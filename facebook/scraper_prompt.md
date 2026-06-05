@@ -341,6 +341,7 @@ For each row, compute:
 - `ad_library_url` — `https://www.facebook.com/ads/library/?id={ad_library_id}`
 - `scrape_run_date` — today YYYY-MM-DD
 - `competitor_name`, `facebook_page_id`, `facebook_page_name`, `facebook_page_followers`, `target_country` ("IN") — constants for this page
+- `page_rank` — the ad's 1-based rank **within its own Facebook page**, in the page's impression order. Maintain a per-page ad counter: reset it to 0 at the start of each page (Step 2b), increment it by 1 for **each ad** (not each creative row) as you process that page, and write the current value to **every** creative row emitted for that ad. It restarts at 1 for the first ad of each new page. All creative rows of one ad share the same `page_rank` (exactly as they share `row_rank`). Leave `row_rank` (the global cross-page rank) unchanged.
 
 Append all rows to `allRows`.
 
@@ -421,13 +422,13 @@ Ask for download confirmation. Wait for explicit yes. **If Step 2g returned `ver
 
 Build RFC 4180 CSV. CRLF line endings. Wrap fields with comma/quote/newline in quotes. Escape `"` as `""`. UTF-8 BOM.
 
-Column order (26 columns, post-rename schema — see HANDOVER §6.3):
+Column order (27 columns, post-rename schema — see HANDOVER §6.3):
 
 ```
-row_rank, competitor_name, facebook_page_id, facebook_page_name, facebook_page_followers, target_country, ad_library_id, ad_library_url, ad_start_date, ad_end_date, has_low_impression_warning, ad_has_multiple_versions, ad_version_count, ad_primary_text, ad_description, ad_cta_label, ad_destination_url, ad_media_type, ad_distribution_platforms, creative_count_in_ad, creative_index_in_ad, creative_aspect_ratio, facebook_video_cdn_url_at_scrape, facebook_thumbnail_cdn_url_at_scrape, facebook_cdn_url_expiry_at_scrape, scrape_run_date
+row_rank, page_rank, competitor_name, facebook_page_id, facebook_page_name, facebook_page_followers, target_country, ad_library_id, ad_library_url, ad_start_date, ad_end_date, has_low_impression_warning, ad_has_multiple_versions, ad_version_count, ad_primary_text, ad_description, ad_cta_label, ad_destination_url, ad_media_type, ad_distribution_platforms, creative_count_in_ad, creative_index_in_ad, creative_aspect_ratio, facebook_video_cdn_url_at_scrape, facebook_thumbnail_cdn_url_at_scrape, facebook_cdn_url_expiry_at_scrape, scrape_run_date
 ```
 
-`row_rank` is the 1-based position across the entire `allRows` array.
+`row_rank` is the 1-based position across the entire `allRows` array (global, impression order with all pages stacked). `page_rank` is the 1-based position of the ad within its own page's impression-sorted list (restarts at 1 per `facebook_page_id`); all creative rows of one ad share a single `page_rank`, exactly as they share `row_rank`.
 
 Filename: `fb-ads-{competitor-slug}-{YYYY-MM-DD}.csv`
 

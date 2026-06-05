@@ -785,7 +785,7 @@ def _rows_to_advertisers(rows: list[dict]) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 CSV_HEADER = [
-    "row_rank", "competitor_name", "advertiser_id", "advertiser_name",
+    "row_rank", "page_rank", "competitor_name", "advertiser_id", "advertiser_name",
     "advertiser_verified_location", "target_country", "creative_id",
     "creative_url", "creative_format", "creative_last_shown_date",
     "regions_shown", "variant_index", "variant_count", "ad_headline",
@@ -967,8 +967,14 @@ def scrape(args: argparse.Namespace) -> int:
     # Sort + rank rows
     rows.sort(key=lambda r: (r["advertiser_id"], r["creative_id"],
                              r["variant_index"]))
+    # page_rank restarts at 1 per advertiser (Google's equivalent of "per page");
+    # row_rank stays global. See handoff 02 — per-page rank fix.
+    per_advertiser_rank: dict = {}
     for i, r in enumerate(rows, 1):
         r["row_rank"] = i
+        adv = r["advertiser_id"]
+        per_advertiser_rank[adv] = per_advertiser_rank.get(adv, 0) + 1
+        r["page_rank"] = per_advertiser_rank[adv]
 
     csv_path = inputs_dir / f"g-ads-{slug}-{today}.csv"
     with csv_path.open("w", encoding="utf-8-sig", newline="") as f:

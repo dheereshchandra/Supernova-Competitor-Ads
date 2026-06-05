@@ -117,6 +117,8 @@ def read_youtube_info_json(video_path: pathlib.Path) -> Dict[str, str]:
 # Columns this script either adds or guarantees on the master CSV. Listed here so
 # the master schema is stable across runs even when an older input CSV omits some.
 MASTER_EXTRA_COLS = [
+    # page_rank — per-advertiser rank (restarts at 1 per advertiser_id); added 2026-06.
+    "page_rank",
     # Step 1 columns introduced after the scraper rewrite — included here so older
     # input CSVs that predate them still produce a master CSV with the right schema.
     "ad_cta_text",

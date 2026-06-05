@@ -53,6 +53,9 @@ def load_env(env_path: pathlib.Path) -> Dict[str, str]:
 # -------- CSV helpers --------
 
 MASTER_EXTRA_COLS = [
+    # page_rank — per-page rank (restarts at 1 per facebook_page_id); added 2026-06.
+    # Listed here so older input CSVs that predate it still yield a master with the column.
+    "page_rank",
     "r2_public_url",
     "first_scrape_run_date",
     "latest_scrape_run_date",
