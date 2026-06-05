@@ -1,0 +1,60 @@
+{
+  "competitor_id": "1244347244307717",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, light brown complexion, short curly dark hair. Wears glasses in later scenes.",
+        "wardrobe": "Olive green t-shirt, light blue jeans.",
+        "demeanor": "Casual, humorous, engaging."
+      },
+      {
+        "id": "B",
+        "role": "animated coach",
+        "appearance": "2D animated older male, dark skin, thick black mustache, dark hair.",
+        "wardrobe": "Pink shirt, teal pants.",
+        "demeanor": "Sarcastic, judgmental."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Couch intro",
+        "supernova_script": "Character A says: सच बताऊँ? [Truth be told?]",
+        "scene_summary": "- Hooks the viewer with a dramatic, relatable opening.\n- Sets a casual, conversational tone.\n- Transitions smoothly into the core problem/solution.",
+        "supernova_on_screen_text": "सच बताऊँ?"
+      },
+      {
+        "n": 2,
+        "scene_label": "App screencast",
+        "supernova_script": "Character A says: Supernova पे अब English बोलना सीखो। [Learn to speak English on Supernova now.] छोटे, daily lessons और real-life situations के साथ। [With short, daily lessons and real-life situations.] Beginners के लिए, और उनके लिए भी जो थोड़ा अटक जाते हैं। [For beginners, and even for those who get a little stuck.] हमारा AI tutor सबकी मदद करता है। [Our AI tutor helps everyone.]",
+        "scene_summary": "- Introduces Supernova as the solution for spoken English.\n- Highlights key features: daily lessons, real-life situations, and AI tutor.\n- Reassures learners of all levels that the app is built for them.",
+        "supernova_on_screen_text": "Supernova पे English बोलना सीखो।\nDaily lessons और real-life situations.\nBeginners और सबके लिए।\nAI tutor सबकी मदद करता है।"
+      },
+      {
+        "n": 3,
+        "scene_label": "Kitchen with Oscar",
+        "supernova_script": "Character B says: Grammar थोड़ी weak थी, पर confidence बढ़िया था! [Grammar was a bit weak, but the confidence was great!]\nCharacter A says: ये मुझे गलती बताता है, पर दोस्त की तरह। और हाँ, practice बिल्कुल real लगती है। [It tells me my mistakes, but like a friend. And yes, the practice feels completely real.]",
+        "scene_summary": "- Demonstrates the AI tutor's encouraging but corrective feedback.\n- Emphasizes the friendly, non-judgmental learning environment.\n- Highlights the realistic feel of the practice sessions.",
+        "supernova_on_screen_text": "Grammar थोड़ी weak थी, पर confidence बढ़िया था!\nये मुझे गलती बताता है, पर दोस्त की तरह।\nPractice बिल्कुल real लगती है।"
+      },
+      {
+        "n": 4,
+        "scene_label": "Couch outro",
+        "supernova_script": "Character A says: अब आपकी बारी। [Now it's your turn.] Supernova app आज ही try करो, और confidence से English बोलो। [Try the Supernova app today, and speak English with confidence.]",
+        "scene_summary": "- Delivers a strong, encouraging Call to Action (CTA).\n- Empowers the user to take the first step towards fluency.\n- Reinforces the brand name and core benefit (confidence).",
+        "supernova_on_screen_text": "अब आपकी बारी।\nSupernova app आज ही try करो।"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.981188
+}

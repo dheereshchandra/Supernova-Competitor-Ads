@@ -1,0 +1,61 @@
+{
+  "competitor_id": "25882090461493760",
+  "parsed": {
+    "duration_s": 43.0,
+    "production_type": "human-recorded",
+    "production_notes": "Natural lighting, slight handheld camera shake, and genuine facial expressions indicate human recording. No AI artifacts are present.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Mid-20s, medium build, light complexion, dark hair with bangs. Cheerful and relaxed.",
+        "wardrobe": "Red short-sleeved t-shirt, white smartwatch, small hoop earrings.",
+        "demeanor": "Engaged, smiling, and casual."
+      },
+      {
+        "id": "B",
+        "role": "female relative",
+        "appearance": "50s, medium build, light complexion, blonde hair pulled back, wearing glasses. Warm and encouraging.",
+        "wardrobe": "Light-colored top.",
+        "demeanor": "Attentive and supportive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 43.0,
+        "screenshot_at_s": 21.5,
+        "scene_label": "Video Call Practice",
+        "setting": "Bedroom with a world map poster, and a kitchen. Daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A younger woman lies on her stomach on a bed, holding a black smartphone in her right hand. She smiles while looking at the screen. The bed has a white frame and a patterned sheet with roads and cars. A colorful world map poster hangs on the white wall behind her. Bright, natural lighting fills the room.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "An older woman is framed from the chest up in a kitchen setting with light cabinets. She wears glasses and gestures slightly with her hands while looking forward. The lighting is soft and even.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A composite video call scene. The main background shows Character A on a bed holding a phone. A small rectangular inset at the top center shows Character B in a kitchen. Both appear engaged in a continuous conversation.",
+        "audio_transcript": "Character A says: Thank you for speaking Spanish with me.\nCharacter B says: De nada. [You're welcome.]\nCharacter A says: I'm trying to practice speaking... bueno, estoy practicando para hablar con los ni\u00f1os m\u00e1s. [well, I'm practicing to speak with the kids more.]\nCharacter B says: Y conmigo tambi\u00e9n. [And with me too.]\nCharacter A says: Y contigo. [And with you.]\nCharacter B says: Entiendo mejor tu espa\u00f1ol. [I understand your Spanish better now.]\nCharacter A says: Estoy practicando con ellos, like yo y con ellos en una aplicaci\u00f3n que se llama Speak. [I'm practicing with them, like me and with them on an app called Speak.]\nCharacter B says: Oh, s\u00ed? [Oh, yeah?]\nCharacter A says: Mhm.\nCharacter B says: Y c\u00f3mo trabaja eso? [And how does that work?]\nCharacter A says: Solamente le hablamos a la aplicaci\u00f3n y nos conversa. [You just speak to the app and it speaks to you.]\nCharacter A says: So we just talk... we just talk to it.\nCharacter A says: Yeah, we talk to it and then it talks to us again and then that's how we practice.",
+        "on_screen_text": "latina moms when you finally speak spanish:\nThank you for speaking Spanish with me.\nI'm trying to practice speaking\nwith the kids more.\nAnd with me too.\nAnd with you.\nI understand your Spanish better now.\nI'm practicing with them,\nthe kids and me.\nAnd with this app called Speak.\nOh, yeah? How does that work?\nYou just speak to the app,\nand it speaks to you.\nSo we just talk... we just talk to it.\nYeah, we talk to it and then it talks\nto us again and then that's how we practice."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966543.4537272
+}

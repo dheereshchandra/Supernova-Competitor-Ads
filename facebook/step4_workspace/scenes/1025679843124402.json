@@ -1,0 +1,75 @@
+{
+  "competitor_id": "1025679843124402",
+  "parsed": {
+    "duration_s": 45.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a human actor interacting with a tablet. The lighting, movements, and setting appear natural and consistent with a human-recorded video.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, medium build, fair complexion. She has blonde hair tied in a half-up ponytail and wears large, dark-rimmed glasses.",
+        "wardrobe": "A light green, textured, long-sleeved sweater.",
+        "demeanor": "Casual, slightly hesitant but engaged, eating a salad while talking."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Digital avatar of a young female with long, wavy red hair and fair skin.",
+        "wardrobe": "A white t-shirt with a red graphic.",
+        "demeanor": "Friendly, encouraging, and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 43.5,
+        "screenshot_at_s": 21.0,
+        "scene_label": "Salad and Spanish Lesson",
+        "setting": "A brightly lit room with a window covered by slatted blinds. A table with a salad bowl and a tablet. A drying rack is visible in the background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up, slightly high angle.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is seated at a wooden table, eating a salad from a clear plastic container using a fork. She is looking down at a tablet resting on the table in front of her. The tablet displays Character B, an AI avatar. The background features a window with white slatted blinds, letting in bright daylight. A light blue drying rack with some items on it is partially visible behind her.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a woman eating a salad while interacting with a language learning app on her tablet. The tablet screen shows an AI avatar. Spanish flag banners are overlaid at the top of the screen. Subtitles appear in the center, translating the conversation.",
+        "audio_transcript": "Character B says: Can you speak Spanish?\nCharacter A says: Uh, un poco. [A little.]\nCharacter B says: Okay, what Spanish words do you know?\nCharacter A says: Hola? [Hello?]\nCharacter B says: Nice! What else?\nCharacter A says: Gracias. [Thank you.]\nCharacter B says: Good. And what do you say when you make a mistake?\nCharacter A says: I... yo... sorry? [I... I... sorry?]\nCharacter B says: Almost! Repeat after me: \"Lo siento.\"\nCharacter A says: Lo siento. [I'm sorry.]\nCharacter B says: Your level is A1.\nCharacter A says: I don't really speak Spanish... I just watch series with subtitles.\nCharacter B says: That's enough to start! You can practice with AI tutors like me.\nCharacter A says: Like you?\nCharacter B says: Yes! Praktika has AI Spanish tutors who correct you and talk to you naturally. You'll start speaking Spanish much faster.\nCharacter A says: But... with an AI?\nCharacter B says: You won't lose anything by trying, and it will be worth it.\nCharacter A says: Okay... teach me Spanish.\nCharacter B says: I will, but you better not give orders to your new maestra.\nCharacter A says: Lo siento! [I'm sorry!]\nCharacter B says: Go download Praktika right now.\nCharacter A says: Okay, let's go!",
+        "on_screen_text": "Can you speak Spanish?\nUn poco.\nOkay,\nWhat Spanish words\ndo you know?\nHola?\nNice! What else?\nGracias.\nGood.\nAnd what do you say\nwhen you make a mistake?\nI... yo... sorry?\nAlmost!\nRepeat after me:\n\"Lo siento.\"\nLo siento.\nYour level is A1,\nI don't really speak Spanish...\nI just watch series\nwith subtitles.\nThat's enough to start!\nYou can practice with\nAI tutors like me.\nLike you?\nYes!\nPraktika has AI Spanish tutors\nwho correct you and\ntalk to you naturally.\nYou'll start speaking Spanish\nmuch faster.\nBut... with an AI?\nYou won't lose anything\nby trying,\nand it will be worth it.\nOkay...\nteach me Spanish.\nI will,\nyou better not give orders\nto your new maestra.\nLo siento!\nGo download Praktika\nright now.\nOkay, let's go!"
+      },
+      {
+        "n": 2,
+        "start_s": 43.5,
+        "end_s": 45.0,
+        "screenshot_at_s": 44.2,
+        "scene_label": "End Card",
+        "setting": "A solid light purple background.",
+        "characters_in_scene": [],
+        "camera": "talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid light purple background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid light purple background with the Praktika app logo in the center. Below the logo is the word 'Praktika'. At the bottom are the 'Download on the App Store' and 'GET IT ON Google Play' badges.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780629072.9931083
+}

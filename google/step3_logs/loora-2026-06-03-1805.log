@@ -1,0 +1,18 @@
+# Step 3 run log (Google pipeline)
+# competitor : loora
+# started_at : 2026-06-03T18:05:54
+# input      : inputs/g-ads-loora-2026-06-03.csv
+# videos     : videos/loora-2026-06-03
+# images     : images/loora-2026-06-03
+# master     : master/loora.csv  (updated)
+# enriched   : inputs/g-ads-loora-2026-06-03_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded-video': 0, 'uploaded-image': 0, 'carried-forward': 0, 'text-no-asset': 0, 'asset-missing': 4, 'unsupported': 0, 'no-creative': 0, 'scrape-error': 0, 'error': 0}
+#
+asset-missing    CR03300941216064995329  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03300941216064995329  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03300941216064995329  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03300941216064995329  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)

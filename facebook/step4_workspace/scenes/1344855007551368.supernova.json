@@ -1,0 +1,72 @@
+{
+  "competitor_id": "1344855007551368",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Male in his 20s, slim build, light brown complexion, short black hair, clean-shaven. He has a friendly and approachable face.",
+        "wardrobe": "Light grey long-sleeve shirt.",
+        "demeanor": "Casual, informative, and engaging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "GitHub Copilot",
+        "supernova_script": "Character A says: YouTube videos, A tier. [YouTube videos, A tier.]\nCharacter A says: It's where everyone starts out, and honestly listening practice के लिए it still holds up. [It's where everyone starts out, and honestly for listening practice it still holds up.]\nCharacter A says: Content बहुत अच्छा है, but problem ये है कि you only listen, you don't actually practice speaking. [The content is very good, but the problem is that you only listen, you don't actually practice speaking.]",
+        "scene_summary": "- Hooks the viewer with a familiar tier-list format.\n- Establishes a common starting point (YouTube) and validates it.\n- Introduces the core problem: passive listening doesn't equal speaking practice.",
+        "supernova_on_screen_text": "Ranking Ways to Learn English 🗣️\n(most people haven't tried the 3rd one)\nS\nA\nB\nC\nD\n(YouTube icon)"
+      },
+      {
+        "n": 2,
+        "scene_label": "Claude Code",
+        "supernova_script": "Character A says: Offline Coaching. Now I'm gonna put this in B tier and I know people are gonna argue with me here. [Offline Coaching. Now I'm gonna put this in B tier and I know people are gonna argue with me here.]\nCharacter A says: Environment बहुत अच्छा होता है, but if you are a working professional, it takes too much time and gets expensive really fast. [The environment is very good, but if you are a working professional, it takes too much time and gets expensive really fast.]",
+        "scene_summary": "- Addresses a traditional, highly respected method (offline coaching).\n- Validates its usefulness but highlights the friction points for the target audience (time and money).\n- Builds trust by being realistic about working professionals' constraints.",
+        "supernova_on_screen_text": "Ranking Ways to Learn English 🗣️\n(most people haven't tried the 3rd one)\nS\nA\nB\nC\nD\n(Coaching Class icon)"
+      },
+      {
+        "n": 3,
+        "scene_label": "Wispr Flow",
+        "supernova_script": "Character A says: Supernova App, S tier, and it's not even close. [Supernova App, S tier, and it's not even close.]\nCharacter A says: This one actually changed how people learn more than any other method on this list. [This one actually changed how people learn more than any other method on this list.]\nCharacter A says: You just open the app and practice speaking with an AI tutor in real-world situations—like an interview, a shop, or with a client. [You just open the app and practice speaking with an AI tutor in real-world situations—like an interview, a shop, or with a client.]\nCharacter A says: It basically removes the fear of speaking. [It basically removes the fear of speaking.]\nCharacter A says: If you want to speak fluent English, you should be on this right now. [If you want to speak fluent English, you should be on this right now.]",
+        "scene_summary": "- Introduces Supernova as the ultimate 'S-tier' solution.\n- Highlights core features: AI tutor and real-world speaking situations.\n- Focuses on the emotional payoff: removing the fear of speaking.",
+        "supernova_on_screen_text": "Ranking Ways to Learn English 🗣️\n(most people haven't tried the 3rd one)\nS\nA\nB\nC\nD\n(Supernova logo)"
+      },
+      {
+        "n": 4,
+        "scene_label": "Notion",
+        "supernova_script": "Character A says: Grammar Books, I'm gonna put this in C tier. [Grammar Books, I'm gonna put this in C tier.]\nCharacter A says: Like yeah, rules important हैं, everyone buys them, but every single person I know has read them three times and they still hesitate to speak. [Like yeah, rules are important, everyone buys them, but every single person I know has read them three times and they still hesitate to speak.]\nCharacter A says: Give me 10 minutes of daily speaking practice any day. [Give me 10 minutes of daily speaking practice any day.]",
+        "scene_summary": "- Critiques a common but ineffective method (rote grammar learning).\n- Relates to the shared frustration of knowing the rules but still hesitating to speak.\n- Reinforces Supernova's philosophy: daily speaking practice beats theory.",
+        "supernova_on_screen_text": "Ranking Ways to Learn English 🗣️\n(most people haven't tried the 3rd one)\nS\nA\nB\nC\nD\n(Grammar Book icon)"
+      },
+      {
+        "n": 5,
+        "scene_label": "Outro",
+        "supernova_script": "Character A says: The one on this list that most learners haven't tried yet is Supernova. [The one on this list that most learners haven't tried yet is Supernova.]\nCharacter A says: Download the app and start speaking today. [Download the app and start speaking today.]",
+        "scene_summary": "- Delivers a clear, direct Call to Action.\n- Ties back to the curiosity hook from the beginning ('most haven't tried').\n- Encourages immediate action without making false 'free' promises.",
+        "supernova_on_screen_text": "Supernova\nDownload the app TODAY"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "GitHub Copilot",
+        "supernova_swap": "YouTube videos"
+      },
+      {
+        "competitor_brand": "Claude Code",
+        "supernova_swap": "Offline Coaching"
+      },
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Notion",
+        "supernova_swap": "Grammar Books"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.7842734
+}

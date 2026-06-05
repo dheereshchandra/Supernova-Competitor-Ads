@@ -1,0 +1,50 @@
+{
+  "competitor_id": "859490559821819",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character, young adult. Fair complexion, large expressive brown eyes, and reddish-brown hair styled in a neat updo. She has a smooth, stylized appearance typical of modern 3D animation.",
+        "wardrobe": "A light green turtleneck sweater and small gold stud earrings.",
+        "demeanor": "Friendly, encouraging, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young adult human female. Fair complexion, long straight dark brown hair, and dark eyes. She has a natural, unstyled look.",
+        "wardrobe": "A dark, possibly black or navy, turtleneck sweater.",
+        "demeanor": "Attentive, slightly hesitant when speaking, and engaged in the conversation."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Italian Lesson Conversation",
+        "supernova_script": "Character A says: Do you speak English? [Do you speak English?]\nCharacter B says: Yes, a little. I am hunger. [Yes, a little. I am hunger.]\nCharacter A says: No, no. You say: I am hungry. English में 'hunger' नहीं, 'hungry' बोलते हैं। [No, no. You say: I am hungry. In English you don't say 'hunger', you say 'hungry'.]\nCharacter B says: I am hungry. [I am hungry.]\nCharacter A says: What do you want to eat? [What do you want to eat?]\nCharacter B says: I want a pizza margherita. [I want a pizza margherita.]\nCharacter A says: That's good! And to drink? [That's good! And to drink?]\nCharacter B says: I want a water. [I want a water.]\nCharacter A says: Better: I would like some water, please. ज़्यादा polite लगता है। [Better: I would like some water, please. It sounds more polite.]\nCharacter B says: I would like some water, please. [I would like some water, please.]\nCharacter A says: Perfect! देखो, तुम्हारी English improve हो रही है। [Perfect! See, your English is improving.]\nCharacter B says: Thank you. पर तुम कौन हो? [Thank you. But who are you?]\nCharacter A says: मैं Supernova पर तुम्हारी AI tutor हूँ। हम रोज़ ऐसे ही practice करेंगे और तुम confidence से English बोलने लगोगी। [I am your AI tutor on Supernova. We will practice like this every day and you will start speaking English with confidence.]\nCharacter B says: Ok, मैं Supernova अभी try करती हूँ। [Ok, I will try Supernova now.]",
+        "scene_summary": "- Establishes a conversational learning scenario.\n- Demonstrates real-time correction and feedback.\n- Introduces the AI tutor and the brand.",
+        "supernova_on_screen_text": "Do you speak English?\nYes, a little.\nI am hunger\nNo, no.\nYou say: I am hungry.\nEnglish में 'hunger' नहीं, 'hungry' बोलते हैं।\nI am hungry.\nWhat do you want to eat?\nI want a pizza margherita\nThat's good! And to drink?\nI want a water\nBetter: I would like some water, please.\nज़्यादा polite लगता है।\nI would like some water, please\nPerfect! देखो, तुम्हारी English improve हो रही है\nThank you. पर तुम कौन हो?\nमैं Supernova पर तुम्हारी AI tutor हूँ।\nहम रोज़ ऐसे ही practice करेंगे और तुम confidence से English बोलने लगोगी\nOk, मैं Supernova अभी try करती हूँ"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the brand logo and call to action.\n- Shows app store availability.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON\nGoogle Play\nAvailable on the\nApp Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630888.6185973
+}

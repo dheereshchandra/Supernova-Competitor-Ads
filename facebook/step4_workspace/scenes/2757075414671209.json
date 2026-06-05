@@ -1,0 +1,147 @@
+{
+  "competitor_id": "2757075414671209",
+  "parsed": {
+    "duration_s": 30.0,
+    "production_type": "mixed",
+    "production_notes": "The video is entirely composed of 2D and 3D digital animation and app screencasts. There are no live-action human actors, and the visuals are standard motion graphics rather than generative AI.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Brand mascot",
+        "appearance": "A stylized, bright green cartoon owl with large eyes, a small yellow beak, and simple rounded features.",
+        "wardrobe": "None, just green feathers.",
+        "demeanor": "Energetic and cheerful."
+      },
+      {
+        "id": "B",
+        "role": "Chess instructor",
+        "appearance": "A stylized 2D cartoon man with brown skin, dark hair, a prominent dark mustache, and a unibrow. He has a slightly grumpy or serious default expression.",
+        "wardrobe": "A light pink long-sleeved shirt. Later depicted with a bare, highly muscular pink torso.",
+        "demeanor": "Serious and instructive, later becoming triumphant and exaggerated."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 2.5,
+        "screenshot_at_s": 1.0,
+        "scene_label": "Brainrot game",
+        "setting": "Abstract 3D checkered pathway, bright lighting, green and white palette.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A 3D animated green owl character is viewed from behind, running forward along a floating pathway made of green and white checkered squares. In the distance, a cluster of white chess pieces, including pawns, rooks, and knights, blocks the path. The background is a solid, pale color, giving an abstract, endless void appearance.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A 3D animated green owl runs along a checkered path towards a group of white chess pieces. A text overlay at the top asks a question about brainrot games.",
+        "audio_transcript": "Unknown speaker says: Tired of brainrot games? [Tired of brainrot games?]",
+        "on_screen_text": "tired of brainrot games?"
+      },
+      {
+        "n": 2,
+        "start_s": 2.5,
+        "end_s": 5.5,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Instructor introduces chess",
+        "setting": "Abstract green background, chessboard.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A 2D cartoon man with a mustache and a pink shirt is positioned behind a chessboard. He has his hands clasped together, resting on the edge of the board. The chessboard is populated with various black and white pieces. The background features abstract, wavy shapes in shades of green and pale pink.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A cartoon man with a mustache sits behind a chessboard, looking directly at the viewer. Text appears above him as he speaks.",
+        "audio_transcript": "Character B says: Learn chess with me, instead. [Learn chess with me, instead.]",
+        "on_screen_text": "Learn chess with me, instead."
+      },
+      {
+        "n": 3,
+        "start_s": 5.5,
+        "end_s": 22.5,
+        "screenshot_at_s": 14.0,
+        "scene_label": "Chess puzzles screencast",
+        "setting": "Digital chessboard, white background with a faint checkered pattern.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A top-down view of a digital chessboard with a faint, transparent checkered pattern on a white background. Various stylized 2D chess pieces, including kings, queens, rooks, and pawns, are positioned on the grid.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An app screencast shows a series of interactive chess puzzles. A cartoon avatar of the instructor provides dialogue bubbles. The user drags pieces to capture opponents, and correct moves are highlighted with green circles and pop-ups.",
+        "audio_transcript": "Character B says: Capture my rook, and I lose 5 points of material. [Capture my rook, and I lose 5 points of material.]\nCharacter B says: The rook is equivalent to 5 pawns. [The rook is equivalent to 5 pawns.]\nCharacter B says: Capture my queen, and I lose 9 points of material. [Capture my queen, and I lose 9 points of material.]\nCharacter B says: The queen is worth 9 pawns. [The queen is worth 9 pawns.]\nCharacter B says: Now, capture the most valuable piece possible. [Now, capture the most valuable piece possible.]",
+        "on_screen_text": "NEW CONCEPT\nSolve the puzzle\nCapture my rook, and I lose 5 points of material.\nNicely done!\nCONTINUE\nThe rook is equivalent to 5 pawns.\nCapture my queen, and I lose 9 points of material.\nAmazing!\nThe queen is worth 9 pawns.\nNow, capture the most valuable piece possible.\n+4"
+      },
+      {
+        "n": 4,
+        "start_s": 22.5,
+        "end_s": 26.5,
+        "screenshot_at_s": 24.5,
+        "scene_label": "Instructor celebrates",
+        "setting": "Abstract white background with green accents.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "medium",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A 2D cartoon man with a mustache is depicted floating or jumping in mid-air. His body is drawn as a highly muscular, pink torso with defined abs and pecs, contrasting with his normal head. His arms are outstretched, and his dark hair is flowing upwards as if caught in an updraft. The background is mostly white with some abstract green shapes.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The cartoon man, now with a muscular pink body, floats triumphantly in the air. Text overlays congratulate the user on their performance, displaying XP and combo stats.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Perfect lesson!\nWhy be humble?\nEveryone can see you're AMAZING.\nCLAIM XP\nTOTAL XP 25\nAMAZING 100%\nBLAZING 0:44"
+      },
+      {
+        "n": 5,
+        "start_s": 26.5,
+        "end_s": 30.0,
+        "screenshot_at_s": 28.0,
+        "scene_label": "End card",
+        "setting": "Solid white background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background with a faint, blurred green shape in the center. There are no characters or distinct objects present in the underlying scene.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The final screen displays the brand logo, a tagline, app store badges, and a download button.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "duolingo\nThe world's #1 learning app.\nDownload on the App Store\nGET IT ON Google Play\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.0948834
+}

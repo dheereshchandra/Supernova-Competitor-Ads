@@ -1,0 +1,95 @@
+{
+  "competitor_id": "989760113647100",
+  "parsed": {
+    "duration_s": 78.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human actors with an AI-generated 3D avatar. The human footage appears to be dubbed into Spanish, as the lip-syncing does not match the audio. The second scene uses a split-screen format typical of AI app advertisements.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, early 20s, slim build, fair complexion. Long brown hair styled in a side braid over her left shoulder.",
+        "wardrobe": "In the first scene, she wears a rust-colored cardigan, a white ribbed top, a patterned scarf, and dark jeans. In the second scene, she wears a light grey crewneck sweatshirt.",
+        "demeanor": "Initially hesitant and nervous, transitioning to enthusiastic and smiling."
+      },
+      {
+        "id": "B",
+        "role": "helpful traveler",
+        "appearance": "Middle-aged man, average build, fair complexion. Short, styled grey hair.",
+        "wardrobe": "Navy blue quarter-zip sweater and olive green pants.",
+        "demeanor": "Friendly, helpful, and reassuring."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character, fair complexion, large expressive eyes. Red hair pulled back neatly.",
+        "wardrobe": "Dark blue police-style uniform shirt with a silver badge, a shoulder-mounted radio, and a black tie.",
+        "demeanor": "Patient, encouraging, and friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 29.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Airport Struggle",
+        "setting": "Busy airport terminal, daytime, bright natural lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with a side braid stands in a busy airport terminal, holding a smartphone in one hand and the handle of a rolling suitcase in the other. She wears a rust-colored cardigan over a white top, with a patterned scarf. An older man with grey hair, wearing a navy blue quarter-zip sweater, approaches her from behind, also pulling a suitcase. They engage in a conversation. The background shows other travelers walking and standing in line, with large windows letting in daylight.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a young woman struggling to practice her English in an airport setting. An older man notices her difficulty and steps in to offer advice, gesturing with his hands as he speaks. The camera remains relatively static, capturing their interaction in a medium shot with the bustling airport environment visible behind them.",
+        "audio_transcript": "Character A says: I am flying to Miami. One luggage. I am flying to... No, one suitcase...\nCharacter B says: \u00bfPrimera vez viajando sola y hablando ingl\u00e9s? [First time traveling alone and speaking English?]\nCharacter A says: \u00bfSe nota tanto? Entiendo todo, pero cuando me toca hablar me bloqueo. [Is it that obvious? I understand everything, but when it's my turn to speak I freeze.]\nCharacter B says: A mi hija le pasaba igual. Practica con Loora, es una IA con la que simplemente hablas. Como hacer todo el check-in antes de llegar al aeropuerto. [The same thing happened to my daughter. Practice with Loora, it's an AI you just talk to. Like doing all the check-in before arriving at the airport.]\nCharacter A says: \u00bfUna IA? \u00bfEn ingl\u00e9s? [An AI? In English?]\nCharacter B says: Diez minutos al d\u00eda. El mes pasado ella sola reserv\u00f3 nuestro hotel en Miami. [Ten minutes a day. Last month she booked our hotel in Miami all by herself.]\nCharacter A says: Bueno, necesito eso. [Well, I need that.]",
+        "on_screen_text": "I am flying to Miami.\nOne luggage.\nI am flying to...\nNo, one suitcase...\n\u00bfPrimera vez viajando sola y hablando ingl\u00e9s? (First time traveling alone and speaking English?)\n\u00bfSe nota tanto? (Is it that obvious?)\nEntiendo todo, pero cuando me toca hablar (I understand everything, but when it's my turn to speak)\nme bloqueo. (I freeze.)\nA mi hija le pasaba igual. (The same thing happened to my daughter.)\nPractica con Loora, es una IA con la que simplemente hablas. (Practice with Loora, it's an AI you just talk to.)\nComo hacer todo el check-in antes de llegar al aeropuerto. (Like doing all the check-in before arriving at the airport.)\n\u00bfUna IA? \u00bfEn ingl\u00e9s? (An AI? In English?)\nDiez minutos al d\u00eda. (Ten minutes a day.)\nEl mes pasado ella sola reserv\u00f3 nuestro hotel en Miami. (Last month she booked our hotel in Miami all by herself.)\nBueno, necesito eso. (Well, I need that.)"
+      },
+      {
+        "n": 2,
+        "start_s": 29.5,
+        "end_s": 78.0,
+        "screenshot_at_s": 50.0,
+        "scene_label": "App Demonstration",
+        "setting": "Split screen showing a virtual border control booth and an airport terminal.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen, close-up talking heads",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A 3D animated female border control officer with red hair pulled back rests her chin on her hand, leaning on a counter. She wears a dark blue police-style uniform shirt with a silver badge, a shoulder-mounted radio, and a black tie. A piece of paper with the words 'BORDER CONTROL' is visible on the counter. The background is a blurred, brightly lit airport terminal.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A young woman with a side braid, wearing a light grey crewneck sweatshirt, stands in an airport terminal. She is looking directly at the camera, smiling and speaking. She wears a black crossbody bag strap. The background is a blurred airport concourse with large windows, structural columns, and people walking in the distance.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The screen is split vertically down the middle. On the left, an animated AI avatar acts as a border control officer, while on the right, the young woman interacts with the avatar. They are having a conversation, simulating a real-life travel scenario.",
+        "audio_transcript": "Character C says: Hello, where are you flying? [Hello, where are you flying?]\nCharacter A says: I fly a... London. [I fly a... London.]\nCharacter C says: \u00bfQuieres decir: \"I am flying to London\"? [Do you mean: \"I am flying to London\"?]\nCharacter A says: Yes, sorry. I am flying to London. [Yes, sorry. I am flying to London.]\nCharacter C says: Any luggage to check in? [Any luggage to check in?]\nCharacter A says: Mmm... luggage? [Mmm... luggage?]\nCharacter C says: S\u00ed, luggage. Pueden ser bolsas, maletas y otras cosas que la gente usa para llevar sus pertenencias cuando viaja. [Yes, luggage. They can be bags, suitcases and other things people use to carry their belongings when traveling.]\nCharacter A says: Oh, I have one luggage. Ay, perd\u00f3n, mi ingl\u00e9s no es muy bueno. [Oh, I have one luggage. Oh, sorry, my English is not very good.]\nCharacter C says: \u00a1No te preocupes! \u00bfCu\u00e1ntas veces hablaste en ingl\u00e9s el \u00faltimo mes? [Don't worry! How many times did you speak in English last month?]\nCharacter A says: La verdad, no habl\u00e9 nada. [To be honest, I didn't speak at all.]\nCharacter C says: Entonces, \u00bfc\u00f3mo esperas hablar con fluidez? [Then, how do you expect to speak fluently?]\nCharacter A says: No tengo a nadie con quien practicar. [I don't have anyone to practice with.]\nCharacter C says: Solo descarga Loora. Vamos a hablar juntas todos los d\u00edas y vas a hablar ingl\u00e9s con fluidez mucho m\u00e1s r\u00e1pido de lo que crees. [Just download Loora. We are going to talk together every day and you will speak English fluently much faster than you think.]\nCharacter A says: Qu\u00e9 incre\u00edble. Voy a agregar esto a mi rutina diaria desde hoy. [How incredible. I am going to add this to my daily routine starting today.]",
+        "on_screen_text": "Hello, where are you flying?\nI fly London.\n\u00bfQuieres decir: \"I am flying to London\"? (Do you mean: \"I am flying to London\"?)\nYes, sorry.\nI am flying to London.\nAny luggage to check in?\nLuggage?\nS\u00ed, luggage. (Yes, luggage.)\nPueden ser bolsas, maletas (They can be bags, suitcases)\ny otras cosas que la gente usa (and other things people use)\npara llevar sus pertenencias cuando viaja. (to carry their belongings when traveling.)\nOh, I have one luggage.\nAy, perd\u00f3n (Oh, sorry)\nmi ingl\u00e9s no es muy bueno. (my English is not very good.)\n\u00a1No te preocupes! (Don't worry!)\n\u00bfCu\u00e1ntas veces hablaste en ingl\u00e9s el \u00faltimo mes? (How many times did you speak in English last month?)\nLa verdad, no habl\u00e9 nada. (To be honest, I didn't speak at all.)\nEntonces, \u00bfc\u00f3mo esperas hablar con fluidez? (Then, how do you expect to speak fluently?)\nNo tengo a nadie con quien practicar. (I don't have anyone to practice with.)\nSolo descarga Loora. (Just download Loora.)\nVamos a hablar juntas todos los d\u00edas (We are going to talk together every day)\ny vas a hablar ingl\u00e9s con fluidez mucho m\u00e1s r\u00e1pido (and you will speak English fluently much faster)\nde lo que crees. (than you think.)\nQu\u00e9 incre\u00edble. (How incredible.)\nVoy a agregar esto a mi rutina diaria desde hoy. (I am going to add this to my daily routine starting today.)\nLoora"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.51622
+}

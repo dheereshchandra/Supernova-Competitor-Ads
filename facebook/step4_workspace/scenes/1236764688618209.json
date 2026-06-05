@@ -1,0 +1,160 @@
+{
+  "competitor_id": "1236764688618209",
+  "parsed": {
+    "duration_s": 47.0,
+    "production_type": "mixed",
+    "production_notes": "The top panel features an AI-generated robot with unnatural, perfectly smooth movements and a static background. The bottom panel shows a human actor, though the video might be slightly manipulated or dubbed.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI Tutor Avatar",
+        "appearance": "Humanoid robot with a white/silver metallic body, blue eyes, and a smooth, featureless face.",
+        "wardrobe": "Metallic casing, no clothing.",
+        "demeanor": "Calm, instructional, robotic but friendly."
+      },
+      {
+        "id": "B",
+        "role": "Female Learner",
+        "appearance": "Young Indian woman, medium build, brown complexion, dark wavy hair.",
+        "wardrobe": "Beige and brown patterned top (kurti).",
+        "demeanor": "Attentive, learning, slightly hesitant but eager."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 15.0,
+        "screenshot_at_s": 7.0,
+        "scene_label": "Grammar Correction",
+        "setting": "Split screen: Top is a warm-toned Indian interior/street, Bottom is an indoor room with plants.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A humanoid robot with a smooth, white metallic casing and blue eyes is positioned in the center of the frame, facing forward. The background is a slightly blurred, warm-toned Indian interior or street scene with traditional elements like a framed picture and brass items. The lighting is soft and even. Character A is speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young Indian woman with dark, wavy hair and a brown complexion is seated indoors, facing the camera. She is wearing a beige and brown patterned top. The background includes a window with natural light and several potted green plants. The lighting is natural and highlights her face. Character B is speaking and listening.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with a robot on top and a woman on the bottom. They are having a conversation. Text overlays appear in the center, translating or highlighting their speech. A red 'X' and a green checkmark graphic appear briefly to indicate incorrect and correct grammar.",
+        "audio_transcript": "Character B says: \u0c28\u0c41\u0c35\u0c4d\u0c35\u0c41 \u0c0e\u0c2a\u0c4d\u0c2a\u0c41\u0c21\u0c41 \u0c35\u0c38\u0c4d\u0c24\u0c3e\u0c35\u0c41? [When will you come?]\nCharacter B says: I will return back on Monday.\nCharacter A says: Return back \u0c05\u0c28\u0c15\u0c42\u0c21\u0c26\u0c41... [You shouldn't say return back...]\nCharacter A says: Return \u0c05\u0c02\u0c1f\u0c47\u0c28\u0c47 \u0c24\u0c3f\u0c30\u0c3f\u0c17\u0c3f \u0c30\u0c3e\u0c35\u0c21\u0c02 \u0c05\u0c28\u0c3f \u0c05\u0c30\u0c4d\u0c25\u0c02. [Return itself means coming back.]\nCharacter A says: Return \u0c2e\u0c30\u0c3f\u0c2f\u0c41 back \u0c30\u0c46\u0c02\u0c21\u0c42 \u0c15\u0c32\u0c3f\u0c2a\u0c3f \u0c1a\u0c46\u0c2c\u0c3f\u0c24\u0c47 - \"\u0c0e\u0c02\u0c26\u0c41\u0c15\u0c41 \u0c2e\u0c33\u0c4d\u0c33\u0c40 \u0c2e\u0c33\u0c4d\u0c33\u0c40 \u0c35\u0c38\u0c4d\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c30\u0c41?\" \u0c05\u0c28\u0c3f \u0c05\u0c30\u0c4d\u0c25\u0c02 \u0c35\u0c38\u0c4d\u0c24\u0c41\u0c02\u0c26\u0c3f. [If you say return and back together, it means \"why are you coming again and again?\"]\nCharacter A says: Just say - I will return on Monday. [Just say - I will return on Monday.]\nCharacter B says: \u0c13\u0c39\u0c4b... \u0c38\u0c30\u0c47 \u0c38\u0c30\u0c47. [Oh... okay okay.]",
+        "on_screen_text": "\u0c28\u0c41\u0c35\u0c4d\u0c35\u0c41 \u0c0e\u0c2a\u0c4d\u0c2a\u0c41\u0c21\u0c41 (When will you), I will return, Return back \u0c05\u0c28\u0c15\u0c42\u0c21\u0c26\u0c41... (Shouldn't say return back...), Return \u0c05\u0c02\u0c1f\u0c47\u0c28\u0c47 (Return means), \u0c24\u0c3f\u0c30\u0c3f\u0c17\u0c3f \u0c30\u0c3e\u0c35\u0c21\u0c02 (coming back), Return \u0c2e\u0c30\u0c3f\u0c2f\u0c41 (Return and), back \u0c30\u0c46\u0c02\u0c21\u0c42 \u0c15\u0c32\u0c3f\u0c2a\u0c3f (back both together), \u0c1a\u0c46\u0c2c\u0c3f\u0c24\u0c47 - \"\u0c0e\u0c02\u0c26\u0c41\u0c15\u0c41 (if said - \"why), \u0c2e\u0c33\u0c4d\u0c33\u0c40 \u0c2e\u0c33\u0c4d\u0c33\u0c40 \u0c35\u0c38\u0c4d\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c30\u0c41?\" (are you coming again and again?\"), \u0c05\u0c28\u0c3f \u0c05\u0c30\u0c4d\u0c25\u0c02 \u0c35\u0c38\u0c4d\u0c24\u0c41\u0c02\u0c26\u0c3f (it means), Just say - I will, return on Monday, \u0c13\u0c39\u0c4b... \u0c38\u0c30\u0c47 \u0c38\u0c30\u0c47 (Oh... okay okay)"
+      },
+      {
+        "n": 2,
+        "start_s": 15.0,
+        "end_s": 25.5,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Discussing AI Teachers",
+        "setting": "Split screen: Top is a warm-toned Indian interior/street, Bottom is an indoor room with plants.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A humanoid robot with a smooth, white metallic casing and blue eyes is positioned in the center of the frame, facing forward. The background is a slightly blurred, warm-toned Indian interior or street scene with traditional elements like a framed picture and brass items. The lighting is soft and even. Character A is speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young Indian woman with dark, wavy hair and a brown complexion is seated indoors, facing the camera. She is wearing a beige and brown patterned top. The background includes a window with natural light and several potted green plants. The lighting is natural and highlights her face. Character B is speaking and listening.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen layout continues. The woman expresses a concern, and the robot responds. Text overlays continue to appear in the center, matching the spoken dialogue.",
+        "audio_transcript": "Character B says: \u0c28\u0c3e\u0c15\u0c41 English \u0c38\u0c30\u0c3f\u0c17\u0c4d\u0c17\u0c3e \u0c30\u0c3e\u0c26\u0c41. [I don't know English properly.]\nCharacter A says: No problem. AI teachers try \u0c1a\u0c47\u0c36\u0c3e\u0c30\u0c3e? [No problem. Have you tried AI teachers?]\nCharacter B says: \u0c05\u0c26\u0c3f expensive-\u0c17\u0c3e \u0c09\u0c02\u0c1f\u0c41\u0c02\u0c26\u0c3f \u0c15\u0c26\u0c3e? [That would be expensive, right?]\nCharacter A says: \u0c05\u0c38\u0c32\u0c41 \u0c1b\u0c3e\u0c28\u0c4d\u0c38\u0c47 \u0c32\u0c47\u0c26\u0c41. [No chance at all.]\nCharacter A says: Normal English classes \u0c15\u0c02\u0c1f\u0c47 \u0c07\u0c26\u0c3f 7 \u0c30\u0c46\u0c1f\u0c4d\u0c32\u0c41 cheap. [This is 7 times cheaper than normal English classes.]",
+        "on_screen_text": "\u0c28\u0c3e\u0c15\u0c41 English (To me English), \u0c38\u0c30\u0c3f\u0c17\u0c4d\u0c17\u0c3e \u0c30\u0c3e\u0c26\u0c41 (doesn't come properly), No problem, AI teachers try, \u0c1a\u0c47\u0c36\u0c3e\u0c30\u0c3e (did you), \u0c05\u0c26\u0c3f expensive-\u0c17\u0c3e (That expensive), \u0c09\u0c02\u0c1f\u0c41\u0c02\u0c26\u0c3f \u0c15\u0c26\u0c3e (will be right), \u0c05\u0c38\u0c32\u0c41 \u0c1b\u0c3e\u0c28\u0c4d\u0c38\u0c47 \u0c32\u0c47\u0c26\u0c41 (No chance at all), Normal English, classes \u0c15\u0c02\u0c1f\u0c47 (than classes), \u0c07\u0c26\u0c3f 7 \u0c30\u0c46\u0c1f\u0c4d\u0c32\u0c41 cheap (this is 7 times cheap)"
+      },
+      {
+        "n": 3,
+        "start_s": 25.5,
+        "end_s": 36.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Benefits and Usage",
+        "setting": "Split screen: Top is a warm-toned Indian interior/street, Bottom is an indoor room with plants.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A humanoid robot with a smooth, white metallic casing and blue eyes is positioned in the center of the frame, facing forward. The background is a slightly blurred, warm-toned Indian interior or street scene with traditional elements like a framed picture and brass items. The lighting is soft and even. Character A is speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young Indian woman with dark, wavy hair and a brown complexion is seated indoors, facing the camera. She is wearing a beige and brown patterned top. The background includes a window with natural light and several potted green plants. The lighting is natural and highlights her face. Character B is speaking and listening.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen conversation continues. Large 3D-style graphics pop up in the center of the screen, temporarily obscuring the characters. First, a gold \"50 LAKHS\" graphic appears, followed by a silver clock graphic. Text overlays continue to appear.",
+        "audio_transcript": "Character A says: \u0c05\u0c02\u0c26\u0c41\u0c15\u0c47 50 \u0c32\u0c15\u0c4d\u0c37\u0c32 \u0c2e\u0c02\u0c26\u0c3f MySivi-\u0c32\u0c4b English practice \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c30\u0c41. [That's why 50 lakh people are practicing English on MySivi.]\nCharacter B says: \u0c15\u0c3e\u0c28\u0c40 time \u0c26\u0c4a\u0c30\u0c15\u0c21\u0c02 \u0c32\u0c47\u0c26\u0c41. [But I don't get time.]\nCharacter A says: Daily \u0c15\u0c47\u0c35\u0c32\u0c02 15-20 minutes practice \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c47 \u0c1a\u0c3e\u0c32\u0c41. [Practicing for just 15-20 minutes daily is enough.]\nCharacter A says: \u0c2e\u0c40\u0c30\u0c41 \u0c1a\u0c3e\u0c32\u0c3e confident \u0c05\u0c35\u0c41\u0c24\u0c3e\u0c30\u0c41. [You will become very confident.]",
+        "on_screen_text": "\u0c05\u0c02\u0c26\u0c41\u0c15\u0c47 50 \u0c32\u0c15\u0c4d\u0c37\u0c32 (That's why 50 lakhs), \u0c2e\u0c02\u0c26\u0c3f MySivi-\u0c32\u0c4b (people in MySivi), English practice, \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c30\u0c41 (are doing), \u0c15\u0c3e\u0c28\u0c40 time (But time), \u0c26\u0c4a\u0c30\u0c15\u0c21\u0c02 \u0c32\u0c47\u0c26\u0c41 (not getting), Daily \u0c15\u0c47\u0c35\u0c32\u0c02 15-20 (Daily just 15-20), minutes practice, \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c47 \u0c1a\u0c3e\u0c32\u0c41 (if done is enough), \u0c2e\u0c40\u0c30\u0c41 \u0c1a\u0c3e\u0c32\u0c3e confident (You very confident), \u0c05\u0c35\u0c41\u0c24\u0c3e\u0c30\u0c41 (will become)"
+      },
+      {
+        "n": 4,
+        "start_s": 36.0,
+        "end_s": 47.0,
+        "screenshot_at_s": 42.0,
+        "scene_label": "Call to Action",
+        "setting": "Split screen: Top is a warm-toned Indian interior/street, Bottom is an indoor room with plants.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A humanoid robot with a smooth, white metallic casing and blue eyes is positioned in the center of the frame, facing forward. The background is a slightly blurred, warm-toned Indian interior or street scene with traditional elements like a framed picture and brass items. The lighting is soft and even. Character A is speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young Indian woman with dark, wavy hair and a brown complexion is seated indoors, facing the camera. She is wearing a beige and brown patterned top. The background includes a window with natural light and several potted green plants. The lighting is natural and highlights her face. Character B is speaking and listening.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The final part of the split-screen conversation. The robot gives instructions on how to join. A large 3D-style calendar graphic with \"15 DAYS\" pops up in the center. Text overlays continue to appear, ending with a call to action.",
+        "audio_transcript": "Character B says: \u0c35\u0c3e\u0c35\u0c4d. \u0c28\u0c47\u0c28\u0c41 \u0c0e\u0c32\u0c3e join \u0c05\u0c35\u0c4d\u0c35\u0c3e\u0c32\u0c3f? [Wow. How should I join?]\nCharacter A says: \u0c08 install button \u0c28\u0c4a\u0c15\u0c4d\u0c15\u0c3f MySivi app install \u0c1a\u0c47\u0c38\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f. [Click this install button and install the MySivi app.]\nCharacter A says: Sign up \u0c1a\u0c47\u0c38\u0c3f practice-\u0c28\u0c3f start \u0c1a\u0c47\u0c2f\u0c02\u0c21\u0c3f. [Sign up and start practicing.]\nCharacter A says: \u0c15\u0c47\u0c35\u0c32\u0c02 15 days-\u0c32\u0c4b \u0c2e\u0c40\u0c15\u0c41 improvement \u0c15\u0c28\u0c3f\u0c2a\u0c3f\u0c38\u0c4d\u0c24\u0c41\u0c02\u0c26\u0c3f. [You will see improvement in just 15 days.]\nCharacter A says: Let's start. [Let's start.]",
+        "on_screen_text": "\u0c35\u0c3e\u0c35\u0c4d (Wow), \u0c28\u0c47\u0c28\u0c41 \u0c0e\u0c32\u0c3e (I how), join \u0c05\u0c35\u0c4d\u0c35\u0c3e\u0c32\u0c3f (should join), \u0c08 install button (This install button), \u0c28\u0c4a\u0c15\u0c4d\u0c15\u0c3f MySivi (pressing MySivi), app install \u0c1a\u0c47\u0c38\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f (install app), Sign up \u0c1a\u0c47\u0c38\u0c3f practice-\u0c28\u0c3f (Sign up and practice), start \u0c1a\u0c47\u0c2f\u0c02\u0c21\u0c3f (start), \u0c15\u0c47\u0c35\u0c32\u0c02 15 days-\u0c32\u0c4b (In just 15 days), \u0c2e\u0c40\u0c15\u0c41 improvement (to you improvement), \u0c15\u0c28\u0c3f\u0c2a\u0c3f\u0c38\u0c4d\u0c24\u0c41\u0c02\u0c26\u0c3f (will appear), Let's start"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779890884.9796357
+}

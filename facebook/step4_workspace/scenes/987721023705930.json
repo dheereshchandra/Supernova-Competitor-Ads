@@ -1,0 +1,61 @@
+{
+  "competitor_id": "987721023705930",
+  "parsed": {
+    "duration_s": 35.8,
+    "production_type": "mixed",
+    "production_notes": "The left side features an AI-generated avatar with unnaturally smooth skin, perfectly static posture, and slightly robotic lip-sync. The right side is a human-recorded selfie video with natural lighting, movement, and camera shake.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI Tutor Avatar",
+        "appearance": "Young adult female, fair complexion, red hair tied back, green eyes. Symmetrical, flawless facial features.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Calm, friendly, and static."
+      },
+      {
+        "id": "B",
+        "role": "Female Learner",
+        "appearance": "Young adult female, fair complexion, dark hair pulled back.",
+        "wardrobe": "Black long-sleeve top.",
+        "demeanor": "Sleepy, casual, and relaxed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 35.8,
+        "screenshot_at_s": 17.0,
+        "scene_label": "Late night English practice",
+        "setting": "Left: plain light grey background. Right: dark bedroom, lying on a white pillow.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Close-up talking head",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A close-up shot of Character A, a young woman with fair skin, green eyes, and red hair tied back. She is wearing a grey turtleneck sweater. She is positioned in the center of the frame against a plain, light grey background. The lighting is even and soft, typical of a studio setup. She is looking directly at the camera with a neutral, slightly friendly expression. Her posture is perfectly upright and static.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A close-up selfie-style shot of Character B, a young woman with fair skin and dark hair pulled back. She is wearing a black long-sleeve top. She is lying down, resting her head on a white pillow. Her right hand is tucked under her cheek. The background is dark, suggesting a bedroom at night. The lighting is dim, likely from a phone screen or a small bedside lamp, casting soft shadows on her face. She looks tired and sleepy, looking directly into the camera lens.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen composition. On the left, an AI-generated woman in a grey turtleneck speaks directly to the camera against a plain background. On the right, a human woman lies in bed in a dark room, resting her head on a pillow, looking sleepy. Text captions appear at the bottom of the screen, alternating between the two speakers, with red cross marks for incorrect grammar and green check marks for correct grammar. A logo appears in the top left corner later in the video.",
+        "audio_transcript": "Character A says: What are you doing?\nCharacter B says: I can't sleep.\nCharacter A says: Do you mean I can't fall asleep?\nCharacter B says: Yes, I can't fall asleep. Now twelve o'clock!\nCharacter A says: You should say it's twelve o'clock or it's midnight.\nCharacter B says: Aha, okay! It's midnight.\nCharacter A says: Great job! We can talk until you feel sleepy.\nCharacter B says: Cool, but my English not good.\nCharacter A says: Do you mean my English isn't good?\nCharacter B says: Alright, my English isn't good.\nCharacter A says: Perfect correction! Don't worry. If you practice with me every day on the Loora app, I'll help fix your mistakes and you'll be confident in no time.\nCharacter B says: Okay, I'll download Loora and see you tomorrow!",
+        "on_screen_text": "What are you doing?\n\u274c I can't sleep.\nDo you mean: \"I can't fall asleep\"?\n\u2705 Yes, I can't fall asleep.\n\u274c Now 12 o'clock!\nYou should say: \"It's 12 o'clock or It's midnight\"\nAha, okay!\n\u2705 It's midnight.\nGreat job!\nWe can talk until you feel sleepy.\n\u274c But my English not good.\nDo you mean: \"My English isn't good?\"\nAlright, my English isn't good.\nPerfect correction!\nDon't worry.\nIf you practice with me every day on the Loora app,\nI'll help fix your mistakes and you'll be confident in no time.\nOkay, I'll download Loora and see you tomorrow!\nLoora"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.5353024
+}

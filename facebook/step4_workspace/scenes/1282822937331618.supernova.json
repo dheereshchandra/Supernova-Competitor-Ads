@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1282822937331618",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with stylized 3D animation features. She has a fair complexion, large expressive green eyes, and wavy red hair. Her face is perfectly smooth with cartoonish proportions.",
+        "wardrobe": "She is wearing a simple white t-shirt with the word 'Praktika' printed on it.",
+        "demeanor": "Friendly, attentive, and encouraging."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young adult human female with a fair complexion. She has blonde hair with visible dark roots and is wearing dark eyeliner. Her features are natural and realistic.",
+        "wardrobe": "She is wearing a casual grey sweatshirt.",
+        "demeanor": "Relaxed, lying down, slightly hesitant but engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Language Practice",
+        "supernova_script": "Character B says: My name Neha.\nCharacter A says: क्या आप कहना चाहती हैं, \"My name is Neha\"? [Do you mean to say, \"My name is Neha\"?]\nCharacter B says: Sorry, small English.\nCharacter A says: You mean, \"Sorry, I speak a little English\"?\nCharacter B says: Yes.\nCharacter A says: कोई बात नहीं। पिछले कुछ महीनों में आपने कितनी बार इंग्लिश में बात की है? [No problem. How many times have you spoken in English in the last few months?]\nCharacter B says: सच कहूँ तो, एक बार भी नहीं। [To be honest, not even once.]\nCharacter A says: Supernova ऐप डाउनलोड करो। हम रोज़ साथ में प्रैक्टिस करेंगे, और आपकी इंग्लिश का डर दूर हो जाएगा। [Download the Supernova app. We will practice together daily, and your fear of English will go away.]",
+        "scene_summary": "- Establishes a relatable struggle with basic English grammar and vocabulary for Indian learners.\n- Demonstrates the AI tutor's gentle, non-judgmental correction style, acting like a supportive friend.\n- Hooks the user by addressing the core problem: lack of real-world speaking practice.\n- Ends with a clear, encouraging call-to-action focused on building confidence rather than unrealistic fluency claims.",
+        "supernova_on_screen_text": "My name Neha.\nक्या आप कहना चाहती हैं, \"My name is Neha\"?\nSorry, small English.\nYou mean, \"Sorry, I speak a little English\"?\nYes.\nकोई बात नहीं। पिछले कुछ महीनों में आपने कितनी बार इंग्लिश में बात की है?\nसच कहूँ तो, एक बार भी नहीं。\nSupernova ऐप डाउनलोड करो।\nहम रोज़ साथ में प्रैक्टिस करेंगे, और आपकी इंग्लिश का डर दूर हो जाएगा।"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the Supernova brand logo clearly to reinforce brand recall.\n- Provides standard app store download buttons for direct user acquisition.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4918032
+}

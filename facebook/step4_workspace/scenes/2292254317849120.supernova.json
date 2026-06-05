@@ -1,0 +1,58 @@
+{
+  "competitor_id": "2292254317849120",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with a fair complexion and shoulder-length brown hair. She has distinct, glowing blue lines tracing her cheeks and neck. Her facial features are symmetrical and slightly stylized.",
+        "wardrobe": "A metallic, shiny copper or gold-colored hoodie.",
+        "demeanor": "Friendly, encouraging, and slightly robotic."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young adult female with a fair complexion and dark hair pulled back. She has natural facial features and a casual appearance.",
+        "wardrobe": "A plain, light blue short-sleeved t-shirt.",
+        "demeanor": "Attentive, smiling, and actively engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Interactive English Lesson",
+        "supernova_script": "Character A says: तुम Red पढ़ो, मैं Black पढ़ती हूँ। चलो, साथ में practice करते हैं। [You read Red, I will read Black. Let's practice together.]\nCharacter A says: मैं इंटरव्यू के लिए तैयार हूँ। [I am ready for the interview.]\nCharacter B says: I am ready for the interview.\nCharacter A says: क्या आप मेरी मदद कर सकते हैं? [Can you help me?]\nCharacter B says: Can you help me?\nCharacter A says: मुझे यह समझ नहीं आया। [I did not understand this.]\nCharacter B says: I did not understand this.\nCharacter A says: मैं आपको बाद में कॉल करती हूँ। [I will call you later.]\nCharacter B says: I will call you later.\nCharacter A says: बहुत बढ़िया! अब आखिरी sentence: मुझे English बोलना सीखना है। [Very good! Now the last sentence: I want to learn how to speak English.]\nCharacter B says: I want to learn how to speak English.",
+        "scene_summary": "- Hooks the viewer with an immediate, interactive call-and-response exercise.\n- Demonstrates the core app functionality (speaking practice).\n- Shifts the vocabulary slightly to reflect Supernova's focus on real-world, practical situations like interviews.",
+        "supernova_on_screen_text": "तुम Red पढ़ो, मैं Black पढ़ती हूँ। चलो, साथ में practice करते हैं। (You read Red, I will read Black. Let's practice together.)\nमैं इंटरव्यू के लिए तैयार हूँ। (I am ready for the interview.)\nI am ready for the interview.\nक्या आप मेरी मदद कर सकते हैं? (Can you help me?)\nCan you help me?\nमुझे यह समझ नहीं आया। (I did not understand this.)\nI did not understand this.\nमैं आपको बाद में कॉल करती हूँ। (I will call you later.)\nI will call you later.\nबहुत बढ़िया! अब आखिरी sentence: मुझे English बोलना सीखना है। (Very good! Now the last sentence: I want to learn how to speak English.)\nI want to learn how to speak English."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Pitch and CTA",
+        "supernova_script": "Character A says: Supernova ऐप पर मेरे जैसे AI ट्यूटर के साथ रोज़ बोलकर English practice करो। [Practice English daily by speaking with an AI tutor like me on the Supernova app.]\nCharacter A says: बिना किसी झिझक के, अपने फोन पर। और वो भी बहुत affordable दाम में। [Without any hesitation, on your phone. And that too at a very affordable price.]\nCharacter A says: रोज़ सिर्फ 15 मिनट practice करो, और इंटरव्यू हो या ऑफिस, अपना कॉन्फिडेंस खुद बढ़ते हुए देखो। [Practice for just 15 minutes daily, and whether it's an interview or office, see your confidence grow yourself.]\nCharacter A says: तो सोचना क्या? आज ही Supernova डाउनलोड करो और बेझिझक English बोलना शुरू करो। [So why think? Download Supernova today and start speaking English without hesitation.]",
+        "scene_summary": "- Transitions from the demo to a direct pitch for the app.\n- Replaces aggressive competitor pricing/hype with Supernova's warm, practical value proposition (affordable, daily practice, workplace confidence).\n- Ends with a clear, encouraging Call to Action.",
+        "supernova_on_screen_text": "Start English Learning - Supernova\nSupernova ऐप पर मेरे जैसे AI ट्यूटर के साथ रोज़ बोलकर English practice करो (Practice English daily by speaking with an AI tutor like me on the Supernova app)\nAffordable Learning\nबिना किसी झिझक के, अपने फोन पर। और वो भी बहुत affordable दाम में (Without any hesitation, on your phone. And that too at a very affordable price)\n15 MINUTES DAILY\nरोज़ सिर्फ 15 मिनट practice करो, और इंटरव्यू हो या ऑफिस, अपना कॉन्फिडेंस खुद बढ़ते हुए देखो (Practice for just 15 minutes daily, and whether it's an interview or office, see your confidence grow yourself)\nSupernova AI English Tutor\nतो सोचना क्या? आज ही Supernova डाउनलोड करो और बेझिझक English बोलना शुरू करो (So why think? Download Supernova today and start speaking English without hesitation)"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "7x Cheaper",
+        "supernova_swap": "Affordable Learning"
+      },
+      {
+        "competitor_brand": "₹1",
+        "supernova_swap": "affordable दाम (affordable price)"
+      },
+      {
+        "competitor_brand": "एक करोड़ प्लस लोग (Over one crore people)",
+        "supernova_swap": "[Removed to avoid aggressive hype]"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892236.0070498
+}

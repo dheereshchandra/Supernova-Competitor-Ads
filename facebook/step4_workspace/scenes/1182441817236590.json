@@ -1,0 +1,122 @@
+{
+  "competitor_id": "1182441817236590",
+  "parsed": {
+    "duration_s": 54.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses an AI-generated avatar for the top panel in the first scene, evident from the slightly unnatural lip-sync and stiff posture. The rest of the video features human actors in a split-screen format, concluding with a standard app screencast.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female, 20s, slim build, medium complexion. Dark hair tied back neatly. Symmetrical facial features.",
+        "wardrobe": "Dark blue blazer over a light blue collared shirt.",
+        "demeanor": "Professional, friendly, and slightly static."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Male, 20s, medium build, medium complexion. Short, dark, curly hair and a light mustache/beard.",
+        "wardrobe": "Light grey button-down shirt.",
+        "demeanor": "Casual, enthusiastic, and confident."
+      },
+      {
+        "id": "C",
+        "role": "Female friend",
+        "appearance": "Female, 20s, slim build, medium complexion. Long, dark, wavy hair.",
+        "wardrobe": "White top with subtle purple patterns, a small necklace, and earrings.",
+        "demeanor": "Curious, slightly skeptical initially, then impressed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "AI Tutor Practice",
+        "setting": "Top: blurred office. Bottom: plain grey wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is centered in the frame, looking directly at the camera with a pleasant smile. She maintains a relatively still posture. The background is a softly blurred, bright office environment with glass partitions, suggesting a professional setting. The lighting is even and bright, highlighting her features clearly.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B is centered in the frame, looking directly at the camera. His mouth moves as he speaks, and his expression is focused. The background is a plain, flat grey wall with no distinguishing features. The lighting is soft and frontal, casting minimal shadows.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout shows an AI tutor on top and a human learner on the bottom. The top panel features a professional office background, while the bottom panel has a plain grey background. Text overlays appear in the center of each panel, displaying the spoken dialogue in Tamil and English.",
+        "audio_transcript": "Character A says: \u0b87\u0ba8\u0bcd\u0ba4 coffee \u0bb0\u0bca\u0bae\u0bcd\u0baa \u0b9a\u0bc2\u0b9f\u0bbe \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1. [This coffee is very hot.]\nCharacter A says: This coffee is very hot.\nCharacter B says: The coffee is very hot.\nCharacter A says: \u0b8e\u0ba9\u0b95\u0bcd\u0b95\u0bc1 \u0b87\u0ba8\u0bcd\u0ba4 coffee taste \u0bb0\u0bca\u0bae\u0bcd\u0baa \u0baa\u0bbf\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1. [I like the taste of this coffee.]\nCharacter A says: I like the taste of this coffee.\nCharacter B says: I like the taste of this coffee.",
+        "on_screen_text": "\u0b87\u0ba8\u0bcd\u0ba4 coffee \u0bb0\u0bca\u0bae\u0bcd\u0baa \u0b9a\u0bc2\u0b9f\u0bbe \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1. (This coffee is very hot.)\nThis coffee is very hot.\n\u0b8e\u0ba9\u0b95\u0bcd\u0b95\u0bc1 \u0b87\u0ba8\u0bcd\u0ba4 coffee taste \u0bb0\u0bca\u0bae\u0bcd\u0baa \u0baa\u0bbf\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1. (I like the taste of this coffee.)\nI like the taste of this coffee."
+      },
+      {
+        "n": 2,
+        "start_s": 11.0,
+        "end_s": 49.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Friend Conversation",
+        "setting": "Top: doorway. Bottom: plain grey wall.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character C stands in a doorway, holding the handle of a light-colored wooden door. She looks slightly downward, as if addressing someone seated below her eye level. Her expression shifts dynamically from curious to surprised and then pleased as she listens. The background consists of a plain beige wall and the edge of the door.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B remains in the same position against the plain grey wall. He looks slightly upward and to his left, engaging in a conversation with someone off-camera. He uses subtle head movements and facial expressions to emphasize his points, appearing confident and animated.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen layout continues, now showing a female friend on top and the male learner on the bottom. The top panel shows a doorway setting, while the bottom remains a plain grey wall. The characters appear to be having a conversation across the split screen. Text overlays appear in the center of the panels, displaying the spoken dialogue.",
+        "audio_transcript": "Character C says: Hey, \u0ba8\u0bc0 English \u0b8e\u0b99\u0bcd\u0b95 \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bb1? [Hey, where are you learning English?]\nCharacter B says: SpeakX app-\u0bb2 AI teacher \u0b95\u0bbf\u0b9f\u0bcd\u0b9f \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0b9f\u0bcd\u0b9f\u0bc1 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc7\u0ba9\u0bcd. [I am learning from an AI teacher on the SpeakX app.]\nCharacter C says: \u0b8e\u0ba9\u0bcd\u0ba9\u0ba4\u0bc1? \u0baa\u0bc1\u0bb0\u0bbf\u0baf\u0bb2\u0bc8\u0baf\u0bc7? [What? I don't understand?]\nCharacter B says: \u0b87\u0ba4\u0bc1 \u0b92\u0bb0\u0bc1 app. \u0b87\u0ba4\u0bc1\u0bb2 \u0ba8\u0bc0\u0b99\u0bcd\u0b95 daily AI English teacher \u0b95\u0bc2\u0b9f practice \u0baa\u0ba3\u0bcd\u0ba3 \u0bae\u0bc1\u0b9f\u0bbf\u0baf\u0bc1\u0bae\u0bcd. [This is an app. In this, you can practice daily with an AI English teacher.]\nCharacter B says: \u0b87\u0baa\u0bcd\u0baa \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95 \u0b95\u0bbe\u0bb2\u0ba4\u0bcd\u0ba4\u0bc1\u0bb2 English \u0ba4\u0bc6\u0bb0\u0bbf\u0baf\u0bb2\u0bc8\u0ba9\u0bcd\u0ba9\u0bbe job \u0b95\u0bbf\u0b9f\u0bc8\u0b95\u0bcd\u0b95\u0bbe\u0ba4\u0bc1. [In today's times, if you don't know English, you won't get a job.]\nCharacter B says: \u0b8f\u0ba9\u0bcd? Respect \u0b95\u0bc2\u0b9f \u0b95\u0bbf\u0b9f\u0bc8\u0b95\u0bcd\u0b95\u0bbe\u0ba4\u0bc1. \u0b95\u0bb0\u0bc6\u0b95\u0bcd\u0b9f\u0bbe? [Why? You won't even get respect. Right?]\nCharacter B says: \u0b85\u0ba4\u0ba9\u0bbe\u0bb2\u0ba4\u0bbe\u0ba9\u0bcd daily just 10 to 15 minutes SpeakX app-\u0bb2 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95 AI teacher \u0b95\u0bc2\u0b9f practice \u0baa\u0ba3\u0bcd\u0bb1\u0bc7\u0ba9\u0bcd. [That's why I practice daily for just 10 to 15 minutes with the AI teacher on the SpeakX app.]\nCharacter B says: Just 10 days \u0ba4\u0bbe\u0ba9\u0bcd \u0b86\u0b9a\u0bcd\u0b9a\u0bc1. \u0b87\u0baa\u0bcd\u0baa \u0b8e\u0ba9\u0bcd English \u0bb0\u0bca\u0bae\u0bcd\u0baa\u0bb5\u0bc7 improve \u0b86\u0baf\u0bbf\u0bb0\u0bc1\u0b9a\u0bcd\u0b9a\u0bc1. [It's only been 10 days. Now my English has improved a lot.]\nCharacter B says: \u0b87\u0baa\u0bcd\u0baa\u0bcb \u0ba8\u0bbe\u0ba9\u0bcd \u0baa\u0baf\u0bae\u0bbf\u0bb2\u0bcd\u0bb2\u0bbe\u0bae confident-\u0b86 English \u0baa\u0bc7\u0b9a\u0bc1\u0bb1\u0bc7\u0ba9\u0bcd. [Now I speak English confidently without fear.]\nCharacter B says: \u0b85\u0ba4\u0bc1\u0bb5\u0bc1\u0bae\u0bcd \u0bb0\u0bca\u0bae\u0bcd\u0baa affordable. [And it's very affordable too.]\nCharacter C says: \u0ba8\u0bbe\u0ba9\u0bc1\u0bae\u0bcd English \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0ba3\u0bc1\u0bae\u0bcd\u0ba9\u0bc1 \u0b86\u0b9a\u0bc8. \u0b86\u0ba9\u0bbe \u0b87\u0ba8\u0bcd\u0ba4 \u0bae\u0bbe\u0ba4\u0bbf\u0bb0\u0bbf courses-\u0bb2\u0bbe\u0bae\u0bcd costly-\u0b86 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bc7? [I also want to learn English. But aren't courses like this costly?]\nCharacter B says: \u0b87\u0bb2\u0bcd\u0bb2, 7 days free trial \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1. [No, there is a 7 days free trial.]\nCharacter C says: Oh super! \u0ba8\u0bbe\u0ba9\u0bcd \u0b87\u0baa\u0bcd\u0baa\u0bb5\u0bc7 SpeakX app-\u0b90 download \u0baa\u0ba3\u0bcd\u0bb1\u0bc7\u0ba9\u0bcd. [Oh super! I will download the SpeakX app right now.]",
+        "on_screen_text": "Hey, \u0ba8\u0bc0 English \u0b8e\u0b99\u0bcd\u0b95 \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bb1? (Hey, where are you learning English?)\nSpeakX app-\u0bb2 AI teacher \u0b95\u0bbf\u0b9f\u0bcd\u0b9f \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0b9f\u0bcd\u0b9f\u0bc1 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc7\u0ba9\u0bcd. (I am learning from an AI teacher on the SpeakX app.)\n\u0b8e\u0ba9\u0bcd\u0ba9\u0ba4\u0bc1? \u0baa\u0bc1\u0bb0\u0bbf\u0baf\u0bb2\u0bc8\u0baf\u0bc7? (What? I don't understand?)\n\u0b87\u0ba4\u0bc1 \u0b92\u0bb0\u0bc1 app. \u0b87\u0ba4\u0bc1\u0bb2 \u0ba8\u0bc0\u0b99\u0bcd\u0b95 daily AI English teacher \u0b95\u0bc2\u0b9f practice \u0baa\u0ba3\u0bcd\u0ba3 \u0bae\u0bc1\u0b9f\u0bbf\u0baf\u0bc1\u0bae\u0bcd. (This is an app. In this, you can practice daily with an AI English teacher.)\n\u0b87\u0baa\u0bcd\u0baa \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95 \u0b95\u0bbe\u0bb2\u0ba4\u0bcd\u0ba4\u0bc1\u0bb2 English \u0ba4\u0bc6\u0bb0\u0bbf\u0baf\u0bb2\u0bc8\u0ba9\u0bcd\u0ba9\u0bbe job \u0b95\u0bbf\u0b9f\u0bc8\u0b95\u0bcd\u0b95\u0bbe\u0ba4\u0bc1. (In today's times, if you don't know English, you won't get a job.)\n\u0b8f\u0ba9\u0bcd? Respect \u0b95\u0bc2\u0b9f \u0b95\u0bbf\u0b9f\u0bc8\u0b95\u0bcd\u0b95\u0bbe\u0ba4\u0bc1. \u0b95\u0bb0\u0bc6\u0b95\u0bcd\u0b9f\u0bbe? (Why? You won't even get respect. Right?)\n\u0b85\u0ba4\u0ba9\u0bbe\u0bb2\u0ba4\u0bbe\u0ba9\u0bcd daily just 10 to 15 minutes SpeakX app-\u0bb2 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95 AI teacher \u0b95\u0bc2\u0b9f practice \u0baa\u0ba3\u0bcd\u0bb1\u0bc7\u0ba9\u0bcd. (That's why I practice daily for just 10 to 15 minutes with the AI teacher on the SpeakX app.)\nJust 10 days \u0ba4\u0bbe\u0ba9\u0bcd \u0b86\u0b9a\u0bcd\u0b9a\u0bc1. \u0b87\u0baa\u0bcd\u0baa \u0b8e\u0ba9\u0bcd English \u0bb0\u0bca\u0bae\u0bcd\u0baa\u0bb5\u0bc7 improve \u0b86\u0baf\u0bbf\u0bb0\u0bc1\u0b9a\u0bcd\u0b9a\u0bc1. (It's only been 10 days. Now my English has improved a lot.)\n\u0b87\u0baa\u0bcd\u0baa\u0bcb \u0ba8\u0bbe\u0ba9\u0bcd \u0baa\u0baf\u0bae\u0bbf\u0bb2\u0bcd\u0bb2\u0bbe\u0bae confident-\u0b86 English \u0baa\u0bc7\u0b9a\u0bc1\u0bb1\u0bc7\u0ba9\u0bcd. (Now I speak English confidently without fear.)\n\u0b85\u0ba4\u0bc1\u0bb5\u0bc1\u0bae\u0bcd \u0bb0\u0bca\u0bae\u0bcd\u0baa affordable. (And it's very affordable too.)\n\u0ba8\u0bbe\u0ba9\u0bc1\u0bae\u0bcd English \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0ba3\u0bc1\u0bae\u0bcd\u0ba9\u0bc1 \u0b86\u0b9a\u0bc8. \u0b86\u0ba9\u0bbe \u0b87\u0ba8\u0bcd\u0ba4 \u0bae\u0bbe\u0ba4\u0bbf\u0bb0\u0bbf courses-\u0bb2\u0bbe\u0bae\u0bcd costly-\u0b86 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bc7? (I also want to learn English. But aren't courses like this costly?)\n\u0b87\u0bb2\u0bcd\u0bb2, 7 days free trial \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1. (No, there is a 7 days free trial.)\nOh super! \u0ba8\u0bbe\u0ba9\u0bcd \u0b87\u0baa\u0bcd\u0baa\u0bb5\u0bc7 SpeakX app-\u0b90 download \u0baa\u0ba3\u0bcd\u0bb1\u0bc7\u0ba9\u0bcd. (Oh super! I will download the SpeakX app right now.)"
+      },
+      {
+        "n": 3,
+        "start_s": 49.0,
+        "end_s": 54.0,
+        "screenshot_at_s": 51.5,
+        "scene_label": "App Download Call to Action",
+        "setting": "Solid yellow background.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A modern smartphone is displayed vertically in the center of the frame. The phone has a thin black bezel and a visible front-facing camera cutout at the top. It is set against a solid, seamless light orange or yellow background. The screen of the phone is visible, displaying an interface.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A smartphone is shown against a solid yellow background. The phone screen displays the SpeakX app interface, featuring the AI tutor avatar and a 'Download Now' button. The overall composition serves as a final call to action.",
+        "audio_transcript": "Unknown speaker says: \u0b89\u0b9f\u0ba9\u0bc7 SpeakX app download \u0baa\u0ba3\u0bcd\u0ba3\u0bbf AI teacher-\u0b93\u0b9f English \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bcb\u0b99\u0bcd\u0b95. [Download the SpeakX app immediately and learn English with an AI teacher.]",
+        "on_screen_text": "SpeakX POWERED BY AI\nLESSON 8: Daily English\nSpeak with AI\nStart speaking without fear today.\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888788.1239846
+}

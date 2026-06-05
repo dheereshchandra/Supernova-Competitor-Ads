@@ -1,0 +1,60 @@
+{
+  "competitor_id": "1724170535252280",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young female, fair skin, short curly reddish-brown hair. Has a white earbud in her right ear and beaded bracelets on her left wrist.",
+        "wardrobe": "Olive green hoodie with a black tree branch pattern.",
+        "demeanor": "Casual, expressive, transitioning from confused to surprised and impressed."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor voice",
+        "appearance": "Digital avatar on a phone screen showing a female face with purple hair.",
+        "wardrobe": "N/A",
+        "demeanor": "Helpful, friendly, synthesized tone."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Vocabulary Correction",
+        "supernova_script": "Character B says: What are you doing? [What are you doing?]\nCharacter A says: Main candle burn karne ki koshish kar rahi hoon. [I am trying to burn the candle.]\nCharacter B says: You mean, 'I'm lighting a candle'? [You mean, 'I'm lighting a candle'?]\nCharacter A says: Oh, yeah, I'm lighting the candle. Mujhe iski smell bahut pasand hai. [Oh, yeah, I'm lighting the candle. I really love its smell.]\nCharacter B says: Don't say \"smell\". English mein \"smell\" usually bad odor ke liye use hota hai. You should say \"scent\". [Don't say \"smell\". In English, \"smell\" is usually used for bad odor. You should say \"scent\".]\nCharacter A says: Ah, okay. I love the scent of the candle. [Ah, okay. I love the scent of the candle.]\nCharacter B says: Good job! [Good job!]",
+        "scene_summary": "- Hooks the viewer with a relatable, real-world English mistake.\n- Establishes the AI tutor as helpful, gentle, and practical.\n- Blends Hindi and English naturally to match the target audience's thought process.",
+        "supernova_on_screen_text": "What are you doing?\nMain candle burn karne ki koshish kar rahi hoon\n❌\nYou mean I'm lighting the candle?\nOh, yeah, I'm lighting the candle\n✅\nMujhe iski smell bahut pasand hai\n❌\nDon't say \"smell\"\nEnglish mein smell usually bad odor ke liye use hota hai\nyou should say \"scent\"\nAh okay, I love the scent of the candle\n✅\nGood job! 👍"
+      },
+      {
+        "n": 2,
+        "scene_label": "The AI Twist",
+        "supernova_script": "Character A says: Mujhe apni English sach mein improve karni hai. [I really need to improve my English.]\nCharacter B says: Toh roz kisi fluent speaker ke saath practice karo. [Then practice with a fluent speaker every day.]\nCharacter A says: Par private tutors bahut expensive hote hain! [But private tutors are very expensive!]\nCharacter B says: Toh AI tutors se baat karo na. [Then talk to AI tutors.]\nCharacter A says: Mujhe kisi robot se baat nahi karni. [I don't want to talk to a robot.]\nCharacter B says: Surprise! Main ek AI teacher hi hoon! [Surprise! I am an AI teacher!]",
+        "scene_summary": "- Addresses the core problem: wanting to speak fluently but finding tutors too expensive.\n- Overcomes the common objection to AI (sounding like a robot) with a clever, engaging twist.\n- Builds trust through a conversational and friendly tone.",
+        "supernova_on_screen_text": "Mujhe apni English sach mein improve karni hai\nToh roz kisi fluent speaker ke saath practice karo\nPar private tutors bahut expensive hote hain!\nToh AI tutors se baat karo na\nMujhe kisi robot se baat nahi karni 🤖\nSurprise! Main ek AI teacher hi hoon!"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action",
+        "supernova_script": "Character A says: Wow, tum bilkul insaan jaisi lagti ho! [Wow, you sound exactly like a human!]\nCharacter B says: Hai na? Bas Supernova app download karo. Hum roz real-world situations practice karenge. [Right? Just download the Supernova app. We will practice real-world situations every day.]\nCharacter A says: Done! Main aaj hi Supernova download karke practice shuru karti hoon. [Done! I'll download Supernova today and start practicing.]",
+        "scene_summary": "- Validates the high quality of the AI voice.\n- Introduces Supernova's core value proposition: practicing real-world situations daily.\n- Ends with a strong, enthusiastic commitment from the learner to download the app.",
+        "supernova_on_screen_text": "Wow, tum bilkul insaan jaisi lagti ho!\nHai na?\nSupernova - AI English Tutor\nlearn and practice speaking\nDOWNLOAD\nBas Supernova app download karo\nHum roz real-world situations practice karenge\nDone! Main aaj hi Supernova download karke practice shuru karti hoon."
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear, static call-to-action.\n- Reinforces the brand name and core mission (speaking with confidence).",
+        "supernova_on_screen_text": "Supernova App\nSpeak English with confidence\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779974839.7798328
+}

@@ -1,0 +1,68 @@
+{
+  "competitor_id": "977301534886774",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "English Learner",
+        "appearance": "Male, mid-20s to early 30s, medium build, olive complexion. Dark hair and a mustache.",
+        "wardrobe": "Black t-shirt with a red graphic.",
+        "demeanor": "Focused, initially frustrated, then happy and confident."
+      },
+      {
+        "id": "B",
+        "role": "Native Speaker",
+        "appearance": "Female, mid-20s to early 30s, medium build, fair complexion. Brown hair tied back.",
+        "wardrobe": "Maroon t-shirt.",
+        "demeanor": "Supportive, encouraging, and smiling."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Practicing pronunciation",
+        "supernova_script": "Character A says: Weather. [Weather.]\nApp voice says: Let's practice that again. मेरे साथ बोलिए। [Let's practice that again. Speak with me.]\nCharacter B says: Weather. [Weather.]\nApp voice says: Now try this sentence. [Now try this sentence.]\nCharacter A says: He put on his father's old clothes. [He put on his father's old clothes.]\nCharacter A says: यार, ये 'TH' sound बहुत मुश्किल है। [Man, this 'TH' sound is very difficult.]\nCharacter B says: He put on his father's old clothes. [He put on his father's old clothes.]\nCharacter A says: Healthy. [Healthy.]\nApp voice says: Let's compare. क्या आपको difference समझ आया? [Let's compare. Did you understand the difference?]\nCharacter B says: Healthy. [Healthy.]\nApp voice says: Awesome! बिल्कुल सही! [Awesome! Absolutely correct!]",
+        "scene_summary": "- Establishes the core problem: the learner struggling with English pronunciation.\n- Introduces the AI app as a patient, interactive tutor that provides immediate feedback.\n- Shows a supportive learning environment with a friend, highlighting progress.",
+        "supernova_on_screen_text": "Supernova App\nAI Tutor\nLet's practice that again.\n76%\nweather\nListening...\nNow try this sentence.\nHe put on his father's old clothes.\n84%\nCompare your pronunciation.\nhealthy\n79%\nAwesome! बिल्कुल सही!"
+      },
+      {
+        "n": 2,
+        "scene_label": "Testimonial",
+        "supernova_script": "Character A says: मुझे English words pronounce करने में बहुत hesitation होती थी, पर Supernova app के साथ रोज़ practice करने से मेरा confidence काफी बढ़ गया है। [I used to hesitate a lot in pronouncing English words, but practicing daily with the Supernova app has really boosted my confidence.]",
+        "scene_summary": "- Direct-to-camera testimonial breaking the fourth wall.\n- Shifts the emotional beat from struggle to confidence.\n- Explicitly names the app and its primary benefit (building confidence through daily practice).",
+        "supernova_on_screen_text": "thumb 69%\nthunder 81%\nsomething 91%\nthyroid 79%\nthorn 84%\nthesis 91%\nSupernova AI Feedback\nAwesome!"
+      },
+      {
+        "n": 3,
+        "scene_label": "Success",
+        "supernova_script": "Character A says: Than. [Than.]\nApp voice says: Great job! ऐसे ही practice करते रहें! [Great job! Keep practicing like this!]\nCharacter B says: Nice! एकदम सही! [Nice! Absolutely correct!]",
+        "scene_summary": "- Delivers the payoff: the learner successfully pronounces a difficult word.\n- Reinforces the positive, encouraging tone of both the app and the friend.\n- Visually rewards the user with high scores.",
+        "supernova_on_screen_text": "Supernova App\nAI Tutor\nNow, let's try the next word.\nthan\nListening...\n94%\nGreat job! ऐसे ही practice करते रहें!"
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to action",
+        "supernova_script": "Character A says: तो अगर आप भी बिना डरे English बोलना सीखना चाहते हैं, तो आज ही Supernova app डाउनलोड करें। [So if you also want to learn to speak English without fear, download the Supernova app today.]",
+        "scene_summary": "- Strong, direct call to action.\n- Focuses on the emotional goal: speaking without fear.\n- Prompts immediate app download without making specific pricing promises.",
+        "supernova_on_screen_text": "Supernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Coach Eliza",
+        "supernova_swap": "AI Tutor"
+      },
+      {
+        "competitor_brand": "SpeechScan",
+        "supernova_swap": "AI Feedback"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779989130.569474
+}

@@ -1,0 +1,82 @@
+{
+  "competitor_id": "1683400652701031",
+  "parsed": {
+    "duration_s": 46.0,
+    "production_type": "mixed",
+    "production_notes": "The video features a split-screen layout. The top half shows a human-recorded female, while the bottom half shows a 3D animated AI avatar. The avatar's lip-syncing and movements are typical of AI-generated or animated characters.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion, long dark hair. She has a soft, friendly face with subtle makeup.",
+        "wardrobe": "White top.",
+        "demeanor": "Friendly, curious, and slightly hesitant but willing to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character, fair complexion, reddish-orange hair styled up. She has large green eyes and stylized, expressive facial features.",
+        "wardrobe": "White top, gold hoop earrings.",
+        "demeanor": "Encouraging, confident, and slightly sassy."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 44.5,
+        "screenshot_at_s": 22.0,
+        "scene_label": "Language Practice Conversation",
+        "setting": "Top: A bright, modern room with a window and white walls. Bottom: A cozy, dimly lit room with string lights and a bed in the background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head, split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A young woman with long dark hair is framed in a close-up shot. She is looking directly at the camera, smiling and speaking. The background is a brightly lit room with a window, white walls, and a white trash can visible. Her expressions change from smiling to thoughtful as she interacts.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A 3D animated female character with reddish-orange hair is framed in a close-up shot. She is looking directly at the camera, speaking with animated facial expressions. The background is a cozy room with warm lighting, featuring string lights, a bed, and some plush toys on a shelf.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half shows a real young woman in a bright room, while the bottom half shows a 3D animated female character in a cozy, warmly lit room. Both characters are looking at the camera and appear to be having a conversation. Text overlays and Japanese flags appear on the screen throughout the scene.",
+        "audio_transcript": "Character B says: \u65e5\u672c\u8a9e\u3067\u304d\u307e\u3059\u304b\uff1f (Nihongo dekimasu ka?) [Can you speak Japanese?]\nCharacter A says: \u306f\u3044 (Hai) [Yes]\nCharacter B says: \ud55c\ubc88 \ud574\ubd10! [Try it once!]\nCharacter A says: \u3053\u3093\u306b\u3061\u306f (Konnichiwa) [Hello]\nCharacter B says: \uc88b\uc544, \ub610? [Good, what else?]\nCharacter A says: \u3042\u308a\u304c\u3068\u3046 (Arigatou) [Thank you]\nCharacter B says: \uadf8\ub7fc \"\ubbf8\uc548\ud574\"\ub294 \uc77c\uc5b4\ub85c? [Then how do you say \"sorry\" in Japanese?]\nCharacter A says: \uc73c\uc74c... \u3059\u307f\u307e\u305b\u3093! (Sumimasen!) [Umm... Sorry!]\nCharacter B says: \ub9de\uc544! \uadfc\ub370 \uc774\ub7f0 \ub9d0\ub3c4 \uc788\uc5b4. \u3054\u3081\u3093\u306a\u3055\u3044 (Gomen nasai) [Right! But there's also this word. I'm sorry]\nCharacter A says: \u3054\u3081\u3093\u306a\u3055\u3044 (Gomen nasai) [I'm sorry]\nCharacter B says: \uc624\ucf00\uc774, \ub108\uc758 \uc77c\ubcf8\uc5b4 \ub808\ubca8\uc740 A1\uc774\uc57c. [Okay, your Japanese level is A1.]\nCharacter A says: \ub098 \uc77c\ubcf8 \uc560\ub2c8 \uc9c4\uc9dc \uc88b\uc544\ud574\uc11c \ub9ce\uc774 \ubd24\ub294\ub370, \uc798 \uc548 \ub298\uc5b4... [I really like Japanese anime so I watched a lot, but I don't improve much...]\nCharacter B says: \uac71\uc815\ub9c8, \ub098\ub791 \ud68c\ud654 \uc5f0\uc2b5\ud558\uc790. [Don't worry, let's practice conversation with me.]\nCharacter A says: \uc5e5?? \ub108\ub791? [Huh?? With you?]\nCharacter B says: \ub098\ub294 Praktika\uc758 AI \uc77c\ubcf8\uc5b4 \ud29c\ud130\uc57c! \ud55c \ub2ec\uc774\uba74 \ub124\uac00 \uc77c\ubcf8\uc5b4\ub97c \uc720\ucc3d\ud558\uac8c \ub9d0\ud558\uac8c \ud574\uc904\uac8c! [I am Praktika's AI Japanese tutor! In one month, I'll make you speak Japanese fluently!]\nCharacter A says: \uadfc\ub370 \ub098\ub294 AI\ub294 \uc880... [But I'm a bit hesitant about AI...]\nCharacter B says: \uc694\uc998 AI \uc548 \uc4f0\uba74 \ubc14\ubcf4\uc57c! [These days, you're a fool if you don't use AI!]\nCharacter A says: \uadf8\ub7f0\uac00...? \uc54c\uc558\uc5b4. \ud55c\ubc88 \ud574\ubcf4\uc790! [Is that so...? Okay. Let's try it!]\nCharacter B says: \uc88b\uc544 \uadfc\ub370 \uba3c\uc800, \uc120\uc0dd\ub2d8\ud55c\ud14c \uc608\uc758\ub97c \ucc28\ub824\uc57c\uc9c0? \ub530\ub77c\ud574\ubd10 \u304a\u9858\u3044\u3057\u307e\u3059 (Onegaishimasu) [Good, but first, you should show respect to your teacher, right? Repeat after me. Please take care of me.]\nCharacter A says: \u304a\u9858\u3044\u3057\u307e\u3059 (Onegaishimasu) [Please take care of me.]\nCharacter B says: \uc88b\uc544!! \ub2f9\uc7a5 Praktika \ub2e4\uc6b4\ubc1b\uc544! [Good!! Download Praktika right now!]\nCharacter A says: \uc54c\uaca0\uc5b4~ Praktika\uc5d0\uc11c \ub9cc\ub098! [Okay~ See you on Praktika!]",
+        "on_screen_text": "\u65e5\u672c\u8a9e\u3067\u304d\u307e\u3059\u304b\uff1f\nNihongo dekimasu ka?\n(\uc77c\ubcf8\uc5b4 \ud560 \uc218 \uc788\uc5b4?)\n\ud55c \ubc88 \ud574\ubd10!\n\u3053\u3093\u306b\u3061\u306f\u3002\nKonnichiwa.\n(\uc548\ub155\ud558\uc138\uc694.)\n\uc88b\uc544, \ub610?\n\u3042\u308a\u304c\u3068\u3046\u3002\nArigatou.\n(\uace0\ub9c8\uc6cc.)\n\uadf8\ub7fc \"\ubbf8\uc548\ud574\"\ub294 \uc77c\uc5b4\ub85c?\n\uc73c\uc74c...\n\u3059\u307f\u307e\u305b\u3093!\nSumimasen!\n(\ubbf8\uc548\ud574.)\n\ub9de\uc544! \uadfc\ub370 \uc774\ub7f0 \ub9d0\ub3c4 \uc788\uc5b4.\n\u3054\u3081\u3093\u306a\u3055\u3044\nGomen nasai.\n(\uc8c4\uc1a1\ud569\ub2c8\ub2e4.)\n\u3054\u3081\u3093\u306a\u3055\u3044\u3002\nGomen nasai.\n(\uc8c4\uc1a1\ud569\ub2c8\ub2e4.)\n\ub108\uc758 \uc77c\ubcf8\uc5b4 \ub808\ubca8\uc740 A1\uc774\uc57c.\n\ub098 \uc77c\ubcf8 \uc560\ub2c8 \uc9c4\uc9dc \uc88b\uc544\ud574\uc11c\n\ub9ce\uc774 \ubd24\ub294\ub370,\n\uc798 \uc548 \ub298\uc5b4...\n\uac71\uc815\ub9c8, \ub098\ub791 \ud68c\ud654 \uc5f0\uc2b5\ud558\uc790.\n\uc5e5?? \ub108\ub791?\n\ub098\ub294 Praktika\uc758 AI \uc77c\ubcf8\uc5b4 \ud29c\ud130\uc57c!\n\ud55c \ub2ec\uc774\uba74 \ub124\uac00 \uc77c\ubcf8\uc5b4\ub97c\n\uc720\ucc3d\ud558\uac8c \ub9d0\ud558\uac8c \ud574\uc904\uac8c!\n\uadfc\ub370 \ub098\ub294 AI\ub294 \uc880...\n\uc694\uc998 AI \uc548 \uc4f0\uba74 \ubc14\ubcf4\uc57c!\n\uadf8\ub7f0\uac00.....?\n\uc54c\uc558\uc5b4. \ud55c\ubc88 \ud574\ubcf4\uc790!\n\uc88b\uc544 \uadfc\ub370 \uba3c\uc800,\n\uc120\uc0dd\ub2d8\ud55c\ud14c \uc608\uc758\ub97c \ucc28\ub824\uc57c\uc9c0?\n\ub530\ub77c\ud574\ubd10\n\u304a\u9858\u3044\u3057\u307e\u3059\u3002\nOnegaishimasu.\n(\uc798 \ubd80\ud0c1\ub4dc\ub9bd\ub2c8\ub2e4.)\n\u304a\u9858\u3044\u3057\u307e\u3059\u3002\nOnegaishimasu.\n(\uc798 \ubd80\ud0c1\ub4dc\ub9bd\ub2c8\ub2e4.)\n\uc88b\uc544!!\n\ub2f9\uc7a5 Praktika \ub2e4\uc6b4\ubc1b\uc544!\n\uc54c\uaca0\uc5b4~\nPraktika\uc5d0\uc11c \ub9cc\ub098!"
+      },
+      {
+        "n": 2,
+        "start_s": 44.5,
+        "end_s": 46.0,
+        "screenshot_at_s": 45.2,
+        "scene_label": "End Card",
+        "setting": "A solid purple background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid purple background with no characters or props.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid purple screen displays the Praktika logo in the center. Below the logo are two app store badges: 'Download on the App Store' and 'GET IT ON Google Play'.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780628805.2868342
+}

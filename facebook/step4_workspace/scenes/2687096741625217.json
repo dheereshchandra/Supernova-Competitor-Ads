@@ -1,0 +1,67 @@
+{
+  "competitor_id": "2687096741625217",
+  "parsed": {
+    "duration_s": 46.5,
+    "production_type": "AI-generated",
+    "production_notes": "The presenter's facial movements and lip-sync are slightly unnatural, indicating an AI avatar. The voice has a synthetic cadence, and the lighting on the face remains perfectly static despite slight head movements.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female, slim build, fair complexion. She has blonde hair parted in the middle with darker roots, and a distinct mole on her right cheek.",
+        "wardrobe": "Black sleeveless top with a subtle, shiny grid pattern. White wireless earbuds in both ears.",
+        "demeanor": "Earnest, persuasive, and confident."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 42.5,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Testimonial",
+        "setting": "Indoors, plain brown background, warm lighting",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman is framed in a close-up shot against a plain, warm brown background. She has blonde hair parted in the middle with darker roots, and a small mole on her right cheek. She is wearing a black sleeveless top with a subtle, shiny grid pattern and white wireless earbuds. The lighting is soft and warm, illuminating her face evenly. She is looking directly at the camera, speaking with a serious and earnest expression. Her head moves slightly as she talks, and she occasionally gestures with her right hand, which briefly enters the bottom right of the frame.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A young woman gives a testimonial directly to the camera. She is framed in a close-up against a plain brown background. White text captions appear at the bottom of the screen, and a blue app logo is visible in the top right corner.",
+        "audio_transcript": "Character A says: I used to be really nervous in meetings.\nCharacter A says: I was too afraid to speak because my English wasn't good enough and I was afraid of saying something wrong, so I stayed quiet.\nCharacter A says: Then a friend told me about Fluently and I thought, why not try it?\nCharacter A says: I started with just 10 minutes a day.\nCharacter A says: That was easy.\nCharacter A says: And the app helps you practice the kind of English you really need at work, for example, how to speak in meetings or how to share your ideas.\nCharacter A says: After a few weeks, everything changed.\nCharacter A says: Now I can talk in meetings without any fear.\nCharacter A says: I don't have those moments of awkward silence and I don't worry about what other people may think of me.\nCharacter A says: Fluently didn't just help my English, it gave me confidence.\nCharacter A says: So if you ever felt like me, download Fluently.",
+        "on_screen_text": "I used to be really nervous in meetings\nI was too afraid to speak because my\nEnglish wasn't good enough\nand I was afraid of say something\nwrong, so I stayed quiet\nThen a friend told me about Fluently\nand I thought, why not try it?\nI started with just 10 minutes a day\nThat was easy\nAnd the app helps you practice\nthe kind of English you really need\nat work, for example\nhow to speak in meetings\nor how to share your ideas\nAfter a few weeks, everything changed\nNow I can talk in meetings\nwithout any fear\nI don't have those moments\nof awkward silence\nand I don't worry about what other\npeople may think of me\nFluently didn't just help my English,\nit gave me confidence\nIf you ever felt like me, try Fluently"
+      },
+      {
+        "n": 2,
+        "start_s": 42.5,
+        "end_s": 46.5,
+        "screenshot_at_s": 44.0,
+        "scene_label": "End Card",
+        "setting": "Digital background",
+        "characters_in_scene": [],
+        "camera": "none",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark purple to black gradient background. There are no characters, props, or physical objects present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A digital end card with a dark purple gradient background. The Fluently app logo, a blue square with white double arrows, is centered. Below it is the text 'Fluently App' and 'AI-power English coach'. A purple 'DOWNLOAD NOW' button is at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.1021683
+}

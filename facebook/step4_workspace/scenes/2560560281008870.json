@@ -1,0 +1,81 @@
+{
+  "competitor_id": "2560560281008870",
+  "parsed": {
+    "duration_s": 14.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is a standard screen recording combined with a webcam picture-in-picture. The presenter's movements, speech patterns, and the screen interactions appear natural and human-driven.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "A young adult male with a medium build and fair complexion. He has short, curly brown hair and a short beard and mustache.",
+        "wardrobe": "A plain black crew-neck t-shirt and white wired earphones.",
+        "demeanor": "Casual, informative, and enthusiastic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.0,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Initial dictation",
+        "setting": "Digital workspace, dark mode color palette",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A solid dark gray background fills the entire frame. The surface is completely uniform in color and texture. There are no visible objects, characters, or light sources within this space. The dark tone creates a high-contrast backdrop for any elements placed over it. The composition is entirely flat and static.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "Character A is framed from the chest up in a medium close-up shot. He is positioned centrally within the frame, looking directly forward. He wears a simple black crew-neck t-shirt and has white wired earphones hanging down from his ears. The background behind him is a plain, softly lit, light-colored wall. The lighting on his face is even and natural, highlighting his features clearly. He exhibits subtle head movements as he speaks.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A screen recording of a dark-themed web interface is shown. In the bottom left corner, there is a square picture-in-picture video of Character A speaking. Large white text overlays are visible at the top and bottom of the screen. Character A dictates a sentence, which appears as text on the screen. He then uses his cursor to manually edit a specific word within the text.",
+        "audio_transcript": "Character A says: His name is Gary Shukrun. [His name is Gary Shukrun.]\nCharacter A says: And Shukrun is not exactly written like this, that's more like Choukron. [And Shukrun is not exactly written like this, that's more like Choukron.]",
+        "on_screen_text": "Why Siri always gets your name wrong:\nDownload Wispr Flow for free\nWhere should we begin?\nHis name is Gary Shukrun."
+      },
+      {
+        "n": 2,
+        "start_s": 6.0,
+        "end_s": 14.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Corrected dictation",
+        "setting": "Digital workspace, dark mode color palette",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A solid dark gray background fills the entire frame. The surface is completely uniform in color and texture, identical to the previous shot. There are no visible objects, characters, or light sources within this space. The dark tone continues to provide a high-contrast backdrop. The composition remains entirely flat and static.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "Character A is framed from the chest up in a medium close-up shot. He remains positioned centrally within the frame, looking directly forward. He is wearing the same black crew-neck t-shirt and white wired earphones. The background behind him is a plain, softly lit, light-colored wall. The lighting on his face is even and natural. He smiles broadly and gestures slightly with his hands while speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The screen recording is now zoomed in on the dark-themed web interface. Character A continues speaking in the picture-in-picture video located in the bottom left corner. Large white text overlays remain visible at the top and bottom of the screen. He dictates the sentence again, and the text appears on the screen. A small notification pop-up briefly appears near the bottom right of the interface.",
+        "audio_transcript": "Character A says: So then... [So then...]\nCharacter A says: His name is Gary Choukron. [His name is Gary Choukron.]\nCharacter A says: And that's it. It's perfect. [And that's it. It's perfect.]",
+        "on_screen_text": "Why Siri always gets your name wrong:\nDownload Wispr Flow for free\nWhere should we begin?\nHis name is Gary Choukron.\nAdded 'Choukron' to your dictionary\nUndo"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.2312424
+}

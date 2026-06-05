@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1720222669432418",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, 3D animated style, fair complexion, wavy red hair, large green eyes. She has a stylized, cartoonish look typical of 3D animation.",
+        "wardrobe": "Simple white top and small crescent moon earrings.",
+        "demeanor": "Friendly, encouraging, and attentive."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young adult male, light complexion, dark hair, short beard and mustache. He has a natural, everyday appearance.",
+        "wardrobe": "Blue t-shirt with red and white striped sleeves, and a white wireless earbud in his right ear.",
+        "demeanor": "Enthusiastic, engaged, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Practice Session",
+        "supernova_script": "Character A says: चलो, आज की English practice शुरू करें। [Let's start today's English practice.]\nCharacter B says: Yes, ready! [Yes, ready!]\nCharacter A says: मेरे बाद repeat करो। Hello. [Repeat after me. Hello.]\nCharacter B says: Hello. [Hello.]\nCharacter A says: Thank you. [Thank you.]\nCharacter B says: Thank you. [Thank you.]\nCharacter A says: ध्यान से सुनो और बोलो। Thank you. [Listen carefully and speak. Thank you.]\nCharacter B says: Thank you. [Thank you.]\nCharacter A says: Great! अब इस सवाल का जवाब दो। What's your name? [Great! Now answer this question. What's your name?]\nCharacter B says: My name Rahul. [My name Rahul.]\nCharacter A says: Close! इसे ऐसे बोलो: \"My name is.\" [Close! Say it like this: \"My name is.\"]\nCharacter B says: My name is Rahul. [My name is Rahul.]\nCharacter A says: बहुत बढ़िया! [Very good!]\nCharacter B says: Thank you. [Thank you.]\nCharacter A says: देखा? रोज़ practice करने से hesitation दूर होती है। Supernova डाउनलोड करो और AI tutor के साथ English बोलना सीखो! [See? Daily practice removes hesitation. Download Supernova and learn to speak English with an AI tutor!]",
+        "scene_summary": "- Establishes a friendly, interactive AI tutoring environment.\n- Demonstrates real-time pronunciation and grammar correction in a warm, non-judgmental way.\n- Ends with a clear call-to-action highlighting the benefit of daily practice to overcome hesitation.",
+        "supernova_on_screen_text": "चलो, आज की English practice शुरू करें।\nYes, ready!\nमेरे बाद repeat करो।\nHello.\nThank you.\nध्यान से सुनो और बोलो।\nअब इस सवाल का जवाब दो।\nWhat's your name?\nMy name Rahul.\nClose! इसे ऐसे बोलो:\n\"My name is.\"\nMy name is Rahul.\nबहुत बढ़िया!\nThank you.\nदेखा? रोज़ practice करने से hesitation दूर होती है।\nSupernova डाउनलोड करो और AI tutor के साथ English बोलना सीखो!"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides clear app store logos for download.\n- Reinforces Supernova's brand identity.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4758203
+}

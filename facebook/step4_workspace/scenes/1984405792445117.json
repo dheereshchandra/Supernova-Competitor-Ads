@@ -1,0 +1,55 @@
+{
+  "competitor_id": "1984405792445117",
+  "parsed": {
+    "duration_s": 10.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video appears to be a genuine, human-recorded clip, possibly a stock video or a personal recording. The lighting is natural, the movements are organic, and there are no obvious AI artifacts in the environment or the people.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "girlfriend",
+        "appearance": "Young adult female, slim build, dark hair pulled back. She is seen from the side/back.",
+        "wardrobe": "Black long-sleeved top and dark pants.",
+        "demeanor": "Relaxed and comfortable, leaning against her partner."
+      },
+      {
+        "id": "B",
+        "role": "boyfriend",
+        "appearance": "Young adult male, average build, short light brown hair. He is seen from the side.",
+        "wardrobe": "Grey t-shirt, dark pants, and patterned socks.",
+        "demeanor": "Relaxed, sitting with his arm around his partner."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Couple relaxing in living room",
+        "setting": "A modern, sunlit living room with large windows overlooking a hilly landscape. The room features a grey sectional couch, a wooden coffee table, a tan leather armchair, and a bookshelf. Sunlight casts long shadows on the concrete floor.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Wide shot, static camera.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A wide shot captures a modern, sunlit living room. Large sliding glass doors and windows offer a view of a hilly, arid landscape under a clear sky. Bright sunlight streams into the room, casting long, distinct shadows across the polished concrete floor. In the center of the room, a grey sectional couch is positioned facing towards the windows. Character A and Character B are sitting together on the couch. Character A is leaning back comfortably against Character B, who has his arm wrapped around her. To the right of the couch, the space is furnished with a wooden coffee table, a tan leather armchair, and a wooden bookshelf filled with various items. The ceiling is white with exposed dark wooden beams, contributing to a minimalist yet cozy aesthetic.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The video consists of a single, continuous static wide shot of a couple relaxing on a couch in a bright living room. Over the course of the video, several white text boxes with black text appear sequentially on the screen, overlaying the scene. The first box appears at the top, followed by a second one just below it. Then, a third box appears in the middle of the screen, followed by a fourth one below that. Finally, a fifth text box appears at the bottom edge of the frame. The couple remains in their relaxed pose throughout the entire clip.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "My mom nearly had a breakdown when my gringo boyfriend spoke Spanish to her for the first time\nShe called my abuela immediately\nHe'd been using Speak for 3 months\n15 minutes a day\nTake a test and start today"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657929.9788837
+}

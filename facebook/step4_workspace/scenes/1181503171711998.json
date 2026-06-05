@@ -1,0 +1,92 @@
+{
+  "competitor_id": "1181503171711998",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is shot on a smartphone in a selfie style, with natural lighting and slight camera movements typical of handheld recording. The interactions, facial expressions, and background environment are natural and authentic.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "A Black man in his late 20s or early 30s with a bald head and a well-groomed, short black beard. He has a medium build and a warm complexion. He has no prominent distinguishing marks other than his facial hair.",
+        "wardrobe": "Initially shirtless, wearing only a silver chain with a cross pendant. Later, he drapes a white cloth with a bright red, yellow, and green floral pattern over his right shoulder.",
+        "demeanor": "Casual, friendly, and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Introduction to Dominican Spanish",
+        "setting": "Outdoors, tropical environment with palm trees, daytime, natural lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up, low-angle",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up, low-angle shot captures a bald Black man with a well-groomed beard. He is shirtless, revealing his upper chest and shoulders. A silver chain necklace with a simple cross pendant rests on his chest. He is looking upwards and off-camera to the right, appearing engaged in a conversation. The background is filled with vibrant, lush green palm fronds and tropical foliage. Bright, natural daylight illuminates the scene, creating soft highlights on his skin. The framing is tight, focusing primarily on his facial expressions and upper torso.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a selfie-style video shot from a low angle, featuring a shirtless man talking. He is positioned in the foreground, looking off-camera. The background consists of tropical plants and palm trees. A text overlay at the top provides context for the video. Subtitles appear at the bottom of the screen, translating his spoken words into English. The overall composition is casual and conversational.",
+        "audio_transcript": "Character A says: Es muy dif\u00edcil aprender con los dominicanos porque yo creo que los dominicanos cortan las palabras y hablan demasiado r\u00e1pido. [It's really difficult to learn with Dominicans because I think Dominicans cut their words short and speak too fast.]",
+        "on_screen_text": "POV: Dominican spanish keeps getting easier with THIS app \ud83c\udde9\ud83c\uddf4\ud83d\udcaa\nIt's really difficult to learn with Dominicans because I think Dominicans cut their words short and speak too fast."
+      },
+      {
+        "n": 2,
+        "start_s": 10.0,
+        "end_s": 35.0,
+        "screenshot_at_s": 22.0,
+        "scene_label": "App Recommendation",
+        "setting": "Outdoors, tropical environment with palm trees, daytime, natural lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up, low-angle",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The camera maintains a close-up, low-angle perspective on the same bald Black man with a beard. He now has a white fabric draped over his right shoulder, adorned with a bright, colorful floral pattern featuring red, yellow, and green flowers. The silver cross necklace remains visible around his neck. He continues to look off-camera to the right, his expressions shifting between thoughtful and smiling as he speaks. The background remains consistent, showing dense, green tropical foliage and palm trees under natural sunlight. The lighting casts gentle shadows, emphasizing the contours of his face. The tight framing keeps the focus intimately on his interaction.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "This scene continues the selfie-style recording from the previous shot. The man is still in the foreground, now with a floral patterned cloth over his shoulder. He is actively conversing with someone off-camera, smiling and gesturing slightly with his head. The tropical background remains unchanged. English subtitles continue to appear at the bottom of the screen, translating the ongoing conversation. The visual style remains informal and direct.",
+        "audio_transcript": "Character A says: He estado aprendiendo espa\u00f1ol por cinco meses. [I have been learning Spanish for five months so far.]\nUnknown speaker says: Y hablas bien. [And you speak it well.]\nCharacter A says: Oh, muchas gracias. Estoy aprendiendo, pero tengo que practicar m\u00e1s. Realmente yo uso una aplicaci\u00f3n llamada Speak, y hay una aplicaci\u00f3n famosa en los Estados Unidos llamada Duolingo, pero siento que Speak est\u00e1 mejor que Duolingo. [Oh, thank you very much. I am learning, but I need to practice more. I usually use an app called Speak, and there is a famous app in the United States called Duolingo, but I feel that Speak is better than Duolingo.]",
+        "on_screen_text": "I have been learning Spanish for five months so far.\nAnd you speak it well.\nThank you very much.\nI am learning, but I need to practice more.\nI usually use an app called Speak,\nand there is a famous app in the United States called Duolingo,\nbut I feel that Speak is better than Duolingo."
+      },
+      {
+        "n": 3,
+        "start_s": 35.0,
+        "end_s": 38.0,
+        "screenshot_at_s": 36.5,
+        "scene_label": "End Card",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [],
+        "camera": "full-screen graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The frame is completely filled with a solid, vibrant blue color. There are no characters, objects, or environmental details visible. The composition is entirely flat and graphic, lacking any depth or texture. The lighting is uniform across the entire surface, creating a seamless and unvarying background. This panel serves as a blank canvas for graphic elements.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The video transitions to a static end-card. The background is a solid, bright blue color. In the center of the screen, the brand name is displayed in a large, bold, white font. Below it, in a smaller white font, is a call to action prompting the user to start a trial. The composition is clean, minimalist, and focused entirely on the brand and the offer.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Speak\nStart your 7-day free trial."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657929.9571106
+}

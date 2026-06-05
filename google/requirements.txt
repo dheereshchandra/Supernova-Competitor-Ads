@@ -1,0 +1,18 @@
+# Python dependencies for the Google ad downloader pipeline.
+# Install with:  pip3 install --user -r requirements.txt
+#
+# Tested against Python 3.9 (Apple Command Line Tools) and Python 3.11+.
+# yt-dlp ships its own dependencies and is installed by Step 2 on demand.
+
+requests          # Step 1, 3 — HTTP client (scraper + R2 PUT)
+boto3             # Step 3 — Cloudflare R2 (S3-compatible) uploads
+yt-dlp            # Step 2 — YouTube metadata via --write-info-json
+openpyxl          # Step 1 — optional, only when feeding an .xlsx of advertiser IDs
+google-genai      # Step 4 — Gemini Pro decompose + rewrite, Nano Banana Pro image gen
+python-docx       # Step 4 — building the two .docx files per ad
+
+# Optional — only needed if you run the HTML5 banner capture pass
+# (scripts/capture_html5_banners.py). Skip otherwise; ~150 MB Chromium download.
+#   pip3 install --user playwright
+#   python3 -m playwright install chromium
+# playwright

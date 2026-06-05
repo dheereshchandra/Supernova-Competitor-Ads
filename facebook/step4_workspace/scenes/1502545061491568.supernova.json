@@ -1,0 +1,79 @@
+{
+  "competitor_id": "1502545061491568",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "learner boyfriend",
+        "appearance": "Male in his mid-20s with a slim build and light complexion. He has short brown hair and a thin mustache. His facial features are expressive and animated.",
+        "wardrobe": "Wearing a plain white t-shirt with a small graphic on the left chest.",
+        "demeanor": "Playful, willing to try, and easily laughs at his own mistakes."
+      },
+      {
+        "id": "B",
+        "role": "expert girlfriend",
+        "appearance": "Female in her mid-20s with a slim build and light complexion. She has long, straight dark hair parted in the middle. Her expressions are warm and encouraging.",
+        "wardrobe": "Wearing a black spaghetti strap top and a white smartwatch on her left wrist.",
+        "demeanor": "Supportive, amused, and confident in her abilities."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Practicing 'sixth'",
+        "supernova_script": "Character A says: Six. यार ये pronunciation बड़ी मुश्किल है। [Six. Man, this pronunciation is really hard.]\nCharacter B says: Sixth. Supernova पे AI tutor के साथ बोल के देखो। [Sixth. Try speaking with the AI tutor on Supernova.]",
+        "scene_summary": "- Establishes the core problem: the learner's struggle with English pronunciation.\n- Introduces Supernova's AI tutor as a practical, accessible solution.\n- Sets a warm, supportive tone rather than a critical one.",
+        "supernova_on_screen_text": "Hindi-medium Boyfriend. English-medium Girlfriend. Supernova App. AI Tutor. Let's start! Tap the button below and say the word. sixth. Compare my pronunciation to yours and then try recording the word again. 64%. Great improvement, let's keep going! 99%."
+      },
+      {
+        "n": 2,
+        "scene_label": "Practicing 'jewelry'",
+        "supernova_script": "Character A says: Jewerly.\nCharacter B says: (Laughs) Jewelry. देख, app में red mark आया। [(Laughs) Jewelry. Look, you got a red mark in the app.]",
+        "scene_summary": "- Highlights a common pronunciation mistake in a lighthearted, relatable way.\n- Demonstrates the app's real-time feedback mechanism visually and verbally.\n- Reinforces the comfortable, non-patronizing dynamic between the characters.",
+        "supernova_on_screen_text": "Hindi-medium Boyfriend. English-medium Girlfriend. Supernova App. AI Tutor. Let's pause to troubleshoot. Listen to the difference in our recordings and try again. jewelry. 59%. Now great changes, let's move on. 96%."
+      },
+      {
+        "n": 3,
+        "scene_label": "Practicing 'specific'",
+        "supernova_script": "Character A says: Specific.\nCharacter B says: Specific. Wow, 92%! Supernova पे रोज़ practice काम आ रही है। [Specific. Wow, 92%! Daily practice on Supernova is working.]",
+        "scene_summary": "- Provides a moment of success and validation for the learner.\n- Emphasizes the value of daily practice, a core Supernova feature.\n- Shows the app's positive reinforcement and scoring system.",
+        "supernova_on_screen_text": "Hindi-medium Boyfriend. English-medium Girlfriend. Supernova App. AI Tutor. Let's begin! Record yourself saying the word below. specific. 92%. Wow! Good job! I'd say, 'Mic drop!' but you don't want to break your phone. 100%."
+      },
+      {
+        "n": 4,
+        "scene_label": "Practicing 'thoughtful'",
+        "supernova_script": "Character A says: Foughts. No, I'm doing it wrong. मुझसे नहीं होगा। [Foughts. No, I'm doing it wrong. I can't do this.]\nCharacter B says: Thoughtful. अरे डरो मत, AI tutor judge नहीं करता। [Thoughtful. Oh don't be scared, the AI tutor doesn't judge.]",
+        "scene_summary": "- Addresses learner frustration and the fear of making mistakes.\n- Highlights Supernova's core value proposition: a safe, non-judgmental space to practice speaking.\n- Encourages persistence and resilience.",
+        "supernova_on_screen_text": "Hindi-medium Boyfriend. English-medium Girlfriend. Supernova App. AI Tutor. Let's start! Tap the button below and say the word. thoughtful. 26%. Compare my pronunciation to yours and then try recording the word again. Excellent work, persistence pays off! 98%."
+      },
+      {
+        "n": 5,
+        "scene_label": "Practicing a tongue twister",
+        "supernova_script": "Character A says: The six sick sheep.\nCharacter B says: The sixth sick sheep. Supernova के साथ तुम्हारी English पक्की हो जाएगी! [The sixth sick sheep. Your English will become solid with Supernova!]",
+        "scene_summary": "- Ends on a fun, challenging note with a tongue twister.\n- Delivers the final brand payoff and a confidence boost.\n- Acts as a soft call-to-action for the viewer to start their own learning journey.",
+        "supernova_on_screen_text": "Hindi-medium Boyfriend. English-medium Girlfriend. Supernova App. AI Tutor. Let's start! Tap the button below and say the phrase. The sixth sick sheep. 75%. That wasn't quite right. Listen carefully to how I say it and then compare it to how you said it."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "American accent app",
+        "supernova_swap": "Supernova App"
+      },
+      {
+        "competitor_brand": "Coach Ethan",
+        "supernova_swap": "AI Tutor"
+      },
+      {
+        "competitor_brand": "Immigrant Boyfriend",
+        "supernova_swap": "Hindi-medium Boyfriend"
+      },
+      {
+        "competitor_brand": "Native Girlfriend",
+        "supernova_swap": "English-medium Girlfriend"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779989130.5644522
+}

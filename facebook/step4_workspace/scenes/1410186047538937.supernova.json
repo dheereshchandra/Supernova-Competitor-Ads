@@ -1,0 +1,96 @@
+{
+  "competitor_id": "1410186047538937",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Older Asian male, heavy build, light complexion. He has short black hair parted to the side and wears dark-rimmed glasses.",
+        "wardrobe": "White polo shirt with a small logo on the left chest, blue jeans.",
+        "demeanor": "Calm, professional, and authoritative."
+      },
+      {
+        "id": "B",
+        "role": "male presenter",
+        "appearance": "Young South Asian male, medium build, medium complexion. He has short dark hair and a full, neatly trimmed beard.",
+        "wardrobe": "Black denim jacket over a plain white t-shirt. He wears a silver watch on his left wrist.",
+        "demeanor": "Enthusiastic, engaging, and demonstrative."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction by Character A",
+        "supernova_script": "Character A says: आज professionals के लिए सबसे बड़ी problem क्या है? [What is the biggest problem for professionals today?]\nCharacter A says: English में बात करने की hesitation. Supernova इसे जड़ से खत्म कर रहा है। [The hesitation to speak in English. Supernova is eliminating it from the root.]",
+        "scene_summary": "- Hooks the audience by addressing a major pain point: English hesitation.\n- Establishes authority and introduces Supernova as the ultimate solution.\n- Sets a serious, empathetic tone for career-focused learners.",
+        "supernova_on_screen_text": "BIGGEST PROBLEM\nFOR PROFESSIONALS\nENGLISH HESITATION\nSupernova\neliminates it\nfrom the root\nSpeak Confidently"
+      },
+      {
+        "n": 2,
+        "scene_label": "Character B introduces the product",
+        "supernova_script": "Character B says: Let me show you how it works. [Let me show you how it works.]",
+        "scene_summary": "- Transitions from the problem statement to the practical demonstration.\n- Introduces a younger, relatable character to guide the user.\n- Builds anticipation for the app features.",
+        "supernova_on_screen_text": "Let me show you\nhow it works"
+      },
+      {
+        "n": 3,
+        "scene_label": "App integration graphic",
+        "supernova_script": "Character B says: बस app खोलो और अपने AI tutor के साथ practice शुरू करो। [Just open the app and start practicing with your AI tutor.]",
+        "scene_summary": "- Explains the core mechanism of the app (AI tutor).\n- Emphasizes ease of use and accessibility.\n- Replaces the 'works in any app' tech feature with 'practice anytime' learning feature.",
+        "supernova_on_screen_text": "just open\nthe app\nand practice with\nyour AI tutor\nhello"
+      },
+      {
+        "n": 4,
+        "scene_label": "Messaging demonstration",
+        "supernova_script": "Character B says: Interview की तैयारी करनी है? \"Actually, um... my strengths are...\" AI आपकी गलतियां बिना judge किए ठीक करता है। [Want to prepare for an interview? \"Actually, um... my strengths are...\" AI corrects your mistakes without judging.]",
+        "scene_summary": "- Demonstrates the app's utility for high-stakes real-world scenarios (interviews).\n- Shows how the AI handles hesitation and natural speech.\n- Highlights the psychological benefit: correction without judgment.",
+        "supernova_on_screen_text": "Actually, um... my strengths are...\nFIXES GRAMMAR INSTANTLY"
+      },
+      {
+        "n": 5,
+        "scene_label": "Transition to coding",
+        "supernova_script": "Character B says: Real-life situations के लिए भी ये best है। [It's also best for real-life situations.]",
+        "scene_summary": "- Bridges the gap between interview prep and everyday workplace English.\n- Keeps the pacing brisk and engaging.",
+        "supernova_on_screen_text": "it's best for\nreal-life situations"
+      },
+      {
+        "n": 6,
+        "scene_label": "Coding demonstration",
+        "supernova_script": "Character B says: Customer से बात करनी हो या boss से, \"Sir, your report is ready.\" Supernova आपको सही words और confidence देता है। [Whether talking to a customer or a boss, \"Sir, your report is ready.\" Supernova gives you the right words and confidence.]",
+        "scene_summary": "- Replaces niche coding demo with a relatable workplace communication scenario.\n- Focuses on vocabulary building and confidence generation.\n- Shows practical application for tier-2/3 working professionals.",
+        "supernova_on_screen_text": "Sir, your report is ready.\nBUILDS VOCABULARY AUTOMATICALLY\nBOOSTS YOUR CONFIDENCE"
+      },
+      {
+        "n": 7,
+        "scene_label": "Whispering feature",
+        "supernova_script": "Character B says: And the best part is, आप अकेले में practice कर सकते हो। [And the best part is, you can practice in private.]\nCharacter B says: (Whispering) I want to speak fluent English. [(Whispering) I want to speak fluent English.]\nCharacter B says: And it guides you perfectly. [And it guides you perfectly.]",
+        "scene_summary": "- Addresses the embarrassment/shyness learners feel when practicing English aloud.\n- Repurposes the whispering feature as a privacy/comfort benefit.\n- Proves the AI's accuracy even with quiet, hesitant speech.",
+        "supernova_on_screen_text": "And the best\npart is\nyou can\npractice in private\nI want to speak fluent English\nand it\nguides you perfectly"
+      },
+      {
+        "n": 8,
+        "scene_label": "Conclusion and social proof",
+        "supernova_script": "Character B says: आज Supernova हज़ारों Indians की मदद कर रहा है, ताकि वो confident English बोलें और life में आगे बढ़ें। [Today, Supernova is helping thousands of Indians so they can speak confident English and move ahead in life.]",
+        "scene_summary": "- Provides social proof tailored to the Indian market (thousands of Indians vs Fortune 500).\n- Ties English fluency directly to career growth and life progress.\n- Ends on a warm, encouraging, and aspirational note.",
+        "supernova_on_screen_text": "Supernova\nis helping thousands\nof Indians\nspeak confidently\nand move ahead\nin life every year"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Wispr",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Flow",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.777406
+}

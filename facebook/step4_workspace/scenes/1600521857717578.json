@@ -1,0 +1,127 @@
+{
+  "competitor_id": "1600521857717578",
+  "parsed": {
+    "duration_s": 67.0,
+    "production_type": "mixed",
+    "production_notes": "Combines live-action smartphone footage with a 3D animated AI avatar. The avatar features stylized, rendered graphics typical of mobile applications.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult, fair skin, light brown hair styled in a side braid. Distinctive large gold hoop earrings.",
+        "wardrobe": "Wears a bright blue crewneck sweatshirt in the first half, then switches to a light grey crewneck sweatshirt.",
+        "demeanor": "Expressive, relatable, and friendly."
+      },
+      {
+        "id": "B",
+        "role": "male passenger",
+        "appearance": "Young adult, average build, fair skin, short blonde hair.",
+        "wardrobe": "Dark grey hoodie with black headphones resting around his neck.",
+        "demeanor": "Casual and polite."
+      },
+      {
+        "id": "C",
+        "role": "flight attendant",
+        "appearance": "Adult female, slim build, dark hair pulled back neatly.",
+        "wardrobe": "Navy blue uniform vest worn over a white short-sleeve collared shirt.",
+        "demeanor": "Professional and attentive."
+      },
+      {
+        "id": "D",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character, fair skin, large expressive eyes, auburn hair pulled back.",
+        "wardrobe": "Dark blue police or border control uniform shirt with a badge, epaulets, and a shoulder microphone.",
+        "demeanor": "Friendly, patient, with slightly exaggerated animated expressions."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.0,
+        "screenshot_at_s": 3.5,
+        "scene_label": "Airplane interaction",
+        "setting": "Airplane cabin, daytime, bright natural lighting.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "Medium shot, over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A medium shot inside an airplane cabin during the day. Character B sits in a window seat, looking up and speaking. Character C stands in the aisle, facing him. The lighting is bright, coming from the airplane window.",
+            "characters_in_panel": [
+              "B",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A male passenger interacts with a flight attendant in an airplane aisle. Subtitles overlay the bottom of the screen.",
+        "audio_transcript": "Character B says: Could I get a sparkling water and do you have any snacks that aren't peanuts?\nCharacter C says: Of course, pretzels okay?\nCharacter B says: Perfect, thanks.",
+        "on_screen_text": "Could I get a sparkling water\nand do you have any snacks that aren't peanuts?\nOf course, pretzels okay?\nPerfect, thanks."
+      },
+      {
+        "n": 2,
+        "start_s": 7.0,
+        "end_s": 19.0,
+        "screenshot_at_s": 13.0,
+        "scene_label": "Introduction to app",
+        "setting": "Airplane cabin, daytime.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up, talking-head shot of Character A inside an airplane cabin. She is looking directly at the camera with an expressive face. The background shows the blurred interior of the airplane, including a window and seats. The lighting is natural and bright.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A female passenger speaks directly to the camera in a vlog style, sharing her thoughts. Subtitles are centered on screen.",
+        "audio_transcript": "Character A says: This guy talks so easy. Me? I practice \"chicken or pasta\" for ten minutes in my head. I need to fix this. My friend told me about this app Loora. You just talk to it. I'm trying it now.",
+        "on_screen_text": "This guy talks so easy.\nMe?\nI practice \"chicken or pasta\" for ten minutes in my head.\nI need to fix this.\nMy friend told me about this app Loora.\nYou just talk to it.\nI'm trying it now."
+      },
+      {
+        "n": 3,
+        "start_s": 19.0,
+        "end_s": 67.0,
+        "screenshot_at_s": 40.0,
+        "scene_label": "App interaction",
+        "setting": "Split screen: Airport border control (left) and Airport terminal (right).",
+        "characters_in_scene": [
+          "D",
+          "A"
+        ],
+        "camera": "Split-screen, close-ups",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A 3D animated portrait of Character D. She is resting her chin on her hand with a friendly expression. The background is a softly blurred, brightly lit airport terminal interior.",
+            "characters_in_panel": [
+              "D"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A close-up shot of Character A standing in an airport terminal. She is looking directly at the camera and smiling. The background is a brightly lit, slightly blurred airport concourse with large windows.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Vertical split-screen showing a conversation. The left side features an animated AI officer; the right side shows a human user. Subtitles, grammar correction icons (red crosses, green checkmarks), and an app logo overlay the footage.",
+        "audio_transcript": "Character D says: Hello, where are you flying?\nCharacter A says: I fly uh London.\nCharacter D says: Do you mean \"I am flying to London\"?\nCharacter A says: Yes, sorry. I am flying to London.\nCharacter D says: Any luggage to check in?\nCharacter A says: Um, luggage?\nCharacter D says: Yes, luggage. It might be bags, suitcases and other containers people use to carry their belongings when traveling.\nCharacter A says: Oh, I have one luggage. Sorry, I'm not so good English.\nCharacter D says: Do you mean \"My English isn't that good\"? No worries. How many times have you spoken in English over the past month?\nCharacter A says: Um, actually I didn't.\nCharacter D says: So how do you expect to speak fluently?\nCharacter A says: I not have anyone to practice with.\nCharacter D says: Just download Loora. We'll speak together daily and you'll be fluent in no time.\nCharacter A says: That's amazing. I'm adding this to my daily routine today.",
+        "on_screen_text": "Hello, where are you flying?\nI fly London.\nDo you mean \"I am flying to London\"?\nYes, sorry.\nI am flying to London.\nAny luggage to check in?\nLuggage?\nYes, luggage.\nIt might be bags, suitcases\nand other containers\npeople use to carry their belongings\nwhen traveling.\nOh, I have one luggage.\nSorry\nI'm not so good English.\nDo you mean \"My English isn't that good\"?\nNo worries.\nHow many times\nhave you spoken in English\nover the past month?\nActually I didn't.\nSo how do you expect\nto speak fluently?\nI not have anyone\nto practice with.\nJust download Loora.\nWe'll speak together daily\nand you'll be fluent in no time.\nThat's amazing.\nI'm adding this\nto my daily routine today.\nLoora"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.538174
+}

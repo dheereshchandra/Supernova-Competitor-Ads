@@ -1,0 +1,39 @@
+{
+  "competitor_id": "1654898552218834",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, fair complexion, red hair pulled back, large brown eyes.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Cheerful, static, slightly uncanny."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young female, fair complexion, blonde hair pulled back, blue eyes.",
+        "wardrobe": "Cream-colored ribbed sweater.",
+        "demeanor": "Earnest, slightly hesitant."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Split-screen conversation",
+        "supernova_script": "Character B says: Sorry, मेरी English इतनी अच्छी नहीं है। [Sorry, my English is not that good.]\nCharacter A says: कोई बात नहीं, बस रोज़ practice करनी चाहिए। [No worries, you just need to practice daily.]\nCharacter B says: But practice किसके साथ करूँ? [But who do I practice with?]\nCharacter A says: उसी के लिए तो मैं हूँ! मैं Supernova हूँ, आपकी AI English tutor. [That's exactly what I'm here for! I am Supernova, your AI English tutor.]\nCharacter B says: क्या मैं आपसे बात कर सकती हूँ? [Can I speak with you?]\nCharacter A says: बिल्कुल! हम रोज़ बात करेंगे, मैं आपकी pronunciation ठीक करूँगी, और हर conversation के साथ आपकी English बेहतर होगी। [Absolutely! We will talk every day, I'll correct your pronunciation, and with every conversation your English will get better.]\nCharacter B says: पर मैं बहुत mistakes करती हूँ। [But I make a lot of mistakes.]\nCharacter A says: Mistakes से घबराना नहीं है, मैं हूँ ना आपको guide करने के लिए। [Don't be afraid of mistakes, I am here to guide you.]\nCharacter B says: ये सही है! [This sounds good!]\nCharacter A says: तो चलो, रोज़ साथ में practice करते हैं। Supernova के साथ confidence से English बोलना सीखो! [So come on, let's practice together every day. Learn to speak English with confidence with Supernova!]",
+        "scene_summary": "- Establishes the core problem: the learner feels insecure about their English and lacks a speaking partner.\n- Introduces Supernova's AI tutor as a practical, accessible solution.\n- Reassures the user that making mistakes is okay, positioning the app as a safe, non-judgmental space.\n- Ends with a warm, encouraging call to action to practice daily and build confidence.",
+        "supernova_on_screen_text": "Sorry, मेरी English इतनी अच्छी नहीं है।\nबस रोज़ practice करनी चाहिए।\nBut practice किसके साथ करूँ?\nउसी के लिए तो मैं हूँ!\nमैं Supernova हूँ, आपकी AI English tutor.\nक्या मैं आपसे बात कर सकती हूँ?\nबिल्कुल! हम रोज़ बात करेंगे\nमैं आपकी pronunciation ठीक करूँगी\nऔर हर conversation के साथ आपकी English बेहतर होगी।\nपर मैं बहुत mistakes करती हूँ।\nMistakes से घबराना नहीं है\nमैं हूँ ना आपको guide करने के लिए।\nये सही है!\nतो चलो, रोज़ साथ में practice करते हैं।\nSupernova\nSupernova के साथ confidence से English बोलना सीखो!"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Loora",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889200.081156
+}

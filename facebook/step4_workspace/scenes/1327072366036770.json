@@ -1,0 +1,67 @@
+{
+  "competitor_id": "1327072366036770",
+  "parsed": {
+    "duration_s": 19.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real person and a real screen recording. Movements, lighting, and speech are natural with no AI artifacts.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, medium build, light brown complexion. He has dark hair and a short goatee. He wears round wire-rimmed glasses.",
+        "wardrobe": "White t-shirt and a backwards floral baseball cap.",
+        "demeanor": "Casual, enthusiastic, and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.0,
+        "screenshot_at_s": 3.5,
+        "scene_label": "Screen recording demonstration",
+        "setting": "A desk with a laptop, daytime, neutral color palette.",
+        "characters_in_scene": [],
+        "camera": "POV/close-up of laptop screen",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up view of a laptop keyboard and screen. A hand briefly enters the frame to press a key on the keyboard. The background behind the laptop is slightly out of focus, showing a wall with a framed poster.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The scene shows a screen recording of a laptop being used. Text is being generated on the screen in different applications. A text overlay asks a question at the top.",
+        "audio_transcript": "Character A says: Notion task prompt.\nCharacter A says: Now watch this.\nCharacter A says: Weekly team meeting.",
+        "on_screen_text": "Is this lazy or genius?"
+      },
+      {
+        "n": 2,
+        "start_s": 7.0,
+        "end_s": 19.0,
+        "screenshot_at_s": 13.0,
+        "scene_label": "Presenter explanation",
+        "setting": "A room with a plant, daytime, warm lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Talking-head, selfie style",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is holding a large white water bottle near his chest. He looks directly at the camera, gesturing with his free hand as he speaks. A large green monstera leaf hangs in the background above his head. The lighting is soft and natural.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A speaks directly to the camera, explaining the product. Various text overlays appear around him as he lists features, followed by a final logo and call to action.",
+        "audio_transcript": "Character A says: I essentially set up shortcuts within Wispr Flow.\nCharacter A says: So I can just say these keywords and it'll paste whatever I want.\nCharacter A says: You can use this for email addresses, passwords, affiliate links, you name it.\nCharacter A says: You can try it for a week for free today.\nCharacter A says: Let me know what you think.",
+        "on_screen_text": "or both lol...\nwithin Wispr Flow\nsay these keywords and\nwhatever I want\n\u2705 email addresses\n\u2705 passwords\n\u2705 texting your mom\naffiliate links\nyou name it\nYou can try it for a week for free today\nWispr Flow download today!\nLet me know what you think"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.244249
+}

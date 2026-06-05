@@ -1,0 +1,111 @@
+{
+  "competitor_id": "1288587726756839",
+  "parsed": {
+    "duration_s": 69.0,
+    "production_type": "mixed",
+    "production_notes": "Initial scenes are human-recorded. The split-screen features an AI-generated avatar with smooth, uncanny features and static posture. The human character's voice and lip-sync in the split-screen section appear AI-dubbed, lacking perfect synchronization.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Mid-20s female, slim build, fair complexion, dark brown hair. Facial features are expressive.",
+        "wardrobe": "Light beige short-sleeve t-shirt.",
+        "demeanor": "Shifts from stressed and frustrated to enthusiastic and engaged."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young female avatar, fair complexion, red hair tied back, large brown eyes. Features are smooth and slightly uncanny.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Friendly, encouraging, static posture with hand resting on chin."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Frustrated at work",
+        "setting": "Home office, daytime, white desk, laptop, green tumbler.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "wide, high angle",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "High-angle shot of Character A sitting at a white desk, looking at a laptop. She appears stressed and covers her face with her hands. A green tumbler sits next to the laptop. A ceiling fan is visible above.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A security-camera style shot of a woman struggling at her desk. Text overlays display the time and her spoken words.",
+        "audio_transcript": "Character A says: uh I have many work today and my brain...\nUnknown speaker says: okay no worries take your time",
+        "on_screen_text": "TUE 14:32\nuh I have\nmany work today\nand my brain\nokay no worries\ntake your time"
+      },
+      {
+        "n": 2,
+        "start_s": 10.0,
+        "end_s": 23.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Explaining the problem",
+        "setting": "Home office, daytime, ceiling fan in background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Close-up of Character A speaking directly to the camera. She is in a brightly lit room with a ceiling fan in the background. She later holds up a smartphone displaying a woman's face.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A talking-head shot of the woman explaining her situation to the camera. She holds up her phone to show the app she is using. Captions overlay the bottom of the screen.",
+        "audio_transcript": "Character A says: yes my husband filmed me without telling me yes I cried because of my English but it showed me how badly I needed to improve my English speaking skills so the next day practicing with Loora let me show you",
+        "on_screen_text": "yes\nmy husband filmed\nme without telling\nme yes\nI cried because\nof my English\nbut it showed me\nhow badly I\nneeded to improve\nmy English\nspeaking skills so\nthe next day\npracticing with Loora\nlet me show\nyou"
+      },
+      {
+        "n": 3,
+        "start_s": 23.5,
+        "end_s": 69.0,
+        "screenshot_at_s": 45.0,
+        "scene_label": "App interaction",
+        "setting": "Split screen. Left: abstract studio background. Right: Home office.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Close-up of Character B resting her chin on her hand, smiling. She maintains a mostly static pose. The background is a soft, blurred gradient.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Close-up of Character A speaking to the camera. She is in her home office with a ceiling fan visible in the background.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen showing the AI avatar on the left and the human user on the right. They are having a conversation. Dynamic text overlays and icons appear over both panels to highlight corrections and dialogue.",
+        "audio_transcript": "Character B says: What are you doing?\nCharacter A says: I am working. I have many work today.\nCharacter B says: Do you mean: \"I have a lot of work today\"?\nCharacter A says: Yes, I have a lot of work today and my brain not working.\nCharacter B says: Do you mean: \"my brain isn't working\"?\nCharacter A says: Yes, I have a lot of work and my brain isn't working.\nCharacter B says: That's perfect! Well done, Anna!\nCharacter A says: I want to speak in English everyday but lesson is expensive!\nCharacter B says: Why don't you speak to an AI tutor?\nCharacter A says: I'm not sure about an AI tutor. I want someone who can help correct my mistakes.\nCharacter B says: Like I did! My name is Loora and I am an AI tutor! Nice to meet you, Anna!\nCharacter A says: You're an AI tutor? What? No way!\nCharacter B says: Download the Loora app and talk to me everyday and I'll help correct your mistakes!\nCharacter A says: Amazing. I'll add it to my daily routine today!",
+        "on_screen_text": "What are you doing?\nI am working.\nI have many work today.\nDo you mean:\n\"I have a lot of work today\"\nYes, I have a lot of work today\nand my brain not working.\nDo you mean:\n\"my brain isn't working\"\nYes, I have a lot of work and my brain isn't working.\nThat's perfect!\nWell done, Anna!\nI want to speak in English everyday\nbut lesson is expensive!\nWhy don't you speak to an AI tutor?\nI'm not sure about an AI tutor.\nI want someone who can help correct my mistakes.\nLike I did!\nMy name is Loora and I am an AI tutor!\nNice to meet you, Anna!\nYou're an AI tutor?\nWhat? No way!\nDownload the Loora app\nand talk to me everyday and I'll help correct your mistakes!\nAmazing.\nI'll add it to my daily routine today!\nLoora\nPERFECT RESPONSE"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.5395975
+}

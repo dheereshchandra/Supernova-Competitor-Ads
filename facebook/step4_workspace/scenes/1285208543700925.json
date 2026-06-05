@@ -1,0 +1,71 @@
+{
+  "competitor_id": "1285208543700925",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses a static screencast with a digitally overlaid, robotically moving hand asset. The voiceovers are clearly synthetic text-to-speech, and the background illustrations have an AI-generated aesthetic.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "App user",
+        "appearance": "A fair-skinned human right hand with the index finger extended in a pointing gesture. The nails are short and neat.",
+        "wardrobe": "None visible.",
+        "demeanor": "Neutral, robotic, interacting with the screen."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.0,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Reading Animal Farm - Pig Illustration",
+        "setting": "Digital app interface, dark farm illustration",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A fair-skinned human right hand with the index finger extended points towards the center of the frame. The background is a stylized, dark illustration of a farm at night. A large pig wearing a dark suit and a red tie stands centrally in front of a barn. Various farm animals, including white horses, black sheep, chickens, and dogs, are gathered in front of the pig. A full moon is visible in the upper right corner.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A screencast of a language learning app. The top half shows an illustration of a pig in a suit addressing other farm animals at night. The bottom half displays a paragraph of Spanish text. A hand enters the frame and taps on a word in the text. When the word is tapped, it highlights in yellow, and a small pop-up appears showing the word, its pronunciation, and its English translation.",
+        "audio_transcript": "Unknown speaker says: Todos los animales son iguales, pero algunos animales son m\u00e1s importantes que otros. [All animals are equal, but some animals are more important than others.]\nUnknown speaker says: igual [equal]",
+        "on_screen_text": "READ BOOKS IN SPANISH FOR 10 MINUTES A DAY\n\u2014Todos los animales son iguales, pero algunos animales son m\u00e1s importantes que otros\n\u2014ley\u00f3 uno de ellos lentamente. Los animales permanecieron en silencio en la noche fr\u00eda, mirando fijamente el muro. Intentaron recordar la vieja palabra, pero algo no encajaba. Nadie dijo nada. La granja parec\u00eda la misma de siempre, y aun as\u00ed, nada volv\u00eda a ser igual.\nigual\n[i'\u0263wal]\nequal\nI know it\nLearn"
+      },
+      {
+        "n": 2,
+        "start_s": 6.0,
+        "end_s": 38.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Reading Animal Farm - Cow Illustration",
+        "setting": "Digital app interface, warm farm illustration",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A fair-skinned human right hand with the index finger extended points towards the center of the frame. The background is a warm, painted-style illustration of farm animals inside or near a barn. A large brown and white cow is prominent on the left. In the center and right, there are sheep and light-colored horses. The lighting suggests late afternoon or a warm interior.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The app interface continues. The top illustration changes to a warmer scene featuring a cow, sheep, and horses. The Spanish text remains the same. The hand continues to tap on various words throughout the paragraph. Each tap brings up a translation pop-up, and a voice pronounces the word in Spanish.",
+        "audio_transcript": "Unknown speaker says: ley\u00f3 uno de ellos lentamente. [read one of them slowly.]\nUnknown speaker says: lentamente [slowly]\nUnknown speaker says: Los animales permanecieron en silencio en la noche fr\u00eda, [The animals remained in silence in the cold night,]\nUnknown speaker says: fr\u00edo [cold]\nUnknown speaker says: mirando fijamente el muro. Intentaron recordar [staring at the wall. They tried to remember]\nUnknown speaker says: intentar [to try]\nUnknown speaker says: la vieja palabra, [the old word,]\nUnknown speaker says: palabra [word]\nUnknown speaker says: pero algo no encajaba. [but something didn't fit.]\nUnknown speaker says: algo [something]\nUnknown speaker says: Nadie dijo nada. La granja [Nobody said anything. The farm]\nUnknown speaker says: granja [farm]\nUnknown speaker says: parec\u00eda la misma de siempre, [seemed the same as always,]\nUnknown speaker says: siempre [always]\nUnknown speaker says: y aun as\u00ed, nada volv\u00eda a ser igual. [and even so, nothing would ever be the same.]",
+        "on_screen_text": "READ BOOKS IN SPANISH FOR 10 MINUTES A DAY\nANIMAL FARM\nGEORGE ORWELL\n\u2014Todos los animales son iguales, pero algunos animales son m\u00e1s importantes que otros\n\u2014ley\u00f3 uno de ellos lentamente. Los animales permanecieron en silencio en la noche fr\u00eda, mirando fijamente el muro. Intentaron recordar la vieja palabra, pero algo no encajaba. Nadie dijo nada. La granja parec\u00eda la misma de siempre, y aun as\u00ed, nada volv\u00eda a ser igual.\nlentamente\n['lenta'mente]\nslowly\nfr\u00edo\n['f\u027eio]\ncold\nintentar\n[inten'ta\u027e]\nto try\npalabra\n[pa'la\u03b2\u027ea]\nword\nalgo\n['al\u0263o]\nsomething\ngranja\n['g\u027ea\u014bxa]\nfarm\nsiempre\n['sjemp\u027ee]\nalways\nI know it\nLearn"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.274597
+}

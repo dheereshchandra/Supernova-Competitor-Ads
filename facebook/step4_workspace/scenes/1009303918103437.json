@@ -1,0 +1,51 @@
+{
+  "competitor_id": "1009303918103437",
+  "parsed": {
+    "duration_s": 7.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video uses a static photograph of a human model as the background, with animated digital UI elements overlaid on top.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Model",
+        "appearance": "Young woman, short dark hair with micro bangs, fair skin.",
+        "wardrobe": "Blue t-shirt, black lanyard, black rectangular sunglasses.",
+        "demeanor": "Casual, relaxed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.0,
+        "screenshot_at_s": 3.5,
+        "scene_label": "Ordering Practice",
+        "setting": "Indistinct grey background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A young woman with short dark hair and sunglasses holds a Frappuccino with whipped cream and caramel drizzle. She wears a blue t-shirt and a black lanyard. The background is a plain grey surface. The lighting is soft.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A blank white rectangular area with rounded corners.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A woman holds a Frappuccino. An app interface overlay shows English phrases for ordering flavors with German translations. Handwritten yellow text is on the left. The app interface cycles through vanilla, caramel, and mocha flavors.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Bestell deinen Frappuccino wie ein Profi.\nI'd like a vanilla Frappuccino.\nIch h\u00e4tte gern einen Vanille-Frappuccino.\nJetzt sprechen...\nI'd like a caramel Frappuccino.\nIch h\u00e4tte gern einen Karamell-Frappuccino.\nBeispiel\nDu\nNeustarten\nI'd like a mocha Frappuccino.\nIch h\u00e4tte gern einen Mokka-Frappuccino."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657929.978153
+}

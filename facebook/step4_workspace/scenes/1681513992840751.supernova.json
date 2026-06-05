@@ -1,0 +1,40 @@
+{
+  "competitor_id": "1681513992840751",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot presenter",
+        "appearance": "Stylized 2D animated brown bear. It has a round body, small ears, and simple facial features with black eyes and a black nose.",
+        "wardrobe": "A light blue scarf or towel draped around its neck.",
+        "demeanor": "Cheerful and confident."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Bear on the beach",
+        "supernova_script": "Character A says: मैं Supernova के साथ रोज़ English बोलना सीख रहा हूँ। [I am learning to speak English daily with Supernova.]\nCharacter A says: I love the beach! [I love the beach!]",
+        "scene_summary": "- Hooks the viewer by stating the app's core value proposition directly in a relatable Hindi-English mix.\n- Demonstrates immediate success by having the character confidently speak the target language (English).\n- Establishes a cheerful, practical, and encouraging tone while removing the competitor's 'free' claim.",
+        "supernova_on_screen_text": "Supernova\nमैं Supernova के साथ रोज़ English बोलना सीख रहा हूँ।\nI love the beach!"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "for free",
+        "supernova_swap": "removed (replaced with 'रोज़' / daily)"
+      },
+      {
+        "competitor_brand": "Spanish",
+        "supernova_swap": "English"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.9480326
+}

@@ -1,0 +1,50 @@
+{
+  "competitor_id": "2204393376963501",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion. She has long, straight brown hair. Her facial features are expressive.",
+        "wardrobe": "A long-sleeved polo shirt with horizontal black, white, and grey stripes. Grey sweatpants.",
+        "demeanor": "Initially frustrated, then focused and engaged as she practices speaking."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor voice",
+        "appearance": "Not visible; voice only.",
+        "wardrobe": "N/A",
+        "demeanor": "Helpful, encouraging, and instructive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Washing Dishes and Practicing",
+        "supernova_script": "Character A says: English बोलना इतना मुश्किल क्यों है यार? [Why is speaking English so hard, man?]\nCharacter B says: Let's practice! Tell me about yourself. [Let's practice! Tell me about yourself.]\nCharacter A says: My name is Sara. [My name is Sara.]\nCharacter B says: Great! What do you do? [Great! What do you do?]\nCharacter A says: I am work... in office. [I am work... in office.]\nCharacter B says: Do you mean 'I work in an office'? [Do you mean 'I work in an office'?]\nCharacter A says: I work in an office. [I work in an office.]\nCharacter B says: Perfect! How long have you been working there? [Perfect! How long have you been working there?]\nCharacter A says: From... two years? [From... two years?]\nCharacter B says: Try saying 'For two years'. [Try saying 'For two years'.]\nCharacter A says: For two years. [For two years.]\nCharacter A says: मैं रोज़ ऐसे ही practice कैसे कर सकती हूँ? [How can I practice like this every day?]\nCharacter B says: Supernova app के साथ! [With the Supernova app!]\nCharacter A says: मैं आज ही Supernova download करती हूँ। [I'll download Supernova today itself.]",
+        "scene_summary": "- Establishes a relatable frustration (struggling with English) while doing everyday chores.\n- Demonstrates Supernova's core value: real-time, conversational AI practice with gentle, encouraging corrections.\n- Ends with a clear, practical call to action to start daily practice.",
+        "supernova_on_screen_text": "English बोलना इतना मुश्किल क्यों है यार? (Why is speaking English so hard, man?)\nLet's practice! Tell me about yourself. (Let's practice! Tell me about yourself.)\nMy name is Sara. (My name is Sara.)\nGreat! What do you do? (Great! What do you do?)\nI am work... in office. (I am work... in office.)\nI work in an office. (I work in an office.)\nFrom... two years? (From... two years?)\nFor two years. (For two years.)\nमैं रोज़ ऐसे ही practice कैसे कर सकती हूँ? (How can I practice like this every day?)\nSupernova app के साथ! (With the Supernova app!)\nमैं आज ही Supernova download करती हूँ। (I'll download Supernova today itself.)"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear final call to action.\n- Displays the brand logo and app store availability for easy discovery.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4948895
+}

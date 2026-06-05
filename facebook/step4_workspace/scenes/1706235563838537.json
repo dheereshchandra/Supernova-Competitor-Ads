@@ -1,0 +1,96 @@
+{
+  "competitor_id": "1706235563838537",
+  "parsed": {
+    "duration_s": 37.0,
+    "production_type": "AI-generated",
+    "production_notes": "The presenter exhibits characteristics of an AI avatar, including unnaturally smooth skin, slightly stiff head movements, and lip-syncing that feels slightly disconnected. The video is a single, static shot, typical of AI talking-head generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult Indian woman, slim build, medium complexion. Straight dark brown hair parted in the middle. Prominent nose and defined jawline.",
+        "wardrobe": "Brown long-sleeved collared shirt. Small cross earrings.",
+        "demeanor": "Enthusiastic, informative, and engaging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 14.0,
+        "screenshot_at_s": 7.0,
+        "scene_label": "Introduction and First Test",
+        "setting": "Dimly lit room, dark teal walls, desk, microphone, lamp.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits at a dark wooden desk in a dimly lit room with dark teal walls. She wears a brown long-sleeved collared shirt and small cross earrings. A black microphone on an articulated arm is positioned in front of her on the left. A black desk lamp with a warm light is visible in the background on the left, and a small framed picture hangs on the wall behind her. She holds a dark smartphone in her left hand. The lighting is soft and focused on her face.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter introduces the app while sitting at her desk. App UI overlays appear, showing a speech scanning process and her initial score. She speaks a phrase into her phone, and the app grades her pronunciation.",
+        "audio_transcript": "Character A says: I thought my English was pretty good until I found this app that showed me otherwise.\nCharacter A says: A few months ago, I came across BoldVoice's SpeechScan.\nCharacter A says: The first time I took the test, I came in at 75%.\nCharacter A says: Goofy moves.",
+        "on_screen_text": "ENGLISH APP OTHERWISE AGO BOLDVOICE'S SPEECHSCAN CAME 75% NEVER Grading your intonation... 79% Grading your fluency... 96% 100% Your Speech Level Maya 75% Practice My Text Coach Alice Let's begin! Record yourself saying the phrase below. Goofy moves 82% 68% moves M.OO.V.Z"
+      },
+      {
+        "n": 2,
+        "start_s": 14.0,
+        "end_s": 23.0,
+        "screenshot_at_s": 18.0,
+        "scene_label": "App Feedback and Practice",
+        "setting": "Dimly lit room, dark teal walls, desk, microphone, lamp.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits at a dark wooden desk in a dimly lit room with dark teal walls. She wears a brown long-sleeved collared shirt and small cross earrings. A black microphone on an articulated arm is positioned in front of her on the left. A black desk lamp with a warm light is visible in the background on the left, and a small framed picture hangs on the wall behind her. She holds a dark smartphone in her left hand. The lighting is soft and focused on her face.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter explains how the app helped her identify areas for improvement. Overlays display detailed analytics on pronunciation, intonation, and fluency, as well as examples of practice exercises.",
+        "audio_transcript": "Character A says: I never realized what I was doing wrong.\nCharacter A says: Then the app showed me the areas where I could improve, and I've been practicing every single night for like 10 minutes before bed.",
+        "on_screen_text": "WRONG SHOWED WHERE AND PRACTICING SINGLE 10 TODAY Pronunciation 67 Good Intonation 93 Advanced Fluency 83 Great Word stress We found 2 words where you're stressing the wrong syllable. Intonation patterns to improve Compare how your intonation rises or falls differently from the coach's. flo-wers 80%"
+      },
+      {
+        "n": 3,
+        "start_s": 23.0,
+        "end_s": 37.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Second Test and CTA",
+        "setting": "Dimly lit room, dark teal walls, desk, microphone, lamp.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits at a dark wooden desk in a dimly lit room with dark teal walls. She wears a brown long-sleeved collared shirt and small cross earrings. A black microphone on an articulated arm is positioned in front of her on the left. A black desk lamp with a warm light is visible in the background on the left, and a small framed picture hangs on the wall behind her. She holds a dark smartphone in her left hand. The lighting is soft and focused on her face.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter takes a second test on her phone, speaking words into it. The app UI shows her improved score. She reacts with excitement and delivers a call to action, accompanied by the app's logo.",
+        "audio_transcript": "Character A says: Today, I'm taking another SpeechScan, and we'll see how I do.\nCharacter A says: Enthusiasm.\nCharacter A says: Future.\nCharacter A says: 91%!\nCharacter A says: Try BoldVoice for free to see what you get on your SpeechScan.",
+        "on_screen_text": "TAKING SPEECHSCAN HOW 91% TRY FOR YOU SPEECHSCAN Practice My Text Coach Alice Let's start! Tap the button below and say the word. enthusiasm future Your Speech Level Maya 91% BoldVoice Grading your fluency... 97% 100%"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780658172.1771605
+}

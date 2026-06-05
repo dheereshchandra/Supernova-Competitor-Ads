@@ -1,0 +1,81 @@
+{
+  "competitor_id": "1297255881948219",
+  "parsed": {
+    "duration_s": 31.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines AI-generated illustrations in the top half with a screencast of an app interface in the bottom half. A static image of a human hand is superimposed and animated rigidly to simulate tapping on the screen.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "user hand",
+        "appearance": "A human right hand with a light complexion. The fingers are slender with short, neat fingernails.",
+        "wardrobe": "None visible.",
+        "demeanor": "Neutral, performing precise tapping motions."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.0,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Reading Animal Farm - Pig Image",
+        "setting": "App interface, white background, top image of a farm.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "An animated illustration of a pig standing on its hind legs, wearing a dark blue coat with gold trim, a white ruffled shirt, and a black tricorn hat. The pig has a pink snout, its mouth is open as if speaking, and it is gesturing with its right hoof. Behind the pig, to the left, are other farm animals including a brown horse and two sheep. To the right, a white chicken is visible. The setting appears to be inside a wooden barn with a lit lantern hanging on the right side.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A human hand with a light complexion is pointing its index finger towards the center of the frame, as if interacting with a touchscreen. The background is plain white.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen app interface. The top half shows an illustration of a pig in a coat and hat addressing other farm animals. The bottom half displays English text on a white background. A human hand taps on words in the text, bringing up a pop-up with a speaker icon, the English word, its phonetic spelling, and the Indonesian translation.",
+        "audio_transcript": "Unknown speaker says: All animals are equal, but some animals are more important than others,\nUnknown speaker says: equal\nUnknown speaker says: important",
+        "on_screen_text": "BACA BUKU BERBAHASA INGGRIS 10 MENIT SEHARI\n\"All animals are equal, but some animals are more important than others,\" one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore.\nequal\n[\u02c8i\u02d0kw\u0259l]\nsetara\nTahu ini\nBelajar\nimportant\n[\u026am\u02c8p\u0254\u02d0tnt]\npenting"
+      },
+      {
+        "n": 2,
+        "start_s": 6.0,
+        "end_s": 31.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Reading Animal Farm - Cows Image",
+        "setting": "App interface, white background, top image of cows and sheep.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "An illustration of several farm animals looking towards the right side of the frame. In the foreground, there is a brown cow on the left and a light brown horse on the right. Between them, slightly further back, are several sheep. The background shows a green field and a red barn under a warm, golden sky, suggesting sunrise or sunset.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A human hand with a light complexion is pointing its index finger towards the center of the frame, as if interacting with a touchscreen. The background is plain white.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The top half of the screen changes to an illustration of cows, sheep, and a horse looking off into the distance. The bottom half continues to show the English text. The hand continues to tap on various words, triggering pop-ups with pronunciation and Indonesian translations.",
+        "audio_transcript": "Unknown speaker says: one of them read slowly.\nUnknown speaker says: slowly\nUnknown speaker says: The animals stood silent in the cold\nUnknown speaker says: cold\nUnknown speaker says: night, staring at the wall. They tried\nUnknown speaker says: to try\nUnknown speaker says: to remember the old words,\nUnknown speaker says: word\nUnknown speaker says: but something\nUnknown speaker says: something\nUnknown speaker says: felt wrong. No one spoke. The farm\nUnknown speaker says: farm\nUnknown speaker says: looked the same as always,\nUnknown speaker says: always\nUnknown speaker says: yet nothing was the same anymore.",
+        "on_screen_text": "BACA BUKU BERBAHASA INGGRIS 10 MENIT SEHARI\nPETERNAKAN HEWAN GEORGE ORWELL\n\"All animals are equal, but some animals are more important than others,\" one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore.\nslowly\n[\u02c8sl\u0259\u028ali]\nperlahan\ncold\n[k\u0259\u028ald]\ndingin\nto try\n[t\u0259 tra\u026a]\nmencoba\nword\n[w\u025c\u02d0d]\nkata\nsomething\n[\u02c8s\u028cm\u03b8\u026a\u014b]\nsesuatu\nfarm\n[f\u0251\u02d0m]\npeternakan\nalways\n[\u02c8\u0254\u02d0lwe\u026az]\nselalu"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.2807286
+}

@@ -1,0 +1,103 @@
+{
+  "competitor_id": "908822938160022",
+  "parsed": {
+    "duration_s": 11.4,
+    "production_type": "human-recorded",
+    "production_notes": "The video consists of live-action, human-recorded footage of hands handling cash and a smartphone, combined with screen recordings and graphic overlays. There are no signs of AI generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Person counting money",
+        "appearance": "A person with a light to medium complexion. Only their hands and forearms are visible. They have well-manicured nails.",
+        "wardrobe": "A thick, ribbed, long-sleeved sweater in a vibrant blue color.",
+        "demeanor": "Focused and methodical, as they handle a large amount of cash."
+      },
+      {
+        "id": "B",
+        "role": "Smartphone user",
+        "appearance": "A person with a medium to dark complexion. Only their hands are visible holding a smartphone.",
+        "wardrobe": "Not visible, as only hands are shown.",
+        "demeanor": "Interactive, as they are shown navigating a smartphone interface."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.8,
+        "screenshot_at_s": 2.5,
+        "scene_label": "Counting Money",
+        "setting": "An overhead view of a wooden desk. A clear acrylic cash organizer is visible, with compartments holding stacks of Indian Rupee notes (\u20b9500, \u20b9200, \u20b9100) and coins. A reddish-brown leather wallet or clutch is also on the desk.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Overhead shot, top-down view",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "An overhead, top-down shot of a wooden desk. A pair of hands belonging to Character A, who is wearing a blue ribbed sweater, are seen counting a thick stack of Indian 500 Rupee notes. The hands place the counted money onto a reddish-brown leather clutch. In the background, a clear acrylic cash organizer contains neatly arranged stacks of 500, 200, and 100 Rupee notes, along with some coins. The lighting is bright and even.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "An overhead shot shows Character A's hands counting a large stack of 500 Rupee notes over a wooden desk. A bank SMS notification from 'Bank of India' pops up at the top, showing a credit of \u20b92,01,108. Below this, a text overlay in Hindi reads '\u0905\u092a\u0928\u0947 \u092a\u0930\u093f\u0935\u093e\u0930 \u0915\u093e \u0938\u092c\u0938\u0947 \u0905\u092e\u0940\u0930 \u0906\u0926\u092e\u0940 \u092c\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f Download \u0915\u0940\u091c\u093f\u092f\u0947 Zinglish App \ud83d\ude0d\ud83d\ude0d'.",
+        "audio_transcript": "[upbeat regional Indian music playing]",
+        "on_screen_text": "truecaller SMS \u2022 20:00\nBOI Bank of India\n+ \u20b9 2,01,108\nCredited to Account 0002\nMARK AS READ VIEW PROFILE\n\u0905\u092a\u0928\u0947 \u092a\u0930\u093f\u0935\u093e\u0930 \u0915\u093e \u0938\u092c\u0938\u0947 \u0905\u092e\u0940\u0930 \u0906\u0926\u092e\u0940 \u092c\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f Download \u0915\u0940\u091c\u093f\u092f\u0947 Zinglish App \ud83d\ude0d\ud83d\ude0d (To become the richest person in your family, download the Zinglish App \ud83d\ude0d\ud83d\ude0d)"
+      },
+      {
+        "n": 2,
+        "start_s": 4.8,
+        "end_s": 7.9,
+        "screenshot_at_s": 6.5,
+        "scene_label": "Translating a Message",
+        "setting": "Indoors, a person is holding a smartphone. The background is slightly out of focus but appears to be an indoor space.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "Close-up on a smartphone",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of Character B's hands holding a black smartphone in a rugged black case. The phone screen displays a messaging app with a dark theme. A purple message bubble is visible. Character B's thumb taps on the message, causing a new pop-up to appear on the screen. The lighting is soft, with a slight warm, pinkish glow cast over the scene.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A close-up on a smartphone held by Character B. The screen shows an RCS message from an 'Unknown' sender with a UPI Mandate for Rs. 2000.00 from HDFC Bank. The user's finger taps on the message, and a pop-up appears with the same message translated into Hindi, along with a 'Chat with Zia' button.",
+        "audio_transcript": "[upbeat regional Indian music playing]",
+        "on_screen_text": "Unknown\nRCS chat with Unknown\nThis chat is now end-to-end encrypted. Learn more\nUPI Mandate:\nSent Rs.2000.00\nfrom HDFC Bank A/c 6212\nTo Beejapuri Dairy Privat\nRef 102433381081\nNot You? Call 18002586161/\nSMS BLOCK UPI to\n7308080808\n[Translated pop-up]\nUPI Mandate: HDFC Bank A/c 6212 \u0938\u0947 Beejapuri Dairy Privat \u0915\u094b Rs.2000.00 \u092d\u0947\u091c\u093e \u0917\u092f\u093e 10/01/26 \u0938\u0902\u0926\u0930\u094d\u092d 102433381081 \u0915\u094d\u092f\u093e \u0906\u092a \u0928\u0939\u0940\u0902 \u0939\u0948\u0902? \u0915\u0949\u0932 \u0915\u0930\u0947\u0902 18002586161/SMS BLOCK UPI 7308080808 \u092a\u0930\nChat with Zia"
+      },
+      {
+        "n": 3,
+        "start_s": 7.9,
+        "end_s": 11.4,
+        "screenshot_at_s": 9.5,
+        "scene_label": "Opening the App",
+        "setting": "Indoors, a person is holding a smartphone. The background is out of focus.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "Close-up on a smartphone",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of Character B's hands holding a black smartphone in a rugged case. The phone screen displays an app store page with a light theme. The user's finger comes into frame and taps on a prominent blue button on the screen. The lighting is bright and neutral.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The same smartphone from the previous scene, held by Character B, now shows the Google Play Store page for 'Zinglish: English Speaking App'. The user's finger taps the 'Open' button.",
+        "audio_transcript": "[upbeat regional Indian music playing]",
+        "on_screen_text": "Zinglish: English Speaking App\nCapslock Market Places Pvt Ltd\nUninstall Open\nWhat's new \u2022 Last updated 18 Dec 2025\nBug Fixes\nRate this app\nTell others what you think\n\u2606\u2606\u2606\u2606\u2606\nWrite a review\nApp support\nAbout this app\nEnglish Seekho - Practice with Zia, English Translate."
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1780628107.4899309
+}

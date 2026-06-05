@@ -1,0 +1,103 @@
+{
+  "competitor_id": "1714159199581150",
+  "parsed": {
+    "duration_s": 37.0,
+    "production_type": "mixed",
+    "production_notes": "The female character is an AI avatar with unnatural smoothness, a synthetic voice, and a static background. The male character is human, filmed outdoors with natural lighting and movement.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female, young adult, fair complexion, short dark hair. She has a glowing blue star symbol on her forehead.",
+        "wardrobe": "Futuristic, form-fitting blue suit with gold accents.",
+        "demeanor": "Calm, friendly, and slightly robotic."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Male, young adult, medium build, brown complexion, short dark hair, beard.",
+        "wardrobe": "White button-down shirt.",
+        "demeanor": "Expressive, slightly frustrated or confused."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 30.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "AI Tutor Conversation",
+        "setting": "Split screen: Left is a futuristic digital space, Right is an outdoor street scene with a tree.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character A is facing forward, smiling gently. The background consists of glowing blue holographic screens displaying data and diagrams.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Character B is standing outdoors next to a large tree trunk. The background is blurred, showing hints of a street and foliage. He is looking forward, gesturing with his hands as he speaks.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen showing an AI avatar on the left and a human man on the right. They appear to be having a conversation. Text overlays occasionally appear over the man's panel.",
+        "audio_transcript": "Character B says: \u092f\u0942 \u0938\u0940 \u0935\u0947\u0930\u0940 \u092c\u094d\u092f\u0942\u091f\u0940\u092b\u0941\u0932\u0964 [You see very beautiful.]\nCharacter A says: \u0930\u0949\u0902\u0917\u0964 \u0907\u0902\u0938\u094d\u091f\u0947\u0921 \u0938\u0947, \u092f\u0942 \u0932\u0941\u0915 \u0935\u0947\u0930\u0940 \u092c\u094d\u092f\u0942\u091f\u0940\u092b\u0941\u0932\u0964 [Wrong. Instead say, you look very beautiful.]\nCharacter B says: \u0915\u0948\u0938\u0947 \u0938\u0940\u0916\u0942\u0902 \u0907\u0902\u0917\u094d\u0932\u093f\u0936? \u0939\u0930 \u092c\u093e\u0930 \u0932\u095c\u0915\u0940 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0941\u0928 \u0915\u0947 \u092e\u0941\u0902\u0939 \u092e\u094b\u095c \u0932\u0947\u0924\u0940 \u0939\u0948\u0964 [How do I learn English? Every time a girl hears my English, she turns away.]\nCharacter A says: \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u091f\u0947\u0902\u0936\u0928 \u092e\u0924 \u0932\u094b\u0964 \u092e\u0948\u0902 \u0939\u0942\u0901 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916\u094b \u0910\u092a \u0915\u0940 \u090f\u0906\u0908 \u0915\u094b\u091a\u0964 \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0915\u0947 \u0924\u0941\u092e \u092b\u094d\u0932\u0942\u090f\u0902\u091f \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916 \u0938\u0915\u0924\u0947 \u0939\u094b\u0964 [Don't worry at all. I am the AI coach of the English Seekho app. By practicing with me, you can learn fluent English.]\nCharacter B says: \u092a\u0930 \u0915\u0948\u0938\u0947? \u0928\u093e \u091f\u093e\u0907\u092e \u0939\u0948 \u0928\u093e \u092a\u0948\u0938\u0947\u0964 [But how? I have neither time nor money.]\nCharacter A says: \u092c\u0938 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916\u094b \u0910\u092a \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 \u0930\u094b\u095b \u0938\u093f\u0930\u094d\u092b \u0926\u0938 \u092e\u093f\u0928\u091f \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u094b, \u0935\u094b \u092d\u0940 \u0905\u092b\u094b\u0930\u094d\u0921\u0947\u092c\u0932 \u092a\u094d\u0930\u093e\u0907\u0938\u093f\u0902\u0917 \u092e\u0947\u0902\u0964 \u092f\u0939\u093e\u0901 \u0924\u0941\u092e\u094d\u0939\u0947\u0902 \u092e\u093f\u0932\u0947\u0902\u0917\u0947 \u0907\u0902\u0938\u094d\u091f\u0947\u0902\u091f \u092b\u0940\u0921\u092c\u0948\u0915 \u0914\u0930 \u0930\u093f\u092f\u0932-\u091f\u093e\u0907\u092e \u0915\u0930\u0947\u0915\u094d\u0936\u0902\u0938\u0964 [Just download the English Seekho app. Practice with me for just 10 minutes every day, that too at affordable pricing. Here you will get instant feedback and real-time corrections.]",
+        "on_screen_text": "You see very beautiful \u274c\nYou look very beautiful \u2705"
+      },
+      {
+        "n": 2,
+        "start_s": 30.0,
+        "end_s": 33.0,
+        "screenshot_at_s": 31.5,
+        "scene_label": "App Install CTA",
+        "setting": "Solid light purple background.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid light purple background. In the center, a smartphone is displayed. Below the phone, there is a rectangular button.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An end-card showing a smartphone with the English Seekho app logo on the screen. Below it is an 'INSTALL NOW' button.",
+        "audio_transcript": "Character B says: \u0924\u094b \u0907\u0928\u0938\u094d\u091f\u0949\u0932 \u092c\u091f\u0928 \u092a\u0947 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930\u094b \u0914\u0930 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916\u094b \u0910\u092a \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 [So click on the install button and download the English Seekho app.]",
+        "on_screen_text": "English Seekho\nINSTALL NOW"
+      },
+      {
+        "n": 3,
+        "start_s": 33.0,
+        "end_s": 37.0,
+        "screenshot_at_s": 35.0,
+        "scene_label": "Disclaimer",
+        "setting": "Solid black background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid black background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A black screen with a long paragraph of white text acting as a legal disclaimer.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "English Seekho kisi bhi government authority institution brand, organisation ya individual ke dwara endorsed, sponsored, affiliated ya associated nahi hai. Kisi bhi names trademarks logos ya references ka use sirf educational aur informational purposes ke liye kiya gaya hai Kuch content sirf samjhane ke liye dramatised ya representational ho sakta hai English Seekho kisi bhi guaranteed results ka promise nahi karta Outcomes individual effort aur doosre factors par depend karte hain aur vary kar sakte hain."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779855213.968946
+}

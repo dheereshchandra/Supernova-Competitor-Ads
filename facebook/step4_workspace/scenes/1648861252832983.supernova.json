@@ -1,0 +1,60 @@
+{
+  "competitor_id": "1648861252832983",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Black woman in her 30s, medium build, dark complexion. She has short, curly black hair and clear facial features. No obvious distinguishing marks.",
+        "wardrobe": "She wears a solid green crew-neck t-shirt throughout the entire video.",
+        "demeanor": "Earnest, eager to learn, and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "White woman in her 30s, slim build, fair complexion. She has shoulder-length, wavy brown hair. Her face is symmetrical with a soft appearance.",
+        "wardrobe": "She wears a dark blue top with a subtle v-neckline throughout the video.",
+        "demeanor": "Consistently friendly, encouraging, and professional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction to the Problem",
+        "supernova_script": "Character A says: Office में सबको लगता है मेरी English अच्छी है। [Everyone in the office thinks my English is good.]\nCharacter A says: But सच तो ये है... [But the truth is...]\nCharacter A says: Meetings में जब कुछ समझ नहीं आता, तो मैं बस यही बोलती हूँ... [In meetings when I don't understand something, I just say this...]\nCharacter A says: Can you repeat that? [Can you repeat that?]",
+        "scene_summary": "- Hooks the viewer with a highly relatable workplace insecurity.\n- Establishes the core problem: knowing basic English but lacking professional vocabulary.\n- Builds empathy with the target audience of working professionals.",
+        "supernova_on_screen_text": "Office में सबको लगता है मेरी English अच्छी है।\nBut सच तो ये है...\nMeetings में जब कुछ समझ नहीं आता,\nतो मैं बस यही बोलती हूँ...\nCan you repeat that?"
+      },
+      {
+        "n": 2,
+        "scene_label": "First Correction",
+        "supernova_script": "Character B says: ये ठीक है, but professional setting में आप कह सकते हो... [That's fine, but in a professional setting you can say...]\nCharacter B says: Could you run that by me again? [Could you run that by me again?]\nCharacter B says: ये ज़्यादा confident sound करता है। [This sounds more confident.]\nCharacter A says: Could you run that by me again? [Could you run that by me again?]",
+        "scene_summary": "- Demonstrates the app's core value proposition: practical AI correction.\n- Establishes the warm, encouraging 'older sibling' tone of the AI tutor.\n- Shows immediate application and practice by the learner.",
+        "supernova_on_screen_text": "ये ठीक है, but professional setting में आप कह सकते हो...\nCould you run that by me again?\nये ज़्यादा confident sound करता है।\nCould you run that by me again? (with a green checkmark icon)"
+      },
+      {
+        "n": 3,
+        "scene_label": "Second Correction",
+        "supernova_script": "Character B says: Perfect! अब इसे try करो... [Perfect! Now try this...]\nCharacter A says: I didn't understand your point. [I didn't understand your point.]\nCharacter B says: इसकी जगह बोलो, \"I didn't quite catch that.\" [Instead of this, say, \"I didn't quite catch that.\"]\nCharacter B says: एकदम natural लगेगा। [It will sound completely natural.]\nCharacter A says: I didn't quite catch that. [I didn't quite catch that.]",
+        "scene_summary": "- Reinforces the learning loop with a second practical workplace example.\n- Highlights the transition from textbook English to natural spoken English.\n- Builds the learner's confidence through successful repetition.",
+        "supernova_on_screen_text": "Perfect! अब इसे try करो...\nI didn't understand your point. (with a red X icon)\nइसकी जगह बोलो, \"I didn't quite catch that.\"\nएकदम natural लगेगा।\nI didn't quite catch that. (with a green checkmark icon)"
+      },
+      {
+        "n": 4,
+        "scene_label": "The Reveal and Call to Action",
+        "supernova_script": "Character A says: मेरी English बुरी नहीं है, बस अटक जाती हूँ। [My English isn't bad, I just get stuck.]\nCharacter A says: और रोज़ एक real tutor afford करना मुश्किल है। [And affording a real tutor every day is difficult.]\nCharacter B says: That's why I am here! मैं आपकी AI tutor हूँ, [That's why I am here! I am your AI tutor,]\nCharacter B says: जो 24/7 आपके साथ practice करने के लिए ready है। [who is ready to practice with you 24/7.]\nCharacter A says: Supernova app try करो। [Try the Supernova app.]\nCharacter A says: और बिना डरे, confidently English बोलो। [And speak English confidently, without fear.]",
+        "scene_summary": "- Addresses the cost and accessibility barriers of traditional tutoring.\n- Reveals the AI tutor solution as an affordable, anytime option.\n- Delivers a strong, encouraging Call to Action for the Supernova app.",
+        "supernova_on_screen_text": "मेरी English बुरी नहीं है, बस अटक जाती हूँ।\nऔर रोज़ एक real tutor afford करना मुश्किल है।\nThat's why I am here! मैं आपकी AI tutor हूँ,\nजो 24/7 आपके साथ practice करने के लिए ready है।\nSupernova app try करो।\nऔर बिना डरे, confidently English बोलो।\n>> Start speaking (button graphic)"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658623.9273593
+}

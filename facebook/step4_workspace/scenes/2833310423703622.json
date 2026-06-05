@@ -1,0 +1,127 @@
+{
+  "competitor_id": "2833310423703622",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "mixed",
+    "production_notes": "The top panel features a human actor recorded in a studio, while the bottom panel features an AI-generated robot avatar. The robot exhibits typical AI artifacts such as a perfectly smooth, glossy plastic texture, stiff posture, and slightly unnatural lip-syncing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult woman with a slim build and fair complexion. She has long, dark, wavy hair parted in the middle. She has expressive facial features with dark eyes and eyebrows.",
+        "wardrobe": "Mustard yellow off-the-shoulder long-sleeve top and large hoop earrings.",
+        "demeanor": "Expressive and exaggerated, initially showing discomfort from spicy food, then becoming curious and eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Humanoid robot with a glossy white plastic casing and black joints. It has a female-presenting face with smooth, featureless white skin, silver/grey eyes, and a neutral expression.",
+        "wardrobe": "None, it is a bare robot casing.",
+        "demeanor": "Static, calm, robotic, and helpful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 20.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Spicy Food Translation",
+        "setting": "Studio setting with a black background (top) and dark grey background (bottom). Tables hold bottles of hot sauce and plates of chicken wings. Warm lighting on top, cooler lighting on bottom.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A young woman sits at a table against a solid black background. In front of her is a plate of reddish chicken wings and several bottles of hot sauce. She holds a chicken wing in her right hand and points at it with her left index finger. Her facial expression is exaggerated, showing discomfort from eating spicy food. She wears a mustard yellow off-the-shoulder top and large hoop earrings. The lighting is bright and focused on her.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A white humanoid robot sits at a table against a dark grey background. On the table are several bottles of hot sauce and a plate of reddish chicken wings, mirroring the setup above. The robot has a glossy white plastic casing, black joints, and a female-presenting face with silver eyes. It remains mostly static, with only its mouth moving. The lighting highlights the reflective surface of the robot.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with a woman on top and a robot on the bottom. Both have similar props (hot sauce, chicken wings) in front of them. The woman reacts dramatically to spicy food, while the robot calmly translates her complaints into English. Text overlays show the Gujarati and English phrases as they speak.",
+        "audio_transcript": "Character A says: \u0aae\u0abe\u0ab0\u0ac0 \u0a9c\u0ac0\u0aad \u0aac\u0ab3\u0ac7 \u0a9b\u0ac7! [My tongue is burning!]\nCharacter B says: My tongue is burning.\nCharacter A says: \u0a86 \u0a96\u0abe\u0ab5\u0abe\u0aa8\u0ac1\u0a82 \u0aac\u0ab9\u0ac1 \u0aa4\u0ac0\u0a96\u0ac1\u0a82 \u0a9b\u0ac7. [This food is very spicy.]\nCharacter B says: This food is very spicy.\nCharacter A says: \u0a86\u0aae\u0abe\u0a82 \u0aac\u0ab9\u0ac1 \u0aae\u0ab0\u0a9a\u0ac1\u0a82 \u0a9b\u0ac7. [It has a lot of chili in it.]\nCharacter B says: It has a lot of chili in it.\nCharacter A says: \u0aaa\u0abe\u0aa3\u0ac0 \u0a86\u0aaa\u0acb, \u0aac\u0ab9\u0ac1 \u0aa4\u0ac0\u0a96\u0ac1\u0a82 \u0a9b\u0ac7! [Give me water, it's too spicy!]\nCharacter B says: Give me water, it's too spicy!\nCharacter A says: \u0ab9\u0ac1\u0a82 \u0aaa\u0aa3 \u0aa4\u0aae\u0abe\u0ab0\u0ac0 \u0a9c\u0ac7\u0aae fluent English \u0aac\u0acb\u0ab2\u0ab5\u0abe \u0aae\u0abe\u0a82\u0a97\u0ac1 \u0a9b\u0ac1\u0a82. \u0aaa\u0aa3 \u0a95\u0ac7\u0ab5\u0ac0 \u0ab0\u0ac0\u0aa4\u0ac7? [I also want to speak fluent English like you. But how?]\nCharacter B says: \u0ab0\u0acb\u0a9c 10-15 minute \u0aae\u0abe\u0ab0\u0ac0 \u0ab8\u0abe\u0aa5\u0ac7 practice \u0a95\u0ab0\u0acb. [Practice with me for 10-15 minutes daily.]",
+        "on_screen_text": "\u0aae\u0abe\u0ab0\u0ac0 \u0a9c\u0ac0\u0aad \u0aac\u0ab3\u0ac7 \u0a9b\u0ac7! (My tongue is burning!)\nMy toungue is burning\n\u0a86 \u0a96\u0abe\u0ab5\u0abe\u0aa8\u0ac1\u0a82 \u0aac\u0ab9\u0ac1 \u0aa4\u0ac0\u0a96\u0ac1\u0a82 \u0a9b\u0ac7. (This food is very spicy.)\nThis food is very spicy.\n\u0a86\u0aae\u0abe\u0a82 \u0aac\u0ab9\u0ac1 \u0aae\u0ab0\u0a9a\u0ac1\u0a82 \u0a9b\u0ac7. (It has a lot of chili in it.)\nIt has a lot of chili in it.\n\u0aaa\u0abe\u0aa3\u0ac0 \u0a86\u0aaa\u0acb, \u0aac\u0ab9\u0ac1 \u0aa4\u0ac0\u0a96\u0ac1\u0a82 \u0a9b\u0ac7! (Give me water, it's too spicy!)\nGive me water, it's too spicy!\n\u0aaa\u0aa3 \u0aa4\u0aae\u0abe\u0ab0\u0ac0 \u0a9c\u0ac7\u0aae fluent English \u0aac\u0acb\u0ab2\u0ab5\u0abe\n\u0aaa\u0aa3 \u0a95\u0ac7\u0ab5\u0ac0 \u0ab0\u0ac0\u0aa4\u0ac7\n\u0ab0\u0acb\u0a9c 10-15 minute \u0aae\u0abe\u0ab0\u0ac0 \u0ab8\u0abe\u0aa5\u0ac7 practice \u0a95\u0ab0\u0acb"
+      },
+      {
+        "n": 2,
+        "start_s": 20.0,
+        "end_s": 27.0,
+        "screenshot_at_s": 23.0,
+        "scene_label": "App Features",
+        "setting": "Studio setting with a black background (top) and dark grey background (bottom). Tables hold bottles of hot sauce and plates of chicken wings.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "The young woman sits at the table with the hot sauce and chicken wings against a black background. She holds a crumpled white tissue in her right hand near her chest. She looks slightly downwards with a curious, attentive expression. Her mustard yellow top and hoop earrings are visible.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "The white humanoid robot sits at the table with the hot sauce and chicken wings against a dark grey background. It continues to face forward, its mouth moving as if speaking. The glossy white casing and black joints are clearly visible under even lighting.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen continues, but the center of the screen is dominated by various app UI overlays showing the MySivi app's features. These include a learning path menu, a chat interface demonstrating grammar correction, and a Google Play Store installation page. The woman and robot are partially obscured by these large graphical overlays.",
+        "audio_transcript": "Character B says: \u0ab9\u0ac1\u0a82 MySivi \u0aa8\u0ac0 AI teacher \u0a9b\u0ac1\u0a82\u2014\u0aa4\u0aae\u0abe\u0ab0\u0ac0 speaking improve \u0a95\u0ab0\u0ac0\u0ab6 \u0a85\u0aa8\u0ac7 \u0aad\u0ac2\u0ab2\u0acb \u0aa4\u0ab0\u0aa4 \u0a9c correct \u0a95\u0ab0\u0ac0\u0ab6. [I am MySivi's AI teacher\u2014I will improve your speaking and correct mistakes immediately.]\nCharacter B says: 1 \u0a95\u0ab0\u0acb\u0aa1\u0aa5\u0ac0 \u0ab2\u0acb\u0a95\u0acb \u0aae\u0abe\u0ab0\u0ac0 \u0aae\u0aa6\u0aa6\u0aa5\u0ac0 English \u0aac\u0acb\u0ab2\u0aa4\u0abe \u0ab6\u0ac0\u0a96\u0ac0 \u0a9a\u0ac2\u0a95\u0acd\u0aaf\u0abe \u0a9b\u0ac7. [Over 1 crore people have learned to speak English with my help.]",
+        "on_screen_text": "\u0ab9\u0ac1\u0a82 MySivi \u0aa8\u0ac0 AI teacher \u0a9b\u0ac1\u0a82\u2014\u0aa4\u0aae\u0abe\u0ab0\u0ac0 speaking improve \u0a95\u0ab0\u0ac0\u0ab6 \u0a85\u0aa8\u0ac7 \u0aad\u0ac2\u0ab2\u0acb \u0aa4\u0ab0\u0aa4 \u0a9c correct \u0a95\u0ab0\u0ac0\u0ab6\nArya AI Teacher\nPractice Now\nFluency Score\nYour Learning Path\nTalk about anything\nDaily routine\nLet's Improve Vocabulary\nTalk about your childhood\nHey! What did you do over the weekend?\nI went to the beach and eat ice cream.\nAlmost perfect! Just a small correction: I went to the beach and ate ice cream.\nStart English Learning - MySivi\n10M+ Downloads\nInstall\n1 \u0a95\u0ab0\u0acb\u0aa1\u0aa5\u0ac0 \u0ab2\u0acb\u0a95\u0acb \u0aae\u0abe\u0ab0\u0ac0 \u0aae\u0aa6\u0aa6\u0aa5\u0ac0 English \u0aac\u0acb\u0ab2\u0aa4\u0abe \u0ab6\u0ac0\u0a96\u0ac0 \u0a9a\u0ac2\u0a95\u0acd\u0aaf\u0abe \u0a9b\u0ac7"
+      },
+      {
+        "n": 3,
+        "start_s": 27.0,
+        "end_s": 38.0,
+        "screenshot_at_s": 32.0,
+        "scene_label": "Pricing and CTA",
+        "setting": "Studio setting with a black background (top) and dark grey background (bottom). Tables hold bottles of hot sauce and plates of chicken wings.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "The young woman sits at the table with the hot sauce and chicken wings against a black background. She points her left index finger forward, looking directly at the camera with an inquisitive expression. She holds a white tissue in her right hand. She wears a mustard yellow off-the-shoulder top.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "The white humanoid robot sits at the table with the hot sauce and chicken wings against a dark grey background. It faces forward, its mouth moving. The glossy white plastic casing and silver eyes are prominent.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen layout persists. Overlays appear showing a premium offer for 1 rupee, followed by an app installation prompt at the bottom of the screen. The woman asks about the price and how to join, and the robot provides the answers and a final call to action to download the app.",
+        "audio_transcript": "Character A says: \u0ab6\u0ac1\u0a82 \u0a86 \u0aae\u0acb\u0a82\u0a98\u0ac1\u0a82 \u0a9b\u0ac7? [Is this expensive?]\nCharacter B says: \u0a86\u0aa8\u0acb trial \u0aab\u0a95\u0acd\u0aa4 \u0a8f\u0a95 \u0ab0\u0ac2\u0aaa\u0abf\u0aaf\u0abe\u0aa8\u0acb \u0a9b\u0ac7. [Its trial is for just one rupee.]\nCharacter A says: \u0ab9\u0ac1\u0a82 \u0a95\u0ac7\u0ab5\u0ac0 \u0ab0\u0ac0\u0aa4\u0ac7 join \u0a95\u0ab0\u0ac1\u0a82? [How do I join?]\nCharacter B says: \u0a86 video \u0aa8\u0ac0 link \u0aaa\u0ab0 click \u0a95\u0ab0\u0acb aur MySivi \u0a85\u0aa4\u0acd\u0aaf\u0abe\u0ab0\u0ac7 \u0a9c download \u0a95\u0ab0\u0acb. [Click on the link of this video and download MySivi right now.]",
+        "on_screen_text": "\u0ab6\u0ac1\u0a82 \u0a86 \u0aae\u0acb\u0a82\u0a98\u0ac1\u0a82 \u0a9b\u0ac7\n\u0a86\u0aa8\u0acb trial \u0aab\u0a95\u0acd\u0aa4 \u0a8f\u0a95 \u0ab0\u0ac2\u0aaa\u0abf\u0aaf\u0abe\u0aa8\u0acb \u0a9b\u0ac7\nMySivi Premium\nLIMITED TIME OFFER\n3 days of Premium benefits for \u20b91\n1,200 learners purchased today\n\u0ab9\u0ac1\u0a82 \u0a95\u0ac7\u0ab5\u0ac0 \u0ab0\u0ac0\u0aa4\u0ac7 join \u0a95\u0ab0\u0ac1\u0a82\n\u0a86 video \u0aa8\u0ac0 link \u0aaa\u0ab0 click \u0a95\u0ab0\u0acb aur MySivi \u0a85\u0aa4\u0acd\u0aaf\u0abe\u0ab0\u0ac7 \u0a9c download \u0a95\u0ab0\u0acb\nMySivi AI English Spe...\nInstalling...\nCancel\nMaster Spoken Eng\nSharpen your Englis 1-on-1 calls. Try MyS fast"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780640923.8501089
+}

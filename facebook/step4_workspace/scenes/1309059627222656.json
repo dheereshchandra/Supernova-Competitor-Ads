@@ -1,0 +1,145 @@
+{
+  "competitor_id": "1309059627222656",
+  "parsed": {
+    "duration_s": 36.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features real human actors with natural movements, facial expressions, and lighting. There are no AI artifacts such as distorted fingers, uncanny facial features, or unnatural static cuts.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "Male in his late 20s to early 30s with a medium build and olive complexion. He has short dark hair and a prominent mustache.",
+        "wardrobe": "Black t-shirt with a red and white graphic design on the front.",
+        "demeanor": "Focused and determined, transitioning to happy and confident."
+      },
+      {
+        "id": "B",
+        "role": "female native speaker",
+        "appearance": "Female in her late 20s to early 30s with a medium build and fair complexion. She has long brown hair tied back in a ponytail.",
+        "wardrobe": "Solid maroon short-sleeved t-shirt.",
+        "demeanor": "Supportive, encouraging, and friendly."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor voice",
+        "appearance": "Digital avatar of a young man with short dark hair and a short beard. He is only visible as a small circular profile picture within the app interface.",
+        "wardrobe": "Red shirt.",
+        "demeanor": "Instructional, clear, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 20.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Pronunciation Practice",
+        "setting": "Living room, evening, warm lighting, white table.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A man and a woman are seated side-by-side at a white table in a warmly lit living room. Character A, positioned on the right, has dark hair, a mustache, and wears a black t-shirt. Character B, on the left, has brown hair pulled back and wears a maroon t-shirt. Both individuals are looking downwards towards the table, their attention focused on something out of frame. The background features a softly lit room with a lamp, a doorway, and framed pictures on the wall. The camera angle is a medium close-up, capturing them from the chest up. Their expressions are concentrated as they engage in their activity.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a composite effect where the top half features a man and a woman sitting at a table, and the bottom half displays a smartphone app interface. The man and woman are looking down, seemingly interacting with the app. Text overlays label them as 'Beginner' and 'Advanced'. The app interface shows pronunciation exercises with a digital tutor avatar, displaying words like 'weather' and 'healthy' along with accuracy scores. The overall vibe is an interactive learning session.",
+        "audio_transcript": "Character A says: Weather.\nCharacter C says: Let's pause to troubleshoot. Listen to the difference in our recordings and try again.\nCharacter B says: Weather.\nCharacter A says: He put on his father's old clothes.\nCharacter A says: Yeah, same. TH, TH.\nCharacter B says: He put on his father's old clothes.\nCharacter A says: Healthy.\nCharacter C says: Let's compare my recording to yours. Do you hear a difference?\nCharacter B says: Healthy.\nCharacter C says: Awesome! You got it this time!",
+        "on_screen_text": "Advanced, Beginner, BoldVoice App, Coach Eliza, weather, Listening..., 76%, He put on his father's old clothes., 84%, healthy, 79%, 97%"
+      },
+      {
+        "n": 2,
+        "start_s": 20.0,
+        "end_s": 26.5,
+        "screenshot_at_s": 23.0,
+        "scene_label": "Testimonial",
+        "setting": "Living room, evening, warm lighting, white table.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A and Character B remain seated at the white table in the living room. Character A is now looking directly at the camera, actively speaking and gesturing with his right hand. Character B is looking at Character A, listening attentively with a slight smile on her face. The warm lighting and background elements, including the lamp and framed pictures, remain consistent. The framing continues to be a medium close-up of the two individuals.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The man is speaking directly to the camera while the woman watches him. Various app interface elements, including a list of words with pronunciation scores and a diagram of mouth movements, are overlaid on the screen. The overlays obscure parts of the background and the characters. The scene conveys a testimonial or explanation of the app's features.",
+        "audio_transcript": "Character A says: So I obviously really struggled with TH sounds, but actually using the BoldVoice app has really helped my pronunciation.",
+        "on_screen_text": "thumb 69%, thunder 81%, something 91%, thyroid 79%, thorn 84%, thesis 91%, Close Up, Voiced, TH, 41%, than"
+      },
+      {
+        "n": 3,
+        "start_s": 26.5,
+        "end_s": 30.5,
+        "screenshot_at_s": 28.5,
+        "scene_label": "Successful Practice",
+        "setting": "Living room, evening, warm lighting, white table.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A and Character B are once again looking downwards towards the table, focused on their activity. After a brief moment, they both look up at each other and smile broadly, sharing a positive interaction. Character A is on the right in his black t-shirt, and Character B is on the left in her maroon t-shirt. The setting remains the same warmly lit living room with a white table in the foreground. The camera maintains its medium close-up framing.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The man and woman are looking down again, with the app interface overlaid on the bottom half of the screen. Text overlays now label them as 'English Learner' and 'Native Speaker'. The app shows the word 'than' being practiced. They look at each other and smile after a successful attempt, indicating progress and satisfaction.",
+        "audio_transcript": "Character C says: Now, let's try the next word.\nCharacter A says: Than.\nCharacter B says: Nice! Good one!",
+        "on_screen_text": "Native Speaker, English Learner, BoldVoice App, Coach Eliza, than, Listening..., 94%"
+      },
+      {
+        "n": 4,
+        "start_s": 30.5,
+        "end_s": 36.0,
+        "screenshot_at_s": 33.0,
+        "scene_label": "Call to Action",
+        "setting": "Living room, evening, warm lighting, white table.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is looking directly at the camera, speaking and making small gestures with his hands. Character B is seated next to him, holding a smartphone in her hands and looking at Character A with a supportive smile. The setting is the consistent living room environment with warm, ambient lighting. The camera angle remains a medium close-up, capturing their interaction and Character A's direct address to the viewer.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The man speaks to the camera while the woman holds a phone. The 'BoldVoice' logo is prominently displayed in the top left corner. The scene serves as a call to action, encouraging viewers to try the app. The framing and lighting remain consistent with the previous scenes.",
+        "audio_transcript": "Character A says: So if you wanna improve your English pronunciation, you can start your free trial today.",
+        "on_screen_text": "BoldVoice"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779986084.7871184
+}

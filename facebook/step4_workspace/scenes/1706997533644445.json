@@ -1,0 +1,111 @@
+{
+  "competitor_id": "1706997533644445",
+  "parsed": {
+    "duration_s": 18.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor with natural movements, expressions, and consistent lighting. There are no AI artifacts present.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "presenter",
+        "appearance": "Mid-20s male, medium build, brown complexion. Dark hair styled back, beard, wearing glasses.",
+        "wardrobe": "Black half-zip sweater, silver watch, silver ring.",
+        "demeanor": "Energetic, persuasive, direct."
+      },
+      {
+        "id": "B",
+        "role": "worker",
+        "appearance": "Mid-20s male, medium build, brown complexion. Dark hair styled back, beard, wearing glasses.",
+        "wardrobe": "Grey short-sleeve polo shirt, blue jeans.",
+        "demeanor": "Focused, relaxed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 2.0,
+        "screenshot_at_s": 1.0,
+        "scene_label": "Intro hook",
+        "setting": "Office, daytime, wooden desk, window with city view.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits at a wooden desk with a laptop, pointing his right index finger directly at the camera. A bright window showing city buildings is visible in the background.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A engages the viewer by pointing at the camera. Large text overlays appear word-by-word in the center.",
+        "audio_transcript": "Character A says: If you work in finance or tech, listen up.",
+        "on_screen_text": "If you work in finance or tech, listen up."
+      },
+      {
+        "n": 2,
+        "start_s": 2.0,
+        "end_s": 5.0,
+        "screenshot_at_s": 3.5,
+        "scene_label": "Typing vs Speaking",
+        "setting": "Top: Office. Bottom: Lounge area with grey armchair.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A sits in the office setting, gesturing with both hands while speaking. The bright window remains in the background.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B sits comfortably in a grey armchair, typing on a silver laptop resting on his lap. A large green plant is visible to the left.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The screen splits horizontally, contrasting Character A speaking with Character B typing. Text overlays continue to appear centrally.",
+        "audio_transcript": "Character A says: Typing is a thing of the past.\nCharacter A says: The most productive people are speaking.",
+        "on_screen_text": "Typing is a thing of the past. The most productive people are speaking."
+      },
+      {
+        "n": 3,
+        "start_s": 5.0,
+        "end_s": 18.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Product Pitch",
+        "setting": "Office, daytime, wooden desk, window with city view.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits at the wooden desk, speaking to the camera and using expressive hand gestures. The laptop is on the desk, and the window is behind him.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A pitches the product with hand gestures. A dark graphic overlay resembling a code editor appears, alongside continuous text overlays.",
+        "audio_transcript": "Character A says: But the secret tool that nobody's talking about is Wispr Flow.\nCharacter A says: And that's because it understands context.\nCharacter A says: If you're coding in an IDE, it'll give you perfectly formatted text for you to use.\nCharacter A says: That's why everyone is using it.\nCharacter A says: If you're still typing, you're literally four times slower.\nCharacter A says: Try Wispr Flow for free.\nCharacter A says: I bet you'll instantly be more productive.",
+        "on_screen_text": "But the secret tool that nobody's talking about is Wispr Flow. And that's because it understands context. If you're coding in an IDE, it'll give you perfectly formatted text for you to use. That's why everyone is using it. If you're still typing, you're literally four times slower. Try Wispr Flow for free. I bet you'll instantly be more productive. I just updated the IPC call in @helper.swift to include unique identifiers. Update @README.md to reflect this and explain that we need the IDs for deduplicating"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.2376943
+}

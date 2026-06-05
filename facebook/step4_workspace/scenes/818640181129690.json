@@ -1,0 +1,95 @@
+{
+  "competitor_id": "818640181129690",
+  "parsed": {
+    "duration_s": 82.0,
+    "production_type": "mixed",
+    "production_notes": "The first half is live-action human recording in an airport. The second half uses a split-screen with an AI-generated avatar on the left, characterized by overly smooth skin, perfect lighting, and slightly unnatural lip-syncing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, early 20s, slim build, fair complexion, long brown hair styled in a side braid.",
+        "wardrobe": "In the airport, a rust-colored cardigan over a white ribbed top with a patterned scarf and dark jeans. In the split-screen, a grey blazer over a white top.",
+        "demeanor": "Initially hesitant and nervous, later enthusiastic and engaged."
+      },
+      {
+        "id": "B",
+        "role": "helpful stranger",
+        "appearance": "Older man, 50s, average build, fair complexion, salt-and-pepper hair.",
+        "wardrobe": "Navy blue quarter-zip pullover and khaki pants.",
+        "demeanor": "Friendly, helpful, and confident."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "Young woman, fair complexion, red hair pulled back.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Cheerful, encouraging, with a static but expressive face."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 28.5,
+        "screenshot_at_s": 14.0,
+        "scene_label": "Airport Encounter",
+        "setting": "Airport terminal, daytime, bright lighting, luggage props.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with a side braid stands in an airport terminal, holding a phone and a suitcase handle. She appears slightly confused. An older man with salt-and-pepper hair stands behind her with his own luggage. He smiles and gestures towards her as they converse. The background features a busy airport concourse with large windows and other travelers.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A young woman struggles to practice English while waiting in an airport line. A friendly older man behind her notices and recommends an AI language app. The camera remains focused on them in a medium shot as they talk.",
+        "audio_transcript": "Character A says: I am flying to Miami. One luggage. I am flying to... No, one suitcase...\nCharacter B says: First time flying solo in English?\nCharacter A says: Is it that obvious? I understand everything, I just freeze.\nCharacter B says: My daughter was the same. She practices on Loora, it's an AI you just talk to. Like doing the whole check-in before you get there.\nCharacter A says: An AI in English?\nCharacter B says: 10 minutes a day. She booked our hotel in Miami herself last month.\nCharacter A says: Okay, show me. I've got fifteen people ahead of me anyway.",
+        "on_screen_text": "I am flying to Miami.\nOne luggage.\nI am flying to...\nNo, one suitcase...\nFirst time flying solo in English?\nIs it that obvious?\nI understand everything, I just freeze.\nMy daughter was the same.\nShe practices on Loora, it's an AI you just talk to.\nLike doing the whole check-in before you get there.\nAn AI in English?\n10 minutes a day. She booked our hotel in Miami herself last month.\nOkay, show me. I've got fifteen people ahead of me anyway."
+      },
+      {
+        "n": 2,
+        "start_s": 28.5,
+        "end_s": 82.0,
+        "screenshot_at_s": 55.0,
+        "scene_label": "App Interaction",
+        "setting": "Split screen. Left: abstract warm background. Right: inside a car.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen, close-up talking heads",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A close-up of a young woman with red hair pulled back, wearing a grey turtleneck. She rests her hand under her chin and smiles warmly. The background is a soft, out-of-focus warm tone with even lighting.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A close-up of a young woman with brown hair in a side braid, wearing a grey blazer over a white top. She sits in a car, looking directly at the camera, speaking and smiling.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen displays the AI tutor on the left and the human learner on the right. They engage in a conversation where the AI corrects the learner's English grammar. Text overlays highlight the corrections with green checkmarks and red crosses.",
+        "audio_transcript": "Character C says: What are you doing?\nCharacter A says: I am working. I have many work today.\nCharacter C says: Do you mean: \"I have a lot of work today\"?\nCharacter A says: Yes, I have a lot of work today and my brain not working.\nCharacter C says: Do you mean: \"my brain isn't working\"?\nCharacter A says: Yes, I have a lot of work and my brain isn't working!\nCharacter C says: That's perfect! Well done, Maria!\nCharacter A says: I want to speak in English everyday but lesson are expensive!\nCharacter C says: Why don't you speak to an AI tutor?\nCharacter A says: I'm not sure about an AI tutor. I want someone who can help correct my mistakes.\nCharacter C says: Like I did! My name is Loora and I am an AI tutor! Nice to meet you, Maria!\nCharacter A says: You're an AI tutor? What? No way!\nCharacter C says: Download the Loora app and talk to me everyday and I'll help correct your mistakes!\nCharacter A says: Amazing. I'll add it to my daily routine today!",
+        "on_screen_text": "What are you doing?\nI am working.\nI have many work today.\nDo you mean: \"I have a lot of work today\"?\nYes, I have a lot of work today\nand my brain not working.\nDo you mean: \"my brain isn't working\"?\nYes, I have a lot of work and my brain isn't working!\nThat's perfect!\nWell done, Maria!\nI want to speak in English everyday\nbut lesson are expensive!\nWhy don't you speak to an AI tutor?\nI'm not sure about an AI tutor.\nI want someone who can help correct my mistakes.\nLike I did!\nMy name is Loora and I am an AI tutor!\nNice to meet you, Maria!\nYou're an AI tutor?\nWhat? No way!\nDownload the Loora app\nand talk to me everyday and I'll help correct your mistakes!\nAmazing.\nI'll add it to my daily routine today!\nLoora"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.5337646
+}

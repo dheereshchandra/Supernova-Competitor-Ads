@@ -1,0 +1,92 @@
+{
+  "competitor_id": "834462509182127",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "AI-generated",
+    "production_notes": "The presenter appears to be an AI avatar; the lip-sync is slightly imprecise and facial movements are somewhat stiff. The office background is perfectly static throughout the video, suggesting a green screen or generated backdrop.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, fair complexion. He has short, dark hair parted slightly off-center. His facial features are clean-cut with dark eyes.",
+        "wardrobe": "A plain, light grey short-sleeved t-shirt.",
+        "demeanor": "Serious but earnest, attempting to convey personal struggle and subsequent success."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Presenter Introduction",
+        "setting": "Modern open-plan office, daytime, bright fluorescent lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man sits in a black office chair in a modern office setting. He holds a smartphone in his hands, which rest in his lap. He looks directly forward, speaking. The background consists of empty office desks, computer monitors, and glass partitions under bright, even lighting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter sits in an office environment, talking directly to the camera. A static text box is positioned at the top of the screen. Dynamic subtitles appear at the bottom, highlighting words as they are spoken.",
+        "audio_transcript": "Character A says: Honestly, poor English at work almost ruined my confidence.\nCharacter A says: Every meeting I knew what to say, but the words just wouldn't come out until I found something that actually worked.",
+        "on_screen_text": "What 30 Days of Microspeaking Did for My Career\nHonestly\npoor English at work\nalmost ruined my confidence\nEvery meeting\nI knew what to say\nbut the words just wouldn't come out\nuntil I found something\nthat actually worked"
+      },
+      {
+        "n": 2,
+        "start_s": 10.0,
+        "end_s": 32.0,
+        "screenshot_at_s": 21.0,
+        "scene_label": "App Features and Curriculum",
+        "setting": "Modern open-plan office, daytime, bright fluorescent lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man sits in a black office chair in a modern office setting. He holds a smartphone in his hands, which rest in his lap. He looks directly forward, speaking. The background consists of empty office desks, computer monitors, and glass partitions under bright, even lighting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter continues speaking in the office setting. A large, semi-transparent list of 20 daily topics overlays the entire screen, obscuring most of the background. A green highlight and checkmark animate down the list, indicating progress. Subtitles continue to appear at the bottom of the screen.",
+        "audio_transcript": "Character A says: Now, instead of scrolling on my phone, I spend just 10 minutes a day on Fluently, an app that helps you master one real topic at a time, like meetings, small talk, or presentations.\nCharacter A says: You don't memorize.\nCharacter A says: You practice speaking until it feels natural.\nCharacter A says: And honestly, it's a total game changer.\nCharacter A says: I sound fluent, confident, and people actually listen.",
+        "on_screen_text": "SPEAK 20 TOPICS IN 20 DAYS (10-15 minutes a day to sound natural and confident)\nDAY 1: Introduce Yourself & Talk About Your Hometown\nDAY 2: Daily Routine & Morning Habits\nDAY 3: Work, Career Goals & Job Interviews\nDAY 4: Technology in Everyday Life\nDAY 5: Fitness, Health & Well-being\nDAY 6: Food, Cooking & Eating Habits\nDAY 7: Travel, Vacations & Dream Destinations\nDAY 8: Home, Living Space & Comfort\nDAY 9: Environment & Modern Lifestyle\nDAY 10: Culture, Art & Hobbies\nDAY 11: Music, Movies & Books You Love\nDAY 12: Sports & Free Time\nDAY 13: Shopping & Money Habits\nDAY 14: Media, News & Social Trends\nDAY 15: Public Services & Volunteering\nDAY 16: Festivals, Holidays & Celebrations\nDAY 17: Business, Startups & The Future of Work\nDAY 18: Science, Space & Exploration\nDAY 19: History, Historical Figures & Events\nDAY 20: Your Life Goals & Future Plans\nNow, instead of scrolling\non my phone\nI spend just 10 minutes a\nday on Fluently\nan app that helps you master\none real topic at a time\nlike meetings, small talk,\nor presentations\nYou don't memorize\nYou practice speaking\nuntil it feels natural\nAnd honestly, it's a total\ngame changer\nI sound fluent, confident,\nand people actually listen"
+      },
+      {
+        "n": 3,
+        "start_s": 32.0,
+        "end_s": 35.0,
+        "screenshot_at_s": 33.5,
+        "scene_label": "End Card",
+        "setting": "Abstract dark background.",
+        "characters_in_scene": [],
+        "camera": "Wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark purple and black gradient background. There are no characters, objects, or distinct environmental features present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A dark purple gradient background displays the app's logo, name, and a tagline. A prominent call-to-action button is positioned at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power English coach\nDOWNLOAD\nNOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.0927463
+}

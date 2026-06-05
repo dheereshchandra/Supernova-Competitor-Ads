@@ -1,0 +1,53 @@
+{
+  "competitor_id": "1596212348295807",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Learner / Presenter",
+        "appearance": "Young woman, slim build, brown complexion, dark curly shoulder-length hair.",
+        "wardrobe": "Scene 1: grey striped dress. Scene 2: light blue jacket, white collared shirt, dark blue skirt.",
+        "demeanor": "Confident, friendly, and engaging."
+      },
+      {
+        "id": "B",
+        "role": "Friend",
+        "appearance": "Young woman, slim build, fair complexion, brown shoulder-length hair.",
+        "wardrobe": "Light blue jacket over a white shirt and a blue skirt.",
+        "demeanor": "Curious and impressed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Cafe Conversation",
+        "supernova_script": "Character B says: आजकल तुम्हारी English बहुत natural लग रही है! [Your English is sounding very natural lately!]\nCharacter A says: मैंने सिर्फ grammar रटना छोड़ दिया, और बोलना शुरू किया। [I stopped just cramming grammar, and started speaking.]\nCharacter B says: क्या कोई private tutor रखा है? [Did you hire a private tutor?]\nCharacter A says: नहीं, मैं बस Supernova app पर रोज़ 10 मिनट practice करती हूँ। [No, I just practice on the Supernova app for 10 minutes daily.]",
+        "scene_summary": "- Hook: Establishes the desired outcome (natural-sounding English) through a relatable peer conversation.\n- Problem/Solution: Shifts focus from traditional 'studying' to active speaking using Supernova.\n- Payoff: Positions the app as an accessible, daily 10-minute habit instead of an expensive private tutor.",
+        "supernova_on_screen_text": "आजकल तुम्हारी English बहुत natural लग रही है!\nमैंने सिर्फ grammar रटना छोड़ दिया\nऔर बोलना शुरू किया\nक्या कोई private tutor रखा है?\nनहीं, मैं बस Supernova पर रोज़ 10 मिनट practice करती हूँ"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Pitch",
+        "supernova_script": "Character A says: Supernova के AI tutor के साथ रोज़ 10 मिनट practice काफी है। [Just 10 minutes of daily practice with Supernova's AI tutor is enough.]\nCharacter A says: शुरू में, आपका गलतियाँ करने का डर खत्म होता है। [In the beginning, your fear of making mistakes goes away.]\nCharacter A says: फिर आप English में सोचना शुरू करते हैं। [Then you start thinking in English.]\nCharacter A says: और बहुत जल्द, आप office और दोस्तों के साथ confidently बात करने लगते हैं! [And very soon, you start talking confidently at the office and with friends!]\nCharacter A says: तो सिर्फ पढ़ना छोड़ो, और Supernova के साथ बोलना शुरू करो। [So stop just reading, and start speaking with Supernova.]",
+        "scene_summary": "- Purpose: Directly pitches the app's methodology and user journey without using unrealistic timelines.\n- Emotion: Encouraging and practical, acting like a supportive older sibling building the user's confidence.\n- Payoff: Connects daily AI practice to real-world fluency (office, friends), ending with a strong call to action.",
+        "supernova_on_screen_text": "Supernova के साथ रोज़ 10 मिनट\nगलतियाँ करने का डर खत्म\nEnglish में सोचना शुरू\nConfident conversations!\nसिर्फ पढ़ना छोड़ो\nबोलना शुरू करो"
+      },
+      {
+        "n": 3,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Purpose: Final brand reinforcement and call to action.\n- Emotion: Clear, professional, and direct.\n- Payoff: Drives app downloads with a clear value proposition.",
+        "supernova_on_screen_text": "Supernova App\nआपका अपना AI English Tutor\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779974839.7843668
+}

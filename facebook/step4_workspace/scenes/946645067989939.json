@@ -1,0 +1,82 @@
+{
+  "competitor_id": "946645067989939",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "mixed",
+    "production_notes": "The top character exhibits AI-typical traits: perfectly smooth skin, static posture, and slightly unnatural lip-sync. The bottom character displays natural lighting, varied expressions, and fluid body movements, indicating human recording.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, fair complexion, short blonde hair parted in the middle. She has a symmetrical face with subtle makeup.",
+        "wardrobe": "Beige blazer over a white v-neck top, with a thin gold necklace.",
+        "demeanor": "Calm, professional, and reassuring."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young adult female, fair complexion, long brown hair tied back in a ponytail. She has expressive facial features.",
+        "wardrobe": "Brown turtleneck sweater and large silver hoop earrings.",
+        "demeanor": "Expressive, slightly flustered initially, then amazed and enthusiastic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 34.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "English Lesson Conversation",
+        "setting": "Top: blurred office/room. Bottom: room with a glass-paned door.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is framed from the chest up in a medium close-up. She is looking directly at the camera with a gentle smile. The background is a softly blurred interior space, possibly an office, with muted lighting. Her posture remains mostly static throughout the shot.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B is framed from the chest up in a medium close-up. She is looking directly at the camera, using active hand gestures and displaying a range of facial expressions. The background features a plain wall and a dark-framed glass door or window. The lighting is natural and bright.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen video call layout. The top half shows a calm blonde woman, while the bottom half shows a more animated brunette woman. Text captions and emojis appear dynamically over both halves, highlighting their conversation and grammatical corrections. An app download prompt briefly appears in the center of the screen.",
+        "audio_transcript": "Character B says: Sorry! I'm late I lost the bus!\nCharacter A says: You mean you missed your bus?\nCharacter B says: Oh yeah I missed my bus! It was crowded with people!\nCharacter A says: Just say crowded everyone knows it's with people\nCharacter B says: Um, yes, I miss the bus! It was crowded. Oh, English can be tricky sometimes...\nCharacter A says: Want to sound confident and natural every day? Talk to me on Fluently\nCharacter B says: What? You're an AI? But you're amazing!\nCharacter A says: Yep I'm your AI English tutor! Practice with me daily and speak naturally without stress!\nCharacter B says: Wow I'm downloading Fluently right now!",
+        "on_screen_text": "Sorry!\nI'm late\nI lost the bus!\nYou mean you missed your bus?\nOh yeah\nI missed my bus!\nIt was crowded with people!\nJust say CROWDED everyone knows it's with people\nYes, I miss the bus! It was CROWDED\nEnglish can be tricky sometimes...\nWant to sound confident and natural every day?\nTalk to me on FLUENTLY\nFluently - AI English Tutor learn and practice speaking DOWNLOAD\nWhat?\nYou're an AI?\nBut you're amazing!\nYep I'm your AI English tutor!\nPractice with me daily\nand speak naturally without stress!\nWow I'm downloading FLUENTLY right now!"
+      },
+      {
+        "n": 2,
+        "start_s": 34.5,
+        "end_s": 38.0,
+        "screenshot_at_s": 36.0,
+        "scene_label": "App End Card",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [],
+        "camera": "graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, light blue background fills the entire frame. There are no characters, props, or environmental details present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid light blue screen serves as the background for an end card. A purple app icon with white arrows appears in the center, followed by the app name and a descriptive tagline. A purple 'DOWNLOAD NOW' button is displayed at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-powered English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.0980604
+}

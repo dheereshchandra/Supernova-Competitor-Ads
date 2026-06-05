@@ -1,0 +1,61 @@
+{
+  "competitor_id": "986956634132095",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female, slim build, fair complexion. She has long, straight brown hair and expressive facial features.",
+        "wardrobe": "Black long-sleeved top and large silver over-ear headphones.",
+        "demeanor": "Enthusiastic, engaging, and informative."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction to Accent Discrimination",
+        "supernova_script": "Character A says: कोई आपको ये नहीं बताता, but broken English की वजह से लोग आपको judge करते हैं। [No one tells you this, but people judge you because of broken English.]\nCharacter A says: इसीलिए मैंने Supernova try किया। [That's why I tried Supernova.]\nCharacter A says: ये एक कमाल का app है। [It's an amazing app.]\nCharacter A says: इसका AI tutor आपको बोलते वक़्त real-time feedback देता है। [Its AI tutor gives you real-time feedback while you speak.]",
+        "scene_summary": "- Hooks the viewer by addressing the relatable fear of being judged for poor English at work or in public.\n- Introduces Supernova as a practical, modern solution.\n- Highlights the AI tutor's real-time feedback feature to build curiosity.",
+        "supernova_on_screen_text": "कोई आपको ये नहीं बताता, but broken English की वजह से लोग आपको judge करते हैं। Supernova AI Tutor. Real-time feedback."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "supernova_script": "Character A says: Schedule. [Schedule.]\nCharacter A says: मेरा pronunciation थोड़ा ग़लत था। [My pronunciation was a bit wrong.]\nCharacter A says: Schedule. [Schedule.]\nCharacter A says: Perfect! [Perfect!]",
+        "scene_summary": "- Demonstrates the app's interactive pronunciation and speaking feature.\n- Normalizes making mistakes and shows how easy it is to correct them.\n- Provides a quick, satisfying payoff that proves the app works.",
+        "supernova_on_screen_text": "Schedule. मेरा pronunciation थोड़ा ग़लत था। Schedule. Perfect!"
+      },
+      {
+        "n": 3,
+        "scene_label": "Explaining Features",
+        "supernova_script": "Character A says: ये आपके level के हिसाब से daily lessons plan करता है। [It plans daily lessons according to your level.]\nCharacter A says: आप Hindi के through आसानी से English सीख सकते हैं। [You can easily learn English through Hindi.]\nCharacter A says: और सबसे अच्छी बात, आप real-world situations जैसे interviews और office meetings की practice कर सकते हैं। [And the best part, you can practice real-world situations like interviews and office meetings.]",
+        "scene_summary": "- Explains the personalized daily lessons and the comfort of a Hindi-medium approach.\n- Highlights the practical benefit of practicing real-world scenarios like interviews.\n- Reassures the user of the app's direct utility for career and confidence growth.",
+        "supernova_on_screen_text": "Daily lessons based on your level. Learn English through Hindi. Practice real-world situations: Interviews, Office Meetings."
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Delivers a strong call-to-action to download the app.\n- Reinforces the core value proposition: speaking English confidently.\n- Removes competitor's specific free trial claims to align with Supernova's premium positioning.",
+        "supernova_on_screen_text": "Supernova. Download the app today. Speak English Confidently."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Get your first 7 days free",
+        "supernova_swap": "Download the app today"
+      },
+      {
+        "competitor_brand": "27,000 STAR RATING",
+        "supernova_swap": "removed"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658661.8091824
+}

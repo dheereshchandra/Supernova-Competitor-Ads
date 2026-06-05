@@ -1,0 +1,72 @@
+{
+  "competitor_id": "1315729067327013",
+  "parsed": {
+    "duration_s": 29.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor recorded via webcam, overlaid on a standard screen recording of an app. No AI-generated artifacts are present in the human footage.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male player",
+        "appearance": "Young adult male, medium build, light complexion. He has dark hair pulled back and a prominent dark mustache.",
+        "wardrobe": "Grey crew-neck t-shirt and large black over-ear headphones.",
+        "demeanor": "Enthusiastic, engaged, becoming increasingly frustrated and self-deprecating."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 25.0,
+        "screenshot_at_s": 12.0,
+        "scene_label": "Gameplay and Mistakes",
+        "setting": "Digital app interface with a webcam inset, plain white background in the webcam feed",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A clean white background. A stylized cartoon character stands on the left side. Below the character is a grid of rounded rectangular shapes.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A young man with a mustache, dark hair, and a grey t-shirt is looking forward. He is wearing black over-ear headphones. He is sitting in a room with a plain white wall behind him. His expression is focused and slightly frustrated.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a mobile app interface for learning a language. A cartoon character is displayed above a grid of word choices. In the bottom right corner, a picture-in-picture inset shows a young man wearing headphones, reacting to the app. He selects words, gets some right, and gets some wrong, showing frustration.",
+        "audio_transcript": "Character A says: All right, we are going to be hablando some Espa\u00f1ol today. Let's go Duolingo.\nCharacter A says: All right, okay, c\u00f3mo est\u00e1 se\u00f1or, right? That should be... Yes! All right, okay, perfect.\nCharacter A says: Carmen, est\u00e1s mal. Yes... Oh wait, no, cansada!\nCharacter A says: All right, okay. Let's lock in.\nCharacter A says: We got this. Okay, s\u00ed, yo comes espa\u00f1ol. I speak Spanish.\nCharacter A says: Wait, my... yo hablo!",
+        "on_screen_text": "What would you like to learn? For English speakers Spanish French German Italian CONTINUE Translate this sentence How are you, sir? C\u00f3mo est\u00e1 se\u00f1or CHECK Incredible! Translate this sentence Carmen, are you tired? Carmen est\u00e1s mal CHECK Incorrect Correct Answer: Carmen, \u00bfest\u00e1s cansada? GOT IT Keep trying! Translate this sentence Yes, I speak Spanish. S\u00ed yo comes espa\u00f1ol CHECK Incorrect Correct Answer: S\u00ed, yo hablo espa\u00f1ol. GOT IT can you do better?"
+      },
+      {
+        "n": 2,
+        "start_s": 25.0,
+        "end_s": 29.0,
+        "screenshot_at_s": 27.0,
+        "scene_label": "End Card",
+        "setting": "Digital graphic, white background",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A white background with a cluster of colorful, stylized cartoon characters floating in the center. The characters include a green owl, a girl with purple hair, a boy in a red shirt, and others in dynamic, playful poses.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A promotional end card for the app. The brand's logo is at the top, with a group of cartoon mascots in the center. Text below encourages the user to play for free, with a button to start.",
+        "audio_transcript": "Character A says: All right Duolingo, you made your point. I gotta learn some more.",
+        "on_screen_text": "duolingo Learn a language for free! PLAY NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.1039884
+}

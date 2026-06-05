@@ -1,0 +1,58 @@
+{
+  "competitor_id": "27040096928908687",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, brown complexion. Short dark hair, clean-shaven.",
+        "wardrobe": "Dark t-shirt.",
+        "demeanor": "Enthusiastic, smiling, engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Figma Design",
+        "supernova_script": "Character A says: मैंने Supernova app open किया। [I opened the Supernova app.]\nCharacter A says: और यहाँ मैंने अपना daily speaking lesson select किया, like interview practice. [And here I selected my daily speaking lesson, like interview practice.]\nCharacter A says: And then I started talking to the AI tutor. [And then I started talking to the AI tutor.]",
+        "scene_summary": "- Hooks the viewer by showing the app interface immediately.\n- Introduces the core problem/solution: selecting a practical, real-world speaking lesson.\n- Sets a casual, relatable tone.",
+        "supernova_on_screen_text": "Supernova App\nSpeaking English with confidence is simple"
+      },
+      {
+        "n": 2,
+        "scene_label": "Lovable App Generation",
+        "supernova_script": "Character A says: Then I practiced real-world situations with the AI. [Then I practiced real-world situations with the AI.]\nCharacter A says: और ये मेरी mistakes का detailed breakdown है। [And this is the detailed breakdown of my mistakes.]\nCharacter A says: This is the final feedback. [This is the final feedback.]\nCharacter A says: So yes, now... [So yes, now...]\nCharacter A says: You have... [You have...]\nCharacter A says: Yep. [Yep.]\nCharacter A says: Improvement. [Improvement.]\nCharacter A says: This is what real practice looks like. [This is what real practice looks like.]",
+        "scene_summary": "- Demonstrates the core value proposition: AI feedback and real-world practice.\n- Matches the slightly hesitant, authentic pacing of the original screencast.\n- Builds confidence by showing tangible improvement.",
+        "supernova_on_screen_text": "Supernova App\nSpeaking English with confidence is simple"
+      },
+      {
+        "n": 3,
+        "scene_label": "Wispr Flow Stats",
+        "supernova_script": "Character A says: Like I practice speaking a lot on daily basis. [Like I practice speaking a lot on daily basis.]\nCharacter A says: And Supernova has for sure helped me in that regard. [And Supernova has for sure helped me in that regard.]\nCharacter A says: And I'm truly loving it for this. [And I'm truly loving it for this.]",
+        "scene_summary": "- Emphasizes the importance of a daily learning habit.\n- Provides a strong, personal endorsement of the app.\n- Ends on a warm, encouraging note.",
+        "supernova_on_screen_text": "Supernova App\nSpeaking English with confidence is simple"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Figma",
+        "supernova_swap": "Supernova app"
+      },
+      {
+        "competitor_brand": "Lovable",
+        "supernova_swap": "AI tutor"
+      },
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova App"
+      },
+      {
+        "competitor_brand": "Wispr",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.7670045
+}

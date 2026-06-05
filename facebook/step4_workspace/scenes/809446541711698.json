@@ -1,0 +1,76 @@
+{
+  "competitor_id": "809446541711698",
+  "parsed": {
+    "duration_s": 52.0,
+    "production_type": "mixed",
+    "production_notes": "Combines human-recorded footage of a man with an AI-generated robot avatar on a screen. The robot's lip-sync is slightly unnatural, and the voices sound AI-generated.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "Young adult male, slim build, dark hair. Seen from behind with 'ME NO ENGLISH' written in red on his bare back.",
+        "wardrobe": "Shirtless, wearing dark pants.",
+        "demeanor": "Hesitant initially, but becomes curious and eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "White humanoid robot face with smooth synthetic features and bright blue eyes.",
+        "wardrobe": "None (robot exterior).",
+        "demeanor": "Patient, helpful, and robotic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 48.5,
+        "screenshot_at_s": 24.0,
+        "scene_label": "AI Tutor Conversation",
+        "setting": "Modern room with large windows overlooking a city skyline.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot from behind Character A",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A shirtless man sits facing away from the camera, with 'ME NO ENGLISH' written in red on his back. He looks at a large vertical screen displaying a white humanoid robot face with blue eyes. The background shows a city skyline through large windows. A red cloth hangs on the man's chair.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A man interacts with an AI robot avatar on a large screen. Various text overlays and app UI pop-ups appear, highlighting the app's features and cost.",
+        "audio_transcript": "Character B says: Hello, what is your name?\nCharacter A says: My name is Rahul.\nCharacter B says: How old are you?\nCharacter A says: I have 22.\nCharacter B says: I have 22 nahi, I am 22 years old hota hai. [It's not 'I have 22', it's 'I am 22 years old'.]\nCharacter A says: Okay okay. I am 22 years old.\nCharacter B says: Where are you from?\nCharacter A says: I am Uttar Pradesh.\nCharacter B says: I am Uttar Pradesh nahi, I am from Uttar Pradesh hoga. [It's not 'I am Uttar Pradesh', it will be 'I am from Uttar Pradesh'.]\nCharacter A says: Oh, theek hai, theek hai. Mujhe English acche se nahi aati. [Oh, okay, okay. I don't know English well.]\nCharacter B says: Koi problem nahi. AI teachers try kiya? [No problem. Have you tried AI teachers?]\nCharacter A says: Wo to mehenge hote honge na? [They must be expensive, right?]\nCharacter B says: Bilkul nahi. Normal English classes se 7 guna sasta hai, isliye 50 lakh log MySivi par English practice kar rahe hain. [Not at all. It's 7 times cheaper than normal English classes, that's why 5 million people are practicing English on MySivi.]\nCharacter A says: Par time nahi milta. [But I don't get time.]\nCharacter B says: Roz ki sirf 15-20 minute ki practice kaafi hai. Bilkul confident ho jaoge. [Just 15-20 minutes of daily practice is enough. You will become completely confident.]\nCharacter A says: Wow, kaise join karun? [Wow, how do I join?]\nCharacter B says: Ye install ka button dabao aur MySivi app install karo. Sirf 15 dino mein tumhe improvement dikhne lagegi. Chalo, shuru ho jao. [Press this install button and install the MySivi app. You will start seeing improvement in just 15 days. Come on, get started.]",
+        "on_screen_text": "Hello, What is your name, My name is rahul, How old are you, I have 22, I am 22 yrs old, Okay okay, I am 22 years old, Where are you from, I am Uttar Pradesh, I am from Uttar Pradesh, Oh, theek hai, Mujhe English, acche se nahi aati, Koi problem nahi, AI teachers try, kiya, Wo to mehenge, hote honge na, Bilkul nahi, Normal English, classes se 7 guna, sasta hai, 7x CHEAPER, isliye 50 lakh log, MySivi par English, practice kar rahe hain, MySivi AI English Speakin..., Install, In-app purchases, Par time nahi, milta, Roz ki sirf 15-20, minute ki practice kaafi hai, Bilkul confident, ho jaoge, Wow, Kaise join karun, Install, MySivi AI English Spe..., Install, Sirf 15 dino mein, tumhe improvement, dikhne lagegi, Chalo, shuru ho jao"
+      },
+      {
+        "n": 2,
+        "start_s": 48.5,
+        "end_s": 52.0,
+        "screenshot_at_s": 50.0,
+        "scene_label": "End Card",
+        "setting": "Solid white background.",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A simple end card with a white background displaying the app's logo, name, and a call-to-action button.",
+        "audio_transcript": "Unknown speaker says: Install now pe click karo aur MySivi app download karo. [Click on install now and download the MySivi app.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779890884.982123
+}

@@ -1,0 +1,43 @@
+{
+  "competitor_id": "1810377262974963",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Male, mid-20s, slim build, fair complexion. He has wavy, medium-length brown hair and a prominent mustache. His facial features are expressive.",
+        "wardrobe": "A plain, short-sleeved black t-shirt.",
+        "demeanor": "Enthusiastic and engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Presenter Intro",
+        "supernova_script": "Character A says: Myself... [Myself...]\nCharacter A says: I am... [I am...]\nCharacter A says: My name is... [My name is...]\nCharacter A says: I am... [I am...]\nCharacter A says: Hi, I am... [Hi, I am...]",
+        "scene_summary": "- Hooks the viewer with a highly relatable struggle of practicing English introductions and hesitating.\n- Establishes the core problem of lacking confidence while speaking.\n- Introduces Supernova as the practical solution to overcome this hesitation.",
+        "supernova_on_screen_text": "English बोलने में अटकते हो?\nSupernova is here to build your confidence\nI am...\nMyself...?"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Features Montage",
+        "supernova_script": "Unknown speaker says: हमने English learning को boring grammar से निकालकर real-world practice बना दिया है। [We took English learning out of boring grammar and turned it into real-world practice.]\nUnknown speaker says: AI tutor के साथ रोज़ बात करो, बिना किसी डर के। [Talk daily with an AI tutor, without any fear.]\nUnknown speaker says: Interview हो या office meeting, अब हर जगह confidence से बोलो। [Whether it's an interview or an office meeting, now speak with confidence everywhere.]\nUnknown speaker says: सिर्फ videos देखने में time waste मत करो, आज ही सही English बोलना शुरू करो। [Don't waste time just watching videos, start speaking correct English today.]\nUnknown speaker says: Start today. [Start today.]",
+        "scene_summary": "- Highlights Supernova's core features: AI tutor and real-world conversation practice.\n- Shifts the focus from passive learning (watching videos/grammar) to active, confident speaking.\n- Delivers a warm, encouraging call-to-action to download the app and start practicing.",
+        "supernova_on_screen_text": "Real-world English practice\nAI Tutor के साथ रोज़ बात करो\nINTERVIEW PREP\nअब हर जगह confidence से बोलो\nOFFICE MEETING\nPresentation\n10 hours\nCLIENT CALL\nUpdate\n3 hours\n(बिना डरे...)\nसिर्फ videos देखने में time waste मत करो\nजब आप AI के साथ बोलकर practice कर सकते हो?\nSupernova\nDownload the app now.\nDownload on the App Store\nGET IT ON Google Play\nSTART TODAY"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "duolingo",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Download the world's #1 learning app.",
+        "supernova_swap": "Download the app now."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.9766605
+}

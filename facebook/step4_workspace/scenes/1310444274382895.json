@@ -1,0 +1,81 @@
+{
+  "competitor_id": "1310444274382895",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "mixed",
+    "production_notes": "The video is a screencast of an app. The voiceover sounds like AI-generated text-to-speech due to its slightly robotic cadence. The top illustrations appear to be AI-generated, especially the realistic animal painting which has a generic, smoothed digital art quality.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "User",
+        "appearance": "A human hand with fair skin and a neatly trimmed fingernail on the index finger.",
+        "wardrobe": "None visible.",
+        "demeanor": "Active, tapping on the screen."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.5,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Stylized Animal Farm",
+        "setting": "App interface, white background, digital illustration.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A stylized, flat-vector illustration of a farm scene at night. A dark barn is in the background. A scarecrow with an 'X' face and a pirate hat stands centrally. Various farm animals, including a white horse, a black horse, pigs, sheep, and chickens, are arranged in a row in the foreground. The color palette is muted with blacks, whites, and earthy tones.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A plain white background. A human hand with a pointing index finger is visible, interacting with the area.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "An app interface split horizontally. The top half shows a stylized illustration of farm animals and a scarecrow. The bottom half displays Spanish text. A hand taps on highlighted words in the text, bringing up translation pop-ups.",
+        "audio_transcript": "Unknown speaker says: Todos los animales son iguales, [All animals are equal,]\nUnknown speaker says: igual [equal]\nUnknown speaker says: pero algunos animales son m\u00e1s importantes que otros [but some animals are more important than others]",
+        "on_screen_text": "READ BOOKS IN SPANISH FOR 10 MINUTES A DAY\n\u2014Todos los animales son iguales, pero algunos animales son m\u00e1s importantes que otros\nigual\n[i'\u0263wal]\nequal\nI know it\nLearn"
+      },
+      {
+        "n": 2,
+        "start_s": 6.5,
+        "end_s": 38.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Realistic Animal Farm",
+        "setting": "App interface, white background, digital painting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A realistic, oil-painting style illustration of farm animals. A black and white cow is on the left, a white sheep and a brown sheep are in the center, and a light brown horse is on the right. The background is a warm, golden-yellow field or sky.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A plain white background. A human hand with a pointing index finger is visible, interacting with the area.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The app interface continues. The top image has changed to a realistic painting of a cow, sheep, and horse. The bottom half continues to show Spanish text. The hand repeatedly taps on various highlighted words, triggering translation pop-ups with audio pronunciations.",
+        "audio_transcript": "Unknown speaker says: \u2014ley\u00f3 uno de ellos lentamente. [-read one of them slowly.]\nUnknown speaker says: lentamente [slowly]\nUnknown speaker says: Los animales permanecieron en silencio en la noche fr\u00eda, [The animals remained in silence in the cold night,]\nUnknown speaker says: fr\u00edo [cold]\nUnknown speaker says: mirando fijamente el muro. Intentaron [staring at the wall. They tried]\nUnknown speaker says: intentar [to try]\nUnknown speaker says: recordar la vieja palabra, [to remember the old word,]\nUnknown speaker says: palabra [word]\nUnknown speaker says: pero algo [but something]\nUnknown speaker says: algo [something]\nUnknown speaker says: no encajaba. Nadie dijo nada. La granja [didn't fit. Nobody said anything. The farm]\nUnknown speaker says: granja [farm]\nUnknown speaker says: parec\u00eda la misma de siempre, [seemed the same as always,]\nUnknown speaker says: siempre [always]\nUnknown speaker says: y aun as\u00ed, nada volv\u00eda a ser igual. [and even so, nothing was the same again.]",
+        "on_screen_text": "READ BOOKS IN SPANISH FOR 10 MINUTES A DAY\nANIMAL FARM\nGEORGE ORWELL\n\u2014ley\u00f3 uno de ellos lentamente. Los animales permanecieron en silencio en la noche fr\u00eda, mirando fijamente el muro. Intentaron recordar la vieja palabra, pero algo no encajaba. Nadie dijo nada. La granja parec\u00eda la misma de siempre, y aun as\u00ed, nada volv\u00eda a ser igual.\nlentamente\nfr\u00edo\nintentar\npalabra\nalgo\ngranja\nsiempre\nI know it\nLearn"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.283583
+}

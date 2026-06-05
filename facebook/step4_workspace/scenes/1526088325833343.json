@@ -1,0 +1,148 @@
+{
+  "competitor_id": "1526088325833343",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "mixed",
+    "production_notes": "The first 12 seconds consist of AI-generated clips, evidenced by morphing facial features, unnatural physics (like the skateboard scene), and a hyper-realistic, overly perfect lighting style. The remainder of the video is human-recorded, featuring natural interactions, realistic textures, and typical 360-camera distortion.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female traveler",
+        "appearance": "Young woman, slim build, tanned complexion. She has long, voluminous, wavy brown hair. Her facial features are expressive and friendly.",
+        "wardrobe": "In the AI montage, she wears various outfits including a white top, bikini, and swimsuit. In the human-recorded sections, she wears a brown tank top and white skirt, later changing to a light beige button-down shirt.",
+        "demeanor": "Enthusiastic, curious, and outgoing."
+      },
+      {
+        "id": "B",
+        "role": "shopkeeper",
+        "appearance": "Adult male, medium build. Partially visible.",
+        "wardrobe": "Casual clothing.",
+        "demeanor": "Helpful and attentive."
+      },
+      {
+        "id": "C",
+        "role": "fruit vendor",
+        "appearance": "Older adult female, medium build.",
+        "wardrobe": "Red long-sleeved top.",
+        "demeanor": "Calm and polite."
+      },
+      {
+        "id": "D",
+        "role": "fruit vendor",
+        "appearance": "Adult male, medium build.",
+        "wardrobe": "Black t-shirt with white text, blue towel draped over his shoulder.",
+        "demeanor": "Friendly and accommodating."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 12.0,
+        "screenshot_at_s": 6.0,
+        "scene_label": "AI Travel Montage",
+        "setting": "Various locations including an airplane, beach, jungle, waterfall, and street.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Various (selfie, wide, tracking)",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A rapid montage of Character A in various locations. She is seen looking out an airplane window, walking on a beach at sunset, skateboarding in a jungle, sitting by a waterfall, standing in a field, and riding a scooter. The scenes have a slightly surreal, hyper-realistic quality typical of AI generation. The lighting is dramatic and perfectly stylized in each shot.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A montage of AI-generated clips showing a woman traveling through various scenic locations. Text overlays describe her experience switching from Duolingo to a new language app. The text appears in the center of the screen, changing with the shots.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "I had a 574 days streak on Duolingo but couldn't order tacos\nThen I switched to this immersive Spanish app\nIn 72 hours, I started getting TikToks in Spanish\nIn 10 days, I understood the full bad bunny album.\nUsing the immersion method actually helps you speak words and hear sounds without thinking.\nI started the app 2.5 months ago and today I'm talking like a native."
+      },
+      {
+        "n": 2,
+        "start_s": 12.0,
+        "end_s": 17.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Blanket Shop",
+        "setting": "A crowded shop filled with colorful woven blankets and bags.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Wide, high-angle (360 camera)",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands in a shop filled with colorful woven textiles. She points to a specific blanket hanging among many others. Character B, partially visible in the background, assists her. The camera angle is wide and slightly distorted, suggesting a 360-degree camera held by Character A. The lighting is natural indoor lighting.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A first-person view of a woman shopping for blankets. Text overlays at the top explain the premise of the video. Subtitles translate the Spanish conversation into English at the bottom of the screen.",
+        "audio_transcript": "Character A says: \u00bfEste? [This one?]\nCharacter B says: \u00bfEste? [This one?]\nCharacter A says: S\u00ed. \u00bfEn cu\u00e1nto est\u00e1? [Yes. How much is it?]\nCharacter B says: Seis ochenta. [Six eighty.]\nCharacter A says: \u00bfSeis ochenta? [Six eighty?]",
+        "on_screen_text": "POV: you switch from Duolingo to Speak and have the best trip of your life bc you can actually talk to locals\nthis one?, YES\n$680"
+      },
+      {
+        "n": 3,
+        "start_s": 17.5,
+        "end_s": 25.5,
+        "screenshot_at_s": 21.0,
+        "scene_label": "Fruit Stand 1",
+        "setting": "An outdoor fruit stand on a paved street, daytime.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Wide, high-angle (360 camera)",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The camera looks down at an outdoor fruit stand displaying various fruits in baskets. Character C and another woman are seated behind the stand. The perspective is from someone standing in front of the stand, reaching out to point at a bag of red fruit. The setting appears to be a sunny street in a town with natural daylight.",
+            "characters_in_panel": [
+              "A",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A first-person view of a woman buying fruit at a street stand. Text overlays remain at the top. Subtitles translate the conversation at the bottom, highlighting the words as they are spoken.",
+        "audio_transcript": "Character A says: Hola, buenos d\u00edas. \u00bfCu\u00e1nto ser\u00eda? [Hello, good morning. How much would it be?]\nCharacter C says: \u00bfAqu\u00ed en la bolsa? [Here in the bag?]\nCharacter A says: S\u00ed. [Yes.]\nCharacter C says: Diez. [Ten.]\nCharacter A says: \u00bfDiez? Okay. Much\u00edsimas gracias. [Ten? Okay. Thank you very much.]",
+        "on_screen_text": "POV: you switch from Duolingo to Speak and have the best trip of your life bc you can actually talk to locals\nHELLO, GOOD MORNING.\nHOW MUCH? HERE IN\nTHE BAG?\nYES\n$10? YES, OKAY\nTHANK YOU VERY MUCH"
+      },
+      {
+        "n": 4,
+        "start_s": 25.5,
+        "end_s": 35.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Fruit Stand 2",
+        "setting": "Another fruit stand, next to a blue store front.",
+        "characters_in_scene": [
+          "A",
+          "D"
+        ],
+        "camera": "Wide, high-angle (360 camera)",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character D stands behind a small wooden cart displaying various fruits. He holds a clear plastic cup filled with red fruit. The camera perspective is from someone standing in front of him, holding out their hand. Character D sprinkles something from a small bottle onto the person's hand. The person then tastes it and reacts with a smile. Character A and Character D pose for a photo together at the end.",
+            "characters_in_panel": [
+              "A",
+              "D"
+            ]
+          }
+        ],
+        "visual_description": "A first-person view of a woman trying spicy fruit from a vendor. Text overlays remain at the top. Subtitles translate the conversation at the bottom. The video ends with the woman and vendor posing for the camera.",
+        "audio_transcript": "Character A says: \u00bfS\u00faper picante? [Super spicy?]\nCharacter D says: S\u00ed, muy picante. [Yes, very spicy.]\nCharacter A says: \u00bfPuedo probar un poquito? [Can I try a little bit?]\nCharacter D says: [sprinkles spice]\nCharacter A says: \u00a1Uf! Gracias. [Oof! Thank you.]",
+        "on_screen_text": "POV: you switch from Duolingo to Speak and have the best trip of your life bc you can actually talk to locals\nSUPER-SPICY YES VERY SPICY\nI CAN TRY?\nTRY A LITTLE BIT\nTHANK YOU"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966543.474175
+}

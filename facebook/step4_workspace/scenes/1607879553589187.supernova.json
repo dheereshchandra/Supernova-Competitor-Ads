@@ -1,0 +1,64 @@
+{
+  "competitor_id": "1607879553589187",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female user",
+        "appearance": "Young adult, slim build, fair complexion, long straight blonde hair.",
+        "wardrobe": "Fitted long-sleeved blue top and a black skirt.",
+        "demeanor": "Initially confused, then surprised and interested."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D cartoon style, young female, fair skin, big eyes, wavy red hair.",
+        "wardrobe": "Not clearly visible, appears as a floating head/shoulders on screen.",
+        "demeanor": "Cheerful and helpful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Language Confusion",
+        "supernova_script": "Character B says: Good morning! Let's start our mock interview. Tell me about yourself. [Good morning! Let's start our mock interview. Tell me about yourself.]\nCharacter A says: Uhh... myself... I am... [Uhh... myself... I am...]\nCharacter A says: Sorry, मुझे English बोलने में hesitation होती है। [Sorry, I hesitate while speaking English.]\nCharacter B says: No problem! What if you have to speak to a customer? [No problem! What if you have to speak to a customer?]\nCharacter A says: Customer? Uhh... I will say... [Customer? Uhh... I will say...]\nCharacter A says: नहीं हो पा रहा, I feel so stuck. [I can't do it, I feel so stuck.]",
+        "scene_summary": "- Establishes the core problem: the user freezing up when forced to speak English in real-world scenarios.\n- Creates a relatable sense of frustration and hesitation.\n- Hooks the audience by mirroring their own struggles with spoken English.",
+        "supernova_on_screen_text": "Good morning!\nLet's start our mock interview.\nUhh... myself... I am...\nमुझे English बोलने में hesitation होती है\nWhat if you have to speak to a customer?\nCustomer? Uhh... I will say...\nनहीं हो पा रहा\nI feel so stuck."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Explanation",
+        "supernova_script": "Character A says: क्या तुम सच में मेरी English ठीक कर सकती हो? [Can you really fix my English?]\nCharacter B says: Yes! I'm an AI tutor on Supernova. हम interview, office, या दोस्तों के साथ बात करने की daily practice कर सकते हैं! [Yes! I'm an AI tutor on Supernova. We can do daily practice for interviews, office, or talking with friends!]\nCharacter A says: पर मुझे तो basic English भी ठीक से नहीं आती। [But I don't even know basic English properly.]",
+        "scene_summary": "- Introduces Supernova as the solution to the user's problem.\n- Highlights the app's core feature: daily practice for real-life situations (interviews, office).\n- Acknowledges the user's insecurity about their basic skills to build trust.",
+        "supernova_on_screen_text": "क्या तुम सच में\nमेरी English ठीक कर सकती हो?\nYes!\nI'm an AI tutor on Supernova.\nहम interview, office, या दोस्तों के साथ\nबात करने की daily practice कर सकते हैं!\nपर मुझे तो basic English भी\nठीक से नहीं आती।"
+      },
+      {
+        "n": 3,
+        "scene_label": "Native Language Feature",
+        "supernova_script": "Character B says: कोई बात नहीं! मैं आपको Hindi में समझाऊंगी, step-by-step. [No problem! I will explain it to you in Hindi, step-by-step.]\nCharacter A says: तुम मेरी language में सिखाओगी? [You will teach in my language?]\nCharacter B says: बिल्कुल! Supernova download करो और confidence के साथ English बोलना शुरू करो! [Absolutely! Download Supernova and start speaking English with confidence!]\nCharacter A says: Perfect, मैं अभी download करती हूँ! [Perfect, I will download it right now!]",
+        "scene_summary": "- Delivers the main payoff: learning English through the comfort of Hindi.\n- Reassures the user with a warm, encouraging tone.\n- Ends with a strong, clear call-to-action to download the app.",
+        "supernova_on_screen_text": "कोई बात नहीं!\nमैं आपको Hindi में समझाऊंगी,\nstep-by-step.\nतुम मेरी language में सिखाओगी?\nबिल्कुल!\nSupernova download करो\nऔर confidence के साथ English बोलना शुरू करो!\nPerfect,\nमैं अभी download करती हूँ!"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "[no speech]",
+        "scene_summary": "- Displays the brand logo and app store badges.\n- Reinforces the final call-to-action visually.",
+        "supernova_on_screen_text": "Supernova\nSpeak English with Confidence\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967765.077117
+}

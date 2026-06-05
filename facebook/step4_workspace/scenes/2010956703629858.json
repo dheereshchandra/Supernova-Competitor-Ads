@@ -1,0 +1,82 @@
+{
+  "competitor_id": "2010956703629858",
+  "parsed": {
+    "duration_s": 54.0,
+    "production_type": "mixed",
+    "production_notes": "The top panel features an AI-generated avatar with perfectly smooth skin, a static background, and slightly unnatural lip-sync. The bottom panel is human-recorded, showing natural movements, real props, and a visible lavalier microphone.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, fair complexion. Short blonde bob haircut. Symmetrical facial features.",
+        "wardrobe": "Beige blazer over a light-colored top, delicate silver necklace.",
+        "demeanor": "Calm, professional, and slightly robotic."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young adult female, slim build, fair complexion. Short reddish-brown hair with bangs.",
+        "wardrobe": "White spaghetti-strap top, black lavalier microphone clipped to the neckline.",
+        "demeanor": "Expressive, slightly confused initially, then surprised and engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 50.5,
+        "screenshot_at_s": 25.0,
+        "scene_label": "Candle Vocabulary Lesson",
+        "setting": "Split screen: blurred office (top) and bedroom with plant (bottom).",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A faces the camera directly in a medium close-up. She maintains a steady, attentive gaze with minimal head movement. Her posture is upright and professional. The background is a softly blurred interior space with muted, cool-toned lighting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B is framed in a medium close-up, looking slightly downward. She holds a large yellow glass candle in one hand and a lit lighter in the other. She brings the flame near the candle wick. The background shows a room with a wooden wardrobe and a large green leafy plant. The lighting is natural and warm, casting soft shadows.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with an AI avatar on top and a human learner on the bottom. The human interacts with props while conversing with the avatar. Text overlays and UI elements appear throughout the scene.",
+        "audio_transcript": "Character A says: What are you doing?\nCharacter B says: I try to burn the candle.\nCharacter A says: You mean I'm trying to light the candle?\nCharacter B says: Okay. I'm trying to light the candle. I really like the smell of it.\nCharacter A says: Don't say \"smell\". In English smell usually means bad smells. You should say \"scent\".\nCharacter B says: Okay. I really love the scent of the candle.\nCharacter A says: Good job!\nCharacter B says: I really need an English speaking practice!\nCharacter A says: You should speak to a native every day.\nCharacter B says: I don't have money to pay for a tutor!\nCharacter A says: Then speak to AI tutors.\nCharacter B says: I don't want to talk to an AI.\nCharacter A says: Surprise! I'm an AI teacher!\nCharacter B says: You? You're really good!\nCharacter A says: It's like talking to a human. Just download the Fluently app. We will talk everyday.\nCharacter B says: Okay. So I'll just download Fluently and practice English everyday!",
+        "on_screen_text": "What are you doing?\nI trying to burn the candle\nYou mean I'm trying to light the candle?\nI'm trying to light the candle\nI really like the smell of it\nDon't say \"smell\"\nin English smell usually means bad smells\nyou should say \"scent\"\nI really love the scent of the candle\nGood job! \ud83d\udc4d\nI really need a English speaking practice!\nYou should speak to a native every day\nI don't have money to pay for a tutor! \ud83d\ude14\nThen speak to AI tutors\nI don't want to talk to an AI \ud83e\udd16\nSurprise! I'm an AI teacher!\nYOU? \ud83d\ude31\nYou're really good!\nIt's like talking to a human\nJust download the FLUENTLY app\nWe will talk everyday\nSo I'll just download FLUENTLY and practice English everyday!\nFluently - AI English Tutor\nlearn and practice speaking\nDOWNLOAD"
+      },
+      {
+        "n": 2,
+        "start_s": 50.5,
+        "end_s": 54.0,
+        "screenshot_at_s": 52.0,
+        "scene_label": "End Card",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid light blue background fills the frame. A subtle radial gradient lightens the center of the image. No characters or props are present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A static end card with a solid blue background. App logos and call-to-action buttons are displayed.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-powered English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657946.4280145
+}

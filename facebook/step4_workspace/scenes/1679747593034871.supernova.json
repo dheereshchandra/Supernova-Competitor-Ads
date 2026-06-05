@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1679747593034871",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter/learner",
+        "appearance": "Young adult female with a slim build and fair complexion. She has long brown hair. Her facial features are expressive and natural.",
+        "wardrobe": "In the first scene, she wears a white sleeveless turtleneck. In the second scene, she wears a light blue v-neck scrub top.",
+        "demeanor": "Energetic, engaging, and attentive."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female with fair skin and long red hair. She has large, expressive eyes and a perfectly smooth complexion. Her appearance is highly polished and slightly stylized.",
+        "wardrobe": "She wears a solid grey long-sleeved turtleneck sweater.",
+        "demeanor": "Friendly, patient, and consistently smiling."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction in car",
+        "supernova_script": "Character A says: \"I'm fine, thanks\", \"I don't know\" बोलना बंद करो। [Stop saying \"I'm fine, thanks\", \"I don't know\".]\nCharacter A says: ये बहुत basic English है। [This is very basic English.]\nCharacter A says: पहले मैं भी बोलते हुए ऐसे ही अटकती थी। [Earlier, I used to get stuck like this while speaking too.]\nCharacter A says: फिर मैंने Supernova app पर practice शुरू की। [Then I started practicing on the Supernova app.]\nCharacter A says: रुको, मैं दिखाती हूँ। [Wait, let me show you.]",
+        "scene_summary": "- Hooks the viewer by calling out common, repetitive English phrases.\n- Establishes empathy by admitting the speaker used to struggle too.\n- Introduces Supernova as the practical solution and transitions to a demo.",
+        "supernova_on_screen_text": "⛔ STOP SAYING ⛔\nI'm fine, thanks ❌\nI don't know\nये बहुत basic English है।\nपहले मैं भी ऐसे ही अटकती थी।\nफिर मैंने Supernova app पर practice शुरू की।\nरुको, मैं दिखाती हूँ।"
+      },
+      {
+        "n": 2,
+        "scene_label": "App demonstration split-screen",
+        "supernova_script": "Character A says: Sorry, मेरी English अच्छी नहीं है। [Sorry, my English is not good.]\nCharacter B says: कोई बात नहीं, तुम्हें रोज़ practice करनी चाहिए। [No problem, you should practice everyday.]\nCharacter A says: पर मैं practice किसके साथ करूँ? [But who do I practice with?]\nCharacter B says: उसी के लिए तो मैं हूँ! [That's exactly what I'm here for!]\nCharacter B says: मैं Supernova पर तुम्हारी AI English tutor हूँ। [I'm your AI English tutor on Supernova.]\nCharacter A says: क्या मैं तुमसे बात कर सकती हूँ? [Can I speak with you?]\nCharacter B says: हाँ, हम real-life situations की practice करेंगे [Yes, we will practice real-life situations]\nCharacter B says: और मैं तुम्हारी pronunciation पर तुरंत feedback दूँगी। [and I'll give you instant feedback on your pronunciation.]\nCharacter A says: पर मैं बोलते हुए बहुत mistakes करती हूँ। [But I make a lot of mistakes while speaking.]\nCharacter B says: Mistakes से डरो मत, मैं उन्हें सही करने में मदद करूँगी। [Don't be afraid of mistakes, I'll help you correct them.]\nCharacter A says: Sounds good! [Sounds good!]\nCharacter B says: चलो रोज़ साथ practice करते हैं [Let's practice together every day]\nCharacter B says: फिर देखना तुम्हारी English कितनी जल्दी improve होती है! [then see how quickly your English improves!]",
+        "scene_summary": "- Demonstrates the core problem: lack of a speaking partner and fear of making mistakes.\n- Showcases the AI tutor as a safe, non-judgmental space for daily practice.\n- Highlights key features like instant feedback and real-life situation practice.",
+        "supernova_on_screen_text": "Sorry, मेरी English अच्छी नहीं है।\nकोई बात नहीं, तुम्हें रोज़ practice करनी चाहिए।\nपर मैं practice किसके साथ करूँ?\nउसी के लिए तो मैं हूँ!\nमैं Supernova पर तुम्हारी AI English tutor हूँ।\nक्या मैं तुमसे बात कर सकती हूँ?\nहाँ, हम real-life situations की practice करेंगे\nऔर मैं तुम्हारी pronunciation पर तुरंत feedback दूँगी।\nपर मैं बोलते हुए बहुत mistakes करती हूँ।\nMistakes से डरो मत, मैं उन्हें सही करने में मदद करूँगी।\nSounds good!\nचलो रोज़ साथ practice करते हैं\nफिर देखना तुम्हारी English कितनी जल्दी improve होती है!\nSupernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Loora",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889200.0649912
+}

@@ -1,0 +1,198 @@
+{
+  "competitor_id": "27932844696318320",
+  "parsed": {
+    "duration_s": 50.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human actors with an AI-generated robot avatar. The robot's movements are slightly stiff and its facial expressions are uncanny, typical of AI generation. The split-screen format is used to composite different video sources together.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot with a glossy white and silver casing. It has a human-like face with grey eyes and smooth, artificial skin.",
+        "wardrobe": "Built-in white and silver robotic casing.",
+        "demeanor": "Calm, educational, and slightly robotic."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young adult male with a medium build, light brown complexion, and short black hair.",
+        "wardrobe": "Grey short-sleeved t-shirt.",
+        "demeanor": "Curious, slightly hesitant, and eager to learn."
+      },
+      {
+        "id": "C",
+        "role": "Female learner",
+        "appearance": "Young adult female with a medium build, light brown complexion, and shoulder-length dark brown hair.",
+        "wardrobe": "Initially a black v-neck top, later an olive green jacket over a white top.",
+        "demeanor": "Surprised, engaged, and excited."
+      },
+      {
+        "id": "D",
+        "role": "Street food vendor",
+        "appearance": "Middle-aged male with a medium build, brown complexion, and short dark hair.",
+        "wardrobe": "Light pink short-sleeved button-up shirt.",
+        "demeanor": "Energetic and focused on his work."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 17.0,
+        "screenshot_at_s": 8.0,
+        "scene_label": "Describing the street vendor",
+        "setting": "Split screen: Podcasting studios and a street food cart.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "D"
+        ],
+        "camera": "Medium close-ups and medium shot",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "The panel features two distinct subjects side-by-side. On the left, Character A sits in a dimly lit room with potted plants, speaking into a black microphone on a boom arm. On the right, Character B sits in a well-lit room with wooden acoustic panels and shelves, also speaking into a black microphone.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character D stands behind a blue street food cart. He is energetically mixing ingredients in a large metal pot using a spoon. The cart has multiple small metal containers attached to its front, holding various colorful ingredients like puffed rice and peanuts.",
+            "characters_in_panel": [
+              "D"
+            ]
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half shows the AI avatar and the male learner in their respective studio settings. The bottom half shows a street food vendor rapidly preparing a snack. Text overlays in Malayalam and English appear throughout, translating the dialogue and highlighting key phrases.",
+        "audio_transcript": "Character B says: \u0d08 \u0d38\u0d40\u0d7b \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d3f\u0d7d \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46 \u0d2a\u0d31\u0d2f\u0d41\u0d02? [How do you say this scene in English?]\nCharacter B says: Man is making food fastly.\nCharacter A says: \u0d07\u0d24\u0d4d \u0d2a\u0d42\u0d7c\u0d23\u0d4d\u0d23\u0d2e\u0d3e\u0d2f\u0d41\u0d02 \u0d24\u0d46\u0d31\u0d4d\u0d31\u0d32\u0d4d\u0d32, \u0d0e\u0d19\u0d4d\u0d15\u0d3f\u0d32\u0d41\u0d02 \u0d15\u0d41\u0d31\u0d1a\u0d4d\u0d1a\u0d41\u0d15\u0d42\u0d1f\u0d3f \u0d28\u0d28\u0d4d\u0d28\u0d3e\u0d2f\u0d3f \u0d07\u0d19\u0d4d\u0d19\u0d28\u0d46 \u0d2a\u0d31\u0d2f\u0d3e\u0d02. [This is not completely wrong, but it can be said better like this.]\nCharacter A says: An energetic vendor aggressively mixes various ingredients into a snack with high-intensity movements.\nCharacter B says: \u0d13, \u0d36\u0d30\u0d3f \u0d36\u0d30\u0d3f. \u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d05\u0d24\u0d4d\u0d30 \u0d28\u0d28\u0d4d\u0d28\u0d3e\u0d2f\u0d3f \u0d05\u0d31\u0d3f\u0d2f\u0d3f\u0d32\u0d4d\u0d32. [Oh, okay okay. I don't know English that well.]",
+        "on_screen_text": "\u0d08 \u0d38\u0d40\u0d7b \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d3f\u0d7d \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46 \u0d2a\u0d31\u0d2f\u0d41\u0d02 (How to say this scene in English)\nMan is making food fastly\n\u0d07\u0d24\u0d4d \u0d2a\u0d42\u0d7c\u0d23\u0d4d\u0d23\u0d2e\u0d3e\u0d2f\u0d41\u0d02 \u0d24\u0d46\u0d31\u0d4d\u0d31\u0d32\u0d4d\u0d32 (This is not completely wrong)\n\u0d0e\u0d19\u0d4d\u0d15\u0d3f\u0d32\u0d41\u0d02 \u0d15\u0d41\u0d31\u0d1a\u0d4d\u0d1a\u0d41\u0d15\u0d42\u0d1f\u0d3f \u0d28\u0d28\u0d4d\u0d28\u0d3e\u0d2f\u0d3f \u0d07\u0d19\u0d4d\u0d19\u0d28\u0d46 \u0d2a\u0d31\u0d2f\u0d3e\u0d02 (but it can be said better like this)\nAn energetic vendor aggressively mixes various ingredients into a snack with high-intensity movements\n\u0d13, \u0d36\u0d30\u0d3f \u0d36\u0d30\u0d3f (Oh, okay okay)\n\u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d05\u0d24\u0d4d\u0d30 \u0d28\u0d28\u0d4d\u0d28\u0d3e\u0d2f\u0d3f \u0d05\u0d31\u0d3f\u0d2f\u0d3f\u0d32\u0d4d\u0d32 (I don't know English that well)"
+      },
+      {
+        "n": 2,
+        "start_s": 17.0,
+        "end_s": 30.0,
+        "screenshot_at_s": 23.0,
+        "scene_label": "Discussing cost and alternatives",
+        "setting": "Split screen: Podcasting studios and a classroom.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-ups and wide shot",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A sits on the left in a room with plants, speaking into a microphone. Character B sits on the right in a room with wooden panels, listening and responding into his microphone.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A classroom environment. A female teacher is standing at the front, writing on a white whiteboard with a marker. Several students are seated at wooden desks in the foreground, facing the teacher and the board. The room is brightly lit with natural light coming from windows on the left.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The screen remains split horizontally. The top half continues to show the AI avatar and the male learner. The bottom half transitions from an app interface to a live-action classroom scene, and then to an app store page. Large text overlays emphasize the cost savings of the app compared to traditional classes.",
+        "audio_transcript": "Character A says: \u0d38\u0d3e\u0d30\u0d2e\u0d3f\u0d32\u0d4d\u0d32, \u0d28\u0d40 \u0d12\u0d30\u0d41 AI \u0d1f\u0d40\u0d1a\u0d4d\u0d1a\u0d31\u0d46 \u0d2a\u0d30\u0d40\u0d15\u0d4d\u0d37\u0d3f\u0d1a\u0d4d\u0d1a\u0d41 \u0d28\u0d4b\u0d15\u0d4d\u0d15\u0d3f\u0d2f\u0d4b? [No problem, have you tried an AI teacher?]\nCharacter B says: \u0d2a\u0d15\u0d4d\u0d37\u0d46 \u0d05\u0d24\u0d3f\u0d28\u0d4d \u0d28\u0d32\u0d4d\u0d32 \u0d1a\u0d3f\u0d32\u0d35\u0d3e\u0d15\u0d3f\u0d32\u0d4d\u0d32\u0d47? [But won't that be very expensive?]\nCharacter A says: \u0d12\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d32\u0d41\u0d2e\u0d3f\u0d32\u0d4d\u0d32. \u0d38\u0d3e\u0d27\u0d3e\u0d30\u0d23 \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d15\u0d4d\u0d32\u0d3e\u0d38\u0d41\u0d15\u0d33\u0d46\u0d15\u0d4d\u0d15\u0d3e\u0d7e 7 \u0d2e\u0d1f\u0d19\u0d4d\u0d19\u0d4d \u0d1a\u0d3f\u0d32\u0d35\u0d4d \u0d15\u0d41\u0d31\u0d35\u0d3e\u0d23\u0d4d. \u0d05\u0d24\u0d41\u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d3e\u0d23\u0d4d \u0d12\u0d30\u0d41 \u0d15\u0d4b\u0d1f\u0d3f \u0d06\u0d33\u0d41\u0d15\u0d7e MySivi-\u0d7d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d4d\u0d30\u0d3e\u0d15\u0d4d\u0d1f\u0d40\u0d38\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d4d. [Not at all. It is 7 times cheaper than normal English classes. That's why 1 crore people practice English on MySivi.]\nCharacter B says: \u0d2a\u0d15\u0d4d\u0d37\u0d46 \u0d38\u0d2e\u0d2f\u0d02 \u0d15\u0d3f\u0d1f\u0d4d\u0d1f\u0d41\u0d28\u0d4d\u0d28\u0d3f\u0d32\u0d4d\u0d32. [But I don't get time.]",
+        "on_screen_text": "\u0d38\u0d3e\u0d30\u0d2e\u0d3f\u0d32\u0d4d\u0d32 (No problem)\n\u0d28\u0d40 \u0d12\u0d30\u0d41 AI \u0d1f\u0d40\u0d1a\u0d4d\u0d1a\u0d31\u0d46 \u0d2a\u0d30\u0d40\u0d15\u0d4d\u0d37\u0d3f\u0d1a\u0d4d\u0d1a\u0d41 \u0d28\u0d4b\u0d15\u0d4d\u0d15\u0d3f\u0d2f\u0d4b (have you tried an AI teacher)\n\u0d2a\u0d15\u0d4d\u0d37\u0d46 \u0d05\u0d24\u0d3f\u0d28\u0d4d \u0d28\u0d32\u0d4d\u0d32 \u0d1a\u0d3f\u0d32\u0d35\u0d3e\u0d15\u0d3f\u0d32\u0d4d\u0d32\u0d47 (But won't that be very expensive)\n\u0d12\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d32\u0d41\u0d2e\u0d3f\u0d32\u0d4d\u0d32 (Not at all)\n\u0d38\u0d3e\u0d27\u0d3e\u0d30\u0d23 \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d15\u0d4d\u0d32\u0d3e\u0d38\u0d41\u0d15\u0d33\u0d46\u0d15\u0d4d\u0d15\u0d3e\u0d7e (than normal English classes)\n7 \u0d2e\u0d1f\u0d19\u0d4d\u0d19\u0d4d \u0d1a\u0d3f\u0d32\u0d35\u0d4d \u0d15\u0d41\u0d31\u0d35\u0d3e\u0d23\u0d4d (7 times cheaper)\n7X CHEAPER\n\u0d05\u0d24\u0d41\u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d3e\u0d23\u0d4d \u0d12\u0d30\u0d41 \u0d15\u0d4b\u0d1f\u0d3f \u0d06\u0d33\u0d41\u0d15\u0d7e (That's why 1 crore people)\nMySivi-\u0d7d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d4d\u0d30\u0d3e\u0d15\u0d4d\u0d1f\u0d40\u0d38\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d4d (practice English on MySivi)\n\u0d2a\u0d15\u0d4d\u0d37\u0d46 \u0d38\u0d2e\u0d2f\u0d02 \u0d15\u0d3f\u0d1f\u0d4d\u0d1f\u0d41\u0d28\u0d4d\u0d28\u0d3f\u0d32\u0d4d\u0d32 (But I don't get time)"
+      },
+      {
+        "n": 3,
+        "start_s": 30.0,
+        "end_s": 38.0,
+        "screenshot_at_s": 34.0,
+        "scene_label": "Practicing with the app",
+        "setting": "Split screen: Podcasting studios and a plain room.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C"
+        ],
+        "camera": "Medium close-ups",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is on the left, speaking into a microphone in a plant-filled room. Character B is on the right, listening intently in a wood-paneled room.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character C stands in a room with plain, light-colored walls and a wooden door. She is holding a smartphone in front of her face, speaking into it with a surprised and engaged expression. She then turns her body slightly to the side.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The horizontal split continues. The top half shows the ongoing conversation between the AI and the male learner. The bottom half shows a female learner actively using her smartphone, demonstrating the ease of practicing. Text overlays highlight the short daily time commitment required.",
+        "audio_transcript": "Character A says: \u0d26\u0d3f\u0d35\u0d38\u0d35\u0d41\u0d02 \u0d35\u0d46\u0d31\u0d41\u0d02 15-20 \u0d2e\u0d3f\u0d28\u0d3f\u0d31\u0d4d\u0d31\u0d4d \u0d2a\u0d4d\u0d30\u0d3e\u0d15\u0d4d\u0d1f\u0d40\u0d38\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d3e\u0d7d \u0d2e\u0d24\u0d3f. \u0d2a\u0d24\u0d41\u0d15\u0d4d\u0d15\u0d46 \u0d28\u0d40 \u0d06\u0d24\u0d4d\u0d2e\u0d35\u0d3f\u0d36\u0d4d\u0d35\u0d3e\u0d38\u0d24\u0d4d\u0d24\u0d4b\u0d1f\u0d46 \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d38\u0d02\u0d38\u0d3e\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d41\u0d02. [Just practice for 15-20 minutes daily. Slowly you will start speaking English with confidence.]\nCharacter B says: \u0d35\u0d57, \u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46 \u0d1c\u0d4b\u0d2f\u0d3f\u0d7b \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d02? [Wow, how can I join?]",
+        "on_screen_text": "\u0d26\u0d3f\u0d35\u0d38\u0d35\u0d41\u0d02 \u0d35\u0d46\u0d31\u0d41\u0d02 15-20 \u0d2e\u0d3f\u0d28\u0d3f\u0d31\u0d4d\u0d31\u0d4d \u0d2a\u0d4d\u0d30\u0d3e\u0d15\u0d4d\u0d1f\u0d40\u0d38\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d3e\u0d7d \u0d2e\u0d24\u0d3f (Just practice for 15-20 minutes daily)\n\u0d2a\u0d24\u0d41\u0d15\u0d4d\u0d15\u0d46 \u0d28\u0d40 \u0d06\u0d24\u0d4d\u0d2e\u0d35\u0d3f\u0d36\u0d4d\u0d35\u0d3e\u0d38\u0d24\u0d4d\u0d24\u0d4b\u0d1f\u0d46 \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d38\u0d02\u0d38\u0d3e\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d41\u0d02 (Slowly you will start speaking English with confidence)\n\u0d35\u0d57 (Wow)\n\u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46 \u0d1c\u0d4b\u0d2f\u0d3f\u0d7b \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d02 (how can I join)"
+      },
+      {
+        "n": 4,
+        "start_s": 38.0,
+        "end_s": 46.0,
+        "screenshot_at_s": 43.0,
+        "scene_label": "Call to action and results",
+        "setting": "Split screen: Podcasting studio and a plain room.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Medium close-ups",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A sits in a dimly lit room with potted plants in the background. She is speaking into a black microphone mounted on a boom arm.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character C sits in a room with plain, light-colored walls. She is holding a smartphone with both hands, looking down at the screen. She smiles broadly, her face lighting up with excitement, and she raises one fist in a subtle cheering gesture.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half shows the AI avatar giving instructions. The bottom half briefly shows an app installation interface before cutting to the female learner looking thrilled while using her phone. Text overlays provide step-by-step instructions on how to download and use the app.",
+        "audio_transcript": "Character A says: \u0d07\u0d7b\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d3e\u0d7e \u0d2c\u0d1f\u0d4d\u0d1f\u0d23\u0d3f\u0d7d \u0d15\u0d4d\u0d32\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d42, MySivi \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d07\u0d7b\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d3e\u0d7e \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d42, \u0d38\u0d48\u0d7b \u0d05\u0d2a\u0d4d\u0d2a\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d4d \u0d2a\u0d4d\u0d30\u0d3e\u0d15\u0d4d\u0d1f\u0d40\u0d38\u0d4d \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d42. \u0d35\u0d46\u0d31\u0d41\u0d02 15 \u0d26\u0d3f\u0d35\u0d38\u0d24\u0d4d\u0d24\u0d3f\u0d28\u0d41\u0d33\u0d4d\u0d33\u0d3f\u0d7d \u0d2e\u0d3e\u0d31\u0d4d\u0d31\u0d02 \u0d15\u0d23\u0d4d\u0d1f\u0d41\u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d41\u0d02. \u0d07\u0d2a\u0d4d\u0d2a\u0d4b\u0d7e \u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d42. [Click on the install button, install the MySivi app, sign up and start practicing. You will start seeing changes in just 15 days. Start right now.]",
+        "on_screen_text": "\u0d07\u0d7b\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d3e\u0d7e \u0d2c\u0d1f\u0d4d\u0d1f\u0d23\u0d3f\u0d7d \u0d15\u0d4d\u0d32\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d42 (Click on the install button)\nMySivi \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d07\u0d7b\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d3e\u0d7e \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d42 (install the MySivi app)\n\u0d38\u0d48\u0d7b \u0d05\u0d2a\u0d4d\u0d2a\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d4d \u0d2a\u0d4d\u0d30\u0d3e\u0d15\u0d4d\u0d1f\u0d40\u0d38\u0d4d \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d42 (sign up and start practicing)\n\u0d35\u0d46\u0d31\u0d41\u0d02 15 \u0d26\u0d3f\u0d35\u0d38\u0d24\u0d4d\u0d24\u0d3f\u0d28\u0d41\u0d33\u0d4d\u0d33\u0d3f\u0d7d \u0d2e\u0d3e\u0d31\u0d4d\u0d31\u0d02 \u0d15\u0d23\u0d4d\u0d1f\u0d41\u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d41\u0d02 (You will start seeing changes in just 15 days)\n\u0d07\u0d2a\u0d4d\u0d2a\u0d4b\u0d7e \u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d42 (Start right now)"
+      },
+      {
+        "n": 5,
+        "start_s": 46.0,
+        "end_s": 50.0,
+        "screenshot_at_s": 48.0,
+        "scene_label": "End card",
+        "setting": "Abstract light background.",
+        "characters_in_scene": [],
+        "camera": "Close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A silver smartphone is displayed against a plain, light purple background. The phone is initially shown from the back, highlighting its multi-lens camera module, before rotating to reveal its front screen.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A 3D render of a smartphone spins into view against a light purple background. The screen displays the MySivi app logo, the tagline 'English speaking app', and a prominent 'Install Now' button.",
+        "audio_transcript": "Unknown speaker says: Click on install now and download MySivi app.",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780640923.8651166
+}

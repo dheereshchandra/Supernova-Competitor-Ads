@@ -1,0 +1,82 @@
+{
+  "competitor_id": "1282822937331618",
+  "parsed": {
+    "duration_s": 21.0,
+    "production_type": "mixed",
+    "production_notes": "The top half features a 3D animated character with stylized, oversized eyes and flawless skin, clearly AI-generated or CGI. The bottom half shows a real human recorded with a smartphone camera, indicated by natural skin texture, lighting, and slight camera movements.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with stylized 3D animation features. She has a fair complexion, large expressive green eyes, and wavy red hair. Her face is perfectly smooth with cartoonish proportions.",
+        "wardrobe": "She is wearing a simple white t-shirt with the word 'Praktika' printed on it.",
+        "demeanor": "Friendly, attentive, and encouraging."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young adult human female with a fair complexion. She has blonde hair with visible dark roots and is wearing dark eyeliner. Her features are natural and realistic.",
+        "wardrobe": "She is wearing a casual grey sweatshirt.",
+        "demeanor": "Relaxed, lying down, slightly hesitant but engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 20.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Language Practice",
+        "setting": "Bedroom, nighttime, purple lighting in the bottom panel, bright lighting in the top panel.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A young woman with wavy red hair and large green eyes is lying down, resting her head on a fluffy white pillow. She is wearing a simple white t-shirt. The lighting is bright and even, highlighting her features. She looks directly at the camera with a friendly and attentive expression. Her mouth moves as if she is speaking to someone. The background is soft and out of focus, keeping the emphasis entirely on her face.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young woman with blonde hair is lying down, resting her head on a textured purple and black striped pillow. She is wearing a grey sweatshirt. The scene is illuminated by a strong purple light, creating a moody and relaxed atmosphere. In the background, a small white bunny figurine is faintly visible on a shelf. She looks towards the camera, her expression slightly hesitant as she speaks. Her body language is casual and comfortable.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout showing two women having a conversation. The top half features a 3D animated woman with red hair lying on a white pillow in bright lighting. The bottom half shows a real woman with blonde hair lying on a purple pillow, bathed in purple light. Both are framed in close-up, looking directly at the camera. Text captions appear in the center of the screen, translating their spoken words.",
+        "audio_transcript": "Character B says: My name Nesly.\nCharacter A says: \u00bfQuieres decir \"My name is Nesly\"? [Do you mean \"My name is Nesly\"?]\nCharacter B says: Sorry, small English.\nCharacter A says: You mean \"Sorry, I speak a little English\"?\nCharacter B says: Yes.\nCharacter A says: Est\u00e1 bien. \u00bfCu\u00e1ntas veces hablaste ingl\u00e9s en los \u00faltimos meses? [That's fine. How many times did you speak English in the last few months?]\nCharacter B says: La verdad, ninguna. [To be honest, none.]\nCharacter A says: Descarga Praktika. Hablaremos juntos todos los d\u00edas y hablar\u00e1s con fluidez en poco tiempo. [Download Praktika. We will speak together every day and you will speak fluently in no time.]",
+        "on_screen_text": "My name Nesly.\n\u00bfQuieres decir \"My name is Nesly\"?\nSorry, small English.\nYou mean \"Sorry, I speak a little English\"?\nYes.\nEst\u00e1 bien. \u00bfCu\u00e1ntas veces hablaste ingl\u00e9s en los \u00faltimos meses?\nLa verdad, ninguna.\nDescarga Praktika.\nHablaremos juntos todos los d\u00edas y hablar\u00e1s con fluidez en poco tiempo."
+      },
+      {
+        "n": 2,
+        "start_s": 20.0,
+        "end_s": 21.0,
+        "screenshot_at_s": 20.5,
+        "scene_label": "End Card",
+        "setting": "Abstract, bright, minimal.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, light purple gradient background fills the entire frame. There are no characters, props, or distinct environmental features visible in this shot. The lighting is even and bright across the entire surface. The composition is entirely minimal and empty. The gradient transitions smoothly from a lighter shade at the top to a slightly darker shade at the bottom.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid light purple background serves as the base for the end card. A large, stylized app logo is centered in the upper portion of the screen. Below the logo, the app name is displayed in bold text. At the bottom, two standard app store download buttons are positioned side-by-side. The overall layout is clean and promotional.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966545.9295826
+}

@@ -1,0 +1,157 @@
+{
+  "competitor_id": "2170052253789462",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in a physical classroom setting. The movements, lighting, and shadows are natural, and there are no visual artifacts typical of AI generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Male in his 20s or 30s with a medium build and light brown complexion. He has short dark hair, a mustache, and a goatee. He has visible tattoos on his arms and neck.",
+        "wardrobe": "He wears a black t-shirt with a graphic print of a face, dark grey pants, and white sneakers. He accessorizes with a blue LA Dodgers baseball cap and a silver cross necklace.",
+        "demeanor": "Confident, educational, and expressive, using frequent hand gestures to emphasize his points."
+      },
+      {
+        "id": "B",
+        "role": "struggling learner",
+        "appearance": "Male in his 20s or 30s with a medium build and light brown complexion. He has a mustache and goatee.",
+        "wardrobe": "He wears a tan short-sleeve button-down work shirt over a white t-shirt, and a dark baseball cap.",
+        "demeanor": "Confused, hesitant, and unsure."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Introduction",
+        "setting": "Classroom, daytime, whiteboard, international flags, bright lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A man stands in front of a white dry-erase board in what appears to be a classroom setting. He is framed from the chest up in a medium close-up shot. He wears a black t-shirt, a silver cross necklace, and a blue baseball cap. He holds a red marker in his right hand. Above the whiteboard, a string of various international flags is visible. The lighting is bright and even, typical of an indoor educational environment. He looks directly at the camera with an engaging and informative expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The shot is a medium close-up of a male presenter in a classroom. He is standing in front of a whiteboard with \"Top 3 Never Dos\" written on it. A prominent text overlay in the center reads \"\u2757\ufe0fHow NOT to Learn Spanish\u2757\ufe0f (from a no sabo turned spanish teacher)\". The presenter is speaking directly to the camera, holding a red marker. The overall composition is focused on the presenter's face and the introductory text.",
+        "audio_transcript": "Character A says: Top three things I tell my students to never do if they want to learn how to speak Spanish the right way.",
+        "on_screen_text": "Top 3 Never Dos\n1.\n2.\n3.\n\u2757\ufe0fHow NOT to Learn Spanish\u2757\ufe0f\n(from a no sabo turned spanish teacher)"
+      },
+      {
+        "n": 2,
+        "start_s": 4.5,
+        "end_s": 19.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Points 1 and 2",
+        "setting": "Classroom, daytime, whiteboard, wooden shelf, patterned rug, bright lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The camera pulls back to a wide shot, revealing more of the classroom environment. The man stands to the left of the whiteboard, gesturing with his hands as he speaks. He is wearing dark grey pants and white sneakers along with his black graphic t-shirt and blue cap. The whiteboard behind him has some writing on it in red marker. Below the whiteboard, a wooden shelf holds colorful educational materials and boxes. A vibrant, patterned rug covers the floor in the foreground. The man's body language is active and instructional.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The camera cuts to a wide shot of the presenter in the classroom. He is standing next to the whiteboard, which now has two points written on it. During the first point, a large graphic of the Duolingo owl with a red 'X' over it appears on screen. During the second point, a large animated clock graphic is overlaid on the screen. The presenter uses hand gestures to emphasize his spoken points. The composition balances the presenter, the whiteboard text, and the large graphic overlays.",
+        "audio_transcript": "Character A says: Never rely on apps like Duolingo.\nCharacter A says: Yeah, they're great for vocab, but they don't actually train you to speak, which is why in conversations, you blank.\nCharacter A says: Never wait until you feel ready.\nCharacter A says: You don't get ready, then speak. You speak to get ready.",
+        "on_screen_text": "Top 3 Never Dos\n1. Never rely on apps like Duolingo\n2. Never wait until you \"feel ready\"\n3."
+      },
+      {
+        "n": 3,
+        "start_s": 19.0,
+        "end_s": 26.5,
+        "screenshot_at_s": 22.0,
+        "scene_label": "Point 3 with PIP",
+        "setting": "Classroom, daytime, whiteboard, wooden shelf, patterned rug, bright lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "wide",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "The man stands in the classroom setting, positioned to the left of the whiteboard. He gestures emphatically with both hands, emphasizing his point. The wide shot captures the whiteboard, the wooden shelf with educational materials, and the patterned rug on the floor. The lighting remains consistent and bright throughout the room. He maintains eye contact with the camera, projecting a confident teaching demeanor. The physical environment appears tidy and organized for learning.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A man is seated indoors, framed from the chest up. He wears a tan button-down work shirt over a white t-shirt and a dark baseball cap. He holds a piece of white paper in his hands. He looks directly at the camera with a slightly confused or hesitant expression. The background is plain, light-colored, and slightly out of focus. The lighting on his face is soft and even.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene maintains the wide classroom shot but introduces a picture-in-picture layout. The main background shows the presenter explaining his third point next to the whiteboard. In the bottom right corner, an inset video plays showing a different character looking confused while holding a paper. The whiteboard displays the third written point. The composition uses the inset to visually represent the \"real conversation\" scenario being discussed.",
+        "audio_transcript": "Character A says: Never avoid real conversation practice.\nCharacter A says: If you're not speaking out loud, you're not building fluency. Period.",
+        "on_screen_text": "Top 3 Never Dos\n1. Never rely on apps like Duolingo\n2. Never wait until you \"feel ready\"\n3. Never avoid real conversation practice"
+      },
+      {
+        "n": 4,
+        "start_s": 26.5,
+        "end_s": 36.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "App Pitch",
+        "setting": "Classroom, daytime, whiteboard, wooden shelf, patterned rug, bright lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The man is back in the wide classroom shot, initially facing the whiteboard to write on it with a red marker. He then turns back to face the camera, gesturing with his hands. The classroom setting remains unchanged, with the whiteboard, shelf, and patterned rug visible. He stands confidently, delivering his final points to the viewer. His expression is encouraging and persuasive. The lighting continues to be bright and even across the scene.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene returns to a single wide shot in the classroom. The presenter turns to the whiteboard and writes the word \"SPEAK\" in large letters. As he turns back to the camera, an animated graphic of the \"Speak\" app logo appears on screen. He continues to gesture and speak directly to the audience. The composition focuses on the presenter's final pitch and the introduction of the brand logo.",
+        "audio_transcript": "Character A says: That's why tools like Speak exist.\nCharacter A says: You actually practice speaking in real scenarios without the pressure.\nCharacter A says: Less tapping, more talking. That's how you're gonna get fluent.",
+        "on_screen_text": "Top 3 Never Dos\nSPEAK\n1. Never rely on apps like Duolingo\n2. Never wait until you \"feel ready\"\n3. Never avoid real conversation practice"
+      },
+      {
+        "n": 5,
+        "start_s": 36.0,
+        "end_s": 38.0,
+        "screenshot_at_s": 37.0,
+        "scene_label": "End Card",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "This panel consists entirely of a solid, vibrant blue background. There are no characters, props, or physical settings visible within the frame. The color is uniform and flat, filling the entire visual space. The lighting is completely even, as it represents a digital background rather than a physical environment. There are no textures or gradients present on the blue surface.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The video concludes with a digital end-card. The background is a solid, bright blue color. White text in the center reads \"Speak\" in a large, bold font. Below it, smaller white text says \"Start your 7-day free trial.\" The composition is simple, clean, and focused entirely on the brand name and call to action.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Speak\nStart your 7-day free trial."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966543.4579
+}

@@ -1,0 +1,104 @@
+{
+  "competitor_id": "973070502004047",
+  "parsed": {
+    "duration_s": 52.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is a standard selfie-style recording of a real person in a physical environment. Lighting, movements, and facial expressions are natural.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "presenter and learner",
+        "appearance": "Young adult female, slim build, fair complexion. She has light brown hair tied back and blue eyes.",
+        "wardrobe": "Black off-the-shoulder long-sleeve top and a silver necklace with a butterfly pendant.",
+        "demeanor": "Casual, expressive, and conversational."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor voice",
+        "appearance": "N/A - Voice only.",
+        "wardrobe": "N/A",
+        "demeanor": "Friendly and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 22.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "The Vocabulary Myth",
+        "setting": "Dimly lit bedroom, daytime. A woven hammock chair and clothing rack are visible in the background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, selfie-style",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman is framed in a close-up, selfie-style shot. She has fair skin, blue eyes, and light brown hair pulled back. She is wearing a black, off-the-shoulder top and a silver necklace. She looks directly at the camera and speaks. The background shows a dimly lit bedroom with a woven hammock chair hanging from the ceiling and a dark clothing rack.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter speaks directly to the camera. A vertical column of anatomical emojis appears on the left side of the screen, accompanied by text labels. Later, large text captions appear as she speaks.",
+        "audio_transcript": "Character A says: brain\nCharacter A says: heart\nCharacter A says: lungs\nCharacter A says: liver\nCharacter A says: kidneys\nCharacter A says: stomach\nCharacter A says: intestines\nCharacter A says: pancreas\nCharacter A says: bladder\nCharacter A says: And the biggest lie about learning English is that you need more vocabulary.\nCharacter A says: You don't.\nCharacter A says: You just have to start speaking.",
+        "on_screen_text": "brain\nheart\nlungs\nliver\nkidneys\nstomach\nintestines\npancreas\nbladder\nAND THE BIGGEST LIE ABOUT LEARNING ENGLISH THAT YOU NEED MORE VOCABULARY YOU DON'T JUST HAVE TO START SPEAKING"
+      },
+      {
+        "n": 2,
+        "start_s": 22.5,
+        "end_s": 44.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "App Demonstration",
+        "setting": "Dimly lit bedroom, daytime. A woven hammock chair is visible in the background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Close-up, selfie-style",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman is framed in a close-up, selfie-style shot. She holds a smartphone up in front of her, with the screen facing the camera. She has fair skin, blue eyes, and light brown hair pulled back. She wears a black, off-the-shoulder top and a silver necklace. She looks at the phone screen and speaks. The background shows a dimly lit bedroom with a woven hammock chair.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter holds her smartphone up to the camera, displaying a purple app interface. She interacts with the app, speaking into it and listening to the responses. Large text captions overlay the video.",
+        "audio_transcript": "Character B says: Hey May, how's your day been? Any fun art projects lately?\nCharacter A says: Hello Stacy, everything's okay. I'm a bit tired and I have a lot of work.\nCharacter B says: Oh, that sounds like a lot. What kind of work has been keeping you busy?\nCharacter A says: Just a few art projects. Nothing interesting.",
+        "on_screen_text": "HEY MAY HOW'S YOUR DAY BEEN ANY FUN ART PROJECTS LATELY\nHELLO STACY EVERYTHING'S OK I'M A BIT TIRED AND I HAVE A LOT OF WORK\nOH THAT SOUNDS LIKE A LOT WHAT KIND OF WORK HAS BEEN KEEPING YOU BUSY\nJUST A FEW ART PROJECTS NOTHING INTERESTING"
+      },
+      {
+        "n": 3,
+        "start_s": 44.0,
+        "end_s": 52.0,
+        "screenshot_at_s": 48.0,
+        "scene_label": "Call to Action",
+        "setting": "Dimly lit bedroom, daytime. A woven hammock chair and clothing rack are visible in the background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, selfie-style",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman is framed in a close-up, selfie-style shot. She has fair skin, blue eyes, and light brown hair pulled back. She is wearing a black, off-the-shoulder top and a silver necklace. She looks directly at the camera and speaks with an expressive face. The background shows a dimly lit bedroom with a woven hammock chair hanging from the ceiling and a dark clothing rack.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter speaks directly to the camera to deliver the final message. A promotional overlay for the app appears in the center of the screen, along with text captions.",
+        "audio_transcript": "Character A says: That's why Fluently works. It's like a real speaking partner in your pocket.\nCharacter A says: So stop learning English and start speaking English with Fluently app.",
+        "on_screen_text": "THAT'S WHY FLUENTLY WORKS IT'S LIKE A REAL SPEAKING PARTNER IN YOUR POCKET SO STOP LEARNING ENGLISH AND START SPEAKING ENGLISH WITH FLUENTLY APP\nFluently - AI English Tutor\nLearn and practice speaking\nDOWNLOAD"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657946.4331155
+}

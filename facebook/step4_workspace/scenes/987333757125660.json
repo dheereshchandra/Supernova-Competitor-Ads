@@ -1,0 +1,107 @@
+{
+  "competitor_id": "987333757125660",
+  "parsed": {
+    "duration_s": 58.0,
+    "production_type": "mixed",
+    "production_notes": "The video features a human presenter interacting with an AI-generated avatar. The avatar exhibits typical AI traits like perfectly smooth skin, static posture, and slightly unnatural lip-syncing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter and learner",
+        "appearance": "Young adult female, slim build, dark complexion. She has long, straight black hair, full lips, and dark eyes. Her facial features are symmetrical and well-defined.",
+        "wardrobe": "In the first scene, she wears a black top. In the second scene, she wears a black tank top, black pants, and a gold pendant necklace.",
+        "demeanor": "Casual, conversational, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, fair complexion. She has a short blonde bob haircut and blue eyes. Her appearance is highly polished and slightly artificial.",
+        "wardrobe": "She wears a solid grey turtleneck sweater throughout her appearance.",
+        "demeanor": "Professional, static, and slightly uncanny."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Stop saying basic phrases",
+        "setting": "Inside a car with white leather seats, daytime, bright natural lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with dark skin and long black hair sits in the driver's seat of a car. She wears a black top. The car features white leather seats and a sunroof. Bright, natural lighting illuminates her face. She looks directly at the camera. Her expression is calm and engaging. The background shows a glimpse of trees outside the car window.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The woman speaks to the camera from inside her car. A large graphic overlay resembling a piece of parchment paper covers the bottom half of the screen. The parchment displays phrases to stop saying in red and black text, along with small drawn icons. Subtitles appear over her chest.",
+        "audio_transcript": "Character A says: \"Stop saying: 'I'm fine, thank you'.\"\nCharacter A says: \"I don't know.\"\nCharacter A says: \"You are welcome.\"\nCharacter A says: \"It's very basic.\"\nCharacter A says: \"I used to speak like that too.\"\nCharacter A says: \"Then I started practicing with Fluently.\"\nCharacter A says: \"Let me show you.\"",
+        "on_screen_text": "Stop saying: \"I'm fine, thank you\"\n\"I don't know\"\n\"You are welcome\"\nStop saying:\nI'm fine, thank you\nI don't know\nYou're welcome\nIt's very basic\nI used to speak like that too\nThen I started practicing with Fluently\nLet me show you"
+      },
+      {
+        "n": 2,
+        "start_s": 11.5,
+        "end_s": 54.5,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Conversation with AI Tutor",
+        "setting": "A bright, minimalist room with a white armchair and a wooden cabinet.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium shot",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A young woman with dark skin and long black hair sits in a white armchair. She wears a black tank top, black pants, and a gold necklace. She holds a black microphone on a stand. A wooden cabinet is visible on the left. The room features white curtains and soft lighting. She looks towards the camera, gesturing slightly with her free hand. Her posture is relaxed but attentive.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A close-up portrait of a young woman with fair skin and a short blonde bob. She wears a grey turtleneck sweater. She looks directly forward with a neutral, professional expression. The background is a softly blurred interior. The lighting is even and studio-like. Her head and shoulders are centered in the frame.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The main screen shows the dark-skinned woman sitting in an armchair with a microphone. In the top center, a rectangular inset displays the blonde AI tutor. Text bubbles appear dynamically on screen as they converse, resembling a chat interface. The layout simulates a video call or podcast recording setup. Subtitles are also present.",
+        "audio_transcript": "Character B says: \"Do you speak English?\"\nCharacter A says: \"More or less.\"\nCharacter B says: \"Where are you from?\"\nCharacter A says: \"I am Puerto Rico.\"\nCharacter B says: \"Almost! Better say: 'I am from Puerto Rico'.\"\nCharacter A says: \"Oh, I always get confused about that.\"\nCharacter B says: \"That's what I'm here for, to help you speak correctly.\"\nCharacter A says: \"But I don't have any money.\"\nCharacter B says: \"You don't need a fortune! Fluently is way more affordable than a private tutor.\"\nCharacter A says: \"Really?\"\nCharacter B says: \"Sure! No tricks. Just real English conversation practice with an AI tutor.\"\nCharacter A says: \"Like a real tutor?\"\nCharacter B says: \"Yes, it corrects your grammar and pronunciation and helps you speak with confidence.\"\nCharacter A says: \"Okay, then I will download Fluently right now.\"\nCharacter B says: \"Great decision. Let's speak English together.\"",
+        "on_screen_text": "Do you speak English?\nMore or less\nWhere are you from?\nI am Puerto Rico\nAlmost!\nBetter say:\n\"I am from Puerto Rico\"\nOh, I always get confused about that\nThat's what I'm here for, to help you speak correctly\nBut I don't have any money\nYou don't need a fortune!\nFluently is way more affordable than a private tutor\nReally?\nSure! No tricks\nJust real English conversation practice with an AI tutor\nLike a real tutor?\nYes, it corrects your grammar and pronunciation\nand helps you speak with confidence\nOkay, then I will download Fluently right now\nGreat decision\nLet's speak English together"
+      },
+      {
+        "n": 3,
+        "start_s": 54.5,
+        "end_s": 58.0,
+        "screenshot_at_s": 56.0,
+        "scene_label": "End Card",
+        "setting": "Digital graphic background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark purple background with a subtle gradient. The color fades to black at the edges. The space is entirely empty. There are no characters, props, or distinct light sources. The overall tone is dark and minimalist.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A digital end card with a dark purple background. A blue app icon with white arrows sits in the center. The app name and a short description appear below the icon. A purple download button is positioned at the bottom. The entire scene is composed of graphic elements.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.0999117
+}

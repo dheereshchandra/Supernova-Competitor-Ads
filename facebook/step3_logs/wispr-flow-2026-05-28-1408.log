@@ -1,0 +1,508 @@
+# Step 3 run log
+# competitor : wispr-flow
+# started_at : 2026-05-28T14:08:56
+# input      : inputs/fb-ads-wispr-flow-2026-05-28-1848.csv
+# videos     : videos/wispr-flow-2026-05-28
+# master     : master/wispr-flow.csv  (updated)
+# enriched   : inputs/fb-ads-wispr-flow-2026-05-28-1848_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded': 31, 'carried-forward': 312, 'image-pending': 102, 'video-missing': 50, 'no-creative': 0, 'error': 0}
+#
+carried-forward  3662315693910482 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3662315693910482.mp4
+image-pending    1662376828284378 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1606915600884130 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1308275597318776 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2560560281008870 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2560560281008870.mp4
+carried-forward  1274695934858096 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1274695934858096.mp4
+image-pending    1706333260361238 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  27040096928908687 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27040096928908687.mp4
+image-pending    1793352381634692 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1334618508565781 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1729770374849541 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1576375724042094 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1501865931273199 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1501865931273199.mp4
+carried-forward  2292746258177295 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2292746258177295.mp4
+carried-forward  1706997533644445 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1706997533644445.mp4
+image-pending    2922112728180732 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1566718835460461 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1649615709610057 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1649615709610057.mp4
+carried-forward  813092931636453 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/813092931636453.mp4
+carried-forward  833455549824302 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/833455549824302.mp4
+image-pending    2936171560055456 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1410186047538937 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1410186047538937.mp4
+image-pending    1640811040476262 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2152493262262632 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    811543085145765 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1007115604994768 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1327072366036770 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1327072366036770.mp4
+image-pending    2169539090512694 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1316066920475716 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1700430384710408 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1679889603157451 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1679889603157451.mp4
+image-pending    2151758269557506 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1265112498602213 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1680340000078907 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1547799510245830 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1547799510245830.mp4
+image-pending    976814981925609 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1395179515999240 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1395179515999240.mp4
+carried-forward  1344855007551368 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1344855007551368.mp4
+carried-forward  2124600818383377 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2124600818383377.mp4
+image-pending    969535065655350 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  3398790000298365 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3398790000298365.mp4
+carried-forward  1290680159494956 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1290680159494956.mp4
+carried-forward  1304712985124608 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1304712985124608.mp4
+carried-forward  846359314632935 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/846359314632935.mp4
+image-pending    1307188548234290 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2051239912455354 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1864869910859122 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1864869910859122.mp4
+carried-forward  1884892045481248 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1884892045481248.mp4
+carried-forward  2186056478900917 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2186056478900917.mp4
+carried-forward  1648288179761448 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1648288179761448.mp4
+carried-forward  1666379031262907 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1666379031262907.mp4
+carried-forward  2042834266268899 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2042834266268899.mp4
+image-pending    1321820823242307 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1908695443093591 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1333845745257365 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1333845745257365.mp4
+carried-forward  2558183101307193 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2558183101307193.mp4
+image-pending    2835607609983877 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2732353097151246 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2732353097151246.mp4
+carried-forward  1872155040127046 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1872155040127046.mp4
+carried-forward  2770851846614450 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2770851846614450.mp4
+carried-forward  1517519639959959 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1517519639959959.mp4
+image-pending    4093643220928515 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  996594529434742 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/996594529434742.mp4
+image-pending    1407053411186041 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  977082658436567 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/977082658436567.mp4
+carried-forward  1244613431077113 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1244613431077113.mp4
+carried-forward  4535846550034570 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4535846550034570.mp4
+carried-forward  4436238149854864 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4436238149854864.mp4
+carried-forward  2043391093053258 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2043391093053258.mp4
+image-pending    2089850335192636 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1283229190629431 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1283229190629431.mp4
+image-pending    1671995874069322 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1676118757038657 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1676118757038657.mp4
+carried-forward  1266896538851718 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1266896538851718.mp4
+carried-forward  1003179348710919 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1003179348710919.mp4
+image-pending    1002523858919101 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  26853065227676923 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26853065227676923.mp4
+carried-forward  1330964142244241 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1330964142244241.mp4
+carried-forward  1690497488636995 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1690497488636995.mp4
+image-pending    4235413386773154 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1452317883341969 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1488628986378006 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1488628986378006.mp4
+image-pending    1507366707840407 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1505816484577671 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1505816484577671.mp4
+carried-forward  1230808302298799 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1230808302298799.mp4
+carried-forward  28363907486531254 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/28363907486531254.mp4
+carried-forward  1341101164603689 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1341101164603689.mp4
+carried-forward  1394875489329016 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1394875489329016.mp4
+carried-forward  1473846077550038 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1473846077550038.mp4
+image-pending    1389245473014883 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1857387648974603 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1857387648974603.mp4
+image-pending    987728243617910 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  831286949639991 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/831286949639991.mp4
+image-pending    778691951844405 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    736357786207635 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1766180788089821 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1766180788089821.mp4
+carried-forward  2732641793773250 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2732641793773250.mp4
+image-pending    953817067634152 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1653529422588763 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1653529422588763.mp4
+image-pending    4447325295586275 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2417519245417895 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2417519245417895.mp4
+image-pending    1532309055242158 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1573209414222400 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1573209414222400.mp4
+carried-forward  1299672751710265 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1299672751710265.mp4
+image-pending    1789766065330509 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1710498496891331 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1710498496891331.mp4
+carried-forward  1512744190530792 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1512744190530792.mp4
+carried-forward  1324244086252624 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1324244086252624.mp4
+carried-forward  852905427869057 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/852905427869057.mp4
+carried-forward  1650274326098141 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1650274326098141.mp4
+image-pending    1213777460734259 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1664156547958622 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1653406269221996 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1653406269221996.mp4
+image-pending    4570173356640395 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2402770113563221 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2402770113563221.mp4
+image-pending    25627006063641773 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1338416851516422 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1690940302047579 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2122878071825151 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2122878071825151.mp4
+carried-forward  1000838749475246 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1000838749475246.mp4
+carried-forward  988070633918039 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/988070633918039.mp4
+carried-forward  3482883728559587 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3482883728559587.mp4
+carried-forward  1465202198203162 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1465202198203162.mp4
+carried-forward  2504655613302155 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2504655613302155.mp4
+image-pending    1304930827640000 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  963873423308072 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/963873423308072.mp4
+carried-forward  1348451947202496 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1348451947202496.mp4
+carried-forward  1502135684947381 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1502135684947381.mp4
+carried-forward  1629992708068632 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1629992708068632.mp4
+carried-forward  849926281487625 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/849926281487625.mp4
+image-pending    1769589530676290 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1894343737944061 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1894343737944061.mp4
+carried-forward  1496629299149131 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1496629299149131.mp4
+image-pending    1168519741972828 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2164552131032487 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2024721988254064 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2024721988254064.mp4
+carried-forward  831050683019062 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/831050683019062.mp4
+carried-forward  1659440741978591 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1659440741978591.mp4
+carried-forward  2119253888654752 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2119253888654752.mp4
+image-pending    1472379261037057 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1474647687730449 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1613872029715012 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  993887699889806 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/993887699889806.mp4
+carried-forward  1711610066512320 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1711610066512320.mp4
+carried-forward  2084499892108477 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2084499892108477.mp4
+image-pending    1949617632324117 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    26296350260044370 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  767796019658058 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/767796019658058.mp4
+image-pending    1630983688019061 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    836902862366291 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  999613062571788 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/999613062571788.mp4
+carried-forward  1008277438210393 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1008277438210393.mp4
+carried-forward  1514844143419145 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1514844143419145.mp4
+carried-forward  1575558140951930 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1575558140951930.mp4
+carried-forward  1457795429720362 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1457795429720362.mp4
+image-pending    1644842533399361 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    829943616823793 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1307707194110436 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1307707194110436.mp4
+carried-forward  1347312157244411 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1347312157244411.mp4
+image-pending    1721178389296475 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1781458526560240 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  868494942244631 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/868494942244631.mp4
+image-pending    2210336443061066 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2082253205967465 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1674744247102852 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1674744247102852.mp4
+image-pending    1888210885110974 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2078334223081418 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1690288628956827 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1690288628956827.mp4
+image-pending    4297648813878804 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  965590616346605 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/965590616346605.mp4
+carried-forward  4399399116992624 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4399399116992624.mp4
+carried-forward  26578956815133786 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26578956815133786.mp4
+carried-forward  992038293776025 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/992038293776025.mp4
+carried-forward  1545342520554361 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1545342520554361.mp4
+video-missing    1664643048177567 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1664643048177567 c1  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1664643048177567 c2  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1664643048177567 c3  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1664643048177567 c4  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1664643048177567 c5  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1664643048177567 c6  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1664643048177567 c7  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  1313063437468973 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1313063437468973.mp4
+carried-forward  2907797752900359 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2907797752900359.mp4
+carried-forward  3110551179133059 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3110551179133059.mp4
+image-pending    4086432868320778 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  967677179397099 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/967677179397099.mp4
+carried-forward  1534273534755094 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1534273534755094.mp4
+image-pending    2078216392740498 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2225304311630453 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1395320139283491 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1395320139283491.mp4
+carried-forward  2011638906393051 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2011638906393051.mp4
+image-pending    1519993253052122 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1307431290729921 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1297642861998332 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1297642861998332.mp4
+image-pending    967758139096013 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1957249268287320 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1466557791940649 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1466557791940649.mp4
+carried-forward  1018315570618531 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1018315570618531.mp4
+image-pending    2220276032124660 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  872676911783297 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/872676911783297.mp4
+carried-forward  822770594245538 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/822770594245538.mp4
+carried-forward  2192062011197722 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2192062011197722.mp4
+image-pending    1285569029603660 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  976644315127989 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/976644315127989.mp4
+carried-forward  956167000382209 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/956167000382209.mp4
+carried-forward  27769694415953681 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27769694415953681.mp4
+carried-forward  999768679663949 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/999768679663949.mp4
+carried-forward  1378250434135755 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1378250434135755.mp4
+carried-forward  2589191581496421 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2589191581496421.mp4
+carried-forward  2048519246099318 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2048519246099318.mp4
+carried-forward  1335436018528237 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1335436018528237.mp4
+carried-forward  1693650765117984 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1693650765117984.mp4
+carried-forward  1422241006596275 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1422241006596275.mp4
+carried-forward  1506096514359130 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1506096514359130.mp4
+carried-forward  1328231482705036 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1328231482705036.mp4
+carried-forward  1625555125168516 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1625555125168516.mp4
+carried-forward  1511018107035710 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1511018107035710.mp4
+carried-forward  1475576313559918 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1475576313559918.mp4
+carried-forward  2452008935277426 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2452008935277426.mp4
+carried-forward  2057704855158545 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2057704855158545.mp4
+carried-forward  1626951528610165 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1626951528610165.mp4
+carried-forward  1506064064391726 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1506064064391726.mp4
+carried-forward  1218671753547509 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1218671753547509.mp4
+image-pending    1249200367294137 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1458287982290511 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1458287982290511.mp4
+image-pending    2643031549458709 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1949715605678668 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2115243479041912 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2115243479041912.mp4
+image-pending    1906852649972064 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1644181246698688 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1644181246698688.mp4
+carried-forward  1058193627387168 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1058193627387168.mp4
+carried-forward  1530019845227310 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1530019845227310.mp4
+carried-forward  1706834640451505 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1706834640451505.mp4
+carried-forward  2541412699632590 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2541412699632590.mp4
+carried-forward  1320698123600855 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1320698123600855.mp4
+carried-forward  985496133894370 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/985496133894370.mp4
+image-pending    1495051495368238 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1027111360001443 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1027111360001443.mp4
+carried-forward  816379641295078 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/816379641295078.mp4
+image-pending    1031277119430910 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2200442530707859 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2200442530707859.mp4
+carried-forward  991452353289221 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/991452353289221.mp4
+carried-forward  1522128662969277 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1522128662969277.mp4
+image-pending    779017941808368 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2467773930362439 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    861069807026182 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1520649129665426 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    1499832728262493 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3209703732565022 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1345485144104370 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1345485144104370.mp4
+image-pending    2921813558166857 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1898113890892128 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2028956641380465 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2028956641380465.mp4
+image-pending    2038970610166024 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    4449955445286631 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2046399032578125 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2046399032578125 c1  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2046399032578125 c2  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2046399032578125 c3  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2046399032578125 c4  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2046399032578125 c5  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2046399032578125 c6  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  1413499927486042 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1413499927486042.mp4
+image-pending    1531644281691946 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  994323369773281 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/994323369773281.mp4
+carried-forward  1334894005201388 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1334894005201388.mp4
+carried-forward  883869928058894 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/883869928058894.mp4
+carried-forward  991614283225178 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/991614283225178.mp4
+carried-forward  1742474416928086 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1742474416928086.mp4
+carried-forward  1413543764136761 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1413543764136761.mp4
+carried-forward  4329482780633323 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4329482780633323.mp4
+carried-forward  1468669864379536 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1468669864379536.mp4
+carried-forward  27090274347291909 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27090274347291909.mp4
+video-missing    932472703114618 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    932472703114618 c1  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    932472703114618 c2  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    932472703114618 c3  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    932472703114618 c4  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    932472703114618 c5  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    932472703114618 c6  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  1518962062915602 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1518962062915602.mp4
+carried-forward  1777829876522997 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1777829876522997.mp4
+carried-forward  1476251200968359 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1476251200968359.mp4
+image-pending    1519449926514198 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    737568652748461 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    984591057764568 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1610711050015123 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  1511699417218878 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1511699417218878.mp4
+carried-forward  1493576399191050 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1493576399191050.mp4
+carried-forward  967575696101853 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/967575696101853.mp4
+carried-forward  1462024831867901 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1462024831867901.mp4
+image-pending    2074295093462029 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  983902797669874 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/983902797669874.mp4
+carried-forward  1696174794914986 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1696174794914986.mp4
+carried-forward  1621028679007922 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1621028679007922.mp4
+carried-forward  1433413138553184 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1433413138553184.mp4
+carried-forward  1678808119834291 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1678808119834291.mp4
+carried-forward  2474135039736662 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2474135039736662.mp4
+carried-forward  1691799135604942 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1691799135604942.mp4
+carried-forward  1310877167913494 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1310877167913494.mp4
+video-missing    1497936665346556 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    27904360405834066 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1534672114676637 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1534672114676637.mp4
+carried-forward  1949742758976213 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1949742758976213.mp4
+carried-forward  1660739288493384 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1660739288493384.mp4
+carried-forward  983158950746121 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/983158950746121.mp4
+carried-forward  2027662171162149 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2027662171162149.mp4
+carried-forward  892492527230932 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/892492527230932.mp4
+carried-forward  828161967038694 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/828161967038694.mp4
+carried-forward  947408351458226 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/947408351458226.mp4
+carried-forward  2868493926832289 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2868493926832289.mp4
+carried-forward  929557383420921 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/929557383420921.mp4
+carried-forward  4574721712814597 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4574721712814597.mp4
+carried-forward  1857049418321058 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1857049418321058.mp4
+carried-forward  1908577629821787 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1908577629821787.mp4
+carried-forward  2170903863694343 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2170903863694343.mp4
+image-pending    1452497216627357 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1598311961241782 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1598311961241782.mp4
+carried-forward  1888658678609655 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1888658678609655.mp4
+carried-forward  1378435157436690 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1378435157436690.mp4
+carried-forward  1924902181518532 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1924902181518532.mp4
+carried-forward  2769795570072002 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2769795570072002.mp4
+carried-forward  1499125685238269 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1499125685238269.mp4
+carried-forward  3207293352790207 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3207293352790207.mp4
+carried-forward  2235266710555783 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2235266710555783.mp4
+carried-forward  1686884242354492 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1686884242354492.mp4
+carried-forward  1502335084723654 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1502335084723654.mp4
+video-missing    1964986724386543 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    943973065359364 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    2389191254910998 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  992423906715997 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/992423906715997.mp4
+video-missing    1477832580746522 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  2147797252827132 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2147797252827132.mp4
+video-missing    1549644453183539 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1295371085523432 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1549167540129258 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    948729364657598 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  2557690094675307 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2557690094675307.mp4
+carried-forward  2194651654409607 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2194651654409607.mp4
+carried-forward  983841690672063 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/983841690672063.mp4
+carried-forward  1461470485264629 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1461470485264629.mp4
+carried-forward  1037505808631947 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1037505808631947.mp4
+carried-forward  816586577939145 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/816586577939145.mp4
+image-pending    1295577742655066 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  940462522150429 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/940462522150429.mp4
+carried-forward  1290223629926787 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1290223629926787.mp4
+carried-forward  1727545088601187 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1727545088601187.mp4
+video-missing    2960873554305370 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  2025050618885441 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2025050618885441.mp4
+carried-forward  1607584684044291 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1607584684044291.mp4
+carried-forward  1308475204582398 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1308475204582398.mp4
+carried-forward  1539875584430396 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1539875584430396.mp4
+carried-forward  985787091044413 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/985787091044413.mp4
+carried-forward  953638304177454 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/953638304177454.mp4
+carried-forward  2060064134862080 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2060064134862080.mp4
+carried-forward  1342307254418309 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1342307254418309.mp4
+carried-forward  27398894966383006 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27398894966383006.mp4
+carried-forward  2547505089034308 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2547505089034308.mp4
+carried-forward  815625301370555 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/815625301370555.mp4
+carried-forward  1518858149750346 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1518858149750346.mp4
+carried-forward  1544130163903814 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1544130163903814.mp4
+carried-forward  990858730087103 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/990858730087103.mp4
+carried-forward  2062242474690866 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2062242474690866.mp4
+carried-forward  1698144861211771 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1698144861211771.mp4
+carried-forward  963462113257266 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/963462113257266.mp4
+image-pending    956292073891297 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  983523291091628 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/983523291091628.mp4
+carried-forward  2600437180358995 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2600437180358995.mp4
+carried-forward  1017236537527668 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1017236537527668.mp4
+carried-forward  2084439705767681 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2084439705767681.mp4
+carried-forward  1886477468685414 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1886477468685414.mp4
+carried-forward  2050250089227404 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2050250089227404.mp4
+carried-forward  958149217222266 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/958149217222266.mp4
+carried-forward  2238394246914659 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2238394246914659.mp4
+carried-forward  2033346344252062 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2033346344252062.mp4
+carried-forward  2533668657085886 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2533668657085886.mp4
+carried-forward  2015933762609484 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2015933762609484.mp4
+carried-forward  993997806512770 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/993997806512770.mp4
+carried-forward  1486233319667270 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1486233319667270.mp4
+image-pending    930919783186924 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    973271205414719 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1314290944138060 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1314290944138060.mp4
+carried-forward  1863423987685707 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1863423987685707.mp4
+carried-forward  1001345232259119 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1001345232259119.mp4
+carried-forward  1617796385979485 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1617796385979485.mp4
+carried-forward  844976064839994 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/844976064839994.mp4
+carried-forward  3235037933341735 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3235037933341735.mp4
+carried-forward  2384185045437404 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2384185045437404.mp4
+carried-forward  1628339884888095 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1628339884888095.mp4
+carried-forward  1309362284501239 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1309362284501239.mp4
+carried-forward  1000288645783962 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1000288645783962.mp4
+image-pending    2548523478938206 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1372734824906812 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1372734824906812.mp4
+carried-forward  2032467807619458 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2032467807619458.mp4
+carried-forward  1289363819981492 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1289363819981492.mp4
+carried-forward  26717877824551596 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26717877824551596.mp4
+carried-forward  1281880330819874 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1281880330819874.mp4
+carried-forward  998480062729694 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/998480062729694.mp4
+carried-forward  1542232330948541 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1542232330948541.mp4
+carried-forward  2074116963459232 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2074116963459232.mp4
+carried-forward  1563409292021287 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1563409292021287.mp4
+carried-forward  1646075290029714 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1646075290029714.mp4
+carried-forward  870037275385972 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/870037275385972.mp4
+carried-forward  1551419969746805 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1551419969746805.mp4
+carried-forward  2531700740617284 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2531700740617284.mp4
+carried-forward  1766320354351957 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1766320354351957.mp4
+carried-forward  1017222057530962 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1017222057530962.mp4
+carried-forward  1526877048960805 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1526877048960805.mp4
+carried-forward  1540230911052913 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1540230911052913.mp4
+carried-forward  977250445165070 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/977250445165070.mp4
+carried-forward  1506877364384373 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1506877364384373.mp4
+carried-forward  875398298926655 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/875398298926655.mp4
+carried-forward  1587705206318336 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1587705206318336.mp4
+carried-forward  949620311281038 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/949620311281038.mp4
+carried-forward  2400772063779012 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2400772063779012.mp4
+carried-forward  1042850444950034 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1042850444950034.mp4
+carried-forward  1482446469451194 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1482446469451194.mp4
+carried-forward  2475844162838428 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2475844162838428.mp4
+carried-forward  1649374036283329 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1649374036283329.mp4
+carried-forward  1672378080475047 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1672378080475047.mp4
+carried-forward  1767494654630526 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1767494654630526.mp4
+carried-forward  1699363347763773 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1699363347763773.mp4
+video-missing    1950325292273958 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  1772038357092256 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1772038357092256.mp4
+carried-forward  2063698844186455 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2063698844186455.mp4
+carried-forward  989759103922877 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/989759103922877.mp4
+carried-forward  1703702597645451 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1703702597645451.mp4
+carried-forward  2220603608682887 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2220603608682887.mp4
+carried-forward  1571019874379818 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1571019874379818.mp4
+carried-forward  1534531005061404 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1534531005061404.mp4
+carried-forward  3837235089905572 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3837235089905572.mp4
+carried-forward  1691469665609261 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1691469665609261.mp4
+carried-forward  1231311415597698 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1231311415597698.mp4
+carried-forward  911767428564079 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/911767428564079.mp4
+carried-forward  1357334192911322 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1357334192911322.mp4
+carried-forward  1547426376984036 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1547426376984036.mp4
+carried-forward  1516876816814846 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1516876816814846.mp4
+carried-forward  1109622268903320 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1109622268903320.mp4
+carried-forward  819896004527409 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/819896004527409.mp4
+carried-forward  1471462244163599 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1471462244163599.mp4
+carried-forward  2045783839342704 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2045783839342704.mp4
+carried-forward  4224391227812215 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4224391227812215.mp4
+carried-forward  1547156103734323 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1547156103734323.mp4
+carried-forward  958778383738431 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/958778383738431.mp4
+video-missing    2318718265321924 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  1524272802396834 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1524272802396834.mp4
+carried-forward  977302141671203 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/977302141671203.mp4
+carried-forward  982344277882625 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/982344277882625.mp4
+video-missing    1300562598849283 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2182985802457364 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    3903169566651958 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+carried-forward  1306909370884974 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1306909370884974.mp4
+carried-forward  1483581310175072 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1483581310175072.mp4
+carried-forward  2516847602098739 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2516847602098739.mp4
+carried-forward  2044541756134819 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2044541756134819.mp4
+carried-forward  818136867756415 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/818136867756415.mp4
+video-missing    4104006256521349 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1688140105969296 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+uploaded         1746228133221838 c0  (video) ← 1746228133221838.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1746228133221838.mp4
+uploaded         1267115098511793 c0  (video) ← 1267115098511793.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1267115098511793.mp4
+uploaded         1657500728699799 c0  (video) ← 1657500728699799.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1657500728699799.mp4
+uploaded         1322368433364978 c0  (video) ← 1322368433364978.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1322368433364978.mp4
+uploaded         1359535953018082 c0  (video) ← 1359535953018082.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1359535953018082.mp4
+uploaded         926320210455807 c0  (video) ← 926320210455807.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/926320210455807.mp4
+uploaded         779878878426351 c0  (video) ← 779878878426351.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/779878878426351.mp4
+uploaded         1413261284161942 c0  (video) ← 1413261284161942.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1413261284161942.mp4
+uploaded         1788214782562310 c0  (video) ← 1788214782562310.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1788214782562310.mp4
+uploaded         1723716478814852 c0  (video) ← 1723716478814852.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1723716478814852.mp4
+video-missing    821274497407451 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+uploaded         1644663216752201 c0  (video) ← 1644663216752201.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1644663216752201.mp4
+uploaded         977926474955194 c0  (video) ← 977926474955194.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/977926474955194.mp4
+video-missing    925314090510241 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+uploaded         1137530259438222 c0  (video) ← 1137530259438222.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1137530259438222.mp4
+uploaded         1264136165518560 c0  (video) ← 1264136165518560.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1264136165518560.mp4
+video-missing    1332928282078834 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    907316102331699 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+uploaded         985523274337639 c0  (video) ← 985523274337639.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/985523274337639.mp4
+uploaded         1083502908185516 c0  (video) ← 1083502908185516.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1083502908185516.mp4
+uploaded         975618998556065 c0  (video) ← 975618998556065.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/975618998556065.mp4
+uploaded         864612603337597 c0  (video) ← 864612603337597.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/864612603337597.mp4
+uploaded         1867806670557358 c0  (video) ← 1867806670557358.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1867806670557358.mp4
+uploaded         1614234420296947 c0  (video) ← 1614234420296947.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1614234420296947.mp4
+uploaded         3272942412907325 c0  (video) ← 3272942412907325.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3272942412907325.mp4
+uploaded         1635694734306453 c0  (video) ← 1635694734306453.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1635694734306453.mp4
+uploaded         1351558753558031 c0  (video) ← 1351558753558031.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1351558753558031.mp4
+uploaded         26873840628945240 c0  (video) ← 26873840628945240.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26873840628945240.mp4
+uploaded         1703674871049851 c0  (video) ← 1703674871049851.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1703674871049851.mp4
+uploaded         1859796101658057 c0  (video) ← 1859796101658057.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1859796101658057.mp4
+uploaded         999229155893489 c0  (video) ← 999229155893489.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/999229155893489.mp4
+uploaded         1303984397967191 c0  (video) ← 1303984397967191.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1303984397967191.mp4
+uploaded         1513422940192478 c0  (video) ← 1513422940192478.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1513422940192478.mp4
+uploaded         2165995524235758 c0  (video) ← 2165995524235758.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2165995524235758.mp4
+video-missing    951519644423697 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+uploaded         2795482860798359 c0  (video) ← 2795482860798359.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2795482860798359.mp4

@@ -1,0 +1,78 @@
+{
+  "competitor_id": "833455549824302",
+  "parsed": {
+    "duration_s": 7.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor with natural movements, consistent lighting, and realistic environments.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, light complexion, short dark hair. Clean-shaven.",
+        "wardrobe": "Plain black short-sleeve t-shirt.",
+        "demeanor": "Focused while working, then enthusiastic when addressing the camera."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.5,
+        "screenshot_at_s": 2.5,
+        "scene_label": "Typing vs Flowing Comparison",
+        "setting": "Home office/bedroom, daytime. Desk, laptop, white chair, bed in background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium side profile",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A sits in a white ergonomic chair at a desk, facing right. He is actively typing on a dark grey laptop. The background shows a bedroom with a bed and a framed picture on the wall. Natural light comes from a window out of frame to the left.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character A sits in the same white chair at the same desk, facing right. Instead of typing, he is looking slightly upward and speaking, gesturing gently with his right hand. The laptop is open on the desk. The bedroom background is identical to the top panel.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen compares typing versus dictating. The top half shows Character A typing, while the bottom half shows him speaking. A central text banner separates the panels. The bottom panel completes its task faster, indicated by a 'Winner' graphic.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Typing vs Flowing\nHey Jack! I really enjoyed our lunch meet the other day. Do you think we can setup another one for Thursday or Friday?\nListening iPhone Microphone\nProcessing\nWinner \u2705"
+      },
+      {
+        "n": 2,
+        "start_s": 5.5,
+        "end_s": 7.0,
+        "screenshot_at_s": 6.2,
+        "scene_label": "Call to Action",
+        "setting": "Home office/bedroom. Plain wall and sliding closet doors in background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is framed in a close-up, looking directly into the camera lens. He is speaking. The background consists of a plain white wall and beige sliding closet doors. A portion of the white chair is visible on the left.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A speaks directly to the viewer in a close-up shot. A text overlay at the top of the screen provides a call to action.",
+        "audio_transcript": "Character A says: Try Wispr Flow today for free. [Try Wispr Flow today for free.]",
+        "on_screen_text": "Try Wispr Flow for Free"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.241281
+}

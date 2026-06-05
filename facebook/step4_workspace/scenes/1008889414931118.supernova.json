@@ -1,0 +1,60 @@
+{
+  "competitor_id": "1008889414931118",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner / job applicant",
+        "appearance": "A young South Asian woman in her mid-20s with a medium build and a brown complexion. She has dark brown, shoulder-length hair, often tied back in a low ponytail, and a round face with expressive dark eyes. She has a small tattoo on her left wrist.",
+        "wardrobe": "A short-sleeved, collared black polo shirt and light-wash blue jeans.",
+        "demeanor": "Initially dejected and sad, she becomes progressively more engaged, hopeful, and finally happy and confident."
+      },
+      {
+        "id": "B",
+        "role": "male interviewer",
+        "appearance": "A young South Asian man in his mid-20s with a slim build and a medium complexion. He has short, dark, curly hair, a mustache, and wears black-rimmed glasses.",
+        "wardrobe": "A light-colored, possibly off-white, collared shirt.",
+        "demeanor": "Dismissive and condescending."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "A young South Asian woman in her early to mid-20s with a slim build and a fair complexion. She has long, wavy, dark brown hair parted on the side, and a small red bindi on her forehead. She has a warm, friendly smile.",
+        "wardrobe": "A bright pink sleeveless blouse and a matching pink saree with a gold border draped over her shoulder. She wears a delicate gold necklace and traditional gold jhumka earrings.",
+        "demeanor": "Consistently warm, encouraging, and professional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Job Interview Rejection",
+        "supernova_script": "Character B says: English नहीं आती? [Don't know English?]\nCharacter B says: जॉब चाहिए तुम्हें? [You want a job?]\nCharacter B says: यहाँ तुम्हारे जैसों के लिए कोई जॉब नहीं है। [There's no job for people like you here.]",
+        "scene_summary": "- Establishes the core problem: rejection due to poor English skills.\n- Creates immediate empathy for the protagonist.\n- Sets up the emotional stakes for the rest of the ad.",
+        "supernova_on_screen_text": "English नहीं आती?\nजॉब चाहिए तुम्हें?\nयहाँ तुम्हारे जैसों के लिए कोई जॉब नहीं है।"
+      },
+      {
+        "n": 2,
+        "scene_label": "Conversation with AI Tutor",
+        "supernova_script": "Character C says: इतनी परेशान क्यों हो? [Why are you so worried?]\nCharacter A says: मैं हमेशा qualify करती हूँ, काम भी अच्छे से आता है। पर English की वजह से हमेशा reject हो जाती हूँ। [I qualify every time, I even know the work well. But because of English, I always get rejected.]\nCharacter C says: ये बहुत common है, और practice से इसे ठीक किया जा सकता है। आज हम यहाँ से शुरू करते हैं। [This is very common, and with practice, it can be fixed. Today, let's start from here.]\nCharacter A says: Okay. [Okay.]\nCharacter C says: मुझे अपने बारे में बताओ। [Tell me about yourself.]\nCharacter A says: मेरा नाम प्रिया है। मुझे customer handling में तीन साल का experience है। मैं hard working भी हूँ। [My name is Priya. I have three years of experience in customer handling. I am also hardworking.]\nCharacter C says: इसे ऐसे कहो, I am Priya. I have three years of experience in customer handling and I am a very hardworking person. [Say it like this, I am Priya. I have three years of experience in customer handling and I am a very hardworking person.]\nCharacter A says: Wow! ये तो बहुत easy था। [Wow! This was very easy.]\nCharacter C says: मैं तुम्हारे साथ 24 घंटे available हूँ। जब भी टाइम मिले, बस 15 minutes practice करो। [I am available with you 24 hours. Whenever you have time, just practice for 15 minutes.]\nCharacter A says: मैं कितने दिन में अच्छे से English बोलने लगूँगी? [In how many days will I be able to speak English well?]\nCharacter C says: रोज़ मेरे साथ practice करो। तुम मुझसे interview, customer या दोस्तों से बात करने की practice कर सकती हो। मैं तुम्हें English में जवाब देना सिखाऊँगी और तुम्हारी गलतियाँ एक real teacher की तरह correct करूँगी। [Practice with me every day. You can practice talking for an interview, with a customer, or with friends. I will teach you how to answer in English and correct your mistakes like a real teacher.]\nCharacter A says: सच में? पर ये सब बहुत महँगा होगा ना? [Really? But this all must be very expensive, right?]\nCharacter C says: बिल्कुल नहीं, Supernova बहुत affordable है। तुम आज ही try कर सकती हो। [Not at all, Supernova is very affordable. You can try it today.]\nCharacter A says: सच में? मैं अभी Supernova app download करती हूँ। [Really? I'll download the Supernova app right now.]",
+        "scene_summary": "- Introduces the AI tutor as a supportive, non-judgmental guide.\n- Demonstrates the core product value: real-time correction and practical speaking scenarios.\n- Addresses price objections while keeping the actual cost vague but accessible.",
+        "supernova_on_screen_text": "इतनी परेशान क्यों हो?\nमैं हमेशा qualify करती हूँ,\nकाम भी अच्छे से आता है।\nपर English की वजह से\nहमेशा reject हो जाती हूँ।\nये बहुत common है,\nऔर practice से\nइसे ठीक किया जा सकता है।\nआज हम यहाँ से\nशुरू करते हैं।\nOkay.\nमुझे अपने बारे में बताओ।\nमेरा नाम प्रिया है।\nमुझे customer handling में\nतीन साल का experience है।\nमैं hard working भी हूँ।\nइसे ऐसे कहो,\nI am Priya.\nI have three years of\nexperience in customer handling\nand I am a very\nhardworking person.\nWow! ये तो बहुत easy था।\nमैं तुम्हारे साथ\n24 घंटे available हूँ।\nजब भी टाइम मिले,\nबस 15 minutes practice करो।\nमैं कितने दिन में\nअच्छे से English\nबोलने लगूँगी?\nरोज़ मेरे साथ practice करो।\nतुम मुझसे interview, customer\nया दोस्तों से बात करने की\npractice कर सकती हो।\nमैं तुम्हें English में\nजवाब देना सिखाऊँगी\nऔर तुम्हारी गलतियाँ\nएक real teacher की तरह\ncorrect करूँगी।\nसच में? पर ये सब\nबहुत महँगा होगा ना?\nबिल्कुल नहीं,\nSupernova बहुत affordable है।\nतुम आज ही try कर सकती हो।\nसच में?\nमैं अभी Supernova app\ndownload करती हूँ।"
+      },
+      {
+        "n": 3,
+        "scene_label": "App CTA End Card",
+        "supernova_script": "[upbeat notification chime sound]",
+        "scene_summary": "- Provides a clear call to action to download the app.\n- Highlights key features visually.\n- Creates urgency to start learning.",
+        "supernova_on_screen_text": "Supernova\nDownload\nSupernova App\nPREMIUM\nLearn with\nPersonal AI Tutor\nDaily Speaking Practice\nReal Life Scenarios\nInterview, Customer, Friends\nGet Personalised Feedback\nImprove your speaking with instant feedback\nStart Learning Today"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "SpeakX",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780634227.6996202
+}

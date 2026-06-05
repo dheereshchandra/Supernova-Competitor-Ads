@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1481040770146627",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, fair complexion, wavy red hair, large green eyes. Stylized 3D animated appearance.",
+        "wardrobe": "White top and gold crescent moon earrings.",
+        "demeanor": "Friendly, patient, and animated."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young adult male, medium build, fair complexion, dark hair, and a short beard.",
+        "wardrobe": "Black t-shirt, clear plastic shower cap, and white wireless earbuds.",
+        "demeanor": "Engaged, learning, and slightly confused."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Lesson",
+        "supernova_script": "Character A says: Where do you live? [Where do you live?]\n\nCharacter B says: I am living in Delhi. [I am living in Delhi.]\n\nCharacter A says: Grammatically theek hai, but native speakers usually say, I live in Delhi. [Grammatically it's okay, but native speakers usually say, I live in Delhi.]\n\nCharacter B says: I live in Delhi. [I live in Delhi.]\n\nCharacter A says: Great! What is your age? [Great! What is your age?]\n\nCharacter B says: My age is twenty-four years. [My age is twenty-four years.]\n\nCharacter A says: Better to say, I am twenty-four years old. [Better to say, I am twenty-four years old.]\n\nCharacter B says: I am twenty-four years old. [I am twenty-four years old.]\n\nCharacter A says: Perfect. What do you do? [Perfect. What do you do?]\n\nCharacter B says: I am doing job in bank. [I am doing job in bank.]\n\nCharacter A says: More naturally, you can say, I work at a bank. [More naturally, you can say, I work at a bank.]\n\nCharacter B says: I work at a bank. [I work at a bank.]\n\nCharacter A says: Well done! [Well done!]\n\nCharacter B says: Thank you. Par aap kaun ho? [Thank you. But who are you?]\n\nCharacter A says: Main Supernova ki AI tutor hoon. Hum roz aise hi baat karke English practice kar sakte hain. [I am Supernova's AI tutor. We can practice English by talking like this every day.]\n\nCharacter B says: Par meri English bahut weak hai. Mujhe bolne mein darr lagta hai. [But my English is very weak. I feel scared to speak.]\n\nCharacter A says: Tension mat lo. Main aapko Hindi mein samjhaungi, aur hum dheere dheere English bolna seekhenge. [Don't worry. I will explain to you in Hindi, and we will slowly learn to speak English.]\n\nCharacter B says: Aapko Hindi aati hai? [You know Hindi?]\n\nCharacter A says: Bilkul, main ek AI hoon. [Of course, I am an AI.]\n\nCharacter B says: Sahi hai, main abhi app download karta hoon. [That's great, I am going to download this app right now.]",
+        "scene_summary": "- Hooks the viewer by demonstrating real-time AI correction of common English mistakes made by Indian speakers.\n- Establishes the AI's ability to converse and teach in Hindi, removing the intimidation factor for beginners.\n- Ends with a clear call to action as the user feels encouraged and decides to download the app.",
+        "supernova_on_screen_text": "Where do you live?\nI am living in Delhi.\nGrammatically theek hai,\nbut native speakers usually say,\nI live in Delhi.\nI live in Delhi.\nWhat is your age?\nMy age is 24 years.\nBetter to say,\nI am 24 years old.\nI am 24 years old.\nWhat do you do?\nI am doing job in bank.\nMore naturally, you can say,\nI work at a bank.\nI work at a bank.\nWell done!\nThank you.\nPar aap kaun ho?\nMain Supernova ki AI tutor hoon.\nHum roz aise hi baat karke\nEnglish practice kar sakte hain.\nPar meri English bahut weak hai.\nMujhe bolne mein darr lagta hai.\nTension mat lo.\nMain aapko Hindi mein samjhaungi,\naur hum dheere dheere English bolna seekhenge.\nAapko Hindi aati hai?\nBilkul, main ek AI hoon.\nSahi hai,\nmain abhi app download karta hoon."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the brand logo and app store badges.\n- Provides a clear final visual call to action for downloading the app.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4790337
+}

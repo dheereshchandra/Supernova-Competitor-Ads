@@ -1,0 +1,110 @@
+{
+  "competitor_id": "1502233078032513",
+  "parsed": {
+    "duration_s": 30.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features live-action footage with real actors in physical locations. The lighting, camera movements, and character interactions are natural, lacking any uncanny artifacts typical of AI generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "Young adult male, slim build, fair complexion, messy brown hair. He has a clean-shaven face and a generally youthful appearance.",
+        "wardrobe": "Initially wearing a dark blue hoodie under an olive green jacket. Later seen wearing a simple light grey t-shirt.",
+        "demeanor": "Initially awkward and embarrassed, later focused and determined."
+      },
+      {
+        "id": "B",
+        "role": "female partner",
+        "appearance": "Young adult female, slim build, brown complexion, voluminous curly black hair. She has expressive facial features.",
+        "wardrobe": "Wearing a rust-orange knit sweater and blue jeans.",
+        "demeanor": "Friendly, amused, and supportive."
+      },
+      {
+        "id": "C",
+        "role": "cashier",
+        "appearance": "Older adult female, average build, fair complexion, short blonde/grey hair. She wears reading glasses.",
+        "wardrobe": "Wearing a floral patterned shirt under a brown apron with a 'FRESH MARKET' logo.",
+        "demeanor": "Friendly, chatty, and sympathetic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 18.5,
+        "screenshot_at_s": 9.0,
+        "scene_label": "Grocery store checkout",
+        "setting": "A brightly lit grocery store checkout lane during the day, with shelves of products visible in the background.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man, Character A, and a young woman, Character B, stand together at a grocery store checkout counter. Character A is holding a reusable cloth shopping bag. Across the counter, an older female cashier, Character C, is processing their items. Character C looks at the couple with a friendly smile. Character B smiles back and gestures slightly towards Character A. Character A initially looks confused, then awkwardly forces a smile. The background consists of blurred supermarket aisles filled with various products on shelves under bright fluorescent lighting.",
+            "characters_in_panel": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The scene takes place at a grocery store checkout where a young couple interacts with a cashier. Yellow text overlays appear at the top and bottom of the screen throughout the scene. Subtitles translate the Spanish dialogue into English. The camera cuts back and forth between the cashier and the couple as they converse.",
+        "audio_transcript": "Character C says: \u00bfTodo bien? \u00bfEncontraste todo lo que buscabas? [All good? Did you find everything you were looking for?]\nCharacter B says: S\u00ed, todo perfecto, gracias. [Yes, everything's perfect, thanks.]\nCharacter C says: \u00bfEs tu novio? \u00a1Qu\u00e9 guapo! [Is he your boyfriend? How handsome!]\nCharacter B says: S\u00ed, pero no habla espa\u00f1ol todav\u00eda. [Yes, but he doesn't speak Spanish yet.]\nCharacter C says: \u00a1Ay, pobrecito! [Oh, poor thing!]",
+        "on_screen_text": "I HATED NEEDING HER TO SPEAK FOR ME. THAT'S WHY I USE SPEAK\nI HATE NEEDING IT"
+      },
+      {
+        "n": 2,
+        "start_s": 18.5,
+        "end_s": 27.5,
+        "screenshot_at_s": 23.0,
+        "scene_label": "Practicing at home",
+        "setting": "A modern kitchen with light wooden cabinets and a window letting in natural daylight.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands alone in a modern kitchen, leaning casually against the countertop. He is wearing a simple light grey t-shirt. He has a single white wireless earbud in his right ear. He is looking down intently at his smartphone, holding it with both hands. The kitchen features light wooden cabinets, a white countertop, and a window in the background that lets in soft natural daylight. A ceramic mug rests on the counter next to him.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shifts to a kitchen where the young man is alone, leaning against the counter and looking at his phone with an earbud in. A yellow text overlay is visible at the top of the screen. The shot briefly cuts to a screencast of a language learning app on his phone before returning to the man. Subtitles display the dialogue from the app.",
+        "audio_transcript": "Character A says: Hola, disculpe, \u00bfhabla ingl\u00e9s? [Hello, excuse me, do you speak English?]\nUnknown speaker says: No, solo espa\u00f1ol. Lo siento. [No, only Spanish. I'm sorry.]",
+        "on_screen_text": "I HATED NEEDING HER TO SPEAK FOR ME. THAT'S WHY I USE SPEAK\nSO I STOPPED NEEDING IT"
+      },
+      {
+        "n": 3,
+        "start_s": 27.5,
+        "end_s": 30.0,
+        "screenshot_at_s": 28.5,
+        "scene_label": "End card",
+        "setting": "A solid white background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The scene consists entirely of a solid, bright white background. There are no characters present in this frame. No props, furniture, or architectural elements are visible. The lighting is completely uniform, eliminating any shadows or gradients. The composition is stark and minimalist, providing a completely empty visual space.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The video concludes with a static end card. The background is solid white. The logo for the 'Speak' app is displayed in the center. Below the logo, black text provides a call to action encouraging the viewer to take a test and start using the app.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Speak\nStop making her translate for you. Take the test and start today"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657929.9844906
+}

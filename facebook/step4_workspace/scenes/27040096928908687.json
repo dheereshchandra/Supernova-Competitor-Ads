@@ -1,0 +1,111 @@
+{
+  "competitor_id": "27040096928908687",
+  "parsed": {
+    "duration_s": 44.0,
+    "production_type": "human-recorded",
+    "production_notes": "Standard screencast with a webcam picture-in-picture. Natural human movements, authentic speech patterns, and standard screen recording quality with no AI artifacts.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, brown complexion. Short dark hair, clean-shaven.",
+        "wardrobe": "Dark t-shirt.",
+        "demeanor": "Enthusiastic, smiling, engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 14.5,
+        "screenshot_at_s": 7.0,
+        "scene_label": "Figma Design",
+        "setting": "Digital workspace, daytime",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A digital canvas displaying a pink grid pattern with a small red circle in the center. To the right, two smaller rectangular areas show similar pink grid patterns, one containing large red shapes.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A young man with a brown complexion and short dark hair, wearing a dark t-shirt, positioned against a plain, light-colored wall.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A screencast of a design software interface with a circular webcam inset in the bottom left. The main screen shows a pink grid design. The presenter is visible in the inset, explaining his process.",
+        "audio_transcript": "Character A says: I went to Figma. [I went to Figma.]\nCharacter A says: And I designed the screen, like this is how I am visualizing the game. [And I designed the screen, like this is how I am visualizing the game.]\nCharacter A says: And then I fed this design that I made to Lovable. [And then I fed this design that I made to Lovable.]",
+        "on_screen_text": "Wispr Flow + Lovable\nBuilding apps in 2026 is simple"
+      },
+      {
+        "n": 2,
+        "start_s": 14.5,
+        "end_s": 34.5,
+        "screenshot_at_s": 25.0,
+        "scene_label": "Lovable App Generation",
+        "setting": "Digital workspace, daytime",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A split digital workspace. The left side is a blank white area. The right side shows a white canvas with scattered black dots and a small red circle. Later, the canvas changes to a pink grid pattern with a red circle moving through it.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A young man with a brown complexion and short dark hair, wearing a dark t-shirt, positioned against a plain, light-colored wall.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A screencast of a development platform with the circular webcam inset remaining in the bottom left. The presenter shows how he fed the design to the platform and the resulting app variations. The app preview shows a simple game with a red circle moving through a maze.",
+        "audio_transcript": "Character A says: Then I fed this image or design that I made to Lovable. [Then I fed this image or design that I made to Lovable.]\nCharacter A says: And these are all the variations that I made. [And these are all the variations that I made.]\nCharacter A says: This is the final one. [This is the final one.]\nCharacter A says: So yes, now... [So yes, now...]\nCharacter A says: You have... [You have...]\nCharacter A says: Yep. [Yep.]\nCharacter A says: They meet. [They meet.]\nCharacter A says: This is what it looks like. [This is what it looks like.]",
+        "on_screen_text": "Wispr Flow + Lovable\nBuilding apps in 2026 is simple"
+      },
+      {
+        "n": 3,
+        "start_s": 34.5,
+        "end_s": 44.0,
+        "screenshot_at_s": 39.0,
+        "scene_label": "Wispr Flow Stats",
+        "setting": "Digital workspace, daytime",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A digital interface with a white background containing various rectangular sections. There is a small illustration of a person sitting at a desk with a laptop.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A young man with a brown complexion and short dark hair, wearing a dark t-shirt, positioned against a plain, light-colored wall.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A screencast of an application showing user statistics. The circular webcam inset remains in the bottom left. The presenter talks about his daily writing habit and how the tool helps him.",
+        "audio_transcript": "Character A says: Like I write a lot on daily basis. [Like I write a lot on daily basis.]\nCharacter A says: And Wispr has for sure helped me in that regard. [And Wispr has for sure helped me in that regard.]\nCharacter A says: And I'm truly loving it for this. [And I'm truly loving it for this.]",
+        "on_screen_text": "Wispr Flow + Lovable\nBuilding apps in 2026 is simple"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.2335854
+}

@@ -1,0 +1,54 @@
+{
+  "competitor_id": "1689040725779581",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female with short, side-parted dark brown hair. Fair complexion, dark brown eyes, and symmetrical features.",
+        "wardrobe": "Light grey button-down shirt. Large black over-ear headphones in the first half.",
+        "demeanor": "Friendly and informative, but slightly stiff."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction",
+        "supernova_script": "Character A says: क्या आपको भी लगता है कि आपकी English की वजह से आप career में पीछे छूट रहे हैं? [Do you also feel you are being left behind in your career because of your English?]\nCharacter A says: Supernova एक ऐसा app है जहाँ आप AI tutor के साथ रोज़ English बोलने की practice कर सकते हैं और instant feedback पा सकते हैं। [Supernova is an app where you can practice speaking English daily with an AI tutor and get instant feedback.]",
+        "scene_summary": "- Hooks the viewer by addressing a common insecurity among Indian professionals regarding their English fluency.\n- Introduces Supernova as the practical solution, highlighting the AI tutor feature for daily practice.\n- Sets a warm, encouraging, and relatable tone.",
+        "supernova_on_screen_text": "क्या English की वजह से\nपीछे छूट रहे हैं?\nSupernova App\nAI tutor के साथ\nरोज़ practice करें\nInstant Feedback"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "supernova_script": "Character A says: I am... working here. [I am... working here.]\nCharacter A says: Oops, AI tutor ने बताया कि मुझे 'I have been working here' बोलना चाहिए। [Oops, the AI tutor told me I should say 'I have been working here'.]\nCharacter A says: I have been working here. [I have been working here.]\nCharacter A says: Perfect! यह बहुत आसान है। [Perfect! It's very easy.]\nCharacter A says: आज ही अपने phone में Supernova download करें। [Download Supernova on your phone today.]\nCharacter A says: रोज़ practice करें और पूरे confidence के साथ English बोलें। [Practice daily and speak English with full confidence.]",
+        "scene_summary": "- Demonstrates a real-world speaking scenario (office introduction) and immediate AI grammar correction.\n- Shows the user successfully correcting their mistake, emphasizing ease of use.\n- Delivers a clear call-to-action to download the app and build confidence.",
+        "supernova_on_screen_text": "I am... working here.\nAI Feedback:\nSay \"I have been...\"\nI have been working here.\nPerfect!\nDownload Supernova\nSpeak with confidence"
+      },
+      {
+        "n": 3,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the final brand logo and app store badges.\n- Reinforces the core value proposition of speaking English confidently.\n- Removes competitor-specific pricing and hype claims.",
+        "supernova_on_screen_text": "Speak English Confidently\nSupernova\nDownload Now"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "learn an American one",
+        "supernova_swap": "English बोलने की practice"
+      },
+      {
+        "competitor_brand": "Get your first 7 days free",
+        "supernova_swap": "[Removed]"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779989130.576742
+}

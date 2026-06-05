@@ -1,0 +1,56 @@
+{
+  "competitor_id": "1534214218051412",
+  "parsed": {
+    "duration_s": 14.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features natural human actors with realistic expressions and movements, typical of a short, human-recorded skit or social media reel. No signs of AI generation were observed.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "boasting young man",
+        "appearance": "A young adult male, likely in his early twenties, with a medium build and fair complexion. He has dark, voluminous hair styled upwards and a neatly trimmed beard and mustache. His facial features are expressive, with prominent eyebrows and a defined jawline.",
+        "wardrobe": "He wears a black and white plaid button-up shirt, unbuttoned at the collar, revealing a silver chain with a small pendant. On his left wrist, he has a silver watch with a light blue strap, and a silver ring on his right hand.",
+        "demeanor": "Initially confident and aggressive, gesturing emphatically while speaking. His demeanor shifts to surprised and slightly bewildered after an interaction."
+      },
+      {
+        "id": "B",
+        "role": "friend / brother-in-law",
+        "appearance": "A young adult male, similar age and build to Character A, with a fair complexion. He has dark, medium-length hair. His appearance is brief, mostly seen from behind or partially from the side.",
+        "wardrobe": "He wears a plain brown button-up shirt.",
+        "demeanor": "Calm and slightly amused, delivering a punchline."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 14.0,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Confrontation and unexpected arrival",
+        "setting": "Outdoors, likely a parking area or street. Several cars (white, red) are parked in the background. Lush green trees with some red flowering foliage are visible under bright daylight, suggesting a sunny day.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot, mostly static, focusing on Character A.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man (Character A) with dark, styled hair and a beard stands outdoors, facing slightly towards the camera. He wears a black and white plaid shirt, unbuttoned at the top, and a silver watch on his left wrist. He gestures with his hands, his expression shifting from confident and assertive to surprised. Behind him, several cars are parked, including white and red vehicles. Lush green trees with some red blossoms are visible in the background under bright daylight. At one point, another young man (Character B) in a plain brown shirt briefly appears from behind Character A, then stands to his right, partially visible, looking towards Character A.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The entire video takes place in one continuous shot, featuring a young man (Character A) in a plaid shirt standing in an outdoor parking area. He is initially seen boasting and gesturing aggressively, with parked cars and trees in the background. Another young man (Character B) in a brown shirt then appears, leading to a comedic twist. Character A's expression changes from confident to surprised. The scene is brightly lit, indicating daytime.",
+        "audio_transcript": "Character A says: \u0921\u091f \u091c\u093e \u0924\u0942\u0964 [You wait.]\nCharacter A says: \u092e\u0947\u0930\u093e \u0938\u093e\u0932\u093e \u0906 \u0930\u0939\u093e \u0939\u0948, \u092c\u0947 \u092c\u0924\u093e\u090f\u0917\u093e \u0924\u0928\u0947\u0964 [My brother-in-law is coming, he will tell you.]\nCharacter A says: \u091b\u094b\u095c\u0947 \u0932\u0947\u0915\u0947 \u0906 \u0930\u0939\u093e \u0939\u0948 \u092e\u0947\u0930\u093e \u0938\u093e\u0932\u093e\u0964 [My brother-in-law is bringing boys.]\nCharacter A says: \u0939\u093e\u0902 \u091c\u0940\u091c\u093e, \u0939\u093e\u0902 \u091c\u0940\u091c\u093e\u0964 [Yes brother-in-law, yes brother-in-law.]\nCharacter A says: \u0915\u093f\u0924\u0947 \u0939\u0948? [Where is he?]\nCharacter B says: \u0915\u094c\u0928? [Who?]\nCharacter A says: \u0924\u0942 \u0928 \u0915\u0939\u0942\u0902 \u0925\u093e \u0928\u093e \u0939\u092e\u093e\u0930\u0947? [Didn't you say 'ours'?]\nCharacter B says: \u0939\u093e\u0902 \u0924\u094b \u0939\u092e \u0906 \u0917\u090f \u0928\u093e\u0964 [Yes, so we came.]\nCharacter A says: \u0930\u093e\u091c\u093e \u0938\u093e\u0939\u092c, [Raja Sahab,]\nCharacter A says: \u0906\u092a\u0915\u0947 \u0939\u092e \u0915\u0947 \u091a\u0915\u094d\u0915\u0930 \u092e\u0947\u0902 \u0928\u093e \u0906\u092a\u0915\u093e \u091c\u0940\u091c\u093e \u0906\u092a\u0915\u0947 \u0917\u093e\u0902\u0935 \u092e\u0947\u0902 \u0939\u0940 \u091a\u0940\u0924\u0947 \u0915\u094b\u0964 [Because of your 'we', your brother-in-law will be a cheetah in your village.]\nCharacter A says: \u0913\u0964 [Oh.]",
+        "on_screen_text": ""
+      }
+    ]
+  },
+  "model": "gemini-2.5-flash",
+  "decoded_at": 1780633235.741267,
+  "truncated_to": "15s"
+}

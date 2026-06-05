@@ -1,0 +1,82 @@
+{
+  "competitor_id": "1412613080667553",
+  "parsed": {
+    "duration_s": 31.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses a split-screen format combining a 3D animated AI avatar on the top half and a human actor recorded on video on the bottom half.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female with fair skin, large green eyes, and red hair styled in a messy top bun. She has a youthful, stylized appearance.",
+        "wardrobe": "A simple, ribbed white long-sleeve top and gold hoop earrings with small crescent moon charms.",
+        "demeanor": "Friendly, encouraging, and attentive."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young human female with fair skin and long, straight blonde hair parted in the middle. She has dark manicured nails.",
+        "wardrobe": "A plain black short-sleeve t-shirt.",
+        "demeanor": "Slightly hesitant but engaged, casually fidgeting with a prop."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 28.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Language Lesson",
+        "setting": "Top: cozy bedroom with warm string lights. Bottom: bedroom with purple string lights.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen, close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is framed in a close-up shot. The background is a softly lit, cozy bedroom featuring warm string lights draped across the wall, a bed with pink pillows, and a glowing bedside lamp. The lighting on Character A is warm and inviting. She maintains a friendly expression, looking directly forward as if making eye contact with the viewer.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B is shown in a close-up shot. She is holding and gently squeezing a small, bright orange stress ball in her hands near her chest. The background is a bedroom illuminated by vibrant purple string lights, with a white cabinet or shelf visible behind her, adorned with small items and stickers. The lighting is slightly cool with a strong purple hue from the background. She looks slightly upward, as if conversing with someone positioned above her.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen composition showing a 3D animated female avatar on the top half and a real human woman on the bottom half. The avatar is in a warm, cozy room, while the human is in a room with purple lighting, holding an orange ball. Text overlays appear in the center, displaying the dialogue. The two characters appear to be having a real-time conversation.",
+        "audio_transcript": "Character A says: \u00bfHabla espa\u00f1ol? [Do you speak Spanish?]\nCharacter B says: S\u00ed, un poco. Yo conozco espa\u00f1ol, mas no muy bien. [Yes, a little. I know Spanish, but not very well.]\nCharacter A says: Se entiende, pero los nativos dicen simplemente: \"Hablo espa\u00f1ol\". [It's understood, but natives simply say: \"I speak Spanish\".]\nCharacter B says: Ah, hablo espa\u00f1ol. [Ah, I speak Spanish.]\nCharacter A says: \u00bfCu\u00e1ntos a\u00f1os tiene? [How old are you?]\nCharacter B says: Yo te\u00f1o veintitr\u00e9s. [I have twenty-three.]\nCharacter A says: En espa\u00f1ol decimos: \"tengo veintitr\u00e9s a\u00f1os\". [In Spanish we say: \"I am twenty-three years old\".]\nCharacter B says: Tengo veintitr\u00e9s a\u00f1os. [I am twenty-three years old.]\nCharacter A says: Bien hecho. [Well done.]\nCharacter B says: Gracias, mas, \u00bfqui\u00e9n es usted? [Thanks, but, who are you?]\nCharacter A says: Soy un tutor de IA en Praktika. Podemos hablar as\u00ed cada d\u00eda. [I am an AI tutor on Praktika. We can talk like this every day.]\nCharacter B says: Ah, pero mi espa\u00f1ol es malo. Yo entiendo un poco, mas hablar es dif\u00edcil, no consigo. [Ah, but my Spanish is bad. I understand a little, but speaking is difficult, I can't.]\nCharacter A says: No se preocupe, puedo ense\u00f1arle en su lengua materna. [Don't worry, I can teach you in your mother tongue.]\nCharacter B says: \u00bfUsted habla portugu\u00e9s? [Do you speak Portuguese?]\nCharacter A says: \u00a1Claro, soy una IA! [Of course, I am an AI!]\nCharacter B says: Vale, entonces voy a baixar esta app. [Okay, then I'm going to download this app.]",
+        "on_screen_text": "\u00bfHabla espa\u00f1ol?\nS\u00ed, un poco\nYo conozco espa\u00f1ol,\nmas no muy bien\nSe entiende, pero\nlos nativos dicen\nsimplemente: \"Hablo\nespa\u00f1ol\"\nAh, hablo espa\u00f1ol\n\u00bfCu\u00e1ntos a\u00f1os tiene?\nYo te\u00f1o veintitr\u00e9s\nEn espa\u00f1ol decimos:\ntengo veintitr\u00e9s a\u00f1os\nTengo veintitr\u00e9s a\u00f1os\nBien hecho\nGracias, mas,\n\u00bfqui\u00e9n es usted?\nSoy un tutor de\nIA en Praktika\nPodemos hablar\nas\u00ed cada d\u00eda\nAh, pero mi\nespa\u00f1ol es malo\nYo entiendo un poco,\nmas hablar es\ndif\u00edcil, no consigo\nNo se preocupe,\npuedo ense\u00f1arle en\nsu lengua materna\n\u00bfUsted habla portugu\u00e9s?\n\u00a1Claro, soy una IA!\nVale, entonces voy\na baixar esta app"
+      },
+      {
+        "n": 2,
+        "start_s": 28.5,
+        "end_s": 31.0,
+        "screenshot_at_s": 29.5,
+        "scene_label": "End Card",
+        "setting": "White background",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A white screen with a purple app logo in the center. Below the logo is the app name in purple text. At the bottom are two black buttons for downloading the app from mobile app stores.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966545.9212463
+}

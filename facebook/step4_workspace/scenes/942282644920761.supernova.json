@@ -1,0 +1,50 @@
+{
+  "competitor_id": "942282644920761",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated young female. Fair complexion, large green eyes, and wavy red hair. Features are stylized and smooth.",
+        "wardrobe": "Plain white short-sleeved t-shirt. Small gold crescent moon earrings.",
+        "demeanor": "Friendly, encouraging, and attentive."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Young adult human male. Medium build, fair complexion, dark hair, and a short, neatly trimmed beard.",
+        "wardrobe": "Dark green short-sleeved t-shirt. White wireless earbud in the right ear. Black smartwatch on the left wrist.",
+        "demeanor": "Casual, slightly hesitant, but engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Lesson",
+        "supernova_script": "Character A says: Where do you work? [Where do you work?]\n\nCharacter B says: I am work in a bank. [I am work in a bank.]\n\nCharacter A says: Thoda sa galat hai. Aap bol sakte hain, I work at a bank. [That's slightly incorrect. You can say, I work at a bank.]\n\nCharacter B says: I work at a bank. [I work at a bank.]\n\nCharacter A says: What is your role there? [What is your role there?]\n\nCharacter B says: My role is... uh, main manager hoon. [My role is... uh, I am a manager.]\n\nCharacter A says: You can simply say, I am a manager. [You can simply say, I am a manager.]\n\nCharacter B says: I am a manager. [I am a manager.]\n\nCharacter A says: Bahut badhiya! [Very good!]\n\nCharacter B says: Thank you! Par aap kaun ho? [Thank you! But who are you?]\n\nCharacter A says: Main Supernova ki AI tutor hoon. Hum roz aise hi English practice kar sakte hain. [I am Supernova's AI tutor. We can practice English like this every day.]\n\nCharacter B says: Par meri English toh bahut weak hai. Mujhe bolne mein darr lagta hai. [But my English is very weak. I feel scared to speak.]\n\nCharacter A says: Ghabraiye mat! Main aapko Hindi mein samjhaungi, aur hum real-life situations ki practice karenge. [Don't worry! I will explain things to you in Hindi, and we will practice real-life situations.]\n\nCharacter B says: Yeh toh bahut sahi hai! Main aaj hi Supernova download karta hoon. [This is really great! I will download Supernova today.]",
+        "scene_summary": "- Establishes a relatable learning scenario where the user makes a common English mistake and the AI corrects it gently.\n- Introduces the AI tutor and the core value proposition: daily spoken English practice.\n- Addresses the user's insecurity (fear of speaking/weak English) and provides a comforting solution (Hindi explanations, real-life situations).\n- Ends with a clear intent to download the app.",
+        "supernova_on_screen_text": "Where do you work?\nI am work in a bank.\nThoda sa galat hai.\nAap bol sakte hain,\nI work at a bank.\nI work at a bank.\nWhat is your role there?\nMy role is... uh,\nmain manager hoon.\nYou can simply say,\nI am a manager.\nI am a manager.\nBahut badhiya!\nThank you!\nPar aap kaun ho?\nMain Supernova ki AI tutor hoon.\nHum roz aise hi\nEnglish practice kar sakte hain.\nPar meri English toh bahut weak hai.\nMujhe bolne mein darr lagta hai.\nGhabraiye mat!\nMain aapko Hindi mein samjhaungi,\naur hum real-life situations ki\npractice karenge.\nYeh toh bahut sahi hai!\nMain aaj hi Supernova download karta hoon."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the brand logo and app store badges.\n- Serves as the final call-to-action for the user to download the app.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4716048
+}

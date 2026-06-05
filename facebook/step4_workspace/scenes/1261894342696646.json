@@ -1,0 +1,214 @@
+{
+  "competitor_id": "1261894342696646",
+  "parsed": {
+    "duration_s": 99.0,
+    "production_type": "mixed",
+    "production_notes": "The video primarily features human actors recorded in real-world settings. However, it includes a segment showcasing an AI-generated avatar (SIA) within an app interface, making it a mixed production.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter / son",
+        "appearance": "Young male, early 20s, slim build, light brown complexion. Short black hair, slight mustache and goatee.",
+        "wardrobe": "Wears a blue and white tie-dye t-shirt and grey jeans in the first half, then switches to a dark grey t-shirt and grey jeans.",
+        "demeanor": "Casual, slightly teasing but supportive."
+      },
+      {
+        "id": "B",
+        "role": "female learner / mother",
+        "appearance": "Middle-aged female, 40s-50s, medium build, light brown complexion. Black hair tied back, wears a bindi and occasionally glasses.",
+        "wardrobe": "Wears a blue patterned kurta initially, then a patterned top, and finally a solid orange kurta with white detailing.",
+        "demeanor": "Expressive, transitions from frustrated and confused to confident and animated."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, slim build, fair complexion. Long, straight dark hair.",
+        "wardrobe": "Plain white t-shirt.",
+        "demeanor": "Professional, friendly, and static, typical of AI avatars."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 23.0,
+        "screenshot_at_s": 11.0,
+        "scene_label": "Mother struggles with English",
+        "setting": "Living room, daytime, green sofa, beige patterned curtains.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A and Character B sit side-by-side on a light green sofa against a backdrop of beige patterned curtains. Character B looks confused and gestures with her hands while speaking to Character A. Character A looks at his phone, then responds to her. Later, Character A stands up and holds his phone out towards Character B.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene establishes the dynamic between the mother and son. The mother repeatedly asks the son for help with English-related tasks on her phone, showing frustration. The son is casually helpful but slightly dismissive.",
+        "audio_transcript": "Character B says: \u0c05\u0c30\u0c47\u0c2f\u0c4d, \u0c08\u0c30\u0c4b\u0c1c\u0c41 \u0c2e\u0c40 \u0c2c\u0c3e\u0c2c\u0c3e\u0c2f\u0c4d \u0c2a\u0c46\u0c33\u0c4d\u0c32\u0c3f \u0c30\u0c4b\u0c1c\u0c41 \u0c30\u0c3e. \u0c17\u0c4d\u0c30\u0c42\u0c2a\u0c4d \u0c32\u0c4b \u0c05\u0c02\u0c26\u0c30\u0c42 \u0c2e\u0c46\u0c38\u0c47\u0c1c\u0c4d \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c30\u0c41, \u0c2e\u0c28\u0c02 \u0c15\u0c42\u0c21\u0c3e \u0c1a\u0c47\u0c26\u0c4d\u0c26\u0c3e\u0c2e\u0c3e? [Hey, today is your uncle's wedding anniversary. Everyone is messaging in the group, shall we also do it?]\nCharacter A says: \u0c1a\u0c46\u0c2f\u0c4d \u0c2e\u0c30\u0c3f \u0c28\u0c3e\u0c15\u0c47\u0c02 \u0c1a\u0c46\u0c2a\u0c4d\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c35\u0c4d. [Do it then, why are you telling me?]\nCharacter B says: \u0c28\u0c41\u0c35\u0c4d\u0c35\u0c41 \u0c1f\u0c48\u0c2a\u0c4d \u0c1a\u0c47\u0c2f\u0c21\u0c3e\u0c28\u0c3f\u0c15\u0c3f \u0c39\u0c46\u0c32\u0c4d\u0c2a\u0c4d \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c3e\u0c35\u0c47\u0c2e\u0c4b \u0c05\u0c28\u0c3f \u0c05\u0c21\u0c41\u0c17\u0c41\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e. [I'm asking if you would help me type.]\nCharacter A says: \u0c05\u0c1f\u0c4d\u0c32\u0c3e \u0c1a\u0c46\u0c2a\u0c4d\u0c2a\u0c4a\u0c1a\u0c4d\u0c1a\u0c41\u0c17\u0c3e \u0c2e\u0c30\u0c3f. [You could have said that then.]\nCharacter B says: \u0c05\u0c30\u0c47\u0c2f\u0c4d \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c32\u0c4b \u0c26\u0c40\u0c28\u0c4d\u0c28\u0c47\u0c2e\u0c4b \u0c05\u0c02\u0c1f\u0c3e\u0c30\u0c41 \u0c30\u0c3e, \u0c28\u0c3e\u0c15\u0c41 \u0c17\u0c41\u0c30\u0c4d\u0c24\u0c4a\u0c38\u0c4d\u0c24\u0c32\u0c47\u0c26\u0c41 \u0c2e\u0c30\u0c4d\u0c1a\u0c3f\u0c2a\u0c4b\u0c2f\u0c3f\u0c28\u0c3e. [Hey, what is this called in English, I can't remember, I forgot.]\nCharacter B says: \u0c05\u0c30\u0c47\u0c2f\u0c4d \u0c35\u0c1a\u0c4d\u0c1a\u0c3f\u0c28\u0c3e\u0c35\u0c3e \u0c30\u0c3e, \u0c1c\u0c30 \u0c06\u0c28\u0c4d\u0c32\u0c48\u0c28\u0c4d \u0c32\u0c4b \u0c15\u0c42\u0c30\u0c17\u0c3e\u0c2f\u0c32\u0c41 \u0c06\u0c30\u0c4d\u0c21\u0c30\u0c4d \u0c2a\u0c46\u0c1f\u0c4d\u0c1f\u0c30\u0c3e, \u0c0f\u0c02 \u0c1f\u0c48\u0c2a\u0c4d \u0c1a\u0c47\u0c2f\u0c3e\u0c32\u0c4b \u0c28\u0c3e\u0c15\u0c41 \u0c05\u0c30\u0c4d\u0c25\u0c2e\u0c48\u0c24\u0c32\u0c47\u0c26\u0c41. [Hey, you came, just order vegetables online, I don't understand what to type.]",
+        "on_screen_text": ""
+      },
+      {
+        "n": 2,
+        "start_s": 23.0,
+        "end_s": 35.0,
+        "screenshot_at_s": 28.0,
+        "scene_label": "Montage of English struggles",
+        "setting": "Various locations (kitchen, gym, balcony), daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A montage of quick cuts in different locations. Character B stands in a kitchen, talking on a phone with a frustrated expression. Character A stands in a gym, holding a phone to his ear. Character B stands on a balcony, holding up black pants while on the phone. Character A sits on a parked scooter, talking on the phone. Character B stands on the balcony again, looking exasperated.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A fast-paced montage showing the mother encountering various situations where her lack of English skills causes problems. She calls her son for help, but he is busy. She finally resolves to learn English herself.",
+        "audio_transcript": "Character B says: \u0c05\u0c30\u0c47\u0c2f\u0c4d \u0c35\u0c3e\u0c1f\u0c4d\u0c38\u0c3e\u0c2a\u0c4d \u0c32\u0c4b \u0c28\u0c40\u0c15\u0c4a\u0c15\u0c1f\u0c3f \u0c2a\u0c02\u0c2a\u0c3f\u0c28\u0c3e, \u0c26\u0c3e\u0c28\u0c3f \u0c05\u0c30\u0c4d\u0c25\u0c02 \u0c0f\u0c02\u0c26\u0c4b \u0c1a\u0c42\u0c38\u0c3f \u0c1a\u0c46\u0c2a\u0c4d\u0c2a\u0c30\u0c3e. [Hey, I sent you something on WhatsApp, look at it and tell me its meaning.]\nCharacter B says: \u0c05\u0c30\u0c47\u0c2f\u0c4d \u0c28\u0c40\u0c15\u0c41 \u0c35\u0c3e\u0c1f\u0c4d\u0c38\u0c3e\u0c2a\u0c4d \u0c32\u0c4b \u0c2a\u0c46\u0c1f\u0c4d\u0c1f\u0c3f\u0c28 \u0c2c\u0c41\u0c15\u0c4d \u0c24\u0c46\u0c32\u0c41\u0c17\u0c41\u0c32\u0c4b \u0c09\u0c02\u0c26\u0c3e\u0c30\u0c3e, \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c32\u0c4b \u0c28\u0c3e\u0c15\u0c41 \u0c05\u0c30\u0c4d\u0c25\u0c2e\u0c48\u0c24\u0c32\u0c47\u0c26\u0c41. [Hey, is the book I sent you on WhatsApp in Telugu, I don't understand English.]\nCharacter A says: \u0c28\u0c47\u0c28\u0c41 \u0c2c\u0c02\u0c21\u0c3f \u0c2e\u0c40\u0c26 \u0c09\u0c28\u0c4d\u0c28\u0c3e \u0c2e\u0c2e\u0c4d\u0c2e\u0c40, \u0c12\u0c15 \u0c2b\u0c48\u0c35\u0c4d \u0c2e\u0c3f\u0c28\u0c3f\u0c1f\u0c4d\u0c38\u0c4d \u0c06\u0c17\u0c41. [I am on the bike mommy, wait for five minutes.]\nCharacter B says: \u0c1b\u0c3e, \u0c07\u0c02\u0c15 \u0c32\u0c3e\u0c2d\u0c02 \u0c32\u0c47\u0c26\u0c41, \u0c28\u0c47\u0c28\u0c47 \u0c0e\u0c1f\u0c4d\u0c32\u0c4b \u0c05\u0c1f\u0c4d\u0c32\u0c3e \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c3e\u0c32\u0c3f. [Damn, there's no use anymore, I have to learn English somehow.]",
+        "on_screen_text": ""
+      },
+      {
+        "n": 3,
+        "start_s": 35.0,
+        "end_s": 38.0,
+        "screenshot_at_s": 36.5,
+        "scene_label": "Time transition",
+        "setting": "Abstract cartoon background.",
+        "characters_in_scene": [],
+        "camera": "full",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A static, cartoon-style background image featuring a repeating, textured pattern in shades of yellow, orange, and brown, resembling a tropical or tiki theme.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A classic Spongebob Squarepants style time card is shown to indicate a passage of time.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Several Days Later..."
+      },
+      {
+        "n": 4,
+        "start_s": 38.0,
+        "end_s": 63.0,
+        "screenshot_at_s": 50.0,
+        "scene_label": "Mother's improvement revealed",
+        "setting": "Living room, daytime, green sofa, beige patterned curtains.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits on a green sofa, looking at his phone with a surprised expression. The view alternates between him and Character B, who is sitting on the same sofa. Character B speaks confidently, using expressive hand gestures. The background consists of beige patterned curtains.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The son notices his mother posting English statuses on her phone. He asks her how she learned, and she confidently explains that she decided to learn and used an app.",
+        "audio_transcript": "Character A says: \u0c06\u0c39\u0c4d? \u0c2e\u0c2e\u0c4d\u0c2e\u0c40 \u0c0f\u0c02\u0c26\u0c3f \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c32\u0c4b \u0c38\u0c4d\u0c1f\u0c47\u0c1f\u0c38\u0c4d \u0c32\u0c41 \u0c2c\u0c3e\u0c28\u0c47 \u0c2a\u0c46\u0c21\u0c41\u0c24\u0c41\u0c02\u0c26\u0c3f. \u0c0e\u0c2a\u0c4d\u0c2a\u0c41\u0c21\u0c41 \u0c28\u0c28\u0c4d\u0c28\u0c47 \u0c05\u0c21\u0c41\u0c17\u0c41\u0c24\u0c26\u0c3f \u0c15\u0c26\u0c3e. [Ah? Mommy is putting up English statuses quite well. She always asks me, right.]\nCharacter A says: \u0c2e\u0c2e\u0c4d\u0c2e\u0c40, \u0c0f\u0c02\u0c26\u0c3f \u0c2e\u0c27\u0c4d\u0c2f\u0c28 \u0c39\u0c46\u0c32\u0c4d\u0c2a\u0c4d \u0c32\u0c47\u0c15\u0c41\u0c02\u0c21\u0c3e \u0c38\u0c4d\u0c1f\u0c47\u0c1f\u0c38\u0c4d \u0c32\u0c41 \u0c2a\u0c46\u0c21\u0c41\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c35\u0c4d, \u0c05\u0c28\u0c4d\u0c28\u0c40 \u0c28\u0c41\u0c35\u0c4d\u0c35\u0c47 \u0c1a\u0c42\u0c38\u0c41\u0c15\u0c41\u0c02\u0c1f\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c35\u0c4d, \u0c0f\u0c02\u0c26\u0c3f \u0c38\u0c02\u0c17\u0c24\u0c3f? [Mommy, what's this, you are putting up statuses without help lately, you are taking care of everything yourself, what's the matter?]\nCharacter B says: \u0c2e\u0c30\u0c3f \u0c0f\u0c02 \u0c05\u0c21\u0c17\u0c3e\u0c32\u0c3f \u0c0a\u0c30\u0c3f\u0c15\u0c47 \u0c05\u0c02\u0c26\u0c30\u0c3f\u0c28\u0c40, \u0c28\u0c3e\u0c15\u0c47 \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c2a\u0c30\u0c4d\u0c2b\u0c46\u0c15\u0c4d\u0c1f\u0c4d \u0c17\u0c3e \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c3e\u0c32\u0c28\u0c3f\u0c2a\u0c3f\u0c02\u0c1a\u0c3f\u0c02\u0c26\u0c3f, \u0c05\u0c02\u0c26\u0c41\u0c15\u0c47 \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c41\u0c28\u0c4d\u0c28\u0c3e. [Then why should I keep asking everyone, I felt like learning English perfectly myself, that's why I learned.]\nCharacter A says: \u0c0e\u0c1f\u0c4d\u0c32\u0c3e? [How?]\nCharacter B says: SpeakX \u0c09\u0c02\u0c26\u0c3f \u0c15\u0c26\u0c3e, \u0c38\u0c3f\u0c2f\u0c3e \u0c05\u0c28\u0c4d\u0c28\u0c40 \u0c28\u0c47\u0c30\u0c4d\u0c2a\u0c3f\u0c02\u0c1a\u0c47\u0c38\u0c3f\u0c02\u0c26\u0c3f. [SpeakX is there right, Sia taught me everything.]\nCharacter A says: SpeakX \u0c0f\u0c02\u0c26\u0c3f, \u0c38\u0c3f\u0c2f\u0c3e \u0c0f\u0c02\u0c26\u0c3f? [What is SpeakX, what is Sia?]",
+        "on_screen_text": "\"The only recipe is hard work, persistence, and belief.\" - Julen Lopetegui"
+      },
+      {
+        "n": 5,
+        "start_s": 63.0,
+        "end_s": 74.0,
+        "screenshot_at_s": 68.0,
+        "scene_label": "App introduction",
+        "setting": "Digital app interface.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A sequence of simple visual plates. It begins with a solid, bright red background. This transitions to a plain white background. The final plate shows Character C standing centrally against a stark white background, looking directly forward.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A promotional sequence for the SpeakX app. It displays the app's logo, ratings, and language selection screen. It then introduces the AI teacher, SIA, showing her avatar.",
+        "audio_transcript": "Character B says: SpeakX \u0c05\u0c28\u0c47\u0c26\u0c3f \u0c0f\u0c10 \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c1f\u0c40\u0c1a\u0c30\u0c4d \u0c30\u0c3e. \u0c26\u0c40\u0c02\u0c1f\u0c4d\u0c32\u0c4b \u0c2c\u0c47\u0c38\u0c3f\u0c15\u0c4d \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c41\u0c02\u0c1a\u0c3f \u0c05\u0c21\u0c4d\u0c35\u0c3e\u0c28\u0c4d\u0c38\u0c4d\u0c21\u0c4d \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c35\u0c30\u0c15\u0c41 \u0c05\u0c28\u0c4d\u0c28\u0c40 \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c1a\u0c4d\u0c1a\u0c41. \u0c28\u0c28\u0c4d\u0c28\u0c21\u0c3f\u0c17\u0c3f\u0c24\u0c47 \u0c28\u0c40 \u0c07\u0c02\u0c1f\u0c30\u0c4d\u0c35\u0c4d\u0c2f\u0c42 \u0c2a\u0c4d\u0c30\u0c3f\u0c2a\u0c30\u0c47\u0c37\u0c28\u0c4d \u0c15\u0c3f \u0c08 \u0c2f\u0c3e\u0c2a\u0c4d \u0c2a\u0c30\u0c4d\u0c2b\u0c46\u0c15\u0c4d\u0c1f\u0c4d. \u0c2e\u0c28\u0c15\u0c3f \u0c15\u0c3e\u0c28\u0c4d\u0c2b\u0c3f\u0c21\u0c46\u0c02\u0c1f\u0c4d \u0c17\u0c3e \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c2e\u0c3e\u0c1f\u0c4d\u0c32\u0c3e\u0c21\u0c1f\u0c02 \u0c28\u0c47\u0c30\u0c4d\u0c2a\u0c3f\u0c38\u0c4d\u0c24\u0c41\u0c02\u0c26\u0c3f. \u0c05\u0c02\u0c21\u0c4d \u0c07\u0c02\u0c26\u0c41\u0c32\u0c4b \u0c2e\u0c28 \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c38\u0c4d\u0c2a\u0c40\u0c15\u0c3f\u0c02\u0c17\u0c4d \u0c17\u0c48\u0c21\u0c4d \u0c1a\u0c47\u0c2f\u0c21\u0c3e\u0c28\u0c3f\u0c15\u0c3f \u0c0f\u0c10 \u0c1f\u0c40\u0c1a\u0c30\u0c4d \u0c38\u0c3f\u0c2f\u0c3e \u0c15\u0c42\u0c21\u0c3e \u0c09\u0c02\u0c26\u0c3f. [SpeakX is an AI English teacher. In this, you can learn everything from basic English to advanced English. If you ask me, this app is perfect for your interview preparation. It teaches us to speak English confidently. And in this, there is also an AI teacher Sia to guide our English speaking.]",
+        "on_screen_text": "SpeakX KEY TO CONFIDENCE\nCONFIDENT ENGLISH SPEAKER WITH PERSONAL AI TEACHER\n4.5+ PLAYSTORE RATING\nTRUSTED BY 1 CR+ LEARNERS\nWhich language do you speak at home?\n\u0939\u093f\u0902\u0926\u0940 / Hindi\n\u092e\u0930\u093e\u0920\u0940 / Marathi\n\u09ac\u09be\u0982\u09b2\u09be / Bengali\n\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41 / Telugu\n\u0ba4\u0bae\u0bbf\u0bb4\u0bcd / Tamil\n\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0 / Gujarati\n\u0c95\u0ca8\u0ccd\u0ca8\u0ca1 / Kannada\n\u0627\u0631\u062f\u0648 / Urdu\nMeet SIA Your personal AI Teacher"
+      },
+      {
+        "n": 6,
+        "start_s": 74.0,
+        "end_s": 88.0,
+        "screenshot_at_s": 81.0,
+        "scene_label": "App features explained",
+        "setting": "Living room, daytime, green sofa, beige patterned curtains.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A and Character B are seated on a green sofa in front of beige curtains. Character B is highly animated, smiling and using both hands to emphasize her points as she speaks. Character A listens attentively and occasionally responds.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The mother continues to enthusiastically explain the features of the SpeakX app to her son, highlighting the activities and the short daily time commitment required.",
+        "audio_transcript": "Character A says: \u0c2e\u0c4a\u0c24\u0c4d\u0c24\u0c3e\u0c28\u0c3f\u0c15\u0c3f \u0c2c\u0c3e\u0c28\u0c47 \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c35\u0c4d. [Overall, you learned quite well.]\nCharacter B says: \u0c39\u0c3e \u0c2e\u0c30\u0c3f, \u0c05\u0c02\u0c24\u0c47 \u0c15\u0c3e\u0c15\u0c41\u0c02\u0c21\u0c3e 10,000 \u0c2a\u0c4d\u0c32\u0c38\u0c4d \u0c2f\u0c3e\u0c15\u0c4d\u0c1f\u0c3f\u0c35\u0c3f\u0c1f\u0c40\u0c38\u0c4d, \u0c30\u0c40\u0c21\u0c3f\u0c02\u0c17\u0c4d, \u0c32\u0c3f\u0c1c\u0c28\u0c3f\u0c02\u0c17\u0c4d, \u0c38\u0c4d\u0c2a\u0c40\u0c15\u0c3f\u0c02\u0c17\u0c4d \u0c05\u0c28\u0c4d\u0c28\u0c40 \u0c08 \u0c2f\u0c3e\u0c2a\u0c4d \u0c32\u0c4b\u0c28\u0c47. \u0c2a\u0c4d\u0c30\u0c24\u0c3f \u0c30\u0c4b\u0c1c\u0c41 15 \u0c28\u0c3f\u0c2e\u0c3f\u0c37\u0c3e\u0c32\u0c41 \u0c1f\u0c48\u0c02 \u0c38\u0c4d\u0c2a\u0c46\u0c02\u0c21\u0c4d \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c47 \u0c38\u0c30\u0c3f\u0c2a\u0c4b\u0c24\u0c41\u0c02\u0c26\u0c3f, \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c08\u0c1c\u0c40\u0c17\u0c3e \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c1a\u0c4d\u0c1a\u0c41. [Yes of course, not only that, 10,000 plus activities, reading, listening, speaking, everything is in this app only. Spending 15 minutes of time every day is enough, you can learn English easily.]",
+        "on_screen_text": ""
+      },
+      {
+        "n": 7,
+        "start_s": 88.0,
+        "end_s": 99.0,
+        "screenshot_at_s": 93.0,
+        "scene_label": "Call to action",
+        "setting": "Living room, daytime, green sofa, beige patterned curtains.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits alone on a green sofa. He faces forward, looking directly ahead, and speaks while using subtle hand gestures to emphasize his words. The background is filled by beige patterned curtains.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The son delivers the final call to action directly to the camera, summarizing the benefits of the app and encouraging viewers to use it.",
+        "audio_transcript": "Character A says: \u0c38\u0c4b \u0c15\u0c4d\u0c32\u0c3e\u0c38\u0c46\u0c38\u0c4d \u0c15\u0c3f \u0c35\u0c46\u0c33\u0c4d\u0c32\u0c15\u0c41\u0c02\u0c21\u0c3e \u0c07\u0c02\u0c1f\u0c4d\u0c32\u0c4b \u0c09\u0c02\u0c1f\u0c42\u0c28\u0c47 \u0c2e\u0c40\u0c30\u0c41 \u0c15\u0c42\u0c21\u0c3e \u0c08\u0c1c\u0c40\u0c17\u0c3e \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c1a\u0c4d\u0c1a\u0c41. \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c32\u0c46\u0c30\u0c4d\u0c28\u0c3f\u0c02\u0c17\u0c4d \u0c2e\u0c47\u0c21\u0c4d \u0c08\u0c1c\u0c40 \u0c35\u0c3f\u0c24\u0c4d \u0c0f\u0c10. \u0c38\u0c4d\u0c2a\u0c40\u0c15\u0c4d \u0c15\u0c3e\u0c28\u0c4d\u0c2b\u0c3f\u0c21\u0c46\u0c02\u0c1f\u0c4d\u0c32\u0c40, \u0c38\u0c4d\u0c2a\u0c40\u0c15\u0c4d \u0c38\u0c4d\u0c2e\u0c3e\u0c30\u0c4d\u0c1f\u0c4d, \u0c38\u0c4d\u0c2a\u0c40\u0c15\u0c4d \u0c0e\u0c15\u0c4d\u0c38\u0c4d. [So without going to classes, staying at home, you too can easily learn English. English learning made easy with AI. Speak confidently, speak smart, SpeakX.]",
+        "on_screen_text": ""
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888788.1280951
+}

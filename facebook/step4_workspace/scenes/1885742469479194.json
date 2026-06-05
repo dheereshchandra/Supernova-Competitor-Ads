@@ -1,0 +1,97 @@
+{
+  "competitor_id": "1885742469479194",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "AI-generated",
+    "production_notes": "The visuals consist of static, AI-generated illustrations exhibiting characteristic uncanny smoothness and unnatural lighting. The voiceover utilizes synthetic text-to-speech, and the pointing hand is a digitally overlaid stock asset moving mechanically.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "governess",
+        "appearance": "Young woman with a pale complexion and dark hair pulled back neatly. She has wide, expressive eyes.",
+        "wardrobe": "Black Victorian-style dress with a high white collar.",
+        "demeanor": "Frightened and protective."
+      },
+      {
+        "id": "B",
+        "role": "child",
+        "appearance": "Young boy with a pale complexion and light brown hair.",
+        "wardrobe": "Simple white nightgown.",
+        "demeanor": "Terrified and pointing urgently."
+      },
+      {
+        "id": "C",
+        "role": "mysterious figure",
+        "appearance": "Adult woman, features obscured by distance and shadow.",
+        "wardrobe": "Long, dark, period-appropriate dress.",
+        "demeanor": "Static, ominous, and observant."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Frightened in the Dark",
+        "setting": "A dimly lit room at night, illuminated only by a single candle, casting large shadows on the wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A and Character B stand close together in a dark room. Character A holds a lit candle in a brass holder, illuminating their faces. Both characters are looking off-screen to the left with expressions of terror. Character B is extending his arm, pointing in the direction they are looking. Their shadows are cast starkly against the wall behind them.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A disembodied human hand with the index finger extended in a pointing gesture moves across a plain white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half displays an illustration of a frightened woman and child holding a candle in a dark room. The bottom half shows a white background where a disembodied hand points to various locations. A banner is visible at the very top of the screen.",
+        "audio_transcript": "Unknown speaker 1 says: Miss Jessel \u2014 she's there! She's there! She's there!",
+        "on_screen_text": "GU\u00c1RDALO EN SECRETO HASTA QUE LO CONSIGAS: SOLO 10 MINUTOS PARA HABLAR INGL\u00c9S CON FLUIDEZ\n\"Miss Jessel \u2014 she's there! She's there! She's there!\""
+      },
+      {
+        "n": 2,
+        "start_s": 4.5,
+        "end_s": 38.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "The Old Mansion",
+        "setting": "Exterior of a large, gothic mansion at night under a cloudy, dark sky.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "Wide shot",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A large, imposing gothic mansion stands against a dark, cloudy night sky. The architecture is detailed with pointed roofs and dark windows. Character C stands motionless on the stone steps leading up to the mansion's entrance. The overall lighting is dark and moody, emphasizing the eerie atmosphere.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A disembodied human hand with the index finger extended in a pointing gesture moves across a plain white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The top half of the split screen shows an illustration of a dark gothic mansion with a figure standing on the steps. The bottom half continues to show a white background with the disembodied pointing hand. Throughout the scene, text and interactive dictionary pop-ups appear in the bottom half, which the hand interacts with.",
+        "audio_transcript": "Unknown speaker 1 says: The governess\n\nUnknown speaker 2 says: governess\n\nUnknown speaker 1 says: stood frozen, staring\n\nUnknown speaker 2 says: to stare\n\nUnknown speaker 1 says: across the quiet room. The child's voice filled the house with fear.\n\nUnknown speaker 2 says: fear\n\nUnknown speaker 1 says: Something unseen seemed to watch\n\nUnknown speaker 2 says: to watch\n\nUnknown speaker 1 says: them from the shadows. And in that moment, the old mansion felt\n\nUnknown speaker 2 says: to feel\n\nUnknown speaker 1 says: colder than ever.",
+        "on_screen_text": "HENRY JAMES OTRA VUELTA DE TUERCA\nThe governess stood frozen, staring across the quiet room. The child's voice filled the house with fear. Something unseen seemed to watch them from the shadows. And in that moment, the old mansion felt colder than ever.\ngoverness (institutriz)\nto stare (mirar fijamente)\nfear (miedo)\nto watch (observar)\nto feel (sentir)\nAprendido Aprender"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.2877073
+}

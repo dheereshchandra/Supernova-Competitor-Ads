@@ -1,0 +1,43 @@
+{
+  "competitor_id": "3386646894842495",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "User's hand",
+        "appearance": "A fair-skinned human hand, likely female, with slender fingers and short, unpainted nails. Only the hand and part of the forearm are visible.",
+        "wardrobe": "No clothing is visible on the arm.",
+        "demeanor": "Deliberate and precise, pointing and tapping."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "First sentence",
+        "supernova_script": "User says: \"All animals are equal, but some animals are more important than others,\" [\"All animals are equal, but some animals are more important than others,\"]\nSupernova App says: equal. समान। [equal. equal.]",
+        "scene_summary": "- Introduces the reading interface where the user reads an English passage.\n- Demonstrates the tap-to-translate feature, instantly providing Hindi meanings for difficult words.\n- Establishes Supernova as a helpful, Hindi-medium learning tool that builds vocabulary for speaking.",
+        "supernova_on_screen_text": "SUPERNOVA: रोज़ 10 मिनट प्रैक्टिस करें और English बोलना सीखें\n\"All animals are equal, but some animals are more important than others,\" one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore.\nequal [ˈiːkwəl] समान\nमुझे पता है | सीखें\nimportant [ɪmˈpɔːrtnt] महत्वपूर्ण\nanimals [ˈænɪməlz] जानवर"
+      },
+      {
+        "n": 2,
+        "scene_label": "Remaining text",
+        "supernova_script": "User says: one of them read slowly. [one of them read slowly.]\nSupernova App says: slowly. धीरे-धीरे। [slowly. slowly.]\nUser says: The animals stood silent in the cold night, [The animals stood silent in the cold night,]\nSupernova App says: cold. ठंडा। [cold. cold.]\nUser says: staring at the wall. They tried to remember the old words, [staring at the wall. They tried to remember the old words,]\nSupernova App says: to try. कोशिश करना। [to try. to try.]\nSupernova App says: word. शब्द। [word. word.]\nUser says: but something felt wrong. [but something felt wrong.]\nSupernova App says: something. कुछ। [something. something.]\nUser says: No one spoke. The farm looked the same as always, [No one spoke. The farm looked the same as always,]\nSupernova App says: farm. खेत। [farm. farm.]\nSupernova App says: always. हमेशा। [always. always.]\nUser says: yet nothing was the same anymore. [yet nothing was the same anymore.]",
+        "scene_summary": "- Continues the reading exercise, showing seamless vocabulary building.\n- Reinforces the ease of learning new words in context with Hindi translations.\n- Highlights the app's ability to break down complex sentences into understandable parts for Hindi speakers.",
+        "supernova_on_screen_text": "SUPERNOVA READING PRACTICE\n\"All animals are equal, but some animals are more important than others,\" one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore.\nslowly [ˈsloʊli] धीरे-धीरे\ncold [koʊld] ठंडा\nto try [tə traɪ] कोशिश करना\nword [wɜːrd] शब्द\nsomething [ˈsʌmθɪŋ] कुछ\nfarm [fɑːrm] खेत\nalways [ˈɔːlweɪz] हमेशा\nमुझे पता है | सीखें"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BACA BUKU BERBAHASA INGGRIS 10 MENIT SEHARI",
+        "supernova_swap": "SUPERNOVA: रोज़ 10 मिनट प्रैक्टिस करें और English बोलना सीखें"
+      },
+      {
+        "competitor_brand": "PETERNAKAN HEWAN GEORGE ORWELL",
+        "supernova_swap": "SUPERNOVA READING PRACTICE"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779985926.5523221
+}

@@ -1,0 +1,127 @@
+{
+  "competitor_id": "1724170535252280",
+  "parsed": {
+    "duration_s": 50.0,
+    "production_type": "human-recorded",
+    "production_notes": "Video features a real human actor in a physical indoor setting. Jump cuts are typical of social media vlog style. The AI voice is synthesized and added in post-production.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young female, fair skin, short curly reddish-brown hair. Has a white earbud in her right ear and beaded bracelets on her left wrist.",
+        "wardrobe": "Olive green hoodie with a black tree branch pattern.",
+        "demeanor": "Casual, expressive, transitioning from confused to surprised and impressed."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor voice",
+        "appearance": "Digital avatar on a phone screen showing a female face with purple hair.",
+        "wardrobe": "N/A",
+        "demeanor": "Helpful, friendly, synthesized tone."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 20.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Vocabulary Correction",
+        "setting": "Indoor room, daytime. White walls, air conditioner, dark cabinet with a unicorn figurine.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is indoors, holding a pale yellow unlit candle and a smartphone. She wears a green patterned hoodie and a white earbud. The background features a white wall, an air conditioner, and a dark cabinet with a unicorn figurine. Soft natural lighting illuminates the scene.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A interacts with her phone while holding a candle. Text overlays and emojis pop up on screen to highlight the vocabulary corrections being discussed. The camera angle remains fixed on her.",
+        "audio_transcript": "Character B says: What are you doing?\nCharacter A says: I'm trying to burn the candle.\nCharacter B says: You mean I'm lighting a candle?\nCharacter A says: Oh, yeah, I'm lighting the candle. I really love the smell of it.\nCharacter B says: Don't say \"smell\". In English smell usually means bad smells. You should say \"scent\".\nCharacter A says: Ah, okay. I love the scent of the candle.\nCharacter B says: Good job!",
+        "on_screen_text": "What are you doing?\nI'm trying to burn the candle\n\u274c\nYou mean I'm lighting the candle?\nOh, yeah, I'm lighting the candle\n\u2705\nI really love the smell of it\n\u274c\nDon't say \"smell\"\nin English smell usually means bad smells\nyou should say \"scent\"\nAh okay, I love the scent of the candle\n\u2705\nGood job! \ud83d\udc4d"
+      },
+      {
+        "n": 2,
+        "start_s": 20.0,
+        "end_s": 34.0,
+        "screenshot_at_s": 27.0,
+        "scene_label": "The AI Twist",
+        "setting": "Indoor room, daytime. White walls, air conditioner, dark cabinet with a unicorn figurine.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A remains in the same indoor setting, still holding the candle and phone. She looks at the phone, glances away thoughtfully, then looks back with a surprised expression. The background and lighting are unchanged.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A continues her conversation, showing a range of expressions from thoughtful to surprised. Subtitles track the dialogue, and a robot emoji appears when AI is mentioned.",
+        "audio_transcript": "Character A says: I really need to improve my English.\nCharacter B says: You should speak to a native every day.\nCharacter A says: I don't have any money!\nCharacter B says: Then speak to AI tutors.\nCharacter A says: I don't want to talk to an AI.\nCharacter B says: Surprise! I'm an AI teacher!",
+        "on_screen_text": "I really need to improve my English\nYou should speak to a native every day\nI don't have any money!\nThen speak to AI tutors\nI don't want to talk to an AI \ud83e\udd16\nSurprise! I'm an AI teacher!"
+      },
+      {
+        "n": 3,
+        "start_s": 34.0,
+        "end_s": 47.0,
+        "screenshot_at_s": 40.0,
+        "scene_label": "Call to Action",
+        "setting": "Indoor room, daytime. White walls, air conditioner, dark cabinet with a unicorn figurine.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A looks at her phone with wide eyes and an impressed expression. She nods, speaks directly to the camera, and then brings the candle near her face to blow on it. The indoor setting and props remain the same.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A reacts positively to the AI reveal. An app download prompt graphic appears over the video. She finishes speaking and blows out the unlit candle.",
+        "audio_transcript": "Character A says: You're very good!\nCharacter B says: It's like talking to a human. Just download the Fluently app. We will talk everyday.\nCharacter A says: Okay, so I'll just download Fluently and practice everyday!",
+        "on_screen_text": "You're very good!\nIt's like talking to a human\nFluently - AI English Tutor\nlearn and practice speaking\nDOWNLOAD\nJust download the FLUENTLY app\nWe will talk everyday\nOkay, so I'll just download FLUENTLY and practice everyday!"
+      },
+      {
+        "n": 4,
+        "start_s": 47.0,
+        "end_s": 50.0,
+        "screenshot_at_s": 48.5,
+        "scene_label": "End Card",
+        "setting": "Digital graphic",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid light blue background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A digital end card with a solid blue background displays the app logo, name, a short tagline, and a download button.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-powered English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.087149
+}

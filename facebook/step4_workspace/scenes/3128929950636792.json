@@ -1,0 +1,117 @@
+{
+  "competitor_id": "3128929950636792",
+  "parsed": {
+    "duration_s": 20.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in physical environments (kitchen, living room). App interfaces and animated characters are added as digital overlays in post-production.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, medium build, light brown complexion. He has short, curly dark hair and a light beard/stubble. He wears round, wire-rimmed glasses.",
+        "wardrobe": "Olive green short-sleeved t-shirt and light blue jeans.",
+        "demeanor": "Casual, friendly, and slightly humorous."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Pouring milk",
+        "setting": "Modern kitchen, daytime, white cabinets, white countertop.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands behind a white kitchen counter. He is pouring milk from a blue and white carton into a white bowl. He looks directly forward with a conversational expression. A smartphone lies flat on the counter to his right. The background features white kitchen cabinets and a stainless steel oven.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter is in a kitchen pouring milk into a bowl while looking at the camera. Text captions appear on screen as he speaks.",
+        "audio_transcript": "Character A says: Wanna know something wild?\nCharacter A says: Duolingo teaches chess.",
+        "on_screen_text": "Wanna know something wild?\nDuolingo teaches chess."
+      },
+      {
+        "n": 2,
+        "start_s": 4.5,
+        "end_s": 10.5,
+        "screenshot_at_s": 7.5,
+        "scene_label": "App screencast",
+        "setting": "Digital interface",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up view of a hand holding a smartphone. The screen displays a digital chessboard with dark squares and stylized, cartoonish chess pieces. A thumb interacts with the screen, moving a piece.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A screencast of the Duolingo app showing a chess puzzle. A hand interacts with the screen. An animated character appears at the top of the app interface. Text captions are overlaid.",
+        "audio_transcript": "Character A says: It's all puzzle-based, bite-sized strategy that sticks.\nCharacter A says: It's built for beginners and those who pretend to be pros.\nCharacter A says: Coach Oscar helps everyone the same.",
+        "on_screen_text": "puzzle-based strategy sticks.\nbeginners pretend to be pros.\nCoach Oscar helps everyone"
+      },
+      {
+        "n": 3,
+        "start_s": 10.5,
+        "end_s": 16.5,
+        "screenshot_at_s": 13.5,
+        "scene_label": "Kitchen counter with tongs",
+        "setting": "Modern kitchen, daytime, white countertop.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A leans forward on the white kitchen counter. He holds a pair of metal kitchen tongs vertically near his mouth, gripping them as if they were a microphone. He has a slightly amused, exasperated expression. A single white chess piece sits on the counter in front of him.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter leans on the kitchen counter, holding tongs like a mic. An animated character, Coach Oscar, is overlaid on the left side of the screen, speaking. The presenter then responds. Text captions are visible.",
+        "audio_transcript": "Unknown speaker says: Is this your strategy or a cry for help?\nCharacter A says: He loves to humble me as he teaches.\nCharacter A says: But yeah, it's 100% free.",
+        "on_screen_text": "Is this your strategy or a cry for help?\nhumble me teaches.\n100% free."
+      },
+      {
+        "n": 4,
+        "start_s": 16.5,
+        "end_s": 20.0,
+        "screenshot_at_s": 18.0,
+        "scene_label": "Couch call to action",
+        "setting": "Living room, daytime, beige couch, bookshelf.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits comfortably on a beige sofa in a brightly lit living room. He holds a smartphone in his left hand and points towards the camera with his right index finger. He is smiling. A tall wooden bookshelf filled with books is visible in the background.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter sits on a couch, holding his phone and pointing at the camera, delivering the final call to action. Text captions are overlaid.",
+        "audio_transcript": "Character A says: Your move.\nCharacter A says: Learn chess at Duolingo today for free.",
+        "on_screen_text": "Your move.\nLearn chess at Duolingo today for free."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.0976207
+}

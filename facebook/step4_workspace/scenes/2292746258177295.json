@@ -1,0 +1,96 @@
+{
+  "competitor_id": "2292746258177295",
+  "parsed": {
+    "duration_s": 48.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor with natural facial expressions, fluid body movements, and realistic lighting. There are no uncanny artifacts typical of AI generation, such as distorted fingers or unnatural eye movements.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, medium build, light brown complexion. He has dark hair, a goatee, and wears round gold-rimmed glasses.",
+        "wardrobe": "He wears a black beanie, a dark teal t-shirt, and a gold chain necklace.",
+        "demeanor": "Casual, enthusiastic, and direct."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.0,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Introduction",
+        "setting": "Indoor room, clothes hanging in background, natural lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, selfie style",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is framed in a close-up, selfie-style shot. He is looking directly at the camera and gesturing with his right hand, pointing his index finger up. The background is slightly out of focus, showing a room with clothes hanging on a rack and a plain wall.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A young man is speaking directly to the camera in a close-up shot. He is wearing a beanie, glasses, and a t-shirt. The background is slightly out of focus, showing some hanging clothes. Text overlays appear as he speaks.",
+        "audio_transcript": "Character A says: This is how I saved 40 hours last week after I made this one change. Watch.",
+        "on_screen_text": "This is how\n40\nlast week after\nI made this one\nchange\nWatch"
+      },
+      {
+        "n": 2,
+        "start_s": 4.0,
+        "end_s": 36.5,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Phone Demonstration",
+        "setting": "Indoor room, natural lighting from a window.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up on phone",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot focuses on Character A's hands holding a black smartphone. The phone is held vertically. The background is blurred, showing a bright window and part of Character A's grey shirt. Character A's thumb is visible interacting with the phone's screen.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A close-up shot of a person's hands holding a black smartphone. The screen displays an email draft and a dictation interface. The background is blurred, showing a window with bright light. Text overlays highlight the spoken words and the resulting text.",
+        "audio_transcript": "Character A says: Hey Thijs, thanks again for meeting with me over lunch today. Really enjoyed that sinigang you made. Would you be free to do the same thing next week on Tuesday? No wait, uh, actually, um, Wednesday at four... sorry, actually 4:30? Let me know if this works for you. Thanks again. Blessings, Bryce.\nCharacter A says: Look at that. In seconds. Usually I would have to fix the name, take out the errors, reformat the whole thing, but not anymore. This did it all for me.",
+        "on_screen_text": "thijs@email.com\nFrom querubin.bryce@gmail.com\nLunch Follow up\nHelp me write\nSwipe\nListening\niPhone Microphone\nHey Thijs,\nThanks again for meeting with me over lunch today! I really enjoyed that sinigang you made.\nWould you be free to do the same thing next week on Wednesday at 4:30? Let me know if this works for you.\nThanks again!\nBlessings,\nBryce\nLook at that\nIn seconds\nUsually\nI would have to\nfix the name\ntake out the errors\nreformat the whole\nthing\nbut not anymore\nThis did it all\nfor me"
+      },
+      {
+        "n": 3,
+        "start_s": 36.5,
+        "end_s": 48.0,
+        "screenshot_at_s": 42.0,
+        "scene_label": "Laptop Demonstration",
+        "setting": "Desk with a laptop, green lamp, wall with posters.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up to close-up on laptop",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot shows a silver laptop open on a desk. Character A's left hand is resting on the keyboard, with a finger pressing a key. To the left of the laptop, a bright green desk lamp is partially visible. The background features a wall covered with various colorful posters and stickers.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene starts with a quick shot of the presenter, then moves to a close-up of a laptop on a desk. A hand is pressing a key on the keyboard, and a dictation interface appears on the screen. A green lamp and a wall with posters are visible in the background. Text overlays and a logo appear at the end.",
+        "audio_transcript": "Character A says: And it even works on here too. Note to self: download Wispr Flow on all devices ASAP. Try it yourself for a week and see how much time you can save. Fire emoji.",
+        "on_screen_text": "and it even works\non here too\nNote to\nself\ndownload Wispr Flow\non all devices\nASAP\nTry it yourself\nfor a week and\nsee how much time\nyou can save!\nFire\nemoji\nWispr Flow\ndownload today!"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.2366576
+}

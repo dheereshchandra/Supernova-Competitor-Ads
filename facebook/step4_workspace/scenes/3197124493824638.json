@@ -1,0 +1,75 @@
+{
+  "competitor_id": "3197124493824638",
+  "parsed": {
+    "duration_s": 45.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in a physical set with practical lighting. The AI tutor is a digital element displayed on a physical tablet within the scene.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, slim build, fair complexion. Long straight blonde hair with dark roots. Dark lipstick and eyeliner.",
+        "wardrobe": "Grey hoodie with black lettering.",
+        "demeanor": "Casual, slightly hesitant but engaged, focused on her coloring."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor",
+        "appearance": "Voice only, represented by a 3D animated female avatar with red hair visible on a tablet screen.",
+        "wardrobe": "N/A",
+        "demeanor": "Encouraging, conversational, slightly sassy."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 44.0,
+        "screenshot_at_s": 22.0,
+        "scene_label": "Coloring and Conversing",
+        "setting": "A dimly lit room with purple and pink ambient lighting. A desk with a coloring book, markers, and a tablet. A white and pink gaming chair is in the background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up, slightly high angle.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is seated at a desk, actively coloring in a large coloring book using a yellow highlighter. She holds the marker in her right hand and rests her left hand on the book. To her right, a tablet is propped up, displaying an animated avatar. The room is bathed in vibrant purple and pink lighting. Behind her, the top of a white and pink gaming chair is visible, along with a closed white door and some wall decorations. Character A looks down at her coloring, occasionally pausing to think or react to the conversation, looking slightly off-camera or towards the tablet.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A continuous shot of Character A coloring while having a conversation. Text overlays appear dynamically, displaying the dialogue. A banner of Spanish flags hangs at the top of the screen.",
+        "audio_transcript": "Character B says: Can you speak Spanish?\nCharacter A says: Uuuh... un poco [a little]\nCharacter B says: Okay, what Spanish words do you know?\nCharacter A says: Hola. [Hello.]\nCharacter B says: Nice! What else?\nCharacter A says: Gracias. [Thank you.]\nCharacter B says: Good. And what do you say when you make a mistake?\nCharacter A says: I... sorry?\nCharacter B says: Almost. Repeat after me: \"Lo siento.\" [I'm sorry.]\nCharacter A says: Lo siento. [I'm sorry.]\nCharacter B says: Your level is A1, but that's totally fine.\nCharacter A says: I don't really speak Spanish... I just watch series with subtitles.\nCharacter B says: That's enough to start! You can practice with AI tutors like me.\nCharacter A says: Like you?\nCharacter B says: Yes! Praktika has AI Spanish tutors who correct you and talk to you naturally. You'll start speaking Spanish much faster.\nCharacter A says: But... with an AI?\nCharacter B says: You won't lose anything by trying, and it will be worth it.\nCharacter A says: Okay... teach me Spanish.\nCharacter B says: I will! But don't start giving orders to your new teacher.\nCharacter A says: Lo siento... [I'm sorry...]\nCharacter B says: Go download Praktika right now.\nCharacter A says: Okay, okay, I'm going!",
+        "on_screen_text": "Can you speak Spanish?\nUuuh... un poco\nOkay, what Spanish words do you know?\nHola.\nNice! What else?\nGracias.\nGood. And what do you say when you make a mistake?\nI... sorry?\nAlmost. Repeat after me: \"Lo siento.\"\nLo siento.\nYour level is A1, but that's totally fine.\nI don't really speak Spanish... I just watch series with subtitles.\nThat's enough to start!\nYou can practice with AI tutors like me.\nLike you?\nYes!\nPraktika has AI Spanish tutors who correct you and talk to you naturally.\nYou'll start speaking Spanish much faster.\nBut... with an AI?\nYou won't lose anything by trying, and it will be worth it.\nOkay...\nteach me Spanish.\nI will! But don't start giving orders to your new teacher.\nLo siento...\nGo download Praktika right now.\nOkay, okay, I'm going!"
+      },
+      {
+        "n": 2,
+        "start_s": 44.0,
+        "end_s": 45.0,
+        "screenshot_at_s": 44.5,
+        "scene_label": "End Card",
+        "setting": "Solid white background.",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background with no characters or physical props.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A static end card with a white background displaying the app logo and download buttons.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966784.056329
+}

@@ -1,0 +1,79 @@
+{
+  "competitor_id": "1534356198311434",
+  "parsed": {
+    "duration_s": 26.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor with natural movements, expressions, and lighting. The setting and props are physical and interact naturally with the actor.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, tan complexion. He has short, spiky black hair and dark eyes.",
+        "wardrobe": "Light blue textured crew-neck sweater.",
+        "demeanor": "Friendly, engaging, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor voice",
+        "appearance": "Voice only. Not visible on screen.",
+        "wardrobe": "N/A",
+        "demeanor": "Professional and clear."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Truth vs Myth pouring",
+        "setting": "Kitchen, daytime, wooden table, clear glasses, measuring cup.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man sits at a wooden table with two empty clear glasses. He holds a glass measuring cup filled with brown liquid. He pours the liquid into the left glass, then the right glass, and back into the left glass. He smiles and gestures while speaking. The background shows a kitchen cabinet, a potted plant, and an abstract painting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter sits at a table with two glasses. Text overlays label the glasses as 'truth' and 'myth'. He pours a brown liquid from a measuring cup into the glasses as he speaks. Dynamic text captions appear on screen matching his spoken words.",
+        "audio_transcript": "Character A says: A strong accent reduces your chances of getting hired.\nCharacter A says: People judge your accent within three seconds of hearing you speak.\nCharacter A says: There is no way to improve your accent.",
+        "on_screen_text": "Accent bias is real.\ntruth\nmyth\naccent\nchances\nhired\npeople\nwithin\nhearing\nthere\nto\naccent"
+      },
+      {
+        "n": 2,
+        "start_s": 11.0,
+        "end_s": 26.0,
+        "screenshot_at_s": 18.0,
+        "scene_label": "App demonstration",
+        "setting": "Kitchen, daytime, wooden table.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The young man sits at an empty wooden table. He speaks directly to the camera, using hand gestures. He briefly looks down, then looks back up with a pleased expression. The background remains consistent with the previous scene, showing a kitchen cabinet, plant, and painting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter speaks directly to the camera. An app interface overlay appears in the center of the screen. It shows a pronunciation exercise for the word 'comfortable'. The presenter interacts with the app, receives a low score, listens to the coach, and tries again to get a high score. Dynamic captions continue to appear throughout the scene.",
+        "audio_transcript": "Character A says: This is exactly how millions of people use Bold Voice to transform their accent.\nCharacter A says: Comfortable.\nCharacter A says: Let's see.\nCharacter B says: Comfortable.\nCharacter A says: Comfortable.\nCharacter A says: Download Bold Voice and hear the difference yourself.",
+        "on_screen_text": "exactly\nmillions\nuse\ntransform\namerican accent app\nPractice My Text\nCoach Alice\nLet's pause to troubleshoot. Listen to the difference in our recordings and try again.\n43%\ncomfortable\nIncorrect stress\nCoach\nYou\n97%\ndownload\nand\ndifference"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779986084.8030374
+}

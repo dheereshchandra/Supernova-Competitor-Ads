@@ -1,0 +1,82 @@
+{
+  "competitor_id": "1905428543598807",
+  "parsed": {
+    "duration_s": 51.0,
+    "production_type": "mixed",
+    "production_notes": "The video features a split-screen with a human actor on the bottom and a 3D animated AI avatar on the top. The human is recorded, while the avatar is computer-generated.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, slender build, fair complexion, red hair styled in a high bun. She has large green eyes, a small nose, and a soft, friendly face.",
+        "wardrobe": "White top, gold hoop earrings with a small dangling charm.",
+        "demeanor": "Friendly, encouraging, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Young adult male, medium build, fair complexion, short dark hair, and a short beard. He has dark eyes and thick eyebrows.",
+        "wardrobe": "Dark blue collared shirt, white wireless earbuds.",
+        "demeanor": "Curious, slightly hesitant, but engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 49.0,
+        "screenshot_at_s": 24.5,
+        "scene_label": "Spanish Lesson Conversation",
+        "setting": "Top panel: A cozy bedroom with warm lighting, a bed, and string lights. Bottom panel: A plain, light-colored wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head, split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A 3D animated young woman with red hair in a bun is centered in the frame, looking directly at the camera. She is wearing a white top and gold hoop earrings. The background is a softly lit bedroom with a bed, pillows, and string lights. A banner with Spanish flags hangs across the top of the frame. Her expression is friendly and engaging.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young man with short dark hair and a beard is centered in the frame, looking directly at the camera. He is wearing a dark blue collared shirt and white wireless earbuds. The background is a plain, light-colored wall. His expression changes from hesitant to engaged as he speaks.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen video with a 3D animated female avatar on top and a live-action male on the bottom. They are having a conversation. Text overlays appear in the center of the screen, translating their dialogue. A green checkmark appears when the man corrects his Spanish.",
+        "audio_transcript": "Character A says: \u00bfHablas espa\u00f1ol? [Do you speak Spanish?]\nCharacter B says: S\u00ed, yo conozco espa\u00f1ol. [Yes, I know Spanish.]\nCharacter A says: T\u00e9cnicamente es correcto. Pero los hablantes nativos simplemente dicen, hablo espa\u00f1ol. [Technically it's correct. But native speakers simply say, I speak Spanish.]\nCharacter B says: Hablo espa\u00f1ol. [I speak Spanish.]\nCharacter A says: \u00bfCu\u00e1ntos a\u00f1os tienes? [How old are you?]\nCharacter B says: Soy 24. [I am 24.]\nCharacter A says: Quieres decir, tengo 24 a\u00f1os? [You mean, I have 24 years?]\nCharacter B says: Tengo 24 a\u00f1os. [I am 24 years old.]\nCharacter A says: \u00bfC\u00f3mo te llamas? [What is your name?]\nCharacter B says: Mi nombre es Gustavo. [My name is Gustavo.]\nCharacter A says: Los hablantes nativos normalmente dicen, me llamo Gustavo. [Native speakers normally say, I call myself Gustavo.]\nCharacter B says: Me llamo Gustavo. [My name is Gustavo.]\nCharacter A says: Bien hecho. [Well done.]\nCharacter B says: Gracias. Pero \u00bfQui\u00e9n eres? [Thank you. But who are you?]\nCharacter A says: Soy un tutor de IA en Praktika. Podemos hablar as\u00ed todos los d\u00edas para aprender espa\u00f1ol. [I am an AI tutor on Praktika. We can talk like this every day to learn Spanish.]\nCharacter B says: Ah, pero mi espa\u00f1ol es A1. No puedo hablar. [Ah, but my Spanish is A1. I can't speak.]\nCharacter A says: No te preocupes. Puedo ense\u00f1arte en tu lengua materna mientras aprendes espa\u00f1ol. [Don't worry. I can teach you in your mother tongue while you learn Spanish.]\nCharacter B says: \u00bfConoces mi idioma? [Do you know my language?]\nCharacter A says: Claro. Soy una IA. [Of course. I am an AI.]\nCharacter B says: Est\u00e1 bien. Voy a descargar esta aplicaci\u00f3n. [Okay. I'm going to download this app.]",
+        "on_screen_text": "\u00bfHablas espa\u00f1ol?\nS\u00ed, yo conozco espa\u00f1ol.\nT\u00e9cnicamente es correcto.\nPero los hablantes nativos\nsimplemente dicen, hablo espa\u00f1ol.\nHablo espa\u00f1ol.\n\u00bfCu\u00e1ntos a\u00f1os tienes?\nSoy 24.\nQuieres decir, tengo 24 a\u00f1os?\nTengo 24 a\u00f1os.\n\u00bfC\u00f3mo te llamas?\nMi nombre es Gustavo.\nLos hablantes nativos\nnormalmente dicen,\nme llamo Gustavo.\nMe llamo Gustavo.\nBien hecho.\nGracias.\nPero \u00bfQui\u00e9n eres?\nSoy un tutor de IA en Praktika.\nPodemos hablar as\u00ed todos\nlos d\u00edas para aprender espa\u00f1ol.\nAh, pero mi espa\u00f1ol es A1.\nNo puedo hablar.\nNo te preocupes.\nPuedo ense\u00f1arte en tu lengua\nmaterna mientras\naprendes espa\u00f1ol.\n\u00bfConoces mi idioma?\nClaro. Soy una IA.\nEst\u00e1 bien.\nVoy a descargar esta aplicaci\u00f3n."
+      },
+      {
+        "n": 2,
+        "start_s": 49.0,
+        "end_s": 51.0,
+        "screenshot_at_s": 50.0,
+        "scene_label": "End Card",
+        "setting": "White background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A white screen with the Praktika logo in the center. Below the logo are the Google Play and App Store badges.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780629216.3713706
+}

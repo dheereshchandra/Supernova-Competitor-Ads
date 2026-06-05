@@ -1,0 +1,46 @@
+{
+  "competitor_id": "919585814171318",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot with a smooth, white, metallic and plastic exterior. She has a pale face with grey eyes, no hair, and visible mechanical joints on her neck and arms.",
+        "wardrobe": "No clothing; visible white mechanical body panels.",
+        "demeanor": "Helpful, instructional, and slightly robotic."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Young adult male with a slim build, medium brown complexion, dark voluminous hair, and a light beard and mustache.",
+        "wardrobe": "Light blue t-shirt with thin, horizontal white stripes.",
+        "demeanor": "Attentive, occasionally confused, and eager to learn."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI English Lesson",
+        "supernova_script": "Character A says: कल कहाँ गए थे? [Where did you go yesterday?]\nCharacter B says: I went to माल yesterday. [I went to maal yesterday.]\nCharacter A says: माल? प्रोनन्सियेशन थोड़ा गड़बड़ हो गया। It is Mall. I went to the mall yesterday. [Maal? The pronunciation is a bit wrong. It is Mall. I went to the mall yesterday.]\nCharacter A says: कल क्या खाया? [What did you eat yesterday?]\nCharacter B says: I eat पीजा खाया। [I eat peeja ate.]\nCharacter A says: पीजा? नहीं, Pizza! और बात कल की है इसलिए Eat नहीं, Ate! I ate pizza! [Peeja? No, Pizza! And we are talking about yesterday so not Eat, but Ate! I ate pizza!]\nCharacter A says: ट्रेन कहाँ से पकड़ते हो? [Where do you catch the train from?]\nCharacter B says: I pick train from रेलवे इस्टेशन। [I pick train from railway is-station.]\nCharacter A says: Pick? Pick मतलब उठाना। ट्रेन उठाओगे? Catch मतलब पकड़ना और इस्टेशन नहीं, Station! I catch the train from the railway station. [Pick? Pick means to lift. Will you lift the train? Catch means to catch and not is-station, but Station! I catch the train from the railway station.]\nCharacter B says: ओह... मेरी इंग्लिश काफी वीक है। [Oh... my English is quite weak.]\nCharacter A says: कोई बात नहीं, घबराओ मत। Supernova का AI Tutor ट्राई किया क्या? [No problem, don't worry. Did you try Supernova's AI Tutor?]\nCharacter B says: वो महंगा होगा ना? [That must be expensive, right?]\nCharacter A says: बिल्कुल नहीं। ये बहुत अफोर्डेबल है। लाखों लोग Supernova पर रोज़ प्रैक्टिस कर रहे हैं। [Not at all. It is very affordable. Lakhs of people are practicing daily on Supernova.]\nCharacter B says: लेकिन टाइम नहीं मिलता। [But I don't get time.]\nCharacter A says: रोज़ सिर्फ 15-20 मिनट प्रैक्टिस काफी है। धीरे-धीरे कॉन्फिडेंट हो जाओगे। [Just 15-20 minutes of practice daily is enough. You will slowly become confident.]\nCharacter B says: वाओ, कैसे जॉइन करूँ? [Wow, how do I join?]\nCharacter A says: नीचे इनस्टॉल का बटन दबाओ। Supernova App डाउनलोड करो, और आज ही अपनी प्रैक्टिस शुरू करो। [Press the install button below. Download the Supernova App, and start your practice today.]",
+        "scene_summary": "- Hooks the viewer with relatable, everyday English pronunciation and grammar mistakes.\n- Introduces the AI Tutor as a warm, non-judgmental, and affordable solution.\n- Overcomes common user objections (cost, lack of time) with reassuring, practical answers.\n- Ends with a clear, encouraging call-to-action to download the app.",
+        "supernova_on_screen_text": "Dynamic text overlays showing the dialogue in Hindi and English, such as 'कल कहाँ गए थे', 'I went to माल yesterday', 'It is Mall', 'I ate pizza!', 'Catch मतलब पकड़ना', 'Supernova AI Tutor', 'Supernova App डाउनलोड करो'."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Promo",
+        "supernova_script": "Character A says: आज ही अपना ट्रायल शुरू करो और इंग्लिश बोलने का डर खत्म करो। [Start your trial today and end your fear of speaking English.]\nCharacter A says: 'Install Now' पे क्लिक करो और Supernova App डाउनलोड करो। [Click on 'Install Now' and download the Supernova App.]",
+        "scene_summary": "- Reinforces the CTA with an encouraging message about overcoming the fear of speaking English.\n- Directs the user to take immediate action via the install button.\n- Displays app benefits and safety reassurances on-screen without aggressive pricing hype.",
+        "supernova_on_screen_text": "Supernova, सब कुछ UNLOCK करें (Unlock everything), Supernova Pro के फायदे (Supernova Pro benefits), 24/7 आपका Personal AI English Teacher (24/7 your Personal AI English Teacher), Instant feedback के साथ grammar correct करें (Correct your grammar with instant feedback), Start Trial, Payments safe हैं. कभी भी Cancel कर सकते हैं (Payments are safe. Can cancel anytime.), Supernova English speaking app, Install Now"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892235.9951596
+}

@@ -1,0 +1,92 @@
+{
+  "competitor_id": "900964249487648",
+  "parsed": {
+    "duration_s": 15.9,
+    "production_type": "mixed",
+    "production_notes": "The video combines a direct screen recording of an app interface with live-action footage of human hands interacting with a smartphone.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Phone user",
+        "appearance": "Two hands with a dark complexion holding a smartphone. Only the hands and lower arms are visible.",
+        "wardrobe": "Not applicable, only hands visible.",
+        "demeanor": "Actively tapping and swiping on the phone screen."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Spinning Wheel Game",
+        "setting": "Digital app interface, white background, yellow wheel.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A digital spinning wheel with various segments. Some segments contain green rectangular objects resembling bills. The wheel is yellow with a red pointer at the bottom. The background is plain white.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A digital spinning wheel game is shown. The wheel spins and lands on a segment. A notification pops up at the top of the screen. Text overlays are present at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u0905\u092a\u0928\u0947 \u092a\u0930\u093f\u0935\u093e\u0930 \u0915\u093e \u0938\u092c\u0938\u0947 \u0905\u092e\u0940\u0930 \u0906\u0926\u092e\u0940 \u092c\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f Download \u0915\u0940\u091c\u093f\u092f\u0947 Zinglish App \ud83d\ude0d (To become the richest man in your family Download Zinglish App \ud83d\ude0d)\nTruecaller SMS - 20:00\nBank of India\n+ \u20b9 2,01,108\nCredited to Account 0002\nMARK AS READ\nVIEW PROFILE\nSPINNING\n2 free spins available\n$1\n$0.05\n$0.25"
+      },
+      {
+        "n": 2,
+        "start_s": 4.5,
+        "end_s": 11.5,
+        "screenshot_at_s": 8.0,
+        "scene_label": "Bank Chat Translation",
+        "setting": "Dark, blurry background, holding a smartphone.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Two hands hold a smartphone against a dark, blurry background. The phone screen displays a chat interface with message bubbles. A finger from the right hand taps on one of the message bubbles, causing a small pop-up menu to appear. The finger then taps an option within the menu, and a new message bubble appears below the original one.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Hands hold a smartphone showing a WhatsApp chat with a bank. A credit alert message is visible. The user taps the message, selects an option, and a Hindi translation of the message appears.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "DBFC BANK\n29 January 2026\nMessages and calls are end-to-end encrypted...\nCredit Alert! Rs. 50,000.00 credited to DBFC Bank A/c XX5865 on 10-03-26 from VPA ravitrk@okhdfcbank (UPI 606935234635)\nCopy\nSave\n\u0915\u094d\u0930\u0947\u0921\u093f\u091f \u0905\u0932\u0930\u094d\u091f! \u0930\u0941. 50,000.00 DBFC \u092c\u0948\u0902\u0915 \u0916\u093e\u0924\u093e XX5865 \u092e\u0947\u0902 10-03-26 \u0915\u094b VPA ravitrk@okhdfcbank (UPI 606935234635) \u0938\u0947 \u0938\u094d\u0935\u0940\u0915\u0943\u0924 \u0915\u093f\u092f\u093e \u0917\u092f\u093e (Credit Alert! Rs. 50,000.00 credited to DBFC Bank A/c XX5865 on 10-03-26 from VPA ravitrk@okhdfcbank (UPI 606935234635))\nChat with Zia"
+      },
+      {
+        "n": 3,
+        "start_s": 11.5,
+        "end_s": 15.9,
+        "screenshot_at_s": 14.0,
+        "scene_label": "App Store Download",
+        "setting": "Dark, blurry background, holding a smartphone.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Two hands hold a smartphone against a dark, blurry background. The phone screen displays a home screen with several app icons. A finger from the right hand taps on one of the icons, and the screen transitions to an app store page. The finger then taps a prominent button on the app store page.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The user navigates to the phone's home screen, taps the Google Play Store icon, and opens the page for the Zinglish app. They then tap the Open button.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Zinglish: English Speaking App\nCapslock Market Pla... Ltd\n4.9*\nRated for 12+\n1M+ Downloads\nUninstall\nOpen\nWhat's new\nRate this app\nApp support"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779803911.3906343
+}

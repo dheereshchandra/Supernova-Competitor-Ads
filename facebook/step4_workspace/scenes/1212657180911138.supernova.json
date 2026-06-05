@@ -1,0 +1,47 @@
+{
+  "competitor_id": "1212657180911138",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "User",
+        "appearance": "A human hand, light to medium complexion, with short, clean fingernails. Only the hand and part of the wrist are visible.",
+        "wardrobe": "Not applicable, only hand is visible.",
+        "demeanor": "Interacting purposefully and quickly with a smartphone interface."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Quiz Question",
+        "supernova_script": "Unknown speaker says: 'मुझे नौकरी मिल गई' को English में कैसे कहेंगे? [How do you say 'I got the job' in English?]",
+        "scene_summary": "- Hooks the viewer with a practical, real-world English translation challenge instead of a random trivia question.\n- Replaces the scammy fake-money notification with a positive learning milestone (XP/Goal reached).\n- Establishes Supernova as a tool for career and personal growth.",
+        "supernova_on_screen_text": "Translate: 'मुझे नौकरी मिल गई!' (How do you say 'I got the job!')\nA. I got the job!\nB. I get job!\nC. I getting job!\nSupernova App - 20:00\nDaily Goal Reached\n+ 50 XP\nKeep up the great speaking practice!\nबिना डरे English बोलने के लिए Download कीजिये Supernova App (To speak English without fear, Download Supernova App)"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "supernova_script": "Unknown speaker says: Supernova के AI Tutor के साथ रोज़ बोलकर practice करें और अपना confidence बढ़ाएं। [Practice speaking daily with Supernova's AI Tutor and build your confidence.]",
+        "scene_summary": "- Demonstrates the practical utility of the app in everyday situations (translating bank SMS).\n- Introduces the AI Tutor feature as a safe space to practice speaking.\n- Delivers a warm, encouraging call-to-action to download the app.",
+        "supernova_on_screen_text": "VM-HDFCBK-S\nE-Mandate!\nRs.2000.00 will be deducted on 10/01/26...\nई-जनादेश! 10/01/26, को 2000.00 रुपये की कटौती की जाएगी...\nChat with Supernova AI Tutor\nSupernova: English Speaking App\nSupernova EdTech Pvt Ltd\nUninstall Open"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Zinglish",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Zia",
+        "supernova_swap": "Supernova AI Tutor"
+      },
+      {
+        "competitor_brand": "Capslock Market Places Pvt Ltd",
+        "supernova_swap": "Supernova EdTech Pvt Ltd"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779804111.2532978
+}

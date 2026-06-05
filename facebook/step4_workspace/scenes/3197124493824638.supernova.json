@@ -1,0 +1,50 @@
+{
+  "competitor_id": "3197124493824638",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, slim build, fair complexion. Long straight blonde hair with dark roots. Dark lipstick and eyeliner.",
+        "wardrobe": "Grey hoodie with black lettering.",
+        "demeanor": "Casual, slightly hesitant but engaged, focused on her coloring."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor",
+        "appearance": "Voice only, represented by a 3D animated female avatar with red hair visible on a tablet screen.",
+        "wardrobe": "N/A",
+        "demeanor": "Encouraging, conversational, slightly sassy."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Coloring and Conversing",
+        "supernova_script": "Character B says: Can you speak English?\nCharacter A says: Uhh... thoda thoda. [Uhh... a little bit.]\nCharacter B says: Okay, English mein kya bol lete ho? [Okay, what can you say in English?]\nCharacter A says: Hello... How are you? [Hello... How are you?]\nCharacter B says: Nice! Aur kya? [Nice! What else?]\nCharacter A says: Thank you. [Thank you.]\nCharacter B says: Good. Aur jab koi mistake ho jaye toh kya bolte ho? [Good. And what do you say when you make a mistake?]\nCharacter A says: I... sorry? [I... sorry?]\nCharacter B says: Almost. Bolo: \"I apologize.\" [Almost. Say: \"I apologize.\"]\nCharacter A says: I apologize. [I apologize.]\nCharacter B says: Tumhara level beginner hai, par that's totally fine. [Your level is beginner, but that's totally fine.]\nCharacter A says: Mujhe English bolne mein darr lagta hai... bas samajh aati hai. [I feel scared speaking English... I only understand it.]\nCharacter B says: Start karne ke liye itna kaafi hai! Tum mere jaise AI tutors ke saath practice kar sakti ho. [That's enough to start! You can practice with AI tutors like me.]\nCharacter A says: Tumhare jaise? [Like you?]\nCharacter B says: Haan! Supernova app par AI tutors tumhe naturally English bolna sikhate hain, aur mistakes bhi correct karte hain. [Yes! On the Supernova app, AI tutors teach you to speak English naturally, and correct your mistakes too.]\nCharacter A says: Par... AI ke saath? [But... with an AI?]\nCharacter B says: Try karke dekho, bina kisi judgement ke confidence badhega. [Give it a try, your confidence will grow without any judgement.]\nCharacter A says: Okay... mujhe English sikhao. [Okay... teach me English.]\nCharacter B says: Zaroor! Par apne naye teacher ko orders dena band karo. [Sure! But stop giving orders to your new teacher.]\nCharacter A says: I apologize... [I apologize...]\nCharacter B says: Jao, abhi Supernova download karo. [Go, download Supernova right now.]\nCharacter A says: Okay, okay, jaa rahi hoon! [Okay, okay, I'm going!]",
+        "scene_summary": "- Hooks the viewer with a relatable language assessment moment.\n- Highlights the core problem: understanding English but fearing speaking it.\n- Introduces Supernova's AI tutor as a safe, non-judgemental space to practice and build confidence.\n- Ends with a lighthearted, encouraging call to action.",
+        "supernova_on_screen_text": "Can you speak English?\nUhh... thoda thoda.\nOkay, English mein kya bol lete ho?\nHello... How are you?\nNice! Aur kya?\nThank you.\nGood. Aur jab koi mistake ho jaye toh kya bolte ho?\nI... sorry?\nAlmost. Bolo: \"I apologize.\"\nI apologize.\nTumhara level beginner hai, par that's totally fine.\nMujhe English bolne mein darr lagta hai... bas samajh aati hai.\nStart karne ke liye itna kaafi hai!\nTum mere jaise AI tutors ke saath practice kar sakti ho.\nTumhare jaise?\nHaan!\nSupernova app par AI tutors tumhe naturally English bolna sikhate hain.\nAur mistakes bhi correct karte hain.\nPar... AI ke saath?\nTry karke dekho, bina kisi judgement ke confidence badhega.\nOkay... mujhe English sikhao.\nZaroor! Par apne naye teacher ko orders dena band karo.\nI apologize...\nJao, abhi Supernova download karo.\nOkay, okay, jaa rahi hoon!"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear, static call to action.\n- Displays the brand logo and app store availability for easy discovery.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Spanish",
+        "supernova_swap": "English"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4933195
+}

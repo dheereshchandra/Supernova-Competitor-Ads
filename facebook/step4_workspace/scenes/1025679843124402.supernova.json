@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1025679843124402",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, medium build, fair complexion. She has blonde hair tied in a half-up ponytail and wears large, dark-rimmed glasses.",
+        "wardrobe": "A light green, textured, long-sleeved sweater.",
+        "demeanor": "Casual, slightly hesitant but engaged, eating a salad while talking."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Digital avatar of a young female with long, wavy red hair and fair skin.",
+        "wardrobe": "A white t-shirt with a red graphic.",
+        "demeanor": "Friendly, encouraging, and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Salad and Spanish Lesson",
+        "supernova_script": "Character B says: Can you speak English?\nCharacter A says: Uh, थोड़ा बहुत। [Uh, a little bit.]\nCharacter B says: Okay, what English words do you know?\nCharacter A says: Hello?\nCharacter B says: Nice! What else?\nCharacter A says: Thank you.\nCharacter B says: Good. And what do you say when you make a mistake?\nCharacter A says: I... मैं... sorry? [I... I... sorry?]\nCharacter B says: Almost! Repeat after me: \"I apologize.\"\nCharacter A says: I apologize.\nCharacter B says: Your level is beginner.\nCharacter A says: मुझे English बोलनी नहीं आती... मैं बस movies देखती हूँ subtitles के साथ। [I don't really know how to speak English... I just watch movies with subtitles.]\nCharacter B says: That's enough to start! You can practice with AI tutors like me.\nCharacter A says: Like you?\nCharacter B says: Yes! Supernova has AI English tutors who correct you and talk to you naturally. You'll start speaking English much faster.\nCharacter A says: But... with an AI?\nCharacter B says: You won't lose anything by trying, and it will be worth it.\nCharacter A says: Okay... teach me English.\nCharacter B says: I will, but you better not give orders to your new tutor.\nCharacter A says: I apologize!\nCharacter B says: Go download Supernova right now.\nCharacter A says: Okay, let's go!",
+        "scene_summary": "- Establishes the core interaction: a learner casually talking to an AI tutor.\n- Demonstrates the AI's ability to assess level and correct mistakes gently.\n- Overcomes the learner's hesitation about practicing with AI.\n- Ends with a clear call to action to download the app.",
+        "supernova_on_screen_text": "Can you speak English?\nथोड़ा बहुत।\nOkay,\nWhat English words\ndo you know?\nHello?\nNice! What else?\nThank you.\nGood.\nAnd what do you say\nwhen you make a mistake?\nI... मैं... sorry?\nAlmost!\nRepeat after me:\n\"I apologize.\"\nI apologize.\nYour level is beginner.\nमुझे English बोलनी नहीं आती...\nमैं बस movies देखती हूँ\nsubtitles के साथ।\nThat's enough to start!\nYou can practice with\nAI tutors like me.\nLike you?\nYes!\nSupernova has AI English tutors\nwho correct you and\ntalk to you naturally.\nYou'll start speaking English\nmuch faster.\nBut... with an AI?\nYou won't lose anything\nby trying,\nand it will be worth it.\nOkay...\nteach me English.\nI will,\nyou better not give orders\nto your new tutor.\nI apologize!\nGo download Supernova\nright now.\nOkay, let's go!"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the app logo and name.\n- Provides clear app store badges for download.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Spanish",
+        "supernova_swap": "English"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630841.1436775
+}

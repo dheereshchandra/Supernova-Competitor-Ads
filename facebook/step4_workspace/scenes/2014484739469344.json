@@ -1,0 +1,86 @@
+{
+  "competitor_id": "2014484739469344",
+  "parsed": {
+    "duration_s": 46.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human-recorded footage with an AI-generated avatar. The avatar in the split-screen scene exhibits typical AI traits: a perfectly static head and body pose with only the mouth and eyes moving, creating an uncanny effect.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter and learner",
+        "appearance": "Young woman, light complexion, blue eyes. Her blonde hair is styled in a single side braid.",
+        "wardrobe": "In the first scene, she wears a white button-down shirt over a white top. In the second scene, she wears a light blue V-neck scrub top.",
+        "demeanor": "Enthusiastic, expressive, and friendly."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young woman, light complexion, red hair, large brown eyes, flawless skin.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Calm, supportive, and unnaturally static."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Scooter Intro",
+        "setting": "Sunny street with Balinese-style architecture, riding on the back of a green scooter.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "selfie talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman is riding on the back of a moving scooter, filming herself selfie-style. She is wearing a white button-down shirt over a white top and has her blonde hair in a side braid. The scooter driver in front of her wears a bright green helmet and jacket. The background features a sunny street with traditional Balinese stone walls and gateways, along with lush green plants. The lighting is bright, natural sunlight. The woman is smiling broadly and speaking directly to the camera.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a selfie-style video of a woman on a scooter. Text overlays appear on screen listing phrases to 'stop saying'. The background shows a sunny, tropical street.",
+        "audio_transcript": "Character A says: Stop saying I'm fine, thanks, I don't know, you're welcome.\nCharacter A says: It's very basic.\nCharacter A says: I used to speak the same way.\nCharacter A says: Then my friend suggested practicing with Loora.\nCharacter A says: Let me show you.",
+        "on_screen_text": "\u26d4 STOP SAYING \u26d4\nI'm fine, thanks \u274c\nI don't know\nYou're welcome\nIt's very basic.\nI used to speak the same way.\nThen my friend suggested practicing with Loora.\nLet me show you."
+      },
+      {
+        "n": 2,
+        "start_s": 11.5,
+        "end_s": 46.0,
+        "screenshot_at_s": 25.0,
+        "scene_label": "App Demonstration",
+        "setting": "Split screen: left is a studio backdrop, right is inside a car.",
+        "characters_in_scene": [
+          "B",
+          "A"
+        ],
+        "camera": "split-screen close-up",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A close-up of a young woman with red hair and large brown eyes, resting her chin on her hand. She is wearing a grey turtleneck sweater. The background is a plain, warm, gradient studio backdrop. Her body and head remain perfectly still, with only her mouth and eyes moving. She maintains a gentle, supportive smile.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A close-up of a young woman with blonde hair in a side braid, sitting inside a car. She is wearing a light blue V-neck scrub top. The interior of the car is visible in the background, with natural light coming through the windows. She is looking directly at the camera, speaking and reacting with natural facial expressions.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen shows an AI avatar on the left and a human user on the right, simulating a video call. Subtitles appear at the bottom of the screen for both speakers. The Loora logo appears at the end.",
+        "audio_transcript": "Character A says: Sorry, my English is not good.\nCharacter B says: You should practice everyday.\nCharacter A says: But I don't have anyone to practice with.\nCharacter B says: That's exactly what I'm here for.\nCharacter B says: I'm Loora, your AI English tutor.\nCharacter A says: I can speak with you?\nCharacter B says: Yes, I'll chat with you, give you instant feedback on your pronunciation, and help you get better with every conversation.\nCharacter A says: But I make a lot of mistakes.\nCharacter B says: You don't have to worry about making mistakes because I'll guide you through them.\nCharacter A says: Sounds good.\nCharacter B says: Let's practice together every day and you'll see how quickly your English improves.",
+        "on_screen_text": "Sorry, my English is not good.\nYou should practice everyday.\nBut I don't have anyone to practice with.\nThat's exactly what I'm here for.\nI'm Loora, your AI English tutor.\nI can speak with you?\nYes, I'll chat with you\ngive you instant feedback on your pronunciation\nand help you get better with every conversation.\nBut I make a lot of mistakes.\nYou don't have to worry about making mistakes\nbecause I'll guide you through them.\nSounds good.\nLet's practice together every day\nand you'll see how quickly your English improves.\nLoora"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.52374
+}

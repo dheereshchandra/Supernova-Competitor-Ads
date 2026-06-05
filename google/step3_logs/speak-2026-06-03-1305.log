@@ -1,0 +1,91 @@
+# Step 3 run log (Google pipeline)
+# competitor : speak
+# started_at : 2026-06-03T13:05:33
+# input      : inputs/g-ads-speak-2026-06-03.csv
+# videos     : videos/speak-2026-06-03
+# images     : images/speak-2026-06-03
+# master     : master/speak.csv  (updated)
+# enriched   : inputs/g-ads-speak-2026-06-03_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded-video': 0, 'uploaded-image': 16, 'carried-forward': 0, 'text-no-asset': 0, 'asset-missing': 61, 'unsupported': 0, 'no-creative': 0, 'scrape-error': 0, 'error': 0}
+#
+uploaded-image  CR00460064819299483649  ← CR00460064819299483649.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00460064819299483649.jpg
+uploaded-image  CR00460064819299483649  ← CR00460064819299483649_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00460064819299483649.jpg
+uploaded-image  CR00460064819299483649  ← CR00460064819299483649_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00460064819299483649.jpg
+uploaded-image  CR00719391405578911745  ← CR00719391405578911745.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00719391405578911745.jpg
+uploaded-image  CR00719391405578911745  ← CR00719391405578911745_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00719391405578911745.jpg
+uploaded-image  CR00719391405578911745  ← CR00719391405578911745_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00719391405578911745.jpg
+uploaded-image  CR01089078327580295169  ← CR01089078327580295169.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01089078327580295169.jpg
+asset-missing    CR01428209546567876609  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01428209546567876609  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01428209546567876609  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01428209546567876609  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01428209546567876609  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03013186756649418753  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03013186756649418753  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03013186756649418753  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03809934818196586497  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03809934818196586497  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03809934818196586497  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03809934818196586497  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR05027409681262313473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR05027409681262313473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR05027409681262313473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR05027409681262313473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06175808344788303873  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06175808344788303873  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06175808344788303873  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06175808344788303873  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06175808344788303873  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06947978593423065089  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06947978593423065089  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06947978593423065089  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06947978593423065089  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08154973753466421249  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08154973753466421249  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08154973753466421249  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08154973753466421249  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08154973753466421249  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR09036662610132467713  ← CR09036662610132467713.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09036662610132467713.jpg
+uploaded-image  CR09036662610132467713  ← CR09036662610132467713_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09036662610132467713.jpg
+uploaded-image  CR09036662610132467713  ← CR09036662610132467713_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09036662610132467713.jpg
+asset-missing    CR09059097457702469633  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09059097457702469633  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09059097457702469633  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11982852120391974913  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11982852120391974913  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11982852120391974913  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11982852120391974913  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12027842710271426561  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12027842710271426561  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12027842710271426561  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12027842710271426561  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR13050314015010455553  ← CR13050314015010455553.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13050314015010455553.jpg
+uploaded-image  CR13050314015010455553  ← CR13050314015010455553_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13050314015010455553.jpg
+uploaded-image  CR13050314015010455553  ← CR13050314015010455553_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13050314015010455553.jpg
+asset-missing    CR14774311757321076737  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14774311757321076737  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14774311757321076737  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14774311757321076737  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14774311757321076737  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15187292739940122625  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15187292739940122625  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15187292739940122625  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15187292739940122625  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15708446064501587969  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15708446064501587969  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15708446064501587969  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15708446064501587969  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16557653045580660737  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16557653045580660737  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16557653045580660737  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR17170834995170770945  ← CR17170834995170770945.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17170834995170770945.jpg
+uploaded-image  CR17170834995170770945  ← CR17170834995170770945_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17170834995170770945.jpg
+uploaded-image  CR17170834995170770945  ← CR17170834995170770945_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17170834995170770945.jpg
+asset-missing    CR18123795758917353473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR18123795758917353473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR18123795758917353473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR18123795758917353473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)

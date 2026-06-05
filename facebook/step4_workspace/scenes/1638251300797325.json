@@ -1,0 +1,160 @@
+{
+  "competitor_id": "1638251300797325",
+  "parsed": {
+    "duration_s": 45.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses a split-screen format combining an AI-generated robot avatar and a human actor. The robot exhibits slightly stiff, unnatural movements and lip-sync typical of AI generation, while the human actor's lip-sync also appears slightly manipulated or dubbed over a static background.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Humanoid robot with a smooth, metallic silver and white body and visible mechanical joints. It has a human-like face with pale skin, striking blue eyes, and dark, defined eyebrows.",
+        "wardrobe": "Metallic robot chassis, no clothing.",
+        "demeanor": "Calm, instructive, and authoritative."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young Indian woman with a medium build, warm brown complexion, and long, straight black hair parted in the middle. She has expressive facial features.",
+        "wardrobe": "Maroon kurta with intricate gold embroidery around the neckline, paired with large, traditional gold jhumka earrings.",
+        "demeanor": "Eager to learn, initially hesitant but becomes enthusiastic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 12.0,
+        "screenshot_at_s": 6.0,
+        "scene_label": "Correcting 'Return Back'",
+        "setting": "Top: Traditional Indian living room. Bottom: Plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head, split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up frames Character A, a humanoid robot, positioned centrally. The robot has a smooth, metallic silver and white body with visible mechanical joints at the shoulders and neck. Its face is human-like with pale skin, striking blue eyes, and dark, defined eyebrows. The robot's expression is neutral but attentive as it speaks. The background is a warmly lit, traditional Indian living room. Visible details include a wooden sofa adorned with patterned cushions, brass artifacts displayed on shelves, and a framed picture hanging on the wall. Natural-looking light filters in from a window in the background, creating a soft ambiance.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up captures Character B, a young Indian woman, facing directly towards the camera. She has a medium build, a warm brown complexion, and long, straight black hair parted neatly down the middle. She is dressed in a maroon kurta featuring intricate gold embroidery around the neckline. Large, traditional gold jhumka earrings dangle from her ears. Her facial expressions are dynamic, shifting as she speaks. The background is a completely plain, solid white wall with no distracting elements. The lighting is bright and even, clearly illuminating her face and upper body.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a vertical split-screen layout. The top half features an AI-generated humanoid robot in a traditional Indian living room setting. The bottom half shows a young Indian woman against a plain white background. Large, dynamic text overlays in Gujarati and English appear in the center of the screen, translating the spoken dialogue. A red 'X' graphic briefly appears over the woman's face when she makes a mistake. The overall composition is bright and focused on the two speakers.",
+        "audio_transcript": "Character B says: \u0aa4\u0aae\u0ac7 \u0a95\u0acd\u0aaf\u0abe\u0ab0\u0ac7 \u0a86\u0ab5\u0ab6\u0acb [When will you come?]\nCharacter B says: I will return back on Monday\nCharacter A says: Return back \u0aa8\u0ab9\u0ac0\u0a82, return \u0aa8\u0acb \u0aae\u0aa4\u0ab2\u0aac \u0a9c \u0a9b\u0ac7 \u0aaa\u0abe\u0a9b\u0abe \u0a86\u0ab5\u0ab5\u0ac1\u0a82. [Not return back, return itself means to come back.]\nCharacter A says: Return \u0a85\u0aa8\u0ac7 back \u0aac\u0a82\u0aa8\u0ac7 \u0a8f\u0a95 \u0ab8\u0abe\u0aa5\u0ac7 \u0ab5\u0abe\u0aaa\u0ab0\u0ab5\u0abe\u0aa8\u0acb \u0aae\u0aa4\u0ab2\u0aac \u0ab5\u0abe\u0ab0\u0a82\u0ab5\u0abe\u0ab0 \u0a95\u0ac7\u0aae \u0a86\u0ab5\u0ac0 \u0ab0\u0ab9\u0acd\u0aaf\u0abe \u0a9b\u0acb. [Using return and back together means why are you coming repeatedly.]\nCharacter A says: \u0aac\u0ab8 \u0a86\u0a9f\u0ab2\u0ac1\u0a82 \u0a95\u0ab9\u0acb, I will return on Monday. [Just say this, I will return on Monday.]\nCharacter B says: \u0a93\u0ab9, \u0aa0\u0ac0\u0a95 \u0a9b\u0ac7, \u0aa0\u0ac0\u0a95 \u0a9b\u0ac7. [Oh, okay, okay.]",
+        "on_screen_text": "\u0aa4\u0aae\u0ac7 \u0a95\u0acd\u0aaf\u0abe\u0ab0\u0ac7 \u0a86\u0ab5\u0ab6\u0acb (When will you come)\nI will return back on Monday\nReturn back \u0aa8\u0ab9\u0ac0\u0a82 (Not return back)\nReturn \u0aa8\u0acb \u0aae\u0aa4\u0ab2\u0aac \u0a9c \u0a9b\u0ac7 \u0aaa\u0abe\u0a9b\u0abe \u0a86\u0ab5\u0ab5\u0ac1\u0a82 (Return itself means to come back)\nReturn \u0a85\u0aa8\u0ac7 back \u0aac\u0a82\u0aa8\u0ac7 \u0a8f\u0a95 \u0ab8\u0abe\u0aa5\u0ac7 \u0ab5\u0abe\u0aaa\u0ab0\u0ab5\u0abe\u0aa8\u0acb \u0aae\u0aa4\u0ab2\u0aac \u0ab5\u0abe\u0ab0\u0a82\u0ab5\u0abe\u0ab0 \u0a95\u0ac7\u0aae \u0a86\u0ab5\u0ac0 \u0ab0\u0ab9\u0acd\u0aaf\u0abe \u0a9b\u0acb (Using return and back together means why are you coming repeatedly)\n\u0aac\u0ab8 \u0a86\u0a9f\u0ab2\u0ac1\u0a82 \u0a95\u0ab9\u0acb (Just say this)\nI will return on Monday\n\u0a93\u0ab9, \u0aa0\u0ac0\u0a95 \u0a9b\u0ac7, \u0aa0\u0ac0\u0a95 \u0a9b\u0ac7 (Oh, okay, okay)"
+      },
+      {
+        "n": 2,
+        "start_s": 12.0,
+        "end_s": 26.0,
+        "screenshot_at_s": 19.0,
+        "scene_label": "AI Teachers and Cost",
+        "setting": "Top: Traditional Indian living room. Bottom: Plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head, split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up frames Character A, a humanoid robot, positioned centrally. The robot has a smooth, metallic silver and white body with visible mechanical joints at the shoulders and neck. Its face is human-like with pale skin, striking blue eyes, and dark, defined eyebrows. The robot's expression is neutral but attentive as it speaks. The background is a warmly lit, traditional Indian living room. Visible details include a wooden sofa adorned with patterned cushions, brass artifacts displayed on shelves, and a framed picture hanging on the wall. Natural-looking light filters in from a window in the background, creating a soft ambiance.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up captures Character B, a young Indian woman, facing directly towards the camera. She has a medium build, a warm brown complexion, and long, straight black hair parted neatly down the middle. She is dressed in a maroon kurta featuring intricate gold embroidery around the neckline. Large, traditional gold jhumka earrings dangle from her ears. Her facial expressions are dynamic, shifting as she speaks. The background is a completely plain, solid white wall with no distracting elements. The lighting is bright and even, clearly illuminating her face and upper body.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The vertical split-screen layout continues with the robot on top and the woman on the bottom. The characters maintain their positions and settings. Text overlays continue to appear in the center, displaying the dialogue. A graphic overlay showing '7x Cheaper' pops up. Later in the scene, a large overlay of the Google Play Store page for the 'MySivi' app covers the center of the screen, showing the app icon, name, and an 'Install' button.",
+        "audio_transcript": "Character B says: \u0aae\u0aa8\u0ac7 English \u0aac\u0ab0\u0abe\u0aac\u0ab0 \u0aa8\u0aa5\u0ac0 \u0a86\u0ab5\u0aa1\u0aa4\u0ac1\u0a82. [I don't know English well.]\nCharacter A says: \u0a95\u0acb\u0a88 \u0aaa\u0acd\u0ab0\u0acb\u0aac\u0acd\u0ab2\u0ac7\u0aae \u0aa8\u0aa5\u0ac0. AI teachers \u0a9f\u0acd\u0ab0\u0abe\u0aaf \u0a95\u0ab0\u0acd\u0aaf\u0abe \u0a95\u0ac7? [No problem. Have you tried AI teachers?]\nCharacter B says: \u0a8f \u0aa4\u0acb \u0aae\u0acb\u0a82\u0a98\u0abe \u0ab9\u0ab6\u0ac7 \u0aa8\u0ac7? [They must be expensive, right?]\nCharacter A says: \u0aac\u0abf\u0ab2\u0a95\u0ac1\u0ab2 \u0aa8\u0ab9\u0ac0\u0a82. \u0aa8\u0acb\u0ab0\u0acd\u0aae\u0ab2 English classes \u0a95\u0ab0\u0aa4\u0abe 7 \u0a97\u0aa3\u0ac1\u0a82 \u0ab8\u0ab8\u0acd\u0aa4\u0ac1\u0a82 \u0a9b\u0ac7. [Not at all. It is 7 times cheaper than normal English classes.]\nCharacter A says: \u0a8f\u0a9f\u0ab2\u0ac7 \u0a9c 1 \u0a95\u0ab0\u0acb\u0aa1 \u0ab2\u0acb\u0a95\u0acb MySivi \u0aaa\u0ab0 English \u0aaa\u0acd\u0ab0\u0ac7\u0a95\u0acd\u0a9f\u0abf\u0ab8 \u0a95\u0ab0\u0ac0 \u0ab0\u0ab9\u0acd\u0aaf\u0abe \u0a9b\u0ac7. [That's why 1 crore people are practicing English on MySivi.]",
+        "on_screen_text": "\u0aae\u0aa8\u0ac7 English \u0aac\u0ab0\u0abe\u0aac\u0ab0 \u0aa8\u0aa5\u0ac0 \u0a86\u0ab5\u0aa1\u0aa4\u0ac1\u0a82 (I don't know English well)\n\u0a95\u0acb\u0a88 \u0aaa\u0acd\u0ab0\u0acb\u0aac\u0acd\u0ab2\u0ac7\u0aae \u0aa8\u0aa5\u0ac0 (No problem)\nAI teachers \u0a9f\u0acd\u0ab0\u0abe\u0aaf \u0a95\u0ab0\u0acd\u0aaf\u0abe \u0a95\u0ac7? (Have you tried AI teachers?)\n\u0a8f \u0aa4\u0acb \u0aae\u0acb\u0a82\u0a98\u0abe \u0ab9\u0ab6\u0ac7 \u0aa8\u0ac7? (They must be expensive, right?)\n\u0aac\u0abf\u0ab2\u0a95\u0ac1\u0ab2 \u0aa8\u0ab9\u0ac0\u0a82 (Not at all)\n\u0aa8\u0acb\u0ab0\u0acd\u0aae\u0ab2 English classes \u0a95\u0ab0\u0aa4\u0abe 7 \u0a97\u0aa3\u0ac1\u0a82 \u0ab8\u0ab8\u0acd\u0aa4\u0ac1\u0a82 \u0a9b\u0ac7 (It is 7 times cheaper than normal English classes)\n7x Cheaper\n\u0a8f\u0a9f\u0ab2\u0ac7 \u0a9c 1 \u0a95\u0ab0\u0acb\u0aa1 \u0ab2\u0acb\u0a95\u0acb MySivi \u0aaa\u0ab0 English \u0aaa\u0acd\u0ab0\u0ac7\u0a95\u0acd\u0a9f\u0abf\u0ab8 \u0a95\u0ab0\u0ac0 \u0ab0\u0ab9\u0acd\u0aaf\u0abe \u0a9b\u0ac7 (That's why 1 crore people are practicing English on MySivi)\nStart English Learning - MySivi\nInstall"
+      },
+      {
+        "n": 3,
+        "start_s": 26.0,
+        "end_s": 33.0,
+        "screenshot_at_s": 29.0,
+        "scene_label": "Time Commitment",
+        "setting": "Top: Traditional Indian living room. Bottom: Plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head, split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up frames Character A, a humanoid robot, positioned centrally. The robot has a smooth, metallic silver and white body with visible mechanical joints at the shoulders and neck. Its face is human-like with pale skin, striking blue eyes, and dark, defined eyebrows. The robot's expression is neutral but attentive as it speaks. The background is a warmly lit, traditional Indian living room. Visible details include a wooden sofa adorned with patterned cushions, brass artifacts displayed on shelves, and a framed picture hanging on the wall. Natural-looking light filters in from a window in the background, creating a soft ambiance.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up captures Character B, a young Indian woman, facing directly towards the camera. She has a medium build, a warm brown complexion, and long, straight black hair parted neatly down the middle. She is dressed in a maroon kurta featuring intricate gold embroidery around the neckline. Large, traditional gold jhumka earrings dangle from her ears. Her facial expressions are dynamic, shifting as she speaks. The background is a completely plain, solid white wall with no distracting elements. The lighting is bright and even, clearly illuminating her face and upper body.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen format remains consistent with the robot and woman in their respective panels. Text overlays displaying the Gujarati dialogue appear in the center. A large graphic overlay of an analog clock face with the text '10-15 MINUTES' appears prominently over the center of the screen, emphasizing the short time commitment required. The characters continue to speak directly to the camera.",
+        "audio_transcript": "Character B says: \u0aaa\u0aa3 \u0ab8\u0aae\u0aaf \u0aa8\u0aa5\u0ac0 \u0aae\u0ab3\u0aa4\u0acb. [But I don't get time.]\nCharacter A says: \u0ab0\u0acb\u0a9c \u0aab\u0a95\u0acd\u0aa4 10-15 \u0aae\u0abf\u0aa8\u0abf\u0a9f \u0aaa\u0acd\u0ab0\u0ac7\u0a95\u0acd\u0a9f\u0abf\u0ab8 \u0aaa\u0ac2\u0ab0\u0aa4\u0ac0 \u0a9b\u0ac7. [Just 10-15 minutes of practice daily is enough.]\nCharacter A says: \u0aa4\u0aae\u0ac7 \u0a8f\u0a95\u0aa6\u0aae \u0a95\u0acb\u0aa8\u0acd\u0aab\u0abf\u0aa1\u0aa8\u0acd\u0a9f \u0aa5\u0a88 \u0a9c\u0ab6\u0acb. [You will become very confident.]",
+        "on_screen_text": "\u0aaa\u0aa3 \u0ab8\u0aae\u0aaf \u0aa8\u0aa5\u0ac0 \u0aae\u0ab3\u0aa4\u0acb (But I don't get time)\n\u0ab0\u0acb\u0a9c \u0aab\u0a95\u0acd\u0aa4 10-15 \u0aae\u0abf\u0aa8\u0abf\u0a9f \u0aaa\u0acd\u0ab0\u0ac7\u0a95\u0acd\u0a9f\u0abf\u0ab8 \u0aaa\u0ac2\u0ab0\u0aa4\u0ac0 \u0a9b\u0ac7 (Just 10-15 minutes of practice daily is enough)\n10-15 MINUTES\n\u0aa4\u0aae\u0ac7 \u0a8f\u0a95\u0aa6\u0aae \u0a95\u0acb\u0aa8\u0acd\u0aab\u0abf\u0aa1\u0aa8\u0acd\u0a9f \u0aa5\u0a88 \u0a9c\u0ab6\u0acb (You will become very confident)"
+      },
+      {
+        "n": 4,
+        "start_s": 33.0,
+        "end_s": 45.0,
+        "screenshot_at_s": 39.0,
+        "scene_label": "Call to Action",
+        "setting": "Top: Traditional Indian living room. Bottom: Plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head, split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up frames Character A, a humanoid robot, positioned centrally. The robot has a smooth, metallic silver and white body with visible mechanical joints at the shoulders and neck. Its face is human-like with pale skin, striking blue eyes, and dark, defined eyebrows. The robot's expression is neutral but attentive as it speaks. The background is a warmly lit, traditional Indian living room. Visible details include a wooden sofa adorned with patterned cushions, brass artifacts displayed on shelves, and a framed picture hanging on the wall. Natural-looking light filters in from a window in the background, creating a soft ambiance.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up captures Character B, a young Indian woman, facing directly towards the camera. She has a medium build, a warm brown complexion, and long, straight black hair parted neatly down the middle. She is dressed in a maroon kurta featuring intricate gold embroidery around the neckline. Large, traditional gold jhumka earrings dangle from her ears. Her facial expressions are dynamic, shifting as she speaks. The background is a completely plain, solid white wall with no distracting elements. The lighting is bright and even, clearly illuminating her face and upper body.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The video maintains the vertical split-screen with the robot on top and the woman on the bottom. Text overlays continue to show the spoken dialogue. An overlay showing a mobile phone screen with the MySivi app installing from an app store appears briefly. The characters maintain their engaging expressions as they deliver the final call to action. The scene concludes with the robot gesturing encouragingly.",
+        "audio_transcript": "Character B says: \u0ab5\u0abe\u0ab9, \u0a95\u0ac7\u0ab5\u0ac0 \u0ab0\u0ac0\u0aa4\u0ac7 \u0a9c\u0acb\u0a88\u0aa8 \u0a95\u0ab0\u0ac1\u0a82? [Wow, how do I join?]\nCharacter A says: \u0a86 Install \u0aa8\u0ac1\u0a82 \u0aac\u0a9f\u0aa8 \u0aa6\u0aac\u0abe\u0ab5\u0acb \u0a85\u0aa8\u0ac7 MySivi \u0a8f\u0aaa \u0a87\u0aa8\u0acd\u0ab8\u0acd\u0a9f\u0acb\u0ab2 \u0a95\u0ab0\u0acb. [Press this Install button and install the MySivi app.]\nCharacter A says: \u0ab8\u0abe\u0a87\u0aa8 \u0a85\u0aaa \u0a95\u0ab0\u0acb \u0a85\u0aa8\u0ac7 \u0aaa\u0acd\u0ab0\u0ac7\u0a95\u0acd\u0a9f\u0abf\u0ab8 \u0ab6\u0ab0\u0ac2 \u0a95\u0ab0\u0acb. [Sign up and start practicing.]\nCharacter A says: \u0aab\u0a95\u0acd\u0aa4 15 \u0aa6\u0abf\u0ab5\u0ab8\u0aae\u0abe\u0a82 \u0a9c \u0aa4\u0aae\u0aa8\u0ac7 \u0a87\u0aae\u0acd\u0aaa\u0acd\u0ab0\u0ac2\u0ab5\u0aae\u0ac7\u0aa8\u0acd\u0a9f \u0aa6\u0ac7\u0a96\u0abe\u0ab5\u0abe \u0ab2\u0abe\u0a97\u0ab6\u0ac7. [You will start seeing improvement in just 15 days.]\nCharacter A says: \u0a9a\u0abe\u0ab2\u0acb \u0ab6\u0ab0\u0ac2 \u0a95\u0ab0\u0acb. [Let's start.]",
+        "on_screen_text": "\u0ab5\u0abe\u0ab9, \u0a95\u0ac7\u0ab5\u0ac0 \u0ab0\u0ac0\u0aa4\u0ac7 \u0a9c\u0acb\u0a88\u0aa8 \u0a95\u0ab0\u0ac1\u0a82? (Wow, how do I join?)\n\u0a86 Install \u0aa8\u0ac1\u0a82 \u0aac\u0a9f\u0aa8 \u0aa6\u0aac\u0abe\u0ab5\u0acb \u0a85\u0aa8\u0ac7 MySivi \u0a8f\u0aaa \u0a87\u0aa8\u0acd\u0ab8\u0acd\u0a9f\u0acb\u0ab2 \u0a95\u0ab0\u0acb (Press this Install button and install the MySivi app)\nMySivi AI English Spe... Installing...\n\u0ab8\u0abe\u0a87\u0aa8 \u0a85\u0aaa \u0a95\u0ab0\u0acb \u0a85\u0aa8\u0ac7 \u0aaa\u0acd\u0ab0\u0ac7\u0a95\u0acd\u0a9f\u0abf\u0ab8 \u0ab6\u0ab0\u0ac2 \u0a95\u0ab0\u0acb (Sign up and start practicing)\n\u0aab\u0a95\u0acd\u0aa4 15 \u0aa6\u0abf\u0ab5\u0ab8\u0aae\u0abe\u0a82 \u0a9c \u0aa4\u0aae\u0aa8\u0ac7 \u0a87\u0aae\u0acd\u0aaa\u0acd\u0ab0\u0ac2\u0ab5\u0aae\u0ac7\u0aa8\u0acd\u0a9f \u0aa6\u0ac7\u0a96\u0abe\u0ab5\u0abe \u0ab2\u0abe\u0a97\u0ab6\u0ac7 (You will start seeing improvement in just 15 days)\n\u0a9a\u0abe\u0ab2\u0acb \u0ab6\u0ab0\u0ac2 \u0a95\u0ab0\u0acb (Let's start)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780640923.871133
+}

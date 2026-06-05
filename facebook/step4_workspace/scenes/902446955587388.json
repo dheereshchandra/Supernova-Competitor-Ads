@@ -1,0 +1,67 @@
+{
+  "competitor_id": "902446955587388",
+  "parsed": {
+    "duration_s": 56.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video consists of a single, static AI-generated illustration where only the mouth and eyes are animated. The art style is a typical AI anime/illustration aesthetic with no natural body movement.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI presenter",
+        "appearance": "Young woman with a fair complexion, short wavy dark brown hair, and brown eyes. Rendered in an anime/illustration style.",
+        "wardrobe": "Chunky cream-colored turtleneck sweater and small gold hoop earrings.",
+        "demeanor": "Friendly, confident, and static."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 51.5,
+        "screenshot_at_s": 25.0,
+        "scene_label": "AI Presenter Pitch",
+        "setting": "Inside a cozy cafe or room, looking out a window at a rainy city street at night. Warm indoor lighting contrasting with cool outdoor rain.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "An anime-style illustration of Character A standing indoors by a window. She is looking directly forward with a slight smile. Behind her is a windowpane covered in raindrops. Outside the window, a blurry city street is visible with glowing neon signs in red and green. On the windowsill to her left and right are small potted green plants and a stack of books. The lighting is warm and cozy on the character, contrasting with the rainy, darker scene outside.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a single, continuous shot of an AI-generated anime-style woman talking. She is positioned in the center of the frame, indoors by a window. The background shows a rainy city street with neon lights. Pink text bubbles appear in the center of the screen, displaying her speech. The character's body remains completely still, with only her mouth and eyes animated to match the audio.",
+        "audio_transcript": "Character A says: I don't need perfect English\nCharacter A says: I just want to speak with confidence\nCharacter A says: But for years\nCharacter A says: I felt nervous and scared of making mistakes\nCharacter A says: every time I opened my mouth\nCharacter A says: I understood everything\nCharacter A says: Netflix, podcasts, songs, no problem\nCharacter A says: But my brain got lazy\nCharacter A says: because I was training my eyes with subtitles, not my mouth\nCharacter A says: It's called the 'Crutch Effect'\nCharacter A says: and it's why your English stays stuck\nCharacter A says: Then I found Fluently\nCharacter A says: It uses the APA cycle: Absorb, Practice, and Adjust\nCharacter A says: It's how we naturally learn to talk\nCharacter A says: no books, no pressure, just real speaking immersion\nCharacter A says: Stop training your eyes and start training your mouth\nCharacter A says: Download Fluently and finally start speaking with confidence",
+        "on_screen_text": "I don't need perfect English\nI just want to speak with confidence\nBut for years\nI felt nervous and scared of making mistakes\nevery time I opened my mouth\nI understood everything\nNetflix, podcasts, songs, no problem\nBut my brain got lazy\nbecause I was training my eyes with subtitles, not my mouth\nIt's called the 'Crutch Effect'\nand it's why your English stays stuck\nThen I found Fluently\nIt uses the APA cycle: Absorb, Practice, and Adjust\nIt's how we naturally learn to talk\nno books, no pressure, just real speaking immersion\nStop training your eyes and start training your mouth\nDownload Fluently and finally start speaking with confidence"
+      },
+      {
+        "n": 2,
+        "start_s": 51.5,
+        "end_s": 56.0,
+        "screenshot_at_s": 53.0,
+        "scene_label": "End Card",
+        "setting": "Abstract dark purple gradient background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark purple gradient background. There are no characters, props, or physical elements present. The scene serves entirely as a blank canvas.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A dark purple gradient background with a large app icon in the center. The icon is a blue square with two white forward-pointing arrows. Below the icon is the app name and a tagline in white text. At the bottom is a purple button with white text.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657946.4526937
+}

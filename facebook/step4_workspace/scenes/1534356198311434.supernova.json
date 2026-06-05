@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1534356198311434",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, tan complexion. He has short, spiky black hair and dark eyes.",
+        "wardrobe": "Light blue textured crew-neck sweater.",
+        "demeanor": "Friendly, engaging, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor voice",
+        "appearance": "Voice only. Not visible on screen.",
+        "wardrobe": "N/A",
+        "demeanor": "Professional and clear."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Truth vs Myth pouring",
+        "supernova_script": "Character A says: खराब English आपकी job लगने के chances कम कर देती है। [Poor English reduces your chances of getting a job.]\nCharacter A says: लोग आपके बोलते ही आपका confidence judge कर लेते हैं। [People judge your confidence as soon as you speak.]\nCharacter A says: और ये एक myth है कि आप अपनी spoken English improve नहीं कर सकते। [And it's a myth that you cannot improve your spoken English.]",
+        "scene_summary": "- Hooks the viewer by addressing a common fear (job rejection due to poor English).\n- Uses a visual metaphor (truth vs myth) to challenge the belief that fluency cannot be learned.\n- Sets up the core problem that Supernova will solve.",
+        "supernova_on_screen_text": "English bias is real.\ntruth\nmyth\njob\nchances\nconfidence\njudge\nimprove\nspoken\nEnglish"
+      },
+      {
+        "n": 2,
+        "scene_label": "App demonstration",
+        "supernova_script": "Character A says: Supernova app से लाखों लोग रोज़ practice करके अपनी English सुधार रहे हैं। [Millions of people are improving their English by practicing daily with the Supernova app.]\nCharacter A says: Comfortable. [Comfortable.]\nCharacter A says: Let's see. [Let's see.]\nCharacter B says: इसे ऐसे बोलें: Com-for-ta-ble. [Say it like this: Com-for-ta-ble.]\nCharacter A says: Comfortable. [Comfortable.]\nCharacter A says: आज ही Supernova download करें और खुद फर्क देखें। [Download Supernova today and see the difference yourself.]",
+        "scene_summary": "- Introduces Supernova as the practical, daily solution for spoken English.\n- Demonstrates the AI tutor feature in real-time, showing immediate feedback and improvement.\n- Ends with a strong, encouraging call to action to download the app.",
+        "supernova_on_screen_text": "practice\ndaily\nimprove\nspoken English\nSupernova app\nAI Tutor\nLet's practice. Listen to the correct pronunciation and try again.\n43%\ncomfortable\nIncorrect pronunciation\nAI Tutor\nYou\n97%\ndownload\nSupernova\nsee the difference"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Bold Voice",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779989130.582576
+}

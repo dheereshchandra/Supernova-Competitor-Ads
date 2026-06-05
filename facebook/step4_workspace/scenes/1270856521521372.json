@@ -1,0 +1,101 @@
+{
+  "competitor_id": "1270856521521372",
+  "parsed": {
+    "duration_s": 21.0,
+    "production_type": "mixed",
+    "production_notes": "The video is a 2D animated screencast of a mobile application, featuring vector-based character avatars and UI elements. It does not contain live-action human footage.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Chess opponent avatar",
+        "appearance": "2D animated male character with dark brown skin, black hair, and a prominent thick black mustache. He has simple, stylized facial features.",
+        "wardrobe": "A solid pink collared shirt.",
+        "demeanor": "Confident, slightly smug, and expressive through simple animations."
+      },
+      {
+        "id": "B",
+        "role": "Brand mascot",
+        "appearance": "2D animated bright green owl with large eyes and a yellow beak. Stylized and rounded.",
+        "wardrobe": "None.",
+        "demeanor": "Playful and challenging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 15.0,
+        "screenshot_at_s": 7.0,
+        "scene_label": "Chess Match Gameplay",
+        "setting": "A digital chess board interface on a mobile screen, light background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A digital chessboard is displayed with white and dark grey pieces arranged on a grid of light grey and white squares. Above the board, a 2D animated avatar of Character A is visible. The avatar's facial expressions change slightly, showing different emotions like confidence or surprise. The chess pieces move across the board in a sequence of turns.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a mobile app interface for a chess game. At the top, Character A's avatar appears with speech bubbles containing his dialogue. Below him is the chessboard where a game is being played. The user's pieces are white, and Character A's are dark grey. The game progresses rapidly until the user is checkmated. A pop-up featuring a green owl then appears, offering a rematch.",
+        "audio_transcript": "Character A says: If you win, I'll eat my mustache.\n\nCharacter A says: I won't be controlling that diagonal anymore.\n\nCharacter A says: That was my FAVORITE pawn!\n\nCharacter A says: Dear diary, today I won another match.",
+        "on_screen_text": "9 POINTS\n19:48\nPlay Chess\nIf you win, I'll eat my mustache.\n11 POINTS\n19:47\n14 POINTS\n19:44\nI won't be controlling that diagonal anymore.\n15 POINTS\n19:42\nThat was my FAVORITE pawn!\n19:40\nDear diary, today I won another match.\nOscar checkmated you!\nCONTINUE\nRematch?"
+      },
+      {
+        "n": 2,
+        "start_s": 15.0,
+        "end_s": 17.0,
+        "screenshot_at_s": 16.0,
+        "scene_label": "Rematch Face-off",
+        "setting": "Abstract, dynamic background with pink and green geometric shapes.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A dynamic, stylized graphic with a diagonal split. On the left side against a green background, Character B is holding a dark grey chess knight. On the right side against a pink background, Character A is holding a white chess knight. Both characters are looking intensely towards the center, suggesting a confrontation or competition. White sparkle effects are scattered around them.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A fast-paced, animated transition screen showing a face-off between the green owl mascot and the chess opponent. The screen is split diagonally with bold green and pink colors. Both characters hold chess pieces, emphasizing the theme of a rematch.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": ""
+      },
+      {
+        "n": 3,
+        "start_s": 17.0,
+        "end_s": 21.0,
+        "screenshot_at_s": 19.0,
+        "scene_label": "End Card",
+        "setting": "A plain white background with a subtle light grey grid pattern.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background with a very faint, light grey checkerboard pattern. Green, stylized leaf-like shapes briefly animate and disappear in the center of the frame.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The final scene is a standard promotional end card. It features the brand's logo, a tagline, and buttons to download the app from various app stores. A prominent green button encourages the user to play for free. The background is a subtle white and grey grid.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "duolingo\nThe world's #1 learning app.\nDownload on the App Store\nGET IT ON Google Play\nPLAY FOR FREE"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.0753658
+}

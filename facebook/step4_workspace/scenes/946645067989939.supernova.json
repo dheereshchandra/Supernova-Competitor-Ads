@@ -1,0 +1,46 @@
+{
+  "competitor_id": "946645067989939",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, fair complexion, short blonde hair parted in the middle. She has a symmetrical face with subtle makeup.",
+        "wardrobe": "Beige blazer over a white v-neck top, with a thin gold necklace.",
+        "demeanor": "Calm, professional, and reassuring."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young adult female, fair complexion, long brown hair tied back in a ponytail. She has expressive facial features.",
+        "wardrobe": "Brown turtleneck sweater and large silver hoop earrings.",
+        "demeanor": "Expressive, slightly flustered initially, then amazed and enthusiastic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Lesson Conversation",
+        "supernova_script": "Character B says: Sorry! Main late ho gayi, I lost the bus! [Sorry! I'm late, I lost the bus!]\nCharacter A says: You mean, you missed your bus? [You mean, you missed your bus?]\nCharacter B says: Oh haan, I missed my bus! Bahut crowded with people tha! [Oh yes, I missed my bus! It was very crowded with people!]\nCharacter A says: Sirf 'crowded' kaho, everyone knows it means people. [Just say 'crowded', everyone knows it means people.]\nCharacter B says: Right, I missed the bus! It was crowded. Uff, English bolna kabhi kabhi kitna tricky lagta hai na... [Right, I missed the bus! It was crowded. Uff, speaking English feels so tricky sometimes...]\nCharacter A says: Agar bina darr ke confident English bolni hai, toh roz mere saath Supernova par practice karo. [If you want to speak confident English without fear, practice with me daily on Supernova.]\nCharacter B says: Wait, tum AI ho? Par tum toh bilkul real lagti ho! [Wait, you're an AI? But you seem so real!]\nCharacter A says: Haan, main aapki AI English tutor hoon! Real-world situations ki practice karo aur naturally English bolo. [Yes, I am your AI English tutor! Practice real-world situations and speak English naturally.]\nCharacter B says: Wow, main abhi Supernova download karti hoon! [Wow, I'm downloading Supernova right now!]",
+        "scene_summary": "- Hooks the viewer with a relatable, common English mistake (lost vs missed bus) typical for Indian learners.\n- Demonstrates the AI tutor's warm, non-judgmental correction style.\n- Positions Supernova as a stress-free, daily practice tool for real-world confidence.\n- Ends with a strong emotional payoff of amazement and a clear download intent.",
+        "supernova_on_screen_text": "Sorry! Main late ho gayi\nI lost the bus!\nYou mean you missed your bus?\nOh haan, I missed my bus!\nBahut crowded with people tha!\nSirf CROWDED kaho\nUff, English bolna tricky lagta hai...\nConfident English bolni hai?\nPractice with me on SUPERNOVA\nSupernova - AI English Tutor DOWNLOAD\nWait, tum AI ho?\nHaan, main aapki AI English tutor hoon!\nPractice daily and speak naturally!\nDownloading SUPERNOVA right now!"
+      },
+      {
+        "n": 2,
+        "scene_label": "App End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clean, uncluttered visual resolution to the ad.\n- Reinforces the Supernova brand name and core value proposition (AI English Tutor).\n- Delivers a final, clear call-to-action to drive app installs.",
+        "supernova_on_screen_text": "Supernova App\nAapki Personal AI English Tutor\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779974839.7926662
+}

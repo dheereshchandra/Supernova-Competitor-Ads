@@ -1,0 +1,76 @@
+{
+  "competitor_id": "1695856521594672",
+  "parsed": {
+    "duration_s": 55.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines a live-action recording of a human actor with a 3D animated AI avatar displayed on a tablet screen.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, light brown complexion. Dark hair tied back with loose strands framing her face. Expressive facial features.",
+        "wardrobe": "Dark grey or black long-sleeved button-up shirt with visible white stitching details.",
+        "demeanor": "Casual, slightly hesitant at first, then engaged and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character. Fair skin, bright red wavy hair, large expressive eyes.",
+        "wardrobe": "Simple white t-shirt.",
+        "demeanor": "Friendly, encouraging, and helpful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 53.5,
+        "screenshot_at_s": 25.0,
+        "scene_label": "AI English Lesson",
+        "setting": "A dimly lit room with strong blue ambient lighting. A desk with a dark cutting board, a yellow apple, a knife, and a tablet in a case.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up, slightly high angle.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with dark hair tied back sits at a desk in a room illuminated by blue ambient light. She wears a dark button-up shirt with white stitching. On the desk in front of her is a dark cutting board where she is slicing a yellow apple with a knife. To the left of the cutting board, a tablet is propped up in a light-colored case. The tablet screen displays a 3D animated female character with bright red wavy hair wearing a white t-shirt. The woman looks back and forth between her task of cutting the apple and the tablet screen, actively conversing. The background is dark and slightly out of focus, showing hints of a chair and a wall.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene captures a woman multitasking by cutting an apple while interacting with an AI avatar on her tablet. The lighting is moody with a distinct blue hue. Dynamic text overlays appear on the screen, tracking the conversation, and a row of American flag emojis is superimposed at the top of the frame.",
+        "audio_transcript": "Character B says: Do you speak English?\nCharacter A says: Uh, Tarzan style.\nCharacter B says: Can you at least say your name?\nCharacter A says: My name is Jenny.\nCharacter B says: Nice. Where are you from?\nCharacter A says: I am France.\nCharacter B says: You said \"I am France.\" Close though! Try: \"I am from France.\"\nCharacter A says: Okay, I am from France. I am France... No... wait, I am from France.\nCharacter B says: There you go!\nCharacter A says: Hey Skye, How am I going to improve my English?\nCharacter B says: Daily conversation practice is a must.\nCharacter A says: But who am I going to speak with this bad English?\nCharacter B says: With me, of course!\nCharacter A says: With you?\nCharacter B says: Haven't you heard of AI English teachers? You can make as many mistakes as you want without boring anyone.\nCharacter A says: Wait, that could actually work. You just taught me something in two seconds.\nCharacter B says: We're nothing like those pointless word-matching apps. Download Praktika and see the difference.\nCharacter A says: Well, you know what, fair enough. I'm downloading Praktika right now! Let's go.",
+        "on_screen_text": "\ud83c\uddfa\ud83c\uddf8 \ud83c\uddfa\ud83c\uddf8 \ud83c\uddfa\ud83c\uddf8 \ud83c\uddfa\ud83c\uddf8 \ud83c\uddfa\ud83c\uddf8 \ud83c\uddfa\ud83c\uddf8\nDo you speak English?\nUh, Tarzan style.\nCan you at least say your name?\nMy name is Jenny.\nNice. Where are you from?\nI am France. \u274c\nYou said \"I'm from France.\" close though! Try: \"I'm from France.\"\nOkay, I'm from France. I am France. No... wait, I am from France. \u2705\nThere you go!\nHey Skye, How am I going to improve my English?\nDaily conversation practice is a must.\nBut who am I going to speak with this bad English?\nWith me, of course!\nWith you?\nHaven't you heard of AI English teachers? You can make as many mistakes as you want without boring anyone.\nWait, that could actually work. You just taught me something in two seconds.\nWe're nothing like those pointless word-matching apps. Download Praktika and see the difference.\nYou know what, fair enough. I'm downloading Praktika right now! Let's go."
+      },
+      {
+        "n": 2,
+        "start_s": 53.5,
+        "end_s": 55.0,
+        "screenshot_at_s": 54.2,
+        "scene_label": "End Card",
+        "setting": "Abstract digital background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, light purple gradient background with no other elements.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A simple end card featuring a light purple gradient background. The Praktika app logo is prominently displayed in the center, accompanied by app store download badges below it.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966545.9372814
+}

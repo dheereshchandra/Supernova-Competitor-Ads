@@ -1,0 +1,64 @@
+{
+  "competitor_id": "1498337882301575",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot",
+        "appearance": "A stylized, 2D cartoon owl. It is bright green with a rounded body, large eyes, a small yellow beak, and small wings.",
+        "wardrobe": "Typically unclad. In some scenes, it wears black sunglasses.",
+        "demeanor": "Cheerful, energetic, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Water Question",
+        "supernova_script": "Unknown speaker says: पानी... Water. [Water... Water.]\n\n[music only, no speech]",
+        "scene_summary": "- Introduces the basic learning interface.\n- Shows a simple vocabulary matching exercise (Hindi to English) to build foundational confidence.\n- Establishes a rewarding, gamified loop.",
+        "supernova_on_screen_text": "Select the correct English word\nपानी\nMilk\nBread\nWater\nCat"
+      },
+      {
+        "n": 2,
+        "scene_label": "Bread Question and Reward",
+        "supernova_script": "Unknown speaker says: ब्रेड... Bread. [Bread... Bread.]\n\n[music only, no speech]",
+        "scene_summary": "- Continues the learning loop with another everyday vocabulary word.\n- Highlights the in-app reward system (2x multiplier) to keep users motivated and engaged.",
+        "supernova_on_screen_text": "Select the correct English word\nब्रेड\nBread\nDog\nAvocado\nMilk\n2x"
+      },
+      {
+        "n": 3,
+        "scene_label": "Milk Question and Streak",
+        "supernova_script": "Unknown speaker says: दूध... Milk. रोज़ practice करो! [Milk... Milk. Practice daily!]\n\n[music only, no speech]",
+        "scene_summary": "- Reinforces the importance of daily learning habits.\n- Shows the '15 day streak' milestone, encouraging consistency.\n- Mascot transformation adds a fun, celebratory payoff for the user's dedication.",
+        "supernova_on_screen_text": "Select the correct English word\nदूध\nAvocado\nMilk\nBread\nWater\nAmazing!\n15 day streak!"
+      },
+      {
+        "n": 4,
+        "scene_label": "Leaderboard",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the competitive and social aspect of the app.\n- Shows the user climbing to the top of the leaderboard, providing a strong sense of achievement and progress.",
+        "supernova_on_screen_text": "Gold League\n1 Priya S. 204 XP\n2 Rahul K. 192 XP\n3 Amit Verma 186 XP\n4 You 199 XP\n5 Neha 179 XP\n6 Vikram 179 XP\n7 Pooja 167 XP\nPROMOTION ZONE\nYou 276 XP"
+      },
+      {
+        "n": 5,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Final call to action.\n- Replaces competitor's 'free' claim with Supernova's core value proposition of speaking English with confidence.",
+        "supernova_on_screen_text": "Supernova\nEnglish बोलना सीखो Confidence के साथ\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "duolingo",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "LEARN A LANGUAGE FOR FREE",
+        "supernova_swap": "English बोलना सीखो Confidence के साथ"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.9720836
+}

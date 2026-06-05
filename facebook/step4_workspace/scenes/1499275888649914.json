@@ -1,0 +1,67 @@
+{
+  "competitor_id": "1499275888649914",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "mixed",
+    "production_notes": "Screencast of an app interface with a digitally composited human finger. The background illustrations, particularly the highly polished portrait in the second half, exhibit the typical aesthetic of AI-generated imagery.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Background illustration subject",
+        "appearance": "Young woman with a fair complexion and long, wavy brown hair. She has soft, symmetrical facial features.",
+        "wardrobe": "A low-cut, ornate, light-colored dress with intricate lace detailing.",
+        "demeanor": "Serene, gazing directly at the viewer with a soft, slightly seductive expression."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.5,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Black and white illustration",
+        "setting": "Dimly lit room, graphic novel style",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A black and white illustration depicting two women in a dimly lit room. In the foreground, a woman looks back over her shoulder with a concerned expression. In the background, another woman stands near an open doorway, gesturing inwards. The art style resembles a classic book illustration.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An app interface overlays a black and white illustration. A human finger enters the frame and taps on specific words in the English text displayed over the image. Tapping a word triggers a pop-up showing its Turkish translation and pronunciation.",
+        "audio_transcript": "Unknown speaker says: Come, my dear girl, there is nothing here that should frighten you.\nUnknown speaker says: But... what am I to do?",
+        "on_screen_text": "G\u00dcNDE SADECE 10 DAK\u0130KA K\u0130TAPLARLA \u0130NG\u0130L\u0130ZCE \u00d6\u011eRENEB\u0130L\u0130RS\u0130N (You can learn English with books in just 10 minutes a day)\n\u00d6\u011fretmenler taraf\u0131ndan \u00f6nerildi (Recommended by teachers)\nOku (Read)\nDinle (Listen)\n\u00c7evir (Translate)\n+150 yeni kelime (+150 new words)\nCome, my dear girl, there is nothing here that should frighten you.\nBut... what am I to do?\nto frighten\n[tu \u02c8fra\u026atn]\nkorkutmak\nBiliyorum (I know)\n\u00d6\u011frenmek (To learn)"
+      },
+      {
+        "n": 2,
+        "start_s": 6.5,
+        "end_s": 35.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Color portrait illustration",
+        "setting": "Lavishly decorated room, warm lighting",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A color illustration of Character A sitting in a lavishly decorated room. She is positioned in the center, looking directly forward. The room features warm, golden lighting. In the background, there is a chandelier and a table with a golden goblet.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The background image changes to a color portrait of Character A. The app interface remains, with the English text continuing. The finger continues to tap on various words as they are read aloud, bringing up translation pop-ups. A book title is now visible above the text.",
+        "audio_transcript": "Unknown speaker says: I asked, trembling.\nUnknown speaker says: I stood before her in silence, my cheeks burning and my heart beating faster than ever before.\nUnknown speaker says: Though I could not yet understand the life she hinted at, I felt that the door behind me had already closed, and another\u2014far more mysterious\u2014was opening.",
+        "on_screen_text": "G\u00dcNDE SADECE 10 DAK\u0130KA K\u0130TAPLARLA \u0130NG\u0130L\u0130ZCE \u00d6\u011eRENEB\u0130L\u0130RS\u0130N\n\u00d6\u011fretmenler taraf\u0131ndan \u00f6nerildi\nFanny Hill: Bir Zevk Kad\u0131n\u0131n\u0131n An\u0131lar\u0131\nOku\nDinle\n\u00c7evir\n+151 yeni kelime\nI asked, trembling.\nI stood before her in silence, my cheeks burning and my heart beating faster than ever before.\nThough I could not yet understand the life she hinted at, I felt that the door behind me had already closed, and another\u2014far more mysterious\u2014was opening.\nto tremble\n[tu \u02c8tr\u025bmb\u0259l]\ntitremek\ncheek\n[t\u0283i\u02d0k]\nyanak\nto beat\n[tu bi\u02d0t]\n\u00e7arp(mak)\nyet\n[j\u025bt]\nhen\u00fcz\nto hint\n[tu h\u026ant]\nsezdirmek\nbehind\n[b\u026a\u02c8ha\u026and]\narkas\u0131nda\nmysterious\n[m\u026as\u02c8t\u026ari\u0259s]\ngizemli"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.3010976
+}

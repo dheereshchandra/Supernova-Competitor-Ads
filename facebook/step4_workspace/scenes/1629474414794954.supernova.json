@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1629474414794954",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, fair complexion, blonde hair parted in the middle. Smooth, symmetrical facial features.",
+        "wardrobe": "Light blue collared shirt.",
+        "demeanor": "Calm, professional, and static."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young female, fair complexion, dark hair pulled back tightly. Expressive facial features.",
+        "wardrobe": "Maroon knit sweater, gold necklace, and small hoop earrings.",
+        "demeanor": "Expressive, slightly anxious but eager."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Split-screen Conversation",
+        "supernova_script": "Character B says: We need to discuss about the budget [We need to discuss about the budget]\nCharacter A says: Careful, English में हम सिर्फ \"discuss the budget\" कहते हैं। [Careful, in English we just say \"discuss the budget\".]\nCharacter B says: OK, let's discuss the budget [OK, let's discuss the budget]\nCharacter B says: I don't understand good this report [I don't understand good this report]\nCharacter A says: इसे ऐसे कहो: \"I don't understand this report well.\" [Say it like this: \"I don't understand this report well.\"]\nCharacter B says: I don't understand this report well [I don't understand this report well]\nCharacter B says: सच बताऊँ? Office में मुझसे रोज़ ऐसी ग़लतियाँ होती हैं। [Honestly? I make mistakes like this every day at the office.]\nCharacter B says: बाकी सब इतने confident लगते हैं, और मुझे बहुत घबराहट होती है। [Everyone else seems so confident, and I feel very nervous.]\nCharacter A says: इसीलिए रोज़ speaking practice करना ज़रूरी है। [That's why doing daily speaking practice is important.]\nCharacter B says: हाँ, पर tutors के लिए मेरे पास time और ज़्यादा पैसे नहीं हैं। [Yes, but I don't have time and a lot of money for tutors.]\nCharacter A says: तो मेरे साथ practice करो, तुम्हारी AI tutor. [Then practice with me, your AI tutor.]\nCharacter A says: मैं हमेशा available हूँ, और तुम्हारी ग़लतियाँ सुधारने में मदद करूंगी। [I am always available, and will help correct your mistakes.]\nCharacter B says: मुझे अपनी job के लिए बस यही चाहिए! [This is exactly what I need for my job!]\nCharacter A says: Supernova download करो और हम रोज़ practice करेंगे। [Download Supernova and we will practice every day.]\nCharacter B says: OK, मैं आज ही Supernova download करती हूँ। [OK, I will download Supernova today.]",
+        "scene_summary": "- Hooks the viewer with a relatable workplace English mistake.\n- Highlights the emotional pain point of feeling nervous around confident colleagues.\n- Introduces the AI tutor as an accessible, affordable, and judgment-free solution.\n- Ends with a clear call-to-action to download Supernova.",
+        "supernova_on_screen_text": "We need to discuss about the budget\nCareful, English में हम सिर्फ \"discuss the budget\" कहते हैं\nOK, let's discuss the budget\nI don't understand good this report\nइसे ऐसे कहो: \"I don't understand this report well\"\nI don't understand this report well\nसच बताऊँ? Office में मुझसे रोज़ ऐसी ग़लतियाँ होती हैं\nबाकी सब इतने confident लगते हैं, और मुझे बहुत घबराहट होती है\nइसीलिए रोज़ speaking practice करना ज़रूरी है\nहाँ, पर tutors के लिए मेरे पास time और ज़्यादा पैसे नहीं हैं\nतो मेरे साथ practice करो, तुम्हारी AI tutor\nहमेशा available, हमेशा तुम्हारी मदद के लिए\nमुझे अपनी job के लिए बस यही चाहिए!\nSupernova download करो और हम रोज़ practice करेंगे\nOK, मैं आज ही Supernova download करती हूँ"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the Supernova brand logo and core value proposition.\n- Provides a clear final call-to-action to download the app.\n- Removes aggressive sales tactics to maintain a supportive brand tone.",
+        "supernova_on_screen_text": "Supernova App\nAI-powered English coach\nDOWNLOAD"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "FLASH SALE 50% SHOP NOW",
+        "supernova_swap": "[removed]"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658780.5380316
+}

@@ -1,0 +1,157 @@
+{
+  "competitor_id": "971476452303674",
+  "parsed": {
+    "duration_s": 29.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human presenter with natural movements, expressions, and lighting. There are no AI artifacts like distorted fingers or uncanny facial features.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female, slim build, fair complexion, long straight brown hair. She has expressive facial features and natural makeup.",
+        "wardrobe": "Black long-sleeve top, large silver over-ear headphones, and a silver watch on her left wrist.",
+        "demeanor": "Enthusiastic, informative, and engaging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Introduction to Accent Discrimination",
+        "setting": "Indoor room, bright daylight, green potted plants, colorful abstract painting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is seated indoors, positioned on the right side of the frame. She is facing slightly left towards a black microphone mounted on an arm. She actively gestures with her hands as she speaks. Behind her, there are several green potted plants and a framed abstract artwork with pink and yellow shapes. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows Character A speaking into a microphone in a well-lit room with plants. Text captions appear dynamically on screen as she speaks. A brand logo is visible in the top right corner.",
+        "audio_transcript": "Character A says: No one tells you this if you're an immigrant, but accent discrimination is a real thing.\nCharacter A says: There's this AI tool called BoldVoice.\nCharacter A says: It's an app.\nCharacter A says: The AI gives you real-time feedback on your pronunciation.",
+        "on_screen_text": "No one tells you this if you're an immigrant, but accent discrimination is a real thing. There's this AI tool called BoldVoice. It's an app. The AI gives you real-time feedback on your pronunciation."
+      },
+      {
+        "n": 2,
+        "start_s": 10.5,
+        "end_s": 14.5,
+        "screenshot_at_s": 12.5,
+        "scene_label": "Practicing Pronunciation",
+        "setting": "Indoor room, bright daylight, green potted plants, colorful abstract painting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A is seated indoors, holding a silver smartphone in her left hand. She looks down at the phone screen and speaks into it. A black microphone is positioned in front of her. The background features green potted plants and a colorful abstract painting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A vertical rectangular panel.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Character A is holding her phone and practicing a word. An inset panel on the left shows a screencast of the app interface analyzing her speech. Text captions continue to appear on screen.",
+        "audio_transcript": "Character A says: water.\nCharacter A says: my \"t\" sound was not quite right.\nCharacter A says: water.\nCharacter A says: Correct!",
+        "on_screen_text": "water. my \"t\" sound was not quite right. water. Correct!"
+      },
+      {
+        "n": 3,
+        "start_s": 14.5,
+        "end_s": 22.5,
+        "screenshot_at_s": 18.5,
+        "scene_label": "Personalized Plan Explanation",
+        "setting": "Indoor room, bright daylight, green potted plants, colorful abstract painting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A is seated indoors, speaking and gesturing with her hands. A black microphone is positioned in front of her. The background features green potted plants and a colorful abstract painting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A vertical rectangular panel.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Character A continues to speak into the microphone. An inset panel on the left displays various screens of the app interface showing progress and personalized plans. Text captions appear on screen.",
+        "audio_transcript": "Character A says: It personalizes your plan based on your accent test results and native language.\nCharacter A says: So, that it can target the unique sounds that are difficult for you.",
+        "on_screen_text": "It personalizes your plan based on your accent test results and native language. So, that it can target the unique sounds that are difficult for you."
+      },
+      {
+        "n": 4,
+        "start_s": 22.5,
+        "end_s": 27.5,
+        "screenshot_at_s": 25.0,
+        "scene_label": "Video Coaches",
+        "setting": "Indoor room, bright daylight, green potted plants, colorful abstract painting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A is seated indoors, speaking and gesturing with her hands. A black microphone is positioned in front of her. The background features green potted plants and a colorful abstract painting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A vertical rectangular panel showing a sequence of different people speaking directly to the camera. The people are framed from the chest up against plain backgrounds, clearly articulating words with their mouths.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Character A speaks into the microphone. An inset panel on the left shows video clips of different coaches demonstrating pronunciation. Text captions appear on screen.",
+        "audio_transcript": "Character A says: You get to learn from Harvard-trained coaches who show you how to pronounce each word correctly.",
+        "on_screen_text": "You get to learn from Harvard-trained coaches who show you how to pronounce each word correctly."
+      },
+      {
+        "n": 5,
+        "start_s": 27.5,
+        "end_s": 29.0,
+        "screenshot_at_s": 28.0,
+        "scene_label": "End Card",
+        "setting": "Dark background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A dark end card displays the app's star rating, logo, App Store badge, and a call to action offering a free trial.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "27,000 STAR RATING BoldVoice Download on the App Store Speak English Confidently Get your first 7 days free"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779986084.7945902
+}

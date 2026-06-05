@@ -1,0 +1,46 @@
+{
+  "competitor_id": "979523084446611",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter and learner",
+        "appearance": "Young woman with a slim build and fair complexion. She has long brown hair styled in a side braid and expressive facial features.",
+        "wardrobe": "Wears a white long-sleeve shirt in the first scene, and a light blue v-neck scrub-style top in the second scene.",
+        "demeanor": "Energetic, expressive, and relatable."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young woman with a fair complexion, auburn/red hair pulled back, and large expressive brown eyes. She has flawless, stylized skin.",
+        "wardrobe": "Wears a solid grey long-sleeve turtleneck sweater.",
+        "demeanor": "Friendly, patient, and attentive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Motorcycle Intro",
+        "supernova_script": "Character A says: \"I am fine\", \"Thank you\", \"I don't know\" बोलना बंद करो। [Stop saying \"I am fine\", \"Thank you\", \"I don't know\".]\nCharacter A says: ये बहुत basic है। [It's very basic.]\nCharacter A says: पहले मेरी English भी ऐसी ही थी। [Earlier, my English was just like this.]\nCharacter A says: फिर मैंने Supernova के साथ practice शुरू की। [Then I started practicing with Supernova.]\nCharacter A says: रुको, मैं दिखाती हूँ। [Wait, let me show you.]",
+        "scene_summary": "- Hooks the viewer by calling out common, basic English phrases that learners overuse.\n- Builds empathy by having the presenter admit she used to speak the same way.\n- Introduces Supernova as the practical solution and sets up a live demonstration.",
+        "supernova_on_screen_text": "STOP SAYING\n\"I am fine\"\n\"Thank you\"\n\"I don't know\"\nये बहुत basic है।\nपहले मेरी English भी ऐसी ही थी।\nफिर मैंने Supernova के साथ practice शुरू की।\nरुको, मैं दिखाती हूँ।"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demo Split Screen",
+        "supernova_script": "Character A says: Sorry, मेरी English अच्छी नहीं है। [Sorry, my English is not good.]\nCharacter B says: आपको रोज़ practice करनी चाहिए। [You should practice everyday.]\nCharacter A says: पर practice किसके साथ करूँ? [But who do I practice with?]\nCharacter B says: उसी के लिए तो मैं हूँ। मैं Supernova हूँ, आपकी AI English tutor. [That's exactly what I am here for. I am Supernova, your AI English tutor.]\nCharacter A says: मैं आपसे बात कर सकती हूँ? [I can speak with you?]\nCharacter B says: हाँ, मैं आपसे बात करूँगी, आपकी pronunciation ठीक करूँगी, और हर conversation के साथ आपकी English बेहतर होगी। [Yes, I will talk to you, correct your pronunciation, and with every conversation your English will get better.]\nCharacter A says: पर मैं बहुत mistakes करती हूँ। [But I make a lot of mistakes.]\nCharacter B says: Mistakes की tension मत लो, मैं आपको सही तरीके से guide करूँगी। [Don't worry about mistakes, I will guide you the right way.]\nCharacter A says: ये सही है! [This is great!]\nCharacter B says: चलो रोज़ साथ practice करते हैं, फिर देखना आपकी English कितनी जल्दी improve होती है। [Let's practice together everyday, then see how quickly your English improves.]",
+        "scene_summary": "- Highlights the core pain point for Indian learners: not having a partner to practice English with.\n- Positions the Supernova AI tutor as a safe, judgment-free space to make mistakes and learn.\n- Emphasizes practical features like instant pronunciation feedback and daily conversational practice.",
+        "supernova_on_screen_text": "Sorry, मेरी English अच्छी नहीं है।\nआपको रोज़ practice करनी चाहिए।\nपर practice किसके साथ करूँ?\nउसी के लिए तो मैं हूँ।\nमैं Supernova हूँ, आपकी AI English tutor.\nमैं आपसे बात कर सकती हूँ?\nहाँ, मैं आपसे बात करूँगी\nआपकी pronunciation ठीक करूँगी\nऔर हर conversation के साथ आपकी English बेहतर होगी।\nपर मैं बहुत mistakes करती हूँ।\nMistakes की tension मत लो\nमैं आपको सही तरीके से guide करूँगी।\nये सही है!\nचलो रोज़ साथ practice करते हैं\nफिर देखना आपकी English कितनी जल्दी improve होती है।\nSupernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Loora",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889200.0694892
+}

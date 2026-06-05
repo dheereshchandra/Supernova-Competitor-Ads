@@ -1,0 +1,141 @@
+{
+  "competitor_id": "2956993031298495",
+  "parsed": {
+    "duration_s": 75.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human-recorded footage for the initial interview with a 3D-animated/AI-generated robot character. In the split-screen segment, the human subject's lip movements appear AI-manipulated or dubbed to match the English audio, lacking natural synchronization.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult, slim build, fair complexion, blonde hair with bangs. Distinguishing marks: tattoos on her left arm.",
+        "wardrobe": "White short-sleeve crop top, light blue jeans, silver cross necklace.",
+        "demeanor": "Energetic, inquisitive, professional."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Middle-aged, medium build, brown complexion.",
+        "wardrobe": "Beige and brown patterned hijab and matching traditional dress (salwar kameez).",
+        "demeanor": "Initially hesitant, then confident, happy, and engaged."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "White, humanoid robot with a smooth metallic face, blue eyes, and a glowing blue circular core on its chest.",
+        "wardrobe": "None (robot body).",
+        "demeanor": "Calm, helpful, friendly, robotic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 18.5,
+        "screenshot_at_s": 9.0,
+        "scene_label": "London Eye Interview",
+        "setting": "Inside a glass observation pod on the London Eye, daytime. Big Ben and the River Thames visible in the background. Bright, natural lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot, two-shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with blonde hair and tattoos on her arm stands on the right, holding a black microphone towards a middle-aged woman on the left. The middle-aged woman is wearing a patterned hijab and traditional dress. They are inside a glass-walled observation pod. Through the glass, a river, a bridge, and a large clock tower are visible in the background under a clear sky. Other people are blurred in the background of the pod. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a street-style interview taking place inside a London Eye pod. The interviewer asks questions, and the interviewee responds, explaining her past struggles with English and how an app helped her. Text overlays show the dialogue.",
+        "audio_transcript": "Character A: What did your English being bad actually stop you from doing?\nCharacter B: Everything. I couldn't go to the shop alone. I couldn't talk to my kids' teacher. I couldn't make a phone call without asking my husband first.\nCharacter A: So what changed?\nCharacter B: My sister-in-law showed me this app. It's like having an English teacher on your phone. Now I handle everything myself. Let me show you.",
+        "on_screen_text": "What did your English being bad actually stop you from doing? \ud83c\uddec\ud83c\udde7\nEverything.\nI couldn't go to the shop alone.\nI couldn't talk to my kids' teacher.\nI couldn't make a phone call without asking my husband first.\nSo what changed?\nMy sister-in-law showed me this app.\nIt's like having an English teacher on your phone.\nNow I handle everything myself.\nLet me show you.\nLearna AI"
+      },
+      {
+        "n": 2,
+        "start_s": 18.5,
+        "end_s": 32.5,
+        "screenshot_at_s": 25.0,
+        "scene_label": "App Introduction",
+        "setting": "Abstract/blurred interior background. Studio-like lighting.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A white, humanoid robot with a glowing blue circular core on its chest stands on the left side of the frame. It has a smooth, metallic face with blue eyes. To the right of the robot, a large smartphone is displayed vertically. The background is a blurred, indistinct interior setting. The lighting is studio-like, highlighting the robot and the phone.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A 3D animated robot introduces the language learning app. A smartphone screen appears next to the robot, displaying various features of the app, including the app store page, the main interface, and a selection of AI tutors. Text overlays emphasize the app's benefits.",
+        "audio_transcript": "Character C: Wait. Did you know you can speak English like a native in just one week? It's not magic, it's Learna, the app that corrects you as you speak and teaches you without you even noticing. Let's try it together.",
+        "on_screen_text": "Wait.\nDid you know you can speak English like a native in just 1 week?\nIt's not magic,\nit's Learna, the app\nthat corrects you as you speak\nand teaches you without you even noticing.\nLet's try it together.\nLearna AI\nSPEAK ENGLISH LIKE A NATIVE IN JUST 1 WEEK!\nSpeak English: Learna AI Tutor\nWOW, This is the most effective way of learning English!!\nBeginner\nGreetings\nJobs\nIntroductions I\nSelect Your Tutor\nMateo\nHazel\nSkye\nJasmine\nLogan\nCharlotte\nHarry"
+      },
+      {
+        "n": 3,
+        "start_s": 32.5,
+        "end_s": 72.0,
+        "screenshot_at_s": 50.0,
+        "scene_label": "AI Tutor Practice",
+        "setting": "Split screen. Top: solid black background. Bottom: Inside the London Eye pod, daytime.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "Split-screen. Top: close-up. Bottom: medium close-up.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A close-up of a white, humanoid robot's head and shoulders against a solid black background. The robot has a smooth face, blue eyes, and a glowing blue circle on its chest. Concentric white sound wave graphics emanate from the robot's head.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A middle-aged woman wearing a patterned hijab and traditional dress stands facing forward. She is inside a glass-walled observation pod. Through the glass behind her, a river, a bridge, and a large clock tower are visible under a clear sky. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half shows the AI robot tutor, and the bottom half shows the woman from the interview. They engage in a simulated conversation where the AI corrects her English. Text overlays display their dialogue.",
+        "audio_transcript": "Character C: Do you speak English?\nCharacter B: A little bit.\nCharacter C: Where do you live?\nCharacter B: I am London.\nCharacter C: Almost. You should say, I live in London.\nCharacter B: I always mix that up.\nCharacter C: That is exactly why I am here to help you speak correctly.\nCharacter B: But I don't have any money.\nCharacter C: You don't need money. With Learna, you can practice English for free. It is not like other expensive apps or courses.\nCharacter B: Are you serious?\nCharacter C: Absolutely. No tricks, just real conversation practice with your AI tutor.\nCharacter B: Like, a real tutor?\nCharacter C: Yes, I correct your grammar, your pronunciation, and help you speak with confidence.\nCharacter B: Okay. I am going to download Learna right now.\nCharacter C: Great decision. Let's speak English together.",
+        "on_screen_text": "Do you speak English?\nA little bit.\nWhere do you live?\nI am London.\nAlmost.\nYou should say, I live in London.\nI always mix that up.\nThat is exactly why I am here to help you speak correctly.\nBut I don't have any money.\nYou don't need money.\nWith Learna, you can practice English for free.\nIt is not like other expensive apps or courses.\nAre you serious?\nAbsolutely.\nNo tricks, just real conversation practice with your AI tutor.\nLike, a real tutor?\nYes, I correct your grammar, your pronunciation, and help you speak with confidence.\nOkay.\nI am going to download Learna right now.\nGreat decision.\nLet's speak English together.\nLearna AI"
+      },
+      {
+        "n": 4,
+        "start_s": 72.0,
+        "end_s": 75.0,
+        "screenshot_at_s": 73.5,
+        "scene_label": "End Card",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark blue background. In the center, there is a square app icon featuring the face of a white humanoid robot.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A standard end card with a solid blue background. It displays the app icon, the app name, a call to action to download, and badges for the Apple App Store and Google Play Store.",
+        "audio_transcript": "Unknown speaker: Download now and start practicing.",
+        "on_screen_text": "DOWNLOAD NOW! START PRACTICING\nLearna\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780125081.0047371
+}

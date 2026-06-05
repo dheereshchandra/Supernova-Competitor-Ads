@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1412725307545214",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, light brown complexion, dark hair tied back with some loose strands. She has dark eyes and red nail polish.",
+        "wardrobe": "Dark grey or black long-sleeved top with a buttoned neckline.",
+        "demeanor": "Engaged, slightly hesitant at first, then surprised and convinced."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated 3D avatar of a young female with bright red, wavy hair and green eyes.",
+        "wardrobe": "White t-shirt.",
+        "demeanor": "Friendly, encouraging, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Language Practice",
+        "supernova_script": "B says: क्या आप English बोलती हैं? [Do you speak English?]\nA says: Uh, थोड़ी-थोड़ी, Tarzan style. [Uh, a little bit, Tarzan style.]\nB says: Can you at least say your name? [Can you at least say your name?]\nA says: My name is Jenny. [My name is Jenny.]\nB says: Nice. Where are you from? [Nice. Where are you from?]\nA says: I am France. [I am France.]\nB says: आपने कहा \"I am France.\" Close though! Try: \"I am from France.\" [You said \"I am France.\" Close though! Try: \"I am from France.\"]\nA says: Okay, I am from France. I'm France... No... wait, I am from France. [Okay, I am from France. I'm France... No... wait, I am from France.]\nB says: There you go! [There you go!]\nA says: Hey, मैं अपनी English कैसे improve करूँगी? [Hey, how am I going to improve my English?]\nB says: Daily conversation practice बहुत ज़रूरी है. [Daily conversation practice is very important.]\nA says: But मेरी इतनी ख़राब English के साथ मैं किससे बात करूँगी? [But who am I going to speak with this bad English?]\nB says: मेरे साथ, of course! [With me, of course!]\nA says: तुम्हारे साथ? [With you?]\nB says: Supernova के AI English teachers के बारे में नहीं सुना? आप बिना किसी को bore किए जितनी चाहें ग़लतियाँ कर सकती हैं. [Haven't you heard of Supernova's AI English teachers? You can make as many mistakes as you want without boring anyone.]\nA says: Wait, ये तो सच में काम कर सकता है. तुमने मुझे दो seconds में कुछ सिखा दिया. [Wait, that could actually work. You just taught me something in two seconds.]\nB says: हम सिर्फ़ रटने वाले apps की तरह नहीं हैं. Supernova download करो और ख़ुद देखो. [We're not like those rote-learning apps. Download Supernova and see for yourself.]\nA says: Oh, you know what, fair enough. मैं अभी Supernova download कर रही हूँ! Let's go. [Oh, you know what, fair enough. I'm downloading Supernova right now! Let's go.]",
+        "scene_summary": "- Hooks the viewer with a relatable, slightly humorous English mistake.\n- Demonstrates the AI tutor's gentle correction in real-time.\n- Addresses the core user anxiety: \"Who will I practice with if my English is bad?\"\n- Positions the AI tutor as a safe, non-judgmental space for practice.",
+        "supernova_on_screen_text": "क्या आप English बोलती हैं?\nUh, थोड़ी-थोड़ी, Tarzan style.\nCan you at least say your name?\nMy name is Jenny.\nNice. Where are you from?\nI am France.\nआपने कहा \"I am France.\"\nClose though! Try:\n\"I am from France.\"\nOkay,\nI am from France.\nI'm France.\nNo... wait,\nI am from France.\nThere you go!\nHey,\nमैं अपनी English कैसे\nimprove करूँगी?\nDaily conversation\npractice बहुत ज़रूरी है.\nBut मेरी इतनी ख़राब English के साथ\nमैं किससे बात करूँगी?\nमेरे साथ, of course!\nतुम्हारे साथ?\nSupernova के\nAI English teachers के बारे में नहीं सुना?\nआप बिना किसी को bore किए\nजितनी चाहें ग़लतियाँ कर सकती हैं.\nWait,\nये तो सच में काम कर सकता है.\nतुमने मुझे दो seconds में\nकुछ सिखा दिया.\nहम सिर्फ़ रटने वाले\napps की तरह नहीं हैं.\nSupernova download करो\nऔर ख़ुद देखो.\nOh,\nYou know what,\nfair enough.\nमैं अभी Supernova\ndownload कर रही हूँ!\nLet's go."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear call-to-action.\n- Shows brand logo and app store availability.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630879.6484077
+}

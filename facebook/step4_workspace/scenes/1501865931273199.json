@@ -1,0 +1,78 @@
+{
+  "competitor_id": "1501865931273199",
+  "parsed": {
+    "duration_s": 39.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video consists of standard interview footage with natural lighting, realistic human movements, and authentic b-roll clips. There are no signs of AI generation such as uncanny features or unnatural physics.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Interviewee 1",
+        "appearance": "Older Asian male, medium build, light complexion. He has short white hair and wears glasses.",
+        "wardrobe": "Dark suit jacket, white dress shirt, and a blue tie.",
+        "demeanor": "Thoughtful and expressive, using hand gestures to emphasize points."
+      },
+      {
+        "id": "B",
+        "role": "Interviewee 2",
+        "appearance": "Younger South Asian male, medium build, brown complexion. He has short black hair and a full beard.",
+        "wardrobe": "Black short-sleeved polo shirt.",
+        "demeanor": "Enthusiastic and articulate, holding a microphone and gesturing while speaking."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 18.5,
+        "screenshot_at_s": 9.0,
+        "scene_label": "The Typing Problem",
+        "setting": "Interview studio with a blue paneled wall and a US flag; various b-roll locations.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits in a chair, gesturing with both hands. The background is a blue wall with a US flag. The shot intercuts with several brief clips: a circular space station floating in space, a close-up of fingers typing on a white keyboard, two open laptops positioned back-to-back, a macro shot of an eye reflecting a screen, and vintage grainy footage of a man typing at a desk.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A is interviewed against a blue background, with his speech captioned on screen. His statements are illustrated with quick b-roll cuts of space, keyboards, laptops, and vintage office footage, all overlaid with the same caption style.",
+        "audio_transcript": "Character A says: We have lots and lots of imaginations of all the things that we can do.\nCharacter A says: If we just didn't have to type anymore, we could go and do those things.\nCharacter A says: And so maybe it's just because in the last 50 years, this one little device with a keyboard on it consumed all of our lives to the point where we just can't imagine living without typing anymore.",
+        "on_screen_text": "We have lots and lots of imaginations of all the things that we can do. If we just didn't have to type anymore, we could go and do those things. And so maybe it's just because in the last 50 years, this one little device with a keyboard on it consumed all of our lives to the point where we just can't imagine living without typing anymore."
+      },
+      {
+        "n": 2,
+        "start_s": 18.5,
+        "end_s": 39.0,
+        "screenshot_at_s": 25.0,
+        "scene_label": "The Wispr Flow Solution",
+        "setting": "Interview setting with green plants in the background; solid black screen.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B holds a microphone in his right hand and gestures with his left hand while speaking. He is seated in front of a background with green leafy plants. The shot briefly cuts to a solid black screen before returning to Character B continuing his explanation.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character B speaks into a microphone in a relaxed setting, with his words captioned on screen. The video cuts to a black screen where text is typed out to demonstrate the product's capability, then cuts back to Character B finishing his point.",
+        "audio_transcript": "Character B says: The magic that Wispr Flow has really comes from the fact that it doesn't transcribe everything you're saying word for word.\nCharacter B says: It actually understands what you're trying to communicate and then puts that down.\nCharacter B says: If I say, \"Hey Sean, let's meet at 5:00, actually, you know what, let's do 6:00 p.m.,\" Wispr will write, \"Hey Sean, let's meet at 6:00 p.m.\"\nCharacter B says: At the heart of it, it lets you speak and think at the same time, and it puts everything down in the most structured and concise way that makes you feel understood.",
+        "on_screen_text": "The magic that Wispr Flow has really comes from the fact that it doesn't transcribe everything you're saying word for word. It actually understands what you're trying to communicate and then puts that down. if I say, \"Hey Sean, let's meet at 5:00, actually, you know what, let's do 6:00 p.m.,\" Wispr will write, \"Hey Sean, let's meet at 6:00 p.m.\" At the heart of it, it lets you speak and think at the same time, and it puts everything down in the most structured and concise way that makes you feel understood."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.235355
+}

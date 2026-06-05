@@ -1,0 +1,53 @@
+{
+  "competitor_id": "1714159199581150",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female, young adult, fair complexion, short dark hair. She has a glowing blue star symbol on her forehead.",
+        "wardrobe": "Futuristic, form-fitting blue suit with gold accents.",
+        "demeanor": "Calm, friendly, and slightly robotic."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Male, young adult, medium build, brown complexion, short dark hair, beard.",
+        "wardrobe": "White button-down shirt.",
+        "demeanor": "Expressive, slightly frustrated or confused."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI Tutor Conversation",
+        "supernova_script": "Character B says: यू सी वेरी ब्यूटीफुल। [You see very beautiful.]\nCharacter A says: रॉंग। इंस्टेड से, यू लुक वेरी ब्यूटीफुल। [Wrong. Instead say, you look very beautiful.]\nCharacter B says: कैसे सीखूं इंग्लिश? हर बार गलत इंग्लिश बोल कर इम्प्रेस्शन ख़राब हो जाता है। [How do I learn English? Every time I speak wrong English, my impression gets ruined.]\nCharacter A says: बिल्कुल टेंशन मत लो। मैं हूँ Supernova ऐप पर तुम्हारी AI ट्यूटर। मेरे साथ रोज़ बोल कर प्रैक्टिस करो, और अपना कॉन्फिडेंस बढ़ाओ। [Don't worry at all. I am your AI tutor on the Supernova app. Practice speaking with me daily, and build your confidence.]\nCharacter B says: पर कैसे? ना टाइम है ना पैसे। [But how? I have neither time nor money.]\nCharacter A says: बस Supernova ऐप डाउनलोड करो। रोज़ सिर्फ दस मिनट मेरे साथ रियल-लाइफ सिचुएशंस की प्रैक्टिस करो, वो भी एकदम अफोर्डेबल। मैं तुम्हारी गलतियां तुरंत सुधारूंगी, बिना किसी जजमेंट के। [Just download the Supernova app. Practice real-life situations with me for just 10 minutes daily, that too completely affordable. I will correct your mistakes instantly, without any judgment.]",
+        "scene_summary": "- Hooks the viewer with a relatable, common English mistake and the embarrassment it causes.\n- Introduces the Supernova AI tutor as a warm, non-judgmental solution to build confidence.\n- Overcomes the 'time and money' objection by highlighting 10-minute daily practice and affordable pricing.",
+        "supernova_on_screen_text": "You see very beautiful ❌\nYou look very beautiful ✅"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Install CTA",
+        "supernova_script": "Character B says: तो अभी इनस्टॉल बटन पे क्लिक करो और Supernova ऐप डाउनलोड करो। [So click on the install button now and download the Supernova app.]",
+        "scene_summary": "- Delivers a clear, direct Call to Action (CTA).\n- Encourages immediate app download from the user.",
+        "supernova_on_screen_text": "Supernova\nINSTALL NOW"
+      },
+      {
+        "n": 3,
+        "scene_label": "Disclaimer",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides standard legal disclaimers.\n- Sets realistic expectations regarding learning outcomes and individual effort.",
+        "supernova_on_screen_text": "Supernova kisi bhi government authority institution brand, organisation ya individual ke dwara endorsed, sponsored, affiliated ya associated nahi hai. Kisi bhi names trademarks logos ya references ka use sirf educational aur informational purposes ke liye kiya gaya hai Kuch content sirf samjhane ke liye dramatised ya representational ho sakta hai Supernova kisi bhi guaranteed results ka promise nahi karta Outcomes individual effort aur doosre factors par depend karte hain aur vary kar sakte hain."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "English Seekho",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779858634.0799112
+}

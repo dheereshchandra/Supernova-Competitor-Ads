@@ -1,0 +1,54 @@
+{
+  "competitor_id": "1757405299002125",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot",
+        "appearance": "Green cartoon owl. Large white eyes with black pupils. Orange beak and feet.",
+        "wardrobe": "None.",
+        "demeanor": "Expressive, transitions from angry to joyful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Angry Duo Zoom",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Hooks the viewer with a relatable feeling of frustration (often associated with struggling to speak English).\n- Uses a fast zoom to build sudden dramatic tension.",
+        "supernova_on_screen_text": ""
+      },
+      {
+        "n": 2,
+        "scene_label": "Happy Duo and CTA",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Resolves the tension by showing a happy, surprised expression.\n- Introduces the core value proposition of quick, daily practice.\n- Provides a clear, actionable button click visual.",
+        "supernova_on_screen_text": "रोज़ 10 मिनट में English बोलना सीखें [Learn to speak English in 10 minutes daily]\nSTART PRACTICING"
+      },
+      {
+        "n": 3,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the brand logo and core tagline clearly.\n- Shows app store badges to build trust and direct the user on where to download.\n- Delivers the final Call to Action.",
+        "supernova_on_screen_text": "Supernova\nConfidence के साथ English बोलें [Speak English with confidence]\nDownload on the App Store\nGET IT ON Google Play\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "duolingo",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "LEARN FOR FREE",
+        "supernova_swap": "START PRACTICING / DOWNLOAD NOW"
+      },
+      {
+        "competitor_brand": "The world's #1 learning app.",
+        "supernova_swap": "Confidence के साथ English बोलें [Speak English with confidence]"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.9693034
+}

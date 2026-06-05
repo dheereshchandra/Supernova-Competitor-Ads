@@ -1,0 +1,67 @@
+{
+  "competitor_id": "1810377262974963",
+  "parsed": {
+    "duration_s": 29.0,
+    "production_type": "mixed",
+    "production_notes": "The video starts with a human-recorded selfie shot featuring natural lighting and movement. It then transitions to a fully animated, 2D motion graphics sequence typical of app advertisements.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Male, mid-20s, slim build, fair complexion. He has wavy, medium-length brown hair and a prominent mustache. His facial features are expressive.",
+        "wardrobe": "A plain, short-sleeved black t-shirt.",
+        "demeanor": "Enthusiastic and engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.5,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Presenter Intro",
+        "setting": "Indoors, daytime, city view through window",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man with wavy brown hair and a mustache looks directly at the camera. He wears a plain black t-shirt. He stands indoors next to a large window. A bright daytime cityscape with tall buildings and a blue sky is visible through the window. The lighting is natural and bright, illuminating his face.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A young man records himself selfie-style, looking at the camera. Text overlays appear on screen, along with a graphic of a piece of bread and a flag. The man repeatedly says a word, seemingly practicing pronunciation.",
+        "audio_transcript": "Character A says: \ube75 [Bread]\nCharacter A says: \ube75 [Bread]\nCharacter A says: \ube75 [Bread]\nCharacter A says: \ube75 [Bread]\nCharacter A says: \ube75 [Bread]",
+        "on_screen_text": "tired of brainrot games?\nduolingo is here to slap your neurons awake\n\ube75\n\ube75?"
+      },
+      {
+        "n": 2,
+        "start_s": 6.5,
+        "end_s": 29.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "App Features Montage",
+        "setting": "Abstract digital space, white and light blue backgrounds",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A sequence of animated 2D graphics featuring a stylized green owl and various cartoon human and animal characters. The scenes transition rapidly, showing characters interacting, running, and lifting weights. The backgrounds are simple, utilizing solid white or light blue colors with floating geometric shapes and icons. The overall style is flat, colorful, and vector-based.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A fast-paced motion graphics montage displays animated characters and stylized smartphone interfaces. The sequence highlights gamified learning modules and community interaction features. Text overlays emphasize the app's educational value and social aspects, concluding with a brand logo and download prompts.",
+        "audio_transcript": "Unknown speaker says: We turned language, chess, math, and music courses into games where you actually learn.\nUnknown speaker says: Fueled by science (and maybe a dash of witchcraft).\nUnknown speaker says: Join a community where you can cheer each other on (or not...).\nUnknown speaker says: Why waste hours playing mind numbing games when you could be leveling up your brain with friends?\nUnknown speaker says: Start today.",
+        "on_screen_text": "we turned language, chess, math, and music courses into games where you actually learn\nfueled by science (and maybe a dash of witchcraft)\nFRIENDS QUEST\njoin a community where you can cheer each other on\nFEED\nJinu\n10 hours\nCELEBRATE\nGwi-Wa\n3 hours\n(or not...)\nwhy waste hours playing mind numbing games\nwhen you could be leveling up your brain with friends?\nduolingo\nDownload the world's #1 learning app.\nDownload on the App Store\nGET IT ON Google Play\nSTART TODAY"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.1058414
+}

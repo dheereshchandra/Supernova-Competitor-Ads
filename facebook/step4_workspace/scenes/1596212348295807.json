@@ -1,0 +1,101 @@
+{
+  "competitor_id": "1596212348295807",
+  "parsed": {
+    "duration_s": 34.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video uses AI-generated watercolor-style imagery. The animation is limited to unnatural mouth movements and slight head bobs, typical of image-to-video AI tools, and the background in the first scene is completely static.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Learner / Presenter",
+        "appearance": "Young woman, slim build, brown complexion, dark curly shoulder-length hair.",
+        "wardrobe": "Scene 1: grey striped dress. Scene 2: light blue jacket, white collared shirt, dark blue skirt.",
+        "demeanor": "Confident, friendly, and engaging."
+      },
+      {
+        "id": "B",
+        "role": "Friend",
+        "appearance": "Young woman, slim build, fair complexion, brown shoulder-length hair.",
+        "wardrobe": "Light blue jacket over a white shirt and a blue skirt.",
+        "demeanor": "Curious and impressed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Cafe Conversation",
+        "setting": "Cozy cafe or study room, daytime, bookshelves, record player, teacups, warm color palette.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Two women are seated across from each other at a small round cafe table with teacups on it. The woman on the left has dark curly hair and wears a grey striped dress. The woman on the right has brown hair and wears a light blue jacket. They are in a cozy room filled with tall bookshelves, a record player, and framed pictures. The art style is a detailed watercolor illustration. The lighting is warm and soft, creating an inviting atmosphere.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a watercolor illustration of two women talking at a cafe table. Text bubbles appear on screen as they speak, simulating a conversation. A flag and app name are visible at the top of the frame. The camera remains static throughout the scene. The overall composition resembles a stylized comic panel.",
+        "audio_transcript": "Character B says: Your English sounds so natural lately!\nCharacter A says: I finally stopped just 'studying' and started talking.\nCharacter B says: Did you find a private tutor?\nCharacter A says: No, I just use Fluently for 10 minutes a day.",
+        "on_screen_text": "\ud83c\uddfa\ud83c\uddf8 Easy English A2 \ud83c\udfa7\nYour English sounds so natural lately!\nI finally stopped just 'studying'\nand started talking\nDid you find a private tutor?\nNo, I just use Fluently for 10 minutes a day"
+      },
+      {
+        "n": 2,
+        "start_s": 11.5,
+        "end_s": 30.5,
+        "screenshot_at_s": 20.0,
+        "scene_label": "App Pitch",
+        "setting": "Abstract watercolor background, light beige tones.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A woman with dark curly hair stands facing the camera against a plain, light beige watercolor background. She is wearing a light blue buttonless jacket over a white collared shirt and a dark blue skirt. Her hands are clasped in front of her initially, then she gestures slightly. The art style remains a watercolor illustration. The lighting is even and bright.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The woman from the previous scene, now in a different outfit, speaks directly to the camera. She is centered in the frame against a minimal background. Text overlays appear on screen highlighting her key points as she speaks. The animation is limited mostly to her facial features. The shot feels like a direct address to the viewer.",
+        "audio_transcript": "Character A says: Just 10 minutes a day with Fluently is all it takes.\nCharacter A says: In Week 1, you lose the fear of mistakes.\nCharacter A says: In Week 2, you start thinking in English.\nCharacter A says: In Week 4, you're having full confident conversations!\nCharacter A says: Stop 'studying' and start actually talking.",
+        "on_screen_text": "Just 10 minutes a day\nwith Fluently is all it takes\nIn Week 1\nYou lose the fear of mistakes\nIn Week 2\nYou start thinking in English\nIn Week 4\nYou're having full\nconfident conversations!\nStop 'studying' and start\nactually talking"
+      },
+      {
+        "n": 3,
+        "start_s": 30.5,
+        "end_s": 34.0,
+        "screenshot_at_s": 32.0,
+        "scene_label": "End Card",
+        "setting": "Dark purple gradient background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark purple gradient background with no characters, props, or distinct features. The lighting is a simple radial gradient from the center. The scene is entirely static and abstract. It serves as a blank canvas for graphic elements. The overall tone is dark and clean.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A dark purple gradient background fills the screen. The app logo, name, and a tagline appear in the center. A download button is displayed at the bottom. The elements animate slightly as they appear. The scene functions as a standard promotional end card.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power\nEnglish coach\nDOWNLOAD\nNOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.091466
+}

@@ -1,0 +1,145 @@
+{
+  "competitor_id": "1272799508356017",
+  "parsed": {
+    "duration_s": 78.0,
+    "production_type": "mixed",
+    "production_notes": "Scene 1 appears to be a human-recorded viral clip. Subsequent scenes use an AI-generated robot avatar and an AI-generated older woman with unnatural stillness and poor lip-sync against a static background.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Older South Asian woman. Medium build, warm complexion, visible facial wrinkles. Dark hair covered by a scarf in later scenes.",
+        "wardrobe": "Floral patterned top. Wears a brown cardigan in the first scene and a brown headscarf in the third scene.",
+        "demeanor": "Friendly and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Humanoid robot. White glossy casing, blue eyes, glowing blue circular core on the chest.",
+        "wardrobe": "None (robot casing).",
+        "demeanor": "Neutral, helpful, and robotic."
+      },
+      {
+        "id": "C",
+        "role": "interviewer",
+        "appearance": "Young white male. Slim build, short brown hair.",
+        "wardrobe": "Black puffer jacket.",
+        "demeanor": "Energetic and surprised."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 21.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Street Interview",
+        "setting": "Nighttime street, brick houses, yellow streetlights.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Medium shot, handheld.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A group of young men surround Character A on a wet street at night. The men wear casual winter jackets, including puffer styles. Character C stands close to Character A, holding a smartphone near her face. The background features a row of brick terraced houses illuminated by yellow streetlights. The street surface reflects the ambient light, suggesting recent rain. The group appears highly energetic and excited. They are smiling and laughing together.",
+            "characters_in_panel": [
+              "A",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A handheld camera captures a group of young men interacting with an older woman on a street at night. The framing is a medium shot that encompasses the main group. Text captions overlay the center of the screen, displaying the spoken dialogue. The camera movement is slightly shaky, giving it a raw, documentary feel. The overall composition is crowded and dynamic.",
+        "audio_transcript": "Character C says: Oi, oi wait you're telling us you came to the UK only three months ago, and you couldn't speak a word of English, yeah?\nCharacter A says: Yeah, three months ago straight out of Sylhet. Back home the only English I knew was from my textbook but now I'm speaking like a native. Look, the secret to speaking English fluently is to start speaking from day one. And I had the best teacher anyone could ask for, an app called Learna. Let me show you.",
+        "on_screen_text": "Oi, oi wait you're telling us you came to the UK only three months ago,\nand you couldn't speak a word of English, yeah?\nYeah, three months ago straight out of Sylhet.\nBack home the only English I knew was from my textbook\nbut now I'm speaking like a native.\nLook, the secret to speaking English fluently is to\nstart speaking from day one.\nAnd I had the best teacher anyone could ask\nfor, an app called Learna. Let me show you."
+      },
+      {
+        "n": 2,
+        "start_s": 21.0,
+        "end_s": 34.5,
+        "screenshot_at_s": 28.0,
+        "scene_label": "App Intro",
+        "setting": "Blurred indoor background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "Medium close-up.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B stands on the left side of the frame, facing forward. The robot features a glossy white casing and glowing blue eyes. A circular blue light illuminates its chest area. To the right, a large smartphone is positioned vertically. The background is a softly blurred indoor setting. The blurred shapes suggest a modern living room environment. The lighting is bright and even.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "An AI robot stands on the left side of the screen. Next to it, a large, animated smartphone displays various app interfaces and menus. Large, bold text overlays appear dynamically across the screen, emphasizing key phrases. The background is a blurred indoor space. The composition balances the robot character with the informational app display.",
+        "audio_transcript": "Character B says: Wait. Did you know you can speak English like a native in just one week? It's not magic, it's Learna, the app that corrects you as you speak and teaches you without you even noticing. Let's try it together.",
+        "on_screen_text": "Wait.\nDid you know you\ncan speak English\nlike a native\nin just one week?\nIt's not magic,\nit's Learna,\nthe app that corrects\nyou as you speak\nand teaches you\nwithout you even\nnoticing.\nLet's try it\ntogether."
+      },
+      {
+        "n": 3,
+        "start_s": 34.5,
+        "end_s": 74.5,
+        "screenshot_at_s": 50.0,
+        "scene_label": "AI Conversation",
+        "setting": "Top: black background. Bottom: Nighttime street.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Split-screen.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "The head and shoulders of Character B are centered in the frame. The robot faces directly forward with a neutral expression. The background is a solid, deep black. Faint, concentric white circles radiate outward from behind the character's head. The lighting on the robot is stark and highlights its glossy surface.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character A stands facing forward in the center of the frame. She wears a floral patterned top and a brown headscarf. The background consists of a street at night with brick terraced houses. Yellow streetlights cast a warm glow on the buildings. The background appears completely static, lacking any natural movement. The lighting on Character A does not perfectly match the background environment.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene utilizes a horizontal split-screen layout. The top panel shows the AI robot against a black background with radiating white circles. The bottom panel displays the older woman standing on a nighttime street. Text captions appear over both panels, translating the conversation. The static nature of the bottom panel contrasts with the animated elements in the top panel.",
+        "audio_transcript": "Character B says: Do you speak English?\nCharacter A says: A little bit.\nCharacter B says: Where do you live?\nCharacter A says: I am London.\nCharacter B says: Almost. You should say, I live in London.\nCharacter A says: I always mix that up.\nCharacter B says: That is exactly why I am here to help you speak correctly.\nCharacter A says: But I don't have any money.\nCharacter B says: You don't need money. With Learna, you can practice English for free. It is not like other expensive apps or courses.\nCharacter A says: Are you serious?\nCharacter B says: Absolutely. No tricks, just real conversation practice with your AI tutor.\nCharacter A says: Like, a real tutor?\nCharacter B says: Yes, I correct your grammar, your pronunciation, and help you speak with confidence.\nCharacter A says: Okay. I am going to download Learna right now.\nCharacter B says: Great decision. Let's speak English together.",
+        "on_screen_text": "Do you speak English?\nA little bit.\nWhere do you live?\nI am London.\nAlmost.\nYou should say, I live in London.\nI always mix that up.\nThat is exactly why I am here to help\nyou speak correctly.\nBut I don't have any money.\nYou don't need money.\nWith Learna, you can practice English for free.\nIt is not like other\nexpensive apps or courses.\nAre you serious?\nAbsolutely.\nNo tricks, just real\nconversation practice\nwith your AI tutor.\nLike, a real tutor?\nYes,\nI correct your grammar,\nyour pronunciation,\nand help you speak with confidence.\nOkay.\nI am going to download\nLearna right now.\nGreat decision.\nLet's speak English together."
+      },
+      {
+        "n": 4,
+        "start_s": 74.5,
+        "end_s": 78.0,
+        "screenshot_at_s": 76.0,
+        "scene_label": "End Card",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "Graphic layout.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The head and shoulders of Character B are centered in the frame. The robot faces directly forward. The background is a solid, dark blue color. The lighting on the robot is bright and even. The composition is simple and symmetrical.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A solid blue end card is displayed. The AI robot's head is positioned in the center of the screen. App store download buttons are located at the bottom. Promotional text is displayed prominently at the top. The layout is clean and designed to drive user action.",
+        "audio_transcript": "Character B says: Download now and start practicing.",
+        "on_screen_text": "DOWNLOAD NOW!\nSTART PRACTICING\nLearna\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780125081.003927
+}

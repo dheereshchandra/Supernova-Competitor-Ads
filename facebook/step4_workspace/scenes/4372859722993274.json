@@ -1,0 +1,82 @@
+{
+  "competitor_id": "4372859722993274",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "mixed",
+    "production_notes": "The top panel features a human-recorded video of a man in a car. The bottom panel features an AI-generated 3D animated avatar, evident from the stylized, Pixar-like rendering, perfect lighting, and slightly unnatural lip-syncing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "Young adult male, medium build, light complexion. He has short dark hair, a neatly trimmed beard, and dark eyes.",
+        "wardrobe": "Brown crew-neck t-shirt. He wears a white wireless earbud in his right ear.",
+        "demeanor": "Engaged, slightly frustrated initially, then eager and happy as he learns."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character. Young adult, slender build, fair complexion. She has bright orange hair styled in an updo, large green eyes, and a soft, stylized face.",
+        "wardrobe": "Light-colored, possibly white or pale blue, top. She wears small gold hoop earrings.",
+        "demeanor": "Friendly, encouraging, patient, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 36.5,
+        "screenshot_at_s": 18.0,
+        "scene_label": "Italian Lesson in Car",
+        "setting": "Top: Inside a car during the day. Bottom: A cozy, softly lit bedroom with string lights.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is seated in the driver's seat of a car, facing the camera. He is wearing a brown t-shirt and a seatbelt. A white earbud is visible in his right ear. The car interior is visible behind him, with daylight coming through the windows. He is actively speaking and gesturing with his hands.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B, a 3D animated woman with orange hair and green eyes, is centered in the frame. She is in a softly lit room with a bed and string lights in the background. She is looking directly at the camera, smiling, and speaking.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with a man in a car on top and an animated female avatar on the bottom. Text overlays appear in the center, translating the dialogue and providing feedback. A banner of Italian flags is at the very top.",
+        "audio_transcript": "Character A says: Ah, odio l'italiano.\nCharacter B says: Come ti chiami?\nCharacter A says: Mi chiamo Gustavo.\nCharacter B says: Watch your pronunciation. The 'chi' in Italian is a hard K sound. Repeat: Mi chiamo Gustavo.\nCharacter A says: Mi chiamo Gustavo.\nCharacter B says: Quanti anni hai?\nCharacter A says: Sono ventiquattro anni.\nCharacter B says: Good! But note, Italian uses 'ho' to have for age, not 'sono'. Never say 'sono ventiquattro anni', say 'ho ventiquattro anni'.\nCharacter A says: Ho ventiquattro anni.\nCharacter B says: Now answer this: Parli italiano?\nCharacter A says: S\u00ec, parlo italiano.\nCharacter B says: You got it. You're improving fast.\nCharacter A says: Hey! How can I practice my Italian every day?\nCharacter B says: Just download Praktika and talk to AI tutors like me.\nCharacter A says: Alright! I'll download Praktika right now!",
+        "on_screen_text": "Odio l'italiano. (I hate Italian.)\nCome ti chiami? (What's your name?)\nMi chiamo Gustavo. (My name is Gustavo.)\nWatch your pronunciation \u2014\nthe \"chi\" in Italian is a\nhard K sound.\nRepeat:\nMi chiamo Gustavo.\nMi chiamo Gustavo.\nQuanti anni hai? (How old are you?)\nSono 24 anni. (I am 24 years old.)\nGood! But note \u2014\nItalian uses \"ho\"\n(to have) for age,\nnot \"sono.\"\nNever say \"sono 24 anni\"\nsay \"ho 24 anni\"\nHo 24 anni.\nNow answer this:\nParli italiano? (Do you speak Italian?)\nS\u00ec,\nparlo italiano. (I speak Italian.)\nYou got it.\nYou're improving fast.\nHey! how can I practice\nmy Italian every day?\nJust download Praktika\nand talk to AI tutors like me.\nAlright!\nI'll download Praktika\nright now!"
+      },
+      {
+        "n": 2,
+        "start_s": 36.5,
+        "end_s": 38.0,
+        "screenshot_at_s": 37.2,
+        "scene_label": "End Card",
+        "setting": "Solid purple background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid purple background with a slight gradient.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid purple screen displaying the Praktika logo and app store download buttons.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780628849.008358
+}

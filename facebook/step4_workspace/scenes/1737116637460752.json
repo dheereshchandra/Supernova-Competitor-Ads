@@ -1,0 +1,121 @@
+{
+  "competitor_id": "1737116637460752",
+  "parsed": {
+    "duration_s": 14.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in a physical kitchen environment. Lighting, movements, and interactions with physical objects like the coffee maker and stove are natural and consistent with live-action recording.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "language learner",
+        "appearance": "Black male, around 30 years old, bald with a full, well-groomed black beard. Average build.",
+        "wardrobe": "Loose-fitting, solid grey short-sleeve t-shirt. A small black lavalier microphone is clipped to the neckline.",
+        "demeanor": "Relaxed, casual, and engaged in his task while casually practicing a language."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 3.0,
+        "screenshot_at_s": 1.5,
+        "scene_label": "Scooping coffee",
+        "setting": "Kitchen, daytime, white cabinets, light fixture.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A bald Black man with a full beard stands in a kitchen. He wears a loose grey t-shirt with a lavalier microphone clipped to the collar. He holds a small metal filter basket in his left hand and uses a plastic scoop in his right hand to transfer coffee grounds from a clear plastic container into the filter. The kitchen features white cabinets and a light fixture above him.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a man in a kitchen preparing coffee. He is scooping coffee grounds into a filter basket. A text overlay is positioned at the top center of the screen.",
+        "audio_transcript": "Character A says: [fast-forwarded, unintelligible speech]",
+        "on_screen_text": "pov: you become bilingual with THIS app"
+      },
+      {
+        "n": 2,
+        "start_s": 3.0,
+        "end_s": 8.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Assembling Moka pot",
+        "setting": "Kitchen counter, Moka pot, smartphone.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, top-down angle",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up, top-down view of a white kitchen counter. A person's hands are visible, screwing the top half of a metal Moka pot onto its base. To the right of the Moka pot, a smartphone lies flat on the counter, screen facing up. A clear plastic container filled with coffee grounds is partially visible in the upper right background.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The camera focuses closely on the man's hands as he assembles a Moka pot on the counter. A smartphone is lying next to it, displaying an app interface. The text overlay remains at the top.",
+        "audio_transcript": "Unknown speaker says: Perfecto. Entonces, un caf\u00e9 caramelo y unos pastelitos, \u00bfverdad? [Perfect. So, a caramel coffee and some pastries, right?]",
+        "on_screen_text": "pov: you become bilingual with THIS app"
+      },
+      {
+        "n": 3,
+        "start_s": 8.5,
+        "end_s": 11.0,
+        "screenshot_at_s": 9.5,
+        "scene_label": "Responding in Spanish",
+        "setting": "Kitchen, dining area in background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The bald Black man with a beard stands in the kitchen, holding his smartphone in his left hand. He looks slightly off-camera to the left, smiling, and gestures with his right hand as he speaks. He wears the same grey t-shirt with the lavalier microphone. In the background, a dining table, chairs, and a trash can are visible.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The man is shown from the chest up, holding his phone and speaking. He looks relaxed and conversational. The text overlay is still present at the top.",
+        "audio_transcript": "Character A says: Mmm, eso suena como una buena idea, pero no tengo pastelitos ahora mismo. [Mmm, that sounds like a good idea, but I don't have pastries right now.]",
+        "on_screen_text": "pov: you become bilingual with THIS app"
+      },
+      {
+        "n": 4,
+        "start_s": 11.0,
+        "end_s": 14.0,
+        "screenshot_at_s": 12.5,
+        "scene_label": "Turning on stove",
+        "setting": "Kitchen stove.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of a stainless steel kitchen stove. A person's right hand reaches into the frame and turns the middle knob to ignite the burner. The assembled metal Moka pot is visible sitting on the burner in the background.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The camera focuses on the stove knobs as the man's hand turns one to ignite the burner under the Moka pot. The text overlay remains at the top.",
+        "audio_transcript": "[no speech]",
+        "on_screen_text": "pov: you become bilingual with THIS app"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966543.4598918
+}

@@ -1,0 +1,76 @@
+{
+  "competitor_id": "1449273303357626",
+  "parsed": {
+    "duration_s": 24.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in a natural setting. The lighting, movements, and interactions with physical objects (like the sponge and cutting board) are realistic and consistent with human recording.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, slim build, fair complexion, long straight brown hair. She has a casual, everyday look.",
+        "wardrobe": "A long-sleeved, collared shirt with horizontal black and white stripes, and light-colored pants.",
+        "demeanor": "Initially frustrated, then engaged and focused as she interacts with the app."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated female character with red hair, visible on the tablet screen.",
+        "wardrobe": "Not clearly visible, but appears to be wearing a light-colored top.",
+        "demeanor": "Helpful and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 22.5,
+        "screenshot_at_s": 11.0,
+        "scene_label": "Washing dishes and learning Italian",
+        "setting": "A kitchen, daytime. A stainless steel sink is in the foreground. A tablet is propped up on the edge of the sink. In the background, there is a dining table with a red tablecloth, a staircase, and a hanging lamp.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up, slightly low angle.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands at a kitchen sink, holding a cutting board and a sponge. She is looking down at a tablet resting on the edge of the sink. The tablet displays Character B, an animated avatar. Character A speaks to the tablet, then listens, and occasionally scrubs the cutting board. The background shows a cozy home interior with a dining area and stairs.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a young woman multitasking in her kitchen. She is washing a cutting board while simultaneously using a language learning app on her tablet. The app features an animated avatar that she interacts with. Text overlays appear on screen, translating the spoken Italian and English dialogue.",
+        "audio_transcript": "Character A says: Odio l'italiano. [I hate Italian.]\nCharacter B says: Come ti chiami? [What's your name?]\nCharacter A says: Mi chiamo Sara. [My name is Sara.]\nCharacter B says: Come stai? [How are you?]\nCharacter A says: Sto bene, grazie. [I'm fine, thanks.]\nCharacter B says: Parli italiano? [Do you speak Italian?]\nCharacter A says: S\u00ec, io... [Yes, I...]\nCharacter B says: Do you mean: S\u00ec, lo parlo. [Yes, I speak it.]\nCharacter A says: S\u00ec, lo parlo. [Yes, I speak it.]\nCharacter B says: Quanti anni hai? [How old are you?]\nCharacter A says: Io... venti...? [I... twenty...?]\nCharacter B says: Do you mean: Ho venti anni. [I am 20.]\nCharacter A says: Ho vent'anni. [I am 20.]\nCharacter A says: How can I practice my Italian every day?\nCharacter B says: Just download Praktika.\nCharacter A says: I'll download Praktika right now.",
+        "on_screen_text": "Odio l'italiano. (I hate Italian.)\nCome ti chiami? (What's your name?)\nMi chiamo Sara. (My name is Sara.)\nCome stai? (How are you?)\nSto bene, grazie. (I'm fine, thanks.)\nParli italiano? (Do you speak Italian?)\nS\u00ec, io... (Yes, I...)\nS\u00ec, lo parlo. (Yes, I speak it.)\nQuanti anni hai? (How old are you?)\nIo... venti...? (I... twenty...?)\nHo venti anni. (I am 20.)\nHow can I practice my Italian every day?\nJust download Praktika.\nI'll download Praktika right now."
+      },
+      {
+        "n": 2,
+        "start_s": 22.5,
+        "end_s": 24.0,
+        "screenshot_at_s": 23.0,
+        "scene_label": "End Card",
+        "setting": "White background.",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A white screen displays the app's logo and name, along with badges for the Google Play Store and Apple App Store.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780626696.979435
+}

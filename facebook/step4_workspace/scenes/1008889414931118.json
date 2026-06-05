@@ -1,0 +1,116 @@
+{
+  "competitor_id": "1008889414931118",
+  "parsed": {
+    "duration_s": 65.8,
+    "production_type": "human-recorded",
+    "production_notes": "The video features human actors in real-world settings. The AI tutor is represented by a static photograph of a human model, with a human voiceover, not by AI-generated video or animation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner / job applicant",
+        "appearance": "A young South Asian woman in her mid-20s with a medium build and a brown complexion. She has dark brown, shoulder-length hair, often tied back in a low ponytail, and a round face with expressive dark eyes. She has a small tattoo on her left wrist.",
+        "wardrobe": "A short-sleeved, collared black polo shirt and light-wash blue jeans.",
+        "demeanor": "Initially dejected and sad, she becomes progressively more engaged, hopeful, and finally happy and confident."
+      },
+      {
+        "id": "B",
+        "role": "male interviewer",
+        "appearance": "A young South Asian man in his mid-20s with a slim build and a medium complexion. He has short, dark, curly hair, a mustache, and wears black-rimmed glasses.",
+        "wardrobe": "A light-colored, possibly off-white, collared shirt.",
+        "demeanor": "Dismissive and condescending."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "A young South Asian woman in her early to mid-20s with a slim build and a fair complexion. She has long, wavy, dark brown hair parted on the side, and a small red bindi on her forehead. She has a warm, friendly smile.",
+        "wardrobe": "A bright pink sleeveless blouse and a matching pink saree with a gold border draped over her shoulder. She wears a delicate gold necklace and traditional gold jhumka earrings.",
+        "demeanor": "Consistently warm, encouraging, and professional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 3.8,
+        "screenshot_at_s": 1.5,
+        "scene_label": "Job Interview Rejection",
+        "setting": "An office reception area. A dark grey wall with a large circular logo ('Juniper') is in the background. A clock on the wall reads 10:10. A marble-topped reception desk is in the foreground.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "In an office reception area, Character B, a young man with glasses, sits behind a desk looking up and speaking dismissively to Character A, a young woman. Character A stands in front of the desk, looking downcast and disappointed. The lighting is neutral indoor office lighting. The shot is a stable medium frame capturing both individuals in their interaction.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A medium shot of a job interview rejection. Character B sits behind a reception desk, speaking condescendingly to Character A, who stands before him looking dejected. The company logo 'Juniper' is visible on the wall behind them. Subtitles appear at the bottom of the screen corresponding to the dialogue.",
+        "audio_transcript": "Character B says: English \u0cac\u0cb0\u0cb2\u0ccd\u0cb5\u0cbe? [Don't know English?]\nCharacter B says: \u0c95\u0cc6\u0cb2\u0cb8 \u0cac\u0cc7\u0c95\u0cbe \u0ca8\u0cbf\u0c82\u0c97\u0cc6? [You want a job?]\nCharacter B says: \u0c87\u0cb2\u0ccd\u0cb2\u0cc6\u0cb2\u0ccd\u0cb2 \u0ca8\u0cbf\u0cae\u0ccd\u0cae\u0c82\u0ca4\u0ccb\u0cb0\u0ccd\u0c97\u0cc6 \u0c95\u0cc6\u0cb2\u0cb8 \u0c87\u0cb2\u0ccd\u0cb2. [There's no job for people like you here.]",
+        "on_screen_text": "English baralwa?\nKelasa bekaa ninge?\nIllella nimmanthorge kelasa illa."
+      },
+      {
+        "n": 2,
+        "start_s": 3.8,
+        "end_s": 63.5,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Conversation with AI Tutor",
+        "setting": "A modern, well-lit living room. Character A is on a teal-colored couch with decorative pillows. A large window with sheer curtains is behind her, and a potted plant is visible nearby.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "medium close-up, split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A static, studio-lit medium close-up shot of Character C, a smiling young woman in a pink saree. She looks directly at the camera with a warm, inviting expression against a plain, solid white background. Her pose and expression do not change throughout the scene.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium shot of Character A sitting on a teal couch in her living room, holding a smartphone and looking at it. Her expression changes throughout the scene, starting as sad and frustrated, then becoming attentive, and eventually shifting to surprised and happy. She holds a pillow in her lap. The room is brightly lit by natural light from a window behind her.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen conversation. The top panel shows a static, smiling image of the AI tutor, Character C. The bottom panel shows a live-action video of the user, Character A, sitting on her couch and interacting with her phone. Subtitles for the conversation appear in an orange box, overlaid on the video panels.",
+        "audio_transcript": "Character C says: \u0c87\u0cb7\u0ccd\u0c9f\u0cc1 \u0ca6\u0cc1\u0c83\u0c96\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0ccd\u0ca6\u0cc1 \u0caf\u0cbe\u0c95\u0cc6? [Why are you so sad?]\nCharacter A says: \u0c8e\u0cb2\u0ccd\u0cb2 \u0cb8\u0ca4\u0cbf \u0c95\u0ccd\u0cb5\u0cbe\u0cb2\u0cbf\u0cab\u0cc8 \u0cae\u0cbe\u0ca1\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf, \u0c95\u0cc6\u0cb2\u0cb8 \u0c95\u0cc2\u0ca1 \u0c9a\u0cc6\u0ca8\u0ccd\u0ca8\u0cbe\u0c97\u0ccd \u0cac\u0cb0\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6. \u0c86\u0ca6\u0ccd\u0cb0\u0cc6 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c87\u0c82\u0ca6 \u0caf\u0cbe\u0cb5\u0cbe\u0c97\u0ccd\u0cb2\u0cc2 \u0cb0\u0cbf\u0c9c\u0cc6\u0c95\u0ccd\u0c9f\u0ccd \u0c86\u0c97\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf. [I qualify every time, I even know the work well. But because of English, I always get rejected.]\nCharacter C says: \u0c87\u0ca6\u0cc1 \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c95\u0cbe\u0cae\u0ca8\u0ccd \u0c86\u0c97\u0cbf\u0ca6\u0cc6 \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf\u0ca6\u0ccd\u0cb0\u0cc6 \u0c87\u0ca6\u0ca8\u0ccd\u0ca8 \u0cab\u0cbf\u0c95\u0ccd\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1. \u0c87\u0cb5\u0ca4\u0ccd\u0ca4\u0cc1 \u0ca8\u0cbe\u0cb5\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c82\u0ca6 \u0cb6\u0cc1\u0cb0\u0cc1 \u0cae\u0cbe\u0ca1\u0ccb\u0ca3. [This is very common and with practice, it can be fixed. Today, let's start from here.]\nCharacter A says: \u0c93\u0c95\u0cc6. [Okay.]\nCharacter C says: \u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cac\u0c97\u0ccd\u0c97\u0cc6 \u0ca8\u0ca8\u0c97\u0cc6 \u0cb9\u0cc7\u0cb3\u0cbf. [Tell me about yourself.]\nCharacter A says: \u0ca8\u0ca8\u0ccd \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0caa\u0ccd\u0cb0\u0cbf\u0caf\u0cbe. \u0ca8\u0ca8\u0c97\u0cc6 \u0cae\u0cc2\u0cb0\u0cc1 \u0cb5\u0cb0\u0ccd\u0cb7\u0ca6 \u0c8e\u0c95\u0ccd\u0cb8\u0ccd\u0caa\u0cc0\u0cb0\u0cbf\u0caf\u0ca8\u0ccd\u0cb8\u0ccd \u0c87\u0ca6\u0cc6 \u0c95\u0cb8\u0ccd\u0c9f\u0cae\u0cb0\u0ccd \u0cb9\u0ccd\u0caf\u0cbe\u0c82\u0ca1\u0ccd\u0cb2\u0cbf\u0c82\u0c97\u0ccd \u0c85\u0cb2\u0ccd\u0cb2\u0cbf. \u0cb9\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0cb5\u0cb0\u0ccd\u0c95\u0cbf\u0c82\u0c97\u0ccd \u0c95\u0cc2\u0ca1 \u0c87\u0ca6\u0cc0\u0ca8\u0cbf. [My name is Priya. I have three years of experience in customer handling. I am also hardworking.]\nCharacter C says: \u0c87\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cc0\u0c97\u0cc6 \u0cb9\u0cc7\u0cb3\u0cbf, I am Priya. I have three years of experience in customer handling and I am a very hardworking person. [Say it like this, I am Priya. I have three years of experience in customer handling and I am a very hardworking person.]\nCharacter A says: Wow! \u0c87\u0ca6\u0cc1 \u0ca4\u0cc1\u0c82\u0cac\u0cbe easy \u0c87\u0ca4\u0ccd\u0ca4\u0cc1. [Wow! This was very easy.]\nCharacter C says: \u0ca8\u0cbe\u0ca8\u0cc1 \u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0c9c\u0cca\u0ca4\u0cc6\u0c97\u0cc6 \u0c87\u0caa\u0ccd\u0caa\u0ca4\u0ccd\u0ca4\u0ca8\u0cbe\u0cb2\u0ccd\u0c95\u0cc1 \u0c97\u0c82\u0c9f\u0cc6 \u0c85\u0cb5\u0cc8\u0cb2\u0cac\u0cb2\u0ccd \u0c87\u0cb0\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf. \u0caf\u0cbe\u0cb5\u0cbe\u0c97 \u0cac\u0cc7\u0c95\u0cbe\u0ca6\u0ccd\u0cb0\u0cc1 fifteen minutes \u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf \u0cb8\u0cbe\u0c95\u0cc1. [I am available with you 24 hours. Practicing for fifteen minutes whenever you want is enough.]\nCharacter A says: \u0ca8\u0cbe\u0ca8\u0ccd \u0c8e\u0cb7\u0ccd\u0c9f\u0cc1 \u0ca6\u0cbf\u0ca8\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0c9a\u0cc6\u0ca8\u0ccd\u0ca8\u0cbe\u0c97\u0cbf \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0ccb \u0ca4\u0cb0 \u0c86\u0c97\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf? [In how many days will I be able to speak English well?]\nCharacter C says: \u0c95\u0cc7\u0cb5\u0cb2 \u0c87\u0caa\u0ccd\u0caa\u0ca4\u0ccd\u0ca4\u0cc1 \u0ca6\u0cbf\u0ca8 \u0ca8\u0ca8\u0ccd\u0ca8 \u0c9c\u0cca\u0ca4\u0cc6 \u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf. \u0ca8\u0cc0\u0cb5\u0cc1 \u0ca8\u0ca8\u0c97\u0cc6 \u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c95\u0ccd\u0cb5\u0cc6\u0cb6\u0ccd\u0c9a\u0ca8\u0ccd \u0c95\u0cc7\u0cb3\u0cbf. \u0ca8\u0cbe\u0ca8\u0cc1 \u0ca8\u0cbf\u0cae\u0c97\u0cc6 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0c86\u0ca8\u0ccd\u0cb8\u0cb0\u0ccd \u0c95\u0cca\u0ca1\u0ccb\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0c95\u0cb2\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cc7\u0ca8\u0cc6 \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0ca4\u0caa\u0ccd\u0caa\u0cc1\u0c97\u0cb3\u0ca8\u0ccd\u0ca8 \u0cb0\u0cbf\u0caf\u0cb2\u0ccd \u0c9f\u0cc0\u0c9a\u0cb0\u0ccd \u0ca4\u0cb0 \u0c95\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf. [Just practice with me for twenty days. You can ask me any question. I will teach you how to answer in English and correct your mistakes like a real teacher.]\nCharacter A says: \u0cb9\u0ccc\u0ca6\u0cbe? \u0c86\u0ca6\u0ccd\u0cb0\u0cc6 \u0c87\u0ca6\u0cc6\u0cb2\u0ccd\u0cb2 \u0c95\u0cc7\u0cb3\u0cbf \u0ca6\u0cc1\u0cac\u0cbe\u0cb0\u0cbf \u0c87\u0ca6\u0cc6 \u0c85\u0ca8\u0ccd\u0cb8\u0ca4\u0ccd\u0ca4\u0cc6. [Really? But this all sounds expensive.]\nCharacter C says: \u0cac\u0cbf\u0cb2\u0ccd\u0c95\u0cc1\u0cb2\u0ccd \u0c87\u0cb2\u0ccd\u0cb2, \u0cb8\u0cbf\u0cb0\u0ccd\u0cab\u0ccd 2 \u0cb0\u0cc2\u0caa\u0cbe\u0caf\u0cbf \u0caa\u0cb0\u0ccd \u0ca1\u0cc7 \u0c85\u0cb2\u0ccd\u0cb2\u0cbf 7 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3 \u0c9f\u0ccd\u0cb0\u0caf\u0cb2\u0ccd \u0ca4\u0c97\u0ccb\u0cac\u0cb9\u0cc1\u0ca6\u0cc1. [Not at all, you can take a 7-day trial for just 2 rupees per day.]\nCharacter A says: \u0cb9\u0ccc\u0ca6\u0cbe? \u0ca8\u0cbe\u0ca8\u0ccd \u0c88\u0c97\u0cb2\u0cc7 SpeakX \u0c86\u0caa\u0ccd \u0ca1\u0ccc\u0ca8\u0ccd\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf. [Really? I'll download the SpeakX app right now.]",
+        "on_screen_text": "Ishtu dukhavagiddu yaake?\nElla sati qualify maadtini,\nkelasa kooda chennag barutte.\nAadre English inda\nyaavaglu reject aagtini.\nIdu tumba common aagide\nmattu practice maadidre\nidanna fix maadbahudu.\nIvattu naavu illinda\nshuru maadona.\nOkay.\nNimma bagge nanage heli.\nNan hesaru Priya.\nNanage mooru varshada\nexperience ide customer\nhandling alli.\nHard working kooda iddini.\nIdanna heege heli,\nI am Priya.\nI have three years of\nexperience in customer handling\nand I am a very\nhardworking person.\nWow! Idu tumba easy ittu.\nNaanu nimma jothege\nippattnaalku gante\navailable irtini.\nYaavaga bekaadru\nfifteen minutes practice maadi saaku.\nNaan esht dina\ndalli chennagi English\nmaatado tara aagtini?\nKevala ippattu dina\nnanna jothe practice maadi.\nNeevu nanage yaavude\nquestion keli.\nNaanu nimge English\nalli answer kododanna\nkalisitini mattu tappugalanna\nreal teacher tara\ncorrect maadtini.\nHoudaa? Aadre\nidella keli dubaari\nide anstade.\nBilkul illa,\nsirf 2 rupayi per day\nalli 7 dinagala\ntrial maadbahudu.\nHoudaa?\nNaan igle SpeakX app\ndownload maadtini."
+      },
+      {
+        "n": 3,
+        "start_s": 63.5,
+        "end_s": 65.8,
+        "screenshot_at_s": 64.5,
+        "scene_label": "App CTA End Card",
+        "setting": "A graphic background with white on top and orange on the bottom.",
+        "characters_in_scene": [],
+        "camera": "full shot graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A centered, front-facing mockup of a modern smartphone with a notch at the top. The phone is displayed against a clean, two-toned background, which is white at the top and orange at the bottom. The screen of the phone is illuminated.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An end card for the SpeakX app. The brand logo is at the top left. Large orange text says 'Download SpeakX App'. Below this, a smartphone shows the app's premium features: 'Learn with Personal AI Mentor', 'Unlock Unlimited Exercises', '100+ Real Life Scenarios', and 'Get Personalised Feedback'. At the bottom, an orange banner has a countdown timer 'OFFER ENDS IN 00:09:20' and a button that says 'Start 7 Days Trial Now'.",
+        "audio_transcript": "[upbeat notification chime sound]",
+        "on_screen_text": "speakX\nDownload\nSpeakX App\nPREMIUM\nLearn with\nPersonal AI Mentor\nUnlock Unlimited Exercises\nLearn with 100+ speaking exercises\n100+ Real Life Scenarios\nPractice through daily life scenarios\nGet Personalised Feedback\nImprove your speaking with instant feedback\nOFFER ENDS IN\n00:09:20\nStart 7 Days Trial Now"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1780631915.1205976
+}

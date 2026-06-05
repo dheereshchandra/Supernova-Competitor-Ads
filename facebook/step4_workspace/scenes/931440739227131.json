@@ -1,0 +1,151 @@
+{
+  "competitor_id": "931440739227131",
+  "parsed": {
+    "duration_s": 30.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is a screencast of a 2D animated mobile application. It uses standard vector graphics and UI animations, with no generative AI artifacts like morphing, uncanny features, or unnatural lighting.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot",
+        "appearance": "Small, bright green cartoon owl. It has large, expressive eyes, a small yellow beak, and small wings.",
+        "wardrobe": "None.",
+        "demeanor": "Cheerful, encouraging, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "Virtual Tutor",
+        "appearance": "Adult male with a medium build and brown complexion. He has a thick black beard and mustache.",
+        "wardrobe": "Bright blue turban, pink sweater with a purple pattern, and blue pants.",
+        "demeanor": "Neutral to slightly expressive, acting as a patient guide."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Language Selection",
+        "setting": "Plain white background, bright flat lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A small, bright green cartoon owl stands in the center of a plain white background. The owl has large, expressive eyes and a small yellow beak. A stylized brown hand with a pointing index finger enters the frame from the right side. The hand moves towards the center and makes a distinct tapping motion. Following the tap, a silver 3D coin briefly pops up into the air. The coin spins momentarily before disappearing. The background remains completely white throughout the sequence.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a mobile app interface for language selection. The green Duolingo owl mascot is positioned at the top. Below it, a list of language options is displayed, including Intermediate English, Spanish, French, German, and Italian. A hand cursor selects 'Intermediate English' and then clicks the 'Continue' button at the bottom. A 3D coin animation plays to indicate a successful action.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "What would you like to learn?\nIntermediate English\nSpanish\nFrench\nGerman\nItalian\nCONTINUE"
+      },
+      {
+        "n": 2,
+        "start_s": 4.5,
+        "end_s": 13.0,
+        "screenshot_at_s": 8.0,
+        "scene_label": "Tap What You Hear",
+        "setting": "Plain white background, bright flat lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B stands against a plain white background. He maintains a mostly neutral expression, though his mouth occasionally moves as if speaking. A stylized brown hand with a pointing index finger enters the lower half of the frame. The hand moves around, making multiple tapping motions in different spots. Character B remains stationary in the upper portion of the frame. Later in the sequence, Character A briefly peeks in from the left edge of the frame. Character A has a slightly sad or encouraging expression before disappearing.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene displays a 'Tap what you hear' language learning exercise. The character Vikram is at the top, with a speech bubble and audio icons next to him. Below him is a grid of word tiles. A hand cursor taps the tiles 'Thank', 'you', 'helping', 'our', 'elderly', 'neighbors' in sequence. An incorrect answer is submitted, triggering a red error message at the bottom with the correct answer. The green owl mascot pops up from the left side with a 'Keep trying!' speech bubble.",
+        "audio_transcript": "Unknown speaker says: Thank you for helping our elderly neighbors.",
+        "on_screen_text": "Tap what you hear\nThank you helping Thank awesome attitude neighbors for positive elderly somehow our\nCONTINUE\nIncorrect\nCorrect Answer:\nThank you for helping our elderly neighbors!\nGOT IT\nKeep trying!"
+      },
+      {
+        "n": 3,
+        "start_s": 13.0,
+        "end_s": 18.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Speak This Sentence",
+        "setting": "Plain white background, bright flat lighting.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B stands on a white background. He looks forward with a neutral expression. A stylized brown hand with a pointing index finger enters and taps the center of the frame. A blue audio waveform animation plays in the center, indicating sound activity. The waveform fluctuates dynamically for a few seconds. Character B's expression then shifts to a slight, approving smile. The background remains a solid, plain white.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A 'Speak this sentence' exercise interface is shown. The character Vikram is present at the top with the target sentence in a speech bubble. A hand cursor taps a 'Tap to Speak' microphone button. A blue waveform appears, indicating voice recording is in progress. Upon completion, a green 'Nicely done!' success message appears at the bottom of the screen.",
+        "audio_transcript": "Unknown speaker says: Yes, he should appreciate your relationship.",
+        "on_screen_text": "Speak this sentence\nYes, he should appreciate your relationship.\nTAP TO SPEAK\nCONTINUE\nNicely done!"
+      },
+      {
+        "n": 4,
+        "start_s": 18.5,
+        "end_s": 24.5,
+        "screenshot_at_s": 21.0,
+        "scene_label": "Listen for the Missing Word",
+        "setting": "Plain white background, bright flat lighting.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The scene consists entirely of a plain white background. A stylized brown hand with a pointing index finger enters the frame from the bottom right. The hand moves towards the center of the screen. It hovers briefly before making a distinct tapping motion on a specific area. The hand then moves slightly away. There are no characters or other props visible in this shot. The lighting is flat and even across the white space.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A 'Listen for the missing word' exercise interface is displayed. A sentence with a blank space is shown at the top. Below it are two audio playback options with corresponding text labels. The hand cursor selects the first option, 'extended'. This is marked as incorrect, and a red error message appears at the bottom displaying the correct answer.",
+        "audio_transcript": "Unknown speaker says: We want to extend the kitchen because it's too small.",
+        "on_screen_text": "Listen for the missing word\nWe want to ____ the kitchen because it's too small.\nextended\nextend\nIncorrect\nCorrect Answer:\nWe want to extend the kitchen because it's too small.\nGOT IT"
+      },
+      {
+        "n": 5,
+        "start_s": 24.5,
+        "end_s": 30.0,
+        "screenshot_at_s": 27.0,
+        "scene_label": "Outro and Call to Action",
+        "setting": "Plain white background, bright flat lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits comfortably on a stack of two thick books. The bottom book is yellow, and the top book is red. Character A is holding and actively reading a smaller blue book. The character's eyes move slightly as it reads, appearing focused and engaged. After a few moments, the character and the books disappear completely. The scene then transitions to a completely blank white background. The lighting remains flat and bright throughout.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The final scene serves as an outro and call to action. It begins with the green Duolingo owl mascot reading books, accompanied by the text 'improve your english for free'. The scene then cuts to the Duolingo logo. Below the logo, text prompts the user to download the app, alongside badges for the Apple App Store and Google Play Store.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "improve your english for free\nduolingo\nDownload the world's #1 language learning app.\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.0714788
+}

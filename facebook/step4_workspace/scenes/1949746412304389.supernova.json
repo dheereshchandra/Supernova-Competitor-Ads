@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1949746412304389",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman with long blonde hair, fair complexion, and dark eye makeup. She has a slender build.",
+        "wardrobe": "Dark grey t-shirt with a graphic print featuring a skeleton and red text. She wears a white smartwatch on her left wrist.",
+        "demeanor": "Focused and engaged, occasionally smiling or looking thoughtful as she interacts with the app."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated female character with red hair and a friendly expression.",
+        "wardrobe": "Not fully visible, but appears to be wearing a light-colored top.",
+        "demeanor": "Friendly and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Language Practice Session",
+        "supernova_script": "Character A says: English बोलना बहुत मुश्किल लगता है। [Speaking English feels very difficult.]\nCharacter B says: What's your name? [What's your name?]\nCharacter A says: My name is Nesly. [My name is Nesly.]\nCharacter B says: How are you? [How are you?]\nCharacter A says: Yes, I'm fine. [Yes, I'm fine.]\nCharacter B says: Do you speak English? [Do you speak English?]\nCharacter A says: Yes, I... [Yes, I...]\nCharacter B says: Yes, I speak it. [Yes, I speak it.]\nCharacter A says: Yes, I speak it. [Yes, I speak it.]\nCharacter B says: How old are you? [How old are you?]\nCharacter A says: I... twenty-four...? [I... twenty-four...?]\nCharacter B says: I am 24. [I am 24.]\nCharacter A says: I am 24. [I am 24.]\nCharacter B says: You're welcome. [You're welcome.]\nCharacter A says: मैं रोज़ English practice कैसे कर सकती हूँ? [How can I practice English every day?]\nCharacter B says: Just download Supernova. [Just download Supernova.]\nCharacter A says: मैं अभी Supernova download करती हूँ। [I'll download Supernova right now.]",
+        "scene_summary": "- Establishes the core problem: the user finds speaking English difficult.\n- Demonstrates the interactive AI tutor correcting mistakes in real-time.\n- Ends with a clear call to action to download the app.",
+        "supernova_on_screen_text": "English बोलना बहुत मुश्किल लगता है।\nWhat's your name?\nMy name is Nesly.\nHow are you?\nYes, I'm fine.\nDo you speak English?\nYes, I...\n❌\nYes, I speak it.\n✅\nHow old are you?\nI... twenty-four...?\nI am 24.\nYou're welcome.\nमैं रोज़ English practice कैसे कर सकती हूँ?\nJust download Supernova.\nमैं अभी Supernova download करती हूँ।"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the app logo and download buttons.\n- Provides a final visual call to action.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630861.2176244
+}

@@ -1,0 +1,47 @@
+{
+  "competitor_id": "25882090461493760",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Mid-20s, medium build, light complexion, dark hair with bangs. Cheerful and relaxed.",
+        "wardrobe": "Red short-sleeved t-shirt, white smartwatch, small hoop earrings.",
+        "demeanor": "Engaged, smiling, and casual."
+      },
+      {
+        "id": "B",
+        "role": "female relative",
+        "appearance": "50s, medium build, light complexion, blonde hair pulled back, wearing glasses. Warm and encouraging.",
+        "wardrobe": "Light-colored top.",
+        "demeanor": "Attentive and supportive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Video Call Practice",
+        "supernova_script": "Character A says: मेरे साथ English में बात करने के लिए thank you. [Thank you for speaking in English with me.]\nCharacter B says: कोई बात नहीं बेटा। [No problem, child.]\nCharacter A says: I'm trying to practice speaking... मतलब, मैं office में confidence के साथ बात करने की practice कर रही हूँ। [I mean, I'm practicing to speak with confidence at the office.]\nCharacter B says: और मेरे साथ भी। [And with me too.]\nCharacter A says: हाँ, और आपके साथ भी। [Yes, and with you too.]\nCharacter B says: तुम्हारी English अब काफी better हो गई है। [Your English has gotten much better now.]\nCharacter A says: मैं रोज़ practice कर रही हूँ, Supernova नाम के एक app पर। [I am practicing daily, on an app called Supernova.]\nCharacter B says: अच्छा? [Really?]\nCharacter A says: Mhm. [Mhm.]\nCharacter B says: वो कैसे काम करता है? [How does that work?]\nCharacter A says: बस app से बात करो, और वो AI tutor वापस हमसे बात करता है। [Just talk to the app, and the AI tutor talks back to us.]\nCharacter A says: So we just talk... we just talk to it. [So we just talk... we just talk to it.]\nCharacter A says: Yeah, we talk to it and then it talks to us again, बिल्कुल real conversation की तरह। [Yeah, we talk to it and then it talks to us again, exactly like a real conversation.]",
+        "scene_summary": "- Establishes a warm, relatable dynamic between a learner and an older relative.\n- Highlights the core problem/goal: wanting to speak English with confidence at the office.\n- Introduces Supernova organically as the solution for daily practice.\n- Explains the core feature simply: a two-way conversation with an AI tutor.",
+        "supernova_on_screen_text": "desi moms when you finally speak fluent english:\nमेरे साथ English में बात करने के लिए thank you.\nI'm trying to practice speaking...\noffice में confidence के साथ बात करने के लिए।\nऔर मेरे साथ भी।\nहाँ, और आपके साथ भी।\nतुम्हारी English अब काफी better हो गई है।\nमैं रोज़ practice कर रही हूँ, Supernova app पर।\nअच्छा? वो कैसे काम करता है?\nबस app से बात करो, और वो AI tutor वापस बात करता है।\nSo we just talk... we just talk to it.\nYeah, we talk to it and then it talks to us again, बिल्कुल real conversation की तरह।"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Speak",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Spanish",
+        "supernova_swap": "English"
+      },
+      {
+        "competitor_brand": "latina moms",
+        "supernova_swap": "desi moms"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967297.8520973
+}

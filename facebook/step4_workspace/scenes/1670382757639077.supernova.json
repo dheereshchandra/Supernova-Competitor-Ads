@@ -1,0 +1,95 @@
+{
+  "competitor_id": "1670382757639077",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female, 20s, medium build, brown complexion, long dark hair, bindi. Professional and smiling.",
+        "wardrobe": "Blue blouse and an orange/blue sari.",
+        "demeanor": "Professional and smiling."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Female, 20s, slim build, brown complexion, long dark hair.",
+        "wardrobe": "Yellow sleeveless top and blue jeans.",
+        "demeanor": "Curious and engaged."
+      },
+      {
+        "id": "C",
+        "role": "Male presenter",
+        "appearance": "Male, 20s, medium build, brown complexion, short dark hair, wearing glasses.",
+        "wardrobe": "Black t-shirt and blue jeans.",
+        "demeanor": "Confident and helpful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "App Practice",
+        "supernova_script": "Character A says: मैं यहाँ चाय पीने आई हूँ। [I came here to have tea.]\nCharacter A says: I came here to have tea.\nCharacter C says: I came here to have tea.\nCharacter A says: यह चाय बहुत गरम है। [This tea is very hot.]\nCharacter A says: This tea is very hot.\nCharacter C says: This tea is very hot.\nCharacter A says: मुझे इस चाय का स्वाद बहुत पसंद आया। [I really like the taste of this tea.]\nCharacter A says: I really like the taste of this tea.\nCharacter C says: I really like the taste of this tea.",
+        "scene_summary": "- Establishes the core app mechanic of listening and repeating.\n- Shows the user actively practicing in a real-world setting.\n- Sets a practical, everyday tone for learning.",
+        "supernova_on_screen_text": "Main yahan chai peene aayi hoon. I came here to have tea. I came here to have tea. Yeh chai bahut garam hai. This tea is very hot. This tea is very hot. Mujhe is chai ka swaad bahut pasand aaya. I really like the taste of this tea. I really like the taste of this tea."
+      },
+      {
+        "n": 2,
+        "scene_label": "Woman's Inquiry",
+        "supernova_script": "Character B says: यार, तुम इतनी अच्छी इंग्लिश कहाँ से सीख रहे हो? [Friend, where are you learning such good English from?]",
+        "scene_summary": "- Introduces the hook via a curious friend.\n- Validates the user's progress and sets up the solution.",
+        "supernova_on_screen_text": "Yaar, tum itni achhi English kahan se seekh rahe ho?"
+      },
+      {
+        "n": 3,
+        "scene_label": "Man Mentions App",
+        "supernova_script": "Character C says: Supernova ऐप पर, अपने AI ट्यूटर से। [On the Supernova app, from my AI tutor.]",
+        "scene_summary": "- Reveals the brand name.\n- Introduces the core feature (AI tutor).",
+        "supernova_on_screen_text": "Supernova App par AI tutor se."
+      },
+      {
+        "n": 4,
+        "scene_label": "Woman Confused",
+        "supernova_script": "Character B says: AI ट्यूटर? मुझे समझ नहीं आया। [AI tutor? I didn't understand.]",
+        "scene_summary": "- Represents the target audience's unfamiliarity with AI tutors.\n- Prompts further explanation of the product.",
+        "supernova_on_screen_text": "AI Tutor? Mujhe samajh nahi aaya."
+      },
+      {
+        "n": 5,
+        "scene_label": "Man Explains App Details",
+        "supernova_script": "Character C says: Supernova एक ऐप है। यहाँ तुम AI ट्यूटर के साथ रोज़ बोलकर इंग्लिश प्रैक्टिस कर सकती हो। [Supernova is an app. Here you can practice speaking English daily with an AI tutor.]\nCharacter C says: तुम्हें तो पता है, इंग्लिश के बिना कॉन्फिडेंस नहीं आता, और जॉब में भी दिक्कत होती है। [You know, without English confidence doesn't come, and there are issues in jobs too.]\nCharacter C says: इसीलिए मैं Supernova पर रोज़ 10 से 15 मिनट रियल-लाइफ सिचुएशंस की प्रैक्टिस करता हूँ। [That's why I practice real-life situations for 10 to 15 minutes daily on Supernova.]\nCharacter C says: अब मैं बिना डरे, एकदम कॉन्फिडेंस के साथ इंग्लिश बोल लेता हूँ। [Now I can speak English with full confidence, without any fear.]",
+        "scene_summary": "- Explains the value proposition (daily practice, real-life situations).\n- Touches on the emotional pain point (lack of confidence/job struggles due to poor English).\n- Delivers the payoff (speaking without fear).",
+        "supernova_on_screen_text": "Supernova ek app hai jahan AI tutor ke saath roz English practice kar sakte ho. English ke bina confidence nahi aata, job mein bhi problem hoti hai. Isiliye main roz 10-15 mins practice karta hoon. Ab main bina dare confidently English bol leta hoon."
+      },
+      {
+        "n": 6,
+        "scene_label": "Cost Concern",
+        "supernova_script": "Character B says: मुझे भी इंग्लिश बोलना सीखना है, पर कोर्सेज तो बहुत महँगे होते हैं ना? [I also want to learn to speak English, but courses are very expensive, right?]",
+        "scene_summary": "- Addresses a common barrier to entry for the target demographic (cost).",
+        "supernova_on_screen_text": "Mujhe bhi English seekhni hai, par courses bahut costly hote hain na?"
+      },
+      {
+        "n": 7,
+        "scene_label": "Pricing Explanation",
+        "supernova_script": "Character C says: अरे नहीं, Supernova बहुत अफोर्डेबल है। [Oh no, Supernova is very affordable.]\nCharacter C says: बाहर की महँगी क्लासेज से बहुत बेहतर, और तुम अपने टाइम के हिसाब से कभी भी सीख सकती हो। [Much better than expensive outside classes, and you can learn anytime according to your time.]",
+        "scene_summary": "- Overcomes the cost objection by positioning the app as affordable (without specific pricing).\n- Highlights convenience and flexibility.",
+        "supernova_on_screen_text": "Supernova bahut affordable hai. Aur apne time ke hisaab se kabhi bhi seekh sakte ho."
+      },
+      {
+        "n": 8,
+        "scene_label": "Downloading App",
+        "supernova_script": "Character B says: अरे वाह! एक मिनट, मैं भी अभी Supernova ऐप डाउनलोड करती हूँ। [Oh wow! One minute, I will also download the Supernova app right now.]",
+        "scene_summary": "- Strong call to action.\n- Shows immediate intent to download, encouraging the viewer to do the same.",
+        "supernova_on_screen_text": "Arey wah! Ek minute, main bhi abhi Supernova app download karti hoon."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "SpeakX",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889847.6519957
+}

@@ -1,0 +1,54 @@
+{
+  "competitor_id": "3398790000298365",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "presenter",
+        "appearance": "Young adult male of East Asian descent. Slim build, light complexion, short dark hair parted on the side. Clean-shaven.",
+        "wardrobe": "Dark grey short-sleeved t-shirt.",
+        "demeanor": "Initially surprised, then informative and direct."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Surprised reaction",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Hooks the viewer with a relatable expression of surprise and relief.\n- Establishes that a major pain point (English speaking anxiety) has been solved.\n- Sets up curiosity for the product reveal.",
+        "supernova_on_screen_text": "मुझे एक ऐसा app मिल गया जिससे मेरी English speaking की tension खतम 🤯... [I found an app that ended my English speaking tension 🤯...]"
+      },
+      {
+        "n": 2,
+        "scene_label": "Dictating ticket",
+        "supernova_script": "Character A says: Hi team, I have reviewed the latest reports and everything looks good. We can proceed with the launch. यार, Supernova के AI tutor के साथ रोज़ practice करके, office meetings में English बोलना कितना आसान हो गया है। [Hi team, I have reviewed the latest reports and everything looks good. We can proceed with the launch. Man, by practicing daily with Supernova's AI tutor, speaking English in office meetings has become so easy.]",
+        "scene_summary": "- Demonstrates the core product feature (practicing real-world English with an AI tutor).\n- Shows the practical, career-focused benefit of the app (office meetings).\n- Transitions from a confident English demonstration to a relatable, warm Hindi reflection.",
+        "supernova_on_screen_text": "Supernova AI Tutor practice screen"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to action",
+        "supernova_script": "Character A says: अपनी English improve करने के लिए आज ही Supernova try करो। [Try Supernova today to improve your English.]",
+        "scene_summary": "- Delivers a clear, encouraging call to action.\n- Reinforces the brand name.\n- Ends on a supportive, older-sibling tone.",
+        "supernova_on_screen_text": "Supernova\nStart speaking confidently today"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Linear",
+        "supernova_swap": "Removed/Replaced with general English speaking context"
+      },
+      {
+        "competitor_brand": "Supabase",
+        "supernova_swap": "Removed"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.7867355
+}

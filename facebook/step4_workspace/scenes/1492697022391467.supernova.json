@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1492697022391467",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young woman with a fair complexion and a blonde, straight bob haircut. She has symmetrical, smooth facial features and light-colored eyes.",
+        "wardrobe": "A beige blazer worn over a simple white top.",
+        "demeanor": "Calm, professional, and perfectly composed."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young woman with a tanned complexion and short, voluminous curly brown hair. She has dark eyes and wears small gold hoop earrings and layered thin gold necklaces.",
+        "wardrobe": "A black top with thin spaghetti straps.",
+        "demeanor": "Expressive, engaged, and eager to learn."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Grammar Correction Conversation",
+        "supernova_script": "Character A says: That movie was amazing, right? [That movie was amazing, right?]\nCharacter B says: हाँ, I am agree! [Yes, I am agree!]\nCharacter A says: Do you mean, 'I agree'? [Do you mean, 'I agree'?]\nCharacter B says: Wait, 'am' नहीं लगेगा? [Wait, no 'am'?]\nCharacter A says: नहीं, 'agree' खुद एक verb है। हम सिर्फ 'I agree' बोलते हैं। [No, 'agree' is already a verb. We just say 'I agree'.]\nCharacter B says: समझ गई! I agree to practice more. [Got it! I agree to practice more.]\nCharacter A says: Perfect! [Perfect!]\nCharacter B says: काश कोई मुझे ऐसे ही हर बार correct करता। [I wish someone corrected me like this every time.]\nCharacter A says: मैं कर सकती हूँ! मैं Supernova की AI tutor हूँ। [I can! I am Supernova's AI tutor.]\nCharacter B says: सच में? [Really?]\nCharacter A says: हाँ, हम रोज़ बात कर सकते हैं, जिससे आप confidence के साथ English बोल सकें। [Yes, we can talk every day, so you can speak English with confidence.]\nCharacter B says: ये तो बहुत बढ़िया है! कल फिर बात करते हैं। [That's great! Let's talk again tomorrow.]",
+        "scene_summary": "- Hooks the viewer with a highly relatable, common English grammar mistake made by Indian learners.\n- Demonstrates the AI tutor's gentle, non-judgmental correction style, building trust.\n- Positions Supernova as a daily companion for building spoken English confidence in a safe environment.",
+        "supernova_on_screen_text": "That movie was amazing, right?\nहाँ, I am agree!\nDo you mean, 'I agree'?\nWait, 'am' नहीं लगेगा?\nनहीं, 'agree' खुद एक verb है। हम सिर्फ 'I agree' बोलते हैं।\nसमझ गई! I agree to practice more.\nPerfect!\nकाश कोई मुझे ऐसे ही हर बार correct करता।\nमैं कर सकती हूँ! मैं Supernova की AI tutor हूँ।\nसच में?\nहाँ, हम रोज़ बात कर सकते हैं, जिससे आप confidence के साथ English बोल सकें।\nये तो बहुत बढ़िया है! कल फिर बात करते हैं।"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the Supernova brand logo and core value proposition.\n- Provides a clear call-to-action to download the app.",
+        "supernova_on_screen_text": "Supernova App\nConfidence से English बोलें\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779974839.7963233
+}

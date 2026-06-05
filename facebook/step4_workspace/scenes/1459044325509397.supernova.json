@@ -1,0 +1,39 @@
+{
+  "competitor_id": "1459044325509397",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female speaker",
+        "appearance": "Young woman with a slim build and fair complexion. She has long, dark brown hair. She is wearing large aviator-style sunglasses with a tortoiseshell detail on the top bar.",
+        "wardrobe": "A light grey, long-sleeved button-up shirt worn over a dark top. She has a delicate gold necklace and a gold ring on her right hand.",
+        "demeanor": "Enthusiastic, animated, and conversational, using frequent hand gestures."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Uber Story",
+        "supernova_script": "Unknown speaker says: So, how long have you been handling this project? [So, how long have you been handling this project?]\nCharacter A says: And he was like, \"So, how long have you been handling this project?\" [And he was like, \"So, how long have you been handling this project?\"] And I was like, \"I've been leading this for two months.\" [And I was like, \"I've been leading this for two months.\"] And then he went as far as to say, \"Your communication skills are really impressive.\" [And then he went as far as to say, \"Your communication skills are really impressive.\"] So I'm sitting in the cab after the meeting, and I'm texting my mom immediately. I kid you not, I was like, \"मम्मी, आज तो मज़ा आ गया, client ने मेरी English की तारीफ की!\" [Mom, today was amazing, the client praised my English!]\nUnknown speaker says: तूने इतनी अच्छी English कब सीखी? [When did you learn such good English?]\nCharacter A says: मैं Supernova app यूज़ कर रही हूँ, literally रोज़ सिर्फ 10 मिनट के लिए। [I've been using the Supernova app, literally for just 10 minutes a day.] And now I can actually speak confidently in real life. खुद पे proud feel हो रहा है, honestly. [Feeling proud of myself, honestly.]",
+        "scene_summary": "- Establishes a relatable real-world success story (impressing a client/colleague with fluent English).\n- Highlights the emotional payoff of feeling proud and sharing the success with family.\n- Introduces Supernova as the practical, low-time-commitment solution (10 minutes a day).",
+        "supernova_on_screen_text": "Client was SHOOK I spoke fluent English 😂\nHow long have you been handling this?\nI've been leading this for two months.\nYour communication skills are really impressive.\nमम्मी, आज तो मज़ा आ गया\nbecause he said\nmy English was really impressive.\nतूने इतनी अच्छी English कब सीखी?"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[sound effect only, no speech]",
+        "scene_summary": "- Delivers the final brand logo and call to action.\n- Encourages immediate app download without promising specific free trials.",
+        "supernova_on_screen_text": "Supernova\nDownload the app and start speaking today."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Speak",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967297.8662574
+}

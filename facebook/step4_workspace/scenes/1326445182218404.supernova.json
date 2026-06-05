@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1326445182218404",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman in her 20s, slim build, fair complexion. She has blonde hair tied up in a messy bun with some loose strands framing her face. She has dark eyeliner and defined eyebrows.",
+        "wardrobe": "Wearing a loose, oversized brown t-shirt with a graphic print on the front.",
+        "demeanor": "Casual, slightly frustrated initially, but becomes engaged and happy as she learns."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Digital avatar of a young woman with reddish-brown hair, visible only on the tablet screen.",
+        "wardrobe": "Not clearly visible, appears to be wearing a light-colored top.",
+        "demeanor": "Friendly, encouraging, and instructional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Washing Dishes and Learning Spanish",
+        "supernova_script": "Character A says: मुझे English से डर लगता है।\n[I am scared of English.]\nCharacter B says: Hello! How are you?\n[Hello! How are you?]\nCharacter A says: I am fine, thank you.\n[I am fine, thank you.]\nCharacter B says: What are you doing?\n[What are you doing?]\nCharacter A says: I am wash dishes.\n[I am wash dishes.]\nCharacter B says: No digas \"I am wash dishes.\"\n[Don't say \"I am wash dishes.\"]\nCharacter B says: Say \"I am washing the dishes.\"\n[Say \"I am washing the dishes.\"]\nCharacter A says: Ah, I am washing the dishes.\n[Ah, I am washing the dishes.]\nCharacter B says: Why are you scared of English?\n[Why are you scared of English?]\nCharacter A says: I am jobless because my English bad.\n[I am jobless because my English bad.]\nCharacter B says: Don't say \"because my English bad.\"\n[Don't say \"because my English bad.\"]\nCharacter B says: Say \"because my English is weak.\"\n[Say \"because my English is weak.\"]\nCharacter A says: Ah!\n[Ah!]\nCharacter A says: I am jobless because my English is weak.\n[I am jobless because my English is weak.]\nCharacter B says: That sounded great! Your confidence is improving.\n[That sounded great! Your confidence is improving.]\nCharacter A says: क्या तुम रोज़ ऐसे ही मेरी English practice करवा सकती हो?\n[Can you make me practice English like this every day?]\nCharacter B says: Yes! Just download Supernova.\n[Yes! Just download Supernova.]\nCharacter B says: I will practice with you daily and fix your mistakes instantly.\n[I will practice with you daily and fix your mistakes instantly.]\nCharacter A says: Okay, मैं अभी Supernova download करती हूँ।\n[Okay, I will download Supernova right now.]",
+        "scene_summary": "- Hook: Learner expresses frustration with English while doing chores.\n- Problem: Learner makes common grammatical mistakes and reveals English is holding back her career.\n- Solution: AI tutor gently corrects her in real-time, building her confidence.\n- CTA: Learner asks for daily practice and is directed to download Supernova.",
+        "supernova_on_screen_text": "मुझे English से डर लगता है।\n(I am scared of English.)\nHello! How are you?\nI am fine, thank you.\nWhat are you doing?\nI am wash dishes.\nDon't say \"I am wash dishes.\"\nSay \"I am washing the dishes.\"\nI am washing the dishes.\nWhy are you scared of English?\nI am jobless because my English bad.\nDon't say \"because my English bad.\"\nSay \"because my English is weak.\"\nAh!\nI am jobless because my English is weak.\nThat sounded great!\nYour confidence is improving.\nक्या तुम रोज़ ऐसे ही\n(Can you make me practice)\nमेरी English practice करवा सकती हो?\n(English like this every day?)\nJust download Supernova.\nI will practice with you daily\nand fix your mistakes instantly.\nमैं अभी Supernova download करती हूँ।\n(I will download Supernova right now.)"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the Supernova logo and app store badges.\n- Serves as the final call to action.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630773.7788367
+}

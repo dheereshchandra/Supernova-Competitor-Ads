@@ -1,0 +1,169 @@
+{
+  "competitor_id": "1810831836593995",
+  "parsed": {
+    "duration_s": 49.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human-recorded footage (the woman on the right) with AI-generated elements. The avatar on the left exhibits uncanny smoothness, glowing facial lines, and slightly unnatural, repetitive movements typical of AI generation. The opening clip of the brain being cut also appears to be a 3D render or AI-generated due to the unnatural smoke physics and texture.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with a fair complexion and brown hair styled in a bob. She has large, expressive brown eyes and glowing, animated blue lines running vertically down her cheeks.",
+        "wardrobe": "A metallic, shiny gold or bronze hooded jacket.",
+        "demeanor": "Friendly, encouraging, and slightly artificial in her movements."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young Indian female with a medium complexion and dark, shoulder-length hair. She has dark eyes and a natural, everyday look.",
+        "wardrobe": "A simple, light grey sleeveless tank top.",
+        "demeanor": "Expressive, initially hesitant but becomes eager and interested."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.0,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Brain Cutting Hook",
+        "setting": "A rustic wooden workbench, daytime, warm and moody lighting.",
+        "characters_in_scene": [],
+        "camera": "Close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of a wooden workbench covered in wood shavings and various carving tools. In the center sits a translucent, pinkish, brain-shaped object. A hand holding a dark, rustic-looking knife presses down on the object, slicing into it. As the knife cuts, thick white smoke or steam billows out from the incision. The lighting is natural and slightly moody, highlighting the texture of the brain object and the smoke.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A close-up shot of a knife cutting into a translucent, brain-shaped object on a wooden workbench. Smoke billows from the cut. Text overlays pose a question about English proficiency.",
+        "audio_transcript": "Unknown speaker: \u0906\u092a\u0915\u094b \u0905\u0902\u0917\u094d\u0930\u0947\u091c\u093c\u0940 \u0938\u092e\u091d \u0906\u0924\u0940 \u0939\u0948, \u0932\u0947\u0915\u093f\u0928 \u092c\u094b\u0932\u0928\u093e \u0928\u0939\u0940\u0902 \u0906\u0924\u093e? [Do you understand English, but can't speak it?]",
+        "on_screen_text": "\u0906\u092a\u0915\u094b \u0905\u0902\u0917\u094d\u0930\u0947\u091c\u093c\u0940 \u0938\u092e\u091d \u0906\u0924\u0940 \u0939\u0948, \u0932\u0947\u0915\u093f\u0928 \u092c\u094b\u0932\u0928\u093e \u0928\u0939\u0940\u0902 \u0906\u0924\u093e? (Aapko angrezi samajh aati hai, lekin bolna nahi aata?)"
+      },
+      {
+        "n": 2,
+        "start_s": 4.0,
+        "end_s": 28.0,
+        "screenshot_at_s": 16.0,
+        "scene_label": "Split Screen Conversation",
+        "setting": "Indistinct dark backgrounds for both characters.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character A is framed in a medium close-up against a dark, indistinct background. She rests her chin on her hand, looking directly forward with a friendly expression. The lighting highlights the metallic sheen of her jacket and the glowing lines on her face.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Character B is framed in a medium close-up against a plain, dark wall. She looks directly forward, her facial expressions changing as she speaks and listens. The lighting is soft and natural, illuminating her face clearly.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen showing two women having a conversation. The left side features an AI-generated avatar, while the right side shows a real human woman. Subtitles appear at the bottom of the screen, translating their dialogue.",
+        "audio_transcript": "Character B: Sorry, \u092e\u0947\u0930\u0940 English \u0905\u091a\u094d\u091b\u0940 \u0928\u0939\u0940\u0902 \u0939\u0948\u0964 [Sorry, my English is not good.]\nCharacter A: \u0924\u0941\u092e\u094d\u0939\u0947 \u0930\u094b\u091c\u093c practice \u0915\u0930\u0928\u0940 \u091a\u093e\u0939\u093f\u090f\u0964 [You should practice every day.]\nCharacter B: \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 practice \u0915\u0930\u0928\u0947 \u0935\u093e\u0932\u093e \u0915\u094b\u0908 \u0928\u0939\u0940\u0902 \u0939\u0948\u0964 [There is no one to practice with me.]\nCharacter A: \u0924\u0941\u092e\u094d\u0939\u093e\u0930\u0947 \u0932\u093f\u090f \u092e\u0948\u0902 \u0939\u0942\u0901 \u0928\u093e? I am Sivi, your AI English tutor. [I am here for you, right? I am Sivi, your AI English tutor.]\nCharacter B: \u092e\u0924\u0932\u092c, \u092e\u0948\u0902 \u0924\u0941\u092e\u0938\u0947 direct \u092c\u093e\u0924 \u0915\u0930 \u0938\u0915\u0924\u0940 \u0939\u0942\u0901? [Meaning, I can talk to you directly?]\nCharacter A: \u092c\u093f\u0932\u094d\u0915\u0941\u0932! \u092e\u0948\u0902 \u0924\u0941\u092e\u094d\u0939\u0947 instant feedback \u0926\u0942\u0901\u0917\u0940\u0964 \u0924\u0941\u092e\u094d\u0939\u093e\u0930\u0947 pronunciation, grammar, \u0938\u092c \u0915\u0941\u091b improve \u0915\u0930\u0942\u0901\u0917\u0940\u0964 \u0914\u0930 \u0924\u0941\u092e \u092c\u0939\u0941\u0924 \u0905\u091a\u094d\u091b\u0940 English \u092c\u094b\u0932\u0928\u0947 \u0932\u0917\u094b\u0917\u0940\u0964 [Absolutely! I will give you instant feedback. I will improve your pronunciation, grammar, everything. And you will start speaking very good English.]\nCharacter B: \u0932\u0947\u0915\u093f\u0928 \u0924\u0941\u092e\u0938\u0947 \u092c\u093e\u0924 \u0915\u0930\u0928\u093e \u092e\u0939\u0902\u0917\u093e \u0939\u094b\u0917\u093e \u0928\u093e? [But talking to you must be expensive, right?]\nCharacter A: \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0928\u0939\u0940\u0902! Normal English classes \u0938\u0947 7 \u0917\u0941\u0928\u093e \u0938\u0938\u094d\u0924\u093e \u0939\u0948\u0964 [Not at all! It is 7 times cheaper than normal English classes.]",
+        "on_screen_text": "Sorry, meri English acchi nahi hai.\nTume roz practice karni chahiye.\nMere saath practice karne wala koi nahi hai.\nTumhare liye main hoon na? I am Sivi, your AI English tutor.\nMatlab, main tumse direct baat kar sakti hoon?\nBilkul! Main tumhe instant feedback doongi. Tumhare pronunciation, grammar, sab kuch improve karoongi. Aur tum bahot acchi English bolne lagogi.\nLekin tumse baat karna mehenga hoga na?\nBilkul nahi! Normal English classes se 7 guna sasta hai."
+      },
+      {
+        "n": 3,
+        "start_s": 28.0,
+        "end_s": 30.0,
+        "screenshot_at_s": 29.0,
+        "scene_label": "App Store Page",
+        "setting": "Digital interface, white background.",
+        "characters_in_scene": [],
+        "camera": "App-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A digital interface displaying a product page. At the top is a square icon next to several lines of text. Below this is a prominent, wide rectangular button. Further down is a video player thumbnail showing a person's face, along with more text sections.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A full-screen view of a mobile app store interface. The screen displays the details of an app, including its name, icon, and a prominent install button. A promotional video thumbnail is visible below the install section.",
+        "audio_transcript": "Character A: \u0907\u0938\u0932\u093f\u090f 1 \u0915\u0930\u094b\u0921\u093c \u0932\u094b\u0917 MySivi \u092a\u0930 English practice \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902\u0964 [That's why 1 crore people are practicing English on MySivi.]",
+        "on_screen_text": "MySivi AI English Speak...\nMySivi AI\nIn-app purchases\nInstall\n10M+ Downloads\nAbout this app\nImprove your English learning with a Trial at No Cost | Practice English Now\nIsliye 1 crore log MySivi par English practice kar rahe hain."
+      },
+      {
+        "n": 4,
+        "start_s": 30.0,
+        "end_s": 38.0,
+        "screenshot_at_s": 34.0,
+        "scene_label": "Split Screen Continues",
+        "setting": "Indistinct dark backgrounds for both characters.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character A is framed in a medium close-up against a dark, indistinct background. She rests her chin on her hand, looking directly forward with a friendly expression. The lighting highlights the metallic sheen of her jacket and the glowing lines on her face.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Character B is framed in a medium close-up against a plain, dark wall. She looks directly forward, her facial expressions changing as she speaks and listens. The lighting is soft and natural, illuminating her face clearly.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The video returns to the vertical split-screen format. The AI avatar on the left and the human woman on the right continue their conversation. Subtitles are displayed at the bottom.",
+        "audio_transcript": "Character B: \u0932\u0947\u0915\u093f\u0928 time \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u0924\u093e\u0964 [But I don't get time.]\nCharacter A: \u0930\u094b\u091c\u093c \u0938\u093f\u0930\u094d\u092b 15 \u0938\u0947 20 minute practice \u0915\u093e\u092b\u0940 \u0939\u0948\u0964 \u0924\u0941\u092e \u0906\u0938\u093e\u0928\u0940 \u0938\u0947 confident \u092c\u0928 \u091c\u093e\u0913\u0917\u0940\u0964 [Just 15 to 20 minutes of practice daily is enough. You will easily become confident.]\nCharacter B: Wow! \u0915\u0948\u0938\u0947 join \u0915\u0930\u0942\u0901? [Wow! How do I join?]",
+        "on_screen_text": "Lekin time nahi milta.\nRoz sirf 15 se 20 minute practice kaafi hai. Tum aasaani se confident ban jaogi.\nWow! Kaise join karoon?"
+      },
+      {
+        "n": 5,
+        "start_s": 38.0,
+        "end_s": 49.0,
+        "screenshot_at_s": 44.0,
+        "scene_label": "Call to Action",
+        "setting": "Indistinct dark backgrounds for both characters.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character A is framed in a medium close-up against a dark, indistinct background. She rests her chin on her hand, looking directly forward with a friendly expression. The lighting highlights the metallic sheen of her jacket and the glowing lines on her face.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Character B is framed in a medium close-up against a plain, dark wall. She looks directly forward, her facial expressions changing as she speaks and listens. The lighting is soft and natural, illuminating her face clearly.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen conversation continues. For a few seconds, a mobile app installation interface pops up over the video, showing the download progress. The interface then disappears, and the AI avatar finishes her pitch. Subtitles are present throughout.",
+        "audio_transcript": "Character A: \u092c\u0938, install \u0915\u093e button \u0926\u092c\u093e\u0913 \u0914\u0930 MySivi app install \u0915\u0930\u094b\u0964 Sign up \u0915\u0930\u094b \u0914\u0930 practice \u0936\u0941\u0930\u0942 \u0915\u0930\u094b\u0964 \u0938\u093f\u0930\u094d\u092b 15 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 \u0924\u0941\u092e\u094d\u0939\u0947 improvement \u0926\u093f\u0916\u0928\u0947 \u0932\u0917\u0947\u0917\u093e\u0964 \u091a\u0932\u094b, \u0936\u0941\u0930\u0942 \u0915\u0930\u094b\u0964 [Just press the install button and install the MySivi app. Sign up and start practicing. You will start seeing improvement in just 15 days. Come on, start.]",
+        "on_screen_text": "Bas, install ka button dabao aur MySivi app install karo. Sign up karo aur practice shuru karo. Sirf 15 dino me tumhe improvement dikhne lagega. Chalo, shuru karo.\nMySivi AI English Spe...\nInstalling...\nVerified by Play Protect\nCancel\nMaster Spoken Eng\nSharpen your Englis 1-on-1 calls. Try MyS fast"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779890885.0016966
+}

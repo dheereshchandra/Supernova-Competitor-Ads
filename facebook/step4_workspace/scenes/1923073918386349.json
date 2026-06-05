@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1923073918386349",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video is clearly AI-generated. The subject's face has an uncanny, overly smooth quality, and her right hand remains perfectly static in a pointing gesture for the entire 38-second duration, which is physically unnatural.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, fair complexion. She has red hair styled in a high bun and brown eyes. Her facial features are symmetrical and smooth.",
+        "wardrobe": "Dark blue crew-neck t-shirt.",
+        "demeanor": "Friendly, encouraging, but slightly robotic and stiff."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 38.0,
+        "screenshot_at_s": 19.0,
+        "scene_label": "AI Tutor Introduction",
+        "setting": "Plain, light-colored background, soft lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Close-up shot of Character A looking directly at the camera. She has fair skin, brown eyes, and red hair tied in a high bun. She is wearing a dark blue crew-neck t-shirt. Her right hand is raised into the frame with the index finger pointing upwards; this hand remains completely motionless. The background is a plain, out-of-focus light beige or off-white wall. The lighting is soft, even, and bright, illuminating her face clearly without harsh shadows.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A continuous close-up shot of an AI-generated woman acting as an English tutor. She speaks directly to the viewer, maintaining a static hand gesture with her right index finger pointing up. Dynamic, word-by-word captions appear in the lower center of the screen, highlighting the spoken words in blue and white.",
+        "audio_transcript": "Character A says: The best way to improve your speaking is to practice every day.\nCharacter A says: And that's exactly what I'm here for.\nCharacter A says: I'm Loora, your AI English tutor.\nCharacter A says: With me, you can practice anytime, anywhere, just like you would with a real person.\nCharacter A says: I'll chat with you, give you instant feedback on your pronunciation, and help you get better with every conversation.\nCharacter A says: It's fast, easy, and without stress.\nCharacter A says: You don't have to worry about making mistakes because I'll guide you through them.\nCharacter A says: Let's practice together every day, and you'll see how quickly your English improves.",
+        "on_screen_text": "the best way to improve your speaking is to practice every day and that's exactly what I'm here for I'm Loora your AI English tutor with me you can practice anytime anywhere just like you would with a real person I'll chat with you give you instant feedback on your pronunciation and help you get better with every conversation it's fast easy and without stress you don't have to worry about making mistakes because I'll guide you through them let's practice together every day and you'll see how quickly your English improves"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.5138834
+}

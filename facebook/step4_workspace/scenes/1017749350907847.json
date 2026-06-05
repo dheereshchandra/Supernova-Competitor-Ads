@@ -1,0 +1,95 @@
+{
+  "competitor_id": "1017749350907847",
+  "parsed": {
+    "duration_s": 82.0,
+    "production_type": "mixed",
+    "production_notes": "The first half is live-action video. The second half uses a split-screen featuring a 3D animated AI avatar on the left, which has typical stylized features like large eyes and smooth skin, while the right side remains live-action.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young Asian woman, slim build, fair complexion. Black hair styled in a long braid.",
+        "wardrobe": "White lace top with a high neckline. Brown crossbody bag strap visible.",
+        "demeanor": "Cheerful, slightly nervous initially but becomes confident and expressive."
+      },
+      {
+        "id": "B",
+        "role": "male officer",
+        "appearance": "Middle-aged Caucasian man, average build. Short brown hair.",
+        "wardrobe": "Dark blue short-sleeved uniform shirt with a badge and epaulets.",
+        "demeanor": "Professional, serious but friendly."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female, fair skin. Red hair pulled back, large expressive eyes.",
+        "wardrobe": "Dark blue uniform shirt with a badge and a shoulder-mounted radio.",
+        "demeanor": "Friendly, encouraging, and animated."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 20.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Passport Control Interaction",
+        "setting": "Airport passport control desk, bright lighting, busy terminal background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Over-shoulder switching to medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands at a counter facing away from the camera. Behind the counter, Character B holds a red passport. The background shows a busy airport terminal. Character A turns to face the camera, smiling, and later holds up a smartphone.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A interacts with Character B at an airport desk. After answering his questions, she turns to the camera to explain her language skills. She then shows her phone screen to the camera.",
+        "audio_transcript": "Character B says: Do you speak English?\nCharacter A says: Yes.\nCharacter B says: Prove it.\nCharacter A says: Um, I'm here to visit my sister in Miami. I'm staying for two weeks. I have the return ticket. I'm not working, just visiting.\nCharacter B says: Alright. How?\nCharacter A says: I used Loora. 10 minutes a day for real conversations like this one. Let me show you how it works.",
+        "on_screen_text": "\u82f1\u8a9e\u306f\u8a71\u305b\u307e\u3059\u304b\uff1f (Do you speak English?)\n\u306f\u3044\u3002 (Yes.)\n\u305d\u308c\u3092\u8a3c\u660e\u3057\u3066\u304f\u3060\u3055\u3044\u3002 (Prove it.)\n\u3048\u3048\u3068\u3001\u79c1\u306f\u30de\u30a4\u30a2\u30df\u306b\u3044\u308b\u59c9\u3092\u8a2a\u306d\u3066\u3044\u307e\u3059\u3002 (Um, I'm here to visit my sister in Miami.)\n2\u9031\u9593\u6ede\u5728\u3059\u308b\u4e88\u5b9a\u3067\u3059\u3002 (I'm staying for two weeks.)\n\u5e30\u308a\u306e\u822a\u7a7a\u5238\u3082\u6301\u3063\u3066\u3044\u307e\u3059\u3002 (I have the return ticket.)\n\u50cd\u304f\u4e88\u5b9a\u306f\u306a\u304f\u3001\u305f\u3060\u8a2a\u554f\u3057\u3066\u3044\u308b\u3060\u3051\u3067\u3059\u3002 (I'm not working, just visiting.)\n\u306a\u308b\u307b\u3069\u3002\u3069\u3046\u3084\u3063\u3066\uff1f (Alright. How?)\nLoora\u3067\u3001 (I used Loora.)\n1\u65e510\u5206\u3060\u3051\u3001\u30ea\u30a2\u30eb\u306a\u4f1a\u8a71\u306e\u7df4\u7fd2\u3092\u3057\u3066\u3044\u307e\u3057\u305f\u3002 (10 minutes a day for real conversations like this one.)\n\u3069\u3046\u3044\u3046\u4ed5\u7d44\u307f\u304b\u3001\u3061\u3087\u3063\u3068\u304a\u898b\u305b\u3057\u307e\u3059\u306d\u3002 (Let me show you how it works.)"
+      },
+      {
+        "n": 2,
+        "start_s": 20.0,
+        "end_s": 82.0,
+        "screenshot_at_s": 50.0,
+        "scene_label": "App Demonstration",
+        "setting": "Split screen with blurred airport backgrounds.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen talking-head",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character C rests her chin on her hand, looking forward. The background is a blurred airport terminal.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Character A looks forward, smiling and talking. The background is a blurred airport terminal.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen shows Character C on the left and Character A on the right. They engage in a conversation where Character C corrects Character A's English. Subtitles and UI elements appear over the video.",
+        "audio_transcript": "Character C says: Hello, where are you flying?\nCharacter A says: I fly London.\nCharacter C says: I am flying to London \u3063\u3066\u8a00\u3044\u305f\u304b\u3063\u305f\u3067\u3059\u304b\uff1f [Did you mean to say 'I am flying to London'?]\nCharacter A says: Yes, sorry. I am flying to London.\nCharacter C says: Any luggage to check in?\nCharacter A says: Mmm... Luggage?\nCharacter C says: Luggage \u306f\u3001\u65c5\u884c\u306b\u6301\u3063\u3066\u3044\u304f\u30b9\u30fc\u30c4\u30b1\u30fc\u30b9\u3084\u30d0\u30c3\u30b0\u306e\u3053\u3068\u3067\u3059\u3002 ['Luggage' refers to suitcases or bags you take on a trip.]\nCharacter A says: Oh, I have one luggage. \u3054\u3081\u3093\u306a\u3055\u3044... \u82f1\u8a9e\u3042\u3093\u307e\u308a\u5f97\u610f\u3058\u3083\u306a\u304f\u3066\u3002 [Sorry... I'm not very good at English.]\nCharacter C says: \u5927\u4e08\u592b\u3067\u3059\u3088\uff01\u3053\u306e1\u304b\u6708\u3001\u3069\u306e\u304f\u3089\u3044\u82f1\u8a9e\u3092\u8a71\u3057\u307e\u3057\u305f\u304b\uff1f [It's okay! How much English have you spoken in the past month?]\nCharacter A says: \u6b63\u76f4...\u5168\u7136\u8a71\u3057\u3066\u306a\u304f\u3066\u3002 [Honestly... I haven't spoken it at all.]\nCharacter C says: \u3058\u3083\u3042\u3001\u3069\u3046\u3084\u3063\u3066\u82f1\u8a9e\u30da\u30e9\u30da\u30e9\u306b\u306a\u308d\u3046\u3068\u601d\u3063\u3066\u308b\u3093\u3067\u3059\u304b\uff1f [Then, how do you plan to become fluent in English?]\nCharacter A says: \u7df4\u7fd2\u3059\u308b\u76f8\u624b\u304c\u3044\u306a\u304f\u3066\u3002 [I don't have anyone to practice with.]\nCharacter C says: \u3060\u3063\u305f\u3089Loora\u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u3057\u3066\u3001\u6bce\u65e5\u79c1\u3068\u8a71\u3057\u307e\u3057\u3087\u3046\u3002\u601d\u3063\u3066\u308b\u3088\u308a\u65e9\u304f\u82f1\u8a9e\u8a71\u305b\u308b\u3088\u3046\u306b\u306a\u308a\u307e\u3059\u3088\u3002 [Then download Loora and talk to me every day. You'll be able to speak English faster than you think.]\nCharacter A says: \u3048\u3001\u3044\u3044\u304b\u3082\u3002\u4eca\u65e5\u304b\u3089\u6bce\u65e5\u4f7f\u304a\u3002 [Oh, that sounds good. I'll use it every day starting today.]",
+        "on_screen_text": "Hello, where are you flying?\nI fly London.\n\u300cI am flying to London\u300d\u3063\u3066\u8a00\u3044\u305f\u304b\u3063\u305f\u3067\u3059\u304b\uff1f\nYes, sorry.\nI am flying to London.\nAny luggage to check in?\nLuggage?\n\u300cluggage\u300d\u306f\u3001\u65c5\u884c\u306b\u6301\u3063\u3066\u3044\u304f\u30b9\u30fc\u30c4\u30b1\u30fc\u30b9\u3084\u30d0\u30c3\u30b0\u306e\u3053\u3068\u3067\u3059\u3002\nOh, I have one luggage.\n\u3054\u3081\u3093\u306a\u3055\u3044... \u82f1\u8a9e\u3042\u3093\u307e\u308a\u5f97\u610f\u3058\u3083\u306a\u304f\u3066\u3002\n\u5927\u4e08\u592b\u3067\u3059\u3088\uff01\n\u3053\u306e1\u304b\u6708\u3001\u3069\u306e\u304f\u3089\u3044\u82f1\u8a9e\u3092\u8a71\u3057\u307e\u3057\u305f\u304b\uff1f\n\u6b63\u76f4...\u5168\u7136\u8a71\u3057\u3066\u306a\u304f\u3066\u3002\n\u3058\u3083\u3042\u3001\u3069\u3046\u3084\u3063\u3066\u82f1\u8a9e\u30da\u30e9\u30da\u30e9\u306b\u306a\u308d\u3046\u3068\u601d\u3063\u3066\u308b\u3093\u3067\u3059\u304b\uff1f\n\u7df4\u7fd2\u3059\u308b\u76f8\u624b\u304c\u3044\u306a\u304f\u3066\u3002\n\u3060\u3063\u305f\u3089Loora\u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u3057\u3066\u3001\u6bce\u65e5\u79c1\u3068\u8a71\u3057\u307e\u3057\u3087\u3046\u3002\n\u601d\u3063\u3066\u308b\u3088\u308a\u65e9\u304f\u82f1\u8a9e\u8a71\u305b\u308b\u3088\u3046\u306b\u306a\u308a\u307e\u3059\u3088\u3002\n\u3048\u3001\u3044\u3044\u304b\u3082\u3002\u4eca\u65e5\u304b\u3089\u6bce\u65e5\u4f7f\u304a\u3002\nLoora logo"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780641380.6322057
+}

@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1266895682308848",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion. She has blonde hair styled in a messy bun and wears dark eyeliner.",
+        "wardrobe": "A loose-fitting brown t-shirt with a graphic print on the front.",
+        "demeanor": "Initially slightly frustrated or bored, transitioning to pleasantly surprised and engaged."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Digital avatar of a woman with red hair and fair skin, visible only on a tablet screen.",
+        "wardrobe": "Not clearly visible, appears to be wearing a dark top.",
+        "demeanor": "Static, friendly digital presence."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Kitchen Japanese Lesson",
+        "supernova_script": "Character A says: मुझे English बोलने से डर लगता है। [I am scared of speaking English.]\nCharacter B says: What's your name? [What's your name?]\nCharacter A says: My name is Nesly. [My name is Nesly.]\nCharacter B says: How are you? [How are you?]\nCharacter A says: I am fine, thank you. [I am fine, thank you.]\nCharacter B says: How old are you? [How old are you?]\nCharacter A says: My age 24. [My age 24.]\nCharacter B says: \"My age 24\" मत बोलो। [Don't say \"My age 24\".]\nCharacter B says: \"I am 24 years old\" बोलो। [Say \"I am 24 years old\".]\nCharacter A says: Oh, I am 24 years old. [Oh, I am 24 years old.]\nCharacter B says: तुम्हें English से डर क्यों लगता है? [Why are you scared of English?]\nCharacter A says: I am berozgaar because my English is bad. [I am jobless because my English is bad.]\nCharacter B says: \"Berozgaar\" मत बोलो। [Don't say \"berozgaar\".]\nCharacter B says: \"Unemployed\" बोलो। [Say \"unemployed\".]\nCharacter A says: Ah, I am unemployed because my English is bad. [Ah, I am unemployed because my English is bad.]\nCharacter B says: Perfect! तुम्हारी pronunciation बिल्कुल सही थी। [Perfect! Your pronunciation was exactly right.]\nCharacter B says: Great job! [Great job!]\nCharacter A says: क्या तुम रोज़ मुझे ऐसे ही English सिखा सकती हो? [Can you teach me English like this every day?]\nCharacter B says: बस Supernova डाउनलोड करो। [Just download Supernova.]\nCharacter B says: हम रोज़ बोलने की practice करेंगे और मैं तुम्हारी गलतियां सुधारूंगी। [We will practice speaking every day and I'll fix your mistakes.]\nCharacter A says: मैं अभी Supernova डाउनलोड करती हूँ। [I'll download Supernova right now.]",
+        "scene_summary": "- Hooks the viewer with a highly relatable pain point for the target audience: the fear of speaking English.\n- Demonstrates the app's core value by showing the AI tutor correcting common Indian-English mistakes in a warm, non-judgmental way.\n- Builds emotional payoff as the learner gains confidence and realizes daily practice is accessible.\n- Ends with a clear, encouraging call-to-action to download the app.",
+        "supernova_on_screen_text": "मुझे English बोलने से डर लगता है। (Mujhe English bolne se darr lagta hai. I am scared of speaking English.)\nWhat's your name?\nMy name is Nesly.\nHow are you?\nI am fine, thank you.\nHow old are you?\nMy age 24.\n\"My age 24\" मत बोलो। (\"My age 24\" mat bolo. Don't say \"My age 24\".)\n\"I am 24 years old\" बोलो। (\"I am 24 years old\" bolo. Say \"I am 24 years old\".)\nOh, I am 24 years old.\nतुम्हें English से डर क्यों लगता है? (Tumhein English se darr kyun lagta hai? Why are you scared of English?)\nI am berozgaar because my English is bad.\n\"Berozgaar\" मत बोलो। (\"Berozgaar\" mat bolo. Don't say \"berozgaar\".)\n\"Unemployed\" बोलो। (\"Unemployed\" bolo. Say \"unemployed\".)\nAh, I am unemployed because my English is bad.\nPerfect! तुम्हारी pronunciation बिल्कुल सही थी। (Perfect! Tumhari pronunciation bilkul sahi thi. Perfect! Your pronunciation was exactly right.)\nGreat job!\nक्या तुम रोज़ मुझे ऐसे ही English सिखा सकती हो? (Kya tum roz mujhe aise hi English sikha sakti ho? Can you teach me English like this every day?)\nबस Supernova डाउनलोड करो। (Bas Supernova download karo. Just download Supernova.)\nहम रोज़ बोलने की practice करेंगे और मैं तुम्हारी गलतियां सुधारूंगी। (Hum roz bolne ki practice karenge aur main tumhari galtiyan sudharungi. We will practice speaking every day and I'll fix your mistakes.)\nमैं अभी Supernova डाउनलोड करती हूँ। (Main abhi Supernova download karti hoon. I'll download Supernova right now.)"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clean, distraction-free final screen.\n- Reinforces brand recall with the Supernova logo.\n- Directs users to the app stores for immediate download.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4962442
+}

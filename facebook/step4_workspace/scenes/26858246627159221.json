@@ -1,0 +1,95 @@
+{
+  "competitor_id": "26858246627159221",
+  "parsed": {
+    "duration_s": 68.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines live-action footage with a 3D animated AI avatar. The avatar exhibits typical stylized features, smooth movements, and slightly unnatural lip-syncing characteristic of AI generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult, slim build, fair complexion, blonde hair. Hair is braided in the first half, loose in the second.",
+        "wardrobe": "Wears a pink tank top initially, then switches to a plain grey sweatshirt.",
+        "demeanor": "Confident initially, then eager, engaged, and slightly apologetic when making mistakes."
+      },
+      {
+        "id": "B",
+        "role": "passport officer",
+        "appearance": "Middle-aged male, average build, fair complexion, short dark hair.",
+        "wardrobe": "Wears a standard dark blue police or customs officer uniform.",
+        "demeanor": "Stern, serious, and professional."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female, fair complexion, red hair tied back. Features are stylized and smooth.",
+        "wardrobe": "Wears a dark blue police uniform, mimicking Character B.",
+        "demeanor": "Friendly, helpful, patient, and highly expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 20.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Passport Control Interaction",
+        "setting": "Brightly lit airport terminal at a passport control desk.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Over-shoulder and medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with a blonde braid stands at a counter. She faces a middle-aged male officer in a dark blue uniform. The officer holds a dark passport booklet and looks directly at her. The setting is a bright, busy airport terminal with white walls and ceilings. Other travelers and airport infrastructure are visible in the blurred background. The lighting is even, artificial overhead illumination.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a live-action shot in an airport terminal. The camera alternates between an over-the-shoulder view of the woman and a frontal view of her face. The officer remains seated behind the counter throughout the interaction. Subtitles appear at the bottom of the screen in various colors. The interaction appears natural and conversational.",
+        "audio_transcript": "Character B says: Do you speak English?\nCharacter A says: Yes.\nCharacter B says: Prove it.\nCharacter A says: Um, I'm here to visit my sister in Miami. I'm staying for two weeks. I have the return ticket. I'm not working, just visiting.\nCharacter B says: Alright, how?\nCharacter A says: I used Loora. Ten minutes a day, for real conversations like this one. Let me show you how it works.",
+        "on_screen_text": "PASSPORT CONTROL\nDo you speak English?\nYes.\nProve it.\nI'm here to visit my sister in Miami.\nI'm staying for two weeks.\nI have the return ticket, I'm not working, just visiting.\nAlright, how?\nI used Loora.\nTen minutes a day, for real conversations like this one.\nLet me show you how it works."
+      },
+      {
+        "n": 2,
+        "start_s": 20.5,
+        "end_s": 68.0,
+        "screenshot_at_s": 40.0,
+        "scene_label": "App Demonstration",
+        "setting": "Split screen: Left is a stylized airport desk, Right is a real airport terminal.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen, talking-head",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A 3D animated female character sits at a desk. She has fair skin, red hair pulled back, and wears a dark blue police uniform. She rests her chin on her hand, looking forward with a friendly expression. The background is a blurred, bright indoor space resembling an airport terminal. The lighting is soft and stylized.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A young woman with loose blonde hair stands in a bright indoor space. She wears a plain grey sweatshirt. The framing is a close-up, selfie-style shot, suggesting she is holding the camera. The background shows a brightly lit airport terminal with blurred figures walking by. The lighting is natural and bright.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a vertical split-screen layout. The left side features a 3D animated avatar, while the right side shows a live-action human. Both characters appear to be conversing with each other. Various UI elements, including green checkmarks and red crosses, pop up over the video to indicate correct or incorrect grammar. Subtitles are displayed continuously across both panels. The app logo appears near the end of the scene.",
+        "audio_transcript": "Character C says: Hello, where are you flying?\nCharacter A says: I fly, uh, London.\nCharacter C says: Do you mean \"I am flying to London\"?\nCharacter A says: Yes, sorry. I am flying to London.\nCharacter C says: Any luggage to check in?\nCharacter A says: Mmm, luggage?\nCharacter C says: Yes, luggage. It might be bags, suitcases and other containers people use to carry their belongings when traveling.\nCharacter A says: Oh, I have one luggage. Sorry, I'm not so good English.\nCharacter C says: Do you mean \"My English isn't that good\"? No worries. How many times have you spoken in English over the past month?\nCharacter A says: Mmm, actually I didn't.\nCharacter C says: So how do you expect to speak fluently?\nCharacter A says: I not have anyone to practice with.\nCharacter C says: Just download Loora. We'll speak together daily and you'll be fluent in no time.\nCharacter A says: That's amazing. I'm adding this to my daily routine today.",
+        "on_screen_text": "Hello, where are you flying?\nI fly London.\nDo you mean \"I am flying to London\"?\nYes, sorry.\nI am flying to London.\nAny luggage to check in?\nLuggage?\nYes, luggage.\nIt might be bags, suitcases\nand other containers\npeople use to carry their belongings\nwhen traveling.\nOh, I have one luggage.\nSorry\nI'm not so good English.\nDo you mean\n\"My English isn't that good\"?\nNo worries.\nHow many times\nhave you spoken in English\nover the past month?\nActually I didn't.\nSo how do you expect\nto speak fluently?\nI not have anyone\nto practice with.\nJust download Loora.\nWe'll speak together daily\nand you'll be fluent in no time.\nThat's amazing.\nI'm adding this\nto my daily routine today.\nLoora"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.5088603
+}

@@ -1,0 +1,61 @@
+{
+  "competitor_id": "1654898552218834",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "mixed",
+    "production_notes": "Left side is an AI avatar with uncanny smoothness, unnaturally large eyes, and a static pose. Right side is a human-recorded video with natural movement.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, fair complexion, red hair pulled back, large brown eyes.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Cheerful, static, slightly uncanny."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young female, fair complexion, blonde hair pulled back, blue eyes.",
+        "wardrobe": "Cream-colored ribbed sweater.",
+        "demeanor": "Earnest, slightly hesitant."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 35.0,
+        "screenshot_at_s": 17.0,
+        "scene_label": "Split-screen conversation",
+        "setting": "Warm, softly lit indoor settings.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Close-up, split-screen",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Close-up of Character A. She has fair skin, red hair pulled back, and large brown eyes. She wears a grey turtleneck and rests her chin on her right hand. The background is a plain, warm wall. Lighting is soft and even.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Close-up of Character B. She has fair skin, blonde hair pulled back, and blue eyes. She wears a cream ribbed sweater and rests her chin on her left hand. The background is a softly lit room with a curtain. Lighting is warm.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Vertical split-screen of two women conversing. Left side shows Character A against a plain background. Right side shows Character B in a softly lit room. Both rest their chins on their hands, mirroring each other. Captions and a logo appear over the video.",
+        "audio_transcript": "Character B says: Sorry, my English is not good.\nCharacter A says: You should practice everyday.\nCharacter B says: But I don't have anyone to practice with.\nCharacter A says: That's exactly what I'm here for. I'm Loora, your AI English tutor.\nCharacter B says: I can speak with you?\nCharacter A says: Yes, I'll chat with you, give you instant feedback on your pronunciation, and help you get better with every conversation.\nCharacter B says: But I make a lot of mistakes.\nCharacter A says: You don't have to worry about making mistakes because I'll guide you through them.\nCharacter B says: Sounds good.\nCharacter A says: Let's practice together every day and you'll see how quickly your English improves.",
+        "on_screen_text": "Sorry, my English is not good.\nYou should practice everyday.\nBut I don't have anyone to practice with.\nThat's exactly what I'm here for.\nI'm Loora, your AI English tutor.\nI can speak with you?\nYes, I'll chat with you\ngive you instant feedback on your pronunciation\nand help you get better with every conversation.\nBut I make a lot of mistakes.\nYou don't have to worry about making mistakes\nbecause I'll guide you through them.\nSounds good.\nLet's practice together every day\nLoora\nand you'll see how quickly your English improves."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.5367846
+}

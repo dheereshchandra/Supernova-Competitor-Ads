@@ -1,0 +1,82 @@
+{
+  "competitor_id": "1720222669432418",
+  "parsed": {
+    "duration_s": 24.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines a 3D animated AI avatar on the top half with a human recorded via smartphone on the bottom half. The AI avatar exhibits slightly unnatural lip-sync and a static, rendered background.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, 3D animated style, fair complexion, wavy red hair, large green eyes. She has a stylized, cartoonish look typical of 3D animation.",
+        "wardrobe": "Simple white top and small crescent moon earrings.",
+        "demeanor": "Friendly, encouraging, and attentive."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young adult male, light complexion, dark hair, short beard and mustache. He has a natural, everyday appearance.",
+        "wardrobe": "Blue t-shirt with red and white striped sleeves, and a white wireless earbud in his right ear.",
+        "demeanor": "Enthusiastic, engaged, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 22.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "English Practice Session",
+        "setting": "Top: blurred vanity mirror with lights. Bottom: plain white wall with a light switch.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A, a 3D animated young woman with wavy red hair, looks directly at the camera. She rests her chin on her right hand. The background is blurred, showing what appears to be a vanity mirror with round lights. Her expression is friendly and attentive.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B, a young man with a short beard, looks directly at the camera. The background is a plain white wall with a light switch visible. He smiles and speaks enthusiastically, reacting to the conversation.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with a 3D animated female avatar on top and a live-action young man on the bottom. They are engaged in a conversation. Text overlays appear in the center of the screen, displaying the dialogue. A banner of US flags is at the top. Green checkmarks and red crosses appear to indicate correct or incorrect pronunciation.",
+        "audio_transcript": "Character A says: Vamos praticar seu ingl\u00eas. [Let's practice your English.]\nCharacter B says: Okie dokie. [Okie dokie.]\nCharacter A says: Repete depois de mim. Hello. [Repeat after me. Hello.]\nCharacter B says: Hello. [Hello.]\nCharacter A says: Thank you. [Thank you.]\nCharacter B says: Thank you. [Thank you.]\nCharacter A says: Fala como eu. Thank you. [Speak like me. Thank you.]\nCharacter B says: Thank you. [Thank you.]\nCharacter A says: Voc\u00ea consegue responder a essa pergunta? What's your name? [Can you answer this question? What's your name?]\nCharacter B says: My name Gustavo. [My name Gustavo.]\nCharacter A says: Quase! Diz: \"My name is.\" [Almost! Say: \"My name is.\"]\nCharacter B says: My name is Gustavo. [My name is Gustavo.]\nCharacter A says: Mandou bem. [Well done.]\nCharacter B says: Thank you. [Thank you.]\nCharacter A says: Incr\u00edvel! Voc\u00ea arrasou na pron\u00fancia! Baixe o Praktika e pratique seu ingl\u00eas com tutores de IA! [Incredible! You nailed the pronunciation! Download Praktika and practice your English with AI tutors!]",
+        "on_screen_text": "Vamos praticar seu ingl\u00eas.\nOkie dokie.\nRepete depois de mim.\nHello.\nThank you.\nFala como eu.\nVoc\u00ea consegue responder a essa pergunta?\nWhat's your name?\nMy name Gustavo.\nQuase! Diz:\n\"My name is.\"\nMy name is Gustavo.\nMandou bem.\nThank you.\nIncr\u00edvel!\nVoc\u00ea arrasou na pron\u00fancia!\nBaixe o Praktika e pratique seu ingl\u00eas com tutores de IA!"
+      },
+      {
+        "n": 2,
+        "start_s": 22.5,
+        "end_s": 24.0,
+        "screenshot_at_s": 23.0,
+        "scene_label": "End Card",
+        "setting": "White background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A white screen with a purple app icon in the center. Below the icon is the app name in purple text. At the bottom are two black buttons for app stores.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966545.9163651
+}

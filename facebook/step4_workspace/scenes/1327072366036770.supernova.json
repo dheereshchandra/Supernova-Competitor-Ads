@@ -1,0 +1,39 @@
+{
+  "competitor_id": "1327072366036770",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, medium build, light brown complexion. He has dark hair and a short goatee. He wears round wire-rimmed glasses.",
+        "wardrobe": "White t-shirt and a backwards floral baseball cap.",
+        "demeanor": "Casual, enthusiastic, and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Screen recording demonstration",
+        "supernova_script": "Character A says: Interview practice mode. [Interview practice mode.]\nCharacter A says: अब ये देखो। [Now watch this.]\nCharacter A says: Good morning, sir. [Good morning, sir.]",
+        "scene_summary": "- Hooks the viewer with a quick, intriguing demonstration of the app's AI practice feature.\n- Shows how easy it is to start a conversation.\n- Sets up the problem/solution dynamic instantly.",
+        "supernova_on_screen_text": "English practice: Hard or Smart?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Presenter explanation",
+        "supernova_script": "Character A says: मैंने Supernova पर AI ट्यूटर सेट किया है। [I have set up the AI tutor on Supernova.]\nCharacter A says: मैं बस माइक ऑन करता हूँ और बिना डरे इंग्लिश में बात करता हूँ। [I just turn on the mic and speak in English without fear.]\nCharacter A says: आप इसे ऑफिस मीटिंग्स, कस्टमर कॉल्स, या दोस्तों से बात करने के लिए यूज़ कर सकते हैं। [You can use this for office meetings, customer calls, or talking to friends.]\nCharacter A says: आज ही ऐप डाउनलोड करें और अपनी इंग्लिश बेहतर बनाएं। [Download the app today and improve your English.]\nCharacter A says: खुद ट्राई करके देखो। [Try it yourself and see.]",
+        "scene_summary": "- Explains the core value proposition (AI tutor for fearless speaking).\n- Lists highly relatable, real-world use cases for the target demographic.\n- Delivers a warm, encouraging call to action to download the app.",
+        "supernova_on_screen_text": "Supernova AI Tutor\nSpeak without fear\n✅ Office meetings\n✅ Customer calls\n✅ Talking to friends\nDownload Supernova today!\nTry it yourself"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.7789896
+}

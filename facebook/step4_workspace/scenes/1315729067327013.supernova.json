@@ -1,0 +1,39 @@
+{
+  "competitor_id": "1315729067327013",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male player",
+        "appearance": "Young adult male, medium build, light complexion. He has dark hair pulled back and a prominent dark mustache.",
+        "wardrobe": "Grey crew-neck t-shirt and large black over-ear headphones.",
+        "demeanor": "Enthusiastic, engaged, becoming increasingly frustrated and self-deprecating."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Gameplay and Mistakes",
+        "supernova_script": "Character A says: All right, आज हम अपनी English practice करेंगे. Let's go Supernova. [All right, today we will practice our English. Let's go Supernova.]\nCharacter A says: All right, okay, 'How are you, sir?', right? That should be... Yes! All right, okay, perfect. [All right, okay, 'How are you, sir?', right? That should be... Yes! All right, okay, perfect.]\nCharacter A says: 'Carmen, are you tired?' Carmen, are you... exhaust? Yes... Oh wait, no, exhausted! ['Carmen, are you tired?' Carmen, are you... exhaust? Yes... Oh wait, no, exhausted!]\nCharacter A says: All right, okay. Focus करते हैं. [All right, okay. Let's focus.]\nCharacter A says: We got this. Okay, 'हाँ, मैं English बोलता हूँ'. I speaks English. [We got this. Okay, 'Yes, I speak English'. I speaks English.]\nCharacter A says: Wait, grammar mistake... I speak! [Wait, grammar mistake... I speak!]",
+        "scene_summary": "- Hooks the viewer by showing a relatable, realistic struggle with spoken English and grammar.\n- Demonstrates the app's interactive feedback loop (getting it right, making a mistake, correcting it).\n- Builds empathy through the user's mild frustration and determination to improve.",
+        "supernova_on_screen_text": "What would you like to learn? English CONTINUE Translate this sentence आप कैसे हैं, सर? How are you, sir? CHECK Incredible! Translate this sentence कारमेन, क्या तुम थकी हुई हो? Carmen, are you exhaust? CHECK Incorrect Correct Answer: Carmen, are you exhausted? GOT IT Keep trying! Translate this sentence हाँ, मैं English बोलता हूँ। I speaks English CHECK Incorrect Correct Answer: Yes, I speak English. GOT IT can you do better?"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "Character A says: All right Supernova, you made your point. मुझे रोज़ practice करनी पड़ेगी. [All right Supernova, you made your point. I will have to practice daily.]",
+        "scene_summary": "- Concludes the ad with a clear realization that consistent, daily practice is needed to master English.\n- Presents the brand logo and a call to action to start learning.",
+        "supernova_on_screen_text": "Supernova Speak English with confidence! START LEARNING NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.9756439
+}

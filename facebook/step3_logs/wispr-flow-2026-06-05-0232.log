@@ -1,0 +1,141 @@
+# Step 3 run log
+# competitor : wispr-flow
+# started_at : 2026-06-05T02:32:44
+# input      : inputs/fb-ads-wispr-flow-2026-06-04-2232_NEW_ONLY.csv
+# videos     : videos/wispr-flow-2026-05-28
+# master     : master/wispr-flow.csv  (updated)
+# enriched   : inputs/fb-ads-wispr-flow-2026-06-04-2232_NEW_ONLY_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded': 20, 'carried-forward': 0, 'image-pending': 20, 'video-missing': 88, 'no-creative': 0, 'error': 0}
+#
+uploaded         1469613061573017 c0  (video) ← 1469613061573017.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1469613061573017.mp4
+uploaded         1594180728511921 c0  (video) ← 1594180728511921.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1594180728511921.mp4
+uploaded         2000826840827099 c0  (video) ← 2000826840827099.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2000826840827099.mp4
+uploaded         1514236670316304 c0  (video) ← 1514236670316304.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1514236670316304.mp4
+uploaded         4420596578229527 c0  (video) ← 4420596578229527.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4420596578229527.mp4
+uploaded         3035274613339634 c0  (video) ← 3035274613339634.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3035274613339634.mp4
+uploaded         893573703280994 c0  (video) ← 893573703280994.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/893573703280994.mp4
+image-pending    1782638999069504 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1473601681072488 c0  (video) ← 1473601681072488.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1473601681072488.mp4
+uploaded         977919351399357 c0  (video) ← 977919351399357.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/977919351399357.mp4
+uploaded         1943117606276656 c0  (video) ← 1943117606276656.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1943117606276656.mp4
+uploaded         1327341312828250 c0  (video) ← 1327341312828250.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1327341312828250.mp4
+image-pending    1525539975901936 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1751732892904716 c0  (video) ← 1751732892904716.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1751732892904716.mp4
+uploaded         1526313555629564 c0  (video) ← 1526313555629564.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1526313555629564.mp4
+uploaded         2783263615366115 c0  (video) ← 2783263615366115.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2783263615366115.mp4
+image-pending    1988519465419516 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2074814436435331 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1309945897778127 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         26951218921154834 c0  (video) ← 26951218921154834.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26951218921154834.mp4
+uploaded         1323700989262551 c0  (video) ← 1323700989262551.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1323700989262551.mp4
+uploaded         1447995542938284 c0  (video) ← 1447995542938284.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1447995542938284.mp4
+uploaded         939804812207466 c0  (video) ← 939804812207466.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/939804812207466.mp4
+uploaded         1448720376875344 c0  (video) ← 1448720376875344.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1448720376875344.mp4
+uploaded         4290328817880625 c0  (video) ← 4290328817880625.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4290328817880625.mp4
+video-missing    1703623403931806 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1548537210174971 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1503680267805930 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    977766888472161 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2231448444339421 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1344142607559099 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    1487733916142109 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1019345563775127 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2491734961264960 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1777723302894179 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1634815097934664 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    26934001002934526 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    26806861318983789 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1480884993832917 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    964991023202490 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    1681630572984077 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    825007220404729 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    818473721135010 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1996638704317385 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1665828411350061 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2092420904994189 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    974623485306288 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    971276262465909 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2160514198124716 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    915861828146331 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    27342850795403619 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    1007487788399464 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2003161393621596 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2408836822881544 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1712215026762061 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    883103087971011 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    4325066024489838 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    919124804533742 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1526873115619640 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1704848277195783 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    3551930208294863 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2211660996329076 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    3868602370114322 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2864697693922198 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1350201880348353 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1546472607036391 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1166691958921732 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2188370728630215 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1317213013886114 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    948040591378668 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    26170167115940335 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    2062753101320143 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1716266826357262 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1499688908361839 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2879990902347105 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    2591616264621564 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1343971727652844 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2056717451920518 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    1024110519955744 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    966896692803613 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    967954409545926 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2436227953510853 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    1026592549721789 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1389701746525090 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    27575583032033914 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1273557821660363 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1231293345579218 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1452290990247734 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    26853137111022111 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1303537861844052 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    975530245265512 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    992867743218240 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+image-pending    1317421439772078 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1788344938992863 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1509194667365126 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1589914369805558 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1687690555899690 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1639341597120271 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2021786208412769 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2466614900521469 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1544896063857696 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1533682291746682 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1642872343590699 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1629684578324202 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2552972838479006 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1010114801548791 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    987730516976322 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1572631420957539 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1299297872393220 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1443271877548776 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1648538236405737 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1527647282402374 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1749440799358678 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1010470124775138 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1661076751780965 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    927347916992984 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    27600709532899964 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    983459301330814 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2174313546444747 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    26493128840387738 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    841778428545478 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    995244919758432 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1464760242122095 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    2156078808581419 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1671133337418480 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    3197283097145585 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    1981475805832450 c0  (expected file not found in videos/wispr-flow-2026-05-28)
+video-missing    4002639813203332 c0  (expected file not found in videos/wispr-flow-2026-05-28)

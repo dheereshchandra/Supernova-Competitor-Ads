@@ -1,0 +1,82 @@
+{
+  "competitor_id": "4534743323518937",
+  "parsed": {
+    "duration_s": 43.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines an AI-generated avatar on the left with a human-recorded video on the right. The AI character exhibits perfectly smooth skin, slightly unnatural lip-sync, and a static background, while the human character shows natural lighting, slight camera movement, and realistic textures.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, fair complexion. Dark brown hair tied back with loose strands framing her face. Symmetrical, smooth facial features.",
+        "wardrobe": "Dark green long-sleeve turtleneck sweater. Small gold hoop earrings.",
+        "demeanor": "Friendly, encouraging, and slightly robotic in its consistent perfection."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young adult female, fair complexion. Light brown hair tied back. Wearing round, wire-rimmed glasses.",
+        "wardrobe": "Dark grey zip-up hoodie over a lighter-colored shirt.",
+        "demeanor": "Eager, slightly hesitant during initial attempts, becoming excited and confident."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 39.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Pronunciation Practice",
+        "setting": "Split screen: Left is a plain dark grey studio background. Right is a brightly lit room with an off-white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen, talking-head",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A medium close-up of Character A looking directly at the camera. She has dark brown hair tied back with loose strands framing her face and is wearing a dark green turtleneck and small gold hoop earrings. The background is a solid, dark grey color. The lighting is soft, even, and studio-like, highlighting her features without harsh shadows.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A medium close-up of Character B looking directly at the camera. She has light brown hair tied back and is wearing round wire-rimmed glasses and a dark grey zip-up hoodie. The background is a brightly lit room with a plain off-white wall and a small portion of a ceiling light visible at the top. The lighting is natural and slightly uneven, typical of a home environment.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen showing two women engaged in a conversation. The left panel features an AI avatar, while the right panel shows a real person. Throughout the scene, various text boxes with dialogue and pronunciation scores pop up over the characters. A blue fast-forward icon appears between them towards the end.",
+        "audio_transcript": "Character A says: Let's practice your pronunciation.\nCharacter B says: Okay, let's go!\nCharacter A says: Say this phrase: \"Do you want to go?\"\nCharacter B says: Do you want to go?\nCharacter A says: Try \"Jawannago\"\nCharacter B says: Do you wanna go?\nCharacter A says: Now this one: \"Let me think about it\"\nCharacter B says: Let me think about it.\nCharacter A says: Try \"Lemmee thinkaboudit\"\nCharacter B says: Lemme think about it.\nCharacter B says: Oh, wow! One more.\nCharacter A says: \"What did you say?\"\nCharacter B says: What did you say?\nCharacter A says: Say \"Whadjasay\"\nCharacter B says: What did you say?\nCharacter B says: Amazing, I'm speaking faster already! How do I learn more?\nCharacter A says: Just download Fluently App. We'll practice daily, and you'll be fluent faster than you think.\nCharacter B says: Awesome! I'm downloading it right now.",
+        "on_screen_text": "Let's practice your pronunciation\nOkay, let's go!\nSay this phrase: \"Do you want to go?\"\nDo you want to go?\nTry \"Jawannago\"\n20/100\nJawannago\nDo you wanna go?\nNow this one: \"Let me think about it\"\nLet me think about it\n32/100\nTry \"Lemmee thinkaboudit\"\nLemme thinkaboudit\nLemme think about it\nOh, wow! One more\n100/100\n\"What did you say?\"\nWhat did you say?\n15/100\nSay \"Whadjasay\"\nWhadjasay?\nWhat did you say?\nAmazing, I'm speaking faster already!\n100/100\nHow do I learn more?\nJust download Fluently App\nWe'll practice daily, and you'll be fluent faster than you think\nAwesome!\nI'm downloading it right now"
+      },
+      {
+        "n": 2,
+        "start_s": 39.0,
+        "end_s": 43.0,
+        "screenshot_at_s": 41.0,
+        "scene_label": "End Card",
+        "setting": "Digital graphic background.",
+        "characters_in_scene": [],
+        "camera": "full screen graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark blue gradient background, transitioning from a lighter blue in the center to a darker, almost black shade at the edges. There are no characters, props, or environmental details present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A simple end card graphic. The background is a dark blue gradient. In the center, there is an app icon featuring a blue square with white fast-forward arrows. Below the icon is the app name, a tagline, and a purple download button.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657946.4216752
+}

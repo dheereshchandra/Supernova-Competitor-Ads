@@ -1,0 +1,67 @@
+{
+  "competitor_id": "964203152818249",
+  "parsed": {
+    "duration_s": 10.0,
+    "production_type": "mixed",
+    "production_notes": "2D motion graphics and app screencast. No human actors or generative AI artifacts present.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Brand Mascot",
+        "appearance": "Stylized 2D green owl. Large eyes, yellow beak, wearing round black glasses.",
+        "wardrobe": "Round black glasses.",
+        "demeanor": "Cheerful and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.5,
+        "screenshot_at_s": 4.0,
+        "scene_label": "App Question",
+        "setting": "Digital app interface, white background",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Solid white background. A flat-vector green owl character with large eyes and a yellow beak wears round black glasses in the lower half.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Mobile app interface with a top progress bar. A vocabulary question is displayed with 'Yes' and 'No' buttons. A cursor clicks 'Yes'. The green owl mascot appears from the bottom with a speech bubble.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Is this a real English word? PREVALENT Yes No If you got it right then you are ready to take the DET!"
+      },
+      {
+        "n": 2,
+        "start_s": 7.5,
+        "end_s": 10.0,
+        "screenshot_at_s": 9.0,
+        "scene_label": "End Card",
+        "setting": "Solid green background",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Solid bright green background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Solid bright green background. A white badge logo with a green interior shape sits above promotional text.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "duolingo english test Take unlimited free practice tests"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780640528.9060035
+}

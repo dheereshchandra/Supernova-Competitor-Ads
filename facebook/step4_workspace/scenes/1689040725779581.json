@@ -1,0 +1,92 @@
+{
+  "competitor_id": "1689040725779581",
+  "parsed": {
+    "duration_s": 22.0,
+    "production_type": "AI-generated",
+    "production_notes": "The presenter exhibits uncanny facial smoothness, slightly unnatural lip-sync, and robotic head movements typical of AI avatars. The lighting on the subject remains perfectly static despite movement.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female with short, side-parted dark brown hair. Fair complexion, dark brown eyes, and symmetrical features.",
+        "wardrobe": "Light grey button-down shirt. Large black over-ear headphones in the first half.",
+        "demeanor": "Friendly and informative, but slightly stiff."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Introduction",
+        "setting": "Indoor, daytime. Blurred brick wall and green plant. Bright lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A woman with short dark hair is centered in the frame, wearing a light grey button-down shirt and large black over-ear headphones. She is looking slightly off-camera to the left. The background features a blurred brick wall on the left and a large, leafy green plant on the right. The lighting is bright and even.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter introduces the app. An animated smartphone mockup appears on the right side, showing various app screens. Text captions are displayed at the bottom.",
+        "audio_transcript": "Character A says: If you're an immigrant, you might wonder if native speakers understand your accent.\nCharacter A says: There's a pronunciation app, BoldVoice, that tests your accent and helps you learn an American one with instant AI feedback.",
+        "on_screen_text": "If you're an immigrant\nyou might wonder\nif native speakers\nunderstand your accent.\nThere's a pronunciation app\nBoldVoice\nthat tests your accent\nand helps you learn\nan American one with\ninstant AI feedback."
+      },
+      {
+        "n": 2,
+        "start_s": 10.5,
+        "end_s": 19.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "App Demonstration",
+        "setting": "Indoor, daytime. Blurred brick wall and green plant. Bright lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The same woman is shown in a medium close-up, wearing a light grey button-down shirt and a small black lavalier microphone clipped to her collar. She is holding a smartphone with a pink marble case in her right hand. The background features a blurred brick wall and a green plant. The lighting is bright and even.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter demonstrates using the app. An animated smartphone mockup appears on the right. She then holds up her actual phone. Text captions are displayed at the bottom.",
+        "audio_transcript": "Character A says: Theater.\nCharacter A says: Looks like I have to work on that first \"th\".\nCharacter A says: Theater.\nCharacter A says: I fixed it!\nCharacter A says: It's super easy.\nCharacter A says: Download BoldVoice on your phone.\nCharacter A says: Get your results and let BoldVoice boost your confidence.",
+        "on_screen_text": "Theater\nLooks like I have to\nwork on that first\n\"th\"\nTheater\nI fixed it!\nIt's super easy.\nDownload BoldVoice\non your phone.\nGet your results\nand let BoldVoice\nboost your confidence."
+      },
+      {
+        "n": 3,
+        "start_s": 19.5,
+        "end_s": 22.0,
+        "screenshot_at_s": 20.5,
+        "scene_label": "End Card",
+        "setting": "Dark grey background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark grey background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A dark grey end card with a smartphone mockup in the center playing a video. Above the phone is a gold laurel wreath with stars. Below is promotional text, a logo, and an App Store badge.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "27,000\nSTAR RATING\nSpeak English Confidently\nGet your first 7 days free\nBoldVoice\nDownload on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779986084.7970002
+}

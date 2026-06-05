@@ -1,0 +1,120 @@
+{
+  "competitor_id": "1347418030649936",
+  "parsed": {
+    "duration_s": 68.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human footage with an AI-generated 3D avatar. The human presenter's lip-sync appears slightly unnatural, suggesting AI dubbing or translation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion. She has light brown hair styled in a single braid down her back and blue eyes.",
+        "wardrobe": "Wears a light purple tank top initially, then a mustard yellow chunky knit sweater, and finally a plain grey crewneck sweatshirt.",
+        "demeanor": "Relatable, slightly embarrassed initially, then enthusiastic and engaged."
+      },
+      {
+        "id": "B",
+        "role": "male border officer",
+        "appearance": "Adult male, medium build, light brown complexion. He has short dark hair and dark eyes.",
+        "wardrobe": "Dark blue short-sleeved uniform shirt with epaulets and a badge.",
+        "demeanor": "Stern, professional, unsmiling."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character, fair complexion. She has reddish-brown hair pulled back and large, expressive green eyes.",
+        "wardrobe": "Dark blue uniform shirt with a badge and a radio on the shoulder.",
+        "demeanor": "Friendly, patient, encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.0,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Border Control Rejection",
+        "setting": "Airport passport control area, bright fluorescent lighting, blue signage in the background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The camera looks over the shoulder of Character A, who is facing away from the viewer. She is handing a dark passport to Character B, who stands behind a counter. Character B looks directly at Character A with a serious expression. The background shows a busy airport terminal with other travelers and a sign.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A brief introductory scene establishing a stressful travel situation. Character A is seen from behind interacting with a stern border control officer. Text overlays display the officer's dialogue.",
+        "audio_transcript": "Character B says: What's the reason for your trip?\nCharacter B says: Please step aside.",
+        "on_screen_text": "What's the reason for your trip? Please step aside."
+      },
+      {
+        "n": 2,
+        "start_s": 4.0,
+        "end_s": 20.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Presenter Introduction",
+        "setting": "Cozy indoor living space, soft natural lighting, wooden shelving with plants and books in the background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is framed from the chest up, facing the camera directly. She holds a light-colored ceramic mug with both hands near her chest. She is speaking and making subtle facial expressions. The background is slightly out of focus, showing a warm, domestic environment with shelves.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A addresses the camera directly, recounting her experience. She holds a mug, creating a casual, conversational atmosphere. Subtitles appear over her chest as she speaks. The scene ends with a kaleidoscopic transition effect.",
+        "audio_transcript": "Character A says: S\u00ed, esa era yo. [Yes, that was me.]\nCharacter A says: En migraci\u00f3n en Miami me regresaron porque no pod\u00eda hablar ingl\u00e9s. [At immigration in Miami they sent me back because I couldn't speak English.]\nCharacter A says: Entend\u00ed la pregunta pero me qued\u00e9 en blanco. [I understood the question but my mind went blank.]\nCharacter A says: Una amiga me puso Loora en el tel\u00e9fono. [A friend put Loora on my phone.]\nCharacter A says: Ahora practico cada conversaci\u00f3n antes de tenerla [Now I practice every conversation before having it]\nCharacter A says: en el aeropuerto, en el hotel, en todos lados. [at the airport, at the hotel, everywhere.]\nCharacter A says: D\u00e9jame mostrarte. [Let me show you.]",
+        "on_screen_text": "S\u00ed, esa era yo. En migraci\u00f3n en Miami me regresaron porque no pod\u00eda hablar ingl\u00e9s. Entend\u00ed la pregunta pero me qued\u00e9 en blanco. Una amiga me puso Loora en el tel\u00e9fono. Ahora practico cada conversaci\u00f3n antes de tenerla en el aeropuerto, en el hotel, en todos lados. D\u00e9jame mostrarte."
+      },
+      {
+        "n": 3,
+        "start_s": 20.0,
+        "end_s": 68.0,
+        "screenshot_at_s": 40.0,
+        "scene_label": "App Demonstration",
+        "setting": "Split screen. Left: blurred airport terminal. Right: bright indoor setting with a window.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "split-screen",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character C, a 3D animated avatar, is framed from the chest up. She rests her chin on her hand, looking forward with a friendly expression. The background is a softly blurred, bright airport terminal interior.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Character A is framed from the chest up, looking directly at the camera. She is smiling and speaking. The background is a bright, neutral indoor space with a window visible on the right side.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen showing a simulated conversation. On the left, the AI avatar acts as the conversation partner. On the right, the human user responds. Subtitles and occasional UI elements like checkmarks or crosses appear over the respective speakers.",
+        "audio_transcript": "Character C says: Hello, where are you flying?\nCharacter A says: I fly uh London.\nCharacter C says: \u00bfQuieres decir: \"I am flying to London\"? [Do you mean: \"I am flying to London\"?]\nCharacter A says: Yes, sorry. I am flying to London.\nCharacter C says: Any luggage to check in?\nCharacter A says: Mmm, luggage?\nCharacter C says: S\u00ed, luggage. [Yes, luggage.]\nCharacter C says: Pueden ser bolsas, maletas [They can be bags, suitcases]\nCharacter C says: y otras cosas que la gente usa [and other things people use]\nCharacter C says: para llevar sus pertenencias cuando viaja. [to carry their belongings when traveling.]\nCharacter A says: Oh, I have one luggage.\nCharacter A says: Ay, perd\u00f3n [Oh, sorry]\nCharacter A says: mi ingl\u00e9s no es muy bueno. [my English is not very good.]\nCharacter C says: \u00a1No te preocupes! [Don't worry!]\nCharacter C says: \u00bfCu\u00e1ntas veces hablaste en ingl\u00e9s el \u00faltimo mes? [How many times did you speak English in the last month?]\nCharacter A says: Mmm, la verdad, no habl\u00e9 nada. [Mmm, honestly, I didn't speak at all.]\nCharacter C says: Entonces, \u00bfc\u00f3mo esperas hablar con fluidez? [Then, how do you expect to speak fluently?]\nCharacter A says: No tengo a nadie con quien practicar. [I don't have anyone to practice with.]\nCharacter C says: Solo descarga Loora. [Just download Loora.]\nCharacter C says: Vamos a hablar juntas todos los d\u00edas [We are going to talk together every day]\nCharacter C says: y vas a hablar ingl\u00e9s con fluidez mucho m\u00e1s r\u00e1pido [and you are going to speak English fluently much faster]\nCharacter C says: de lo que crees. [than you think.]\nCharacter A says: Qu\u00e9 incre\u00edble. [How incredible.]\nCharacter A says: Voy a agregar esto a mi rutina diaria desde hoy. [I am going to add this to my daily routine starting today.]",
+        "on_screen_text": "Hello, where are you flying? I fly uh London. \u00bfQuieres decir: \"I am flying to London\"? Yes, sorry. I am flying to London. Any luggage to check in? Luggage? S\u00ed, luggage. Pueden ser bolsas, maletas y otras cosas que la gente usa para llevar sus pertenencias cuando viaja. Oh, I have one luggage. Ay, perd\u00f3n mi ingl\u00e9s no es muy bueno. \u00a1No te preocupes! \u00bfCu\u00e1ntas veces hablaste en ingl\u00e9s el \u00faltimo mes? La verdad, no habl\u00e9 nada. Entonces, \u00bfc\u00f3mo esperas hablar con fluidez? No tengo a nadie con quien practicar. Solo descarga Loora. Vamos a hablar juntas todos los d\u00edas y vas a hablar ingl\u00e9s con fluidez mucho m\u00e1s r\u00e1pido de lo que crees. Qu\u00e9 incre\u00edble. Voy a agregar esto a mi rutina diaria desde hoy. Loora"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.5426967
+}

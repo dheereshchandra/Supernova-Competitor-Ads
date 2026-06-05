@@ -1,0 +1,94 @@
+{
+  "competitor_id": "2292254317849120",
+  "parsed": {
+    "duration_s": 49.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines an AI-generated avatar in the top half with a human actor in the bottom half. The AI avatar exhibits typical uncanny features like overly smooth skin, unnatural glowing lines on the face, and slightly stiff lip-syncing, while the human actor has natural lighting, movement, and camera quality.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with a fair complexion and shoulder-length brown hair. She has distinct, glowing blue lines tracing her cheeks and neck. Her facial features are symmetrical and slightly stylized.",
+        "wardrobe": "A metallic, shiny copper or gold-colored hoodie.",
+        "demeanor": "Friendly, encouraging, and slightly robotic."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young adult female with a fair complexion and dark hair pulled back. She has natural facial features and a casual appearance.",
+        "wardrobe": "A plain, light blue short-sleeved t-shirt.",
+        "demeanor": "Attentive, smiling, and actively engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 26.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Interactive English Lesson",
+        "setting": "Top: A stylized room with purple and blue neon lighting. Bottom: A plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is framed in a medium close-up, looking directly at the camera. She is positioned in a room with soft, out-of-focus purple and blue neon lighting in the background, suggesting a modern or futuristic setting. Her expression is friendly and she appears to be speaking. The lighting on her face is even, highlighting the glowing blue lines on her skin.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B is framed in a medium close-up, looking directly at the camera. She is standing in front of a plain, unadorned white wall. The lighting is natural and even, typical of a well-lit indoor environment. She smiles frequently and moves her head slightly as she speaks, appearing relaxed and attentive.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with an AI avatar on top and a human learner on the bottom. They are engaged in a call-and-response language lesson. Large text overlays appear in the center of the screen, displaying the Hindi sentences spoken by the avatar in red and the English translations spoken by the human in black.",
+        "audio_transcript": "Character A says: \u0924\u0941\u092e Red \u092c\u094b\u0932\u094b, \u092e\u0948\u0902 Black \u092c\u094b\u0932\u0924\u0940 \u0939\u0942\u0901\u0964 \u091a\u0932\u094b, \u0936\u0941\u0930\u0942 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964 [You say Red, I will say Black. Let's start.]\nCharacter A says: \u092e\u0948\u0902 \u0905\u092d\u0940 \u0928\u093e\u0936\u094d\u0924\u093e \u0915\u0930 \u0930\u0939\u0940 \u0939\u0942\u0901\u0964 [I am having breakfast right now.]\nCharacter B says: I am having breakfast right now.\nCharacter A says: \u0924\u0941\u092e \u0915\u0939\u093e\u0901 \u091c\u093e \u0930\u0939\u0940 \u0939\u094b? [Where are you going?]\nCharacter B says: Where are you going?\nCharacter A says: \u092e\u0941\u091d\u0947 \u0925\u094b\u0921\u093c\u093e \u092a\u093e\u0928\u0940 \u0926\u0947 \u0926\u094b \u0928\u093e\u0964 [Please give me some water.]\nCharacter B says: Please give me some water.\nCharacter A says: \u0906\u091c \u092c\u0939\u0941\u0924 \u0917\u0930\u094d\u092e\u0940 \u0939\u0948\u0964 [It is very hot today.]\nCharacter B says: It is very hot today.\nCharacter A says: \u092e\u0948\u0902 \u0924\u0941\u092e\u094d\u0939\u0947\u0902 \u092c\u093e\u0926 \u092e\u0947\u0902 \u092b\u094b\u0928 \u0915\u0930\u0924\u093e \u0939\u0942\u0901\u0964 [I will call you later.]\nCharacter B says: I will call you later.\nCharacter A says: \u092e\u0941\u091d\u0947 \u092f\u0939 \u0938\u092e\u091d \u0928\u0939\u0940\u0902 \u0906\u092f\u093e\u0964 [I did not understand this.]\nCharacter B says: I did not understand this.\nCharacter A says: \u0915\u094d\u092f\u093e \u0924\u0941\u092e \u092e\u0947\u0930\u0940 \u092e\u0926\u0926 \u0915\u0930 \u0938\u0915\u0924\u0940 \u0939\u094b? [Can you help me?]\nCharacter B says: Can you help me?\nCharacter A says: \u092c\u0922\u093c\u093f\u092f\u093e! \u0905\u092c \u0906\u0916\u093f\u0930\u0940 sentence, \u092e\u0941\u091d\u0947 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092c\u094b\u0932\u0928\u093e \u0938\u0940\u0916\u0928\u093e \u0939\u0948\u0964 [Great! Now the last sentence, I want to learn how to speak English.]\nCharacter B says: I want to learn how to speak English.",
+        "on_screen_text": "\u0924\u0941\u092e Red \u092c\u094b\u0932\u094b, \u092e\u0948\u0902 Black \u092c\u094b\u0932\u0924\u0940 \u0939\u0942\u0901\u0964 \u091a\u0932\u094b, \u0936\u0941\u0930\u0942 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964 (You say Red, I will say Black. Let's start.)\n\u092e\u0948\u0902 \u0905\u092d\u0940 \u0928\u093e\u0936\u094d\u0924\u093e \u0915\u0930 \u0930\u0939\u0940 \u0939\u0942\u0901\u0964 (I am having breakfast right now.)\nI am having breakfast right now.\n\u0924\u0941\u092e \u0915\u0939\u093e\u0901 \u091c\u093e \u0930\u0939\u0940 \u0939\u094b? (Where are you going?)\nWhere are you going?\n\u092e\u0941\u091d\u0947 \u0925\u094b\u0921\u093c\u093e \u092a\u093e\u0928\u0940 \u0926\u0947 \u0926\u094b \u0928\u093e\u0964 (Please give me some water.)\nPlease give me some water.\n\u0906\u091c \u092c\u0939\u0941\u0924 \u0917\u0930\u094d\u092e\u0940 \u0939\u0948\u0964 (It is very hot today.)\nIt is very hot today.\n\u092e\u0948\u0902 \u0924\u0941\u092e\u094d\u0939\u0947\u0902 \u092c\u093e\u0926 \u092e\u0947\u0902 \u092b\u094b\u0928 \u0915\u0930\u0924\u093e \u0939\u0942\u0901\u0964 (I will call you later.)\nI will call you later.\n\u092e\u0941\u091d\u0947 \u092f\u0939 \u0938\u092e\u091d \u0928\u0939\u0940\u0902 \u0906\u092f\u093e\u0964 (I did not understand this.)\nI did not understand this.\n\u0915\u094d\u092f\u093e \u0924\u0941\u092e \u092e\u0947\u0930\u0940 \u092e\u0926\u0926 \u0915\u0930 \u0938\u0915\u0924\u0940 \u0939\u094b? (Can you help me?)\nCan you help me?\n\u092c\u0922\u093c\u093f\u092f\u093e! \u0905\u092c \u0906\u0916\u093f\u0930\u0940 sentence, \u092e\u0941\u091d\u0947 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092c\u094b\u0932\u0928\u093e \u0938\u0940\u0916\u0928\u093e \u0939\u0948\u0964 (Great! Now the last sentence, I want to learn how to speak English.)\nI want to learn how to speak English."
+      },
+      {
+        "n": 2,
+        "start_s": 26.0,
+        "end_s": 49.0,
+        "screenshot_at_s": 35.0,
+        "scene_label": "App Pitch and CTA",
+        "setting": "Top: A stylized room with purple and blue neon lighting. Bottom: A plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A remains in a medium close-up, looking directly at the camera and speaking. The background features the same soft purple and blue neon lighting. Her expression is persuasive and engaging as she delivers a pitch.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B remains in a medium close-up against the plain white wall. She is no longer speaking but maintains eye contact with the camera, smiling and nodding slightly as if listening to the pitch.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen layout continues, but the focus shifts to the AI avatar delivering a promotional pitch. Various graphic overlays appear over the video, including an app store listing, a '7x Cheaper' badge, a premium subscription screen showing '\u20b91', a clock icon with '10-15 MINUTES', and an app installation prompt. The human learner listens attentively.",
+        "audio_transcript": "Character A says: \u090f\u0915 \u0915\u0930\u094b\u0921\u093c \u092a\u094d\u0932\u0938 \u0932\u094b\u0917 \u092a\u0939\u0932\u0947 \u0938\u0947 \u0939\u0940 MySivi \u0910\u092a \u092a\u0930 \u092e\u0947\u0930\u0947 \u091c\u0948\u0938\u0947 AI \u0915\u0947 \u0938\u093e\u0925 \u092c\u093e\u0924 \u0915\u0930\u0915\u0947 \u0930\u094b\u091c\u093c English practice \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902\u0964 [Over one crore people are already practicing English daily by talking to an AI like me on the MySivi app.]\nCharacter A says: \u0928\u0949\u0930\u094d\u092e\u0932 \u0915\u094d\u0932\u093e\u0938\u0947\u0938 \u0938\u0947 7 \u0917\u0941\u0928\u093e \u0938\u0938\u094d\u0924\u093e\u0964 [7 times cheaper than normal classes.]\nCharacter A says: \u0907\u0938\u0940\u0932\u093f\u090f \u091f\u094d\u0930\u093e\u092f\u0932 \u0938\u093f\u0930\u094d\u092b \u20b91 \u092e\u0947\u0902\u0964 [That's why the trial is just for \u20b91.]\nCharacter A says: \u0930\u094b\u091c\u093c \u0938\u093f\u0930\u094d\u092b 15 \u0938\u0947 20 \u092e\u093f\u0928\u091f \u0926\u0940\u091c\u093f\u090f \u0914\u0930 \u0915\u0941\u091b \u0939\u0940 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 \u0906\u092a\u0915\u093e \u0915\u0949\u0928\u094d\u092b\u093f\u0921\u0947\u0902\u0938 \u0938\u093e\u092b \u092c\u0922\u093c\u0924\u093e \u0939\u0941\u0906 \u0926\u093f\u0916\u0947\u0917\u093e\u0964 [Just give 15 to 20 minutes daily and in a few days you will clearly see your confidence increasing.]\nCharacter A says: \u0905\u092c \u0930\u0941\u0915\u0928\u093e \u0915\u094d\u092f\u094b\u0902? \u0905\u092d\u0940 \u0938\u093e\u0907\u0928 \u0905\u092a \u0915\u0930\u0947\u0902 \u0914\u0930 \u0906\u091c \u0938\u0947 \u0939\u0940 MySivi \u092a\u0930 English \u092c\u094b\u0932\u0928\u093e \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902\u0964 [Why wait now? Sign up now and start speaking English on MySivi from today itself.]",
+        "on_screen_text": "Start English Learning - MySivi\n10M+ Downloads\n\u090f\u0915 \u0915\u0930\u094b\u0921\u093c \u092a\u094d\u0932\u0938 \u0932\u094b\u0917 \u092a\u0939\u0932\u0947 \u0938\u0947 \u0939\u0940 MySivi \u0910\u092a \u092a\u0930 \u092e\u0947\u0930\u0947 \u091c\u0948\u0938\u0947 AI \u0915\u0947 \u0938\u093e\u0925 \u092c\u093e\u0924 \u0915\u0930\u0915\u0947 \u0930\u094b\u091c\u093c English practice \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902 (Over one crore people are already practicing English daily by talking to an AI like me on the MySivi app)\n7x Cheaper\n\u0928\u0949\u0930\u094d\u092e\u0932 \u0915\u094d\u0932\u093e\u0938\u0947\u0938 \u0938\u0947 7 \u0917\u0941\u0928\u093e \u0938\u0938\u094d\u0924\u093e (7 times cheaper than normal classes)\nMySivi Premium\n\u20b91\n\u0907\u0938\u0940\u0932\u093f\u090f \u091f\u094d\u0930\u093e\u092f\u0932 \u0938\u093f\u0930\u094d\u092b \u20b91 \u092e\u0947\u0902 (That's why the trial is just for \u20b91)\n10-15 MINUTES\n\u0930\u094b\u091c\u093c \u0938\u093f\u0930\u094d\u092b 15 \u0938\u0947 20 \u092e\u093f\u0928\u091f \u0926\u0940\u091c\u093f\u090f \u0914\u0930 \u0915\u0941\u091b \u0939\u0940 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 \u0906\u092a\u0915\u093e \u0915\u0949\u0928\u094d\u092b\u093f\u0921\u0947\u0902\u0938 \u0938\u093e\u092b \u092c\u0922\u093c\u0924\u093e \u0939\u0941\u0906 \u0926\u093f\u0916\u0947\u0917\u093e (Just give 15 to 20 minutes daily and in a few days you will clearly see your confidence increasing)\nMySivi AI English Spe...\n\u0905\u092c \u0930\u0941\u0915\u0928\u093e \u0915\u094d\u092f\u094b\u0902? \u0905\u092d\u0940 \u0938\u093e\u0907\u0928 \u0905\u092a \u0915\u0930\u0947\u0902 \u0914\u0930 \u0906\u091c \u0938\u0947 \u0939\u0940 MySivi \u092a\u0930 English \u092c\u094b\u0932\u0928\u093e \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902 (Why wait now? Sign up now and start speaking English on MySivi from today itself)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779890885.0147448
+}

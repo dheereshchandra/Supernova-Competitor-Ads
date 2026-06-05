@@ -1,0 +1,103 @@
+{
+  "competitor_id": "1274548481445067",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male protagonist",
+        "appearance": "Young Indian man, early 20s, slim build, brown complexion. He has thick, curly dark hair and expressive dark eyes. His facial features remain consistent despite changing outfits.",
+        "wardrobe": "Various outfits including a light blue patterned shirt, a blue overshirt over a white tee, a dark suit, and a casual grey t-shirt.",
+        "demeanor": "Transitions from extremely anxious and sweating to confident, happy, and engaged."
+      },
+      {
+        "id": "B",
+        "role": "interviewer",
+        "appearance": "Older man, seen mostly from behind or in profile. He has grey hair at his temples and wears glasses.",
+        "wardrobe": "Dark professional suit.",
+        "demeanor": "Professional and formal."
+      },
+      {
+        "id": "C",
+        "role": "female learner",
+        "appearance": "Young woman, early 20s, fair complexion. She has long, straight dark hair.",
+        "wardrobe": "Yellow long-sleeve top.",
+        "demeanor": "Happy and relaxed."
+      },
+      {
+        "id": "D",
+        "role": "AI tutor avatar",
+        "appearance": "Small, glowing blue holographic robot. It has a rounded head, large expressive eyes, and a floating body without legs.",
+        "wardrobe": "None (hologram).",
+        "demeanor": "Friendly and helpful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Anxious Interview",
+        "supernova_script": "Unknown speaker says: इंटरव्यू में सब आता है, पर English के नाम पे पसीने छूट जाते हैं? [You know everything in the interview, but start sweating at the name of English?]",
+        "scene_summary": "- Hooks the viewer with a highly relatable moment of interview anxiety.\n- Validates the fear of speaking English and making mistakes without being condescending.",
+        "supernova_on_screen_text": "English बोलने में डर लगता है? अटकने की टेंशन होती है? (English bolne me darr lagta hai? Atakne ki tension hoti hai?)"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Introduction",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Introduces Supernova as the supportive solution.\n- Shifts the emotional tone from anxiety to hope.",
+        "supernova_on_screen_text": "फिक्र मत करो, Supernova App है ना! (Fikr mat karo, Supernova App hai na!)"
+      },
+      {
+        "n": 3,
+        "scene_label": "AI Tutor",
+        "supernova_script": "Unknown speaker says: अब बिना झिझक, अपने AI Tutor के साथ रोज़ practice करो। [Now without hesitation, practice daily with your AI Tutor.]",
+        "scene_summary": "- Showcases the AI Tutor feature as a safe, judgment-free space.\n- Emphasizes immediate, helpful feedback over rote learning.",
+        "supernova_on_screen_text": "हमारे AI Tutor से बात करें। गलती होने पर यह तुरंत सुधारता है! (Humare AI Tutor se baat karein. Galti hone par yeh turant sudhaarta hai!)"
+      },
+      {
+        "n": 4,
+        "scene_label": "Practice with Others",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Highlights community practice with peers.\n- Reinforces that the user is not alone in their learning journey.",
+        "supernova_on_screen_text": "और हाँ, अपने जैसे और learners के साथ मिलकर Practice भी करें! (Aur haan, apne jaise aur learners ke saath milkar Practice bhi karein!)"
+      },
+      {
+        "n": 5,
+        "scene_label": "Confident Interview",
+        "supernova_script": "Unknown speaker says: रोज़ के छोटे lessons से, तुम्हारी English और confidence दोनों बढ़ेंगे। [With small daily lessons, both your English and confidence will grow.]",
+        "scene_summary": "- Delivers the emotional payoff: returning to the interview with confidence.\n- Connects daily practice to real-world success.",
+        "supernova_on_screen_text": "Daily lessons से अपनी English को step-by-step बेहतर बनाओ। (Daily lessons se apni English ko step-by-step behtar banao.)"
+      },
+      {
+        "n": 6,
+        "scene_label": "Handshake",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Visualizes career success and overcoming the initial hurdle.\n- Introduces an accessible entry point without specific pricing.",
+        "supernova_on_screen_text": "आज ही अपना affordable trial शुरू करें! (Aaj hi apna affordable trial shuru karein!)"
+      },
+      {
+        "n": 7,
+        "scene_label": "Call to Action",
+        "supernova_script": "Unknown speaker says: तो सोचना क्या? आज ही Supernova डाउनलोड करो और छा जाओ! [So why think? Download Supernova today and shine!]",
+        "scene_summary": "- Ends on a warm, encouraging note like an older sibling.\n- Clear call to action to download the app.",
+        "supernova_on_screen_text": "अपनी English सुधारें। आज ही Supernova Download करें! (Apni English sudharein. Aaj hi Supernova Download karein!)"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Mysivi App",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "1 रुपये",
+        "supernova_swap": "affordable"
+      },
+      {
+        "competitor_brand": "299 रुपये",
+        "supernova_swap": "[removed specific pricing]"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892235.9937
+}

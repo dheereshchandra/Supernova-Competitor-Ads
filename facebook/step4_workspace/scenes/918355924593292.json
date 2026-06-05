@@ -1,0 +1,154 @@
+{
+  "competitor_id": "918355924593292",
+  "parsed": {
+    "duration_s": 69.0,
+    "production_type": "mixed",
+    "production_notes": "The advertisement primarily uses human-recorded, live-action footage of actors in a real-world setting. However, it incorporates a screen recording of a mobile application which features a digitally-rendered AI avatar, making it a mixed-media production.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "A South Indian woman in her late 20s or early 30s with a warm, medium complexion. She has long, dark, wavy hair parted in the middle, and a red bindi on her forehead. She has a friendly, smiling expression.",
+        "wardrobe": "A traditional saree with a royal blue body, a turquoise green inner layer, and an orange and gold patterned border (pallu). She wears gold-colored traditional bell-shaped earrings (jhumkas).",
+        "demeanor": "Polite, encouraging, and pleasant."
+      },
+      {
+        "id": "B",
+        "role": "Female app user",
+        "appearance": "A young South Asian woman in her early 20s with a fair complexion and a slim build. She has long, straight, dark brown hair parted on the side. She has delicate facial features.",
+        "wardrobe": "A casual dark navy blue sleeveless top and dark blue jeans.",
+        "demeanor": "Initially focused and learning, then becomes friendly, confident, and helpful when explaining the app."
+      },
+      {
+        "id": "C",
+        "role": "Male inquirer",
+        "appearance": "A young South Asian man in his early 20s with a medium build and a light brown complexion. He has short, styled black hair and wears black-rimmed glasses. He has a light beard and mustache.",
+        "wardrobe": "A casual, short-sleeved, light brown or beige t-shirt with some small text on the chest, paired with dark jeans.",
+        "demeanor": "Curious, polite, and impressed."
+      },
+      {
+        "id": "D",
+        "role": "AI tutor avatar (on phone)",
+        "appearance": "A woman in her mid-20s with a fair complexion. She has long, straight, dark brown hair parted in the middle. She has a neutral, professional expression.",
+        "wardrobe": "A light purple or lavender-colored turtleneck top.",
+        "demeanor": "Professional and neutral."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 16.5,
+        "screenshot_at_s": 8.0,
+        "scene_label": "Before and After Translation",
+        "setting": "The bottom panel is set in a modern cafe with olive green walls, wooden tables, and woven-back chairs. The top panel has a neutral indoor background with light-colored curtains.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Split-screen with two medium close-ups.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up shot of Character A. She is smiling warmly at the camera. The background is softly out of focus, showing light-colored vertical curtains. The lighting is bright and even, highlighting her features.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium shot of Character B sitting at a wooden table in a cafe. She is holding a black smartphone in her left hand, looking at the screen and speaking. On the table in front of her is a white bowl with food. In the background, another male patron is visible sitting at a different table, out of focus. The cafe has olive green walls.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertically split screen. The top panel shows a smiling woman (Character A) in a saree. The bottom panel shows a young woman (Character B) in a cafe, speaking to her phone. Text captions appear sequentially in the bottom panel, first showing broken English, then Telugu, then correct English. An AI voice says 'Very good' at the end.",
+        "audio_transcript": "Character B says: I Pooja. I Chennai. I doing hard working person.\n\nAI Voice says: \u0c28\u0c3e \u0c2a\u0c47\u0c30\u0c41 \u0c2a\u0c42\u0c1c. \u0c28\u0c47\u0c28\u0c41 \u0c1a\u0c46\u0c28\u0c4d\u0c28\u0c48 \u0c28\u0c41\u0c02\u0c21\u0c3f \u0c35\u0c1a\u0c4d\u0c1a\u0c3e\u0c28\u0c41 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c28\u0c47\u0c28\u0c41 \u0c15\u0c37\u0c4d\u0c1f\u0c2a\u0c21\u0c3f \u0c2a\u0c28\u0c3f\u0c1a\u0c47\u0c38\u0c47 \u0c35\u0c4d\u0c2f\u0c15\u0c4d\u0c24\u0c3f\u0c28\u0c3f. [My name is Pooja. I came from Chennai and I am a hardworking person.]\n\nCharacter B says: My name is Pooja, I am from Chennai, I am a hardworking person.\n\nAI Voice says: Very good.",
+        "on_screen_text": "I Pooja\nI Chennai\nI doing hard working person.\nNaa peru Pooja\nnenu Chennai nundi vachanu\nmariyu nenu kashtapadi\npanichese vyaktini.\nMy name is Pooja,\nI am from Chennai,\nI am a hardworking person.\nVery good."
+      },
+      {
+        "n": 2,
+        "start_s": 16.5,
+        "end_s": 33.5,
+        "screenshot_at_s": 25.0,
+        "scene_label": "A Curious Onlooker",
+        "setting": "A modern cafe with olive green walls, wooden tables, and woven-back chairs. There are posters and a decorative guitar on the wall.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "Medium shot, transitioning to over-the-shoulder shots.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character C approaches Character B, who is sitting at her table in the cafe. He stands next to her table and begins to speak to her. Character B looks up from her phone, surprised, to listen to him. The camera angle shifts during their conversation, showing different perspectives of the two characters interacting in the cafe environment.",
+            "characters_in_panel": [
+              "B",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "Character C walks up to Character B's table in the cafe and starts a conversation. Subtitles in Telugu appear at the bottom of the screen corresponding to their dialogue. The brand logo for 'SpeakX' appears on the wall behind Character B as she mentions the app.",
+        "audio_transcript": "Character C says: Hi, nenu ippude meeru English nerchukovadam chusanu. Actually naa English kuda chala weak eh. ee app nundi English nerchukovachha? [Hi, I just saw you learning English. Actually, my English is also very weak. Can I learn English from this app?]\n\nCharacter B says: Naa English kuda chala weak ga undedi, anduke daily nenu SpeakX app lo English practice chestunnanu. [My English was also very weak, that's why I practice English daily on the SpeakX app.]\n\nCharacter C says: SpeakX app? Adenti? [SpeakX app? What is that?]\n\nCharacter B says: idi oka AI English teaching app. [This is an AI English teaching app.]",
+        "on_screen_text": "Hi,\nnenu ippude meeru English\nnerchukovadam chusanu.\nActually naa English kuda chala weak\napp nundi English nerchukovachha?\nNaa English kuda\nweak ga undi,\nanduke daily nenu\nSpeakX app lo\nEnglish practice chestunnanu.\nSpeakX app\nidi oka AI English teaching app."
+      },
+      {
+        "n": 3,
+        "start_s": 33.5,
+        "end_s": 39.0,
+        "screenshot_at_s": 36.0,
+        "scene_label": "App Demonstration",
+        "setting": "A person is holding a smartphone, likely in a home setting with a patterned couch visible in the background.",
+        "characters_in_scene": [
+          "D"
+        ],
+        "camera": "Close-up on a smartphone screen.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of a person's hands holding a smartphone. The thumb scrolls through a list-based interface on the screen. The screen then transitions to show a video feed of Character D, an AI tutor, against a plain white background. She looks directly at the camera as if addressing the user.",
+            "characters_in_panel": [
+              "D"
+            ]
+          }
+        ],
+        "visual_description": "A screen recording of the SpeakX app. A finger scrolls through lesson options like 'Daily English', 'Vocabulary', 'Read with me', and 'Grammar'. It then shows the AI tutor interface with Character D. Voiceover from Character B explains the feature, with corresponding Telugu subtitles on screen.",
+        "audio_transcript": "Character B says: Ikkada AI teachers neeku English practice chepinchi, English ela matladalo nerpistaru. [Here, AI teachers make you practice English and teach you how to speak English.]",
+        "on_screen_text": "idi oka AI English teaching app.\nIkkada AI teachers neeku English\nPractice chepinchi\nEnglish ela matladalo nerpistaru."
+      },
+      {
+        "n": 4,
+        "start_s": 39.0,
+        "end_s": 69.0,
+        "screenshot_at_s": 55.0,
+        "scene_label": "Explaining the Benefits",
+        "setting": "The same modern cafe from the previous scenes.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "Medium shot, alternating between over-the-shoulder perspectives.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B and Character C continue their conversation in the cafe. Character B is seated, gesturing as she explains the app's features. Character C stands and listens intently, occasionally asking questions. Their expressions are engaged and friendly. The camera cuts between different angles, focusing on each speaker.",
+            "characters_in_panel": [
+              "B",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The conversation between Character B and Character C continues in the cafe. They discuss the app's non-judgmental nature, the time commitment, cost, and trial period. Telugu subtitles appear on screen for the dialogue. The scene ends with Character C thanking Character B and deciding to download the app.",
+        "audio_transcript": "Character B says: Adi kuda emi judge cheyakunda, human teachers laga. [That too, without any judgment, like human teachers.]\n\nCharacter C says: Kani deeniki chala time padutundi kada? [But this will take a lot of time, right?]\n\nCharacter B says: Ledu, roz ke 15-20 minutes ee app lo practice chey, 15 to 20 days lo meeru English fluent ga matladataru. Already naa friends andaru fluent aipoyaru. nenu kuda konni rojullo fluent aipotanu. [No, practice for 15-20 minutes daily on this app, and in 15 to 20 days you will speak English fluently. All my friends are already fluent. I will also become fluent in a few days.]\n\nCharacter C says: Kani idi chala costly untundi kada? [But this must be very costly, right?]\n\nCharacter B says: Assalu kaadu, rojuki 4 rupees matrame, 7 days trial kuda theeskovachu. [Not at all, it's only 4 rupees per day, you can also take a 7-day trial.]\n\nCharacter C says: Idi naku munde enduku teliyaledu? nenu ippude SpeakX app ni download chestanu. Thank you. [Why didn't I know this before? I will download the SpeakX app right now. Thank you.]",
+        "on_screen_text": "Adi kuda\nemi judge cheyakunda\nhuman teachers laga.\nKani deeniki\nchala time padutundi kada?\nroz ke 15-20 minutes\nee app lo practice chey,\n15 to 20 days\nlo meeru English\nfluent ga matladataru.\nAlready naa friends\nandaru fluent aipoyaru.\nnenu kuda konni rojullo\nfluent aipoyaru.\nuntundi kada?\nAssalu kaadu\nrojuki 4 rupees matrame,\n7 days trial kuda\ntheeskovachu.\nIdi naku munde enduku\nnenu ippude SpeakX app\ndownload chesthanu.\nThank you."
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1780631601.2438176
+}

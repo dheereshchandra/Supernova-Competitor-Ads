@@ -1,0 +1,193 @@
+{
+  "competitor_id": "813092931636453",
+  "parsed": {
+    "duration_s": 61.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features real human actors with natural movements, expressions, and lighting. There are no AI artifacts like distorted fingers, uncanny facial features, or unnatural physics.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "presenter",
+        "appearance": "Male, 20s-30s, South Asian. Short dark hair, beard and mustache. Average build.",
+        "wardrobe": "Black denim jacket over a white t-shirt. Silver watch on left wrist.",
+        "demeanor": "Confident, enthusiastic, and professional."
+      },
+      {
+        "id": "B",
+        "role": "testimonial speaker",
+        "appearance": "Male, 40s-50s, East Asian. Short dark hair, wearing glasses. Average build.",
+        "wardrobe": "White short-sleeve polo shirt, blue jeans.",
+        "demeanor": "Serious, authoritative, and professional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 12.0,
+        "screenshot_at_s": 6.0,
+        "scene_label": "Introduction",
+        "setting": "Modern office, warm lighting, blurred background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits at a desk in a modern office environment. He faces forward, making direct eye contact with the camera. His hands are clasped on the desk in front of him, occasionally gesturing. The background features blurred architectural elements and warm overhead lighting. The framing remains steady on his upper body.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A introduces the product directly to the camera. A large bar chart graphic appears over him, comparing accuracy metrics. The scene is bright and professional.",
+        "audio_transcript": "Character A says: Our first product, Wispr Flow, is the fastest and most reliable voice dictation model ever built.\nCharacter A says: It's 3-4x more accurate than Siri, ElevenLabs, and OpenAI.\nCharacter A says: So let me show you how it works.",
+        "on_screen_text": "our first product Wispr Flow is the fastest and most reliable voice dictation model ever built. it's 3-4x more accurate Output Accuracy Wispr Flow OpenAI ElevenLabs Siri Percentage of outputs without mistakes than Siri ElevenLabs and OpenAI show you how it works"
+      },
+      {
+        "n": 2,
+        "start_s": 12.0,
+        "end_s": 23.5,
+        "screenshot_at_s": 18.0,
+        "scene_label": "Gmail Demo",
+        "setting": "Office desk.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is seated at his desk, looking down slightly. He appears to be focusing on a laptop screen just out of frame. The background remains a blurred office setting. The lighting highlights his face and upper torso.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A solid, light-colored rectangular area. The space is completely blank and devoid of any features, elements, or textures. It serves as a flat background canvas.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top shows Character A working on his laptop. The bottom shows a screen recording of an email draft being populated by voice, with animated text callouts appearing.",
+        "audio_transcript": "Character A says: Just press the shortcut and Flow works in any application.\nCharacter A says: Hey Sahaj, Flow is insanely fast, works everywhere, and gets names right.",
+        "on_screen_text": "the shortcut and Flow works in any application. Hey Sahaj, Flow is: 1. Insanely fast 2. Works everywhere 3. It gets names right \u2014 Written with Flow INSANELY FAST WORKS EVERYWHERE GETS NAMES RIGHT"
+      },
+      {
+        "n": 3,
+        "start_s": 23.5,
+        "end_s": 31.5,
+        "screenshot_at_s": 27.0,
+        "scene_label": "Chat Demo",
+        "setting": "Office desk.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is seated at his desk, looking down slightly. He appears to be focusing on a laptop screen just out of frame. The background remains a blurred office setting. The lighting highlights his face and upper torso.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A solid, light-colored rectangular area. The space is completely blank and devoid of any features, elements, or textures. It serves as a flat background canvas.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Split screen layout. The top shows Character A speaking. The bottom shows a chat application where dictated text is automatically corrected, highlighted by a text callout.",
+        "audio_transcript": "Character A says: And Flow even fixes your mistakes for you.\nCharacter A says: Hey Hans, wanna meet at 5? Actually, um, let's do, let's do 5:30 pm.",
+        "on_screen_text": "and Flow even fixes your mistakes for you Hey Hans, wanna meet at 5? Actually, um, let's do\u2014 let's do 5:30 pm. FIXES MISTAKES"
+      },
+      {
+        "n": 4,
+        "start_s": 31.5,
+        "end_s": 39.0,
+        "screenshot_at_s": 35.0,
+        "scene_label": "Code Demo",
+        "setting": "Office desk.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is seated at his desk, looking down slightly. He appears to be focusing on a laptop screen just out of frame. The background remains a blurred office setting. The lighting highlights his face and upper torso.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A solid, light-colored rectangular area. The space is completely blank and devoid of any features, elements, or textures. It serves as a flat background canvas.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Split screen layout. The top shows Character A speaking. The bottom shows a code editor interface being controlled by voice commands, with animated text callouts appearing.",
+        "audio_transcript": "Character A says: It's great for writing code.\nCharacter A says: Hey, can you look at auth.ts, constants.ts, and enums.ts and fix the bugs across all of them?",
+        "on_screen_text": "it's great for writing code Hey! Can you look auth.ts and constants.ts and enums.ts and fix the bugs across all of them? TAGS FILES AUTOMATICALLY GETS VARIABLE NAMES RIGHT"
+      },
+      {
+        "n": 5,
+        "start_s": 39.0,
+        "end_s": 50.5,
+        "screenshot_at_s": 45.0,
+        "scene_label": "Whisper Demo",
+        "setting": "Office desk.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up to close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A holds a black smartphone close to his mouth. He looks off-camera while speaking softly into the device. He then extends his arm, presenting the phone's screen directly to the camera lens. The camera focus shifts slightly as the phone is brought forward. The office background remains softly blurred throughout the action.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A whispers into his phone, then presents the phone screen to the camera, showing a dictated message. Captions appear over the footage.",
+        "audio_transcript": "Character A says: And the best part is, you can even whisper.\nCharacter A says: You can install Wispr on your iPhone.\nCharacter A says: And that got it perfectly.",
+        "on_screen_text": "and the best part is you can even whisper You can install Wispr on your iPhone as a voice keyboard and that got it perfectly"
+      },
+      {
+        "n": 6,
+        "start_s": 50.5,
+        "end_s": 61.0,
+        "screenshot_at_s": 55.0,
+        "scene_label": "Testimonial",
+        "setting": "Office environment, blurred background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B sits comfortably in a chair within an office setting. He faces the camera directly, with his arms crossed over his chest. He maintains a serious and professional expression while speaking. The background consists of blurred office furniture and glass partitions. The lighting is natural and even across his face.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character B delivers a testimonial directly to the camera. Large, bold text overlays emphasize his words as he speaks.",
+        "audio_transcript": "Character B says: Wispr Flow is going after one of the most exciting opportunities in AI today.\nCharacter B says: It is reimagining the primary interface between humans and machines.",
+        "on_screen_text": "WISPR FLOW IS ONE OF THE MOST EXCITING OPPORTUNITIES IN AI TODAY it is reimagining the primary interface between humans and machines Hans Tung Managing Partner"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.2400756
+}

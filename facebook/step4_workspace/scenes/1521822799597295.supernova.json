@@ -1,0 +1,64 @@
+{
+  "competitor_id": "1521822799597295",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female, slim build, fair complexion. She has dark brown hair pulled back and wears wire-rimmed glasses. Her facial features are smooth and symmetrical.",
+        "wardrobe": "She wears a light pink button-down shirt and large black over-ear headphones throughout the video.",
+        "demeanor": "Enthusiastic, informative, and expressive, using frequent hand gestures."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction to BoldVoice",
+        "supernova_script": "Character A says: Confidently English बोलने का power अलग ही होता है। [The power of speaking English confidently is something else.]\nCharacter A says: Supernova app एक कमाल का AI tool है। [Supernova app is an amazing AI tool.]\nCharacter A says: इसमें AI tutor आपको बोलते वक़्त real-time feedback देता है। [In this, the AI tutor gives you real-time feedback while you speak.]",
+        "scene_summary": "- Hooks the viewer by emphasizing the power of confident English.\n- Introduces Supernova as an AI tool.\n- Highlights the core feature of real-time feedback during speaking practice.",
+        "supernova_on_screen_text": "Confidently English बोलने का power अलग ही होता है। Supernova app एक कमाल का AI tool है। इसमें AI tutor आपको बोलते वक़्त real-time feedback देता है।"
+      },
+      {
+        "n": 2,
+        "scene_label": "Pronunciation Feedback",
+        "supernova_script": "Character A says: Wery. [Wery.]\nCharacter A says: ये मुझे बता रहा है कि मेरा \"V\" और \"W\" का sound mix हो रहा है। [It's telling me that my \"V\" and \"W\" sounds are getting mixed.]\nCharacter A says: Very. [Very.]",
+        "scene_summary": "- Demonstrates the app's feedback mechanism using a common Indian-English pronunciation challenge (V vs W).\n- Shows the immediate correction and improvement.\n- Keeps the relatable, practical tone of the brand.",
+        "supernova_on_screen_text": "Wery. ये मुझे बता रहा है कि मेरा \"V\" और \"W\" का sound mix हो रहा है। Very."
+      },
+      {
+        "n": 3,
+        "scene_label": "Personalized Curriculum",
+        "supernova_script": "Character A says: ये आपकी हिंदी के हिसाब से daily lessons plan करता है, ताकि आप अपनी कमज़ोरियों पर काम कर सकें। [It plans daily lessons according to your Hindi, so you can work on your weaknesses.]",
+        "scene_summary": "- Highlights the Hindi-medium learning approach.\n- Mentions daily lessons, a key Supernova feature.\n- Reassures the user that the app adapts to their specific needs.",
+        "supernova_on_screen_text": "ये आपकी हिंदी के हिसाब से daily lessons plan करता है, ताकि आप अपनी कमज़ोरियों पर काम कर सकें।"
+      },
+      {
+        "n": 4,
+        "scene_label": "Video Coaches",
+        "supernova_script": "Character A says: आप real-life situations जैसे interview या office meeting के लिए practice कर सकते हैं, वो भी बिना डरे। [You can practice for real-life situations like an interview or office meeting, that too without fear.]",
+        "scene_summary": "- Shifts focus from 'Harvard-trained coaches' to practical, real-world applications (interviews, office).\n- Addresses the emotional barrier of fear/hesitation.\n- Reinforces the supportive, older-sibling brand voice.",
+        "supernova_on_screen_text": "आप real-life situations जैसे interview या office meeting के लिए practice कर सकते हैं, वो भी बिना डरे।"
+      },
+      {
+        "n": 5,
+        "scene_label": "Outro and Call to Action",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear call to action.\n- Reinforces the core brand promise of speaking confidently.\n- Displays the Supernova branding.",
+        "supernova_on_screen_text": "Supernova. Download the app. Speak English Confidently."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Harvard-trained",
+        "supernova_swap": "[removed to avoid aggressive hype and align with practical real-world focus]"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658661.803958
+}

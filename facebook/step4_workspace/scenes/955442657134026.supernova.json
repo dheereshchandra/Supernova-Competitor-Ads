@@ -1,0 +1,50 @@
+{
+  "competitor_id": "955442657134026",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, 3D animated, dark hair, fair skin with freckles. Large expressive eyes.",
+        "wardrobe": "White top.",
+        "demeanor": "Calm, encouraging, and friendly."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young Asian woman, dark hair tied back, fair skin with a shiny complexion.",
+        "wardrobe": "Black tank top.",
+        "demeanor": "Casual, expressive, and slightly hesitant."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI Japanese Lesson",
+        "supernova_script": "Character A says: क्या तुम्हें English बोलनी आती है? [Do you know how to speak English?]\nCharacter B says: थोड़ी बहुत [A little bit]\nCharacter A says: कौनसे words आते हैं? [What words do you know?]\nCharacter B says: Hello? [Hello?]\nCharacter A says: बढ़िया, और? [Good, what else?]\nCharacter B says: Thank you, sorry [Thank you, sorry]\nCharacter A says: तो फिर इसका जवाब दो. How was your day? [Then answer this. How was your day?]\nCharacter B says: अरे? मुझे नहीं पता. मुझे बस basic words आते हैं. [Huh? I don't know. I just know basic words.]\nCharacter A says: मेरे बाद बोलो. It was good. [Repeat after me. It was good.]\nCharacter B says: Um. It was good. [Um. It was good.]\nCharacter A says: बहुत बढ़िया! [Great job!]\nCharacter B says: मुझे English सीखनी है, पर समझ नहीं आता कहाँ से शुरू करूँ. [I want to learn English, but don't know how to start.]\nCharacter A says: तो चलो मेरे साथ English में बात करो. [Then let's converse in English with me.]\nCharacter B says: English में बात? यार, मुझे थोड़ी शर्म आती है. [Converse in English? Man, I feel a bit shy.]\nCharacter A says: फ़िक्र मत करो. Supernova पर तुम AI teacher के साथ practice कर सकती हो. मैं AI हूँ, तो घबराने की कोई ज़रूरत नहीं. [Don't worry. On Supernova, you can practice with an AI teacher. I am an AI, so no need to be nervous.]\nCharacter B says: सच में? तो मैं Supernova download करती हूँ. [Really? Then I'll download Supernova.]",
+        "scene_summary": "- Hooks the viewer by demonstrating a relatable struggle with speaking English.\n- Shows a quick, low-pressure win by having the AI guide the user to say a simple sentence.\n- Addresses the common pain point of feeling shy or judged when speaking.\n- Positions Supernova's AI tutor as a safe, judgment-free space to practice.",
+        "supernova_on_screen_text": "क्या तुम्हें English बोलनी आती है? (Do you know how to speak English?)\nथोड़ी बहुत (A little bit)\nकौनसे words आते हैं? (What words do you know?)\nHello?\nबढ़िया, और? (Good, what else?)\nThank you, sorry\nतो फिर इसका जवाब दो. How was your day? (Then answer this. How was your day?)\nअरे? मुझे नहीं पता. मुझे बस basic words आते हैं. (Huh? I don't know. I just know basic words.)\nमेरे बाद बोलो. It was good. (Repeat after me. It was good.)\nUm. It was good.\nबहुत बढ़िया! (Great job!)\nमुझे English सीखनी है, पर समझ नहीं आता कहाँ से शुरू करूँ. (I want to learn English, but don't know how to start.)\nतो चलो मेरे साथ English में बात करो. (Then let's converse in English with me.)\nEnglish में बात? यार, मुझे थोड़ी शर्म आती है. (Converse in English? Man, I feel a bit shy.)\nफ़िक्र मत करो. Supernova पर तुम AI teacher के साथ practice कर सकती हो. (Don't worry. On Supernova, you can practice with an AI teacher.)\nमैं AI हूँ, तो घबराने की कोई ज़रूरत नहीं. (I am an AI, so no need to be nervous.)\nसच में? तो मैं Supernova download करती हूँ. (Really? Then I'll download Supernova.)"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear call to action.\n- Displays the brand logo and app store availability.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630822.664469
+}

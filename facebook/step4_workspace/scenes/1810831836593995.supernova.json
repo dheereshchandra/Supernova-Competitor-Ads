@@ -1,0 +1,71 @@
+{
+  "competitor_id": "1810831836593995",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with a fair complexion and brown hair styled in a bob. She has large, expressive brown eyes and glowing, animated blue lines running vertically down her cheeks.",
+        "wardrobe": "A metallic, shiny gold or bronze hooded jacket.",
+        "demeanor": "Friendly, encouraging, and slightly artificial in her movements."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young Indian female with a medium complexion and dark, shoulder-length hair. She has dark eyes and a natural, everyday look.",
+        "wardrobe": "A simple, light grey sleeveless tank top.",
+        "demeanor": "Expressive, initially hesitant but becomes eager and interested."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Brain Cutting Hook",
+        "supernova_script": "Unknown speaker says: आपको अंग्रेज़ी समझ तो आती है, पर बोलते वक़्त अटक जाते हो? [Do you understand English, but get stuck while speaking?]",
+        "scene_summary": "- Hooks the viewer with a highly relatable problem: understanding English but hesitating to speak.\n- Sets a practical, empathetic tone right from the start.",
+        "supernova_on_screen_text": "आपको अंग्रेज़ी समझ आती है, पर बोलते वक़्त अटक जाते हो? (Aapko angrezi samajh aati hai, par bolte waqt atak jaate ho?)"
+      },
+      {
+        "n": 2,
+        "scene_label": "Split Screen Conversation",
+        "supernova_script": "Character B says: यार, मेरी English इतनी अच्छी नहीं है। [Man, my English is not that good.]\nCharacter A says: तो रोज़ practice किया करो ना! [Then you should practice every day!]\nCharacter B says: पर मेरे साथ English में बात करने वाला कोई है ही नहीं। [But there is no one to talk to me in English.]\nCharacter A says: अरे, मैं हूँ ना! I am your Supernova AI tutor. [Hey, I am here! I am your Supernova AI tutor.]\nCharacter B says: मतलब, मैं तुमसे direct बात कर सकती हूँ? [Meaning, I can talk to you directly?]\nCharacter A says: बिल्कुल! तुम interview, shopping या दोस्तों से बात करने की practice कर सकती हो। मैं तुम्हारी गलतियां सुधारूंगी। [Absolutely! You can practice talking for an interview, shopping, or with friends. I will correct your mistakes.]\nCharacter B says: पर ये बहुत महंगा होगा ना? [But this must be very expensive, right?]\nCharacter A says: बिल्कुल नहीं! ये normal classes से बहुत affordable है। [Not at all! It is much more affordable than normal classes.]",
+        "scene_summary": "- Establishes the core problem of lacking a speaking partner.\n- Introduces Supernova's AI tutor as a friendly, accessible solution.\n- Highlights real-world practice scenarios and affordability without specific pricing.",
+        "supernova_on_screen_text": "Yaar, meri English itni acchi nahi hai.\nToh roz practice kiya karo na!\nPar mere saath English mein baat karne wala koi hai hi nahi.\nAre, main hoon na! I am your Supernova AI tutor.\nMatlab, main tumse direct baat kar sakti hoon?\nBilkul! Tum interview, shopping ya doston se baat karne ki practice kar sakti ho. Main tumhari galtiyan sudharungi.\nPar ye bahut mehenga hoga na?\nBilkul nahi! Ye normal classes se bahut affordable hai."
+      },
+      {
+        "n": 3,
+        "scene_label": "App Store Page",
+        "supernova_script": "Character A says: इसीलिए हज़ारों लोग Supernova पर रोज़ English बोलने की practice कर रहे हैं। [That's why thousands of people are practicing speaking English daily on Supernova.]",
+        "scene_summary": "- Builds social proof using realistic numbers instead of exaggerated hype.\n- Shows the app interface to drive recognition.",
+        "supernova_on_screen_text": "Supernova Spoken English App\nSupernova AI\nIn-app purchases\nInstall\nAbout this app\nPractice English Now\nIsiliye hazaron log Supernova par roz English bolne ki practice kar rahe hain."
+      },
+      {
+        "n": 4,
+        "scene_label": "Split Screen Continues",
+        "supernova_script": "Character B says: लेकिन मुझे time ही नहीं मिलता। [But I just don't get the time.]\nCharacter A says: रोज़ सिर्फ 15 minute practice काफी है। तुम बहुत जल्दी confident बन जाओगी। [Just 15 minutes of practice daily is enough. You will become confident very soon.]\nCharacter B says: Wow! मैं कैसे join करूँ? [Wow! How do I join?]",
+        "scene_summary": "- Overcomes the common objection of not having enough time.\n- Reassures the user that consistency builds confidence.",
+        "supernova_on_screen_text": "Lekin mujhe time hi nahi milta.\nRoz sirf 15 minute practice kaafi hai. Tum bahut jaldi confident ban jaogi.\nWow! Main kaise join karoon?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "supernova_script": "Character A says: बस, नीचे दिए गए link से Supernova app install करो। आज ही अपनी practice शुरू करो और अपना confidence बढ़ाओ। चलो, शुरू करें! [Just install the Supernova app from the link below. Start your practice today and build your confidence. Come on, let's start!]",
+        "scene_summary": "- Delivers a clear, encouraging Call to Action.\n- Focuses on building confidence rather than making unrealistic timeline guarantees.",
+        "supernova_on_screen_text": "Bas, niche diye gaye link se Supernova app install karo. Aaj hi apni practice shuru karo aur apna confidence badhao. Chalo, shuru karein!\nSupernova Spoken English\nInstalling...\nVerified by Play Protect\nCancel"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Sivi",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892235.998888
+}

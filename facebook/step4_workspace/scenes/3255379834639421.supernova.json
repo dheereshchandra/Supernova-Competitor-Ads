@@ -1,0 +1,53 @@
+{
+  "competitor_id": "3255379834639421",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Middle-aged male, average build, light complexion. Short brown hair and light facial stubble.",
+        "wardrobe": "Light blue long-sleeve button-down shirt.",
+        "demeanor": "Earnest and informative."
+      },
+      {
+        "id": "B",
+        "role": "female coach",
+        "appearance": "Young adult female, slim build, light complexion. Short dark hair.",
+        "wardrobe": "Light purple top.",
+        "demeanor": "Instructional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction to the Problem",
+        "supernova_script": "Character A says: India में लाखों लोग English grammar तो जानते हैं, पर बोलने में अटकते हैं। [Millions of people in India know English grammar, but hesitate while speaking.]\nCharacter A says: It's not your fault. स्कूल में हमें सिर्फ लिखना सिखाया गया, बोलना नहीं। [It's not your fault. In school we were only taught how to write, not how to speak.]\nCharacter A says: But spoken English is what people notice first. [But spoken English is what people notice first.]\nCharacter A says: Supernova नाम की एक app है। इसमें आप सीधा बोलकर practice कर सकते हो। [There's this app called Supernova. You can practice by speaking directly into it.]\nCharacter A says: It gives you real-time feedback and helps you fix your mistakes. [It gives you real-time feedback and helps you fix your mistakes.]",
+        "scene_summary": "- Hooks the audience by addressing a common pain point: knowing English grammar but hesitating to speak.\n- Validates the user's struggle by blaming the education system, building empathy.\n- Introduces Supernova as the practical, speaking-first solution.",
+        "supernova_on_screen_text": "MILLIONS HESITATE WHILE SPEAKING IT'S NOT YOUR FAULT SCHOOLS TAUGHT US TO WRITE NOT SPEAK BUT SPOKEN ENGLISH IS WHAT PEOPLE NOTICE FIRST THERE'S THIS APP CALLED SUPERNOVA YOU JUST SPEAK INTO IT IT GIVES YOU REAL-TIME FEEDBACK AND HELPS YOU FIX YOUR MISTAKES"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "supernova_script": "Character A says: I want to discuss about the project. [I want to discuss about the project.]\n[music only, no speech]\nCharacter A says: App बता रही है कि 'discuss' के साथ 'about' नहीं लगाते। [The app is telling me that we don't use 'about' with 'discuss'.]\nCharacter A says: I want to discuss the project. [I want to discuss the project.]\n[music only, no speech]",
+        "scene_summary": "- Demonstrates the core app experience with a relatable Indian-English mistake.\n- Shows the AI tutor providing instant, non-judgmental feedback.\n- Highlights the ease of correcting mistakes in real-time.",
+        "supernova_on_screen_text": "I WANT TO DISCUSS ABOUT THE PROJECT APP SAYS DON'T USE 'ABOUT' WITH DISCUSS I WANT TO DISCUSS THE PROJECT Practice with AI Tutor Let's start! Tap the microphone and speak. Listening... Let's pause to troubleshoot. Listen to the correction and try again. Awesome! You're ready for the next one."
+      },
+      {
+        "n": 3,
+        "scene_label": "Features and Call to Action",
+        "supernova_script": "Character A says: Now I got it. [Now I got it.]\nCharacter A says: I love this app because you practice real-world situations, like office meetings or talking to a customer. [I love this app because you practice real-world situations, like office meetings or talking to a customer.]\nCharacter A says: इसमें AI tutor आपकी level के हिसाब से daily lessons plan करता है। [In this, the AI tutor plans daily lessons according to your level.]\nCharacter A says: It's very affordable and only takes 10 minutes a day. [It's very affordable and only takes 10 minutes a day.]\nCharacter A says: बिना डरे English बोलने के लिए, आज ही Supernova download करें। [To speak English without fear, download Supernova today.]",
+        "scene_summary": "- Highlights key Supernova features: real-world scenarios and personalized AI daily lessons.\n- Overcomes objections by emphasizing affordability and low time commitment (10 mins/day).\n- Ends with a strong, encouraging call-to-action to download the app.",
+        "supernova_on_screen_text": "NOW I GOT IT I LOVE THIS APP BECAUSE YOU PRACTICE REAL-WORLD SITUATIONS LIKE OFFICE MEETINGS AI TUTOR PLANS DAILY LESSONS ACCORDING TO YOUR LEVEL IT'S VERY AFFORDABLE AND ONLY TAKES 10 MINUTES A DAY SPEAK ENGLISH WITHOUT FEAR DOWNLOAD SUPERNOVA TODAY Office Meeting Practice AI Tutor Strong work today! Let's practice a customer scenario next. Your Daily Plan Complete these goals 1. Introduce yourself 2. Order at a restaurant Hi there! I'm your AI Tutor. Let's practice for your upcoming interview. Continue Conversation Your Top-Focus Areas Added to your personalized journey Next Good work! Together, we'll advance to the next level."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779989130.5725625
+}

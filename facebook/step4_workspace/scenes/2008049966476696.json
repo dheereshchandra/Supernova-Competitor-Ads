@@ -1,0 +1,96 @@
+{
+  "competitor_id": "2008049966476696",
+  "parsed": {
+    "duration_s": 27.0,
+    "production_type": "mixed",
+    "production_notes": "The video is a 2D vector animation featuring stylized character designs and simulated app interfaces. It does not exhibit artifacts typical of generative AI.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "animated presenter",
+        "appearance": "Stylized 2D male character with brown skin, black hair, and a thick black mustache. He has half-closed eyes and a prominent nose.",
+        "wardrobe": "Pink shirt with a green collar detail.",
+        "demeanor": "Bored, sarcastic, and slightly condescending."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.0,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Intro",
+        "setting": "Abstract green background with a chessboard.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits behind a checkered board. Several stylized game pieces are visible in the foreground on the board. The background is a solid, dark green color. Character A looks directly forward with a neutral, slightly bored expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A is positioned behind a chessboard against a green background. Text appears above his head as he speaks.",
+        "audio_transcript": "Character A says: Want to learn chess? [Want to learn chess?]\nCharacter A says: Prove it. [Prove it.]",
+        "on_screen_text": "Want to learn chess?\nProve it."
+      },
+      {
+        "n": 2,
+        "start_s": 4.0,
+        "end_s": 20.5,
+        "screenshot_at_s": 12.0,
+        "scene_label": "Gameplay Screencast",
+        "setting": "A digital chessboard grid.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A top-down view of a white and grey checkered grid. Various stylized game pieces, including a horse head, a crown, and simple pawns, are placed on the grid. In the top left corner, the head and shoulders of Character A are visible. Character A's facial expressions change slightly throughout.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A screencast of a chess puzzle application. Character A's head appears in the top left corner with speech bubbles. A user interacts with the chessboard, making various moves.",
+        "audio_transcript": "Character A says: Alright, let's start with the knight. [Alright, let's start with the knight.]\nCharacter A says: Giddy up! You've got potential. [Giddy up! You've got potential.]\nCharacter A says: But don't get too cocky... [But don't get too cocky...]\nCharacter A says: This isn't checkers, darling. [This isn't checkers, darling.]\nCharacter A says: My blood pressure is rising! [My blood pressure is rising!]\nCharacter A says: Finally, a move worthy of applause. [Finally, a move worthy of applause.]\nCharacter A says: Duolingo Chess is available on the latest app version! [Duolingo Chess is available on the latest app version!]",
+        "on_screen_text": "Solve the puzzle\nCONTINUE\nNicely done!\nTRY AGAIN\nOops, that's not correct\nAlright, let's start with the knight.\nGiddy up! You've got potential.\nBut don't get too cocky...\nThis isn't checkers, darling.\nMy blood pressure is rising!\nFinally, a move worthy of applause.\nDuolingo Chess is available on the latest app version!"
+      },
+      {
+        "n": 3,
+        "start_s": 20.5,
+        "end_s": 27.0,
+        "screenshot_at_s": 23.0,
+        "scene_label": "Outro",
+        "setting": "Abstract green background transitioning to a solid green screen.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits behind a checkered board with game pieces, his hands clasped together in front of him. The background is a solid green color with abstract, lighter green and pink cloud-like shapes appearing behind him. The scene then transitions to a completely blank, bright green screen.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A is back behind the chessboard, hands clasped. The background features abstract shapes. The video ends with a solid green screen displaying a brand logo.",
+        "audio_transcript": "Character A says: Download it now and start building your strategy. [Download it now and start building your strategy.]",
+        "on_screen_text": "Download it now and start building your strategy.\nduolingo"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.0879347
+}

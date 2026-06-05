@@ -1,0 +1,115 @@
+{
+  "competitor_id": "1536411941329964",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "mixed",
+    "production_notes": "The top panel features an AI-generated robot avatar with slightly unnatural, repetitive hand movements and a perfectly static background. The bottom panel is standard human-recorded video.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot. Metallic silver casing with visible panel seams and articulated joints. Glowing blue eyes and a smooth, sculpted face.",
+        "wardrobe": "No clothing; metallic robot body.",
+        "demeanor": "Helpful, instructional, and slightly robotic in movement."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young Indian woman, medium build, brown complexion. Dark, shoulder-length wavy hair.",
+        "wardrobe": "White button-up shirt with a grey geometric pattern.",
+        "demeanor": "Expressive, transitioning from unsure to pleasantly surprised."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 19.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Grammar Correction",
+        "setting": "Top: Traditional Indian living room. Bottom: Plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A sits at a wooden desk facing the camera. The background is a warmly lit, traditional Indian room featuring wooden furniture, patterned cushions, and brass artifacts on a shelf. Character A makes conversational hand gestures while speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B stands facing the camera against a plain, brightly lit white wall. She looks upwards towards the top panel, reacting with various facial expressions as she listens and responds.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with the AI robot on top and the human woman on the bottom. Dynamic text captions appear in the center of the screen, translating the spoken dialogue. A red 'X' and green checkmark graphic briefly appear over the top panel to indicate incorrect and correct grammar.",
+        "audio_transcript": "Character A says: \u0b89\u0ba9\u0b95\u0bcd\u0b95\u0bc1 \u0b8e\u0ba4\u0bcd\u0ba4\u0ba9\u0bc8 brothers \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbe\u0b99\u0bcd\u0b95? [How many brothers do you have?]\nCharacter B says: I am having two brothers.\nCharacter A says: Having-\u0ba9\u0bcd\u0ba9\u0bc1 \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0b95\u0bcd\u0b95\u0bc2\u0b9f\u0bbe\u0ba4\u0bc1. \u0ba8\u0bc0 \u0bb0\u0bc6\u0ba3\u0bcd\u0b9f\u0bc1 \u0baa\u0bc7\u0bb0\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0b95\u0bc8\u0baf\u0bbf\u0bb2 \u0baa\u0bbf\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0b9f\u0bcd\u0b9f\u0bc1 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0baf\u0bbe \u0b8e\u0ba9\u0bcd\u0ba9? 'I have two brothers'-\u0ba9\u0bcd\u0ba9\u0bc1 \u0ba4\u0bbe\u0ba9\u0bcd \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0ba3\u0bc1\u0bae\u0bcd. [You shouldn't say 'having'. Are you holding both of them in your hands? You should say 'I have two brothers'.]\nCharacter B says: \u0b93, \u0b93\u0b95\u0bc7 \u0b93\u0b95\u0bc7. \u0b8e\u0ba9\u0b95\u0bcd\u0b95\u0bc1 English \u0b85\u0bb5\u0bcd\u0bb3\u0bcb\u0bb5\u0bbe \u0ba4\u0bc6\u0bb0\u0bbf\u0baf\u0bbe\u0ba4\u0bc1. [Oh, okay okay. I don't know English that well.]\nCharacter A says: No problem. AI teachers-\u0b85 try \u0baa\u0ba3\u0bcd\u0ba3\u0bb2\u0bc8\u0baf\u0bbe? [No problem. Haven't you tried AI teachers?]\nCharacter B says: \u0b85\u0ba4\u0bc6\u0bb2\u0bcd\u0bb2\u0bbe\u0bae\u0bcd \u0bb0\u0bca\u0bae\u0bcd\u0baa \u0b9a\u0bc6\u0bb2\u0bb5\u0bbe\u0b95\u0bc1\u0bae\u0bc7. [That will be very expensive.]\nCharacter A says: \u0b95\u0ba3\u0bcd\u0b9f\u0bbf\u0baa\u0bcd\u0baa\u0bbe \u0b87\u0bb2\u0bcd\u0bb2. \u0b8e\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4\u0bcd\u0ba4\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0bb5\u0bbf\u0b9f 7 \u0bae\u0b9f\u0b99\u0bcd\u0b95\u0bc1 cheap-\u0b86 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bb1\u0ba4\u0bc1\u0ba9\u0bbe\u0bb2 \u0ba4\u0bbe\u0ba9\u0bcd \u0b92\u0bb0\u0bc1 \u0b95\u0bcb\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd \u0b85\u0ba4\u0bbf\u0b95\u0bae\u0bbe\u0ba9\u0bb5\u0b99\u0bcd\u0b95 \u0b87\u0ba9\u0bcd\u0ba9\u0bc8\u0b95\u0bcd\u0b95\u0bc1 MySivi-\u0bb2 English practice \u0baa\u0ba3\u0bcd\u0bb1\u0bbe\u0b99\u0bcd\u0b95. [Definitely not. Because it is 7 times cheaper than everything else, more than 1 crore people are practicing English on MySivi today.]",
+        "on_screen_text": "\u0b89\u0ba9\u0b95\u0bcd\u0b95\u0bc1 \u0b8e\u0ba4\u0bcd\u0ba4\u0ba9\u0bc8 brothers \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbe\u0b99\u0bcd\u0b95? (How many brothers do you have?)\nI am having two brothers\nHaving-\u0ba9\u0bcd\u0ba9\u0bc1 \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0b95\u0bcd\u0b95\u0bc2\u0b9f\u0bbe\u0ba4\u0bc1 (You shouldn't say 'having')\n\u0ba8\u0bc0 \u0bb0\u0bc6\u0ba3\u0bcd\u0b9f\u0bc1 \u0baa\u0bc7\u0bb0\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0b95\u0bc8\u0baf\u0bbf\u0bb2 \u0baa\u0bbf\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0b9f\u0bcd\u0b9f\u0bc1 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0baf\u0bbe \u0b8e\u0ba9\u0bcd\u0ba9 (Are you holding both of them in your hands?)\n'I have two brothers'-\u0ba9\u0bcd\u0ba9\u0bc1 \u0ba4\u0bbe\u0ba9\u0bcd \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0ba3\u0bc1\u0bae\u0bcd (You should say 'I have two brothers')\n\u0b93, \u0b93\u0b95\u0bc7 \u0b93\u0b95\u0bc7 (Oh, okay okay)\n\u0b8e\u0ba9\u0b95\u0bcd\u0b95\u0bc1 English \u0b85\u0bb5\u0bcd\u0bb3\u0bcb\u0bb5\u0bbe \u0ba4\u0bc6\u0bb0\u0bbf\u0baf\u0bbe\u0ba4\u0bc1 (I don't know English that well)\nNo problem\nAI teachers-\u0b85 try \u0baa\u0ba3\u0bcd\u0ba3\u0bb2\u0bc8\u0baf\u0bbe (Haven't you tried AI teachers?)\n\u0b85\u0ba4\u0bc6\u0bb2\u0bcd\u0bb2\u0bbe\u0bae\u0bcd \u0bb0\u0bca\u0bae\u0bcd\u0baa \u0b9a\u0bc6\u0bb2\u0bb5\u0bbe\u0b95\u0bc1\u0bae\u0bc7 (That will be very expensive)\n\u0b95\u0ba3\u0bcd\u0b9f\u0bbf\u0baa\u0bcd\u0baa\u0bbe \u0b87\u0bb2\u0bcd\u0bb2 (Definitely not)\n\u0b8e\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4\u0bcd\u0ba4\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0bb5\u0bbf\u0b9f 7 \u0bae\u0b9f\u0b99\u0bcd\u0b95\u0bc1 cheap-\u0b86 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bb1\u0ba4\u0bc1\u0ba9\u0bbe\u0bb2 \u0ba4\u0bbe\u0ba9\u0bcd (Because it is 7 times cheaper than everything else)\n\u0b92\u0bb0\u0bc1 \u0b95\u0bcb\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd \u0b85\u0ba4\u0bbf\u0b95\u0bae\u0bbe\u0ba9\u0bb5\u0b99\u0bcd\u0b95 (more than 1 crore people)\n\u0b87\u0ba9\u0bcd\u0ba9\u0bc8\u0b95\u0bcd\u0b95\u0bc1 MySivi-\u0bb2 English practice \u0baa\u0ba3\u0bcd\u0bb1\u0bbe\u0b99\u0bcd\u0b95 (are practicing English on MySivi today)"
+      },
+      {
+        "n": 2,
+        "start_s": 19.5,
+        "end_s": 21.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "App Store Showcase",
+        "setting": "Digital interface",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A digital screen displaying a mobile application store page. The layout includes an app icon, title, download statistics, and a prominent install button. Below this, a promotional video thumbnail is visible.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A screencast of the Google Play Store page for the 'MySivi AI' app. The screen scrolls slightly, showing the app name, rating, download count, and an 'Install' button.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Start English Learning - MySivi\nMySivi AI\nIn-app purchases\nRated for 3+\n61 MB\n10M+ Downloads\nInstall\nImprove English speaking with AI\nAbout this app\nStart your English learning with a Trial at No Cost |"
+      },
+      {
+        "n": 3,
+        "start_s": 21.0,
+        "end_s": 38.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Call to Action",
+        "setting": "Top: Traditional Indian living room. Bottom: Plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A sits at a wooden desk facing the camera. The background is a warmly lit, traditional Indian room featuring wooden furniture, patterned cushions, and brass artifacts on a shelf. Character A makes conversational hand gestures while speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B stands facing the camera against a plain, brightly lit white wall. She looks upwards towards the top panel, reacting with various facial expressions as she listens and responds.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen layout resumes. Dynamic text captions continue to appear. At one point, a large graphic of an analog clock fades in over the center of the screen, blurring the background slightly, before fading out.",
+        "audio_transcript": "Character B says: \u0b86\u0ba9\u0bbe time \u0b95\u0bbf\u0b9f\u0bc8\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0ba4\u0bc1 \u0b87\u0bb2\u0bcd\u0bb2. [But I don't get time.]\nCharacter A says: \u0ba4\u0bbf\u0ba9\u0bae\u0bc1\u0bae\u0bcd 15-\u0bb2\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 20 minutes practice \u0baa\u0ba3\u0bcd\u0ba3\u0bbe\u0bb2\u0bc7 \u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd. Confident-\u0b86 English \u0baa\u0bc7\u0b9a\u0bb2\u0bbe\u0bae\u0bcd. [Practicing for 15 to 20 minutes daily is enough. You can speak English confidently.]\nCharacter B says: \u0bb5\u0bbe\u0bb5\u0bcd! \u0ba8\u0bbe\u0ba9\u0bcd \u0b8e\u0baa\u0bcd\u0baa\u0b9f\u0bbf join \u0baa\u0ba3\u0bcd\u0bb1\u0ba4\u0bc1? [Wow! How do I join?]\nCharacter A says: Install button-\u0b85 tap \u0baa\u0ba3\u0bcd\u0ba3\u0bc1\u0b99\u0bcd\u0b95. Sign up \u0baa\u0ba3\u0bcd\u0ba3\u0bbf practice \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b99\u0bcd\u0b95. \u0bb5\u0bc6\u0bb1\u0bc1\u0bae\u0bcd 15 \u0ba8\u0bbe\u0bb3\u0bcd\u0bb2\u0bc8\u0baf\u0bc7 improvement \u0ba4\u0bc6\u0bb0\u0bbf\u0baf\u0bc1\u0bae\u0bcd. Start Now. [Tap the install button. Sign up and start practicing. You will see improvement in just 15 days. Start Now.]",
+        "on_screen_text": "\u0b86\u0ba9\u0bbe time \u0b95\u0bbf\u0b9f\u0bc8\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0ba4\u0bc1 \u0b87\u0bb2\u0bcd\u0bb2 (But I don't get time)\n\u0ba4\u0bbf\u0ba9\u0bae\u0bc1\u0bae\u0bcd (Daily)\n15-20 mins\n15-\u0bb2\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 20 minutes practice \u0baa\u0ba3\u0bcd\u0ba3\u0bbe\u0bb2\u0bc7 \u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd (Practicing for 15 to 20 minutes is enough)\nConfident-\u0b86 English \u0baa\u0bc7\u0b9a\u0bb2\u0bbe\u0bae\u0bcd (You can speak English confidently)\n\u0bb5\u0bbe\u0bb5\u0bcd (Wow)\n\u0ba8\u0bbe\u0ba9\u0bcd \u0b8e\u0baa\u0bcd\u0baa\u0b9f\u0bbf join \u0baa\u0ba3\u0bcd\u0bb1\u0ba4\u0bc1 (How do I join?)\nInstall button-\u0b85 tap \u0baa\u0ba3\u0bcd\u0ba3\u0bc1\u0b99\u0bcd\u0b95 (Tap the install button)\nSign up \u0baa\u0ba3\u0bcd\u0ba3\u0bbf practice \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b99\u0bcd\u0b95 (Sign up and start practicing)\n\u0bb5\u0bc6\u0bb1\u0bc1\u0bae\u0bcd 15 \u0ba8\u0bbe\u0bb3\u0bcd\u0bb2\u0bc8\u0baf\u0bc7 improvement \u0ba4\u0bc6\u0bb0\u0bbf\u0baf\u0bc1\u0bae\u0bcd (You will see improvement in just 15 days)\nStart Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780640923.8485181
+}

@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1354760609752319",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion, long straight brown hair. She has expressive brown eyes and a natural makeup look.",
+        "wardrobe": "Black turtleneck sweater.",
+        "demeanor": "Hesitant, slightly nervous but eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Stylized 3D animated young adult female, fair complexion, greyish-white hair tied back with some loose strands. She has large, expressive eyes and smooth, flawless skin.",
+        "wardrobe": "Maroon ribbed long-sleeve sweater.",
+        "demeanor": "Friendly, patient, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Video Call Lesson",
+        "supernova_script": "Character A says: My name Priya. [My name Priya.]\nCharacter B says: आपका मतलब है, \"My name is Priya\"? [Do you mean, \"My name is Priya\"?]\nCharacter A says: Sorry... मेरी English थोड़ी weak है। [Sorry... my English is a bit weak.]\nCharacter B says: कोई बात नहीं! क्या आप कहना चाहती थीं, \"Sorry, I speak a little English\"? [No problem! Did you mean to say, \"Sorry, I speak a little English\"?]\nCharacter A says: हाँ। [Yes.]\nCharacter B says: बिल्कुल ठीक। वैसे, पिछले कुछ महीनों में आपने कितनी बार English में बात की है? [Perfectly fine. By the way, how many times have you spoken in English in the last few months?]\nCharacter A says: सच कहूँ तो... कभी नहीं। [To be honest... never.]\nCharacter B says: आप बिल्कुल सही जगह पर हैं। हम रोज़ साथ में practice करेंगे, और जल्द ही आप confidence के साथ English बोल पाएंगी। [You are in exactly the right place. We will practice together every day, and soon you will be able to speak English with confidence.]",
+        "scene_summary": "- Hooks the viewer with a relatable, common English mistake.\n- Demonstrates the AI tutor's gentle, non-judgmental correction style.\n- Highlights the core problem (lack of speaking practice) and offers daily practice as the solution.",
+        "supernova_on_screen_text": "My name Priya\nआपका मतलब है, \"My name is Priya\"?\nSorry... मेरी English थोड़ी weak है।\nक्या आप कहना चाहती थीं, \"Sorry, I speak a little English\"?\nहाँ।\nपिछले कुछ महीनों में आपने कितनी बार English में बात की है?\nसच कहूँ तो... कभी नहीं।\nहम रोज़ साथ में practice करेंगे..."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear call-to-action.\n- Displays the brand logo and app store availability.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4846096
+}

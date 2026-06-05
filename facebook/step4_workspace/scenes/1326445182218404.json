@@ -1,0 +1,76 @@
+{
+  "competitor_id": "1326445182218404",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in a natural kitchen setting. The lighting, movements, and interactions with physical objects (washing dishes) are realistic and consistent with human recording.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman in her 20s, slim build, fair complexion. She has blonde hair tied up in a messy bun with some loose strands framing her face. She has dark eyeliner and defined eyebrows.",
+        "wardrobe": "Wearing a loose, oversized brown t-shirt with a graphic print on the front.",
+        "demeanor": "Casual, slightly frustrated initially, but becomes engaged and happy as she learns."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Digital avatar of a young woman with reddish-brown hair, visible only on the tablet screen.",
+        "wardrobe": "Not clearly visible, appears to be wearing a light-colored top.",
+        "demeanor": "Friendly, encouraging, and instructional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 36.5,
+        "screenshot_at_s": 18.0,
+        "scene_label": "Washing Dishes and Learning Spanish",
+        "setting": "A modern kitchen with white cabinets, a dark speckled countertop, and a stainless steel sink. A tablet is propped up on the counter next to the sink.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot, slightly low angle, capturing the woman at the sink and the tablet on the counter.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with blonde hair in a messy bun is standing at a kitchen sink, washing a stainless steel pot with a sponge. She is wearing an oversized brown t-shirt. To her right, on the dark speckled countertop, a tablet is propped up, displaying a digital avatar of a woman with reddish hair. The kitchen has white cabinets and a blue light strip under the upper cabinets. The woman looks between the pot she is washing and the tablet screen, engaging in a conversation.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a woman washing dishes while interacting with a language learning app on her tablet. Text overlays in Spanish and English appear on screen, translating the conversation. A banner with Spanish flags hangs at the top of the frame. The woman makes mistakes, is corrected by the app, and then repeats the correct phrases, showing a progression from frustration to satisfaction.",
+        "audio_transcript": "Character A says: Odio el espa\u00f1ol.\n[I hate Spanish.]\nCharacter B says: \u00bfC\u00f3mo te llamas?\n[What's your name?]\nCharacter A says: Me llamo Nesly.\n[My name is Nesly.]\nCharacter B says: \u00bfC\u00f3mo est\u00e1s?\n[How are you?]\nCharacter A says: Estoy bien, gracias.\n[I am fine, thank you.]\nCharacter B says: \u00bfCu\u00e1ntos a\u00f1os tienes?\n[How old are you?]\nCharacter A says: Soy 24.\n[I am 24.]\nCharacter B says: No digas \"Soy 24.\"\n[Don't say \"Soy 24.\"]\nCharacter B says: Di \"Tengo 24 a\u00f1os.\"\n[Say \"Tengo 24 a\u00f1os.\"]\nCharacter A says: Ah, tengo 24 a\u00f1os.\n[Ah, I am 24 years old.]\nCharacter B says: \u00bfPor qu\u00e9 odias el espa\u00f1ol?\n[Why do you hate Spanish?]\nCharacter A says: Estoy sin trabajo por mi mal espa\u00f1ol.\n[I am jobless because of my bad Spanish.]\nCharacter B says: No digas \"sin trabajo.\"\n[Don't say \"sin trabajo.\"]\nCharacter B says: Di \"desempleado.\"\n[Say \"desempleado.\"]\nCharacter A says: Ah!\n[Ah!]\nCharacter A says: Estoy desempleado por mi mal espa\u00f1ol.\n[I am unemployed because of my bad Spanish.]\nCharacter B says: \u00a1Eso son\u00f3 99% con acento nativo, muy bien!\n[That was 99% in a native accent, great job!]\nCharacter A says: \u00bfPuedes ense\u00f1arme espa\u00f1ol as\u00ed todos los d\u00edas?\n[Can you teach me Spanish like this every day?]\nCharacter B says: Solo descarga Praktika.\n[Just download Praktika.]\nCharacter B says: Corregir\u00e9 tus errores de pronunciaci\u00f3n y practicar\u00e9 contigo todos los d\u00edas.\n[I'll fix your pronunciation mistakes and practice with you every day.]\nCharacter A says: Vale, voy a descargar Praktika ahora mismo.\n[Okay, I'll download Praktika right now.]",
+        "on_screen_text": "Odio el espa\u00f1ol.\n(I hate Spanish.)\n\u00bfC\u00f3mo te llamas?\n(What's your name?)\nMe llamo Nesly.\n(My name is Nesly.)\n\u00bfC\u00f3mo est\u00e1s?\n(How are you?)\nEstoy bien, gracias.\n(I am fine, thank you.)\n\u00bfCu\u00e1ntos a\u00f1os tienes?\n(How old are you?)\nSoy 24.\n(I am 24.)\nNo digas \"Soy 24.\"\n(Don't say \"Soy 24.\")\nDi \"Tengo 24 a\u00f1os.\"\n(Say \"Tengo 24 a\u00f1os.\")\nTengo 24 a\u00f1os.\n(I am 24 years old.)\n\u00bfPor qu\u00e9 odias el espa\u00f1ol?\n(Why do you hate Spanish?)\nEstoy sin trabajo\n(I am jobless)\npor mi mal espa\u00f1ol.\n(because of my bad Spanish.)\nNo digas \"sin trabajo.\"\n(Don't say \"sin trabajo.\")\nDi \"desempleado.\"\n(Say \"desempleado.\")\nAh!\nEstoy desempleado\n(I am unemployed)\npor mi mal espa\u00f1ol.\n(because of my bad Spanish.)\n\u00a1Eso son\u00f3 99%\n(That was 99%)\ncon acento nativo,\n(in a native accent,)\nmuy bien!\n(great job!)\n\u00bfPuedes ense\u00f1arme\n(Can you teach me)\nespa\u00f1ol as\u00ed todos los d\u00edas?\n(Spanish like this every day?)\nSolo descarga Praktika.\n(Just download Praktika.)\nCorregir\u00e9 tus errores\n(I'll fix your)\nde pronunciaci\u00f3n\n(pronunciation mistakes)\ny practicar\u00e9 contigo\n(and practice with you)\ntodos los d\u00edas.\n(every day.)\nVoy a descargar Praktika\n(I'll download Praktika)\nahora mismo.\n(right now.)"
+      },
+      {
+        "n": 2,
+        "start_s": 36.5,
+        "end_s": 38.0,
+        "screenshot_at_s": 37.2,
+        "scene_label": "End Card",
+        "setting": "A solid light purple background.",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid light purple background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The scene is a static end card with a light purple background. The Praktika app logo is centered, with 'Download on the App Store' and 'GET IT ON Google Play' buttons below it.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780628900.528743
+}

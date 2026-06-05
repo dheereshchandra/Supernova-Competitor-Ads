@@ -1,0 +1,64 @@
+{
+  "competitor_id": "874091655660010",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, fair complexion, green eyes, red hair styled in an updo. She has a smooth, 3D-animated appearance.",
+        "wardrobe": "Simple white top and gold hoop earrings.",
+        "demeanor": "Friendly, encouraging, and slightly playful."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young adult male, medium build, fair complexion. He has dark hair, a beard, and a mustache.",
+        "wardrobe": "Black t-shirt and a white wireless earbud in his left ear.",
+        "demeanor": "Expressive, slightly hesitant initially, but becomes enthusiastic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Spanish Quiz",
+        "supernova_script": "Character A says: English बोलने में डर लगता है? [Scared to speak in English?]\nCharacter B says: Uuuh... थोड़ा बहुत? [Uuuh... a little?]\nCharacter A says: Okay, let's test. \"मैं कोशिश करूँगा\" को English में क्या कहेंगे? [Okay, let's test. How do you say \"I will try\" in English?]\nCharacter B says: I will... try? [I will... try?]\nCharacter A says: Nice! और \"मुझसे गलती हो गई\"? [Nice! And \"I made a mistake\"?]\nCharacter B says: I do mistake? [I do mistake?]\nCharacter A says: Almost! Repeat after me: \"I made a mistake.\" [Almost! Repeat after me: \"I made a mistake.\"]\nCharacter B says: I made a mistake. [I made a mistake.]",
+        "scene_summary": "- Hooks the viewer with a relatable pain point (fear of speaking English).\n- Demonstrates a quick, interactive quiz format to show the app's teaching style.\n- Establishes a warm, encouraging dynamic between the AI tutor and the learner.",
+        "supernova_on_screen_text": "English बोलने में डर लगता है?\nUuuh... थोड़ा बहुत?\nOkay, let's test. \"मैं कोशिश करूँगा\" को English में क्या कहेंगे?\nI will... try?\nNice! और \"मुझसे गलती हो गई\"?\nI do mistake?\nAlmost! Repeat after me:\n\"I made a mistake.\"\nI made a mistake."
+      },
+      {
+        "n": 2,
+        "scene_label": "Pitching AI Tutors",
+        "supernova_script": "Character A says: See? You know the words, बस practice की कमी है। [See? You know the words, just lack practice.]\nCharacter B says: हाँ, पर English में बात करने वाला कोई है ही नहीं। [Yes, but there's no one to talk to in English.]\nCharacter A says: That's why I am here! आप Supernova पर मेरे जैसे AI tutors के साथ practice कर सकते हो। [That's why I am here! You can practice with AI tutors like me on Supernova.]\nCharacter B says: Like you? [Like you?]\nCharacter A says: Yes! Supernova के AI tutors आपसे रोज़मर्रा की situations में बात करते हैं, जैसे interview या shopping, और आपकी गलतियाँ सुधारते हैं। [Yes! Supernova's AI tutors talk to you in everyday situations, like an interview or shopping, and correct your mistakes.]\nCharacter B says: Oh, but... AI के साथ? [Oh, but... with an AI?]\nCharacter A says: Try करके देखो, बिना किसी झिझक के English बोलना सीख जाओगे। [Give it a try, you'll learn to speak English without any hesitation.]",
+        "scene_summary": "- Identifies the core problem for the target audience (lack of speaking partners).\n- Introduces Supernova's AI tutors as the practical, judgment-free solution.\n- Highlights real-world practice scenarios (interviews, shopping) to build value.",
+        "supernova_on_screen_text": "See? You know the words,\nबस practice की कमी है।\nहाँ, पर English में बात करने वाला\nकोई है ही नहीं।\nThat's why I am here!\nआप Supernova पर मेरे जैसे AI tutors\nके साथ practice कर सकते हो।\nLike you?\nYes! Supernova के AI tutors\nआपसे रोज़मर्रा की situations में बात करते हैं,\nऔर आपकी गलतियाँ सुधारते हैं।\nOh, but... AI के साथ?\nTry करके देखो, बिना किसी झिझक के\nEnglish बोलना सीख जाओगे।"
+      },
+      {
+        "n": 3,
+        "scene_label": "Acceptance and CTA",
+        "supernova_script": "Character B says: Okay... teach me English. [Okay... teach me English.]\nCharacter A says: I will! But रोज़ practice करनी पड़ेगी, deal? [I will! But you'll have to practice daily, deal?]\nCharacter B says: Done! I will try... I mean, I will do it! [Done! I will try... I mean, I will do it!]\nCharacter A says: That's the spirit! Go download Supernova right now. [That's the spirit! Go download Supernova right now.]\nCharacter B says: Okay, okay! I'm going! [Okay, okay! I'm going!]",
+        "scene_summary": "- Shows the learner gaining confidence and committing to the process.\n- Reinforces the brand's 'older sibling' tone by asking for a commitment to daily practice.\n- Delivers a clear, urgent Call To Action to download the app.",
+        "supernova_on_screen_text": "Okay... teach me English.\nI will! But रोज़ practice करनी पड़ेगी, deal?\nDone! I will try...\nI mean, I will do it!\nThat's the spirit!\nGo download Supernova right now.\nOkay, okay! I'm going!"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear final visual of the brand name.\n- Directs users to the app stores for download.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4883356
+}

@@ -1,0 +1,201 @@
+{
+  "competitor_id": "953470727433696",
+  "parsed": {
+    "duration_s": 54.0,
+    "production_type": "mixed",
+    "production_notes": "The primary footage is human-recorded with natural lighting, dynamic camera angles, and realistic acting. However, it includes a brief inset of an AI-generated avatar which exhibits typical AI smoothness, static posture, and slightly unnatural lip-syncing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female customer",
+        "appearance": "Young adult, medium build, brown complexion. Long, wavy black hair, half tied up.",
+        "wardrobe": "Sleeveless blue denim top and blue jeans.",
+        "demeanor": "Initially annoyed, transitions to surprised and curious."
+      },
+      {
+        "id": "B",
+        "role": "male delivery driver",
+        "appearance": "Young adult, slim build, brown complexion. Short curly black hair, light beard and mustache.",
+        "wardrobe": "White Puma t-shirt, beige cargo pants, and a silver watch.",
+        "demeanor": "Calm, polite, confident."
+      },
+      {
+        "id": "C",
+        "role": "AI Tutor Avatar (Sia)",
+        "appearance": "Female, young adult, fair complexion. Long straight dark hair.",
+        "wardrobe": "Light beige high-neck top.",
+        "demeanor": "Friendly, professional, static."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "The Wrong Order",
+        "setting": "Outdoor courtyard of an apartment or office building. Daytime. Paved ground, pillars, some greenery in the background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman stands holding a brown paper bag, looking annoyed and gesturing with her free hand. She is facing a young man sitting on a purple scooter. The man is looking back at her calmly. The camera alternates between over-the-shoulder shots of the woman and the man. The background shows a paved outdoor area with building pillars and some greenery.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene cuts back and forth between the female customer and the male delivery driver. The customer holds a paper bag and looks displeased, while the driver responds calmly and politely. Text overlays show the dialogue.",
+        "audio_transcript": "Character A says: Chetta ith entha, pizza aanu njan order cheythe. Ithu sandwich aanallo vanne. [Brother, what is this? I ordered a pizza. This is a sandwich.]\n\nCharacter B says: Ma'am, this issue is from the restaurant side, not from my end. Please don't worry. I'll raise a complaint right away and make sure it gets sorted for you.",
+        "on_screen_text": "Chetta ith entha, pizza aanu njan order cheythe. Ithu sandwich aanallo vanne. Ma'am, this issue is from the restaurant side, not from my end. Please don't worry. I'll raise a complaint right away and make sure it gets sorted for you."
+      },
+      {
+        "n": 2,
+        "start_s": 11.0,
+        "end_s": 24.5,
+        "screenshot_at_s": 18.0,
+        "scene_label": "Surprised by Fluency",
+        "setting": "Outdoor courtyard of an apartment or office building. Daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The woman looks surprised and impressed, gesturing with her hands as she speaks to the man on the scooter. The man smiles slightly and gestures back, explaining something confidently. The camera continues to alternate between over-the-shoulder shots of the two characters. The lighting is natural daylight.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The customer expresses surprise at the driver's fluent English. The driver smiles and explains how he learned it. A logo for 'speakX' appears briefly on screen. Text overlays show the dialogue.",
+        "audio_transcript": "Character A says: Chetta ningal English ente office manager-nekkalum nallayittu samsarikkunnundallo. [Brother, you speak English better than my office manager.]\n\nCharacter B says: Madam munpu njan valare budhimuttayirunnu samsarikan. Pakshe SpeakX app use cheythu English samsarikan thudangi. Ippo ningalkkum kaanam ente fluency. [Madam, earlier I used to struggle a lot to speak. But I started speaking English using the SpeakX app. Now you can see my fluency.]\n\nCharacter A says: App-il English aano? Ath engane padichu? [English on an app? How did you learn that?]\n\nCharacter B says: Ithu valare simple aanu. [It's very simple.]",
+        "on_screen_text": "Chetta ningal English ente office manager-nekkalum nallayittu samsarikkunnundallo. Madam munpu njan valare budhimuttayirunnu samsarikan. Pakshe SpeakX app use cheythu English samsarikan thudangi. Ippo ningalkkum kaanam ente fluency. App-il English aano? Ath engane padichu? Ithu valare simple aanu. speakX"
+      },
+      {
+        "n": 3,
+        "start_s": 24.5,
+        "end_s": 30.0,
+        "screenshot_at_s": 27.0,
+        "scene_label": "AI Teacher Introduction",
+        "setting": "Outdoor courtyard (background), plain white studio (inset).",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "medium close-up",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "The young man sits on his purple scooter in the outdoor courtyard, gesturing with his hands as he speaks. He looks confident and relaxed.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A young woman with long dark hair stands against a plain white background. She is wearing a light beige high-neck top and looks directly forward with a neutral, professional expression.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The delivery driver continues explaining, while an inset video appears in the top half of the screen showing an AI tutor avatar. The avatar is static except for lip movements. Text overlays show the dialogue and introduce the AI teacher.",
+        "audio_transcript": "Character B says: Namukku ivide AI teacher undu. Athupole namukku daily chat cheyyam, call cheyyam, athupole Malayalam-il ninnum English padikkam, enne pole. [We have an AI teacher here. Also, we can chat daily, call, and learn English from Malayalam, like me.]",
+        "on_screen_text": "Meet SIA Your personal AI Teacher. Namukku ivide AI teacher undu. Athupole namukku daily chat cheyyam, call cheyyam, athupole Malayalam-il ninnum English padikkam, enne pole. CONTINUE"
+      },
+      {
+        "n": 4,
+        "start_s": 30.0,
+        "end_s": 37.0,
+        "screenshot_at_s": 33.0,
+        "scene_label": "Delivery Boy English",
+        "setting": "Outdoor courtyard of an apartment or office building. Daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The woman stands listening attentively, holding the paper bag. The scene cuts to the man on the scooter, who is speaking and gesturing with one hand. The camera alternates between the two characters. The background remains the same sunny outdoor courtyard.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene cuts between the customer listening and the driver speaking. The driver demonstrates the English phrases he learned for his job. Text overlays show the dialogue.",
+        "audio_transcript": "Character B says: Oru delivery boy-kku aavashyamulla English njan padichu. I am here with your order. Please check once after replacing. I will leave it at your doorstep as requested. [I learned the English needed for a delivery boy. I am here with your order. Please check once after replacing. I will leave it at your doorstep as requested.]",
+        "on_screen_text": "Oru delivery boy-kku aavashyamulla English njan padichu. I am here with your order. Please check once after replacing. I will leave it at your doorstep as requested."
+      },
+      {
+        "n": 5,
+        "start_s": 37.0,
+        "end_s": 40.5,
+        "screenshot_at_s": 38.5,
+        "scene_label": "App Interface",
+        "setting": "Digital app interface.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A dark gradient background transitioning from deep purple to black. In the upper center, there is a circular portrait photo of a young woman with long dark hair smiling. Below the portrait, there is a red circular button containing a white phone receiver icon.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A full-screen view of a mobile app interface showing an active voice call with the AI tutor 'Sia'. The screen has a dark background, a profile picture, a timer, and chat bubbles. Text overlays show the driver's voiceover dialogue.",
+        "audio_transcript": "Character B says: Free time-il okke njan practice cheythu. Pathinanchu divasam kondu thanne ente fluency valare improve aayi. [I practiced in my free time. In just 15 days, my fluency improved a lot.]",
+        "on_screen_text": "Sia 0:19 hi Sia hi Sia I am new hi Sia I am new here can you help me hi Sia I am new here can you help me understand from where Free time-il okke njan practice cheythu. Pathinanchu divasam kondu thanne ente fluency valare improve aayi."
+      },
+      {
+        "n": 6,
+        "start_s": 40.5,
+        "end_s": 54.0,
+        "screenshot_at_s": 47.0,
+        "scene_label": "The Pitch",
+        "setting": "Outdoor courtyard of an apartment or office building. Daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The man on the scooter continues speaking, looking proud. The woman looks excited and asks a question. The man responds enthusiastically, gesturing with his hands. The camera alternates between them. The lighting and setting remain consistent.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene cuts back to the driver and customer. The driver talks about his improved ratings and the app's benefits. The customer asks if she can learn too, and the driver gives the pricing and a call to action. Text overlays show the dialogue.",
+        "audio_transcript": "Character B says: Munp okke onnu randu rating aayirunnu. Ippol anchu aayi. Daily life-il upayogikkunna ella words-um basic-il ninn thudangi padikkam. Theerchayayum padikkam. [Earlier it was one or two ratings. Now it's five. You can learn all the words used in daily life starting from the basics. You can definitely learn.]\n\nCharacter A says: Adipoli chetta. Enikkum padikan pattumo? [Awesome brother. Can I also learn?]\n\nCharacter B says: Per day naalu rupa ye ullu. Ezhu divasathe trial-um undu. Innu thanne download cheyyu. [It's only four rupees per day. There is a seven-day trial too. Download it today itself.]",
+        "on_screen_text": "Munp okke onnu randu rating aayirunnu. Ippol anchu aayi. Daily life-il upayogikkunna ella words-um basic-il ninn thudangi padikkam. Theerchayayum padikkam. Adipoli chetta. Enikkum padikan pattumo? Per day naalu rupa ye ullu. Ezhu divasathe trial-um undu. Innu thanne download cheyyu."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888788.1399033
+}

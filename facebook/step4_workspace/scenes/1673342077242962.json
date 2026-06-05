@@ -1,0 +1,121 @@
+{
+  "competitor_id": "1673342077242962",
+  "parsed": {
+    "duration_s": 22.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor with natural facial expressions, fluid movements, and synchronized speech. The lighting, shadows, and background details are consistent with a standard smartphone or webcam recording in a real room.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter / accent coach",
+        "appearance": "Female in her 30s with a slim build and fair complexion. She has short, brown hair swept back from her face. Her facial features are clear and expressive.",
+        "wardrobe": "A light grey-green, long-sleeved button-down shirt.",
+        "demeanor": "Friendly, instructional, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 3.0,
+        "screenshot_at_s": 1.5,
+        "scene_label": "Introduction",
+        "setting": "Indoor room, daytime lighting. A white bookshelf is visible on the left and a dark door with hanging bags on the right.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A woman with short, swept-back brown hair is framed in a close-up shot, looking directly at the camera. She is wearing a light grey-green button-down shirt. The background consists of a white bookshelf filled with various books on the left, and a dark-colored door with a couple of bags hanging on it to the right. The lighting is soft and even, illuminating her face clearly.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene features a close-up of the presenter speaking directly to the camera. Text overlays identify her and provide captions. A graphic of an app interface appears, prompting the pronunciation of a word.",
+        "audio_transcript": "Character A says: Say this out loud with me. Thirty-three.",
+        "on_screen_text": "ELIZA SIMPSON ACCENT COACH\nsay this out loud with me\nTHIRTY-THREE\nCoach Eliza Let's start! Tap the button below and say the word. thirty-three"
+      },
+      {
+        "n": 2,
+        "start_s": 3.0,
+        "end_s": 8.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Common Mistakes",
+        "setting": "Indoor room, daytime lighting. A white bookshelf is visible on the left and a dark door with hanging bags on the right.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The woman remains in the same close-up framing, continuing to look at the camera. Her facial expression shifts slightly as she speaks, appearing explanatory. The background elements, including the bookshelf and the door with hanging bags, remain static and in focus.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter continues her explanation. The screen displays app interface mockups showing incorrect pronunciation scores and phonetic breakdowns. Large text captions mirror her spoken words.",
+        "audio_transcript": "Character A says: If it came out tirty-tree or sirty-sree, then it's your TH sound.",
+        "on_screen_text": "IF IT CAME OUT\nTIRTY-TREE\n74% thirty three th T.EE th R.EE Coach You You said T\nOR\nSIRTY-SREE\n77% thirty three th T.EE th R.EE Coach You You said S\nTHEN IT'S YOUR TH SOUND"
+      },
+      {
+        "n": 3,
+        "start_s": 8.5,
+        "end_s": 18.5,
+        "screenshot_at_s": 13.0,
+        "scene_label": "Correction and Demonstration",
+        "setting": "Indoor room, daytime lighting. A white bookshelf is visible on the left and a dark door with hanging bags on the right.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The woman is in the same close-up shot. She raises her right index finger in a gesture of instruction. She then points to her mouth and slightly opens it, demonstrating the placement of her tongue against her upper teeth. She continues to look directly at the camera. The background of the bookshelf and door is unchanged.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter gestures to her mouth to demonstrate correct articulation. An animated diagram overlays the video, showing tongue placement. Finally, an app interface graphic shows a high score for correct pronunciation.",
+        "audio_transcript": "Character A says: Here's how to fix it. Tongue tip to your upper teeth, push air out and don't stop it. Thirty-three.",
+        "on_screen_text": "HERE'S HOW TO FIX IT\nTONGUE TIP TO YOUR UPPER TEETH\nCompare th to S th You need to make this sound. S It sounds like you are making this sound.\nPUSH AIR OUT AND DON'T STOP IT\nTHIRTY-THREE\nCoach Eliza Let's start! Tap the button below and say the word. thirty-three\n96% thirty-three th.ER DD.EE th.R.EE"
+      },
+      {
+        "n": 4,
+        "start_s": 18.5,
+        "end_s": 22.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Call to Action",
+        "setting": "Indoor room, daytime lighting. A white bookshelf is visible on the left and a dark door with hanging bags on the right.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The woman, still in the close-up shot, smiles warmly at the camera. She raises her right hand and points her index finger downwards. The background setting with the bookshelf and door remains consistent.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter smiles and points downwards, directing attention to a link or button. The brand logo and a call-to-action text overlay appear on the screen.",
+        "audio_transcript": "Character A says: Start your first lesson on BoldVoice today for free.",
+        "on_screen_text": "BoldVoice\nSTART YOUR FIRST LESSON ON BOLDVOICE TODAY FOR FREE"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780658172.1792717
+}

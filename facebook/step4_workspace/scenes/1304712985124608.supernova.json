@@ -1,0 +1,53 @@
+{
+  "competitor_id": "1304712985124608",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young male of Asian descent, late teens to early twenties. He has a slim build and a fair complexion. His hair is dark, thick, and styled in a messy, textured way.",
+        "wardrobe": "A grey, ribbed half-zip sweater.",
+        "demeanor": "Casual, informative, and engaging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction",
+        "supernova_script": "Character A says: English बोलने में hesitation होती है? Check this out: [Do you hesitate while speaking English? Check this out:]",
+        "scene_summary": "- Hooks the viewer with a highly relatable problem for the target audience (hesitation in speaking English).\n- Immediately pivots to offering a solution.\n- Establishes a casual, older-sibling tone.",
+        "supernova_on_screen_text": "English बोलने में hesitation होती है? Check this out:"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration - Listening",
+        "supernova_script": "Character A says: इस app में आप AI ट्यूटर के साथ रोज़ English बोलने की practice कर सकते हो, बिना किसी डर के। [In this app, you can practice speaking English daily with an AI tutor, without any fear.]",
+        "scene_summary": "- Introduces the core product feature (AI tutor practice).\n- Addresses the emotional barrier of fear or judgment when speaking.\n- Shows the app interface actively listening to the user.",
+        "supernova_on_screen_text": "Practice English daily with an AI tutor. Listening..."
+      },
+      {
+        "n": 3,
+        "scene_label": "App Demonstration - Result",
+        "supernova_script": "Character A says: And just like that, you get instant feedback to improve your grammar and pronunciation. [And just like that, you get instant feedback to improve your grammar and pronunciation.]",
+        "scene_summary": "- Highlights the immediate payoff of using the app (instant feedback).\n- Focuses on practical improvement areas like grammar and pronunciation.\n- Maintains the quick, satisfying pacing of the original ad.",
+        "supernova_on_screen_text": "and just like that, instant feedback to improve your English"
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "supernova_script": "Character A says: आज ही Supernova download करो और confidence के साथ बोलना शुरू करो। [Download Supernova today and start speaking with confidence.]",
+        "scene_summary": "- Delivers a clear, encouraging call to action.\n- Replaces the competitor brand with Supernova.\n- Removes the 'free' claim to align with Supernova's premium model while emphasizing the ultimate goal: confidence.",
+        "supernova_on_screen_text": "Download Supernova today and speak with confidence"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Whisper Flow",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982352.7958922
+}

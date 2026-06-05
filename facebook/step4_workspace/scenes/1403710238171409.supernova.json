@@ -1,0 +1,47 @@
+{
+  "competitor_id": "1403710238171409",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Phone user",
+        "appearance": "Only hands are visible. Dark-skinned hands with short fingernails.",
+        "wardrobe": "N/A",
+        "demeanor": "Active, demonstrating app features with gestures."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Translating a text message",
+        "supernova_script": "Character A says: क्या? ₹8500? समझ नहीं आ रहा कि पैसे देने हैं या मिलने वाले हैं? कहीं ये कोई scam तो नहीं? ऐसे English messages देखकर घबराइए मत। Supernova app के साथ अपनी English इतनी strong बनाओ कि कोई आपको बेवकूफ ना बना सके। [What? ₹8500? Can't understand if you have to give money or receive it? Is this some scam? Don't panic seeing such English messages. Make your English so strong with the Supernova app that no one can fool you.]\n\nCharacter A says: यहाँ AI tutor के साथ रोज़ practice करो। Interview हो, office हो या दोस्तों से बात करनी हो, Supernova के daily lessons से confidence के साथ English बोलना सीखो। [Practice daily with the AI tutor here. Whether it's an interview, office, or talking to friends, learn to speak English with confidence through Supernova's daily lessons.]",
+        "scene_summary": "- Hooks the viewer with a relatable problem: receiving a confusing and potentially scammy English text message.\n- Transitions the fear of misunderstanding into a motivation to learn English.\n- Introduces Supernova's AI tutor and daily lessons as the practical solution for real-world situations.",
+        "supernova_on_screen_text": "Finance\nMonday 23 Feb - 16:28\nRCS chat with Finance\nThis chat is now end-to-end encrypted. Learn more\nUnread\n12:19\nI mistakenly sent you ₹8,500 via UPI. Please approve the collect request to return the money. Click the link below to pay my money\nhttps://paymoney.com/8500rs\n12:19\nParthipan\nOkay\nWow\nYes\nThanks\nमैंने गलती से आपको UPI के माध्यम से ₹8,500 भेज दिए हैं। पैसे वापस करने के लिए कृपया कलेक्ट रिक्वेस्ट को मंज़ूरी दें। मेरे पैसे चुकाने के लिए नीचे दिए गए लिंक पर क्लिक करें\nhttps://paymoney.com/8500rs\nChat with Supernova"
+      },
+      {
+        "n": 2,
+        "scene_label": "App store page",
+        "supernova_script": "Character A says: अगर आप भी confidence के साथ English बोलना चाहते हैं, तो अभी Play Store पर जाइए और Supernova app install कीजिए। इसमें आप AI tutor के साथ बोलना सीख सकते हैं, और रोज़ practice कर सकते हैं। अभी जाकर install करें! [If you also want to speak English with confidence, go to the Play Store right now and install the Supernova app. In this, you can learn to speak with an AI tutor, and practice daily. Go and install it right now!]",
+        "scene_summary": "- Displays the app store page to build trust and show exactly where to get the app.\n- Delivers a clear, encouraging call-to-action to install Supernova.\n- Emphasizes daily practice and the AI tutor to reinforce the brand's core value proposition.",
+        "supernova_on_screen_text": "Supernova: Spoken English App\nSupernova\n4.0\n3k reviews\nRated for 12+\n1M+\nDownloads\nUninstall\nOpen\nWhat's new\nLast updated 13 Feb 2024\nBug fixes and improvements\nRate this app\nTell others what you think\nWrite a review\nApp support\nAbout this app\nPractice with AI Tutor, Daily Lessons, Real-world speaking"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Zinglish",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Ziz",
+        "supernova_swap": "Supernova / AI Tutor"
+      },
+      {
+        "competitor_brand": "Capslock Market Places Pvt Ltd",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779804111.25891
+}

@@ -1,0 +1,101 @@
+{
+  "competitor_id": "1395179515999240",
+  "parsed": {
+    "duration_s": 26.0,
+    "production_type": "human-recorded",
+    "production_notes": "Live-action footage with natural lighting, realistic human movements, and authentic environments. No AI artifacts observed.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Auto-rickshaw driver",
+        "appearance": "Male, 30s, medium build, brown complexion, short black hair, mustache.",
+        "wardrobe": "Khaki uniform shirt with a white and pink checked cloth draped over his shoulder.",
+        "demeanor": "Talkative, cheerful, oblivious to the passenger's need for quiet."
+      },
+      {
+        "id": "B",
+        "role": "Passenger",
+        "appearance": "Male, 20s, medium build, brown complexion, short black hair, beard, wears glasses.",
+        "wardrobe": "Black and white plaid button-down shirt.",
+        "demeanor": "Focused, slightly annoyed, trying to be quiet while working."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 15.5,
+        "screenshot_at_s": 7.0,
+        "scene_label": "Noisy Auto Ride",
+        "setting": "Inside a moving auto-rickshaw, daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Inside a moving auto-rickshaw. Character A, the driver, is seen from the back and side, turning his head to speak. Character B sits in the back seat, holding a smartphone close to his mouth. The background shows blurred city streets passing by. Natural daylight illuminates the interior.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene alternates between the talkative driver and the passenger trying to record a voice note. The passenger whispers into his phone while the driver speaks loudly over him. Text overlays show the passenger's speech being transcribed.",
+        "audio_transcript": "Character A says: Sir, sarkar ke baare me kya khayal hai apka? Haanji? [Sir, what are your thoughts on the government? Yes?]\nCharacter B says: Bhaiya, bas ek second. [Brother, just one second.]\nCharacter B says: Hey team,\nCharacter A says: Dekh rahe ho sir, road kitne badhiya ban gaye hain. [Are you seeing sir, how good the roads have become.]\nCharacter A says: Chand pe jaane ki zarurat hi nahi hain hume. [We don't even need to go to the moon.]\nCharacter B says: Hey team, two things we need to do today: We need to get the updated presentation. The demo needs to be way funnier\nCharacter A says: Batao sir. [Tell me sir.]\nCharacter A says: Aisa lagta hain sir traffic rules ki koi zarurat nahi hamare desh pe.. [It feels like there is no need for traffic rules in our country..]",
+        "on_screen_text": "Sir, sarkar ke baare me kya khayal hai apka? Haanji?\nBhaiya, bas ek second.\nHey team,\nDekh rahe ho sir, road kitne badhiya ban gaye hain.\nChand pe jaane ki zarurat hi nahi hain hume.\nHey team, two things we need to do today: We need to get the updated presentation. The demo needs to be way funnier\nBatao sir.\nAisa lagta hain sir traffic rules ki koi zarurat nahi hamare desh pe.."
+      },
+      {
+        "n": 2,
+        "start_s": 15.5,
+        "end_s": 19.0,
+        "screenshot_at_s": 17.0,
+        "scene_label": "App Transcription",
+        "setting": "Close-up of a smartphone.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "App-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up of a hand holding a black smartphone. The background is blurred, showing indistinct shapes and colors of the auto-rickshaw interior. Natural lighting.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A close-up of the smartphone screen shows a messaging app. The whispered voice note is perfectly transcribed into text despite the background noise. A text overlay highlights this feature.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Hey team, two things we need to do today:\n1. We need to get the updated presentation\n2. The demo needs to be way funnier\nCatches your whispers"
+      },
+      {
+        "n": 3,
+        "start_s": 19.0,
+        "end_s": 26.0,
+        "screenshot_at_s": 22.0,
+        "scene_label": "End Card",
+        "setting": "Graphic background.",
+        "characters_in_scene": [],
+        "camera": "Wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, light cream-colored background. No objects or characters are present. Flat, even lighting.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid light-colored background displays the brand logo, a tagline, and a call to action to download the app. Platform icons are shown at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Wispr Flow\nReady for India and the World\nDownload today at wisprflow.ai\nAndroid Windows iOS Mac"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.2479105
+}

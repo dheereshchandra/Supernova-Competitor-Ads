@@ -1,0 +1,53 @@
+{
+  "competitor_id": "3411393879019186",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female face, short dark wavy hair, fair complexion. Attached to a futuristic robotic body. Symmetrical, slightly uncanny features.",
+        "wardrobe": "White and light blue metallic robotic suit with glowing blue neck accents.",
+        "demeanor": "Calm, reassuring, and static."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young adult Indian woman, medium complexion, dark straight shoulder-length hair. Natural appearance.",
+        "wardrobe": "Light pink short-sleeved t-shirt.",
+        "demeanor": "Expressive, transitioning from hesitant to excited."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Split-screen conversation",
+        "supernova_script": "Character B says: मुझे वो पसंद है। [I like him.]\nCharacter B says: I like him.\nCharacter B says: मैं उससे प्यार करती हूँ। [I love him.]\nCharacter B says: I love him.\nCharacter B says: मैं उससे शादी करना चाहती हूँ। [I want to marry him.]\nCharacter B says: I want to marry him.\nCharacter B says: पता नहीं मैं कब बिना अटके ऐसी इंग्लिश बोल पाऊँगी। [I don't know when I'll be able to speak English fluently like this.]\nCharacter A says: Don't worry.\nCharacter A says: मेरे साथ रोज़ ऐसे दस-पंद्रह मिनट प्रैक्टिस करोगे तो कॉन्फिडेंस आ जाएगा। [If you practice with me like this for 10-15 minutes every day, you will gain confidence.]\nCharacter B says: पर गलत इंग्लिश बोलने पे मुझे शर्म आती है। [But I feel shy when I speak incorrect English.]\nCharacter A says: मैं Supernova की एआई टीचर हूँ। [I am Supernova's AI teacher.]\nCharacter A says: ना ही मैं तुम्हें जज करूँगी, ना ही तुम्हारा मज़ाक उड़ाऊँगी। [Neither will I judge you, nor will I make fun of you.]\nCharacter B says: और मैं आपसे इंग्लिश कहाँ से सीख सकती हूँ? [And where can I learn English from you?]\nCharacter A says: तुम्हें ज़्यादा कुछ नहीं करना। [You don't have to do much.]\nCharacter A says: बस Supernova ऐप डाउनलोड कर लो। [Just download the Supernova app.]\nCharacter A says: ये एक स्पोकन इंग्लिश ऐप है। [This is a spoken English app.]\nCharacter A says: जहाँ मेरे जैसे एआई टीचर्स तुम्हें रोज़ रियल-लाइफ सिचुएशंस में इंग्लिश बोलना सिखाएंगे। [Where AI teachers like me will teach you to speak English in real-life situations every day.]\nCharacter A says: और तुम बिना डरे इंग्लिश बोलना सीख जाओगी। [And you will learn to speak English without fear.]\nCharacter B says: फिर तो ये ऐप महँगा भी होगा ना? [Then this app must be expensive too, right?]\nCharacter A says: बिल्कुल नहीं, ये बहुत अफोर्डेबल है। [Not at all, it is very affordable.]\nCharacter A says: तुम आज ही अपनी प्रैक्टिस शुरू कर सकते हो। [You can start your practice today itself.]\nCharacter B says: अरे, मुझे पहले क्यों नहीं पता चला इस ऐप के बारे में? [Oh, why didn't I know about this app earlier?]\nCharacter B says: मैं अभी डाउनलोड करती हूँ Supernova ऐप। [I will download the Supernova app right now.]",
+        "scene_summary": "- Hooks the viewer with relatable translation struggles and the desire for fluency.\n- Addresses the core pain point of feeling judged while speaking broken English.\n- Introduces the AI tutor as a safe, non-judgmental space for daily practice.\n- Removes unrealistic guarantees and specific pricing, focusing instead on affordability and real-world confidence.",
+        "supernova_on_screen_text": ""
+      },
+      {
+        "n": 2,
+        "scene_label": "App Install Prompt",
+        "supernova_script": "Unknown speaker says: तो इंस्टॉल बटन पे क्लिक करो और Supernova ऐप डाउनलोड करो। [So click on the install button and download the Supernova app.]",
+        "scene_summary": "- Delivers a clear, direct call-to-action to download the app.\n- Reinforces the brand name visually and aurally.",
+        "supernova_on_screen_text": "Supernova\nINSTALL NOW"
+      },
+      {
+        "n": 3,
+        "scene_label": "Disclaimer",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides necessary legal and educational disclaimers.\n- Replaces competitor brand name with Supernova.",
+        "supernova_on_screen_text": "Supernova kisi bhi government authority institution brand, organisation ya individual ke dwara endorsed, sponsored, affiliated ya associated nahi hai. Kisi bhi names trademarks logos ya references ka use sirf educational aur informational purposes ke liye kiya gaya hai Kuch content sirf samjhane ke liye dramatised ya representational ho sakta hai Supernova kisi bhi guaranteed results ka promise nahi karta Outcomes individual effort aur doosre factors par depend karte hain aur vary kar sakte hain."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "English Seekho",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779890383.1930451
+}

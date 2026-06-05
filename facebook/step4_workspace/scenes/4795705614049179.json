@@ -1,0 +1,46 @@
+{
+  "competitor_id": "4795705614049179",
+  "parsed": {
+    "duration_s": 8.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video consists of a single static photograph of a real person with text overlays and background music.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female subject",
+        "appearance": "Young woman, fair complexion, dark curly hair tied up. Features are natural.",
+        "wardrobe": "White t-shirt with a black graphic, silver chain necklace, small hoop earrings.",
+        "demeanor": "Looking away, slightly downwards, contemplative."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 8.0,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Static text overlay",
+        "setting": "Narrow street or alleyway, daytime, natural lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands in a narrow street. She has dark curly hair tied up and wears a white t-shirt with a black graphic, a silver chain necklace, and small hoop earrings. She looks away from the camera, slightly downwards. The background shows buildings on both sides of the street, slightly out of focus. Natural daylight illuminates the scene.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Static shot of Character A in a street. Large yellow text is positioned at the top left. A block of white text is centered over the image.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "wie ich ENDLICH SELBSTVERTRAUEN im Englischen fand\nPOV: 10 Jahre Englisch in der Schule und du kannst in London immer noch keinen Kaffee bestellen \ud83d\udc80\nDuolingo? Gemacht. Sprachkurse? Gemacht. Ergebnis = null.\nDann entdecke ich auf TikTok eine App und pl\u00f6tzlich... Game-Changer.\nSpeak ist eine KI, mit der du wirklich sprichst - entwickelt von Linguisten. Du sprichst, sie antwortet, du wirst besser. Punkt.\n3 Monate sp\u00e4ter tr\u00e4ume ich auf Englisch. Kein Witz."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657929.968644
+}

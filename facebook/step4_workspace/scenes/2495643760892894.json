@@ -1,0 +1,181 @@
+{
+  "competitor_id": "2495643760892894",
+  "parsed": {
+    "duration_s": 52.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses a mixed production approach. The human character is live-action recorded, while the robot character is clearly AI-generated, evidenced by its perfectly symmetrical, uncanny face, stiff micro-expressions, and unnatural lip-syncing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot. Features a glossy white synthetic casing with visible mechanical joints at the neck and shoulders. She has a perfectly symmetrical face with striking blue eyes and subtle, makeup-like contours.",
+        "wardrobe": "White robotic casing/armor, no traditional clothing.",
+        "demeanor": "Calm, polite, slightly stiff and uncanny."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Young adult human male with a slim build and medium brown complexion. He has short, dark, slightly wavy hair and a clean-shaven face.",
+        "wardrobe": "Casual blue denim button-down shirt.",
+        "demeanor": "Casual, slightly hesitant but eager to learn."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 17.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Introductions and Corrections",
+        "setting": "Video call interface, plain grey background for AI, softly lit room for human",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A close-up portrait of Character A facing the camera. Character A is a humanoid robot with a glossy white casing and blue eyes. The background is a plain, out-of-focus grey wall. Soft, even lighting highlights the reflective robotic shell. The framing is tight on her head and shoulders, with a neutral expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A medium close-up of Character B sitting indoors, looking at the camera. Character B is a young man wearing a blue denim shirt. The background is a softly lit room with a blurred wooden shelf. Natural indoor lighting illuminates his face evenly. He has an attentive and relaxed expression.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene mimics a mobile video call interface. It alternates between Character A and Character B in the main view and the picture-in-picture inset. At the screenshot moment, Character A occupies the main screen. Video call control icons are overlaid at the bottom. Dynamic text captions appear in the center, highlighting grammatical corrections in red and green.",
+        "audio_transcript": "Character A says: Hello, what is your name? [Hello, what is your name?]\n\nCharacter B says: My name is Rahul. [My name is Rahul.]\n\nCharacter A says: How old are you? [How old are you?]\n\nCharacter B says: I have 22. [I have 22.]\n\nCharacter A says: I have 22 \u0928\u0939\u0940\u0902, I am 22 years old \u0939\u094b\u0924\u093e \u0939\u0948\u0964 [Not I have 22, it is I am 22 years old.]\n\nCharacter B says: Okay okay, I am 22 years old. [Okay okay, I am 22 years old.]\n\nCharacter A says: Where are you from? [Where are you from?]\n\nCharacter B says: I am Uttar Pradesh. [I am Uttar Pradesh.]\n\nCharacter A says: I am Uttar Pradesh \u0928\u0939\u0940\u0902, I am from Uttar Pradesh \u0939\u094b\u0917\u093e\u0964 [Not I am Uttar Pradesh, it will be I am from Uttar Pradesh.]",
+        "on_screen_text": "HELLO WHAT IS YOUR NAME?\nMY NAME IS RAHUL\nHOW OLD ARE YOU?\nI have 22\nI have 22 \u0928\u0939\u0940\u0902 (nahi)\nI am 22 yrs old \u0939\u094b\u0924\u093e \u0939\u0948 (hota hai)\nOKAY OKAY I AM 22 YEARS OLD\nWHERE ARE YOU FROM?\nI am Uttar Pradesh\nI am Uttar Pradesh \u0928\u0939\u0940\u0902 (nahi)\nI am from Uttar Pradesh \u0939\u094b\u0917\u093e (hoga)"
+      },
+      {
+        "n": 2,
+        "start_s": 17.0,
+        "end_s": 28.0,
+        "screenshot_at_s": 19.0,
+        "scene_label": "The Problem and Solution",
+        "setting": "Video call interface, plain grey background for AI, softly lit room for human",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A medium close-up of Character B sitting indoors, looking at the camera. Character B is a young man in a blue denim shirt, gesturing slightly with his right hand. The background is a softly lit room with a blurred wooden shelf. Natural indoor lighting illuminates his face evenly. He has a slightly hesitant but engaged expression.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A close-up portrait of Character A facing the camera. Character A is a humanoid robot with a glossy white casing and blue eyes. The background is a plain, out-of-focus grey wall. Soft, even lighting highlights the reflective robotic shell. The framing is tight on her head and shoulders.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The video call layout alternates rapidly between Character B and Character A in the main background screen. At the screenshot moment, Character B is in the main screen with Character A in the inset. Video call control icons remain at the bottom. Large, dynamic text captions appear across the center. A large '7X CHEAPER' graphic pops up at the end.",
+        "audio_transcript": "Character B says: \u0913\u0939\u094b \u0920\u0940\u0915 \u0939\u0948 \u0920\u0940\u0915 \u0939\u0948, \u092e\u0941\u091d\u0947 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0905\u091a\u094d\u091b\u0947 \u0938\u0947 \u0928\u0939\u0940\u0902 \u0906\u0924\u0940\u0964 [Oh okay okay, I don't know English well.]\n\nCharacter A says: \u0915\u094b\u0908 \u092a\u094d\u0930\u0949\u092c\u094d\u0932\u092e \u0928\u0939\u0940\u0902, AI teachers \u091f\u094d\u0930\u093e\u0908 \u0915\u093f\u092f\u093e? [No problem, have you tried AI teachers?]\n\nCharacter B says: \u0935\u094b \u0924\u094b \u092e\u0939\u0902\u0917\u0947 \u0939\u094b\u0924\u0947 \u0939\u094b\u0902\u0917\u0947 \u0928\u093e? [They must be expensive, right?]\n\nCharacter A says: \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0928\u0939\u0940\u0902, \u0928\u093e\u0930\u094d\u092e\u0932 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0915\u094d\u0932\u093e\u0938\u0947\u0938 \u0938\u0947 7 \u0917\u0941\u0928\u093e \u0938\u0938\u094d\u0924\u093e \u0939\u0948\u0964 [Not at all, it is 7 times cheaper than normal English classes.]",
+        "on_screen_text": "OH THEEK HAI THEEK HAI\nMUJHE ENGLISH ACCHE SE NAHI AATI\nKOI PROBLEM NAHI\nAI TEACHERS TRY KIYA?\nWO TOH MEHENGE HOTE HONGE NA?\nBILKUL NAHI\nNORMAL ENGLISH CLASSES SE\n7X CHEAPER"
+      },
+      {
+        "n": 3,
+        "start_s": 28.0,
+        "end_s": 32.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "App Store Overlay",
+        "setting": "Video call interface, plain grey background for AI, softly lit room for human",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A close-up portrait of Character A facing the camera. Character A is a humanoid robot with a glossy white casing and blue eyes. The background is a plain, out-of-focus grey wall. Soft, even lighting highlights the reflective robotic shell. The framing is tight on her head and shoulders, with a polite expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A medium close-up of Character B sitting indoors, looking at the camera. Character B is a young man wearing a blue denim shirt. The background is a softly lit room with a blurred wooden shelf. Natural indoor lighting illuminates his face evenly. He has an attentive expression.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The layout shows Character A in the main screen and Character B in the inset. A large Google Play Store app installation overlay for 'MySivi' dominates the center. This overlay obscures most of Character A. The video call controls are still visible at the bottom. Dynamic captions continue to appear.",
+        "audio_transcript": "Character A says: \u0907\u0938\u0932\u093f\u090f 50 \u0932\u093e\u0916 \u0932\u094b\u0917 MySivi \u092a\u0930 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902\u0964 [That's why 5 million people are practicing English on MySivi.]",
+        "on_screen_text": "ISLIYE 50 LAKH LOG\nMYSIVI PAR ENGLISH PRACTICE KAR RAHE HAIN\nMySivi AI English Speaking...\nInstall\nEnglish Speaking App - Improve Your Spoken English and Fluency with AI Support"
+      },
+      {
+        "n": 4,
+        "start_s": 32.0,
+        "end_s": 48.0,
+        "screenshot_at_s": 36.0,
+        "scene_label": "Time Constraint and Call to Action",
+        "setting": "Video call interface, plain grey background for AI, softly lit room for human",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A close-up portrait of Character A facing the camera. Character A is a humanoid robot with a glossy white casing and blue eyes. The background is a plain, out-of-focus grey wall. Soft, even lighting highlights the reflective robotic shell. The framing is tight on her head and shoulders, featuring a slight smile.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A medium close-up of Character B sitting indoors, looking at the camera. Character B is a young man wearing a blue denim shirt. The background is a softly lit room with a blurred wooden shelf. Natural indoor lighting illuminates his face evenly. He has an eager and interested expression.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene continues with Character A in the main screen and Character B in the inset. The app store overlay is no longer visible. Dynamic text captions appear in the center as Character A explains the app's benefits. The video call control icons remain at the bottom. The layout remains static for this segment.",
+        "audio_transcript": "Character B says: \u092a\u0930 \u091f\u093e\u0907\u092e \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u0924\u093e\u0964 [But I don't get time.]\n\nCharacter A says: \u0930\u094b\u091c\u093c \u0915\u0940 \u0938\u093f\u0930\u094d\u092b 15-20 \u092e\u093f\u0928\u091f \u0915\u0940 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u093e\u092b\u0940 \u0939\u0948\u0964 \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0915\u0949\u0928\u094d\u092b\u093f\u0921\u0947\u0902\u091f \u0939\u094b \u091c\u093e\u0913\u0917\u0940\u0964 [Just 15-20 minutes of daily practice is enough. You will become completely confident.]\n\nCharacter B says: \u0935\u093e\u0913, \u0915\u0948\u0938\u0947 \u091c\u094d\u0935\u093e\u0907\u0928 \u0915\u0930\u0942\u0901? [Wow, how do I join?]\n\nCharacter A says: \u092f\u0947 \u0907\u0928\u0938\u094d\u091f\u0949\u0932 \u0915\u093e \u092c\u091f\u0928 \u0926\u092c\u093e\u0913 \u0914\u0930 MySivi \u0910\u092a \u0907\u0928\u0938\u094d\u091f\u0949\u0932 \u0915\u0930\u094b\u0964 \u0938\u093f\u0930\u094d\u092b 15 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 \u0924\u0941\u092e\u094d\u0939\u0947\u0902 \u0907\u092e\u094d\u092a\u094d\u0930\u0942\u0935\u092e\u0947\u0902\u091f \u0926\u093f\u0916\u0928\u0947 \u0932\u0917\u0947\u0917\u0940\u0964 \u091a\u0932\u094b, \u0936\u0941\u0930\u0942 \u0939\u094b \u091c\u093e\u0913\u0964 [Press this install button and install the MySivi app. You will start seeing improvement in just 15 days. Come on, get started.]",
+        "on_screen_text": "PAR TIME NAHI MILTA\nROZ KI SIRF 15-20 MINUTE KI PRACTICE KAAFI HAI\nBILKUL CONFIDENT HO JAOGI\nWOW KAISE JOIN KARU?\nYE INSTALL KA BUTTON DABAO\nAUR MYSIVI APP INSTALL KARO\nSIRF 15 DINO MEIN TUMHE IMPROVEMENT DIKHNE LAGEGI\nCHALO SHURU HO JAO"
+      },
+      {
+        "n": 5,
+        "start_s": 48.0,
+        "end_s": 52.0,
+        "screenshot_at_s": 50.0,
+        "scene_label": "End Card",
+        "setting": "Solid light purple background",
+        "characters_in_scene": [],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A sleek, modern smartphone is displayed in a three-quarter profile view. The phone features a prominent, multi-lens camera module and a metallic side frame. It is positioned against a solid, light purple background. Bright, studio-like lighting creates soft reflections on the device's surfaces. The minimalist composition focuses entirely on the hardware design.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The video call interface disappears entirely. It is replaced by a solid light purple background. A 3D render of a smartphone slides into view. The MySivi app logo and an 'Install Now' button are displayed prominently next to the phone. This serves as the final call-to-action end card.",
+        "audio_transcript": "Unknown speaker says: \u0907\u0928\u0938\u094d\u091f\u0949\u0932 \u0928\u093e\u0909 \u092a\u0947 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930\u094b \u0914\u0930 MySivi \u0910\u092a \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 [Click on install now and download the MySivi app.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779890884.9842544
+}

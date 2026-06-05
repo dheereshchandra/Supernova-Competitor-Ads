@@ -1,0 +1,92 @@
+{
+  "competitor_id": "1757405299002125",
+  "parsed": {
+    "duration_s": 6.0,
+    "production_type": "mixed",
+    "production_notes": "The video is a 2D vector animation. It uses stylized graphics and motion graphics rather than live-action recording or AI generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot",
+        "appearance": "Green cartoon owl. Large white eyes with black pupils. Orange beak and feet.",
+        "wardrobe": "None.",
+        "demeanor": "Expressive, transitions from angry to joyful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 1.0,
+        "screenshot_at_s": 0.5,
+        "scene_label": "Angry Duo Zoom",
+        "setting": "Gradient red to orange background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A green cartoon owl is centered against a dark red to orange gradient background. The owl has an angry expression with furrowed brows and a slightly open beak. The lighting is flat, typical of 2D vector animation. The camera rapidly zooms in on the owl's face, filling the frame. The owl's features remain sharp and stylized throughout the zoom.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A green cartoon owl is centered against a dark red to orange gradient background. The owl has an angry expression with furrowed brows and a slightly open beak. The lighting is flat, typical of 2D vector animation. The camera rapidly zooms in on the owl's face, filling the frame. The owl's features remain sharp and stylized throughout the zoom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": ""
+      },
+      {
+        "n": 2,
+        "start_s": 1.0,
+        "end_s": 3.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Happy Duo and CTA",
+        "setting": "Gradient red to orange background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Extreme close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The bottom half of the frame shows the top of a green cartoon owl's head. The owl has large, wide-open eyes with white sclera and black pupils. Its orange beak is open in a happy, surprised expression. The background above the owl is a smooth dark red to orange gradient. The composition leaves the upper half of the frame empty.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The bottom half of the frame shows the top of a green cartoon owl's head. The owl has large, wide-open eyes and an open orange beak, appearing happy and surprised. The background above the owl is a smooth dark red to orange gradient. White text is overlaid in the upper section. A green button is positioned below the text, and a cartoon hand cursor clicks it.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "learn a language with 10 minutes per day\nLEARN FOR FREE"
+      },
+      {
+        "n": 3,
+        "start_s": 3.5,
+        "end_s": 6.0,
+        "screenshot_at_s": 4.5,
+        "scene_label": "End Card",
+        "setting": "White background.",
+        "characters_in_scene": [],
+        "camera": "Wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The scene consists of a solid, bright white background. There are no characters, props, or environmental elements present. The lighting is uniform and flat, providing a clean slate. The framing is wide and static. The composition is entirely empty, serving as a backdrop.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The scene consists of a solid, bright white background. The Duolingo logo, featuring the green owl face and brand name, is centered near the top. Black text is positioned below the logo. Two black app store badges are displayed side-by-side in the middle. A bright green button is located at the bottom center.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "duolingo\nThe world's #1 learning app.\nDownload on the App Store\nGET IT ON Google Play\nLEARN FOR FREE"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.093113
+}

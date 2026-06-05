@@ -1,0 +1,76 @@
+{
+  "competitor_id": "1883207469009188",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human interacting with a tablet app. The lighting, movements, and environment are natural and consistent with a human-recorded video.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, medium build, fair complexion, blonde hair tied back. She wears glasses.",
+        "wardrobe": "White hoodie.",
+        "demeanor": "Focused on her task, slightly confused at first, then engaged and willing to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated female avatar with red hair and fair skin.",
+        "wardrobe": "White t-shirt.",
+        "demeanor": "Helpful, encouraging, and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 33.5,
+        "screenshot_at_s": 16.0,
+        "scene_label": "Cooking and Learning",
+        "setting": "A kitchen with wooden paneled walls and yellow painted walls. A cutting board, knife, apples, and a tablet are on the counter.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot, slightly high angle.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands at a kitchen counter, slicing an apple on a white cutting board. She is wearing a white hoodie and glasses. To her right, a tablet is propped up, displaying Character B, an animated red-haired avatar. The kitchen has wooden paneled walls and a yellow wall in the background. Character A looks down at her task and occasionally glances at the tablet.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a woman in a kitchen, slicing an apple while interacting with an AI tutor on a tablet. The tablet displays an animated avatar. Text overlays appear on the screen, showing the dialogue and corrections made by the AI tutor. The woman's expressions change from focused to slightly confused, and then to understanding as she repeats the corrected sentences.",
+        "audio_transcript": "B says: What are you doing?\nA says: I am cooking my daughter.\nB says: What? You are cooking your daughter!?\nA says: No no, I mean I am making food for my daughter!\nB says: Oh thank god! Then say: I am cooking for my daughter.\nA says: I am cooking for my daughter.\nB says: How old is your daughter?\nA says: She has 3.\nB says: Say: She is three years old.\nA says: She is three years old.\nA says: I have many work today.\nB says: Do you mean: \"I have a lot of work today\"?\nA says: I have a lot of work today. How can I improve my English?\nB says: By talking to me every day! I'm Skye, an AI tutor on Praktika. I can teach you and correct your English while you're working. 15 minutes daily is all you need!\nA says: Amazing, let's start!",
+        "on_screen_text": "What are you doing?\nI am cooking my daughter.\nWhat?\nYou are cooking your daughter!?\nNo no, I mean\nI am making food\nfor my daughter!\nThen say:\nI am cooking for my daughter.\nI am cooking for my daughter.\nHow old is your daughter?\nShe has 3.\nSay:\nShe is three years old.\nShe is three years old.\nI have many work today.\nDo you mean:\n\"I have a lot of work today\"?\nI have a lot of work today.\nHow can I improve my English?\nBy talking to me every day!\nI'm Skye,\nan AI tutor on Praktika.\nI can teach you\nand correct your English\nwhile you're working.\n15 minutes daily\nAmazing, let's start!"
+      },
+      {
+        "n": 2,
+        "start_s": 33.5,
+        "end_s": 35.0,
+        "screenshot_at_s": 34.2,
+        "scene_label": "End Card",
+        "setting": "Solid purple background.",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid purple background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid purple screen with the Praktika logo in the center. Below the logo are two app store badges.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780629192.4643264
+}

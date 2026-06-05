@@ -1,0 +1,1740 @@
+=== run-all started Wed Jun  3 12:58:34 IST 2026 ===
+competitors: 8
+log: logs/run-all-20260603-1258.log
+
+
+######################################################
+### Memrise  (slug=memrise)   started 12:58:34
+######################################################
+[step 1] scraping...
+[info] competitor: Memrise
+[info] advertisers: 1 (AR06420837225457516545)
+[info] region: IN
+[info] output: /Users/iniyan/Desktop/google-ad-downloader
+
+[search] AR06420837225457516545 (Memrise Ltd)
+          → 1 creatives
+
+[csv] wrote 3 rows → /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-memrise-2026-06-03.csv
+
+[downloads] 3 image creative(s) to fetch
+  [1/3] CR17536918250632249345.jpg  OK  — 45,931 bytes
+  [2/3] CR17536918250632249345_v2.jpg  OK  — 45,931 bytes
+  [3/3] CR17536918250632249345_v3.jpg  OK  — 45,931 bytes
+
+[done] CSV:    /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-memrise-2026-06-03.csv
+[done] images: /Users/iniyan/Desktop/google-ad-downloader/images/memrise-2026-06-03 — 3 ok, 0 failed
+[done] rows:   3 (text/other variants stored in CSV only)
+[step 2] yt-dlp .info.json enrichment...
+[info] input:        inputs/g-ads-memrise-2026-06-03.csv
+[info] videos-out:   videos/memrise-2026-06-03
+[info] images-out:   images/memrise-2026-06-03
+[info] batch-size:   600
+[info] summary:      videos/memrise-2026-06-03/download_summary.csv
+[info] csv rows:     3
+[info] yt-dlp:       /Users/iniyan/Library/Python/3.13/bin/yt-dlp
+[info] already on disk: 3
+[info] pending:         0
+
+[done] tally:
+  already-on-disk              3
+[done] 3 rows total processed, 0 still pending
+[done] summary: videos/memrise-2026-06-03/download_summary.csv
+[step 3] R2 upload + master...
+/Users/iniyan/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+[info] competitor:  memrise
+[info] input:       inputs/g-ads-memrise-2026-06-03.csv
+[info] videos:      videos/memrise-2026-06-03
+[info] images:      images/memrise-2026-06-03
+[info] master:      master/memrise.csv
+[info] enriched:    inputs/g-ads-memrise-2026-06-03_enriched.csv
+[info] log:         step3_logs/memrise-2026-06-03-1258.log
+[info] dry-run:     False
+[info] bucket:      video-ads  (https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev)
+
+[done] tally:
+  uploaded-image     3
+[done] enriched: inputs/g-ads-memrise-2026-06-03_enriched.csv
+[done] master:   master/memrise.csv  (3 rows total)
+[done] log:      step3_logs/memrise-2026-06-03-1258.log
+[backfill] YouTube metadata sidecars into master...
+[backfill] no .info.json sidecars found; nothing to fill
+### Memrise done at 12:58:41
+
+######################################################
+### Loora  (slug=loora)   started 12:58:41
+######################################################
+[step 1] scraping...
+[info] competitor: Loora
+[info] advertisers: 1 (AR13725632235724341249)
+[info] region: IN
+[info] output: /Users/iniyan/Desktop/google-ad-downloader
+
+[search] AR13725632235724341249 (Loora AI LTD)
+          → 1 creatives
+
+[csv] wrote 4 rows → /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-loora-2026-06-03.csv
+
+[done] CSV:    /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-loora-2026-06-03.csv
+[done] rows:   4 (text/other variants stored in CSV only)
+[step 2] yt-dlp .info.json enrichment...
+[info] input:        inputs/g-ads-loora-2026-06-03.csv
+[info] videos-out:   videos/loora-2026-06-03
+[info] images-out:   images/loora-2026-06-03
+[info] batch-size:   600
+[info] summary:      videos/loora-2026-06-03/download_summary.csv
+[info] csv rows:     4
+[info] yt-dlp:       /Users/iniyan/Library/Python/3.13/bin/yt-dlp
+[info] already on disk: 0
+[info] pending:         4
+[  1/4] YouTubeVideo   CR03300941216064995329 → no youtube URL
+[  2/4] YouTubeVideo   CR03300941216064995329 → no youtube URL
+[  3/4] YouTubeVideo   CR03300941216064995329 → no youtube URL
+[  4/4] YouTubeVideo   CR03300941216064995329 → no youtube URL
+
+[done] tally:
+  already-on-disk              0
+[done] 4 rows total processed, 0 still pending
+[done] summary: videos/loora-2026-06-03/download_summary.csv
+[done] failed:  videos/loora-2026-06-03/failed_ads.txt  (4 ids)
+[step 3] R2 upload + master...
+/Users/iniyan/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+[info] competitor:  loora
+[info] input:       inputs/g-ads-loora-2026-06-03.csv
+[info] videos:      videos/loora-2026-06-03
+[info] images:      images/loora-2026-06-03
+[info] master:      master/loora.csv
+[info] enriched:    inputs/g-ads-loora-2026-06-03_enriched.csv
+[info] log:         step3_logs/loora-2026-06-03-1258.log
+[info] dry-run:     False
+[info] bucket:      video-ads  (https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev)
+
+[done] tally:
+  asset-missing      4
+[done] enriched: inputs/g-ads-loora-2026-06-03_enriched.csv
+[done] master:   master/loora.csv  (4 rows total)
+[done] log:      step3_logs/loora-2026-06-03-1258.log
+[backfill] YouTube metadata sidecars into master...
+[backfill] no .info.json sidecars found; nothing to fill
+### Loora done at 12:58:50
+
+######################################################
+### Praktika AI  (slug=praktika ai)   started 12:58:50
+######################################################
+[step 1] scraping...
+[info] competitor: Praktika AI
+[info] advertisers: 1 (AR10065453821808607233)
+[info] region: IN
+[info] output: /Users/iniyan/Desktop/google-ad-downloader
+
+[search] AR10065453821808607233 (PRAKTIKA.AI COMPANY)
+          → 26 creatives
+          processed 20/26
+
+[csv] wrote 82 rows → /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-praktika-ai-2026-06-03.csv
+
+[downloads] 15 image creative(s) to fetch
+  [1/15] CR01084621637585731585.jpg  OK  — 33,607 bytes
+  [2/15] CR01084621637585731585_v2.jpg  OK  — 33,607 bytes
+  [3/15] CR18127931477415952385.jpg  OK  — 34,280 bytes
+  [4/15] CR18127931477415952385_v2.jpg  OK  — 34,280 bytes
+  [5/15] CR07779640298090528769.jpg  OK  — 36,776 bytes
+  [6/15] CR15375785703371702273.jpg  OK  — 244,345 bytes
+  [7/15] CR15375785703371702273_v2.jpg  OK  — 243,831 bytes
+  [8/15] CR15375785703371702273_v3.jpg  OK  — 244,295 bytes
+  [9/15] CR02534039827150536705.jpg  OK  — 69,934 bytes
+  [10/15] CR02534039827150536705_v2.jpg  OK  — 70,381 bytes
+  [11/15] CR02534039827150536705_v3.jpg  OK  — 75,318 bytes
+  [12/15] CR06074318147324739585.jpg  OK  — 261,876 bytes
+  [13/15] CR06074318147324739585_v2.jpg  OK  — 297,309 bytes
+  [14/15] CR12359054043924922369.jpg  OK  — 267,525 bytes
+  [15/15] CR18133990379190484993.jpg  OK  — 338,181 bytes
+
+[done] CSV:    /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-praktika-ai-2026-06-03.csv
+[done] images: /Users/iniyan/Desktop/google-ad-downloader/images/praktika-ai-2026-06-03 — 15 ok, 0 failed
+[done] rows:   82 (text/other variants stored in CSV only)
+[skip] Praktika AI -- no CSV produced, skipping Step 2/3
+
+######################################################
+### Busuu  (slug=busuu)   started 13:00:39
+######################################################
+[step 1] scraping...
+[info] competitor: Busuu
+[info] advertisers: 1 (AR10122694483049971713)
+[info] region: IN
+[info] output: /Users/iniyan/Desktop/google-ad-downloader
+
+[search] AR10122694483049971713 (Busuu Limited)
+          → 44 creatives
+          processed 20/44
+          processed 40/44
+
+[csv] wrote 87 rows → /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-busuu-2026-06-03.csv
+
+[downloads] 1 video creative(s) to fetch
+  [1/1] CR11138142794705534977.mp4  OK  — 164,370,063 bytes
+
+[downloads] 53 image creative(s) to fetch
+  [1/53] CR13503526609126162433.jpg  OK  — 40,323 bytes
+  [2/53] CR13503526609126162433_v2.jpg  OK  — 40,323 bytes
+  [3/53] CR13503526609126162433_v3.jpg  OK  — 40,323 bytes
+  [4/53] CR03239106211127230465.jpg  OK  — 55,774 bytes
+  [5/53] CR08682293225135800321.jpg  OK  — 53,618 bytes
+  [6/53] CR08682293225135800321_v2.jpg  OK  — 53,618 bytes
+  [7/53] CR15869509812002750465.jpg  OK  — 38,077 bytes
+  [8/53] CR15869509812002750465_v2.jpg  OK  — 38,077 bytes
+  [9/53] CR13161052376573935617.jpg  OK  — 63,530 bytes
+  [10/53] CR13161052376573935617_v2.jpg  OK  — 63,530 bytes
+  [11/53] CR13161052376573935617_v3.jpg  OK  — 63,530 bytes
+  [12/53] CR18034156630353903617.jpg  OK  — 58,568 bytes
+  [13/53] CR18034156630353903617_v2.jpg  OK  — 58,568 bytes
+  [14/53] CR18034156630353903617_v3.jpg  OK  — 58,568 bytes
+  [15/53] CR02836618950303809537.jpg  OK  — 51,675 bytes
+  [16/53] CR03654745520804462593.jpg  OK  — 58,595 bytes
+  [17/53] CR07564755104222412801.jpg  OK  — 70,767 bytes
+  [18/53] CR04190672124114894849.jpg  OK  — 38,077 bytes
+  [19/53] CR17400594425289113601.jpg  OK  — 89,032 bytes
+  [20/53] CR03828542025272131585.jpg  OK  — 259,825 bytes
+  [21/53] CR03828542025272131585_v2.jpg  OK  — 69,917 bytes
+  [22/53] CR03828542025272131585_v3.jpg  OK  — 69,917 bytes
+  [23/53] CR09600301837085310977.jpg  OK  — 62,027 bytes
+  [24/53] CR08166446074970505217.jpg  OK  — 80,148 bytes
+  [25/53] CR08166446074970505217_v2.jpg  OK  — 80,148 bytes
+  [26/53] CR07528491286593011713.jpg  OK  — 82,634 bytes
+  [27/53] CR05322909959577403393.jpg  OK  — 84,731 bytes
+  [28/53] CR05322909959577403393_v2.jpg  OK  — 84,731 bytes
+  [29/53] CR07972347809850458113.jpg  OK  — 49,055 bytes
+  [30/53] CR17799953781689942017.jpg  OK  — 60,982 bytes
+  [31/53] CR17657357706366812161.jpg  OK  — 42,631 bytes
+  [32/53] CR16294105812119322625.jpg  OK  — 97,667 bytes
+  [33/53] CR16294105812119322625_v2.jpg  OK  — 97,667 bytes
+  [34/53] CR06721449580006735873.jpg  OK  — 74,387 bytes
+  [35/53] CR06721449580006735873_v2.jpg  OK  — 74,387 bytes
+  [36/53] CR07531383173972754433.jpg  OK  — 52,983 bytes
+  [37/53] CR14460486760519434241.jpg  OK  — 54,585 bytes
+  [38/53] CR14460486760519434241_v2.jpg  OK  — 54,585 bytes
+  [39/53] CR06235048313305956353.jpg  OK  — 56,966 bytes
+  [40/53] CR00101879854076526593.jpg  OK  — 71,955 bytes
+  [41/53] CR08958116265403088897.jpg  OK  — 72,098 bytes
+  [42/53] CR08341967678822416385.jpg  OK  — 53,711 bytes
+  [43/53] CR11517009814165127169.jpg  OK  — 57,928 bytes
+  [44/53] CR11517009814165127169_v2.jpg  OK  — 57,928 bytes
+  [45/53] CR11517009814165127169_v3.jpg  OK  — 57,928 bytes
+  [46/53] CR13607785462767812609.jpg  OK  — 87,801 bytes
+  [47/53] CR13570237484276645889.jpg  OK  — 64,853 bytes
+  [48/53] CR03579516110598307841.jpg  OK  — 53,601 bytes
+  [49/53] CR15022494260677050369.jpg  OK  — 40,962 bytes
+  [50/53] CR12408200959556059137.jpg  OK  — 251,901 bytes
+  [51/53] CR05925405034102652929.jpg  OK  — 65,367 bytes
+  [52/53] CR05925405034102652929_v2.jpg  OK  — 65,367 bytes
+  [53/53] CR05925405034102652929_v3.jpg  OK  — 65,367 bytes
+
+[done] CSV:    /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-busuu-2026-06-03.csv
+[done] videos: /Users/iniyan/Desktop/google-ad-downloader/videos/busuu-2026-06-03 — 1 ok, 0 failed
+[done] images: /Users/iniyan/Desktop/google-ad-downloader/images/busuu-2026-06-03 — 53 ok, 0 failed
+[done] rows:   87 (text/other variants stored in CSV only)
+[step 2] yt-dlp .info.json enrichment...
+[info] input:        inputs/g-ads-busuu-2026-06-03.csv
+[info] videos-out:   videos/busuu-2026-06-03
+[info] images-out:   images/busuu-2026-06-03
+[info] batch-size:   600
+[info] summary:      videos/busuu-2026-06-03/download_summary.csv
+[info] csv rows:     87
+[info] yt-dlp:       /Users/iniyan/Library/Python/3.13/bin/yt-dlp
+[info] already on disk: 54
+[info] pending:         33
+[  1/33] YouTubeVideo   CR01799058325942304769 → no youtube URL
+[  2/33] YouTubeVideo   CR01799058325942304769 → no youtube URL
+[  3/33] YouTubeVideo   CR01799058325942304769 → no youtube URL
+[  4/33] YouTubeVideo   CR01799058325942304769 → no youtube URL
+[  5/33] YouTubeVideo   CR04424761448203288577 → no youtube URL
+[  6/33] YouTubeVideo   CR04424761448203288577 → no youtube URL
+[  7/33] YouTubeVideo   CR04424761448203288577 → no youtube URL
+[  8/33] YouTubeVideo   CR06135470613239693313 → no youtube URL
+[  9/33] YouTubeVideo   CR06135470613239693313 → no youtube URL
+[ 10/33] YouTubeVideo   CR06135470613239693313 → no youtube URL
+[ 11/33] YouTubeVideo   CR06135470613239693313 → no youtube URL
+[ 12/33] YouTubeVideo   CR06800463028199358465 → no youtube URL
+[ 13/33] YouTubeVideo   CR06800463028199358465 → no youtube URL
+[ 14/33] YouTubeVideo   CR06800463028199358465 → no youtube URL
+[ 15/33] YouTubeVideo   CR09292026745483952129 → no youtube URL
+[ 16/33] YouTubeVideo   CR09292026745483952129 → no youtube URL
+[ 17/33] YouTubeVideo   CR09292026745483952129 → no youtube URL
+[ 18/33] YouTubeVideo   CR09324229156138909697 → no youtube URL
+[ 19/33] YouTubeVideo   CR09324229156138909697 → no youtube URL
+[ 20/33] YouTubeVideo   CR09324229156138909697 → no youtube URL
+[ 21/33] YouTubeVideo   CR09324229156138909697 → no youtube URL
+[ 22/33] YouTubeVideo   CR09324229156138909697 → no youtube URL
+[ 23/33] YouTubeVideo   CR14166047442205671425 → no youtube URL
+[ 24/33] YouTubeVideo   CR14166047442205671425 → no youtube URL
+[ 25/33] YouTubeVideo   CR14166047442205671425 → no youtube URL
+[ 26/33] YouTubeVideo   CR14166047442205671425 → no youtube URL
+[ 27/33] YouTubeVideo   CR14271934810007011329 → no youtube URL
+[ 28/33] YouTubeVideo   CR14271934810007011329 → no youtube URL
+[ 29/33] YouTubeVideo   CR14271934810007011329 → no youtube URL
+[ 30/33] YouTubeVideo   CR16947020212106952705 → no youtube URL
+[ 31/33] YouTubeVideo   CR16947020212106952705 → no youtube URL
+[ 32/33] YouTubeVideo   CR16947020212106952705 → no youtube URL
+[ 33/33] YouTubeVideo   CR16947020212106952705 → no youtube URL
+
+[done] tally:
+  already-on-disk              54
+[done] 87 rows total processed, 0 still pending
+[done] summary: videos/busuu-2026-06-03/download_summary.csv
+[done] failed:  videos/busuu-2026-06-03/failed_ads.txt  (33 ids)
+[step 3] R2 upload + master...
+/Users/iniyan/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+[info] competitor:  busuu
+[info] input:       inputs/g-ads-busuu-2026-06-03.csv
+[info] videos:      videos/busuu-2026-06-03
+[info] images:      images/busuu-2026-06-03
+[info] master:      master/busuu.csv
+[info] enriched:    inputs/g-ads-busuu-2026-06-03_enriched.csv
+[info] log:         step3_logs/busuu-2026-06-03-1302.log
+[info] dry-run:     False
+[info] bucket:      video-ads  (https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev)
+
+[done] tally:
+  uploaded-video     1
+  uploaded-image     53
+  asset-missing      33
+[done] enriched: inputs/g-ads-busuu-2026-06-03_enriched.csv
+[done] master:   master/busuu.csv  (87 rows total)
+[done] log:      step3_logs/busuu-2026-06-03-1302.log
+[backfill] YouTube metadata sidecars into master...
+[backfill] busuu: filled 0 cells from 1 sidecars
+### Busuu done at 13:03:23
+
+######################################################
+### Speak  (slug=speak)   started 13:03:23
+######################################################
+[step 1] scraping...
+[info] competitor: Speak
+[info] advertisers: 1 (AR00705977088842137601)
+[info] region: IN
+[info] output: /Users/iniyan/Desktop/google-ad-downloader
+
+[search] AR00705977088842137601 (Speakeasy Labs, Inc)
+          → 21 creatives
+          processed 20/21
+
+[csv] wrote 77 rows → /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-speak-2026-06-03.csv
+
+[downloads] 16 image creative(s) to fetch
+  [1/16] CR00719391405578911745.jpg  OK  — 106,455 bytes
+  [2/16] CR00719391405578911745_v2.jpg  OK  — 106,455 bytes
+  [3/16] CR00719391405578911745_v3.jpg  OK  — 106,455 bytes
+  [4/16] CR09036662610132467713.jpg  OK  — 46,458 bytes
+  [5/16] CR09036662610132467713_v2.jpg  OK  — 262,965 bytes
+  [6/16] CR09036662610132467713_v3.jpg  OK  — 46,458 bytes
+  [7/16] CR00460064819299483649.jpg  OK  — 264,817 bytes
+  [8/16] CR00460064819299483649_v2.jpg  OK  — 267,159 bytes
+  [9/16] CR00460064819299483649_v3.jpg  OK  — 265,171 bytes
+  [10/16] CR17170834995170770945.jpg  OK  — 262,442 bytes
+  [11/16] CR17170834995170770945_v2.jpg  OK  — 260,839 bytes
+  [12/16] CR17170834995170770945_v3.jpg  OK  — 273,151 bytes
+  [13/16] CR13050314015010455553.jpg  OK  — 257,098 bytes
+  [14/16] CR13050314015010455553_v2.jpg  OK  — 271,027 bytes
+  [15/16] CR13050314015010455553_v3.jpg  OK  — 265,153 bytes
+  [16/16] CR01089078327580295169.jpg  OK  — 261,000 bytes
+
+[done] CSV:    /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-speak-2026-06-03.csv
+[done] images: /Users/iniyan/Desktop/google-ad-downloader/images/speak-2026-06-03 — 16 ok, 0 failed
+[done] rows:   77 (text/other variants stored in CSV only)
+[step 2] yt-dlp .info.json enrichment...
+[info] input:        inputs/g-ads-speak-2026-06-03.csv
+[info] videos-out:   videos/speak-2026-06-03
+[info] images-out:   images/speak-2026-06-03
+[info] batch-size:   600
+[info] summary:      videos/speak-2026-06-03/download_summary.csv
+[info] csv rows:     77
+[info] yt-dlp:       /Users/iniyan/Library/Python/3.13/bin/yt-dlp
+[info] already on disk: 16
+[info] pending:         61
+[  1/61] YouTubeVideo   CR01428209546567876609 → no youtube URL
+[  2/61] YouTubeVideo   CR01428209546567876609 → no youtube URL
+[  3/61] YouTubeVideo   CR01428209546567876609 → no youtube URL
+[  4/61] YouTubeVideo   CR01428209546567876609 → no youtube URL
+[  5/61] YouTubeVideo   CR01428209546567876609 → no youtube URL
+[  6/61] YouTubeVideo   CR03013186756649418753 → no youtube URL
+[  7/61] YouTubeVideo   CR03013186756649418753 → no youtube URL
+[  8/61] YouTubeVideo   CR03013186756649418753 → no youtube URL
+[  9/61] YouTubeVideo   CR03809934818196586497 → no youtube URL
+[ 10/61] YouTubeVideo   CR03809934818196586497 → no youtube URL
+[ 11/61] YouTubeVideo   CR03809934818196586497 → no youtube URL
+[ 12/61] YouTubeVideo   CR03809934818196586497 → no youtube URL
+[ 13/61] YouTubeVideo   CR05027409681262313473 → no youtube URL
+[ 14/61] YouTubeVideo   CR05027409681262313473 → no youtube URL
+[ 15/61] YouTubeVideo   CR05027409681262313473 → no youtube URL
+[ 16/61] YouTubeVideo   CR05027409681262313473 → no youtube URL
+[ 17/61] YouTubeVideo   CR06175808344788303873 → no youtube URL
+[ 18/61] YouTubeVideo   CR06175808344788303873 → no youtube URL
+[ 19/61] YouTubeVideo   CR06175808344788303873 → no youtube URL
+[ 20/61] YouTubeVideo   CR06175808344788303873 → no youtube URL
+[ 21/61] YouTubeVideo   CR06175808344788303873 → no youtube URL
+[ 22/61] YouTubeVideo   CR06947978593423065089 → no youtube URL
+[ 23/61] YouTubeVideo   CR06947978593423065089 → no youtube URL
+[ 24/61] YouTubeVideo   CR06947978593423065089 → no youtube URL
+[ 25/61] YouTubeVideo   CR06947978593423065089 → no youtube URL
+[ 26/61] YouTubeVideo   CR08154973753466421249 → no youtube URL
+[ 27/61] YouTubeVideo   CR08154973753466421249 → no youtube URL
+[ 28/61] YouTubeVideo   CR08154973753466421249 → no youtube URL
+[ 29/61] YouTubeVideo   CR08154973753466421249 → no youtube URL
+[ 30/61] YouTubeVideo   CR08154973753466421249 → no youtube URL
+[ 31/61] YouTubeVideo   CR09059097457702469633 → no youtube URL
+[ 32/61] YouTubeVideo   CR09059097457702469633 → no youtube URL
+[ 33/61] YouTubeVideo   CR09059097457702469633 → no youtube URL
+[ 34/61] YouTubeVideo   CR11982852120391974913 → no youtube URL
+[ 35/61] YouTubeVideo   CR11982852120391974913 → no youtube URL
+[ 36/61] YouTubeVideo   CR11982852120391974913 → no youtube URL
+[ 37/61] YouTubeVideo   CR11982852120391974913 → no youtube URL
+[ 38/61] YouTubeVideo   CR12027842710271426561 → no youtube URL
+[ 39/61] YouTubeVideo   CR12027842710271426561 → no youtube URL
+[ 40/61] YouTubeVideo   CR12027842710271426561 → no youtube URL
+[ 41/61] YouTubeVideo   CR12027842710271426561 → no youtube URL
+[ 42/61] YouTubeVideo   CR14774311757321076737 → no youtube URL
+[ 43/61] YouTubeVideo   CR14774311757321076737 → no youtube URL
+[ 44/61] YouTubeVideo   CR14774311757321076737 → no youtube URL
+[ 45/61] YouTubeVideo   CR14774311757321076737 → no youtube URL
+[ 46/61] YouTubeVideo   CR14774311757321076737 → no youtube URL
+[ 47/61] YouTubeVideo   CR15187292739940122625 → no youtube URL
+[ 48/61] YouTubeVideo   CR15187292739940122625 → no youtube URL
+[ 49/61] YouTubeVideo   CR15187292739940122625 → no youtube URL
+[ 50/61] YouTubeVideo   CR15187292739940122625 → no youtube URL
+[ 51/61] YouTubeVideo   CR15708446064501587969 → no youtube URL
+[ 52/61] YouTubeVideo   CR15708446064501587969 → no youtube URL
+[ 53/61] YouTubeVideo   CR15708446064501587969 → no youtube URL
+[ 54/61] YouTubeVideo   CR15708446064501587969 → no youtube URL
+[ 55/61] YouTubeVideo   CR16557653045580660737 → no youtube URL
+[ 56/61] YouTubeVideo   CR16557653045580660737 → no youtube URL
+[ 57/61] YouTubeVideo   CR16557653045580660737 → no youtube URL
+[ 58/61] YouTubeVideo   CR18123795758917353473 → no youtube URL
+[ 59/61] YouTubeVideo   CR18123795758917353473 → no youtube URL
+[ 60/61] YouTubeVideo   CR18123795758917353473 → no youtube URL
+[ 61/61] YouTubeVideo   CR18123795758917353473 → no youtube URL
+
+[done] tally:
+  already-on-disk              16
+[done] 77 rows total processed, 0 still pending
+[done] summary: videos/speak-2026-06-03/download_summary.csv
+[done] failed:  videos/speak-2026-06-03/failed_ads.txt  (61 ids)
+[step 3] R2 upload + master...
+/Users/iniyan/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+[info] competitor:  speak
+[info] input:       inputs/g-ads-speak-2026-06-03.csv
+[info] videos:      videos/speak-2026-06-03
+[info] images:      images/speak-2026-06-03
+[info] master:      master/speak.csv
+[info] enriched:    inputs/g-ads-speak-2026-06-03_enriched.csv
+[info] log:         step3_logs/speak-2026-06-03-1305.log
+[info] dry-run:     False
+[info] bucket:      video-ads  (https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev)
+
+[done] tally:
+  uploaded-image     16
+  asset-missing      61
+[done] enriched: inputs/g-ads-speak-2026-06-03_enriched.csv
+[done] master:   master/speak.csv  (77 rows total)
+[done] log:      step3_logs/speak-2026-06-03-1305.log
+[backfill] YouTube metadata sidecars into master...
+[backfill] no .info.json sidecars found; nothing to fill
+### Speak done at 13:05:33
+
+######################################################
+### SpeakX  (slug=speakx)   started 13:05:33
+######################################################
+[step 1] scraping...
+[info] competitor: SpeakX
+[info] advertisers: 1 (AR02221466555617640449)
+[info] region: IN
+[info] output: /Users/iniyan/Desktop/google-ad-downloader
+
+[search] AR02221466555617640449 (Ivypods Technology Pvt. Ltd)
+          → 87 creatives
+          processed 20/87
+          processed 40/87
+          processed 60/87
+          processed 80/87
+
+[csv] wrote 382 rows → /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-speakx-2026-06-03.csv
+
+[downloads] 9 video creative(s) to fetch
+  [1/9] CR13952643204600823809.mp4  OK  — 6,893,440 bytes
+  [2/9] CR13952643204600823809_v2.mp4  OK  — 6,399,759 bytes
+  [3/9] CR13952643204600823809_v3.mp4  OK  — 5,692,517 bytes
+  [4/9] CR15171813583316058113.mp4  OK  — 8,758,407 bytes
+  [5/9] CR15171813583316058113_v2.mp4  OK  — 4,296,270 bytes
+  [6/9] CR15171813583316058113_v3.mp4  OK  — 5,722,849 bytes
+  [7/9] CR08475678918509068289.mp4  OK  — 4,466,595 bytes
+  [8/9] CR08475678918509068289_v2.mp4  OK  — 10,763,253 bytes
+  [9/9] CR08475678918509068289_v3.mp4  OK  — 4,720,677 bytes
+
+[done] CSV:    /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-speakx-2026-06-03.csv
+[done] videos: /Users/iniyan/Desktop/google-ad-downloader/videos/speakx-2026-06-03 — 9 ok, 0 failed
+[done] rows:   382 (text/other variants stored in CSV only)
+[step 2] yt-dlp .info.json enrichment...
+[info] input:        inputs/g-ads-speakx-2026-06-03.csv
+[info] videos-out:   videos/speakx-2026-06-03
+[info] images-out:   images/speakx-2026-06-03
+[info] batch-size:   600
+[info] summary:      videos/speakx-2026-06-03/download_summary.csv
+[info] csv rows:     382
+[info] yt-dlp:       /Users/iniyan/Library/Python/3.13/bin/yt-dlp
+[info] already on disk: 9
+[info] pending:         373
+[  1/373] YouTubeVideo   CR00141381200873783297 → no youtube URL
+[  2/373] YouTubeVideo   CR00141381200873783297 → no youtube URL
+[  3/373] YouTubeVideo   CR00141381200873783297 → no youtube URL
+[  4/373] YouTubeVideo   CR00141381200873783297 → no youtube URL
+[  5/373] YouTubeVideo   CR00141381200873783297 → no youtube URL
+[  6/373] YouTubeVideo   CR00214000885871673345 → no youtube URL
+[  7/373] YouTubeVideo   CR00214000885871673345 → no youtube URL
+[  8/373] YouTubeVideo   CR00214000885871673345 → no youtube URL
+[  9/373] YouTubeVideo   CR00214000885871673345 → no youtube URL
+[ 10/373] YouTubeVideo   CR00615567752383430657 → no youtube URL
+[ 11/373] YouTubeVideo   CR00615567752383430657 → no youtube URL
+[ 12/373] YouTubeVideo   CR00615567752383430657 → no youtube URL
+[ 13/373] YouTubeVideo   CR00615567752383430657 → no youtube URL
+[ 14/373] YouTubeVideo   CR00697210613914402817 → no youtube URL
+[ 15/373] YouTubeVideo   CR00697210613914402817 → no youtube URL
+[ 16/373] YouTubeVideo   CR00697210613914402817 → no youtube URL
+[ 17/373] YouTubeVideo   CR00697210613914402817 → no youtube URL
+[ 18/373] YouTubeVideo   CR00810905476345626625 → no youtube URL
+[ 19/373] YouTubeVideo   CR00810905476345626625 → no youtube URL
+[ 20/373] YouTubeVideo   CR00810905476345626625 → no youtube URL
+[ 21/373] YouTubeVideo   CR00810905476345626625 → no youtube URL
+[ 22/373] YouTubeVideo   CR00810905476345626625 → no youtube URL
+[ 23/373] YouTubeVideo   CR01547339054457028609 → no youtube URL
+[ 24/373] YouTubeVideo   CR01547339054457028609 → no youtube URL
+[ 25/373] YouTubeVideo   CR01547339054457028609 → no youtube URL
+[ 26/373] YouTubeVideo   CR01547339054457028609 → no youtube URL
+[ 27/373] YouTubeVideo   CR01547339054457028609 → no youtube URL
+[ 28/373] YouTubeVideo   CR01788401550008254465 → no youtube URL
+[ 29/373] YouTubeVideo   CR01788401550008254465 → no youtube URL
+[ 30/373] YouTubeVideo   CR01788401550008254465 → no youtube URL
+[ 31/373] YouTubeVideo   CR01788401550008254465 → no youtube URL
+[ 32/373] YouTubeVideo   CR01788401550008254465 → no youtube URL
+[ 33/373] YouTubeVideo   CR02024463535395831809 → no youtube URL
+[ 34/373] YouTubeVideo   CR02024463535395831809 → no youtube URL
+[ 35/373] YouTubeVideo   CR02024463535395831809 → no youtube URL
+[ 36/373] YouTubeVideo   CR02024463535395831809 → no youtube URL
+[ 37/373] YouTubeVideo   CR02024463535395831809 → no youtube URL
+[ 38/373] YouTubeVideo   CR02126387876743610369 → no youtube URL
+[ 39/373] YouTubeVideo   CR02126387876743610369 → no youtube URL
+[ 40/373] YouTubeVideo   CR02126387876743610369 → no youtube URL
+[ 41/373] YouTubeVideo   CR02126387876743610369 → no youtube URL
+[ 42/373] YouTubeVideo   CR02126387876743610369 → no youtube URL
+[ 43/373] YouTubeVideo   CR02137283324010299393 → no youtube URL
+[ 44/373] YouTubeVideo   CR02137283324010299393 → no youtube URL
+[ 45/373] YouTubeVideo   CR02137283324010299393 → no youtube URL
+[ 46/373] YouTubeVideo   CR02137283324010299393 → no youtube URL
+[ 47/373] YouTubeVideo   CR02137283324010299393 → no youtube URL
+[ 48/373] YouTubeVideo   CR02271950408668676097 → no youtube URL
+[ 49/373] YouTubeVideo   CR02271950408668676097 → no youtube URL
+[ 50/373] YouTubeVideo   CR02271950408668676097 → no youtube URL
+[ 51/373] YouTubeVideo   CR02271950408668676097 → no youtube URL
+[ 52/373] YouTubeVideo   CR02394903914920017921 → no youtube URL
+[ 53/373] YouTubeVideo   CR02394903914920017921 → no youtube URL
+[ 54/373] YouTubeVideo   CR02394903914920017921 → no youtube URL
+[ 55/373] YouTubeVideo   CR02394903914920017921 → no youtube URL
+[ 56/373] YouTubeVideo   CR02394903914920017921 → no youtube URL
+[ 57/373] YouTubeVideo   CR02580772670513610753 → no youtube URL
+[ 58/373] YouTubeVideo   CR02580772670513610753 → no youtube URL
+[ 59/373] YouTubeVideo   CR02580772670513610753 → no youtube URL
+[ 60/373] YouTubeVideo   CR02580772670513610753 → no youtube URL
+[ 61/373] YouTubeVideo   CR02580772670513610753 → no youtube URL
+[ 62/373] YouTubeVideo   CR02638435226392461313 → no youtube URL
+[ 63/373] YouTubeVideo   CR02638435226392461313 → no youtube URL
+[ 64/373] YouTubeVideo   CR02638435226392461313 → no youtube URL
+[ 65/373] YouTubeVideo   CR02638435226392461313 → no youtube URL
+[ 66/373] YouTubeVideo   CR02963800740188913665 → no youtube URL
+[ 67/373] YouTubeVideo   CR02963800740188913665 → no youtube URL
+[ 68/373] YouTubeVideo   CR02963800740188913665 → no youtube URL
+[ 69/373] YouTubeVideo   CR02963800740188913665 → no youtube URL
+[ 70/373] YouTubeVideo   CR02963800740188913665 → no youtube URL
+[ 71/373] YouTubeVideo   CR03483707742550491137 → no youtube URL
+[ 72/373] YouTubeVideo   CR03483707742550491137 → no youtube URL
+[ 73/373] YouTubeVideo   CR03483707742550491137 → no youtube URL
+[ 74/373] YouTubeVideo   CR03483707742550491137 → no youtube URL
+[ 75/373] YouTubeVideo   CR03483707742550491137 → no youtube URL
+[ 76/373] YouTubeVideo   CR03631499697509629953 → no youtube URL
+[ 77/373] YouTubeVideo   CR03631499697509629953 → no youtube URL
+[ 78/373] YouTubeVideo   CR03631499697509629953 → no youtube URL
+[ 79/373] YouTubeVideo   CR03631499697509629953 → no youtube URL
+[ 80/373] YouTubeVideo   CR03631499697509629953 → no youtube URL
+[ 81/373] YouTubeVideo   CR04148213537715519489 → no youtube URL
+[ 82/373] YouTubeVideo   CR04148213537715519489 → no youtube URL
+[ 83/373] YouTubeVideo   CR04148213537715519489 → no youtube URL
+[ 84/373] YouTubeVideo   CR04148213537715519489 → no youtube URL
+[ 85/373] YouTubeVideo   CR04148213537715519489 → no youtube URL
+[ 86/373] YouTubeVideo   CR04170532215010099201 → no youtube URL
+[ 87/373] YouTubeVideo   CR04170532215010099201 → no youtube URL
+[ 88/373] YouTubeVideo   CR04170532215010099201 → no youtube URL
+[ 89/373] YouTubeVideo   CR04170532215010099201 → no youtube URL
+[ 90/373] YouTubeVideo   CR04362785087301877761 → no youtube URL
+[ 91/373] YouTubeVideo   CR04362785087301877761 → no youtube URL
+[ 92/373] YouTubeVideo   CR04362785087301877761 → no youtube URL
+[ 93/373] YouTubeVideo   CR04362785087301877761 → no youtube URL
+[ 94/373] YouTubeVideo   CR04362785087301877761 → no youtube URL
+[ 95/373] YouTubeVideo   CR04569581577851371521 → no youtube URL
+[ 96/373] YouTubeVideo   CR04569581577851371521 → no youtube URL
+[ 97/373] YouTubeVideo   CR04569581577851371521 → no youtube URL
+[ 98/373] YouTubeVideo   CR04569581577851371521 → no youtube URL
+[ 99/373] YouTubeVideo   CR04569581577851371521 → no youtube URL
+[100/373] YouTubeVideo   CR04605080985791365121 → no youtube URL
+[101/373] YouTubeVideo   CR04605080985791365121 → no youtube URL
+[102/373] YouTubeVideo   CR04605080985791365121 → no youtube URL
+[103/373] YouTubeVideo   CR04605080985791365121 → no youtube URL
+[104/373] YouTubeVideo   CR04861911139509862401 → no youtube URL
+[105/373] YouTubeVideo   CR04861911139509862401 → no youtube URL
+[106/373] YouTubeVideo   CR04861911139509862401 → no youtube URL
+[107/373] YouTubeVideo   CR04861911139509862401 → no youtube URL
+[108/373] YouTubeVideo   CR05126339244993806337 → no youtube URL
+[109/373] YouTubeVideo   CR05126339244993806337 → no youtube URL
+[110/373] YouTubeVideo   CR05126339244993806337 → no youtube URL
+[111/373] YouTubeVideo   CR05248235545045237761 → no youtube URL
+[112/373] YouTubeVideo   CR05248235545045237761 → no youtube URL
+[113/373] YouTubeVideo   CR05248235545045237761 → no youtube URL
+[114/373] YouTubeVideo   CR05248235545045237761 → no youtube URL
+[115/373] YouTubeVideo   CR05248235545045237761 → no youtube URL
+[116/373] YouTubeVideo   CR05433894405587075073 → no youtube URL
+[117/373] YouTubeVideo   CR05433894405587075073 → no youtube URL
+[118/373] YouTubeVideo   CR05433894405587075073 → no youtube URL
+[119/373] YouTubeVideo   CR05433894405587075073 → no youtube URL
+[120/373] YouTubeVideo   CR05640321485999439873 → no youtube URL
+[121/373] YouTubeVideo   CR05640321485999439873 → no youtube URL
+[122/373] YouTubeVideo   CR05640321485999439873 → no youtube URL
+[123/373] YouTubeVideo   CR05640321485999439873 → no youtube URL
+[124/373] YouTubeVideo   CR05717206734947221505 → no youtube URL
+[125/373] YouTubeVideo   CR05717206734947221505 → no youtube URL
+[126/373] YouTubeVideo   CR05717206734947221505 → no youtube URL
+[127/373] YouTubeVideo   CR05717206734947221505 → no youtube URL
+[128/373] YouTubeVideo   CR05717206734947221505 → no youtube URL
+[129/373] YouTubeVideo   CR05797737440466698241 → no youtube URL
+[130/373] YouTubeVideo   CR05797737440466698241 → no youtube URL
+[131/373] YouTubeVideo   CR05797737440466698241 → no youtube URL
+[132/373] YouTubeVideo   CR05797737440466698241 → no youtube URL
+[133/373] YouTubeVideo   CR05797737440466698241 → no youtube URL
+[134/373] YouTubeVideo   CR05840666248475574273 → no youtube URL
+[135/373] YouTubeVideo   CR05840666248475574273 → no youtube URL
+[136/373] YouTubeVideo   CR05840666248475574273 → no youtube URL
+[137/373] YouTubeVideo   CR05840666248475574273 → no youtube URL
+[138/373] YouTubeVideo   CR05840666248475574273 → no youtube URL
+[139/373] YouTubeVideo   CR05848903763821068289 → no youtube URL
+[140/373] YouTubeVideo   CR05848903763821068289 → no youtube URL
+[141/373] YouTubeVideo   CR05848903763821068289 → no youtube URL
+[142/373] YouTubeVideo   CR05848903763821068289 → no youtube URL
+[143/373] YouTubeVideo   CR05848903763821068289 → no youtube URL
+[144/373] YouTubeVideo   CR06323286294688432129 → no youtube URL
+[145/373] YouTubeVideo   CR06323286294688432129 → no youtube URL
+[146/373] YouTubeVideo   CR06323286294688432129 → no youtube URL
+[147/373] YouTubeVideo   CR06323286294688432129 → no youtube URL
+[148/373] YouTubeVideo   CR06697491101378412545 → no youtube URL
+[149/373] YouTubeVideo   CR06697491101378412545 → no youtube URL
+[150/373] YouTubeVideo   CR06697491101378412545 → no youtube URL
+[151/373] YouTubeVideo   CR06697491101378412545 → no youtube URL
+[152/373] YouTubeVideo   CR06697491101378412545 → no youtube URL
+[153/373] YouTubeVideo   CR06966997756581773313 → no youtube URL
+[154/373] YouTubeVideo   CR06966997756581773313 → no youtube URL
+[155/373] YouTubeVideo   CR06966997756581773313 → no youtube URL
+[156/373] YouTubeVideo   CR07002697181148741633 → no youtube URL
+[157/373] YouTubeVideo   CR07002697181148741633 → no youtube URL
+[158/373] YouTubeVideo   CR07002697181148741633 → no youtube URL
+[159/373] YouTubeVideo   CR07002697181148741633 → no youtube URL
+[160/373] YouTubeVideo   CR07029952562572820481 → no youtube URL
+[161/373] YouTubeVideo   CR07029952562572820481 → no youtube URL
+[162/373] YouTubeVideo   CR07029952562572820481 → no youtube URL
+[163/373] YouTubeVideo   CR07029952562572820481 → no youtube URL
+[164/373] YouTubeVideo   CR07351478238167695361 → no youtube URL
+[165/373] YouTubeVideo   CR07351478238167695361 → no youtube URL
+[166/373] YouTubeVideo   CR07351478238167695361 → no youtube URL
+[167/373] YouTubeVideo   CR07351478238167695361 → no youtube URL
+[168/373] YouTubeVideo   CR07351478238167695361 → no youtube URL
+[169/373] YouTubeVideo   CR07448877925958418433 → no youtube URL
+[170/373] YouTubeVideo   CR07448877925958418433 → no youtube URL
+[171/373] YouTubeVideo   CR07648828350307237889 → no youtube URL
+[172/373] YouTubeVideo   CR07648828350307237889 → no youtube URL
+[173/373] YouTubeVideo   CR07648828350307237889 → no youtube URL
+[174/373] YouTubeVideo   CR07648828350307237889 → no youtube URL
+[175/373] YouTubeVideo   CR07648828350307237889 → no youtube URL
+[176/373] YouTubeVideo   CR07693579899486863361 → no youtube URL
+[177/373] YouTubeVideo   CR07693579899486863361 → no youtube URL
+[178/373] YouTubeVideo   CR07693579899486863361 → no youtube URL
+[179/373] YouTubeVideo   CR07693579899486863361 → no youtube URL
+[180/373] YouTubeVideo   CR07918452859413200897 → no youtube URL
+[181/373] YouTubeVideo   CR07918452859413200897 → no youtube URL
+[182/373] YouTubeVideo   CR07918452859413200897 → no youtube URL
+[183/373] YouTubeVideo   CR07918452859413200897 → no youtube URL
+[184/373] YouTubeVideo   CR07918452859413200897 → no youtube URL
+[185/373] YouTubeVideo   CR08022515656387723265 → no youtube URL
+[186/373] YouTubeVideo   CR08022515656387723265 → no youtube URL
+[187/373] YouTubeVideo   CR08022515656387723265 → no youtube URL
+[188/373] YouTubeVideo   CR08022515656387723265 → no youtube URL
+[189/373] YouTubeVideo   CR08022515656387723265 → no youtube URL
+[190/373] YouTubeVideo   CR08023018158971420673 → no youtube URL
+[191/373] YouTubeVideo   CR08023018158971420673 → no youtube URL
+[192/373] YouTubeVideo   CR08023018158971420673 → no youtube URL
+[193/373] YouTubeVideo   CR08023018158971420673 → no youtube URL
+[194/373] YouTubeVideo   CR08023018158971420673 → no youtube URL
+[195/373] YouTubeVideo   CR08307899809251983361 → no youtube URL
+[196/373] YouTubeVideo   CR08307899809251983361 → no youtube URL
+[197/373] YouTubeVideo   CR08307899809251983361 → no youtube URL
+[198/373] YouTubeVideo   CR08307899809251983361 → no youtube URL
+[199/373] YouTubeVideo   CR08475678918509068289 → no youtube URL
+[200/373] YouTubeVideo   CR08553746967090429953 → no youtube URL
+[201/373] YouTubeVideo   CR08553746967090429953 → no youtube URL
+[202/373] YouTubeVideo   CR08553746967090429953 → no youtube URL
+[203/373] YouTubeVideo   CR08553746967090429953 → no youtube URL
+[204/373] YouTubeVideo   CR08553746967090429953 → no youtube URL
+[205/373] YouTubeVideo   CR08553746967090429953 → no youtube URL
+[206/373] YouTubeVideo   CR08596523424019382273 → no youtube URL
+[207/373] YouTubeVideo   CR08596523424019382273 → no youtube URL
+[208/373] YouTubeVideo   CR08596523424019382273 → no youtube URL
+[209/373] YouTubeVideo   CR08671056955034304513 → no youtube URL
+[210/373] YouTubeVideo   CR08671056955034304513 → no youtube URL
+[211/373] YouTubeVideo   CR08671056955034304513 → no youtube URL
+[212/373] YouTubeVideo   CR08671056955034304513 → no youtube URL
+[213/373] YouTubeVideo   CR08807709001778200577 → no youtube URL
+[214/373] YouTubeVideo   CR08807709001778200577 → no youtube URL
+[215/373] YouTubeVideo   CR08807709001778200577 → no youtube URL
+[216/373] YouTubeVideo   CR08807709001778200577 → no youtube URL
+[217/373] YouTubeVideo   CR09548064950182739969 → no youtube URL
+[218/373] YouTubeVideo   CR09548064950182739969 → no youtube URL
+[219/373] YouTubeVideo   CR09548064950182739969 → no youtube URL
+[220/373] YouTubeVideo   CR09548064950182739969 → no youtube URL
+[221/373] YouTubeVideo   CR09576800136818851841 → no youtube URL
+[222/373] YouTubeVideo   CR09576800136818851841 → no youtube URL
+[223/373] YouTubeVideo   CR09576800136818851841 → no youtube URL
+[224/373] YouTubeVideo   CR09576800136818851841 → no youtube URL
+[225/373] YouTubeVideo   CR09678062958713765889 → no youtube URL
+[226/373] YouTubeVideo   CR09678062958713765889 → no youtube URL
+[227/373] YouTubeVideo   CR09678062958713765889 → no youtube URL
+[228/373] YouTubeVideo   CR09678062958713765889 → no youtube URL
+[229/373] YouTubeVideo   CR10123737112130879489 → no youtube URL
+[230/373] YouTubeVideo   CR10123737112130879489 → no youtube URL
+[231/373] YouTubeVideo   CR10123737112130879489 → no youtube URL
+[232/373] YouTubeVideo   CR10123737112130879489 → no youtube URL
+[233/373] YouTubeVideo   CR10123737112130879489 → no youtube URL
+[234/373] YouTubeVideo   CR10274052892952363009 → no youtube URL
+[235/373] YouTubeVideo   CR10274052892952363009 → no youtube URL
+[236/373] YouTubeVideo   CR10274052892952363009 → no youtube URL
+[237/373] YouTubeVideo   CR10274052892952363009 → no youtube URL
+[238/373] YouTubeVideo   CR10303472285058596865 → no youtube URL
+[239/373] YouTubeVideo   CR10303472285058596865 → no youtube URL
+[240/373] YouTubeVideo   CR10303472285058596865 → no youtube URL
+[241/373] YouTubeVideo   CR10303472285058596865 → no youtube URL
+[242/373] YouTubeVideo   CR10303472285058596865 → no youtube URL
+[243/373] YouTubeVideo   CR10441594550647521281 → no youtube URL
+[244/373] YouTubeVideo   CR10441594550647521281 → no youtube URL
+[245/373] YouTubeVideo   CR10441594550647521281 → no youtube URL
+[246/373] YouTubeVideo   CR10441594550647521281 → no youtube URL
+[247/373] YouTubeVideo   CR10504075192249090049 → no youtube URL
+[248/373] YouTubeVideo   CR10504075192249090049 → no youtube URL
+[249/373] YouTubeVideo   CR10504075192249090049 → no youtube URL
+[250/373] YouTubeVideo   CR10504075192249090049 → no youtube URL
+[251/373] YouTubeVideo   CR10766543761853906945 → no youtube URL
+[252/373] YouTubeVideo   CR10766543761853906945 → no youtube URL
+[253/373] YouTubeVideo   CR10766543761853906945 → no youtube URL
+[254/373] YouTubeVideo   CR10766543761853906945 → no youtube URL
+[255/373] YouTubeVideo   CR10772811527888044033 → no youtube URL
+[256/373] YouTubeVideo   CR10772811527888044033 → no youtube URL
+[257/373] YouTubeVideo   CR10772811527888044033 → no youtube URL
+[258/373] YouTubeVideo   CR10772811527888044033 → no youtube URL
+[259/373] YouTubeVideo   CR10772811527888044033 → no youtube URL
+[260/373] YouTubeVideo   CR11628441744227434497 → no youtube URL
+[261/373] YouTubeVideo   CR11628441744227434497 → no youtube URL
+[262/373] YouTubeVideo   CR11628441744227434497 → no youtube URL
+[263/373] YouTubeVideo   CR11628441744227434497 → no youtube URL
+[264/373] YouTubeVideo   CR12295867928175181825 → no youtube URL
+[265/373] YouTubeVideo   CR12295867928175181825 → no youtube URL
+[266/373] YouTubeVideo   CR12295867928175181825 → no youtube URL
+[267/373] YouTubeVideo   CR12295867928175181825 → no youtube URL
+[268/373] YouTubeVideo   CR12438457853105143809 → no youtube URL
+[269/373] YouTubeVideo   CR12438457853105143809 → no youtube URL
+[270/373] YouTubeVideo   CR12438457853105143809 → no youtube URL
+[271/373] YouTubeVideo   CR12438457853105143809 → no youtube URL
+[272/373] YouTubeVideo   CR12605358461161570305 → no youtube URL
+[273/373] YouTubeVideo   CR12605358461161570305 → no youtube URL
+[274/373] YouTubeVideo   CR12605358461161570305 → no youtube URL
+[275/373] YouTubeVideo   CR12605358461161570305 → no youtube URL
+[276/373] YouTubeVideo   CR12605358461161570305 → no youtube URL
+[277/373] YouTubeVideo   CR12670613273679233025 → no youtube URL
+[278/373] YouTubeVideo   CR12670613273679233025 → no youtube URL
+[279/373] YouTubeVideo   CR12670613273679233025 → no youtube URL
+[280/373] YouTubeVideo   CR12670613273679233025 → no youtube URL
+[281/373] YouTubeVideo   CR12848689592798281729 → no youtube URL
+[282/373] YouTubeVideo   CR12848689592798281729 → no youtube URL
+[283/373] YouTubeVideo   CR12848689592798281729 → no youtube URL
+[284/373] YouTubeVideo   CR12848689592798281729 → no youtube URL
+[285/373] YouTubeVideo   CR12949108883116261377 → no youtube URL
+[286/373] YouTubeVideo   CR12949108883116261377 → no youtube URL
+[287/373] YouTubeVideo   CR12949108883116261377 → no youtube URL
+[288/373] YouTubeVideo   CR12949108883116261377 → no youtube URL
+[289/373] YouTubeVideo   CR13189743763133562881 → no youtube URL
+[290/373] YouTubeVideo   CR13189743763133562881 → no youtube URL
+[291/373] YouTubeVideo   CR13189743763133562881 → no youtube URL
+[292/373] YouTubeVideo   CR13189743763133562881 → no youtube URL
+[293/373] YouTubeVideo   CR13437940688989716481 → no youtube URL
+[294/373] YouTubeVideo   CR13437940688989716481 → no youtube URL
+[295/373] YouTubeVideo   CR13437940688989716481 → no youtube URL
+[296/373] YouTubeVideo   CR13437940688989716481 → no youtube URL
+[297/373] YouTubeVideo   CR13437940688989716481 → no youtube URL
+[298/373] YouTubeVideo   CR13529714313220063233 → no youtube URL
+[299/373] YouTubeVideo   CR13529714313220063233 → no youtube URL
+[300/373] YouTubeVideo   CR13529714313220063233 → no youtube URL
+[301/373] YouTubeVideo   CR13529714313220063233 → no youtube URL
+[302/373] YouTubeVideo   CR13560433980905357313 → no youtube URL
+[303/373] YouTubeVideo   CR13560433980905357313 → no youtube URL
+[304/373] YouTubeVideo   CR13560433980905357313 → no youtube URL
+[305/373] YouTubeVideo   CR13560433980905357313 → no youtube URL
+[306/373] YouTubeVideo   CR13560433980905357313 → no youtube URL
+[307/373] YouTubeVideo   CR13654429752495177729 → no youtube URL
+[308/373] YouTubeVideo   CR13654429752495177729 → no youtube URL
+[309/373] YouTubeVideo   CR13654429752495177729 → no youtube URL
+[310/373] YouTubeVideo   CR13654429752495177729 → no youtube URL
+[311/373] YouTubeVideo   CR13654429752495177729 → no youtube URL
+[312/373] YouTubeVideo   CR13952643204600823809 → no youtube URL
+[313/373] YouTubeVideo   CR14115625539762913281 → no youtube URL
+[314/373] YouTubeVideo   CR14115625539762913281 → no youtube URL
+[315/373] YouTubeVideo   CR14115625539762913281 → no youtube URL
+[316/373] YouTubeVideo   CR14115625539762913281 → no youtube URL
+[317/373] YouTubeVideo   CR14190844538968342529 → no youtube URL
+[318/373] YouTubeVideo   CR14190844538968342529 → no youtube URL
+[319/373] YouTubeVideo   CR14190844538968342529 → no youtube URL
+[320/373] YouTubeVideo   CR14190844538968342529 → no youtube URL
+[321/373] YouTubeVideo   CR14190844538968342529 → no youtube URL
+[322/373] YouTubeVideo   CR14347703066810122241 → no youtube URL
+[323/373] YouTubeVideo   CR14347703066810122241 → no youtube URL
+[324/373] YouTubeVideo   CR14347703066810122241 → no youtube URL
+[325/373] YouTubeVideo   CR14347703066810122241 → no youtube URL
+[326/373] YouTubeVideo   CR14916240669604315137 → no youtube URL
+[327/373] YouTubeVideo   CR14916240669604315137 → no youtube URL
+[328/373] YouTubeVideo   CR14916240669604315137 → no youtube URL
+[329/373] YouTubeVideo   CR14945050786239873025 → no youtube URL
+[330/373] YouTubeVideo   CR14945050786239873025 → no youtube URL
+[331/373] YouTubeVideo   CR14945050786239873025 → no youtube URL
+[332/373] YouTubeVideo   CR14945050786239873025 → no youtube URL
+[333/373] YouTubeVideo   CR14988426906502692865 → no youtube URL
+[334/373] YouTubeVideo   CR14988426906502692865 → no youtube URL
+[335/373] YouTubeVideo   CR14988426906502692865 → no youtube URL
+[336/373] YouTubeVideo   CR14988426906502692865 → no youtube URL
+[337/373] YouTubeVideo   CR15171813583316058113 → no youtube URL
+[338/373] YouTubeVideo   CR15279559787193303041 → no youtube URL
+[339/373] YouTubeVideo   CR15279559787193303041 → no youtube URL
+[340/373] YouTubeVideo   CR15279559787193303041 → no youtube URL
+[341/373] YouTubeVideo   CR15279559787193303041 → no youtube URL
+[342/373] YouTubeVideo   CR15420451026787893249 → no youtube URL
+[343/373] YouTubeVideo   CR15420451026787893249 → no youtube URL
+[344/373] YouTubeVideo   CR15420451026787893249 → no youtube URL
+[345/373] YouTubeVideo   CR15420451026787893249 → no youtube URL
+[346/373] YouTubeVideo   CR15420451026787893249 → no youtube URL
+[347/373] YouTubeVideo   CR15658730589689741313 → no youtube URL
+[348/373] YouTubeVideo   CR15658730589689741313 → no youtube URL
+[349/373] YouTubeVideo   CR15658730589689741313 → no youtube URL
+[350/373] YouTubeVideo   CR15658730589689741313 → no youtube URL
+[351/373] YouTubeVideo   CR15658730589689741313 → no youtube URL
+[352/373] YouTubeVideo   CR16935482366581800961 → no youtube URL
+[353/373] YouTubeVideo   CR16935482366581800961 → no youtube URL
+[354/373] YouTubeVideo   CR16935482366581800961 → no youtube URL
+[355/373] YouTubeVideo   CR16935482366581800961 → no youtube URL
+[356/373] YouTubeVideo   CR16935482366581800961 → no youtube URL
+[357/373] YouTubeVideo   CR17096940452210278401 → no youtube URL
+[358/373] YouTubeVideo   CR17096940452210278401 → no youtube URL
+[359/373] YouTubeVideo   CR17096940452210278401 → no youtube URL
+[360/373] YouTubeVideo   CR17096940452210278401 → no youtube URL
+[361/373] YouTubeVideo   CR17338713988187291649 → no youtube URL
+[362/373] YouTubeVideo   CR17338713988187291649 → no youtube URL
+[363/373] YouTubeVideo   CR17338713988187291649 → no youtube URL
+[364/373] YouTubeVideo   CR17988141080888999937 → no youtube URL
+[365/373] YouTubeVideo   CR17988141080888999937 → no youtube URL
+[366/373] YouTubeVideo   CR17988141080888999937 → no youtube URL
+[367/373] YouTubeVideo   CR17988141080888999937 → no youtube URL
+[368/373] YouTubeVideo   CR17988141080888999937 → no youtube URL
+[369/373] YouTubeVideo   CR18102982871386947585 → no youtube URL
+[370/373] YouTubeVideo   CR18102982871386947585 → no youtube URL
+[371/373] YouTubeVideo   CR18102982871386947585 → no youtube URL
+[372/373] YouTubeVideo   CR18102982871386947585 → no youtube URL
+[373/373] YouTubeVideo   CR18102982871386947585 → no youtube URL
+
+[done] tally:
+  already-on-disk              9
+[done] 382 rows total processed, 0 still pending
+[done] summary: videos/speakx-2026-06-03/download_summary.csv
+[done] failed:  videos/speakx-2026-06-03/failed_ads.txt  (373 ids)
+[step 3] R2 upload + master...
+/Users/iniyan/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+[info] competitor:  speakx
+[info] input:       inputs/g-ads-speakx-2026-06-03.csv
+[info] videos:      videos/speakx-2026-06-03
+[info] images:      images/speakx-2026-06-03
+[info] master:      master/speakx.csv
+[info] enriched:    inputs/g-ads-speakx-2026-06-03_enriched.csv
+[info] log:         step3_logs/speakx-2026-06-03-1316.log
+[info] dry-run:     False
+[info] bucket:      video-ads  (https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev)
+
+[done] tally:
+  uploaded-video     9
+  asset-missing      373
+[done] enriched: inputs/g-ads-speakx-2026-06-03_enriched.csv
+[done] master:   master/speakx.csv  (383 rows total)
+[done] log:      step3_logs/speakx-2026-06-03-1316.log
+[backfill] YouTube metadata sidecars into master...
+[backfill] speakx: filled 12 cells from 9 sidecars
+### SpeakX done at 13:17:48
+
+######################################################
+### Duolingo  (slug=duolingo)   started 13:17:48
+######################################################
+[step 1] scraping...
+[info] competitor: Duolingo
+[info] advertisers: 1 (AR01320432650854334465)
+[info] region: IN
+[info] output: /Users/iniyan/Desktop/google-ad-downloader
+
+[search] AR01320432650854334465 (Duolingo Inc)
+          → 417 creatives
+          processed 20/417
+          processed 40/417
+          processed 60/417
+          processed 80/417
+          processed 100/417
+          processed 120/417
+          processed 140/417
+          processed 160/417
+          processed 180/417
+          ! detail failed for CR07543396523917180929: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGNm7_9AGIjAFwU_jQx6EavsqI8-18PalgcF8R9T1OvcmP55a98YH5nmgiQTD-eV_fQgTb1w_8wsyAVJaAUM
+          ! detail failed for CR01130741245518282753: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGNq7_9AGIjAWkcwt4BQWnWf1RZvy7RvpdS9OBHu0oYtc4Nay-Y-df0WaymbpNOnh1F_LBc3gwvYyAVJaAUM
+          ! detail failed for CR07848985989648220161: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGNu7_9AGIjBDiipA1iDr4fPdZ4rbrw_7ToMrIZw4DyWYQrgdxtcg3xiQLWOgT4UVVjcxPIYZFaAyAVJaAUM
+          ! detail failed for CR10337104593405607937: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGNu7_9AGIjBDiipA1iDr4fPdZ4rbrw_7ToMrIZw4DyWYQrgdxtcg3xiQLWOgT4UVVjcxPIYZFaAyAVJaAUM
+          ! detail failed for CR18337398930817417217: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGNy7_9AGIjCE5dC1dyE8ExAAR8GcbHJty9oemGKTwfrxFy5_duA7BJ47I5wCzWfD7ksu8FDalA4yAVJaAUM
+          ! detail failed for CR05543142980434526209: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGNy7_9AGIjCE5dC1dyE8ExAAR8GcbHJty9oemGKTwfrxFy5_duA7BJ47I5wCzWfD7ksu8FDalA4yAVJaAUM
+          ! detail failed for CR04916521202001903617: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGNy7_9AGIjCE5dC1dyE8ExAAR8GcbHJty9oemGKTwfrxFy5_duA7BJ47I5wCzWfD7ksu8FDalA4yAVJaAUM
+          ! detail failed for CR04153116191344295937: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGN27_9AGIjBrNWVVMs7sY4K_c_inh5vN7qxAacgFqBZSxVEGcKXG4pmY8s4prO2LR7jmyCBpAsUyAVJaAUM
+          ! detail failed for CR00080577486303264769: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGN27_9AGIjBrNWVVMs7sY4K_c_inh5vN7qxAacgFqBZSxVEGcKXG4pmY8s4prO2LR7jmyCBpAsUyAVJaAUM
+          ! detail failed for CR01337385900383928321: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGN67_9AGIjA5_5nB09i4UX-jFmJi5WM7mi4fmuJmbMWeclcxxjA8tLQSR3XNMhimAd0aWiU7TiIyAVJaAUM
+          ! detail failed for CR09952450483471777793: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGN67_9AGIjA5_5nB09i4UX-jFmJi5WM7mi4fmuJmbMWeclcxxjA8tLQSR3XNMhimAd0aWiU7TiIyAVJaAUM
+          ! detail failed for CR12251326437256069121: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGN-7_9AGIjA7AD5HY3xSa0gGe_lOH5Ey887YbR-NFCX0CK7e-l2LimMDI08Y4XaQFSLt0auw1FIyAVJaAUM
+          ! detail failed for CR14787415977419079681: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGN-7_9AGIjA7AD5HY3xSa0gGe_lOH5Ey887YbR-NFCX0CK7e-l2LimMDI08Y4XaQFSLt0auw1FIyAVJaAUM
+          ! detail failed for CR11432953335632625665: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOC7_9AGIjBxpNbJGiCihG8wVwTHqojRu5OBMLD1Ojzl7eLYX6-oXwdkAjmEax3wzysG2Joym5cyAVJaAUM
+          ! detail failed for CR02931127008412827649: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOC7_9AGIjBxpNbJGiCihG8wVwTHqojRu5OBMLD1Ojzl7eLYX6-oXwdkAjmEax3wzysG2Joym5cyAVJaAUM
+          ! detail failed for CR12122115155064520705: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOG7_9AGIjABduRsIihFLeIStZYxJnKlv-ULivMKCtAhJ8t4gcKaRMUKi1Zm4C1FcelJyvlKWDgyAVJaAUM
+          ! detail failed for CR11439713158889996289: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOK7_9AGIjDvIUh3-dF-hp0eVbU1SHUOXyxUScSR7ycjIa6Vhh9eQDir-LfifVY4PbINWYik6hgyAVJaAUM
+          ! detail failed for CR02996805261756203009: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOK7_9AGIjDvIUh3-dF-hp0eVbU1SHUOXyxUScSR7ycjIa6Vhh9eQDir-LfifVY4PbINWYik6hgyAVJaAUM
+          ! detail failed for CR11259239019659132929: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOO7_9AGIjCP-3jw1tlc-0CDCdUmUaU9Lo-uofAl9pwVzyMqyzYHgKMYZUxEXd84s_qOFdYl4SAyAVJaAUM
+          ! detail failed for CR03247348476706553857: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOO7_9AGIjCP-3jw1tlc-0CDCdUmUaU9Lo-uofAl9pwVzyMqyzYHgKMYZUxEXd84s_qOFdYl4SAyAVJaAUM
+          ! detail failed for CR14353788107755618305: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOS7_9AGIjAv1Pzt9EyXfZtmePmGQaeg6XrPZvumLxFIpweAxdvH6OST5VuubjzzMsJEdWmxwpUyAVJaAUM
+          ! detail failed for CR05130416070900842497: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOS7_9AGIjAv1Pzt9EyXfZtmePmGQaeg6XrPZvumLxFIpweAxdvH6OST5VuubjzzMsJEdWmxwpUyAVJaAUM
+          ! detail failed for CR06879456324405428225: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOW7_9AGIjDuY4zIysqQ7gW0RS82VijWgA9AtyzDx4URK_rYDJfDHDTDjGLUNBstaPp1Cm3IFNIyAVJaAUM
+          ! detail failed for CR11212286402819522561: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOW7_9AGIjDuY4zIysqQ7gW0RS82VijWgA9AtyzDx4URK_rYDJfDHDTDjGLUNBstaPp1Cm3IFNIyAVJaAUM
+          ! detail failed for CR00355032940264030209: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOW7_9AGIjDuY4zIysqQ7gW0RS82VijWgA9AtyzDx4URK_rYDJfDHDTDjGLUNBstaPp1Cm3IFNIyAVJaAUM
+          ! detail failed for CR13723310548202815489: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOa7_9AGIjD0IxCiR3gTBBHck40Cbecu0kpDM7wfOL893OLgKN1znxf6bnVur0k5RsSzZKVvBKwyAVJaAUM
+          ! detail failed for CR03723665057117110273: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOa7_9AGIjD0IxCiR3gTBBHck40Cbecu0kpDM7wfOL893OLgKN1znxf6bnVur0k5RsSzZKVvBKwyAVJaAUM
+          ! detail failed for CR11804142516935065601: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOe7_9AGIjAwF_iKpD_Bd-wtLY0-pKQgYIWpw6Zm0FiNYqssHtXyL9Bk5Z1OIEAa_wNiWpj6w0kyAVJaAUM
+          ! detail failed for CR12697261329547788289: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOe7_9AGIjAwF_iKpD_Bd-wtLY0-pKQgYIWpw6Zm0FiNYqssHtXyL9Bk5Z1OIEAa_wNiWpj6w0kyAVJaAUM
+          ! detail failed for CR14861807662844084225: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOi7_9AGIjAJFoHSrFN2yIQG7-hvk_jOLfqFrN8IJSeVxYoG_eBNoTlWhsFT8JdZ71ALRok8PCMyAVJaAUM
+          ! detail failed for CR13148362689539473409: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOi7_9AGIjAJFoHSrFN2yIQG7-hvk_jOLfqFrN8IJSeVxYoG_eBNoTlWhsFT8JdZ71ALRok8PCMyAVJaAUM
+          ! detail failed for CR00225154151435206657: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOm7_9AGIjBSr-yGu8gtzd6wPNOTlDwXJVwRakLDwXC5dItGP42IkmlQHlrYkbiXRH74VuntROIyAVJaAUM
+          ! detail failed for CR16090918073351012353: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOm7_9AGIjBSr-yGu8gtzd6wPNOTlDwXJVwRakLDwXC5dItGP42IkmlQHlrYkbiXRH74VuntROIyAVJaAUM
+          ! detail failed for CR02969335793392287745: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOq7_9AGIjAH6zB5-X27FC1PlnIKYAiEeJPXa4yR0CjB3LXWQBygJeb3j-gxKGEbBzTBmhFi0BgyAVJaAUM
+          ! detail failed for CR12812375197634002945: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOq7_9AGIjAH6zB5-X27FC1PlnIKYAiEeJPXa4yR0CjB3LXWQBygJeb3j-gxKGEbBzTBmhFi0BgyAVJaAUM
+          ! detail failed for CR16585265785463635969: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOq7_9AGIjAH6zB5-X27FC1PlnIKYAiEeJPXa4yR0CjB3LXWQBygJeb3j-gxKGEbBzTBmhFi0BgyAVJaAUM
+          ! detail failed for CR04442749836390825985: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOu7_9AGIjBIV9NfnkCWP59XevnVhZO6IMLLfWqHMPCSjgpOkP25ckBzqnUFnjtNXqXh6oz7ZG4yAVJaAUM
+          ! detail failed for CR09173209498897088513: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOu7_9AGIjBIV9NfnkCWP59XevnVhZO6IMLLfWqHMPCSjgpOkP25ckBzqnUFnjtNXqXh6oz7ZG4yAVJaAUM
+          ! detail failed for CR05087881686918627329: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGOy7_9AGIjAjMNNZc9CFWyg9zspujSv6fRX5qjAZ36kAN3QVc_UpmSCLhx2TcwkkRWtLB7OQ1eMyAVJaAUM
+          ! detail failed for CR09110127630593556481: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGO27_9AGIjBQbGiVYXeGbWWlMe4SXqlbL-2-2guWPEQ_3AdV2ERzq8qWKaeuNF_pGBtZELE3fd4yAVJaAUM
+          ! detail failed for CR03773528837149687809: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGO27_9AGIjBQbGiVYXeGbWWlMe4SXqlbL-2-2guWPEQ_3AdV2ERzq8qWKaeuNF_pGBtZELE3fd4yAVJaAUM
+          ! detail failed for CR16197097911245340673: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGO27_9AGIjBQbGiVYXeGbWWlMe4SXqlbL-2-2guWPEQ_3AdV2ERzq8qWKaeuNF_pGBtZELE3fd4yAVJaAUM
+          ! detail failed for CR04944055996818391041: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGO67_9AGIjAzgEHWp52cSHxMVkFSb6kVMA7Vks7nc9KcW9sBUKBP-juUjvgXvbPdAR9yMKNnyGwyAVJaAUM
+          ! detail failed for CR18040347791351349249: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGO67_9AGIjAzgEHWp52cSHxMVkFSb6kVMA7Vks7nc9KcW9sBUKBP-juUjvgXvbPdAR9yMKNnyGwyAVJaAUM
+          ! detail failed for CR00595989985778204673: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGO-7_9AGIjBY7Cu37JL8AVKe4tFoPoeLXw9A4unuXQX4dpHbJddiYxONHEKQZZWP8d0mS1VALnoyAVJaAUM
+          ! detail failed for CR03870369698155593729: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGO-7_9AGIjBY7Cu37JL8AVKe4tFoPoeLXw9A4unuXQX4dpHbJddiYxONHEKQZZWP8d0mS1VALnoyAVJaAUM
+          ! detail failed for CR12082378504188985345: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPC7_9AGIjCp4shSc1mBfLNfVWfIVFJ5FYkSIISEnVt09wb1GoMRTBaI0Ujh6agEaogDnT7XH2cyAVJaAUM
+          ! detail failed for CR13662579023442608129: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPC7_9AGIjCp4shSc1mBfLNfVWfIVFJ5FYkSIISEnVt09wb1GoMRTBaI0Ujh6agEaogDnT7XH2cyAVJaAUM
+          ! detail failed for CR00182742388769292289: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPG7_9AGIjB5OaqT9KgQglPoqw1tvGpQr-x6l0tK-NeTQBpPQrKYaxh84cGD5bmtueXaU8us6OgyAVJaAUM
+          ! detail failed for CR09669012053871820801: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPG7_9AGIjB5OaqT9KgQglPoqw1tvGpQr-x6l0tK-NeTQBpPQrKYaxh84cGD5bmtueXaU8us6OgyAVJaAUM
+          ! detail failed for CR03356091276205228033: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPK7_9AGIjBL_Cl0H4YMl-iwC7977R7hLarrDHVW0D-7gmtbDt3CWyQe5XvA5xeWwHCXmrfe6FUyAVJaAUM
+          ! detail failed for CR10767890362950221825: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPK7_9AGIjBL_Cl0H4YMl-iwC7977R7hLarrDHVW0D-7gmtbDt3CWyQe5XvA5xeWwHCXmrfe6FUyAVJaAUM
+          ! detail failed for CR17264945408027656193: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPO7_9AGIjB2T-hNQkedAp4r8T8-9OaR49vyjuJJA0XF9Hq5g6MvaZnrf3qNovQR8POpbSbO6ZQyAVJaAUM
+          ! detail failed for CR11338527431658045441: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPO7_9AGIjB2T-hNQkedAp4r8T8-9OaR49vyjuJJA0XF9Hq5g6MvaZnrf3qNovQR8POpbSbO6ZQyAVJaAUM
+          ! detail failed for CR04561899290108100609: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPO7_9AGIjB2T-hNQkedAp4r8T8-9OaR49vyjuJJA0XF9Hq5g6MvaZnrf3qNovQR8POpbSbO6ZQyAVJaAUM
+          ! detail failed for CR02783458473633906689: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPS7_9AGIjAVuT5ldhcShoEnjtcHecvAZ8gKhHOMSi3PFd_69KgC0YhRAWfFNCO270aTHb3dMQwyAVJaAUM
+          ! detail failed for CR04597731824301506561: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPS7_9AGIjAVuT5ldhcShoEnjtcHecvAZ8gKhHOMSi3PFd_69KgC0YhRAWfFNCO270aTHb3dMQwyAVJaAUM
+          ! detail failed for CR14708875937701691393: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPW7_9AGIjC1nWor0vAbsYd2vrGRfEwqNkTtrh2WfbzR0jZt2yupQM-n22oJJMjLOB5JjYqGNxoyAVJaAUM
+          ! detail failed for CR08116479232902692865: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPW7_9AGIjC1nWor0vAbsYd2vrGRfEwqNkTtrh2WfbzR0jZt2yupQM-n22oJJMjLOB5JjYqGNxoyAVJaAUM
+          ! detail failed for CR03202938102549053441: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPa7_9AGIjB56UorWeLQiXAiJwAc5r0sWuvmLPKGE8hfaQEct1k7eIEVgKc4M1ZtKRGLzRWrVTwyAVJaAUM
+          ! detail failed for CR04360477143675699201: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPa7_9AGIjB56UorWeLQiXAiJwAc5r0sWuvmLPKGE8hfaQEct1k7eIEVgKc4M1ZtKRGLzRWrVTwyAVJaAUM
+          ! detail failed for CR02889213350284099585: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPa7_9AGIjB56UorWeLQiXAiJwAc5r0sWuvmLPKGE8hfaQEct1k7eIEVgKc4M1ZtKRGLzRWrVTwyAVJaAUM
+          ! detail failed for CR01729249061384486913: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPe7_9AGIjBPzDrFiBmIjA0xqzL2TrhCmy7n2xuFrST0Fuzpczb--kJ-WE_Wiftck92oBwtQGxEyAVJaAUM
+          ! detail failed for CR17825290051467083777: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPe7_9AGIjBPzDrFiBmIjA0xqzL2TrhCmy7n2xuFrST0Fuzpczb--kJ-WE_Wiftck92oBwtQGxEyAVJaAUM
+          ! detail failed for CR01175648702010753025: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPi7_9AGIjAckvpHrJz5IS2y7o_muLxxOfvbmK7fh65ztbL0e_dfV3ISgQl3jE84hSH5yvci_3kyAVJaAUM
+          ! detail failed for CR12844041441751597057: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPm7_9AGIjDfqzFQPwKXlP8GmZLGhFbtkV68PZxpFLHCEKcvEZWYjG8L9lMRCNazLlcWy4usFtEyAVJaAUM
+          ! detail failed for CR12482092727967678465: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPm7_9AGIjDfqzFQPwKXlP8GmZLGhFbtkV68PZxpFLHCEKcvEZWYjG8L9lMRCNazLlcWy4usFtEyAVJaAUM
+          ! detail failed for CR00870484712919924737: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPq7_9AGIjCmvOwFCsm0-axBMR6zw5H6r8YNHb6F_vx3cCth9pEFov6R_1dd9JCic-6qMeTMNz8yAVJaAUM
+          ! detail failed for CR01290797153173635073: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPq7_9AGIjCmvOwFCsm0-axBMR6zw5H6r8YNHb6F_vx3cCth9pEFov6R_1dd9JCic-6qMeTMNz8yAVJaAUM
+          ! detail failed for CR05765768727572250625: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPq7_9AGIjCmvOwFCsm0-axBMR6zw5H6r8YNHb6F_vx3cCth9pEFov6R_1dd9JCic-6qMeTMNz8yAVJaAUM
+          ! detail failed for CR08137586832499015681: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPu7_9AGIjBBBSGN5B2xBZnsMerLPx2PEv-mkYv8qVRvy-h7_l6tukITvLOY1r5GUkIvTjOtsocyAVJaAUM
+          ! detail failed for CR13983462524117319681: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPu7_9AGIjBBBSGN5B2xBZnsMerLPx2PEv-mkYv8qVRvy-h7_l6tukITvLOY1r5GUkIvTjOtsocyAVJaAUM
+          ! detail failed for CR15560837916962848769: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPy7_9AGIjBzHivbbVWTpf759sW91_DKanaQIEcD-y513MDFLqebaaZ1GlnqftN5K0FabEi7HUoyAVJaAUM
+          ! detail failed for CR08084101089365852161: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGPy7_9AGIjBzHivbbVWTpf759sW91_DKanaQIEcD-y513MDFLqebaaZ1GlnqftN5K0FabEi7HUoyAVJaAUM
+          ! detail failed for CR13593416306081660929: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGP27_9AGIjBt5iGFuiOtiiqeEWXGFt9AayHhAtEZ6T3JxFXNuNHXLBMYFM2TDK-gWHhCUj7JiiIyAVJaAUM
+          ! detail failed for CR07691514965110292481: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGP27_9AGIjBt5iGFuiOtiiqeEWXGFt9AayHhAtEZ6T3JxFXNuNHXLBMYFM2TDK-gWHhCUj7JiiIyAVJaAUM
+          ! detail failed for CR12304467620932878337: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGP27_9AGIjBt5iGFuiOtiiqeEWXGFt9AayHhAtEZ6T3JxFXNuNHXLBMYFM2TDK-gWHhCUj7JiiIyAVJaAUM
+          ! detail failed for CR10989176320809762817: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGP67_9AGIjBQm41Vbn-89B-wwMf7pjafXWSBe8qurNUcr3IdNVwC1V047puk21koAtNbmRiG0gUyAVJaAUM
+          ! detail failed for CR04593892192258359297: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGP-7_9AGIjBM15K5mAfv9X75V_tzPd5IJkKkbjCwG06kymICFgw2dkjii7zs3mM1dIlQmy3IylgyAVJaAUM
+          ! detail failed for CR18229766569343320065: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGP-7_9AGIjBM15K5mAfv9X75V_tzPd5IJkKkbjCwG06kymICFgw2dkjii7zs3mM1dIlQmy3IylgyAVJaAUM
+          ! detail failed for CR02582431876509597697: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIC8_9AGIjBnvrO4Yok-r-fzv0TJHe6yZG0uIS_pkjvbNb2XuDWBXGgSRqsmrNuT2N0DvtVsWX8yAVJaAUM
+          ! detail failed for CR02365103782552928257: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIC8_9AGIjBnvrO4Yok-r-fzv0TJHe6yZG0uIS_pkjvbNb2XuDWBXGgSRqsmrNuT2N0DvtVsWX8yAVJaAUM
+          ! detail failed for CR03948338679021305857: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIC8_9AGIjBnvrO4Yok-r-fzv0TJHe6yZG0uIS_pkjvbNb2XuDWBXGgSRqsmrNuT2N0DvtVsWX8yAVJaAUM
+          ! detail failed for CR02253422813106929665: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIG8_9AGIjAUYF-32xjtUlYdvUn9TcQvVCeOmN9nshTa80dOZJ1YsFR7gcIj5QHh8OqWE-lOb90yAVJaAUM
+          ! detail failed for CR11635652289942781953: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIG8_9AGIjAUYF-32xjtUlYdvUn9TcQvVCeOmN9nshTa80dOZJ1YsFR7gcIj5QHh8OqWE-lOb90yAVJaAUM
+          ! detail failed for CR04118908219940667393: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIK8_9AGIjDUiduntAPE_Tw9Xuiy7qwBZXp_lVvDRox2QdwQb_hqWVpn90g6XIjXAAw4I_lO0VAyAVJaAUM
+          ! detail failed for CR02559491665907679233: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIK8_9AGIjDUiduntAPE_Tw9Xuiy7qwBZXp_lVvDRox2QdwQb_hqWVpn90g6XIjXAAw4I_lO0VAyAVJaAUM
+          ! detail failed for CR01100173104279191553: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIO8_9AGIjBtTgjwquU1Nis3kpWuk2wZcqd9zSPx7nYRxAkv8blfTMPX1MY7ty7-BxHjX5qtNRsyAVJaAUM
+          ! detail failed for CR07325555164188770305: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIO8_9AGIjBtTgjwquU1Nis3kpWuk2wZcqd9zSPx7nYRxAkv8blfTMPX1MY7ty7-BxHjX5qtNRsyAVJaAUM
+          ! detail failed for CR03274989511834075137: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIS8_9AGIjAQjH-rev9K7ozMptugGunhCn7XKWsPUjchevRai_0gYlMmNNg-vq1QorzW9nqOUggyAVJaAUM
+          ! detail failed for CR16736108060556132353: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIS8_9AGIjAQjH-rev9K7ozMptugGunhCn7XKWsPUjchevRai_0gYlMmNNg-vq1QorzW9nqOUggyAVJaAUM
+          ! detail failed for CR01824752607013371905: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIS8_9AGIjAQjH-rev9K7ozMptugGunhCn7XKWsPUjchevRai_0gYlMmNNg-vq1QorzW9nqOUggyAVJaAUM
+          ! detail failed for CR17540958921504587777: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIW8_9AGIjA8uuoOz4SDVHcRa3oYdJz6CwiN-nP7BOrDOS2BQehT8rYNOVWAiaeE9muX3Xet-7IyAVJaAUM
+          ! detail failed for CR13461733673938190337: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIW8_9AGIjA8uuoOz4SDVHcRa3oYdJz6CwiN-nP7BOrDOS2BQehT8rYNOVWAiaeE9muX3Xet-7IyAVJaAUM
+          ! detail failed for CR00754063714486845441: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIa8_9AGIjAbpaNvm0GYYXuSUjpRuagx_RByGnMhDIUHkFNsld_so_16eUMsFgQ1KvR1hCDoLhgyAVJaAUM
+          ! detail failed for CR03794565483886280705: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIa8_9AGIjAbpaNvm0GYYXuSUjpRuagx_RByGnMhDIUHkFNsld_so_16eUMsFgQ1KvR1hCDoLhgyAVJaAUM
+          ! detail failed for CR04735206924218269697: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIe8_9AGIjCFc1qlyuYVFoiiFu3_52MMBRQUALE9_KHDP09gCbMlGJ8WNWSHKQma7HEHJ-gg5R0yAVJaAUM
+          ! detail failed for CR15754065884269772801: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIe8_9AGIjCFc1qlyuYVFoiiFu3_52MMBRQUALE9_KHDP09gCbMlGJ8WNWSHKQma7HEHJ-gg5R0yAVJaAUM
+          ! detail failed for CR09046243823176384513: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIi8_9AGIjD_2EPB5Enu18YRZRrKilN2tTrjC9o6zqcbu2-a843pUVg_UE44GXq2bpPVfqs2lw8yAVJaAUM
+          ! detail failed for CR13314451892374339585: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIi8_9AGIjD_2EPB5Enu18YRZRrKilN2tTrjC9o6zqcbu2-a843pUVg_UE44GXq2bpPVfqs2lw8yAVJaAUM
+          ! detail failed for CR15932137702263095297: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIm8_9AGIjDLaEfv2-iJ55jkkWkIZBmfXMOcrU1EpzCN_7SDJ4FRImAfDpCebge0dcNnMF5iFlgyAVJaAUM
+          ! detail failed for CR16815035403244404737: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIm8_9AGIjDLaEfv2-iJ55jkkWkIZBmfXMOcrU1EpzCN_7SDJ4FRImAfDpCebge0dcNnMF5iFlgyAVJaAUM
+          ! detail failed for CR03734752051335266305: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIq8_9AGIjA9SBu7HzLet4zjVe9uvRVc6jhhI0EFXluz5tgoK5iQJRSfZvNFBguzoXgtw7m6I-YyAVJaAUM
+          ! detail failed for CR12236307623816724481: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIq8_9AGIjA9SBu7HzLet4zjVe9uvRVc6jhhI0EFXluz5tgoK5iQJRSfZvNFBguzoXgtw7m6I-YyAVJaAUM
+          ! detail failed for CR09904629870921515009: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIu8_9AGIjDmZzBQsCwsuBdEWCopIR0hnC9enL9g6eIpdrvRxH0ymqYgoxbPkrXXG6TmX-d-XBIyAVJaAUM
+          ! detail failed for CR05366775199305826305: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIu8_9AGIjDmZzBQsCwsuBdEWCopIR0hnC9enL9g6eIpdrvRxH0ymqYgoxbPkrXXG6TmX-d-XBIyAVJaAUM
+          ! detail failed for CR05974113296133914625: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIu8_9AGIjDmZzBQsCwsuBdEWCopIR0hnC9enL9g6eIpdrvRxH0ymqYgoxbPkrXXG6TmX-d-XBIyAVJaAUM
+          ! detail failed for CR11536035127717003265: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIy8_9AGIjD2jWtdbdM0zr-_DU8LzgIYlPHVzK9eLF0kV4EeWsX7e5j6Ja0h0XBp5aNPyl9uvWYyAVJaAUM
+          ! detail failed for CR12349873362351161345: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGIy8_9AGIjD2jWtdbdM0zr-_DU8LzgIYlPHVzK9eLF0kV4EeWsX7e5j6Ja0h0XBp5aNPyl9uvWYyAVJaAUM
+          ! detail failed for CR04461114927569960961: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGI28_9AGIjCTePdphEoK9Mi4pc-4ww1DCwDEikGRlCX91zl5jX66z4zKQgPYO60UzXwRJiTpGREyAVJaAUM
+          ! detail failed for CR18442760972578848769: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGI68_9AGIjDfaCHtqC8lfl7_Q-YelOhO3VcsoHwkABLdo5DSamozhuljOeFwVhouGPzs0nkYGQgyAVJaAUM
+          ! detail failed for CR05386588398838349825: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGI68_9AGIjDfaCHtqC8lfl7_Q-YelOhO3VcsoHwkABLdo5DSamozhuljOeFwVhouGPzs0nkYGQgyAVJaAUM
+          ! detail failed for CR06323327603683885057: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGI68_9AGIjDfaCHtqC8lfl7_Q-YelOhO3VcsoHwkABLdo5DSamozhuljOeFwVhouGPzs0nkYGQgyAVJaAUM
+          ! detail failed for CR03218206986164240385: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGI-8_9AGIjBmGJo_S8F0TNZVcGnSFUS4VWvaXCWN4O_-xi31XCRlX_-xJufUb8FCGeBZza_1T2wyAVJaAUM
+          ! detail failed for CR12809351368858927105: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJC8_9AGIjBnqOTWkJ6-zOR9H5T5vFGBjNuJjTmiKdlXFx1jIwbE4sA7soNWLTDVf62sVOdHrOwyAVJaAUM
+          ! detail failed for CR10607105650884345857: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJC8_9AGIjBnqOTWkJ6-zOR9H5T5vFGBjNuJjTmiKdlXFx1jIwbE4sA7soNWLTDVf62sVOdHrOwyAVJaAUM
+          ! detail failed for CR09879615947029872641: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJG8_9AGIjBaH7XV9uGXnXGgxBjPyu2LnpxsdYRZMDE6Gc222zj3hAk_x-GqkvwAZZm30tTOytIyAVJaAUM
+          ! detail failed for CR18204878951849918465: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJG8_9AGIjBaH7XV9uGXnXGgxBjPyu2LnpxsdYRZMDE6Gc222zj3hAk_x-GqkvwAZZm30tTOytIyAVJaAUM
+          ! detail failed for CR16107833475628793857: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJK8_9AGIjC7EqMNRBi47iwvtZWS7--uG0pX7wvoMbHliP5wJwAbUe7lDoiS_OLTnJsn2-1w5jAyAVJaAUM
+          ! detail failed for CR11071163947955519489: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJK8_9AGIjC7EqMNRBi47iwvtZWS7--uG0pX7wvoMbHliP5wJwAbUe7lDoiS_OLTnJsn2-1w5jAyAVJaAUM
+          ! detail failed for CR03935553386014834689: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJO8_9AGIjDvYMLIcggzhCCZdh0AmyFnJ9TwTwDPhYArglJLgo0iKguZkPVKOpQTuhTss8Mr4FEyAVJaAUM
+          ! detail failed for CR17276803005278060545: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJO8_9AGIjDvYMLIcggzhCCZdh0AmyFnJ9TwTwDPhYArglJLgo0iKguZkPVKOpQTuhTss8Mr4FEyAVJaAUM
+          ! detail failed for CR17939601808640966657: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJS8_9AGIjDlucDHHtcDBsZH-woKk69ne6X0Pbn-r3xFy5jTqJJuxa4R8Ru8HX3nknnqnsGZbFUyAVJaAUM
+          ! detail failed for CR07710907360927023105: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJS8_9AGIjDlucDHHtcDBsZH-woKk69ne6X0Pbn-r3xFy5jTqJJuxa4R8Ru8HX3nknnqnsGZbFUyAVJaAUM
+          ! detail failed for CR06447154603204018177: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJW8_9AGIjB40uOTkVfxbF0Xw6byVm6nBmD_BO63PamLQNdTnJilvKokHYJZJA4LvbZRGPLo6dQyAVJaAUM
+          ! detail failed for CR15685537172801191937: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJW8_9AGIjB40uOTkVfxbF0Xw6byVm6nBmD_BO63PamLQNdTnJilvKokHYJZJA4LvbZRGPLo6dQyAVJaAUM
+          ! detail failed for CR00339160802722316289: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJa8_9AGIjDYZmqYOfY81qPOuPRBg1qpqvlMRM5FeLxgIRFIFzWymQhf0ur0a-xk0WNcOy_-_5cyAVJaAUM
+          ! detail failed for CR01533471704569872385: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJa8_9AGIjDYZmqYOfY81qPOuPRBg1qpqvlMRM5FeLxgIRFIFzWymQhf0ur0a-xk0WNcOy_-_5cyAVJaAUM
+          ! detail failed for CR15807358937990168577: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJe8_9AGIjD3uRqP7CgT4zPFPDCpFZHVJVW4432JURU8jn8Ci7oS3KZpW48XCcBp_i_8Bm78c50yAVJaAUM
+          ! detail failed for CR14173431435880300545: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJe8_9AGIjD3uRqP7CgT4zPFPDCpFZHVJVW4432JURU8jn8Ci7oS3KZpW48XCcBp_i_8Bm78c50yAVJaAUM
+          ! detail failed for CR15252672089329500161: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJi8_9AGIjBSM3Afbw0Ud01A6Mr-iPIpSNNIy7NFRr1w3jmbDwb0zN_onAwzt25o45rY8XO3nZYyAVJaAUM
+          ! detail failed for CR02777872576607682561: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJi8_9AGIjBSM3Afbw0Ud01A6Mr-iPIpSNNIy7NFRr1w3jmbDwb0zN_onAwzt25o45rY8XO3nZYyAVJaAUM
+          ! detail failed for CR07655597528003379201: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJm8_9AGIjDLMyC65yMywgl6vR4K_W5WQhrQXpDz1EvWMt8tNDIxc_ws_kFDetrrOwUytQPWx3EyAVJaAUM
+          ! detail failed for CR17180384184938528769: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJm8_9AGIjDLMyC65yMywgl6vR4K_W5WQhrQXpDz1EvWMt8tNDIxc_ws_kFDetrrOwUytQPWx3EyAVJaAUM
+          ! detail failed for CR14433771874959753217: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJq8_9AGIjCTByUJXazbmhxiSJjJz8aT5J936DqEIQc9pkqSSBlsfhKUyNrCMIDChRu7ds_oKqkyAVJaAUM
+          ! detail failed for CR02441408515131047937: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJq8_9AGIjCTByUJXazbmhxiSJjJz8aT5J936DqEIQc9pkqSSBlsfhKUyNrCMIDChRu7ds_oKqkyAVJaAUM
+          ! detail failed for CR06623573614702624769: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJu8_9AGIjAgz62ieTPsqF5J6hZWnSF9SHYB9p_9PBZ41CNNFnDmC2ZKaMFRh-ivGIgV2vF51v8yAVJaAUM
+          ! detail failed for CR14175674164723056641: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJu8_9AGIjAgz62ieTPsqF5J6hZWnSF9SHYB9p_9PBZ41CNNFnDmC2ZKaMFRh-ivGIgV2vF51v8yAVJaAUM
+          ! detail failed for CR10127300560597024769: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJy8_9AGIjA0aPmobnToeOuT-tF6gC-4WgVH1tnMwcHaKUgWlPfxMGsMuXMOiNcQ_7Y036jbZa4yAVJaAUM
+          ! detail failed for CR14027582781823909889: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJ28_9AGIjDWnAZkq0Z3ozFkF-LN6bDNQFJWr0EYKt74a4gILivGAHVyOXYeUAQiGEN3jaMe9d0yAVJaAUM
+          ! detail failed for CR09919917480594112513: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJ28_9AGIjDWnAZkq0Z3ozFkF-LN6bDNQFJWr0EYKt74a4gILivGAHVyOXYeUAQiGEN3jaMe9d0yAVJaAUM
+          ! detail failed for CR06346806712422367233: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJ68_9AGIjBo9QO9wot8Fhl8WL855n2j2-dW3pojJdxW2WX5CDtZI3BCanIsQEaCE2jbUfNLbl4yAVJaAUM
+          ! detail failed for CR18381899705446563841: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJ68_9AGIjBo9QO9wot8Fhl8WL855n2j2-dW3pojJdxW2WX5CDtZI3BCanIsQEaCE2jbUfNLbl4yAVJaAUM
+          ! detail failed for CR05308910960352690177: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJ-8_9AGIjDOLrj4UXxNbiDp12iSCpfR3tzVisaUoB1T5XqlvZyzK4rEaF-MPHotoQ7VnNRRwcMyAVJaAUM
+          ! detail failed for CR01343770764406423553: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJ-8_9AGIjDOLrj4UXxNbiDp12iSCpfR3tzVisaUoB1T5XqlvZyzK4rEaF-MPHotoQ7VnNRRwcMyAVJaAUM
+          ! detail failed for CR02066686465529610241: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGJ-8_9AGIjDOLrj4UXxNbiDp12iSCpfR3tzVisaUoB1T5XqlvZyzK4rEaF-MPHotoQ7VnNRRwcMyAVJaAUM
+          ! detail failed for CR02128424764983738369: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKC8_9AGIjAXeu4gwHVMv_bTveFBl4MmT_okj-10fcjBOL-P5pmZakCxJxTNN3Eq4ENpt-eDTsoyAVJaAUM
+          ! detail failed for CR12093927018412900353: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKC8_9AGIjAXeu4gwHVMv_bTveFBl4MmT_okj-10fcjBOL-P5pmZakCxJxTNN3Eq4ENpt-eDTsoyAVJaAUM
+          ! detail failed for CR03633588460364759041: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKG8_9AGIjDWDUKMRI4yNc-_j64EHY55_GN_y3F5YLHhIHEc_kuzl7YiKzE3Ik74V0Ng-bSIueQyAVJaAUM
+          ! detail failed for CR02861963294619467777: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKG8_9AGIjDWDUKMRI4yNc-_j64EHY55_GN_y3F5YLHhIHEc_kuzl7YiKzE3Ik74V0Ng-bSIueQyAVJaAUM
+          ! detail failed for CR06516214000831692801: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKK8_9AGIjDZjB7eZGq8hHHMkHeoEZ6WzRrg5yGx2t3XutJ6nvbqvWLL76N8nazGjOCtUy_l51gyAVJaAUM
+          ! detail failed for CR11568858504743616513: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKK8_9AGIjDZjB7eZGq8hHHMkHeoEZ6WzRrg5yGx2t3XutJ6nvbqvWLL76N8nazGjOCtUy_l51gyAVJaAUM
+          ! detail failed for CR00092628322722250753: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKO8_9AGIjDEaGufFPBAcp_X17XlIPXrzcAm5sO6tmbmaAcVsY6t8C7L8a5tXyXXzWHOrzUsWUoyAVJaAUM
+          ! detail failed for CR15769365588570275841: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKS8_9AGIjC3saknP3w_B_D--d7GpuAiJzRHAVX8abCmjnIigdszLdtT_wBeQd00HlEHpC0B5goyAVJaAUM
+          ! detail failed for CR09313024514176581633: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKS8_9AGIjC3saknP3w_B_D--d7GpuAiJzRHAVX8abCmjnIigdszLdtT_wBeQd00HlEHpC0B5goyAVJaAUM
+          ! detail failed for CR17480066541629210625: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKS8_9AGIjC3saknP3w_B_D--d7GpuAiJzRHAVX8abCmjnIigdszLdtT_wBeQd00HlEHpC0B5goyAVJaAUM
+          ! detail failed for CR05863167865607159809: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKW8_9AGIjDSQvqrSotc0lVyDfuHklTmZ3-yG8DrdqIGuq0v0yoX7WBSex5q21WOcMye-nDzU4UyAVJaAUM
+          ! detail failed for CR15799445649725849601: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKW8_9AGIjDSQvqrSotc0lVyDfuHklTmZ3-yG8DrdqIGuq0v0yoX7WBSex5q21WOcMye-nDzU4UyAVJaAUM
+          ! detail failed for CR07269400459658395649: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKa8_9AGIjDgDB-g-4Rbzi6DDfo_gAAr6aPBpuHyngDVU_f-aM0udxe0RS4ZgQbF_usf-ZgRYMwyAVJaAUM
+          ! detail failed for CR00302240267413487617: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKa8_9AGIjDgDB-g-4Rbzi6DDfo_gAAr6aPBpuHyngDVU_f-aM0udxe0RS4ZgQbF_usf-ZgRYMwyAVJaAUM
+          ! detail failed for CR07416723713426456577: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKe8_9AGIjBddydIV1XPpjTQGBIFYuVDZcyLbju21HYOGo1nNxYcbZMr6T-rGCQS6AyYRMy_sB0yAVJaAUM
+          ! detail failed for CR11946280611305488385: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKi8_9AGIjBMDTBTEDzu0JPZyJMeTgSO50ycx3TsGeaje4P0gZju_JHFfZmFnA8DfySiMgJHwNYyAVJaAUM
+          ! detail failed for CR10851844329203302401: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKi8_9AGIjBMDTBTEDzu0JPZyJMeTgSO50ycx3TsGeaje4P0gZju_JHFfZmFnA8DfySiMgJHwNYyAVJaAUM
+          ! detail failed for CR07420746826472488961: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKm8_9AGIjCdrcjWUhXTQajQqk4d6LwAhJXIHskjYOrMRKFIlFuGdNCA09yBsJupMSlp4kbtL2gyAVJaAUM
+          ! detail failed for CR07409546101520334849: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKm8_9AGIjCdrcjWUhXTQajQqk4d6LwAhJXIHskjYOrMRKFIlFuGdNCA09yBsJupMSlp4kbtL2gyAVJaAUM
+          ! detail failed for CR18136295780196024321: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKm8_9AGIjCdrcjWUhXTQajQqk4d6LwAhJXIHskjYOrMRKFIlFuGdNCA09yBsJupMSlp4kbtL2gyAVJaAUM
+          ! detail failed for CR06772101898854989825: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKq8_9AGIjC-AHqEwKGppailzBNzjVrEazksbXKLlNBaLw6Dp5ehKNfN6psTQ6HZGsj6ehjZhSEyAVJaAUM
+          ! detail failed for CR17842371995396734977: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKq8_9AGIjC-AHqEwKGppailzBNzjVrEazksbXKLlNBaLw6Dp5ehKNfN6psTQ6HZGsj6ehjZhSEyAVJaAUM
+          ! detail failed for CR14039297614361395201: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKu8_9AGIjBoNWurgLIpT4aJbUjJxXMk8ZpPs7XUhQq5eAP9KHfenEdLomq_7DvVUkLdccn41TEyAVJaAUM
+          ! detail failed for CR17807469098284613633: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKu8_9AGIjBoNWurgLIpT4aJbUjJxXMk8ZpPs7XUhQq5eAP9KHfenEdLomq_7DvVUkLdccn41TEyAVJaAUM
+          ! detail failed for CR01423026208236371969: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKy8_9AGIjBmuR5LnZsJAPHD-l6Xhl05J35Ea3yhStPJTOT9TPjV0OKF4Jvjk79vJxLxn4mOzgkyAVJaAUM
+          ! detail failed for CR12400953958158303233: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGKy8_9AGIjBmuR5LnZsJAPHD-l6Xhl05J35Ea3yhStPJTOT9TPjV0OKF4Jvjk79vJxLxn4mOzgkyAVJaAUM
+          ! detail failed for CR01796609473029079041: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGK28_9AGIjCGbUT0iKsn6ksZXotniESDMB3u0Q8rdXT_juCYe3p5_7XDbr2tvflYoZ4yPM6I8pgyAVJaAUM
+          ! detail failed for CR09373804932844486657: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGK68_9AGIjC5rpuwQWVzh2GSqOlQaYbW-s1cGVveGegkGBG3rUqTA_9-0u-kdhfBnPqDzUy31zQyAVJaAUM
+          ! detail failed for CR04080075221594275841: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGK68_9AGIjC5rpuwQWVzh2GSqOlQaYbW-s1cGVveGegkGBG3rUqTA_9-0u-kdhfBnPqDzUy31zQyAVJaAUM
+          ! detail failed for CR05896184894119215105: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGK68_9AGIjC5rpuwQWVzh2GSqOlQaYbW-s1cGVveGegkGBG3rUqTA_9-0u-kdhfBnPqDzUy31zQyAVJaAUM
+          ! detail failed for CR01557529603101163521: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGK-8_9AGIjBp5_BDWBX-VEckMQ61Gb-J6ubxAWF2XN0zqZtVe2Aw-y-PlhlT4IjowIxBREy7YOAyAVJaAUM
+          ! detail failed for CR12300664204053970945: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGK-8_9AGIjBp5_BDWBX-VEckMQ61Gb-J6ubxAWF2XN0zqZtVe2Aw-y-PlhlT4IjowIxBREy7YOAyAVJaAUM
+          ! detail failed for CR11780639184581033985: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLC8_9AGIjDlfcmovhEAWP39eQzWDH3dUsSaAQsmirqvTGgrJedscuHX8TSBoBi6NwDlb3_rIUwyAVJaAUM
+          ! detail failed for CR06295254838443769857: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLC8_9AGIjDlfcmovhEAWP39eQzWDH3dUsSaAQsmirqvTGgrJedscuHX8TSBoBi6NwDlb3_rIUwyAVJaAUM
+          ! detail failed for CR09207456520143372289: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLG8_9AGIjBEMnxWQB1jo80UAjbJ8DSHXjmGmwv2J0oeHZk7y8QC1yI2SpC5XiKvBBH9E6MyPFwyAVJaAUM
+          ! detail failed for CR13516275463630094337: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLG8_9AGIjBEMnxWQB1jo80UAjbJ8DSHXjmGmwv2J0oeHZk7y8QC1yI2SpC5XiKvBBH9E6MyPFwyAVJaAUM
+          ! detail failed for CR01171838378824433665: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLK8_9AGIjB2xGFQlUE_eymH3Ud2I3esak0fJKE36IcAuYOEQwK49bS3FHEjN4nkWtesRr5qfOAyAVJaAUM
+          ! detail failed for CR02689703185852923905: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLK8_9AGIjB2xGFQlUE_eymH3Ud2I3esak0fJKE36IcAuYOEQwK49bS3FHEjN4nkWtesRr5qfOAyAVJaAUM
+          ! detail failed for CR03320610242135326721: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLO8_9AGIjBlDcTTcge5-d4-C_y1-B68Pfn0RqK9Tt1Ng0gPUgOz_4XTCw99ht1u-mVd4N28gUUyAVJaAUM
+          ! detail failed for CR17153246485618360321: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLO8_9AGIjBlDcTTcge5-d4-C_y1-B68Pfn0RqK9Tt1Ng0gPUgOz_4XTCw99ht1u-mVd4N28gUUyAVJaAUM
+          ! detail failed for CR10948722848482459649: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLS8_9AGIjBd5JnSAn95a6YQWw_pvHgCxF7E2wOsjN8emNkHjHF9haTxp3wE1k333ThEcJRsul4yAVJaAUM
+          ! detail failed for CR01910258705727750145: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLS8_9AGIjBd5JnSAn95a6YQWw_pvHgCxF7E2wOsjN8emNkHjHF9haTxp3wE1k333ThEcJRsul4yAVJaAUM
+          ! detail failed for CR08005037063638351873: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLW8_9AGIjAjulFVKQtE4Dh_0JQhbk0vCDyPIPkTfgDgisRhzLvvwbPvi3eBcv1ijhK3EjM6mggyAVJaAUM
+          ! detail failed for CR16673899548082438145: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLW8_9AGIjAjulFVKQtE4Dh_0JQhbk0vCDyPIPkTfgDgisRhzLvvwbPvi3eBcv1ijhK3EjM6mggyAVJaAUM
+          ! detail failed for CR06118761094514212865: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLa8_9AGIjCqtW2IqTiC4kvMnuh3Mo5ciQUZKs6iLpurM_R2TmJDFoh_5Heat8JTSKmd_t3Z69EyAVJaAUM
+          ! detail failed for CR03618019358535581697: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLa8_9AGIjCqtW2IqTiC4kvMnuh3Mo5ciQUZKs6iLpurM_R2TmJDFoh_5Heat8JTSKmd_t3Z69EyAVJaAUM
+          ! detail failed for CR10370041099870797825: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLe8_9AGIjASAl-Z7iMA-umXlU2qTb40VjhC3nTCdb41ORxytHxm2s20yU4gRk5FhOxWq_a7we0yAVJaAUM
+          ! detail failed for CR08336194881999339521: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLe8_9AGIjASAl-Z7iMA-umXlU2qTb40VjhC3nTCdb41ORxytHxm2s20yU4gRk5FhOxWq_a7we0yAVJaAUM
+          ! detail failed for CR04273584492079218689: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLi8_9AGIjB6bLbGhf3fI7_urRBASRZW3lyNbA-4VKd1klREWx8e-_puRGP9onF9LXXnBHl84CoyAVJaAUM
+          ! detail failed for CR00181197265694621697: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLi8_9AGIjB6bLbGhf3fI7_urRBASRZW3lyNbA-4VKd1klREWx8e-_puRGP9onF9LXXnBHl84CoyAVJaAUM
+          ! detail failed for CR18439375644996403201: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLm8_9AGIjDvaEwE3FVT3QK0-uA_ZAX1LVszjYZgZi2fQNoGVEyPUASrWTEAzIu-altG2seOMeUyAVJaAUM
+          ! detail failed for CR07175890947085959169: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLq8_9AGIjCIGcl8EOLnSZmaHPA6jE1rKdCeBqAwFW6Uh2vy7hN2YJ3EjTWjM2ij7iPdenC4Kl0yAVJaAUM
+          ! detail failed for CR01947827506220367873: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLq8_9AGIjCIGcl8EOLnSZmaHPA6jE1rKdCeBqAwFW6Uh2vy7hN2YJ3EjTWjM2ij7iPdenC4Kl0yAVJaAUM
+          ! detail failed for CR10801463641266716673: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLu8_9AGIjCw7WRGr58ueTuQR6P-KziYfT8Q7nF_vlZBGotV51wsI5GcqUW5EpjCb8g0E88yX04yAVJaAUM
+          ! detail failed for CR05467319868309110785: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLu8_9AGIjCw7WRGr58ueTuQR6P-KziYfT8Q7nF_vlZBGotV51wsI5GcqUW5EpjCb8g0E88yX04yAVJaAUM
+          ! detail failed for CR07943736713409462273: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLy8_9AGIjDTdR63hhh-GvYYNz4e21MFT7cSHXC-GjhWyDEO5FtPBCDa07xoQfiUMDJCheRu4E8yAVJaAUM
+          ! detail failed for CR05921300900793548801: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLy8_9AGIjDTdR63hhh-GvYYNz4e21MFT7cSHXC-GjhWyDEO5FtPBCDa07xoQfiUMDJCheRu4E8yAVJaAUM
+          ! detail failed for CR07791060006245236737: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGLy8_9AGIjDTdR63hhh-GvYYNz4e21MFT7cSHXC-GjhWyDEO5FtPBCDa07xoQfiUMDJCheRu4E8yAVJaAUM
+          ! detail failed for CR05404970240389939201: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGL28_9AGIjDKQd27G_mhwrcnl9LFXOuBGBfivtaGeFVNDEV8atm_06JkrF4lISVsbjOM3mBKfdQyAVJaAUM
+          ! detail failed for CR04763770243443064833: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGL28_9AGIjDKQd27G_mhwrcnl9LFXOuBGBfivtaGeFVNDEV8atm_06JkrF4lISVsbjOM3mBKfdQyAVJaAUM
+          ! detail failed for CR09038894120520646657: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGL68_9AGIjBwiPtqkBM_URQjXEFiFuyBA0rEIJJiVCP_QFK9i_0jCfMQ2e7wPUSBOtvz1q6vBvwyAVJaAUM
+          ! detail failed for CR04668698788704026625: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGL68_9AGIjBwiPtqkBM_URQjXEFiFuyBA0rEIJJiVCP_QFK9i_0jCfMQ2e7wPUSBOtvz1q6vBvwyAVJaAUM
+          ! detail failed for CR10970625824482394113: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGL-8_9AGIjD6TMxkN0WL3TI06CprhKG1E5douIQsOlvrwfvrezHUQDXl6UuJS0J11fl64FRCyNQyAVJaAUM
+          ! detail failed for CR04128968115679657985: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGL-8_9AGIjD6TMxkN0WL3TI06CprhKG1E5douIQsOlvrwfvrezHUQDXl6UuJS0J11fl64FRCyNQyAVJaAUM
+          ! detail failed for CR12291604107982012417: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMC8_9AGIjBqqs-fPEDrqzXSd4-SqYdpMgU3J9Oz5AOPt6LSvP4tzvn5LtaZQdv4NUbkWXc-z68yAVJaAUM
+          ! detail failed for CR16079470319059861505: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMC8_9AGIjBqqs-fPEDrqzXSd4-SqYdpMgU3J9Oz5AOPt6LSvP4tzvn5LtaZQdv4NUbkWXc-z68yAVJaAUM
+          ! detail failed for CR04055412608847577089: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMG8_9AGIjCtAuLTWTBBPxV4Cix3n3eDYnYD6EpG3iD6TUdNQJCcucGeFgZRok5i9MU3iYgVm5EyAVJaAUM
+          ! detail failed for CR18037957332813479937: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMK8_9AGIjCKBjB4MkT_Z6U4gVueR8_gPYv6PuL7PO1gTjjAzyiA4lUte8v5H_GiC-vMEw8pa04yAVJaAUM
+          ! detail failed for CR15636233628302704641: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMK8_9AGIjCKBjB4MkT_Z6U4gVueR8_gPYv6PuL7PO1gTjjAzyiA4lUte8v5H_GiC-vMEw8pa04yAVJaAUM
+          ! detail failed for CR18064978930577702913: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMK8_9AGIjCKBjB4MkT_Z6U4gVueR8_gPYv6PuL7PO1gTjjAzyiA4lUte8v5H_GiC-vMEw8pa04yAVJaAUM
+          ! detail failed for CR10213188705242316801: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMO8_9AGIjAvsLHMmURSCzl2aBQJkVsYLxCtnvzia6cibTIjOMI96eC5StjQ2eLwT1Wk6W6tzPAyAVJaAUM
+          ! detail failed for CR12073527658923687937: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMO8_9AGIjAvsLHMmURSCzl2aBQJkVsYLxCtnvzia6cibTIjOMI96eC5StjQ2eLwT1Wk6W6tzPAyAVJaAUM
+          ! detail failed for CR14458025778618564609: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMS8_9AGIjA_jmmgfW247F3SQsUj8yYXy_02R4bmOnQm0neBdbNWh5ofdiR-jwHoTlrPiYaNJAAyAVJaAUM
+          ! detail failed for CR09930385982341775361: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMS8_9AGIjA_jmmgfW247F3SQsUj8yYXy_02R4bmOnQm0neBdbNWh5ofdiR-jwHoTlrPiYaNJAAyAVJaAUM
+          ! detail failed for CR13815933476446142465: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMW8_9AGIjBgu1uu_U98mIaorrBhv6zgiXpfClZvoBAif4lQ-8GdrrWjMFo40gNkJLxlqZgc1b8yAVJaAUM
+          ! detail failed for CR08949231129118900225: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMa8_9AGIjA-zwEY3O3O3btYV-ikraqOOJPqj8V7xFYorXQYsT72sv5fEmJguuWplJzeExWkCfgyAVJaAUM
+          ! detail failed for CR08042033241911197697: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMa8_9AGIjA-zwEY3O3O3btYV-ikraqOOJPqj8V7xFYorXQYsT72sv5fEmJguuWplJzeExWkCfgyAVJaAUM
+          ! detail failed for CR07026656243892617217: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMa8_9AGIjA-zwEY3O3O3btYV-ikraqOOJPqj8V7xFYorXQYsT72sv5fEmJguuWplJzeExWkCfgyAVJaAUM
+          ! detail failed for CR07024839386827063297: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMe8_9AGIjAClLQlWY-viiXah5hDTU3EZ-DOr7lBQR0ndI_lF1zCGVsAxRSlZCg12lFcaIXuvVkyAVJaAUM
+          ! detail failed for CR12443897171487490049: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMe8_9AGIjAClLQlWY-viiXah5hDTU3EZ-DOr7lBQR0ndI_lF1zCGVsAxRSlZCg12lFcaIXuvVkyAVJaAUM
+          ! detail failed for CR06417975042071592961: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMi8_9AGIjD5YxD9dEzR5_J3eEV8aICI_7r7fyXoFam3bF4DYfWHaLWsdTHQfbMjSFssobyYyeoyAVJaAUM
+          ! detail failed for CR14862330171385446401: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMi8_9AGIjD5YxD9dEzR5_J3eEV8aICI_7r7fyXoFam3bF4DYfWHaLWsdTHQfbMjSFssobyYyeoyAVJaAUM
+          ! detail failed for CR12085504759344136193: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMm8_9AGIjCY0IrfTIVON9fKKcbWof3qaLo3U3gwZ52gc9b8zWG61yPJiPN5KeMSOBvlAE5ynPEyAVJaAUM
+          ! detail failed for CR02602988517701189633: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/LookupService/GetCreativeById%3Fauthuser%3D0&q=EgRqM1yGGMm8_9AGIjCY0IrfTIVON9fKKcbWof3qaLo3U3gwZ52gc9b8zWG61yPJiPN5KeMSOBvlAE5ynPEyAVJaAUM
+
+[csv] wrote 743 rows → /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-duolingo-2026-06-03.csv
+
+[downloads] 18 video creative(s) to fetch
+  [1/18] CR15129272378925776897.mp4  OK  — 5,702,411 bytes
+  [2/18] CR15129272378925776897_v2.mp4  OK  — 5,702,411 bytes
+  [3/18] CR15129272378925776897_v3.mp4  OK  — 5,702,411 bytes
+  [4/18] CR12863802955647680513.mp4  OK  — 4,394,208 bytes
+  [5/18] CR12863802955647680513_v2.mp4  OK  — 4,394,208 bytes
+  [6/18] CR12863802955647680513_v3.mp4  OK  — 2,631,070 bytes
+  [7/18] CR07157674058048339969.mp4  OK  — 2,528,893 bytes
+  [8/18] CR07157674058048339969_v2.mp4  OK  — 2,528,893 bytes
+  [9/18] CR07157674058048339969_v3.mp4  OK  — 2,528,893 bytes
+  [10/18] CR18247574835192397825.mp4  OK  — 4,126,018 bytes
+  [11/18] CR18247574835192397825_v2.mp4  OK  — 4,126,018 bytes
+  [12/18] CR18247574835192397825_v3.mp4  OK  — 4,126,018 bytes
+  [13/18] CR12480928817600266241.mp4  OK  — 4,126,606 bytes
+  [14/18] CR12480928817600266241_v2.mp4  OK  — 2,568,152 bytes
+  [15/18] CR12480928817600266241_v3.mp4  OK  — 4,126,606 bytes
+  [16/18] CR16014139614470078465.mp4  OK  — 4,394,208 bytes
+  [17/18] CR16014139614470078465_v2.mp4  OK  — 2,631,070 bytes
+  [18/18] CR16014139614470078465_v3.mp4  OK  — 2,631,070 bytes
+
+[downloads] 201 image creative(s) to fetch
+  [1/201] CR15062215913526788097.jpg  OK  — 46,428 bytes
+  [2/201] CR15062215913526788097_v2.jpg  OK  — 46,428 bytes
+  [3/201] CR10293516336118104065.jpg  OK  — 209,338 bytes
+  [4/201] CR10293516336118104065_v2.jpg  OK  — 204,988 bytes
+  [5/201] CR10293516336118104065_v3.jpg  OK  — 211,342 bytes
+  [6/201] CR06702948965429542913.jpg  OK  — 231,869 bytes
+  [7/201] CR06702948965429542913_v2.jpg  OK  — 109,646 bytes
+  [8/201] CR06702948965429542913_v3.jpg  OK  — 231,869 bytes
+  [9/201] CR09322502983012843521.jpg  OK  — 110,027 bytes
+  [10/201] CR09322502983012843521_v2.jpg  OK  — 235,888 bytes
+  [11/201] CR09322502983012843521_v3.jpg  OK  — 108,472 bytes
+  [12/201] CR09323993714621677569.jpg  OK  — 59,833 bytes
+  [13/201] CR09323993714621677569_v2.jpg  OK  — 59,833 bytes
+  [14/201] CR05406473573432819713.jpg  OK  — 64,955 bytes
+  [15/201] CR05406473573432819713_v2.jpg  OK  — 64,955 bytes
+  [16/201] CR13712223992071323649.jpg  FAIL — network error: ReadTimeout: HTTPSConnectionPool(host='tpc.googlesyndication.com', port=443): Read timed out. (read timeout=120)
+  [17/201] CR13712223992071323649_v2.jpg  OK  — 233,918 bytes
+  [18/201] CR13712223992071323649_v3.jpg  OK  — 234,505 bytes
+  [19/201] CR18360220282494386177.jpg  OK  — 221,316 bytes
+  [20/201] CR18360220282494386177_v2.jpg  OK  — 204,988 bytes
+  [21/201] CR18360220282494386177_v3.jpg  OK  — 205,568 bytes
+  [22/201] CR16328759918955855873.jpg  OK  — 110,027 bytes
+  [23/201] CR16328759918955855873_v2.jpg  OK  — 232,299 bytes
+  [24/201] CR16328759918955855873_v3.jpg  OK  — 236,091 bytes
+  [25/201] CR16058041739377639425.jpg  OK  — 51,956 bytes
+  [26/201] CR16058041739377639425_v2.jpg  OK  — 51,956 bytes
+  [27/201] CR02953461826194505729.jpg  OK  — 60,691 bytes
+  [28/201] CR02953461826194505729_v2.jpg  OK  — 60,691 bytes
+  [29/201] CR09613772203145297921.jpg  OK  — 301,737 bytes
+  [30/201] CR09613772203145297921_v2.jpg  OK  — 304,939 bytes
+  [31/201] CR09613772203145297921_v3.jpg  OK  — 302,967 bytes
+  [32/201] CR00523603173907103745.jpg  OK  — 133,647 bytes
+  [33/201] CR00523603173907103745_v2.jpg  OK  — 133,647 bytes
+  [34/201] CR05386581002904666113.jpg  OK  — 67,927 bytes
+  [35/201] CR04306221768172896257.jpg  OK  — 227,765 bytes
+  [36/201] CR04306221768172896257_v2.jpg  OK  — 223,959 bytes
+  [37/201] CR04306221768172896257_v3.jpg  OK  — 224,530 bytes
+  [38/201] CR15273935123792265217.jpg  OK  — 68,068 bytes
+  [39/201] CR15273935123792265217_v2.jpg  OK  — 68,068 bytes
+  [40/201] CR05930435944044822529.jpg  OK  — 60,998 bytes
+  [41/201] CR05930435944044822529_v2.jpg  OK  — 60,998 bytes
+  [42/201] CR00666386106077413377.jpg  OK  — 53,596 bytes
+  [43/201] CR14889223220778500097.jpg  OK  — 51,584 bytes
+  [44/201] CR17810233090128216065.jpg  OK  — 58,995 bytes
+  [45/201] CR11265099055857926145.jpg  OK  — 92,078 bytes
+  [46/201] CR00622910591681429505.jpg  OK  — 230,504 bytes
+  [47/201] CR00622910591681429505_v2.jpg  OK  — 102,622 bytes
+  [48/201] CR00622910591681429505_v3.jpg  OK  — 220,341 bytes
+  [49/201] CR06108857887772114945.jpg  OK  — 108,472 bytes
+  [50/201] CR06108857887772114945_v2.jpg  OK  — 239,752 bytes
+  [51/201] CR06108857887772114945_v3.jpg  OK  — 237,691 bytes
+  [52/201] CR05323514484814249985.jpg  OK  — 91,815 bytes
+  [53/201] CR06426361661501734913.jpg  OK  — 230,504 bytes
+  [54/201] CR06426361661501734913_v2.jpg  OK  — 112,950 bytes
+  [55/201] CR06426361661501734913_v3.jpg  OK  — 230,504 bytes
+  [56/201] CR02332026650268532737.jpg  OK  — 102,622 bytes
+  [57/201] CR02332026650268532737_v2.jpg  OK  — 237,408 bytes
+  [58/201] CR02332026650268532737_v3.jpg  OK  — 237,691 bytes
+  [59/201] CR04243151788338839553.jpg  OK  — 46,428 bytes
+  [60/201] CR04243151788338839553_v2.jpg  OK  — 46,428 bytes
+  [61/201] CR04243151788338839553_v3.jpg  OK  — 46,428 bytes
+  [62/201] CR14512574792445460481.jpg  OK  — 230,504 bytes
+  [63/201] CR14512574792445460481_v2.jpg  OK  — 108,472 bytes
+  [64/201] CR14512574792445460481_v3.jpg  OK  — 102,622 bytes
+  [65/201] CR08392678426405765121.jpg  OK  — 93,892 bytes
+  [66/201] CR06045526018012217345.jpg  OK  — 230,504 bytes
+  [67/201] CR06045526018012217345_v2.jpg  OK  — 237,408 bytes
+  [68/201] CR06045526018012217345_v3.jpg  OK  — 108,472 bytes
+  [69/201] CR03461645655192109057.jpg  OK  — 71,971 bytes
+  [70/201] CR03568382765093093377.jpg  OK  — 52,461 bytes
+  [71/201] CR03568382765093093377_v2.jpg  OK  — 52,461 bytes
+  [72/201] CR03568382765093093377_v3.jpg  OK  — 52,461 bytes
+  [73/201] CR12542398114662711297.jpg  OK  — 46,428 bytes
+  [74/201] CR12542398114662711297_v2.jpg  OK  — 46,428 bytes
+  [75/201] CR14098023449523912705.jpg  OK  — 45,315 bytes
+  [76/201] CR14098023449523912705_v2.jpg  OK  — 45,315 bytes
+  [77/201] CR14098023449523912705_v3.jpg  OK  — 45,315 bytes
+  [78/201] CR00220408796688678913.jpg  OK  — 82,146 bytes
+  [79/201] CR00220408796688678913_v2.jpg  OK  — 82,146 bytes
+  [80/201] CR00220408796688678913_v3.jpg  OK  — 82,146 bytes
+  [81/201] CR03419157983274205185.jpg  OK  — 236,614 bytes
+  [82/201] CR03419157983274205185_v2.jpg  OK  — 108,472 bytes
+  [83/201] CR03419157983274205185_v3.jpg  OK  — 230,504 bytes
+  [84/201] CR00990928154384138241.jpg  OK  — 88,198 bytes
+  [85/201] CR05131027012818829313.jpg  OK  — 68,746 bytes
+  [86/201] CR05131027012818829313_v2.jpg  OK  — 68,746 bytes
+  [87/201] CR14747712157273554945.jpg  OK  — 69,925 bytes
+  [88/201] CR14747712157273554945_v2.jpg  OK  — 69,925 bytes
+  [89/201] CR03986498286625226753.jpg  OK  — 61,272 bytes
+  [90/201] CR01080890376157396993.jpg  OK  — 68,375 bytes
+  [91/201] CR01080890376157396993_v2.jpg  OK  — 68,375 bytes
+  [92/201] CR14764325777969250305.jpg  OK  — 55,179 bytes
+  [93/201] CR14764325777969250305_v2.jpg  OK  — 55,179 bytes
+  [94/201] CR09846282628536205313.jpg  OK  — 211,662 bytes
+  [95/201] CR09846282628536205313_v2.jpg  OK  — 204,988 bytes
+  [96/201] CR09846282628536205313_v3.jpg  OK  — 209,338 bytes
+  [97/201] CR18253761168646602753.jpg  OK  — 40,584 bytes
+  [98/201] CR05657396214384033793.jpg  OK  — 68,746 bytes
+  [99/201] CR12267137577672245249.jpg  OK  — 302,967 bytes
+  [100/201] CR12267137577672245249_v2.jpg  OK  — 301,613 bytes
+  [101/201] CR12267137577672245249_v3.jpg  OK  — 261,026 bytes
+  [102/201] CR06322497395095502849.jpg  OK  — 223,959 bytes
+  [103/201] CR06322497395095502849_v2.jpg  OK  — 223,959 bytes
+  [104/201] CR06322497395095502849_v3.jpg  OK  — 228,420 bytes
+  [105/201] CR12769296933353160705.jpg  OK  — 46,235 bytes
+  [106/201] CR00340579095412736001.jpg  OK  — 113,525 bytes
+  [107/201] CR00340579095412736001_v2.jpg  OK  — 238,037 bytes
+  [108/201] CR00340579095412736001_v3.jpg  OK  — 228,485 bytes
+  [109/201] CR03449188738205220865.jpg  OK  — 123,494 bytes
+  [110/201] CR03449188738205220865_v2.jpg  OK  — 230,504 bytes
+  [111/201] CR03449188738205220865_v3.jpg  OK  — 236,614 bytes
+  [112/201] CR08869171658821206017.jpg  OK  — 224,530 bytes
+  [113/201] CR08869171658821206017_v2.jpg  OK  — 223,959 bytes
+  [114/201] CR08869171658821206017_v3.jpg  OK  — 228,420 bytes
+  [115/201] CR17439134721614282753.jpg  OK  — 232,299 bytes
+  [116/201] CR17439134721614282753_v2.jpg  OK  — 239,358 bytes
+  [117/201] CR17439134721614282753_v3.jpg  OK  — 232,042 bytes
+  [118/201] CR00708930609002577921.jpg  OK  — 204,988 bytes
+  [119/201] CR00708930609002577921_v2.jpg  OK  — 224,740 bytes
+  [120/201] CR00708930609002577921_v3.jpg  OK  — 228,110 bytes
+  [121/201] CR12153520918005547009.jpg  OK  — 240,121 bytes
+  [122/201] CR12153520918005547009_v2.jpg  OK  — 239,752 bytes
+  [123/201] CR12153520918005547009_v3.jpg  OK  — 240,121 bytes
+  [124/201] CR16716632436863139841.jpg  OK  — 237,691 bytes
+  [125/201] CR16716632436863139841_v2.jpg  OK  — 230,091 bytes
+  [126/201] CR16716632436863139841_v3.jpg  OK  — 110,027 bytes
+  [127/201] CR13560614326582116353.jpg  OK  — 224,530 bytes
+  [128/201] CR13560614326582116353_v2.jpg  OK  — 225,377 bytes
+  [129/201] CR13560614326582116353_v3.jpg  OK  — 223,959 bytes
+  [130/201] CR13978443863421878273.jpg  OK  — 108,472 bytes
+  [131/201] CR13978443863421878273_v2.jpg  OK  — 237,691 bytes
+  [132/201] CR13978443863421878273_v3.jpg  OK  — 230,504 bytes
+  [133/201] CR09697229533740007425.jpg  OK  — 204,988 bytes
+  [134/201] CR09697229533740007425_v2.jpg  OK  — 204,988 bytes
+  [135/201] CR09697229533740007425_v3.jpg  OK  — 232,953 bytes
+  [136/201] CR02876105685622325249.jpg  OK  — 232,299 bytes
+  [137/201] CR02876105685622325249_v2.jpg  OK  — 236,614 bytes
+  [138/201] CR02876105685622325249_v3.jpg  OK  — 235,888 bytes
+  [139/201] CR00172539367540129793.jpg  OK  — 79,732 bytes
+  [140/201] CR00172539367540129793_v2.jpg  OK  — 79,732 bytes
+  [141/201] CR00172539367540129793_v3.jpg  OK  — 79,732 bytes
+  [142/201] CR05583083874184855553.jpg  OK  — 48,520 bytes
+  [143/201] CR05583083874184855553_v2.jpg  OK  — 48,520 bytes
+  [144/201] CR04808461817699368961.jpg  OK  — 94,587 bytes
+  [145/201] CR04844956498410864641.jpg  OK  — 53,543 bytes
+  [146/201] CR06272089056159465473.jpg  OK  — 120,340 bytes
+  [147/201] CR06272089056159465473_v2.jpg  OK  — 120,340 bytes
+  [148/201] CR14911460577162297345.jpg  OK  — 30,850 bytes
+  [149/201] CR17821800957474766849.jpg  OK  — 55,053 bytes
+  [150/201] CR17821800957474766849_v2.jpg  OK  — 55,053 bytes
+  [151/201] CR17821800957474766849_v3.jpg  OK  — 55,053 bytes
+  [152/201] CR18217646274713223169.jpg  OK  — 80,316 bytes
+  [153/201] CR18217646274713223169_v2.jpg  OK  — 80,316 bytes
+  [154/201] CR18217646274713223169_v3.jpg  OK  — 80,316 bytes
+  [155/201] CR12064062315507482625.jpg  OK  — 111,993 bytes
+  [156/201] CR12064062315507482625_v2.jpg  OK  — 116,970 bytes
+  [157/201] CR12064062315507482625_v3.jpg  OK  — 111,993 bytes
+  [158/201] CR13257516216760664065.jpg  OK  — 111,711 bytes
+  [159/201] CR13257516216760664065_v2.jpg  OK  — 229,285 bytes
+  [160/201] CR13257516216760664065_v3.jpg  OK  — 107,275 bytes
+  [161/201] CR14121301622512418817.jpg  OK  — 60,568 bytes
+  [162/201] CR08828366720730136577.jpg  OK  — 229,285 bytes
+  [163/201] CR08828366720730136577_v2.jpg  OK  — 113,408 bytes
+  [164/201] CR08828366720730136577_v3.jpg  OK  — 111,711 bytes
+  [165/201] CR12743741792042614785.jpg  OK  — 72,480 bytes
+  [166/201] CR08997587753587703809.jpg  OK  — 75,404 bytes
+  [167/201] CR08997587753587703809_v2.jpg  OK  — 75,404 bytes
+  [168/201] CR12262115145995517953.jpg  OK  — 229,285 bytes
+  [169/201] CR12262115145995517953_v2.jpg  OK  — 107,275 bytes
+  [170/201] CR12262115145995517953_v3.jpg  OK  — 235,334 bytes
+  [171/201] CR00077483048265842689.jpg  OK  — 71,482 bytes
+  [172/201] CR09105497088912785409.jpg  OK  — 60,034 bytes
+  [173/201] CR09105497088912785409_v2.jpg  OK  — 60,034 bytes
+  [174/201] CR14964264038970687489.jpg  OK  — 39,001 bytes
+  [175/201] CR14964264038970687489_v2.jpg  OK  — 39,001 bytes
+  [176/201] CR00912206643708559361.jpg  OK  — 36,666 bytes
+  [177/201] CR09139973409873068033.jpg  OK  — 65,833 bytes
+  [178/201] CR09524829142751641601.jpg  OK  — 259,385 bytes
+  [179/201] CR06643980163967090689.jpg  OK  — 225,552 bytes
+  [180/201] CR06643980163967090689_v2.jpg  OK  — 224,740 bytes
+  [181/201] CR06643980163967090689_v3.jpg  OK  — 206,340 bytes
+  [182/201] CR02300258323368247297.jpg  OK  — 225,377 bytes
+  [183/201] CR02300258323368247297_v2.jpg  OK  — 224,530 bytes
+  [184/201] CR02300258323368247297_v3.jpg  OK  — 225,174 bytes
+  [185/201] CR02345735223804690433.jpg  OK  — 308,476 bytes
+  [186/201] CR02345735223804690433_v2.jpg  OK  — 307,152 bytes
+  [187/201] CR02345735223804690433_v3.jpg  OK  — 308,476 bytes
+  [188/201] CR17029122789757419521.jpg  OK  — 59,700 bytes
+  [189/201] CR17029122789757419521_v2.jpg  OK  — 59,700 bytes
+  [190/201] CR17029122789757419521_v3.jpg  OK  — 59,700 bytes
+  [191/201] CR11947045081124438017.jpg  OK  — 62,266 bytes
+  [192/201] CR11527773569144586241.jpg  OK  — 69,579 bytes
+  [193/201] CR10900726726388613121.jpg  OK  — 268,882 bytes
+  [194/201] CR08046156221536796673.jpg  OK  — 53,424 bytes
+  [195/201] CR18342870616073306113.jpg  OK  — 96,720 bytes
+  [196/201] CR18342870616073306113_v2.jpg  OK  — 96,720 bytes
+  [197/201] CR03289419536796745729.jpg  OK  — 264,170 bytes
+  [198/201] CR07397178691651895297.jpg  OK  — 71,806 bytes
+  [199/201] CR13388207338523983873.jpg  OK  — 73,343 bytes
+  [200/201] CR13357102360732631041.jpg  OK  — 492,789 bytes
+  [201/201] CR07395444761814892545.jpg  OK  — 594,532 bytes
+
+[done] CSV:    /Users/iniyan/Desktop/google-ad-downloader/inputs/g-ads-duolingo-2026-06-03.csv
+[done] videos: /Users/iniyan/Desktop/google-ad-downloader/videos/duolingo-2026-06-03 — 18 ok, 0 failed
+[done] images: /Users/iniyan/Desktop/google-ad-downloader/images/duolingo-2026-06-03 — 200 ok, 1 failed
+[done] rows:   743 (text/other variants stored in CSV only)
+[step 2] yt-dlp .info.json enrichment...
+[info] input:        inputs/g-ads-duolingo-2026-06-03.csv
+[info] videos-out:   videos/duolingo-2026-06-03
+[info] images-out:   images/duolingo-2026-06-03
+[info] batch-size:   600
+[info] summary:      videos/duolingo-2026-06-03/download_summary.csv
+[info] csv rows:     743
+[info] yt-dlp:       /Users/iniyan/Library/Python/3.13/bin/yt-dlp
+[info] already on disk: 218
+[info] pending:         289
+[  1/289] YouTubeVideo   CR00183418201873317889 → no youtube URL
+[  2/289] YouTubeVideo   CR00183418201873317889 → no youtube URL
+[  3/289] YouTubeVideo   CR00183418201873317889 → no youtube URL
+[  4/289] YouTubeVideo   CR00183418201873317889 → no youtube URL
+[  5/289] YouTubeVideo   CR00273460825434357761 → no youtube URL
+[  6/289] YouTubeVideo   CR00273460825434357761 → no youtube URL
+[  7/289] YouTubeVideo   CR00273460825434357761 → no youtube URL
+[  8/289] YouTubeVideo   CR00273460825434357761 → no youtube URL
+[  9/289] YouTubeVideo   CR00486904619688001537 → no youtube URL
+[ 10/289] YouTubeVideo   CR00486904619688001537 → no youtube URL
+[ 11/289] YouTubeVideo   CR00486904619688001537 → no youtube URL
+[ 12/289] YouTubeVideo   CR00486904619688001537 → no youtube URL
+[ 13/289] YouTubeVideo   CR01002423385243779073 → no youtube URL
+[ 14/289] YouTubeVideo   CR01002423385243779073 → no youtube URL
+[ 15/289] YouTubeVideo   CR01002423385243779073 → no youtube URL
+[ 16/289] YouTubeVideo   CR01002423385243779073 → no youtube URL
+[ 17/289] YouTubeVideo   CR01002423385243779073 → no youtube URL
+[ 18/289] YouTubeVideo   CR01030743368801452033 → no youtube URL
+[ 19/289] YouTubeVideo   CR01030743368801452033 → no youtube URL
+[ 20/289] YouTubeVideo   CR01030743368801452033 → no youtube URL
+[ 21/289] YouTubeVideo   CR01030743368801452033 → no youtube URL
+[ 22/289] YouTubeVideo   CR01450103631985508353 → no youtube URL
+[ 23/289] YouTubeVideo   CR01450103631985508353 → no youtube URL
+[ 24/289] YouTubeVideo   CR01450103631985508353 → no youtube URL
+[ 25/289] YouTubeVideo   CR01868085494135390209 → no youtube URL
+[ 26/289] YouTubeVideo   CR01868085494135390209 → no youtube URL
+[ 27/289] YouTubeVideo   CR01868085494135390209 → no youtube URL
+[ 28/289] YouTubeVideo   CR02400119130498793473 → no youtube URL
+[ 29/289] YouTubeVideo   CR02400119130498793473 → no youtube URL
+[ 30/289] YouTubeVideo   CR02400119130498793473 → no youtube URL
+[ 31/289] YouTubeVideo   CR02400119130498793473 → no youtube URL
+[ 32/289] YouTubeVideo   CR02403692818166972417 → no youtube URL
+[ 33/289] YouTubeVideo   CR02403692818166972417 → no youtube URL
+[ 34/289] YouTubeVideo   CR02403692818166972417 → no youtube URL
+[ 35/289] YouTubeVideo   CR02403692818166972417 → no youtube URL
+[ 36/289] YouTubeVideo   CR02469643449746325505 → no youtube URL
+[ 37/289] YouTubeVideo   CR02469643449746325505 → no youtube URL
+[ 38/289] YouTubeVideo   CR02469643449746325505 → no youtube URL
+[ 39/289] YouTubeVideo   CR02469643449746325505 → no youtube URL
+[ 40/289] YouTubeVideo   CR02959457325661814785 → no youtube URL
+[ 41/289] YouTubeVideo   CR02959457325661814785 → no youtube URL
+[ 42/289] YouTubeVideo   CR02959457325661814785 → no youtube URL
+[ 43/289] YouTubeVideo   CR02959457325661814785 → no youtube URL
+[ 44/289] YouTubeVideo   CR03125866348941410305 → no youtube URL
+[ 45/289] YouTubeVideo   CR03342477054510628865 → no youtube URL
+[ 46/289] YouTubeVideo   CR03342477054510628865 → no youtube URL
+[ 47/289] YouTubeVideo   CR03342477054510628865 → no youtube URL
+[ 48/289] YouTubeVideo   CR03444500283185430529 → no youtube URL
+[ 49/289] YouTubeVideo   CR03444500283185430529 → no youtube URL
+[ 50/289] YouTubeVideo   CR03444500283185430529 → no youtube URL
+[ 51/289] YouTubeVideo   CR03444500283185430529 → no youtube URL
+[ 52/289] YouTubeVideo   CR03444500283185430529 → no youtube URL
+[ 53/289] YouTubeVideo   CR03460262881881227265 → no youtube URL
+[ 54/289] YouTubeVideo   CR03460262881881227265 → no youtube URL
+[ 55/289] YouTubeVideo   CR03460262881881227265 → no youtube URL
+[ 56/289] YouTubeVideo   CR03460262881881227265 → no youtube URL
+[ 57/289] YouTubeVideo   CR03872881463749771265 → no youtube URL
+[ 58/289] YouTubeVideo   CR03872881463749771265 → no youtube URL
+[ 59/289] YouTubeVideo   CR03872881463749771265 → no youtube URL
+[ 60/289] YouTubeVideo   CR03872881463749771265 → no youtube URL
+[ 61/289] YouTubeVideo   CR04074443454317330433 → no youtube URL
+[ 62/289] YouTubeVideo   CR04074443454317330433 → no youtube URL
+[ 63/289] YouTubeVideo   CR04074443454317330433 → no youtube URL
+[ 64/289] YouTubeVideo   CR04074443454317330433 → no youtube URL
+[ 65/289] YouTubeVideo   CR04074443454317330433 → no youtube URL
+[ 66/289] YouTubeVideo   CR04123240768200507393 → no youtube URL
+[ 67/289] YouTubeVideo   CR04123240768200507393 → no youtube URL
+[ 68/289] YouTubeVideo   CR04123240768200507393 → no youtube URL
+[ 69/289] YouTubeVideo   CR04123240768200507393 → no youtube URL
+[ 70/289] YouTubeVideo   CR04123240768200507393 → no youtube URL
+[ 71/289] YouTubeVideo   CR04691106638109605889 → no youtube URL
+[ 72/289] YouTubeVideo   CR04691106638109605889 → no youtube URL
+[ 73/289] YouTubeVideo   CR04921081589686861825 → no youtube URL
+[ 74/289] YouTubeVideo   CR04921081589686861825 → no youtube URL
+[ 75/289] YouTubeVideo   CR04921081589686861825 → no youtube URL
+[ 76/289] YouTubeVideo   CR04921081589686861825 → no youtube URL
+[ 77/289] YouTubeVideo   CR05666550748196896769 → no youtube URL
+[ 78/289] YouTubeVideo   CR05666550748196896769 → no youtube URL
+[ 79/289] YouTubeVideo   CR05666550748196896769 → no youtube URL
+[ 80/289] YouTubeVideo   CR05666550748196896769 → no youtube URL
+[ 81/289] YouTubeVideo   CR05666550748196896769 → no youtube URL
+[ 82/289] YouTubeVideo   CR05686368302826258433 → no youtube URL
+[ 83/289] YouTubeVideo   CR05686368302826258433 → no youtube URL
+[ 84/289] Image          CR05803985243492843521 → image-url-missing
+[ 85/289] YouTubeVideo   CR06204449428690960385 → no youtube URL
+[ 86/289] YouTubeVideo   CR06204449428690960385 → no youtube URL
+[ 87/289] YouTubeVideo   CR06204449428690960385 → no youtube URL
+[ 88/289] YouTubeVideo   CR06204449428690960385 → no youtube URL
+[ 89/289] YouTubeVideo   CR06417969407074500609 → no youtube URL
+[ 90/289] YouTubeVideo   CR06417969407074500609 → no youtube URL
+[ 91/289] YouTubeVideo   CR06417969407074500609 → no youtube URL
+[ 92/289] YouTubeVideo   CR07158521712793878529 → no youtube URL
+[ 93/289] YouTubeVideo   CR07158521712793878529 → no youtube URL
+[ 94/289] YouTubeVideo   CR07158521712793878529 → no youtube URL
+[ 95/289] YouTubeVideo   CR07563440577941864449 → no youtube URL
+[ 96/289] YouTubeVideo   CR07563440577941864449 → no youtube URL
+[ 97/289] YouTubeVideo   CR07563440577941864449 → no youtube URL
+[ 98/289] YouTubeVideo   CR07563440577941864449 → no youtube URL
+[ 99/289] YouTubeVideo   CR08032435845430509569 → no youtube URL
+[100/289] YouTubeVideo   CR08032435845430509569 → no youtube URL
+[101/289] YouTubeVideo   CR08032435845430509569 → no youtube URL
+[102/289] YouTubeVideo   CR08074942964960329729 → no youtube URL
+[103/289] YouTubeVideo   CR08074942964960329729 → no youtube URL
+[104/289] YouTubeVideo   CR08074942964960329729 → no youtube URL
+[105/289] YouTubeVideo   CR08397333973386133505 → no youtube URL
+[106/289] YouTubeVideo   CR08397333973386133505 → no youtube URL
+[107/289] YouTubeVideo   CR08397333973386133505 → no youtube URL
+[108/289] YouTubeVideo   CR08397333973386133505 → no youtube URL
+[109/289] YouTubeVideo   CR08608896597733933057 → no youtube URL
+[110/289] YouTubeVideo   CR08608896597733933057 → no youtube URL
+[111/289] YouTubeVideo   CR08608896597733933057 → no youtube URL
+[112/289] YouTubeVideo   CR08840752513058603009 → no youtube URL
+[113/289] YouTubeVideo   CR08840752513058603009 → no youtube URL
+[114/289] YouTubeVideo   CR08840752513058603009 → no youtube URL
+[115/289] YouTubeVideo   CR08840752513058603009 → no youtube URL
+[116/289] YouTubeVideo   CR09402136117676867585 → no youtube URL
+[117/289] YouTubeVideo   CR09402136117676867585 → no youtube URL
+[118/289] YouTubeVideo   CR09402136117676867585 → no youtube URL
+[119/289] YouTubeVideo   CR09402136117676867585 → no youtube URL
+[120/289] YouTubeVideo   CR09890420641637597185 → no youtube URL
+[121/289] YouTubeVideo   CR09890420641637597185 → no youtube URL
+[122/289] YouTubeVideo   CR09890420641637597185 → no youtube URL
+[123/289] YouTubeVideo   CR09890420641637597185 → no youtube URL
+[124/289] YouTubeVideo   CR09976959662806794241 → no youtube URL
+[125/289] YouTubeVideo   CR10049201622610870273 → no youtube URL
+[126/289] YouTubeVideo   CR10049201622610870273 → no youtube URL
+[127/289] YouTubeVideo   CR10049201622610870273 → no youtube URL
+[128/289] YouTubeVideo   CR10049201622610870273 → no youtube URL
+[129/289] YouTubeVideo   CR10134121578548428801 → no youtube URL
+[130/289] YouTubeVideo   CR10134121578548428801 → no youtube URL
+[131/289] YouTubeVideo   CR10134121578548428801 → no youtube URL
+[132/289] YouTubeVideo   CR10134121578548428801 → no youtube URL
+[133/289] YouTubeVideo   CR10331997937420206081 → no youtube URL
+[134/289] YouTubeVideo   CR10331997937420206081 → no youtube URL
+[135/289] YouTubeVideo   CR10331997937420206081 → no youtube URL
+[136/289] YouTubeVideo   CR10331997937420206081 → no youtube URL
+[137/289] YouTubeVideo   CR10464658688235798529 → no youtube URL
+[138/289] YouTubeVideo   CR10464658688235798529 → no youtube URL
+[139/289] YouTubeVideo   CR10464658688235798529 → no youtube URL
+[140/289] YouTubeVideo   CR10509336174999371777 → no youtube URL
+[141/289] YouTubeVideo   CR10509336174999371777 → no youtube URL
+[142/289] YouTubeVideo   CR10509336174999371777 → no youtube URL
+[143/289] YouTubeVideo   CR10509336174999371777 → no youtube URL
+[144/289] YouTubeVideo   CR10807972672793739265 → no youtube URL
+[145/289] YouTubeVideo   CR10807972672793739265 → no youtube URL
+[146/289] YouTubeVideo   CR10807972672793739265 → no youtube URL
+[147/289] YouTubeVideo   CR10807972672793739265 → no youtube URL
+[148/289] YouTubeVideo   CR10906009665011712001 → no youtube URL
+[149/289] YouTubeVideo   CR10906009665011712001 → no youtube URL
+[150/289] YouTubeVideo   CR10906009665011712001 → no youtube URL
+[151/289] YouTubeVideo   CR10906009665011712001 → no youtube URL
+[152/289] YouTubeVideo   CR10946004099824353281 → no youtube URL
+[153/289] YouTubeVideo   CR10946004099824353281 → no youtube URL
+[154/289] YouTubeVideo   CR10946004099824353281 → no youtube URL
+[155/289] YouTubeVideo   CR10946004099824353281 → no youtube URL
+[156/289] YouTubeVideo   CR11014488306841812993 → no youtube URL
+[157/289] YouTubeVideo   CR11014488306841812993 → no youtube URL
+[158/289] YouTubeVideo   CR11014488306841812993 → no youtube URL
+[159/289] YouTubeVideo   CR11014488306841812993 → no youtube URL
+[160/289] YouTubeVideo   CR11030900854348578817 → no youtube URL
+[161/289] YouTubeVideo   CR11030900854348578817 → no youtube URL
+[162/289] YouTubeVideo   CR11030900854348578817 → no youtube URL
+[163/289] YouTubeVideo   CR11030900854348578817 → no youtube URL
+[164/289] YouTubeVideo   CR11231224038909018113 → no youtube URL
+[165/289] YouTubeVideo   CR11231224038909018113 → no youtube URL
+[166/289] YouTubeVideo   CR11231224038909018113 → no youtube URL
+[167/289] YouTubeVideo   CR11231224038909018113 → no youtube URL
+[168/289] YouTubeVideo   CR11570853560002281473 → no youtube URL
+[169/289] YouTubeVideo   CR11570853560002281473 → no youtube URL
+[170/289] YouTubeVideo   CR11570853560002281473 → no youtube URL
+[171/289] YouTubeVideo   CR11570853560002281473 → no youtube URL
+[172/289] YouTubeVideo   CR11570853560002281473 → no youtube URL
+[173/289] YouTubeVideo   CR12068207534473740289 → no youtube URL
+[174/289] YouTubeVideo   CR12068207534473740289 → no youtube URL
+[175/289] YouTubeVideo   CR12068207534473740289 → no youtube URL
+[176/289] YouTubeVideo   CR12068207534473740289 → no youtube URL
+[177/289] YouTubeVideo   CR12068207534473740289 → no youtube URL
+[178/289] YouTubeVideo   CR12455594901465202689 → no youtube URL
+[179/289] YouTubeVideo   CR12455594901465202689 → no youtube URL
+[180/289] YouTubeVideo   CR12455594901465202689 → no youtube URL
+[181/289] YouTubeVideo   CR12455594901465202689 → no youtube URL
+[182/289] YouTubeVideo   CR12455594901465202689 → no youtube URL
+[183/289] YouTubeVideo   CR12480928817600266241 → no youtube URL
+[184/289] YouTubeVideo   CR12659402996719812609 → no youtube URL
+[185/289] YouTubeVideo   CR12753894673823563777 → no youtube URL
+[186/289] YouTubeVideo   CR12753894673823563777 → no youtube URL
+[187/289] YouTubeVideo   CR12753894673823563777 → no youtube URL
+[188/289] YouTubeVideo   CR12753894673823563777 → no youtube URL
+[189/289] YouTubeVideo   CR12863802955647680513 → no youtube URL
+[190/289] YouTubeVideo   CR12912006576201531393 → no youtube URL
+[191/289] YouTubeVideo   CR12912006576201531393 → no youtube URL
+[192/289] YouTubeVideo   CR12912006576201531393 → no youtube URL
+[193/289] YouTubeVideo   CR12912006576201531393 → no youtube URL
+[194/289] YouTubeVideo   CR13524496125523918849 → no youtube URL
+[195/289] YouTubeVideo   CR13524496125523918849 → no youtube URL
+[196/289] YouTubeVideo   CR13524496125523918849 → no youtube URL
+[197/289] YouTubeVideo   CR13524496125523918849 → no youtube URL
+[198/289] YouTubeVideo   CR13542136251993292801 → no youtube URL
+[199/289] YouTubeVideo   CR13542136251993292801 → no youtube URL
+[200/289] YouTubeVideo   CR13542136251993292801 → no youtube URL
+[201/289] YouTubeVideo   CR13615593412664229889 → no youtube URL
+[202/289] YouTubeVideo   CR13615593412664229889 → no youtube URL
+[203/289] YouTubeVideo   CR13615593412664229889 → no youtube URL
+[204/289] Image          CR13712223992071323649 → ok
+[205/289] YouTubeVideo   CR13972041338493861889 → no youtube URL
+[206/289] YouTubeVideo   CR13972041338493861889 → no youtube URL
+[207/289] YouTubeVideo   CR13972041338493861889 → no youtube URL
+[208/289] YouTubeVideo   CR13972041338493861889 → no youtube URL
+[209/289] YouTubeVideo   CR14093348600960516097 → no youtube URL
+[210/289] YouTubeVideo   CR14093348600960516097 → no youtube URL
+[211/289] YouTubeVideo   CR14093348600960516097 → no youtube URL
+[212/289] YouTubeVideo   CR14093348600960516097 → no youtube URL
+[213/289] YouTubeVideo   CR14263880732714729473 → no youtube URL
+[214/289] YouTubeVideo   CR14333273969560387585 → no youtube URL
+[215/289] YouTubeVideo   CR14333273969560387585 → no youtube URL
+[216/289] YouTubeVideo   CR14333273969560387585 → no youtube URL
+[217/289] YouTubeVideo   CR14333273969560387585 → no youtube URL
+[218/289] YouTubeVideo   CR14457736933477974017 → no youtube URL
+[219/289] YouTubeVideo   CR14457736933477974017 → no youtube URL
+[220/289] YouTubeVideo   CR14457736933477974017 → no youtube URL
+[221/289] YouTubeVideo   CR14698326243892264961 → no youtube URL
+[222/289] YouTubeVideo   CR14698326243892264961 → no youtube URL
+[223/289] YouTubeVideo   CR14698326243892264961 → no youtube URL
+[224/289] YouTubeVideo   CR14950572808512471041 → no youtube URL
+[225/289] YouTubeVideo   CR14950572808512471041 → no youtube URL
+[226/289] YouTubeVideo   CR14950572808512471041 → no youtube URL
+[227/289] YouTubeVideo   CR14950572808512471041 → no youtube URL
+[228/289] YouTubeVideo   CR15087245196221480961 → no youtube URL
+[229/289] YouTubeVideo   CR15087245196221480961 → no youtube URL
+[230/289] YouTubeVideo   CR15087245196221480961 → no youtube URL
+[231/289] YouTubeVideo   CR15087245196221480961 → no youtube URL
+[232/289] YouTubeVideo   CR15124672915628359681 → no youtube URL
+[233/289] YouTubeVideo   CR15124672915628359681 → no youtube URL
+[234/289] YouTubeVideo   CR15124672915628359681 → no youtube URL
+[235/289] YouTubeVideo   CR15124672915628359681 → no youtube URL
+[236/289] YouTubeVideo   CR15129272378925776897 → no youtube URL
+[237/289] YouTubeVideo   CR15197344586910400513 → no youtube URL
+[238/289] YouTubeVideo   CR15197344586910400513 → no youtube URL
+[239/289] YouTubeVideo   CR15197344586910400513 → no youtube URL
+[240/289] YouTubeVideo   CR15318706137763676161 → no youtube URL
+[241/289] YouTubeVideo   CR15318706137763676161 → no youtube URL
+[242/289] YouTubeVideo   CR15318706137763676161 → no youtube URL
+[243/289] YouTubeVideo   CR15402426870112714753 → no youtube URL
+[244/289] YouTubeVideo   CR15612273062320275457 → no youtube URL
+[245/289] YouTubeVideo   CR15612273062320275457 → no youtube URL
+[246/289] YouTubeVideo   CR15612273062320275457 → no youtube URL
+[247/289] YouTubeVideo   CR15612273062320275457 → no youtube URL
+[248/289] YouTubeVideo   CR15930982252981256193 → no youtube URL
+[249/289] YouTubeVideo   CR15930982252981256193 → no youtube URL
+[250/289] YouTubeVideo   CR15930982252981256193 → no youtube URL
+[251/289] YouTubeVideo   CR16167130962348474369 → no youtube URL
+[252/289] YouTubeVideo   CR16167130962348474369 → no youtube URL
+[253/289] YouTubeVideo   CR16167130962348474369 → no youtube URL
+[254/289] YouTubeVideo   CR16651913258306895873 → no youtube URL
+[255/289] YouTubeVideo   CR16651913258306895873 → no youtube URL
+[256/289] YouTubeVideo   CR16652154781497819137 → no youtube URL
+[257/289] YouTubeVideo   CR16652154781497819137 → no youtube URL
+[258/289] YouTubeVideo   CR16652154781497819137 → no youtube URL
+[259/289] YouTubeVideo   CR16860688844016582657 → no youtube URL
+[260/289] YouTubeVideo   CR16860688844016582657 → no youtube URL
+[261/289] YouTubeVideo   CR16860688844016582657 → no youtube URL
+[262/289] YouTubeVideo   CR16860688844016582657 → no youtube URL
+[263/289] YouTubeVideo   CR16979506013294034945 → no youtube URL
+[264/289] YouTubeVideo   CR16979506013294034945 → no youtube URL
+[265/289] YouTubeVideo   CR16979506013294034945 → no youtube URL
+[266/289] YouTubeVideo   CR16979506013294034945 → no youtube URL
+[267/289] YouTubeVideo   CR17141482123518017537 → no youtube URL
+[268/289] YouTubeVideo   CR17141482123518017537 → no youtube URL
+[269/289] YouTubeVideo   CR17141482123518017537 → no youtube URL
+[270/289] YouTubeVideo   CR17195655018468868097 → no youtube URL
+[271/289] YouTubeVideo   CR17195655018468868097 → no youtube URL
+[272/289] YouTubeVideo   CR17195655018468868097 → no youtube URL
+[273/289] YouTubeVideo   CR17660929306680885249 → no youtube URL
+[274/289] YouTubeVideo   CR17717268342617669633 → no youtube URL
+[275/289] YouTubeVideo   CR17717268342617669633 → no youtube URL
+[276/289] YouTubeVideo   CR17717268342617669633 → no youtube URL
+[277/289] YouTubeVideo   CR17717268342617669633 → no youtube URL
+[278/289] YouTubeVideo   CR17915019846790152193 → no youtube URL
+[279/289] YouTubeVideo   CR17915019846790152193 → no youtube URL
+[280/289] YouTubeVideo   CR17915019846790152193 → no youtube URL
+[281/289] YouTubeVideo   CR17915019846790152193 → no youtube URL
+[282/289] YouTubeVideo   CR17915019846790152193 → no youtube URL
+[283/289] YouTubeVideo   CR18023376717707476993 → no youtube URL
+[284/289] YouTubeVideo   CR18023376717707476993 → no youtube URL
+[285/289] YouTubeVideo   CR18023376717707476993 → no youtube URL
+[286/289] YouTubeVideo   CR18027554312137211905 → no youtube URL
+[287/289] YouTubeVideo   CR18027554312137211905 → no youtube URL
+[288/289] YouTubeVideo   CR18027554312137211905 → no youtube URL
+[289/289] YouTubeVideo   CR18247574835192397825 → no youtube URL
+
+[done] tally:
+  downloaded-image             1
+  image-url-missing            1
+  already-on-disk              218
+[done] 743 rows total processed, 0 still pending
+[done] summary: videos/duolingo-2026-06-03/download_summary.csv
+[done] failed:  videos/duolingo-2026-06-03/failed_ads.txt  (288 ids)
+[step 3] R2 upload + master...
+/Users/iniyan/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+[info] competitor:  duolingo
+[info] input:       inputs/g-ads-duolingo-2026-06-03.csv
+[info] videos:      videos/duolingo-2026-06-03
+[info] images:      images/duolingo-2026-06-03
+[info] master:      master/duolingo.csv
+[info] enriched:    inputs/g-ads-duolingo-2026-06-03_enriched.csv
+[info] log:         step3_logs/duolingo-2026-06-03-1332.log
+[info] dry-run:     False
+[info] bucket:      video-ads  (https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev)
+
+[done] tally:
+  uploaded-video     18
+  uploaded-image     201
+  text-no-asset      6
+  asset-missing      288
+  scrape-error       230
+[done] enriched: inputs/g-ads-duolingo-2026-06-03_enriched.csv
+[done] master:   master/duolingo.csv  (743 rows total)
+[done] log:      step3_logs/duolingo-2026-06-03-1332.log
+[backfill] YouTube metadata sidecars into master...
+[backfill] duolingo: filled 12 cells from 18 sidecars
+### Duolingo done at 13:35:29
+
+######################################################
+### English Seekho  (slug=english seekho)   started 13:35:29
+######################################################
+[step 1] scraping...
+[info] competitor: English Seekho
+[info] advertisers: 1 (AR02289573295139323905)
+[info] region: IN
+[info] output: /Users/iniyan/Desktop/google-ad-downloader
+
+[search] AR02289573295139323905 (Keyaro Edutech Private Limited)
+Traceback (most recent call last):
+  File "/Users/iniyan/Desktop/google-ad-downloader/skills/google-ad-scraper/scripts/scrape_google_ads.py", line 1057, in <module>
+    sys.exit(main())
+  File "/Users/iniyan/Desktop/google-ad-downloader/skills/google-ad-scraper/scripts/scrape_google_ads.py", line 1053, in main
+    return scrape(args)
+  File "/Users/iniyan/Desktop/google-ad-downloader/skills/google-ad-scraper/scripts/scrape_google_ads.py", line 802, in scrape
+    creatives = client.list_all_creatives(adv_id, max_count=args.limit)
+  File "/Users/iniyan/Desktop/google-ad-downloader/skills/google-ad-scraper/scripts/scrape_google_ads.py", line 278, in list_all_creatives
+    resp = self.search_creatives(advertiser_id, next_page_id=next_page)
+  File "/Users/iniyan/Desktop/google-ad-downloader/skills/google-ad-scraper/scripts/scrape_google_ads.py", line 270, in search_creatives
+    return self._post(self.SEARCH_URL, body)
+  File "/Users/iniyan/Desktop/google-ad-downloader/skills/google-ad-scraper/scripts/scrape_google_ads.py", line 299, in _post
+    r.raise_for_status()
+  File "/Users/iniyan/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://adstransparency.google.com/anji/_/rpc/SearchService/SearchCreatives%3Fauthuser%3D0&q=EgRqM1yGGMrA_9AGIjANUUWJJg1x799n94cC5EHH80ZvMIzlF9Eyu5FjgXuUMdTqyI53yWeCOfKNjaIgnDMyAVJaAUM
+[skip] English Seekho -- no CSV produced, skipping Step 2/3
+
+=== run-all finished Wed Jun  3 13:35:31 IST 2026 ===
+
+Summary of master CSVs:
+  Memrise                 3 rows     3 with r2_public_url
+  Loora                   4 rows     0 with r2_public_url
+  Busuu                 137 rows    54 with r2_public_url
+  Speak                  77 rows    16 with r2_public_url
+  SpeakX                383 rows     9 with r2_public_url
+  Duolingo              743 rows   219 with r2_public_url

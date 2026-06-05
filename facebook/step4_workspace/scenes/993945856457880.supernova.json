@@ -1,0 +1,57 @@
+{
+  "competitor_id": "993945856457880",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, light brown complexion. She has dark hair tied back with loose strands framing her face. Her facial features are expressive and natural.",
+        "wardrobe": "Dark grey long-sleeved button-up shirt with white stitching details.",
+        "demeanor": "Casual, expressive, and engaged."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young female appearance, pale complexion. She has bright red, wavy shoulder-length hair and large, animated eyes.",
+        "wardrobe": "Plain white t-shirt.",
+        "demeanor": "Friendly, animated, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Initial Conversation and Correction",
+        "supernova_script": "Character B says: Do you speak English? [Do you speak English?]\nCharacter A says: Uh, thodi thodi aati hai. [Uh, I know a little bit.]\nCharacter B says: Let's practice! Aap kahan se hain? [Let's practice! Where are you from?]\nCharacter A says: I am belong to Delhi. [I am belong to Delhi.]\nCharacter B says: Close! Par sahi sentence hai: \"I am from Delhi.\" [Close! But the correct sentence is: \"I am from Delhi.\"]\nCharacter A says: Okay, I am from Delhi. I am belong... no wait, I am from Delhi. [Okay, I am from Delhi. I am belong... no wait, I am from Delhi.]\nCharacter B says: Perfect! There you go. [Perfect! There you go.]",
+        "scene_summary": "- Hooks the viewer with a relatable, common English mistake made by Indian learners.\n- Demonstrates the AI tutor's gentle, non-judgmental correction style.\n- Establishes a warm, encouraging tone right away.",
+        "supernova_on_screen_text": "Do you speak English?\nUh, thodi thodi aati hai.\nLet's practice!\nAap kahan se hain?\nI am belong to Delhi.\nClose! Par sahi sentence hai:\n\"I am from Delhi.\"\nOkay,\nI am from Delhi.\nI am belong...\nNo wait,\nI am from Delhi.\nPerfect! There you go."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Explanation and Decision",
+        "supernova_script": "Character A says: Hey, par main apni English improve kaise karungi? [Hey, but how will I improve my English?]\nCharacter B says: Daily conversation practice se! [Through daily conversation practice!]\nCharacter A says: Par aisi tooti-phooti English kiske saath bolun? Log judge karte hain. [But who do I speak this broken English with? People judge.]\nCharacter B says: Mere saath! Main Supernova ki AI tutor hoon. [With me! I am Supernova's AI tutor.]\nCharacter A says: Tumhare saath? [With you?]\nCharacter B says: Haan! Yahan aap jitni chahein mistakes kar sakte ho, bina kisi sharam ke. [Yes! Here you can make as many mistakes as you want, without any embarrassment.]\nCharacter A says: Wait, yeh toh sach mein kaam karega. Tumne mujhe abhi do second mein correct kiya. [Wait, this will actually work. You just corrected me in two seconds.]\nCharacter B says: Exactly! Supernova app download karo aur roz practice karo. [Exactly! Download the Supernova app and practice daily.]\nCharacter A says: Sahi baat hai. Main abhi Supernova download karti hoon! Let's go. [That makes sense. I'm downloading Supernova right now! Let's go.]",
+        "scene_summary": "- Addresses the core user anxiety: fear of being judged for bad English.\n- Positions Supernova's AI as a safe, private space for daily speaking practice.\n- Ends with a strong, enthusiastic decision to download the app.",
+        "supernova_on_screen_text": "Par main apni English\nimprove kaise karungi?\nDaily conversation\npractice se!\nPar aisi tooti-phooti English\nkiske saath bolun? Log judge karte hain.\nMere saath!\nMain Supernova ki AI tutor hoon.\nTumhare saath?\nHaan! Yahan aap jitni chahein\nmistakes kar sakte ho,\nbina kisi sharam ke.\nWait,\nyeh toh sach mein kaam karega.\nTumne mujhe abhi do second\nmein correct kiya.\nExactly!\nSupernova app download karo\naur roz practice karo.\nSahi baat hai.\nMain abhi Supernova\ndownload karti hoon! Let's go."
+      },
+      {
+        "n": 3,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear call-to-action.\n- Displays the brand logo and app store badges for easy discovery.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Skye",
+        "supernova_swap": "Supernova ki AI tutor"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.490092
+}

@@ -1,0 +1,92 @@
+{
+  "competitor_id": "966066672912078",
+  "parsed": {
+    "duration_s": 22.0,
+    "production_type": "AI-generated",
+    "production_notes": "The presenter exhibits uncanny facial smoothness and slightly unnatural lip-syncing. The head movements are somewhat robotic and disconnected from the torso, typical of AI-generated avatars.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "presenter",
+        "appearance": "A young adult with a fair complexion and short, dark brown hair styled in a side part. They have dark eyes, defined eyebrows, and a smooth, unblemished face. Their features are symmetrical and slightly synthetic in appearance.",
+        "wardrobe": "A light greyish-green, long-sleeved button-down shirt. In the first half, they wear large black over-ear headphones.",
+        "demeanor": "Friendly, informative, and direct, though slightly stiff in movement."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Introduction",
+        "setting": "Indoor studio or office setting, daytime. Blurred brick wall and a large potted plant.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is positioned in the center of the frame, looking directly forward. They are wearing a light greyish-green, collared button-down shirt and large, black, over-ear headphones. The background is slightly out of focus. On the left side of the background, a section of an exposed red brick wall is visible. On the right side, the large, broad leaves of a green indoor plant fill the space. The lighting is soft and natural, illuminating the person's face evenly.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A speaks directly to the camera, introducing the topic. An animated smartphone mockup appears on the right side of the screen, displaying various screens of an app's interface. A brand logo is visible in the top right corner. Large text captions appear at the bottom of the screen, syncing with the spoken words.",
+        "audio_transcript": "Character A says: If you're an immigrant, you might wonder if native speakers understand your accent.\nCharacter A says: There's a pronunciation app, BoldVoice, that tests your accent and helps you learn an American one with instant AI feedback.",
+        "on_screen_text": "If you're an immigrant you might wonder if native speakers understand your accent. There's a pronunciation app BoldVoice that tests your accent and helps you learn an American one with instant AI feedback."
+      },
+      {
+        "n": 2,
+        "start_s": 10.5,
+        "end_s": 19.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "App Demonstration",
+        "setting": "Indoor studio or office setting, daytime. Blurred brick wall and a large potted plant.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is centered in the shot, facing the camera. They are wearing the same light greyish-green button-down shirt, but the large headphones have been removed. A small, black lavalier microphone is now clipped to the right side of their shirt collar. In their right hand, they are holding up a smartphone that has a distinctive pink and white marbled case with a round pop-socket attached to the back. The background remains consistent, showing the blurred brick wall on the left and the large green plant on the right.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A, now without headphones and using a lavalier mic, demonstrates the app by speaking into it. An app interface overlay appears on the screen, showing a pronunciation score that improves after a second attempt. The brand logo remains in the top right. Text captions continue to display at the bottom.",
+        "audio_transcript": "Character A says: Theater.\nCharacter A says: Looks like I have to work on that first \"th\".\nCharacter A says: Theater.\nCharacter A says: I fixed it!\nCharacter A says: It's super easy.\nCharacter A says: Download BoldVoice on your phone.\nCharacter A says: Get your results and let BoldVoice boost your confidence.",
+        "on_screen_text": "Theater Looks like I have to work on that first \"th\" Theater I fixed it! It's super easy. Download BoldVoice on your phone. Get your results and let BoldVoice boost your confidence."
+      },
+      {
+        "n": 3,
+        "start_s": 19.5,
+        "end_s": 22.0,
+        "screenshot_at_s": 20.5,
+        "scene_label": "End Card",
+        "setting": "Abstract dark background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The scene consists entirely of a solid, dark grey background. There are no characters, props, or environmental details present in the underlying image. The lighting is flat and uniform across the entire frame.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A dark grey end card is displayed. In the center is a smartphone mockup playing a video of Character A. Above the phone is a gold laurel wreath graphic with five stars and a rating number. Below the phone is promotional text offering a free trial, along with the brand logo and an app store download badge.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "27,000 STAR RATING Speak English Confidently Get your first 7 days free BoldVoice Download on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780658172.1660595
+}

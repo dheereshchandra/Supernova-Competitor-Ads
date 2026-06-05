@@ -1,0 +1,75 @@
+{
+  "competitor_id": "1412725307545214",
+  "parsed": {
+    "duration_s": 55.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a human actor interacting with an AI avatar on a tablet. The human's movements, expressions, and the physical environment are natural and consistent with human recording.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, light brown complexion, dark hair tied back with some loose strands. She has dark eyes and red nail polish.",
+        "wardrobe": "Dark grey or black long-sleeved top with a buttoned neckline.",
+        "demeanor": "Engaged, slightly hesitant at first, then surprised and convinced."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated 3D avatar of a young female with bright red, wavy hair and green eyes.",
+        "wardrobe": "White t-shirt.",
+        "demeanor": "Friendly, encouraging, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 53.5,
+        "screenshot_at_s": 26.0,
+        "scene_label": "Language Practice",
+        "setting": "A dimly lit room with blue ambient lighting. A tablet is propped up on a table, and the character is cutting an apple on a cutting board.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is seated at a table in a room with blue lighting. She is looking down at a tablet displaying Character B, an animated avatar. Character A is holding a knife and cutting an apple on a dark cutting board. She occasionally looks up and speaks, then looks back down at the tablet. Her expressions change from thoughtful to surprised as she interacts with the avatar.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows Character A interacting with an AI language tutor on her tablet while cutting an apple. The lighting is predominantly blue. Text overlays appear on the screen, showing the dialogue between the two characters. A banner of US flags is visible at the top of the screen.",
+        "audio_transcript": "B: Do you speak English?\nA: Uh, Tarzan style.\nB: Can you at least say your name?\nA: My name is Jenny.\nB: Nice. Where are you from?\nA: I am France.\nB: You said \"I'm from France.\" Close though! Try: \"I am from France.\"\nA: Okay, I am from France. I'm France... No... wait, I am from France.\nB: There you go!\nA: Hey Skye, how am I going to improve my English?\nB: Daily conversation practice is a must.\nA: But who am I going to speak with this bad English?\nB: With me, of course!\nA: With you?\nB: Haven't you heard of AI English teachers? You can make as many mistakes as you want without boring anyone.\nA: Wait, that could actually work. You just taught me something in two seconds.\nB: We're nothing like those pointless word-matching apps. Download Praktika and see the difference.\nA: Oh, you know what, fair enough. I'm downloading Praktika right now! Let's go.",
+        "on_screen_text": "Do you speak English?\nUh, Tarzan style.\nCan you at least say your name?\nMy name is Jenny.\nNice. Where are you from?\nI am France.\nYou said \"I'm from France.\"\nclose though! Try:\n\"I'm from France.\"\nOkay,\nI'm from France.\nI am France.\nNo... wait,\nI am from France.\nThere you go!\nHey Skye,\nHow am I going to\nimprove my English?\nDaily conversation\npractice is a must.\nBut who am I going to\nspeak with this bad English?\nWith me, of course!\nWith you?\nHaven't you heard of\nAI English teachers?\nYou can make as\nmany mistakes as you want\nwithout boring anyone.\nWait,\nthat could actually work.\nYou just taught me something\nin two seconds.\nWe're nothing like those\npointless word-matching apps.\nDownload Praktika\nand see the difference.\nOh,\nYou know what,\nfair enough.\nI'm downloading\nPraktika right now!\nLet's go."
+      },
+      {
+        "n": 2,
+        "start_s": 53.5,
+        "end_s": 55.0,
+        "screenshot_at_s": 54.2,
+        "scene_label": "End Card",
+        "setting": "A solid light purple background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid light purple background with no characters or props.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The scene is a static end card with a light purple background. It displays the app's logo, name, and download buttons for the App Store and Google Play.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780629153.0528092
+}

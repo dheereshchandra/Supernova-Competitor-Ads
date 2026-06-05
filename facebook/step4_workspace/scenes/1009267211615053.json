@@ -1,0 +1,82 @@
+{
+  "competitor_id": "1009267211615053",
+  "parsed": {
+    "duration_s": 27.0,
+    "production_type": "mixed",
+    "production_notes": "The video features a human presenter in the bottom panel and an AI-generated 3D animated character in the top panel. The AI character has a stylized, Pixar-like appearance.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated male character, young adult, medium build, fair complexion, curly dark hair, wearing glasses. Stylized, cartoonish features.",
+        "wardrobe": "Purple and white floral Hawaiian shirt.",
+        "demeanor": "Friendly, encouraging, and attentive."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Human male, young adult, medium build, fair complexion, dark hair, dark beard and mustache.",
+        "wardrobe": "White t-shirt, black over-ear headphones.",
+        "demeanor": "Focused, slightly hesitant when speaking Japanese, then relieved and happy."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 25.5,
+        "screenshot_at_s": 12.0,
+        "scene_label": "Japanese Practice Session",
+        "setting": "Top panel: dimly lit room with a warm lamp in the background. Bottom panel: room with purple ambient lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen, close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is shown from the chest up, resting his chin on his hand. He looks directly at the camera with a friendly expression. The background is dark with a soft, warm light source on the right.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B is shown from the chest up, wearing headphones. He looks directly at the camera, his expression changing from focused to slightly confused, then to smiling. The background is a solid, vibrant purple.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with an animated character on top and a human on the bottom. They are engaged in a conversation. Subtitles appear in the middle of the screen, translating the Japanese dialogue into English.",
+        "audio_transcript": "Character B says: \u306b\u307b\u3093\u3054\u304d\u3089\u3044\u3002 [Nihongo kirai. / I hate Japanese.]\nCharacter A says: \u304a\u306a\u307e\u3048\u306f\u306a\u3093\u3067\u3059\u304b\uff1f [Onamae wa nan desu ka? / What's your name?]\nCharacter B says: \u308f\u305f\u3057\u306e\u306a\u307e\u3048\u306f\u30b0\u30b9\u30bf\u30dc\u3067\u3059\u3002 [Watashi no namae wa Gustavo desu. / My name is Gustavo.]\nCharacter A says: \u304a\u3052\u3093\u304d\u3067\u3059\u304b\uff1f [Ogenki desu ka? / How are you?]\nCharacter B says: \u3052\u3093\u304d\u3067\u3059\u3002 [Genki desu. / I'm fine.]\nCharacter A says: \u306b\u307b\u3093\u3054\u3092\u306f\u306a\u305b\u307e\u3059\u304b\uff1f [Nihongo o hanasemasu ka? / Do you speak Japanese?]\nCharacter B says: \u306f\u3044\u3001\u308f\u305f\u3057\u2026 [Hai, watashi... / Yes, I...]\nCharacter A says: \u306f\u3044\u3001\u306f\u306a\u305b\u307e\u3059\u3002 [Hai, hanasemasu. / Do you mean: Hai, hanasemasu. / Yes, I speak it.]\nCharacter B says: \u306f\u3044\u3001\u306f\u306a\u305b\u307e\u3059\u3002 [Hai, hanasemasu. / Yes, I speak it.]\nCharacter A says: \u306a\u3093\u3055\u3044\u3067\u3059\u304b\uff1f [Nan-sai desu ka? / How old are you?]\nCharacter B says: \u308f\u305f\u3057\u2026 \u306b\u3058\u3085\u3046\u3088\u3093\u2026\uff1f [Watashi... nijuyon...? / I... twenty-four...?]\nCharacter A says: \u306b\u3058\u3085\u3046\u3088\u3093\u3055\u3044\u3067\u3059\u3002 [Nijuyon-sai desu. / Do you mean: Nijuyon-sai desu. / I am 24.]\nCharacter B says: \u306b\u3058\u3085\u3046\u3088\u3093\u3055\u3044\u3067\u3059\u3002 [Nijuyon-sai desu. / I am 24.]\nCharacter B says: How can I practice my Japanese every day?\nCharacter A says: Just download Praktika.\nCharacter B says: I'll download Praktika right now.",
+        "on_screen_text": "\ud83c\uddef\ud83c\uddf5\ud83c\uddef\ud83c\uddf5\ud83c\uddef\ud83c\uddf5\ud83c\uddef\ud83c\uddf5\ud83c\uddef\ud83c\uddf5\n\u306b\u307b\u3093\u3054\u304d\u3089\u3044\u3002\nNihongo kirai.\nI hate Japanese.\n\u304a\u306a\u307e\u3048\u306f\u306a\u3093\u3067\u3059\u304b\uff1f\nOnamae wa nan desu ka?\nWhat's your name?\n\u308f\u305f\u3057\u306e\u306a\u307e\u3048\u306f\u30b0\u30b9\u30bf\u30dc\u3067\u3059\u3002\nWatashi no namae wa Gustavo desu.\nMy name is Gustavo.\n\u304a\u3052\u3093\u304d\u3067\u3059\u304b\uff1f\nOgenki desu ka?\nHow are you?\n\u3052\u3093\u304d\u3067\u3059\u3002\nGenki desu.\nI'm fine.\n\u306b\u307b\u3093\u3054\u3092\u306f\u306a\u305b\u307e\u3059\u304b\uff1f\nNihongo o hanasemasu ka?\nDo you speak Japanese?\n\u306f\u3044\u3001\u308f\u305f\u3057\u2026\nHai, watashi...\nYes, I...\n\u306f\u3044\u3001\u306f\u306a\u305b\u307e\u3059\u3002\nDo you mean: Hai, hanasemasu.\nYes, I speak it.\n\u306f\u3044\u3001\u306f\u306a\u305b\u307e\u3059\u3002\nHai, hanasemasu.\nYes, I speak it.\n\u306a\u3093\u3055\u3044\u3067\u3059\u304b\uff1f\nNan-sai desu ka?\nHow old are you?\n\u308f\u305f\u3057\u2026 \u306b\u3058\u3085\u3046\u3088\u3093\u2026\uff1f\nWatashi... nijuyon...?\nI... twenty-four...?\n\u306b\u3058\u3085\u3046\u3088\u3093\u3055\u3044\u3067\u3059\u3002\nDo you mean: Nijuyon-sai desu.\nI am 24.\n\u306b\u3058\u3085\u3046\u3088\u3093\u3055\u3044\u3067\u3059\u3002\nNijuyon-sai desu.\nI am 24.\nHow can I practice my Japanese every day?\nJust download Praktika.\nI'll download Praktika right now."
+      },
+      {
+        "n": 2,
+        "start_s": 25.5,
+        "end_s": 27.0,
+        "screenshot_at_s": 26.0,
+        "scene_label": "End Card",
+        "setting": "Solid light purple background.",
+        "characters_in_scene": [],
+        "camera": "full screen graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid light purple background with a slight gradient.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The screen displays the Praktika app logo and name in the center. Below it are the 'Download on the App Store' and 'GET IT ON Google Play' buttons.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780628820.962696
+}

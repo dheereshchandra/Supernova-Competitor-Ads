@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1181503171711998",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "A Black man in his late 20s or early 30s with a bald head and a well-groomed, short black beard. He has a medium build and a warm complexion. He has no prominent distinguishing marks other than his facial hair.",
+        "wardrobe": "Initially shirtless, wearing only a silver chain with a cross pendant. Later, he drapes a white cloth with a bright red, yellow, and green floral pattern over his right shoulder.",
+        "demeanor": "Casual, friendly, and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction to Dominican Spanish",
+        "supernova_script": "Character A says: English सीखना मुश्किल लगता था क्योंकि लोग बहुत fast बोलते हैं और words खा जाते हैं। [Learning English used to feel difficult because people speak very fast and swallow their words.]",
+        "scene_summary": "- Hooks the viewer by addressing a relatable pain point: struggling to understand fast, fluent speakers.\n- Sets a casual, confessional tone.\n- Establishes the core problem that the app will solve.",
+        "supernova_on_screen_text": "POV: Fluent English keeps getting easier with THIS app 🇮🇳💪\nLearning English used to feel difficult because people speak very fast and swallow their words."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Recommendation",
+        "supernova_script": "Character A says: मैं पिछले कुछ महीनों से English सीख रहा हूँ। [I have been learning English for the past few months.]\nUnknown speaker says: और तुम काफी अच्छा बोल लेते हो। [And you speak quite well.]\nCharacter A says: अरे, thank you. अभी सीख रहा हूँ, रोज़ practice करता हूँ। मैं Supernova app use करता हूँ। वैसे तो बहुत apps हैं, पर Supernova में AI tutor के साथ बोल कर practice करने का मज़ा ही अलग है। [Oh, thank you. I'm still learning, I practice daily. I use the Supernova app. There are many apps out there, but practicing speaking with Supernova's AI tutor is a completely different experience.]",
+        "scene_summary": "- Demonstrates social proof through an off-camera compliment on the speaker's progress.\n- Introduces Supernova as the solution for daily speaking practice.\n- Highlights the unique value proposition (AI tutor) without directly disparaging competitors.",
+        "supernova_on_screen_text": "I have been learning English for the past few months.\nAnd you speak quite well.\nOh, thank you.\nI'm still learning, I practice daily.\nI use the Supernova app.\nThere are many apps out there,\nbut practicing speaking with Supernova's AI tutor is a completely different experience."
+      },
+      {
+        "n": 3,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear, distraction-free call to action.\n- Reinforces brand recall with the Supernova name.\n- Encourages immediate app download without relying on free-trial gimmicks.",
+        "supernova_on_screen_text": "Supernova\nStart speaking English confidently today."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Speak",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "removed / replaced with generic 'बहुत apps हैं'"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658816.5577612
+}

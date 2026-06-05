@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1876586636380023",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, slim build, fair complexion, long blonde hair. She has dark eyeliner and a casual, slightly tired appearance.",
+        "wardrobe": "Oversized grey sweatshirt with 'NEW YORK 85' printed in black.",
+        "demeanor": "Initially frustrated and hesitant, becoming more confident and happy as she learns."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor voice",
+        "appearance": "Not visible, voice only.",
+        "wardrobe": "N/A",
+        "demeanor": "Helpful, encouraging, and clear."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Washing dishes and learning English",
+        "supernova_script": "Character A says: English बोलना इतना मुश्किल क्यों है? [Why is speaking English so difficult?]\nCharacter B says: What's your name? [What's your name?]\nCharacter A says: My name is Nesly. [My name is Nesly.]\nCharacter B says: How are you? [How are you?]\nCharacter A says: I am fine, thank you. [I am fine, thank you.]\nCharacter B says: Can you speak English? [Can you speak English?]\nCharacter A says: Yes, I... [Yes, I...]\nCharacter B says: कोई बात नहीं। कहिए: \"Yes, I can\". [No problem. Say: \"Yes, I can\".]\nCharacter A says: Yes, I can. [Yes, I can.]\nCharacter B says: How old are you? [How old are you?]\nCharacter A says: I... twenty-four...? [I... twenty-four...?]\nCharacter B says: Say: \"I am 24 years old\". [Say: \"I am 24 years old\".]\nCharacter A says: I am 24 years old. [I am 24 years old.]\nCharacter A says: मैं रोज़ ऐसे ही practice कैसे करूँ? [How do I practice like this every day?]\nCharacter B says: बस Supernova app डाउनलोड करो। [Just download the Supernova app.]\nCharacter A says: मैं अभी Supernova डाउनलोड करती हूँ! [I'll download Supernova right now!]",
+        "scene_summary": "- Establishes the relatable problem of struggling with English while doing daily chores.\n- Demonstrates the interactive, non-judgmental AI tutor experience.\n- Ends with a clear, enthusiastic call to action to download the app.",
+        "supernova_on_screen_text": "English बोलना इतना मुश्किल क्यों है?\nWhat's your name?\nMy name is Nesly.\nHow are you?\nI am fine, thank you.\nCan you speak English?\nYes, I...\nकोई बात नहीं। कहिए: \"Yes, I can\".\nYes, I can.\nHow old are you?\nI... twenty-four...?\nSay: \"I am 24 years old\".\nI am 24 years old.\nमैं रोज़ ऐसे ही practice कैसे करूँ?\nबस Supernova app डाउनलोड करो।\nमैं अभी Supernova डाउनलोड करती हूँ!"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides the final brand impression.\n- Directs users to the app stores for download.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630589.076649
+}

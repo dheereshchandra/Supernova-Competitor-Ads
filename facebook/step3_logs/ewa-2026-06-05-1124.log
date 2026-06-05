@@ -1,0 +1,776 @@
+# Step 3 run log
+# competitor : ewa
+# started_at : 2026-06-05T11:24:03
+# input      : inputs/_ewa-2026-06-04-1021_new_only.csv
+# videos     : videos/ewa-2026-06-04
+# master     : master/ewa.csv  (unchanged (dry-run))
+# enriched   : inputs/_ewa-2026-06-04-1021_new_only_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : True
+#
+# counts     : {'uploaded': 170, 'carried-forward': 0, 'image-pending': 357, 'video-missing': 236, 'no-creative': 0, 'error': 0}
+#
+image-pending    2112022572700228 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1566699294391528 c0  (video) ← 1566699294391528.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1566699294391528.mp4  [DRY-RUN]
+would-upload     2185572212211330 c0  (video) ← 2185572212211330.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2185572212211330.mp4  [DRY-RUN]
+would-upload     1652016086089793 c0  (video) ← 1652016086089793.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1652016086089793.mp4  [DRY-RUN]
+image-pending    962525473452656 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    994760606773075 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1474153004182259 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1310987677594535 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1505340341193626 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1303357461427255 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1304155555246846 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     991976169883119 c0  (video) ← 991976169883119.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/991976169883119.mp4  [DRY-RUN]
+image-pending    1030565239393337 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     4445725825698673 c0  (video) ← 4445725825698673.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4445725825698673.mp4  [DRY-RUN]
+would-upload     1649936122963029 c0  (video) ← 1649936122963029.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1649936122963029.mp4  [DRY-RUN]
+image-pending    1641674433549086 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    26911675965183741 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2728992727463723 c0  (video) ← 2728992727463723.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2728992727463723.mp4  [DRY-RUN]
+image-pending    2168156464039850 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2792455144431425 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    985475464096039 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1873335986664922 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2261578648013726 c0  (video) ← 2261578648013726.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2261578648013726.mp4  [DRY-RUN]
+image-pending    2008633796433371 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    4507609992827741 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1304010068608336 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1533522968372799 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    944738788428187 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     910497315336588 c0  (video) ← 910497315336588.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/910497315336588.mp4  [DRY-RUN]
+would-upload     1357905219727082 c0  (video) ← 1357905219727082.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1357905219727082.mp4  [DRY-RUN]
+would-upload     998309906077759 c0  (video) ← 998309906077759.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/998309906077759.mp4  [DRY-RUN]
+image-pending    2219814685442029 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1725260812119280 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1810785103218617 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1398473008927470 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1512170856915494 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1673242803803482 c0  (video) ← 1673242803803482.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1673242803803482.mp4  [DRY-RUN]
+image-pending    35935455032765064 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1505141247653016 c0  (video) ← 1505141247653016.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1505141247653016.mp4  [DRY-RUN]
+image-pending    1407892621373675 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1245885030677396 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1293718302414653 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1005455715274465 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    846820411813101 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1288320463333208 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    986232277440875 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    993819813195120 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1354789463130530 c0  (video) ← 1354789463130530.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1354789463130530.mp4  [DRY-RUN]
+would-upload     968133256007959 c0  (video) ← 968133256007959.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/968133256007959.mp4  [DRY-RUN]
+image-pending    3992486917711214 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2064120410837805 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1660137235254669 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1777413536933796 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    759062397229915 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2050222485888477 c0  (video) ← 2050222485888477.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2050222485888477.mp4  [DRY-RUN]
+image-pending    1299514655111003 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2074446319953343 c0  (video) ← 2074446319953343.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2074446319953343.mp4  [DRY-RUN]
+image-pending    855585517046394 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     961411566521644 c0  (video) ← 961411566521644.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/961411566521644.mp4  [DRY-RUN]
+would-upload     1716693839373968 c0  (video) ← 1716693839373968.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1716693839373968.mp4  [DRY-RUN]
+would-upload     1478107503596754 c0  (video) ← 1478107503596754.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1478107503596754.mp4  [DRY-RUN]
+image-pending    1033767069322431 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2484963355260890 c0  (video) ← 2484963355260890.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2484963355260890.mp4  [DRY-RUN]
+would-upload     2393291561149090 c0  (video) ← 2393291561149090.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2393291561149090.mp4  [DRY-RUN]
+would-upload     1945438232782242 c0  (video) ← 1945438232782242.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1945438232782242.mp4  [DRY-RUN]
+image-pending    960698600181842 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1253596156687933 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1187616820101501 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27119610730988737 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1955696055062267 c0  (video) ← 1955696055062267.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1955696055062267.mp4  [DRY-RUN]
+image-pending    916043194800031 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1461567038992208 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1312012790896223 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1564228615125160 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1551241049764263 c0  (video) ← 1551241049764263.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1551241049764263.mp4  [DRY-RUN]
+would-upload     1698192648039552 c0  (video) ← 1698192648039552.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1698192648039552.mp4  [DRY-RUN]
+would-upload     1662368658343943 c0  (video) ← 1662368658343943.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1662368658343943.mp4  [DRY-RUN]
+image-pending    2008084223484030 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1016546140719465 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1293512385659522 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1465472401458214 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     921674677546921 c0  (video) ← 921674677546921.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/921674677546921.mp4  [DRY-RUN]
+image-pending    1343511690984446 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1738115987362905 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    975020472106377 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2019922298962165 c0  (video) ← 2019922298962165.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2019922298962165.mp4  [DRY-RUN]
+image-pending    4324852771064861 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1797632091212819 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2485877388593921 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1018241944489742 c0  (video) ← 1018241944489742.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1018241944489742.mp4  [DRY-RUN]
+image-pending    1477871840166136 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1330220262405214 c0  (video) ← 1330220262405214.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1330220262405214.mp4  [DRY-RUN]
+would-upload     929509573476337 c0  (video) ← 929509573476337.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/929509573476337.mp4  [DRY-RUN]
+image-pending    1319321473675745 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2464573214043216 c0  (video) ← 2464573214043216.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2464573214043216.mp4  [DRY-RUN]
+image-pending    1373614851489114 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     970141082392543 c0  (video) ← 970141082392543.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/970141082392543.mp4  [DRY-RUN]
+would-upload     988692753890724 c0  (video) ← 988692753890724.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/988692753890724.mp4  [DRY-RUN]
+image-pending    1681770069801275 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2945330799153095 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1682959029269644 c0  (video) ← 1682959029269644.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1682959029269644.mp4  [DRY-RUN]
+video-missing    1687231248974468 c0  (expected file not found in videos/ewa-2026-06-04)
+would-upload     2074424716447363 c0  (video) ← 2074424716447363.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2074424716447363.mp4  [DRY-RUN]
+image-pending    1026985983001938 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1644141459975072 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1342943787765590 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2827520480940799 c0  (video) ← 2827520480940799.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2827520480940799.mp4  [DRY-RUN]
+image-pending    36331000489831767 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     27292729493669115 c0  (video) ← 27292729493669115.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27292729493669115.mp4  [DRY-RUN]
+image-pending    1593028389050139 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1309419344027918 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1038448385294247 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    975138715271703 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    26879328081687684 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    983237477960751 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    4555764801413057 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2217336695772735 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1472431060846397 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1030682335970732 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     4338425543037151 c0  (video) ← 4338425543037151.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4338425543037151.mp4  [DRY-RUN]
+image-pending    993791116576367 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    859046849876030 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1058463433545695 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1988602422019714 c0  (video) ← 1988602422019714.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1988602422019714.mp4  [DRY-RUN]
+image-pending    1291491979733090 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27578941305024215 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1775427966758519 c0  (video) ← 1775427966758519.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1775427966758519.mp4  [DRY-RUN]
+would-upload     1514935080281501 c0  (video) ← 1514935080281501.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1514935080281501.mp4  [DRY-RUN]
+image-pending    2334582457303823 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1054121247795303 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    3535982359901074 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    864650720011116 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1139165189286008 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     960717333636566 c0  (video) ← 960717333636566.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/960717333636566.mp4  [DRY-RUN]
+would-upload     1314759730150022 c0  (video) ← 1314759730150022.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1314759730150022.mp4  [DRY-RUN]
+would-upload     1690656721935096 c0  (video) ← 1690656721935096.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1690656721935096.mp4  [DRY-RUN]
+image-pending    2992578137610864 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1082947924911068 c0  (video) ← 1082947924911068.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1082947924911068.mp4  [DRY-RUN]
+would-upload     2068928727378488 c0  (video) ← 2068928727378488.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2068928727378488.mp4  [DRY-RUN]
+image-pending    1461244112470894 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2200801820762579 c0  (video) ← 2200801820762579.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2200801820762579.mp4  [DRY-RUN]
+image-pending    1007520425336977 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1992619758014600 c0  (video) ← 1992619758014600.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1992619758014600.mp4  [DRY-RUN]
+would-upload     1343926107647255 c0  (video) ← 1343926107647255.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1343926107647255.mp4  [DRY-RUN]
+image-pending    4266409816942336 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1470636687611258 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    963899263183875 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1329879862539644 c0  (video) ← 1329879862539644.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1329879862539644.mp4  [DRY-RUN]
+would-upload     811507742040196 c0  (video) ← 811507742040196.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/811507742040196.mp4  [DRY-RUN]
+would-upload     868515649028347 c0  (video) ← 868515649028347.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/868515649028347.mp4  [DRY-RUN]
+image-pending    1012131931311199 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2398797947295687 c0  (video) ← 2398797947295687.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2398797947295687.mp4  [DRY-RUN]
+image-pending    1693401078348249 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     996907182876519 c0  (video) ← 996907182876519.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/996907182876519.mp4  [DRY-RUN]
+would-upload     1707658220566964 c0  (video) ← 1707658220566964.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1707658220566964.mp4  [DRY-RUN]
+image-pending    1481581840818569 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1002188779168466 c0  (video) ← 1002188779168466.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1002188779168466.mp4  [DRY-RUN]
+image-pending    1738767367476279 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1904777066899401 c0  (video) ← 1904777066899401.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1904777066899401.mp4  [DRY-RUN]
+image-pending    1886909255337340 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2288198458254353 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1927615251289179 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    858408813979834 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1834688200839645 c0  (video) ← 1834688200839645.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1834688200839645.mp4  [DRY-RUN]
+would-upload     863483493462145 c0  (video) ← 863483493462145.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/863483493462145.mp4  [DRY-RUN]
+image-pending    2052471022334215 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    944139671726808 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1527609958875121 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    978209598439199 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     3435025230002074 c0  (video) ← 3435025230002074.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3435025230002074.mp4  [DRY-RUN]
+would-upload     1763575131678118 c0  (video) ← 1763575131678118.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1763575131678118.mp4  [DRY-RUN]
+image-pending    2018800028725680 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2047196636676595 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2907444386281438 c0  (video) ← 2907444386281438.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2907444386281438.mp4  [DRY-RUN]
+image-pending    1288020793525336 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1517868806650541 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1532810891749239 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1313817623507224 c0  (video) ← 1313817623507224.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1313817623507224.mp4  [DRY-RUN]
+would-upload     1400706432079785 c0  (video) ← 1400706432079785.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1400706432079785.mp4  [DRY-RUN]
+would-upload     1585856169876999 c0  (video) ← 1585856169876999.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1585856169876999.mp4  [DRY-RUN]
+would-upload     1674649060452391 c0  (video) ← 1674649060452391.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1674649060452391.mp4  [DRY-RUN]
+image-pending    1641078807121892 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1564365435206249 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1718592356178742 c0  (video) ← 1718592356178742.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1718592356178742.mp4  [DRY-RUN]
+image-pending    2058252205110366 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1643672201091595 c0  (video) ← 1643672201091595.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1643672201091595.mp4  [DRY-RUN]
+would-upload     992482303709928 c0  (video) ← 992482303709928.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/992482303709928.mp4  [DRY-RUN]
+image-pending    4412183892352225 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1318377752974268 c0  (video) ← 1318377752974268.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1318377752974268.mp4  [DRY-RUN]
+image-pending    965938319548184 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2255427168535460 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1003641889288586 c0  (video) ← 1003641889288586.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1003641889288586.mp4  [DRY-RUN]
+would-upload     1684614639453744 c0  (video) ← 1684614639453744.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1684614639453744.mp4  [DRY-RUN]
+image-pending    3092454547618347 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     4513751928906441 c0  (video) ← 4513751928906441.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4513751928906441.mp4  [DRY-RUN]
+would-upload     1400668708765383 c0  (video) ← 1400668708765383.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1400668708765383.mp4  [DRY-RUN]
+would-upload     1360760182532130 c0  (video) ← 1360760182532130.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1360760182532130.mp4  [DRY-RUN]
+image-pending    2461315684382742 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2259859937884797 c0  (video) ← 2259859937884797.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2259859937884797.mp4  [DRY-RUN]
+would-upload     26924679820549809 c0  (video) ← 26924679820549809.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26924679820549809.mp4  [DRY-RUN]
+would-upload     2064347114517933 c0  (video) ← 2064347114517933.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2064347114517933.mp4  [DRY-RUN]
+image-pending    4275663419339672 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1470518217395854 c0  (expected file not found in videos/ewa-2026-06-04)
+would-upload     1377025430938988 c0  (video) ← 1377025430938988.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1377025430938988.mp4  [DRY-RUN]
+would-upload     1317176387183781 c0  (video) ← 1317176387183781.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1317176387183781.mp4  [DRY-RUN]
+would-upload     1536754204793742 c0  (video) ← 1536754204793742.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1536754204793742.mp4  [DRY-RUN]
+would-upload     2039873183324573 c0  (video) ← 2039873183324573.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2039873183324573.mp4  [DRY-RUN]
+image-pending    2216431419171043 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2053618915529126 c0  (video) ← 2053618915529126.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2053618915529126.mp4  [DRY-RUN]
+would-upload     958192860158484 c0  (video) ← 958192860158484.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/958192860158484.mp4  [DRY-RUN]
+image-pending    2740416966341647 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1522500519229673 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    953694590823837 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    851779171322607 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1333164605330802 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1495270952097577 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1525575792629938 c0  (video) ← 1525575792629938.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1525575792629938.mp4  [DRY-RUN]
+image-pending    964553206353515 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1875801396422436 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1983975862993541 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1470161190961581 c0  (video) ← 1470161190961581.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1470161190961581.mp4  [DRY-RUN]
+would-upload     2983380308674231 c0  (video) ← 2983380308674231.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2983380308674231.mp4  [DRY-RUN]
+would-upload     1324215596323029 c0  (video) ← 1324215596323029.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1324215596323029.mp4  [DRY-RUN]
+would-upload     2043834906343891 c0  (video) ← 2043834906343891.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2043834906343891.mp4  [DRY-RUN]
+image-pending    1476207833755224 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1318304606340867 c0  (video) ← 1318304606340867.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1318304606340867.mp4  [DRY-RUN]
+would-upload     2236114363884705 c0  (video) ← 2236114363884705.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2236114363884705.mp4  [DRY-RUN]
+would-upload     945485928324564 c0  (video) ← 945485928324564.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/945485928324564.mp4  [DRY-RUN]
+image-pending    1516325429948585 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     979753768002648 c0  (video) ← 979753768002648.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/979753768002648.mp4  [DRY-RUN]
+image-pending    991902310478987 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1305801728419265 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1377876737485055 c0  (video) ← 1377876737485055.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1377876737485055.mp4  [DRY-RUN]
+would-upload     1612427626483674 c0  (video) ← 1612427626483674.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1612427626483674.mp4  [DRY-RUN]
+would-upload     1385990217015391 c0  (video) ← 1385990217015391.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1385990217015391.mp4  [DRY-RUN]
+would-upload     1309985493978099 c0  (video) ← 1309985493978099.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1309985493978099.mp4  [DRY-RUN]
+image-pending    1514951367077580 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1308151907914323 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1531531011740775 c0  (video) ← 1531531011740775.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1531531011740775.mp4  [DRY-RUN]
+image-pending    1770797747276751 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2279779622848513 c0  (video) ← 2279779622848513.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2279779622848513.mp4  [DRY-RUN]
+video-missing    960993070046514 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1741827783858317 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2402449996890780 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1989436875009228 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    899742599792655 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1620062929092521 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1508306594429088 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    987645690332030 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    4162096024101986 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1058117360197884 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1033408442342752 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    987577610524292 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    975365742130470 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    994854179598759 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1702917654055499 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    3970381953259003 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    988263706923952 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1768018404240811 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1436000898270529 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2177619556372289 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1814178842884956 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    826001053536655 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1417219330161259 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1305427947835058 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3599142360223512 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2026449374934115 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1535970071383337 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1320281302961129 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    964925356319286 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2077067096208713 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2182713202664132 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1553687929649755 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3054377521439506 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    917449898011839 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1607269414288062 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1677600440114478 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2890158987981958 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    928520793575694 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1991582411458608 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2018576172362905 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1315051054070788 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1782620252703596 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1012890787860778 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1786092836097017 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2828041150887052 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    813865028257344 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2224294761645816 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1156871059927366 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1714651159971387 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1021452737078959 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1662614731698719 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1312332717757106 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    996489226254563 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1243646144305695 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1312438411041435 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2208558396566545 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1674756143833332 c0  (video) ← 1674756143833332.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1674756143833332.mp4  [DRY-RUN]
+would-upload     978711844750473 c0  (video) ← 978711844750473.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/978711844750473.mp4  [DRY-RUN]
+image-pending    1570765904483060 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2838081806544741 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2430770317445350 c0  (video) ← 2430770317445350.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2430770317445350.mp4  [DRY-RUN]
+image-pending    27183815321227023 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1306834768265467 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     4329442474033664 c0  (video) ← 4329442474033664.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4329442474033664.mp4  [DRY-RUN]
+video-missing    1529043505478455 c0  (expected file not found in videos/ewa-2026-06-04)
+would-upload     2757713301272328 c0  (video) ← 2757713301272328.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2757713301272328.mp4  [DRY-RUN]
+image-pending    4536222193279010 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1321143203483633 c0  (video) ← 1321143203483633.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1321143203483633.mp4  [DRY-RUN]
+would-upload     1009090912071815 c0  (video) ← 1009090912071815.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1009090912071815.mp4  [DRY-RUN]
+would-upload     1348402967183091 c0  (video) ← 1348402967183091.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1348402967183091.mp4  [DRY-RUN]
+would-upload     27067657459521006 c0  (video) ← 27067657459521006.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27067657459521006.mp4  [DRY-RUN]
+would-upload     748449174977604 c0  (video) ← 748449174977604.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/748449174977604.mp4  [DRY-RUN]
+image-pending    2342146262979353 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1026260910074027 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3876734565955025 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1755953562485263 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    3290986674395422 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    4554868661502640 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    858626433967777 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1306099231659773 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1288252643026016 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1939086186794892 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2005947606981854 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    3606807472805435 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    4072068206417989 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    918900844502946 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1862176411146296 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    818594884418005 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1623114248768169 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1332288532381233 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2074183733160973 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    971032762595869 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    4349218965318489 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1065613166476111 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2435570036886684 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    981608651517825 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1639544597344522 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2275803029493073 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1701264394352219 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1661735128425670 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1566730544874158 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1014949174393738 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1949216799060945 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1539260024608275 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1467068991299148 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1514127293641623 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1704277884194389 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    26635011579517248 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2104930273409040 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1976917656530001 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1004803669155720 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2425811354550177 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1046143537848415 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1666551181294018 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1360157755956403 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1487786325703673 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2085617068684357 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    980467778178019 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1019963017264874 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2570906543359293 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1492324362147236 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    4422700011318772 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    974967512077024 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2523893751387360 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1322240070038242 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1316994949888755 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1036430025515898 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1508952677473455 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    4102191256580085 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1326696246067130 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    872507505869461 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    974818552028732 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1082018847621748 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1773954973978340 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    3957007094604883 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1677876173499348 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    936026679440164 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1326376742921353 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1910949109472686 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1510984150439683 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2200869277367854 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2074975506708307 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1001223785760793 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    764555643334313 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1301229554991116 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    976995418560060 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1545579736903660 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1291506869358763 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    744044915431965 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1305397691160798 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1536050931518136 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    4194569640853216 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1666736737715128 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    4398815877041503 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1516974633464160 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2182764425897081 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    970854182508311 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    881010704258946 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1450735763759796 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1012537721214580 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1668630224421273 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2078547859374139 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    997034366240482 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1509297870848148 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    26887404677594159 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    894047113707341 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    3993272060970220 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2212204339568801 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1026267099822408 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1516225963577313 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2228628927890619 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    4435704406644628 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1547758616939744 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2363004624191956 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1028653600115552 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2294546694682927 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    993888976363707 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1673525496913003 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1001809209488356 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2098536811011109 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2106135576613247 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1337488338317680 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    955445897465280 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2025588438038790 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    976591738323980 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1598410694558232 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    879008978556951 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1517035980133951 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    960364033434474 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1308228347418237 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1311058531160426 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1660622411848342 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2041799329764747 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1011141578135522 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2311137399694995 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1006801345238557 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1388356709793893 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    979740211474396 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27117062487988599 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1651087829495408 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    864368353382421 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1546065580551848 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    4375937352676019 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1073263855878459 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2095943541051645 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2268067750394466 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1672789363956423 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1299291902269993 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    956642197209037 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1766953510774223 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    921029144292931 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1017283167553267 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1016704104138999 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1504984604550012 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1311195931078270 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1660273231967518 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2111210322772416 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    972820088894371 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1001283845649382 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1373620194637136 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    897588326679103 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2237853020339159 c0  (expected file not found in videos/ewa-2026-06-04)
+would-upload     1521507976318024 c0  (video) ← 1521507976318024.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1521507976318024.mp4  [DRY-RUN]
+would-upload     36104121705869057 c0  (video) ← 36104121705869057.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/36104121705869057.mp4  [DRY-RUN]
+would-upload     27363454226582534 c0  (video) ← 27363454226582534.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27363454226582534.mp4  [DRY-RUN]
+image-pending    837870159017972 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1347658757239613 c0  (video) ← 1347658757239613.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1347658757239613.mp4  [DRY-RUN]
+image-pending    2431133667308721 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2596103854176653 c0  (video) ← 2596103854176653.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2596103854176653.mp4  [DRY-RUN]
+image-pending    2183271512462967 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27668195572765197 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1719925546118511 c0  (video) ← 1719925546118511.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1719925546118511.mp4  [DRY-RUN]
+would-upload     834952633021076 c0  (video) ← 834952633021076.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/834952633021076.mp4  [DRY-RUN]
+image-pending    1320044263566928 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1481131579976541 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2006592566655857 c0  (video) ← 2006592566655857.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2006592566655857.mp4  [DRY-RUN]
+image-pending    1372220408055995 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1006413342040093 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     3047514555595406 c0  (video) ← 3047514555595406.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3047514555595406.mp4  [DRY-RUN]
+image-pending    1509020640919608 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1563453688536612 c0  (video) ← 1563453688536612.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1563453688536612.mp4  [DRY-RUN]
+image-pending    1041797818516687 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1639052753901106 c0  (video) ← 1639052753901106.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1639052753901106.mp4  [DRY-RUN]
+video-missing    2062562891002843 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1284625453874317 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1715341649478319 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1029552526195717 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1555490299303837 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1021567286878969 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1273075738242673 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    3077679015766980 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1302221105436364 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1746855186475470 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    4321156288143589 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    961198833463937 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1902222287157093 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1246752857337425 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1315286877246026 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    821241754142280 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    970167549220051 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2162852624562953 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1894995051168301 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1648578893032130 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1377638564277315 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    4390930211121639 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    851286771383058 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2237847300359151 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    975670578504610 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1022136916960108 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1534656998321901 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1719642399388772 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1667406201190474 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2182853585806722 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1011639231415545 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2562838914148299 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1996582620997157 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2078285406421752 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    977992938150535 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2243746403034083 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1753976159093152 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2028089927781018 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1441579454676955 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    939267569091176 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1741559877214832 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2011860209691243 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1469236284677266 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1475645997091455 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    971549602398050 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2743202942746154 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    26527487926926145 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    991720733790824 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1316982233865161 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    966326616435857 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1419301529955580 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1550918453071251 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3390525364445422 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1525033459132825 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1499819115202808 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1528831068615959 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1748918256520187 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2793436534352467 c0  (expected file not found in videos/ewa-2026-06-04)
+would-upload     3210220345853443 c0  (video) ← 3210220345853443.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3210220345853443.mp4  [DRY-RUN]
+would-upload     1908421789870358 c0  (video) ← 1908421789870358.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1908421789870358.mp4  [DRY-RUN]
+would-upload     2088640915403093 c0  (video) ← 2088640915403093.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2088640915403093.mp4  [DRY-RUN]
+image-pending    1526653839098936 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1913008589362425 c0  (video) ← 1913008589362425.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1913008589362425.mp4  [DRY-RUN]
+would-upload     1005533612158224 c0  (video) ← 1005533612158224.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1005533612158224.mp4  [DRY-RUN]
+would-upload     2265366214234665 c0  (video) ← 2265366214234665.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2265366214234665.mp4  [DRY-RUN]
+image-pending    1508105944444396 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1956081255100959 c0  (video) ← 1956081255100959.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1956081255100959.mp4  [DRY-RUN]
+image-pending    1674996150314125 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1606585933738749 c0  (video) ← 1606585933738749.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1606585933738749.mp4  [DRY-RUN]
+would-upload     1990805151808381 c0  (video) ← 1990805151808381.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1990805151808381.mp4  [DRY-RUN]
+image-pending    1006657858374098 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    977886088537175 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1445627504271024 c0  (video) ← 1445627504271024.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1445627504271024.mp4  [DRY-RUN]
+would-upload     5368423430048793 c0  (video) ← 5368423430048793.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/5368423430048793.mp4  [DRY-RUN]
+would-upload     3583391405141313 c0  (video) ← 3583391405141313.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3583391405141313.mp4  [DRY-RUN]
+would-upload     2072598147003830 c0  (video) ← 2072598147003830.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2072598147003830.mp4  [DRY-RUN]
+image-pending    1202987238575570 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1800401644701479 c0  (video) ← 1800401644701479.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1800401644701479.mp4  [DRY-RUN]
+image-pending    970914869252750 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1532857415223303 c0  (video) ← 1532857415223303.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1532857415223303.mp4  [DRY-RUN]
+image-pending    1020583694251828 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     2431438083947692 c0  (video) ← 2431438083947692.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2431438083947692.mp4  [DRY-RUN]
+would-upload     1540063247480768 c0  (video) ← 1540063247480768.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1540063247480768.mp4  [DRY-RUN]
+image-pending    998837815893361 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2248746655968807 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2509858796121775 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2866555747027017 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1016772787479841 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1309659903918601 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1561962825651675 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    995862300104648 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1236196128443791 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    3551401688369685 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1743462893763043 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2411365122698547 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    973822422106007 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1686944142447660 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1323304769638241 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1709651063405246 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    977967318177147 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1712494306597000 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27886084297649942 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1026293693186977 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1469702754422762 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    27391608717122168 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    975701685203071 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1904543063596887 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2262983411183946 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1007040438963941 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1705589480450534 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    936215776052318 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1612679923126404 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1683383139454880 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1980793222577215 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1337047195064237 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    4311731355744220 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    985241514367745 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    3705516332939036 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1318860326243623 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2298034494062994 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    818857611052126 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1464467588282783 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1930104181024895 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    957965230451965 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    27303257282640070 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    842366671845917 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1036830428993798 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1360186299297637 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    916067421453215 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1672479873781817 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1660787181824375 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1493354205197326 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2362134817604995 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2525994964486718 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     3189721991212980 c0  (video) ← 3189721991212980.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3189721991212980.mp4  [DRY-RUN]
+image-pending    1306825208243228 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    891313803986551 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1028378906532851 c0  (video) ← 1028378906532851.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1028378906532851.mp4  [DRY-RUN]
+image-pending    1925344024782126 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     824992397131292 c0  (video) ← 824992397131292.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/824992397131292.mp4  [DRY-RUN]
+would-upload     1307961927449640 c0  (video) ← 1307961927449640.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1307961927449640.mp4  [DRY-RUN]
+would-upload     966176779617610 c0  (video) ← 966176779617610.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/966176779617610.mp4  [DRY-RUN]
+image-pending    958114793515128 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1019857204231695 c0  (video) ← 1019857204231695.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1019857204231695.mp4  [DRY-RUN]
+would-upload     1509520790711417 c0  (video) ← 1509520790711417.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1509520790711417.mp4  [DRY-RUN]
+image-pending    1297615625810494 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     946424164893649 c0  (video) ← 946424164893649.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/946424164893649.mp4  [DRY-RUN]
+would-upload     982589591431388 c0  (video) ← 982589591431388.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/982589591431388.mp4  [DRY-RUN]
+video-missing    1887587215267853 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1428430889093017 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1518450716536389 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1503331527955696 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1741721763921018 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1958049281510943 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1980659705888481 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1318542603037413 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    960194020187220 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2056312021586904 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2023627198193226 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2395672260959105 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    4232988713680541 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1687369908855048 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1296435602471543 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1313409750242969 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1317429833153850 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1573806987749205 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2110790866527175 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1693449201948411 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    960982940256355 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    951432671049319 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2351038855423686 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    26432637296414726 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    986542317567112 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    998628816470478 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    26678887361783007 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    26706776155684215 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1459104505936714 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1533503848350700 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2291702794570315 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1490007362595542 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2980896488970291 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    4426912044231441 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1513516800324135 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1067911309526995 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1633855571230916 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1536065898176025 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    947353454969133 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1003904902027995 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1642045163673366 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    973252771977141 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1019926514033118 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1359948212675982 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2138891036680232 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    26993504810292585 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    936312469414744 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    992188743422799 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2156267828553618 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2205750680279232 c0  (expected file not found in videos/ewa-2026-06-04)
+would-upload     3445896925576971 c0  (video) ← 3445896925576971.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3445896925576971.mp4  [DRY-RUN]
+would-upload     26905922349030332 c0  (video) ← 26905922349030332.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26905922349030332.mp4  [DRY-RUN]
+image-pending    1629368058366517 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     981124314664045 c0  (video) ← 981124314664045.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/981124314664045.mp4  [DRY-RUN]
+would-upload     27861509003434650 c0  (video) ← 27861509003434650.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27861509003434650.mp4  [DRY-RUN]
+would-upload     846508321853410 c0  (video) ← 846508321853410.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/846508321853410.mp4  [DRY-RUN]
+would-upload     26260602906948172 c0  (video) ← 26260602906948172.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26260602906948172.mp4  [DRY-RUN]
+would-upload     866569962541703 c0  (video) ← 866569962541703.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/866569962541703.mp4  [DRY-RUN]
+would-upload     3646777858812462 c0  (video) ← 3646777858812462.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3646777858812462.mp4  [DRY-RUN]
+would-upload     1495086295428585 c0  (video) ← 1495086295428585.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1495086295428585.mp4  [DRY-RUN]
+would-upload     1618576275895067 c0  (video) ← 1618576275895067.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1618576275895067.mp4  [DRY-RUN]
+video-missing    1761686138604652 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    4673772946191426 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1507715590563716 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2093401764890283 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2358854247976716 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    27089478570716288 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1895897764288128 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2044076636144663 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    806727172520435 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1329448802452673 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1566633031703996 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1342383271316042 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1909888873050993 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2218878528866883 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1231949248868463 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1286185217001051 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1002668825793444 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    985870937178769 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    979619824966317 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1754938732342312 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1304853341763787 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1377593344285563 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1901132260576343 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1645452803415845 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1538176351244727 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1603216645136950 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2290650441465973 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1970438203586053 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    2083031232247908 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    746233768547996 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2324048078128104 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2629167464146173 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1027173666407724 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    26906616242298161 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    27205135195762127 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2464527084022540 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    36497156166542365 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    969749175826102 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    990334796745378 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2020430098881378 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    4392418991073257 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    978013958273732 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2062675387679311 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    2116546079265027 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1000675962919066 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    1021381106987637 c0  (expected file not found in videos/ewa-2026-06-04)
+image-pending    1266186022170811 c0  (HANDOVER §8.5 — image handling not yet built)
+video-missing    2445411335933513 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    826433586893438 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    863218663501894 c0  (expected file not found in videos/ewa-2026-06-04)
+would-upload     922154427552637 c0  (video) ← 922154427552637.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/922154427552637.mp4  [DRY-RUN]
+image-pending    969992775921825 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     998315256229059 c0  (video) ← 998315256229059.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/998315256229059.mp4  [DRY-RUN]
+would-upload     1340116611363034 c0  (video) ← 1340116611363034.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1340116611363034.mp4  [DRY-RUN]
+would-upload     828434033400765 c0  (video) ← 828434033400765.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/828434033400765.mp4  [DRY-RUN]
+would-upload     995919866389192 c0  (video) ← 995919866389192.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/995919866389192.mp4  [DRY-RUN]
+would-upload     2441945402983626 c0  (video) ← 2441945402983626.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2441945402983626.mp4  [DRY-RUN]
+would-upload     1515884906673913 c0  (video) ← 1515884906673913.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1515884906673913.mp4  [DRY-RUN]
+would-upload     1302642214805186 c0  (video) ← 1302642214805186.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1302642214805186.mp4  [DRY-RUN]
+image-pending    1377202687552744 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1531168315409937 c0  (video) ← 1531168315409937.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1531168315409937.mp4  [DRY-RUN]
+would-upload     1302571054824475 c0  (video) ← 1302571054824475.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1302571054824475.mp4  [DRY-RUN]
+would-upload     1645943833177956 c0  (video) ← 1645943833177956.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1645943833177956.mp4  [DRY-RUN]
+image-pending    2367031697377370 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1377658214176351 c0  (HANDOVER §8.5 — image handling not yet built)
+would-upload     1526293635902347 c0  (video) ← 1526293635902347.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1526293635902347.mp4  [DRY-RUN]
+video-missing    2470811630018201 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1294894299463503 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1360600055940005 c0  (expected file not found in videos/ewa-2026-06-04)
+video-missing    1670605964147545 c0  (expected file not found in videos/ewa-2026-06-04)

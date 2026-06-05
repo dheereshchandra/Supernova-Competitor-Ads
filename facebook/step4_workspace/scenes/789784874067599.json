@@ -1,0 +1,157 @@
+{
+  "competitor_id": "789784874067599",
+  "parsed": {
+    "duration_s": 28.0,
+    "production_type": "mixed",
+    "production_notes": "The presenter appears human but exhibits slightly uncanny, stiff facial movements and flat lighting, suggesting potential AI enhancement or avatar use. The video mixes this footage with screen recordings of an app interface.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Late 20s, slim build, fair complexion. Dark brown hair pulled back. Wears round wire-rimmed glasses.",
+        "wardrobe": "Light pink button-down shirt, large black over-ear headphones.",
+        "demeanor": "Enthusiastic, educational, slightly stiff."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 8.5,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Introduction",
+        "setting": "Home studio, daytime, potted plants, microphone, colorful artwork.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits at a desk in a room, facing a large black microphone on a stand. Green potted plants and a colorful abstract artwork are visible in the background. She speaks animatedly, using hand gestures.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A speaks into a microphone in a home studio setting. Large white text captions appear on screen, highlighting her spoken words. A small, colorful logo is positioned in the top right corner.",
+        "audio_transcript": "Character A says: Do not underestimate the power of speaking English with a clear accent.\nCharacter A says: There's this AI tool called BoldVoice.\nCharacter A says: It's an app, and the AI gives you real-time feedback on your pronunciation.",
+        "on_screen_text": "Do not underestimate the power of speaking English with a clear accent. There's this AI tool called BoldVoice. And the AI gives you real-time feedback on your pronunciation."
+      },
+      {
+        "n": 2,
+        "start_s": 8.5,
+        "end_s": 14.5,
+        "screenshot_at_s": 11.5,
+        "scene_label": "Pronunciation Practice",
+        "setting": "Home studio, daytime, potted plants, microphone, colorful artwork.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up with inset",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A sits at her desk, holding a black smartphone. She looks at the screen, speaks into the microphone, and makes specific mouth shapes.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A digital 3D rendering of a human mouth and jaw in profile. The lips, teeth, and tongue move to demonstrate articulation.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Character A is shown speaking into the microphone while holding a phone. A large inset panel displays a screen recording of a pronunciation app interface. The app UI shows a pronunciation score, feedback on specific sounds, and a 3D animation of a mouth. Text captions continue to appear on the main video.",
+        "audio_transcript": "Character A says: Wold.\nCharacter A says: It's telling me that I have a problem with the \"er\" sound and my \"L\" sound.\nCharacter A says: World.",
+        "on_screen_text": "world. It's telling me that I have a problem with the \"er\" sound and my \"L\" sound. world."
+      },
+      {
+        "n": 3,
+        "start_s": 14.5,
+        "end_s": 22.5,
+        "screenshot_at_s": 18.5,
+        "scene_label": "Personalized Curriculum",
+        "setting": "Home studio, daytime, potted plants, microphone, colorful artwork.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up with inset",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A sits at her desk, holding the smartphone. She gestures with her right hand while speaking towards the camera.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A headshot photograph of a woman with dark hair pulled back, wearing a light-colored top, looking directly forward.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Character A continues speaking, with an inset panel showing different screens of the app interface. The app screens display a user profile, an accent test result, and a list of focus areas with pronunciation scores. White text captions are overlaid on the main video.",
+        "audio_transcript": "Character A says: It personalizes your curriculum based on your accent test results and native language to target the unique sounds that are difficult for you.",
+        "on_screen_text": "It personalizes your curriculum based on your accent test results and native language to target the unique sounds that are difficult for you."
+      },
+      {
+        "n": 4,
+        "start_s": 22.5,
+        "end_s": 26.5,
+        "screenshot_at_s": 24.5,
+        "scene_label": "Expert Coaches",
+        "setting": "Home studio, daytime, potted plants, microphone, colorful artwork.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up with inset",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A sits at her desk, speaking and gesturing with her right hand.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A sequence of three people speaking to the camera: a bearded man in a striped shirt, a woman in a grey top pointing to her mouth, and a man in a black shirt demonstrating a tongue position.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Character A speaks while the inset panel shows video clips of different pronunciation coaches within the app interface. The coaches demonstrate mouth movements. Text captions are displayed on the main video.",
+        "audio_transcript": "Character A says: You'll learn from Harvard-trained coaches that will teach you how to pronounce each word correctly.",
+        "on_screen_text": "You'll learn from Harvard-trained coaches that will teach you each word correctly."
+      },
+      {
+        "n": 5,
+        "start_s": 26.5,
+        "end_s": 28.0,
+        "screenshot_at_s": 27.0,
+        "scene_label": "End Card",
+        "setting": "Solid dark background",
+        "characters_in_scene": [],
+        "camera": "Wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark grey background with no physical elements or characters.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A dark grey end card is displayed. It features a star rating graphic, the app logo, an App Store download badge, and a tagline at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "27,000 STAR RATING\nBoldVoice\nDownload on the App Store\nSpeak English Confidently"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779986084.7997825
+}

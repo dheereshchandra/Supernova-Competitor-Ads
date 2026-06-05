@@ -1,0 +1,43 @@
+{
+  "competitor_id": "1285208543700925",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "App user",
+        "appearance": "A fair-skinned human right hand with the index finger extended in a pointing gesture. The nails are short and neat.",
+        "wardrobe": "None visible.",
+        "demeanor": "Neutral, robotic, interacting with the screen."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Reading Animal Farm - Pig Illustration",
+        "supernova_script": "Unknown speaker says: इंग्लिश बोलने में अटकते हो? [Stuck while speaking English?]\nUnknown speaker says: Good morning everyone, I am excited to join this team. [Good morning everyone, I am excited to join this team.]\nUnknown speaker says: Excited. [उत्साहित]",
+        "scene_summary": "- Hooks the viewer by addressing the common problem of lacking English speaking confidence.\n- Demonstrates the core app feature: reading real-world English text (like an office introduction).\n- Shows the instant tap-to-translate mechanic providing Hindi meaning and pronunciation.",
+        "supernova_on_screen_text": "PRACTICE ENGLISH FOR 10 MINUTES A DAY\nGood morning everyone, I am excited to join this team.\nexcited\n[ɪkˈsaɪtɪd]\nउत्साहित\nI know it\nLearn"
+      },
+      {
+        "n": 2,
+        "scene_label": "Reading Animal Farm - Cow Illustration",
+        "supernova_script": "Unknown speaker says: I have always wanted to work in a dynamic environment. [I have always wanted to work in a dynamic environment.]\nUnknown speaker says: Dynamic. [गतिशील]\nUnknown speaker says: जो वर्ड समझ ना आए, उस पर टैप करो। [Tap on the word you don't understand.]\nUnknown speaker says: I believe that dedication is important. [I believe that dedication is important.]\nUnknown speaker says: Dedication. [समर्पण]\nUnknown speaker says: सही pronunciation और हिंदी meaning तुरंत पाओ। [Get the correct pronunciation and Hindi meaning instantly.]\nUnknown speaker says: Thank you for this wonderful opportunity. [Thank you for this wonderful opportunity.]\nUnknown speaker says: Opportunity. [अवसर]\nUnknown speaker says: रोज़ 10 मिनट प्रैक्टिस करो। आज ही Supernova डाउनलोड करो! [Practice 10 minutes daily. Download Supernova today!]",
+        "scene_summary": "- Continues demonstrating the tap-to-translate feature with practical workplace vocabulary.\n- The warm, encouraging voiceover reinforces the ease of use, highlighting instant pronunciation and Hindi meanings.\n- Ends with a strong call-to-action to build a daily learning habit with Supernova.",
+        "supernova_on_screen_text": "PRACTICE ENGLISH FOR 10 MINUTES A DAY\nOFFICE INTRODUCTIONS\nREAL-WORLD ENGLISH\nGood morning everyone, I am excited to join this team. I have always wanted to work in a dynamic environment. I believe that dedication is important. Thank you for this wonderful opportunity.\ndynamic\n[daɪˈnæmɪk]\nगतिशील\ndedication\n[ˌdɛdɪˈkeɪʃən]\nसमर्पण\nopportunity\n[ˌɒpəˈtjuːnɪti]\nअवसर\nI know it\nLearn"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "SPANISH",
+        "supernova_swap": "ENGLISH"
+      },
+      {
+        "competitor_brand": "ANIMAL FARM / GEORGE ORWELL",
+        "supernova_swap": "OFFICE INTRODUCTIONS / REAL-WORLD ENGLISH"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779985926.5375793
+}

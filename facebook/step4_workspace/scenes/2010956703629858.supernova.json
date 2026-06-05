@@ -1,0 +1,46 @@
+{
+  "competitor_id": "2010956703629858",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, fair complexion. Short blonde bob haircut. Symmetrical facial features.",
+        "wardrobe": "Beige blazer over a light-colored top, delicate silver necklace.",
+        "demeanor": "Calm, professional, and slightly robotic."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young adult female, slim build, fair complexion. Short reddish-brown hair with bangs.",
+        "wardrobe": "White spaghetti-strap top, black lavalier microphone clipped to the neckline.",
+        "demeanor": "Expressive, slightly confused initially, then surprised and engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Candle Vocabulary Lesson",
+        "supernova_script": "Character A says: क्या कर रहे हो? [What are you doing?]\nCharacter B says: I try to burn the candle. [I try to burn the candle.]\nCharacter A says: शायद तुम कहना चाहती हो, 'I am trying to light the candle.' [Maybe you want to say, 'I am trying to light the candle.']\nCharacter B says: Okay. I'm trying to light the candle. मुझे इसकी smell बहुत पसंद है। [Okay. I'm trying to light the candle. I really like its smell.]\nCharacter A says: English में 'smell' अक्सर बुरी महक के लिए इस्तेमाल होता है। तुम्हें 'scent' कहना चाहिए। [In English, 'smell' is often used for bad odors. You should say 'scent'.]\nCharacter B says: Okay. I really love the scent of the candle. [Okay. I really love the scent of the candle.]\nCharacter A says: Perfect! [Perfect!]\nCharacter B says: मुझे सच में रोज़ English बोलने की practice चाहिए! [I really need daily English speaking practice!]\nCharacter A says: तो फिर रोज़ किसी के साथ English में बात करो। [Then speak with someone in English every day.]\nCharacter B says: पर महंगे tutors के लिए पैसे नहीं हैं मेरे पास! [But I don't have money for expensive tutors!]\nCharacter A says: तो AI tutors से बात करो ना। [Then talk to AI tutors.]\nCharacter B says: मुझे किसी robot से बात नहीं करनी। [I don't want to talk to a robot.]\nCharacter A says: Surprise! मैं भी तो एक AI teacher हूँ! [Surprise! I am also an AI teacher!]\nCharacter B says: तुम? पर तुम तो बिल्कुल असली इंसान जैसी हो! [You? But you are exactly like a real human!]\nCharacter A says: Supernova app पर practice करना बिल्कुल ऐसा ही है। रोज़ मेरे साथ practice करो। [Practicing on the Supernova app is exactly like this. Practice with me every day.]\nCharacter B says: Okay! तो मैं आज ही Supernova download करती हूँ और रोज़ practice करती हूँ! [Okay! So I'll download Supernova today itself and practice every day!]",
+        "scene_summary": "- Hooks the viewer with a relatable, real-world English mistake (burn vs. light, smell vs. scent).\n- Introduces the problem of needing affordable daily speaking practice.\n- Reveals the AI tutor twist, showing how natural and human-like the Supernova AI feels.\n- Ends with a clear call-to-action to download the app.",
+        "supernova_on_screen_text": "क्या कर रहे हो?\nI try to burn the candle\nI'm trying to light the candle\nमुझे इसकी smell बहुत पसंद है\nSay \"scent\" instead of \"smell\"\nI really love the scent of the candle\nPerfect! 👍\nमुझे रोज़ English practice चाहिए!\nमहंगे tutors के लिए पैसे नहीं हैं 😔\nTalk to AI tutors\nमुझे robot से बात नहीं करनी 🤖\nSurprise! मैं एक AI teacher हूँ!\nतुम? 😱\nबिल्कुल असली इंसान जैसी!\nDownload the Supernova app\nSupernova - Your AI English Tutor\nLearn and practice speaking\nDOWNLOAD"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear final call-to-action.\n- Displays the Supernova brand and core value proposition (AI English coach).",
+        "supernova_on_screen_text": "Supernova App\nYour personal AI English coach\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658623.9401531
+}

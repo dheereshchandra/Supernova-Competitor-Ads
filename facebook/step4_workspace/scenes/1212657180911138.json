@@ -1,0 +1,67 @@
+{
+  "competitor_id": "1212657180911138",
+  "parsed": {
+    "duration_s": 13.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines a digital graphic overlay on a likely stock or AI-generated forest background with live-action footage of a human hand interacting with a smartphone.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "User",
+        "appearance": "A human hand, light to medium complexion, with short, clean fingernails. Only the hand and part of the wrist are visible.",
+        "wardrobe": "Not applicable, only hand is visible.",
+        "demeanor": "Interacting purposefully and quickly with a smartphone interface."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.0,
+        "screenshot_at_s": 2.5,
+        "scene_label": "Quiz Question",
+        "setting": "A misty forest with tall pine trees, sunlight filtering through.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A dense, misty forest scene with tall, straight pine trees. Sunlight filters through the canopy, creating a hazy, atmospheric effect. The ground is covered in low-lying vegetation and ferns. The camera angle is wide, capturing the depth of the forest.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A misty forest background with a quiz question overlay. The question asks '\u092d\u093e\u0930\u0924 \u0915\u093e \u0930\u093e\u0937\u094d\u091f\u094d\u0930\u0940\u092f \u092a\u0915\u094d\u0937\u0940 \u0915\u094c\u0928 \u0938\u093e \u0939\u0948?' (Which is the national bird of India?). Three options appear sequentially: A. \u0924\u094b\u0924\u093e (Parrot) with a parrot image, B. \u092e\u094b\u0930 (Peacock) with a peacock image, and C. \u0915\u094c\u0906 (Crow) with a crow image. Option B is selected, turns green with a checkmark, and a fake bank SMS notification pops up showing a credit of \u20b92,01,108. Text at the bottom encourages downloading the Zinglish App.",
+        "audio_transcript": "Unknown speaker says: \u092d\u093e\u0930\u0924 \u0915\u093e \u0930\u093e\u0937\u094d\u091f\u094d\u0930\u0940\u092f \u092a\u0915\u094d\u0937\u0940 \u0915\u094c\u0928 \u0938\u093e \u0939\u0948? [Which is the national bird of India?]",
+        "on_screen_text": "\u092d\u093e\u0930\u0924 \u0915\u093e \u0930\u093e\u0937\u094d\u091f\u094d\u0930\u0940\u092f \u092a\u0915\u094d\u0937\u0940 \u0915\u094c\u0928 \u0938\u093e \u0939\u0948? (Which is the national bird of India?)\nA. \u0924\u094b\u0924\u093e (Parrot)\nB. \u092e\u094b\u0930 (Peacock)\nC. \u0915\u094c\u0906 (Crow)\nTruecaller SMS - 20:00\nBank of India\n+ \u20b92,01,108\nCredited to Account 0002\n\u0905\u092a\u0928\u0947 \u092a\u0930\u093f\u0935\u093e\u0930 \u0915\u093e \u0938\u092c\u0938\u0947 \u0905\u092e\u0940\u0930 \u0906\u0926\u092e\u0940 \u092c\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f Download \u0915\u0940\u091c\u093f\u092f\u0947 Zinglish App (To become the richest man in your family, Download Zinglish App)"
+      },
+      {
+        "n": 2,
+        "start_s": 5.0,
+        "end_s": 13.0,
+        "screenshot_at_s": 9.0,
+        "scene_label": "App Demonstration",
+        "setting": "A person holding a smartphone against a solid green background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of a person's hand holding a modern smartphone with a light-colored case. The background is a solid, bright green screen. The hand's thumb is actively tapping and swiping on the phone's screen. The lighting is even and bright, focusing entirely on the device and the hand interacting with it.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A hand holds a smartphone against a green screen. The screen shows an SMS message from HDFC Bank about an E-Mandate deduction. The user selects the text, and a translation popup appears, translating the English text to Hindi. The user then taps 'Chat with Zia'. The scene cuts to the Google Play Store page for the 'Zinglish: English Speaking App', and the user taps the 'Open' button.",
+        "audio_transcript": "Unknown speaker says: \u0928\u093e \u0924\u094b \u0915\u093e\u0930\u0935\u093e\u0902 \u0915\u0940 \u0924\u0932\u093e\u0936 \u0939\u0948 [Neither am I looking for a caravan]",
+        "on_screen_text": "VM-HDFCBK-S\nE-Mandate!\nRs.2000.00 will be deducted on 10/01/26...\n\u0908-\u091c\u0928\u093e\u0926\u0947\u0936! 10/01/26, \u0915\u094b 2000.00 \u0930\u0941\u092a\u092f\u0947 \u0915\u0940 \u0915\u091f\u094c\u0924\u0940 \u0915\u0940 \u091c\u093e\u090f\u0917\u0940...\nChat with Zia\nZinglish: English Speaking App\nCapslock Market Places Pvt Ltd\nUninstall Open"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779803911.3867376
+}

@@ -1,0 +1,101 @@
+{
+  "competitor_id": "35692433970401655",
+  "parsed": {
+    "duration_s": 24.0,
+    "production_type": "mixed",
+    "production_notes": "The top panel uses live-action footage and static images. The bottom panel is a digital screencast with a stock hand asset overlaid, moving in a rigid, unnatural path typical of motion graphics.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Victor Frankenstein",
+        "appearance": "Young male, pale complexion, dark messy hair. Distressed facial features.",
+        "wardrobe": "Dark, loose-fitting shirt.",
+        "demeanor": "Distressed and fearful."
+      },
+      {
+        "id": "B",
+        "role": "User hand",
+        "appearance": "Light-skinned human hand, visible from the wrist up. Index finger extended.",
+        "wardrobe": "None visible.",
+        "demeanor": "Neutral, pointing."
+      },
+      {
+        "id": "C",
+        "role": "Frankenstein's Monster",
+        "appearance": "Male, pale complexion, prominent heavy brow, flat squared-off head, visible scars on forehead.",
+        "wardrobe": "Dark clothing, mostly obscured.",
+        "demeanor": "Somber and imposing."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.5,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Frankenstein's despair",
+        "setting": "Dark, candlelit room top; plain white surface bottom.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A young man with pale skin and dark, messy hair is shown in a medium close-up. He has a distressed, fearful expression. He is wearing a dark, loose-fitting shirt. The background is a dark room, dimly lit by several candles on a table behind him.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A light-skinned human hand is visible from the wrist up. The index finger is extended and pointing towards the background. The background is a plain white surface.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half shows a young man in a dark, candlelit room looking fearful. The bottom half shows a hand interacting with a block of text, highlighting specific words. Text is visible at the very top of the screen.",
+        "audio_transcript": "Unknown speaker says: Why did I do this? What have I created? I am afraid of what will happen now.",
+        "on_screen_text": "IMPARA L'INGLESE CON LIBRI E AUDIOLIBRI IN 10 MINUTI AL GIORNO\n\"Why did I do this? What have I created? I am afraid of what will happen now.\" He said quietly. Victor Frankenstein looked at the creature he had made. His heart was full of fear and sadness. The room was dark and cold."
+      },
+      {
+        "n": 2,
+        "start_s": 7.5,
+        "end_s": 24.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Reading Frankenstein",
+        "setting": "Solid black background top; plain white surface bottom.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A black and white portrait of a man's face. He has a prominent, heavy brow, a flat, squared-off head, and visible scars or stitches on his forehead. His expression is somber. The background is solid black.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A light-skinned human hand is visible from the wrist up. The index finger is extended and pointing towards the background. The background is a plain white surface.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half shows a black and white book cover featuring Frankenstein's monster. The bottom half shows a hand interacting with a block of text, highlighting words which then trigger popup translation cards.",
+        "audio_transcript": "Unknown speaker says: He said quietly. Victor Frankenstein looked at the creature\nUnknown speaker says: Creature\nUnknown speaker says: he had made. His heart\nUnknown speaker says: Heart\nUnknown speaker says: was full of fear and sadness.\nUnknown speaker says: Sadness\nUnknown speaker says: The room was dark and cold.\nUnknown speaker says: Cold",
+        "on_screen_text": "IMPARA L'INGLESE CON LIBRI E AUDIOLIBRI IN 10 MINUTI AL GIORNO\nFRANKENSTEIN MARY SHELLEY\n\"Why did I do this? What have I created? I am afraid of what will happen now.\" He said quietly. Victor Frankenstein looked at the creature he had made. His heart was full of fear and sadness. The room was dark and cold.\nto be afraid\nnow\ncreature\nheart\nsadness\ncold\nLo so\nImparare"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.2929966
+}

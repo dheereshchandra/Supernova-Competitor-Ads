@@ -1,0 +1,95 @@
+{
+  "competitor_id": "869185468874772",
+  "parsed": {
+    "duration_s": 67.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines live-action human recording in an office and home setting with a 3D animated AI avatar. The avatar exhibits typical stylized 3D rendering with smooth, flawless skin and slightly unnatural, perfectly looped idle animations.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male boss",
+        "appearance": "Older male, medium build, grey hair. Professional and authoritative.",
+        "wardrobe": "Navy blue suit jacket over a crisp white button-down shirt.",
+        "demeanor": "Professional, slightly demanding but impressed."
+      },
+      {
+        "id": "B",
+        "role": "female employee/learner",
+        "appearance": "Young female, fair complexion, long brown hair styled in a side braid. Expressive facial features.",
+        "wardrobe": "Maroon long-sleeve top in the first scene; pink sleeveless tank top in the second scene.",
+        "demeanor": "Initially surprised, then confident and eager to learn."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated young female, fair skin with freckles, red hair tied back. Large, expressive eyes.",
+        "wardrobe": "Blue blazer over a white shirt.",
+        "demeanor": "Friendly, encouraging, and attentive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 21.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Office Presentation Prep",
+        "setting": "Modern corporate office, daytime. Glass partitions, desks, computers, neutral color palette.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot, transitioning to a close-up on a smartphone.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A and Character B stand in a brightly lit modern office. Character A holds a tablet. Character B holds a mug, takes a sip, and sets it down on a desk. They converse. Character B then holds up a smartphone displaying a 3D avatar. The background features glass walls and blurred office workers at desks.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A male boss informs a female employee about an upcoming presentation in English. She confidently accepts and later shows him an AI tutor app on her phone to explain her improved language skills. Subtitles overlay the bottom of the screen.",
+        "audio_transcript": "Character A says: Hey, call with New York in ten minutes.\nCharacter B says: Oh.\nCharacter A says: You're presenting it, in English.\nCharacter B says: Okay.\nCharacter B says: I can do that. I'll start with the timeline. Then the budget. Then the risks.\nCharacter A says: When did your English get this good?\nCharacter B says: I started using Loora. Ten minutes a day. Real conversations, same as this.",
+        "on_screen_text": "Hey, call with New York in ten minutes. You're presenting it, in English. Okay. I can do that. I'll start with the timeline. Then the budget. Then the risks. When did your English get this good? I started using Loora. Ten minutes a day. Real conversations, same as this."
+      },
+      {
+        "n": 2,
+        "start_s": 21.5,
+        "end_s": 67.0,
+        "screenshot_at_s": 45.0,
+        "scene_label": "AI Tutor Practice",
+        "setting": "Split screen. Left: blurred office background. Right: home interior with a ceiling fan.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "Split-screen, close-up talking heads.",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character C, a 3D animated woman, rests her chin on her hand. She is framed from the chest up against a blurred, abstract office background. She speaks and changes her facial expressions.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Character B looks directly at the camera. She is in a room with a white ceiling and a dark ceiling fan visible above her head. She speaks and gestures slightly with her hands.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen shows an animated AI avatar on the left and a human user on the right. They engage in a conversation where the AI corrects the user's English grammar. Text overlays show the user's speech with red crosses for errors and green checkmarks for corrections, along with the app logo.",
+        "audio_transcript": "Character C says: What are you doing?\nCharacter B says: I am working. I have many work today.\nCharacter C says: Do you mean: \"I have a lot of work today\"?\nCharacter B says: Yes, I have a lot of work today and my brain not working.\nCharacter C says: Do you mean: \"my brain isn't working\"?\nCharacter B says: Yes, I have a lot of work and my brain isn't working.\nCharacter C says: That's perfect! Well done, Anna!\nCharacter B says: I want to speak in English everyday but lessons are expensive!\nCharacter C says: Why don't you speak to an AI tutor?\nCharacter B says: I'm not sure about an AI tutor. I want someone who can correct my mistakes.\nCharacter C says: Like I did! My name is Loora and I am an AI tutor! Nice to meet you, Anna!\nCharacter B says: You're an AI tutor? Wow, cool!\nCharacter C says: Download the Loora app and talk to me everyday and I'll help correct your mistakes!\nCharacter B says: Amazing. I'll add it to my daily routine today!",
+        "on_screen_text": "What are you doing? I am working. X I have many work today. Do you mean: \"I have a lot of work today\"? Yes, I have a lot of work today. X and my brain not working. Do you mean: \"my brain isn't working\"? Yes, I have a lot of work and my brain isn't working. That's perfect! Well done, Anna! I want to speak in English everyday X but lesson is expensive! Why don't you speak to an AI tutor? I'm not sure about an AI tutor. I want someone who can correct my mistakes. Like I did! My name is Loora and I am an AI tutor! Nice to meet you, Anna! You're an AI tutor? Wow, cool! Loora Download the Loora app and talk to me everyday and I'll help correct your mistakes! Amazing. I'll add it to my daily routine today! PERFECT RESPONSE"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780641380.6305687
+}

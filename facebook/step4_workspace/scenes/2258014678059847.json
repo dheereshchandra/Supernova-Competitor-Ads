@@ -1,0 +1,71 @@
+{
+  "competitor_id": "2258014678059847",
+  "parsed": {
+    "duration_s": 31.0,
+    "production_type": "mixed",
+    "production_notes": "A real human hand is composited over a digital app interface. The background illustrations within the app appear to be digital artwork, potentially AI-generated given the stylized rendering.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "App User",
+        "appearance": "A light-skinned human hand and lower forearm. The hand has short, unpainted fingernails and slender fingers. No distinguishing marks are visible.",
+        "wardrobe": "No clothing is visible on the forearm.",
+        "demeanor": "Deliberate and precise in its tapping actions."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Reading Animal Farm - Part 1",
+        "setting": "Digital app interface with a dark, stylized illustration of farm animals.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A light-skinned human hand with short fingernails reaches into the frame from the bottom, with the index finger extended as if pointing or touching a surface. The background consists of a dark, stylized illustration of various farm animals, including a pig, horses, sheep, and chickens, standing in front of a dark, geometric barn structure. The lighting on the hand is even and bright, contrasting with the dark illustration behind it.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A mobile app interface displays an illustration of farm animals above a block of English text. A human hand enters from the bottom and taps the word 'equal'. A pop-up shows the word's pronunciation and Chinese translation. The hand then taps 'important', triggering a similar pop-up.",
+        "audio_transcript": "Unknown speaker says: All animals are equal,\nUnknown speaker says: equal\nUnknown speaker says: but some animals are more important\nUnknown speaker says: important\nUnknown speaker says: than others,\" one of them",
+        "on_screen_text": "\u6bcf\u5929\u82b110\u5206\u949f\u8bfb\u82f1\u6587\u4e66 (Spend 10 minutes a day reading English books)\n\"All animals are equal, but some animals are more important than others,\" one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore.\nequal\n[\u02c8i\u02d0kw\u0259l]\n\u5e73\u7b49\u7684 (equal)\n\u5df2\u638c\u63e1 (Mastered)\n\u5b66\u4e60 (Learn)\nimportant\n[\u026am\u02c8p\u0254\u02d0rtnt]\n\u91cd\u8981\u7684 (important)"
+      },
+      {
+        "n": 2,
+        "start_s": 5.5,
+        "end_s": 31.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Reading Animal Farm - Part 2",
+        "setting": "Digital app interface with a warm, golden-hour illustration of farm animals.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A light-skinned human hand with short fingernails is visible in the lower half of the frame, with the index finger extended. The background features a warm, golden-hour illustration of farm animals, including cows, sheep, and horses, gathered in a field with a red barn visible in the distance. The hand moves slightly, maintaining its pointing gesture against the illustrated background.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The app interface updates with a new illustration of farm animals in a warm setting. The English text remains. The human hand continues to tap various words in the text, including 'slowly', 'cold', 'tried', 'words', 'something', 'farm', and 'always'. Each tap opens a dictionary pop-up with phonetic spelling and Chinese translation. The hand occasionally taps the 'Mastered' button.",
+        "audio_transcript": "Unknown speaker says: read slowly.\nUnknown speaker says: slowly\nUnknown speaker says: The animals stood silent in the cold\nUnknown speaker says: cold\nUnknown speaker says: night, staring at the wall. They tried\nUnknown speaker says: to try\nUnknown speaker says: to remember the old words,\nUnknown speaker says: word\nUnknown speaker says: but something\nUnknown speaker says: something\nUnknown speaker says: felt wrong. No one spoke. The farm\nUnknown speaker says: farm\nUnknown speaker says: looked the same as always,\nUnknown speaker says: always\nUnknown speaker says: yet nothing was the same anymore.",
+        "on_screen_text": "\u6bcf\u5929\u82b110\u5206\u949f\u8bfb\u82f1\u6587\u4e66 (Spend 10 minutes a day reading English books)\n\u52a8\u7269\u5e84\u56ed (Animal Farm)\n\u4e54\u6cbb\u00b7\u5965\u5a01\u5c14 (George Orwell)\n\"All animals are equal, but some animals are more important than others,\" one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore.\nslowly\n[\u02c8slo\u028ali]\n\u6162\u6162\u5730 (slowly)\n\u5df2\u638c\u63e1 (Mastered)\n\u5b66\u4e60 (Learn)\ncold\n[ko\u028ald]\n\u51b7\u7684 (cold)\ntried\n[tra\u026ad]\n\u5c1d\u8bd5 (try)\nwords\n[w\u025c\u02d0rdz]\n\u5355\u8bcd (word)\nsomething\n[\u02c8s\u028cm\u03b8\u026a\u014b]\n\u67d0\u7269 (something)\nfarm\n[f\u0251\u02d0rm]\n\u519c\u573a (farm)\nalways\n[\u02c8\u0254\u02d0lwe\u026az]\n\u603b\u662f (always)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.2892349
+}

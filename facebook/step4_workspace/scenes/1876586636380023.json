@@ -1,0 +1,75 @@
+{
+  "competitor_id": "1876586636380023",
+  "parsed": {
+    "duration_s": 26.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in a real kitchen setting. The movements, lighting, and interactions with the water and dishes are natural and consistent with human recording.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, slim build, fair complexion, long blonde hair. She has dark eyeliner and a casual, slightly tired appearance.",
+        "wardrobe": "Oversized grey sweatshirt with 'NEW YORK 85' printed in black.",
+        "demeanor": "Initially frustrated and hesitant, becoming more confident and happy as she learns."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor voice",
+        "appearance": "Not visible, voice only.",
+        "wardrobe": "N/A",
+        "demeanor": "Helpful, encouraging, and clear."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 24.5,
+        "screenshot_at_s": 12.0,
+        "scene_label": "Washing dishes and learning English",
+        "setting": "A modern kitchen with white cabinets, a granite countertop, and a stainless steel sink. A tablet is propped up next to the sink.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up, static shot.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is standing at a kitchen sink, washing dishes. She is holding a sponge and a pot, with water running from the faucet. A tablet is resting on the counter to her right. The lighting is bright and natural, illuminating the kitchen. Character A's expressions change from frustrated to thoughtful to smiling as she interacts with the unseen voice.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows Character A washing dishes while interacting with an English learning app on her tablet. Text overlays appear on screen, showing the dialogue between her and the app. The app's voice prompts her, and she responds, sometimes struggling and being corrected. A green checkmark appears when she gets the answer right.",
+        "audio_transcript": "Character A says: I hate English.\nCharacter B says: What's your name?\nCharacter A says: My name is Nesly.\nCharacter B says: How are you?\nCharacter A says: I am fine, thank you.\nCharacter B says: Can you speak English?\nCharacter A says: Yes, I...\nCharacter B says: Do you mean: \"Yes, I can\".\nCharacter A says: Yes, I can.\nCharacter B says: How old are you?\nCharacter A says: I... twenty-four...?\nCharacter B says: Say: \"I am 24 years old\".\nCharacter A says: I am 24 years old.\nCharacter A says: How can I practice my English every day?\nCharacter B says: Just download Praktika.\nCharacter A says: I'll download Praktika right now!",
+        "on_screen_text": "I hate English.\nWhat's your name?\nMy name is Nesly.\nHow are you?\nI am fine, thank you.\nCan you speak English?\nYes, I...\nDo you mean: \"Yes, I can\".\nYes, I can.\nHow old are you?\nI... twenty-four...?\nSay: \"I am 24 years old\".\nI am 24 years old.\nHow can I practice my English every day?\nJust download Praktika.\nI'll download Praktika right now!"
+      },
+      {
+        "n": 2,
+        "start_s": 24.5,
+        "end_s": 26.0,
+        "screenshot_at_s": 25.0,
+        "scene_label": "End Card",
+        "setting": "White background.",
+        "characters_in_scene": [],
+        "camera": "N/A",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A plain white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A white screen with the Praktika app logo in the center. Below the logo, there are buttons to download the app from the Google Play Store and the Apple App Store.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780628751.6096916
+}

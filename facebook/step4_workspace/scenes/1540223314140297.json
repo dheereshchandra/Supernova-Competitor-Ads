@@ -1,0 +1,34 @@
+{
+  "competitor_id": "1540223314140297",
+  "parsed": {
+    "duration_s": 6.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is a simple, static shot of a real beach scene. No AI artifacts are present.",
+    "characters": [],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.0,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Beach Scene with Text",
+        "setting": "Tropical beach, clear blue water, white sand, green vegetation. Bright sunny day.",
+        "characters_in_scene": [],
+        "camera": "Wide shot, static.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Wide shot of a tropical beach from a high angle. Green plants and rocks are in the left foreground. White sand meets clear turquoise water below. Small figures of people are swimming. The sky is clear blue. Natural, bright sunlight.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Static wide shot of a beach from a cliff. Greenery in the foreground, turquoise water with swimmers below. A large white text box with black text is centered on the screen.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "I TOLD MY GRINGO BOYFRIEND\nON MONDAY HE STARTS THE 21-DAY SPANISH IMMERSION CHALLENGE.\nAND you should join him.\nON DAY 6 YOU'LL UNDERSTAND IT\nON DAY 13 YOU'LL SPEAK IT\nON DAY 19 YOUR FRIENDS WON'T BELIEVE YOUR ACCENT\nARE YOU IN?"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657929.975946
+}

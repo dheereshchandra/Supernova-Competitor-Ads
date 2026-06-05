@@ -1,0 +1,64 @@
+{
+  "competitor_id": "800024156379055",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "User",
+        "appearance": "Only torso and hands are visible. Light complexion.",
+        "wardrobe": "White t-shirt with a large graphic of yellow, blue, and green flowers.",
+        "demeanor": "Casual and relaxed."
+      },
+      {
+        "id": "B",
+        "role": "AI Tutor Avatar",
+        "appearance": "3D animated female character. Brown skin, short curly brown hair.",
+        "wardrobe": "White collared shirt under a dark grey suit jacket.",
+        "demeanor": "Professional and attentive."
+      },
+      {
+        "id": "C",
+        "role": "AI Tutor Avatar",
+        "appearance": "3D animated female character. Light skin, light blue hair styled in two high buns.",
+        "wardrobe": "Light green top.",
+        "demeanor": "Friendly and approachable."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Eating cake and using app",
+        "supernova_script": "Unknown speaker says: So, how was your weekend? Tell me about this cake you're having. [So, how was your weekend? Tell me about this cake you're having.]\nUnknown speaker says: It is very tasty. [It is very tasty.]",
+        "scene_summary": "- Hooks the viewer with a relatable, casual setting (eating cake while using the phone).\n- Demonstrates that learning English can happen anytime, even during a snack break.\n- Positions the app as highly affordable compared to everyday expenses.",
+        "supernova_on_screen_text": "एक कैफे कॉफी की कीमत में, Supernova के साथ रोज़ इंग्लिश प्रैक्टिस करें (Practice English daily with Supernova for the price of a cafe coffee)"
+      },
+      {
+        "n": 2,
+        "scene_label": "App features walkthrough",
+        "supernova_script": "Character B says: Hello! I heard you have a presentation today. How are you preparing for it? [Hello! I heard you have a presentation today. How are you preparing for it?]",
+        "scene_summary": "- Showcases the core AI tutor feature in a professional/workplace context.\n- Highlights the value propositions: real-time feedback, judgment-free practice, and daily consistency.\n- Builds confidence by showing that mistakes are part of the learning process.",
+        "supernova_on_screen_text": "बिना झिझक के इंग्लिश बोलें (Speak English without hesitation)\nAI ट्यूटर तुरंत आपकी गलतियां सुधारेगा (AI tutor will correct your mistakes instantly)\nताकि आप बिना डरे प्रैक्टिस कर सकें (So you can practice without fear)\nरोज़ 15 मिनट बोलकर प्रैक्टिस करें (Practice by speaking 15 minutes daily)\nइंटरव्यू हो या ऑफिस, हर सिचुएशन के लिए तैयार रहें (Whether it's an interview or office, be ready for every situation)\nगलतियों से सीखें और कॉन्फिडेंस बढ़ाएं (Learn from mistakes and build confidence)\nSupernova के साथ आपकी इंग्लिश होगी एकदम नेचुरल (With Supernova, your English will become completely natural)"
+      },
+      {
+        "n": 3,
+        "scene_label": "End card",
+        "supernova_script": "Unknown speaker says: इंग्लिश बोलना सीखें, Supernova के साथ। [Learn to speak English, with Supernova.]",
+        "scene_summary": "- Delivers a clear, strong call-to-action.\n- Reinforces the brand name and the ultimate goal: speaking English with confidence.\n- Leaves a lasting visual impression of the app interface.",
+        "supernova_on_screen_text": "आज ही Supernova ऐप डाउनलोड करें और कॉन्फिडेंस से इंग्लिश बोलें! Supernova (Download the Supernova app today and speak English with confidence! Supernova)"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Speak",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "스픽",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658816.561987
+}

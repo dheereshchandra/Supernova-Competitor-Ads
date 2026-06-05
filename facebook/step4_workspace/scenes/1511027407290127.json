@@ -1,0 +1,97 @@
+{
+  "competitor_id": "1511027407290127",
+  "parsed": {
+    "duration_s": 45.0,
+    "production_type": "AI-generated",
+    "production_notes": "The presenter exhibits uncanny facial movements, particularly around the mouth and eyes, typical of AI avatars. The lighting is overly perfect, and the compositing in the second half is rigid.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female, slim build, fair complexion. Long, wavy blonde hair. Distinctive facial features include defined cheekbones and light-colored eyes.",
+        "wardrobe": "Solid grey, long-sleeved hoodie.",
+        "demeanor": "Earnest, persuasive, and direct."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 22.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "The Problem with Traditional Learning",
+        "setting": "Studio room, desk setup, purple/blue ambient lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is centered in the frame, positioned behind a black studio microphone on a stand. The background is a softly lit room featuring a desk setup. Behind her, there are computer monitors displaying abstract blue and purple colors, and a shelf with various indistinct objects. The lighting is dramatic, with purple and blue hues illuminating the background, contrasting with the warmer light on her face. She is looking directly forward with an expressive, engaged demeanor.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A speaks directly to the camera in a studio setting. Dynamic text overlays emphasize her spoken words. The camera remains static on a medium close-up.",
+        "audio_transcript": "Character A says: I hate that nobody told me this earlier.\nCharacter A says: There's a huge difference between knowing English and being able to perform in English.\nCharacter A says: You can pass every test, nail every grammar exercise, and then sit in a meeting and not say a single word because your brain can't translate thoughts into speech fast enough.\nCharacter A says: That's not bad English.\nCharacter A says: That's zero speaking practice.\nCharacter A says: Fluently is the first thing I've seen that actually solves this.",
+        "on_screen_text": "I HATE\nthat nobody\ntold me\nthis earlier\nThere's a huge\ndifference between\nknowing English\nand being able\nto perform\nin English\nYou can pass\nevery test\nnail every\ngrammar exercise\nand then sit\nin a meeting\nand not say\na single word\nbecause your brain\ncan't translate\nthoughts into\nspeech fast enough\nThat's not\nbad English\nThat's zero\nspeaking practice\nFluently is the first\nthing I've seen\nthat actually\nsolves this"
+      },
+      {
+        "n": 2,
+        "start_s": 22.5,
+        "end_s": 39.5,
+        "screenshot_at_s": 30.0,
+        "scene_label": "App Demonstration",
+        "setting": "Abstract dark background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A solid, dark, slightly textured background. A large, vertically oriented rectangular shape with rounded corners, resembling a blank smartphone screen, is centered in the frame.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "Character A is visible from the chest up. She is looking directly forward and speaking. The background behind her is completely removed or transparent.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A screencast of a mobile app is displayed centrally. Character A appears in a picture-in-picture inset in the bottom right, continuing her narration. The app UI shows various features like an AI tutor avatar, progress charts, and vocabulary stats.",
+        "audio_transcript": "Character A says: Ten minutes a day on Fluently, and you're having a real conversation with an AI tutor.\nCharacter A says: Interview practice, work scenarios, topics you actually like talking about.\nCharacter A says: No quizzes, nothing passive.\nCharacter A says: Just speaking.\nCharacter A says: After a month, I stopped translating in my head.\nCharacter A says: That was the big one for me.",
+        "on_screen_text": "10 minutes a day\non Fluently\nand you're having\na real conversation\nwith an AI tutor\nInterview practice\nwork scenarios\ntopics you actually\nlike talking about\nNo quizzes\nnothing passive\nJust speaking\nAfter a month\nI stopped translating\nin my head\nThat was the\nbig one for me"
+      },
+      {
+        "n": 3,
+        "start_s": 39.5,
+        "end_s": 45.0,
+        "screenshot_at_s": 42.0,
+        "scene_label": "End Card",
+        "setting": "Dark purple gradient background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A simple, smooth gradient background transitioning from a deep, dark purple at the edges to a slightly lighter, muted purple in the center. There are no objects, characters, or distinct features present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A static end card displays the app's logo, name, and a call-to-action button against a dark gradient background.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power English coach\nDOWNLOAD\nNOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.1101675
+}

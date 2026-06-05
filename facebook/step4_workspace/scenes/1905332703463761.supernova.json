@@ -1,0 +1,65 @@
+{
+  "competitor_id": "1905332703463761",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, smooth complexion, brown hair. Distinctive glowing blue lines trace her facial features.",
+        "wardrobe": "Shiny orange/copper hoodie and large over-ear headphones.",
+        "demeanor": "Friendly and helpful."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young, medium complexion, curly dark hair.",
+        "wardrobe": "Covered with a patterned blanket featuring red, grey, and white stripes.",
+        "demeanor": "Sleepy but curious."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Split-screen conversation",
+        "supernova_script": "Character A says: क्या कर रही हो? [What are you doing?]\n\nCharacter B says: I... sleeping.\n\nCharacter A says: 'I am sleeping' बोलना चाहिए। थोड़ा formal तरीके से 'I am getting some sleep' भी बोल सकती हो। [You should say 'I am sleeping'. You can also say it a bit more formally as 'I am getting some sleep'.]\n\nCharacter B says: ओह अच्छा। English कैसे सीखूं? [Oh, I see. How do I learn English?]\n\nCharacter A says: मेरे साथ रोज़ 15 minutes practice करो, तुम्हारी English में confidence आ जाएगा। [Practice with me for 15 minutes daily, you will gain confidence in your English.]\n\nCharacter B says: इसमें बहुत खर्चा होगा क्या? मेरे पास इतने पैसे नहीं हैं। [Will this cost a lot? I don't have that much money.]\n\nCharacter A says: फ़िक्र मत करो, Supernova बहुत affordable है। हज़ारों लोग मेरे साथ रोज़ English बोलना सीख रहे हैं। [Don't worry, Supernova is very affordable. Thousands of people are learning to speak English with me every day.]\n\nCharacter B says: सुपर! कैसे join करूँ? [Super! How to join?]\n\nCharacter A says: अभी Supernova app download करो, [Download the Supernova app right now,]",
+        "scene_summary": "- Hooks the viewer with a relatable, everyday English mistake.\n- Introduces the AI tutor as a friendly, non-judgmental guide.\n- Addresses price objections with a reassuring, affordable value proposition rather than gimmicky pricing.",
+        "supernova_on_screen_text": "क्या कर रही हो? (What are you doing?)\nI... sleeping.\n'I am sleeping' बोलना चाहिए। (You should say 'I am sleeping'.)\nथोड़ा formal तरीके से 'I am getting some sleep' भी बोल सकती हो। (You can also say it a bit more formally as 'I am getting some sleep'.)\nओह अच्छा। English कैसे सीखूं? (Oh, I see. How do I learn English?)\nमेरे साथ रोज़ (Every day with me)\n15 MINUTES\ndaily practice करो, (do daily practice,)\nConfidence\nआ जाएगा। (you will gain confidence.)\nइसमें बहुत खर्चा होगा क्या? (Will this cost a lot?)\nमेरे पास इतने पैसे नहीं हैं। (I don't have that much money.)\nSupernova बहुत (Supernova is very)\nAffordable\nहै। (is.)\nThousands\nलोग मेरे साथ English बोलना सीख रहे हैं। (people are learning to speak English with me.)\nसुपर! कैसे join करूँ? (Super! How to join?)\nअभी Supernova app download करो, (Download the Supernova app right now,)"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Store Screencast",
+        "supernova_script": "Character A says: और English बोलना शुरू करो। [and start speaking English.]",
+        "scene_summary": "- Shows the app in the app store to build trust.\n- Delivers a clear, action-oriented instruction to start learning.",
+        "supernova_on_screen_text": "Supernova AI English Speaking App\nPending...\nVerified by Play Protect\nCancel\nOpen\nWhat's new\nLast updated Feb 23, 2026\n- Introduced Invoices\n- No connectivity issue fix & other Improvements\nRate this app\nTell others what you think\nWrite a review\nApp support\nApp download\nकरो और English\nबोलना शुरू\nकरो। (and start speaking.)"
+      },
+      {
+        "n": 3,
+        "scene_label": "End Card",
+        "supernova_script": "Unknown speaker says: Click on install now and download Supernova app. [Click on install now and download Supernova app.]",
+        "scene_summary": "- Provides a final, strong Call to Action.\n- Reinforces brand name and core utility (English speaking app).",
+        "supernova_on_screen_text": "Supernova\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "1 Rupee",
+        "supernova_swap": "affordable"
+      },
+      {
+        "competitor_brand": "1 Month",
+        "supernova_swap": "confidence"
+      },
+      {
+        "competitor_brand": "50 LAKHS",
+        "supernova_swap": "Thousands"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892236.0081792
+}

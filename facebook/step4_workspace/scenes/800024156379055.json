@@ -1,0 +1,110 @@
+{
+  "competitor_id": "800024156379055",
+  "parsed": {
+    "duration_s": 37.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines live-action footage of a person's hands and a physical environment with digital screen recordings of an app featuring 3D animated avatars.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "User",
+        "appearance": "Only torso and hands are visible. Light complexion.",
+        "wardrobe": "White t-shirt with a large graphic of yellow, blue, and green flowers.",
+        "demeanor": "Casual and relaxed."
+      },
+      {
+        "id": "B",
+        "role": "AI Tutor Avatar",
+        "appearance": "3D animated female character. Brown skin, short curly brown hair.",
+        "wardrobe": "White collared shirt under a dark grey suit jacket.",
+        "demeanor": "Professional and attentive."
+      },
+      {
+        "id": "C",
+        "role": "AI Tutor Avatar",
+        "appearance": "3D animated female character. Light skin, light blue hair styled in two high buns.",
+        "wardrobe": "Light green top.",
+        "demeanor": "Friendly and approachable."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.5,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Eating cake and using app",
+        "setting": "A light-colored marble countertop, daytime. Props include a cake box, a plate with cake, a fork, a smartphone, and a stylus.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Overhead close-up, slightly angled down.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A's torso and hands are visible over a light marble countertop. Character A's left hand holds a white plate containing a partially eaten slice of cake with white frosting and yellow filling. Their right hand uses a silver fork to take a piece of the cake. To the left is a partially visible black cake box with crumbs. To the right, a smartphone lies flat on the counter. Character A then uses a pink stylus to tap the phone screen.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A top-down view of a person eating cake while interacting with a language learning app on their phone. The person takes a bite of cake and then uses a stylus to tap the screen, which displays a 3D avatar. Text overlays highlight the cost comparison between the cake and the app subscription.",
+        "audio_transcript": "Unknown speaker says: Because one and one make two together. [Because one and one make two together.]\nUnknown speaker says: Why do you think 1 plus 1 equals 2? Tell me what you know. [Why do you think 1 plus 1 equals 2? Tell me what you know.]",
+        "on_screen_text": "\ucf00\uc774\ud06c \ud55c \ud310 \uac00\uaca9\uc774\uba74 \uc2a4\ud53d 2\uac1c\uc6d4 \ubb34\uc81c\ud55c (Speak 2 months unlimited for the price of a whole cake)"
+      },
+      {
+        "n": 2,
+        "start_s": 7.5,
+        "end_s": 31.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "App features walkthrough",
+        "setting": "Digital app interface.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A digital interface featuring Character B. Character B stands in the center, gesturing with her right hand. The background behind her is blurred, showing a rising line graph. Later, a simple, rounded blue 3D blob character with small eyes and a smile appears against a light blue and white gradient background.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A fast-paced sequence of screen recordings demonstrating various features of the app. It shows pronunciation feedback, a grid of different AI avatars, a conversational interface with Character B, and progress screens featuring a blue blob mascot. Numerous text overlays explain the benefits of the app, such as real-time correction and customized lessons.",
+        "audio_transcript": "Character B says: Hello! I heard you want to discuss your important point about the second half of the year's promotions. What have you noticed so far that we should change or improve? [Hello! I heard you want to discuss your important point about the second half of the year's promotions. What have you noticed so far that we should change or improve?]",
+        "on_screen_text": "\uc800\ub294 \uc9c0\ud558\ucca0 \ud0c0\uace0 \ub2e4\ub140\uc694. (I take the subway.)\n\ubc1c\uc74c\uacfc \ubb38\ubc95\uc744 \uc2e4\uc2dc\uac04\uc73c\ub85c \uad50\uc815\ud574 \uc8fc\uace0 (Corrects pronunciation and grammar in real-time)\n\ud2c0\ub824\ub3c4 \ubc14\ub85c \uace0\uccd0\uc8fc\ub2c8\uae4c (Because it corrects you immediately even if you are wrong)\n\ub208\uce58 \uc548 \ubcf4\uace0 \uc601\uc5b4\ub85c \ub9d0\ud560 \uc218 \uc788\uc5b4\uc694 (You can speak English without worrying about what others think)\n\ub9e4\uc77c 20\ubd84\uc774\uba74 100\ubb38\uc7a5\uc744 \uc9c1\uc811 \ub9d0\ud558\uace0 (If you spend 20 minutes a day, you can speak 100 sentences yourself)\n\ub098\ub9cc\uc758 \ub9de\ucda4\ud615 \ub808\uc2a8\uc744 \ub9cc\ub4e4\uc5b4 \ubcf4\uc138\uc694! (Create your own customized lessons!)\n\ud2c0\ub9b0 \ud45c\ud604\uc740 \ub0b4 \uc57d\uc810\uc744 \uae30\ubc18\uc73c\ub85c (Incorrect expressions are based on my weaknesses)\n\ub9de\ucda4 \uc218\uc5c5\uc744 \ub9cc\ub4e4\uace0 \ubcf5\uc2b5\uc2dc\ucf1c \uc90d\ub2c8\ub2e4 (Creates customized lessons and lets you review)\n\uadf8\ub798\uc11c \uac19\uc740 \uc2e4\uc218\ub97c \ubc18\ubcf5\ud558\uc9c0 \uc54a\uac8c \ud574\uc918\uc694 (So it prevents you from repeating the same mistakes)\n\uadf8\ub9cc\ud07c \uc601\uc5b4\ub85c \ub9d0\ud558\uba74 \ud45c\ud604\uc774 \uba38\ub9bf\uc18d\uc5d0 \ub0a8\uace0 (The more you speak in English, the more the expressions stay in your head)\n\uc785\uc5d0\uc11c\ub3c4 \uc790\uc5f0\uc2a4\ub7fd\uac8c \ub098\uc624\uac8c \ub429\ub2c8\ub2e4 (And it comes out naturally from your mouth)\n\uc804\uc5d4 \ubc84\ubc85\ub314\ub358 \ub9d0\uc774 \uadf8\ub0e5 \ub098\uc624\ub294 \uc21c\uac04\uc774 \uc9c4\uc9dc \uc640\uc694 (The moment when the words you used to stutter just come out really comes)\n\ub9e4\uc77c 20\ubd84\ub9cc \uc2a4\ud53d \uc368\ubcf4\uc138\uc694 (Try using Speak for just 20 minutes a day)"
+      },
+      {
+        "n": 3,
+        "start_s": 31.0,
+        "end_s": 37.0,
+        "screenshot_at_s": 34.0,
+        "scene_label": "End card",
+        "setting": "Digital background, solid blue.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A sleek, dark grey smartphone is shown against a solid, bright blue background. The phone rotates to reveal the front screen. The screen displays Character C. Character C is looking forward.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A 3D render of a smartphone spins into view against a vibrant blue background. The phone screen displays the app interface featuring Character C. Text overlays encourage the viewer to start using the app, accompanied by the brand logo.",
+        "audio_transcript": "Unknown speaker says: \uc601\uc5b4 \uc2a4\ud53c\ud0b9\uc740 \uc2a4\ud53d. [English speaking is Speak.]",
+        "on_screen_text": "\ub354 \ub9ce\uc740 \uc601\uc5b4 \ud45c\ud604\uc744 \uc54c\uace0 \uc2f6\ub2e4\uba74 \uc9c0\uae08 \uc2a4\ud53d\uc5d0\uc11c \uc2dc\uc791\ud558\uc138\uc694! Speak (If you want to know more English expressions, start with Speak now! Speak)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657929.9605772
+}

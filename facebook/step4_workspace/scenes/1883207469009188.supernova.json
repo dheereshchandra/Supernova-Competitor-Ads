@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1883207469009188",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, medium build, fair complexion, blonde hair tied back. She wears glasses.",
+        "wardrobe": "White hoodie.",
+        "demeanor": "Focused on her task, slightly confused at first, then engaged and willing to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated female avatar with red hair and fair skin.",
+        "wardrobe": "White t-shirt.",
+        "demeanor": "Helpful, encouraging, and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Cooking and Learning",
+        "supernova_script": "B says: What are you doing? [What are you doing?]\nA says: I am cooking my daughter. [I am cooking my daughter.]\nB says: What? You are cooking your daughter!? [What? You are cooking your daughter!?]\nA says: अरे नहीं, मेरा मतलब है I am making food for my daughter! [Oh no, I mean I am making food for my daughter!]\nB says: Oh thank god! ऐसे कहो: I am cooking for my daughter. [Oh thank god! Say it like this: I am cooking for my daughter.]\nA says: I am cooking for my daughter. [I am cooking for my daughter.]\nB says: How old is your daughter? [How old is your daughter?]\nA says: She has 3. [She has 3.]\nB says: Say: She is three years old. [Say: She is three years old.]\nA says: She is three years old. [She is three years old.]\nA says: I have many work today. [I have many work today.]\nB says: क्या आपका मतलब है: \"I have a lot of work today\"? [Do you mean: \"I have a lot of work today\"?]\nA says: I have a lot of work today. मैं अपनी English कैसे improve करूँ? [I have a lot of work today. How can I improve my English?]\nB says: रोज़ मुझसे बात करके! मैं Supernova पर आपकी AI tutor हूँ। आप काम करते-करते भी English practice कर सकते हो। बस रोज़ 15 मिनट! [By talking to me every day! I am your AI tutor on Supernova. You can practice English even while working. Just 15 minutes daily!]\nA says: ये तो बहुत बढ़िया है, let's start! [This is great, let's start!]",
+        "scene_summary": "- Hooks the viewer with a funny, relatable English mistake.\n- Demonstrates the AI tutor's real-time correction in a gentle, conversational way.\n- Introduces the brand and the core value proposition: practice English daily while doing chores.",
+        "supernova_on_screen_text": "What are you doing?\nI am cooking my daughter.\nWhat?\nYou are cooking your daughter!?\nअरे नहीं, मेरा मतलब है\nI am making food\nfor my daughter!\nऐसे कहो:\nI am cooking for my daughter.\nI am cooking for my daughter.\nHow old is your daughter?\nShe has 3.\nSay:\nShe is three years old.\nShe is three years old.\nI have many work today.\nक्या आपका मतलब है:\n\"I have a lot of work today\"?\nI have a lot of work today.\nमैं अपनी English कैसे improve करूँ?\nरोज़ मुझसे बात करके!\nमैं Supernova पर आपकी AI tutor हूँ।\nआप काम करते-करते भी\nEnglish practice कर सकते हो।\nबस रोज़ 15 मिनट!\nये तो बहुत बढ़िया है, let's start!"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear call-to-action.\n- Displays the brand logo and app store availability.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630931.0663903
+}

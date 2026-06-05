@@ -1,0 +1,92 @@
+{
+  "competitor_id": "862072036697076",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "brand mascot",
+        "appearance": "A stylized, bright green owl with large eyes, a small orange beak, and orange feet. It has a simple, rounded vector-art design.",
+        "wardrobe": "None.",
+        "demeanor": "Cheerful, encouraging, and energetic."
+      },
+      {
+        "id": "B",
+        "role": "learner avatar",
+        "appearance": "A woman with dark skin and black hair styled in a high bun. She has a simple vector-art facial structure.",
+        "wardrobe": "A yellow headband, a yellow short-sleeved top, and blue jeans.",
+        "demeanor": "Enthusiastic and triumphant."
+      },
+      {
+        "id": "C",
+        "role": "learner avatar",
+        "appearance": "A woman with light skin and blonde hair. She has a sturdy build and simple vector-art features.",
+        "wardrobe": "A red tracksuit with white stripes and a red headband.",
+        "demeanor": "Confident and strong."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Globe and Mirror",
+        "supernova_script": "Unknown speaker says: क्या English की वजह से आपका dream job अटका हुआ है? [Is your dream job stuck because of English?]",
+        "scene_summary": "- Hooks the viewer by addressing a common pain point: career stagnation due to poor English.\n- Sets a relatable, empathetic tone right from the start.\n- Establishes the core problem the app will solve.",
+        "supernova_on_screen_text": "Dream job अटका है?\n[Dream job stuck?]"
+      },
+      {
+        "n": 2,
+        "scene_label": "Fill in the Blank",
+        "supernova_script": "Unknown speaker says: तो try करो Supernova के daily English lessons. [Then try Supernova's daily English lessons.]",
+        "scene_summary": "- Introduces the brand as the immediate solution to the hook.\n- Highlights the 'daily lessons' feature, emphasizing consistency.\n- Visually demonstrates the app interface to build familiarity.",
+        "supernova_on_screen_text": "Try\nSupernova's\ndaily English lessons"
+      },
+      {
+        "n": 3,
+        "scene_label": "High Five",
+        "supernova_script": "Unknown speaker says: हमारे AI tutor के साथ रोज़ practice करो और confidence बढ़ाओ। [Practice daily with our AI tutor and increase your confidence.]",
+        "scene_summary": "- Introduces the core differentiator: the AI tutor.\n- Shifts the emotional beat to encouragement and confidence-building.\n- Uses the visual of a high-five to reinforce a supportive, 'older sibling' brand voice.",
+        "supernova_on_screen_text": "Practice daily\nwith AI Tutor"
+      },
+      {
+        "n": 4,
+        "scene_label": "Speaking Exercise",
+        "supernova_script": "Unknown speaker says: Real-world situations में English बोलना सीखो, बिना किसी झिझक के। [Learn to speak English in real-world situations, without any hesitation.]",
+        "scene_summary": "- Focuses on practical application (real-world situations) rather than just grammar.\n- Addresses the emotional barrier of 'hesitation' (झिझक).\n- Shows the speaking feature in action to prove the app's utility.",
+        "supernova_on_screen_text": "Speak English\nwithout hesitation"
+      },
+      {
+        "n": 5,
+        "scene_label": "Flexing",
+        "supernova_script": "Unknown speaker says: ताकि interview हो या office, आप हमेशा ready रहो। [So that whether it's an interview or office, you are always ready.]",
+        "scene_summary": "- Connects the learning back to the original goal: career success.\n- Uses the flexing visual to represent empowerment and readiness.\n- Delivers the emotional payoff of feeling prepared.",
+        "supernova_on_screen_text": "Always be ready!"
+      },
+      {
+        "n": 6,
+        "scene_label": "Read and Respond",
+        "supernova_script": "Unknown speaker says: Can we practice for my job interview today? [Can we practice for my job interview today?]\nUnknown speaker says: Supernova है आसान, practical, और बहुत effective. [Supernova is easy, practical, and very effective.]",
+        "scene_summary": "- Replaces the competitor's 'free' claim with value-driven adjectives (easy, practical, effective).\n- Shows a relevant real-world text prompt (job interview practice).\n- Reinforces the app's core value proposition before the final CTA.",
+        "supernova_on_screen_text": "It's easy\nIt's practical\nIt's effective"
+      },
+      {
+        "n": 7,
+        "scene_label": "End Card",
+        "supernova_script": "Unknown speaker says: आज ही Supernova app download करो और अपनी English journey शुरू करो। [Download the Supernova app today and start your English journey.]",
+        "scene_summary": "- Delivers a clear, direct Call to Action (CTA).\n- Removes aggressive 'world's #1' hype in favor of an encouraging push to start the journey.\n- Displays app store badges for immediate conversion.",
+        "supernova_on_screen_text": "Supernova\nDownload the app today.\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Duolingo's",
+        "supernova_swap": "Supernova's"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.9604158
+}

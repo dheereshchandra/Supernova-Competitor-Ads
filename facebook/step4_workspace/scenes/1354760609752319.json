@@ -1,0 +1,82 @@
+{
+  "competitor_id": "1354760609752319",
+  "parsed": {
+    "duration_s": 22.0,
+    "production_type": "mixed",
+    "production_notes": "The video features a human actor recorded on a smartphone camera, interacting with an AI-generated 3D avatar. The avatar exhibits typical AI animation traits like perfectly smooth skin and slightly stiff, repetitive idle movements.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion, long straight brown hair. She has expressive brown eyes and a natural makeup look.",
+        "wardrobe": "Black turtleneck sweater.",
+        "demeanor": "Hesitant, slightly nervous but eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Stylized 3D animated young adult female, fair complexion, greyish-white hair tied back with some loose strands. She has large, expressive eyes and smooth, flawless skin.",
+        "wardrobe": "Maroon ribbed long-sleeve sweater.",
+        "demeanor": "Friendly, patient, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 20.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Video Call Lesson",
+        "setting": "Bedroom with a sloped wooden ceiling, warm indoor lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "app-screencast",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A is framed in a close-up shot, looking directly at the camera. She is in a room with a distinctive sloped wooden ceiling and a wall with small photos pinned to it. The lighting is warm and slightly dim. She makes various facial expressions, occasionally touching her face or mouth with her hand, conveying a sense of uncertainty or thought.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "Character B is framed in a close-up shot against a dark, blurred background. She is resting her chin on her right hand, looking forward with a gentle, static smile. Her posture remains mostly still, with subtle, animated idle movements.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene is formatted to look like a mobile video call interface. Character A occupies the full screen as the main background, while Character B appears in a smaller rectangular inset window in the top right corner. Various video call control icons are visible at the bottom of the screen. Large, colorful text overlays appear dynamically in the center of the screen, displaying the dialogue.",
+        "audio_transcript": "Character A says: My name Sara.\nCharacter B says: Quer dizer \"My name is Sara\"? [Do you mean \"My name is Sara\"?]\nCharacter A says: Desculpa... My english so so. [Sorry... My english so so.]\nCharacter B says: Quer dizer \"Sorry, I speak a little English\"? [Do you mean \"Sorry, I speak a little English\"?]\nCharacter A says: Sim. [Yes.]\nCharacter B says: Tudo bem. Quantas vezes voc\u00ea falou ingl\u00eas nos \u00faltimos meses? [That's okay. How many times have you spoken English in the last few months?]\nCharacter A says: Na verdade, nunca. [Actually, never.]\nCharacter B says: Voc\u00ea est\u00e1 no lugar certo. Vamos falar juntos todos os dias e voc\u00ea ficar\u00e1 fluente em pouco tempo. [You are in the right place. We will speak together every day and you will be fluent in no time.]",
+        "on_screen_text": "My name Sara\nQuer dizer \"My name is Sara\"?\nDesculpa... My english so so\nQuer dizer \"Sorry, I speak a little English\"?\nSim.\nTudo bem.\nQuantas vezes voc\u00ea falou ingl\u00eas nos \u00faltimos meses?\nna verdade, nunca.\nVoc\u00ea est\u00e1 no lugar certo.\nVamos falar juntos todos os dias e voc\u00ea ficar\u00e1 fluente em pouco tempo."
+      },
+      {
+        "n": 2,
+        "start_s": 20.5,
+        "end_s": 22.0,
+        "screenshot_at_s": 21.0,
+        "scene_label": "End Card",
+        "setting": "Solid white background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A completely blank, solid white background with no characters, props, or environmental details.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid white screen displays a purple app logo in the center. Below the logo, the brand name is written in purple text. At the bottom, there are two standard app store download badges.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966545.922631
+}

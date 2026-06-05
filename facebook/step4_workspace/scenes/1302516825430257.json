@@ -1,0 +1,103 @@
+{
+  "competitor_id": "1302516825430257",
+  "parsed": {
+    "duration_s": 56.0,
+    "production_type": "mixed",
+    "production_notes": "The female character is clearly AI-generated, evidenced by her robotic arm, perfectly smooth skin, and slightly unnatural lip-sync. The male character appears to be human-recorded. The split-screen format is static throughout the main dialogue.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female, 20s-30s, slim build, fair complexion, dark hair. She has a distinct metallic, robotic right arm.",
+        "wardrobe": "Red and gold sari with a silver choker necklace.",
+        "demeanor": "Calm, instructional, and slightly robotic."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Male, 20s, average build, medium complexion, dark hair.",
+        "wardrobe": "Dark blue, long-sleeved button-down shirt.",
+        "demeanor": "Casual, initially confused, then enthusiastic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 46.5,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Split-screen conversation",
+        "setting": "Left: softly lit room with bokeh. Right: room with a bookshelf.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A medium close-up of Character A, a young woman with a metallic, robotic right arm. She has dark hair and is wearing a red and gold sari with a silver choker necklace. She is positioned in a softly lit room with blurred, warm bokeh lights in the background. She is looking directly forward and gesturing slightly with her robotic hand.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A medium close-up of Character B, a young man with dark hair. He is wearing a dark blue, long-sleeved button-down shirt. He is standing in a room with a wooden bookshelf filled with books visible in the background. The lighting is warm and natural. He is looking forward and gesturing with both hands.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen showing Character A on the left and Character B on the right. They are having a conversation. There is a text overlay at the top of the screen.",
+        "audio_transcript": "Character A says: \u09a4\u09cb\u09ae\u09be\u09b0 \u09ac\u09be\u09ac\u09be \u0995\u09cb\u09a5\u09be\u09df? [Where is your dad?]\nCharacter B says: My dad is out of station. [My dad is out of station.]\nCharacter A says: Out of station \u09a8\u09be, out of town \u09b9\u09df\u0964 Out of station \u09ae\u09be\u09a8\u09c7 station-\u098f\u09b0 \u09ac\u09be\u0987\u09b0\u09c7 \u09a6\u09be\u0981\u09dc\u09bf\u09df\u09c7 \u0986\u099b\u09c7\u0964 [Not out of station, it's out of town. Out of station means standing outside the station.]\nCharacter B says: \u09a0\u09bf\u0995 \u0986\u099b\u09c7, \u09a0\u09bf\u0995 \u0986\u099b\u09c7\u0964 \u0986\u09ae\u09be\u09b0 English-\u099f\u09be \u0996\u09c1\u09ac weak. [Okay, okay. My English is very weak.]\nCharacter A says: \u0995\u09cb\u09a8\u09cb problem \u09a8\u09c7\u0987\u0964 \u09a4\u09c1\u09ae\u09bf \u0995\u0996\u09a8\u09cb AI teacher try \u0995\u09b0\u09c7\u099b\u09cb? [No problem. Have you ever tried an AI teacher?]\nCharacter B says: \u0993\u0987\u0997\u09c1\u09b2\u09cb \u09a4\u09cb \u0985\u09a8\u09c7\u0995 \u09a6\u09be\u09ae\u09bf \u09b9\u09df \u09a8\u09be? [Aren't those very expensive?]\nCharacter A says: \u09a8\u09be, \u09a8\u09be normal English class-\u098f\u09b0 \u09a5\u09c7\u0995\u09c7 \u0985\u09a8\u09c7\u0995 \u09b8\u09b8\u09cd\u09a4\u09be\u0964 \u09a4\u09be\u0987 \u098f\u0995 \u0995\u09cb\u099f\u09bf\u09b0 \u09ac\u09c7\u09b6\u09bf \u09b2\u09cb\u0995 English \u09b6\u09bf\u0996\u09cb app \u09a6\u09bf\u09df\u09c7 English practice \u0995\u09b0\u099b\u09c7\u0964 [No, no, much cheaper than normal English classes. That's why over one crore people are practicing English with the English Seekho app.]\nCharacter B says: \u0986\u09ae\u09bf \u09a4\u09cb time-\u0987 \u09aa\u09be\u0987 \u09a8\u09be\u0964 [I don't even get time.]\nCharacter A says: \u09b0\u09cb\u099c \u09b6\u09c1\u09a7\u09c1 \u09aa\u09a8\u09c7\u09b0\u09cb \u0995\u09c1\u09dc\u09bf \u09ae\u09bf\u09a8\u09bf\u099f practice \u0995\u09b0\u09b2\u09c7\u0987 enough. \u0986\u09b8\u09cd\u09a4\u09c7 \u0986\u09b8\u09cd\u09a4\u09c7 \u09a6\u09c7\u0996\u09ac\u09bf \u0985\u09a8\u09c7\u0995 confident \u09b9\u09df\u09c7 \u09af\u09be\u09ac\u09bf\u0964 [Practicing just 15-20 minutes daily is enough. Slowly you will see you become very confident.]\nCharacter B says: \u09a4\u09be\u09b9\u09b2\u09c7 \u0986\u09ae\u09bf \u0995\u09bf\u09ad\u09be\u09ac\u09c7 join \u0995\u09b0\u09ac\u09cb? [Then how do I join?]\nCharacter A says: Install button-\u098f click \u0995\u09b0\u09cb \u0986\u09b0 English \u09b6\u09bf\u0996\u09cb app install \u0995\u09b0\u09cb\u0964 \u09b6\u09c1\u09a7\u09c1 \u098f\u0995 \u09b0\u09c1\u09aa\u09bf\u09df\u09c7 trial \u09a6\u09bf\u09df\u09c7 start \u0995\u09b0\u09cb\u0964 \u09a6\u09c7\u0996\u09a4\u09c7 \u09a6\u09c7\u0996\u09a4\u09c7 \u0995\u09df\u09c7\u0995 \u09a6\u09bf\u09a8\u09c7\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7\u0987 improvement \u09a6\u09c7\u0996\u09a4\u09c7 \u09aa\u09be\u09ac\u09c7\u0964 \u099a\u09b2\u09cb \u0986\u099c \u09a5\u09c7\u0995\u09c7\u0987 \u09b6\u09c1\u09b0\u09c1 \u0995\u09b0\u09cb\u0964 [Click the install button and install the English Seekho app. Start with just a one rupee trial. You will see improvement within a few days. Come on, start from today.]",
+        "on_screen_text": "\u098f\u0987 \u098f\u0986\u0987 \u09b6\u09bf\u0995\u09cd\u09b7\u0995 \u09ae\u09be\u09a4\u09cd\u09b0 \u09e7 \u099f\u09be\u0995\u09be\u09df \u0987\u0982\u09b0\u09c7\u099c\u09bf \u09b6\u09c7\u0996\u09be\u09a8\u09cb\u09b0 \u09aa\u09cd\u09b0\u09a4\u09bf\u09b6\u09cd\u09b0\u09c1\u09a4\u09bf \u09a6\u09bf\u099a\u09cd\u099b\u09c7\u0964 (This AI teacher promises to teach English for just 1 rupee.)"
+      },
+      {
+        "n": 2,
+        "start_s": 46.5,
+        "end_s": 51.5,
+        "screenshot_at_s": 49.0,
+        "scene_label": "App Endcard",
+        "setting": "Digital purple background",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A graphic of a smartphone against a dark purple background with glowing, sparkling particle effects and a bright vertical light beam.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An end-card showing the app logo on a smartphone screen with a call-to-action button and a clicking cursor.",
+        "audio_transcript": "Character B says: \u09a6\u09c7\u09b0\u09bf \u09a8\u09be \u0995\u09b0\u09c7 install now-\u098f click \u0995\u09b0\u09cb \u0986\u09b0 English \u09b6\u09bf\u0996\u09cb app download \u0995\u09b0\u09c7 \u09a8\u09be\u0993\u0964 [Without delay, click on install now and download the English Seekho app.]",
+        "on_screen_text": "English Seekho Install Now"
+      },
+      {
+        "n": 3,
+        "start_s": 51.5,
+        "end_s": 56.0,
+        "screenshot_at_s": 53.0,
+        "scene_label": "Disclaimer",
+        "setting": "Black screen",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid black screen.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A black screen with white disclaimer text scrolling upwards.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "English Seekho kisi bhi government authority institution brand, organisation ya individual ke dwara endorsed, sponsored, affiliated ya associated nahi hai. Kisi bhi names trademarks logos ya references ka use sirf educational aur informational purposes ke liye kiya gaya hai Kuch content sirf samjhane ke liye dramatised ya representational ho sakta hai English Seekho kisi bhi guaranteed results ka promise nahi karta Outcomes individual effort aur doosre factors par depend karte hain aur vary kar sakte hain."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657869.9300451
+}

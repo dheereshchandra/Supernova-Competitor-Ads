@@ -1,0 +1,43 @@
+{
+  "competitor_id": "2560560281008870",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "A young adult male with a medium build and fair complexion. He has short, curly brown hair and a short beard and mustache.",
+        "wardrobe": "A plain black crew-neck t-shirt and white wired earphones.",
+        "demeanor": "Casual, informative, and enthusiastic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Initial dictation",
+        "supernova_script": "Character A says: 'I am... very good in... working.' ['I am... very good in... working.']\nCharacter A says: ऐसे अटक-अटक कर English बोलने से interview कैसे clear होगा? [How will you clear an interview speaking English hesitantly like this?]",
+        "scene_summary": "- Hooks the viewer by demonstrating a relatable English speaking mistake.\n- Highlights the pain point of hesitating and feeling stuck during important moments like interviews.\n- Sets up the need for a practical learning solution.",
+        "supernova_on_screen_text": "English बोलने में डर लगता है?\nDownload Supernova\nInterview Practice\n'I am... very good in... working.'"
+      },
+      {
+        "n": 2,
+        "scene_label": "Corrected dictation",
+        "supernova_script": "Character A says: Supernova के AI tutor के साथ रोज़ practice करो। [Practice daily with Supernova's AI tutor.]\nCharacter A says: 'I have excellent problem-solving skills.' ['I have excellent problem-solving skills.']\nCharacter A says: देखा? बिना डरे, एकदम perfect! [See? Without fear, absolutely perfect!]",
+        "scene_summary": "- Introduces Supernova's AI tutor as the practical solution for daily practice.\n- Demonstrates a confident, corrected English sentence to show progress.\n- Ends on a warm, encouraging note to build user confidence.",
+        "supernova_on_screen_text": "English बोलने में डर लगता है?\nDownload Supernova\nInterview Practice\n'I have excellent problem-solving skills.'\nAI Tutor: Perfect pronunciation!"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Siri",
+        "supernova_swap": "removed"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.7634356
+}

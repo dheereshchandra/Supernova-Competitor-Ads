@@ -1,0 +1,82 @@
+{
+  "competitor_id": "946896624496219",
+  "parsed": {
+    "duration_s": 29.0,
+    "production_type": "AI-generated",
+    "production_notes": "Both characters exhibit typical AI-generated traits: overly smooth skin, slightly unnatural lip-sync, and stiff, repetitive micro-expressions. The split-screen format with static backgrounds is also a common AI video template.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young woman, fair complexion, blonde bob hair. Symmetrical facial features.",
+        "wardrobe": "Beige blazer over a white top, delicate gold necklace.",
+        "demeanor": "Calm, professional, and encouraging."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young woman, tanned complexion, short curly brown hair. Prominent eyes and cheekbones.",
+        "wardrobe": "Black spaghetti strap top, gold hoop earrings, layered gold necklaces.",
+        "demeanor": "Expressive, eager, and slightly unsure."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 25.5,
+        "screenshot_at_s": 12.0,
+        "scene_label": "English Lesson Conversation",
+        "setting": "Indistinct blurred indoor backgrounds.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "close-up, split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A close-up shot of Character A facing the camera directly. She is positioned in the center of the frame. The background is a brightly lit, blurred indoor space, possibly an office or modern apartment, with indistinct shapes and light sources. The lighting on her face is soft and even.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A close-up shot of Character B facing the camera directly. She is centered in the frame. The background is a blurred, slightly darker indoor setting with warm, muted tones. The lighting on her face highlights her features, with soft shadows adding depth.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with Character A on top and Character B on the bottom. Both characters are engaged in a conversation, looking directly at the camera as if speaking to each other. Speech bubbles appear next to them, displaying their dialogue. A logo is visible in the top left corner.",
+        "audio_transcript": "Character A says: That movie was amazing, right?\nCharacter B says: Yes, I am agree!\nCharacter A says: Do you mean I agree?\nCharacter B says: Wait, no \"am\"?\nCharacter A says: Nope \u2014 \"agree\" is already a verb. We just say I agree.\nCharacter B says: Got it. I agree to practice more!\nCharacter A says: Perfect.\nCharacter B says: I wish someone corrected me like that every time.\nCharacter A says: I can! I'm an AI tutor in Fluently.\nCharacter B says: Really?\nCharacter A says: Yes, we can talk every day, and I'll help you sound more natural.\nCharacter B says: That's great! Let's talk again tomorrow.",
+        "on_screen_text": "That movie was amazing, right?\nYes, I am agree!\nDo you mean I agree?\nWait, no \"am\"?\nNope \u2014 \"agree\" is already a verb. We just say I agree\nGot it. I agree to practice more!\nPerfect\nI wish someone corrected me like that every time\nI can! I'm an AI tutor in Fluently\nReally?\nYes, we can talk every day, and I'll help you sound more natural\nThat's great! Let's talk again tomorrow"
+      },
+      {
+        "n": 2,
+        "start_s": 25.5,
+        "end_s": 29.0,
+        "screenshot_at_s": 27.0,
+        "scene_label": "End Card",
+        "setting": "Abstract digital background.",
+        "characters_in_scene": [],
+        "camera": "full screen graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, dark purple gradient background. The color transitions smoothly from a slightly lighter shade in the center to darker edges. There are no objects, characters, or distinct shapes present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A static end card screen. The background is a dark purple gradient. In the center, there is a large app icon, followed by the app name and a short descriptive tagline. Below this, a prominent download button is displayed.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.1067877
+}

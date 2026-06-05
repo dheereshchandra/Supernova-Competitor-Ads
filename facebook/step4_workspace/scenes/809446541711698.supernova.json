@@ -1,0 +1,54 @@
+{
+  "competitor_id": "809446541711698",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "Young adult male, slim build, dark hair. Seen from behind with 'ME NO ENGLISH' written in red on his bare back.",
+        "wardrobe": "Shirtless, wearing dark pants.",
+        "demeanor": "Hesitant initially, but becomes curious and eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "White humanoid robot face with smooth synthetic features and bright blue eyes.",
+        "wardrobe": "None (robot exterior).",
+        "demeanor": "Patient, helpful, and robotic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI Tutor Conversation",
+        "supernova_script": "Character B says: Hello, what is your name? [Hello, what is your name?]\nCharacter A says: My name is Rahul. [My name is Rahul.]\nCharacter B says: How old are you? [How old are you?]\nCharacter A says: I have 22. [I have 22.]\nCharacter B says: I have 22 nahi, I am 22 years old hota hai. [It's not 'I have 22', it's 'I am 22 years old'.]\nCharacter A says: Okay okay. I am 22 years old. [Okay okay. I am 22 years old.]\nCharacter B says: Where are you from? [Where are you from?]\nCharacter A says: I am Uttar Pradesh. [I am Uttar Pradesh.]\nCharacter B says: I am Uttar Pradesh nahi, I am from Uttar Pradesh hoga. [It's not 'I am Uttar Pradesh', it will be 'I am from Uttar Pradesh'.]\nCharacter A says: Oh, theek hai, theek hai. Mujhe English acche se nahi aati. [Oh, okay, okay. I don't know English well.]\nCharacter B says: Koi baat nahi, Rahul. Supernova ka AI tutor try kiya? [No problem, Rahul. Have you tried Supernova's AI tutor?]\nCharacter A says: Wo toh kaafi mehenga hoga na? [That must be quite expensive, right?]\nCharacter B says: Bilkul nahi, bohot affordable hai. Yahan tum bina kisi jhijhak ke, real-life situations ki practice kar sakte ho. [Not at all, it's very affordable. Here you can practice real-life situations without any hesitation.]\nCharacter A says: Par time kahan milta hai? [But where is the time?]\nCharacter B says: Roz ki sirf 15-20 minute ki practice kaafi hai. Tumhara confidence zaroor badhega. [Just 15-20 minutes of daily practice is enough. Your confidence will definitely grow.]\nCharacter A says: Wow, kaise join karun? [Wow, how do I join?]\nCharacter B says: Ye install button dabao aur Supernova app download karo. Chalo, aaj hi se shuru karte hain! [Press this install button and download the Supernova app. Come on, let's start from today!]",
+        "scene_summary": "- Hooks the user with a relatable grammar mistake and correction loop.\n- Introduces Supernova's AI tutor as a safe, affordable space to practice real-life English without hesitation.\n- Overcomes the 'lack of time' objection with a practical 15-20 minute daily goal.\n- Ends with an encouraging, pressure-free call to action.",
+        "supernova_on_screen_text": "Hello, What is your name, My name is rahul, How old are you, I have 22, I am 22 yrs old, Okay okay, I am 22 years old, Where are you from, I am Uttar Pradesh, I am from Uttar Pradesh, Oh, theek hai, Mujhe English, acche se nahi aati, Koi baat nahi, Supernova AI tutor try kiya, Wo toh mehenga hoga na, Bilkul nahi, Bohot affordable hai, Real-life practice, Supernova AI English Speaking, Install, Par time kahan milta hai, Roz ki sirf 15-20 minute ki practice, Confidence zaroor badhega, Wow, Kaise join karun, Install, Supernova AI English Speaking, Install, Aaj hi shuru karein"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "Unknown speaker says: Install now pe click karo aur Supernova ke saath English bolna shuru karo. [Click on install now and start speaking English with Supernova.]",
+        "scene_summary": "- Delivers the final clear call to action.\n- Reinforces the Supernova brand name and core value proposition.",
+        "supernova_on_screen_text": "Supernova\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "7 guna sasta hai / 7x CHEAPER",
+        "supernova_swap": "bohot affordable hai"
+      },
+      {
+        "competitor_brand": "Sirf 15 dino mein tumhe improvement dikhne lagegi",
+        "supernova_swap": "Tumhara confidence zaroor badhega / Aaj hi se shuru karte hain"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892235.986924
+}

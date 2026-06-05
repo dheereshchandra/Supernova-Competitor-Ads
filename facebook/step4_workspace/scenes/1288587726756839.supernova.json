@@ -1,0 +1,53 @@
+{
+  "competitor_id": "1288587726756839",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Mid-20s female, slim build, fair complexion, dark brown hair. Facial features are expressive.",
+        "wardrobe": "Light beige short-sleeve t-shirt.",
+        "demeanor": "Shifts from stressed and frustrated to enthusiastic and engaged."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young female avatar, fair complexion, red hair tied back, large brown eyes. Features are smooth and slightly uncanny.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Friendly, encouraging, static posture with hand resting on chin."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Frustrated at work",
+        "supernova_script": "Character A says: Uh, I have many work today and my brain... [Uh, I have many work today and my brain...]\nUnknown speaker says: Okay, no worries, take your time. [Okay, no worries, take your time.]",
+        "scene_summary": "- Establishes the core problem: struggling with English in a professional setting.\n- Evokes empathy and frustration through a relatable grammar mistake.\n- Hooks the viewer with a raw, authentic moment of vulnerability.",
+        "supernova_on_screen_text": "TUE 14:32\nUh I have\nmany work today\nand my brain...\nOkay no worries\ntake your time"
+      },
+      {
+        "n": 2,
+        "scene_label": "Explaining the problem",
+        "supernova_script": "Character A says: हाँ, मेरे husband ने मुझे बिना बताए record कर लिया। सच में, अपनी English की वजह से मैं रो पड़ी थी। [Yes, my husband recorded me without telling me. Honestly, I cried because of my English.] But it showed me how badly I needed to improve my English speaking skills. तो अगले ही दिन मैंने Supernova के साथ practice शुरू कर दी। Let me show you. [So the very next day I started practicing with Supernova. Let me show you.]",
+        "scene_summary": "- Deepens the emotional stakes by revealing the personal embarrassment caused by poor English.\n- Transitions from the problem to the proactive search for a solution.\n- Introduces Supernova as the turning point in her learning journey.",
+        "supernova_on_screen_text": "हाँ, मेरे husband ने\nमुझे बिना बताए\nrecord कर लिया।\nसच में, अपनी English\nकी वजह से मैं रो पड़ी थी।\nBut it showed me\nhow badly I needed\nto improve my English\nspeaking skills.\nतो अगले ही दिन मैंने\nSupernova के साथ\npractice शुरू कर दी।\nLet me show you."
+      },
+      {
+        "n": 3,
+        "scene_label": "App interaction",
+        "supernova_script": "Character B says: What are you doing? [What are you doing?]\nCharacter A says: I am working. I have many work today. [I am working. I have many work today.]\nCharacter B says: Do you mean: \"I have a lot of work today\"? [Do you mean: \"I have a lot of work today\"?]\nCharacter A says: Yes, I have a lot of work today and my brain not working. [Yes, I have a lot of work today and my brain not working.]\nCharacter B says: Do you mean: \"my brain isn't working\"? [Do you mean: \"my brain isn't working\"?]\nCharacter A says: Yes, I have a lot of work and my brain isn't working. [Yes, I have a lot of work and my brain isn't working.]\nCharacter B says: That's perfect! Well done, Anjali! [That's perfect! Well done, Anjali!]\nCharacter A says: मुझे रोज़ English बोलनी है, but classes बहुत expensive होती हैं! [I want to speak English everyday, but classes are very expensive!]\nCharacter B says: Why don't you speak to an AI tutor? [Why don't you speak to an AI tutor?]\nCharacter A says: AI tutor? मुझे कोई ऐसा चाहिए जो मेरी mistakes correct कर सके। [AI tutor? I want someone who can correct my mistakes.]\nCharacter B says: Like I did! मैं Supernova की AI tutor हूँ। Nice to meet you, Anjali! [Like I did! I am Supernova's AI tutor. Nice to meet you, Anjali!]\nCharacter A says: You're an AI tutor? What? सच में? [You're an AI tutor? What? Really?]\nCharacter B says: Supernova app download करो और रोज़ मुझसे बात करो। I'll help correct your mistakes! [Download the Supernova app and talk to me everyday. I'll help correct your mistakes!]\nCharacter A says: Amazing! मैं आज से ही इसे अपने daily routine में add करूँगी। [Amazing! I'll add it to my daily routine starting today.]",
+        "scene_summary": "- Demonstrates the app's core value: real-time, non-judgmental AI correction.\n- Addresses common objections like the high cost of human tutors and skepticism about AI.\n- Ends with a strong, clear call-to-action to download and practice daily.",
+        "supernova_on_screen_text": "What are you doing?\nI am working.\nI have many work today.\nDo you mean:\n\"I have a lot of work today\"\nYes, I have a lot of work today\nand my brain not working.\nDo you mean:\n\"my brain isn't working\"\nYes, I have a lot of work and my brain isn't working.\nThat's perfect!\nWell done, Anjali!\nमुझे रोज़ English बोलनी है,\nbut classes बहुत expensive होती हैं!\nWhy don't you speak to an AI tutor?\nAI tutor? मुझे कोई ऐसा चाहिए जो मेरी mistakes correct कर सके।\nLike I did!\nमैं Supernova की AI tutor हूँ!\nNice to meet you, Anjali!\nYou're an AI tutor?\nWhat? सच में?\nSupernova app download करो\nऔर रोज़ मुझसे बात करो। I'll help correct your mistakes!\nAmazing.\nमैं आज से ही इसे अपने daily routine में add करूँगी!\nSupernova\nPERFECT RESPONSE"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Loora",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889200.084334
+}

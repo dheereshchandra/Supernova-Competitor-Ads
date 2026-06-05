@@ -1,0 +1,61 @@
+{
+  "competitor_id": "2124600818383377",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, dark complexion. He has black hair styled upwards, a beard, and wears round wire-rimmed glasses.",
+        "wardrobe": "Black t-shirt with a white line-drawing graphic on the chest, dark pants. He wears a watch on his left wrist and a bracelet on his right.",
+        "demeanor": "Enthusiastic, expressive, and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Hook",
+        "supernova_script": "Character A says: English बोलने से पहले अभी भी मन में translate करते हो? Bro, that's holding you back. Watch this. [Do you still translate in your mind before speaking English? Bro, that's holding you back. Watch this.]",
+        "scene_summary": "- Hooks the viewer by calling out a common pain point (translating in the head before speaking).\n- Establishes a relatable, older-sibling tone.\n- Transitions directly into a demonstration.",
+        "supernova_on_screen_text": "pov: you want to speak fluent English\nEnglish\nबोलने\nसे\nपहले\ntranslate\nकरते\nहो?\nbro\nthat's\nholding\nyou\nback\nwatch\nthis"
+      },
+      {
+        "n": 2,
+        "scene_label": "Demonstration",
+        "supernova_script": "Character A says: Hi, I want to order... uh, ek coffee... I mean, one cappuccino please. And... uh... parcel कर दीजिये... I mean, make it takeaway. [Hi, I want to order... uh, a coffee... I mean, one cappuccino please. And... uh... pack it... I mean, make it takeaway.]",
+        "scene_summary": "- Demonstrates a realistic, relatable struggle with spoken English in a cafe setting.\n- Shows the user making mistakes and self-correcting naturally.\n- Sets up the AI tutor's role for the next scene.",
+        "supernova_on_screen_text": "hi\nI\nwant\nto\norder\nuh\nek\ncoffee\nI\nmean\none\ncappuccino\nplease\nand\nuh\nparcel\nकर\nदीजिये\nI\nmean\nmake\nit\ntakeaway"
+      },
+      {
+        "n": 3,
+        "scene_label": "Value Proposition",
+        "supernova_script": "Character A says: मैंने अभी एक real-life situation practice की, बिना किसी डर के। Supernova का AI tutor आपकी टूटी-फूटी English सुनता है और बिना judge किये आपको सही बोलना सिखाता है। [I just practiced a real-life situation, without any fear. Supernova's AI tutor listens to your broken English and teaches you to speak correctly without judging.]",
+        "scene_summary": "- Explains the core value proposition: judgment-free AI practice.\n- Highlights the app's ability to handle mistakes and teach correct phrasing.\n- Replaces the competitor's tech-heavy pitch with an emotional, confidence-building message.",
+        "supernova_on_screen_text": "Supernova AI Tutor\nमैंने\nअभी\nएक\nreal-life\nsituation\npractice\nकी\nबिना\nकिसी\nडर\nके\nSupernova\nका\nAI\ntutor\nआपकी\nटूटी-फूटी\nEnglish\nसुनता\nहै\nऔर\nबिना\njudge\nकिये\nआपको\nसही\nबोलना\nसिखाता\nहै"
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "supernova_script": "Character A says: No judgment, no hesitation. अगर अभी भी सिर्फ grammar rules रट रहे हो, तो you're missing out on real growth. Supernova app download करो and thank me later. [No judgment, no hesitation. If you're still just cramming grammar rules, then you're missing out on real growth. Download the Supernova app and thank me later.]",
+        "scene_summary": "- Delivers a strong call to action emphasizing practical growth over rote learning.\n- Removes the 'free' claim as per brand guidelines.\n- Ends with a confident, encouraging sign-off.",
+        "supernova_on_screen_text": "no\njudgment\nno\nhesitation\nअगर\nअभी\nभी\nसिर्फ\ngrammar\nrules\nरट\nरहे\nहो\nतो\nyou're\nmissing\nout\non\nreal\ngrowth\nSupernova\napp\ndownload\nकरो\nand\nthank\nme\nlater"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Claude",
+        "supernova_swap": "removed"
+      },
+      {
+        "competitor_brand": "Cursor",
+        "supernova_swap": "removed"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.7855713
+}

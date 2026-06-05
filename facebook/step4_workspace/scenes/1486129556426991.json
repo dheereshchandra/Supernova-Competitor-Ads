@@ -1,0 +1,67 @@
+{
+  "competitor_id": "1486129556426991",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "AI-generated",
+    "production_notes": "The presenter's facial movements and lip-sync are slightly stiff and unnatural. The background is perfectly static, and the lighting on the subject is unusually even, which are common traits of AI-generated video avatars.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "White male, late 20s, slim build, fair complexion. Short light brown hair, light stubble, round tortoiseshell glasses.",
+        "wardrobe": "Navy blue crew-neck sweater over a white collared shirt.",
+        "demeanor": "Professional, earnest, and direct."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 30.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Presenter Pitch",
+        "setting": "A softly lit home office or living room with a bookshelf and framed art.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A medium close-up of Character A looking directly at the camera with an earnest expression. He is dressed in a navy blue crew-neck sweater over a white collared shirt and wears round tortoiseshell glasses. The background is a softly lit room featuring a wooden bookshelf with books and a potted trailing plant on the left. A framed piece of art hangs on the wall to the right. The lighting is warm, even, and natural-looking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A continuous talking-head shot of Character A speaking directly to the camera. Dynamic, word-by-word captions appear in the lower center of the frame, highlighting the spoken words in yellow. Towards the end of the scene, a small, pill-shaped button with a double arrow icon and text appears at the bottom.",
+        "audio_transcript": "Character A says: My English is good enough to get the job.\nCharacter A says: But not good enough to get the promotion.\nCharacter A says: I say things like we have a problem when natives say we are facing a challenge.\nCharacter A says: Small things.\nCharacter A says: But they make you sound like a student, not a leader.\nCharacter A says: Fluently taught me how to rephrase.\nCharacter A says: Like saying let me circle back instead of I will answer later.\nCharacter A says: Ten minutes a day on my commute.\nCharacter A says: And now people actually listen differently when I talk.\nCharacter A says: Download Fluently and start sounding like a leader.",
+        "on_screen_text": "My English is good enough to get the job. But not good enough to get the promotion. I say things like we have a problem when natives say we are facing a challenge. Small things. But they make you sound like a student, not a leader. Fluently taught me how to rephrase. Like saying let me circle back instead of I will answer later. Ten minutes a day on my commute. And now people actually listen differently when I talk. Download Fluently and start sounding like a leader. >> Start speaking"
+      },
+      {
+        "n": 2,
+        "start_s": 30.0,
+        "end_s": 35.0,
+        "screenshot_at_s": 32.5,
+        "scene_label": "End Card",
+        "setting": "Dark purple gradient background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A simple, abstract background consisting of a smooth, dark purple to black radial gradient. The center is slightly lighter purple, fading to black at the edges. There are no objects, characters, or distinct light sources visible.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A static end-card graphic. The background is a dark purple gradient. In the center is a large, rounded square app icon featuring a blue gradient and two white right-pointing arrows. Below the icon is the app name and a short tagline. At the bottom is a purple, pill-shaped download button.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": ">> Fluently App AI-power English coach DOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.0950031
+}

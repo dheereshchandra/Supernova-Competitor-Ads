@@ -1,0 +1,202 @@
+{
+  "competitor_id": "1305320435143159",
+  "parsed": {
+    "duration_s": 79.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines live-action human footage with a CGI/AI-generated humanoid robot avatar. The robot's voice is synthetic, and the split-screen conversation features precise, unnatural timing typical of AI-assembled ads.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter and learner",
+        "appearance": "Young adult female of South Asian descent with a medium complexion. She has long, wavy dark brown hair, dark-rimmed glasses, and a small nose ring.",
+        "wardrobe": "A light blue, long-sleeved button-up top with subtle white embroidery.",
+        "demeanor": "Confident and expressive."
+      },
+      {
+        "id": "B",
+        "role": "male colleague",
+        "appearance": "Adult white male with short brown hair.",
+        "wardrobe": "A light-colored plaid button-down shirt.",
+        "demeanor": "Surprised."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "A white, glossy humanoid robot with visible panel seams. It has a human-like face, blue eyes, and a glowing blue circular light on its chest.",
+        "wardrobe": "None.",
+        "demeanor": "Calm and artificial."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Cafeteria Intro",
+        "setting": "Office cafeteria, daytime, bright lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands in the foreground, holding the camera selfie-style. She is in a modern office cafeteria. Behind her, a counter with food and two chefs in white uniforms are visible. Other people walk in the background.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A introduces her situation while filming herself in a busy office cafeteria. Large text captions are overlaid on the footage.",
+        "audio_transcript": "Character A says: My colleagues don't know I've been practicing my English, and they were making fun of my accent.\nCharacter A says: Let's see their reaction.",
+        "on_screen_text": "My colleagues don't know I've been practicing my English, and they were making fun of my accent. Let's see their reaction. Learna AI"
+      },
+      {
+        "n": 2,
+        "start_s": 5.5,
+        "end_s": 13.5,
+        "screenshot_at_s": 9.0,
+        "scene_label": "Meeting Room Surprise",
+        "setting": "Glass-walled meeting room, daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A low-angle shot inside a meeting room. Character A is in the foreground left, looking towards the right. Character B sits across the table, looking at her with a surprised expression. Other colleagues are blurred in the background.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A speaks confidently in a meeting, surprising her colleague. Text captions are overlaid on the footage.",
+        "audio_transcript": "Character A says: I'd like to propose a different approach to this project.\nCharacter B says: What did you say?\nCharacter A says: A different approach.\nCharacter B says: Wow, you sound a lot different.",
+        "on_screen_text": "I'd like to propose a different approach to this project. What did you say? A different approach. Wow, you sound a lot different. Learna AI"
+      },
+      {
+        "n": 3,
+        "start_s": 13.5,
+        "end_s": 21.5,
+        "screenshot_at_s": 17.0,
+        "scene_label": "App Introduction",
+        "setting": "Glass-walled meeting room, daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Inside the same meeting room, Character A holds up a black smartphone, showing the blank screen to the camera. Character B is visible in the background, looking on.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A explains how she improved her English, holding up her phone to introduce the app. Text captions are overlaid.",
+        "audio_transcript": "Character A says: Remember I was always on my phone after lunch?\nCharacter A says: I wasn't scrolling Instagram, I was practicing English with this.\nCharacter A says: It's called Learna.\nCharacter A says: It's like having an English teacher on your phone.\nCharacter A says: Look, let me show you.",
+        "on_screen_text": "Remember I was always on my phone after lunch? I wasn't scrolling Instagram, I was practicing English with this. It's called Learna. It's like having an English teacher on your phone. Look, let me show you. Learna AI"
+      },
+      {
+        "n": 4,
+        "start_s": 21.5,
+        "end_s": 34.5,
+        "screenshot_at_s": 28.0,
+        "scene_label": "App Features",
+        "setting": "Blurred office background.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "app-screencast",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character C, a white humanoid robot, stands facing forward against a blurred office background.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A pink smartphone is displayed vertically against a blurred office background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A split-screen presentation. On the left, the AI robot speaks. On the right, a phone displays various screens of the Learna app, including flags and tutor profiles. Text captions are overlaid in the center.",
+        "audio_transcript": "Character C says: Wait.\nCharacter C says: Did you know you can speak English like a native in just one week?\nCharacter C says: It's not magic, it's Learna, the app that corrects you as you speak and teaches you without you even noticing.\nCharacter C says: Let's try it together.",
+        "on_screen_text": "Wait. Did you know you can speak English like a native in just 1 week? It's not magic, it's Learna, the app that corrects you as you speak and teaches you without you even noticing. Let's try it together. SPEAK ENGLISH LIKE A NATIVE IN JUST 1 WEEK! Learna AI"
+      },
+      {
+        "n": 5,
+        "start_s": 34.5,
+        "end_s": 74.5,
+        "screenshot_at_s": 55.0,
+        "scene_label": "AI Conversation Practice",
+        "setting": "Top: Black background. Bottom: Office cafeteria.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character C, a white humanoid robot, is centered against a solid black background.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character A is in a modern office cafeteria, holding the camera selfie-style. In the background, a food service counter is visible with chefs working.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A horizontal split-screen showing a conversation. The top half features the AI robot with animated sound waves. The bottom half shows Character A in the cafeteria. Text captions are overlaid across the screen.",
+        "audio_transcript": "Character C says: Do you speak English?\nCharacter A says: A little bit.\nCharacter C says: Where do you live?\nCharacter A says: I am London.\nCharacter C says: Almost. You should say, I live in London.\nCharacter A says: I always mix that up.\nCharacter C says: That is exactly why I am here to help you speak correctly.\nCharacter A says: But I don't have any money.\nCharacter C says: You don't need money. With Learna, you can practice English for free.\nCharacter C says: It is not like other expensive apps or courses.\nCharacter A says: Are you serious?\nCharacter C says: Absolutely. No tricks, just real conversation practice with your AI tutor.\nCharacter A says: Like, a real tutor?\nCharacter C says: Yes. I correct your grammar, your pronunciation, and help you speak with confidence.\nCharacter A says: Okay. I am going to download Learna right now.\nCharacter C says: Great decision. Let's speak English together.",
+        "on_screen_text": "Do you speak English? A little bit. Where do you live? I am London. Almost. You should say, I live in London. I always mix that up. That is exactly why I am here to help you speak correctly. But I don't have any money. You don't need money. With Learna, you can practice English for free. It is not like other expensive apps or courses. Are you serious? Absolutely. No tricks, just real conversation practice with your AI tutor. Like, a real tutor? Yes. I correct your grammar, your pronunciation, and help you speak with confidence. Okay. I am going to download Learna right now. Great decision. Let's speak English together. Learna AI"
+      },
+      {
+        "n": 6,
+        "start_s": 74.5,
+        "end_s": 79.0,
+        "screenshot_at_s": 77.0,
+        "scene_label": "Call to Action",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark blue background. In the center is a square image of Character C, the white humanoid robot.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "An end-card with a solid blue background. The app's icon is in the center, surrounded by text prompting the viewer to download the app and app store badges.",
+        "audio_transcript": "Character C says: Download now and start practicing.",
+        "on_screen_text": "DOWNLOAD NOW! START PRACTICING Learna Download on the App Store GET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780125080.987683
+}

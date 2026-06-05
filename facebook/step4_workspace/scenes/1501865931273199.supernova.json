@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1501865931273199",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Interviewee 1",
+        "appearance": "Older Asian male, medium build, light complexion. He has short white hair and wears glasses.",
+        "wardrobe": "Dark suit jacket, white dress shirt, and a blue tie.",
+        "demeanor": "Thoughtful and expressive, using hand gestures to emphasize points."
+      },
+      {
+        "id": "B",
+        "role": "Interviewee 2",
+        "appearance": "Younger South Asian male, medium build, brown complexion. He has short black hair and a full beard.",
+        "wardrobe": "Black short-sleeved polo shirt.",
+        "demeanor": "Enthusiastic and articulate, holding a microphone and gesturing while speaking."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Typing Problem",
+        "supernova_script": "Character A says: हमारे पास बहुत सारे सपने हैं, जो हम achieve करना चाहते हैं। [We have so many dreams that we want to achieve.]\nCharacter A says: अगर बस ये English बोलने का डर नहीं होता, तो हम क्या कुछ नहीं कर सकते थे। [If only this fear of speaking English wasn't there, there's so much we could have done.]\nCharacter A says: सालों से, सिर्फ एक language barrier ने हमें इतना पीछे रखा है कि हमें लगता है हम बिना fluent English के आगे बढ़ ही नहीं सकते। [For years, just one language barrier has kept us so far behind that we feel we can't move forward without fluent English.]",
+        "scene_summary": "- Establishes the core problem: the fear of speaking English holding people back.\n- Creates an emotional hook by validating the user's unfulfilled dreams and potential.\n- Sets up the language barrier as the primary villain to be defeated.",
+        "supernova_on_screen_text": "हमारे पास बहुत सारे सपने हैं, जो हम achieve करना चाहते हैं। अगर बस ये English बोलने का डर नहीं होता, तो हम क्या कुछ नहीं कर सकते थे। सालों से, सिर्फ एक language barrier ने हमें इतना पीछे रखा है कि हमें लगता है हम बिना fluent English के आगे बढ़ ही नहीं सकते।"
+      },
+      {
+        "n": 2,
+        "scene_label": "The Wispr Flow Solution",
+        "supernova_script": "Character B says: Supernova का असली magic ये है कि वो सिर्फ आपको grammar के rules नहीं रटाता। [The real magic of Supernova is that it doesn't just make you memorize grammar rules.]\nCharacter B says: ये actually समझता है कि आप real-life situations में कैसे बात करना चाहते हैं, और आपको वैसे ही practice कराता है। [It actually understands how you want to converse in real-life situations, and makes you practice exactly like that.]\nCharacter B says: अगर आप अटकते हैं या गलत बोलते हैं, जैसे \"I goes to market\", तो Supernova का AI tutor आपको बिना judge किये सही करेगा, \"I go to the market\"। [If you get stuck or speak incorrectly, like \"I goes to market\", Supernova's AI tutor will correct you without judging, \"I go to the market\".]\nCharacter B says: Basically, ये आपको बिना डरे सोचने और बोलने की आज़ादी देता है, जिससे आपका confidence एकदम natural तरीके से बढ़ता है। [Basically, it gives you the freedom to think and speak without fear, which builds your confidence in a completely natural way.]",
+        "scene_summary": "- Introduces Supernova as the practical, non-judgmental solution.\n- Highlights the AI tutor feature that corrects mistakes naturally without rote memorization.\n- Delivers the payoff: building real-world speaking confidence.",
+        "supernova_on_screen_text": "Supernova का असली magic ये है कि वो सिर्फ आपको grammar के rules नहीं रटाता। ये actually समझता है कि आप real-life situations में कैसे बात करना चाहते हैं। अगर आप अटकते हैं, तो Supernova का AI tutor आपको बिना judge किये सही करेगा। ये आपको बिना डरे सोचने और बोलने की आज़ादी देता है, जिससे आपका confidence बढ़ता है।"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Wispr",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.768537
+}

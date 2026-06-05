@@ -1,0 +1,96 @@
+{
+  "competitor_id": "3398790000298365",
+  "parsed": {
+    "duration_s": 20.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor, natural lighting, and a physical laptop. The movements and speech are natural.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "presenter",
+        "appearance": "Young adult male of East Asian descent. Slim build, light complexion, short dark hair parted on the side. Clean-shaven.",
+        "wardrobe": "Dark grey short-sleeved t-shirt.",
+        "demeanor": "Initially surprised, then informative and direct."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 2.5,
+        "screenshot_at_s": 1.0,
+        "scene_label": "Surprised reaction",
+        "setting": "Indoor room, plain white ceiling, wooden door in background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man looks off-camera with a shocked expression. His right hand covers his mouth. He is indoors with a plain white ceiling and a wooden door visible in the background. The lighting is natural and soft.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A close-up shot of a young man looking surprised, with his hand over his mouth. Text overlay is present at the top.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "I found a dev tool that writes my entire linear ticket without typing \ud83e\udd2f..."
+      },
+      {
+        "n": 2,
+        "start_s": 2.5,
+        "end_s": 17.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Dictating ticket",
+        "setting": "Close-up of a laptop.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up view of a physical laptop keyboard and screen. A person's hand gestures in the foreground over the keyboard. The laptop screen is illuminated.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A close-up shot of a laptop screen showing a ticket being created. The user's hand is visible gesturing in front of the screen as they dictate the ticket details. The text appears on the screen as they speak.",
+        "audio_transcript": "Character A says: Users are getting logged out after every page refresh, session isn't persisting. I've already um checked cookie settings and they look fine. Need to investigate whether we're initializing the Supabase client multiple times across API routes. Might need to refactor to a singleton. Priority is high, fire emoji.",
+        "on_screen_text": "Linear app interface text"
+      },
+      {
+        "n": 3,
+        "start_s": 17.5,
+        "end_s": 20.0,
+        "screenshot_at_s": 18.5,
+        "scene_label": "Call to action",
+        "setting": "Indoor room, plain white ceiling, wooden door in background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man looks directly at the camera and speaks. He is indoors with a plain white ceiling and a wooden door visible in the background. The lighting is natural and soft.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A close-up shot of the young man speaking directly to the camera, delivering a call to action. A brand logo and text overlay are present.",
+        "audio_transcript": "Character A says: Try Wispr Flow for free today.",
+        "on_screen_text": "Wispr Flow\nTry Wispr Flow\nfor FREE today"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.252227
+}

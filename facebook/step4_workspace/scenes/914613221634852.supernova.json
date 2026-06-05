@@ -1,0 +1,53 @@
+{
+  "competitor_id": "914613221634852",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot with a white and silver metallic body, visible mechanical joints, and bright blue eyes. She has a smooth, sculpted face and wears a small black headset.",
+        "wardrobe": "No clothing; features a white and silver metallic robotic casing.",
+        "demeanor": "Calm, instructional, and friendly."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Indian female in her late 20s, medium build, brown complexion, dark hair tied back. She has a bright, constant smile.",
+        "wardrobe": "Pink short-sleeved blouse and a black saree decorated with pink floral patterns.",
+        "demeanor": "Cheerful, eager to learn, and inquisitive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Conversation about learning English",
+        "supernova_script": "Character A says: क्या कर रही हो? [What are you doing?]\n\nCharacter B says: मैं रोटियां making. [I am making rotis.]\n\nCharacter A says: हाहा, रोटियां making नहीं, \"I am making rotis\" कहो. [Haha, not making rotis, say \"I am making rotis\".]\n\nCharacter B says: क्या तुम मुझे English बोलना सिखाओगी? [Will you teach me to speak English?]\n\nCharacter A says: बिल्कुल! रोज़ मेरे साथ 15 मिनट practice करो, और confidence से English बोलो. [Absolutely! Practice with me for 15 minutes daily, and speak English with confidence.]\n\nCharacter B says: लेकिन मेरे पास महँगी classes के पैसे नहीं हैं. [But I don't have money for expensive classes.]\n\nCharacter A says: Tension मत लो. Supernova बहुत affordable है. [Don't take tension. Supernova is very affordable.]\n\nCharacter B says: अरे वाह! कैसे join करूँ? [Oh wow! How do I join?]",
+        "scene_summary": "- Establishes a relatable daily scenario to hook the viewer.\n- Demonstrates the AI tutor's gentle, non-judgmental correction method.\n- Addresses the common barrier of high costs by positioning Supernova as an affordable alternative.",
+        "supernova_on_screen_text": "क्या कर रही हो? (What are you doing?)\nमैं रोटियां making (I am making rotis)\nhahaha रोटियां making नहीं (hahaha not making rotis)\n\"I am making rotis\" कहो. (say \"I am making rotis\".)\nक्या तुम मुझे English बोलना सिखाओगी? (Will you teach me to speak english?)\nबिल्कुल! (Absolutely!)\nरोज़ मेरे साथ (Daily with me)\n15 MIN\npractice करो (practice)\nconfidence से English बोलो. (speak english with confidence.)\nलेकिन मेरे पास (But I have)\nमहँगी classes के (for expensive classes)\nपैसे नहीं हैं. (no money.)\nTension मत लो. (Don't take tension.)\nSupernova बहुत (Supernova is very)\nAFFORDABLE\nहै. (is.)\nअरे वाह! (Oh wow!)\nकैसे join करूँ? (How to join?)"
+      },
+      {
+        "n": 2,
+        "scene_label": "Call to action instructions",
+        "supernova_script": "Character A says: नीचे दिए गए install button पर click करो, Supernova app download करो, और आज ही अपनी English practice शुरू करो. [Click the install button below, download the Supernova app, and start your English practice today.]",
+        "scene_summary": "- Directs the user to take immediate action.\n- Clearly instructs how to download the app.\n- Reinforces the goal of starting English practice.",
+        "supernova_on_screen_text": "नीचे दिए गए install (install below)\nbutton पर click करो, (click button,)\nSupernova\napp download करो, (download app,)\nअपनी English practice (your english practice)\nशुरू करो. (start.)"
+      },
+      {
+        "n": 3,
+        "scene_label": "App download end-card",
+        "supernova_script": "Unknown speaker says: अभी install पर click करें और Supernova app download करें. [Click on install now and download the Supernova app.]",
+        "scene_summary": "- Provides a final, clear call to action.\n- Displays the app branding prominently for recall.",
+        "supernova_on_screen_text": "Supernova\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892236.000641
+}

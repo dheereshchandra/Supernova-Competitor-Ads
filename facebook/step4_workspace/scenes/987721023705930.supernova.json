@@ -1,0 +1,39 @@
+{
+  "competitor_id": "987721023705930",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI Tutor Avatar",
+        "appearance": "Young adult female, fair complexion, red hair tied back, green eyes. Symmetrical, flawless facial features.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Calm, friendly, and static."
+      },
+      {
+        "id": "B",
+        "role": "Female Learner",
+        "appearance": "Young adult female, fair complexion, dark hair pulled back.",
+        "wardrobe": "Black long-sleeve top.",
+        "demeanor": "Sleepy, casual, and relaxed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Late night English practice",
+        "supernova_script": "Character A says: Hey, इतनी रात को क्या कर रहे हो? [Hey, what are you doing so late at night?]\nCharacter B says: I can't sleep. [I can't sleep.]\nCharacter A says: शायद आप कहना चाहते हो, 'I can't fall asleep'? [Maybe you mean to say, 'I can't fall asleep'?]\nCharacter B says: Yes, I can't fall asleep. Now twelve o'clock! [Yes, I can't fall asleep. Now twelve o'clock!]\nCharacter A says: इसे ऐसे कह सकते हैं: 'It's twelve o'clock' या 'It's midnight'. [You can say it like this: 'It's twelve o'clock' or 'It's midnight'.]\nCharacter B says: Aha, okay! It's midnight. [Aha, okay! It's midnight.]\nCharacter A says: Great job! जब तक नींद नहीं आती, हम इंग्लिश में बात कर सकते हैं। [Great job! Until you feel sleepy, we can talk in English.]\nCharacter B says: Cool, but my English not good. [Cool, but my English not good.]\nCharacter A says: आपको कहना चाहिए, 'My English isn't good'. [You should say, 'My English isn't good'.]\nCharacter B says: Alright, my English isn't good. [Alright, my English isn't good.]\nCharacter A says: Perfect! घबराओ मत। Supernova app पर मेरे साथ रोज़ practice करो। मैं आपकी गलतियां सुधारूंगी और आप जल्द ही confidently इंग्लिश बोलने लगोगे। [Perfect! Don't worry. Practice with me every day on the Supernova app. I will correct your mistakes and you will start speaking English confidently soon.]\nCharacter B says: Okay, मैं आज ही Supernova download करती हूँ। See you tomorrow! [Okay, I will download Supernova today itself. See you tomorrow!]",
+        "scene_summary": "- Hooks the viewer with a relatable late-night scenario where the user is casually practicing English from bed.\n- Demonstrates the AI tutor's gentle, real-time correction capabilities using a comforting Hindi-English mix.\n- Establishes the app as a safe, judgment-free space to make mistakes and build speaking confidence.\n- Concludes with a clear, practical call-to-action to download Supernova for daily practice.",
+        "supernova_on_screen_text": "Hey, इतनी रात को क्या कर रहे हो?\n❌ I can't sleep.\nशायद आप कहना चाहते हो: \"I can't fall asleep\"?\n✅ Yes, I can't fall asleep.\n❌ Now 12 o'clock!\nइसे ऐसे कह सकते हैं: \"It's 12 o'clock\" या \"It's midnight\"\nAha, okay!\n✅ It's midnight.\nGreat job!\nजब तक नींद नहीं आती, हम इंग्लिश में बात कर सकते हैं।\n❌ But my English not good.\nआपको कहना चाहिए: \"My English isn't good\"\nAlright, my English isn't good.\nPerfect!\nघबराओ मत।\nSupernova app पर मेरे साथ रोज़ practice करो,\nमैं आपकी गलतियां सुधारूंगी और आप confidently इंग्लिश बोलने लगोगे।\nOkay, मैं आज ही Supernova download करती हूँ।\nSupernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Loora",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889200.0796306
+}

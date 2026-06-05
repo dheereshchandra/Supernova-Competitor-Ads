@@ -1,0 +1,50 @@
+{
+  "competitor_id": "2162968067812618",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult Indian woman with a medium build and fair complexion. She has long, straight black hair parted in the middle. Her facial features are soft and natural.",
+        "wardrobe": "Wearing a white dupatta draped over a red top.",
+        "demeanor": "Curious, attentive, and eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Humanoid female robot with smooth, metallic silver skin and visible robotic joints/panel lines. She has dark hair styled in an updo, a red bindi, and realistic human-like eyes and lips.",
+        "wardrobe": "Wearing a traditional red sari with intricate gold patterns and borders.",
+        "demeanor": "Helpful, encouraging, and polite."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Practicing Anniversary Wishes",
+        "supernova_script": "Character A says: मुझे अपने पति को एनिवर्सरी विश करना है, पर इंग्लिश में। [I want to wish my husband for our anniversary, but in English.]\n\nCharacter B says: कोई बात नहीं, आप हिंदी में बोलो, मैं आपको इंग्लिश में बोलना सिखाऊंगी। [No worries, you speak in Hindi, I will teach you how to speak in English.]\n\nCharacter A says: हमारी 10th एनिवर्सरी है। [It is our 10th anniversary.]\n\nCharacter B says: Happy 10th wedding anniversary to you. [Happy 10th wedding anniversary to you.]\n\nCharacter A says: मैं और बच्चे आपसे बहुत प्यार करते हैं। [The kids and I love you very much.]\n\nCharacter B says: The kids and I love you very much. [The kids and I love you very much.]\n\nCharacter A says: मैं चाहती हूं आपको जिंदगी में सब कुछ मिले। [I want you to get everything in life.]\n\nCharacter B says: I wish you get everything you want in life. [I wish you get everything you want in life.]",
+        "scene_summary": "- Hooks the viewer with a highly relatable, real-world English speaking goal (anniversary wishes).\n- Demonstrates the core app mechanic: translating natural Hindi thoughts into correct English sentences.\n- Establishes a warm, supportive, and judgment-free dynamic between the learner and the AI tutor.",
+        "supernova_on_screen_text": "मुझे अपने पति को एनिवर्सरी विश करना है, पर इंग्लिश में (I want to wish my husband for our anniversary, but in English)\nकोई बात नहीं, आप हिंदी में बोलो, मैं आपको इंग्लिश में बोलना सिखाऊंगी (No worries, you speak in Hindi, I will teach you how to speak in English)\nहमारी 10th एनिवर्सरी है (It is our 10th anniversary)\nHAPPY 10TH WEDDING ANNIVERSARY TO YOU\nमैं और बच्चे आपसे बहुत प्यार करते हैं (The kids and I love you very much)\nTHE KIDS AND I LOVE YOU VERY MUCH\nमैं चाहती हूं आपको जिंदगी में सब कुछ मिले (I want you to get everything in life)\nI WISH YOU GET EVERYTHING YOU WANT IN LIFE"
+      },
+      {
+        "n": 2,
+        "scene_label": "Introducing Supernova App",
+        "supernova_script": "Character A says: अरे, ऐसे तो इंग्लिश बोलना बहुत आसान है! [Oh, speaking English like this is very easy!]\n\nCharacter B says: बिल्कुल! रोज़ प्रैक्टिस करने से कॉन्फिडेंस अपने आप आ जाता है। [Absolutely! By practicing daily, confidence comes naturally.]\n\nCharacter A says: पर मैं रोज़ प्रैक्टिस कहाँ कर सकती हूँ? [But where can I practice daily?]\n\nCharacter B says: Supernova ऐप पर! यहाँ आप मेरे जैसे AI ट्यूटर के साथ रियल-लाइफ सिचुएशन्स की प्रैक्टिस कर सकते हो, वो भी बिना किसी झिझक के। आज ही Supernova डाउनलोड करो और बेझिझक इंग्लिश बोलना शुरू करो। [On the Supernova app! Here you can practice real-life situations with an AI tutor like me, that too without any hesitation. Download Supernova today and start speaking English confidently.]",
+        "scene_summary": "- Resolves the learner's hesitation by emphasizing that daily practice is the key to building confidence.\n- Introduces Supernova as the practical solution for judgment-free, real-world AI conversation practice.\n- Ends with a strong, realistic call-to-action to download the app, stripping away the competitor's exaggerated 'two weeks' timeline.",
+        "supernova_on_screen_text": "अरे, ऐसे तो इंग्लिश बोलना बहुत आसान है! (Oh, speaking English like this is very easy!)\nबिल्कुल! रोज़ प्रैक्टिस करने से कॉन्फिडेंस अपने आप आ जाता है। (Absolutely! By practicing daily, confidence comes naturally.)\nपर मैं रोज़ प्रैक्टिस कहाँ कर सकती हूँ? (But where can I practice daily?)\nSupernova ऐप पर! यहाँ आप मेरे जैसे AI ट्यूटर के साथ रियल-लाइफ सिचुएशन्स की प्रैक्टिस कर सकते हो, वो भी बिना किसी झिझक के। आज ही Supernova डाउनलोड करो और बेझिझक इंग्लिश बोलना शुरू करो। (On the Supernova app! Here you can practice real-life situations with an AI tutor like me, that too without any hesitation. Download Supernova today and start speaking English confidently.)"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "SpeakX",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "SPEAK X",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889847.6412866
+}

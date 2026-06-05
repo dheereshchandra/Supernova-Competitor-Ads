@@ -1,0 +1,67 @@
+{
+  "competitor_id": "872598712508701",
+  "parsed": {
+    "duration_s": 35.6,
+    "production_type": "AI-generated",
+    "production_notes": "The presenter's facial movements, particularly the lip-sync and eye blinks, are slightly stiff and repetitive, which is characteristic of AI avatar generation. Additionally, the background remains perfectly static without any natural shifts in lighting or depth of field throughout the long take.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Mid-30s male, slim build, fair complexion, with short light brown hair. He wears round tortoiseshell glasses and has light stubble.",
+        "wardrobe": "A navy blue crew neck sweater worn over a crisp white collared shirt.",
+        "demeanor": "Professional, earnest, and direct, maintaining constant eye contact with the camera."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 30.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Presenter Testimonial",
+        "setting": "A softly lit home office or living room. A wooden bookshelf with books and small plants is visible on the left, and a framed picture hangs on a light wall on the right.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is positioned in the center of the frame, looking directly into the camera lens. He is wearing his navy blue sweater and white collared shirt, along with his tortoiseshell glasses. The background behind him is slightly out of focus, showing a warm, inviting interior space. On the left side of the background, a tall wooden bookshelf holds various books and small, trailing green plants. On the right side, a simple framed artwork hangs on a plain, light-colored wall. The lighting on Character A's face is soft, even, and natural, creating a professional yet approachable atmosphere.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A continuous medium close-up shot of Character A speaking directly to the audience. He remains centered in the frame against a blurred, static background of a home office. Throughout the scene, dynamic, stylized text captions appear in the lower-middle section of the screen, highlighting key phrases as he speaks. Towards the end of the scene, a small interactive button overlay appears near the bottom.",
+        "audio_transcript": "Character A says: My English is good enough to get the job.\nCharacter A says: But not good enough to get the promotion.\nCharacter A says: I say things like we have a problem when natives say we are facing a challenge.\nCharacter A says: Small things.\nCharacter A says: But they make you sound like a student, not a leader.\nCharacter A says: Fluently taught me how to rephrase.\nCharacter A says: Like saying let me circle back instead of I will answer later.\nCharacter A says: Ten minutes a day on my commute.\nCharacter A says: And now people actually listen differently when I talk.\nCharacter A says: Download Fluently and start sounding like a leader.",
+        "on_screen_text": "My English is good enough to get the job. But not good enough to get the promotion. I say things like we have a problem when natives say we are facing a challenge. Small things. But they make you sound like a student, not a leader. Fluently taught me how to rephrase. Like saying let me circle back instead of I will answer later. Ten minutes a day on my commute. And now people actually listen differently when I talk. Download Fluently and start sounding like a leader. >> Start speaking"
+      },
+      {
+        "n": 2,
+        "start_s": 30.0,
+        "end_s": 35.6,
+        "screenshot_at_s": 32.0,
+        "scene_label": "End Card",
+        "setting": "Abstract digital background with a dark purple and blue gradient.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, smooth gradient background transitioning from dark purple to deep blue. In the upper center of the frame, there is a large, rounded square app icon. The icon features a bright blue background with two thick, white, right-pointing arrows in the center. The composition is entirely graphic and minimal, with no physical environment or props.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A digital end card displaying the app's branding. The background is a dark purple-to-blue gradient. The app's logo, a blue rounded square with white forward arrows, sits in the center. Below the logo, white text displays the app name and a short tagline. At the bottom, a purple pill-shaped button prompts the user to download.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.0939503
+}

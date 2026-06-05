@@ -1,0 +1,107 @@
+{
+  "competitor_id": "852215417441942",
+  "parsed": {
+    "duration_s": 58.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines a human-recorded male actor with an AI-generated female avatar. The avatar exhibits typical AI traits like perfectly smooth skin, a static blurred background, and slightly unnatural lip-syncing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, athletic build, light brown complexion. He has dark curly hair styled in a mullet, dark eyes, and wears small hoop earrings.",
+        "wardrobe": "Grey hoodie and blue jeans.",
+        "demeanor": "Casual, engaging, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, fair complexion. She has a blonde bob haircut and blue eyes. Her features are highly symmetrical.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Calm, professional, and slightly robotic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Introduction in Car",
+        "setting": "Inside a car, daytime, dark grey leather seats, building visible through the window.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits in the driver's seat of a car. The car interior features dark grey leather seats. Through the side window, a building facade is visible. The lighting is natural daylight. Character A looks directly at the camera and gestures with his hands as he speaks.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A is sitting in a car, talking directly to the camera. He uses hand gestures to emphasize his points. Text overlays appear on the screen highlighting the phrases he mentions.",
+        "audio_transcript": "Character A says: Stop saying: \"I'm fine, thank you\", \"I don't know\", \"You are welcome\".\nCharacter A says: It's very basic.\nCharacter A says: I used to speak like that too.\nCharacter A says: Then I started practicing with Fluently.\nCharacter A says: Let me show you.",
+        "on_screen_text": "!! STOP SAYING !!\nStop saying: \"I'm fine, thank you\"\n\"I don't know\"\n\"You are welcome\"\nIt's very basic\nI used to speak like that too\nThen I started practicing with Fluently\nLet me show you"
+      },
+      {
+        "n": 2,
+        "start_s": 11.5,
+        "end_s": 54.5,
+        "screenshot_at_s": 30.0,
+        "scene_label": "App Demonstration",
+        "setting": "Split screen: Top is a blurred indoor setting; Bottom is a bright room with a beanbag chair and wooden furniture.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character B faces forward against a blurred, neutral-toned indoor background. Her expression is calm and neutral. The lighting is soft and even.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character A sits on a light-colored beanbag chair in a bright room. He holds a black microphone in his hands. A wooden cabinet and a white curtain are visible in the background. He looks upwards towards the top panel and gestures with his hands.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half shows Character B, the AI avatar. The bottom half shows Character A sitting in a room holding a microphone. They appear to be having a conversation, with Character A looking up towards Character B. Text overlays display their dialogue.",
+        "audio_transcript": "Character B says: Do you speak English?\nCharacter A says: More or less.\nCharacter B says: Where are you from?\nCharacter A says: I am Mexico.\nCharacter B says: Almost, better say: \"I am from Mexico\".\nCharacter A says: Oh, I always get confused about that.\nCharacter B says: That's what I'm here for, to help you speak correctly.\nCharacter A says: But I don't have any money.\nCharacter B says: You don't need a fortune! Fluently is way more affordable than a private tutor.\nCharacter A says: Really?\nCharacter B says: Sure! No tricks. Just real English conversation practice with an AI tutor.\nCharacter A says: Like a real tutor?\nCharacter B says: Yes, it corrects your grammar and pronunciation and helps you speak with confidence.\nCharacter A says: Okay, then I will download Fluently right now.\nCharacter B says: Great decision. Let's speak English together.",
+        "on_screen_text": "Do you speak English?\nMore or less\nWhere are you from?\nI am Mexico\nAlmost, better say: \"I am from Mexico\"\nOh, I always get confused about that\nThat's what I'm here for, to help you speak correctly\nBut I don't have any money\nYou don't need a fortune!\nFluently is way more affordable than a private tutor\nReally?\nSure! No tricks\nJust real English conversation practice with an AI tutor\nLike a real tutor?\nYes, it corrects your grammar and pronunciation\nand helps you speak with confidence\nOkay, then I will download Fluently right now\nGreat decision. Let's speak English together."
+      },
+      {
+        "n": 3,
+        "start_s": 54.5,
+        "end_s": 58.0,
+        "screenshot_at_s": 56.0,
+        "scene_label": "End Card",
+        "setting": "Dark purple gradient background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark purple gradient background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A dark purple gradient background displays the app icon, app name, a tagline, and a download button.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power English coach\nDOWNLOAD\nNOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657946.4157748
+}

@@ -1,0 +1,166 @@
+{
+  "competitor_id": "1649615709610057",
+  "parsed": {
+    "duration_s": 26.0,
+    "production_type": "human-recorded",
+    "production_notes": "Natural lighting, realistic skin textures, fluid human movements, and natural hair physics indicate live-action recording. No AI artifacts are present.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Mid-20s, slim build, fair complexion. Long dark hair tied in a high ponytail.",
+        "wardrobe": "Dark blue/grey athletic tank top.",
+        "demeanor": "Focused and professional, momentarily distracted."
+      },
+      {
+        "id": "B",
+        "role": "male gym-goer",
+        "appearance": "Mid-20s, muscular build, fair complexion. Short dark hair.",
+        "wardrobe": "Maroon t-shirt.",
+        "demeanor": "Straining and loud."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 0.8,
+        "screenshot_at_s": 0.4,
+        "scene_label": "Phone typing",
+        "setting": "Indistinct dark background.",
+        "characters_in_scene": [],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Close-up of a person's hands holding a smartphone. The thumbs are positioned over the lower half of the screen as if typing. The background is dark and out of focus.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Close-up of hands typing on a smartphone. A chat application interface is visible on the screen.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Atharva Karande\nVoice call\nCan you send the final versions of the videos we made for the project, I remember version 2 was the latest\nFormal"
+      },
+      {
+        "n": 2,
+        "start_s": 0.8,
+        "end_s": 8.8,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Dictating message",
+        "setting": "Gym, daytime, blurred equipment in background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands in a gym, holding a smartphone horizontally in front of her mouth. She is looking down at the phone screen. The background shows blurred gym equipment and a window with daylight.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A is recording a voice message on her phone in a gym. A white text box overlay shows her transcribed speech in real-time.",
+        "audio_transcript": "Character A says: Remember, \u0939\u092e\u093e\u0930\u0940 \u092c\u093e\u0924 \u0939\u0941\u0908 \u0925\u0940 last week regarding the collab? I think this is the right time, so let's meet on Tuesday 2pm [Remember, we had a talk last week regarding the collab? I think this is the right time, so let's meet on Tuesday 2pm]",
+        "on_screen_text": "Remember, humari baat hui thi last week regarding the collab? I think this is the right time, so let's meet on Tuesday 2pm"
+      },
+      {
+        "n": 3,
+        "start_s": 8.8,
+        "end_s": 10.0,
+        "screenshot_at_s": 9.4,
+        "scene_label": "Gym grunt",
+        "setting": "Gym, dark background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Low-angle close-up of Character B's face. He has his eyes squeezed shut and mouth open in a grimace, appearing to exert intense physical effort. A blurred metal barbell is visible in the immediate foreground.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Quick cut to Character B straining to lift a barbell, making a loud noise.",
+        "audio_transcript": "Character B says: \u0906\u0906\u0906! [Aaaargh!]",
+        "on_screen_text": ""
+      },
+      {
+        "n": 4,
+        "start_s": 10.0,
+        "end_s": 13.8,
+        "screenshot_at_s": 11.5,
+        "scene_label": "Correcting message",
+        "setting": "Gym, daytime.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is holding her smartphone horizontally. She briefly looks up with a slightly distracted or annoyed expression, then looks back down at her phone and continues speaking into it.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A reacts to the loud noise, then corrects the meeting time she just dictated. The text overlay updates with her correction.",
+        "audio_transcript": "Character A says: err sorry, Wednesday 3 pm. [err sorry, Wednesday 3 pm.]",
+        "on_screen_text": "err sorry\nWednesday 3 pm."
+      },
+      {
+        "n": 5,
+        "start_s": 13.8,
+        "end_s": 17.8,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Auto-correction UI",
+        "setting": "Digital screen.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up view of a dark-themed smartphone screen.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Screencast of a chat application. The dictated text is shown with a strikethrough on the incorrect time, which is then automatically replaced by the corrected time. A 'Real Time Auto Correction' graphic is overlaid.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Real Time Auto Correction\nProcessing\nTuesday 2pm err sorry\nWednesday at 3 pm."
+      },
+      {
+        "n": 6,
+        "start_s": 17.8,
+        "end_s": 26.0,
+        "screenshot_at_s": 22.0,
+        "scene_label": "End card",
+        "setting": "Solid background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, light cream-colored background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Brand end card with the Wispr Flow logo, tagline, and download instructions. Operating system icons are displayed at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Wispr Flow\nReady for India and the World\nDownload today at wisprflow.ai\nAndroid\nWindows\niOS\nMac"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.2388594
+}

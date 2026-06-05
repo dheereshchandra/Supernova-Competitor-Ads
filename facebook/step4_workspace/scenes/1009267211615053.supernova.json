@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1009267211615053",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated male character, young adult, medium build, fair complexion, curly dark hair, wearing glasses. Stylized, cartoonish features.",
+        "wardrobe": "Purple and white floral Hawaiian shirt.",
+        "demeanor": "Friendly, encouraging, and attentive."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Human male, young adult, medium build, fair complexion, dark hair, dark beard and mustache.",
+        "wardrobe": "White t-shirt, black over-ear headphones.",
+        "demeanor": "Focused, slightly hesitant when speaking Japanese, then relieved and happy."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Japanese Practice Session",
+        "supernova_script": "Character B says: मुझे English बोलने में डर लगता है। [Mujhe English bolne mein darr lagta hai. / I feel scared to speak English.]\nCharacter A says: What is your name? [What is your name? / What is your name?]\nCharacter B says: My name is Gustavo. [My name is Gustavo. / My name is Gustavo.]\nCharacter A says: How are you today? [How are you today? / How are you today?]\nCharacter B says: I am fine. [I am fine. / I am fine.]\nCharacter A says: Do you speak English? [Do you speak English? / Do you speak English?]\nCharacter B says: Yes, I... [Yes, I... / Yes, I...]\nCharacter A says: Yes, I can speak English. [Do you mean: Yes, I can speak English. / Yes, I can speak English.]\nCharacter B says: Yes, I can speak English. [Yes, I can speak English. / Yes, I can speak English.]\nCharacter A says: How old are you? [How old are you? / How old are you?]\nCharacter B says: I... twenty-four...? [I... twenty-four...? / I... twenty-four...?]\nCharacter A says: I am 24 years old. [Do you mean: I am 24 years old. / I am 24 years old.]\nCharacter B says: I am 24 years old. [I am 24 years old. / I am 24 years old.]\nCharacter B says: मैं हर रोज़ English practice कैसे करूँ? [Main har roz English practice kaise karoon? / How can I practice English every day?]\nCharacter A says: बस Supernova download करो। [Bas Supernova download karo. / Just download Supernova.]\nCharacter B says: मैं अभी Supernova download करता हूँ। [Main abhi Supernova download karta hoon. / I'll download Supernova right now.]",
+        "scene_summary": "- Establishes the core problem: fear of speaking English.\n- Demonstrates the AI tutor's interactive, conversational practice and gentle correction.\n- Ends with a clear call to action to download the app.",
+        "supernova_on_screen_text": "मुझे English बोलने में डर लगता है।\nMujhe English bolne mein darr lagta hai.\nI feel scared to speak English.\nWhat is your name?\nMy name is Gustavo.\nHow are you today?\nI am fine.\nDo you speak English?\nYes, I...\nDo you mean: Yes, I can speak English.\nYes, I can speak English.\nHow old are you?\nI... twenty-four...?\nDo you mean: I am 24 years old.\nI am 24 years old.\nमैं हर रोज़ English practice कैसे करूँ?\nMain har roz English practice kaise karoon?\nHow can I practice English every day?\nबस Supernova download करो।\nBas Supernova download karo.\nJust download Supernova.\nमैं अभी Supernova download करता हूँ।\nMain abhi Supernova download karta hoon.\nI'll download Supernova right now."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the app logo and download buttons.\n- Serves as the final call to action.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630609.5144475
+}

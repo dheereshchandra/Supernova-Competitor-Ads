@@ -1,0 +1,53 @@
+{
+  "competitor_id": "2480761242367070",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter/daughter",
+        "appearance": "Young adult female, slim build, light complexion. She has long, straight dark hair and dark eyes. Her facial features are soft and she has a bright smile.",
+        "wardrobe": "She is wearing a simple black top.",
+        "demeanor": "Encouraging, cheerful, and supportive."
+      },
+      {
+        "id": "B",
+        "role": "female learner/mother",
+        "appearance": "Older adult female, medium build, light complexion. She has light brown, wavy hair pulled back. She wears wire-rimmed glasses.",
+        "wardrobe": "She is wearing a light pink and purple striped long-sleeve shirt.",
+        "demeanor": "Focused, attentive, and happy when she succeeds."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Practicing quarterly",
+        "supernova_script": "Character A says: Okay mummy, let's try. [Okay mom, let's try.]\nCharacter B says: Quarterly. [Quarterly.]\nCharacter A says: Dekhte hain kahan mistake hui. [Let's see where the mistake was.]\nUnknown speaker says: AR. [AR.]\nCharacter B says: AR. [AR.]\nCharacter A says: Wapas try karo, try quarterly. [Try again, try quarterly.]\nCharacter B says: Quarterly. [Quarterly.]\n[sound effect: chime]\nCharacter A says: Nice! Bilkul sahi. [Nice! Absolutely right.]",
+        "scene_summary": "- Establishes a warm, supportive dynamic between a daughter and her mother.\n- Introduces the core problem (pronunciation) and immediate app feedback.\n- Ends on a positive, encouraging note when the mother gets it right.",
+        "supernova_on_screen_text": "Teaching my mom an English pronunciation hack: Supernova\nSupernova gives real-time feedback on mistakes you didn't even know you were making"
+      },
+      {
+        "n": 2,
+        "scene_label": "Practicing schedule",
+        "supernova_script": "Character B says: Schedule. [Schedule.]\nCharacter A says: Word pe press karo, dekhte hain. [Press on the word, let's see.]\nUnknown speaker says: Ooh. [Ooh.]\nCharacter B says: Ooh. [Ooh.]\nCharacter A says: Chalo, ek baar aur. [Come on, one more time.]\nCharacter B says: Schedule. [Schedule.]\n[sound effect: chime]\nCharacter A says: Better! Bahut badhiya. [Better! Very good.]\nCharacter B says: Ooh! [Ooh!]",
+        "scene_summary": "- Reinforces the app's ease of use with a second example.\n- Highlights the interactive AI tutor feature (pressing the word to hear the sound).\n- Shows the learner's growing confidence and joy in improving.",
+        "supernova_on_screen_text": "Supernova's AI tutor helps her practice anytime\nShe's starting to sound so much clearer!"
+      },
+      {
+        "n": 3,
+        "scene_label": "End card",
+        "supernova_script": "[sound effect: chime]\n[music only, no speech]",
+        "scene_summary": "- Delivers the final call to action.\n- Focuses on the core value proposition: speaking English confidently.\n- Directs the user to download the app.",
+        "supernova_on_screen_text": "Speak English confidently\nPractice daily with Supernova\nDownload the app today"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779989130.5815504
+}

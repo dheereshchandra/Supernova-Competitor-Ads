@@ -1,0 +1,53 @@
+{
+  "competitor_id": "1478445913403572",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, athletic build, olive complexion. Dark, wavy, medium-length hair. Dark eyes and light facial hair.",
+        "wardrobe": "Initially wears a white t-shirt. Later wears an olive green long-sleeve waffle-knit shirt and blue jeans. Sunglasses rest on his head throughout.",
+        "demeanor": "Casual, expressive, and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, fair complexion. Short blonde bob haircut. Blue eyes and symmetrical features.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Calm, professional, and slightly robotic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Car Intro",
+        "supernova_script": "Character A says: English में हमेशा \"I'm fine\" या \"I don't know\" बोलना बंद करो। [Stop always saying \"I'm fine\" or \"I don't know\" in English.]\nCharacter A says: ये बहुत basic लगता है। [It sounds very basic.]\nCharacter A says: मैं भी पहले ऐसे ही अटकता था। [I used to get stuck like this too.]\nCharacter A says: फिर मैंने Supernova के साथ practice शुरू की। [Then I started practicing with Supernova.]\nCharacter A says: Let me show you. [Let me show you.]",
+        "scene_summary": "- Hooks the viewer by calling out common, repetitive English phrases.\n- Establishes empathy by admitting the speaker used to struggle too.\n- Introduces the app as the solution and transitions into a demo.",
+        "supernova_on_screen_text": "!! STOP SAYING !!\nStop saying: \"I'm fine\"\n\"I don't know\"\nये बहुत basic है\nमैं भी पहले अटकता था\nफिर मैंने Supernova try किया\nLet me show you"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demo Conversation",
+        "supernova_script": "Character B says: Hi! Tell me about yourself. [Hi! Tell me about yourself.]\nCharacter A says: I am work in office. [I am work in office.]\nCharacter B says: Almost! Better say: \"I work in an office.\" [Almost! Better say: \"I work in an office.\"]\nCharacter A says: Oh, grammar में हमेशा confusion होती है। [Oh, there's always confusion in grammar.]\nCharacter B says: कोई बात नहीं! मैं आपकी AI tutor हूँ, आपकी मदद करने के लिए। [No worries! I am your AI tutor, here to help you.]\nCharacter A says: पर private tutor तो बहुत महँगे होते हैं। [But private tutors are very expensive.]\nCharacter B says: Supernova बहुत affordable है। यहाँ आप बिना डरे रोज़ English बोलने की practice कर सकते हैं। [Supernova is very affordable. Here you can practice speaking English daily without fear.]\nCharacter A says: सच में? Real conversations? [Really? Real conversations?]\nCharacter B says: हाँ! Interview हो या office, मैं आपकी grammar और pronunciation ठीक करूँगी। [Yes! Whether it's an interview or office, I will correct your grammar and pronunciation.]\nCharacter A says: Perfect! मैं आज ही Supernova download करता हूँ। [Perfect! I will download Supernova today.]\nCharacter B says: Great! Let's speak English together. [Great! Let's speak English together.]",
+        "scene_summary": "- Demonstrates the core AI tutor feature with a relatable, real-world mistake (workplace context).\n- Addresses the cost objection directly, positioning the app as an affordable alternative to private tutors.\n- Highlights key benefits: judgment-free practice, grammar/pronunciation correction, and confidence building.",
+        "supernova_on_screen_text": "Tell me about yourself.\nI am work in office.\nAlmost!\nBetter say: \"I work in an office.\"\nGrammar में हमेशा confusion होती है\nमैं आपकी AI tutor हूँ\nपर tutor महँगे होते हैं\nSupernova बहुत affordable है\nबिना डरे रोज़ practice करें\nसच में? Real conversations?\nहाँ! Grammar और pronunciation ठीक करें\nमैं आज ही Supernova download करता हूँ\nGreat! Let's speak English together."
+      },
+      {
+        "n": 3,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear call-to-action.\n- Reinforces brand identity and the main value proposition (AI English Tutor).",
+        "supernova_on_screen_text": "Supernova App\nआपकी अपनी AI English Tutor\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658623.9383764
+}

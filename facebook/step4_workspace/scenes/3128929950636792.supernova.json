@@ -1,0 +1,57 @@
+{
+  "competitor_id": "3128929950636792",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, medium build, light brown complexion. He has short, curly dark hair and a light beard/stubble. He wears round, wire-rimmed glasses.",
+        "wardrobe": "Olive green short-sleeved t-shirt and light blue jeans.",
+        "demeanor": "Casual, friendly, and slightly humorous."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Pouring milk",
+        "supernova_script": "Character A says: Wanna know a secret?\n[Wanna know a secret?]\nCharacter A says: English बोलना उतना मुश्किल नहीं है जितना लगता है।\n[Speaking English isn't as hard as it seems.]",
+        "scene_summary": "- Hooks the viewer with a relatable, casual opening.\n- Introduces the core problem (English speaking feels hard) but immediately offers reassurance.\n- Sets a warm, conversational tone right from the kitchen counter.",
+        "supernova_on_screen_text": "Wanna know a secret?\nEnglish बोलना आसान है।"
+      },
+      {
+        "n": 2,
+        "scene_label": "App screencast",
+        "supernova_script": "Character A says: Supernova के bite-sized lessons और AI tutor के साथ, रोज़ practice करो।\n[With Supernova's bite-sized lessons and AI tutor, practice daily.]\nCharacter A says: Beginners हों या interview की तैयारी करने वाले...\n[Whether beginners or those preparing for an interview...]\nCharacter A says: हमारा AI tutor सबको confidence देता है।\n[Our AI tutor gives confidence to everyone.]",
+        "scene_summary": "- Showcases the app interface and core features (AI tutor, daily practice).\n- Highlights the target audience (beginners, job seekers).\n- Focuses on the emotional payoff: building confidence.",
+        "supernova_on_screen_text": "Bite-sized lessons\nAI tutor practice\nBuilds confidence"
+      },
+      {
+        "n": 3,
+        "scene_label": "Kitchen counter with tongs",
+        "supernova_script": "Unknown speaker says: Great try! Now let's say it with a bit more confidence.\n[Great try! Now let's say it with a bit more confidence.]\nCharacter A says: ये AI tutor गलतियों पर टोकता नहीं, बड़े भाई की तरह सिखाता है।\n[This AI tutor doesn't scold you for mistakes, it teaches like an older brother.]\nCharacter A says: And yeah, it's super practical.\n[And yeah, it's super practical.]",
+        "scene_summary": "- Demonstrates the AI tutor's encouraging, non-judgmental feedback.\n- Uses the visual humor of the tongs to keep the ad light and engaging.\n- Emphasizes the practical, real-world utility of the app without mentioning price.",
+        "supernova_on_screen_text": "Great try!\nTeaches like an older brother.\nSuper practical."
+      },
+      {
+        "n": 4,
+        "scene_label": "Couch call to action",
+        "supernova_script": "Character A says: अब आपकी बारी।\n[Now it's your turn.]\nCharacter A says: Download Supernova today and start speaking.\n[Download Supernova today and start speaking.]",
+        "scene_summary": "- Delivers a direct, empowering call to action.\n- Ends on a high-energy, positive note from a comfortable living room setting.\n- Reinforces the brand name and the primary goal (start speaking).",
+        "supernova_on_screen_text": "अब आपकी बारी।\nDownload Supernova today."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Coach Oscar",
+        "supernova_swap": "AI tutor"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.973276
+}

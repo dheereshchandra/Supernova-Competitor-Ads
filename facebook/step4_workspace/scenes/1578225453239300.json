@@ -1,0 +1,115 @@
+{
+  "competitor_id": "1578225453239300",
+  "parsed": {
+    "duration_s": 47.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human-recorded footage of a man with an AI-generated static image/animation of a robot avatar. The robot's voice is clearly a text-to-speech AI generation, and the split-screen format is a common template for such ads.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "Young adult male, slim build, brown complexion, short black hair. He wears wire-rimmed glasses.",
+        "wardrobe": "Black t-shirt with a small pink graphic on the left chest.",
+        "demeanor": "Curious, engaged, looking down at his phone as if on a video call."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot. White/silver metallic face and body with human-like facial features and a blank, neutral expression.",
+        "wardrobe": "Metallic robot chassis, no clothing.",
+        "demeanor": "Static, robotic, neutral."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 28.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Problem and Solution Introduction",
+        "setting": "Plain white wall background for the man, grey studio background for the robot.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A female-presenting humanoid robot faces forward against a plain grey background. The robot has a white, smooth metallic face with human-like features and a silver mechanical body. The lighting is even and studio-like. The robot remains mostly static.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young man sits indoors against a plain white wall. He is holding a smartphone in both hands, looking down at the screen. He wears glasses and a black t-shirt. The lighting is bright and natural. He appears to be interacting with the phone, occasionally speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with a robot avatar on top and a human man on the bottom. The man is looking at his phone, simulating a video call with the robot. Large, dynamic text captions in Gujarati appear across the center of the screen, translating the spoken dialogue. A video call UI overlay with mute, camera, and end call buttons is visible below the robot.",
+        "audio_transcript": "Character A says: \u0aae\u0abe\u0ab0\u0ac7 English \u0ab6\u0ac0\u0a96\u0ab5\u0ac1\u0a82 \u0a9b\u0ac7 \u0a95\u0abe\u0ab2\u0ac7 \u0aae\u0abe\u0ab0\u0acb interview \u0a9b\u0ac7. [I want to learn English, I have an interview tomorrow.]\nCharacter B says: English speaking improve \u0a95\u0ab0\u0ab5\u0ac1\u0a82 \u0a9b\u0ac7 \u0a8f\u0aae \u0aa8\u0ac7? [You want to improve your English speaking, right?]\nCharacter A says: \u0ab9\u0abe \u0aaa\u0aa3 \u0ab6\u0ac1\u0a82 \u0aa4\u0aae\u0ac7 \u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0\u0aae\u0abe\u0a82 \u0ab8\u0aaa\u0acb\u0ab0\u0acd\u0a9f \u0a86\u0aaa\u0ab6\u0acb \u0aae\u0aa8\u0ac7? [Yes, but will you support me in Gujarati?]\nCharacter B says: \u0ab9\u0abe \u0a9a\u0acb\u0a95\u0acd\u0a95\u0ab8 \u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0\u0aae\u0abe\u0a82 \u0a9c \u0aae\u0aa6\u0aa6 \u0a95\u0ab0\u0ac0\u0ab6 \u0aa4\u0aae\u0abe\u0ab0\u0acb \u0a97\u0acb\u0ab2 English \u0ab6\u0ac0\u0a96\u0ab5\u0abe\u0aa8\u0acb \u0a9c \u0a9b\u0ac7 \u0aa8\u0ac7? [Yes, definitely, I will help you in Gujarati. Your goal is to learn English, right?]\nCharacter A says: \u0ab9\u0abe English \u0ab6\u0ac0\u0a96\u0ab5\u0abe\u0aa8\u0ac0 \u0aac\u0ab9\u0ac1 \u0a88\u0a9a\u0acd\u0a9b\u0abe \u0a9b\u0ac7 \u0aaa\u0aa3 \u0aae\u0abe\u0ab0\u0ac0 \u0aaa\u0abe\u0ab8\u0ac7 \u0ab8\u0aae\u0aaf \u0aaa\u0aa3 \u0aa8\u0aa5\u0ac0 \u0a85\u0aa8\u0ac7 \u0aaa\u0ac8\u0ab8\u0abe\u0aa8\u0ac0 \u0aaa\u0aa3 \u0a96\u0ac7\u0a82\u0a9a \u0a9b\u0ac7 \u0ab6\u0ac1\u0a82 \u0a95\u0ab0\u0ac1\u0a82 \u0ab9\u0ab5\u0ac7 \u0ab9\u0ac1\u0a82? [Yes, I really want to learn English, but I don't have time and I'm tight on money. What should I do now?]\nCharacter B says: \u0a8f\u0aa8\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0a9c MySivi \u0a8f\u0aaa \u0a9b\u0ac7 \u0ab0\u0acb\u0a9c \u0aab\u0a95\u0acd\u0aa4 15-20 \u0aae\u0abf\u0aa8\u0abf\u0a9f \u0aae\u0abe\u0ab0\u0ac0 \u0ab8\u0abe\u0aa5\u0ac7 \u0aaa\u0acd\u0ab0\u0ac7\u0a95\u0acd\u0a9f\u0abf\u0ab8 \u0a95\u0ab0\u0ab6\u0acb \u0aa4\u0acb 30 \u0aa6\u0abf\u0ab5\u0ab8\u0aae\u0abe\u0a82 \u0a95\u0acb\u0aa8\u0acd\u0aab\u0abf\u0aa1\u0aa8\u0acd\u0a9f English \u0aac\u0acb\u0ab2\u0ac0 \u0ab6\u0a95\u0ab6\u0acb. [That's what the MySivi app is for. If you practice with me for just 15-20 minutes a day, you will be able to speak confident English in 30 days.]\nCharacter A says: \u0a93\u0ab9 \u0aaa\u0aa3 \u0a86\u0aae\u0abe\u0a82 real teacher \u0ab9\u0ab6\u0ac7? [Oh, but will there be a real teacher in this?]",
+        "on_screen_text": "\u0aae\u0abe\u0ab0\u0ac7 English \u0ab6\u0ac0\u0a96\u0ab5\u0ac1\u0a82 \u0a9b\u0ac7 \u0a95\u0abe\u0ab2\u0ac7 \u0aae\u0abe\u0ab0\u0acb interview \u0a9b\u0ac7 (I want to learn English, I have an interview tomorrow)\nEnglish speaking improve \u0a95\u0ab0\u0ab5\u0ac1\u0a82 \u0a9b\u0ac7 \u0a8f\u0aae \u0aa8\u0ac7? (You want to improve your English speaking, right?)\n\u0ab9\u0abe \u0aaa\u0aa3 \u0ab6\u0ac1\u0a82 \u0aa4\u0aae\u0ac7 \u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0\u0aae\u0abe\u0a82 \u0ab8\u0aaa\u0acb\u0ab0\u0acd\u0a9f \u0a86\u0aaa\u0ab6\u0acb \u0aae\u0aa8\u0ac7? (Yes, but will you support me in Gujarati?)\n\u0ab9\u0abe \u0a9a\u0acb\u0a95\u0acd\u0a95\u0ab8 \u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0\u0aae\u0abe\u0a82 \u0a9c \u0aae\u0aa6\u0aa6 \u0a95\u0ab0\u0ac0\u0ab6 \u0aa4\u0aae\u0abe\u0ab0\u0acb \u0a97\u0acb\u0ab2 English \u0ab6\u0ac0\u0a96\u0ab5\u0abe\u0aa8\u0acb \u0a9c \u0a9b\u0ac7 \u0aa8\u0ac7? (Yes, definitely, I will help you in Gujarati. Your goal is to learn English, right?)\n\u0ab9\u0abe English \u0ab6\u0ac0\u0a96\u0ab5\u0abe\u0aa8\u0ac0 \u0aac\u0ab9\u0ac1 \u0a88\u0a9a\u0acd\u0a9b\u0abe \u0a9b\u0ac7 \u0aaa\u0aa3 \u0aae\u0abe\u0ab0\u0ac0 \u0aaa\u0abe\u0ab8\u0ac7 \u0ab8\u0aae\u0aaf \u0aaa\u0aa3 \u0aa8\u0aa5\u0ac0 \u0a85\u0aa8\u0ac7 \u0aaa\u0ac8\u0ab8\u0abe\u0aa8\u0ac0 \u0aaa\u0aa3 \u0a96\u0ac7\u0a82\u0a9a \u0a9b\u0ac7 \u0ab6\u0ac1\u0a82 \u0a95\u0ab0\u0ac1\u0a82 \u0ab9\u0ab5\u0ac7 \u0ab9\u0ac1\u0a82? (Yes, I really want to learn English, but I don't have time and I'm tight on money. What should I do now?)\n\u0a8f\u0aa8\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0a9c MySivi \u0a8f\u0aaa \u0a9b\u0ac7 \u0ab0\u0acb\u0a9c \u0aab\u0a95\u0acd\u0aa4 15-20 \u0aae\u0abf\u0aa8\u0abf\u0a9f \u0aae\u0abe\u0ab0\u0ac0 \u0ab8\u0abe\u0aa5\u0ac7 \u0aaa\u0acd\u0ab0\u0ac7\u0a95\u0acd\u0a9f\u0abf\u0ab8 \u0a95\u0ab0\u0ab6\u0acb \u0aa4\u0acb 30 \u0aa6\u0abf\u0ab5\u0ab8\u0aae\u0abe\u0a82 \u0a95\u0acb\u0aa8\u0acd\u0aab\u0abf\u0aa1\u0aa8\u0acd\u0a9f English \u0aac\u0acb\u0ab2\u0ac0 \u0ab6\u0a95\u0ab6\u0acb (That's what the MySivi app is for. If you practice with me for just 15-20 minutes a day, you will be able to speak confident English in 30 days.)\n\u0a93\u0ab9 \u0aaa\u0aa3 \u0a86\u0aae\u0abe\u0a82 real teacher \u0ab9\u0ab6\u0ac7? (Oh, but will there be a real teacher in this?)"
+      },
+      {
+        "n": 2,
+        "start_s": 28.5,
+        "end_s": 34.5,
+        "screenshot_at_s": 31.0,
+        "scene_label": "App Features Showcase",
+        "setting": "Digital app interface.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A blank digital screen. The underlying scene contains no physical characters, props, or environments, as it is entirely composed of digital interface elements.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A full-screen screencast of a mobile application. The UI displays a learning path with various topics like 'Talk about anything' and 'Daily routine'. It then transitions to a chat interface showing a conversation with an AI bot, highlighting grammar corrections.",
+        "audio_transcript": "Character B says: \u0a86\u0aae\u0abe\u0a82 AI based English teachers \u0ab9\u0ab6\u0ac7 \u0a9c\u0ac7 \u0aa4\u0aae\u0aa8\u0ac7 step by step guide \u0a95\u0ab0\u0ab6\u0ac7 \u0aa4\u0aae\u0abe\u0ab0\u0ac0 \u0aad\u0ac2\u0ab2\u0acb \u0ab8\u0ac1\u0aa7\u0abe\u0ab0\u0ab6\u0ac7 \u0a85\u0aa8\u0ac7 \u0ab8\u0acc\u0aa5\u0ac0 \u0aae\u0ab9\u0aa4\u0acd\u0ab5\u0aa8\u0ac0 \u0ab5\u0abe\u0aa4-\u0aa4\u0aae\u0aa8\u0ac7 \u0a95\u0acb\u0a88 \u0a9c\u0a9c \u0aa8\u0ab9\u0ac0\u0a82 \u0a95\u0ab0\u0ac7. [There will be AI-based English teachers in this who will guide you step by step, correct your mistakes, and most importantly, no one will judge you.]",
+        "on_screen_text": "\u0a86\u0aae\u0abe\u0a82 AI based English teachers \u0ab9\u0ab6\u0ac7 \u0a9c\u0ac7 \u0aa4\u0aae\u0aa8\u0ac7 step by step guide \u0a95\u0ab0\u0ab6\u0ac7 \u0aa4\u0aae\u0abe\u0ab0\u0ac0 \u0aad\u0ac2\u0ab2\u0acb \u0ab8\u0ac1\u0aa7\u0abe\u0ab0\u0ab6\u0ac7 \u0a85\u0aa8\u0ac7 \u0ab8\u0acc\u0aa5\u0ac0 \u0aae\u0ab9\u0aa4\u0acd\u0ab5\u0aa8\u0ac0 \u0ab5\u0abe\u0aa4-\u0aa4\u0aae\u0aa8\u0ac7 \u0a95\u0acb\u0a88 \u0a9c\u0a9c \u0aa8\u0ab9\u0ac0\u0a82 \u0a95\u0ab0\u0ac7 (There will be AI-based English teachers in this who will guide you step by step, correct your mistakes, and most importantly, no one will judge you.)\nArya AI Teacher\nPractice Now\nLessons completed\nFluency Score\nYour Learning Path\nTalk about anything\nDaily routine\nLet's Improve Vocabulary\nTalk about your childhood\nHey! What did you do over the weekend?\nI go to the beach and ate ice cream.\nAlmost perfect! Just a small correction: I went to the beach and ate ice cream."
+      },
+      {
+        "n": 3,
+        "start_s": 34.5,
+        "end_s": 47.0,
+        "screenshot_at_s": 40.0,
+        "scene_label": "Call to Action",
+        "setting": "Plain white wall background for the man, grey studio background for the robot.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A female-presenting humanoid robot faces forward against a plain grey background. The robot has a white, smooth metallic face with human-like features and a silver mechanical body. The lighting is even and studio-like. The robot remains mostly static.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young man sits indoors against a plain white wall. He is holding a smartphone in both hands, looking down at the screen. He wears glasses and a black t-shirt. The lighting is bright and natural. He appears to be interacting with the phone, occasionally speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen layout returns with the robot on top and the man on the bottom. The man speaks, followed by the robot. Large Gujarati captions continue to appear. Briefly, a dark blue app UI popup offering a premium trial overlays the center of the screen before disappearing.",
+        "audio_transcript": "Character A says: \u0ab9\u0abe \u0a86 \u0ab8\u0abe\u0a82\u0aad\u0ab3\u0ab5\u0abe\u0aae\u0abe\u0a82 \u0aa4\u0acb \u0aac\u0ab9\u0ac1 \u0ab8\u0abe\u0ab0\u0ac1\u0a82 \u0ab2\u0abe\u0a97\u0ac7 \u0a9b\u0ac7 \u0a9f\u0acd\u0ab0\u0abe\u0aaf \u0a95\u0ab0\u0ac0 \u0ab6\u0a95\u0abe\u0aaf. [Yes, this sounds very good, I can try it.]\nCharacter B says: \u0a86\u0a9c\u0ac7 \u0a9c MySivi \u0a8f\u0aaa download \u0a95\u0ab0\u0acb \u0a86\u0a9c\u0ac7 \u0ab2\u0abe\u0a96\u0acb \u0ab2\u0acb\u0a95\u0acb MySivi \u0aae\u0abe\u0a82 \u0aaa\u0acd\u0ab0\u0ac7\u0a95\u0acd\u0a9f\u0abf\u0ab8 \u0a95\u0ab0\u0ac0 \u0ab0\u0ab9\u0acd\u0aaf\u0abe \u0a9b\u0ac7. [Download the MySivi app today. Today millions of people are practicing on MySivi.]\nCharacter B says: \u0aab\u0a95\u0acd\u0aa4 \u20b91 \u0aa8\u0abe trial \u0aa5\u0ac0 \u0a86\u0a9c\u0ac7 \u0a9c \u0ab6\u0ab0\u0ac2 \u0a95\u0ab0\u0acb \u0a85\u0aa8\u0ac7 \u0a95\u0acb\u0aa8\u0acd\u0aab\u0abf\u0aa1\u0aa8\u0acd\u0a9f English \u0aac\u0acb\u0ab2\u0ab5\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0aa5\u0a88 \u0a9c\u0abe\u0a93. [Start today with a trial of just \u20b91 and get ready to speak confident English.]",
+        "on_screen_text": "\u0ab9\u0abe \u0a86 \u0ab8\u0abe\u0a82\u0aad\u0ab3\u0ab5\u0abe\u0aae\u0abe\u0a82 \u0aa4\u0acb \u0aac\u0ab9\u0ac1 \u0ab8\u0abe\u0ab0\u0ac1\u0a82 \u0ab2\u0abe\u0a97\u0ac7 \u0a9b\u0ac7 \u0a9f\u0acd\u0ab0\u0abe\u0aaf \u0a95\u0ab0\u0ac0 \u0ab6\u0a95\u0abe\u0aaf (Yes, this sounds very good, I can try it.)\n\u0a86\u0a9c\u0ac7 \u0a9c MySivi \u0a8f\u0aaa download \u0a95\u0ab0\u0acb \u0a86\u0a9c\u0ac7 \u0ab2\u0abe\u0a96\u0acb \u0ab2\u0acb\u0a95\u0acb MySivi \u0aae\u0abe\u0a82 \u0aaa\u0acd\u0ab0\u0ac7\u0a95\u0acd\u0a9f\u0abf\u0ab8 \u0a95\u0ab0\u0ac0 \u0ab0\u0ab9\u0acd\u0aaf\u0abe \u0a9b\u0ac7 (Download the MySivi app today. Today millions of people are practicing on MySivi.)\n\u0aab\u0a95\u0acd\u0aa4 \u20b91 \u0aa8\u0abe trial \u0aa5\u0ac0 \u0a86\u0a9c\u0ac7 \u0a9c \u0ab6\u0ab0\u0ac2 \u0a95\u0ab0\u0acb \u0a85\u0aa8\u0ac7 \u0a95\u0acb\u0aa8\u0acd\u0aab\u0abf\u0aa1\u0aa8\u0acd\u0a9f English \u0aac\u0acb\u0ab2\u0ab5\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0aa5\u0a88 \u0a9c\u0abe\u0a93 (Start today with a trial of just \u20b91 and get ready to speak confident English.)\nMySivi Premium\nLIMITED TIME OFFER\n3 days of Premium benefits for \u20b91\n1,200 learners purchased today\n24/7 AI English Teacher\n500+ Exercises and Lessons\nUnlimited Access"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779890885.008501
+}

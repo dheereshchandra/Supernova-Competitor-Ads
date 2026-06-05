@@ -1,0 +1,53 @@
+{
+  "competitor_id": "1977102026236404",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Middle-aged Caucasian man with short brown hair and a light beard/stubble. He has a medium build.",
+        "wardrobe": "Light blue long-sleeve button-down shirt.",
+        "demeanor": "Engaging, informative, and conversational."
+      },
+      {
+        "id": "B",
+        "role": "female accent coach",
+        "appearance": "Young Caucasian woman with short, dark pixie-cut hair. Slim build.",
+        "wardrobe": "Light pink button-down shirt.",
+        "demeanor": "Professional and instructive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction to the problem",
+        "supernova_script": "Character A says: \"India में लाखों लोग हैं जिन्हें English grammar तो आती है, पर बोलने में अटक जाते हैं।\" [There are millions of people in India who know English grammar, but get stuck while speaking.]\nCharacter A says: \"It's not your fault.\" [It's not your fault.]\nCharacter A says: \"School में हमें सिर्फ पढ़ना और लिखना सिखाया, बोलना नहीं।\" [In school they only taught us to read and write, not to speak.]\nCharacter A says: \"But confidence is the first thing people notice.\" [But confidence is the first thing people notice.]\nCharacter A says: \"There's this app called Supernova.\" [There's this app called Supernova.]\nCharacter A says: \"आप बस इसमें बात करो।\" [You just talk into it.]\nCharacter A says: \"ये AI tutor आपको real-time feedback देता है और आपकी गलतियां सुधारता है।\" [This AI tutor gives you real-time feedback and corrects your mistakes.]",
+        "scene_summary": "- Hooks the audience with a highly relatable problem: knowing English grammar but hesitating to speak.\n- Validates the user's struggle by shifting the blame to the traditional schooling system.\n- Introduces Supernova as the practical, AI-driven solution for real-time speaking practice.",
+        "supernova_on_screen_text": "MILLIONS KNOW GRAMMAR BUT HESITATE TO SPEAK IT'S NOT YOUR FAULT SCHOOL TAUGHT READING AND WRITING NOT SPEAKING BUT CONFIDENCE IS THE FIRST THING PEOPLE NOTICE THERE'S THIS APP CALLED SUPERNOVA YOU JUST SPEAK INTO IT IT GIVES YOU REAL-TIME FEEDBACK AND HELPS YOU FIX YOUR MISTAKES"
+      },
+      {
+        "n": 2,
+        "scene_label": "App demonstration",
+        "supernova_script": "Character A says: \"I am give interview.\" [I am give interview.]\n[App sound: ding]\nCharacter A says: \"It's telling me I should say 'I am giving an interview'.\" [It's telling me I should say 'I am giving an interview'.]\nCharacter A says: \"I am giving an interview.\" [I am giving an interview.]\n[App sound: success chime]",
+        "scene_summary": "- Demonstrates the app's core value proposition clearly and quickly.\n- Shows a relatable, common grammatical mistake being corrected by the AI tutor in real-time.\n- Delivers an immediate payoff with the success chime, reinforcing a sense of progress.",
+        "supernova_on_screen_text": "Practice My Text AI Tutor Let's start! Tap the button below and speak. I am give interview. Listening... AI Tutor Let's pause to troubleshoot. You should say 'I am giving an interview'. Try again. I am giving an interview. AI Tutor Awesome! You're ready for the next one. TELLING ME I SHOULD SAY I AM GIVING AN INTERVIEW"
+      },
+      {
+        "n": 3,
+        "scene_label": "Features and call to action",
+        "supernova_script": "Character A says: \"Now I got it.\" [Now I got it.]\nCharacter A says: \"I love this app because आप real-world situations की practice कर सकते हो, जैसे office meeting या interview.\" [I love this app because you can practice real-world situations, like an office meeting or interview.]\nCharacter A says: \"First, you'll take a quick test, और ये आपके level के हिसाब से daily lessons बनाएगा।\" [First, you'll take a quick test, and it will create daily lessons according to your level.]\nCharacter A says: \"It's super affordable and only takes 10 minutes a day.\" [It's super affordable and only takes 10 minutes a day.]\nCharacter A says: \"Ready to speak English with confidence?\" [Ready to speak English with confidence?]\nCharacter A says: \"Download Supernova today.\" [Download Supernova today.]",
+        "scene_summary": "- Highlights key features tailored to the Supernova audience: real-world scenario practice and personalized daily lessons.\n- Overcomes objections by emphasizing that the app is affordable and requires minimal daily time commitment.\n- Ends with a strong, confidence-driven Call to Action to download the app.",
+        "supernova_on_screen_text": "NOW I GOT IT I LOVE THIS APP PRACTICE REAL-WORLD SITUATIONS LIKE OFFICE MEETING OR INTERVIEW FIRST YOU'LL TAKE A QUICK TEST AND THEY'LL PERSONALIZE THE LESSONS TO YOUR LEVEL IT'S SUPER AFFORDABLE AND ONLY TAKES 10 MINUTES A DAY READY TO SPEAK ENGLISH WITH CONFIDENCE? DOWNLOAD SUPERNOVA TODAY"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779989130.5752983
+}

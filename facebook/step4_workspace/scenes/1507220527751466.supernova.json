@@ -1,0 +1,60 @@
+{
+  "competitor_id": "1507220527751466",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "A young woman in her mid-20s with a slender build and medium complexion. She has dark hair pulled back into a low ponytail or bun, with some strands framing her face. Her facial features are expressive and animated.",
+        "wardrobe": "A dark green oversized t-shirt with a colorful 'CAREFREE' graphic on the front, paired with light blue high-waisted baggy jeans. She wears a small, dark bracelet on her right wrist.",
+        "demeanor": "Enthusiastic, confident, and engaging, using hand gestures to emphasize her points."
+      },
+      {
+        "id": "B",
+        "role": "male listener 1",
+        "appearance": "A young man in his mid-20s with a slim build and medium complexion. He has short, dark hair styled with a fringe and wears round, yellow-tinted glasses. His facial features are attentive.",
+        "wardrobe": "A light beige long-sleeved t-shirt with a small button placket at the collar.",
+        "demeanor": "Curious and attentive, leaning forward and clasping his hands as he listens."
+      },
+      {
+        "id": "C",
+        "role": "male listener 2",
+        "appearance": "A young man in his mid-20s with a slim build and medium complexion. He has short, dark hair and wears rectangular black-rimmed glasses. His expression is thoughtful.",
+        "wardrobe": "An off-white short-sleeved t-shirt with a large, prominent green '16' graphic on the front.",
+        "demeanor": "Initially skeptical, then intrigued and questioning."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introducing the AI Teacher",
+        "supernova_script": "Character A says: ನೀವು ಹೇಳ್ತಿದ್ರಿ ಅಲ್ವಾ, ಮನೇಲ್ ಕೂತು ಇಂಗ್ಲಿಷ್ ಕಲಿಯೋಕೆ ಆಗಲ್ಲ ಅಂತ, ಬಟ್ Supernova's AI ಟೀಚರ್ ಜೊತೆ practice ಮಾಡಿ, ಮೈ ಇಂಗ್ಲಿಷ್ ಹ್ಯಾಸ್ ಇಂಪ್ರೂವ್ಡ್ ಸೋ ಮಚ್. [You were saying, right, that you can't learn English sitting at home, but practicing with Supernova's AI teacher, my English has improved so much.]",
+        "scene_summary": "- Hooks the viewer by addressing a common doubt about learning English at home.\n- Introduces the solution (AI teacher) and the positive outcome (improved English).\n- Establishes a confident, relatable tone.",
+        "supernova_on_screen_text": "Neevu helthidri alva, manel koothu English kaliyoke agalla antha, but Supernova's AI teacher jothe practice madi, my English has improved so much."
+      },
+      {
+        "n": 2,
+        "scene_label": "Skeptical Inquiry",
+        "supernova_script": "Character B says: ವೇಟ್, ಒಂದು AI ಟೀಚರ್ ನಿಮಗೆ ಇಂಗ್ಲಿಷ್ ಮಾತಾಡೋದು ಕಲ್ಸಿತಿಯಾ? [Wait, an AI teacher taught you to speak English?]\nCharacter C says: ಅಂಡ್ ರಿಯಲ್ ಲೈಫ್ ಸಿಚುಯೇಷನ್ಸ್ ಅಲ್ಲಿ? [And in real-life situations?]\nCharacter B says: ಇದ್ಯಾದೋ ಹೊಸ ಆಪ್... [What new app is this...]",
+        "scene_summary": "- Voices the audience's skepticism through the listeners.\n- Highlights the unique feature of practicing real-life situations.\n- Builds curiosity for the app reveal.",
+        "supernova_on_screen_text": "Wait, ondu AI teacher nimage English maatadod kalisithiya? And real-life situations alli? Idyaade hosa app..."
+      },
+      {
+        "n": 3,
+        "scene_label": "The App Revealed",
+        "supernova_script": "Character A says: ಹೌದು, ಒಂದು ಆಪ್ ಇದೆ. [Yes, there is an app.]\nCharacter A says: Supernova. [Supernova.]",
+        "scene_summary": "- Delivers the payoff by revealing the app name.\n- Confirms the solution to the problem discussed.\n- Ends on a confident, clear note.",
+        "supernova_on_screen_text": "Howdu, ondu app ide. Supernova."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Speak",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780634212.9507117
+}

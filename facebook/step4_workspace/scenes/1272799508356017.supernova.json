@@ -1,0 +1,67 @@
+{
+  "competitor_id": "1272799508356017",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Older South Asian woman. Medium build, warm complexion, visible facial wrinkles. Dark hair covered by a scarf in later scenes.",
+        "wardrobe": "Floral patterned top. Wears a brown cardigan in the first scene and a brown headscarf in the third scene.",
+        "demeanor": "Friendly and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Humanoid robot. White glossy casing, blue eyes, glowing blue circular core on the chest.",
+        "wardrobe": "None (robot casing).",
+        "demeanor": "Neutral, helpful, and robotic."
+      },
+      {
+        "id": "C",
+        "role": "interviewer",
+        "appearance": "Young white male. Slim build, short brown hair.",
+        "wardrobe": "Black puffer jacket.",
+        "demeanor": "Energetic and surprised."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Street Interview",
+        "supernova_script": "Character C says: अरे wait, you're telling us तुमने वो big interview clear कर लिया? तुम्हारी English इतनी अच्छी कैसे हो गई? [Hey wait, you're telling us you cleared that big interview? How did your English get so good?]\nCharacter A says: हाँ! पहले English बोलने में डर लगता था। [Yes! Earlier I used to be scared to speak English.] Back home the only English I knew was from my textbook, but now I speak with confidence. Look, English बोलने का secret है रोज़ practice करना। [Look, the secret to speaking English is daily practice.] And I had the best teacher anyone could ask for, an app called Supernova. Let me show you.",
+        "scene_summary": "- Hooks the viewer with a relatable success story (clearing an interview).\n- Establishes the core problem: knowing textbook English but lacking speaking confidence.\n- Introduces Supernova as the practical solution for daily practice.",
+        "supernova_on_screen_text": "अरे wait, you're telling us तुमने वो big interview clear कर लिया?\nतुम्हारी English इतनी अच्छी कैसे हो गई?\nहाँ! पहले English बोलने में डर लगता था।\nBack home the only English I knew was from my textbook,\nbut now I speak with confidence.\nLook, English बोलने का secret है रोज़ practice करना।\nAnd I had the best teacher anyone could ask for,\nan app called Supernova. Let me show you."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Intro",
+        "supernova_script": "Character B says: Wait. क्या आप भी बिना डरे, confidently English बोलना चाहते हैं? [Wait. Do you also want to speak English confidently, without fear?] It's not magic, it's Supernova, the app that corrects you as you speak and teaches you without you even noticing. Let's try it together.",
+        "scene_summary": "- Transitions to the product introduction.\n- Removes unrealistic timeline claims (1 week) and focuses on building confidence without fear.\n- Highlights the core feature: real-time correction.",
+        "supernova_on_screen_text": "Wait.\nक्या आप भी बिना डरे,\nconfidently English\nबोलना चाहते हैं?\nIt's not magic,\nit's Supernova,\nthe app that corrects\nyou as you speak\nand teaches you\nwithout you even\nnoticing.\nLet's try it\ntogether."
+      },
+      {
+        "n": 3,
+        "scene_label": "AI Conversation",
+        "supernova_script": "Character B says: Do you speak English?\nCharacter A says: A little bit.\nCharacter B says: Where do you live?\nCharacter A says: I am Delhi. [I am Delhi.]\nCharacter B says: Almost. You should say, I live in Delhi.\nCharacter A says: I always mix that up.\nCharacter B says: That is exactly why I am here. मैं आपकी English practice में help करूँगा। [That is exactly why I am here. I will help you practice English.]\nCharacter A says: But is it very expensive? [But is it very expensive?]\nCharacter B says: Not at all. Supernova is very affordable. आप अपने AI tutor के साथ रोज़ practice कर सकते हैं। [Not at all. Supernova is very affordable. You can practice daily with your AI tutor.]\nCharacter A says: Are you serious?\nCharacter B says: Absolutely. No tricks, just real conversation practice with your AI tutor.\nCharacter A says: Like, a real tutor?\nCharacter B says: Yes, I correct your grammar, your pronunciation, and help you speak with confidence.\nCharacter A says: Okay. I am going to download Supernova right now.\nCharacter B says: Great decision. Let's speak English together.",
+        "scene_summary": "- Demonstrates the AI tutor's real-time correction in a relatable scenario.\n- Addresses pricing concerns by positioning the app as affordable rather than free.\n- Reassures the user of the app's value (grammar, pronunciation, confidence).",
+        "supernova_on_screen_text": "Do you speak English?\nA little bit.\nWhere do you live?\nI am Delhi.\nAlmost.\nYou should say, I live in Delhi.\nI always mix that up.\nThat is exactly why I am here.\nमैं आपकी English practice में help करूँगा।\nBut is it very expensive?\nNot at all.\nSupernova is very affordable.\nआप अपने AI tutor के साथ रोज़ practice कर सकते हैं।\nAre you serious?\nAbsolutely.\nNo tricks, just real\nconversation practice\nwith your AI tutor.\nLike, a real tutor?\nYes,\nI correct your grammar,\nyour pronunciation,\nand help you speak with confidence.\nOkay.\nI am going to download\nSupernova right now.\nGreat decision.\nLet's speak English together."
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "Character B says: आज ही Supernova download करें and start practicing. [Download Supernova today and start practicing.]",
+        "scene_summary": "- Delivers a clear, direct Call to Action.\n- Reinforces the brand name and the core action (practicing).",
+        "supernova_on_screen_text": "DOWNLOAD NOW!\nSTART PRACTICING\nSupernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Learna",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780126294.24452
+}

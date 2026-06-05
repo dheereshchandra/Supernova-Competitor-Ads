@@ -1,0 +1,92 @@
+{
+  "competitor_id": "1595782761518272",
+  "parsed": {
+    "duration_s": 25.0,
+    "production_type": "mixed",
+    "production_notes": "The video is a digital screencast of a mobile application featuring 2D vector animation. It relies entirely on traditional digital UI and motion graphics rather than live-action footage or generative AI.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot",
+        "appearance": "A stylized, bright green cartoon owl with a rounded body, large eyes, and a small orange beak. It features a simple, flat vector art style with minimal shading.",
+        "wardrobe": "None. It is a cartoon animal.",
+        "demeanor": "Enthusiastic, expressive, and slightly mischievous."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Language Selection",
+        "setting": "Digital interface, plain white background",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A bright green cartoon owl with large eyes and an orange beak is positioned in the frame. The owl's wings are raised to its cheeks, conveying an expression of surprise or excitement. The background behind the owl is a solid, plain white.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a mobile app interface. The green owl mascot appears at the top, asking a question via a speech bubble. Below, a list of languages with corresponding flags is displayed. A stylized hand cursor clicks on the 'Spanish' option.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "What would you like to learn?\nSpanish\nFrench\nJapanese\nGerman\nKorean\nItalian\nChinese"
+      },
+      {
+        "n": 2,
+        "start_s": 4.5,
+        "end_s": 19.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Matching Pairs Exercise",
+        "setting": "Digital interface, plain white background",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A completely blank, solid white background with no objects, characters, or environmental features present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A language learning exercise interface is shown. Two columns of rounded rectangular buttons contain words in English and Spanish. A hand cursor attempts to match the pairs, making several incorrect selections indicated by red highlights and shaking animations, before making a correct match indicated by blue highlights.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Tap the matching pairs\npardon\ndisculpe\nwoman\n\u00e9l\nexcuse me\nsoy\nI am\nperd\u00f3n\nhe\nmujer"
+      },
+      {
+        "n": 3,
+        "start_s": 19.0,
+        "end_s": 25.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Call to Action",
+        "setting": "Digital interface, green and white backgrounds",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid bright green background. In the center, a bright green cartoon owl with an orange beak peeks out from a dark, horizontal pill-shaped cutout. The owl holds a small white clipboard and a pencil. Floating around the owl are a few circular icons depicting various national flags.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene transitions to a solid green screen with the owl mascot holding a clipboard, surrounded by floating language flags. Text challenges the viewer. It then cuts to a white screen with the app logo, a tagline, and download buttons for app stores.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "can you do better?\nduolingo\nThe world's #1 learning app.\nDownload on the App Store\nGET IT ON Google Play\nLEARN FOR FREE"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780640528.9011347
+}

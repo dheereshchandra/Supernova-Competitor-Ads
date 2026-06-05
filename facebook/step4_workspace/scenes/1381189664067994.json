@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1381189664067994",
+  "parsed": {
+    "duration_s": 5.0,
+    "production_type": "mixed",
+    "production_notes": "Static digital graphic with text and a vector illustration. No live-action footage.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Illustrated character",
+        "appearance": "Young woman, light complexion, brown hair tied up. Simple facial features.",
+        "wardrobe": "Purple t-shirt, blue jeans, white sneakers.",
+        "demeanor": "Cheerful, waving with one hand, other hand on hip."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.0,
+        "screenshot_at_s": 2.5,
+        "scene_label": "Static Text Graphic",
+        "setting": "Plain light beige background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Static graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Plain light beige background. Small illustration of Character A on the right. She has brown hair tied up, wearing a purple t-shirt, blue jeans, and white sneakers. She is smiling, waving with her right hand, left hand on hip.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Static graphic on a light beige background. Large block of German text on the left and center. Small illustration of a waving woman on the right.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Wie ich in 137 Stunden zweisprachig geworden bin.\nEs klingt schwer zu glauben, aber es ist wahr.\nIch habe Englisch in der Schule gelernt, jahrelang Duolingo benutzt, mehrere Monate am St\u00fcck ge\u00fcbt \u2013 und trotzdem konnte ich kein richtiges Gespr\u00e4ch f\u00fchren. Dann habe ich auf TikTok diese App entdeckt \u2013 und alles hat sich ver\u00e4ndert. Diese App wurde von Sprachwissenschaftlern entwickelt und erm\u00f6glicht es dir, im v\u00f6lligen Eintauchen mit einem KI-Tutor zu sprechen und zu \u00fcben. Seit ich Speak benutze, habe ich viel mehr Selbstvertrauen, echte Gespr\u00e4che mit Ausl\u00e4ndern zu f\u00fchren \u2013 und ich habe sogar angefangen, auf Englisch zu tr\u00e4umen. In nur 3 Monaten habe ich mein Leben komplett ver\u00e4ndert."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966543.4609988
+}

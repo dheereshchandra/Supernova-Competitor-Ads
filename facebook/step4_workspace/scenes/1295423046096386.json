@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1295423046096386",
+  "parsed": {
+    "duration_s": 7.0,
+    "production_type": "mixed",
+    "production_notes": "The video features a person superimposed on a static background image. The person's lighting and edges suggest green-screen compositing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "presenter",
+        "appearance": "Young woman, slim build, light complexion, long dark hair.",
+        "wardrobe": "Black sleeveless top and dark pants.",
+        "demeanor": "Energetic and celebratory."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.0,
+        "screenshot_at_s": 3.5,
+        "scene_label": "Celebration",
+        "setting": "Street in front of a Fish & Chips shop, daytime.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium shot.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands on a street. Behind her is a red brick building with a 'FISH & CHIPS' sign. Character A dances energetically, raising her arms.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A dances in front of a Fish & Chips shop. Large text overlays the center. The background is a static street scene.",
+        "audio_transcript": "[crowd cheering, no speech]",
+        "on_screen_text": "\u00c4hm ...\nIch bin in 137 Stunden auf Englisch zweisprachig geworden!\nIch hab das Gef\u00fchl, ich hab mein Gehirn gehackt!\nHeute habe ich jedes Wort im neuen Taylor-Swift-Album verstanden?!! (Uhm ... I became bilingual in English in 137 hours! I feel like I hacked my brain! Today I understood every word in the new Taylor Swift album?!!)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966543.4810302
+}

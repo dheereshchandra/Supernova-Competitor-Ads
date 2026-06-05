@@ -1,0 +1,198 @@
+{
+  "competitor_id": "862072036697076",
+  "parsed": {
+    "duration_s": 30.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video consists of 2D vector animation and mobile app screencasts. There are no AI artifacts; the motion graphics are standard, intentional, and cleanly designed.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "brand mascot",
+        "appearance": "A stylized, bright green owl with large eyes, a small orange beak, and orange feet. It has a simple, rounded vector-art design.",
+        "wardrobe": "None.",
+        "demeanor": "Cheerful, encouraging, and energetic."
+      },
+      {
+        "id": "B",
+        "role": "learner avatar",
+        "appearance": "A woman with dark skin and black hair styled in a high bun. She has a simple vector-art facial structure.",
+        "wardrobe": "A yellow headband, a yellow short-sleeved top, and blue jeans.",
+        "demeanor": "Enthusiastic and triumphant."
+      },
+      {
+        "id": "C",
+        "role": "learner avatar",
+        "appearance": "A woman with light skin and blonde hair. She has a sturdy build and simple vector-art features.",
+        "wardrobe": "A red tracksuit with white stripes and a red headband.",
+        "demeanor": "Confident and strong."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 3.0,
+        "screenshot_at_s": 1.5,
+        "scene_label": "Globe and Mirror",
+        "setting": "Solid white background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A green owl mascot stands on a solid white background. The owl looks down at a small globe on a golden stand. The globe then magically transforms into a round mirror, and the owl gazes into its reflection.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Duo the owl interacts with a globe that turns into a mirror. Green text overlays appear on screen asking about improving English and getting a dream job.",
+        "audio_transcript": "Unknown speaker says: Want to improve your English and get your dream job?",
+        "on_screen_text": "Want to improve\nyour English\nand get your dream job?"
+      },
+      {
+        "n": 2,
+        "start_s": 3.0,
+        "end_s": 7.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Fill in the Blank",
+        "setting": "Solid light blue background.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid light blue background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A mobile phone screen displays a Duolingo 'Fill in the blank' exercise over a light blue background. The user selects the correct word, clicks continue, and a green success banner appears at the bottom.",
+        "audio_transcript": "Unknown speaker says: Try Duolingo's new advanced English lessons.",
+        "on_screen_text": "Try\nDuolingo's new\nadvanced English lessons\nFill in the blank\nI'll schedule our next meeting. Can you tell me a time ________ you'll be free?\nwhat\nwho\nwhen\nCONTINUE\nCorrect!"
+      },
+      {
+        "n": 3,
+        "start_s": 7.0,
+        "end_s": 10.0,
+        "screenshot_at_s": 8.5,
+        "scene_label": "High Five",
+        "setting": "Solid purple background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A woman with dark skin and a yellow headband jumps into the air, high-fiving a green owl mascot. A large, jagged yellow star shape bursts dynamically behind them. They are set against a solid purple background.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character B high-fives Character A against a purple background. Text overlays promote learning vocabulary and practicing speaking.",
+        "audio_transcript": "Unknown speaker says: Learn essential vocabulary and practice speaking.",
+        "on_screen_text": "Learn essential vocabulary\nand practice speaking"
+      },
+      {
+        "n": 4,
+        "start_s": 10.0,
+        "end_s": 14.0,
+        "screenshot_at_s": 12.0,
+        "scene_label": "Speaking Exercise",
+        "setting": "Solid orange background.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid orange background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A mobile phone screen shows a Duolingo speaking exercise over an orange background. An audio waveform animates as the user speaks, followed by a green 'Nice!' success banner.",
+        "audio_transcript": "Unknown speaker says: To take your basic English to the next level.",
+        "on_screen_text": "Take your basic English\nto the next level\nSpeak this sentence\nYour training with me is on Tuesday morning. I mean Thursday morning!\nCAN'T SPEAK NOW\nCONTINUE\nNice!"
+      },
+      {
+        "n": 5,
+        "start_s": 14.0,
+        "end_s": 16.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Flexing",
+        "setting": "Solid white background.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A woman in a red tracksuit stands and flexes her right bicep confidently. A green owl mascot stands beside her, looking up at her with admiration. Small, animated spark elements appear around them against a solid white background.",
+            "characters_in_panel": [
+              "A",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "Character C flexes her arm next to Character A. A green text overlay reads 'for a better job'.",
+        "audio_transcript": "Unknown speaker says: For a better job.",
+        "on_screen_text": "for a better job"
+      },
+      {
+        "n": 6,
+        "start_s": 16.0,
+        "end_s": 25.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Read and Respond",
+        "setting": "Solid yellow background.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid yellow background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A mobile phone screen displays a reading comprehension exercise over a yellow background. The user selects an answer and a green success banner appears. Text overlays highlight that the app is free, fun, and effective.",
+        "audio_transcript": "Unknown speaker says: Would you mind giving me some tips on how to give presentations? I mostly just wrote reports at my last job.\nUnknown speaker says: It's free, fun, and effective.",
+        "on_screen_text": "Read and respond\nWould you mind giving me some tips on how to give presentations? I mostly just wrote reports at my last job.\nHe's...\ngiving advice\nasking for advice\nignoring advice\nCHECK\nGood job!\nIt's free\nIt's fun\nIt's effective"
+      },
+      {
+        "n": 7,
+        "start_s": 25.0,
+        "end_s": 30.0,
+        "screenshot_at_s": 27.5,
+        "scene_label": "End Card",
+        "setting": "Solid white background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The Duolingo logo and app store download badges appear on a white background, encouraging viewers to download the app.",
+        "audio_transcript": "Unknown speaker says: Download Duolingo.\nUnknown speaker says: The number one language learning app.",
+        "on_screen_text": "duolingo\nDownload the world's #1 language learning app.\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.0836987
+}

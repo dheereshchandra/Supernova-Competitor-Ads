@@ -1,0 +1,99 @@
+{
+  "competitor_id": "3167082200161356",
+  "parsed": {
+    "duration_s": 25.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor applying makeup in a natural, continuous take. The AI voice is an app feature being demonstrated, not a synthetic video generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, slim build, fair complexion, blonde hair tied back. She has distinct winged eyeliner.",
+        "wardrobe": "Pink zip-up hoodie over a dark t-shirt.",
+        "demeanor": "Casual, focused on makeup, slightly hesitant when speaking Korean."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated female character with red hair and green eyes.",
+        "wardrobe": "Not fully visible, appears to be wearing a light-colored top.",
+        "demeanor": "Friendly and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 18.0,
+        "screenshot_at_s": 9.0,
+        "scene_label": "Makeup and Korean Practice",
+        "setting": "A dimly lit room with blue ambient lighting. A round vanity mirror is on the left, and a smartphone is lying flat on the desk in the foreground.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up, slightly high angle.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is seated at a desk, looking into a round vanity mirror on the left side of the frame. She is applying makeup, first using a pink sponge on her face, then switching to a white eyeliner pencil. A smartphone lies flat on the desk in the lower right foreground, displaying an animated character. The room is illuminated with a cool blue light.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A is applying makeup while interacting with a language learning app on her phone. The app's AI avatar is visible on the phone screen. Text overlays show the Korean dialogue, romanization, and English translation. Red 'X' and green checkmark icons appear to indicate incorrect and correct pronunciation.",
+        "audio_transcript": "Character A says: \ud55c\uad6d\uc5b4 \uc2eb\uc5b4. [I hate Korean.]\nCharacter B says: \uc774\ub984\uc774 \ubb50\uc608\uc694? [What's your name?]\nCharacter A says: \uc81c \uc774\ub984\uc740 Nesly\uc608\uc694. [My name is Nesly.]\nCharacter B says: \uc798 \uc9c0\ub0b4\uc694? [How are you?]\nCharacter A says: \uc798 \uc9c0\ub0b4\uc694? [How are you?]\nCharacter B says: \ud55c\uad6d\uc5b4 \ud560 \uc218 \uc788\uc5b4\uc694? [Do you speak Korean?]\nCharacter A says: \ub124, \uc800\ub294... [Yes, I...]\nCharacter B says: \ub124, \ud560 \uc218 \uc788\uc5b4\uc694. [Yes, I speak it.]\nCharacter A says: \ub124, \ud560 \uc218 \uc788\uc5b4\uc694. [Yes, I speak it.]\nCharacter B says: \uba87 \uc0b4\uc774\uc5d0\uc694? [How old are you?]\nCharacter A says: \uc800\ub294... \uc2a4\ubb3c\ub137...? [I... twenty-four...?]\nCharacter B says: \uc800\ub294 \uc2a4\ubb3c\ub124 \uc0b4\uc774\uc5d0\uc694. [I am 24.]\nCharacter A says: \uc800\ub294 \uc2a4\ubb3c\ub124 \uc0b4\uc774\uc5d0\uc694. [I am 24.]",
+        "on_screen_text": "\ud55c\uad6d\uc5b4 \uc2eb\uc5b4.\nHan-gug-eo sil-eo.\nI hate Korean.\n\uc774\ub984\uc774 \ubb50\uc608\uc694?\nI-reum-i mwo-ye-yo?\nWhat's your name?\n\uc81c \uc774\ub984\uc740 Nesly\uc608\uc694.\nJe i-reum-eun Nesly ye-yo.\nMy name is Nesly.\n\uc798 \uc9c0\ub0b4\uc694?\nJal ji-nae-yo?\nHow are you?\n\ud55c\uad6d\uc5b4 \ud560 \uc218 \uc788\uc5b4\uc694?\nHan-gug-eo hal su i-sseo-yo?\nDo you speak Korean?\n\ub124, \uc800\ub294...\nNe, jeo-neun...\nYes, I...\n\ub124, \ud560 \uc218 \uc788\uc5b4\uc694.\nNe, hal su i-sseo-yo.\nYes, I speak it.\n\uba87 \uc0b4\uc774\uc5d0\uc694?\nJeo-neun... seu-mul-net...?\nI... twenty-four...?\n\uc800\ub294 \uc2a4\ubb3c\ub124 \uc0b4\uc774\uc5d0\uc694.\nJeo-neun seu-mul-ne sal-i-e-yo.\nI am 24."
+      },
+      {
+        "n": 2,
+        "start_s": 18.0,
+        "end_s": 23.5,
+        "screenshot_at_s": 20.0,
+        "scene_label": "App Recommendation",
+        "setting": "Same dimly lit room with blue ambient lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up, slightly high angle.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stops applying makeup and looks directly at the camera. She holds the white eyeliner pencil in her hands. The vanity mirror and smartphone are still visible in the frame.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A addresses the camera directly, asking a question in English. The AI voice responds with a recommendation. Text overlays display the English dialogue.",
+        "audio_transcript": "Character A says: How can I practice my Korean every day?\nCharacter B says: Just download Praktika.\nCharacter A says: I'll download Praktika right now.",
+        "on_screen_text": "How can I practice my Korean every day?\nJust download Praktika.\nI'll download Praktika right now."
+      },
+      {
+        "n": 3,
+        "start_s": 23.5,
+        "end_s": 25.0,
+        "screenshot_at_s": 24.0,
+        "scene_label": "End Card",
+        "setting": "White background.",
+        "characters_in_scene": [],
+        "camera": "None",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A white screen displays the Praktika app logo and name, along with badges for the Google Play Store and Apple App Store.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780628871.1898556
+}

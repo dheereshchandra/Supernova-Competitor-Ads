@@ -1,0 +1,43 @@
+{
+  "competitor_id": "2972791772910738",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion, long straight brown hair.",
+        "wardrobe": "Striped long-sleeve polo shirt (white and dark blue), grey sweatpants.",
+        "demeanor": "Initially frustrated, then engaged and thoughtful while learning."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Washing dishes and practicing Italian",
+        "supernova_script": "Character A says: English बोलना इतना मुश्किल क्यों है? [Why is speaking English so difficult?]\nUnknown speaker says: Let's practice. What do you do? [Let's practice. What do you do?]\nCharacter A says: I am do... job. [I am do... job.]\nUnknown speaker says: How about, 'I am working'? [How about, 'I am working'?]\nCharacter A says: I am working. [I am working.]\nUnknown speaker says: Do you like your job? [Do you like your job?]\nCharacter A says: Yes, I... [Yes, I...]\nUnknown speaker says: Do you mean 'Yes, I like it'? [Do you mean 'Yes, I like it'?]\nCharacter A says: Yes, I like it. [Yes, I like it.]\nUnknown speaker says: Where do you work? [Where do you work?]\nCharacter A says: I... bank...? [I... bank...?]\nUnknown speaker says: Do you mean 'I work at a bank'? [Do you mean 'I work at a bank'?]\nCharacter A says: I work at a bank. [I work at a bank.]\nCharacter A says: मैं रोज़ ऐसे ही English practice कैसे करूँ? [How do I practice English like this every day?]\nUnknown speaker says: Just download Supernova. [Just download Supernova.]\nCharacter A says: मैं अभी Supernova download करती हूँ। [I'll download Supernova right now.]",
+        "scene_summary": "- Establishes the relatable frustration of struggling with spoken English while doing everyday chores.\n- Demonstrates the core product value: a non-judgmental AI tutor that gently corrects mistakes in real-time.\n- Ends with a clear, actionable call-to-action to download the app for daily practice.",
+        "supernova_on_screen_text": "English बोलना इतना मुश्किल क्यों है? (Why is speaking English so difficult?)\nLet's practice. What do you do?\nI am do... job.\nHow about, 'I am working'?\nI am working.\nDo you like your job?\nYes, I...\nDo you mean 'Yes, I like it'?\nYes, I like it.\nWhere do you work?\nI... bank...?\nDo you mean 'I work at a bank'?\nI work at a bank.\nमैं रोज़ ऐसे ही English practice कैसे करूँ? (How do I practice English like this every day?)\nJust download Supernova.\nमैं अभी Supernova download करती हूँ। (I'll download Supernova right now.)"
+      },
+      {
+        "n": 2,
+        "scene_label": "End card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Standard end card driving app downloads.\n- Displays app store availability clearly.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.499616
+}

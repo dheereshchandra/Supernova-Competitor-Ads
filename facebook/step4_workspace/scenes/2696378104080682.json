@@ -1,0 +1,107 @@
+{
+  "competitor_id": "2696378104080682",
+  "parsed": {
+    "duration_s": 61.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video relies entirely on static 2D and 3D character assets animated with basic AI lip-syncing tools. The voices are clearly generated using text-to-speech technology, lacking natural cadence and emotion.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "2D cartoon man with a perfectly round head, tan skin, simple dot eyes, and a single line for a mouth. He has stick-figure arms and legs.",
+        "wardrobe": "Plain white t-shirt and black pants.",
+        "demeanor": "Initially confused and hesitant, later becomes enthusiastic and convinced."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D rendering of a female humanoid robot. She has a white and silver metallic body with glowing blue accents, notably a circular light on her chest and bright blue eyes. Her face is sculpted to look human-like but metallic.",
+        "wardrobe": "Built-in white and silver metallic plating.",
+        "demeanor": "Helpful, reassuring, and robotic but friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Introduction",
+        "setting": "Grand Canyon background with a US flag, daytime.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "full body",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A 2D cartoon man stands in the center of the frame. He has a round head, tan skin, dot eyes, and a simple line mouth. He is wearing a white t-shirt and black stick-figure legs. His right arm is raised, pointing upwards. Behind him is a photographic background of the Grand Canyon, with a large, waving United States flag superimposed over the sky.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A 2D cartoon character stands in front of a Grand Canyon background with a US flag. Text overlays appear as he speaks.",
+        "audio_transcript": "Character A says: \u0e16\u0e49\u0e32\u0e04\u0e38\u0e13\u0e1f\u0e31\u0e07\u0e04\u0e25\u0e34\u0e1b\u0e19\u0e35\u0e49\u0e40\u0e02\u0e49\u0e32\u0e43\u0e08 [If you understand this clip]\nCharacter A says: \u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e02\u0e2d\u0e07\u0e04\u0e38\u0e13\u0e04\u0e37\u0e2d\u0e23\u0e30\u0e14\u0e31\u0e1a A2 \u0e41\u0e25\u0e49\u0e27\u0e19\u0e30 [your English is at A2 level.]",
+        "on_screen_text": "\u0e16\u0e49\u0e32\u0e04\u0e38\u0e13\u0e1f\u0e31\u0e07\u0e04\u0e25\u0e34\u0e1b\u0e19\u0e35\u0e49\u0e40\u0e02\u0e49\u0e32\u0e43\u0e08 \u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e02\u0e2d\u0e07\u0e04\u0e38\u0e13\u0e04\u0e37\u0e2d\u0e23\u0e30\u0e14\u0e31\u0e1a A2 \u0e41\u0e25\u0e49\u0e27\u0e19\u0e30 Learna AI"
+      },
+      {
+        "n": 2,
+        "start_s": 4.5,
+        "end_s": 56.5,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Split-screen conversation",
+        "setting": "Left: Abstract black and white concentric circles. Right: A cozy room with a bookshelf and a lit candle on a table.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A 3D rendering of a female humanoid robot from the chest up. She has a white and silver metallic body with glowing blue accents, notably a circular light on her chest and bright blue eyes. Her face is sculpted to look human-like but metallic. The background consists of abstract, dark grey and white concentric circles.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A 2D cartoon man with a round head and tan skin is shown from the chest up. He is looking down at a lit white candle in a clear glass jar sitting on a grey surface. He holds a lighter in his right hand. The background is a softly blurred, warmly lit room featuring a bookshelf filled with books and a framed picture on the wall.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen shows a 3D robot on the left and a 2D cartoon man on the right. The robot speaks to the man, who is interacting with a candle. Subtitles appear in the center of the screen.",
+        "audio_transcript": "Character B says: \u0e41\u0e01\u0e17\u0e33\u0e2d\u0e30\u0e44\u0e23\u0e2d\u0e22\u0e39\u0e48\u0e40\u0e19\u0e35\u0e48\u0e22? [What are you doing?]\nCharacter A says: I burn candle. [I burn candle.]\nCharacter B says: \u0e15\u0e49\u0e2d\u0e07\u0e1e\u0e39\u0e14\u0e27\u0e48\u0e32 \"I'm lighting a candle\" \u0e2a\u0e34 [You should say \"I'm lighting a candle\".]\nCharacter B says: \u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e41\u0e01\u0e40\u0e25\u0e40\u0e27\u0e25\u0e44\u0e2b\u0e19\u0e40\u0e19\u0e35\u0e48\u0e22? [What level is your English?]\nCharacter A says: \u0e40\u0e2d\u0e48\u0e2d... \u0e01\u0e47\u0e07\u0e39\u0e46 \u0e1b\u0e25\u0e32\u0e46 \u0e2d\u0e30... [Uh... just so-so...]\nCharacter B says: \u0e44\u0e21\u0e48\u0e15\u0e49\u0e2d\u0e07\u0e2b\u0e48\u0e27\u0e07! [Don't worry!]\nCharacter B says: \u0e41\u0e01\u0e08\u0e30\u0e1e\u0e39\u0e14\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e44\u0e14\u0e49\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e40\u0e08\u0e49\u0e32\u0e02\u0e2d\u0e07\u0e20\u0e32\u0e29\u0e32\u0e14\u0e49\u0e27\u0e22\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c AI [You will be able to speak English like a native speaker with an AI tutor]\nCharacter B says: \u0e43\u0e19\u0e40\u0e27\u0e25\u0e32\u0e41\u0e04\u0e48 1 \u0e40\u0e14\u0e37\u0e2d\u0e19 [in just 1 month.]\nCharacter A says: AI \u0e40\u0e2b\u0e23\u0e2d? \u0e40\u0e2d\u0e48\u0e2d... \u0e40\u0e23\u0e32\u0e44\u0e21\u0e48\u0e21\u0e35\u0e40\u0e07\u0e34\u0e19\u0e2b\u0e23\u0e2d\u0e01\u0e19\u0e30... [AI? Uh... I don't have money...]\nCharacter B says: \u0e2d\u0e30\u0e44\u0e23\u0e19\u0e30? [What?]\nCharacter B says: \u0e44\u0e21\u0e48\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e40\u0e07\u0e34\u0e19\u0e40\u0e25\u0e22! [You don't need money!]\nCharacter B says: \u0e43\u0e0a\u0e49 Learna \u0e1d\u0e36\u0e01\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e44\u0e14\u0e49\u0e1f\u0e23\u0e35 [Use Learna to practice English for free.]\nCharacter B says: \u0e44\u0e21\u0e48\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e1e\u0e27\u0e01\u0e41\u0e2d\u0e1b\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e2d\u0e23\u0e4c\u0e2a\u0e41\u0e1e\u0e07\u0e46 [It's not like other expensive apps or courses.]\nCharacter A says: \u0e08\u0e23\u0e34\u0e07\u0e14\u0e34? [Really?]\nCharacter B says: \u0e08\u0e23\u0e34\u0e07\u0e2a\u0e34! \u0e44\u0e21\u0e48\u0e21\u0e35\u0e2b\u0e25\u0e2d\u0e01\u0e25\u0e27\u0e07 [Really! No scam.]\nCharacter B says: \u0e1d\u0e36\u0e01\u0e04\u0e38\u0e22\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e08\u0e23\u0e34\u0e07\u0e46 [Practice speaking real English]\nCharacter B says: \u0e01\u0e31\u0e1a\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c AI \u0e02\u0e2d\u0e07\u0e41\u0e01\u0e40\u0e25\u0e22 [with your AI tutor.]\nCharacter A says: \u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19... \u0e21\u0e35\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c\u0e08\u0e23\u0e34\u0e07\u0e46 \u0e40\u0e25\u0e22\u0e40\u0e2b\u0e23\u0e2d? [Like... having a real tutor?]\nCharacter B says: \u0e43\u0e0a\u0e48 \u0e40\u0e02\u0e32\u0e0a\u0e48\u0e27\u0e22\u0e41\u0e01\u0e49\u0e41\u0e01\u0e23\u0e21\u0e21\u0e48\u0e32 \u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e40\u0e2a\u0e35\u0e22\u0e07 [Yes, it helps correct grammar, pronunciation]\nCharacter B says: \u0e41\u0e25\u0e49\u0e27\u0e01\u0e47\u0e0a\u0e48\u0e27\u0e22\u0e43\u0e2b\u0e49\u0e41\u0e01\u0e1e\u0e39\u0e14\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e21\u0e31\u0e48\u0e19\u0e43\u0e08\u0e14\u0e49\u0e27\u0e22 [and helps you speak confidently.]\nCharacter A says: \u0e42\u0e2d\u0e40\u0e04... \u0e07\u0e31\u0e49\u0e19\u0e40\u0e14\u0e35\u0e4b\u0e22\u0e27\u0e42\u0e2b\u0e25\u0e14 Learna \u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49\u0e40\u0e25\u0e22 [Okay... then I'll download Learna right now.]\nCharacter B says: \u0e15\u0e31\u0e14\u0e2a\u0e34\u0e19\u0e43\u0e08\u0e14\u0e35\u0e21\u0e32\u0e01 [Great decision.]\nCharacter B says: \u0e21\u0e32\u0e1d\u0e36\u0e01\u0e1e\u0e39\u0e14\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e44\u0e1b\u0e14\u0e49\u0e27\u0e22\u0e01\u0e31\u0e19\u0e19\u0e30 [Let's practice speaking English together.]",
+        "on_screen_text": "\u0e41\u0e01\u0e17\u0e33\u0e2d\u0e30\u0e44\u0e23\u0e2d\u0e22\u0e39\u0e48\u0e40\u0e19\u0e35\u0e48\u0e22? I burn candle. \u0e15\u0e49\u0e2d\u0e07\u0e1e\u0e39\u0e14\u0e27\u0e48\u0e32 \"I'm lighting a candle\" \u0e2a\u0e34 \u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e41\u0e01\u0e40\u0e25\u0e40\u0e27\u0e25\u0e44\u0e2b\u0e19\u0e40\u0e19\u0e35\u0e48\u0e22? \u0e40\u0e2d\u0e48\u0e2d... \u0e01\u0e47\u0e07\u0e39\u0e46 \u0e1b\u0e25\u0e32\u0e46 \u0e2d\u0e30... \u0e44\u0e21\u0e48\u0e15\u0e49\u0e2d\u0e07\u0e2b\u0e48\u0e27\u0e07! \u0e41\u0e01\u0e08\u0e30\u0e1e\u0e39\u0e14\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e44\u0e14\u0e49\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e40\u0e08\u0e49\u0e32\u0e02\u0e2d\u0e07\u0e20\u0e32\u0e29\u0e32\u0e14\u0e49\u0e27\u0e22\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c AI \u0e43\u0e19\u0e40\u0e27\u0e25\u0e32\u0e41\u0e04\u0e48 1 \u0e40\u0e14\u0e37\u0e2d\u0e19 AI \u0e40\u0e2b\u0e23\u0e2d? \u0e40\u0e2d\u0e48\u0e2d... \u0e40\u0e23\u0e32\u0e44\u0e21\u0e48\u0e21\u0e35\u0e40\u0e07\u0e34\u0e19\u0e2b\u0e23\u0e2d\u0e01\u0e19\u0e30... \u0e2d\u0e30\u0e44\u0e23\u0e19\u0e30? \u0e44\u0e21\u0e48\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e40\u0e07\u0e34\u0e19\u0e40\u0e25\u0e22! \u0e43\u0e0a\u0e49 Learna \u0e1d\u0e36\u0e01\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e44\u0e14\u0e49\u0e1f\u0e23\u0e35 \u0e44\u0e21\u0e48\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e1e\u0e27\u0e01\u0e41\u0e2d\u0e1b\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e2d\u0e23\u0e4c\u0e2a\u0e41\u0e1e\u0e07\u0e46 \u0e08\u0e23\u0e34\u0e07\u0e14\u0e34? \u0e08\u0e23\u0e34\u0e07\u0e2a\u0e34! \u0e44\u0e21\u0e48\u0e21\u0e35\u0e2b\u0e25\u0e2d\u0e01\u0e25\u0e27\u0e07 \u0e1d\u0e36\u0e01\u0e04\u0e38\u0e22\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e08\u0e23\u0e34\u0e07\u0e46 \u0e01\u0e31\u0e1a\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c AI \u0e02\u0e2d\u0e07\u0e41\u0e01\u0e40\u0e25\u0e22 \u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19... \u0e21\u0e35\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c\u0e08\u0e23\u0e34\u0e07\u0e46 \u0e40\u0e25\u0e22\u0e40\u0e2b\u0e23\u0e2d? \u0e43\u0e0a\u0e48 \u0e40\u0e02\u0e32\u0e0a\u0e48\u0e27\u0e22\u0e41\u0e01\u0e49\u0e41\u0e01\u0e23\u0e21\u0e21\u0e48\u0e32 \u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e40\u0e2a\u0e35\u0e22\u0e07 \u0e41\u0e25\u0e49\u0e27\u0e01\u0e47\u0e0a\u0e48\u0e27\u0e22\u0e43\u0e2b\u0e49\u0e41\u0e01\u0e1e\u0e39\u0e14\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e21\u0e31\u0e48\u0e19\u0e43\u0e08\u0e14\u0e49\u0e27\u0e22 \u0e42\u0e2d\u0e40\u0e04... \u0e07\u0e31\u0e49\u0e19\u0e40\u0e14\u0e35\u0e4b\u0e22\u0e27\u0e42\u0e2b\u0e25\u0e14 Learna \u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49\u0e40\u0e25\u0e22 \u0e15\u0e31\u0e14\u0e2a\u0e34\u0e19\u0e43\u0e08\u0e14\u0e35\u0e21\u0e32\u0e01 \u0e21\u0e32\u0e1d\u0e36\u0e01\u0e1e\u0e39\u0e14\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e44\u0e1b\u0e14\u0e49\u0e27\u0e22\u0e01\u0e31\u0e19\u0e19\u0e30 Learna AI"
+      },
+      {
+        "n": 3,
+        "start_s": 56.5,
+        "end_s": 61.0,
+        "screenshot_at_s": 58.0,
+        "scene_label": "Call to Action",
+        "setting": "Solid dark blue background.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark blue background with a subtle gradient. In the center is a square app icon with rounded corners. The icon displays the face of a white and silver metallic humanoid robot with glowing blue eyes against a light blue background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An end card with a solid blue background. The Learna app icon is displayed in the center, along with text prompting the user to download the app and badges for the App Store and Google Play.",
+        "audio_transcript": "Unknown speaker says: \u0e14\u0e32\u0e27\u0e19\u0e4c\u0e42\u0e2b\u0e25\u0e14\u0e40\u0e14\u0e35\u0e4b\u0e22\u0e27\u0e19\u0e35\u0e49! \u0e40\u0e23\u0e34\u0e48\u0e21\u0e1d\u0e36\u0e01\u0e1d\u0e19\u0e40\u0e25\u0e22! [Download now! Start practicing!]",
+        "on_screen_text": "\u0e14\u0e32\u0e27\u0e19\u0e4c\u0e42\u0e2b\u0e25\u0e14\u0e40\u0e14\u0e35\u0e4b\u0e22\u0e27\u0e19\u0e35\u0e49! \u0e40\u0e23\u0e34\u0e48\u0e21\u0e1d\u0e36\u0e01\u0e1d\u0e19\u0e40\u0e25\u0e22! Learna \u0e14\u0e32\u0e27\u0e19\u0e4c\u0e42\u0e2b\u0e25\u0e14\u0e44\u0e14\u0e49\u0e08\u0e32\u0e01 App Store \u0e14\u0e32\u0e27\u0e19\u0e4c\u0e42\u0e2b\u0e25\u0e14\u0e44\u0e14\u0e49\u0e08\u0e32\u0e01 Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780125080.994508
+}

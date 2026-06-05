@@ -1,0 +1,53 @@
+{
+  "competitor_id": "2824622157869852",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion. Blonde hair, bright smile, floral tattoo on right shoulder.",
+        "wardrobe": "Scene 1: Pink tank top, hair in a thick braid, tan cross-body bag. Scene 2: Light grey sweatshirt, hair down.",
+        "demeanor": "Cheerful, confident, and engaging."
+      },
+      {
+        "id": "B",
+        "role": "passport control officer",
+        "appearance": "Middle-aged male, average build, fair complexion. Short dark hair with some grey, clean-shaven.",
+        "wardrobe": "Dark blue short-sleeved uniform shirt with epaulets and a badge.",
+        "demeanor": "Professional and slightly stern."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated young adult female, fair complexion. Reddish-brown hair pulled back, large expressive eyes, smooth stylized features.",
+        "wardrobe": "Dark blue police-style uniform shirt with a silver badge and shoulder microphone.",
+        "demeanor": "Friendly, patient, and animated."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Passport Control Interaction",
+        "supernova_script": "Character B says: Do you speak English? [Do you speak English?]\nCharacter A says: Yes, absolutely. [Yes, absolutely.]\nCharacter B says: Prove it. [Prove it.]\nCharacter A says: I am here to attend a conference in London. I will be staying for two weeks, and here is my return ticket. [I am here to attend a conference in London. I will be staying for two weeks, and here is my return ticket.]\nCharacter B says: Impressive. Itni acchi English kaise? [Impressive. How is your English so good?]\nCharacter A says: Maine Supernova use kiya. Roz sirf 10 minutes practice, aisi real conversations ke liye. Let me show you. [I used Supernova. Just 10 minutes of practice daily, for real conversations like this. Let me show you.]",
+        "scene_summary": "- Hooks the viewer with a high-stakes real-world English scenario (immigration).\n- Demonstrates the user's confident English speaking skills.\n- Introduces Supernova as the practical, daily solution for real conversations.",
+        "supernova_on_screen_text": "Do you speak English?\nYes, absolutely.\nProve it.\nI am here to attend a conference in London.\nI will be staying for two weeks, and here is my return ticket.\nImpressive. Itni acchi English kaise?\nMaine Supernova use kiya.\nRoz sirf 10 minutes practice, aisi real conversations ke liye.\nLet me show you."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "supernova_script": "Character C says: Hello, where are you flying? [Hello, where are you flying?]\nCharacter A says: I fly, uh, London. [I fly, uh, London.]\nCharacter C says: Do you mean \"I am flying to London\"? [Do you mean \"I am flying to London\"?]\nCharacter A says: Yes, sorry. I am flying to London. [Yes, sorry. I am flying to London.]\nCharacter C says: Any luggage to check in? [Any luggage to check in?]\nCharacter A says: Um, luggage? [Um, luggage?]\nCharacter C says: Yes, luggage. Jaise bags ya suitcases jo hum travel karte waqt le jaate hain. [Yes, luggage. Like bags or suitcases that we carry while traveling.]\nCharacter A says: Oh, I have one luggage. Sorry, meri English itni acchi nahi hai. [Oh, I have one luggage. Sorry, my English isn't that good.]\nCharacter C says: Koi baat nahi! Galtiyan karke hi toh seekhte hain. Pichle ek mahine mein aapne kitni baar English mein baat ki? [No worries! We learn by making mistakes. How many times have you spoken in English over the past month?]\nCharacter A says: Um, actually ek baar bhi nahi. [Um, actually not even once.]\nCharacter C says: Toh fluency kaise aayegi? Practice toh karni padegi na. [Then how will you get fluency? You have to practice, right.]\nCharacter A says: Par mere paas practice karne ke liye koi hai hi nahi. [But I don't have anyone to practice with.]\nCharacter C says: Supernova app download karo na! Hum roz saath practice karenge, bina kisi hesitation ke. [Just download the Supernova app! We will practice together daily, without any hesitation.]\nCharacter A says: Yeh toh bohot badhiya hai! Main aaj se hi shuru karti hoon. [This is really great! I am starting from today itself.]",
+        "scene_summary": "- Shows the app interface and AI tutor in action.\n- Highlights the core problem: learners have no one to practice with.\n- Positions Supernova as a friendly, non-judgmental practice partner that gently corrects mistakes.",
+        "supernova_on_screen_text": "Hello, where are you flying?\nI fly, uh, London.\nDo you mean \"I am flying to London\"?\nYes, sorry. I am flying to London.\nAny luggage to check in?\nUm, luggage?\nYes, luggage. Jaise bags ya suitcases jo hum travel karte waqt le jaate hain.\nOh, I have one luggage. Sorry, meri English itni acchi nahi hai.\nKoi baat nahi! Galtiyan karke hi toh seekhte hain.\nPichle ek mahine mein aapne kitni baar English mein baat ki?\nUm, actually ek baar bhi nahi.\nToh fluency kaise aayegi? Practice toh karni padegi na.\nPar mere paas practice karne ke liye koi hai hi nahi.\nSupernova app download karo na!\nHum roz saath practice karenge, bina kisi hesitation ke.\nYeh toh bohot badhiya hai! Main aaj se hi shuru karti hoon.\nSupernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Loora",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889371.4329875
+}

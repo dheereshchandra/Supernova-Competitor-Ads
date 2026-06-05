@@ -1,0 +1,139 @@
+{
+  "competitor_id": "4047050955534121",
+  "parsed": {
+    "duration_s": 30.0,
+    "production_type": "mixed",
+    "production_notes": "The video consists entirely of 2D vector motion graphics and animated app screencasts. There are no human actors or AI-generated video artifacts.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot",
+        "appearance": "A stylized, bright green owl with large eyes, a yellow beak, and small wings.",
+        "wardrobe": "None, though occasionally wears a black graduation cap.",
+        "demeanor": "Cheerful and energetic."
+      },
+      {
+        "id": "B",
+        "role": "Animated character",
+        "appearance": "A woman with dark skin and black hair styled in a high bun.",
+        "wardrobe": "Yellow headband, orange short-sleeve top, blue jeans, and red shoes.",
+        "demeanor": "Active and determined."
+      },
+      {
+        "id": "C",
+        "role": "Animated character",
+        "appearance": "A man with light skin and blonde hair.",
+        "wardrobe": "Red headband, red long-sleeve jacket, red shorts, white socks, and red shoes.",
+        "demeanor": "Confident and strong."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.5,
+        "screenshot_at_s": 3.5,
+        "scene_label": "Intro and B2 English",
+        "setting": "Solid green transitioning to solid blue background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid blue background. In the center, Character A is wearing a black graduation cap and holding a rolled diploma.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "An animated smartphone screen appears on a green background, then transitions to a blue background showing a language learning app interface. The interface features the owl mascot holding a diploma.",
+        "audio_transcript": "Unknown speaker says: Want to improve your English? [Want to improve your English?]\nUnknown speaker says: Learn B2 English with Duolingo. [Learn B2 English with Duolingo.]",
+        "on_screen_text": "want to improve your english?\nlearn b2 english\nwith duolingo\nWhat would you like to learn?\nIntermediate English\nSpanish\nFrench\nGerman\nItalian\nJapanese\nChinese\nRussian\nCONTINUE\nComplete the sentence\nWay to go, Duo! Learning another language is quite an accomplishment!\nquite\nalmost\nhardly\nnot\nCHECK\nGreat job!\nCONTINUE"
+      },
+      {
+        "n": 2,
+        "start_s": 7.5,
+        "end_s": 16.5,
+        "screenshot_at_s": 11.0,
+        "scene_label": "Useful Phrases",
+        "setting": "Solid purple transitioning to solid orange background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid purple background where Character A and Character B are running side-by-side. The background then changes to solid orange, displaying a cartoon woman with blonde hair wearing a red dress and a gold crown.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A and Character B run across a purple screen. The scene cuts to an orange background showing an app interface with a cartoon queen character and a text input exercise.",
+        "audio_transcript": "Unknown speaker says: Our new lessons teach you useful phrases for real life. [Our new lessons teach you useful phrases for real life.]\nUnknown speaker says: Turn the radio up so that Grandpa can hear it! [Turn the radio up so that Grandpa can hear it!]",
+        "on_screen_text": "useful phrases for real life\nType the missing word\nTurn the radio up so that Grandpa can hear it!\nCONTINUE\nCHECK\nCorrect!"
+      },
+      {
+        "n": 3,
+        "start_s": 16.5,
+        "end_s": 27.5,
+        "screenshot_at_s": 21.0,
+        "scene_label": "Career Goals",
+        "setting": "Solid white transitioning to solid yellow background.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background where Character A and Character C are flexing their arm muscles. The background then changes to solid yellow, displaying a cartoon illustration of a black smartphone with colorful square app icons on its screen.",
+            "characters_in_panel": [
+              "A",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "Character A and Character C flex their muscles on a white screen with animated fireworks. The scene cuts to a yellow background showing an app interface with a smartphone illustration and a fill-in-the-blank exercise.",
+        "audio_transcript": "Unknown speaker says: So you can reach your career goals. [So you can reach your career goals.]\nUnknown speaker says: It's free, fun, and effective. [It's free, fun, and effective.]",
+        "on_screen_text": "reach your career goals\nComplete the sentence\nIt would be interesting to work in the tech industry and build laptops or phones!\nsteal\ndrink\neat\nbuild\nCONTINUE\nGreat!\nit's free\nit's fun\nit's effective"
+      },
+      {
+        "n": 4,
+        "start_s": 27.5,
+        "end_s": 30.0,
+        "screenshot_at_s": 28.5,
+        "scene_label": "Outro",
+        "setting": "Solid white background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background featuring the face of Character A in the center.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A white end-card screen displaying the Duolingo logo, app store badges, and a call to action to download the app.",
+        "audio_transcript": "Unknown speaker says: Download Duolingo, the number one language learning app. [Download Duolingo, the number one language learning app.]",
+        "on_screen_text": "Download\nduolingo\nDownload the world's #1 language learning app.\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.091255
+}

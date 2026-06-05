@@ -1,0 +1,67 @@
+{
+  "competitor_id": "1459044325509397",
+  "parsed": {
+    "duration_s": 28.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human in a natural outdoor setting. Lighting, shadows, and movements are consistent with standard smartphone video recording.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female speaker",
+        "appearance": "Young woman with a slim build and fair complexion. She has long, dark brown hair. She is wearing large aviator-style sunglasses with a tortoiseshell detail on the top bar.",
+        "wardrobe": "A light grey, long-sleeved button-up shirt worn over a dark top. She has a delicate gold necklace and a gold ring on her right hand.",
+        "demeanor": "Enthusiastic, animated, and conversational, using frequent hand gestures."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 25.0,
+        "screenshot_at_s": 12.0,
+        "scene_label": "Uber Story",
+        "setting": "Outdoors, daytime. Clear blue sky with scattered clouds. Background includes a building with a colorful mural, a bare tree, and the edge of a white patio umbrella.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is framed in a close-up shot, positioned slightly off-center. She is outdoors on a bright, sunny day. The background features a clear blue sky with a few clouds, a building adorned with a colorful mural, a leafless tree, and a parked red vehicle. The edge of a white patio umbrella is visible on the left side of the frame. Character A is actively gesturing with her hands as she speaks, looking slightly off-camera. The lighting is natural and bright, casting soft shadows.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A continuous close-up shot of Character A telling a story to someone off-camera. The setting is outdoors on a sunny day. A static text overlay sits at the top of the screen, while dynamic subtitles appear in the lower third, translating or transcribing the dialogue.",
+        "audio_transcript": "Unknown speaker says: \u00bfDe d\u00f3nde eres? [Where are you from?]\nCharacter A says: And he was like, soy de Colombia. [I'm from Colombia.] And I was like, ay, qu\u00e9 ch\u00e9vere, soy de Ecuador. [oh, how cool, I'm from Ecuador.] And then he went as far as to say, hablas muy bien el espa\u00f1ol. [you speak Spanish very well.] So I'm sitting in the back of this Uber, and I'm texting my mom immediately. I kid you not, I was like, mi vida est\u00e1 completa porque me dijo que hablo muy bien el espa\u00f1ol. [my life is complete because he told me I speak Spanish very well.]\nUnknown speaker says: When did you even learn Spanish?\nCharacter A says: I've been using this new app called Speak, and I use it for literally like 10 minutes a day. And now I can actually apply it in real life, and patting myself on the back, honestly.",
+        "on_screen_text": "She was SHOOK I spoke Spanish \ud83d\ude02\nWhere are you from?\nI'm from Colombia.\nI'm from Ecuador.\nYou speak Spanish really well.\nMy life is complete\nbecause he said\nI spoke Spanish really well.\nWhen did you even learn Spanish?"
+      },
+      {
+        "n": 2,
+        "start_s": 25.0,
+        "end_s": 28.0,
+        "screenshot_at_s": 26.5,
+        "scene_label": "End Card",
+        "setting": "Solid blue background",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, bright blue background fills the entire frame. There are no characters, props, or other visual elements present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A simple end card consisting of a solid blue background. White text is centered on the screen, displaying the brand name and a call to action.",
+        "audio_transcript": "[sound effect only, no speech]",
+        "on_screen_text": "Speak\nStart your 7-day free trial."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966543.465799
+}

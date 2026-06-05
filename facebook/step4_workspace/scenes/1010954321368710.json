@@ -1,0 +1,103 @@
+{
+  "competitor_id": "1010954321368710",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "AI-generated",
+    "production_notes": "The presenter exhibits uncanny, overly smooth facial movements and static body posture typical of AI avatars, with a perfectly still background. The illustrations of the animals have inconsistent anatomy and a distinct AI-generated aesthetic. The tapping finger is a digital overlay.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Older woman with a slim build and fair complexion. She has long, wavy gray hair and wears black-rimmed glasses. She has extensive tattoos on her neck and chest.",
+        "wardrobe": "Black tank top.",
+        "demeanor": "Enthusiastic and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.0,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Presenter intro",
+        "setting": "Urban street doorway, daytime, neutral colors.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A stands outdoors in front of a dark, weathered wooden doorway and a brick wall. She faces the camera directly. The lighting is natural and even.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A plain white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half shows Character A speaking directly to the camera. The bottom half displays a block of English text. A headline banner runs across the very top of the screen.",
+        "audio_transcript": "Character A says: Lee libros en ingl\u00e9s durante diez minutos al d\u00eda. [Read books in English for ten minutes a day.]",
+        "on_screen_text": "LEE LIBROS EN INGL\u00c9S DURANTE 10 MINUTOS AL D\u00cdA\n\"All animals are equal, but some animals are more important than others.\" - one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore."
+      },
+      {
+        "n": 2,
+        "start_s": 4.0,
+        "end_s": 9.5,
+        "screenshot_at_s": 6.0,
+        "scene_label": "First reading segment",
+        "setting": "Farmyard, daytime, grayscale palette.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A grayscale illustration of various farm animals gathered together. A large pig stands prominently on a wooden crate in the center. Horses and sheep surround the pig, looking forward. The background features wooden fences and barn structures.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A plain white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The screen remains split horizontally. The top half now shows a grayscale illustration of farm animals. The bottom half continues to display the English text. A digital finger overlay taps on specific words in the text, triggering pop-up translation cards.",
+        "audio_transcript": "Unknown speaker says: All animals are equal,\nUnknown speaker says: equal\nUnknown speaker says: but some animals are more important than others.\nUnknown speaker says: important",
+        "on_screen_text": "LEE LIBROS EN INGL\u00c9S DURANTE 10 MINUTOS AL D\u00cdA\n\"All animals are equal, but some animals are more important than others.\" - one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore.\nequal\n[i'kwal]\nigual\nAprendido\nAprender\nimportant\n[im'portant]\nimportante"
+      },
+      {
+        "n": 3,
+        "start_s": 9.5,
+        "end_s": 35.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Second reading segment",
+        "setting": "Farmyard, sunset, warm color palette.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A color illustration of farm animals in a field. A brown cow, several sheep, and a light brown horse are visible. In the background, there is a red barn and a green field under a warm, sunset sky.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A plain white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The top half changes to a color illustration of farm animals near a red barn. The bottom half continues to show the English text. The digital finger overlay keeps tapping on words, bringing up translation pop-ups as the narration progresses.",
+        "audio_transcript": "Unknown speaker says: One of them read slowly.\nUnknown speaker says: slowly\nUnknown speaker says: The animals stood silent in the cold night, staring at the wall.\nUnknown speaker says: cold\nUnknown speaker says: They tried to remember the old words,\nUnknown speaker says: to try\nUnknown speaker says: word\nUnknown speaker says: but something felt wrong.\nUnknown speaker says: something\nUnknown speaker says: No one spoke.\nUnknown speaker says: The farm looked the same as always,\nUnknown speaker says: farm\nUnknown speaker says: always\nUnknown speaker says: yet nothing was the same anymore.",
+        "on_screen_text": "LEE LIBROS EN INGL\u00c9S DURANTE 10 MINUTOS AL D\u00cdA\nREBELI\u00d3N EN LA GRANJA\nGEORGE ORWELL\n\"All animals are equal, but some animals are more important than others.\" - one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore.\nslowly\n['slouli]\nlentamente\ncold\n[kould]\nfr\u00edo\nto try\n[tu trai]\nintentar\nword\n[w\u0259rd]\npalabra\nsomething\n['s\u0259mthing]\nalgo\nfarm\n[farm]\ngranja\nalways\n['ol,weiz]\nsiempre\nAprendido\nAprender"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.2788773
+}

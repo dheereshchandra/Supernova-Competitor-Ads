@@ -1,0 +1,116 @@
+{
+  "competitor_id": "1977102026236404",
+  "parsed": {
+    "duration_s": 49.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human presenter in a physical studio setting with natural lighting, realistic skin textures, and fluid, natural movements. The inset video also shows a real human coach.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Middle-aged Caucasian man with short brown hair and a light beard/stubble. He has a medium build.",
+        "wardrobe": "Light blue long-sleeve button-down shirt.",
+        "demeanor": "Engaging, informative, and conversational."
+      },
+      {
+        "id": "B",
+        "role": "female accent coach",
+        "appearance": "Young Caucasian woman with short, dark pixie-cut hair. Slim build.",
+        "wardrobe": "Light pink button-down shirt.",
+        "demeanor": "Professional and instructive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 20.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Introduction to the problem",
+        "setting": "Dark studio with a black microphone on a stand.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A man is seated in a dark studio setting, facing slightly to the left. A black microphone on a stand is positioned in front of him. He is gesturing with his hands as he speaks, looking off-camera as if addressing an interviewer or audience. The lighting is soft, highlighting his face against the dark background.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter is speaking into a microphone in a dimly lit studio. Large, dynamic text overlays appear in the center of the screen, highlighting key words from his speech.",
+        "audio_transcript": "Character A says: \"There are 45 million immigrants in the US and almost none of them were taught how to actually pronounce English.\"\nCharacter A says: \"It's not your fault.\"\nCharacter A says: \"English classes teach you grammar and vocabulary, not pronunciation.\"\nCharacter A says: \"But pronunciation is the first thing people notice.\"\nCharacter A says: \"There's this app called BoldVoice.\"\nCharacter A says: \"You just speak into it.\"\nCharacter A says: \"It gives you real-time feedback on your pronunciation and helps you fix your mistakes.\"",
+        "on_screen_text": "45 MILLION IMMIGRANTS IN THE US ALMOST NONE TAUGHT HOW TO ACTUALLY PRONOUNCE ENGLISH IT'S NOT YOUR FAULT ENGLISH CLASSES TEACH GRAMMAR AND VOCABULARY NOT PRONUNCIATION BUT PRONUNCIATION IS THE FIRST THING PEOPLE NOTICE THERE'S THIS APP CALLED BOLDVOICE YOU JUST SPEAK INTO IT IT GIVES YOU REAL-TIME FEEDBACK ON YOUR PRONUNCIATION AND HELPS YOU FIX YOUR MISTAKES"
+      },
+      {
+        "n": 2,
+        "start_s": 20.5,
+        "end_s": 31.5,
+        "screenshot_at_s": 25.0,
+        "scene_label": "App demonstration",
+        "setting": "Dark studio with a black microphone on a stand.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up with inset",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A man is seated in a dark studio setting, facing slightly to the left. A black microphone on a stand is positioned in front of him. He is gesturing with his hands as he speaks, looking off-camera.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A vertical rectangular panel is visible. It is completely blank, as all interface elements have been removed.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The presenter continues speaking in the studio. A vertical phone screen inset appears on the right side, showing the BoldVoice app interface. The app displays a pronunciation exercise with a microphone button and feedback scores.",
+        "audio_transcript": "Character A says: \"Sheep.\"\n[App sound: ding]\nCharacter A says: \"It's telling me I said 'ee' and I should say a shorter sound 'ih'.\"\nCharacter A says: \"Ship.\"\n[App sound: success chime]",
+        "on_screen_text": "Practice My Text Coach Eliza Let's start! Tap the button below and say the word. ship SH IH P Listening... 71% ship SH IH P Coach Eliza Let's pause to troubleshoot. Listen to the difference in our recordings and try again. 100% ship SH IH P Coach Eliza Awesome! You're ready for the next one. TELLING ME I SAID E AND I SHOULD SAY A SHORTER SOUND IH"
+      },
+      {
+        "n": 3,
+        "start_s": 31.5,
+        "end_s": 49.0,
+        "screenshot_at_s": 38.0,
+        "scene_label": "Features and call to action",
+        "setting": "Dark studio with a black microphone on a stand.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up with inset",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A man is seated in a dark studio setting, facing slightly to the left. A black microphone on a stand is positioned in front of him. He is gesturing with his hands as he speaks, looking off-camera.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A woman is framed from the chest up against a plain, light-colored background. She is looking directly forward and gesturing slightly with her hands. The lighting is bright and even.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The presenter speaks in the studio. The vertical phone screen inset on the right shows various features of the app, including a video of an accent coach speaking, a speech test interface, and a personalized lesson plan. The video ends with the presenter making a final call to action.",
+        "audio_transcript": "Character A says: \"Now I got it.\"\nCharacter A says: \"I love this app because you learn from real accent coaches who show you how to pronounce each sound correctly.\"\nCharacter A says: \"First, you'll take a speech test, and they'll personalize the lessons to what you need to focus on.\"\nCharacter A says: \"It's cheaper than classes and only takes 10 minutes a day.\"\nCharacter A says: \"Ready to sound more clear and confident?\"\nCharacter A says: \"Download BoldVoice today.\"",
+        "on_screen_text": "NOW I GOT IT I LOVE THIS APP LEARN FROM REAL ACCENT COACHES WHO SHOW YOU HOW TO PRONOUNCE EACH SOUND CORRECTLY FIRST YOU'LL TAKE A SPEECH TEST AND THEY'LL PERSONALIZE THE LESSONS TO WHAT YOU NEED TO FOCUS ON IT'S CHEAPER THAN CLASSES AND ONLY TAKES 10 MINUTES A DAY READY TO SOUND MORE CLEAR AND CONFIDENT? DOWNLOAD BOLDVOICE TODAY Spelling vs. Sounds architect you need to say U Hi there! I'm Eliza. Complete these goals to earn a star Say the phoneme Y UW 5 times Use the suffix 'ing' 3 times Hi there! I'm Eliza. I'm an AI coach here. What brought you to this networking event today? I'm looking to expand my connections and share about my company. Continue Conversation And now, take a look at the sounds that need some work. We'll start with these in our lessons together. Your Top Focus Areas Added to your personalized journey You mispronounced it in: today's shoes flowery Next Good work! At your level, native speakers usually understand you, but may hear an accent. Together, we'll advance to the next level. Your Speech Level Eliza 68% Native Proficient Advanced Next"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779986084.7958124
+}

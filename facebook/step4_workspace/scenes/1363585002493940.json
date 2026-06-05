@@ -1,0 +1,61 @@
+{
+  "competitor_id": "1363585002493940",
+  "parsed": {
+    "duration_s": 52.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video is entirely AI-generated. The characters exhibit uncanny smoothness, perfectly static framing, and slightly unnatural lip-syncing. The lighting and backgrounds have a characteristic AI-rendered perfection.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Black woman in her 30s with a dark complexion and short, curly black hair. She has a friendly, expressive face.",
+        "wardrobe": "Plain green short-sleeved t-shirt.",
+        "demeanor": "Enthusiastic, eager to learn, slightly frustrated when making mistakes."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "White woman in her 30s with a fair complexion and shoulder-length, wavy brown hair. She has a calm, symmetrical face.",
+        "wardrobe": "Dark blue top with a subtle texture.",
+        "demeanor": "Patient, encouraging, professional, and friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 52.0,
+        "screenshot_at_s": 26.0,
+        "scene_label": "AI English Tutoring Session",
+        "setting": "Cozy living room environments for both characters, daytime, warm lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up of Character A facing the camera directly. She is positioned in the center of the frame. The background is a cozy living room. Visible behind her are a wooden bookshelf, a floor lamp emitting a warm glow, a grey sofa draped with a yellow blanket, and a framed piece of art on the wall. The lighting is soft and natural, illuminating her face evenly. She maintains eye contact with the viewer.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up of Character B facing the camera directly. She is centered in the frame. The background shows a comfortable living room environment. Behind her, there is a sofa with patterned throw pillows, a warm-toned lamp, and framed artwork hanging on the wall. The lighting is soft and flattering, creating a welcoming atmosphere. She maintains steady eye contact with the viewer.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout divided horizontally. The top half features Character A in a green shirt, while the bottom half shows Character B in a blue shirt. Both are situated in similar, warmly lit living room settings. They appear to be engaged in a video call. Throughout the video, dynamic text captions of their speech appear over their respective panels. Occasionally, graphic symbols like a green checkmark or a red 'X' pop up on the screen. At the end, a button graphic appears in the bottom panel.",
+        "audio_transcript": "Character A says: My coworkers think my English is great.\n\nCharacter A says: They're wrong.\n\nCharacter A says: In every meeting, when I don't understand something, I say this.\n\nCharacter A says: Can you repeat that?\n\nCharacter B says: That works but natives say Could you run that by me again?\n\nCharacter B says: Sounds much more professional.\n\nCharacter A says: Could you run that by me again?\n\nCharacter B says: Exactly. One more try this.\n\nCharacter A says: I didn't understand your point.\n\nCharacter B says: Try I didn't quite catch that.\n\nCharacter B says: Much more natural.\n\nCharacter A says: I didn't quite catch that.\n\nCharacter A says: My English isn't bad.\n\nCharacter A says: It's just... not natural.\n\nCharacter A says: I can't afford a real tutor every day.\n\nCharacter B says: Surprise! I'm an AI teacher available every day, at any time.\n\nCharacter A says: Try Fluently.\n\nCharacter A says: Start speaking like you actually mean it.",
+        "on_screen_text": "My coworkers think my English is great.\nThey're wrong.\nIn every meeting,\nwhen I don't understand something,\nI say this\nCan you repeat that?\nThat works but natives say Could\nyou run that by me again?\nSounds much more professional.\nCould you run that by me again?\nExactly. One more try this\nI didn't understand your point.\nTry I didn't quite catch that.\nMuch more natural.\nI didn't quite catch that.\nMy English isn't bad.\nIt's just...\nnot natural.\nI can't afford\na real tutor every day.\nSurprise! I'm an AI\nteacher available every day,\nat any time.\nTry Fluently.\nStart speaking like you actually mean it.\n\u00bb Start speaking"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.1054192
+}

@@ -1,0 +1,60 @@
+{
+  "competitor_id": "950441070968656",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, medium brown complexion, dark hair tied back, wearing a bindi. She has symmetrical features and smooth skin.",
+        "wardrobe": "Dark grey or black collared jacket with white stitching details along the lapels and shoulders.",
+        "demeanor": "Calm, professional, and reassuring."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young adult male, medium build, dark complexion, short dark hair styled with a slight quiff. He has a mustache and a light beard.",
+        "wardrobe": "White short-sleeved shirt with a blue and grey leaf or floral pattern.",
+        "demeanor": "Expressive, initially hesitant but becomes eager and convinced."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Problem",
+        "supernova_script": "Character B says: जब भी मैं English बोलने की try करता हूँ, मेरे दोस्त हँसते हैं। [Whenever I try to speak English, my friends laugh.]\nCharacter B says: एक दिन मैंने कहा, 'My English is very weak only'. [One day I said, 'My English is very weak only'.]\nCharacter B says: तो मेरा दोस्त बोला, 'Weak only'? ये कैसी English है भाई? [So my friend said, 'Weak only'? What kind of English is this, bro?]\nCharacter B says: मुझे बहुत बुरा लगा। [I felt really bad.]",
+        "scene_summary": "- Establishes the core pain point: embarrassment when speaking broken English in front of peers.\n- Builds empathy with the target audience who face similar real-world mockery.\n- Sets up the need for a non-judgmental practice space.",
+        "supernova_on_screen_text": ""
+      },
+      {
+        "n": 2,
+        "scene_label": "The Solution",
+        "supernova_script": "Character A says: Tension मत लो। मैं तुम्हारी personal AI tutor हूँ, और मैं judge नहीं करती। [Don't worry. I am your personal AI tutor, and I don't judge.]\nCharacter A says: बस Supernova app पर रोज़ 15-20 minutes practice करो। [Just practice for 15-20 minutes daily on the Supernova app.]\nCharacter A says: हम real-life situations में confidence के साथ English बोलना सीखेंगे। [We will learn to speak English with confidence in real-life situations.]",
+        "scene_summary": "- Introduces the AI tutor as a safe, non-judgmental solution.\n- Highlights the daily 15-20 minute practice routine.\n- Shifts the promise from 'perfect English' to 'confidence in real-life situations', aligning with Supernova's practical brand voice.",
+        "supernova_on_screen_text": "Supernova"
+      },
+      {
+        "n": 3,
+        "scene_label": "The Correction",
+        "supernova_script": "Character B says: अच्छा? तो मैं एक sentence बोलता हूँ, बताना सही है या नहीं। [Really? Then I'll say a sentence, tell me if it's correct.]\nCharacter A says: बिल्कुल, बोल कर दिखाओ। [Absolutely, go ahead and say it.]\nCharacter B says: My English is that weak. [My English is that weak.]\nCharacter A says: इसे ऐसे बोलो: [Say it like this:]\nCharacter A says: My English is not very strong. [My English is not very strong.]\nCharacter B says: My English is not very strong. [My English is not very strong.]",
+        "scene_summary": "- Demonstrates the app's core feature: real-time, interactive sentence correction.\n- Shows the AI tutor's encouraging, conversational teaching style.\n- Gives the user an immediate 'win' by having them repeat the correct phrasing.",
+        "supernova_on_screen_text": ""
+      },
+      {
+        "n": 4,
+        "scene_label": "Pricing and Call to Action",
+        "supernova_script": "Character B says: पर मुझे लगता है इस app के लिए बहुत पैसे लगेंगे। [But I feel this app will cost a lot of money.]\nCharacter A says: बिल्कुल नहीं। Supernova बहुत affordable है, रोज़ की एक कप चाय से भी कम खर्च में। [Not at all. Supernova is very affordable, costing less than a daily cup of tea.]\nCharacter B says: क्या बात है! तो मैं अभी Supernova app download करता हूँ और confident बनकर English बोलता हूँ। [Wow! Then I will download the Supernova app right now and speak English confidently.]",
+        "scene_summary": "- Addresses price objections directly without making specific numerical claims.\n- Replaces competitor's exact pricing with a relatable 'cup of tea' affordability metaphor.\n- Ends with a strong, enthusiastic call-to-action to download the app.",
+        "supernova_on_screen_text": "Supernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "SpeakX",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889847.6439328
+}

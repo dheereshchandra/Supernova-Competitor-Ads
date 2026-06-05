@@ -1,0 +1,47 @@
+# Step 3 run log
+# competitor : loora
+# started_at : 2026-06-04T15:15:55
+# input      : inputs/fb-ads-loora-2026-06-04.csv
+# videos     : videos/loora-2026-06-04
+# master     : master/loora.csv  (unchanged (dry-run))
+# enriched   : inputs/fb-ads-loora-2026-06-04_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : True
+#
+# counts     : {'uploaded': 9, 'carried-forward': 25, 'image-pending': 0, 'video-missing': 0, 'no-creative': 0, 'error': 0}
+#
+carried-forward  1286341193458429 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1286341193458429.mp4
+carried-forward  2824622157869852 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2824622157869852.mp4
+carried-forward  1923073918386349 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1923073918386349.mp4
+would-upload     1758731028824393 c0  (video) ← 1758731028824393.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1758731028824393.mp4  [DRY-RUN]
+carried-forward  3920858908216732 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3920858908216732.mp4
+carried-forward  1582553446724594 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1582553446724594.mp4
+carried-forward  1581060787352516 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1581060787352516.mp4
+would-upload     887166504395248 c0  (video) ← 887166504395248.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/887166504395248.mp4  [DRY-RUN]
+carried-forward  1261073506142042 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1261073506142042.mp4
+carried-forward  1399715815299179 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1399715815299179.mp4
+carried-forward  1608766093513896 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1608766093513896.mp4
+carried-forward  987721023705930 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/987721023705930.mp4
+carried-forward  1000935449552618 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1000935449552618.mp4
+would-upload     1009996348169330 c0  (video) ← 1009996348169330.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1009996348169330.mp4  [DRY-RUN]
+carried-forward  1600521857717578 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1600521857717578.mp4
+carried-forward  1208953758961208 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1208953758961208.mp4
+would-upload     2065316954367727 c0  (video) ← 2065316954367727.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2065316954367727.mp4  [DRY-RUN]
+carried-forward  1288587726756839 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1288587726756839.mp4
+would-upload     1020433583744483 c0  (video) ← 1020433583744483.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1020433583744483.mp4  [DRY-RUN]
+carried-forward  2257110451487366 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2257110451487366.mp4
+carried-forward  1743087253793397 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1743087253793397.mp4
+carried-forward  1143622754604208 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1143622754604208.mp4
+carried-forward  1490005112129951 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1490005112129951.mp4
+carried-forward  990584049996241 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/990584049996241.mp4
+carried-forward  827379027114172 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/827379027114172.mp4
+would-upload     869185468874772 c0  (video) ← 869185468874772.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/869185468874772.mp4  [DRY-RUN]
+carried-forward  1332393458836467 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1332393458836467.mp4
+carried-forward  1651325459631448 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1651325459631448.mp4
+carried-forward  828323076603145 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/828323076603145.mp4
+would-upload     1017749350907847 c0  (video) ← 1017749350907847.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1017749350907847.mp4  [DRY-RUN]
+carried-forward  1626068392526827 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1626068392526827.mp4
+would-upload     1546272363585692 c0  (image) ← 1546272363585692.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1546272363585692.jpg  [DRY-RUN]
+carried-forward  1861497244534107 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1861497244534107.mp4
+would-upload     1633635301042962 c0  (image) ← 1633635301042962.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1633635301042962.jpg  [DRY-RUN]

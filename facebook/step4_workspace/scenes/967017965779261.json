@@ -1,0 +1,198 @@
+{
+  "competitor_id": "967017965779261",
+  "parsed": {
+    "duration_s": 68.0,
+    "production_type": "human-recorded",
+    "production_notes": "Features real human actors with natural movements, expressions, and lighting. Includes a screen-recorded segment of a mobile app.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "cab driver / presenter",
+        "appearance": "Young male, brown complexion, curly black hair, mustache, and light stubble.",
+        "wardrobe": "White button-down shirt with sleeves rolled up.",
+        "demeanor": "Transitions from stressed and confused to confident, happy, and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "passenger",
+        "appearance": "Young female, brown complexion, long dark hair.",
+        "wardrobe": "Patterned top.",
+        "demeanor": "Initially annoyed, later satisfied and calm."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 8.5,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Driver on Phone",
+        "setting": "Inside a car, daytime.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Grayscale shot of Character A sitting in the driver's seat of a car. He holds a phone to his ear with his left hand. He has a stressed and pleading expression. The car interior is visible behind him.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Color shot of Character A sitting in the driver's seat of a car. He holds a blue phone to his ear. He has a calm and confident expression. The car has red seats.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen showing a 'Before' and 'After' scenario. The top half is in black and white, showing the driver struggling on a phone call. The bottom half is in color, showing the driver handling a phone call confidently. Text overlays indicate 'Before' and 'After' along with subtitles.",
+        "audio_transcript": "Character A says: Sir, please don't cancel. \u0d07\u0d24\u0d4d \u0d0e\u0d28\u0d4d\u0d31\u0d46 \u0d06\u0d26\u0d4d\u0d2f\u0d24\u0d4d\u0d24\u0d46 \u0d31\u0d48\u0d21\u0d4d \u0d06\u0d23\u0d4d. \u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d 200 \u0d30\u0d42\u0d2a \u0d32\u0d4b\u0d38\u0d4d \u0d06\u0d15\u0d41\u0d02. [Sir, please don't cancel. This is my first ride. I will lose 200 rupees.]\nCharacter A says: Sir, please don't cancel my ride. I have been waiting since the morning. This is my first ride.",
+        "on_screen_text": "Before\nPlease don't cancel.\nithu ente aadyathe ride aanu.\nEnikku 200 rupa loss aakum.\nAfter\nSir, please don't cancel my ride.\nI have been waiting since the morning.\nThis is my first ride."
+      },
+      {
+        "n": 2,
+        "start_s": 8.5,
+        "end_s": 20.5,
+        "screenshot_at_s": 14.0,
+        "scene_label": "Driver and Passenger",
+        "setting": "Inside a car, daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Grayscale shot inside a car. Character A, in the driver's seat, looks back over his left shoulder with a confused expression. Character B sits in the back seat, looking annoyed while speaking.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Color shot inside a car. Character A looks back over his left shoulder, appearing attentive. Character B sits in the back seat, looking calm and satisfied while speaking.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen continuing the 'Before' and 'After' comparison. The top black-and-white panel shows a communication breakdown between the driver and passenger. The bottom color panel shows a smooth interaction. Subtitles translate the dialogue.",
+        "audio_transcript": "Character B says: \u0d1a\u0d47\u0d1f\u0d4d\u0d1f\u0d3e I have changed the route. Please check your app. [Brother, I have changed the route. Please check your app.]\nCharacter A says: Ma'am English.. No no ma'am.\nCharacter B says: \u0d1a\u0d47\u0d1f\u0d4d\u0d1f\u0d3e I want to change my drop location. [Brother, I want to change my drop location.]\nCharacter A says: Ofcourse ma'am. Please change it in the app. I will adjust the route accordingly.",
+        "on_screen_text": "Before\nChetta I have changed the route.\nPlease check your app.\nMa'am English.. No no ma'am.\nAfter\nChetta I want to change\nmy drop location.\nOfcourse ma'am.\nPlease change it in the app.\nI will adjust the route accordingly."
+      },
+      {
+        "n": 3,
+        "start_s": 20.5,
+        "end_s": 33.5,
+        "screenshot_at_s": 27.0,
+        "scene_label": "Driver Monologue Split",
+        "setting": "Inside a car, daytime.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Grayscale shot of Character A in the driver's seat. He looks forward, speaking with a frustrated and sad expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Color shot of Character A in the driver's seat. He looks forward, speaking with a happy and confident expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Split-screen showing the driver's internal monologue or reflection. The top grayscale panel shows his past struggles, while the bottom color panel shows his current success. Subtitles are present.",
+        "audio_transcript": "Character A says: \u0d15\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d2e\u0d47\u0d34\u0d4d\u0d38\u0d3f\u0d28\u0d4b\u0d1f\u0d4d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d12\u0d28\u0d4d\u0d28\u0d41\u0d02 \u0d38\u0d02\u0d38\u0d3e\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d2a\u0d31\u0d4d\u0d31\u0d41\u0d28\u0d4d\u0d28\u0d3f\u0d32\u0d4d\u0d32, \u0d05\u0d24\u0d41\u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d4d \u0d05\u0d35\u0d7c \u0d15\u0d4d\u0d2f\u0d3e\u0d7b\u0d38\u0d7d \u0d06\u0d15\u0d4d\u0d15\u0d3f\u0d15\u0d4d\u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d3f\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d15\u0d2f\u0d3e\u0d23\u0d32\u0d4d\u0d32\u0d4b. \u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d2e\u0d4a\u0d24\u0d4d\u0d24\u0d02 \u0d28\u0d37\u0d4d\u0d1f\u0d2e\u0d3e\u0d2f\u0d3f\u0d15\u0d4d\u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d3f\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d15\u0d2f\u0d3e\u0d23\u0d4d. [I couldn't speak English with the customers, so they kept cancelling. I am suffering a total loss.]\nCharacter A says: \u0d13 \u0d38\u0d42\u0d2a\u0d4d\u0d2a\u0d7c SpeakX \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d0e\u0d28\u0d4d\u0d31\u0d46 \u0d1c\u0d40\u0d35\u0d3f\u0d24\u0d02 \u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d2e\u0d3e\u0d31\u0d4d\u0d31\u0d3f\u0d2e\u0d31\u0d3f\u0d1a\u0d4d\u0d1a\u0d41. 15 \u0d26\u0d3f\u0d35\u0d38\u0d02 \u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d4d \u0d1e\u0d3e\u0d7b \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d41\u0d02 \u0d2a\u0d20\u0d3f\u0d1a\u0d4d\u0d1a\u0d41. \u0d07\u0d2a\u0d4d\u0d2a\u0d4b \u0d15\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d2e\u0d47\u0d34\u0d4d\u0d38\u0d4d \u0d12\u0d15\u0d4d\u0d15\u0d46 \u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d2b\u0d41\u0d7e \u0d31\u0d46\u0d38\u0d4d\u0d2a\u0d46\u0d15\u0d4d\u0d1f\u0d41\u0d02 \u0d1f\u0d3f\u0d2a\u0d4d\u0d38\u0d41\u0d02 \u0d24\u0d28\u0d4d\u0d28\u0d41\u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d3f\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d15\u0d2f\u0d3e\u0d23\u0d4d. [Oh super, SpeakX app completely changed my life. I learned English in 15 days. Now customers are giving me full respect and tips.]",
+        "on_screen_text": "Before\nCustomers nodu English\nonnum samsarikkaan pattunnilla,\nathukondu avar cancel\naakki ondirikkunnu alle.\nEnikku motham nashtamaayi\nAfter\nOh super SpeakX app ente\njeevitham thanne maatti marichu.\nPathinanchu divasam kondu njan\nEnglish um padichu.\nIppo customers okke enikku\nfull respect um tips um tharunnu."
+      },
+      {
+        "n": 4,
+        "start_s": 33.5,
+        "end_s": 39.5,
+        "screenshot_at_s": 36.0,
+        "scene_label": "Driver Testimonial Intro",
+        "setting": "Inside a car, daytime.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Color shot of Character A sitting in the driver's seat, wearing a seatbelt. He faces the camera directly and speaks with a serious expression. A building exterior is visible through the car window behind him.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The video transitions to a full-screen shot of the driver talking directly to the camera, beginning his testimonial story. Subtitles are displayed at the bottom.",
+        "audio_transcript": "Character A says: \u0d15\u0d23\u0d4d\u0d1f\u0d3f\u0d32\u0d4d\u0d32\u0d47, \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d3f\u0d7d \u0d38\u0d02\u0d38\u0d3e\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d2a\u0d31\u0d4d\u0d31\u0d3e\u0d24\u0d4d\u0d24\u0d24\u0d41\u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d4d \u0d0e\u0d28\u0d4d\u0d24\u0d4a\u0d15\u0d4d\u0d15\u0d46 \u0d2a\u0d4d\u0d30\u0d36\u0d4d\u0d28\u0d19\u0d4d\u0d19\u0d33\u0d3e\u0d23\u0d4d \u0d09\u0d23\u0d4d\u0d1f\u0d3e\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d4d. \u0d12\u0d30\u0d41 \u0d26\u0d3f\u0d35\u0d38\u0d02 \u0d0e\u0d28\u0d4d\u0d31\u0d46 \u0d15\u0d4d\u0d2f\u0d3e\u0d2c\u0d3f\u0d7d \u0d12\u0d30\u0d41 \u0d35\u0d32\u0d3f\u0d2f \u0d15\u0d2e\u0d4d\u0d2a\u0d28\u0d3f \u0d2e\u0d3e\u0d28\u0d47\u0d1c\u0d7c \u0d35\u0d28\u0d4d\u0d28\u0d3f\u0d30\u0d41\u0d28\u0d4d\u0d28\u0d41. [See, what all problems happen because of not being able to speak in English. One day a manager of a big company came in my cab.]",
+        "on_screen_text": "kandille, English il\nsamsarikkaan pattathath kondu\nenthokke prashnangal aanu undaakunnath.\nOru divasam ente cab il\noru valiya company manager vannirunnu."
+      },
+      {
+        "n": 5,
+        "start_s": 39.5,
+        "end_s": 50.5,
+        "screenshot_at_s": 45.0,
+        "scene_label": "App Demonstration",
+        "setting": "Indoors, blurred background.",
+        "characters_in_scene": [],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Close-up shot of a person's hands holding a smartphone. The screen displays an app interface featuring a female AI avatar. The person's thumb taps the screen to interact with the app. The background is out of focus.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A close-up shot of a smartphone screen showing the SpeakX app in use. The user navigates through the app, interacting with an AI tutor. Subtitles continue at the bottom.",
+        "audio_transcript": "Character A says: \u0d05\u0d35\u0d7c \u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d SpeakX \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d2a\u0d31\u0d1e\u0d4d\u0d1e\u0d41\u0d24\u0d28\u0d4d\u0d28\u0d41. \u0d07\u0d24\u0d4a\u0d30\u0d41 AI \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d1f\u0d40\u0d1a\u0d4d\u0d1a\u0d3f\u0d19\u0d4d \u0d06\u0d2a\u0d4d\u0d2a\u0d3e\u0d23\u0d4d. \u0d07\u0d24\u0d3f\u0d7d \u0d05\u0d35\u0d7c \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d2a\u0d4d\u0d2a\u0d3f\u0d1a\u0d4d\u0d1a\u0d41\u0d24\u0d30\u0d41\u0d28\u0d4d\u0d28\u0d41. \u0d05\u0d24\u0d41\u0d02 15-20 \u0d26\u0d3f\u0d35\u0d38\u0d02 \u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d4d. \u0d05\u0d35\u0d7c \u0d2a\u0d31\u0d1e\u0d4d\u0d1e\u0d41 \u0d21\u0d46\u0d2f\u0d3f\u0d32\u0d3f \u0d12\u0d30\u0d41 10-15 \u0d2e\u0d3f\u0d28\u0d3f\u0d31\u0d4d\u0d31\u0d4d \u0d0e\u0d19\u0d4d\u0d15\u0d3f\u0d32\u0d41\u0d02 \u0d2a\u0d4d\u0d30\u0d3e\u0d15\u0d4d\u0d1f\u0d40\u0d38\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d7b \u0d35\u0d47\u0d23\u0d4d\u0d1f\u0d3f\u0d2f\u0d3f\u0d1f\u0d4d\u0d1f\u0d4d. \u0d1e\u0d3e\u0d7b \u0d05\u0d24\u0d41\u0d2a\u0d4b\u0d32\u0d46 \u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d41. [He told me about the SpeakX app. This is an AI English teaching app. They teach English in this. That too in 15-20 days. He told me to practice for at least 10-15 minutes daily. I did exactly like that.]",
+        "on_screen_text": "Avar enikku SpeakX app paranju thannu.\nIthoru AI English teaching app aanu.\nIthil avar English padippichu tharunnu.\nAthum pathinanchu irupathu divasam kondu.\nAvar paranju daily oru\n10-15 minutes engilumpractice\nNjan athupole thanne cheythu."
+      },
+      {
+        "n": 6,
+        "start_s": 50.5,
+        "end_s": 68.0,
+        "screenshot_at_s": 59.0,
+        "scene_label": "Driver Testimonial Conclusion",
+        "setting": "Inside a car, daytime.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Color shot of Character A sitting in the driver's seat, wearing a seatbelt. He faces the camera directly, speaking with a happy and enthusiastic expression, gesturing slightly with his hands. A building exterior is visible through the window.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Full-screen shot of the driver concluding his testimonial. He looks very happy and recommends the app. Subtitles are displayed at the bottom.",
+        "audio_transcript": "Character A says: \u0d2a\u0d3e\u0d38\u0d1e\u0d4d\u0d1a\u0d31\u0d3f\u0d28\u0d4b\u0d1f\u0d4d \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46 \u0d38\u0d02\u0d38\u0d3e\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d02, \u0d05\u0d35\u0d30\u0d4b\u0d1f\u0d4d \u0d32\u0d4a\u0d15\u0d4d\u0d15\u0d47\u0d37\u0d7b \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46 \u0d1a\u0d4b\u0d26\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d02 \u0d0e\u0d28\u0d4d\u0d28\u0d4a\u0d15\u0d4d\u0d15\u0d46 \u0d1e\u0d3e\u0d7b \u0d2a\u0d20\u0d3f\u0d1a\u0d4d\u0d1a\u0d41. I am very grateful to SpeakX app. \u0d08 \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d0e\u0d28\u0d4d\u0d31\u0d46 \u0d1c\u0d40\u0d35\u0d3f\u0d24\u0d02 \u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d2e\u0d3e\u0d31\u0d4d\u0d31\u0d3f\u0d2e\u0d31\u0d3f\u0d1a\u0d4d\u0d1a\u0d41. \u0d07\u0d2a\u0d4d\u0d2a\u0d4b \u0d06\u0d33\u0d41\u0d15\u0d7e \u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d1f\u0d3f\u0d2a\u0d4d\u0d38\u0d41\u0d02 \u0d24\u0d30\u0d41\u0d28\u0d4d\u0d28\u0d41\u0d23\u0d4d\u0d1f\u0d4d, \u0d0e\u0d28\u0d4d\u0d28\u0d3e \u0d31\u0d46\u0d38\u0d4d\u0d2a\u0d46\u0d15\u0d4d\u0d1f\u0d41\u0d02 \u0d24\u0d30\u0d41\u0d28\u0d4d\u0d28\u0d41\u0d23\u0d4d\u0d1f\u0d4d. \u0d2a\u0d3f\u0d28\u0d4d\u0d28\u0d46 \u0d30\u0d23\u0d4d\u0d1f\u0d41 \u0d2e\u0d3e\u0d38\u0d2e\u0d3e\u0d2f\u0d3f\u0d1f\u0d4d\u0d1f\u0d4d \u0d07\u0d24\u0d41\u0d35\u0d30\u0d46 \u0d12\u0d30\u0d41 \u0d31\u0d48\u0d21\u0d4d \u0d2a\u0d4b\u0d32\u0d41\u0d02 \u0d15\u0d4d\u0d2f\u0d3e\u0d7b\u0d38\u0d7d \u0d06\u0d2f\u0d3f\u0d1f\u0d4d\u0d1f\u0d3f\u0d32\u0d4d\u0d32. \u0d1e\u0d3e\u0d7b \u0d2a\u0d31\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d41 SpeakX \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d2c\u0d46\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d4d \u0d06\u0d2a\u0d4d\u0d2a\u0d3e\u0d23\u0d4d. [I learned how to talk to the passenger, how to ask them for the location, etc. I am very grateful to SpeakX app. This app completely changed my life. Now people give me tips and respect. And for the past two months, not even a single ride has been cancelled. I say SpeakX app is the best app to learn English.]",
+        "on_screen_text": "Passenger nodu engane samsarikkam,\navarodu location engane chodikkan\nennokke njan padichu.\nI am very grateful to SpeakX app.\nEe app ente jeevitham thanne maatti marichu.\nIppo aalukal enikku tips um tharunnu,\nenna respect um tharunnu.\nPinne randu maasam aayittu\nithu vare oru\nride polum cancel aayitilla.\nNjan parayunnu SpeakX app\nEnglish padikkaan best app aanu."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888788.1257463
+}

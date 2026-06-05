@@ -1,0 +1,50 @@
+{
+  "competitor_id": "2008049966476696",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "animated presenter",
+        "appearance": "Stylized 2D male character with brown skin, black hair, and a thick black mustache. He has half-closed eyes and a prominent nose.",
+        "wardrobe": "Pink shirt with a green collar detail.",
+        "demeanor": "Bored, sarcastic, and slightly condescending."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Intro",
+        "supernova_script": "Character A says: English fluently बोलना चाहते हो? [Want to speak English fluently?]\nCharacter A says: चलो, practice शुरू करते हैं! [Let's start practicing!]",
+        "scene_summary": "- Hooks the viewer by directly addressing their desire to speak fluent English.\n- Sets a practical, action-oriented tone by immediately jumping into practice.\n- Replaces the original sarcastic challenge with an encouraging invitation.",
+        "supernova_on_screen_text": "Want to speak English fluently?\nLet's practice!"
+      },
+      {
+        "n": 2,
+        "scene_label": "Gameplay Screencast",
+        "supernova_script": "Character A says: Alright, let's start with a simple introduction. [Alright, let's start with a simple introduction.]\nCharacter A says: बहुत बढ़िया! You've got potential. [Very good! You've got potential.]\nCharacter A says: अरे, डरो मत... [Hey, don't be scared...]\nCharacter A says: Mistakes से ही तो सीखते हैं, दोस्त। [We learn from mistakes only, my friend.]\nCharacter A says: Take a deep breath, फिर से try करो। [Take a deep breath, try again.]\nCharacter A says: Perfect! See, you can do it! [Perfect! See, you can do it!]\nCharacter A says: Supernova app पर AI tutor के साथ रोज़ practice करो! [Practice daily with the AI tutor on the Supernova app!]",
+        "scene_summary": "- Demonstrates the app's interactive nature through encouraging feedback rather than sarcastic commentary.\n- Normalizes making mistakes, reinforcing Supernova's safe, non-judgmental learning environment.\n- Introduces the core feature (AI tutor) as the solution for daily practice.",
+        "supernova_on_screen_text": "Speak now\nCONTINUE\nNicely done!\nTRY AGAIN\nDon't worry, try again\nAlright, let's start with a simple introduction.\nबहुत बढ़िया! You've got potential.\nअरे, डरो मत...\nMistakes से ही तो सीखते हैं, दोस्त।\nTake a deep breath, फिर से try करो।\nPerfect! See, you can do it!\nSupernova app पर AI tutor के साथ रोज़ practice करो!"
+      },
+      {
+        "n": 3,
+        "scene_label": "Outro",
+        "supernova_script": "Character A says: आज ही download करो और confidence के साथ English बोलो। [Download today and speak English with confidence.]",
+        "scene_summary": "- Delivers a clear, empowering Call to Action.\n- Focuses on the emotional payoff: speaking English with confidence.\n- Displays the Supernova brand logo.",
+        "supernova_on_screen_text": "Download today and speak English with confidence.\nSupernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Duolingo Chess",
+        "supernova_swap": "Supernova app"
+      },
+      {
+        "competitor_brand": "duolingo",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.963974
+}

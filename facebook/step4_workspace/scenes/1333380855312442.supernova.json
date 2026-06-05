@@ -1,0 +1,39 @@
+{
+  "competitor_id": "1333380855312442",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female, appearing in her 20s, flawless light complexion, dark hair styled up. She has a slightly robotic but friendly demeanor.",
+        "wardrobe": "White saree with a gold border, paired with futuristic metallic neck and arm accessories.",
+        "demeanor": "Confident, composed, and reassuring."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Female, 20s-30s, medium Indian complexion, dark hair tied back, wearing round wire-rimmed glasses.",
+        "wardrobe": "Red and black plaid button-down shirt with a leopard print scarf draped around her neck.",
+        "demeanor": "Initially concerned and frustrated, transitioning to curious and hopeful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI Tutor and Learner Split-Screen",
+        "supernova_script": "Character B says: मैंने बोला मुझे नौकरी करनी है, तो हस्बैंड ने कहा जॉब के लिए इंग्लिश चाहिए। तुम तो हिंदी मीडियम से हो, बस घर और बच्चे संभालो। [I said I want to work, so my husband said English is needed for a job. You are from a Hindi medium background, just manage the house and kids.]\n\nCharacter A says: निराश मत हो! तुम घर बैठे-बैठे भी इंग्लिश बोलना सीख सकती हो, वो भी मेरे साथ। [Don't be disappointed! You can learn to speak English sitting right at home, that too with me.]\n\nCharacter B says: पर कैसे सीखूं? घर के काम के बीच में टाइम ही कहाँ मिलता है। [But how do I learn? Where do I get the time amidst household chores.]\n\nCharacter A says: मैं Supernova की AI ट्यूटर हूँ। बस दिन में 10 मिनट मेरे साथ बोलकर प्रैक्टिस करो। तुम मुझसे हिंदी में बात करके इंग्लिश सीख सकती हो, और जॉब इंटरव्यू के लिए भी रेडी हो सकती हो। [I am Supernova's AI tutor. Just practice speaking with me for 10 minutes a day. You can learn English by talking to me in Hindi, and even get ready for job interviews.]\n\nCharacter B says: सच में? इसके लिए मुझे क्या करना होगा? [Really? What do I have to do for this?]\n\nCharacter A says: बस Supernova ऐप डाउनलोड करो। रोज़ मेरे साथ प्रैक्टिस करोगी, तो बिना झिझक के कॉन्फिडेंस से इंग्लिश बोलना शुरू कर दोगी। आज ही ट्राई करो! [Just download the Supernova app. If you practice with me daily, you will start speaking English with confidence without hesitation. Try it today!]",
+        "scene_summary": "- Establishes a highly relatable pain point: a housewife feeling held back from her career ambitions due to her Hindi-medium background.\n- Introduces the AI tutor as an empathetic, practical solution that fits into a busy daily routine.\n- Replaces aggressive timeline guarantees with a warm, encouraging call-to-action focused on building real-world confidence.",
+        "supernova_on_screen_text": "Hindi Medium Se Ho? Ab Ghar Baithe Confident English Bolna Seekho. (From a Hindi medium background? Now learn to speak confident English from home.) [Dynamic captions matching the spoken dialogue appear throughout.]"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "SPEAKX",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889847.6573856
+}

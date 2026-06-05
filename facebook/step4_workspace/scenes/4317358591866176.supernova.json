@@ -1,0 +1,41 @@
+{
+  "competitor_id": "4317358591866176",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male ride-share driver",
+        "appearance": "A man in his late 20s to early 30s, with a medium build and dark complexion. He has a full, dark beard and mustache, and dark, curly hair. His eyes are dark.",
+        "wardrobe": "A grey marled short-sleeved t-shirt with a subtle pattern. He wears a simple silver chain with a small pendant and a red thread bracelet on his right wrist.",
+        "demeanor": "Initially stressed and pleading while on the phone, his expression shifts to more understanding and helpful when interacting with the passenger."
+      },
+      {
+        "id": "B",
+        "role": "female passenger",
+        "appearance": "A woman in her late 20s to early 30s, with a medium build and light-medium complexion. She has dark, straight hair pulled back, and wears glasses.",
+        "wardrobe": "A dark patterned kurta (Indian tunic) with a light, possibly white or cream, pattern.",
+        "demeanor": "Initially concerned and slightly frustrated, her expression becomes more relieved and communicative as the conversation progresses."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Driver on phone, alone",
+        "supernova_script": "Character A says: Please cancel cheyakandi sir. [Please don't cancel, sir.]\nCharacter A says: Idi naa first ride. [This is my first ride.]\nCharacter A says: English raadu ani cancel cheste ela sir? [How can you cancel just because I don't know English, sir?]\nCharacter A says: Sir, please don't cancel my ride. I am learning English with Supernova now.",
+        "scene_summary": "- Establishes the pain point of losing business due to poor English.\n- Shows the emotional distress of the driver.\n- Introduces the 'After' state where he can communicate confidently.",
+        "supernova_on_screen_text": "Before Supernova\nAfter Supernova\nPlease cancel చేయకండి సర్ [Please don't cancel sir]\nఇది నా first ride [This is my first ride]\nEnglish రాదు అని cancel చేస్తే ఎలా సర్? [How can you cancel just because I don't know English, sir?]\nSir, please don't cancel my ride. I am learning English with Supernova now."
+      },
+      {
+        "n": 2,
+        "scene_label": "Driver and Passenger interaction",
+        "supernova_script": "Character B says: అన్నా, I have changed the route. Please check your app. [Anna, I have changed the route. Please check your app.]\nCharacter A says: Ma'am, English... No. [Ma'am, English... No.]\nCharacter A says: No English, ma'am.\nCharacter B says: అన్నా, I want to change my drop location. [Anna, I want to change my drop location.]\nCharacter A says: No problem ma'am. Supernova daily practice makes it easy. Please update the app.",
+        "scene_summary": "- Demonstrates a real-world scenario where English is needed.\n- Shows the contrast between the driver's past inability to understand and his current confidence.\n- Softly plugs Supernova's daily practice as the solution.",
+        "supernova_on_screen_text": "Before Supernova\nAfter Supernova\nఅన్నా, I have changed the route. Please check your app. [Anna, I have changed the route. Please check your app.]\nMa'am English... No.\nఅన్నా, I want to change my drop location. [Anna, I want to change my drop location.]\nNo problem ma'am. Supernova daily practice makes it easy. Please update the app."
+      }
+    ],
+    "brand_swaps_detected": []
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780634211.772257
+}

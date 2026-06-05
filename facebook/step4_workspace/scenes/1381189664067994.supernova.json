@@ -1,0 +1,36 @@
+{
+  "competitor_id": "1381189664067994",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Illustrated character",
+        "appearance": "Young woman, light complexion, brown hair tied up. Simple facial features.",
+        "wardrobe": "Purple t-shirt, blue jeans, white sneakers.",
+        "demeanor": "Cheerful, waving with one hand, other hand on hip."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Static Text Graphic",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Hooks the viewer with a relatable success story about overcoming the fear of speaking English.\n- Highlights the common frustration of studying English for years without being able to speak it confidently.\n- Introduces Supernova's AI tutor as the practical, judgment-free solution.\n- Ends with a strong emotional payoff of gaining confidence in real life.",
+        "supernova_on_screen_text": "मैंने फर्राटेदार इंग्लिश बोलना कैसे शुरू किया। [How I started speaking fluent English.]\nस्कूल में इंग्लिश पढ़ी, कई सालों तक ऐप्स ट्राई किये, फिर भी बात करने में डर लगता था। [Studied English in school, tried apps for years, but was still scared to converse.]\nफिर मुझे Supernova मिला। [Then I found Supernova.]\nइसके AI ट्यूटर के साथ मैंने बिना किसी झिझक के रोज़ाना practice की। [With its AI tutor, I practiced daily without any hesitation.]\nअब मैं पूरे confidence के साथ इंग्लिश बोलती हूँ। [Now I speak English with full confidence.]"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "removed"
+      },
+      {
+        "competitor_brand": "Speak",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967297.860172
+}

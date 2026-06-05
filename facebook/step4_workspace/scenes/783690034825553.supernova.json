@@ -1,0 +1,54 @@
+{
+  "competitor_id": "783690034825553",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Asian male, mid-30s, medium build, light complexion. He has short, graying hair and a slight mustache and goatee.",
+        "wardrobe": "Plain black short-sleeve t-shirt.",
+        "demeanor": "Friendly, earnest, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction and realization",
+        "supernova_script": "Character A says: I would love to have dinner with my friends. [I would love to have dinner with my friends.]\nCharacter A says: मुझे लगता था मेरी English काफी अच्छी है। [I thought my English was quite good.]\nCharacter A says: But then I tried Supernova's AI tutor, और मुझे realize हुआ कि मुझे काफी improve करना है। [But then I tried Supernova's AI tutor, and I realized I had a lot to improve on.]",
+        "scene_summary": "- Hooks the viewer with a relatable misconception about their English proficiency.\n- Introduces the Supernova AI tutor as a practical reality check.\n- Sets up the core problem: the need for targeted speaking improvement.",
+        "supernova_on_screen_text": "THIS IS WHAT MY ENGLISH SOUNDED LIKE 90 DAYS AGO...\n81%\nI would love to have dinner with my friends\nI THOUGHT MY ENGLISH WAS REALLY GOOD\nBUT THEN I TRIED SUPERNOVA'S AI TUTOR\n89% Grading your intonation...\n97% Grading your fluency...\n100% Grading your pronunciation...\nAND I REALIZED I HAD A LOT TO IMPROVE ON\nYour Speech Level\nIntermediate\nSupernova"
+      },
+      {
+        "n": 2,
+        "scene_label": "Practicing pronunciation",
+        "supernova_script": "Character A says: We-deo. [We-deo.]\nUnknown speaker says: Video. 'V' sound पर ध्यान दें। [Video. Pay attention to the 'V' sound.]\nCharacter A says: We-deo. [We-deo.]\nUnknown speaker says: Vvv. [Vvv.]\nCharacter A says: Vvv. [Vvv.]\nCharacter A says: Video. [Video.]\nUnknown speaker says: बहुत बढ़िया! Let's move on. [Very good! Let's move on.]",
+        "scene_summary": "- Demonstrates the core product feature: interactive pronunciation practice.\n- Shows real-time, actionable feedback from the AI tutor in a familiar code-mixed style.\n- Provides a micro-payoff of instant correction and warm encouragement.",
+        "supernova_on_screen_text": "VIDEO\nPractice My Text\nAI Tutor\nLet's start! Tap the button below and say the word.\nvideo\nV.IH D.EE OH\n46%\nvi de o\nV.IH D.EE OH\nPay attention to the 'V' sound\nTutor\nYou\nCompare V to W\nBite your lower lip slightly to make the V sound.\nV\nYou need to make this sound.\nDeep Dive\n97%\nvideo\nV.IH D.EE OH\nAwesome!\nExplain My Mistake\nCompare Sounds\nबहुत बढ़िया! Let's move on."
+      },
+      {
+        "n": 3,
+        "scene_label": "Recommendation and call to action",
+        "supernova_script": "Character A says: Supernova ने मुझे बताया कि मुझे कहाँ practice करनी है, and I only spent 10 minutes before bed doing it. [Supernova showed me where I needed to practice, and I only spent 10 minutes before bed doing it.]\nCharacter A says: आज ही Supernova try करें and see the difference in your confidence. [Try Supernova today and see the difference in your confidence.]",
+        "scene_summary": "- Highlights the convenience and low time commitment (10 mins/day) for busy working adults.\n- Delivers a strong, encouraging Call to Action.\n- Replaces the competitor's 'free' claim with a focus on building real-world confidence.",
+        "supernova_on_screen_text": "SUPERNOVA SHOWED ME SPECIFIC AREAS TO PRACTICE\nPronunciation 67 Good\nIntonation 93 Advanced\nFluency 85 Good\nAND I ONLY SPENT 10 MINUTES BEFORE BED DOING IT\nflo-wers 80%\nFrom: 'She's super thankful for the beautiful birthday flowers'\nTutor\nYou\nTRY SUPERNOVA TODAY AND SEE THE DIFFERENCE\nSupernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "SpeechScan",
+        "supernova_swap": "AI tutor"
+      },
+      {
+        "competitor_brand": "TRY BOLDVOICE FOR FREE",
+        "supernova_swap": "TRY SUPERNOVA TODAY"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658661.8012931
+}

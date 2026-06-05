@@ -1,0 +1,50 @@
+{
+  "competitor_id": "2187985138676728",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "A white, humanoid robot face with striking blue eyes and smooth, metallic features. It appears exclusively on the screen of a giant smartphone.",
+        "wardrobe": "None visible; only the robotic face and neck are shown.",
+        "demeanor": "Calm, helpful, and robotic."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "A young man with a muscular build, dark hair, and a beard. He is seen only from behind.",
+        "wardrobe": "Shirtless, wearing dark shorts. The words 'ME NO ENGLISH' are written in black on his back.",
+        "demeanor": "Attentive and seated in a relaxed, cross-legged posture."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI Tutor Conversation",
+        "supernova_script": "Character A says: Hello, what is your name?\n\nCharacter B says: My name is Rahul.\n\nCharacter A says: How old are you?\n\nCharacter B says: I have 22.\n\nCharacter A says: I have 22 नहीं, I am 22 years old होता है। [Not 'I have 22', it should be 'I am 22 years old'.]\n\nCharacter B says: Okay okay. I am 22 years old.\n\nCharacter A says: Where are you from?\n\nCharacter B says: I am Uttar Pradesh.\n\nCharacter A says: I am Uttar Pradesh नहीं, I am from Uttar Pradesh होगा। [Not 'I am Uttar Pradesh', it will be 'I am from Uttar Pradesh'.]\n\nCharacter B says: Ohh... ठीक है। मुझे English अच्छे से नहीं आती। [Ohh... okay. I don't know English well.]\n\nCharacter A says: कोई प्रॉब्लम नहीं। AI tutors के साथ practice try किया? [No problem. Have you tried practicing with AI tutors?]\n\nCharacter B says: वो तो महंगे होते होंगे ना? [They must be expensive, right?]\n\nCharacter A says: बिल्कुल नहीं। Supernova app बहुत affordable है। यहाँ आप बिना किसी झिझक के रोज़ practice कर सकते हो। [Not at all. Supernova app is very affordable. Here you can practice daily without any hesitation.]\n\nCharacter B says: पर टाइम नहीं मिलता। [But I don't get time.]\n\nCharacter A says: रोज़ की सिर्फ 15-20 मिनट की practice काफी है। धीरे-धीरे बिल्कुल confident हो जाओगे। [Just 15-20 minutes of daily practice is enough. Slowly you will become completely confident.]\n\nCharacter B says: Wow, कैसे join करूँ? [Wow, how do I join?]\n\nCharacter A says: ये install का बटन दबाओ और Supernova app install करो। रोज़ practice करो और अपनी English बेहतर बनाओ। चलो, शुरू हो जाओ। [Press this install button and install the Supernova app. Practice daily and improve your English. Come on, get started.]",
+        "scene_summary": "- Hooks the viewer with relatable, common English grammar mistakes and gentle, non-judgmental correction.\n- Addresses common learner objections (cost and lack of time) with practical, reassuring solutions.\n- Replaces aggressive timeline guarantees with a focus on consistent daily practice and building confidence.\n- Ends with a clear, encouraging call to action to download the app.",
+        "supernova_on_screen_text": "what is your name\nMy name is Rahul\nHow old are you\nI have 22\nI am 22 yrs old\nOkay okay\nWhere are you from\nI am Uttar Pradesh\nI am from Uttar Pradesh\nOhh... theek hai\nMujhe English aati\nKoi problem nahi\nAI tutors try\nhote honge na\nBilkul nahi\nBahut affordable hai\nAFFORDABLE\nSupernova AI English Speakin...\nInstall\nRated for 3+\nTrusted by Learners\nSupernova\nImprove English speaking with AI\nPar time nahi\nRoz ki sirf 15-20\nkaafi\nho jaoge\nWow\nkaise join\nInstall\nCancel\nMaster Spoken Eng\nRoz practice karo\naur improvement dekho\nChalo\nShuru ho jao"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "Character B says: Install now पे क्लिक करो और Supernova app डाउनलोड करो। [Click on install now and download the Supernova app.]",
+        "scene_summary": "- Delivers the final, direct call to action.\n- Reinforces the brand name visually and audibly.\n- Provides a clear next step for the user.",
+        "supernova_on_screen_text": "Supernova\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Sivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892236.0104094
+}

@@ -1,0 +1,82 @@
+{
+  "competitor_id": "1294872372199763",
+  "parsed": {
+    "duration_s": 20.0,
+    "production_type": "mixed",
+    "production_notes": "The female character is human-recorded, while the male character in the PIP is an AI avatar, evidenced by the static face with only the mouth moving. The second half is a digital screencast.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, medium build, fair complexion. She has dark hair tied back. Her facial features are soft and expressive.",
+        "wardrobe": "Long-sleeved pink top and dark blue jeans.",
+        "demeanor": "Relaxed, slightly hesitant but eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young man, fair complexion, dark curly hair. He has a clean-shaven face and a neutral expression.",
+        "wardrobe": "Dark blue crew-neck t-shirt.",
+        "demeanor": "Calm, static, and instructional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 12.0,
+        "screenshot_at_s": 6.0,
+        "scene_label": "Learning on the bed",
+        "setting": "Bedroom, daytime, bed with patterned sheets, wood-paneled wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A young woman lies on her stomach on a bed, holding a smartphone in both hands. She wears a long-sleeved pink top and blue jeans. The bed has a white sheet with a blue and brown floral pattern. Behind her is a wall with a textured, wood-like finish. The lighting is bright and even.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A young man with dark, curly hair and a fair complexion is visible from the chest up. He wears a plain dark blue t-shirt. The background behind him consists of large, green palm leaves.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A young woman is lying on a bed, holding her phone and talking. In the top right corner, there is a circular inset showing a young man's face. The woman appears to be having a video call or interacting with an app.",
+        "audio_transcript": "Character B says: Hello. [Hello.]\nCharacter A says: Hello. [Hello.]\nCharacter B says: Um... \u0906\u0924\u093e \u0915\u093e\u092f \u092c\u094b\u0932\u093e\u092f\u091a\u0902? [Um... what to say now?]\nCharacter A says: \u092e\u0932\u093e \u092a\u0923 \u0924\u0947\u091a \u0935\u093e\u091f\u0924\u0902\u092f. [I feel the same.]\nCharacter B says: How are you Neha? [How are you Neha?]\nCharacter A says: I am... \u091b\u093e\u0928 \u0906\u0939\u0947 \u092e\u0940. [I am... I am fine.]\nCharacter B says: \u0924\u0938\u0902 \u0928\u093e\u0939\u0940, \u0905\u0938\u0902 \u092c\u094b\u0932, I am good. [Not like that, say it like this, I am good.]\nCharacter A says: I am good. [I am good.]",
+        "on_screen_text": ""
+      },
+      {
+        "n": 2,
+        "start_s": 12.0,
+        "end_s": 20.0,
+        "screenshot_at_s": 16.0,
+        "scene_label": "App promotion",
+        "setting": "Digital interface.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A digital screen displaying a white background with various rectangular placeholders and a blue button. It then transitions to a dark blue background featuring a glowing, circular podium in the center, surrounded by sparkling light effects.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The scene transitions to a screen recording of a mobile phone. It shows the Google Play Store page for an app, highlighting the download count. Then it switches to a premium subscription screen with a special offer.",
+        "audio_transcript": "Unknown speaker says: MySivi \u0972\u092a\u0935\u0930 \u090f\u0915 \u0915\u094b\u091f\u0940 \u0932\u094b\u0915\u0902 \u0938\u094d\u092a\u094b\u0915\u0928 \u0907\u0902\u0917\u094d\u0932\u093f\u0936\u091a\u0940 \u092a\u094d\u0930\u0945\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0924\u093e\u0924. [One crore people practice spoken English on the MySivi app.]\nUnknown speaker says: \u0924\u0941\u092e\u094d\u0939\u0940 \u092a\u0923 \u0906\u091c\u091a \u0938\u0941\u0930\u0942 \u0915\u0930\u093e. [You also start today.]\nUnknown speaker says: \u091f\u094d\u0930\u093e\u092f\u0932 \u092b\u0915\u094d\u0924 \u090f\u0915 \u0930\u0941\u092a\u092f\u093e\u0924. [Trial for just one rupee.]",
+        "on_screen_text": "MySivi\nStart English Learning - MySivi\nMySivi AI\n10M+ Downloads\nInstall\nMySivi Premium\nLIMITED TIME OFFER\n\u20b91\nAutopay, cancel anytime.\n24/7 AI English Teacher\n500+ Exercises and Lessons\nUnlimited Access"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779890884.9869766
+}

@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1294872372199763",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, medium build, fair complexion. She has dark hair tied back. Her facial features are soft and expressive.",
+        "wardrobe": "Long-sleeved pink top and dark blue jeans.",
+        "demeanor": "Relaxed, slightly hesitant but eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young man, fair complexion, dark curly hair. He has a clean-shaven face and a neutral expression.",
+        "wardrobe": "Dark blue crew-neck t-shirt.",
+        "demeanor": "Calm, static, and instructional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Learning on the bed",
+        "supernova_script": "Character B says: Hello. [Hello.]\nCharacter A says: Hello... um... आगे क्या बोलूं? [Hello... um... what should I say next?]\nCharacter B says: How are you, Neha? [How are you, Neha?]\nCharacter A says: I am... मैं ठीक हूँ। [I am... I am fine.]\nCharacter B says: कोई बात नहीं, ऐसे बोलो: I am good. [No worries, say it like this: I am good.]\nCharacter A says: I am good. [I am good.]",
+        "scene_summary": "- Establishes a highly relatable scenario of a learner freezing up or hesitating while trying to speak English.\n- Demonstrates the core value of the AI tutor: providing a safe, judgment-free space with gentle, real-time corrections.\n- Delivers an emotional payoff as the learner successfully repeats the correct phrase, building confidence.",
+        "supernova_on_screen_text": ""
+      },
+      {
+        "n": 2,
+        "scene_label": "App promotion",
+        "supernova_script": "Unknown speaker says: Supernova ऐप के साथ लाखों लोग रोज़ इंग्लिश बोलने की practice कर रहे हैं। [Lakhs of people are practicing speaking English daily with the Supernova app.]\nUnknown speaker says: बिना डरे इंग्लिश बोलना सीखें। [Learn to speak English without fear.]\nUnknown speaker says: आज ही अपनी learning journey शुरू करें। [Start your learning journey today.]",
+        "scene_summary": "- Transitions to the app interface to provide strong social proof (millions of learners).\n- Reinforces the brand's encouraging, older-sibling tone ('learn without fear').\n- Ends with a clear, practical call-to-action to download and start practicing, without relying on gimmicky pricing.",
+        "supernova_on_screen_text": "Supernova\nStart English Learning - Supernova\nSupernova AI\n10M+ Downloads\nInstall\nSupernova Premium\nSTART LEARNING TODAY\nAffordable Plans\n24/7 AI English Teacher\n500+ Exercises and Lessons\nUnlimited Access"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "₹1",
+        "supernova_swap": "Removed / Replaced with 'Affordable Plans'"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892235.990002
+}

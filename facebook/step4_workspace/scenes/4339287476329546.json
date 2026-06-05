@@ -1,0 +1,188 @@
+{
+  "competitor_id": "4339287476329546",
+  "parsed": {
+    "duration_s": 68.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video exhibits clear signs of AI generation, including uncanny and slightly morphing faces, unnatural lip-sync that fails to match the audio, and stiff body language. Background details, such as the street outside the kitchen, show typical AI inconsistencies and artifacts.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Asian female, 30s, medium build, light complexion. She has black wavy hair tied back.",
+        "wardrobe": "Black t-shirt and a beige apron.",
+        "demeanor": "Cheerful but slightly stiff and unnatural."
+      },
+      {
+        "id": "B",
+        "role": "male friend",
+        "appearance": "Asian male, 30s, medium build, light complexion. He has short black hair and wears glasses.",
+        "wardrobe": "Olive green t-shirt.",
+        "demeanor": "Enthusiastic and expressive."
+      },
+      {
+        "id": "C",
+        "role": "man with wallet",
+        "appearance": "Asian male, 30s, short black hair.",
+        "wardrobe": "Dark button-up shirt.",
+        "demeanor": "Frustrated."
+      },
+      {
+        "id": "D",
+        "role": "man with phone",
+        "appearance": "Asian male, 30s, curly black hair.",
+        "wardrobe": "Grey button-up shirt.",
+        "demeanor": "Confused and annoyed."
+      },
+      {
+        "id": "E",
+        "role": "AI tutor avatar",
+        "appearance": "White humanoid robot face with glowing blue eyes and visible panel lines on its cheeks and forehead.",
+        "wardrobe": "None (only head and neck visible).",
+        "demeanor": "Neutral and robotic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.5,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Kitchen conversation",
+        "setting": "Kitchen, daytime, cooking pot, soy sauce bottle, bright lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A woman and a man stand side-by-side in a brightly lit kitchen. The woman on the left holds a ladle in a pot on the stove. The man on the right holds a bottle of soy sauce. They are looking at each other and smiling. An open doorway behind them reveals a street with parked motorbikes.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a woman and a man cooking together in a kitchen. They are engaged in a conversation, smiling and gesturing. Text overlays appear on the screen highlighting parts of their dialogue.",
+        "audio_transcript": "Character A says: Anh bi\u1ebft \u0111i\u1ec1u g\u00ec bu\u1ed3n c\u01b0\u1eddi kh\u00f4ng? Em h\u1ecdc ti\u1ebfng Anh m\u1ed7i ng\u00e0y, nh\u01b0ng em v\u1eabn kh\u00f4ng th\u1ec3 gi\u1eef m\u1ed9t cu\u1ed9c h\u1ed9i tho\u1ea1i. [Do you know what's funny? I study English every day, but I still can't hold a conversation.]\nCharacter B says: Ch\u1eafc l\u00e0 em \u0111ang m\u1eafc ba l\u1ed7i n\u00e0y. [You're probably making these three mistakes.]",
+        "on_screen_text": "\u0110\u1ec3 t\u00f4i ch\u1ec9 cho b\u1ea1n sai l\u1ea7m l\u1edbn nh\u1ea5t khi h\u1ecdc ti\u1ebfng Anh (Let me show you the biggest mistake when learning English)\nANH BI\u1ebeT \u0110I\u1ec0U (DO YOU KNOW)\nM\u1ed6I NG\u00c0Y, (EVERY DAY,)\nH\u1ed8I THO\u1ea0I. (CONVERSATION.)\nCH\u1eaeC L\u00c0 EM \u0110ANG (YOU'RE PROBABLY)"
+      },
+      {
+        "n": 2,
+        "start_s": 7.5,
+        "end_s": 14.5,
+        "screenshot_at_s": 11.0,
+        "scene_label": "Three mistakes montage",
+        "setting": "Various abstract settings, black and white filter.",
+        "characters_in_scene": [
+          "C",
+          "D"
+        ],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A black and white montage. First, a close-up of hands opening a leather wallet and pulling out a piece of paper. Second, a close-up of a man with curly hair looking down at a smartphone in his hands with a furrowed brow.",
+            "characters_in_panel": [
+              "C",
+              "D"
+            ]
+          }
+        ],
+        "visual_description": "A sequence of black and white clips illustrating mistakes. It shows hands opening a wallet, then a man looking frustrated at his phone. Large red 'X' marks appear over the wallet and the phone, along with text overlays describing the mistakes.",
+        "audio_transcript": "Character B says: S\u1ed1 m\u1ed9t, h\u1ecdc v\u1edbi s\u00e1ch gi\u00e1o khoa. S\u1ed1 hai, tr\u1ea3 ti\u1ec1n cho nh\u1eefng kh\u00f3a h\u1ecdc si\u00eau \u0111\u1eaft. S\u1ed1 ba, d\u00f9ng Google Translate cho m\u1ecdi t\u1eeb m\u1edbi. [Number one, learning with textbooks. Number two, paying for super expensive courses. Number three, using Google Translate for every new word.]",
+        "on_screen_text": "H\u1eccC V\u1edaI S\u00c1CH GI\u00c1O KHOA. (LEARNING WITH TEXTBOOKS.)\nTR\u1ea2 TI\u1ec0N CHO NH\u1eeeNG (PAYING FOR)\nKH\u00d3A H\u1eccC SI\u00caU \u0110\u1eaeT. (SUPER EXPENSIVE COURSES.)\nS\u1ed0 BA, (NUMBER THREE,)\nD\u00d9NG GOOGLE TRANSLATE (USING GOOGLE TRANSLATE)\nCHO M\u1eccI T\u1eea M\u1edaI. (FOR EVERY NEW WORD.)"
+      },
+      {
+        "n": 3,
+        "start_s": 14.5,
+        "end_s": 18.5,
+        "screenshot_at_s": 16.0,
+        "scene_label": "Recommendation",
+        "setting": "Kitchen, daytime, cooking pot, soy sauce bottle, bright lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A woman and a man stand in a kitchen. The woman holds a ladle in a pot. The man holds a soy sauce bottle in one hand and points directly at the camera with his other hand, smiling enthusiastically. The background shows an open doorway to a street.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Back in the kitchen, the man enthusiastically recommends a solution, pointing at the camera. The woman continues to cook beside him. Text overlays emphasize his recommendation.",
+        "audio_transcript": "Character B says: Thay v\u00e0o \u0111\u00f3, h\u00e3y d\u00f9ng Learna. Xem c\u00e1i n\u00e0y \u0111i. [Instead, use Learna. Watch this.]",
+        "on_screen_text": "H\u00c3Y D\u00d9NG LEARNA. (USE LEARNA.)"
+      },
+      {
+        "n": 4,
+        "start_s": 18.5,
+        "end_s": 64.5,
+        "screenshot_at_s": 40.0,
+        "scene_label": "AI Tutor Conversation",
+        "setting": "Split screen: abstract digital background top, kitchen bottom.",
+        "characters_in_scene": [
+          "A",
+          "E"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A white humanoid robot face with glowing blue eyes and visible panel lines on its cheeks and forehead. It is set against a solid black background with white concentric circles radiating outwards from behind the robot's head.",
+            "characters_in_panel": [
+              "E"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A woman stands in a kitchen, looking directly forward. She holds a ladle in her right hand. Behind her is a white refrigerator, a window, and a counter with fresh herbs and limes. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout showing an AI robot avatar on the top half and the woman in the kitchen on the bottom half. They appear to be having a back-and-forth conversation. Subtitles of their dialogue appear over the bottom panel.",
+        "audio_transcript": "Character E says: B\u1ea1n bi\u1ebft n\u00f3i ti\u1ebfng Anh h\u00f4ng? [Do you know how to speak English?]\nCharacter A says: C\u0169ng t\u00e0m t\u1ea1m \u00e0. [Just so-so.]\nCharacter E says: B\u1ea1n \u0111\u1ebfn t\u1eeb \u0111\u00e2u v\u1eady? Where are you from? [Where are you from? Where are you from?]\nCharacter A says: I am Vietnam. [I am Vietnam.]\nCharacter E says: G\u1ea7n \u0111\u00fang r\u1ed3i! N\u00ean n\u00f3i l\u00e0 \"I am from Vietnam.\" [Almost right! You should say \"I am from Vietnam.\"]\nCharacter A says: Tr\u1eddi \u01a1i, t\u00f4i hay l\u1ed9n v\u1ee5 \u0111\u00f3 ho\u00e0i \u00e0. [Oh my god, I always mess that up.]\nCharacter E says: Kh\u00f4ng sao, t\u00f4i \u1edf \u0111\u00e2y l\u00e0 \u0111\u1ec3 gi\u00fap b\u1ea1n n\u00f3i cho \u0111\u00fang n\u00e8. [It's okay, I'm here to help you say it right.]\nCharacter A says: Nh\u01b0ng m\u00e0... t\u00f4i \u0111\u00e2u c\u00f3 ti\u1ec1n \u0111\u00e2u. [But... I don't have any money.]\nCharacter E says: \u1ee6a? Kh\u00f4ng c\u1ea7n ti\u1ec1n \u0111\u00e2u! V\u1edbi Learna, b\u1ea1n c\u00f3 th\u1ec3 luy\u1ec7n n\u00f3i ti\u1ebfng Anh mi\u1ec5n ph\u00ed lu\u00f4n. Kh\u00f4ng gi\u1ed1ng m\u1ea5y app hay kho\u00e1 h\u1ecdc m\u1eafc ti\u1ec1n kia \u0111\u00e2u. [Huh? No money needed! With Learna, you can practice speaking English for free. Not like those expensive apps or courses.]\nCharacter A says: Thi\u1ec7t h\u1ea3? [Really?]\nCharacter E says: Thi\u1ec7t ch\u1edb! Kh\u00f4ng c\u00f3 chi\u00eau tr\u00f2 g\u00ec h\u1ebft. Ch\u1ec9 l\u00e0 luy\u1ec7n n\u00f3i ti\u1ebfng Anh th\u1eadt v\u1edbi th\u1ea7y AI th\u00f4i. [Really! No tricks. Just practicing real English with an AI teacher.]\nCharacter A says: \u00dd b\u1ea1n l\u00e0... nh\u01b0 th\u1ea7y th\u1eadt lu\u00f4n h\u1ea3? [You mean... like a real teacher?]\nCharacter E says: \u0110\u00fang r\u1ed3i! N\u00f3 s\u1eeda ng\u1eef ph\u00e1p, ph\u00e1t \u00e2m cho b\u1ea1n v\u00e0 gi\u00fap b\u1ea1n n\u00f3i t\u1ef1 tin h\u01a1n n\u1eefa. [That's right! It corrects your grammar, pronunciation, and helps you speak more confidently.]\nCharacter A says: \u0110\u01b0\u1ee3c r\u1ed3i! V\u1eady t\u00f4i t\u1ea3i Learna li\u1ec1n lu\u00f4n! [Alright! Then I'll download Learna right away!]\nCharacter E says: Qu\u00e1 \u0111\u00e3! M\u00ecnh c\u00f9ng n\u00f3i ti\u1ebfng Anh nha. [Awesome! Let's speak English together.]",
+        "on_screen_text": "B\u1ea1n bi\u1ebft n\u00f3i ti\u1ebfng Anh h\u00f4ng? (Do you know how to speak English?)\nC\u0169ng t\u00e0m t\u1ea1m \u00e0. (Just so-so.)\nB\u1ea1n \u0111\u1ebfn t\u1eeb \u0111\u00e2u v\u1eady? Where are you from? (Where are you from? Where are you from?)\nI am Vietnam. (I am Vietnam.)\nG\u1ea7n \u0111\u00fang r\u1ed3i! N\u00ean n\u00f3i l\u00e0 \"I am from Vietnam.\" (Almost right! You should say \"I am from Vietnam.\")\nTr\u1eddi \u01a1i, t\u00f4i hay l\u1ed9n v\u1ee5 \u0111\u00f3 ho\u00e0i \u00e0. (Oh my god, I always mess that up.)\nKh\u00f4ng sao, t\u00f4i \u1edf \u0111\u00e2y l\u00e0 \u0111\u1ec3 gi\u00fap b\u1ea1n n\u00f3i cho \u0111\u00fang n\u00e8. (It's okay, I'm here to help you say it right.)\nNh\u01b0ng m\u00e0... t\u00f4i \u0111\u00e2u c\u00f3 ti\u1ec1n \u0111\u00e2u. (But... I don't have any money.)\n\u1ee6a? Kh\u00f4ng c\u1ea7n ti\u1ec1n \u0111\u00e2u! (Huh? No money needed!)\nV\u1edbi Learna, b\u1ea1n c\u00f3 th\u1ec3 luy\u1ec7n n\u00f3i ti\u1ebfng Anh mi\u1ec5n ph\u00ed lu\u00f4n. (With Learna, you can practice speaking English for free.)\nKh\u00f4ng gi\u1ed1ng m\u1ea5y app hay kho\u00e1 h\u1ecdc m\u1eafc ti\u1ec1n kia \u0111\u00e2u. (Not like those expensive apps or courses.)\nThi\u1ec7t h\u1ea3? (Really?)\nThi\u1ec7t ch\u1edb! Kh\u00f4ng c\u00f3 chi\u00eau tr\u00f2 g\u00ec h\u1ebft. (Really! No tricks.)\nCh\u1ec9 l\u00e0 luy\u1ec7n n\u00f3i ti\u1ebfng Anh th\u1eadt v\u1edbi th\u1ea7y AI th\u00f4i. (Just practicing real English with an AI teacher.)\n\u00dd b\u1ea1n l\u00e0... nh\u01b0 th\u1ea7y th\u1eadt lu\u00f4n h\u1ea3? (You mean... like a real teacher?)\n\u0110\u00fang r\u1ed3i! N\u00f3 s\u1eeda ng\u1eef ph\u00e1p, ph\u00e1t \u00e2m cho b\u1ea1n (That's right! It corrects your grammar, pronunciation)\nv\u00e0 gi\u00fap b\u1ea1n n\u00f3i t\u1ef1 tin h\u01a1n n\u1eefa. (and helps you speak more confidently.)\n\u0110\u01b0\u1ee3c r\u1ed3i! V\u1eady t\u00f4i t\u1ea3i Learna li\u1ec1n lu\u00f4n! (Alright! Then I'll download Learna right away!)\nQu\u00e1 \u0111\u00e3! M\u00ecnh c\u00f9ng n\u00f3i ti\u1ebfng Anh nha. (Awesome! Let's speak English together.)"
+      },
+      {
+        "n": 5,
+        "start_s": 64.5,
+        "end_s": 68.0,
+        "screenshot_at_s": 66.0,
+        "scene_label": "End Card",
+        "setting": "Abstract dark blue background.",
+        "characters_in_scene": [
+          "E"
+        ],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A square app icon featuring a white humanoid robot face with blue eyes is centered on a dark blue gradient background.",
+            "characters_in_panel": [
+              "E"
+            ]
+          }
+        ],
+        "visual_description": "The final shot is an end card displaying the app icon, download badges for app stores, and call-to-action text in Thai.",
+        "audio_transcript": "Unknown speaker says: T\u1ea3i ngay. B\u1eaft \u0111\u1ea7u luy\u1ec7n t\u1eadp. [Download now. Start practicing.]",
+        "on_screen_text": "\u0e14\u0e32\u0e27\u0e19\u0e4c\u0e42\u0e2b\u0e25\u0e14\u0e40\u0e14\u0e35\u0e4b\u0e22\u0e27\u0e19\u0e35\u0e49! (Download now!)\n\u0e40\u0e23\u0e34\u0e48\u0e21\u0e1d\u0e36\u0e01\u0e1d\u0e19\u0e40\u0e25\u0e22! (Start practicing now!)\nLearna\n\u0e14\u0e32\u0e27\u0e19\u0e4c\u0e42\u0e2b\u0e25\u0e14\u0e44\u0e14\u0e49\u0e17\u0e35\u0e48 App Store (Download on the App Store)\n\u0e14\u0e32\u0e27\u0e19\u0e4c\u0e42\u0e2b\u0e25\u0e14\u0e44\u0e14\u0e49\u0e08\u0e32\u0e01 Google Play (Get it on Google Play)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780125081.00245
+}

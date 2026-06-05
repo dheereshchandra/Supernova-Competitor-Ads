@@ -1,0 +1,268 @@
+{
+  "competitor_id": "1668568907754755",
+  "parsed": {
+    "duration_s": 48.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human-recorded live-action footage for the main narrative with an AI-generated avatar for the tutor. The AI avatar exhibits typical synthetic traits like perfectly smooth skin, static framing, and slightly unnatural lip-syncing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "delivery driver",
+        "appearance": "Male in his 20s with a medium build and brown complexion. He has short black hair, a mustache, and wears rectangular glasses.",
+        "wardrobe": "He wears a light blue t-shirt and a light blue half-helmet throughout the video.",
+        "demeanor": "Helpful, enthusiastic, and confident."
+      },
+      {
+        "id": "B",
+        "role": "frustrated customer",
+        "appearance": "Female in her 20s with a slim build and brown complexion. She has dark hair tied back in a low ponytail.",
+        "wardrobe": "She wears a black button-down shirt and loose black trousers with a white side stripe.",
+        "demeanor": "Initially stressed and frustrated, later curious and impressed."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "Female AI avatar with a slim build and brown complexion. She has dark hair neatly pulled back and highly symmetrical facial features.",
+        "wardrobe": "She wears a dark blazer over a light-colored collared shirt.",
+        "demeanor": "Professional, calm, and attentive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 8.0,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Delivery driver and frustrated customer",
+        "setting": "Outdoor residential complex, daytime, paved road, bushes, building in background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B is standing on the right side of the frame, holding a smartphone to her ear and looking distressed. Character A is sitting on a purple scooter on the left side, looking down at his smartphone. Character B lowers her phone, turns to Character A, and speaks to him. Character A looks up and holds up his index finger, gesturing for her to wait a moment.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A medium shot showing a delivery driver on his scooter and a customer standing nearby. The customer finishes a frustrating phone call and asks the driver for an OTP. The driver asks for a minute as he is busy on his phone. Text overlays translate their conversation.",
+        "audio_transcript": "Character B says: 4th interview ittu. HR heludru English weak ide. Modlu English kali illa job sigalla anta heludru. [It was my 4th interview. HR said my English is weak. They said learn English first or you won't get a job.]\nCharacter B says: Anna, OTP 4062. [Brother, OTP 4062.]\nCharacter A says: Madam, just 1 minute. [Madam, just 1 minute.]",
+        "on_screen_text": "4th interview ittu (4th interview ittu)\nHR heludru (HR heludru)\nEnglish weak ide (English weak ide)\nmodlu English kali illa (modlu English kali illa)\njob sigalla anta heludru. (job sigalla anta heludru.)\nAnna (Anna)\nOTP 4062 (OTP 4062)\nmadam, just 1 minute. (madam, just 1 minute.)"
+      },
+      {
+        "n": 2,
+        "start_s": 8.0,
+        "end_s": 15.5,
+        "screenshot_at_s": 12.0,
+        "scene_label": "Driver speaks English",
+        "setting": "Split screen. Top: Abstract blurred background. Bottom: Outdoor residential complex.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C"
+        ],
+        "camera": "Split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character C is looking directly at the camera with a neutral, professional expression. The background behind her is a blurred, abstract office-like setting with muted tones.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character A is sitting on his purple scooter, holding a smartphone in his left hand. He is looking at the screen and speaking. Character B stands behind him to the right, watching him with a surprised expression.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout. The top half shows the AI tutor avatar listening. The bottom half shows the delivery driver speaking fluent English into his phone, while the customer watches him in surprise. Text overlays display his English speech.",
+        "audio_transcript": "Character A says: Madam this was actually very easy, it's been only 10 days and now I can see my English has become very fluent this days. Thank you. [Madam this was actually very easy, it's been only 10 days and now I can see my English has become very fluent these days. Thank you.]",
+        "on_screen_text": "Madam this was (Madam this was)\nactually very easy, (actually very easy,)\nit's been only 10 days (it's been only 10 days)\nand now I can see my English (and now I can see my English)\nhas become very fluent this days. (has become very fluent this days.)\nThank you. (Thank you.)"
+      },
+      {
+        "n": 3,
+        "start_s": 15.5,
+        "end_s": 25.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Explaining the app",
+        "setting": "Outdoor residential complex, daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A turns his head to the right to speak to Character B. Character B looks interested and asks him a question. Character A gestures with his right hand as he explains something to her, looking earnest and helpful.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A medium shot of the driver and customer. The customer asks how he learned English, and the driver enthusiastically explains that he uses an AI teacher app that saved his job. Text overlays translate their conversation.",
+        "audio_transcript": "Character B says: Neevu yarinda English kalitiddira? [Who are you learning English from?]\nCharacter A says: Madam SpeakX na AI English teacher inda. Nanu actually kelsa kalkombekaytu adre ee teacher save madidru. [Madam, from SpeakX's AI English teacher. I was actually about to lose my job but this teacher saved me.]",
+        "on_screen_text": "English kalitiddira? (English kalitiddira?)\nMadam SpeakX na (Madam SpeakX na)\nAI English teacher inda (AI English teacher inda)\nnanu actually (nanu actually)\nkelsa kalkombekaytu (kelsa kalkombekaytu)\nadre ee teacher (adre ee teacher)\nsave madidru. (save madidru.)"
+      },
+      {
+        "n": 4,
+        "start_s": 25.0,
+        "end_s": 28.5,
+        "screenshot_at_s": 27.0,
+        "scene_label": "App interface with AI avatar",
+        "setting": "Abstract blurred indoor background.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "Close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with dark hair is smiling gently at the camera. She is wearing a light-colored top. The background behind her is a blurred, warm-toned indoor setting.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A smartphone screen displaying the AI avatar in a circular profile picture format. Below the avatar are app UI elements like a microphone button and chat text. The driver's voiceover explains his practice routine.",
+        "audio_transcript": "Character B says: Nijana? [Really?]\nCharacter A says: Houdu madam. Nanu free irbekadre pratidina hatrinda hadinaidu nimisha practice madtini. [Yes madam. Whenever I am free, I practice for 10 to 15 minutes every day.]",
+        "on_screen_text": "Nijana? (Nijana?)\nnanu free irbekadre (nanu free irbekadre)\npratidina (pratidina)\nhatrinda hadinaidu nimisha (hatrinda hadinaidu nimisha)\npractice madtini. (practice madtini.)\nAisha (Aisha)\nTap to submit (Tap to submit)\nHi Aisha how are you (Hi Aisha how are you)\nHi Aisha how are you I am good (Hi Aisha how are you I am good)"
+      },
+      {
+        "n": 5,
+        "start_s": 28.5,
+        "end_s": 30.5,
+        "screenshot_at_s": 29.5,
+        "scene_label": "Driver praises the app",
+        "setting": "Outdoor residential complex, daytime.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is looking off-camera to the right and speaking. The background shows blurred trees and a building.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A medium close-up of the delivery driver speaking enthusiastically about the app's simplicity. Text overlays translate his speech.",
+        "audio_transcript": "Character A says: Tumba simple agli English kalsitare. [They teach English very simply.]",
+        "on_screen_text": "Tumba simple agli (Tumba simple agli)\nEnglish kalsitare. (English kalsitare.)"
+      },
+      {
+        "n": 6,
+        "start_s": 30.5,
+        "end_s": 33.5,
+        "screenshot_at_s": 32.0,
+        "scene_label": "Scrolling through app modules",
+        "setting": "Indoor, blurred background with a plant.",
+        "characters_in_scene": [],
+        "camera": "Close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Two hands are holding a smartphone with a blank screen. The thumbs are positioned as if interacting with the screen, making scrolling motions. The background is out of focus, showing a green plant.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A close-up of hands holding a smartphone and scrolling through a grid of different learning modules within the app. The driver's voiceover describes the app's effectiveness for children.",
+        "audio_transcript": "Character A says: Chik makkalu kuda hadinaidu dinadalli English matadakke kalibodu. [Even small children can learn to speak English in 15 days.]",
+        "on_screen_text": "chik makkalu kuda (chik makkalu kuda)\nEnglish matadakke (English matadakke)\nkalibodu. (kalibodu.)\nTALK ABOUT ANYTHING (TALK ABOUT ANYTHING)\nTALK NOW (TALK NOW)\nJob Interview (Job Interview)\nTalk in Office (Talk in Office)"
+      },
+      {
+        "n": 7,
+        "start_s": 33.5,
+        "end_s": 36.5,
+        "screenshot_at_s": 35.0,
+        "scene_label": "AI avatar corrects mistakes",
+        "setting": "Abstract blurred background.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character C is looking directly at the camera with a neutral expression. The background is a blurred, abstract office-like setting.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The AI avatar is shown full screen, with a faint outline of a smartphone frame overlaid on top. The driver's voiceover explains that the AI corrects mistakes without judging.",
+        "audio_transcript": "Character A says: Enadre mistake madidre AI teacher takshana sari madutte. Judge madalla. [If we make any mistake, the AI teacher corrects it immediately. Doesn't judge.]",
+        "on_screen_text": "Enadre mistake madidre (Enadre mistake madidre)\ntakshana sari madutte (takshana sari madutte)\njudge madalla. (judge madalla.)\nSpeakX (SpeakX)\nKEY TO CONFIDENCE (KEY TO CONFIDENCE)"
+      },
+      {
+        "n": 8,
+        "start_s": 36.5,
+        "end_s": 45.5,
+        "screenshot_at_s": 41.0,
+        "scene_label": "Pricing and download request",
+        "setting": "Outdoor residential complex, daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B asks a question, and Character A responds, holding up two fingers. Character B looks surprised and pleased, then extends her hand holding her smartphone towards Character A.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The customer asks about the price, and the driver explains the cheap trial offer. Convinced, she asks him to download the app on her phone. Text overlays show their conversation.",
+        "audio_transcript": "Character B says: Houda, kaliyokke esht dud agutte? [Is it? How much does it cost to learn?]\nCharacter A says: Madam just eradu roopayige elu dina trial ide. [Madam, there is a 7-day trial for just two rupees.]\nCharacter B says: Houda, ashtena anna? Thank you. Nan phone allu app download madkodi please. [Is it, just that much brother? Thank you. Please download the app on my phone too.]",
+        "on_screen_text": "Houda, (Houda,)\nesht dud agutte? (esht dud agutte?)\nMadam just eradu roopayige (Madam just eradu roopayige)\nelu dina trial ide. (elu dina trial ide.)\nHouda, (Houda,)\nashtena anna? (ashtena anna?)\nthank you (thank you)\nnan phone allu app (nan phone allu app)\ndownload madkodi please. (download madkodi please.)"
+      },
+      {
+        "n": 9,
+        "start_s": 45.5,
+        "end_s": 48.0,
+        "screenshot_at_s": 46.5,
+        "scene_label": "End card",
+        "setting": "Blank white background.",
+        "characters_in_scene": [],
+        "camera": "Wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A completely blank white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A promotional end card for the SpeakX app. It features the app logo, a mockup of the app interface on a phone, a list of premium features, a countdown timer for an offer, and a call-to-action button to start a trial.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "SpeakX (SpeakX)\nDownload SpeakX App (Download SpeakX App)\nPREMIUM (PREMIUM)\nLearn with Personal AI Mentor (Learn with Personal AI Mentor)\nUnlock Unlimited Exercises (Unlock Unlimited Exercises)\n100+ Real Life Scenarios (100+ Real Life Scenarios)\nGet Personalised Feedback (Get Personalised Feedback)\nOFFER ENDS IN 00:09:20 (OFFER ENDS IN 00:09:20)\nStart 7 Days Trial Now (Start 7 Days Trial Now)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888788.1573243
+}

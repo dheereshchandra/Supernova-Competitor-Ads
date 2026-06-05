@@ -1,0 +1,75 @@
+{
+  "competitor_id": "931440739227131",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot",
+        "appearance": "Small, bright green cartoon owl. It has large, expressive eyes, a small yellow beak, and small wings.",
+        "wardrobe": "None.",
+        "demeanor": "Cheerful, encouraging, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "Virtual Tutor",
+        "appearance": "Adult male with a medium build and brown complexion. He has a thick black beard and mustache.",
+        "wardrobe": "Bright blue turban, pink sweater with a purple pattern, and blue pants.",
+        "demeanor": "Neutral to slightly expressive, acting as a patient guide."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Language Selection",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Establishes the app interface and user goal right away.\n- Replaces generic language selection with practical, goal-oriented English learning modules.\n- Sets a focused, career-oriented tone for the user journey.",
+        "supernova_on_screen_text": "Supernova पर क्या सीखना चाहते हैं? [What do you want to learn on Supernova?]\nSpoken English\nInterview Practice\nDaily Conversation\nOffice English\nCONTINUE"
+      },
+      {
+        "n": 2,
+        "scene_label": "Tap What You Hear",
+        "supernova_script": "Unknown speaker says: मुझे अपनी communication skills improve करनी हैं। [I want to improve my communication skills.]",
+        "scene_summary": "- Introduces a listening exercise using a highly relatable, real-world goal (improving communication).\n- Shows the app's error correction mechanism.\n- Mascot provides warm, older-sibling style encouragement when the user makes a mistake.",
+        "supernova_on_screen_text": "सुनकर सही words चुनो [Listen and choose the right words]\nI want to improve my communication skills\nCONTINUE\nIncorrect\nCorrect Answer:\nI want to improve my communication skills.\nGOT IT\nकोई बात नहीं, फिर try करो! [No worries, try again!]"
+      },
+      {
+        "n": 3,
+        "scene_label": "Speak This Sentence",
+        "supernova_script": "Unknown speaker says: Yes, I am ready for the interview. [Yes, I am ready for the interview.]",
+        "scene_summary": "- Demonstrates the AI voice recognition and speaking practice feature.\n- Uses a practical, career-focused sentence to resonate with working professionals.\n- Provides immediate positive reinforcement upon success.",
+        "supernova_on_screen_text": "अब बोल कर practice करो [Now practice by speaking]\nYes, I am ready for the interview.\nTAP TO SPEAK\nCONTINUE\nबहुत बढ़िया! [Very good!]"
+      },
+      {
+        "n": 4,
+        "scene_label": "Listen for the Missing Word",
+        "supernova_script": "Unknown speaker says: Could you please explain this project to me? [Could you please explain this project to me?]",
+        "scene_summary": "- Highlights a grammar/listening exercise in an office context.\n- Reinforces the app's utility for tier-2/tier-3 users navigating corporate environments.\n- Shows clear, constructive feedback on incorrect answers.",
+        "supernova_on_screen_text": "खाली जगह भरो [Fill in the blank]\nCould you please ____ this project to me?\nexplained\nexplain\nIncorrect\nCorrect Answer:\nCould you please explain this project to me?\nGOT IT"
+      },
+      {
+        "n": 5,
+        "scene_label": "Outro and Call to Action",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Delivers the final brand message and call to action.\n- Removes competitor's 'free' and 'world's #1' hype, replacing it with an empowering, confidence-based hook.\n- Directs the user to download the app.",
+        "supernova_on_screen_text": "आज ही confidently English बोलना सीखें [Learn to speak English confidently today]\nSupernova\nDownload the app and start your journey.\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "duolingo",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "improve your english for free",
+        "supernova_swap": "आज ही confidently English बोलना सीखें [Learn to speak English confidently today]"
+      },
+      {
+        "competitor_brand": "Download the world's #1 language learning app.",
+        "supernova_swap": "Download the app and start your journey."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.9509447
+}

@@ -1,0 +1,67 @@
+{
+  "competitor_id": "25024190163945827",
+  "parsed": {
+    "duration_s": 10.0,
+    "production_type": "mixed",
+    "production_notes": "2D motion graphics and UI animation. No human actors or camera footage present.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Brand Mascot",
+        "appearance": "Stylized green owl. Large white eyes with black pupils and a yellow beak. Wears round black glasses.",
+        "wardrobe": "Round black glasses.",
+        "demeanor": "Cheerful and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.5,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Word Quiz",
+        "setting": "Minimalist white digital interface.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background. A stylized green owl with large eyes and round black glasses pops up from the bottom edge. The owl remains stationary at the bottom center, looking forward.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A digital quiz interface on a white background. A progress bar sits at the top. Text asks if a word is real, and a cursor clicks the 'Yes' button. Character A pops up from the bottom with a speech bubble.",
+        "audio_transcript": "Character A says: If you got it right, then you are ready to take the DET. [If you got it right, then you are ready to take the DET.]",
+        "on_screen_text": "Is this a real English word? PREVALENT. Yes. No. If you got it right then you are ready to take the DET!"
+      },
+      {
+        "n": 2,
+        "start_s": 7.5,
+        "end_s": 10.0,
+        "screenshot_at_s": 9.0,
+        "scene_label": "End Card",
+        "setting": "Solid bright green background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, bright green background. No characters or props are visible.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid green background displays a white logo. Below the logo, white promotional text appears.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "duolingo english test. Take unlimited free practice tests"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780640528.9035711
+}

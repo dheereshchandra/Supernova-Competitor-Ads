@@ -1,0 +1,252 @@
+{
+  "competitor_id": "1670382757639077",
+  "parsed": {
+    "duration_s": 58.0,
+    "production_type": "mixed",
+    "production_notes": "The top panel features an AI-generated avatar with slightly stiff facial movements and perfectly smooth skin. The bottom panel and subsequent scenes are human-recorded with natural lighting, movement, and a real-world cafe setting.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female, 20s, medium build, brown complexion, long dark hair, bindi. Professional and smiling.",
+        "wardrobe": "Blue blouse and an orange/blue sari.",
+        "demeanor": "Professional and smiling."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Female, 20s, slim build, brown complexion, long dark hair.",
+        "wardrobe": "Yellow sleeveless top and blue jeans.",
+        "demeanor": "Curious and engaged."
+      },
+      {
+        "id": "C",
+        "role": "Male presenter",
+        "appearance": "Male, 20s, medium build, brown complexion, short dark hair, wearing glasses.",
+        "wardrobe": "Black t-shirt and blue jeans.",
+        "demeanor": "Confident and helpful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 21.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "App Practice",
+        "setting": "Top: Neutral background with white curtains. Bottom: Outdoor cafe with yellow chairs, black table, food posters on the wall. Daytime.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C"
+        ],
+        "camera": "talking-head and medium wide",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A facing forward, smiling. Neutral background with white curtains.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B and Character C sitting at a black cafe table. Character B is on the left, wearing a yellow top, looking at a large menu. Character C is on the right, wearing a black t-shirt and glasses, holding a smartphone up in his right hand, looking at it. A paper cup is on the table.",
+            "characters_in_panel": [
+              "B",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with a horizontal division. The top half shows Character A against a neutral background. The bottom half shows Character B and Character C sitting at an outdoor cafe table. Text overlays appear in the center of the screen, translating the spoken dialogue.",
+        "audio_transcript": "Character A says: \u0c28\u0c47\u0c28\u0c41 \u0c07\u0c15\u0c4d\u0c15\u0c21 \u0c1f\u0c40 \u0c24\u0c3e\u0c17\u0c21\u0c3e\u0c28\u0c3f\u0c15\u0c3f \u0c35\u0c1a\u0c4d\u0c1a\u0c3e\u0c28\u0c41. [I came here to have tea.]\nCharacter A says: I came here to have tea.\nCharacter C says: I came here to have tea.\nCharacter A says: \u0c08 \u0c1f\u0c40 \u0c1a\u0c3e\u0c32\u0c3e \u0c35\u0c47\u0c21\u0c3f\u0c17\u0c3e \u0c09\u0c02\u0c26\u0c3f. [This tea is very hot.]\nCharacter A says: This tea is very hot.\nCharacter C says: This tea is very hot.\nCharacter A says: \u0c08 \u0c1f\u0c40 \u0c28\u0c3e\u0c15\u0c41 \u0c1a\u0c3e\u0c32\u0c3e \u0c1f\u0c47\u0c38\u0c4d\u0c1f\u0c40\u0c17\u0c3e \u0c05\u0c28\u0c3f\u0c2a\u0c3f\u0c38\u0c4d\u0c24\u0c41\u0c02\u0c26\u0c3f. [I really like the taste of this tea.]\nCharacter A says: I really like the taste of this tea.\nCharacter C says: I really like the taste of this tea.",
+        "on_screen_text": "Nenu ikkada tea tagataniki vachanu I came here to have tea. I came here to have tea. Ee tea chala vediga undi This tea is very hot. This tea is very hot. Ee tea naaku chala tasty ga anipistundi. I really like the taste of this tea. I really like the taste of this tea."
+      },
+      {
+        "n": 2,
+        "start_s": 21.0,
+        "end_s": 24.0,
+        "screenshot_at_s": 22.5,
+        "scene_label": "Woman's Inquiry",
+        "setting": "Outdoor cafe. Daytime.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Over-the-shoulder shot past Character C's right shoulder, focusing on Character B. Character B is sitting at the cafe table, holding a large menu, looking at Character C with a questioning expression. A paper cup is on the table. The background shows a pharmacy storefront.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A single-panel shot focusing on Character B at the cafe. Text overlays appear at the bottom of the screen with the dialogue.",
+        "audio_transcript": "Character B says: \u0c2c\u0c4d\u0c30\u0c4b, \u0c0e\u0c35\u0c30\u0c3f \u0c26\u0c17\u0c4d\u0c17\u0c30 \u0c28\u0c41\u0c02\u0c1a\u0c3f \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c41\u0c02\u0c1f\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c35\u0c4d? [Bro, from whom are you learning English?]",
+        "on_screen_text": "Bro, nuvvu ekkada English nerchukuntunnav?"
+      },
+      {
+        "n": 3,
+        "start_s": 24.0,
+        "end_s": 25.5,
+        "screenshot_at_s": 24.7,
+        "scene_label": "Man Mentions App",
+        "setting": "Outdoor cafe. Daytime.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Over-the-shoulder shot past Character B's left shoulder, focusing on Character C. Character C is sitting at the cafe table, wearing glasses and a black t-shirt, holding his phone. The background shows a food menu poster on a glass window.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A single-panel shot focusing on Character C at the cafe. Text overlays appear at the bottom of the screen with the dialogue.",
+        "audio_transcript": "Character C says: SpeakX \u0c2f\u0c3e\u0c2a\u0c4d\u200c\u0c32\u0c4b AI \u0c1f\u0c40\u0c1a\u0c30\u0c4d\u200c\u0c24\u0c4b. [With the AI teacher on the SpeakX app.]",
+        "on_screen_text": "SpeakX App lo AI teacher tho."
+      },
+      {
+        "n": 4,
+        "start_s": 25.5,
+        "end_s": 26.5,
+        "screenshot_at_s": 26.0,
+        "scene_label": "Woman Confused",
+        "setting": "Outdoor cafe. Daytime.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Over-the-shoulder shot past Character C's right shoulder, focusing on Character B. Character B is sitting at the cafe table, looking confused. The menu is on the table. The background shows a pharmacy storefront.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A single-panel shot focusing on Character B at the cafe. Text overlays appear at the bottom of the screen with the dialogue.",
+        "audio_transcript": "Character B says: \u0c28\u0c3e\u0c15\u0c41 \u0c05\u0c30\u0c4d\u0c25\u0c02 \u0c15\u0c3e\u0c32\u0c47\u0c26\u0c41. [I didn't understand.]",
+        "on_screen_text": "Naaku ardham kaaledu"
+      },
+      {
+        "n": 5,
+        "start_s": 26.5,
+        "end_s": 43.5,
+        "screenshot_at_s": 35.0,
+        "scene_label": "Man Explains App Details",
+        "setting": "Outdoor cafe. Daytime.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Over-the-shoulder shot past Character B's left shoulder, focusing on Character C. Character C is sitting at the cafe table, gesturing with his hands as he speaks. The background shows a food menu poster on a glass window.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A single-panel shot focusing on Character C at the cafe. Text overlays appear at the bottom of the screen with the dialogue.",
+        "audio_transcript": "Character C says: \u0c07\u0c26\u0c3f \u0c12\u0c15 \u0c2f\u0c3e\u0c2a\u0c4d. \u0c07\u0c15\u0c4d\u0c15\u0c21 AI \u0c1f\u0c40\u0c1a\u0c30\u0c4d \u0c26\u0c4d\u0c35\u0c3e\u0c30\u0c3e \u0c2a\u0c4d\u0c30\u0c24\u0c3f\u0c30\u0c4b\u0c1c\u0c42 \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c2a\u0c4d\u0c30\u0c3e\u0c15\u0c4d\u0c1f\u0c40\u0c38\u0c4d \u0c1a\u0c47\u0c2f\u0c4a\u0c1a\u0c4d\u0c1a\u0c41 \u0c28\u0c41\u0c35\u0c4d\u0c35\u0c41. [This is an app. Here you can practice English every day through an AI teacher.]\nCharacter C says: \u0c07\u0c02\u0c15\u0c3e \u0c28\u0c40\u0c15\u0c41 \u0c24\u0c46\u0c32\u0c41\u0c38\u0c41 \u0c15\u0c26\u0c3e, \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c32\u0c47\u0c15\u0c41\u0c02\u0c21\u0c3e \u0c30\u0c46\u0c38\u0c4d\u0c2a\u0c46\u0c15\u0c4d\u0c1f\u0c4d \u0c15\u0c42\u0c21\u0c3e \u0c30\u0c3e\u0c26\u0c41, \u0c1c\u0c3e\u0c2c\u0c4d \u0c15\u0c42\u0c21\u0c3e \u0c15\u0c37\u0c4d\u0c1f\u0c2e\u0c47. [And you know, right, without English there is no respect, and getting a job is also difficult.]\nCharacter C says: \u0c05\u0c02\u0c26\u0c41\u0c15\u0c47 \u0c28\u0c47\u0c28\u0c41 SpeakX \u0c2f\u0c3e\u0c2a\u0c4d\u200c\u0c32\u0c4b \u0c30\u0c4b\u0c1c\u0c41\u0c15\u0c3f 10 \u0c1f\u0c41 15 \u0c2e\u0c3f\u0c28\u0c3f\u0c1f\u0c4d\u0c38\u0c4d \u0c2a\u0c4d\u0c30\u0c3e\u0c15\u0c4d\u0c1f\u0c40\u0c38\u0c4d \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c28\u0c41. [That's why I am practicing 10 to 15 minutes a day on the SpeakX app.]\nCharacter C says: \u0c07\u0c2a\u0c4d\u0c2a\u0c1f\u0c3f\u0c15\u0c3f 10 \u0c30\u0c4b\u0c1c\u0c41\u0c32\u0c41 \u0c05\u0c2f\u0c3f\u0c02\u0c26\u0c3f, \u0c05\u0c02\u0c21\u0c4d \u0c26\u0c1f\u0c4d\u0c38\u0c4d \u0c35\u0c48 \u0c10 \u0c15\u0c46\u0c28\u0c4d \u0c38\u0c4d\u0c2a\u0c40\u0c15\u0c4d \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c38\u0c4b \u0c15\u0c3e\u0c28\u0c4d\u0c2b\u0c3f\u0c21\u0c46\u0c02\u0c1f\u0c4d\u0c32\u0c40 \u0c35\u0c3f\u0c24\u0c4c\u0c1f\u0c4d \u0c0e\u0c28\u0c40 \u0c2b\u0c3f\u0c2f\u0c30\u0c4d. [It's been 10 days so far, and that's why I can speak English so confidently without any fear.]",
+        "on_screen_text": "idi oka app ikkada AI teacher dwara priti roju English practice cheyyachu. Neeku telusu kada, English lekunda respect kuda raadhu Job kuda kastam Anduke SpeakX app lo roju ki 10 to 15 minutes Practice Ippatiki 10 days ayyayi I can speak English so confidently without any fear."
+      },
+      {
+        "n": 6,
+        "start_s": 43.5,
+        "end_s": 47.5,
+        "screenshot_at_s": 45.5,
+        "scene_label": "Cost Concern",
+        "setting": "Outdoor cafe. Daytime.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Over-the-shoulder shot past Character C's right shoulder, focusing on Character B. Character B is sitting at the cafe table, looking slightly concerned. The menu is on the table. The background shows a pharmacy storefront.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A single-panel shot focusing on Character B at the cafe. Text overlays appear at the bottom of the screen with the dialogue.",
+        "audio_transcript": "Character B says: \u0c28\u0c3e\u0c15\u0c41 \u0c15\u0c42\u0c21\u0c3e \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c3e\u0c32\u0c28\u0c3f \u0c09\u0c02\u0c26\u0c3f, \u0c15\u0c3e\u0c28\u0c40 \u0c15\u0c4b\u0c30\u0c4d\u0c38\u0c46\u0c38\u0c4d \u0c1a\u0c3e\u0c32\u0c3e \u0c15\u0c3e\u0c38\u0c4d\u0c1f\u0c4d\u0c32\u0c40 \u0c15\u0c26\u0c3e. [I also want to learn English, but courses are very costly, right.]",
+        "on_screen_text": "nerchukovalani undi, chala Costly kada."
+      },
+      {
+        "n": 7,
+        "start_s": 47.5,
+        "end_s": 52.5,
+        "screenshot_at_s": 50.0,
+        "scene_label": "Pricing Explanation",
+        "setting": "Outdoor cafe. Daytime.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Over-the-shoulder shot past Character B's left shoulder, focusing on Character C. Character C is sitting at the cafe table, gesturing with his hands. The background shows a food menu poster on a glass window.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A single-panel shot focusing on Character C at the cafe. Text overlays appear at the bottom of the screen with the dialogue.",
+        "audio_transcript": "Character C says: \u0c08 \u0c2f\u0c3e\u0c2a\u0c4d \u0c1a\u0c3e\u0c32\u0c3e \u0c1a\u0c40\u0c2a\u0c4d. \u0c30\u0c4b\u0c1c\u0c41\u0c15\u0c3f \u0c13\u0c28\u0c4d\u0c32\u0c40 4 \u0c30\u0c42\u0c2a\u0c40\u0c38\u0c4d, \u0c05\u0c02\u0c21\u0c4d \u0c06\u0c32\u0c4d\u0c38\u0c4b 7 \u0c21\u0c47\u0c38\u0c4d \u0c15\u0c3f \u0c2b\u0c4d\u0c30\u0c40 \u0c1f\u0c4d\u0c30\u0c2f\u0c32\u0c4d \u0c15\u0c42\u0c21\u0c3e \u0c07\u0c38\u0c4d\u0c24\u0c3e\u0c30\u0c41 \u0c35\u0c40\u0c33\u0c4d\u0c33\u0c41. [This app is very cheap. Only 4 rupees a day, and they also give a 7-day free trial.]",
+        "on_screen_text": "Ee app chala cheapu Rojkiu only 4 rupees and also 7 days ki free trial kuda istharu."
+      },
+      {
+        "n": 8,
+        "start_s": 52.5,
+        "end_s": 58.0,
+        "screenshot_at_s": 55.0,
+        "scene_label": "Downloading App",
+        "setting": "Outdoor cafe. Daytime.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Over-the-shoulder shot past Character C's right shoulder, focusing on Character B. Character B looks excited, then picks up her smartphone from the table and starts tapping on it. The background shows a pharmacy storefront.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A single-panel shot focusing on Character B at the cafe. Text overlays appear at the bottom of the screen with the dialogue.",
+        "audio_transcript": "Character B says: \u0c05\u0c30\u0c46 \u0c35\u0c3e\u0c39\u0c4d! \u0c12\u0c15\u0c4d\u0c15 \u0c28\u0c3f\u0c2e\u0c3f\u0c37\u0c02, SpeakX \u0c2f\u0c3e\u0c2a\u0c4d \u0c28\u0c47\u0c28\u0c41 \u0c15\u0c42\u0c21\u0c3e \u0c07\u0c2a\u0c4d\u0c2a\u0c41\u0c21\u0c47 \u0c21\u0c4c\u0c28\u0c4d\u200c\u0c32\u0c4b\u0c21\u0c4d \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c3e\u0c28\u0c41. [Oh wow! One minute, I will also download the SpeakX app right now.]",
+        "on_screen_text": "Arey wah!! okka nimisham SpeakX app nenu kuda ippude download chesthanu."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888788.1515605
+}

@@ -1,0 +1,75 @@
+{
+  "competitor_id": "1994036307985218",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is a live-action recording shot on a smartphone in a moving vehicle. The lighting changes naturally with the car's movement, and the character's facial expressions and body language are entirely natural.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male passenger",
+        "appearance": "Black male, around 30 years old, bald with a thick, well-groomed black beard. He has a medium build.",
+        "wardrobe": "Grey hoodie worn underneath a dark blue or black puffer vest.",
+        "demeanor": "Friendly, slightly nervous but proud, actively engaged in conversation."
+      },
+      {
+        "id": "B",
+        "role": "female driver",
+        "appearance": "Unseen character, only heard.",
+        "wardrobe": "Unknown.",
+        "demeanor": "Encouraging, surprised, friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 33.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Car Conversation",
+        "setting": "Inside a car, daytime, bright sunlight.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up, low angle.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A bald Black man with a thick black beard sits in the passenger seat of a car. He wears a grey hoodie underneath a dark puffer vest. A black seatbelt is strapped across his chest. He looks off-camera to his left, actively engaged in a conversation. The lighting is bright, with natural sunlight illuminating his face from the adjacent window. The car's interior, including the dark headrest and the window frame, is visible in the background. His expressions change naturally as he speaks and listens.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene consists of a single, continuous shot of Character A sitting in the passenger seat of a moving car. He is having a conversation with the unseen driver, Character B. Text overlays at the top of the screen provide context for the video. Subtitles in both English and Spanish appear at the bottom, changing as the characters speak. The camera angle remains fixed throughout the scene.",
+        "audio_transcript": "Character B says: \u00bfT\u00fa hablas espa\u00f1ol? [You speak Spanish?]\nCharacter A says: S\u00ed. [Yes.]\nCharacter A says: \u00bfEst\u00e1 bien si yo practico mi espa\u00f1ol contigo? [Is it okay if I practice my Spanish with you?]\nCharacter B says: S\u00ed, est\u00e1 bien. [Yes, that's okay.]\nCharacter B says: \u00bfCu\u00e1nto tiempo tienes? [How long have you been learning?]\nCharacter A says: Como hasta ahora. Cinco meses. [So far, about five months.]\nCharacter B says: No, pero lo hablas muy bien. [No, but you speak it very well.]\nCharacter A says: \u00bfS\u00ed? [Really?]\nCharacter B says: \u00a1S\u00ed! Yo pens\u00e9 que ten\u00edas como tres a\u00f1os! [Yes! I thought you'd been learning like three years!]\nCharacter B says: \u00bfTienes a alguien con quien practicar el espa\u00f1ol? [Do you have someone you can practice Spanish with?]\nCharacter A says: He estado usando una aplicaci\u00f3n llamada Speak. [I have been using an app called Speak.]\nCharacter A says: Es una aplicaci\u00f3n. Yo puedo usar para aprender espa\u00f1ol. [It's an application. I can use to learn Spanish.]\nCharacter A says: Se usa inteligencia artificial. [It uses artificial intelligence.]\nCharacter B says: Aj\u00e1. [Uh-huh.]\nCharacter A says: Para aprender espa\u00f1ol. [To learn Spanish.]",
+        "on_screen_text": "POV: just had my first REAL Spanish convo thanks to THIS app\nYou speak Spanish?\n\u00bfT\u00fa hablas espa\u00f1ol?\nYes.\nS\u00ed.\nIs it okay if I\n\u00bfEst\u00e1 bien si yo\npractice my Spanish with you?\npractico mi espa\u00f1ol contigo?\nYes, that's okay.\nS\u00ed, est\u00e1 bien.\nHow long have you been learning?\n\u00bfCu\u00e1nto tiempo tienes?\nSo far, about five months\nComo hasta ahora. Cinco meses.\nNo, but you speak it very well.\nNo, pero lo hablas muy bien.\nReally?\n\u00bfS\u00ed?\nI thought you'd been learning\nYo pens\u00e9 que ten\u00edas\nlike three years!\ncomo tres a\u00f1os!\nDo you have someone\n\u00bfTienes a alguien con\nyou can practice Spanish with?\nquien practicar el espa\u00f1ol?\nI have been using\nHe estado usando\nan app\nuna aplicaci\u00f3n\ncalled Speak.\nllamada Speak.\nIt's an application.\nEs una aplicaci\u00f3n.\nI can\nYo puedo\nuse\nusar\nto learn Spanish.\npara aprender espa\u00f1ol.\nIt uses\nSe usa\nartificial intelligence.\ninteligencia artificial.\nTo learn Spanish.\nPara aprender espa\u00f1ol."
+      },
+      {
+        "n": 2,
+        "start_s": 33.0,
+        "end_s": 35.0,
+        "screenshot_at_s": 34.0,
+        "scene_label": "End Card",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, bright blue background fills the entire frame. The color is a vibrant, uniform shade of blue with no gradients or textures. There are no characters, props, or environmental elements present. The lighting appears flat and even across the entire surface. The composition is entirely empty, serving as a blank canvas.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The scene transitions to a simple, static end card. The background is a solid, bright blue color. The brand name 'Speak' is displayed in the center in white, sans-serif text. There is no movement or other visual elements present. This serves as the final branding moment for the advertisement.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Speak"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966712.8688538
+}

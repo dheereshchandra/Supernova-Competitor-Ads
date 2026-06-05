@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1683400652701031",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion, long dark hair. She has a soft, friendly face with subtle makeup.",
+        "wardrobe": "White top.",
+        "demeanor": "Friendly, curious, and slightly hesitant but willing to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character, fair complexion, reddish-orange hair styled up. She has large green eyes and stylized, expressive facial features.",
+        "wardrobe": "White top, gold hoop earrings.",
+        "demeanor": "Encouraging, confident, and slightly sassy."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Language Practice Conversation",
+        "supernova_script": "Character B says: Can you speak English? [Can you speak English?]\nCharacter A says: Yes [Yes]\nCharacter B says: एक बार try करो! [Try it once!]\nCharacter A says: Hello [Hello]\nCharacter B says: Good, और? [Good, what else?]\nCharacter A says: Thank you [Thank you]\nCharacter B says: तो \"मुझे माफ़ कर दो\" को English में क्या कहेंगे? [Then how do you say \"forgive me\" in English?]\nCharacter A says: Umm... Sorry! [Umm... Sorry!]\nCharacter B says: बिलकुल सही! लेकिन आप ये भी कह सकते हो: I apologize [Exactly right! But you can also say: I apologize]\nCharacter A says: I apologize [I apologize]\nCharacter B says: Okay, आपका English level beginner है। [Okay, your English level is beginner.]\nCharacter A says: मैं English movies बहुत देखती हूँ, पर मेरी speaking improve नहीं हो रही... [I watch a lot of English movies, but my speaking isn't improving...]\nCharacter B says: टेंशन मत लो, मेरे साथ conversation practice करो। [Don't worry, practice conversation with me.]\nCharacter A says: हैं?? तुम्हारे साथ? [Huh?? With you?]\nCharacter B says: मैं Supernova की AI English tutor हूँ! रोज़ practice करेंगे तो आप confidently English बोलने लगोगे! [I am Supernova's AI English tutor! If we practice daily, you'll start speaking English confidently!]\nCharacter A says: पर AI के साथ... मुझे थोड़ा अजीब लग रहा है। [But with AI... I feel a bit weird.]\nCharacter B says: अरे, आजकल AI से सीखना सबसे smart तरीका है! कोई judge नहीं करेगा। [Hey, learning with AI is the smartest way these days! No one will judge you.]\nCharacter A says: ऐसा है क्या...? ठीक है, try करते हैं! [Is that so...? Okay, let's try it!]\nCharacter B says: Great! तो चलो, सबसे पहले एक professional greeting से शुरू करते हैं। मेरे पीछे बोलो: Nice to meet you [Great! So come on, let's start with a professional greeting first. Repeat after me: Nice to meet you]\nCharacter A says: Nice to meet you [Nice to meet you]\nCharacter B says: बहुत बढ़िया!! आज ही Supernova app download करो! [Very good!! Download the Supernova app today!]\nCharacter A says: Done~ मिलते हैं Supernova पर! [Done~ See you on Supernova!]",
+        "scene_summary": "- Hooks the user with a quick, interactive language test.\n- Identifies the common problem: passive consumption (watching movies) doesn't lead to speaking fluency.\n- Introduces the AI tutor as a non-judgmental, practical solution for daily practice.\n- Ends with a clear call to action to download the app.",
+        "supernova_on_screen_text": "Can you speak English?\nएक बार try करो!\nHello.\nGood, और?\nThank you.\nतो \"मुझे माफ़ कर दो\" को English में क्या कहेंगे?\nUmm...\nSorry!\nबिलकुल सही! लेकिन आप ये भी कह सकते हो:\nI apologize.\nI apologize.\nआपका English level beginner है।\nमैं English movies बहुत देखती हूँ, पर मेरी speaking improve नहीं हो रही...\nटेंशन मत लो, मेरे साथ conversation practice करो।\nहैं?? तुम्हारे साथ?\nमैं Supernova की AI English tutor हूँ!\nरोज़ practice करेंगे तो आप confidently English बोलने लगोगे!\nपर AI के साथ... मुझे थोड़ा अजीब लग रहा है।\nअरे, आजकल AI से सीखना सबसे smart तरीका है! कोई judge नहीं करेगा।\nऐसा है क्या...? ठीक है, try करते हैं!\nGreat! तो चलो, सबसे पहले एक professional greeting से शुरू करते हैं।\nमेरे पीछे बोलो:\nNice to meet you.\nNice to meet you.\nबहुत बढ़िया!!\nआज ही Supernova app download करो!\nDone~\nमिलते हैं Supernova पर!"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the brand logo and app store badges.\n- Provides a clear final visual cue for the user to download the app.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630600.285889
+}

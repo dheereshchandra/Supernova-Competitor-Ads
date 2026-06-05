@@ -1,0 +1,50 @@
+{
+  "competitor_id": "975765704980225",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion, blonde hair with dark roots.",
+        "wardrobe": "Yellow hoodie and white wireless earbuds.",
+        "demeanor": "Relaxed and engaged."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female avatar, fair complexion, wavy orange hair, large green eyes.",
+        "wardrobe": "Yellow sweater and gold hoop earrings.",
+        "demeanor": "Friendly and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Language Practice",
+        "supernova_script": "Character B says: क्या तुम इंग्लिश बोल सकती हो? [Can you speak English?]\nCharacter A says: Yes, I know English.\nCharacter B says: Native speakers ऐसे बोलते हैं: \"I speak English\" [Native speakers speak like this: \"I speak English\"]\nCharacter A says: I speak English.\nCharacter B says: तुम्हारी उम्र क्या है? [How old are you?]\nCharacter A says: My age is 23.\nCharacter B says: हम्म... इसे ऐसे बोलो: \"I'm 23\" [Hmm... say it like this: \"I'm 23\"]\nCharacter A says: I'm 23!\nCharacter B says: तुम्हारा नाम क्या है? [What is your name?]\nCharacter A says: My name is Priya.\nCharacter B says: Fluent इंग्लिश में हम कहते हैं: I'm Priya. [In fluent English, we say: I'm Priya.]\nCharacter A says: I'm Priya.\nCharacter B says: बहुत बढ़िया! [Very good!]\nCharacter A says: Thank you, but who are you?\nCharacter B says: मैं Supernova की AI tutor हूँ! तुम मेरे साथ रोज़ ऐसे ही इंग्लिश practice कर सकती हो। [I am Supernova's AI tutor! You can practice English with me like this every day.]\nCharacter A says: Ah, but.. मेरी इंग्लिश बहुत weak है। I cannot speak. [Ah, but.. my English is very weak. I cannot speak.]\nCharacter B says: कोई बात नहीं, मैं तुम्हें हिंदी में समझा कर सिखाऊंगी। [No problem, I will explain and teach you in Hindi.]\nCharacter A says: You know Hindi?\nCharacter B says: हाँ बिलकुल, आख़िर मैं एक AI हूँ! [Yes of course, after all I am an AI!]\nCharacter A says: Okay, I'll download this app.",
+        "scene_summary": "- Hooks the viewer by immediately demonstrating the core product value: real-time, interactive conversation correction.\n- Establishes a warm, non-judgmental tone where mistakes are gently corrected to sound more natural.\n- Addresses a key friction point (fear of being a beginner) by revealing the AI can teach comfortably in the user's native language (Hindi).\n- Ends with a clear, logical progression to the user wanting to download the app.",
+        "supernova_on_screen_text": "क्या तुम इंग्लिश बोल सकती हो?\nYes, I know English\nNative speakers ऐसे बोलते हैं: \"I speak English\"\nI speak English\nतुम्हारी उम्र क्या है?\nMy age is 23\nहम्म... इसे ऐसे बोलो: \"I'm 23\"\nI'm 23!\nतुम्हारा नाम क्या है?\nMy name is Priya\nFluent इंग्लिश में हम कहते हैं: I'm Priya\nI'm Priya\nबहुत बढ़िया!\nThank you, but who are you?\nमैं Supernova की AI tutor हूँ! तुम मेरे साथ रोज़ ऐसे ही इंग्लिश practice कर सकती हो।\nAh, but.. मेरी इंग्लिश बहुत weak है। I cannot speak\nकोई बात नहीं, मैं तुम्हें हिंदी में समझा कर सिखाऊंगी\nYou know Hindi?\nहाँ बिलकुल, आख़िर मैं एक AI हूँ!\nOkay, I'll download this app"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[sound effect, no speech]",
+        "scene_summary": "- Provides a clear, uncluttered final call-to-action.\n- Reinforces brand identity with the logo.\n- Directs users to the appropriate app stores for download.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4861698
+}

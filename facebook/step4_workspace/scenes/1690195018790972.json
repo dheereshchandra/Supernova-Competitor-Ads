@@ -1,0 +1,101 @@
+{
+  "competitor_id": "1690195018790972",
+  "parsed": {
+    "duration_s": 22.0,
+    "production_type": "human-recorded",
+    "production_notes": "Features a real human actor with natural movements, realistic lighting, and consistent physical features. No AI artifacts are present.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female, slim build, fair complexion. Short, neatly parted brown hair. Clear facial features with minimal makeup.",
+        "wardrobe": "Grey button-down collared shirt. Wears white wired earphones in the middle segment.",
+        "demeanor": "Professional, encouraging, and friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Introduction",
+        "setting": "Home office, daytime. Bookshelf background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands centered, looking directly at the camera. She is indoors with a bookshelf visible behind her, filled with books and bags. The lighting is soft and natural. Her expression is engaging.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A introduces herself. Large text overlays identify her name and profession. Subtitles appear as she speaks.",
+        "audio_transcript": "Character A says: I spent 15 years helping people be clearer in English.\nCharacter A says: Now you can get the same coaching on this app.",
+        "on_screen_text": "ELIZA SIMPSON\nACCENT COACH\nI SPENT 15 YEARS HELPING PEOPLE BE CLEARER IN ENGLISH NOW YOU CAN GET THE SAME COACHING ON THIS APP"
+      },
+      {
+        "n": 2,
+        "start_s": 5.5,
+        "end_s": 18.5,
+        "screenshot_at_s": 12.0,
+        "scene_label": "App Demonstration",
+        "setting": "Home office, daytime. Bookshelf background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up talking-head with inset",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A is centered, wearing white wired earphones. She speaks into the camera, pausing to react with smiles or thoughtful expressions. The bookshelf background remains consistent.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A small rectangular area contains a tiny circular portrait of a man's face. Later, it displays a graphical cross-section of a human mouth and tongue.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "Character A demonstrates the app while wearing earphones. An inset of the app UI is overlaid, showing pronunciation feedback and a mouth diagram. Captions continue.",
+        "audio_transcript": "Character A says: Say this with me.\nCharacter A says: World.\nCharacter A says: Now I'm gonna say it incorrectly.\nCharacter A says: Wuhd.\nCharacter A says: It looks like I'm missing that L sound.\nCharacter A says: Let me try again.\nCharacter A says: World.\nCharacter A says: Fixed it.",
+        "on_screen_text": "SAY THIS WITH ME WORLD NOW I'M GONNA SAY IT INCORRECTLY WUHD IT LOOKS LIKE I'M MISSING THAT L SOUND LET ME TRY AGAIN WORLD FIXED IT\nCoach Eliza\nLet's begin! Record yourself saying the word below.\nworld\nW ER uh L D\nAwesome! You're ready for the next one.\n98%\nWe'll come back to this one for more practice later.\n66%\nExplain My Mistake\nWatch Sound\nL Sound\nHold the tip of your tongue right behind your top front teeth..."
+      },
+      {
+        "n": 3,
+        "start_s": 18.5,
+        "end_s": 22.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Call to Action",
+        "setting": "Home office, daytime. Bookshelf background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is centered, without earphones, smiling and gesturing slightly with her hand. The bookshelf background remains unchanged.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A delivers the final call to action. The brand logo appears at the top. Captions are displayed at the bottom.",
+        "audio_transcript": "Character A says: Start your first lesson on BoldVoice today for free.",
+        "on_screen_text": "BoldVoice\nSTART YOUR FIRST LESSON ON BOLDVOICE TODAY FOR FREE"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780658172.172297
+}

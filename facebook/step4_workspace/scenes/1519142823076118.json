@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1519142823076118",
+  "parsed": {
+    "duration_s": 32.0,
+    "production_type": "mixed",
+    "production_notes": "The video is a screencast of an app interface featuring a static illustration. The voiceover is AI-generated text-to-speech. A human hand is composited over the interface to simulate interaction.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "User's hand",
+        "appearance": "A fair-skinned human hand with short, unpainted fingernails.",
+        "wardrobe": "None visible.",
+        "demeanor": "Active, interacting with a touchscreen."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 32.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "App Demonstration",
+        "setting": "Digital app interface with a gothic illustration.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A fair-skinned human hand with short fingernails points its index finger towards the center of the frame. In the upper portion of the frame, there is a black and white gothic illustration. The illustration depicts two men; one is facing forward with a terrified expression, while the other is seen from behind, wearing a top hat. The background of the illustration features a dark, imposing house with arched windows.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The video displays a mobile app interface designed for language learning. A human hand interacts with the screen, tapping on highlighted English words within a text passage. Upon tapping, pop-up dictionary definitions appear, showing pronunciation and translation. The top of the screen features a static, black-and-white gothic illustration.",
+        "audio_transcript": "Unknown speaker says: I tell you, my friend, this house has a strange power over my mind, and I cannot escape its dark influence,\nUnknown speaker says: said Roderick with a pale face and shaking hands. His voice was low but full of fear.\nUnknown speaker says: fear.\nUnknown speaker says: I looked at him and saw that he truly believed his words.\nUnknown speaker says: believed.\nUnknown speaker says: The air in the room felt heavy\nUnknown speaker says: heavy\nUnknown speaker says: and cold. A distant echo\nUnknown speaker says: echo\nUnknown speaker says: moved through the halls, like the house itself was breathing.\nUnknown speaker says: breathe.",
+        "on_screen_text": "G\u00dcNDE SADECE 10 DAK\u0130KA OKUYARAK \u0130NG\u0130L\u0130ZCEN\u0130 GEL\u0130\u015eT\u0130R\n\u00d6\u011fretmenler taraf\u0131ndan \u00f6nerildi\nOku\nDinle\n10 dakika g\u00fcnde\n+ 150 yeni kelime\nI tell you, my friend, this house has a strange power over my mind, and I cannot escape its dark influence,\" said Roderick with a pale face and shaking hands. His voice was low but full of fear. I looked at him and saw that he truly believed his words. The air in the room felt heavy and cold. A distant echo moved through the halls, like the house itself was breathing.\nstrange [stre\u026and\u0292] tuhaf\nmind [ma\u026and] zihin\nto escape [tu \u026a\u02c8ske\u026ap] ka\u00e7\u0131nmak\ninfluence [\u02c8\u026anflu\u0259ns] etki\nEdgar Allan Poe\nUsher Hanedan\u0131'n\u0131n \u00c7\u00f6k\u00fc\u015f\u00fc\nfear [f\u026ar] korku\nto believe [tu b\u026a\u02c8li\u02d0v] inanmak\nheavy [\u02c8hevi] a\u011f\u0131r\necho [\u02c8eko\u028a] yank\u0131\nto breathe [tu bri\u02d0\u00f0] nefes almak\nBiliyorum\n\u00d6\u011frenmek"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.298562
+}

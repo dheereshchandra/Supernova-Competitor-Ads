@@ -1,0 +1,137 @@
+{
+  "competitor_id": "873410355318564",
+  "parsed": {
+    "duration_s": 30.0,
+    "production_type": "mixed",
+    "production_notes": "The video is a screen recording of a mobile application featuring 2D vector animations. There are no live-action elements, and the characters are stylized app mascots.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "App Mascot",
+        "appearance": "Green cartoon owl mascot with large eyes, a small orange beak, and a rounded body. It has small wings and feet.",
+        "wardrobe": "None.",
+        "demeanor": "Cheerful and encouraging."
+      },
+      {
+        "id": "B",
+        "role": "Animated Speaker",
+        "appearance": "Animated adult male with brown skin, a thick black beard, and a prominent nose. He has a sturdy build.",
+        "wardrobe": "Blue turban, pink sweater, and blue pants.",
+        "demeanor": "Initially neutral, becomes disappointed."
+      },
+      {
+        "id": "C",
+        "role": "Animated Speaker",
+        "appearance": "Animated young boy with light skin, short blonde hair, and a round face. He has a small, slender build.",
+        "wardrobe": "Light blue hoodie and dark pants.",
+        "demeanor": "Initially neutral, becomes exasperated and facepalms."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Language Selection",
+        "setting": "App interface, plain white background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A green cartoon owl mascot is positioned at the top of the frame. A stylized, animated hand with a pointing index finger moves across the screen, simulating a tapping motion. The background is entirely plain white, providing a stark contrast to the colorful mascot and hand. The composition is simple and centrally focused.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene displays the Duolingo app interface on a white background. The green owl mascot, Character A, is at the top, asking the user what they want to learn. A list of language options is presented below. An animated hand cursor appears and clicks on the 'Intermediate English' option. The cursor then moves down to click the 'CONTINUE' button. The layout is clean and typical of a mobile application screen.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "What would you like to learn?\nIntermediate English\nSpanish\nFrench\nGerman\nItalian\nCONTINUE"
+      },
+      {
+        "n": 2,
+        "start_s": 4.5,
+        "end_s": 14.0,
+        "screenshot_at_s": 9.0,
+        "scene_label": "Tap what you hear exercise",
+        "setting": "App interface, plain white background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "An animated man with brown skin, a black beard, a blue turban, and a pink sweater stands on the left side of the frame. He initially holds a neutral expression. A stylized, animated hand with a pointing index finger moves across the lower portion of the screen, simulating tapping motions. Following these motions, the man's expression changes to a disappointed look. The background remains plain white throughout.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The app interface shows a 'Tap what you hear' exercise. Character B stands on the left, with a speech bubble indicating he is speaking. Below him is a word bank with various scattered words. An animated hand cursor selects words to form a sentence but misses a crucial word. The app displays an 'Incorrect' message in a red banner at the bottom, and Character B's expression changes to look disappointed.",
+        "audio_transcript": "Character B says: Thank you for helping our elderly neighbors.",
+        "on_screen_text": "Tap what you hear\nyou\nhelping\nThank\nawesome\nattitude\nneighbors\nfor\npositive\nelderly\nsomehow\nour\nCONTINUE\nIncorrect\nCorrect Answer:\nThank you for helping our elderly neighbors!\nGOT IT"
+      },
+      {
+        "n": 3,
+        "start_s": 14.0,
+        "end_s": 24.5,
+        "screenshot_at_s": 19.0,
+        "scene_label": "Listen and respond exercise",
+        "setting": "App interface, plain white background.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Initially, a green cartoon owl mascot appears briefly in the center. The scene then shifts to an animated young boy with light skin, blonde hair, and a light blue hoodie standing on the left side of the frame. A stylized, animated hand moves across the lower portion of the screen, simulating a tapping motion. After the tap, the boy's expression changes to frustration, and he performs a facepalm gesture, covering his face with his hand. The background is plain white.",
+            "characters_in_panel": [
+              "A",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "Character A briefly appears with a 'Keep trying!' message. The screen then transitions to a 'Listen and respond' exercise featuring Character C. Character C speaks a paragraph, and three multiple-choice options are displayed below him. The animated hand cursor selects the wrong option, 'checking in to a hotel'. A red 'Incorrect' banner appears at the bottom, and Character C reacts by facepalming in frustration.",
+        "audio_transcript": "Character C says: Basically, we're looking for a person who is very organized and knows about contracts. Do you have much experience with contracts, Amy?",
+        "on_screen_text": "Keep trying!\nListen and respond\nAmy is...\nchecking in to a hotel\nat a job interview\nbeing arrested\nCONTINUE\nIncorrect\nCorrect Answer:\nat a job interview\nGOT IT"
+      },
+      {
+        "n": 4,
+        "start_s": 24.5,
+        "end_s": 30.0,
+        "screenshot_at_s": 27.0,
+        "scene_label": "End card",
+        "setting": "Plain white background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A green cartoon owl mascot is depicted reading a blue book. The owl is sitting on top of a small stack of two other books, one yellow and one red. The mascot and books are centrally located in the frame. The background is completely plain white, with no other elements present.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A is shown sitting on a stack of colorful books while reading a blue book. Green text above encourages the user to improve their English for free. The scene then cuts to the Duolingo logo and brand name. Below the logo, text prompts the user to download the app, accompanied by badges for the Apple App Store and Google Play Store.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "improve your english for free\nduolingo\nDownload the world's #1 language learning app.\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.0660844
+}

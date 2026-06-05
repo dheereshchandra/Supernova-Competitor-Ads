@@ -1,0 +1,67 @@
+{
+  "competitor_id": "964644499361286",
+  "parsed": {
+    "duration_s": 14.0,
+    "production_type": "mixed",
+    "production_notes": "The video is a 2D vector animation. It relies entirely on stylized cartoon graphics rather than human actors or photorealistic AI.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Animated mascot presenter",
+        "appearance": "A large, brown, cartoon bear with a lighter brown snout and belly. He has small ears, thick eyebrows, and a wide mouth.",
+        "wardrobe": "He wears a light blue scarf draped around his neck.",
+        "demeanor": "Confident, relaxed, and friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Bear on the beach",
+        "setting": "Cartoon beach, daytime, tan sand, turquoise waves, blue sky.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium shot, centered",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A brown cartoon bear stands centered on a sandy beach, arms crossed, wearing a light blue scarf. Behind him are stylized turquoise and blue ocean waves with white crests. The sky is bright blue with faint horizontal white lines. The bear's expression shifts between neutral and a wide smile.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A 2D animated brown bear with a blue scarf stands on a beach, speaking directly to the viewer. Text overlays appear above his head, displaying the brand logo and his spoken words. The animation style is flat and colorful.",
+        "audio_transcript": "Character A says: I've been learning Spanish on Duolingo. [I've been learning Spanish on Duolingo.]\nCharacter A says: It's free, easy, and actually works. [It's free, easy, and actually works.]\nCharacter A says: \u00a1Me encanta la playa! [I love the beach!]\nCharacter A says: See, not too bad. [See, not too bad.]\nCharacter A says: Download Duolingo for free, and start learning something new. [Download Duolingo for free, and start learning something new.]",
+        "on_screen_text": "duolingo\nI've been learning Spanish on Duolingo.\nIt's free, easy, and actually works.\n\u00a1Me encanta la playa!\nSee, not too bad.\nDownload Duolingo for free,\nand start learning something new."
+      },
+      {
+        "n": 2,
+        "start_s": 11.5,
+        "end_s": 14.0,
+        "screenshot_at_s": 12.5,
+        "scene_label": "Logo reveal",
+        "setting": "Abstract green background obscuring the beach.",
+        "characters_in_scene": [],
+        "camera": "Graphic overlay",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A large, solid bright green circle expands from the center of the frame. It grows to obscure the previously visible beach and ocean background. The edges of the circle are smooth and sharp.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A large green circle containing the brand name in white text expands to fill the screen, covering the previous scene. A signature chime sound effect plays.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "duolingo"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.101609
+}

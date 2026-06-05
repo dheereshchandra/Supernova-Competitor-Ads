@@ -1,0 +1,76 @@
+{
+  "competitor_id": "1391383766354969",
+  "parsed": {
+    "duration_s": 55.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in a physical environment, interacting with a digital device. The lighting, movements, and interactions with physical objects (cutting the apple) are natural and consistent with human recording.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult, slim build, light brown complexion. Dark hair tied back with loose strands framing her face. Expressive facial features.",
+        "wardrobe": "Dark grey or black long-sleeved button-up shirt.",
+        "demeanor": "Engaged, slightly hesitant at first, then enthusiastic and convinced."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character. Young appearance, fair complexion, bright red hair styled in a bob. Large, expressive eyes.",
+        "wardrobe": "Simple white t-shirt.",
+        "demeanor": "Friendly, encouraging, and helpful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 53.5,
+        "screenshot_at_s": 25.0,
+        "scene_label": "AI English Lesson",
+        "setting": "A dimly lit room with blue ambient lighting. A desk or table. Props: tablet, cutting board, knife, apple.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with dark hair tied back is sitting at a desk, cutting an apple on a grey cutting board with a red-handled knife. She is wearing a dark, long-sleeved button-up shirt. To her left, a tablet is propped up, displaying a 3D animated female character with red hair and a white t-shirt. The room is illuminated with a strong blue light, creating a moody atmosphere. The woman is looking back and forth between the tablet and her cutting task, her facial expressions changing as she speaks and listens.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a continuous shot of a woman interacting with a language learning app on her tablet while preparing a snack. The tablet shows an animated avatar. Text overlays appear on the screen, translating the conversation. A row of American flags is superimposed at the top of the frame.",
+        "audio_transcript": "Character B says: Do you speak English?\nCharacter A says: Uh, Tarzan style.\nCharacter B says: Can you at least say your name?\nCharacter A says: My name is Jenny.\nCharacter B says: Nice. Where are you from?\nCharacter A says: I am France.\nCharacter B says: You said I am France. Close though! Try: I am from France.\nCharacter A says: Okay, I am from France. I am France... no... wait, I am from France.\nCharacter B says: There you go!\nCharacter A says: Hey Skye, how am I going to improve my English?\nCharacter B says: Daily conversation practice is a must.\nCharacter A says: But who am I going to speak with this bad English?\nCharacter B says: With me, of course!\nCharacter A says: With you?\nCharacter B says: Haven't you heard of AI English teachers? You can make as many mistakes as you want without boring anyone.\nCharacter A says: Wait, that could actually work. You just taught me something in two seconds.\nCharacter B says: We're nothing like those pointless word-matching apps. Download Praktika and see the difference.\nCharacter A says: Oh, you know what, fair enough. I'm downloading Praktika right now! Let's go.",
+        "on_screen_text": "Do you speak English?\nUh, Tarzan style.\nCan you at least say your name?\nMy name is Jenny.\nNice. Where are you from?\nI am France.\nYou said \"I'm from France.\" close though! Try: \"I'm from France.\"\nOkay, I'm from France. I am France... no... wait, I am from France.\nThere you go!\nHey Skye, How am I going to improve my English?\nDaily conversation practice is a must.\nBut who am I going to speak with this bad English?\nWith me, of course!\nWith you?\nHaven't you heard of AI English teachers? You can make as many mistakes as you want without boring anyone.\nWait, that could actually work. You just taught me something in two seconds.\nWe're nothing like those pointless word-matching apps. Download Praktika and see the difference.\nYou know what, fair enough. I'm downloading Praktika right now! Let's go."
+      },
+      {
+        "n": 2,
+        "start_s": 53.5,
+        "end_s": 55.0,
+        "screenshot_at_s": 54.0,
+        "scene_label": "End Card",
+        "setting": "Digital graphic",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid light purple gradient background with no other elements.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A digital end-card with a light purple gradient background. The Praktika app logo is centered, with 'Download on the App Store' and 'GET IT ON Google Play' badges below.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780626308.3860755
+}

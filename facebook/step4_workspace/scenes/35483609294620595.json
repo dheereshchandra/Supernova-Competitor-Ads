@@ -1,0 +1,76 @@
+{
+  "competitor_id": "35483609294620595",
+  "parsed": {
+    "duration_s": 27.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in a real kitchen setting. The tablet displays an AI avatar, but the primary video is human-recorded.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion. Long blonde hair, dark eyebrows, and dark eye makeup.",
+        "wardrobe": "Black t-shirt with a yellow graphic design.",
+        "demeanor": "Initially frustrated, then engaged and happy."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Digital avatar of a young female with red hair.",
+        "wardrobe": "Not clearly visible, appears to be a light-colored top.",
+        "demeanor": "Helpful and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 25.5,
+        "screenshot_at_s": 12.0,
+        "scene_label": "Washing Dishes and Learning",
+        "setting": "A modern kitchen with white cabinets and a dark granite countertop. A stainless steel sink is in the foreground. A tablet is propped up on the counter next to the sink.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot, slightly angled down.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is standing at a kitchen sink, washing dishes. She is holding a soapy sponge and a pan. A tablet is resting on the counter to her left, displaying Character B. Character A interacts with the tablet while continuing to wash dishes. She looks frustrated at first, then smiles as she successfully answers the prompts. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a woman washing dishes while using a language learning app on a tablet. The app features an AI avatar that prompts her with questions in Japanese. The woman struggles at first but then successfully answers with the app's help. Text overlays show the Japanese phrases and their English translations.",
+        "audio_transcript": "Character A says: \u65e5\u672c\u8a9e\u304c\u5acc\u3044\u3002\n[I hate Japanese.]\nCharacter B says: \u3042\u306a\u305f\u306e\u65e5\u672c\u8a9e\u30ec\u30d9\u30eb\u306f\uff1f\n[What's your Japanese level?]\nCharacter A says: \u308f\u304b\u3089\u306a\u3044\u3002\n[I don't know.]\nCharacter B says: \u300c\u308f\u304b\u3089\u306a\u3044\u300d\u3068\u8a00\u3063\u3066\u304f\u3060\u3055\u3044\u3002\n[Say \"Wakaranai\"]\nCharacter A says: \u308f\u304b\u3089\u306a\u3044\u3002\n[I don't know.]\nCharacter B says: \u65e5\u672c\u8a9e\u3092\u8a71\u305b\u307e\u3059\u304b\uff1f\n[Can you speak Japanese?]\nCharacter A says: \u306f\u3044\u3001\u308f\u305f\u3057\u2026\n[Yes, I...]\nCharacter B says: \u306f\u3044\u3001\u8a71\u305b\u307e\u3059\u3068\u8a00\u3063\u3066\u304f\u3060\u3055\u3044\u3002\n[Please say, \"I can speak.\"]\nCharacter A says: \u306f\u3044\u3001\u8a71\u305b\u307e\u3059\u3002\n[Yes, I can.]\nCharacter B says: \u4f55\u6b73\u3067\u3059\u304b\uff1f\n[How old are you?]\nCharacter A says: \u308f\u305f\u3057\u2026\u306b\u3058\u3085\u3046\u3088\u3093\u2026\uff1f\n[I... twenty-four...?]\nCharacter B says: \u4e8c\u5341\u56db\u6b73\u3067\u3059\u3068\u8a00\u3063\u3066\u304f\u3060\u3055\u3044\u3002\n[Please say, \"I am 24 years old.\"]\nCharacter A says: \u4e8c\u5341\u56db\u6b73\u3067\u3059\u3002\n[I am 24 years old.]\nCharacter A says: How can I practice my Japanese every day?\nCharacter B says: Just download Praktika.\nCharacter A says: I'll download Praktika right now!",
+        "on_screen_text": "\u65e5\u672c\u8a9e\u304c\u5acc\u3044\u3002\nNihongo kirai.\nI hate Japanese.\n\u3042\u306a\u305f\u306e\u65e5\u672c\u8a9e\u30ec\u30d9\u30eb\u306f\uff1f\nAnata no Nihongo reberu wa?\nWhat's your Japanese level?\n\u308f\u304b\u3089\u306a\u3044\u3002\nWakaranai.\nI don't know.\n\u300c\u308f\u304b\u3089\u306a\u3044\u300d\u3068\u8a00\u3063\u3066\u304f\u3060\u3055\u3044\u3002\nWakaranai to itte kudasai.\nSay \"Wakaranai\"\n\u308f\u304b\u3089\u306a\u3044\u3002\nWakaranai.\nI don't know.\n\u65e5\u672c\u8a9e\u3092\u8a71\u305b\u307e\u3059\u304b\uff1f\nNihongo wo hanasemasu ka?\nCan you speak Japanese?\n\u306f\u3044\u3001\u308f\u305f\u3057\u2026\nHai, watashi...\nYes, I...\n\u306f\u3044\u3001\u8a71\u305b\u307e\u3059\u3068\u8a00\u3063\u3066\u304f\u3060\u3055\u3044\u3002\nHai, hanasemasu to itte kudasai\nPlease say, \"I can speak.\"\n\u306f\u3044\u3001\u8a71\u305b\u307e\u3059\u3002\nHai, hanasemasu.\nYes, I can.\n\u4f55\u6b73\u3067\u3059\u304b\uff1f\nNan-sai desu ka?\nHow old are you?\n\u308f\u305f\u3057\u2026\u306b\u3058\u3085\u3046\u3088\u3093\u2026\uff1f\nWatashi... nijuyon...?\nI... twenty-four...?\n\u4e8c\u5341\u56db\u6b73\u3067\u3059\u3068\u8a00\u3063\u3066\u304f\u3060\u3055\u3044\u3002\nNij\u016byon-sai desu to itte kudasai.\nPlease say, \"I am 24 years old.\"\n\u4e8c\u5341\u56db\u6b73\u3067\u3059\u3002\nNij\u016byon-sai desu.\nI am 24 years old.\nHow can I practice my Japanese every day?\nJust download Praktika.\nI'll download Praktika right now!"
+      },
+      {
+        "n": 2,
+        "start_s": 25.5,
+        "end_s": 27.0,
+        "screenshot_at_s": 26.0,
+        "scene_label": "End Card",
+        "setting": "White background.",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A white screen with the Praktika logo and app store download buttons.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780629122.4524167
+}

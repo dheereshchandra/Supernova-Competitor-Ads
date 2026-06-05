@@ -1,0 +1,65 @@
+{
+  "competitor_id": "992683056748048",
+  "parsed": {
+    "duration_s": 31.0,
+    "production_type": "mixed",
+    "production_notes": "The video is a screencast of a mobile application. The illustrations displayed within the app appear to be AI-generated, particularly the second image which exhibits a typical AI-painted aesthetic with slightly unnatural lighting and blending of animal features.",
+    "characters": [],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.5,
+        "screenshot_at_s": 2.5,
+        "scene_label": "App Screencast - First Illustration",
+        "setting": "Mobile app interface",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A stylized, flat, geometric illustration of farm animals gathered in front of a dark barn. The style resembles paper cutouts with textured surfaces. The animals include white horses, sheep, pigs, chickens, and a black dog. The barn has a windmill-like structure on top and a figure resembling a nutcracker or guard. The color palette consists of muted browns, blacks, whites, and dark reds.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A plain white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A mobile phone screen recording. The top half displays a stylized illustration of farm animals. The bottom half contains a paragraph of English text. A hand cursor appears and taps the word 'equal', bringing up a small popup with the word's pronunciation and Vietnamese translation. A banner at the top reads '\u0110\u1eccC S\u00c1CH TI\u1ebeNG ANH 10 PH\u00daT M\u1ed6I NG\u00c0Y'.",
+        "audio_transcript": "Male narrator says: All animals are equal, but some animals are more important than others,\nFemale app voice says: equal",
+        "on_screen_text": "\u0110\u1eccC S\u00c1CH TI\u1ebeNG ANH 10 PH\u00daT M\u1ed6I NG\u00c0Y (Read English books 10 minutes a day)\n\"All animals are equal, but some animals are more important than others,\" one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore.\nequal / \u02c8i\u02d0kw\u0259l / b\u00ecnh \u0111\u1eb3ng (equal) / \u0110\u00e3 bi\u1ebft (Already know) / H\u1ecdc (Learn)"
+      },
+      {
+        "n": 2,
+        "start_s": 5.5,
+        "end_s": 31.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "App Screencast - Second Illustration",
+        "setting": "Mobile app interface",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A painted-style illustration of farm animals in a pastoral setting during golden hour. On the left, a brown cow looks towards the viewer. In the center background, two sheep stand in a grassy field. On the right, the head and neck of a white horse are visible. Behind the sheep, there is a red wooden barn. The lighting is warm and soft, typical of late afternoon sun.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A plain white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The top illustration changes to a more realistic, painted scene of a cow, sheep, and horse. The English text in the bottom half remains the same. The hand cursor continues to tap various words in the text ('slowly', 'cold', 'tried', 'words', 'something', 'farm', 'always'), each time triggering a popup with the word's phonetic spelling and Vietnamese translation. The top banner remains visible.",
+        "audio_transcript": "Male narrator says: one of them read slowly.\nFemale app voice says: slowly\nMale narrator says: The animals stood silent in the cold night, staring at the wall.\nFemale app voice says: cold\nMale narrator says: They tried to remember the old words,\nFemale app voice says: to try\nFemale app voice says: word\nMale narrator says: but something felt wrong.\nFemale app voice says: something\nMale narrator says: No one spoke. The farm looked the same as always,\nFemale app voice says: farm\nFemale app voice says: always\nMale narrator says: yet nothing was the same anymore.",
+        "on_screen_text": "\u0110\u1eccC S\u00c1CH TI\u1ebeNG ANH 10 PH\u00daT M\u1ed6I NG\u00c0Y (Read English books 10 minutes a day)\nTR\u1ea0I S\u00daC V\u1eacT GEORGE ORWELL (Animal Farm George Orwell)\n\"All animals are equal, but some animals are more important than others,\" one of them read slowly.\nThe animals stood silent in the cold night, staring at the wall. They tried to remember the old words, but something felt wrong. No one spoke. The farm looked the same as always, yet nothing was the same anymore.\nslowly / \u02c8slo\u028ali / ch\u1eadm r\u00e3i (slowly)\ncold / ko\u028ald / l\u1ea1nh (cold)\nto try / tu tra\u026a / \u0111\u1ec3 th\u1eed (to try)\nword / w\u025c\u02d0rd / t\u1eeb (word)\nsomething / \u02c8s\u028cm\u03b8\u026a\u014b / th\u1ee9 g\u00ec \u0111\u00f3 (something)\nfarm / f\u0251\u02d0rm / trang tr\u1ea1i (farm)\nalways / \u02c8\u0254\u02d0lwe\u026az / lu\u00f4n lu\u00f4n (always)\n\u0110\u00e3 bi\u1ebft (Already know) / H\u1ecdc (Learn)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.299848
+}

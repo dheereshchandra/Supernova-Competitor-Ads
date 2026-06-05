@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1311129607090927",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, medium build, fair complexion, blonde hair tied back. She wears glasses.",
+        "wardrobe": "White hooded sweatshirt.",
+        "demeanor": "Focused on her task, slightly confused by her mistakes but eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young female avatar, fair complexion, red hair.",
+        "wardrobe": "White t-shirt.",
+        "demeanor": "Helpful, cheerful, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Kitchen English Lesson",
+        "supernova_script": "Character B says: What are you doing? [What are you doing?]\nCharacter A says: I am cooking my daughter. [I am cooking my daughter.]\nCharacter B says: What? You are cooking your daughter!? [What? You are cooking your daughter!?]\nCharacter A says: अरे नहीं, मेरा मतलब है I am making food for my daughter! [Oh no, I mean I am making food for my daughter!]\nCharacter B says: Oh thank God. तो कहिए: I am cooking for my daughter. [Oh thank God. Then say: I am cooking for my daughter.]\nCharacter A says: I am cooking for my daughter. [I am cooking for my daughter.]\nCharacter B says: How old is your daughter? [How old is your daughter?]\nCharacter A says: She has 3. [She has 3.]\nCharacter B says: उम्र बताने के लिए 'is' लगाते हैं। Say: She is three years old. [To tell age we use 'is'. Say: She is three years old.]\nCharacter A says: She is three years old. [She is three years old.]\nCharacter A says: I have many work today. [I have many work today.]\nCharacter B says: Do you mean: \"I have a lot of work today\"? [Do you mean: \"I have a lot of work today\"?]\nCharacter A says: I have a lot of work today. [I have a lot of work today.]\nCharacter A says: मैं अपनी English कैसे improve करूँ? [How can I improve my English?]\nCharacter B says: Supernova पर मेरे साथ रोज़ practice करके! मैं आपका AI tutor हूँ। काम करते-करते भी आप English बोलना सीख सकते हैं। रोज़ सिर्फ 15 मिनट! [By practicing with me every day on Supernova! I am your AI tutor. You can learn to speak English even while working. Just 15 minutes daily!]\nCharacter A says: Perfect, रोज़ practice करूँगी! [Perfect, I will practice daily!]",
+        "scene_summary": "- Hooks the viewer with a relatable and funny English translation mistake.\n- Demonstrates the core product value: real-time, gentle correction by an AI tutor in a practical, everyday setting.\n- Establishes Supernova as a convenient, low-pressure way to learn English (just 15 minutes daily while multitasking).",
+        "supernova_on_screen_text": "What are you doing?\nI am cooking my daughter.\nWhat?\nYou are cooking your daughter!?\nअरे नहीं, मेरा मतलब है\nI am making food\nfor my daughter!\nतो कहिए:\nI am cooking for my daughter.\nHow old is your daughter?\nShe has 3.\nSay:\nShe is three years old.\nI have many work today.\nDo you mean:\n\"I have a lot of work today\"?\nमैं अपनी English कैसे improve करूँ?\nSupernova पर मेरे साथ रोज़ practice करके!\nमैं आपका AI tutor हूँ।\nकाम करते-करते भी आप English बोलना सीख सकते हैं।\nरोज़ सिर्फ 15 मिनट!\nPerfect, रोज़ practice करूँगी!"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear call-to-action to download the app.\n- Reinforces brand identity with the logo and app store badges.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Skye",
+        "supernova_swap": "removed (referred to simply as 'AI tutor')"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967765.0817666
+}

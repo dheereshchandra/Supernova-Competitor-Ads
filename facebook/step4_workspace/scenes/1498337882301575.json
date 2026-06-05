@@ -1,0 +1,138 @@
+{
+  "competitor_id": "1498337882301575",
+  "parsed": {
+    "duration_s": 29.0,
+    "production_type": "mixed",
+    "production_notes": "The video is entirely a digital screencast and 2D animation of an app interface. There are no live-action elements or human actors present.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot",
+        "appearance": "A stylized, 2D cartoon owl. It is bright green with a rounded body, large eyes, a small yellow beak, and small wings.",
+        "wardrobe": "Typically unclad. In some scenes, it wears black sunglasses.",
+        "demeanor": "Cheerful, energetic, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.0,
+        "screenshot_at_s": 2.5,
+        "scene_label": "Water Question",
+        "setting": "A plain white background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A plain white background. Four simple, flat-design illustrations are arranged in a grid: a carton of milk with a glass, a slice of bread, a plastic water bottle, and a purple cat's face. A stylized green cartoon owl (Character A) briefly appears, wearing black sunglasses and holding a red cup with a straw.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "An app interface showing a multiple-choice question. The user selects the water bottle illustration, which turns green. A 'correct' sound plays, and the green owl mascot appears briefly in a celebratory animation.",
+        "audio_transcript": "Unknown speaker says: el agua [the water]\n\n[music only, no speech]",
+        "on_screen_text": "Select the correct image\nel agua\nthe milk\nthe bread\nthe water\nthe cat"
+      },
+      {
+        "n": 2,
+        "start_s": 5.0,
+        "end_s": 12.0,
+        "screenshot_at_s": 8.0,
+        "scene_label": "Bread Question and Reward",
+        "setting": "A plain white background.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A plain white background. Four flat-design illustrations are shown: a slice of bread, a blue dog's face with a bone, an avocado half, and a carton of milk with a glass. Later, a wooden treasure chest with gold trim and a keyhole appears, opening to reveal a purple potion bottle.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The app shows another multiple-choice question. The user selects the bread illustration. After the correct selection, a reward animation plays, showing a treasure chest opening to reveal a '2x' potion.",
+        "audio_transcript": "Unknown speaker says: el pan [the bread]\n\n[music only, no speech]",
+        "on_screen_text": "Select the correct image\nel pan\nthe bread\nthe dog\nthe avocado\nthe milk\n2x"
+      },
+      {
+        "n": 3,
+        "start_s": 12.0,
+        "end_s": 18.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Milk Question and Streak",
+        "setting": "A plain white background transitioning to solid orange.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A plain white background with four illustrations: an avocado half, a carton of milk with a glass, a slice of bread, and a water bottle. The background then changes to a solid bright orange. The green cartoon owl (Character A) appears, first in its standard form, then transforming into a golden, glowing version with sunglasses and outstretched wings.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A third multiple-choice question is answered correctly by selecting the milk. A celebratory animation follows, showing a '15 day streak!' graphic. The background turns orange, and the owl mascot transforms into a golden, winged figure.",
+        "audio_transcript": "Unknown speaker says: la leche [the milk]\n\n[music only, no speech]",
+        "on_screen_text": "Select the correct image\nla leche\nthe avocado\nthe milk\nthe bread\nthe water\nAmazing!\n15 day streak!"
+      },
+      {
+        "n": 4,
+        "start_s": 18.0,
+        "end_s": 23.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Leaderboard",
+        "setting": "A plain white background.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A plain white background. A golden shield icon with a feather inside is displayed at the top. Below it is a list of circular avatars featuring various cartoon human faces.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The screen displays a 'Gold League' leaderboard. The user's profile moves up the ranks from 4th place to 1st place, overtaking other users.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Gold League\n1 katy palma 204 XP\n2 lua dipa 192 XP\n3 Goosey Lucy 186 XP\n4 You 199 XP\n5 holiday in spain 179 XP\n6 gloriaaaaa 179 XP\n7 em em 167 XP\nPROMOTION ZONE\nYou 276 XP"
+      },
+      {
+        "n": 5,
+        "start_s": 23.0,
+        "end_s": 29.0,
+        "screenshot_at_s": 26.0,
+        "scene_label": "End Card",
+        "setting": "A plain white background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A plain white background. The green cartoon owl (Character A) stands in the center, waving its right wing.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The final screen shows the Duolingo logo, the waving owl mascot, a call to action to 'LEARN A LANGUAGE FOR FREE', and buttons to download the app on the App Store and Google Play.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "duolingo\nLEARN A LANGUAGE FOR FREE\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.0961869
+}

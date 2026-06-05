@@ -1,0 +1,71 @@
+{
+  "competitor_id": "2198488184237175",
+  "parsed": {
+    "duration_s": 34.0,
+    "production_type": "mixed",
+    "production_notes": "The video is a screencast of a mobile application with a real human hand superimposed over it, interacting with the screen. The background images within the app appear to be digital illustrations.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "User hand",
+        "appearance": "A fair-skinned human hand with short, unpainted nails. Only the hand and a small portion of the wrist are visible.",
+        "wardrobe": "No clothing is visible on the wrist.",
+        "demeanor": "Deliberate and precise, pointing and tapping on specific areas of the screen."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.5,
+        "screenshot_at_s": 3.0,
+        "scene_label": "First page interaction",
+        "setting": "Digital app interface, light background, black and white illustration at the top.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up view of a digital interface. At the top, there is a black and white illustration of two women in a dimly lit room with a door. Below the illustration, a fair-skinned human hand with short, unpainted nails is pointing its index finger at the center of the screen. The background behind the hand is a plain, light-colored surface.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a mobile app interface. The top half features a black and white illustration of two women. The bottom half displays text. A human hand enters the frame and taps on various words in the text. When a word is tapped, a pop-up appears with translation and pronunciation options.",
+        "audio_transcript": "Unknown speaker says: Come, my dear girl, there is nothing here that should frighten you.\nUnknown speaker says: But... what am I to do?",
+        "on_screen_text": "G\u00dcNDE SADECE 10 DAK\u0130KA K\u0130TAPLARLA \u0130NG\u0130L\u0130ZCE \u00d6\u011eRENEB\u0130L\u0130RS\u0130N (YOU CAN LEARN ENGLISH WITH BOOKS IN JUST 10 MINUTES A DAY)\n\u00d6\u011fretmenler taraf\u0131ndan \u00f6nerildi (Recommended by teachers)\n7 g\u00fcnde bitir (Finish in 7 days)\nOku (Read) Dinle (Listen) \u00c7evir (Translate) +150 yeni kelime (+150 new words)\nCome, my dear girl, there is nothing here that should frighten you.\nBut... what am I to do? I asked, trembling.\nI stood before her in silence, my cheeks burning and my heart beating faster than ever before.\nThough I could not yet understand the life she hinted at, I felt that the door behind me had already closed, and another\u2014far more mysterious\u2014was opening.\ngirl (k\u0131z)\nhere (burada)\nto frighten (korkutmak)\ndo (yapmak)"
+      },
+      {
+        "n": 2,
+        "start_s": 6.5,
+        "end_s": 34.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Second page interaction",
+        "setting": "Digital app interface, light background, color illustration at the top.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up view of a digital interface. At the top, there is a color illustration of a woman with long brown hair lying on a bed or couch, wearing a light-colored dress. Below the illustration, a fair-skinned human hand with short, unpainted nails is pointing its index finger at the center of the screen. The background behind the hand is a plain, light-colored surface.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene continues with the mobile app interface, but the top illustration has changed to a color image of a woman lying down. The text remains the same. The human hand continues to tap on various words in the text, bringing up translation pop-ups for each selected word.",
+        "audio_transcript": "Unknown speaker says: I asked, trembling.\nUnknown speaker says: to tremble\nUnknown speaker says: I stood before her in silence, my cheeks\nUnknown speaker says: cheek\nUnknown speaker says: burning and my heart beating\nUnknown speaker says: to beat\nUnknown speaker says: faster than ever before. Though I could not yet\nUnknown speaker says: yet\nUnknown speaker says: understand the life she hinted\nUnknown speaker says: to hint\nUnknown speaker says: at, I felt that the door behind\nUnknown speaker says: behind\nUnknown speaker says: me had already closed, and another\u2014far more mysterious\nUnknown speaker says: mysterious\nUnknown speaker says: was opening.",
+        "on_screen_text": "G\u00dcNDE SADECE 10 DAK\u0130KA K\u0130TAPLARLA \u0130NG\u0130L\u0130ZCE \u00d6\u011eRENEB\u0130L\u0130RS\u0130N (YOU CAN LEARN ENGLISH WITH BOOKS IN JUST 10 MINUTES A DAY)\n\u00d6\u011fretmenler taraf\u0131ndan \u00f6nerildi (Recommended by teachers)\n7 g\u00fcnde bitir (Finish in 7 days)\nFanny Hill: Bir Zevk Kad\u0131n\u0131n\u0131n An\u0131lar\u0131 (Fanny Hill: Memoirs of a Woman of Pleasure)\nOku (Read) Dinle (Listen) \u00c7evir (Translate) +151 yeni kelime (+151 new words)\nCome, my dear girl, there is nothing here that should frighten you.\nBut... what am I to do? I asked, trembling.\nI stood before her in silence, my cheeks burning and my heart beating faster than ever before.\nThough I could not yet understand the life she hinted at, I felt that the door behind me had already closed, and another\u2014far more mysterious\u2014was opening.\nto tremble (titremek)\ncheek (yanak)\nto beat (\u00e7arp(mak))\nyet (hen\u00fcz)\nto hint (sezdirmek)\nbehind (arkas\u0131nda)\nmysterious (gizemli)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.2723722
+}

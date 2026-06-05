@@ -1,0 +1,53 @@
+{
+  "competitor_id": "989760113647100",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, early 20s, slim build, fair complexion. Long brown hair styled in a side braid over her left shoulder.",
+        "wardrobe": "In the first scene, she wears a rust-colored cardigan, a white ribbed top, a patterned scarf, and dark jeans. In the second scene, she wears a light grey crewneck sweatshirt.",
+        "demeanor": "Initially hesitant and nervous, transitioning to enthusiastic and smiling."
+      },
+      {
+        "id": "B",
+        "role": "helpful traveler",
+        "appearance": "Middle-aged man, average build, fair complexion. Short, styled grey hair.",
+        "wardrobe": "Navy blue quarter-zip sweater and olive green pants.",
+        "demeanor": "Friendly, helpful, and reassuring."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character, fair complexion, large expressive eyes. Red hair pulled back neatly.",
+        "wardrobe": "Dark blue police-style uniform shirt with a silver badge, a shoulder-mounted radio, and a black tie.",
+        "demeanor": "Patient, encouraging, and friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Airport Struggle",
+        "supernova_script": "Character A says: I am flying to London. One luggage. I am flying to... No, one suitcase...\nCharacter B says: पहली बार अकेले travel कर रही हो? और English बोलने में tension हो रही है? [First time traveling alone? And feeling tense about speaking English?]\nCharacter A says: इतना obvious है क्या? मुझे English समझ तो आती है, पर बोलते time मैं अटक जाती हूँ। [Is it that obvious? I understand English, but when speaking I get stuck.]\nCharacter B says: मेरी बेटी का भी यही हाल था। तुम Supernova try करो, ये एक AI tutor है जिससे तुम बात कर सकती हो। Airport पहुँचने से पहले ही पूरी practice हो जाएगी। [My daughter had the same issue. You should try Supernova, it's an AI tutor you can talk to. You'll get full practice before even reaching the airport.]\nCharacter A says: AI tutor? English में? [AI tutor? In English?]\nCharacter B says: हाँ, रोज़ बस 10 मिनट। पिछले महीने उसने अकेले ही हमारा London का hotel book किया था। [Yes, just 10 minutes daily. Last month she booked our London hotel all by herself.]\nCharacter A says: अरे वाह, मुझे भी यही चाहिए। [Oh wow, I need exactly this.]",
+        "scene_summary": "- Establishes the core problem: understanding English but freezing up when it's time to speak in real-world situations.\n- Introduces the solution via a relatable, older-sibling-like figure who recommends Supernova.\n- Highlights the practical benefit of practicing real-life scenarios (like airport check-in) before they happen.",
+        "supernova_on_screen_text": "I am flying to London.\nOne luggage.\nI am flying to...\nNo, one suitcase...\nपहली बार अकेले travel कर रही हो? (First time traveling alone?)\nइतना obvious है क्या? (Is it that obvious?)\nमुझे English समझ तो आती है, पर बोलते time (I understand English, but when speaking)\nमैं अटक जाती हूँ। (I get stuck.)\nमेरी बेटी का भी यही हाल था। (My daughter had the same issue.)\nतुम Supernova try करो, ये एक AI tutor है जिससे तुम बात कर सकती हो। (You should try Supernova, it's an AI tutor you can talk to.)\nAirport पहुँचने से पहले ही पूरी practice हो जाएगी। (You'll get full practice before even reaching the airport.)\nAI tutor? English में? (AI tutor? In English?)\nहाँ, रोज़ बस 10 मिनट। (Yes, just 10 minutes daily.)\nपिछले महीने उसने अकेले ही हमारा London का hotel book किया था। (Last month she booked our London hotel all by herself.)\nअरे वाह, मुझे भी यही चाहिए। (Oh wow, I need exactly this.)"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "supernova_script": "Character C says: Hello, where are you flying? [Hello, where are you flying?]\nCharacter A says: I fly a... London. [I fly a... London.]\nCharacter C says: क्या आप बोलना चाहती हैं: \"I am flying to London\"? [Do you mean to say: \"I am flying to London\"?]\nCharacter A says: Yes, sorry. I am flying to London. [Yes, sorry. I am flying to London.]\nCharacter C says: Any luggage to check in? [Any luggage to check in?]\nCharacter A says: Mmm... luggage? [Mmm... luggage?]\nCharacter C says: हाँ, luggage. Luggage मतलब आपका सामान, जैसे bags या suitcases जो आप travel करते time साथ ले जाते हैं। [Yes, luggage. Luggage means your belongings, like bags or suitcases that you take with you when traveling.]\nCharacter A says: Oh, I have one luggage. माफ़ करना, मेरी English इतनी अच्छी नहीं है। [Oh, I have one luggage. Sorry, my English is not that good.]\nCharacter C says: कोई बात नहीं! पिछले महीने आपने कितनी बार English में बात की? [No worries! How many times did you speak in English last month?]\nCharacter A says: सच कहूँ तो, एक बार भी नहीं। [To be honest, not even once.]\nCharacter C says: तो फिर fluency कैसे आएगी? [Then how will you get fluency?]\nCharacter A says: मेरे पास practice करने के लिए कोई है ही नहीं। [I don't have anyone to practice with.]\nCharacter C says: बस Supernova app download करो। हम रोज़ साथ में practice करेंगे, और आप बहुत जल्द confidently English बोलने लगेंगी। [Just download the Supernova app. We will practice together daily, and you will start speaking English confidently very soon.]\nCharacter A says: ये तो बहुत बढ़िया है। मैं आज से ही रोज़ practice करूँगी। [This is great. I will practice daily starting today.]",
+        "scene_summary": "- Demonstrates the app's core feature: interactive, judgment-free AI conversations in real-world contexts.\n- Shows the AI tutor gently correcting grammar and explaining vocabulary in the user's native language (Hindi).\n- Ends with a strong, encouraging call-to-action to build a daily speaking habit.",
+        "supernova_on_screen_text": "Hello, where are you flying?\nI fly London.\nक्या आप बोलना चाहती हैं: \"I am flying to London\"? (Do you mean to say: \"I am flying to London\"?)\nYes, sorry.\nI am flying to London.\nAny luggage to check in?\nLuggage?\nहाँ, luggage. (Yes, luggage.)\nLuggage मतलब आपका सामान (Luggage means your belongings)\nजैसे bags या suitcases (like bags or suitcases)\nजो आप travel करते time साथ ले जाते हैं। (that you take with you when traveling.)\nOh, I have one luggage.\nमाफ़ करना (Sorry)\nमेरी English इतनी अच्छी नहीं है। (my English is not that good.)\nकोई बात नहीं! (No worries!)\nपिछले महीने आपने कितनी बार English में बात की? (How many times did you speak in English last month?)\nसच कहूँ तो, एक बार भी नहीं। (To be honest, not even once.)\nतो फिर fluency कैसे आएगी? (Then how will you get fluency?)\nमेरे पास practice करने के लिए कोई है ही नहीं। (I don't have anyone to practice with.)\nबस Supernova app download करो। (Just download the Supernova app.)\nहम रोज़ साथ में practice करेंगे (We will practice together daily)\nऔर आप बहुत जल्द confidently English बोलने लगेंगी। (and you will start speaking English confidently very soon.)\nये तो बहुत बढ़िया है। (This is great.)\nमैं आज से ही रोज़ practice करूँगी। (I will practice daily starting today.)\nSupernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Loora",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889200.0627842
+}

@@ -1,0 +1,137 @@
+{
+  "competitor_id": "1867248917309068",
+  "parsed": {
+    "duration_s": 80.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses a mix of human footage that appears heavily filtered or AI-enhanced, evidenced by slightly unnatural lip-syncing and overly smooth skin textures on the presenter. The robot character is entirely AI-generated, and the split-screen interaction features perfectly static camera angles typical of AI composites.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Mid-20s, muscular build, tan complexion, short dark hair with a fade, and a neatly trimmed dark beard. He has expressive facial features and a friendly demeanor.",
+        "wardrobe": "A cream-colored, short-sleeve textured polo shirt and a thin gold necklace.",
+        "demeanor": "Friendly, expressive, and slightly exaggerated."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "A humanoid robot with a smooth white face, bright blue eyes, and visible mechanical joints at the neck. It has a highly symmetrical, artificial appearance.",
+        "wardrobe": "A traditional red and white checkered ghutra (keffiyeh) secured with a black agal.",
+        "demeanor": "Helpful, polite, and artificially expressive with robotic head movements."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 16.0,
+        "screenshot_at_s": 8.0,
+        "scene_label": "The Problem with Basic English",
+        "setting": "Dimly lit lounge and restaurant, evening, warm ambient lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A man sits in a dimly lit lounge, facing slightly left towards an off-screen person. He wears a cream-colored textured polo shirt and a gold chain. The background features blurred city lights and warm ambient lighting. He gestures with his hands as he speaks. Quick cuts show him sitting at a restaurant table with a fork and knife, looking confused, before returning to the lounge setting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene cuts between the presenter in a lounge setting and a restaurant setting. He is explaining common English mistakes. Text overlays in Arabic and English highlight the phrases he is discussing. A red 'X' graphic appears over his face when he demonstrates incorrect phrases.",
+        "audio_transcript": "Character A says: \u0623\u0628\u062f\u0627\u064b \u0644\u0627 \u062a\u0642\u0648\u0644 \"I'm fine, thank you\". [Never say \"I'm fine, thank you\".]\nCharacter A says: I'm fine, thank you. [I'm fine, thank you.]\nCharacter A says: I don't know. [I don't know.]\nCharacter A says: You are welcome. [You are welcome.]\nCharacter A says: \u062d\u062a\u0649 \u0623\u0646\u0627 \u0643\u0646\u062a \u0623\u062a\u0643\u0644\u0645 \u0686\u0630\u064a. [Even I used to speak like this.]\nCharacter A says: \u0644\u064a\u0646 \u0628\u062f\u064a\u062a \u0623\u062a\u062f\u0631\u0628 \u0648\u064a\u0627 Learna! [Until I started practicing with Learna!]\nCharacter A says: \u062f\u0639\u0646\u064a \u0623\u0631\u064a\u0643 \u0625\u064a\u0627\u0647. [Let me show it to you.]",
+        "on_screen_text": "\u0627\u0628\u062f\u0623 \u0628\u0627\u0644\u062a\u062d\u062f\u062b \u0628\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0625\u0646\u062c\u0644\u064a\u0632\u064a\u0629 \u0628\u0637\u0644\u0627\u0642\u0629! (Start speaking English fluently!)\n\u0623\u0628\u062f\u0627\u064b \u0644\u0627 \u062a\u0642\u0648\u0644 (Never say)\n\"I'm fine, thank you\".\nI'm fine, thank you\nI don't know\nYou are welcome\n\u062d\u062a\u0649 \u0623\u0646\u0627 \u0643\u0646\u062a \u0623\u062a\u0643\u0644\u0645 \u0686\u0630\u064a. (Even I used to speak like this.)\n\u0644\u064a\u0646 \u0628\u062f\u064a\u062a \u0623\u062a\u062f\u0631\u0628 \u0648\u064a\u0627 (Until I started practicing with)\nLearna!\n\u062f\u0639\u0646\u064a \u0623\u0631\u064a\u0643 \u0625\u064a\u0627\u0647. (Let me show it to you.)"
+      },
+      {
+        "n": 2,
+        "start_s": 16.0,
+        "end_s": 31.5,
+        "screenshot_at_s": 24.0,
+        "scene_label": "Introducing Learna AI",
+        "setting": "Abstract digital space, blurred warm interior background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A humanoid robot with a white face and blue eyes is wearing a traditional red and white checkered ghutra and black agal. The robot faces forward, speaking with expressive mechanical movements. The background is a softly blurred, warm-toned interior.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A large, modern smartphone is displayed vertically, floating in mid-air. The phone rotates slightly, showing various colorful screens and interfaces. The background matches the softly blurred, warm-toned interior of the left panel.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The screen is split vertically. On the left, the AI robot avatar speaks directly to the camera. On the right, a 3D mockup of a smartphone displays the Learna app interface, showing features like the app store page, tutor selection, and chat interfaces. Arabic text overlays appear in the center, translating the robot's speech.",
+        "audio_transcript": "Character B says: \u0647\u0644\u0627 \u0648\u0627\u0644\u0644\u0647. [Hello there.]\nCharacter B says: \u062a\u062f\u0631\u064a \u0625\u0646\u0643 \u062a\u0642\u062f\u0631 \u062a\u062a\u0643\u0644\u0645 \u0625\u0646\u062c\u0644\u064a\u0632\u064a \u0645\u062b\u0644 \u0627\u0644\u0623\u062c\u0627\u0646\u0628 \u0641\u064a 1 \u0623\u0633\u0628\u0648\u0639 \u0628\u0633! [Did you know you can speak English like foreigners in just 1 week!]\nCharacter B says: \u0628\u0633 \u0647\u0630\u0627 \u0645\u0648 \u0633\u062d\u0631\u060c \u0647\u0630\u0627 Learna. [But this is not magic, this is Learna.]\nCharacter B says: \u0623\u0628\u0644\u0643\u064a\u0634\u0646 \u064a\u0635\u062d\u062d \u0644\u0643 \u0648\u064a\u0646 \u062a\u0633\u0648\u0644\u0641 \u0648\u064a\u0639\u0644\u0645\u0643 \u0628\u062f\u0648\u0646 \u0645\u0627 \u062a\u062d\u0633 \u0623\u0635\u0644\u0627\u064b. [An application that corrects you while you chat and teaches you without you even noticing.]\nCharacter B says: \u064a\u0644\u0627\u060c \u062e\u0644\u0648\u0646\u0627 \u0646\u062c\u0631\u0628 \u0647\u0648 \u0633\u0648\u0627. [Come on, let's try it together.]",
+        "on_screen_text": "\u0647\u0644\u0627 \u0648\u0627\u0644\u0644\u0647. (Hello there.)\n\u062a\u062f\u0631\u064a \u0625\u0646\u0643 \u062a\u0642\u062f\u0631 (Did you know you can)\n\u062a\u062a\u0643\u0644\u0645 \u0625\u0646\u062c\u0644\u064a\u0632\u064a (speak English)\n\u0645\u062b\u0644 \u0627\u0644\u0623\u062c\u0627\u0646\u0628 (like foreigners)\n\u0641\u064a 1 \u0623\u0633\u0628\u0648\u0639 \u0628\u0633! (in just 1 week!)\n\u0628\u0633 \u0647\u0630\u0627 \u0645\u0648 \u0633\u062d\u0631\u060c (But this is not magic,)\n\u0647\u0630\u0627 Learna. (this is Learna.)\n\u0623\u0628\u0644\u0643\u064a\u0634\u0646 (An application)\n\u064a\u0635\u062d\u062d \u0644\u0643 \u0648\u064a\u0646 \u062a\u0633\u0648\u0644\u0641 (that corrects you while you chat)\n\u0648\u064a\u0639\u0644\u0645\u0643 \u0628\u062f\u0648\u0646 (and teaches you without)\n\u0645\u0627 \u062a\u062d\u0633 \u0623\u0635\u0644\u0627\u064b. (you even noticing.)\n\u064a\u0644\u0627\u060c (Come on,)\n\u062e\u0644\u0648\u0646\u0627 \u0646\u062c\u0631\u0628 (let's try it)\n\u0647\u0648 \u0633\u0648\u0627. (together.)"
+      },
+      {
+        "n": 3,
+        "start_s": 31.5,
+        "end_s": 75.5,
+        "screenshot_at_s": 50.0,
+        "scene_label": "Live AI Tutoring Session",
+        "setting": "Home office with a bookshelf and night city view, and a digital soundwave background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Split-screen talking-head",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A humanoid robot wearing a red and white checkered ghutra and black agal is centered against a solid black background. Concentric white circular lines radiate outward from behind the robot's head, resembling sound waves. The robot faces forward.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A man wearing a cream-colored textured polo shirt and a gold chain sits at a wooden desk. A black studio microphone on a stand is positioned in front of him. Behind him is a bookshelf filled with books and a window revealing a nighttime city skyline. He looks forward, speaking into the microphone.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A horizontal split-screen shows the AI robot on top and the human presenter on the bottom, simulating a live video call or podcast recording. They engage in a conversation, with the robot acting as an English tutor. Arabic and English text overlays appear in the center, translating their dialogue. A money bag emoji appears when discussing cost.",
+        "audio_transcript": "Character B says: \u062a\u062a\u0643\u0644\u0645 \u0625\u0646\u062c\u0644\u064a\u0632\u064a\u061f [Do you speak English?]\nCharacter A says: \u0634\u0648\u064a. [A little.]\nCharacter B says: \u0645\u0646 \u0648\u064a\u0646 \u0625\u0646\u062a\u061f Where are you from? [Where are you from? Where are you from?]\nCharacter A says: I am Saudi Arabia. [I am Saudi Arabia.]\nCharacter B says: \u0642\u0631\u0628\u062a. \u0627\u0644\u0623\u062d\u0633\u0646 \u062a\u0642\u0648\u0644 \"I am from Saudi Arabia.\" [Close. It's better to say \"I am from Saudi Arabia.\"]\nCharacter A says: \u0622\u062e\u060c \u062f\u0627\u064a\u0645 \u0623\u062a\u0644\u062e\u0628\u0637 \u0641\u064a\u0647\u0627. [Ugh, I always get confused with that.]\nCharacter B says: \u0639\u0634\u0627\u0646 \u0643\u0630\u0627 \u0623\u0646\u0627 \u0645\u0648\u062c\u0648\u062f \u0623\u0633\u0627\u0639\u062f\u0643 \u062a\u062a\u0643\u0644\u0645 \u0635\u062d. [That's why I'm here to help you speak correctly.]\nCharacter A says: \u0628\u0633 \u0645\u0627 \u0639\u0646\u062f\u064a \u0641\u0644\u0648\u0633. [But I don't have money.]\nCharacter B says: \u0625\u064a\u0634\u061f \u0645\u0627 \u062a\u062d\u062a\u0627\u062c \u0641\u0644\u0648\u0633. [What? You don't need money.]\nCharacter B says: \u0645\u0639 Learna \u062a\u0642\u062f\u0631 \u062a\u062a\u0645\u0631\u0646 \u0625\u0646\u062c\u0644\u064a\u0632\u064a \u0628\u0628\u0644\u0627\u0634. [With Learna you can practice English for free.]\nCharacter B says: \u0645\u0648 \u0632\u064a \u0628\u0627\u0642\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0623\u0648 \u0627\u0644\u0643\u0648\u0631\u0633\u0627\u062a \u0627\u0644\u063a\u0627\u0644\u064a\u0629. [Not like other expensive apps or courses.]\nCharacter A says: \u0645\u0646 \u062c\u062f\u0643\u061f [Are you serious?]\nCharacter B says: \u0623\u0643\u064a\u062f. \u0645\u0627\u0641\u064a \u062d\u0631\u0643\u0627\u062a. [Sure. No tricks.]\nCharacter B says: \u0628\u0633 \u0645\u0645\u0627\u0631\u0633\u0629 \u0645\u062d\u0627\u062f\u062b\u0629 \u0625\u0646\u062c\u0644\u064a\u0632\u064a \u0645\u0646 \u062c\u062f \u0645\u0639 \u0645\u062f\u0631\u0633 AI. [Just real English conversation practice with an AI teacher.]\nCharacter A says: \u064a\u0639\u0646\u064a... \u0645\u062f\u0631\u0633 \u0645\u0646 \u062c\u062f\u061f [You mean... a real teacher?]\nCharacter B says: \u0625\u064a\u0647\u060c \u064a\u0635\u062d\u062d \u0644\u0643 \u0627\u0644\u0642\u0631\u0627\u0645\u0631 \u0648\u0627\u0644\u0646\u0637\u0642 \u0648\u064a\u062e\u0644\u064a\u0643 \u062a\u062a\u0643\u0644\u0645 \u0628\u062b\u0642\u0629. [Yes, corrects your grammar and pronunciation and makes you speak with confidence.]\nCharacter A says: \u0627\u0648\u0643\u064a\u060c \u0623\u062c\u0644 \u0628\u062d\u0645\u0644 Learna \u0627\u0644\u062d\u064a\u0646. [Okay, then I'll download Learna now.]\nCharacter B says: \u0643\u0641\u0648! \u062e\u0644\u0646\u0627 \u0646\u062a\u0643\u0644\u0645 \u0625\u0646\u062c\u0644\u064a\u0632\u064a \u0633\u0648\u0627. [Awesome! Let's speak English together.]",
+        "on_screen_text": "\u062a\u062a\u0643\u0644\u0645 \u0625\u0646\u062c\u0644\u064a\u0632\u064a\u061f (Do you speak English?)\n\u0634\u0648\u064a. (A little.)\n\u0645\u0646 \u0648\u064a\u0646 \u0625\u0646\u062a\u061f (Where are you from?)\nWhere are you from?\nI am Saudi Arabia.\n\u0642\u0631\u0628\u062a. \u0627\u0644\u0623\u062d\u0633\u0646 \u062a\u0642\u0648\u0644 (Close. It's better to say)\n\"I am from Saudi Arabia.\"\n\u0622\u062e\u060c \u062f\u0627\u064a\u0645 \u0623\u062a\u0644\u062e\u0628\u0637 \u0641\u064a\u0647\u0627. (Ugh, I always get confused with that.)\n\u0639\u0634\u0627\u0646 \u0643\u0630\u0627 \u0623\u0646\u0627 \u0645\u0648\u062c\u0648\u062f (That's why I'm here)\n\u0623\u0633\u0627\u0639\u062f\u0643 \u062a\u062a\u0643\u0644\u0645 \u0635\u062d. (to help you speak correctly.)\n\u0628\u0633 \u0645\u0627 \u0639\u0646\u062f\u064a \u0641\u0644\u0648\u0633. (But I don't have money.)\n\u0625\u064a\u0634\u061f \u0645\u0627 \u062a\u062d\u062a\u0627\u062c \u0641\u0644\u0648\u0633. (What? You don't need money.)\n\u0645\u0639 Learna \u062a\u0642\u062f\u0631 \u062a\u062a\u0645\u0631\u0646 (With Learna you can practice)\n\u0625\u0646\u062c\u0644\u064a\u0632\u064a \u0628\u0628\u0644\u0627\u0634. (English for free.)\n\u0645\u0648 \u0632\u064a \u0628\u0627\u0642\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0623\u0648 (Not like other apps or)\n\u0627\u0644\u0643\u0648\u0631\u0633\u0627\u062a \u0627\u0644\u063a\u0627\u0644\u064a\u0629. (expensive courses.)\n\u0645\u0646 \u062c\u062f\u0643\u061f (Are you serious?)\n\u0623\u0643\u064a\u062f. \u0645\u0627\u0641\u064a \u062d\u0631\u0643\u0627\u062a. (Sure. No tricks.)\n\u0628\u0633 \u0645\u0645\u0627\u0631\u0633\u0629 \u0645\u062d\u0627\u062f\u062b\u0629 (Just conversation practice)\n\u0625\u0646\u062c\u0644\u064a\u0632\u064a \u0645\u0646 \u062c\u062f \u0645\u0639 (real English with)\n\u0645\u062f\u0631\u0633 AI. (an AI teacher.)\n\u064a\u0639\u0646\u064a... \u0645\u062f\u0631\u0633 \u0645\u0646 \u062c\u062f\u061f (You mean... a real teacher?)\n\u0625\u064a\u0647\u060c \u064a\u0635\u062d\u062d \u0644\u0643 \u0627\u0644\u0642\u0631\u0627\u0645\u0631 \u0648\u0627\u0644\u0646\u0637\u0642 (Yes, corrects your grammar and pronunciation)\n\u0648\u064a\u062e\u0644\u064a\u0643 \u062a\u062a\u0643\u0644\u0645 \u0628\u062b\u0642\u0629. (and makes you speak with confidence.)\n\u0627\u0648\u0643\u064a\u060c \u0623\u062c\u0644 \u0628\u062d\u0645\u0644 Learna \u0627\u0644\u062d\u064a\u0646. (Okay, then I'll download Learna now.)\n\u0643\u0641\u0648! \u062e\u0644\u0646\u0627 \u0646\u062a\u0643\u0644\u0645 \u0625\u0646\u062c\u0644\u064a\u0632\u064a \u0633\u0648\u0627. (Awesome! Let's speak English together.)"
+      },
+      {
+        "n": 4,
+        "start_s": 75.5,
+        "end_s": 80.0,
+        "screenshot_at_s": 77.0,
+        "scene_label": "Call to Action",
+        "setting": "Digital end-card.",
+        "characters_in_scene": [],
+        "camera": "Full",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark blue background. Centered in the frame is the head and upper torso of a silver humanoid robot with a smooth face and mechanical details on the neck and chest. The robot faces directly forward.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A static end-card with a dark blue background. The Learna app icon, featuring a silver robot head, is prominently displayed in the center. Arabic text above encourages downloading the app. App Store and Google Play badges are positioned at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u062a\u062d\u0645\u064a\u0644 \u0627\u0644\u0622\u0646! (Download now!)\n\u0627\u0628\u062f\u0623 \u0628\u0627\u0644\u062a\u062f\u0631\u0628 (Start practicing)\nLearna\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780125081.003136
+}

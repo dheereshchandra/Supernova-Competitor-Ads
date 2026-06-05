@@ -1,0 +1,51 @@
+{
+  "competitor_id": "922231377529463",
+  "parsed": {
+    "duration_s": 34.0,
+    "production_type": "AI-generated",
+    "production_notes": "The woman in the top panel is a static AI-generated image with slight, unnatural animation applied to her hair and breathing. The hand in the bottom panel is a stock asset composited over the text, moving in a repetitive, disconnected manner.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female avatar / narrator",
+        "appearance": "Young woman with a fair complexion and long, wavy brown hair. She has soft facial features and a gentle gaze.",
+        "wardrobe": "White, off-the-shoulder top or dress with ruffled details.",
+        "demeanor": "Calm, relaxed, and slightly seductive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 34.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Reading and Translation",
+        "setting": "Abstract split-screen: top is a soft, intimate bedroom setting; bottom is a close-up of a book page.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Split-screen: top is a medium close-up, bottom is a macro close-up.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A young woman with long, wavy brown hair is lying down, resting her head on her hand. She has a fair complexion and is wearing a white, off-the-shoulder garment. The lighting is soft and warm, creating an intimate atmosphere. She looks directly at the viewer with a gentle expression. The background is slightly out of focus, showing soft furnishings.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A close-up of a human hand with a manicured fingernail pointing at a textured, off-white surface resembling a blank page of a book. The hand moves slightly, tapping different areas of the surface. The lighting is even and bright, focusing entirely on the hand and the texture of the page.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A split-screen layout. The top half shows a static, slightly animated image of a woman lying down. The bottom half shows a hand tapping on a page of text. As the hand taps specific words, pop-up boxes appear with translations. A banner at the very top contains promotional text in Ukrainian.",
+        "audio_transcript": "Character A says: Come, my dear girl, there is nothing here that should frighten you.\nUnknown speaker says: to frighten\nCharacter A says: But... what am I to do? I asked, trembling.\nUnknown speaker says: to tremble\nCharacter A says: I stood before her in silence, my cheeks burning\nUnknown speaker says: cheek\nCharacter A says: and my heart beating faster than ever before.\nUnknown speaker says: to beat\nCharacter A says: Though I could not yet\nUnknown speaker says: yet\nCharacter A says: understand the life she hinted at,\nUnknown speaker says: to hint\nCharacter A says: I felt that the door behind me\nUnknown speaker says: behind\nCharacter A says: had already closed, and another\u2014far more mysterious\nUnknown speaker says: mysterious\nCharacter A says: \u2014was opening.",
+        "on_screen_text": "\u0412\u0427\u0418 \u0410\u041d\u0413\u041b\u0406\u0419\u0421\u042c\u041a\u0423 \u0417 \u041a\u041d\u0418\u0416\u041a\u0410\u041c\u0418 \u041b\u0418\u0428\u0415 \u041f\u041e 10 \u0425\u0412\u0418\u041b\u0418\u041d \u041d\u0410 \u0414\u0415\u041d\u042c (LEARN ENGLISH WITH BOOKS IN JUST 10 MINUTES A DAY)\n\u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u043e\u0432\u0430\u043d\u043e \u0432\u0447\u0438\u0442\u0435\u043b\u044f\u043c\u0438 (Recommended by teachers)\n\u0414\u0436\u043e\u043d \u041a\u043b\u0435\u043b\u0430\u043d\u0434 (John Cleland)\n\u0424\u0430\u043d\u043d\u0456 \u0425\u0456\u043b\u043b. \u041c\u0435\u043c\u0443\u0430\u0440\u0438 \u0436\u0456\u043d\u043a\u0438 \u0434\u043b\u044f \u0432\u0442\u0456\u0445 (Fanny Hill. Memoirs of a Woman of Pleasure)\n\u0427\u0438\u0442\u0430\u0439 (Read) \u0421\u043b\u0443\u0445\u0430\u0439 (Listen) \u041f\u0435\u0440\u0435\u043a\u043b\u0430\u0434\u0430\u0439 (Translate) +150 \u043d\u043e\u0432\u0438\u0445 \u0441\u043b\u0456\u0432 (+150 new words)\nCome, my dear girl, there is nothing here that should frighten you.\nBut... what am I to do? I asked, trembling.\nI stood before her in silence, my cheeks burning and my heart beating faster than ever before.\nThough I could not yet understand the life she hinted at, I felt that the door behind me had already closed, and another\u2014far more mysterious\u2014was opening.\n\u043d\u0430\u043b\u044f\u043a\u0430\u0442\u0438 (to frighten)\n\u0417\u043d\u0430\u044e (I know) \u0412\u0438\u0432\u0447\u0430\u0442\u0438 (To study)\n\u0442\u0440\u0435\u043c\u0442\u0456\u0442\u0438 (to tremble)\n\u0449\u043e\u043a\u0430 (cheek)\n\u0431\u0438\u0442\u0438\u0441\u044f (to beat)\n\u0449\u0435 (yet)\n\u043d\u0430\u0442\u044f\u043a\u0430\u0442\u0438 (to hint)\n\u043f\u043e\u0437\u0430\u0434\u0443 (behind)\n\u0442\u0430\u0454\u043c\u043d\u0438\u0447\u0438\u0439 (mysterious)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.294299
+}

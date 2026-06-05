@@ -1,0 +1,305 @@
+{
+  "competitor_id": "1271227128122015",
+  "parsed": {
+    "duration_s": 47.0,
+    "production_type": "mixed",
+    "production_notes": "The main scenes with human actors are clearly human-recorded. However, the AI avatar (Character C) appearing in split-screen and phone screen segments exhibits characteristics typical of AI-generated video, such as unnaturally smooth skin, subtle repetitive facial movements, and a somewhat generic, blurred background.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner / delivery person",
+        "appearance": "A young adult male, likely in his early 20s, with a slim build and medium brown complexion. He has short, dark, curly hair, a neatly trimmed beard, and wears clear-framed glasses. His facial features are expressive and earnest.",
+        "wardrobe": "A light blue short-sleeved t-shirt, dark blue or black pants, and a light blue open-face helmet. He also wears a small microphone clipped to his shirt.",
+        "demeanor": "Initially appears a bit reserved or focused on his phone, then becomes more confident and enthusiastic when explaining his English learning experience."
+      },
+      {
+        "id": "B",
+        "role": "female job seeker / potential learner",
+        "appearance": "A young adult female, likely in her late 20s or early 30s, with a slim build and medium brown complexion. She has dark hair pulled back into a ponytail or bun, and no glasses. Her facial features are sharp and she has a serious expression at first.",
+        "wardrobe": "A black collared button-up shirt with short sleeves and black wide-leg pants with a white stripe running down the side. She carries a light green smartphone.",
+        "demeanor": "Starts off frustrated and stressed, then becomes curious, surprised, and finally impressed and eager to learn."
+      },
+      {
+        "id": "C",
+        "role": "AI English teacher avatar",
+        "appearance": "A young adult female with a fair complexion and dark, straight hair styled neatly. She has a professional and friendly appearance, with a gentle smile and calm eyes. Her features are very smooth and symmetrical.",
+        "wardrobe": "A light blue collared shirt under a dark navy blue blazer.",
+        "demeanor": "Consistently maintains a pleasant, encouraging, and professional expression, typical of an AI avatar designed to be approachable."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 0.06,
+        "screenshot_at_s": 0.03,
+        "scene_label": "Job Interview Frustration",
+        "setting": "An outdoor pathway next to a modern, light-colored building with red pipes visible on the wall. Green bushes line the path. Daytime, bright natural light.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A, a young man wearing a light blue helmet and t-shirt, sits on a maroon scooter, holding a black smartphone in his right hand and looking at it. Character B, a young woman in a black shirt and black pants, stands to his right, holding a light green smartphone to her ear with her left hand, looking distressed. They are on an outdoor pathway next to a modern building with green bushes. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A sits on a maroon scooter, looking at his phone. Character B stands next to him, talking on her phone with a frustrated expression. The background is an outdoor pathway next to a modern building with green bushes. On-screen text overlays appear, describing her interview experience.",
+        "audio_transcript": "Character B says: 4th interview ittu. HR heludru English weak ide. Modlu English kali illa job sigalla anta heludru. [It was my 4th interview. HR said my English is weak. They said I won't get a job if I don't learn English first.]",
+        "on_screen_text": "4th interview ittu [It was my 4th interview]\nHR heludru [HR said]\nmodlu English kali illa [first learn English]\njob sigalla anta heludru. [you won't get a job.]"
+      },
+      {
+        "n": 2,
+        "start_s": 0.06,
+        "end_s": 0.09,
+        "screenshot_at_s": 0.07,
+        "scene_label": "OTP Request",
+        "setting": "An outdoor pathway next to a modern, light-colored building with red pipes visible on the wall. Green bushes line the path. Daytime, bright natural light.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A, a young man wearing a light blue helmet and t-shirt, sits on a maroon scooter, holding a black smartphone in his right hand and looking at it. Character B, a young woman in a black shirt and black pants, stands to his right, holding a light green smartphone in her left hand, looking at Character A with a questioning expression. They are on an outdoor pathway next to a modern building with green bushes. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A sits on his scooter, looking at his phone. Character B stands next to him, holding her phone and asking him something. The background is the same outdoor setting. On-screen text overlays show her calling him 'Anna' and asking for an OTP.",
+        "audio_transcript": "Character B says: Anna, OTP 4062. [Brother, OTP 4062.]\nCharacter A says: Madam, just 1 minute. [Madam, just 1 minute.]",
+        "on_screen_text": "Anna [Brother]\nOTP 4062\nMadam, just 1 minute."
+      },
+      {
+        "n": 3,
+        "start_s": 0.09,
+        "end_s": 0.16,
+        "screenshot_at_s": 0.12,
+        "scene_label": "AI Teacher Introduction",
+        "setting": "Bottom panel: An outdoor pathway next to a modern building with green bushes. Top panel: A modern office interior with blurred glass walls.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C"
+        ],
+        "camera": "Split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A young adult female (Character C) with dark hair and a fair complexion is shown from the chest up, smiling gently. She wears a light blue collared shirt under a dark navy blue blazer. The background is a blurred, modern office interior with soft, professional lighting.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character A, a young man wearing a light blue helmet and t-shirt, sits on a maroon scooter, holding a black smartphone in his right hand and looking at it with a confident expression. Character B, a young woman in a black shirt and black pants, stands to his right, holding a light green smartphone in her left hand, looking at Character A with a surprised and curious expression. They are on an outdoor pathway next to a modern building with green bushes. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top panel shows a smiling AI avatar (Character C) in a professional setting. The bottom panel shows Character A on his scooter, confidently looking at his phone, while Character B looks at him with surprise. On-screen text overlays show Character A's English speech about his improvement.",
+        "audio_transcript": "Character A says: Madam this was actually very easy. It's been only 10 days and now I can see my English has become very fluent this days. Thank you. [Madam this was actually very easy. It's been only 10 days and now I can see my English has become very fluent these days. Thank you.]",
+        "on_screen_text": "Madam this was\nactually very easy,\nit's been only 10 days\nand now I can see my English\nhas become very fluent\nthis days.\nThank you."
+      },
+      {
+        "n": 4,
+        "start_s": 0.16,
+        "end_s": 0.24,
+        "screenshot_at_s": 0.2,
+        "scene_label": "AI Teacher's Impact",
+        "setting": "An outdoor pathway next to a modern, light-colored building with red pipes visible on the wall. Green bushes line the path. Daytime, bright natural light.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A, a young man wearing a light blue helmet and t-shirt, sits on a maroon scooter, looking at Character B with an earnest expression, his right hand gesturing towards his chest. Character B, a young woman in a black shirt and black pants, stands to his right, holding a light green smartphone in her left hand, looking at Character A with a thoughtful and slightly surprised expression. They are on an outdoor pathway next to a modern building with green bushes. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A on his scooter explains to Character B how he learned English from an AI teacher, gesturing to his chest. Character B listens intently, looking surprised. The background is the same outdoor setting. On-screen text overlays show their Kannada conversation.",
+        "audio_transcript": "Character B says: Neenu yarinda English kalitiddira? [Who did you learn English from?]\nCharacter A says: Madam SpeakX na AI English teacher inda. Nanu actually kelsa kalkombekaytu adre ee teacher save madidru. [Madam, from SpeakX's AI English teacher. I actually almost lost my job, but this teacher saved me.]",
+        "on_screen_text": "English kalitiddira? [Are you learning English?]\nMadam SpeakX na [Madam, SpeakX's]\nAI English teacher inda [AI English teacher]\nnanu actually [I actually]\nkelsa kalkombekaytu [almost lost my job]\nadre ee teacher [but this teacher]\nsave madidru. [saved me.]"
+      },
+      {
+        "n": 5,
+        "start_s": 0.24,
+        "end_s": 0.28,
+        "screenshot_at_s": 0.26,
+        "scene_label": "Daily Practice Routine",
+        "setting": "An outdoor pathway next to a modern, light-colored building with red pipes visible on the wall. Green bushes line the path. Daytime, bright natural light.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A, a young man wearing a light blue helmet and t-shirt, sits on a maroon scooter, looking at Character B with a confident smile. Character B, a young woman in a black shirt and black pants, stands to his right, holding a light green smartphone in her left hand, smiling and touching her hair in a gesture of surprise. They are on an outdoor pathway next to a modern building with green bushes. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character B, smiling, asks if it's true, and Character A, also smiling, explains his daily practice routine. The background is the same outdoor setting. On-screen text overlays show their Kannada conversation.",
+        "audio_transcript": "Character B says: Nijana? [Really?]\nCharacter A says: Houdhu madam. Nanu free irbekadre pratidina hatrinda hadinaidu nimisha practice madtini. [Yes, madam. When I'm free, I practice for 10 to 15 minutes every day.]",
+        "on_screen_text": "Nijana? [Really?]\nHoudhu madam. [Yes, madam.]\nnanu free irbekadre [when I'm free]\npratidina [every day]\nhatrinda hadinaidu nimisha [10 to 15 minutes]\npractice madtini. [I practice.]"
+      },
+      {
+        "n": 6,
+        "start_s": 0.28,
+        "end_s": 0.3,
+        "screenshot_at_s": 0.29,
+        "scene_label": "Simple Learning",
+        "setting": "An outdoor setting with lush green foliage and blurred background elements, possibly other vehicles. Daytime, soft natural light.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A medium close-up of Character A, a young man wearing a light blue helmet and t-shirt, looking slightly to his right with a thoughtful expression. His face is well-lit, and the background is a soft blur of green foliage and indistinct shapes, suggesting an outdoor environment.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A medium close-up of Character A, wearing his helmet and t-shirt, looking thoughtfully to the side. The background is blurred green foliage. On-screen text overlays describe the simplicity of learning.",
+        "audio_transcript": "Character A says: Tumba simple agli English kalsitare. [They teach English very simply.]",
+        "on_screen_text": "Tumba simple agli [Very simply]\nEnglish kalsitare. [they teach English.]"
+      },
+      {
+        "n": 7,
+        "start_s": 0.3,
+        "end_s": 0.33,
+        "screenshot_at_s": 0.32,
+        "scene_label": "App Interface Showcase",
+        "setting": "A close-up on a smartphone held by hands, with blurred green foliage in the background. Daytime, soft natural light.",
+        "characters_in_scene": [],
+        "camera": "Close-up on phone",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A pair of hands holds a white smartphone vertically, displaying an app interface. The app shows various learning modules like 'Job Interview' and 'Talk in Office'. The background is a blurred, lush green plant, suggesting an indoor or outdoor setting with natural light.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A close-up shot of hands holding a smartphone, showcasing the SpeakX app interface. The app displays categories like 'Job Interview' and 'Talk in Office'. The background is blurred green foliage. On-screen text overlays mention that even children can learn English.",
+        "audio_transcript": "Character A says: Chik makkalu kuda 15 dinadalli English matadakke kalibodu. [Even small children can learn to speak English in 15 days.]",
+        "on_screen_text": "chik makkalu kuda [Even small children]\n15 dinadalli [in 15 days]\nEnglish matadakke [to speak English]\nkalibodu. [can learn.]"
+      },
+      {
+        "n": 8,
+        "start_s": 0.33,
+        "end_s": 0.36,
+        "screenshot_at_s": 0.34,
+        "scene_label": "AI Correction Feature",
+        "setting": "A smartphone screen displaying an AI avatar, with a blurred background of Character A in an outdoor setting.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Inset (PIP)",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A blurred image of Character A, a young man wearing a light blue helmet and t-shirt, looking to his right. The background is a soft blur of green foliage and indistinct shapes, suggesting an outdoor environment.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A white smartphone is held vertically, displaying a full-screen image of Character C, a young adult female with dark hair and a fair complexion, smiling gently. She wears a light blue collared shirt under a dark navy blue blazer. The image is clear and professionally lit.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A smartphone screen showing the AI avatar (Character C) is prominently displayed in the foreground, with a blurred background of Character A. The AI avatar is shown as correcting mistakes instantly without judgment. On-screen text overlays explain this feature.",
+        "audio_transcript": "Character A says: Enadre mistake madidre AI teacher takshana sari madutte. Judge madalla. [If you make any mistake, the AI teacher corrects it instantly. It doesn't judge.]",
+        "on_screen_text": "Enadre mistake madidre [If you make any mistake]\nAI teacher [AI teacher]\ntakshana sari madutte [corrects instantly]\nJudge madalla. [Doesn't judge.]"
+      },
+      {
+        "n": 9,
+        "start_s": 0.36,
+        "end_s": 0.46,
+        "screenshot_at_s": 0.41,
+        "scene_label": "Trial Offer & App Download",
+        "setting": "An outdoor pathway next to a modern, light-colored building with red pipes visible on the wall. Green bushes line the path. Daytime, bright natural light.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A, a young man wearing a light blue helmet and t-shirt, sits on a maroon scooter, looking at Character B with a friendly smile. Character B, a young woman in a black shirt and black pants, stands to his right, holding a light green smartphone in her left hand, looking at Character A with an excited and impressed expression. They are on an outdoor pathway next to a modern building with green bushes. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character B, now very impressed, asks about the cost. Character A, smiling, explains the affordable trial offer. Character B then asks him to download the app on her phone. The background is the same outdoor setting. On-screen text overlays show their Kannada conversation.",
+        "audio_transcript": "Character B says: Houda, esht dud agutte? [Really, how much does it cost?]\nCharacter A says: Madam just eradu roopayige elu dina trial ide. [Madam, for just two rupees, there's a seven-day trial.]\nCharacter B says: Houda, ashtena anna? Thank you. Nan phone allu app download madkodi please. [Really, that's all, brother? Thank you. Please download the app on my phone too.]",
+        "on_screen_text": "Houda, [Really,]\nesht dud agutte? [how much does it cost?]\nMadam just eradu roopayige [Madam, for just two rupees]\nelu dina trial ide. [there's a seven-day trial.]\nHouda, ashtena anna [Really, that's all, brother]\nthank you\nnan phone allu app [on my phone too, the app]\ndownload madkodi please. [please download.]"
+      },
+      {
+        "n": 10,
+        "start_s": 0.46,
+        "end_s": 0.47,
+        "screenshot_at_s": 0.465,
+        "scene_label": "End Card / Call to Action",
+        "setting": "A clean white background with orange and black branding elements.",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A white background features a large orange and black logo at the top. Below it, a white smartphone graphic is centered, displaying a clean app interface with various feature bullet points. A prominent orange button is at the bottom of the phone screen. The overall composition is bright and promotional.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A static end card with the SpeakX logo at the top. Below it, a smartphone graphic displays the app's features: 'Learn with Personal AI Mentor', 'Unlock Unlimited Exercises', '100+ Real Life Scenarios', 'Get Personalised Feedback'. An 'OFFER ENDS IN' timer and a 'START 7 Days Trial Now' button are visible. The background is white with orange and black branding.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "speakX [logo]\nDownload SpeakX App\nPREMIUM\nLearn with Personal AI Mentor\nUnlock Unlimited Exercises\nLearn with 100+ speaking exercises\n100+ Real Life Scenarios\nPractice through daily life scenarios\nGet Personalised Feedback\nImprove your speaking with instant feedback\nOFFER ENDS IN\n00:09:20\nSTART 7 Days Trial Now"
+      }
+    ]
+  },
+  "model": "gemini-2.5-flash",
+  "decoded_at": 1780632533.2154255
+}

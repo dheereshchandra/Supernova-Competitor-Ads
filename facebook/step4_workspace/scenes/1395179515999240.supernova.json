@@ -1,0 +1,57 @@
+{
+  "competitor_id": "1395179515999240",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Auto-rickshaw driver",
+        "appearance": "Male, 30s, medium build, brown complexion, short black hair, mustache.",
+        "wardrobe": "Khaki uniform shirt with a white and pink checked cloth draped over his shoulder.",
+        "demeanor": "Talkative, cheerful, oblivious to the passenger's need for quiet."
+      },
+      {
+        "id": "B",
+        "role": "Passenger",
+        "appearance": "Male, 20s, medium build, brown complexion, short black hair, beard, wears glasses.",
+        "wardrobe": "Black and white plaid button-down shirt.",
+        "demeanor": "Focused, slightly annoyed, trying to be quiet while working."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Noisy Auto Ride",
+        "supernova_script": "Character A says: Sir, sarkar ke baare me kya khayal hai apka? Haanji? [Sir, what are your thoughts on the government? Yes?]\nCharacter B says: Bhaiya, bas ek second. [Brother, just one second.]\nCharacter B says: Good morning sir, my name is... [Good morning sir, my name is...]\nCharacter A says: Dekh rahe ho sir, road kitne badhiya ban gaye hain. [Are you seeing sir, how good the roads have become.]\nCharacter A says: Chand pe jaane ki zarurat hi nahi hain hume. [We don't even need to go to the moon.]\nCharacter B says: I have three years of experience in sales, and I am very hardworking. [I have three years of experience in sales, and I am very hardworking.]\nCharacter A says: Batao sir. [Tell me sir.]\nCharacter A says: Aisa lagta hain sir traffic rules ki koi zarurat nahi hamare desh pe.. [It feels like there is no need for traffic rules in our country..]",
+        "scene_summary": "- Establishes a relatable, chaotic everyday Indian setting (an auto ride).\n- Shows the user utilizing idle travel time to practice English speaking for an interview.\n- Highlights the app's utility for on-the-go, private practice despite external distractions.",
+        "supernova_on_screen_text": "Sir, sarkar ke baare me kya khayal hai apka? Haanji?\nBhaiya, bas ek second.\nGood morning sir, my name is...\nDekh rahe ho sir, road kitne badhiya ban gaye hain.\nChand pe jaane ki zarurat hi nahi hain hume.\nI have three years of experience in sales, and I am very hardworking.\nBatao sir.\nAisa lagta hain sir traffic rules ki koi zarurat nahi hamare desh pe.."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Transcription",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Focuses on the app interface to show the AI tutor's real-time feedback.\n- Reinforces the message that you can practice speaking without fear of judgment.\n- Pays off the user's effort with a positive, encouraging result.",
+        "supernova_on_screen_text": "AI Tutor: Great job! Your pronunciation is improving.\nPractice English anywhere, anytime."
+      },
+      {
+        "n": 3,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Delivers the final brand call-to-action.\n- Positions Supernova as the practical, everyday tool for confident English speaking.",
+        "supernova_on_screen_text": "Supernova\nBolo English confidence ke saath\nDownload the app today\nAndroid iOS"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "wisprflow.ai",
+        "supernova_swap": "Download the app today"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.7831073
+}

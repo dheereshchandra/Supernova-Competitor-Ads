@@ -1,0 +1,75 @@
+{
+  "competitor_id": "1309059627222656",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "Male in his late 20s to early 30s with a medium build and olive complexion. He has short dark hair and a prominent mustache.",
+        "wardrobe": "Black t-shirt with a red and white graphic design on the front.",
+        "demeanor": "Focused and determined, transitioning to happy and confident."
+      },
+      {
+        "id": "B",
+        "role": "female native speaker",
+        "appearance": "Female in her late 20s to early 30s with a medium build and fair complexion. She has long brown hair tied back in a ponytail.",
+        "wardrobe": "Solid maroon short-sleeved t-shirt.",
+        "demeanor": "Supportive, encouraging, and friendly."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor voice",
+        "appearance": "Digital avatar of a young man with short dark hair and a short beard. He is only visible as a small circular profile picture within the app interface.",
+        "wardrobe": "Red shirt.",
+        "demeanor": "Instructional, clear, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Pronunciation Practice",
+        "supernova_script": "Character A says: Environment. [Environment.]\nCharacter C says: Let's pause. Listen to the AI tutor's pronunciation and try again. [Let's pause. Listen to the AI tutor's pronunciation and try again.]\nCharacter B says: Environment. [Environment.]\nCharacter A says: I have an interview tomorrow. [I have an interview tomorrow.]\nCharacter A says: Haan yaar, same mistake. [Yeah man, same mistake.]\nCharacter B says: I have an interview tomorrow. [I have an interview tomorrow.]\nCharacter A says: Confident. [Confident.]\nCharacter C says: Let's compare. Notice how the AI tutor says it? [Let's compare. Notice how the AI tutor says it?]\nCharacter B says: Confident. [Confident.]\nCharacter C says: Awesome! Ekdum sahi bola aapne! [Awesome! You said it perfectly!]",
+        "scene_summary": "- Establishes the core problem: the learner struggling with English pronunciation and sentence delivery.\n- Introduces the AI Tutor as a helpful, non-judgmental guide.\n- Shows the supportive dynamic between the learner and the native speaker, highlighting the app's practical feedback loop.",
+        "supernova_on_screen_text": "Advanced, Beginner, Supernova App, AI Tutor, environment, Listening..., 76%, I have an interview tomorrow., 84%, confident, 79%, 97%"
+      },
+      {
+        "n": 2,
+        "scene_label": "Testimonial",
+        "supernova_script": "Character A says: Mujhe English bolne mein hamesha hesitation hoti thi, par Supernova app ke saath daily practice karke mera confidence kaafi badh gaya hai. [I always used to hesitate while speaking English, but practicing daily with the Supernova app has really boosted my confidence.]",
+        "scene_summary": "- Shifts to a direct-to-camera testimonial to build trust.\n- Articulates the emotional payoff: moving from hesitation to confidence.\n- Positions Supernova as the daily habit that solves the user's core insecurity.",
+        "supernova_on_screen_text": "interview 69%, environment 81%, schedule 91%, career 79%, confident 84%, success 91%, Close Up, AI Feedback, 41%, success"
+      },
+      {
+        "n": 3,
+        "scene_label": "Successful Practice",
+        "supernova_script": "Character C says: Now, let's try the next word. [Now, let's try the next word.]\nCharacter A says: Success. [Success.]\nCharacter B says: Nice! Bahut badhiya! [Nice! Very good!]",
+        "scene_summary": "- Demonstrates real-time progress and the joy of getting it right.\n- Reinforces the supportive, 'older sibling' brand tone through Character B's reaction.\n- Provides a quick, satisfying resolution to the learning loop.",
+        "supernova_on_screen_text": "Native Speaker, English Learner, Supernova App, AI Tutor, success, Listening..., 94%"
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "supernova_script": "Character A says: Agar aap bhi fluent English bolna chahte hain, toh aaj hi Supernova app try karein. [If you also want to speak fluent English, try the Supernova app today.]",
+        "scene_summary": "- Delivers a clear, encouraging Call to Action.\n- Removes competitor's 'free trial' messaging to align with Supernova's premium positioning.\n- Leaves the viewer with a final, empowering message to take control of their learning.",
+        "supernova_on_screen_text": "Supernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Coach Eliza",
+        "supernova_swap": "AI Tutor"
+      },
+      {
+        "competitor_brand": "free trial",
+        "supernova_swap": "removed"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779989130.5660214
+}

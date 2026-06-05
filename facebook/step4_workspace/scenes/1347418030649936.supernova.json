@@ -1,0 +1,60 @@
+{
+  "competitor_id": "1347418030649936",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion. She has light brown hair styled in a single braid down her back and blue eyes.",
+        "wardrobe": "Wears a light purple tank top initially, then a mustard yellow chunky knit sweater, and finally a plain grey crewneck sweatshirt.",
+        "demeanor": "Relatable, slightly embarrassed initially, then enthusiastic and engaged."
+      },
+      {
+        "id": "B",
+        "role": "male border officer",
+        "appearance": "Adult male, medium build, light brown complexion. He has short dark hair and dark eyes.",
+        "wardrobe": "Dark blue short-sleeved uniform shirt with epaulets and a badge.",
+        "demeanor": "Stern, professional, unsmiling."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character, fair complexion. She has reddish-brown hair pulled back and large, expressive green eyes.",
+        "wardrobe": "Dark blue uniform shirt with a badge and a radio on the shoulder.",
+        "demeanor": "Friendly, patient, encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Border Control Rejection",
+        "supernova_script": "Character B says: What's the purpose of your visit?\nCharacter B says: Please step aside, ma'am.",
+        "scene_summary": "- Hooks the viewer with a high-stress, universally relatable situation (airport immigration).\n- Establishes the core problem instantly: the anxiety of being put on the spot in English.",
+        "supernova_on_screen_text": "What's the purpose of your visit? Please step aside, ma'am."
+      },
+      {
+        "n": 2,
+        "scene_label": "Presenter Introduction",
+        "supernova_script": "Character A says: हाँ, ये मैं ही थी। [Yes, that was me.]\nCharacter A says: Immigration counter पर मुझे रोक लिया गया क्योंकि मैं English में जवाब नहीं दे पाई। [I was stopped at the immigration counter because I couldn't answer in English.]\nCharacter A says: सवाल समझ आ रहा था, पर बोलते वक़्त दिमाग blank हो गया। [I understood the question, but my mind went blank while speaking.]\nCharacter A says: फिर मेरी दोस्त ने मुझे Supernova app के बारे में बताया। [Then my friend told me about the Supernova app.]\nCharacter A says: अब मैं हर conversation पहले से practice करती हूँ... [Now I practice every conversation beforehand...]\nCharacter A says: Airport हो, hotel हो, या office. [Whether it's the airport, hotel, or office.]\nCharacter A says: मैं आपको दिखाती हूँ। [Let me show you.]",
+        "scene_summary": "- Transitions to the user explaining her pain point directly to the camera, building empathy.\n- Introduces Supernova as the practical solution for preparing for real-world conversations.\n- Sets up the app demonstration naturally.",
+        "supernova_on_screen_text": "हाँ, ये मैं ही थी। Immigration counter पर मुझे रोक लिया गया क्योंकि मैं English में जवाब नहीं दे पाई। सवाल समझ आ रहा था, पर बोलते वक़्त दिमाग blank हो गया। फिर मेरी दोस्त ने मुझे Supernova app के बारे में बताया। अब मैं हर conversation पहले से practice करती हूँ... Airport हो, hotel हो, या office. मैं आपको दिखाती हूँ।"
+      },
+      {
+        "n": 3,
+        "scene_label": "App Demonstration",
+        "supernova_script": "Character C says: Hello, where are you flying?\nCharacter A says: I fly uh London.\nCharacter C says: क्या आपका मतलब है: \"I am flying to London\"? [Do you mean: \"I am flying to London\"?]\nCharacter A says: Yes, sorry. I am flying to London.\nCharacter C says: Any luggage to check in?\nCharacter A says: Mmm, luggage?\nCharacter C says: हाँ, luggage. [Yes, luggage.]\nCharacter C says: इसका मतलब है आपका सामान या bags [It means your belongings or bags]\nCharacter C says: जो आप सफर के दौरान अपने साथ ले जाते हैं। [that you carry with you during your journey.]\nCharacter A says: Oh, I have one luggage.\nCharacter A says: Sorry, मेरी English उतनी अच्छी नहीं है। [Sorry, my English is not that good.]\nCharacter C says: कोई बात नहीं! [No worries!]\nCharacter C says: पिछले महीने आपने कितनी बार English में बात की? [How many times did you speak in English last month?]\nCharacter A says: सच कहूँ तो, एक बार भी नहीं। [Honestly, not even once.]\nCharacter C says: तो फिर fluency कैसे आएगी? [Then how will you get fluency?]\nCharacter A says: मेरे पास practice करने के लिए कोई है ही नहीं। [I don't have anyone to practice with.]\nCharacter C says: बस Supernova download करो। [Just download Supernova.]\nCharacter C says: हम रोज़ाना साथ में practice करेंगे [We will practice together daily]\nCharacter C says: और आप बहुत जल्द confidence के साथ English बोलने लगोगे। [and you will start speaking English with confidence very soon.]\nCharacter A says: ये तो बहुत बढ़िया है। [This is really great.]\nCharacter A says: मैं आज से ही इसे अपनी daily routine में शामिल करूँगी। [I will add this to my daily routine from today itself.]",
+        "scene_summary": "- Demonstrates the app's core feature: a bilingual AI tutor correcting mistakes gently in Hindi.\n- Addresses the common user objection of \"having no one to practice with\".\n- Ends with a strong, encouraging CTA to build a daily learning habit.",
+        "supernova_on_screen_text": "Hello, where are you flying? I fly uh London. क्या आपका मतलब है: \"I am flying to London\"? Yes, sorry. I am flying to London. Any luggage to check in? Luggage? हाँ, luggage. इसका मतलब है आपका सामान या bags जो आप सफर के दौरान अपने साथ ले जाते हैं। Oh, I have one luggage. Sorry, मेरी English उतनी अच्छी नहीं है। कोई बात नहीं! पिछले महीने आपने कितनी बार English में बात की? सच कहूँ तो, एक बार भी नहीं। तो फिर fluency कैसे आएगी? मेरे पास practice करने के लिए कोई है ही नहीं। बस Supernova download करो। हम रोज़ाना साथ में practice करेंगे और आप बहुत जल्द confidence के साथ English बोलने लगोगे। ये तो बहुत बढ़िया है। मैं आज से ही इसे अपनी daily routine में शामिल करूँगी। Supernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Loora",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889200.1384459
+}

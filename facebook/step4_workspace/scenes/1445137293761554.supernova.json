@@ -1,0 +1,53 @@
+{
+  "competitor_id": "1445137293761554",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Mid-20s female, slim build, medium complexion. Straight dark brown hair past shoulders, wearing black-rimmed glasses.",
+        "wardrobe": "Bright pink button-down shirt, light blue jeans. Gold necklace, gold bracelet, watch, and a small lapel microphone.",
+        "demeanor": "Energetic, confident, and persuasive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction",
+        "supernova_script": "Character A says: दोस्तों, अगर आपकी उम्र भी 30 या 40 के पार है, [Friends, even if you are over 30 or 40,]\nCharacter A says: तो भी आप बिना झिझक के इंग्लिश बोलना सीख सकते हैं। [you can still learn to speak English without hesitation.]\nCharacter A says: Supernova के AI ट्यूटर के साथ। ये देखो। [With Supernova's AI tutor. Look at this.]",
+        "scene_summary": "- Hooks the target demographic (older/working learners) by validating their age.\n- Replaces the aggressive '7-day guarantee' with a realistic, encouraging promise of speaking without hesitation.\n- Introduces Supernova's core AI tutor feature.",
+        "supernova_on_screen_text": ""
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "supernova_script": "Character A says: मुझे इंटरव्यू के लिए इंग्लिश प्रैक्टिस करनी है। [I want to practice English for an interview.]\nApp Voice says: Great! Let's practice your interview skills. [Great! Let's practice your interview skills.]",
+        "scene_summary": "- Demonstrates the app's functionality in a real-world context (interview prep).\n- Shifts focus from simple translation to interactive speaking practice with an AI tutor.\n- Shows practical, immediate utility for a working professional.",
+        "supernova_on_screen_text": "AI Tutor Active\nInterview Practice\nमुझे इंटरव्यू के लिए इंग्लिश प्रैक्टिस करनी है\nGreat! Let's practice your interview skills.\nTap to Speak\nDaily Lessons\nReal-world situations"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action",
+        "supernova_script": "Character A says: देखा? कितना आसान है! [See? How easy it is!]\nCharacter A says: ऐसे ही आप भी अपनी भाषा से रोज़ इंग्लिश बोलने की practice कर सकते हैं। [Just like this, you too can practice speaking English every day from your own language.]\nCharacter A says: तो अभी प्ले स्टोर पर जाइये, [So go to the Play Store right now,]",
+        "scene_summary": "- Delivers the emotional payoff: relief that learning is accessible and easy.\n- Emphasizes 'daily practice' and 'from your own language', aligning with Supernova's Hindi-medium approach.\n- Sets up the final call to action.",
+        "supernova_on_screen_text": ""
+      },
+      {
+        "n": 4,
+        "scene_label": "Play Store Page",
+        "supernova_script": "Character A says: और Supernova ऐप डाउनलोड कीजिये। [and download the Supernova app.]",
+        "scene_summary": "- Directs the user to download the app.\n- Replaces the competitor brand name with Supernova.",
+        "supernova_on_screen_text": "Supernova: Spoken English App\nSupernova Learning\n4.8\n50K reviews\n1M+ Downloads\nInstall\nWhat's new\nLast updated recently\nBug fixes and improvements\nRate this app\nTell others what you think\nWrite a review\nApp support"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Zinglish",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779804111.261901
+}

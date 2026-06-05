@@ -1,0 +1,759 @@
+# Step 3 run log (Google pipeline)
+# competitor : duolingo
+# started_at : 2026-06-05T09:38:14
+# input      : inputs/g-ads-duolingo-2026-06-04.csv
+# videos     : videos/duolingo-2026-06-04
+# images     : images/duolingo-2026-06-04
+# master     : master/duolingo.csv  (updated)
+# enriched   : inputs/g-ads-duolingo-2026-06-04_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded-video': 0, 'uploaded-image': 0, 'carried-forward': 220, 'text-no-asset': 0, 'asset-missing': 0, 'unsupported': 0, 'no-creative': 0, 'scrape-error': 525, 'error': 0}
+#
+carried-forward  CR00077483048265842689 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00077483048265842689.jpg
+scrape-error     CR00080577486303264769 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR00092628322722250753 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR00172539367540129793 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00172539367540129793.jpg
+carried-forward  CR00172539367540129793 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00172539367540129793.jpg
+carried-forward  CR00172539367540129793 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00172539367540129793.jpg
+scrape-error     CR00181197265694621697 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR00182742388769292289 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR00183418201873317889 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00183418201873317889 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00183418201873317889 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00183418201873317889 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR00220408796688678913 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00220408796688678913.jpg
+carried-forward  CR00220408796688678913 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00220408796688678913.jpg
+carried-forward  CR00220408796688678913 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00220408796688678913.jpg
+scrape-error     CR00225154151435206657 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR00273460825434357761 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00273460825434357761 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00273460825434357761 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00273460825434357761 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00302240267413487617 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR00339160802722316289 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR00340579095412736001 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00340579095412736001.jpg
+carried-forward  CR00340579095412736001 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00340579095412736001.jpg
+carried-forward  CR00340579095412736001 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00340579095412736001.jpg
+scrape-error     CR00355032940264030209 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR00486904619688001537 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00486904619688001537 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00486904619688001537 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00486904619688001537 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR00523603173907103745 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00523603173907103745.jpg
+carried-forward  CR00523603173907103745 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00523603173907103745.jpg
+scrape-error     CR00595989985778204673 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR00622910591681429505 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00622910591681429505.jpg
+carried-forward  CR00622910591681429505 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00622910591681429505.jpg
+carried-forward  CR00622910591681429505 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00622910591681429505.jpg
+carried-forward  CR00666386106077413377 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00666386106077413377.jpg
+carried-forward  CR00708930609002577921 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00708930609002577921.jpg
+carried-forward  CR00708930609002577921 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00708930609002577921.jpg
+carried-forward  CR00708930609002577921 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00708930609002577921.jpg
+scrape-error     CR00754063714486845441 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR00870484712919924737 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR00912206643708559361 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00912206643708559361.jpg
+carried-forward  CR00990928154384138241 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00990928154384138241.jpg
+scrape-error     CR01002423385243779073 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01002423385243779073 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01002423385243779073 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01002423385243779073 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01002423385243779073 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01030743368801452033 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01030743368801452033 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01030743368801452033 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01030743368801452033 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01030743368801452033 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR01080890376157396993 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01080890376157396993.jpg
+carried-forward  CR01080890376157396993 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01080890376157396993.jpg
+scrape-error     CR01100173104279191553 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01130741245518282753 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01171838378824433665 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01175648702010753025 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01290797153173635073 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01337385900383928321 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01343770764406423553 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01423026208236371969 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01450103631985508353 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01450103631985508353 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01450103631985508353 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01533471704569872385 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01557529603101163521 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01624949414143459329 v0  (Step 1 tag: text-no-asset; re-run Step 1 to recover)
+scrape-error     CR01729249061384486913 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01796609473029079041 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01824752607013371905 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01868085494135390209 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01868085494135390209 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01868085494135390209 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01910258705727750145 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR01947827506220367873 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02066686465529610241 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02128424764983738369 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02253422813106929665 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR02300258323368247297 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02300258323368247297.jpg
+carried-forward  CR02300258323368247297 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02300258323368247297.jpg
+carried-forward  CR02300258323368247297 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02300258323368247297.jpg
+carried-forward  CR02332026650268532737 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02332026650268532737.jpg
+carried-forward  CR02332026650268532737 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02332026650268532737.jpg
+carried-forward  CR02332026650268532737 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02332026650268532737.jpg
+carried-forward  CR02345735223804690433 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02345735223804690433.jpg
+carried-forward  CR02345735223804690433 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02345735223804690433.jpg
+carried-forward  CR02345735223804690433 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02345735223804690433.jpg
+scrape-error     CR02365103782552928257 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02400119130498793473 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02400119130498793473 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02400119130498793473 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02400119130498793473 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02403692818166972417 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02403692818166972417 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02403692818166972417 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02403692818166972417 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02441408515131047937 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02469643449746325505 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02469643449746325505 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02469643449746325505 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02469643449746325505 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02469643449746325505 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02559491665907679233 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02582431876509597697 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02602988517701189633 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02689703185852923905 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02777872576607682561 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02783458473633906689 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02861963294619467777 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR02876105685622325249 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02876105685622325249.jpg
+carried-forward  CR02876105685622325249 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02876105685622325249.jpg
+carried-forward  CR02876105685622325249 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02876105685622325249.jpg
+scrape-error     CR02889213350284099585 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02931127008412827649 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+carried-forward  CR02953461826194505729 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02953461826194505729.jpg
+carried-forward  CR02953461826194505729 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02953461826194505729.jpg
+scrape-error     CR02959457325661814785 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02959457325661814785 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02959457325661814785 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02959457325661814785 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02969335793392287745 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR02996805261756203009 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03125866348941410305 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03125866348941410305 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03125866348941410305 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03202938102549053441 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03218206986164240385 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03247348476706553857 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03274989511834075137 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR03289419536796745729 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03289419536796745729.jpg
+scrape-error     CR03320610242135326721 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03342477054510628865 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03342477054510628865 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03342477054510628865 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03356091276205228033 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR03419157983274205185 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03419157983274205185.jpg
+carried-forward  CR03419157983274205185 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03419157983274205185.jpg
+carried-forward  CR03419157983274205185 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03419157983274205185.jpg
+scrape-error     CR03444500283185430529 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03444500283185430529 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03444500283185430529 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03444500283185430529 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03444500283185430529 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR03449188738205220865 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03449188738205220865.jpg
+carried-forward  CR03449188738205220865 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03449188738205220865.jpg
+carried-forward  CR03449188738205220865 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03449188738205220865.jpg
+scrape-error     CR03460262881881227265 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03460262881881227265 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03460262881881227265 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03460262881881227265 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR03461645655192109057 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03461645655192109057.jpg
+carried-forward  CR03568382765093093377 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03568382765093093377.jpg
+carried-forward  CR03568382765093093377 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03568382765093093377.jpg
+scrape-error     CR03618019358535581697 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03633588460364759041 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03723665057117110273 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03734752051335266305 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03773528837149687809 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03794565483886280705 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03870369698155593729 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03872881463749771265 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03872881463749771265 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03872881463749771265 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03872881463749771265 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03935553386014834689 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR03948338679021305857 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR03986498286625226753 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03986498286625226753.jpg
+scrape-error     CR04055412608847577089 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04074443454317330433 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04074443454317330433 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04074443454317330433 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04074443454317330433 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04074443454317330433 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04080075221594275841 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04118908219940667393 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04123240768200507393 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04123240768200507393 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04123240768200507393 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04123240768200507393 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04128968115679657985 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04153116191344295937 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+carried-forward  CR04243151788338839553 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04243151788338839553.jpg
+carried-forward  CR04243151788338839553 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04243151788338839553.jpg
+carried-forward  CR04243151788338839553 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04243151788338839553.jpg
+scrape-error     CR04273584492079218689 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR04306221768172896257 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04306221768172896257.jpg
+carried-forward  CR04306221768172896257 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04306221768172896257.jpg
+carried-forward  CR04306221768172896257 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04306221768172896257.jpg
+scrape-error     CR04360477143675699201 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04442749836390825985 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04461114927569960961 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04561899290108100609 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04593892192258359297 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04597731824301506561 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04668698788704026625 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04691106638109605889 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04691106638109605889 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04691106638109605889 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04735206924218269697 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04763770243443064833 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR04808461817699368961 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04808461817699368961.jpg
+carried-forward  CR04844956498410864641 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04844956498410864641.jpg
+scrape-error     CR04916521202001903617 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR04921081589686861825 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04921081589686861825 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04921081589686861825 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04944055996818391041 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR05087881686918627329 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR05130416070900842497 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR05131027012818829313 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05131027012818829313.jpg
+carried-forward  CR05131027012818829313 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05131027012818829313.jpg
+scrape-error     CR05308910960352690177 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR05323514484814249985 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05323514484814249985.jpg
+scrape-error     CR05366775199305826305 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR05386581002904666113 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05386581002904666113.jpg
+scrape-error     CR05386588398838349825 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR05404970240389939201 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR05406473573432819713 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05406473573432819713.jpg
+carried-forward  CR05406473573432819713 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05406473573432819713.jpg
+scrape-error     CR05467319868309110785 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR05543142980434526209 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR05583083874184855553 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05583083874184855553.jpg
+carried-forward  CR05583083874184855553 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05583083874184855553.jpg
+carried-forward  CR05657396214384033793 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05657396214384033793.jpg
+carried-forward  CR05657396214384033793 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05657396214384033793.jpg
+scrape-error     CR05666550748196896769 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05666550748196896769 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05666550748196896769 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05666550748196896769 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05666550748196896769 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05686368302826258433 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05686368302826258433 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05689357643013947393 v0  (Step 1 tag: text-no-asset; re-run Step 1 to recover)
+scrape-error     CR05765768727572250625 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR05803985243492843521 v0  (Step 1 tag: image-url-not-extracted; re-run Step 1 to recover)
+scrape-error     CR05863167865607159809 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR05896184894119215105 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR05921300900793548801 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR05930435944044822529 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05930435944044822529.jpg
+carried-forward  CR05930435944044822529 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05930435944044822529.jpg
+scrape-error     CR05974113296133914625 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR06045526018012217345 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06045526018012217345.jpg
+carried-forward  CR06045526018012217345 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06045526018012217345.jpg
+carried-forward  CR06045526018012217345 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06045526018012217345.jpg
+carried-forward  CR06108857887772114945 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06108857887772114945.jpg
+carried-forward  CR06108857887772114945 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06108857887772114945.jpg
+carried-forward  CR06108857887772114945 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06108857887772114945.jpg
+scrape-error     CR06118761094514212865 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR06204449428690960385 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06204449428690960385 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06204449428690960385 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06204449428690960385 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR06272089056159465473 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06272089056159465473.jpg
+carried-forward  CR06272089056159465473 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06272089056159465473.jpg
+scrape-error     CR06295254838443769857 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR06322497395095502849 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06322497395095502849.jpg
+carried-forward  CR06322497395095502849 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06322497395095502849.jpg
+carried-forward  CR06322497395095502849 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06322497395095502849.jpg
+scrape-error     CR06323327603683885057 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR06346806712422367233 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR06417969407074500609 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06417969407074500609 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06417969407074500609 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06417975042071592961 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR06426361661501734913 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06426361661501734913.jpg
+carried-forward  CR06426361661501734913 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06426361661501734913.jpg
+carried-forward  CR06426361661501734913 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06426361661501734913.jpg
+scrape-error     CR06447154603204018177 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR06516214000831692801 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR06623573614702624769 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR06643980163967090689 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06643980163967090689.jpg
+carried-forward  CR06643980163967090689 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06643980163967090689.jpg
+carried-forward  CR06643980163967090689 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06643980163967090689.jpg
+carried-forward  CR06702948965429542913 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06702948965429542913.jpg
+carried-forward  CR06702948965429542913 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06702948965429542913.jpg
+carried-forward  CR06702948965429542913 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06702948965429542913.jpg
+scrape-error     CR06772101898854989825 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR06879456324405428225 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07024839386827063297 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07026656243892617217 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR07157674058048339969 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07157674058048339969.mp4
+carried-forward  CR07157674058048339969 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07157674058048339969.mp4
+carried-forward  CR07157674058048339969 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07157674058048339969.mp4
+scrape-error     CR07158521712793878529 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07158521712793878529 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07158521712793878529 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07175890947085959169 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07269400459658395649 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07325555164188770305 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR07395444761814892545 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07395444761814892545.jpg
+carried-forward  CR07397178691651895297 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07397178691651895297.jpg
+scrape-error     CR07409546101520334849 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07416723713426456577 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07420746826472488961 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07543396523917180929 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07563440577941864449 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07563440577941864449 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07563440577941864449 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07563440577941864449 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07596772822693707777 v0  (Step 1 tag: text-no-asset; re-run Step 1 to recover)
+scrape-error     CR07655597528003379201 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07691514965110292481 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07710907360927023105 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07791060006245236737 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR07848985989648220161 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07943736713409462273 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR08005037063638351873 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR08032435845430509569 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08032435845430509569 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08032435845430509569 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08042033241911197697 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR08046156221536796673 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08046156221536796673.jpg
+scrape-error     CR08074942964960329729 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08074942964960329729 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08074942964960329729 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08084101089365852161 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR08116479232902692865 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR08137586832499015681 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR08336194881999339521 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR08392678426405765121 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08392678426405765121.jpg
+scrape-error     CR08397333973386133505 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08397333973386133505 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08397333973386133505 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08397333973386133505 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08608896597733933057 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08608896597733933057 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08608896597733933057 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR08828366720730136577 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08828366720730136577.jpg
+carried-forward  CR08828366720730136577 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08828366720730136577.jpg
+carried-forward  CR08828366720730136577 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08828366720730136577.jpg
+scrape-error     CR08840752513058603009 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08840752513058603009 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08840752513058603009 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08840752513058603009 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR08869171658821206017 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08869171658821206017.jpg
+carried-forward  CR08869171658821206017 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08869171658821206017.jpg
+carried-forward  CR08869171658821206017 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08869171658821206017.jpg
+scrape-error     CR08949231129118900225 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR08983430983034339329 v0  (Step 1 tag: text-no-asset; re-run Step 1 to recover)
+carried-forward  CR08997587753587703809 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08997587753587703809.jpg
+carried-forward  CR08997587753587703809 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08997587753587703809.jpg
+scrape-error     CR09038894120520646657 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR09046243823176384513 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR09105497088912785409 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09105497088912785409.jpg
+carried-forward  CR09105497088912785409 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09105497088912785409.jpg
+scrape-error     CR09110127630593556481 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR09139973409873068033 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09139973409873068033.jpg
+scrape-error     CR09173209498897088513 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR09207456520143372289 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR09313024514176581633 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR09322502983012843521 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09322502983012843521.jpg
+carried-forward  CR09322502983012843521 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09322502983012843521.jpg
+carried-forward  CR09322502983012843521 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09322502983012843521.jpg
+carried-forward  CR09323993714621677569 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09323993714621677569.jpg
+carried-forward  CR09323993714621677569 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09323993714621677569.jpg
+scrape-error     CR09373804932844486657 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR09402136117676867585 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09402136117676867585 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09402136117676867585 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09402136117676867585 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR09524829142751641601 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09524829142751641601.jpg
+carried-forward  CR09613772203145297921 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09613772203145297921.jpg
+carried-forward  CR09613772203145297921 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09613772203145297921.jpg
+carried-forward  CR09613772203145297921 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09613772203145297921.jpg
+scrape-error     CR09669012053871820801 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR09697229533740007425 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09697229533740007425.jpg
+carried-forward  CR09697229533740007425 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09697229533740007425.jpg
+carried-forward  CR09697229533740007425 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09697229533740007425.jpg
+carried-forward  CR09846282628536205313 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09846282628536205313.jpg
+carried-forward  CR09846282628536205313 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09846282628536205313.jpg
+carried-forward  CR09846282628536205313 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09846282628536205313.jpg
+scrape-error     CR09879615947029872641 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR09890420641637597185 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09890420641637597185 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09890420641637597185 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09890420641637597185 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09904629870921515009 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR09919917480594112513 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR09930385982341775361 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR09952450483471777793 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR09976959662806794241 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10049201622610870273 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10049201622610870273 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10049201622610870273 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10049201622610870273 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10127300560597024769 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR10134121578548428801 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10134121578548428801 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10134121578548428801 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10134121578548428801 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10213188705242316801 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR10293516336118104065 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10293516336118104065.jpg
+carried-forward  CR10293516336118104065 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10293516336118104065.jpg
+carried-forward  CR10293516336118104065 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10293516336118104065.jpg
+scrape-error     CR10331997937420206081 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10331997937420206081 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10331997937420206081 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10331997937420206081 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10337104593405607937 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR10370041099870797825 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR10464658688235798529 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10464658688235798529 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10464658688235798529 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10509336174999371777 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10509336174999371777 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10509336174999371777 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10509336174999371777 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10607105650884345857 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR10767890362950221825 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR10801463641266716673 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR10807972672793739265 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10807972672793739265 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10807972672793739265 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10807972672793739265 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10851844329203302401 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR10900726726388613121 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10900726726388613121.jpg
+scrape-error     CR10906009665011712001 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10906009665011712001 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10906009665011712001 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10906009665011712001 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10946004099824353281 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10946004099824353281 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10946004099824353281 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10946004099824353281 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10948722848482459649 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR10970625824482394113 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR10989176320809762817 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR11014488306841812993 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11014488306841812993 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11014488306841812993 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11014488306841812993 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11030900854348578817 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11030900854348578817 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11030900854348578817 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11030900854348578817 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11071163947955519489 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR11212286402819522561 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR11231224038909018113 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11231224038909018113 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11231224038909018113 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11231224038909018113 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11259239019659132929 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR11265099055857926145 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11265099055857926145.jpg
+scrape-error     CR11338527431658045441 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR11432953335632625665 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR11439713158889996289 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+carried-forward  CR11527773569144586241 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11527773569144586241.jpg
+scrape-error     CR11536035127717003265 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR11568858504743616513 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR11570853560002281473 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11570853560002281473 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11570853560002281473 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11570853560002281473 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11570853560002281473 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11635652289942781953 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR11780639184581033985 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR11804142516935065601 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR11946280611305488385 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR11947045081124438017 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11947045081124438017.jpg
+carried-forward  CR12064062315507482625 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12064062315507482625.jpg
+carried-forward  CR12064062315507482625 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12064062315507482625.jpg
+carried-forward  CR12064062315507482625 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12064062315507482625.jpg
+scrape-error     CR12068207534473740289 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12068207534473740289 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12068207534473740289 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12068207534473740289 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12068207534473740289 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12073527658923687937 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12082378504188985345 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12085504759344136193 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12093927018412900353 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12122115155064520705 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+carried-forward  CR12153520918005547009 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12153520918005547009.jpg
+carried-forward  CR12153520918005547009 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12153520918005547009.jpg
+carried-forward  CR12153520918005547009 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12153520918005547009.jpg
+scrape-error     CR12236307623816724481 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12251326437256069121 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+carried-forward  CR12262115145995517953 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12262115145995517953.jpg
+carried-forward  CR12262115145995517953 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12262115145995517953.jpg
+carried-forward  CR12262115145995517953 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12262115145995517953.jpg
+carried-forward  CR12267137577672245249 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12267137577672245249.jpg
+carried-forward  CR12267137577672245249 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12267137577672245249.jpg
+carried-forward  CR12267137577672245249 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12267137577672245249.jpg
+scrape-error     CR12291604107982012417 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12300664204053970945 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12304467620932878337 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12349873362351161345 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12400953958158303233 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12443897171487490049 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12455594901465202689 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12455594901465202689 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12455594901465202689 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12455594901465202689 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12455594901465202689 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR12480928817600266241 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12480928817600266241.mp4
+carried-forward  CR12480928817600266241 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12480928817600266241.mp4
+carried-forward  CR12480928817600266241 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12480928817600266241.mp4
+scrape-error     CR12480928817600266241 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12482092727967678465 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR12542398114662711297 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12542398114662711297.jpg
+carried-forward  CR12542398114662711297 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12542398114662711297.jpg
+scrape-error     CR12659402996719812609 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12697261329547788289 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR12743741792042614785 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12743741792042614785.jpg
+scrape-error     CR12753894673823563777 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12753894673823563777 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12753894673823563777 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12753894673823563777 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR12769296933353160705 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12769296933353160705.jpg
+scrape-error     CR12809351368858927105 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12812375197634002945 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR12844041441751597057 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR12863802955647680513 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12863802955647680513.mp4
+carried-forward  CR12863802955647680513 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12863802955647680513.mp4
+carried-forward  CR12863802955647680513 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12863802955647680513.mp4
+scrape-error     CR12863802955647680513 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12912006576201531393 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12912006576201531393 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12912006576201531393 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12912006576201531393 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12936354161687003137 v0  (Step 1 tag: text-no-asset; re-run Step 1 to recover)
+scrape-error     CR13148362689539473409 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR13257516216760664065 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13257516216760664065.jpg
+carried-forward  CR13257516216760664065 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13257516216760664065.jpg
+carried-forward  CR13257516216760664065 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13257516216760664065.jpg
+scrape-error     CR13314451892374339585 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR13357102360732631041 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13357102360732631041.jpg
+carried-forward  CR13388207338523983873 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13388207338523983873.jpg
+scrape-error     CR13461733673938190337 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR13516275463630094337 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR13524496125523918849 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13524496125523918849 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13524496125523918849 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13524496125523918849 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13542136251993292801 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13542136251993292801 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13542136251993292801 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13542136251993292801 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR13560614326582116353 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13560614326582116353.jpg
+carried-forward  CR13560614326582116353 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13560614326582116353.jpg
+carried-forward  CR13560614326582116353 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13560614326582116353.jpg
+scrape-error     CR13593416306081660929 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR13615593412664229889 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13615593412664229889 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13615593412664229889 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13662579023442608129 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR13712223992071323649 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13712223992071323649.jpg
+carried-forward  CR13712223992071323649 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13712223992071323649.jpg
+carried-forward  CR13712223992071323649 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13712223992071323649.jpg
+scrape-error     CR13723310548202815489 v0  (Step 1 tag: detail-fetch: ReadTimeout; re-run Step 1 to recover)
+scrape-error     CR13815933476446142465 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR13972041338493861889 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13972041338493861889 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13972041338493861889 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13972041338493861889 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR13978443863421878273 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13978443863421878273.jpg
+carried-forward  CR13978443863421878273 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13978443863421878273.jpg
+carried-forward  CR13978443863421878273 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13978443863421878273.jpg
+scrape-error     CR13983462524117319681 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR14027582781823909889 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR14039297614361395201 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR14063525172690812929 v0  (Step 1 tag: text-no-asset; re-run Step 1 to recover)
+scrape-error     CR14093348600960516097 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14093348600960516097 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14093348600960516097 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14093348600960516097 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR14098023449523912705 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14098023449523912705.jpg
+carried-forward  CR14098023449523912705 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14098023449523912705.jpg
+carried-forward  CR14098023449523912705 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14098023449523912705.jpg
+carried-forward  CR14121301622512418817 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14121301622512418817.jpg
+scrape-error     CR14173431435880300545 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR14175674164723056641 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR14263880732714729473 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14333273969560387585 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14333273969560387585 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14333273969560387585 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14333273969560387585 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14353788107755618305 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR14433771874959753217 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR14457736933477974017 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14457736933477974017 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14457736933477974017 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14458025778618564609 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR14512574792445460481 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14512574792445460481.jpg
+carried-forward  CR14512574792445460481 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14512574792445460481.jpg
+carried-forward  CR14512574792445460481 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14512574792445460481.jpg
+scrape-error     CR14698326243892264961 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14698326243892264961 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14698326243892264961 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14708875937701691393 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR14747712157273554945 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14747712157273554945.jpg
+carried-forward  CR14747712157273554945 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14747712157273554945.jpg
+carried-forward  CR14764325777969250305 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14764325777969250305.jpg
+carried-forward  CR14764325777969250305 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14764325777969250305.jpg
+scrape-error     CR14787415977419079681 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR14861807662844084225 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR14862330171385446401 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR14889223220778500097 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14889223220778500097.jpg
+carried-forward  CR14911460577162297345 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14911460577162297345.jpg
+scrape-error     CR14950572808512471041 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14950572808512471041 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14950572808512471041 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14950572808512471041 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR14964264038970687489 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14964264038970687489.jpg
+carried-forward  CR14964264038970687489 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14964264038970687489.jpg
+carried-forward  CR15062215913526788097 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15062215913526788097.jpg
+carried-forward  CR15062215913526788097 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15062215913526788097.jpg
+scrape-error     CR15087245196221480961 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15087245196221480961 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15087245196221480961 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15087245196221480961 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15124672915628359681 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15124672915628359681 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15124672915628359681 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15124672915628359681 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR15129272378925776897 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15129272378925776897.mp4
+carried-forward  CR15129272378925776897 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15129272378925776897.mp4
+carried-forward  CR15129272378925776897 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15129272378925776897.mp4
+scrape-error     CR15129272378925776897 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15197344586910400513 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15197344586910400513 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15197344586910400513 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15252672089329500161 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR15273935123792265217 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15273935123792265217.jpg
+carried-forward  CR15273935123792265217 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15273935123792265217.jpg
+scrape-error     CR15318706137763676161 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15318706137763676161 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15318706137763676161 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15402426870112714753 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15560837916962848769 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR15612273062320275457 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15612273062320275457 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15612273062320275457 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15612273062320275457 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15636233628302704641 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR15685537172801191937 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR15754065884269772801 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR15769365588570275841 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR15799445649725849601 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR15807358937990168577 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR15930982252981256193 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15930982252981256193 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15930982252981256193 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15932137702263095297 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR16014139614470078465 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16014139614470078465.mp4
+carried-forward  CR16014139614470078465 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16014139614470078465.mp4
+carried-forward  CR16014139614470078465 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16014139614470078465.mp4
+carried-forward  CR16058041739377639425 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16058041739377639425.jpg
+carried-forward  CR16058041739377639425 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16058041739377639425.jpg
+scrape-error     CR16079470319059861505 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR16090918073351012353 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR16107833475628793857 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR16167130962348474369 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16167130962348474369 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16167130962348474369 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16197097911245340673 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR16328759918955855873 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16328759918955855873.jpg
+carried-forward  CR16328759918955855873 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16328759918955855873.jpg
+carried-forward  CR16328759918955855873 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16328759918955855873.jpg
+scrape-error     CR16585265785463635969 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR16651913258306895873 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16651913258306895873 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16652154781497819137 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16652154781497819137 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16652154781497819137 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16673899548082438145 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR16716632436863139841 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16716632436863139841.jpg
+carried-forward  CR16716632436863139841 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16716632436863139841.jpg
+carried-forward  CR16716632436863139841 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16716632436863139841.jpg
+scrape-error     CR16736108060556132353 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR16815035403244404737 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR16860688844016582657 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR16979506013294034945 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16979506013294034945 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16979506013294034945 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16979506013294034945 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR17029122789757419521 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17029122789757419521.jpg
+carried-forward  CR17029122789757419521 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17029122789757419521.jpg
+carried-forward  CR17029122789757419521 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17029122789757419521.jpg
+scrape-error     CR17141482123518017537 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17141482123518017537 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17141482123518017537 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17153246485618360321 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR17180384184938528769 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR17195655018468868097 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17195655018468868097 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17195655018468868097 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17264945408027656193 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR17276803005278060545 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR17439134721614282753 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17439134721614282753.jpg
+carried-forward  CR17439134721614282753 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17439134721614282753.jpg
+carried-forward  CR17439134721614282753 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17439134721614282753.jpg
+scrape-error     CR17480066541629210625 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR17540958921504587777 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR17660929306680885249 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17717268342617669633 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17717268342617669633 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17717268342617669633 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17717268342617669633 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17807469098284613633 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR17810233090128216065 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17810233090128216065.jpg
+carried-forward  CR17810233090128216065 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17810233090128216065.jpg
+carried-forward  CR17821800957474766849 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17821800957474766849.jpg
+carried-forward  CR17821800957474766849 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17821800957474766849.jpg
+carried-forward  CR17821800957474766849 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17821800957474766849.jpg
+scrape-error     CR17825290051467083777 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR17842371995396734977 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR17915019846790152193 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17915019846790152193 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17915019846790152193 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17915019846790152193 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17915019846790152193 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17939601808640966657 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR18023376717707476993 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18023376717707476993 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18023376717707476993 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18027554312137211905 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18027554312137211905 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18027554312137211905 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18037957332813479937 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR18040347791351349249 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR18064978930577702913 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR18136295780196024321 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR18204878951849918465 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR18217646274713223169 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18217646274713223169.jpg
+carried-forward  CR18217646274713223169 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18217646274713223169.jpg
+carried-forward  CR18217646274713223169 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18217646274713223169.jpg
+scrape-error     CR18229766569343320065 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR18247574835192397825 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18247574835192397825.mp4
+carried-forward  CR18247574835192397825 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18247574835192397825.mp4
+carried-forward  CR18247574835192397825 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18247574835192397825.mp4
+scrape-error     CR18247574835192397825 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR18253761168646602753 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18253761168646602753.jpg
+scrape-error     CR18337398930817417217 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+carried-forward  CR18342870616073306113 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18342870616073306113.jpg
+carried-forward  CR18342870616073306113 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18342870616073306113.jpg
+carried-forward  CR18360220282494386177 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18360220282494386177.jpg
+carried-forward  CR18360220282494386177 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18360220282494386177.jpg
+carried-forward  CR18360220282494386177 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18360220282494386177.jpg
+scrape-error     CR18381899705446563841 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR18439375644996403201 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)
+scrape-error     CR18442760972578848769 v0  (Step 1 tag: detail-fetch: ConnectionError; re-run Step 1 to recover)

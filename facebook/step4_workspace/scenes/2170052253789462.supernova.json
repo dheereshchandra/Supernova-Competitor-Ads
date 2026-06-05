@@ -1,0 +1,71 @@
+{
+  "competitor_id": "2170052253789462",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Male in his 20s or 30s with a medium build and light brown complexion. He has short dark hair, a mustache, and a goatee. He has visible tattoos on his arms and neck.",
+        "wardrobe": "He wears a black t-shirt with a graphic print of a face, dark grey pants, and white sneakers. He accessorizes with a blue LA Dodgers baseball cap and a silver cross necklace.",
+        "demeanor": "Confident, educational, and expressive, using frequent hand gestures to emphasize his points."
+      },
+      {
+        "id": "B",
+        "role": "struggling learner",
+        "appearance": "Male in his 20s or 30s with a medium build and light brown complexion. He has a mustache and goatee.",
+        "wardrobe": "He wears a tan short-sleeve button-down work shirt over a white t-shirt, and a dark baseball cap.",
+        "demeanor": "Confused, hesitant, and unsure."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction",
+        "supernova_script": "Character A says: English बोलना सीखना है? तो ये 3 गलतियां कभी मत करना। [Want to learn to speak English? Then never make these 3 mistakes.]",
+        "scene_summary": "- Hooks the viewer by addressing a common goal (learning English).\n- Sets up a numbered list format to keep retention high.\n- Establishes the presenter as a knowledgeable, relatable guide.",
+        "supernova_on_screen_text": "Top 3 Mistakes\n1.\n2.\n3.\n❗️How NOT to Learn English❗️"
+      },
+      {
+        "n": 2,
+        "scene_label": "Points 1 and 2",
+        "supernova_script": "Character A says: पहला, सिर्फ grammar rules रटना। [First, just cramming grammar rules.] Character A says: Rules से vocabulary तो बढ़ेगी, लेकिन जब बोलने की बारी आएगी, तो आप blank हो जाओगे। [Rules will increase vocabulary, but when it's time to speak, you'll go blank.] Character A says: दूसरा, 'perfect' होने का wait करना। [Second, waiting to be 'perfect'.] Character A says: English बोलने के लिए ready नहीं होना है, ready होने के लिए बोलना है। [You don't get ready to speak English, you speak to get ready.]",
+        "scene_summary": "- Identifies common pitfalls for Indian learners (focusing too much on grammar and fear of making mistakes).\n- Validates the learner's struggle of going 'blank' during conversations.\n- Delivers a memorable, encouraging piece of advice about speaking to get ready.",
+        "supernova_on_screen_text": "Top 3 Mistakes\n1. सिर्फ Grammar रटना\n2. 'Perfect' होने का wait करना\n3."
+      },
+      {
+        "n": 3,
+        "scene_label": "Point 3 with PIP",
+        "supernova_script": "Character A says: और तीसरा, real conversation से डरना। [And third, fearing real conversations.] Character A says: जब तक आप खुलकर बोलोगे नहीं, fluency कैसे आएगी? [Until you speak openly, how will fluency come?]",
+        "scene_summary": "- Introduces the final mistake, highlighting the core problem of avoiding actual speaking practice.\n- Uses the PIP visual of the struggling learner to create empathy and relatability.\n- Sets up the transition to the solution.",
+        "supernova_on_screen_text": "Top 3 Mistakes\n1. सिर्फ Grammar रटना\n2. 'Perfect' होने का wait करना\n3. Real conversation से डरना"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Pitch",
+        "supernova_script": "Character A says: इसीलिए Supernova app बना है। [That's why the Supernova app was made.] Character A says: यहाँ आप AI tutor के साथ interview या shopping जैसे real scenarios में English बोलने की practice कर सकते हो। [Here you can practice speaking English in real scenarios like interviews or shopping with an AI tutor.] Character A says: बिना किसी डर के। रोज़ practice करो, और confidence बढ़ाओ। [Without any fear. Practice daily, and build confidence.]",
+        "scene_summary": "- Introduces Supernova as the practical solution to the problems discussed.\n- Highlights key features: AI tutor, real-world scenarios (interviews, shopping), and a judgment-free environment.\n- Ends with a strong, encouraging call to action focused on building confidence.",
+        "supernova_on_screen_text": "Top 3 Mistakes\nSUPERNOVA\n1. सिर्फ Grammar रटना\n2. 'Perfect' होने का wait करना\n3. Real conversation से डरना"
+      },
+      {
+        "n": 5,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear, uncluttered final screen.\n- Reinforces brand recall with the Supernova name.\n- Delivers a straightforward call to action to download the app.",
+        "supernova_on_screen_text": "Supernova\nDownload the app today."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Speak",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "removed (replaced with 'grammar rules' to avoid disparaging other apps)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967297.8567314
+}

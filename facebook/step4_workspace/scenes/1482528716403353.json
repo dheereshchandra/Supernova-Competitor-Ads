@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1482528716403353",
+  "parsed": {
+    "duration_s": 5.0,
+    "production_type": "mixed",
+    "production_notes": "Static graphic with text and a stock cartoon character. No live-action elements.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Cartoon avatar",
+        "appearance": "2D cartoon illustration of a young woman. Light skin, brown hair in a bun, simple features.",
+        "wardrobe": "Red short-sleeved top, blue jeans, white sneakers.",
+        "demeanor": "Neutral, standing still."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.0,
+        "screenshot_at_s": 2.5,
+        "scene_label": "Static Text Graphic",
+        "setting": "Plain light beige background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Wide, static graphic.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Plain light beige background. Small 2D cartoon illustration of Character A in the bottom right corner. She stands facing forward with arms at her sides. The remaining space is empty.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Static graphic on a light beige background. Large block of German text occupies the center and left. Small cartoon woman in the bottom right. The image remains unchanged.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Wie ich in 3 Wochen zweisprachig geworden bin.\nUnglaublich, aber wahr.\nIch habe in der Schule Englisch gelernt, jahrelang Duolingo benutzt und monatelang intensiv ge\u00fcbt - und trotzdem konnte ich kein richtiges Gespr\u00e4ch f\u00fchren.\nDann habe ich auf TikTok eine App entdeckt - und alles hat sich ver\u00e4ndert.\nDiese App wurde von Sprachwissenschaftlern entwickelt und l\u00e4sst dich vollst\u00e4ndig in die Sprache eintauchen, indem du mit einem KI-Tutor sprichst.\nSeit ich Speak benutze, habe ich beim Sprechen mit Ausl\u00e4ndern echtes Selbstvertrauen gewonnen - ich tr\u00e4ume sogar auf Englisch!\nIn nur drei Monaten hat diese App mein Leben buchst\u00e4blich ver\u00e4ndert. (How I became bilingual in 3 weeks. Unbelievable, but true. I learned English in school, used Duolingo for years and practiced intensively for months - and still couldn't hold a real conversation. Then I discovered an app on TikTok - and everything changed. This app was developed by linguists and lets you fully immerse yourself in the language by talking to an AI tutor. Since I started using Speak, I have gained real confidence when speaking with foreigners - I even dream in English! In just three months, this app has literally changed my life.)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966543.4777484
+}

@@ -1,0 +1,127 @@
+{
+  "competitor_id": "1518609409895801",
+  "parsed": {
+    "duration_s": 56.5,
+    "production_type": "mixed",
+    "production_notes": "The video combines a human-recorded actor with an AI-generated 3D robot avatar. The robot features synthetic text-to-speech audio and slightly stiff, automated lip-syncing, while the human actor has natural movement and audio.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young Indian woman in her 20s, medium build, wheatish complexion. She has dark brown hair tied back loosely with some strands framing her face. She has a small tattoo on her left forearm.",
+        "wardrobe": "Plain grey short-sleeved t-shirt.",
+        "demeanor": "Friendly, expressive, eager to learn, and slightly sheepish when corrected."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot. The body is made of white and silver metallic panels with visible mechanical joints at the shoulders and elbows. The face is smooth and white with human-like eyes and lips, lacking a nose bridge or distinct human skin texture.",
+        "wardrobe": "None; metallic robot body.",
+        "demeanor": "Neutral, helpful, and robotic, with subtle, programmed hand gestures."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 28.0,
+        "screenshot_at_s": 14.0,
+        "scene_label": "English Corrections",
+        "setting": "A typical Indian bedroom with a bed, floral bedsheet, wooden wardrobe, window, and ceiling fan. Daytime natural lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A young Indian woman (Character A) is framed from the chest up, looking directly at the camera as if holding a phone for a selfie video. She is in a bedroom with a neatly made bed featuring a floral bedsheet, a wooden wardrobe, and a window letting in natural daylight. A ceiling fan is visible above. She makes expressive facial gestures, occasionally smiling or looking slightly embarrassed.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A humanoid robot (Character B) is framed from the chest up against a softly blurred background of an indoor cafe or living space with warm lighting and plants. The robot has a white and silver metallic body with visible joints. It looks directly forward, occasionally making small, precise hand gestures.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene is formatted like a mobile video call. Character A occupies the full screen in the background, while Character B appears in a small rectangular inset in the top right corner. Text captions appear in the lower-middle section of the screen, and video call UI buttons (camera, end call, mute) are overlaid at the very bottom.",
+        "audio_transcript": "Character B says: \u0915\u0932 \u0915\u0939\u093e\u0902 \u0917\u090f \u0925\u0947\u0964 [Where did you go yesterday?]\nCharacter A says: I went to \u092e\u093e\u0932 yesterday. [I went to mall yesterday.]\nCharacter B says: \u092e\u093e\u0932? pronunciation \u0925\u094b\u0921\u093c\u093e \u0917\u0921\u093c\u092c\u0921\u093c \u0939\u094b \u0917\u092f\u093e\u0964 It is Mall, I went to the mall yesterday. [Mall? The pronunciation got a little messed up. It is Mall, I went to the mall yesterday.]\nCharacter B says: \u0915\u0932 \u0915\u094d\u092f\u093e \u0916\u093e\u092f\u093e? [What did you eat yesterday?]\nCharacter A says: I eat \u092a\u0940\u091c\u093e \u0916\u093e\u092f\u093e\u0964 [I eat pizza ate.]\nCharacter B says: \u092a\u0940\u091c\u093e? \u0928\u0939\u0940\u0902 Pizza \u0914\u0930 \u092c\u093e\u0924 \u0915\u0932 \u0915\u0940 \u0939\u0948 \u0907\u0938\u0932\u093f\u090f eat \u0928\u0939\u0940\u0902 ate - I ate pizza. [Pija? No, Pizza. And we are talking about yesterday, so not eat, but ate - I ate pizza.]\nCharacter B says: \u091f\u094d\u0930\u0947\u0928 \u0915\u0939\u093e\u0902 \u0938\u0947 \u092a\u0915\u0921\u093c\u0924\u0947 \u0939\u094b? [From where do you catch the train?]\nCharacter A says: I pick train from railway \u0908-\u0938\u094d\u091f\u0947\u0936\u0928\u0964 [I pick train from railway e-station.]\nCharacter B says: Pick? Pick \u092e\u0924\u0932\u092c \u0909\u0920\u093e\u0928\u093e... train \u0909\u0920\u093e\u0913\u0917\u0947? Catch \u092e\u0924\u0932\u092c \u092a\u0915\u0921\u093c\u0928\u093e \u0914\u0930 \u0908-\u0938\u094d\u091f\u0947\u0936\u0928 \u0928\u0939\u0940\u0902 Station. I catch the train from the railway station. [Pick? Pick means to lift... will you lift the train? Catch means to catch, and not e-station, Station. I catch the train from the railway station.]",
+        "on_screen_text": "\u0915\u0932 \u0915\u0939\u093e\u0902 \u0917\u090f \u0925\u0947\u0964 (Where did you go yesterday.)\nI went to \u092e\u093e\u0932 yesterday. (I went to mall yesterday.)\n\u092e\u093e\u0932? (Mall?)\npronunciation \u0925\u094b\u0921\u093c\u093e \u0917\u0921\u093c\u092c\u0921\u093c \u0939\u094b \u0917\u092f\u093e\u0964 (pronunciation got a little messed up.)\nIt is Mall,\nI went to the mall yesterday.\n\u0915\u0932 \u0915\u094d\u092f\u093e \u0916\u093e\u092f\u093e (What did you eat yesterday)\nI eat \u092a\u0940\u091c\u093e \u0916\u093e\u092f\u093e\u0964 (I eat pizza ate.)\n\u092a\u0940\u091c\u093e? (Pija?)\n\u0928\u0939\u0940\u0902 Pizza \u0914\u0930 (No Pizza and)\n\u092c\u093e\u0924 \u0915\u0932 \u0915\u0940 \u0939\u0948 \u0907\u0938\u0932\u093f\u090f (we are talking about yesterday so)\neat \u0928\u0939\u0940\u0902 ate - (not eat but ate -)\nI ate pizza\n\u091f\u094d\u0930\u0947\u0928 \u0915\u0939\u093e\u0902 \u0938\u0947 \u092a\u0915\u0921\u093c\u0924\u0947 \u0939\u094b? (From where do you catch the train?)\nI pick train from railway \u0908-\u0938\u094d\u091f\u0947\u0936\u0928\u0964 (I pick train from railway e-station.)\nPick?\nPick \u092e\u0924\u0932\u092c \u0909\u0920\u093e\u0928\u093e... (Pick means to lift...)\ntrain \u0909\u0920\u093e\u0913\u0917\u0947? (will you lift the train?)\nCatch \u092e\u0924\u0932\u092c \u092a\u0915\u0921\u093c\u0928\u093e (Catch means to catch)\n\u0914\u0930 \u0908-\u0938\u094d\u091f\u0947\u0936\u0928 \u0928\u0939\u0940\u0902 (and not e-station)\nStation.\nI catch the train from the railway station."
+      },
+      {
+        "n": 2,
+        "start_s": 28.0,
+        "end_s": 45.0,
+        "screenshot_at_s": 36.0,
+        "scene_label": "App Benefits",
+        "setting": "A typical Indian bedroom with a bed, floral bedsheet, wooden wardrobe, window, and ceiling fan. Daytime natural lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A remains in the same bedroom setting, framed from the chest up. She continues to hold the camera, looking directly into the lens. Her expressions shift from slightly concerned to attentive as she listens.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "Character B remains in the top right corner, framed from the chest up against the blurred warm indoor background. The robot maintains a steady gaze forward, with minor head movements and hand gestures.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The video call layout continues with Character A in the background and Character B in the top right inset. Text captions continue to appear in the lower-middle area, and the video call UI buttons remain at the bottom. A brand logo briefly appears over Character A's chest.",
+        "audio_transcript": "Character A says: \u0913\u0939 \u092e\u0947\u0930\u093e \u092a\u094d\u0930\u094b\u0928\u0928\u094d\u0938\u093f\u090f\u0936\u0928 \u0935\u0940\u0915 \u0939\u0948\u0964 [Oh, my pronunciation is weak.]\nCharacter B says: \u0915\u094b\u0908 \u092c\u093e\u0924 \u0928\u0939\u0940\u0902, AI Teacher \u091f\u094d\u0930\u093e\u0908 \u0915\u093f\u092f\u093e \u0915\u094d\u092f\u093e? [No problem, did you try the AI Teacher?]\nCharacter A says: \u0935\u094b \u092e\u0939\u0902\u0917\u093e \u0939\u094b\u0917\u093e \u0928\u093e? [It must be expensive, right?]\nCharacter B says: \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0928\u0939\u0940\u0902, Normal English classes \u0938\u0947 7 \u0917\u0941\u0928\u093e \u0938\u0938\u094d\u0924\u093e \u0939\u0948\u0964 \u0907\u0938\u0932\u093f\u090f 50 \u0932\u093e\u0916 \u0932\u094b\u0917 MySivi \u092a\u0930 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902\u0964 [Not at all, it is 7 times cheaper than normal English classes. That's why 5 million people are practicing on MySivi.]\nCharacter A says: \u0932\u0947\u0915\u093f\u0928 \u091f\u093e\u0907\u092e \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u0924\u093e\u0964 [But I don't get time.]\nCharacter B says: \u0930\u094b\u091c \u0938\u093f\u0930\u094d\u092b 15 \u0938\u0947 20 \u092e\u093f\u0928\u091f \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u093e\u092b\u0940 \u0939\u0948\u0964 \u0927\u0940\u0930\u0947-\u0927\u0940\u0930\u0947 \u0915\u0949\u0928\u094d\u092b\u093f\u0921\u0947\u0902\u091f \u0939\u094b \u091c\u093e\u0913\u0917\u0947\u0964 [Just 15 to 20 minutes of practice daily is enough. You will slowly become confident.]",
+        "on_screen_text": "\u0913\u0939 \u092e\u0947\u0930\u093e \u092a\u094d\u0930\u094b\u0928\u0928\u094d\u0938\u093f\u090f\u0936\u0928 \u0935\u0940\u0915 \u0939\u0948\u0964 (Oh my pronunciation is weak.)\n\u0915\u094b\u0908 \u092c\u093e\u0924 \u0928\u0939\u0940\u0902, (No problem,)\nAI Teacher \u091f\u094d\u0930\u093e\u0908 \u0915\u093f\u092f\u093e \u0915\u094d\u092f\u093e? (did you try AI Teacher?)\n\u0935\u094b \u092e\u0939\u0902\u0917\u093e \u0939\u094b\u0917\u093e \u0928\u093e? (It must be expensive, right?)\n\u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0928\u0939\u0940\u0902, (Not at all,)\nNormal English classes \u0938\u0947 7 \u0917\u0941\u0928\u093e \u0938\u0938\u094d\u0924\u093e \u0939\u0948\u0964 (It is 7 times cheaper than Normal English classes.)\n\u0907\u0938\u0932\u093f\u090f 50 \u0932\u093e\u0916 \u0932\u094b\u0917 (That's why 50 lakh people)\nMySivi \u092a\u0930 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902\u0964 (are practicing on MySivi.)\n\u0932\u0947\u0915\u093f\u0928 \u091f\u093e\u0907\u092e \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u0924\u093e\u0964 (But I don't get time.)\n\u0930\u094b\u091c \u0938\u093f\u0930\u094d\u092b 15 \u0938\u0947 20 \u092e\u093f\u0928\u091f \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u093e\u092b\u0940 \u0939\u0948\u0964 (Just 15 to 20 minutes of practice daily is enough.)\n\u0927\u0940\u0930\u0947-\u0927\u0940\u0930\u0947 \u0915\u0949\u0928\u094d\u092b\u093f\u0921\u0947\u0902\u091f \u0939\u094b \u091c\u093e\u0913\u0917\u0947\u0964 (You will slowly become confident.)"
+      },
+      {
+        "n": 3,
+        "start_s": 45.0,
+        "end_s": 56.5,
+        "screenshot_at_s": 50.0,
+        "scene_label": "Call to Action",
+        "setting": "A typical Indian bedroom with a bed, floral bedsheet, wooden wardrobe, window, and ceiling fan. Daytime natural lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A is in the same bedroom, framed from the chest up. She looks excited and engaged, maintaining eye contact with the camera.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "Character B is in the top right inset, framed from the chest up against the blurred indoor background. The robot continues its subtle, programmed movements while looking forward.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The video call layout persists. Character A is the main background, and Character B is in the top right inset. Text captions are displayed in the lower-middle section, and the video call UI buttons are at the bottom. A brand logo appears again over Character A.",
+        "audio_transcript": "Character A says: \u0935\u093e\u0913! \u0915\u0948\u0938\u0947 \u091c\u0949\u0907\u0928 \u0915\u0930\u0942\u0902? [Wow! How do I join?]\nCharacter B says: \u0928\u0940\u091a\u0947 Install \u0915\u093e button \u0926\u092c\u093e\u0913, MySivi app install \u0915\u0930\u094b, sign up \u0915\u0930\u094b \u0914\u0930 practice \u0936\u0941\u0930\u0942 \u0915\u0930\u094b\u0964 \u0938\u093f\u0930\u094d\u092b 15 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 improvement \u0926\u093f\u0916\u0928\u0947 \u0932\u0917\u0947\u0917\u093e\u0964 Trial \u0938\u093f\u0930\u094d\u092b \u20b91 \u092e\u0947\u0902 3 \u0926\u093f\u0928\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u0939\u0948\u0964 \u0905\u092d\u0940 \u0936\u0941\u0930\u0942 \u0915\u0930\u094b\u0964 [Press the install button below, install the MySivi app, sign up and start practicing. You will start seeing improvement in just 15 days. The trial is for just \u20b91 for 3 days. Start now.]",
+        "on_screen_text": "\u0935\u093e\u0913! \u0915\u0948\u0938\u0947 \u091c\u0949\u0907\u0928 \u0915\u0930\u0942\u0902? (Wow! How do I join?)\n\u0928\u0940\u091a\u0947 Install \u0915\u093e button \u0926\u092c\u093e\u0913, (Press the Install button below,)\nMySivi app install \u0915\u0930\u094b, (install MySivi app,)\nsign up \u0915\u0930\u094b \u0914\u0930 practice \u0936\u0941\u0930\u0942 \u0915\u0930\u094b\u0964 (sign up and start practice.)\n\u0938\u093f\u0930\u094d\u092b 15 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 improvement \u0926\u093f\u0916\u0928\u0947 \u0932\u0917\u0947\u0917\u093e\u0964 (Improvement will start showing in just 15 days.)\nTrial \u0938\u093f\u0930\u094d\u092b \u20b91 \u092e\u0947\u0902 3 \u0926\u093f\u0928\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u0939\u0948\u0964 (Trial is for just \u20b91 for 3 days.)\n\u0905\u092d\u0940 \u0936\u0941\u0930\u0942 \u0915\u0930\u094b\u0964 (Start now.)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779890885.0063024
+}

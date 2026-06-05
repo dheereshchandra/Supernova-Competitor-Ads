@@ -1,0 +1,96 @@
+{
+  "competitor_id": "1428449025623778",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Brand Mascot (Duo)",
+        "appearance": "A stylized, bright green cartoon owl with a rounded body, large eyes, a yellow beak, and small yellow feet.",
+        "wardrobe": "No clothing, except when depicted in specific app illustrations (e.g., graduation gown).",
+        "demeanor": "Cheerful, energetic, and encouraging."
+      },
+      {
+        "id": "B",
+        "role": "Animated Woman (Bea)",
+        "appearance": "A cartoon woman with dark skin and black hair styled in a high bun.",
+        "wardrobe": "She wears a yellow headband, a blue short-sleeved shirt, blue pants, and red shoes.",
+        "demeanor": "Active, determined, and focused."
+      },
+      {
+        "id": "C",
+        "role": "Animated Man (Eddy)",
+        "appearance": "A cartoon man with light skin and blonde hair.",
+        "wardrobe": "He wears a red headband, a red long-sleeved athletic top, and red shorts.",
+        "demeanor": "Confident, proud, and strong."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Duo with Globe",
+        "supernova_script": "Unknown speaker says: क्या आप भी confident English बोलना चाहते हैं? [Do you also want to speak confident English?]",
+        "scene_summary": "- Hooks the viewer by addressing their core desire to speak English confidently.\n- Sets a warm, encouraging tone right from the start.\n- Replaces the generic 'improve' with 'confident', targeting the specific emotional pain point of the Indian learner.",
+        "supernova_on_screen_text": "want to speak confident english?\nSupernova App"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Interface - Graduation Duo",
+        "supernova_script": "Unknown speaker says: Supernova के साथ रोज़ practice करें। [Practice daily with Supernova.]",
+        "scene_summary": "- Introduces the brand name and the core mechanism (daily practice).\n- Establishes the app as a practical tool for everyday learning.\n- Maintains the visual beat of showing the app interface while shifting the audio focus to consistency.",
+        "supernova_on_screen_text": "practice daily\nwith supernova\nComplete the sentence\nWay to go! Learning English is quite an accomplishment!\nquite\nalmost\nhardly\nnot\nCHECK\nGreat job!\nCONTINUE"
+      },
+      {
+        "n": 3,
+        "scene_label": "Bea Running",
+        "supernova_script": "Unknown speaker says: हमारे AI tutor से सीखें real-life situations के लिए सही English। [Learn the right English for real-life situations from our AI tutor.]",
+        "scene_summary": "- Highlights Supernova's unique selling proposition (AI tutor).\n- Connects the learning process directly to real-world application.\n- Matches the energetic visual of the character moving forward with the idea of making practical progress.",
+        "supernova_on_screen_text": "real-life english सीखें"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Interface - Typing Exercise",
+        "supernova_script": "App Voice says: Please send the report by tomorrow. [Please send the report by tomorrow.]",
+        "scene_summary": "- Demonstrates the app's interactive exercise interface.\n- Uses a professional, office-context sentence instead of a random phrase to better resonate with working adults.\n- Shows the immediate feedback loop (Correct!) to build user confidence.",
+        "supernova_on_screen_text": "Type the missing word\nPlease send the report by tomorrow.\nCHECK\nCorrect!"
+      },
+      {
+        "n": 5,
+        "scene_label": "Eddy Flexing",
+        "supernova_script": "Unknown speaker says: ताकि आप अपने career में कभी पीछे ना रहें। [So that you never fall behind in your career.]",
+        "scene_summary": "- Connects English fluency directly to career growth and success.\n- Validates the target audience's primary motivation for learning the language.\n- Matches the triumphant, flexing visual with an empowering career message.",
+        "supernova_on_screen_text": "reach your career goals"
+      },
+      {
+        "n": 6,
+        "scene_label": "App Interface - Smartphone Illustration",
+        "supernova_script": "Unknown speaker says: यह आसान है, effective है, और आपके budget में भी। [It's easy, effective, and in your budget too.]",
+        "scene_summary": "- Replaces the competitor's 'free' claim with an honest 'affordable/in-budget' message.\n- Reinforces that the app is user-friendly and yields results.\n- Keeps the fast-paced, multi-benefit rhythm of the original scene.",
+        "supernova_on_screen_text": "it's easy\nit's effective\nit's affordable\nComplete the sentence\nIt would be interesting to work in the tech industry and build laptops or phones!\nsteal\ndrink\neat\nbuild\nCONTINUE\nGreat!"
+      },
+      {
+        "n": 7,
+        "scene_label": "End Card",
+        "supernova_script": "Unknown speaker says: आज ही Supernova download करें और अपनी English journey शुरू करें। [Download Supernova today and start your English journey.]",
+        "scene_summary": "- Delivers a clear, encouraging Call to Action.\n- Removes aggressive 'world's #1' hype in favor of a supportive 'start your journey' tone.\n- Leaves the viewer with the brand name and app store availability.",
+        "supernova_on_screen_text": "supernova\nDownload the Supernova app today.\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "free",
+        "supernova_swap": "affordable / budget में"
+      },
+      {
+        "competitor_brand": "world's #1",
+        "supernova_swap": "[removed]"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.9590042
+}

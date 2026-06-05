@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1690195018790972",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female, slim build, fair complexion. Short, neatly parted brown hair. Clear facial features with minimal makeup.",
+        "wardrobe": "Grey button-down collared shirt. Wears white wired earphones in the middle segment.",
+        "demeanor": "Professional, encouraging, and friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction",
+        "supernova_script": "Character A says: मैंने सालों तक लोगों को confidently English बोलना सिखाया है। [I have spent years teaching people to speak English confidently.]\nCharacter A says: अब वही AI coaching आपको इस app पर मिलेगी। [Now you will get that same AI coaching on this app.]",
+        "scene_summary": "- Establishes authority and trust immediately with the audience.\n- Hooks the user with the promise of expert-level coaching accessible directly from their phone.\n- Sets a warm, encouraging tone.",
+        "supernova_on_screen_text": "ENGLISH COACH\nमैंने सालों तक लोगों को CONFIDENTLY ENGLISH बोलना सिखाया है\nअब वही AI COACHING आपको इस APP पर मिलेगी"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "supernova_script": "Character A says: मेरे साथ बोलिए। [Say this with me.]\nCharacter A says: Interview. [Interview.]\nCharacter A says: अब मैं इसे गलत बोल कर दिखाती हूँ। [Now I will show you by saying it incorrectly.]\nCharacter A says: Intar-view. [Intar-view.]\nCharacter A says: App ने बता दिया कि pronunciation गलत है। [The app pointed out that the pronunciation is wrong.]\nCharacter A says: Let me try again. [Let me try again.]\nCharacter A says: Interview. [Interview.]\nCharacter A says: Perfect! [Perfect!]",
+        "scene_summary": "- Demonstrates the core AI tutor feature in real-time with a relatable word.\n- Shows the app's ability to detect mistakes and provide instant, actionable feedback.\n- Builds user confidence by showing how easy and rewarding it is to correct a mistake.",
+        "supernova_on_screen_text": "MERE SAATH BOLIE INTERVIEW AB MAIN ISE GALAT BOL KAR DIKHATI HOON INTAR-VIEW APP NE BATA DIYA KI PRONUNCIATION GALAT HAI LET ME TRY AGAIN INTERVIEW PERFECT!\nSupernova AI Tutor\nLet's begin! Record yourself saying the word below.\ninterview\nAwesome! You're ready for the next one.\n98%\nWe'll come back to this one for more practice later.\n66%\nExplain My Mistake\nWatch Sound"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action",
+        "supernova_script": "Character A says: तो आज ही Supernova download करें और अपनी English practice शुरू करें। [So download Supernova today and start your English practice.]",
+        "scene_summary": "- Delivers a clear, encouraging Call to Action.\n- Reinforces the brand name and the core value of daily practice.\n- Ends on a supportive, older-sibling note without relying on 'free' gimmicks.",
+        "supernova_on_screen_text": "Supernova\nतो आज ही SUPERNOVA DOWNLOAD करें और अपनी ENGLISH PRACTICE शुरू करें"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "FOR FREE",
+        "supernova_swap": "removed"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658661.8056278
+}

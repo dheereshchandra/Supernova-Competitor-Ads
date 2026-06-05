@@ -1,0 +1,46 @@
+{
+  "competitor_id": "4372859722993274",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "Young adult male, medium build, light complexion. He has short dark hair, a neatly trimmed beard, and dark eyes.",
+        "wardrobe": "Brown crew-neck t-shirt. He wears a white wireless earbud in his right ear.",
+        "demeanor": "Engaged, slightly frustrated initially, then eager and happy as he learns."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character. Young adult, slender build, fair complexion. She has bright orange hair styled in an updo, large green eyes, and a soft, stylized face.",
+        "wardrobe": "Light-colored, possibly white or pale blue, top. She wears small gold hoop earrings.",
+        "demeanor": "Friendly, encouraging, patient, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Italian Lesson in Car",
+        "supernova_script": "Character A says: यार, English बोलना बड़ा मुश्किल लगता है। [Man, speaking English feels so difficult.]\nCharacter B says: Hi! Let's practice. What is your name? [Hi! Let's practice. What is your name?]\nCharacter A says: My name is Gustavo. [My name is Gustavo.]\nCharacter B says: Great start! But remember, 'is' is pronounced with a soft Z sound. Repeat: My name is Gustavo. [Great start! But remember, 'is' is pronounced with a soft Z sound. Repeat: My name is Gustavo.]\nCharacter A says: My name is Gustavo. [My name is Gustavo.]\nCharacter B says: How old are you? [How old are you?]\nCharacter A says: I have twenty-four years. [I have twenty-four years.]\nCharacter B says: Good try! But in English, we use 'am' for age, not 'have'. Say 'I am twenty-four years old'. [Good try! But in English, we use 'am' for age, not 'have'. Say 'I am twenty-four years old'.]\nCharacter A says: I am twenty-four years old. [I am twenty-four years old.]\nCharacter B says: Now answer this: Do you speak English? [Now answer this: Do you speak English?]\nCharacter A says: Yes, I speak English. [Yes, I speak English.]\nCharacter B says: You got it! You're improving fast. [You got it! You're improving fast.]\nCharacter A says: Hey! मैं रोज़ ऐसे ही English practice कैसे कर सकता हूँ? [Hey! How can I practice English like this every day?]\nCharacter B says: Just download Supernova and talk to AI tutors like me! [Just download Supernova and talk to AI tutors like me!]\nCharacter A says: Alright! मैं अभी Supernova download करता हूँ! [Alright! I'll download Supernova right now!]",
+        "scene_summary": "- Hooks the viewer with a relatable frustration about speaking English.\n- Demonstrates the core product value: interactive, real-time AI feedback on pronunciation and grammar.\n- Ends with a clear call to action to download the app.",
+        "supernova_on_screen_text": "यार, English बोलना बड़ा मुश्किल लगता है। (Man, speaking English feels so difficult.)\nWhat is your name?\nMy name is Gustavo.\nGreat start! But remember —\n'is' is pronounced with a\nsoft Z sound.\nRepeat:\nMy name is Gustavo.\nMy name is Gustavo.\nHow old are you?\nI have 24 years.\nGood try! But in English,\nwe use \"am\" for age,\nnot \"have.\"\nSay \"I am 24 years old\"\nI am 24 years old.\nNow answer this:\nDo you speak English?\nYes,\nI speak English.\nYou got it.\nYou're improving fast.\nHey! मैं रोज़ ऐसे ही English practice\nकैसे कर सकता हूँ?\nJust download Supernova\nand talk to AI tutors like me.\nAlright!\nमैं अभी Supernova download करता हूँ!"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides the final brand impression.\n- Displays app store badges to drive downloads.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630635.728027
+}

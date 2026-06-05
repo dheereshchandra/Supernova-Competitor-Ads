@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1391383766354969",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult, slim build, light brown complexion. Dark hair tied back with loose strands framing her face. Expressive facial features.",
+        "wardrobe": "Dark grey or black long-sleeved button-up shirt.",
+        "demeanor": "Engaged, slightly hesitant at first, then enthusiastic and convinced."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character. Young appearance, fair complexion, bright red hair styled in a bob. Large, expressive eyes.",
+        "wardrobe": "Simple white t-shirt.",
+        "demeanor": "Friendly, encouraging, and helpful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI English Lesson",
+        "supernova_script": "Character B says: Do you speak English? [Do you speak English?]\nCharacter A says: Uh, थोड़ा-थोड़ा। [Uh, a little bit.]\nCharacter B says: Can you at least say your name? [Can you at least say your name?]\nCharacter A says: My name is Jenny. [My name is Jenny.]\nCharacter B says: Nice. Where are you from? [Nice. Where are you from?]\nCharacter A says: I am India. [I am India.]\nCharacter B says: You said I am India. Close though! Try: I am from India. [You said I am India. Close though! Try: I am from India.]\nCharacter A says: Okay, I am from India. I am India... no... wait, I am from India. [Okay, I am from India. I am India... no... wait, I am from India.]\nCharacter B says: There you go! [There you go!]\nCharacter A says: Hey, मेरी English कैसे improve होगी? [Hey, how will my English improve?]\nCharacter B says: Daily conversation practice is a must. [Daily conversation practice is a must.]\nCharacter A says: But मेरी टूटी-फूटी English के साथ कौन बात करेगा? [But who will talk to me with my broken English?]\nCharacter B says: With me, of course! [With me, of course!]\nCharacter A says: With you? [With you?]\nCharacter B says: Haven't you heard of Supernova's AI English teachers? You can make as many mistakes as you want without boring anyone. [Haven't you heard of Supernova's AI English teachers? You can make as many mistakes as you want without boring anyone.]\nCharacter A says: Wait, that could actually work. You just taught me something in two seconds. [Wait, that could actually work. You just taught me something in two seconds.]\nCharacter B says: Download Supernova and see the difference. [Download Supernova and see the difference.]\nCharacter A says: Oh, you know what, fair enough. I'm downloading Supernova right now! Let's go. [Oh, you know what, fair enough. I'm downloading Supernova right now! Let's go.]",
+        "scene_summary": "- Hook: Establishes the learner's hesitation and current English level.\n- Problem: The learner wants to practice but feels embarrassed by their mistakes.\n- Solution: Introduces the AI tutor as a safe, non-judgmental practice partner.\n- Payoff: The learner realizes the immediate value and decides to download the app.",
+        "supernova_on_screen_text": "Do you speak English?\nUh, थोड़ा-थोड़ा।\nCan you at least say your name?\nMy name is Jenny.\nNice. Where are you from?\nI am India.\nYou said \"I am India.\" close though! Try: \"I am from India.\"\nOkay, I am from India. I am India... no... wait, I am from India.\nThere you go!\nHey, मेरी English कैसे improve होगी?\nDaily conversation practice is a must.\nBut मेरी टूटी-फूटी English के साथ कौन बात करेगा?\nWith me, of course!\nWith you?\nHaven't you heard of Supernova's AI English teachers? You can make as many mistakes as you want without boring anyone.\nWait, that could actually work. You just taught me something in two seconds.\nDownload Supernova and see the difference.\nYou know what, fair enough. I'm downloading Supernova right now! Let's go."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the app logo and download badges.\n- Provides a clear call to action for the viewer.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780626889.9678097
+}

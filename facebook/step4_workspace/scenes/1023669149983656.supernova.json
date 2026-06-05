@@ -1,0 +1,60 @@
+{
+  "competitor_id": "1023669149983656",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Humanoid robot with a white, segmented face and body, exposing mechanical joints at the neck and shoulders. It has dark, hollow-looking eyes.",
+        "wardrobe": "None, exposed robotic chassis.",
+        "demeanor": "Static, robotic, and expressionless."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young Indian man, medium build, brown complexion, short dark hair, light beard and mustache.",
+        "wardrobe": "Dark blue t-shirt.",
+        "demeanor": "Calm and inquisitive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Bedtime Conversation",
+        "supernova_script": "Character A says: क्या कर रहे हो? [What are you doing?]\nCharacter B says: I sleeping.\nCharacter A says: 'I am sleeping' बोलना चाहिए। थोड़ा formal तरीके से 'I am getting some sleep' भी बोल सकते हो। [You should say 'I am sleeping'. You can also say 'I am getting some sleep' in a slightly formal way.]\nCharacter B says: अरे हाँ, पर मैं अच्छी English कैसे सीखूँ? [Oh yes, but how do I learn good English?]\nCharacter A says: मेरे साथ रोज़ 15 minutes practice करो। हम real-world situations में बात करेंगे, बिना किसी डर के। [Practice with me for 15 minutes daily. We will talk in real-world situations, without any fear.]\nCharacter B says: क्या ये बहुत महँगा है? [Is it very expensive?]\nCharacter A says: बिल्कुल नहीं, ये बहुत affordable है! लाखों लोग Supernova के साथ confidence से English बोलना सीख रहे हैं। [Not at all, it's very affordable! Lakhs of people are learning to speak English with confidence with Supernova.]\nCharacter B says: Super! मैं कैसे join करूँ? [Super! How do I join?]",
+        "scene_summary": "- Hooks the viewer with a relatable, everyday English mistake.\n- Introduces the AI tutor as a helpful, non-judgmental guide.\n- Highlights core Supernova features (daily 15-min practice, real-world situations) while removing unrealistic guarantees.\n- Addresses price objections gently by emphasizing affordability and social proof.",
+        "supernova_on_screen_text": "क्या कर रहे हो? (What are you doing?) I am sleeping थोड़ा formal (a little formal) I am getting some sleep अच्छी English कैसे सीखूँ? (How to learn good English?) रोज़ 15 minutes practice (Daily 15 minutes practice) Real-world situations बहुत affordable (Very affordable) लाखों लोग (Lakhs of people) Supernova कैसे join करूँ? (How to join?)"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Store Screencast",
+        "supernova_script": "Character A says: आज ही Supernova app download करो, [Download the Supernova app today,]",
+        "scene_summary": "- Transitions from the problem/solution dialogue to the direct call-to-action.\n- Shows the app store interface to guide the user on the next step.",
+        "supernova_on_screen_text": "Supernova AI English Speaking App Supernova AI In-app purchases Install Cancel Open What's new Last updated Rate this app App support"
+      },
+      {
+        "n": 3,
+        "scene_label": "Return to Conversation",
+        "supernova_script": "Character A says: और confidence के साथ English बोलना शुरू करो। [and start speaking English with confidence.]",
+        "scene_summary": "- Brings the viewer back to the personal connection with the AI tutor.\n- Delivers the final emotional payoff: speaking with confidence.",
+        "supernova_on_screen_text": "Confidence के साथ (With confidence) English बोलना शुरू करो (Start speaking English)"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "Unknown speaker says: अभी 'Install' पर click करें और Supernova app download करें। [Click on 'Install' now and download the Supernova app.]",
+        "scene_summary": "- Final, clear call-to-action.\n- Reinforces the brand name and the specific action required (Install).",
+        "supernova_on_screen_text": "Supernova English speaking app Install Now"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892235.9915204
+}

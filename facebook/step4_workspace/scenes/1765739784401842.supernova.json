@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1765739784401842",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, slim build, fair complexion. Dark brown hair styled in a loose updo with face-framing strands. Small gold hoop earrings.",
+        "wardrobe": "Dark green, high-necked, long-sleeved turtleneck top.",
+        "demeanor": "Friendly, encouraging, professional, slightly artificial."
+      },
+      {
+        "id": "B",
+        "role": "Human learner",
+        "appearance": "Young female, average build, fair complexion. Light brown hair pulled back. Large, round, wire-rimmed glasses.",
+        "wardrobe": "Dark grey zip-up hoodie over a lighter shirt.",
+        "demeanor": "Eager, attentive, happy, natural."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Pronunciation Practice",
+        "supernova_script": "Character A says: चलो अपनी English speaking practice करते हैं। [Let's practice your English speaking.]\nCharacter B says: हाँ, बिल्कुल! [Yes, absolutely!]\nCharacter A says: ये phrase बोलो: \"Do you want to go?\" [Say this phrase: \"Do you want to go?\"]\nCharacter B says: Do you want to go? [Do you want to go?]\nCharacter A says: इसे थोड़ा naturally बोलो: \"Do you wanna go?\" [Speak it a bit naturally: \"Do you wanna go?\"]\nCharacter B says: Do you wanna go? [Do you wanna go?]\nCharacter A says: Very good! अब ये try करो: \"Let me think about it.\" [Very good! Now try this: \"Let me think about it.\"]\nCharacter B says: Let me think about it. [Let me think about it.]\nCharacter A says: Try: \"Lemme think about it.\" [Try: \"Lemme think about it.\"]\nCharacter B says: Lemme think about it. [Lemme think about it.]\nCharacter B says: अरे वाह, ये तो आसान है! One more. [Oh wow, this is easy! One more.]\nCharacter A says: \"What did you say?\" [\"What did you say?\"]\nCharacter B says: What did you say? [What did you say?]\nCharacter A says: इसे flow में बोलो: \"What'd you say?\" [Say it in a flow: \"What'd you say?\"]\nCharacter B says: What'd you say? [What'd you say?]\nCharacter B says: Amazing, मेरी fluency अभी से better लग रही है! मैं और कैसे सीख सकती हूँ? [Amazing, my fluency is already looking better! How can I learn more?]\nCharacter A says: बस Supernova app download करो। हम रोज़ practice करेंगे, और तुम confidently English बोलने लगोगी। [Just download the Supernova app. We will practice daily, and you will start speaking English confidently.]\nCharacter B says: Awesome! मैं अभी download करती हूँ। [Awesome! I am downloading it right now.]",
+        "scene_summary": "- Establishes the core value proposition: practical, conversational English practice.\n- Builds confidence through immediate, actionable feedback in a supportive tone.\n- Ends with a clear, encouraging call-to-action to download the app.",
+        "supernova_on_screen_text": "चलो English speaking practice करते हैं\nहाँ, बिल्कुल!\nये phrase बोलो: \"Do you want to go?\"\nDo you want to go?\n20/100\nTry: \"Do you wanna go?\"\nDo you wanna go?\nअब ये try करो: \"Let me think about it\"\nLet me think about it\n32/100\nTry: \"Lemme think about it\"\nLemme think about it\nअरे वाह! One more\n\"What did you say?\"\nWhat did you say?\n15/100\nTry: \"What'd you say?\"\nWhat'd you say?\nAmazing, मेरी fluency better हो रही है!\n100/100\nमैं और कैसे सीख सकती हूँ?\nबस Supernova app download करो\nहम रोज़ practice करेंगे\nAwesome!\nमैं अभी download करती हूँ"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the Supernova brand prominently.\n- Reinforces the AI tutor positioning in Hindi.\n- Provides a final, clear call-to-action to download.",
+        "supernova_on_screen_text": "Supernova\nआपका अपना AI English Tutor\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently App",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658780.5416982
+}

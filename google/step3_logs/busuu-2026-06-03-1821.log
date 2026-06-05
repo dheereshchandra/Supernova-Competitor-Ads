@@ -1,0 +1,101 @@
+# Step 3 run log (Google pipeline)
+# competitor : busuu
+# started_at : 2026-06-03T18:21:32
+# input      : inputs/g-ads-busuu-2026-06-03.csv
+# videos     : videos/busuu-2026-06-03
+# images     : images/busuu-2026-06-03
+# master     : master/busuu.csv  (updated)
+# enriched   : inputs/g-ads-busuu-2026-06-03_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded-video': 0, 'uploaded-image': 0, 'carried-forward': 54, 'text-no-asset': 0, 'asset-missing': 33, 'unsupported': 0, 'no-creative': 0, 'scrape-error': 0, 'error': 0}
+#
+carried-forward  CR00101879854076526593 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00101879854076526593.jpg
+asset-missing    CR01799058325942304769  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01799058325942304769  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01799058325942304769  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01799058325942304769  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+carried-forward  CR02836618950303809537 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02836618950303809537.jpg
+carried-forward  CR03239106211127230465 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03239106211127230465.jpg
+carried-forward  CR03579516110598307841 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03579516110598307841.jpg
+carried-forward  CR03654745520804462593 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03654745520804462593.jpg
+carried-forward  CR03828542025272131585 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03828542025272131585.jpg
+carried-forward  CR03828542025272131585 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03828542025272131585.jpg
+carried-forward  CR03828542025272131585 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03828542025272131585.jpg
+carried-forward  CR04190672124114894849 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04190672124114894849.jpg
+asset-missing    CR04424761448203288577  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04424761448203288577  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04424761448203288577  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+carried-forward  CR05322909959577403393 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05322909959577403393.jpg
+carried-forward  CR05322909959577403393 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05322909959577403393.jpg
+carried-forward  CR05925405034102652929 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05925405034102652929.jpg
+carried-forward  CR05925405034102652929 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05925405034102652929.jpg
+carried-forward  CR05925405034102652929 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05925405034102652929.jpg
+asset-missing    CR06135470613239693313  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06135470613239693313  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06135470613239693313  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06135470613239693313  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+carried-forward  CR06235048313305956353 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06235048313305956353.jpg
+carried-forward  CR06721449580006735873 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06721449580006735873.jpg
+carried-forward  CR06721449580006735873 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06721449580006735873.jpg
+asset-missing    CR06800463028199358465  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06800463028199358465  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06800463028199358465  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+carried-forward  CR07528491286593011713 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07528491286593011713.jpg
+carried-forward  CR07531383173972754433 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07531383173972754433.jpg
+carried-forward  CR07564755104222412801 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07564755104222412801.jpg
+carried-forward  CR07972347809850458113 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07972347809850458113.jpg
+carried-forward  CR08166446074970505217 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08166446074970505217.jpg
+carried-forward  CR08166446074970505217 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08166446074970505217.jpg
+carried-forward  CR08341967678822416385 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08341967678822416385.jpg
+carried-forward  CR08682293225135800321 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08682293225135800321.jpg
+carried-forward  CR08682293225135800321 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08682293225135800321.jpg
+carried-forward  CR08958116265403088897 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08958116265403088897.jpg
+asset-missing    CR09292026745483952129  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09292026745483952129  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09292026745483952129  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09324229156138909697  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09324229156138909697  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09324229156138909697  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09324229156138909697  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09324229156138909697  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+carried-forward  CR09600301837085310977 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09600301837085310977.jpg
+carried-forward  CR11138142794705534977 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11138142794705534977.mp4
+carried-forward  CR11517009814165127169 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11517009814165127169.jpg
+carried-forward  CR11517009814165127169 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11517009814165127169.jpg
+carried-forward  CR11517009814165127169 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11517009814165127169.jpg
+carried-forward  CR12408200959556059137 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12408200959556059137.jpg
+carried-forward  CR13161052376573935617 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13161052376573935617.jpg
+carried-forward  CR13161052376573935617 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13161052376573935617.jpg
+carried-forward  CR13161052376573935617 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13161052376573935617.jpg
+carried-forward  CR13503526609126162433 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13503526609126162433.jpg
+carried-forward  CR13503526609126162433 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13503526609126162433.jpg
+carried-forward  CR13503526609126162433 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13503526609126162433.jpg
+carried-forward  CR13570237484276645889 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13570237484276645889.jpg
+carried-forward  CR13607785462767812609 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13607785462767812609.jpg
+asset-missing    CR14166047442205671425  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14166047442205671425  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14166047442205671425  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14166047442205671425  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14271934810007011329  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14271934810007011329  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14271934810007011329  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+carried-forward  CR14460486760519434241 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14460486760519434241.jpg
+carried-forward  CR14460486760519434241 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14460486760519434241.jpg
+carried-forward  CR15022494260677050369 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15022494260677050369.jpg
+carried-forward  CR15869509812002750465 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15869509812002750465.jpg
+carried-forward  CR15869509812002750465 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15869509812002750465.jpg
+carried-forward  CR16294105812119322625 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16294105812119322625.jpg
+carried-forward  CR16294105812119322625 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16294105812119322625.jpg
+asset-missing    CR16947020212106952705  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16947020212106952705  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16947020212106952705  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16947020212106952705  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+carried-forward  CR17400594425289113601 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17400594425289113601.jpg
+carried-forward  CR17657357706366812161 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17657357706366812161.jpg
+carried-forward  CR17799953781689942017 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17799953781689942017.jpg
+carried-forward  CR18034156630353903617 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18034156630353903617.jpg
+carried-forward  CR18034156630353903617 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18034156630353903617.jpg
+carried-forward  CR18034156630353903617 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18034156630353903617.jpg

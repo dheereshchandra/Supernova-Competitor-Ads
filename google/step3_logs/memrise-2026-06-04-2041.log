@@ -1,0 +1,17 @@
+# Step 3 run log (Google pipeline)
+# competitor : memrise
+# started_at : 2026-06-04T20:41:42
+# input      : inputs/g-ads-memrise-2026-06-04.csv
+# videos     : videos/memrise-2026-06-04
+# images     : images/memrise-2026-06-04
+# master     : master/memrise.csv  (updated)
+# enriched   : inputs/g-ads-memrise-2026-06-04_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded-video': 0, 'uploaded-image': 0, 'carried-forward': 3, 'text-no-asset': 0, 'asset-missing': 0, 'unsupported': 0, 'no-creative': 0, 'scrape-error': 0, 'error': 0}
+#
+carried-forward  CR17536918250632249345 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17536918250632249345.jpg
+carried-forward  CR17536918250632249345 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17536918250632249345.jpg
+carried-forward  CR17536918250632249345 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17536918250632249345.jpg

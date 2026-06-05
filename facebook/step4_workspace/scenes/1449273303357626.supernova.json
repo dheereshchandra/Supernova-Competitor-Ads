@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1449273303357626",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, slim build, fair complexion, long straight brown hair. She has a casual, everyday look.",
+        "wardrobe": "A long-sleeved, collared shirt with horizontal black and white stripes, and light-colored pants.",
+        "demeanor": "Initially frustrated, then engaged and focused as she interacts with the app."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated female character with red hair, visible on the tablet screen.",
+        "wardrobe": "Not clearly visible, but appears to be wearing a light-colored top.",
+        "demeanor": "Helpful and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Washing dishes and learning Italian",
+        "supernova_script": "Character A says: English बोलना बहुत मुश्किल है। [Speaking English is very difficult.]\nCharacter B says: What is your name? [What is your name?]\nCharacter A says: My name is Sara. [My name is Sara.]\nCharacter B says: How are you doing today? [How are you doing today?]\nCharacter A says: I am fine, thank you. [I am fine, thank you.]\nCharacter B says: Do you speak English? [Do you speak English?]\nCharacter A says: Yes, I... [Yes, I...]\nCharacter B says: Do you mean: Yes, I speak a little English. [Do you mean: Yes, I speak a little English.]\nCharacter A says: Yes, I speak a little English. [Yes, I speak a little English.]\nCharacter B says: What do you do? [What do you do?]\nCharacter A says: I... working...? [I... working...?]\nCharacter B says: Do you mean: I am working right now. [Do you mean: I am working right now.]\nCharacter A says: I am working right now. [I am working right now.]\nCharacter A says: मैं रोज़ English बोलने की practice कैसे करूँ? [How can I practice speaking English every day?]\nCharacter B says: Just download Supernova. [Just download Supernova.]\nCharacter A says: मैं अभी Supernova download करती हूँ। [I will download Supernova right now.]",
+        "scene_summary": "- Hooks the viewer with a relatable frustration about language learning.\n- Demonstrates the interactive AI tutor correcting mistakes gently in real-time.\n- Shows that learning can happen while multitasking (washing dishes).\n- Ends with a clear call to action to download the app.",
+        "supernova_on_screen_text": "English बोलना बहुत मुश्किल है। (Speaking English is very difficult.)\nWhat is your name?\nMy name is Sara.\nHow are you doing today?\nI am fine, thank you.\nDo you speak English?\nYes, I...\nYes, I speak a little English.\nWhat do you do?\nI... working...?\nI am working right now.\nमैं रोज़ English बोलने की practice कैसे करूँ? (How can I practice speaking English every day?)\nJust download Supernova.\nमैं अभी Supernova download करती हूँ। (I will download Supernova right now.)"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides the final brand impression.\n- Shows where to download the app.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780626898.0720613
+}

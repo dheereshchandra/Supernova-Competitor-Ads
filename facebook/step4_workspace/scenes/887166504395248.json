@@ -1,0 +1,86 @@
+{
+  "competitor_id": "887166504395248",
+  "parsed": {
+    "duration_s": 47.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human-recorded footage with an AI-generated avatar. The AI avatar exhibits an uncanny, overly smooth appearance, unnaturally large eyes, and maintains a perfectly static pose throughout her scene.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female, slim build, fair complexion. Long brown hair styled in a side braid. Expressive facial features.",
+        "wardrobe": "Wears a white long-sleeve button-up shirt in the first scene, and a light blue v-neck scrub top in the second scene.",
+        "demeanor": "Energetic, enthusiastic, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female appearance, fair complexion. Red hair pulled back, large brown eyes, smooth skin.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Friendly, calm, but static and slightly uncanny."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Motorcycle Intro",
+        "setting": "Busy city street at night, heavy traffic, neon signs.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "selfie-style wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is sitting on the back of a moving motorcycle at night, holding the camera in a selfie style. She has long brown hair in a braid and wears a white long-sleeve shirt. The motorcycle driver in front of her wears a bright green helmet and jacket. The background is a busy city street with heavy traffic, bright neon signs, and streetlights. The lighting is a mix of streetlights and neon glow. Character A is energetic and smiling widely.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A selfie-style shot of a woman riding on the back of a motorcycle through a bustling city at night. Text overlays appear on screen as she speaks, crossing out common English phrases.",
+        "audio_transcript": "Character A says: Stop saying I'm fine, thanks, I don't know, you're welcome. It's very basic.\nCharacter A says: I used to speak the same way.\nCharacter A says: Then my friend suggested practicing with Loora.\nCharacter A says: Let me show you.",
+        "on_screen_text": "STOP SAYING\nI'm fine, thanks\nI don't know\nYou're welcome\nIt's very basic.\nI used to speak the same way.\nThen my friend suggested practicing with Loora.\nLet me show you."
+      },
+      {
+        "n": 2,
+        "start_s": 11.5,
+        "end_s": 47.0,
+        "screenshot_at_s": 25.0,
+        "scene_label": "Split-screen Conversation",
+        "setting": "Left: neutral background. Right: inside a car during the day.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen talking-head",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character B, a young woman with red hair and large brown eyes, looks directly at the camera with a friendly, static smile. She wears a grey turtleneck sweater and rests her chin on her hand. The background is a plain, warm-toned wall. The lighting is soft and even.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Character A, a young woman with long brown hair in a braid, sits inside a car during the day. She wears a light blue v-neck top. She looks directly at the camera and speaks. The background shows the interior of the car and a blurred view out the window. The lighting is natural daylight.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen shows an AI avatar on the left and a human woman on the right, engaging in a conversation. Subtitles appear at the bottom of the screen throughout the dialogue.",
+        "audio_transcript": "Character A says: Sorry, my English is not good.\nCharacter B says: You should practice everyday.\nCharacter A says: But I don't have anyone to practice with.\nCharacter B says: That's exactly what I'm here for. I'm Loora, your AI English tutor.\nCharacter A says: I can speak with you?\nCharacter B says: Yes, I'll chat with you, give you instant feedback on your pronunciation, and help you get better with every conversation.\nCharacter A says: But I make a lot of mistakes.\nCharacter B says: You don't have to worry about making mistakes because I'll guide you through them.\nCharacter A says: Sounds good.\nCharacter B says: Let's practice together every day and you'll see how quickly your English improves.",
+        "on_screen_text": "Sorry, my English is not good.\nYou should practice everyday.\nBut I don't have anyone to practice with.\nThat's exactly what I'm here for.\nI'm Loora, your AI English tutor.\nI can speak with you?\nYes, I'll chat with you\ngive you instant feedback on your pronunciation\nand help you get better with every conversation.\nBut I make a lot of mistakes.\nYou don't have to worry about making mistakes\nbecause I'll guide you through them.\nSounds good.\nLet's practice together every day\nand you'll see how quickly your English improves.\nLoora"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780641380.623841
+}

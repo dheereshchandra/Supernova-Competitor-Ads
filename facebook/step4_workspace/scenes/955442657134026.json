@@ -1,0 +1,82 @@
+{
+  "competitor_id": "955442657134026",
+  "parsed": {
+    "duration_s": 34.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines a 3D-animated AI avatar in the top half with a human-recorded video in the bottom half. The AI avatar exhibits typical 3D animation characteristics with slightly unnatural lip-syncing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, 3D animated, dark hair, fair skin with freckles. Large expressive eyes.",
+        "wardrobe": "White top.",
+        "demeanor": "Calm, encouraging, and friendly."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young Asian woman, dark hair tied back, fair skin with a shiny complexion.",
+        "wardrobe": "Black tank top.",
+        "demeanor": "Casual, expressive, and slightly hesitant."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 32.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "AI Japanese Lesson",
+        "setting": "Top: virtual room with soft purple lighting. Bottom: real room with a couch and purple ambient lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is framed from the chest up, looking directly at the camera. She rests her chin on her hand. The background is a softly blurred room with warm purple and pink lighting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B is framed closely, looking up towards the camera. She rests her chin on her hands, which are crossed in front of her. The background features a light-colored couch and purple ambient lighting.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout showing an AI avatar on top and a human user on the bottom. Both characters are engaged in a conversation, maintaining eye contact with the camera. Subtitles appear in the center of the screen.",
+        "audio_transcript": "Character A says: \ub108 \uc77c\ubcf8\uc5b4 \ud560 \uc904 \uc54c\uc544? [Do you know how to speak Japanese?]\nCharacter B says: \ucd08\ub610 [Chotto (A little)]\nCharacter A says: \uc5b4\ub5a4 \ub2e8\uc5b4 \uc54c\uc544? [What words do you know?]\nCharacter B says: \ub098\ub2c8? [Nani? (What?)]\nCharacter A says: \uc88b\uc544, \ub610? [Good, what else?]\nCharacter B says: \ucf54\ub178 \uc57c\ub85c [Kono yaro (You bastard)]\nCharacter A says: \uadf8\ub7fc \uc774 \uc9c8\ubb38\uc5d0 \ub300\ub2f5\ud560 \uc218 \uc788\uc5b4. \ub2c8\ud63c\uac00 \uc2a4\ud0a4\ub370\uc2a4\uae4c? [Then you can answer this question. Nihon ga suki desu ka? (Do you like Japan?)]\nCharacter B says: \uc5b4? \ubaa8\ub974\uaca0\uc5b4. \ub09c \uadf8\ub0e5 \uc560\ub2c8\uc5d0\uc11c \ubc30\uc6cc\uc11c [Huh? I don't know. I just learned from anime]\nCharacter A says: \ub530\ub77c \ud574\ubd10. \ub124, \uc88b\uc544\ud574\uc694. \ud558\uc774 \uc2a4\ud0a4\ub370\uc2a4 [Repeat after me. Yes, I like it. Hai, suki desu]\nCharacter B says: \uc74c. \ud558\uc774 \uc2a4\ud0a4\ub370\uc2a4 [Um. Hai, suki desu]\nCharacter A says: \uc798\ud588\uc5b4! [Good job!]\nCharacter B says: \ub098 \uc77c\ubcf8\uc5b4 \uacf5\ubd80\ud558\uace0 \uc2f6\uc740\ub370 \uc5b4\ub5bb\uac8c \uc2dc\uc791\ud574\uc57c \ub420\uc9c0 \ubaa8\ub974\uaca0\uc5b4 [I want to study Japanese, but I don't know how to start]\nCharacter A says: \uadf8\ub7fc \ub098\ub791 \uc77c\ubcf8\uc5b4\ub85c \ub300\ud654\ud558\uc790 [Then let's converse in Japanese]\nCharacter B says: \uc77c\ubcf8\uc5b4\ub85c \ub300\ud654? \uc544, \uc880 \ubd80\ub044\ub7ec\uc6b4\ub370 [Converse in Japanese? Ah, I'm a bit shy]\nCharacter A says: \uac71\uc815 \ub9c8. \ud504\ub799\ud2f0\uce74\uc5d0\uc120 AI \uc120\uc0dd\ub2d8\uc774\ub791 \uc5f0\uc2b5\ud560 \uc218 \uc788\uc5b4. \ub09c AI\ub2c8\uae4c \uae34\uc7a5\ud560 \ud544\uc694\ub3c4 \uc5c6\uc9c0 [Don't worry. On Praktika, you can practice with an AI teacher. Since I'm an AI, there's no need to be nervous]\nCharacter B says: \uadf8\ub798? \uadf8\ub7fc \ud504\ub799\ud2f0\uce74 \ub2e4\uc6b4\ubc1b\uc744\uac8c [Really? Then I'll download Praktika]",
+        "on_screen_text": "\ub108 \uc77c\ubcf8\uc5b4 \ud560 \uc904 \uc54c\uc544? (Do you know how to speak Japanese?)\n\ucd08\ub610 (Chotto)\n\uc5b4\ub5a4 \ub2e8\uc5b4 \uc54c\uc544? (What words do you know?)\n\ub098\ub2c8? (Nani?)\n\uc88b\uc544, \ub610? (Good, what else?)\n\ucf54\ub178 \uc57c\ub85c (Kono yaro)\n\uadf8\ub7fc \uc774 \uc9c8\ubb38\uc5d0 \ub300\ub2f5\ud560 \uc218 \uc788\uc5b4 (Then you can answer this question)\n\ub2c8\ud63c\uac00 \uc2a4\ud0a4\ub370\uc2a4\uae4c? (Nihon ga suki desu ka?)\n\uc5b4? \ubaa8\ub974\uaca0\uc5b4. \ub09c \uadf8\ub0e5 \uc560\ub2c8\uc5d0\uc11c \ubc30\uc6cc\uc11c (Huh? I don't know. I just learned from anime)\n\ub530\ub77c \ud574\ubd10. \ub124, \uc88b\uc544\ud574\uc694. \ud558\uc774 \uc2a4\ud0a4\ub370\uc2a4 (Repeat after me. Yes, I like it. Hai, suki desu)\n\uc74c. \ud558\uc774 \uc2a4\ud0a4\ub370\uc2a4 (Um. Hai, suki desu)\n\uc798\ud588\uc5b4! (Good job!)\n\ub098 \uc77c\ubcf8\uc5b4 \uacf5\ubd80\ud558\uace0 \uc2f6\uc740\ub370 \uc5b4\ub5bb\uac8c \uc2dc\uc791\ud574\uc57c \ub420\uc9c0 \ubaa8\ub974\uaca0\uc5b4 (I want to study Japanese, but I don't know how to start)\n\uadf8\ub7fc \ub098\ub791 \uc77c\ubcf8\uc5b4\ub85c \ub300\ud654\ud558\uc790 (Then let's converse in Japanese)\n\uc77c\ubcf8\uc5b4\ub85c \ub300\ud654? \uc544, \uc880 \ubd80\ub044\ub7ec\uc6b4\ub370 (Converse in Japanese? Ah, I'm a bit shy)\n\uac71\uc815 \ub9c8. \ud504\ub799\ud2f0\uce74\uc5d0\uc120 AI \uc120\uc0dd\ub2d8\uc774\ub791 \uc5f0\uc2b5\ud560 \uc218 \uc788\uc5b4 (Don't worry. On Praktika, you can practice with an AI teacher)\n\ub09c AI\ub2c8\uae4c \uae34\uc7a5\ud560 \ud544\uc694\ub3c4 \uc5c6\uc9c0 (Since I'm an AI, there's no need to be nervous)\n\uadf8\ub798? \uadf8\ub7fc \ud504\ub799\ud2f0\uce74 \ub2e4\uc6b4\ubc1b\uc744\uac8c (Really? Then I'll download Praktika)"
+      },
+      {
+        "n": 2,
+        "start_s": 32.0,
+        "end_s": 34.0,
+        "screenshot_at_s": 33.0,
+        "scene_label": "End Card",
+        "setting": "Solid white background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A completely blank white screen.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A white screen displaying the app logo and download badges.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780629004.666292
+}

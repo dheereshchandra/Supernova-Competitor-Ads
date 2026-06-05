@@ -1,0 +1,104 @@
+{
+  "competitor_id": "1758731028824393",
+  "parsed": {
+    "duration_s": 74.0,
+    "production_type": "mixed",
+    "production_notes": "Combines live-action human actors in a physical set with a 3D animated AI avatar displayed on a phone screen and in a split-screen composite.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Female, 20s-30s, tan complexion, brown hair in a thick braid. Floral tattoo on left shoulder.",
+        "wardrobe": "Red and black plaid flannel shirt worn off the shoulders over a dusty pink ribbed tank top, blue jeans.",
+        "demeanor": "Initially hesitant, becomes confident and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "immigration officer",
+        "appearance": "Female, 30s-40s, light complexion, dark brown hair pulled back.",
+        "wardrobe": "Beige V-neck blouse.",
+        "demeanor": "Professional, stern, slightly skeptical."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female, fair complexion, freckles, bright red hair pulled back.",
+        "wardrobe": "Dark blue blazer over a white collared shirt, photo ID lanyard.",
+        "demeanor": "Friendly, patient, encouraging."
+      },
+      {
+        "id": "D",
+        "role": "security guard",
+        "appearance": "Male, tall, muscular build.",
+        "wardrobe": "Black tactical uniform, black balaclava, black sunglasses, tactical vest.",
+        "demeanor": "Stoic, intimidating, motionless."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 27.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Immigration Interview",
+        "setting": "Immigration office counter, glass partition, waiting area, fluorescent lighting.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "D"
+        ],
+        "camera": "Over-shoulder, medium shots",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A woman with a braided ponytail stands at a counter facing a glass partition. Behind the glass sits a female clerk in a beige blouse. To the right of the clerk stands a security guard in full black tactical gear, including a balaclava and sunglasses. The setting is a brightly lit office with a waiting area visible in the background where several people are seated. The woman hands over a folder of documents through a slot in the glass. Later, she holds up a smartphone displaying a 3D animated character. The camera alternates between over-the-shoulder shots of the woman and the clerk.",
+            "characters_in_panel": [
+              "A",
+              "B",
+              "D"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a woman at an immigration counter interacting with an officer while a security guard watches. The woman initially struggles with her speech, then confidently explains her situation. She hands over documents and then shows her phone to the officer. The phone displays an AI tutor app. Subtitles appear on screen throughout the interaction.",
+        "audio_transcript": "Character B says: Next.\nCharacter A says: Hi, I am register... for residency.\nCharacter B says: Documents?\nCharacter A says: Yes, here.\nCharacter B says: Do you speak English?\nCharacter A says: Yes.\nCharacter B says: Prove it.\nCharacter A says: My company relocated me for one year. I need to register my address and get a residency permit. I already completed the forms online.\nCharacter B says: Alright, how?\nCharacter A says: I used Loora. Ten minutes a day, just real conversations. Here, let me show you.",
+        "on_screen_text": "IMMIGRATION SERVICE\nQUIET PLEASE - INTERVIEW IN SESSION\nPOLICE\nNext.\nHey, I am register... for residency.\nDocuments?\nYes, here.\nDo you speak English?\nYes.\nProve it.\nMy company relocated me for one year.\nI need to register my address and get a residency permit.\nI already completed the forms online.\nAlright, how?\nI used Loora.\nTen minutes a day, just real conversations.\nHere, let me show you."
+      },
+      {
+        "n": 2,
+        "start_s": 27.5,
+        "end_s": 74.0,
+        "screenshot_at_s": 50.0,
+        "scene_label": "App Demonstration",
+        "setting": "Split screen. Left: virtual office. Right: blurred immigration office.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen, talking-head",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A 3D animated woman with red hair and freckles is framed from the chest up in a medium close-up. She wears a dark blue blazer over a white collared shirt. She rests her chin on her hand, looking directly forward with a friendly expression. The background is a softly blurred, brightly lit office environment with windows and desks. Her mouth moves in sync with her speech.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A woman with a tan complexion and dark hair is framed from the chest up in a medium close-up. She is wearing a red and black plaid shirt draped off her shoulders over a pink tank top. She looks directly forward, engaging in conversation. The background is a softly blurred office setting with fluorescent lights on the ceiling. Her expressions change from hesitant to smiling as she speaks.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen composite showing the AI tutor on the left and the user on the right. They engage in a conversation where the AI corrects the user's grammar. Visual indicators like checkmarks and cross marks appear to highlight the corrections. Subtitles are displayed at the bottom of the screen. The Loora logo appears on the AI's ID badge and later as a watermark.",
+        "audio_transcript": "Character C says: Welcome! How can I help you today?\nCharacter A says: I am here for register.\nCharacter C says: Do you mean \"I'm here TO register\"?\nCharacter A says: Yes, sorry, I'm here to register.\nCharacter C says: Great! What are you registering for?\nCharacter A says: For... um... residency. My company send me here.\nCharacter C says: You mean \"My company SENT me here\"?\nCharacter A says: Yes, my company sent me here. I'm not so good English.\nCharacter C says: You mean \"My English isn't that good\"? No worries. How many times have you spoken in English over the past month?\nCharacter A says: Honestly, I didn't. I have no one to practice with.\nCharacter C says: That's where I come in. We'll talk every day - real situations, just like this one. So you'll be ready for anything.\nCharacter A says: Amazing. I'm adding this to my daily routine today.",
+        "on_screen_text": "Welcome! How can I help you today?\nI am here for register.\nDo you mean \"I'm here TO register\"?\nYes, sorry, I'm here to register.\nGreat! What are you registering for?\nFor residency.\nMy company send me here.\nYou mean \"My company SENT me here\"?\nYes, my company sent me here.\nI'm not so good English.\nYou mean \"My English isn't that good\"?\nNo worries.\nHow many times have you spoken in English over the past month?\nHonestly, I didn't.\nI have no one to practice with.\nThat's where I come in.\nWe'll talk every day - real situations, just like this one.\nSo you'll be ready for anything.\nAmazing.\nI'm adding this to my daily routine today.\nLoora"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780641380.622324
+}

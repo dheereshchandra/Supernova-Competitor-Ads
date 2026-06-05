@@ -1,0 +1,71 @@
+{
+  "competitor_id": "2757075414671209",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Brand mascot",
+        "appearance": "A stylized, bright green cartoon owl with large eyes, a small yellow beak, and simple rounded features.",
+        "wardrobe": "None, just green feathers.",
+        "demeanor": "Energetic and cheerful."
+      },
+      {
+        "id": "B",
+        "role": "Chess instructor",
+        "appearance": "A stylized 2D cartoon man with brown skin, dark hair, a prominent dark mustache, and a unibrow. He has a slightly grumpy or serious default expression.",
+        "wardrobe": "A light pink long-sleeved shirt. Later depicted with a bare, highly muscular pink torso.",
+        "demeanor": "Serious and instructive, later becoming triumphant and exaggerated."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Brainrot game",
+        "supernova_script": "Unknown speaker says: Phone पर time waste करके थक गए? [Tired of wasting time on your phone?]",
+        "scene_summary": "- Hooks the viewer by calling out a relatable bad habit (wasting time on the phone).\n- Sets up a problem-solution dynamic immediately.\n- Uses casual, conversational Hindi-English mix.",
+        "supernova_on_screen_text": "Phone पर time waste करके थक गए?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Instructor introduces chess",
+        "supernova_script": "Character B says: मेरे साथ English बोलना सीखो। [Learn to speak English with me.]",
+        "scene_summary": "- Introduces the app's core value proposition clearly and directly.\n- Establishes the instructor character as a helpful guide.\n- Pivots the viewer's attention from mindless scrolling to productive learning.",
+        "supernova_on_screen_text": "मेरे साथ English बोलना सीखो।"
+      },
+      {
+        "n": 3,
+        "scene_label": "Chess puzzles screencast",
+        "supernova_script": "Character B says: Interview practice करें? 'Tell me about yourself' का जवाब दो। [Shall we practice for an interview? Answer 'Tell me about yourself'.]\nCharacter B says: 'I am' के साथ अपना profession बताओ। [State your profession with 'I am'.]\nCharacter B says: Perfect! अब customer से बात करो। 'How can I help you?' बोलो। [Perfect! Now talk to a customer. Say 'How can I help you?'.]\nCharacter B says: Confidence के साथ बोलना बहुत ज़रूरी है। [Speaking with confidence is very important.]\nCharacter B says: Now, speak the full sentence out loud. [Now, speak the full sentence out loud.]",
+        "scene_summary": "- Demonstrates the app's interactive speaking exercises.\n- Focuses on real-world, practical scenarios (job interviews, customer service) relevant to the target audience.\n- Shows step-by-step guidance, reinforcing the app's role as a supportive tutor.",
+        "supernova_on_screen_text": "NEW CONCEPT\nSpeak out loud\nInterview practice करें? 'Tell me about yourself' का जवाब दो।\nNicely done!\nCONTINUE\n'I am' के साथ अपना profession बताओ।\nअब customer से बात करो। 'How can I help you?' बोलो।\nAmazing!\nConfidence के साथ बोलना बहुत ज़रूरी है。\nNow, speak the full sentence out loud.\n+4"
+      },
+      {
+        "n": 4,
+        "scene_label": "Instructor celebrates",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a rewarding, triumphant visual payoff for completing the exercise.\n- Reinforces positive emotion and encourages daily practice.\n- Displays progress metrics to gamify the learning experience.",
+        "supernova_on_screen_text": "Perfect lesson!\nYour confidence is growing!\nKeep practicing daily.\nCLAIM REWARD\nFLUENCY SCORE 85%\nAMAZING 100%\nTIME 0:44"
+      },
+      {
+        "n": 5,
+        "scene_label": "End card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Delivers the final call-to-action.\n- Replaces competitor hype with Supernova's core brand promise (speaking with confidence).\n- Directs users to download the app.",
+        "supernova_on_screen_text": "Supernova\nSpeak English with confidence.\nDownload on the App Store\nGET IT ON Google Play\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "duolingo",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "The world's #1 learning app.",
+        "supernova_swap": "Speak English with confidence."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.9704437
+}

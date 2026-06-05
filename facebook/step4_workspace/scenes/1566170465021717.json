@@ -1,0 +1,103 @@
+{
+  "competitor_id": "1566170465021717",
+  "parsed": {
+    "duration_s": 54.0,
+    "production_type": "human-recorded",
+    "production_notes": "Presenter exhibits natural human movement, facial expressions, and lighting. Split-screen and text overlays are standard video editing techniques.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult East Asian male, slim build, fair complexion. Short black hair, rectangular glasses.",
+        "wardrobe": "Black crew-neck sweater over a white collared shirt. Silver watch on left wrist.",
+        "demeanor": "Energetic and confident."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 19.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Vocabulary Comparison",
+        "setting": "Plain white wall background, bright even lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Young East Asian man with glasses stands against a white wall. He wears a black sweater over a white shirt. He holds a smartphone in his left hand and gestures with his right. Neutral expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Young East Asian man with glasses stands against a white wall. He wears a black sweater over a white shirt. He holds a smartphone in his right hand and points upwards with his left. Confident expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Split-screen showing the same presenter on both sides against a white background. The left side acts out basic phrases, the right side acts out advanced idioms. Small video clips occasionally pop up in the lower center.",
+        "audio_transcript": "Character A says: Sometimes. Every so often.\nUnknown speaker says: Every so often it's, yep.\nCharacter A says: Rarely. Once in a blue moon.\nUnknown speaker says: Once in a blue moon.\nCharacter A says: Always. Day in and day out.\nUnknown speaker says: Day in and day out.\nCharacter A says: Never. Or, under no circumstances.\nUnknown speaker says: Under no circumstances.",
+        "on_screen_text": "B2 \ud83c\uddfa\ud83c\uddf8\nC1 \ud83c\uddfa\ud83c\uddf8\nSometimes\nEvery so often\nRarely\nOnce in a blue moon\nAlways\nDay in and day out\nNever\nUnder no circumstances"
+      },
+      {
+        "n": 2,
+        "start_s": 19.5,
+        "end_s": 42.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "App Demonstration",
+        "setting": "Plain white wall background, bright even lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Young East Asian man with glasses stands against a white wall. He wears a black sweater over a white shirt. He holds a smartphone in his left hand, showing the screen, and a wired earphone microphone in his right hand near his mouth. Engaged expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Presenter stands centered against a white wall. He holds up his phone showing a chat app and speaks into a wired microphone. Text overlays transcribe the conversation.",
+        "audio_transcript": "Character A says: The biggest lie about learning an English language? You need a better vocabulary. No, you don't. You need to start speaking. Hey, bro! Can we learn some idioms today?\nUnknown speaker says: Idioms are a great idea! Which type of idioms do you want to start with? Something fun like food idioms or maybe business idioms since you like that?",
+        "on_screen_text": "The biggest lie about learning an English language?\nYou need a better vocabulary\nNo, you don't\nYou need to start speaking\nHey, bro! Can we learn some idioms today?\nIdioms are a great idea!\nWhich type of idioms do you want to start with?\nSomething fun like food idioms or maybe business idioms since you like that?"
+      },
+      {
+        "n": 3,
+        "start_s": 42.0,
+        "end_s": 54.0,
+        "screenshot_at_s": 48.0,
+        "scene_label": "Call to Action",
+        "setting": "Plain white wall background, bright even lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Young East Asian man with glasses stands against a white wall. He wears a black sweater over a white shirt. He holds a smartphone and a wired microphone. He gestures enthusiastically and waves goodbye.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Presenter stands centered against a white wall, gesturing while speaking. App branding and download buttons appear on screen. He waves at the end.",
+        "audio_transcript": "Character A says: And that's why Fluently works because it's like a speaking partner in your pocket. Stop just learning a language. And start speaking English with Fluently App. See ya.",
+        "on_screen_text": "And that's why Fluently works\nbecause it's like a speaking partner in your pocket\nStop just learning a language\nAnd start speaking English with Fluently App\nFluently - AI English Tutor\nLearn and practice speaking\nGET IT ON Google Play\nDownload on the App Store\nSee ya"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657946.4140148
+}

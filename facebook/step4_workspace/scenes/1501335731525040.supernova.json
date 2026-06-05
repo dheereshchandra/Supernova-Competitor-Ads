@@ -1,0 +1,43 @@
+{
+  "competitor_id": "1501335731525040",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Immigrant Boyfriend",
+        "appearance": "Young adult male, slim build, light complexion. Short brown hair, mustache.",
+        "wardrobe": "White t-shirt with a small logo on the chest.",
+        "demeanor": "Playful, slightly frustrated but amused."
+      },
+      {
+        "id": "B",
+        "role": "Native Girlfriend",
+        "appearance": "Young adult female, slim build, light complexion. Long straight dark hair.",
+        "wardrobe": "Black spaghetti strap top.",
+        "demeanor": "Supportive, smiling, and laughing."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Pronunciation Practice",
+        "supernova_script": "Character A says: Career. [Career.]\n\nCharacter B says: Career. [Career.]\n\nCharacter A says: Environment. [Environment.]\n\nCharacter B says: Environment. [Environment.]\n\nCharacter A says: Specific. [Specific.]\n\nCharacter B says: Specific. [Specific.]\n\nCharacter A says: Thoughtful. यार, ये मेरे बस का नहीं है। [Thoughtful. Man, this is beyond me.]\n\nCharacter B says: Thoughtful. Supernova के AI tutor के साथ practice करो ना, हो जाएगा। [Thoughtful. Practice with Supernova's AI tutor, you'll get it.]\n\nCharacter A says: The sixth sick sheep. [The sixth sick sheep.]\n\nCharacter B says: The sixth sick sheep. [The sixth sick sheep.]",
+        "scene_summary": "- Establishes a highly relatable struggle with English pronunciation for Hindi speakers.\n- Uses a warm, supportive partner dynamic rather than a teacher-student dynamic, fitting Supernova's encouraging tone.\n- Naturally integrates Supernova's AI tutor as the practical, daily solution for building speaking confidence.",
+        "supernova_on_screen_text": "Learning English\nFluent Partner\nSupernova App\nPractice Speaking\nSupernova AI Tutor\nLet's start! Tap the microphone and speak.\ncareer\nenvironment\nspecific\nthoughtful\nThe sixth sick sheep"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Coach Elsa",
+        "supernova_swap": "Supernova AI Tutor"
+      },
+      {
+        "competitor_brand": "American accent app",
+        "supernova_swap": "Supernova App"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779989130.5590022
+}

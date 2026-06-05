@@ -1,0 +1,132 @@
+{
+  "competitor_id": "1732276511091533",
+  "parsed": {
+    "duration_s": 75.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses human footage but the lip-syncing is slightly off, suggesting AI dubbing. The robot avatar is a static 3D render with animated facial features, typical of AI generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young woman, slim build, light complexion. Dark hair styled in multiple small buns/knots on top of her head. Distinctive large hoop earrings and multiple necklaces.",
+        "wardrobe": "White t-shirt with a graphic print, black cargo pants, chunky sneakers. Multiple necklaces including a cross and a yellow beaded one.",
+        "demeanor": "Energetic, expressive, and engaging."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Humanoid robot with a white, smooth casing. Blue eyes and a glowing blue circular core on its chest.",
+        "wardrobe": "None (robot casing).",
+        "demeanor": "Calm, helpful, and robotic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 15.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Introduction and Hook",
+        "setting": "Starts on a stage with a red circular carpet and dark background, cuts to a dimly lit restaurant, then back to the stage.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium shot on stage, close-up in restaurant.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands on a small red circular carpet against a dark background, gesturing with her hands. The scene cuts to Character A sitting at a wooden table in a dimly lit restaurant with string lights in the background, looking directly at the camera. The scene cuts back to Character A on the stage, continuing to gesture and speak.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene alternates between a stage setting and a restaurant setting. Character A delivers the opening hook, with text overlays emphasizing her points and showing incorrect phrases crossed out.",
+        "audio_transcript": "Character A says: Never, and I mean never say 'I'm fine, thank you.'\nCharacter A says: I'm fine, thank you.\nCharacter A says: I don't know.\nCharacter A says: You are welcome.\nCharacter A says: Honestly, that's exactly how I used to talk, but then I started using Learna.\nCharacter A says: Let me show you.",
+        "on_screen_text": "START SPEAKING ENGLISH FLUENTLY!\nNever, and I mean never say 'I'm fine, thank you.'\nI'm fine, thank you\nI don't know\nYou are welcome\nHonestly, that's exactly how I used to talk, but then I started using Learna.\nLet me show you."
+      },
+      {
+        "n": 2,
+        "start_s": 15.0,
+        "end_s": 28.0,
+        "screenshot_at_s": 21.0,
+        "scene_label": "App Introduction",
+        "setting": "Abstract blurred background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "Medium close-up of robot, wide shot of phone.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B, a white humanoid robot, stands on the left side of the frame. On the right side, a large smartphone hardware frame is visible. The background is a soft, blurred interior.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character B introduces the app while a smartphone displays the app's features and interface. Text overlays highlight the app's promise of native-like English in one week.",
+        "audio_transcript": "Character B says: Wait. Did you know you can speak English like a native in just one week?\nCharacter B says: It's not magic, it's Learna, the app that corrects you as you speak and teaches you without you even noticing.\nCharacter B says: Let's try it together.",
+        "on_screen_text": "Wait.\nDid you know you can speak English like a native in just one week?\nSPEAK ENGLISH LIKE A NATIVE IN JUST 1 WEEK!\nIt's not magic, it's Learna, the app that corrects you as you speak and teaches you without you even noticing.\nLet's try it together."
+      },
+      {
+        "n": 3,
+        "start_s": 28.0,
+        "end_s": 71.0,
+        "screenshot_at_s": 45.0,
+        "scene_label": "Conversation Practice",
+        "setting": "Top: Dark abstract background. Bottom: Bright room with large windows.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Split-screen, close-ups.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character B is framed in a close-up against a dark background.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character A is framed in a low-angle close-up, looking upwards towards the top panel. She is in a bright room with large windows and a white ceiling.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen conversation between the AI tutor and the user. The top panel shows the robot, and the bottom panel shows the user interacting with it. Subtitles display their dialogue.",
+        "audio_transcript": "Character B says: Do you speak English?\nCharacter A says: A little bit.\nCharacter B says: Where are you from?\nCharacter A says: I am Puerto Rico.\nCharacter B says: Almost! You should say: 'I am from Puerto Rico.'\nCharacter A says: I always get mixed up with that.\nCharacter B says: That is exactly why I am here, to help you speak correctly.\nCharacter A says: But... I don't have the money for a tutor.\nCharacter B says: You don't need money. With Learna, you can practice English for free.\nCharacter B says: It is not like those other expensive apps or courses.\nCharacter A says: Are you serious?\nCharacter B says: Absolutely. No catches. Just real conversation practice with your AI tutor.\nCharacter A says: Like... a real tutor?\nCharacter B says: Yes. I correct your grammar, your pronunciation and help you speak with confidence.\nCharacter A says: Okay... I am going to download Learna right now.\nCharacter B says: Great decision. Let's speak English together.",
+        "on_screen_text": "Do you speak English?\nA little bit.\nWhere are you from?\nI am Puerto Rico.\nAlmost! You should say:\n'I am from Puerto Rico.'\nI always get mixed up with that.\nThat is exactly why I am here,\nto help you speak correctly.\nBut... I don't have the money for a tutor.\nYou don't need money.\nWith Learna, you can practice English for free.\nIt is not like those other expensive apps or courses.\nAre you serious?\nAbsolutely. No catches.\nJust real conversation practice with your AI tutor.\nLike... a real tutor?\nYes. I correct your grammar, your pronunciation\nand help you speak with confidence.\nOkay... I am going to download Learna right now.\nGreat decision. Let's speak English together."
+      },
+      {
+        "n": 4,
+        "start_s": 71.0,
+        "end_s": 75.0,
+        "screenshot_at_s": 73.0,
+        "scene_label": "Call to Action",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [],
+        "camera": "Graphic.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark blue background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An end card with a solid blue background. It features the app icon, which is a picture of the robot avatar, along with download text and app store badges.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "DOWNLOAD NOW!\nSTART PRACTICING\nLearna\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780125081.005026
+}

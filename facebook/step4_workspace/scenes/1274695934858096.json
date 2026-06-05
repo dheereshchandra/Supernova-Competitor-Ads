@@ -1,0 +1,113 @@
+{
+  "competitor_id": "1274695934858096",
+  "parsed": {
+    "duration_s": 28.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is a screen recording of a computer interface demonstrating AI tools. No human faces are directly recorded; all visuals are either UI elements or AI-generated images within the UI.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "narrator",
+        "appearance": "Not visible in the video. Voiceover only.",
+        "wardrobe": "Not applicable.",
+        "demeanor": "Informative, casual, and instructional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Dictating the first prompt",
+        "setting": "City skyline at sunset",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A blurred, warm-toned view of a city skyline during sunset. Tall buildings are silhouetted against the hazy sky, with a body of water visible in the distance. The overall atmosphere is calm and urban.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A screencast of a web browser window open to ChatGPT, overlaid on a blurred city skyline background. A dictation tool interface appears at the bottom of the screen, transcribing spoken words into text. A pop-up notification congratulates the user on earning an extra free day of Pro. A persistent title text is visible at the top of the screen.",
+        "audio_transcript": "Character A says: I stop typing prompts. [I stop typing prompts.]\nCharacter A says: I basically pull visual references from Pinterest, drop them into Midjourney, and describe what I want using Wispr Flow. [I basically pull visual references from Pinterest, drop them into Midjourney, and describe what I want using Wispr Flow.]\nCharacter A says: See? [See?]",
+        "on_screen_text": "Teaching my friends how to use AI\nI stop typing. Pull references from Pinterest, drop them into mid journey, and describe what I want using Wispr Flow. That's it. I don't type anything.\nCongrats! You earned an extra free day of Pro\nDictate 100 words or more tomorrow and you'll get another free day!\nSee my stats\nDismiss"
+      },
+      {
+        "n": 2,
+        "start_s": 10.0,
+        "end_s": 16.5,
+        "screenshot_at_s": 13.0,
+        "scene_label": "Uploading reference images",
+        "setting": "City skyline at sunset",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A blurred, warm-toned view of a city skyline during sunset serves as the background. In the foreground, three small square images are displayed. The first image features a person in a yellow jacket against a blue sky, the second shows a person in a blue shirt, and the third depicts a person in a green shirt.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The same ChatGPT browser window over the blurred city skyline. Three reference images have been uploaded into the chat interface. The dictation tool is active again at the bottom, transcribing a new prompt. The persistent title text remains at the top.",
+        "audio_transcript": "Character A says: Help me take these images and turn it into prompts that I can use in Midjourney please. [Help me take these images and turn it into prompts that I can use in Midjourney please.]",
+        "on_screen_text": "Teaching my friends how to use AI\nHelp me take these images and turn it into prompts that I can use in Midjourney and create a visual identity with, all I"
+      },
+      {
+        "n": 3,
+        "start_s": 16.5,
+        "end_s": 23.5,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Midjourney image grid",
+        "setting": "Image grid",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A dense grid of diverse, high-quality images. The collection includes a woman in a dark coat walking in a forest, a man wearing a black leather jacket, a large blooming pink peony, and a clear glass apple. Other images show a hand with sparkling blue fingernails, a fairy with glowing wings, a woman in a flowing black dress, a close-up of a cat, a couple kissing, and a surreal pink landscape.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A screencast of the Midjourney web interface, displaying a large gallery of generated images in a grid layout. A text prompt and image references are visible at the top of the interface. The persistent title text remains at the top of the screen.",
+        "audio_transcript": "Character A says: Now all I do is I take the prompts that I've made, I put in the images as references, and I'm basically done. [Now all I do is I take the prompts that I've made, I put in the images as references, and I'm basically done.]",
+        "on_screen_text": "Teaching my friends how to use AI\nA candid mid-shot of a young woman outdoors, framed against a mild blue sky, natural sunlight, clear blue sky background, relaxed and happy expression, minimal makeup, textured warm brown knitted chunky sweater, modern lifestyle photography, editorial realism, shallow depth of field, shot on 35mm lens, airy composition, optimistic and calm mood, contemporary brand photography. --ar 3:4 --style raw --v 6"
+      },
+      {
+        "n": 4,
+        "start_s": 23.5,
+        "end_s": 28.0,
+        "screenshot_at_s": 25.0,
+        "scene_label": "Building visual identity",
+        "setting": "White canvas",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A stark, plain white background. Two rectangular images are positioned side-by-side. The left image displays a person with curly hair smiling brightly against a clear blue sky, wearing a textured tan sweater. The right image features a person smiling warmly, partially framed by bright green leaves, with a blue sky visible behind them.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A screencast of a digital whiteboard or design canvas with a plain white background. Two of the previously generated images are dragged and dropped onto the canvas side-by-side. A small toolbar is visible below the images. The persistent title text remains at the top.",
+        "audio_transcript": "Character A says: All I gotta do is take the images and start building my identity. [All I gotta do is take the images and start building my identity.]",
+        "on_screen_text": "Teaching my friends how to use AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.232406
+}

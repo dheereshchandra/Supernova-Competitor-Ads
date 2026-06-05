@@ -1,0 +1,57 @@
+{
+  "competitor_id": "1561946748353523",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female with a slim build and fair complexion. She has dark hair styled in a tight, high bun. Her facial features are smooth and symmetrical.",
+        "wardrobe": "She wears a solid, light pink hooded sweatshirt throughout the video.",
+        "demeanor": "Eager, attentive, and slightly hesitant when making mistakes."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Humanoid robot with a glossy white casing. It has glowing blue eyes and exposed mechanical details in the neck area. The face is sculpted to resemble human features but remains distinctly robotic.",
+        "wardrobe": "No clothing; its white robotic casing serves as its exterior.",
+        "demeanor": "Calm, patient, and instructive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction to AI Tutor",
+        "supernova_script": "Character A says: English सीखने का सबसे पहला rule क्या है? [What is the first rule of learning English?]\nCharacter B says: सिर्फ grammar मत रटो, उसे बोलना शुरू करो! तुम्हें बस रोज़ practice करनी है। [Don't just memorize grammar, start speaking it! You just need to practice daily.]\nCharacter A says: लेकिन किसके साथ? [But with whom?]\nCharacter B says: Supernova AI tutor के साथ। [With Supernova AI tutor.]",
+        "scene_summary": "- Hooks the viewer by addressing a common question about learning English.\n- Shifts the focus from studying grammar to active speaking practice.\n- Introduces Supernova AI as the accessible solution for conversation practice.",
+        "supernova_on_screen_text": "ENGLISH सीखने का पहला RULE क्या है? सिर्फ रटो मत, बोलना शुरू करो! रोज़ PRACTICE करो! लेकिन किसके साथ? SUPERNOVA AI के साथ।"
+      },
+      {
+        "n": 2,
+        "scene_label": "Practice Session",
+        "supernova_script": "Character B says: How old are you? [How old are you?]\nCharacter A says: Umm.. I have 22. [Umm.. I have 22.]\nCharacter B says: क्या आप \"I'm 22\" बोलना चाहती थीं? [Did you mean to say \"I'm 22\"?]\nCharacter A says: हाँ बिल्कुल, 'I'm 22'. [Yes exactly, 'I'm 22'.]\nCharacter B says: Neha, where are you from? [Neha, where are you from?]\nCharacter A says: Uhh... I am India. [Uhh... I am India.]\nCharacter B says: Good try Neha, लेकिन सही तरीका है: \"I am from India\". [Good try Neha, but the correct way is: \"I am from India\".]\nCharacter A says: Sorry, मैं अक्सर ये गलती कर देती हूँ। I am from India. [Sorry, I often make this mistake. I am from India.]\nCharacter B says: कोई बात नहीं! ऐसे ही रोज़ साथ में बोलकर practice करेंगे, तो English एकदम perfect हो जाएगी। [No worries! If we practice speaking together like this every day, your English will become absolutely perfect.]",
+        "scene_summary": "- Demonstrates the core app experience through a realistic, relatable mistake-correction loop.\n- Shows the AI tutor's warm, non-judgmental, and encouraging tone.\n- Builds confidence by emphasizing that daily practice leads to improvement.",
+        "supernova_on_screen_text": "How old are you? Umm.. I have 22 ❌ क्या आप \"I'm 22\" बोलना चाहती थीं? हाँ बिल्कुल, 'I'm 22' ✅ Neha, where are you from? Uhh... I am India ❌ Good try Neha, लेकिन सही तरीका है: \"I am from India\" Sorry, मैं अक्सर ये गलती कर देती हूँ। I am from India ✅ कोई बात नहीं! रोज़ practice करेंगे, तो English perfect हो जाएगी।"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Delivers a clear call-to-action to download the app.\n- Reinforces the brand name and availability on app stores.",
+        "supernova_on_screen_text": "आज ही DOWNLOAD करें! Supernova के साथ बोलना शुरू करें। Download on the App Store. GET IT ON Google Play."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Learna AI",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "Learna",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780126294.235942
+}

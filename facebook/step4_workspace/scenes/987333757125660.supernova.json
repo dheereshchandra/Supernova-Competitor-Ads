@@ -1,0 +1,53 @@
+{
+  "competitor_id": "987333757125660",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter and learner",
+        "appearance": "Young adult female, slim build, dark complexion. She has long, straight black hair, full lips, and dark eyes. Her facial features are symmetrical and well-defined.",
+        "wardrobe": "In the first scene, she wears a black top. In the second scene, she wears a black tank top, black pants, and a gold pendant necklace.",
+        "demeanor": "Casual, conversational, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, fair complexion. She has a short blonde bob haircut and blue eyes. Her appearance is highly polished and slightly artificial.",
+        "wardrobe": "She wears a solid grey turtleneck sweater throughout her appearance.",
+        "demeanor": "Professional, static, and slightly uncanny."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Stop saying basic phrases",
+        "supernova_script": "Character A says: \"English में हमेशा 'I'm fine, thank you' बोलना बंद करो।\" [Stop always saying 'I'm fine, thank you' in English.]\nCharacter A says: \"'I don't know' या 'You are welcome' भी।\" [Also 'I don't know' or 'You are welcome'.]\nCharacter A says: \"ये बहुत basic है।\" [This is very basic.]\nCharacter A says: \"मैं भी पहले ऐसे ही अटकती थी।\" [I also used to get stuck like this before.]\nCharacter A says: \"फिर मैंने Supernova के साथ practice शुरू की।\" [Then I started practicing with Supernova.]\nCharacter A says: \"Let me show you.\" [Let me show you.]",
+        "scene_summary": "- Hooks the viewer by calling out common, basic English phrases they likely overuse.\n- Establishes empathy by having the presenter admit she used to struggle too.\n- Introduces Supernova as the solution and transitions to a demo.",
+        "supernova_on_screen_text": "Stop saying: \"I'm fine, thank you\"\n\"I don't know\"\n\"You are welcome\"\nये बहुत basic है\nमैं भी पहले ऐसे ही अटकती थी\nफिर मैंने Supernova के साथ practice शुरू की\nLet me show you"
+      },
+      {
+        "n": 2,
+        "scene_label": "Conversation with AI Tutor",
+        "supernova_script": "Character B says: \"Do you speak English?\" [Do you speak English?]\nCharacter A says: \"थोड़ी बहुत।\" [A little bit.]\nCharacter B says: \"Where are you from?\" [Where are you from?]\nCharacter A says: \"I am belong to Delhi.\" [I am belong to Delhi.]\nCharacter B says: \"Almost! Better say: 'I am from Delhi'.\" [Almost! Better say: 'I am from Delhi'.]\nCharacter A says: \"Oh, मुझे grammar में हमेशा confusion होती है।\" [Oh, I always get confused in grammar.]\nCharacter B says: \"कोई बात नहीं, मैं आपकी English सुधारने में मदद करूंगी।\" [No worries, I will help you improve your English.]\nCharacter A says: \"पर private classes तो बहुत महंगी होती हैं।\" [But private classes are very expensive.]\nCharacter B says: \"You don't need a fortune! Supernova private tutor से बहुत affordable है।\" [You don't need a fortune! Supernova is much more affordable than a private tutor.]\nCharacter A says: \"सच में?\" [Really?]\nCharacter B says: \"हाँ! आप मेरे साथ real-world situations की practice कर सकते हो।\" [Yes! You can practice real-world situations with me.]\nCharacter A says: \"बिल्कुल एक real tutor की तरह?\" [Just like a real tutor?]\nCharacter B says: \"Yes, मैं आपकी grammar और pronunciation correct करूंगी ताकि आप confidence से बोल सको।\" [Yes, I will correct your grammar and pronunciation so you can speak with confidence.]\nCharacter A says: \"Perfect, मैं Supernova अभी download करती हूँ।\" [Perfect, I will download Supernova right now.]\nCharacter B says: \"Great decision. Let's speak English together.\" [Great decision. Let's speak English together.]",
+        "scene_summary": "- Demonstrates the core app experience: an interactive, judgment-free AI tutor correcting a common Indian-English mistake.\n- Addresses the cost barrier of private tutors while positioning Supernova as an affordable, premium alternative.\n- Highlights key features: real-world practice, grammar/pronunciation correction, and building speaking confidence.",
+        "supernova_on_screen_text": "Do you speak English?\nथोड़ी बहुत\nWhere are you from?\nI am belong to Delhi\nAlmost!\nBetter say:\n\"I am from Delhi\"\nOh, मुझे grammar में हमेशा confusion होती है\nकोई बात नहीं, मैं आपकी English सुधारने में मदद करूंगी\nपर private classes तो बहुत महंगी होती हैं\nYou don't need a fortune!\nSupernova private tutor से बहुत affordable है\nसच में?\nहाँ! आप मेरे साथ real-world situations की practice कर सकते हो\nबिल्कुल एक real tutor की तरह?\nYes, मैं आपकी grammar और pronunciation correct करूंगी\nताकि आप confidence से बोल सको\nPerfect, मैं Supernova अभी download करती हूँ\nGreat decision\nLet's speak English together"
+      },
+      {
+        "n": 3,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear call-to-action.\n- Reinforces the brand name and core value proposition visually.",
+        "supernova_on_screen_text": "Supernova App\nYour AI English Tutor\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779974839.7938316
+}

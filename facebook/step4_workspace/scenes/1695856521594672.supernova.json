@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1695856521594672",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, light brown complexion. Dark hair tied back with loose strands framing her face. Expressive facial features.",
+        "wardrobe": "Dark grey or black long-sleeved button-up shirt with visible white stitching details.",
+        "demeanor": "Casual, slightly hesitant at first, then engaged and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character. Fair skin, bright red wavy hair, large expressive eyes.",
+        "wardrobe": "Simple white t-shirt.",
+        "demeanor": "Friendly, encouraging, and helpful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI English Lesson",
+        "supernova_script": "Character B says: क्या आप English बोलते हो? [Do you speak English?]\nCharacter A says: Uh, थोड़ा बहुत, टूटी-फूटी। [Uh, a little bit, broken.]\nCharacter B says: कोई बात नहीं, अपना नाम बताइये? [No problem, tell me your name?]\nCharacter A says: My name is Priya. [My name is Priya.]\nCharacter B says: Nice. आप कहाँ से हो? [Nice. Where are you from?]\nCharacter A says: I am Delhi. [I am Delhi.]\nCharacter B says: आपने कहा \"I am Delhi.\" Close! सही होगा: \"I am from Delhi.\" [You said \"I am Delhi.\" Close! The correct way is: \"I am from Delhi.\"]\nCharacter A says: Okay, I am from Delhi. I am Delhi... No... wait, I am from Delhi. [Okay, I am from Delhi. I am Delhi... No... wait, I am from Delhi.]\nCharacter B says: Perfect! ऐसे ही। [Perfect! Just like that.]\nCharacter A says: पर मैं अपनी English improve कैसे करूँगी? [But how will I improve my English?]\nCharacter B says: Daily conversation practice से। [Through daily conversation practice.]\nCharacter A says: पर इतनी ख़राब English में मैं किससे बात करूँगी? [But who will I speak to with such bad English?]\nCharacter B says: मुझसे, of course! [With me, of course!]\nCharacter A says: तुमसे? [With you?]\nCharacter B says: हाँ! मैं Supernova की AI tutor हूँ। आप बिना झिझक के जितनी चाहें गलतियाँ कर सकते हैं। [Yes! I am Supernova's AI tutor. You can make as many mistakes as you want without hesitation.]\nCharacter A says: Wait, ये तो सच में काम कर रहा है। तुमने मुझे दो सेकंड में सही कर दिया। [Wait, this is actually working. You corrected me in two seconds.]\nCharacter B says: Supernova app download करो और रोज़ real-life situations practice करो। [Download the Supernova app and practice real-life situations daily.]\nCharacter A says: Well, ये सही है। मैं अभी Supernova download कर रही हूँ! Let's go. [Well, this is good. I am downloading Supernova right now! Let's go.]",
+        "scene_summary": "- Hooks the viewer with a relatable English mistake common among Indian learners.\n- Introduces the AI tutor as a safe, non-judgmental practice partner.\n- Demonstrates immediate value through a quick, encouraging correction.\n- Ends with a clear call to action to download the app for real-life practice.",
+        "supernova_on_screen_text": "क्या आप English बोलते हो?\nUh, थोड़ा बहुत, टूटी-फूटी।\nकोई बात नहीं, अपना नाम बताइये?\nMy name is Priya.\nNice. आप कहाँ से हो?\nI am Delhi. ❌\nआपने कहा \"I am Delhi.\" Close! सही होगा: \"I am from Delhi.\"\nOkay, I am from Delhi. I am Delhi... No... wait, I am from Delhi. ✅\nPerfect! ऐसे ही।\nपर मैं अपनी English improve कैसे करूँगी?\nDaily conversation practice से।\nपर इतनी ख़राब English में मैं किससे बात करूँगी?\nमुझसे, of course!\nतुमसे?\nहाँ! मैं Supernova की AI tutor हूँ। आप बिना झिझक के जितनी चाहें गलतियाँ कर सकते हैं।\nWait, ये तो सच में काम कर रहा है। तुमने मुझे दो सेकंड में सही कर दिया।\nSupernova app download करो और रोज़ real-life situations practice करो।\nWell, ये सही है। मैं अभी Supernova download कर रही हूँ! Let's go."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the brand logo clearly.\n- Shows app store availability.\n- Reinforces the final call to action visually.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967654.4980495
+}

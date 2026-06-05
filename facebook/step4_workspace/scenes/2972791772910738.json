@@ -1,0 +1,67 @@
+{
+  "competitor_id": "2972791772910738",
+  "parsed": {
+    "duration_s": 25.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in a physical kitchen setting. Lighting, shadows, and movements are natural, with no uncanny AI artifacts.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion, long straight brown hair.",
+        "wardrobe": "Striped long-sleeve polo shirt (white and dark blue), grey sweatpants.",
+        "demeanor": "Initially frustrated, then engaged and thoughtful while learning."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 22.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Washing dishes and practicing Italian",
+        "setting": "Kitchen, daytime. Sink, dishes, sponge, tablet on the counter. Warm lighting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands at a kitchen sink, washing a baking sheet with a sponge. She looks slightly off-camera towards a tablet resting on the sink's edge. The kitchen has warm lighting and a pendant light in the background. She pauses her washing to speak.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A washes dishes while interacting with a language learning app on her tablet. Text overlays show the Italian phrases she practices and their English translations.",
+        "audio_transcript": "Character A says: Odio l'italiano. [I hate Italian.]\nUnknown speaker says: Come ti chiami? [What's your name?]\nCharacter A says: Mi chiamo Sara. [My name is Sara.]\nUnknown speaker says: Come stai? [How are you?]\nCharacter A says: Sto bene, grazie. [I'm fine, thanks.]\nUnknown speaker says: Parli italiano? [Do you speak Italian?]\nCharacter A says: S\u00ec, io... [Yes, I...]\nUnknown speaker says: Do you mean S\u00ec, lo parlo. [Yes, I speak it.]\nCharacter A says: S\u00ec, lo parlo. [Yes, I speak it.]\nUnknown speaker says: Quanti anni hai? [How old are you?]\nCharacter A says: Io... venti...? [I... twenty...?]\nUnknown speaker says: Do you mean Ho venti anni. [I am 20.]\nCharacter A says: Ho vent'anni. [I am 20.]\nCharacter A says: How can I practice my Italian every day?\nUnknown speaker says: Just download Praktika.\nCharacter A says: I'll download Praktika right now.",
+        "on_screen_text": "Odio l'italiano. (I hate Italian.)\nCome ti chiami? (What's your name?)\nMi chiamo Sara. (My name is Sara.)\nCome stai? (How are you?)\nSto bene, grazie. (I'm fine, thanks.)\nParli italiano? (Do you speak Italian?)\nS\u00ec, io... (Yes, I...)\nDo you mean S\u00ec, lo parlo. (Yes, I speak it.)\nS\u00ec, lo parlo. (Yes, I speak it.)\nQuanti anni hai? (How old are you?)\nIo... venti...? (I... twenty...?)\nDo you mean Ho venti anni. (I am 20.)\nHo venti anni. (I am 20.)\nHow can I practice my Italian every day?\nJust download Praktika.\nI'll download Praktika right now."
+      },
+      {
+        "n": 2,
+        "start_s": 22.5,
+        "end_s": 25.0,
+        "screenshot_at_s": 23.5,
+        "scene_label": "End card",
+        "setting": "Solid white background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An end card displays the app's logo, name, and download buttons on a white background.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966545.9383156
+}

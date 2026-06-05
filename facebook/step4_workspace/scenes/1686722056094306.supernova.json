@@ -1,0 +1,72 @@
+{
+  "competitor_id": "1686722056094306",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female app user",
+        "appearance": "Young adult Indian woman, medium build, medium complexion. Dark hair tied back in a ponytail. Has a bindi.",
+        "wardrobe": "Green and blue patterned salwar kameez with a matching green dupatta. Red and gold bangles on both wrists.",
+        "demeanor": "Confident, helpful, and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "male colleague",
+        "appearance": "Young adult Indian man, medium build, medium complexion. Short dark hair and a short beard.",
+        "wardrobe": "Black polo shirt and black trousers. Gold watch on his left wrist.",
+        "demeanor": "Curious, surprised, and impressed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Office Conversation",
+        "supernova_script": "Character A says: Hello sir. My husband is not available right now. Can I take a message? I will ask him to call you back.\nCharacter B says: अरे किट्टू, तुमने इतनी अच्छी इंग्लिश बोलना कहाँ से सीखी? [Hey Kittu, where did you learn to speak such good English?]\nCharacter A says: हाँ, जब आप ऑफिस में होते हो, तब मैं Supernova ऐप पर 10 मिनट प्रैक्टिस करती हूँ रोज़। [Yes, when you are at the office, I practice for 10 minutes daily on the Supernova app.]\nCharacter A says: और इसमें AI ट्यूटर के साथ रियल-लाइफ सिचुएशन्स की प्रैक्टिस करना बहुत आसान है। [And practicing real-life situations with the AI tutor on it is very easy.]\nCharacter B says: लेकिन उसे यूज़ करने में खर्चा कितना हुआ? [But how much did it cost to use it?]\nCharacter A says: बहुत ही अफोर्डेबल है, आराम से बजट में आ जाता है। [It is very affordable, easily fits in the budget.]\nCharacter B says: क्या बात कर रही हो? फिर तो मैं भी आज से इसे ट्राई करूँगा। [What are you saying? Then I will also try it from today.]",
+        "scene_summary": "- Establishes the hook with Character A speaking fluent English on a phone call.\n- Character B acts as the audience surrogate, asking how she learned and how much it costs.\n- Introduces Supernova as a daily habit with an AI tutor, replacing the competitor's specific pricing claim with a general affordability statement.",
+        "supernova_on_screen_text": ""
+      },
+      {
+        "n": 2,
+        "scene_label": "Direct to Camera Pitch",
+        "supernova_script": "Character A says: क्या आप भी बिना डरे, कॉन्फिडेंस के साथ इंग्लिश बोलना चाहते हो? [Do you also want to speak English with confidence, without fear?]\nCharacter A says: तो आज ही Supernova ऐप डाउनलोड करो। [Then download the Supernova app today.]\nCharacter A says: अगर आपको भी अपनी स्पोकन इंग्लिश इम्प्रूव करनी है, तो अभी डाउनलोड करो Supernova ऐप। [If you also want to improve your spoken English, then download the Supernova app now.]\nCharacter A says: यहाँ आपको मिलता है एक AI ट्यूटर, जो 24 आवर्स आपके लिए अवेलेबल है। [Here you get an AI tutor, who is available for you 24 hours.]\nCharacter A says: आप चाहे जितनी गलतियां करो, वो आपको कभी जज नहीं करेगा। [No matter how many mistakes you make, they will never judge you.]\nCharacter A says: इनस्टॉल बटन पे क्लिक करो और Supernova ऐप अभी डाउनलोड करो। [Click on the install button and download the Supernova app now.]",
+        "scene_summary": "- Breaks the fourth wall to speak directly to the viewer.\n- Shifts the motivation from 'impressing others' to 'speaking with confidence', aligning with Supernova's supportive brand voice.\n- Highlights the core feature: a non-judgmental 24/7 AI tutor.",
+        "supernova_on_screen_text": ""
+      },
+      {
+        "n": 3,
+        "scene_label": "App End Card",
+        "supernova_script": "Character B says: तो इनस्टॉल बटन पे क्लिक करो और Supernova ऐप डाउनलोड करो। [So click on the install button and download the Supernova app.]",
+        "scene_summary": "- Delivers the final Call to Action.\n- Reinforces the brand name visually and audibly.",
+        "supernova_on_screen_text": "Supernova\nINSTALL NOW"
+      },
+      {
+        "n": 4,
+        "scene_label": "Disclaimer",
+        "supernova_script": "[no speech]",
+        "scene_summary": "- Standard legal disclaimer screen.\n- Competitor brand name replaced with Supernova.",
+        "supernova_on_screen_text": "Supernova kisi bhi government authority institution brand, organisation ya individual ke dwara endorsed, sponsored, affiliated ya associated nahi hai. Kisi bhi names trademarks logos ya references ka use sirf educational aur informational purposes ke liye kiya gaya hai Kuch content sirf samjhane ke liye dramatised ya representational ho sakta hai Supernova kisi bhi guaranteed results ka promise nahi karta Outcomes individual effort aur doosre factors par depend karte hain aur vary kar sakte hain."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "इंग्लिश सीखो ऐप",
+        "supernova_swap": "Supernova ऐप"
+      },
+      {
+        "competitor_brand": "इंग्लिश सीखो कोच",
+        "supernova_swap": "AI ट्यूटर"
+      },
+      {
+        "competitor_brand": "english",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "English Seekho",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779890383.1896138
+}

@@ -1,0 +1,20 @@
+[info] competitor:  loora
+[info] input:       inputs/fb-ads-loora-2026-06-04.csv
+[info] videos:      videos/loora-2026-06-04
+[info] images:      images/loora-2026-06-04
+[info] master:      master/loora.csv
+[info] enriched:    inputs/fb-ads-loora-2026-06-04_enriched.csv
+[info] log:         step3_logs/loora-2026-06-04-1519.log
+[info] dry-run:     False
+[info] bucket:      video-ads  (https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev)
+
+[done] tally:
+  uploaded         4
+  carried-forward  30
+  image-pending    0
+  video-missing    0
+  no-creative      0
+  error            0
+[done] enriched: inputs/fb-ads-loora-2026-06-04_enriched.csv
+[done] master:   master/loora.csv  (60 rows total)
+[done] log:      step3_logs/loora-2026-06-04-1519.log

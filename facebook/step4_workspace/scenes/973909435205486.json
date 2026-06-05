@@ -1,0 +1,67 @@
+{
+  "competitor_id": "973909435205486",
+  "parsed": {
+    "duration_s": 48.0,
+    "production_type": "AI-generated",
+    "production_notes": "The speaker's lip sync is slightly unnatural and his facial expressions are repetitive, typical of AI-generated avatars. The background remains perfectly static throughout the video.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, East Asian descent. Short black hair, fair complexion. Small hoop earring in left ear.",
+        "wardrobe": "Black shirt under a tan vest.",
+        "demeanor": "Calm and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 44.5,
+        "screenshot_at_s": 22.0,
+        "scene_label": "Presenter speaking",
+        "setting": "Indoor room, beige sofa, blurred plant, warm lighting",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man sits on a beige sofa, speaking into a black microphone on a stand. The background is a softly blurred interior featuring a plain wall and a green potted plant. The lighting is warm and even across his face. He maintains a steady, conversational posture with minimal body movement.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A young man speaks into a microphone in a medium close-up shot. The background is a blurred room. Dynamic subtitles appear over his chest, with key words highlighted in yellow.",
+        "audio_transcript": "Character A says: I used to be really nervous in meetings\nCharacter A says: I was afraid to speak\nCharacter A says: because my English wasn't good enough\nCharacter A says: I worried about saying something wrong\nCharacter A says: so I stayed quiet\nCharacter A says: Then a friend told me about Fluently\nCharacter A says: I thought, why not try it?\nCharacter A says: I started with just 10 minutes a day\nCharacter A says: It was easy\nCharacter A says: The app helps you practice the kind of English\nCharacter A says: you really need at work\nCharacter A says: like how to speak in meetings or share your ideas\nCharacter A says: After a few weeks, everything changed\nCharacter A says: Now I can speak in meetings without fear\nCharacter A says: I don't have awkward silences or worry about what people think\nCharacter A says: Fluently didn't just help my English\nCharacter A says: it gave me confidence\nCharacter A says: If you ever felt like me, try Fluently",
+        "on_screen_text": "I used to be really nervous in meetings\nI was afraid to speak\nbecause my English wasn't good enough\nI worried about saying something wrong\nso I stayed quiet\nThen a friend told me about Fluently\nI thought, why not try it?\nI started with just 10 minutes a day\nIt was easy\nThe app helps you practice the kind of English\nyou really need at work\nlike how to speak in meetings or share your ideas\nAfter a few weeks, everything changed\nNow I can speak in meetings without fear\nI don't have awkward silences or worry about what people think\nFluently didn't just help my English\nit gave me confidence\nIf you ever felt like me, try Fluently"
+      },
+      {
+        "n": 2,
+        "start_s": 44.5,
+        "end_s": 48.0,
+        "screenshot_at_s": 46.0,
+        "scene_label": "End card",
+        "setting": "Abstract blue background",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A plain light blue background with a subtle gradient. No objects or characters are visible.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A blue end card displays the app logo, name, and a tagline. A prominent download button is positioned at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-powered English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779974053.0804646
+}

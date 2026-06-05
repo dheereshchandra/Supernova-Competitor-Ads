@@ -1,0 +1,103 @@
+{
+  "competitor_id": "1647227479627567",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Male protagonist / learner",
+        "appearance": "Young man, early 20s, brown complexion, curly dark brown hair, expressive eyebrows.",
+        "wardrobe": "Changes throughout: light patterned short-sleeve shirt, blue overshirt, dark suit jacket, and a casual grey t-shirt.",
+        "demeanor": "Transitions from highly anxious and sweating to confident, happy, and relaxed."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Small, floating holographic robot. Rounded head, large glowing blue eyes, no visible mouth.",
+        "wardrobe": "None, appears as a glowing blue digital projection.",
+        "demeanor": "Friendly and helpful."
+      },
+      {
+        "id": "C",
+        "role": "Female learner",
+        "appearance": "Young woman, early 20s, fair complexion, long straight black hair.",
+        "wardrobe": "Yellow long-sleeve top.",
+        "demeanor": "Happy and engaged."
+      },
+      {
+        "id": "D",
+        "role": "Interviewer",
+        "appearance": "Older man, grey hair, fair complexion. Wears dark rectangular glasses. Only seen in profile or from behind.",
+        "wardrobe": "Dark suit jacket, white collared shirt.",
+        "demeanor": "Professional and formal."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Anxious about English",
+        "supernova_script": "Character A says: English बोलने में डर लगता है? लगता है कि कहीं कुछ गलत ना बोल दूँ? [Are you afraid to speak English? Do you feel like you might say something wrong?]",
+        "scene_summary": "- Hooks the viewer by addressing the common fear of speaking English.\n- Establishes empathy with the learner's anxiety and hesitation.",
+        "supernova_on_screen_text": "English बोलने में डर लगता है? गलत बोलने की चिंता सताती है? [Are you afraid to speak English? Worried about speaking incorrectly?]"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Introduction",
+        "supernova_script": "Character A says: टेंशन मत लो, Supernova App है ना! [Don't worry, Supernova App is here, right!]",
+        "scene_summary": "- Introduces Supernova as the supportive solution.\n- Shifts the tone from anxious to hopeful and practical.",
+        "supernova_on_screen_text": "आ गया है Supernova App! [The Supernova App is here!]"
+      },
+      {
+        "n": 3,
+        "scene_label": "AI Teacher",
+        "supernova_script": "Character A says: यहाँ आप हमारे AI Tutor के साथ रोज़ English बोलने की practice कर सकते हो। वो भी बिना किसी झिझक के! [Here you can practice speaking English daily with our AI Tutor. That too without any hesitation!]",
+        "scene_summary": "- Highlights the core AI Tutor feature.\n- Emphasizes a safe, judgment-free environment for daily practice.",
+        "supernova_on_screen_text": "AI Tutor के साथ बिना झिझक रोज़ Practice करें। [Practice daily with the AI Tutor without hesitation.]"
+      },
+      {
+        "n": 4,
+        "scene_label": "Peer Practice",
+        "supernova_script": "Character A says: Interview हो या दोस्तों से बात करनी हो, Supernova आपको हर real-world situation के लिए तैयार करता है। [Whether it's an interview or talking to friends, Supernova prepares you for every real-world situation.]",
+        "scene_summary": "- Connects app features to real-world speaking scenarios.\n- Shows the practical benefit of the app in everyday life.",
+        "supernova_on_screen_text": "Interview हो या दोस्तों से बात, हर situation के लिए तैयार बनें! [Whether it's an interview or talking to friends, get ready for every situation!]"
+      },
+      {
+        "n": 5,
+        "scene_label": "Learning Path",
+        "supernova_script": "Character A says: इसके daily lessons से आपकी English दिन-ब-दिन और बेहतर होती जाएगी। [With its daily lessons, your English will keep getting better day by day.]",
+        "scene_summary": "- Focuses on the daily learning habit.\n- Builds confidence in gradual, structured improvement.",
+        "supernova_on_screen_text": "Daily Lessons से अपनी English को लगातार बेहतर बनाएं। [Continuously improve your English with Daily Lessons.]"
+      },
+      {
+        "n": 6,
+        "scene_label": "Successful Interview",
+        "supernova_script": "Character A says: तो इंतज़ार कैसा? आज ही अपना affordable trial शुरू करो। [So why wait? Start your affordable trial today.]",
+        "scene_summary": "- Shows the successful payoff of acing a professional interaction.\n- Provides a low-friction call to action without specific pricing.",
+        "supernova_on_screen_text": "आज ही अपना affordable trial शुरू करें! [Start your affordable trial today!]"
+      },
+      {
+        "n": 7,
+        "scene_label": "Call to Action",
+        "supernova_script": "Character A says: Confidence के साथ English बोलो। Supernova App आज ही download करो! [Speak English with confidence. Download the Supernova App today!]",
+        "scene_summary": "- Final encouraging push from a relatable peer.\n- Clear call to action to download the app.",
+        "supernova_on_screen_text": "Confidence के साथ English बोलें। आज ही Download करें! [Speak English with confidence. Download today!]"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Mysivi App",
+        "supernova_swap": "Supernova App"
+      },
+      {
+        "competitor_brand": "1 रुपये",
+        "supernova_swap": "affordable trial"
+      },
+      {
+        "competitor_brand": "299 रुपये",
+        "supernova_swap": "removed"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892235.9973943
+}

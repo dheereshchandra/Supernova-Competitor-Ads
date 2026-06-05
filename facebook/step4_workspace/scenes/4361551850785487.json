@@ -1,0 +1,71 @@
+{
+  "competitor_id": "4361551850785487",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines a screencast of a digital app interface with a live-action recording of a human hand. The illustrations within the app appear AI-generated, exhibiting the smooth, slightly uncanny digital painting style typical of AI image generators.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "User's hand",
+        "appearance": "A human right hand with a light complexion. The fingers are slender with short, clean, unpainted fingernails.",
+        "wardrobe": "Not applicable; only the hand is visible.",
+        "demeanor": "Deliberate and precise, pointing and tapping on specific areas of the screen."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.5,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Reading first page",
+        "setting": "Digital app interface featuring a black and white illustration of a dimly lit room.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A human hand with a light complexion points its index finger forward. In the background, there is a black and white illustration of two women in a dimly lit room. One woman is in the foreground, looking concerned, while the other stands further back near an open doorway. The hand's index finger is extended as if interacting with the scene.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A vertical screencast of a language learning app. The top portion displays a black and white illustration of two women. The bottom portion contains a block of English text. A live-action human hand is composited over the screen, tapping on specific words in the text, which triggers pop-up translation boxes.",
+        "audio_transcript": "Unknown speaker says: Come, my dear girl, there is nothing here that should frighten you.\n\nUnknown speaker says: But... what am I to do?",
+        "on_screen_text": "APRENDE INGL\u00caS COM LIVROS EM 10 MINUTOS POR DIA\nRecomendado por professores\nLeia\nOu\u00e7a\nTraduza\n+150 novas palavras\n\"Come, my dear girl, there is nothing here that should frighten you.\"\n\"But... what am I to do?\" I asked, trembling.\nI stood before her in silence, my cheeks burning and my heart beating faster than ever before.\nThough I could not yet understand the life she hinted at, I felt that the door behind me had already closed, and another\u2014far more mysterious\u2014was opening.\nto frighten\nassustar\nSei\nAprender"
+      },
+      {
+        "n": 2,
+        "start_s": 6.5,
+        "end_s": 35.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Reading second page",
+        "setting": "Digital app interface featuring a color illustration of a woman lying down.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A human hand with a light complexion points its index finger forward. The background is a color illustration of a young woman with long, wavy brown hair lying on a bed or couch. She is wearing a white top and has a soft, relaxed expression. The hand's index finger is extended, interacting with the area below the illustration.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The app interface updates, replacing the top illustration with a color image of a woman lying down. The block of English text remains the same. The live-action human hand continues to tap on various words throughout the text, bringing up translation pop-ups and triggering audio pronunciations of the selected words.",
+        "audio_transcript": "Unknown speaker says: I asked, trembling.\n\nUnknown speaker says: to tremble\n\nUnknown speaker says: I stood before her in silence, my cheeks\n\nUnknown speaker says: cheek\n\nUnknown speaker says: burning and my heart beating\n\nUnknown speaker says: to beat\n\nUnknown speaker says: faster than ever before. Though I could not yet\n\nUnknown speaker says: yet\n\nUnknown speaker says: understand the life she hinted\n\nUnknown speaker says: to hint\n\nUnknown speaker says: at, I felt that the door behind\n\nUnknown speaker says: behind\n\nUnknown speaker says: me had already closed, and another\u2014far more mysterious\n\nUnknown speaker says: mysterious\n\nUnknown speaker says: was opening.",
+        "on_screen_text": "APRENDE INGL\u00caS COM LIVROS EM 10 MINUTOS POR DIA\nRecomendado por professores\nJohn Cleland\nMem\u00f3rias de Fanny Hill\nLeia\nOu\u00e7a\nTraduza\n+151 novas palavras\n\"Come, my dear girl, there is nothing here that should frighten you.\"\n\"But... what am I to do?\" I asked, trembling.\nI stood before her in silence, my cheeks burning and my heart beating faster than ever before.\nThough I could not yet understand the life she hinted at, I felt that the door behind me had already closed, and another\u2014far more mysterious\u2014was opening.\nto tremble\ntremer\ncheek\nbochecha\nto beat\nbater\nyet\nainda\nto hint\ninsinuar\nbehind\natr\u00e1s\nmysterious\nmisterioso\nSei\nAprender"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779985046.2856958
+}

@@ -1,0 +1,64 @@
+{
+  "competitor_id": "1238368295046433",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male passenger",
+        "appearance": "Black male, bald, full black beard. Mid-30s, solid build.",
+        "wardrobe": "Dark blue puffer vest over a light grey long-sleeve shirt. Wearing a black seatbelt.",
+        "demeanor": "Relaxed, friendly, and conversational."
+      },
+      {
+        "id": "B",
+        "role": "female driver",
+        "appearance": "Off-camera. Not visible.",
+        "wardrobe": "Off-camera. Not visible.",
+        "demeanor": "Encouraging and polite."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Initial Conversation",
+        "supernova_script": "Character A says: आप English बोलते हो? [Do you speak English?]\nCharacter B says: हाँ। [Yes.]\nCharacter A says: क्या मैं आपके साथ अपनी English practice कर सकता हूँ? [Is it okay if I practice my English with you?]\nCharacter B says: हाँ, बिल्कुल। [Yes, absolutely.]\nCharacter B says: आप कब से सीख रहे हो? [How long have you been learning?]\nCharacter A says: करीब पांच महीने से। [For about five months.]",
+        "scene_summary": "- Establishes the real-world context of a passenger practicing English with a driver.\n- Hooks the viewer with a relatable, slightly vulnerable request to practice speaking.\n- Sets up the timeline of the user's learning journey.",
+        "supernova_on_screen_text": "Speaking English confidently because I started using Supernova instead of just reading grammar books\nDo you speak English?\nआप English बोलते हो?\nYes.\nहाँ।\nIs it okay if I practice my English with you?\nक्या मैं आपके साथ अपनी English practice कर सकता हूँ?\nYes, absolutely.\nहाँ, बिल्कुल।\nHow long have you been learning?\nआप कब से सीख रहे हो?\nFor about five months.\nकरीब पांच महीने से।"
+      },
+      {
+        "n": 2,
+        "scene_label": "Compliment",
+        "supernova_script": "Character B says: पर आपकी English तो बहुत अच्छी है। [But your English is very good.]\nCharacter A says: सच में? [Really?]\nCharacter B says: हाँ, मुझे लगा आप सालों से बोल रहे हो! [Yes, I thought you'd been speaking for years!]\nCharacter B says: आप किसके साथ practice करते हो? [Who do you practice with?]",
+        "scene_summary": "- Delivers the emotional payoff of the ad: validation from a fluent speaker.\n- Builds the main character's confidence, reinforcing the app's effectiveness.\n- Transitions into the product reveal by asking about their practice method.",
+        "supernova_on_screen_text": "Speaking English confidently because I started using Supernova instead of just reading grammar books\nBut your English is very good.\nपर आपकी English तो बहुत अच्छी है।\nReally?\nसच में?\nYes, I thought you'd been speaking for years!\nहाँ, मुझे लगा आप सालों से बोल रहे हो!\nWho do you practice with?\nआप किसके साथ practice करते हो?"
+      },
+      {
+        "n": 3,
+        "scene_label": "App Explanation",
+        "supernova_script": "Character A says: मैं Supernova app use कर रहा हूँ। [I have been using the Supernova app.]\nCharacter A says: इसमें एक AI tutor है। [It has an AI tutor.]\nCharacter A says: जिससे मैं real-life situations की practice करता हूँ। [With which I practice real-life situations.]\nCharacter B says: अच्छा। [I see.]\nCharacter A says: बिना किसी hesitation के। [Without any hesitation.]",
+        "scene_summary": "- Introduces Supernova as the practical solution to the user's speaking problem.\n- Highlights key brand features: AI tutor and real-life situation practice.\n- Emphasizes the emotional benefit of practicing without hesitation or judgment.",
+        "supernova_on_screen_text": "Speaking English confidently because I started using Supernova instead of just reading grammar books\nI have been using the Supernova app.\nमैं Supernova app use कर रहा हूँ।\nIt has an AI tutor.\nइसमें एक AI tutor है。\nWith which I practice real-life situations.\nजिससे मैं real-life situations की practice करता हूँ।\nI see.\nअच्छा।\nWithout any hesitation.\nबिना किसी hesitation के।"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "[ambient noise, no speech]",
+        "scene_summary": "- Provides a clear final brand impression.\n- Acts as the visual call-to-action to download the app.",
+        "supernova_on_screen_text": "Supernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Speak",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "just reading grammar books"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967297.8547862
+}

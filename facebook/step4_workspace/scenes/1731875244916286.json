@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1731875244916286",
+  "parsed": {
+    "duration_s": 28.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is a standard selfie-style recording shot on a smartphone. Lighting, movements, and facial expressions are natural with no AI artifacts.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young male, approximately 20 years old, medium build, light brown complexion. He has short, curly dark hair, a small mustache, and a goatee. He wears small stud earrings.",
+        "wardrobe": "Black zip-up jacket over a white t-shirt, accessorized with a silver chain necklace.",
+        "demeanor": "Confident, earnest, and engaging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 28.0,
+        "screenshot_at_s": 14.0,
+        "scene_label": "Introduction and Goal Setting",
+        "setting": "Inside a car during the daytime. Black leather seats are visible in the background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits in the driver's seat of a car, framed from the chest up. The car interior features black leather seats. Natural daylight illuminates the scene from the windows. Character A looks directly at the camera, speaking and occasionally gesturing with his hands.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A single, continuous close-up shot of Character A in a car speaking directly to the camera. Dynamic text overlays appear throughout the video, translating his Spanish and emphasizing key English phrases.",
+        "audio_transcript": "Character A says: I'm tired of being a no sabo.\nCharacter A says: Hola, me llamo Lucas Reyes. [Hello, my name is Lucas Reyes.]\nCharacter A says: Tengo 20 a\u00f1os [I am 20 years old]\nCharacter A says: y voy a hablar espa\u00f1ol todos los d\u00edas hasta ser fluido. [and I am going to speak Spanish every day until I am fluent.]\nCharacter A says: I'm giving myself one year or less to become fluent in Spanish.\nCharacter A says: And if you're also learning Spanish, or if you're also a no sabo,\nCharacter A says: I got you. We gon' learn together.\nCharacter A says: I'm focusing purely on practicality. We ain't doing no textbooks, we ain't doing none of that.\nCharacter A says: I also ain't waiting until January 1st. We starting this goal now.\nCharacter A says: So if you learning Spanish,\nCharacter A says: hit that follow button. Let's learn Spanish together.",
+        "on_screen_text": "Mexican but can't speak Spanish? Not anymore \ud83c\uddf2\ud83c\uddfd\nHello my name is Lucas Reyes\nI'm 20 years old\nAnd I'm going to\nSpeak Spanish every day\nUntil I'm fluent\nMYSELF\nOR\nFLUENT IN SPANISH.\nIF\nLEARNING SPANISH,\nALSO\nYOU.\nLEARN TOGETHER,\nPURELY\nON PRACTICALITY.\nNO TEXTBOOKS.\nOF THAT.\nUNTIL JANUARY 1ST.\nSTARTING\nGOAL NOW.\nYOU\nLEARNING SPANISH,\nTHAT\nLET'S"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966543.466824
+}

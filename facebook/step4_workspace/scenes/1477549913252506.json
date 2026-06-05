@@ -1,0 +1,92 @@
+{
+  "competitor_id": "1477549913252506",
+  "parsed": {
+    "duration_s": 28.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor with natural movements, expressions, and lighting. There are no AI artifacts like distorted fingers or uncanny facial features.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young woman in her 20s, slim build, fair complexion. She has long, straight blonde hair parted in the middle. Her facial features are soft with light makeup.",
+        "wardrobe": "Light blue and white vertically striped button-down shirt with a white collar.",
+        "demeanor": "Enthusiastic, friendly, and engaging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 12.5,
+        "screenshot_at_s": 6.0,
+        "scene_label": "Pronunciation Practice",
+        "setting": "A brightly lit room with a white brick wall, a sunset lamp projection, and a framed poster.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is positioned in the center of the frame, facing the camera. She initially holds a clear glass jar filled with water and a metal straw. She then lowers the glass and holds up a black smartphone, looking down at it as she speaks. The background features a white brick wall illuminated by a circular, warm-colored light projection on the left. On the right, a framed poster and a YouTube play button award are partially visible. The lighting is bright and even, highlighting her face.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene starts with Character A holding a glass of water, then she switches to holding her phone. A digital overlay of the language app's interface appears in the lower center of the screen, showing her pronunciation score for the word 'water'. The overlay changes from a 0% score in red to a 98% score in green with confetti. A brand logo is visible in the top right corner.",
+        "audio_transcript": "Character A says: Let's see if I can pronounce this word correctly.\nCharacter A says: Vater.\nCharacter A says: I need to work on the first consonant sound.\nCharacter A says: Let me try again.\nCharacter A says: Water.\nCharacter A says: Oh wow!\nCharacter A says: Now my score is so much better!",
+        "on_screen_text": "pronounce\ncorrectly.\n0%\nwater\nListen to Coach\nPlay Recording\nwork on the\nsound.\nLet me try again.\n64%\nwater\nOh wow!\n98%\nwater\nNow my score\nso much better!"
+      },
+      {
+        "n": 2,
+        "start_s": 12.5,
+        "end_s": 24.5,
+        "screenshot_at_s": 18.0,
+        "scene_label": "App Features Explanation",
+        "setting": "A brightly lit room with a white brick wall, a sunset lamp projection, and a framed poster.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A remains in the center of the frame, looking directly at the camera and speaking enthusiastically. She is no longer holding the phone or the glass of water. Her hands are mostly out of frame, but her shoulders and head move naturally as she talks. The background remains consistent with the previous scene, showing the white brick wall, the warm circular light projection, the framed poster, and the edge of the YouTube plaque.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A speaks directly to the camera. As she mentions video lessons, a mockup of a smartphone appears as an overlay on the left side of the screen. The phone screen displays various short video clips of different language coaches demonstrating mouth movements. The phone mockup changes to show three different coaches in succession. A brand logo is visible in the top right corner.",
+        "audio_transcript": "Character A says: I love that the app shows me what I'm doing wrong.\nCharacter A says: It also gives me video lessons from coaches who show me how to move my mouth to make those difficult sounds.\nCharacter A says: Ready to sound like a native speaker?\nCharacter A says: Download BoldVoice now!",
+        "on_screen_text": "I love\nthat the app\nwhat I'm\nIt also gives me\nvideo lessons\ncoaches\nme how\nmy mouth\nthose\nsounds.\nReady to\nsound like a\nDownload\nnow!"
+      },
+      {
+        "n": 3,
+        "start_s": 24.5,
+        "end_s": 28.0,
+        "screenshot_at_s": 26.0,
+        "scene_label": "End Card",
+        "setting": "Dark grey background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark grey background fills the entire frame. There are no characters, props, or physical settings visible. The scene is a blank canvas.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A dark grey end card is displayed. On the left, a smartphone mockup plays a video of a language coach. On the right, there is a 5-star rating graphic, the BoldVoice logo, and an 'Download on the App Store' button. Text at the bottom encourages the user to speak confidently and offers a free trial.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Unvoiced TH [\u03b8]\ngoing to start with the tip of the\ntongue. Bring it up so that it's almost\n27,000\nSTAR RATING\nBoldVoice\nDownload on the\nApp Store\nSpeak English Confidently\nGet your first 7 days free"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779986084.7795112
+}

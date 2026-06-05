@@ -1,0 +1,75 @@
+{
+  "competitor_id": "1547799510245830",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, medium build, light brown complexion, dark hair. Has a small goatee. Wearing round wire-rimmed glasses.",
+        "wardrobe": "White t-shirt, backwards camouflage baseball cap.",
+        "demeanor": "Casual, informative, and enthusiastic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Voice typing demonstration",
+        "supernova_script": "Character A says: Dear Boss, I am writing to... wait, writing for? Ugh, English mein professional email likhna kitna confusing hai na? [Dear Boss, I am writing to... wait, writing for? Ugh, writing a professional email in English is so confusing, right?]",
+        "scene_summary": "- Hooks the viewer by showing a relatable struggle: getting stuck while writing or speaking professional English.\n- Establishes a problem-solution dynamic early on.\n- Sets a casual, empathetic tone.",
+        "supernova_on_screen_text": "English mistakes you should avoid. Dear Boss, I am writing to... wait, writing for? Ugh, English mein professional email likhna kitna confusing hai na?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Basic Mac shortcuts",
+        "supernova_script": "Character A says: Hum hamesha browser mein words translate karte rehte hain. Meaning toh samajh aa jaata hai, par jab bolne ki baari aati hai, toh words dimaag mein aate hi nahi. [We are always translating words in the browser. We understand the meaning, but when it's time to speak, the words just don't come to mind.]",
+        "scene_summary": "- Highlights the common workaround (translating online) and its limitation (doesn't help with speaking).\n- Deepens the user's pain point regarding spoken English fluency.\n- Maintains the visual pacing of the original screencast.",
+        "supernova_on_screen_text": "Hum hamesha browser mein words translate karte rehte hain. Meaning toh samajh aa jaata hai, par jab bolne ki baari aati hai, toh words dimaag mein aate hi nahi."
+      },
+      {
+        "n": 3,
+        "scene_label": "Voice typing with function key",
+        "supernova_script": "Character A says: Par yeh trick bohot cool hai. Supernova app par, main AI tutor se direct English mein baat karta hoon. Jaise, 'Hi, I need a leave for Wednesday. I mean, Thursday.' Aur yeh meri mistakes bina judge kiye theek karta hai. [But this trick is really cool. On the Supernova app, I talk directly to the AI tutor in English. Like, 'Hi, I need a leave for Wednesday. I mean, Thursday.' And it corrects my mistakes without judging.]",
+        "scene_summary": "- Introduces Supernova's AI tutor feature as the ultimate solution.\n- Demonstrates how easy and judgment-free it is to practice speaking.\n- Retains the original's specific day-of-the-week dialogue beat for continuity.",
+        "supernova_on_screen_text": "Par yeh trick bohot cool hai. Supernova app par, main AI tutor se direct English mein baat karta hoon. Jaise, 'Hi, I need a leave for Wednesday. I mean, Thursday.'"
+      },
+      {
+        "n": 4,
+        "scene_label": "Presenter introduces Wispr Flow",
+        "supernova_script": "Character A says: Yeh confidence sirf tab aayega jab aap Supernova use karoge. Yeh aapki fluency badhata hai, vocabulary yaad dilata hai, aur real-life situations ke liye ready karta hai. Now watch this. [This confidence will only come when you use Supernova. It increases your fluency, reminds you of vocabulary, and readies you for real-life situations. Now watch this.]",
+        "scene_summary": "- Transitions to a direct-to-camera address to build trust.\n- Explicitly names Supernova and lists its core benefits (fluency, vocabulary, real-life prep).\n- Sets up the next visual demonstration.",
+        "supernova_on_screen_text": "Yeh confidence sirf tab aayega jab aap Supernova use karoge. Yeh aapki fluency badhata hai, vocabulary yaad dilata hai, aur real-life situations ke liye ready karta hai. Now watch this. Supernova."
+      },
+      {
+        "n": 5,
+        "scene_label": "Text expansion demonstration",
+        "supernova_script": "Character A says: Interview practice prompt. Now watch this. Weekly team meeting preparation. [Interview practice prompt. Now watch this. Weekly team meeting preparation.]",
+        "scene_summary": "- Shows the variety of real-world scenarios available in the app.\n- Keeps the fast-paced, feature-drop energy of the original ad.\n- Connects the visual of text expansion to unlocking full conversation modules.",
+        "supernova_on_screen_text": "Interview practice prompt. Now watch this. Weekly team meeting preparation."
+      },
+      {
+        "n": 6,
+        "scene_label": "Presenter explains shortcuts and call to action",
+        "supernova_script": "Character A says: Main essentially Supernova par alag-alag situations practice karta hoon taaki main fluent ban sakun. Aap isey job interviews, customer calls, office presentations, jiske liye chaho use kar sakte ho. Yeh affordable hai aur sach mein kaam karta hai. Aaj hi download karo aur apni English improve karo. [I essentially practice different situations on Supernova so I can become fluent. You can use it for job interviews, customer calls, office presentations, whatever you want. It's affordable and really works. Download today and improve your English.]",
+        "scene_summary": "- Summarizes the app's value proposition for career-focused users.\n- Replaces the original 'free week' claim with an 'affordable' value statement.\n- Delivers a strong, encouraging call to action to download the app.",
+        "supernova_on_screen_text": "Main essentially Supernova par alag-alag situations practice karta hoon taaki main fluent ban sakun. Aap isey job interviews customer calls office presentations jiske liye chaho use kar sakte ho. Yeh affordable hai aur sach mein kaam karta hai. Aaj hi download karo. job interviews. customer calls. office presentations. Supernova download today!"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "In-N-Out",
+        "supernova_swap": "Removed/Replaced with general context"
+      },
+      {
+        "competitor_brand": "Shake Shack",
+        "supernova_swap": "Removed/Replaced with general context"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.781488
+}

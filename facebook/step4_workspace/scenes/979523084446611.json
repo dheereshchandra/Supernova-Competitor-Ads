@@ -1,0 +1,86 @@
+{
+  "competitor_id": "979523084446611",
+  "parsed": {
+    "duration_s": 47.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human-recorded footage (motorcycle scene, right side of split screen) with an AI-generated avatar (left side of split screen). The AI avatar exhibits typical uncanny traits such as overly smooth skin, perfectly symmetrical features, and slightly unnatural lip movements.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter and learner",
+        "appearance": "Young woman with a slim build and fair complexion. She has long brown hair styled in a side braid and expressive facial features.",
+        "wardrobe": "Wears a white long-sleeve shirt in the first scene, and a light blue v-neck scrub-style top in the second scene.",
+        "demeanor": "Energetic, expressive, and relatable."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young woman with a fair complexion, auburn/red hair pulled back, and large expressive brown eyes. She has flawless, stylized skin.",
+        "wardrobe": "Wears a solid grey long-sleeve turtleneck sweater.",
+        "demeanor": "Friendly, patient, and attentive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 12.0,
+        "screenshot_at_s": 6.0,
+        "scene_label": "Motorcycle Intro",
+        "setting": "Busy city street at night, neon signs, traffic.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Selfie wide-angle",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is riding on the back of a moving motorcycle, holding a camera in a selfie perspective. She is smiling and talking animatedly. The motorcycle driver in front of her wears a bright green helmet and jacket. The background is a bustling city street at night, filled with cars, buses, and brightly lit neon signs in various colors. The lighting is a mix of streetlights and neon glow. The framing is a wide-angle close-up typical of a smartphone selfie.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a dynamic selfie-style shot of Character A on a moving motorcycle at night. Text overlays appear on screen with red strike-throughs and checkmarks to emphasize her points. The background is a vibrant, busy city street with traffic and neon signs. The camera shakes slightly, emphasizing the motion of the ride. The overall vibe is energetic and informal.",
+        "audio_transcript": "Character A says: Stop saying I'm fine, thanks, I don't know, you're welcome.\nCharacter A says: It's very basic.\nCharacter A says: I used to speak the same way.\nCharacter A says: Then my friend suggested practicing with Loora.\nCharacter A says: Let me show you.",
+        "on_screen_text": "STOP SAYING\nI'm fine, thanks\nI don't know\nYou're welcome\nIt's very basic.\nI used to speak the same way.\nThen my friend suggested practicing with Loora.\nLet me show you."
+      },
+      {
+        "n": 2,
+        "start_s": 12.0,
+        "end_s": 47.0,
+        "screenshot_at_s": 25.0,
+        "scene_label": "App Demo Split Screen",
+        "setting": "Left: Neutral studio background. Right: Inside a car during the day.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen, close-up talking heads",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A close-up of Character B resting her chin on her hand. She is wearing a grey turtleneck sweater. The background is a smooth, warm, neutral gradient. The lighting is soft and even, highlighting her flawless skin and bright eyes. She maintains a friendly, attentive expression throughout. The framing is a tight head-and-shoulders shot.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A close-up of Character A sitting inside a car. She is wearing a light blue v-neck top. The interior of the car is visible in the background, with natural daylight illuminating her face. She looks directly at the camera, smiling and speaking. The lighting is natural and slightly directional from the car windows. The framing is a standard talking-head close-up.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen shows an AI avatar on the left and a human user on the right, simulating a video call. Captions appear at the bottom of each speaker's respective side as they talk. The left side features a stylized, perfectly lit character against a studio backdrop. The right side features a human in a natural, everyday setting inside a car. The Loora logo appears at the end of the scene over the split screen.",
+        "audio_transcript": "Character A says: Sorry, my English is not good.\nCharacter B says: You should practice everyday.\nCharacter A says: But I don't have anyone to practice with.\nCharacter B says: That's exactly what I'm here for.\nCharacter B says: I'm Loora, your AI English tutor.\nCharacter A says: I can speak with you?\nCharacter B says: Yes, I'll chat with you, give you instant feedback on your pronunciation, and help you get better with every conversation.\nCharacter A says: But I make a lot of mistakes.\nCharacter B says: You don't have to worry about making mistakes because I'll guide you through them.\nCharacter A says: Sounds good.\nCharacter B says: Let's practice together every day and you'll see how quickly your English improves.",
+        "on_screen_text": "Sorry, my English is not good.\nYou should practice everyday.\nBut I don't have anyone to practice with.\nThat's exactly what I'm here for.\nI'm Loora, your AI English tutor.\nI can speak with you?\nYes, I'll chat with you\ngive you instant feedback on your pronunciation\nand help you get better with every conversation.\nBut I make a lot of mistakes.\nYou don't have to worry about making mistakes\nbecause I'll guide you through them.\nSounds good.\nLet's practice together every day\nand you'll see how quickly your English improves.\nLoora"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.5257638
+}

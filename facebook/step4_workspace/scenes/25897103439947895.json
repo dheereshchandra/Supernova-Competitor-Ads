@@ -1,0 +1,67 @@
+{
+  "competitor_id": "25897103439947895",
+  "parsed": {
+    "duration_s": 48.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video uses an AI avatar. The character's pose, specifically the hand resting on the cheek, remains perfectly static for 45 seconds. The lip-sync is slightly unnatural, and the voice has a synthetic cadence typical of AI text-to-speech.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young East Asian male, slim build, fair complexion. He has dark hair parted in the middle and soft facial features.",
+        "wardrobe": "Dark blue short-sleeved collared shirt with a subtle textured pattern.",
+        "demeanor": "Calm, slightly melancholic initially, transitioning to a reassuring and confident vibe."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 45.0,
+        "screenshot_at_s": 22.0,
+        "scene_label": "Testimonial",
+        "setting": "Indoor room, warm ambient lighting, plain wall background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is framed in a close-up shot against a plain, warm-toned wall. He is resting his left cheek on his left hand, maintaining a static pose. A black broadcast-style microphone on a stand is positioned in the lower left foreground, near his mouth. The lighting is soft and casts gentle shadows on the wall behind him.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene features Character A speaking directly to the camera in a static shot. Dynamic, stylized text overlays appear in the center of the screen, highlighting key phrases from his speech. The text changes color to emphasize certain words.",
+        "audio_transcript": "Character A says: I used to be really nervous in meetings.\nCharacter A says: I was afraid to speak because my English wasn't good enough.\nCharacter A says: I worried about saying something wrong, so I stayed quiet.\nCharacter A says: Then a friend told me about Fluently.\nCharacter A says: I thought, why not try it?\nCharacter A says: I started with just 10 minutes a day.\nCharacter A says: It was easy.\nCharacter A says: The app helps you practice the kind of English you really need at work.\nCharacter A says: Like how to speak in meetings or share your ideas.\nCharacter A says: After a few weeks, everything changed.\nCharacter A says: Now I can speak in meetings without fear.\nCharacter A says: I don't have awkward silences or worry about what people think.\nCharacter A says: Fluently didn't just help my English.\nCharacter A says: It gave me confidence.\nCharacter A says: If you ever felt like me, try Fluently.",
+        "on_screen_text": "I used to be really nervous in meetings\nI was afraid to speak\nbecause my English wasn't good enough\nI worried about saying something wrong\nso I stayed quiet\nThen a friend told me about Fluently\nI thought, why not try it?\nI started with just 10 minutes a day\nIt was easy\nThe app helps you practice the kind of English\nyou really need at work\nlike how to speak in meetings or share your ideas\nAfter a few weeks, everything changed\nNow I can speak in meetings without fear\nI don't have awkward silences or worry about what people think\nFluently didn't just help my English\nit gave me confidence\nIf you ever felt like me, try Fluently"
+      },
+      {
+        "n": 2,
+        "start_s": 45.0,
+        "end_s": 48.0,
+        "screenshot_at_s": 46.5,
+        "scene_label": "End Card",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, light blue background fills the entire frame. There are no characters or props present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A promotional end card with a solid blue background. An app icon featuring two white arrows on a purple gradient square sits at the top. Below it is the app name and a descriptive tagline. A white 'DOWNLOAD NOW' button is positioned at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-powered English coach\nDOWNLOAD NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657946.430277
+}

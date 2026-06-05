@@ -1,0 +1,99 @@
+{
+  "competitor_id": "1315610390528605",
+  "parsed": {
+    "duration_s": 20.5,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human presenter with natural lighting, realistic facial expressions, and fluid hand movements. There are no uncanny AI artifacts like distorted fingers or unnatural eye movements.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young woman in her 20s with a fair complexion, long wavy brown hair, and green eyes. She has a small nose ring on her left nostril.",
+        "wardrobe": "White short-sleeved top with lace detailing. She wears several rings on her fingers and a gold pendant necklace.",
+        "demeanor": "Enthusiastic, confident, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.0,
+        "screenshot_at_s": 3.5,
+        "scene_label": "Before and After Fluency",
+        "setting": "Indoor room, plain wall, hanging clothes in the background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "talking-head",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A is looking directly at the camera and pointing her index finger upwards towards the top left corner of the frame. She is indoors, with a plain wall and some colorful hanging garments visible behind her.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A smaller video frame showing Character A in two different past scenarios. Initially, she is outdoors, looking upwards, wearing glasses and a black top. The scene then cuts to her indoors, wearing a white sweatshirt, gesturing with her hands while speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A speaks to the camera while a picture-in-picture video appears in the top left corner. The inset video shows her past self struggling with Spanish, followed by her current self speaking fluently. She points to the inset video to draw attention to it. Text overlays highlight her progress.",
+        "audio_transcript": "Character A says: The cheat code to fluency.\nCharacter A says: This is me six months ago.\nCharacter A says: \u00bfD\u00f3nde est\u00e1 la biblioteca? [Where is the library?]\nCharacter A says: And this is me today.\nCharacter A says: Digo yo, no s\u00e9 qu\u00e9 le pasa a la gente, pero a m\u00ed me encanta el outfit. [I say, I don't know what's wrong with people, but I love the outfit.]",
+        "on_screen_text": "The cheat code to \ud83c\uddea\ud83c\uddf8 fluency\nsix months ago:\nD\u00d3NDE\nBIBLIOTECA?\nAnd this is me today:\nYO\nLA\nEL"
+      },
+      {
+        "n": 2,
+        "start_s": 7.0,
+        "end_s": 17.5,
+        "screenshot_at_s": 12.0,
+        "scene_label": "App Pitch",
+        "setting": "Indoor room, plain wall, hanging clothes in the background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is speaking directly to the camera, using both hands to gesture and emphasize her points. The framing is a medium close-up, focusing on her face and upper torso. The background remains the same indoor setting with hanging clothes.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A explains her method for achieving language fluency. She uses animated hand gestures to emphasize her points. The camera remains focused on her face and upper body throughout the explanation. Captions appear on screen as she speaks.",
+        "audio_transcript": "Character A says: Okay, let me tell you how to do it.\nCharacter A says: I use this app called Speak.\nCharacter A says: They have a lot of features like roleplay and free talk.\nCharacter A says: So you're not learning vocab words, you're learning real phrases to have real conversations in real life.\nCharacter A says: Even if it's just a few minutes, exposing yourself to Spanish every single day is the most important part.",
+        "on_screen_text": "how to do it\ncalled Speak\nof features like\nand free talk\nvocab words\nYou're learning real phrases\nreal conversations\nEven if it's just\nexposing yourself\nevery single day\nimportant part"
+      },
+      {
+        "n": 3,
+        "start_s": 17.5,
+        "end_s": 20.5,
+        "screenshot_at_s": 19.0,
+        "scene_label": "End Card",
+        "setting": "Solid blue background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A completely solid, bright blue screen with no other visual elements or characters present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid blue screen displays the app's logo and a call to action for a free trial.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Speak\nStart your 7-day free trial."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966543.4679852
+}

@@ -1,0 +1,78 @@
+{
+  "competitor_id": "1526088325833343",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female traveler",
+        "appearance": "Young woman, slim build, tanned complexion. She has long, voluminous, wavy brown hair. Her facial features are expressive and friendly.",
+        "wardrobe": "In the AI montage, she wears various outfits including a white top, bikini, and swimsuit. In the human-recorded sections, she wears a brown tank top and white skirt, later changing to a light beige button-down shirt.",
+        "demeanor": "Enthusiastic, curious, and outgoing."
+      },
+      {
+        "id": "B",
+        "role": "shopkeeper",
+        "appearance": "Adult male, medium build. Partially visible.",
+        "wardrobe": "Casual clothing.",
+        "demeanor": "Helpful and attentive."
+      },
+      {
+        "id": "C",
+        "role": "fruit vendor",
+        "appearance": "Older adult female, medium build.",
+        "wardrobe": "Red long-sleeved top.",
+        "demeanor": "Calm and polite."
+      },
+      {
+        "id": "D",
+        "role": "fruit vendor",
+        "appearance": "Adult male, medium build.",
+        "wardrobe": "Black t-shirt with white text, blue towel draped over his shoulder.",
+        "demeanor": "Friendly and accommodating."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI Travel Montage",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Hooks the viewer by addressing a common frustration: studying grammar but failing to speak.\n- Introduces Supernova as the practical solution with AI tutor practice.\n- Sets an encouraging, relatable tone for career-driven learners.",
+        "supernova_on_screen_text": "मैंने महीनों तक grammar रटी, पर office में एक sentence नहीं बोल पाती थी।\nफिर मैंने Supernova try किया।\nSupernova के AI tutor के साथ मैंने रोज़ practice की।\nInterview हो या shopping, अब मैं बिना डरे English बोलती हूँ।\nReal-world situations में practice करने से confidence अपने आप आता है।\nकुछ ही हफ़्तों में, मेरी spoken English बिल्कुल बदल गई है!"
+      },
+      {
+        "n": 2,
+        "scene_label": "Blanket Shop",
+        "supernova_script": "Character A says: Excuse me, ये वाला available है? [Excuse me, is this one available?]\nCharacter B says: ये वाला मैडम? [This one madam?]\nCharacter A says: हाँ। What's the price? [Yes. What's the price?]\nCharacter B says: Six eighty. [Six eighty.]\nCharacter A says: Six eighty? Perfect. [Six eighty? Perfect.]",
+        "scene_summary": "- Demonstrates the user confidently initiating a conversation in English.\n- Shows practical, real-world application of the app's teachings.\n- Reinforces the 'POV' payoff of feeling confident in public.",
+        "supernova_on_screen_text": "POV: You start using Supernova and finally feel confident speaking English anywhere you go.\nEXCUSE ME, IS THIS ONE AVAILABLE?\nTHIS ONE MADAM?\nYES. WHAT'S THE PRICE?\nSIX EIGHTY.\nSIX EIGHTY? PERFECT."
+      },
+      {
+        "n": 3,
+        "scene_label": "Fruit Stand 1",
+        "supernova_script": "Character A says: Hello, good morning. इसका क्या price है? [Hello, good morning. What is the price for this?]\nCharacter C says: ये bag में दूँ? [Should I give it in this bag?]\nCharacter A says: Yes, please. [Yes, please.]\nCharacter C says: Ten. [Ten.]\nCharacter A says: Ten? Okay. Thank you so much. [Ten? Okay. Thank you so much.]",
+        "scene_summary": "- Continues the proof-of-concept with another everyday interaction.\n- Highlights seamless code-mixing (Hindi-English) which is natural for the target audience.\n- Maintains a warm, polite, and confident demeanor.",
+        "supernova_on_screen_text": "POV: You start using Supernova and finally feel confident speaking English anywhere you go.\nHELLO, GOOD MORNING. WHAT IS THE PRICE FOR THIS?\nSHOULD I GIVE IT IN THIS BAG?\nYES, PLEASE.\nTEN.\nTEN? OKAY. THANK YOU SO MUCH."
+      },
+      {
+        "n": 4,
+        "scene_label": "Fruit Stand 2",
+        "supernova_script": "Character A says: ये बहुत spicy है क्या? [Is this very spicy?]\nCharacter D says: हाँ मैडम, very spicy. [Yes madam, very spicy.]\nCharacter A says: Can I try a little bit? [Can I try a little bit?]\nCharacter D says: [sprinkles spice]\nCharacter A says: उफ़! Thank you. [Oof! Thank you.]",
+        "scene_summary": "- Ends on a lighthearted, successful interaction showing genuine confidence.\n- Proves that the user can handle spontaneous questions and requests in English.\n- Leaves the viewer feeling encouraged that they too can achieve this fluency.",
+        "supernova_on_screen_text": "POV: You start using Supernova and finally feel confident speaking English anywhere you go.\nIS THIS VERY SPICY?\nYES MADAM, VERY SPICY.\nCAN I TRY A LITTLE BIT?\n[SPRINKLES SPICE]\nOOF! THANK YOU."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "[removed/replaced with generic grammar struggle]"
+      },
+      {
+        "competitor_brand": "Speak",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779967297.8778713
+}

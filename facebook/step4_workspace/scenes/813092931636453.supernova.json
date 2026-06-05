@@ -1,0 +1,94 @@
+{
+  "competitor_id": "813092931636453",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "presenter",
+        "appearance": "Male, 20s-30s, South Asian. Short dark hair, beard and mustache. Average build.",
+        "wardrobe": "Black denim jacket over a white t-shirt. Silver watch on left wrist.",
+        "demeanor": "Confident, enthusiastic, and professional."
+      },
+      {
+        "id": "B",
+        "role": "testimonial speaker",
+        "appearance": "Male, 40s-50s, East Asian. Short dark hair, wearing glasses. Average build.",
+        "wardrobe": "White short-sleeve polo shirt, blue jeans.",
+        "demeanor": "Serious, authoritative, and professional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction",
+        "supernova_script": "Character A says: English बोलने में डर लगता है? [Scared to speak in English?]\nCharacter A says: Supernova India का सबसे practical spoken-English app है। [Supernova is India's most practical spoken-English app.]\nCharacter A says: Let me show you how it works. [Let me show you how it works.]",
+        "scene_summary": "- Hooks the viewer by addressing the common fear of speaking English.\n- Introduces Supernova as a practical, accessible solution.\n- Sets up the demo format with a confident, encouraging tone.",
+        "supernova_on_screen_text": "Supernova is India's most practical spoken-English app. Speak with confidence. Let me show you how it works."
+      },
+      {
+        "n": 2,
+        "scene_label": "Gmail Demo",
+        "supernova_script": "Character A says: बस app खोलो और हमारे AI tutor के साथ practice शुरू करो। [Just open the app and start practicing with our AI tutor.]\nCharacter A says: Hello sir, I am here for the interview. [Hello sir, I am here for the interview.]",
+        "scene_summary": "- Demonstrates the ease of starting a practice session.\n- Shows a real-world scenario (job interview) that resonates with working professionals.\n- Highlights the AI tutor feature visually.",
+        "supernova_on_screen_text": "Practice with AI Tutor. Hello sir, I am here for the interview. 1. Real-world practice 2. No judgment 3. Instant feedback"
+      },
+      {
+        "n": 3,
+        "scene_label": "Chat Demo",
+        "supernova_script": "Character A says: और अगर आप बोलते वक्त अटकते हैं, तो Supernova उसे तुरंत सही करता है। [And if you get stuck while speaking, Supernova corrects it instantly.]\nCharacter A says: I gives... actually, um, I give the presentation. [I gives... actually, um, I give the presentation.]",
+        "scene_summary": "- Addresses the fear of making mistakes by showing the app's gentle correction feature.\n- Uses a relatable grammatical error to show how the AI provides instant feedback.\n- Reinforces the safe, non-judgmental learning environment.",
+        "supernova_on_screen_text": "Supernova fixes your mistakes instantly. I gives... actually, um, I give the presentation. INSTANT CORRECTIONS"
+      },
+      {
+        "n": 4,
+        "scene_label": "Code Demo",
+        "supernova_script": "Character A says: रोज़मर्रा की situations के लिए ये perfect है। [It's perfect for everyday situations.]\nCharacter A says: Office meeting हो, customer से बात करनी हो, या दोस्तों के साथ, सब practice करो। [Whether it's an office meeting, talking to a customer, or with friends, practice everything.]",
+        "scene_summary": "- Broadens the app's appeal by listing various practical modules.\n- Connects the learning directly to the user's daily life and career needs.\n- Maintains an encouraging, older-sibling tone.",
+        "supernova_on_screen_text": "Perfect for everyday situations. Office meetings, customers, friends. PRACTICAL LESSONS DAILY SCENARIOS"
+      },
+      {
+        "n": 5,
+        "scene_label": "Whisper Demo",
+        "supernova_script": "Character A says: And the best part is, आप अकेले में practice कर सकते हैं। [And the best part is, you can practice in private.]\nCharacter A says: बिना किसी झिझक के, अपने phone पर। [Without any hesitation, on your phone.]\nCharacter A says: See? Confidence building is that easy. [See? Confidence building is that easy.]",
+        "scene_summary": "- Solves the problem of embarrassment by highlighting private practice.\n- Shows the physical action of speaking softly into the phone.\n- Delivers a strong payoff about building confidence easily.",
+        "supernova_on_screen_text": "And the best part is you can practice in private. Build confidence without hesitation. Confidence building is that easy."
+      },
+      {
+        "n": 6,
+        "scene_label": "Testimonial",
+        "supernova_script": "Character B says: Supernova ने मेरे career को एक नई दिशा दी है। [Supernova has given my career a new direction.]\nCharacter B says: अब मैं office में पूरे confidence के साथ English बोलता हूँ। [Now I speak English in the office with full confidence.]",
+        "scene_summary": "- Provides social proof through a relatable, professional testimonial.\n- Focuses on the ultimate emotional payoff: career growth and workplace confidence.\n- Ends the ad on a strong, authoritative note.",
+        "supernova_on_screen_text": "SUPERNOVA GAVE MY CAREER A NEW DIRECTION. Now I speak English with full confidence."
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Siri",
+        "supernova_swap": "[Removed]"
+      },
+      {
+        "competitor_brand": "ElevenLabs",
+        "supernova_swap": "[Removed]"
+      },
+      {
+        "competitor_brand": "OpenAI",
+        "supernova_swap": "[Removed]"
+      },
+      {
+        "competitor_brand": "Flow",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Wispr",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.7748475
+}

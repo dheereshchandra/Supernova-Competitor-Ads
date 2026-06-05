@@ -1,0 +1,117 @@
+{
+  "competitor_id": "1304712985124608",
+  "parsed": {
+    "duration_s": 14.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human presenter with natural movements, facial expressions, and lighting. The setting, including the microphone and background posters, appears authentic and lacks any AI-generated artifacts.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young male of Asian descent, late teens to early twenties. He has a slim build and a fair complexion. His hair is dark, thick, and styled in a messy, textured way.",
+        "wardrobe": "A grey, ribbed half-zip sweater.",
+        "demeanor": "Casual, informative, and engaging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 3.0,
+        "screenshot_at_s": 1.5,
+        "scene_label": "Introduction",
+        "setting": "Indoor room, likely a bedroom or home office. A black microphone on a stand is visible. The background wall features framed black and white posters of sports cars.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is speaking directly to the camera. He is sitting at a desk with a black microphone on a stand positioned to his right. Behind him, there is a wall decorated with several framed black and white posters of sports cars. The lighting is soft and natural, illuminating his face evenly. He uses subtle hand gestures as he speaks.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter introduces the problem of texting parents in their native language. Large, dynamic text overlays appear word-by-word in the center of the screen as he speaks.",
+        "audio_transcript": "Character A says: Too lazy to text your parents in their native language? Check this out:",
+        "on_screen_text": "Too lazy to text your parents in their native language? check this out:"
+      },
+      {
+        "n": 2,
+        "start_s": 3.0,
+        "end_s": 7.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "App Demonstration - Listening",
+        "setting": "Same indoor room as the previous scene.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is in the same setting as before. He is now looking slightly downwards and speaking. He is holding a smartphone in his left hand, which is partially visible at the bottom of the frame. The microphone remains visible on the right, and the background with car posters is unchanged.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter speaks in Vietnamese. A graphic overlay appears in the center of the screen, resembling an app interface with a sound wave animation, indicating it is listening. Text overlays continue to appear below the graphic.",
+        "audio_transcript": "Character A says: C\u00e1i app n\u00e0y n\u00f3 hi\u1ec3u ti\u1ebfng Vi\u1ec7t xong n\u00f3 d\u1ecbch ra \u0111\u1ec3 cho nh\u1eafn tin \u0111\u1ec3 cho m\u00ecnh lu\u00f4n \u0111\u00f3. [This app understands Vietnamese and then translates it into text for us automatically.]",
+        "on_screen_text": "vietnamese and then translates it into text for us automatically. Listening iPhone Microphone"
+      },
+      {
+        "n": 3,
+        "start_s": 7.0,
+        "end_s": 11.0,
+        "screenshot_at_s": 9.0,
+        "scene_label": "App Demonstration - Result",
+        "setting": "Close-up of a desk surface with a light-colored, patterned desk mat.",
+        "characters_in_scene": [],
+        "camera": "Close-up, over-shoulder/POV",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of a person's hand holding a smartphone. The phone is held over a desk covered with a light-colored desk mat that has a subtle topographical pattern. The screen of the phone is visible and illuminated. The hand is holding the phone by its edges.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A close-up of a phone screen showing the transcribed Vietnamese text within a messaging app interface. The presenter's voiceover explains the result. Dynamic text overlays appear on screen.",
+        "audio_transcript": "Character A says: And just like that you get perfectly formatted text to send in over 100 different languages.",
+        "on_screen_text": "and just like that perfectly formatted text to send in over 100 different languages"
+      },
+      {
+        "n": 4,
+        "start_s": 11.0,
+        "end_s": 14.0,
+        "screenshot_at_s": 12.5,
+        "scene_label": "Call to Action",
+        "setting": "Same indoor room as the first scene.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is back on screen, looking directly at the camera. He is holding up his smartphone in his left hand, showing the illuminated screen towards the camera lens. The microphone is visible on the right. The background with car posters remains the same. He has a neutral, informative expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter holds up his phone and delivers a call to action to try the app. Text overlays appear in the center of the screen.",
+        "audio_transcript": "Character A says: Try Whisper Flow for free for two weeks.",
+        "on_screen_text": "Try Whisper Flow for free for two weeks"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.2547226
+}

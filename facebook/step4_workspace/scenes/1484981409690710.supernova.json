@@ -1,0 +1,53 @@
+{
+  "competitor_id": "1484981409690710",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot. Smooth white synthetic face with grey eyes. Metallic body with exposed joints and wiring at the neck and shoulders.",
+        "wardrobe": "No clothing, exposed white and metallic robotic exterior.",
+        "demeanor": "Calm, instructional, and patient."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young adult male, slim build, brown complexion. Short dark hair and a light beard/mustache.",
+        "wardrobe": "Light blue t-shirt with thin white horizontal stripes.",
+        "demeanor": "Curious, slightly hesitant, and eager to learn."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Grammar Correction",
+        "supernova_script": "Character A says: कल कहाँ गए थे? [Where did you go yesterday?]\n\nCharacter B says: I went to माल yesterday. [I went to maal yesterday.]\n\nCharacter A says: माल? Pronunciation थोड़ा गलत है। It is Mall. I went to the mall yesterday. [Maal? The pronunciation is a bit wrong. It is Mall. I went to the mall yesterday.]\n\nCharacter A says: कल क्या खाया? [What did you eat yesterday?]\n\nCharacter B says: I eat पीजा खाया। [I eat peeja ate.]\n\nCharacter A says: पीजा? नहीं, Pizza. और बात कल की है, इसलिए Eat नहीं, Ate. I ate pizza. [Peeja? No, Pizza. And the event is from yesterday, so not Eat, but Ate. I ate pizza.]\n\nCharacter A says: ट्रेन कहाँ से पकड़ते हो? [Where do you catch the train from?]\n\nCharacter B says: I pick train from railway ईस्टेशन. [I pick train from railway e-station.]\n\nCharacter A says: Pick? Pick मतलब उठाना। ट्रेन उठाओगे क्या? Catch मतलब पकड़ना। और ईस्टेशन नहीं, Station. I catch the train from the railway station. [Pick? Pick means to lift. Are you going to lift the train? Catch means to catch. And not e-station, Station. I catch the train from the railway station.]\n\nCharacter B says: Ohhh मेरा pronunciation बहुत weak है। [Ohhh my pronunciation is very weak.]\n\nCharacter A says: कोई बात नहीं! Supernova का AI tutor try किया? [No problem! Have you tried Supernova's AI tutor?]\n\nCharacter B says: वो महँगा होगा ना? [That must be expensive, right?]\n\nCharacter A says: बिल्कुल नहीं, बहुत affordable है। Supernova पर आप बिना किसी झिझक के practice कर सकते हो। [Not at all, it's very affordable. On Supernova, you can practice without any hesitation.]\n\nCharacter B says: पर रोज़ time नहीं मिलता। [But I don't get time every day.]\n\nCharacter A says: दिन के बस 15-20 मिनट काफी हैं। धीरे-धीरे confidence आ जाएगा। [Just 15-20 minutes a day is enough. Slowly you will gain confidence.]\n\nCharacter B says: Wow, कैसे join करूँ? [Wow, how do I join?]\n\nCharacter A says: नीचे install button पर click करो। Supernova app download करो और आज ही बोलना शुरू करो! [Click on the install button below. Download the Supernova app and start speaking today!]",
+        "scene_summary": "- Hooks the viewer with relatable, everyday English mistakes and gentle corrections.\n- Establishes the learner's pain point (weak pronunciation, lack of time/money) and introduces Supernova as the practical, affordable solution.\n- Ends with a clear, encouraging call to action to start practicing.",
+        "supernova_on_screen_text": "कल कहाँ गए थे (Where did you go yesterday)\nI went to माल yesterday\nमाल (Maal)\nPronunciation थोड़ा गलत है (Pronunciation is a bit wrong)\nIt is Mall\nI went to the mall yesterday\nकल क्या खाया (What did you eat yesterday)\nI eat पीजा खाया (I eat peeja ate)\nपीजा नहीं (Not peeja)\nPizza\nऔर बात कल की है (And the event is from yesterday)\nइसलिए Eat नहीं Ate (So not Eat but Ate)\nI ate pizza\nट्रेन कहाँ से पकड़ते हो (Where do you catch the train from)\nI pick train from railway ईस्टेशन (I pick train from railway e-station)\nPick\nPick मतलब उठाना (Pick means to lift)\nट्रेन उठाओगे क्या (Are you going to lift the train)\nCatch मतलब पकड़ना (Catch means to catch)\nऔर ईस्टेशन नहीं (And not e-station)\nStation\nI catch the train from the railway station\nohhh मेरा pronunciation बहुत weak है (ohhh my pronunciation is very weak)\nकोई बात नहीं (No problem)\nSupernova का AI tutor try किया (Have you tried Supernova's AI tutor)\nवो महँगा होगा ना (That must be expensive right)\nबिल्कुल नहीं, बहुत affordable है (Not at all, it's very affordable)\nSupernova पर बिना झिझक practice करो (Practice without hesitation on Supernova)\nपर रोज़ time नहीं मिलता (But don't get time everyday)\nबस 15-20 मिनट काफी हैं (Just 15-20 minutes is enough)\nधीरे-धीरे confidence आ जाएगा (Slowly you will gain confidence)\nWow कैसे join करूँ (Wow how to join)\nनीचे install button पर click करो (Click on install button below)\nSupernova App download करो (Download Supernova App)\nआज ही बोलना शुरू करो (Start speaking today)"
+      },
+      {
+        "n": 2,
+        "scene_label": "Offer Screen",
+        "supernova_script": "Character A says: आज ही अपना trial शुरू करो और English बोलने की practice करो। [Start your trial today and practice speaking English.]",
+        "scene_summary": "- Transitions from the educational hook to the product offering.\n- Highlights the core value propositions (24/7 AI tutor, instant feedback) without relying on aggressive pricing gimmicks.\n- Maintains the warm, encouraging tone while driving conversion.",
+        "supernova_on_screen_text": "Supernova\nसब कुछ UNLOCK करो (Unlock everything)\nAffordable Plans\nSupernova Pro के फायदे (Supernova Pro benefits)\n24/7 आपका Personal AI English Teacher (24/7 your Personal AI English Teacher)\nInstant feedback के साथ grammar सही करो (Correct grammar with instant feedback)\nStart Trial\nSafe Payments. कभी भी Cancel करें। (Safe Payments. Cancel anytime.)"
+      },
+      {
+        "n": 3,
+        "scene_label": "App Install",
+        "supernova_script": "Character A says: Install now पर click करो और Supernova app download करो। [Click on Install now and download the Supernova app.]",
+        "scene_summary": "- Delivers the final, direct call to action.\n- Visually reinforces the app name and its primary function (Spoken English App).\n- Provides a clear next step for the user.",
+        "supernova_on_screen_text": "Supernova\nSpoken English App\nInstall Now"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779892236.0047588
+}

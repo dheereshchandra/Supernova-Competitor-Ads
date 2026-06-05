@@ -1,0 +1,82 @@
+{
+  "competitor_id": "1629474414794954",
+  "parsed": {
+    "duration_s": 48.0,
+    "production_type": "mixed",
+    "production_notes": "The top panel features an AI-generated avatar, indicated by the perfectly static background, slightly unnatural lip-sync, and overly smooth features. The bottom panel is human-recorded, showing natural micro-movements and lighting.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, fair complexion, blonde hair parted in the middle. Smooth, symmetrical facial features.",
+        "wardrobe": "Light blue collared shirt.",
+        "demeanor": "Calm, professional, and static."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young female, fair complexion, dark hair pulled back tightly. Expressive facial features.",
+        "wardrobe": "Maroon knit sweater, gold necklace, and small hoop earrings.",
+        "demeanor": "Expressive, slightly anxious but eager."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 45.0,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Split-screen Conversation",
+        "setting": "Top: Office environment. Bottom: Plain wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up of Character A. She is positioned in an office setting. Behind her, a desk with a computer monitor displaying a blue screen is visible, along with a window letting in natural light. The lighting on her face is bright and even. She maintains a calm, professional expression, looking directly at the camera.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up of Character B. She is positioned against a plain, light-colored wall. The lighting is soft and natural. She uses hand gestures as she speaks, displaying a range of expressions from confused to relieved. She looks directly at the camera.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with Character A on top and Character B on the bottom. Both characters appear to be conversing with each other. Speech bubbles with text appear over their respective panels as they speak. Flash sale promotional stickers are overlaid on the right side of both panels.",
+        "audio_transcript": "Character B says: We need to discuss about the budget\nCharacter A says: Careful, natives just say \"discuss the budget\"\nCharacter B says: OK, let's discuss the budget\nCharacter B says: I don't understand good this report\nCharacter A says: Say \"I don't understand this report well\"\nCharacter B says: I don't understand this report well\nCharacter B says: Honestly, I make mistakes like this all the time at work\nCharacter B says: My colleagues sound confident, and I feel nervous\nCharacter A says: That's why daily speaking practice is important\nCharacter B says: Yeah, but I don't have time or money for tutors\nCharacter A says: Then practice with me, your AI tutor\nCharacter A says: Always available, always correcting you\nCharacter B says: That's exactly what I need for my job\nCharacter A says: Download Fluently and we'll practice every day\nCharacter B says: OK, I'll download Fluently today",
+        "on_screen_text": "We need to discuss about the budget\nCareful, natives just say \"discuss the budget\"\nOK, let's discuss the budget\nI don't understand good this report\nSay \"I don't understand this report well\"\nI don't understand this report well\nHonestly, I make mistakes like this all the time at work\nMy colleagues sound confident, and I feel nervous\nThat's why daily speaking practice is important\nBut I don't have time or money for tutors\nThen practice with me, your AI tutor\nAlways available, always correcting you\nThat's exactly what I need for my job\nDownload Fluently and we'll practice every day\nOK, I'll download Fluently today\nFLASH SALE 50% SHOP NOW"
+      },
+      {
+        "n": 2,
+        "start_s": 45.0,
+        "end_s": 48.0,
+        "screenshot_at_s": 46.5,
+        "scene_label": "End Card",
+        "setting": "Abstract dark background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark purple background. The lighting is flat and uniform across the frame. No characters or props are present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A dark purple end card screen. The app logo is centered at the top, followed by the app name and a descriptive tagline. A download button is positioned below the text. Two flash sale promotional stickers are overlaid on the screen.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Fluently App\nAI-power English coach\nDOWNLOAD\nFLASH SALE 50% SHOP NOW"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780657946.4450672
+}

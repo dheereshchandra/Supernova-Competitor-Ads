@@ -1,0 +1,227 @@
+{
+  "competitor_id": "1647227479627567",
+  "parsed": {
+    "duration_s": 37.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video consists entirely of static or minimally animated AI-generated illustrations. The art style exhibits typical AI artifacts, such as overly smooth shading, slightly inconsistent facial features across different shots, and a distinct digital painting aesthetic common to models like Midjourney.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Male protagonist / learner",
+        "appearance": "Young man, early 20s, brown complexion, curly dark brown hair, expressive eyebrows.",
+        "wardrobe": "Changes throughout: light patterned short-sleeve shirt, blue overshirt, dark suit jacket, and a casual grey t-shirt.",
+        "demeanor": "Transitions from highly anxious and sweating to confident, happy, and relaxed."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Small, floating holographic robot. Rounded head, large glowing blue eyes, no visible mouth.",
+        "wardrobe": "None, appears as a glowing blue digital projection.",
+        "demeanor": "Friendly and helpful."
+      },
+      {
+        "id": "C",
+        "role": "Female learner",
+        "appearance": "Young woman, early 20s, fair complexion, long straight black hair.",
+        "wardrobe": "Yellow long-sleeve top.",
+        "demeanor": "Happy and engaged."
+      },
+      {
+        "id": "D",
+        "role": "Interviewer",
+        "appearance": "Older man, grey hair, fair complexion. Wears dark rectangular glasses. Only seen in profile or from behind.",
+        "wardrobe": "Dark suit jacket, white collared shirt.",
+        "demeanor": "Professional and formal."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Anxious about English",
+        "setting": "Indoor, warm lighting, sitting at a desk.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man with curly dark hair sits at a desk, looking highly anxious and stressed. He is sweating profusely, with visible drops on his forehead and face. He wears a light-colored, patterned short-sleeve shirt. His hands are clasped together nervously on the table. The background is slightly blurred, showing a warm, indoor setting. The lighting highlights his worried expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a young man looking very stressed and sweating, sitting at a desk. A text box appears over his chest. The overall mood is tense and anxious.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "English bolne me darr lagta hai? \u0917\u0932\u0924 \u092c\u094b\u0932 \u0926\u0947\u0902\u0917\u0947 \u0907\u0938 \u0921\u0930 \u0938\u0947 \u091a\u093f\u0902\u0924\u093e \u0939\u094b \u0930\u0939\u0940 \u0939\u0948? (Are you afraid to speak English? Are you worried about speaking incorrectly?)"
+      },
+      {
+        "n": 2,
+        "start_s": 5.5,
+        "end_s": 8.0,
+        "screenshot_at_s": 6.5,
+        "scene_label": "App Introduction",
+        "setting": "Indoor, blurred background, holding a smartphone.",
+        "characters_in_scene": [],
+        "camera": "Close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of a person's hands holding a smartphone. The person is wearing blue jeans. The phone screen is white with a blue and white circular logo in the center. The background is a softly blurred indoor setting with warm, natural light coming from a window. The hands are holding the phone in a relaxed manner.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A close-up of hands holding a smartphone displaying an app logo. A text box is overlaid at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u0932\u0940\u091c\u093f\u090f Mysivi App! (Take the Mysivi App!)"
+      },
+      {
+        "n": 3,
+        "start_s": 8.0,
+        "end_s": 14.5,
+        "screenshot_at_s": 11.0,
+        "scene_label": "AI Teacher",
+        "setting": "Indoor, sitting on a sofa, warm lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man with curly dark hair sits comfortably, holding a smartphone and smiling broadly. He wears a blue overshirt over a light t-shirt. Hovering above the phone is a small, glowing blue, holographic robot with a rounded head and large eyes. The man looks at the robot with a happy, engaged expression. The background shows a softly lit room with a window.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The young man is happily interacting with a holographic AI robot that floats above his phone. Text boxes appear sequentially over his chest.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u092f\u0939\u093e\u0901 AI Teacher \u0915\u0947 \u0938\u093e\u0925 \u0906\u092a \u091c\u092c \u091a\u093e\u0939\u0947\u0902 \u0924\u092c \u092c\u093e\u0924 \u0915\u0930 \u0938\u0915\u0924\u0947 \u0939\u0948\u0902\u0964 (Here you can talk to the AI Teacher whenever you want.)\n\u0906\u092a\u0915\u0940 \u0917\u0932\u0924\u093f\u092f\u094b\u0902 \u0915\u094b \u092f\u0939 \u0924\u0941\u0930\u0902\u0924 \u0938\u0941\u0927\u093e\u0930\u0915\u0930 \u0938\u093f\u0916\u093e\u0924\u093e \u0939\u0948\u0964 (It teaches you by instantly correcting your mistakes.)"
+      },
+      {
+        "n": 4,
+        "start_s": 14.5,
+        "end_s": 20.5,
+        "screenshot_at_s": 17.5,
+        "scene_label": "Peer Practice",
+        "setting": "Indoor, warm lighting.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A young woman with long straight black hair sits on a sofa, holding a smartphone and smiling warmly. She wears a yellow long-sleeve top. The background features indoor plants and warm lighting. She appears to be engaged in a pleasant conversation or activity on her phone.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young man with curly dark hair holds a smartphone, looking surprised and delighted. He wears a blue overshirt. His mouth is slightly open in a happy expression. The background is a softly lit indoor setting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen shows a woman on top and the young man on the bottom, both happily using their phones, suggesting they are connecting. A large text box overlays the center of the screen.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u092c\u0938 \u0907\u0924\u0928\u093e \u0939\u0940 \u0928\u0939\u0940\u0902, \u0906\u092a\u0915\u0940 \u0924\u0930\u0939 \u0939\u0940 \u0938\u0940\u0916 \u0930\u0939\u0947 \u0926\u0942\u0938\u0930\u0947 \u0932\u094b\u0917\u094b\u0902 \u0915\u0947 \u0938\u093e\u0925 \u092e\u093f\u0932\u0915\u0930 \u092c\u093e\u0924 \u0915\u0930\u0915\u0947 \u0906\u092a Practice \u092d\u0940 \u0915\u0930 \u0938\u0915\u0924\u0947 \u0939\u0948\u0902! (Not only this, you can also practice by talking together with other people who are learning just like you!)"
+      },
+      {
+        "n": 5,
+        "start_s": 20.5,
+        "end_s": 26.5,
+        "screenshot_at_s": 23.5,
+        "scene_label": "Learning Path",
+        "setting": "Office environment, sitting across a desk.",
+        "characters_in_scene": [
+          "A",
+          "D"
+        ],
+        "camera": "Over-shoulder",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man with curly dark hair sits across a desk, looking confident and smiling. He is wearing a dark blue suit jacket. He is gesturing with his hands as if explaining something or speaking confidently. In the foreground, the back of the head and shoulder of another man wearing glasses and a suit is visible, indicating an interview or formal meeting setting.",
+            "characters_in_panel": [
+              "A",
+              "D"
+            ]
+          }
+        ],
+        "visual_description": "The young man is in a formal setting, looking confident and speaking to an interviewer whose back is to the camera. A text box is overlaid on the left side.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u0907\u0938\u092e\u0947\u0902 \u092e\u094c\u091c\u0942\u0926 Learning Path \u0915\u0947 \u091c\u093c\u0930\u093f\u090f \u0906\u092a \u0905\u092a\u0928\u0940 English \u0915\u094b \u0927\u0940\u0930\u0947-\u0927\u0940\u0930\u0947 \u092c\u0947\u0939\u0924\u0930 \u092c\u0928\u093e \u0938\u0915\u0924\u0947 \u0939\u0948\u0902\u0964 (Through the Learning Path available in it, you can gradually improve your English.)"
+      },
+      {
+        "n": 6,
+        "start_s": 26.5,
+        "end_s": 30.5,
+        "screenshot_at_s": 28.5,
+        "scene_label": "Successful Interview",
+        "setting": "Office environment.",
+        "characters_in_scene": [
+          "A",
+          "D"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man with curly dark hair smiles broadly while shaking hands with an older man. The young man wears a dark suit jacket. The older man, seen in profile, has grey hair, wears glasses and a dark suit. They appear to be concluding a successful meeting or interview. The background is a brightly lit office setting.",
+            "characters_in_panel": [
+              "A",
+              "D"
+            ]
+          }
+        ],
+        "visual_description": "The young man is shaking hands with the interviewer, both smiling, indicating success. A text box is overlaid at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u0938\u093f\u0930\u094d\u092b 1 \u0930\u0941\u092a\u092f\u0947 \u092e\u0947\u0902 Trial \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902! (Start the Trial for just 1 Rupee!)"
+      },
+      {
+        "n": 7,
+        "start_s": 30.5,
+        "end_s": 37.0,
+        "screenshot_at_s": 33.5,
+        "scene_label": "Call to Action",
+        "setting": "Indoor, living room.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young man with curly dark hair stands in a softly lit room, smiling confidently and giving a thumbs-up gesture with his right hand. He is wearing a casual grey t-shirt. The background shows a blurred living room setting with a sofa. He looks directly at the viewer with a positive and encouraging expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The young man gives a thumbs up to the camera, looking happy and confident. A text box is overlaid at the bottom.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u0909\u0938\u0915\u0947 \u092c\u093e\u0926 \u0915\u0947\u0935\u0932 299 \u0930\u0941\u092a\u092f\u0947 \u092a\u094d\u0930\u0924\u093f \u092e\u093e\u0939\u0964 \u0906\u091c \u0939\u0940 Download \u0915\u0930\u0947\u0902! (After that only 299 rupees per month. Download today!)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779890884.9985623
+}

@@ -1,0 +1,51 @@
+{
+  "competitor_id": "1261073506142042",
+  "parsed": {
+    "duration_s": 39.0,
+    "production_type": "AI-generated",
+    "production_notes": "The character's face exhibits uncanny valley characteristics with perfectly smooth skin and slightly unnatural lip-syncing. The background is completely static and the lighting is artificially soft and flawless.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI English tutor avatar",
+        "appearance": "Middle-aged woman with a fair complexion and reddish-brown hair pulled back. She has smooth skin, bright eyes, and a friendly, approachable look.",
+        "wardrobe": "A simple, solid grey turtleneck sweater.",
+        "demeanor": "Friendly, encouraging, and consistently smiling."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 39.0,
+        "screenshot_at_s": 19.5,
+        "scene_label": "Tutor Introduction",
+        "setting": "A plain, soft, out-of-focus brown/grey background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A close-up shot of Character A looking directly at the camera. She is smiling and appears to be speaking. Her right hand occasionally comes up to rest gently under her chin. The background is a completely plain, soft, out-of-focus brown/grey color. The lighting is soft, even, and flattering, highlighting her facial features without harsh shadows.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A solid, plain light beige background with no other visual elements.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half features a close-up of Character A speaking directly to the viewer against a soft background. The bottom half is a solid light beige area where a scrolling transcript of her speech is displayed, with words highlighting as they are spoken. A thin progress bar is visible at the very top of the screen.",
+        "audio_transcript": "Character A says: If you're over 50 and think you'll never speak English - you're wrong!\nCharacter A says: You just need to practice everyday, and that's exactly what I'm here for. I'm Loora, your AI English tutor.\nCharacter A says: With me, you can practice anytime, anywhere, just like you would with a real person.\nCharacter A says: I'll chat with you, provide instant feedback on your pronunciation, and help you improve with every conversation.\nCharacter A says: It's fast, easy, and pressure-free. You don't have to worry about making mistakes because I'll guide you through them.\nCharacter A says: Let's practice together every day, and you'll see how quickly your English improves.",
+        "on_screen_text": "If you're over 50 and think you'll never speak English - you're wrong!\nYou just need to practice everyday, and that's exactly what I'm here for. I'm Loora, your AI English tutor.\nWith me, you can practice anytime, anywhere, just like you would with a real person.\nI'll chat with you, provide instant feedback on your pronunciation, and help you improve with every conversation. It's fast, easy, and pressure-free. You don't have to worry about making mistakes because I'll guide you through them.\nLet's practice together every day, and you'll see how quickly your English improves."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888546.5275617
+}

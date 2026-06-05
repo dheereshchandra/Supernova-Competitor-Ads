@@ -1,0 +1,60 @@
+# Step 3 run log (Google pipeline)
+# competitor : speakx
+# started_at : 2026-05-29T13:04:58
+# input      : inputs/g-ads-speakx-2026-05-29.csv
+# videos     : videos/speakx-2026-05-29
+# images     : images/speakx-2026-05-29
+# master     : master/speakx.csv  (updated)
+# enriched   : inputs/g-ads-speakx-2026-05-29_enriched.csv
+# bucket     : google-video-ads
+# public_base: https://pub-placeholder.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded-video': 0, 'uploaded-image': 0, 'carried-forward': 0, 'text-no-asset': 0, 'asset-missing': 44, 'unsupported': 0, 'no-creative': 0, 'scrape-error': 2, 'error': 0}
+#
+asset-missing    CR13952643204600823809  (expected local file not found)
+asset-missing    CR13952643204600823809  (expected local file not found)
+asset-missing    CR13952643204600823809  (expected local file not found)
+asset-missing    CR13952643204600823809  (expected local file not found)
+asset-missing    CR02580772670513610753  (expected local file not found)
+asset-missing    CR02580772670513610753  (expected local file not found)
+asset-missing    CR02580772670513610753  (expected local file not found)
+asset-missing    CR02580772670513610753  (expected local file not found)
+asset-missing    CR02580772670513610753  (expected local file not found)
+asset-missing    CR15658730589689741313  (expected local file not found)
+asset-missing    CR15658730589689741313  (expected local file not found)
+asset-missing    CR15658730589689741313  (expected local file not found)
+asset-missing    CR15658730589689741313  (expected local file not found)
+asset-missing    CR15171813583316058113  (expected local file not found)
+asset-missing    CR15171813583316058113  (expected local file not found)
+asset-missing    CR15171813583316058113  (expected local file not found)
+asset-missing    CR15171813583316058113  (expected local file not found)
+asset-missing    CR02963800740188913665  (expected local file not found)
+asset-missing    CR02963800740188913665  (expected local file not found)
+asset-missing    CR02963800740188913665  (expected local file not found)
+asset-missing    CR02963800740188913665  (expected local file not found)
+asset-missing    CR02963800740188913665  (expected local file not found)
+asset-missing    CR04605080985791365121  (expected local file not found)
+asset-missing    CR04605080985791365121  (expected local file not found)
+asset-missing    CR04605080985791365121  (expected local file not found)
+asset-missing    CR04605080985791365121  (expected local file not found)
+asset-missing    CR13654429752495177729  (expected local file not found)
+asset-missing    CR13654429752495177729  (expected local file not found)
+asset-missing    CR13654429752495177729  (expected local file not found)
+asset-missing    CR13654429752495177729  (expected local file not found)
+asset-missing    CR13654429752495177729  (expected local file not found)
+asset-missing    CR09678062958713765889  (expected local file not found)
+asset-missing    CR09678062958713765889  (expected local file not found)
+asset-missing    CR09678062958713765889  (expected local file not found)
+asset-missing    CR09678062958713765889  (expected local file not found)
+asset-missing    CR17096940452210278401  (expected local file not found)
+asset-missing    CR17096940452210278401  (expected local file not found)
+asset-missing    CR17096940452210278401  (expected local file not found)
+asset-missing    CR17096940452210278401  (expected local file not found)
+asset-missing    CR12295867928175181825  (expected local file not found)
+asset-missing    CR12295867928175181825  (expected local file not found)
+asset-missing    CR12295867928175181825  (expected local file not found)
+asset-missing    CR12295867928175181825  (expected local file not found)
+asset-missing    CR12295867928175181825  (expected local file not found)
+scrape-error     CR03483707742550491137 v0  (Step 1 tag: scrape-stalled-during-enrichment; re-run Step 1 to recover)
+scrape-error     CR09548064950182739969 v0  (Step 1 tag: scrape-stalled-during-enrichment; re-run Step 1 to recover)

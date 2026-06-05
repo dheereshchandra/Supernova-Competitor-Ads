@@ -1,0 +1,757 @@
+# Step 3 run log (Google pipeline)
+# competitor : duolingo
+# started_at : 2026-06-03T13:35:29
+# input      : inputs/g-ads-duolingo-2026-06-03.csv
+# videos     : videos/duolingo-2026-06-03
+# images     : images/duolingo-2026-06-03
+# master     : master/duolingo.csv  (updated)
+# enriched   : inputs/g-ads-duolingo-2026-06-03_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded-video': 18, 'uploaded-image': 201, 'carried-forward': 0, 'text-no-asset': 6, 'asset-missing': 288, 'unsupported': 0, 'no-creative': 0, 'scrape-error': 230, 'error': 0}
+#
+uploaded-image  CR00077483048265842689  ← CR00077483048265842689.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00077483048265842689.jpg
+scrape-error     CR00080577486303264769 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR00092628322722250753 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR00172539367540129793  ← CR00172539367540129793.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00172539367540129793.jpg
+uploaded-image  CR00172539367540129793  ← CR00172539367540129793_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00172539367540129793.jpg
+uploaded-image  CR00172539367540129793  ← CR00172539367540129793_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00172539367540129793.jpg
+scrape-error     CR00181197265694621697 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR00182742388769292289 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR00183418201873317889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR00183418201873317889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR00183418201873317889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR00183418201873317889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR00220408796688678913  ← CR00220408796688678913.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00220408796688678913.jpg
+uploaded-image  CR00220408796688678913  ← CR00220408796688678913_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00220408796688678913.jpg
+uploaded-image  CR00220408796688678913  ← CR00220408796688678913_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00220408796688678913.jpg
+scrape-error     CR00225154151435206657 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR00273460825434357761  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR00273460825434357761  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR00273460825434357761  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR00273460825434357761  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR00302240267413487617 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR00339160802722316289 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR00340579095412736001  ← CR00340579095412736001.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00340579095412736001.jpg
+uploaded-image  CR00340579095412736001  ← CR00340579095412736001_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00340579095412736001.jpg
+uploaded-image  CR00340579095412736001  ← CR00340579095412736001_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00340579095412736001.jpg
+scrape-error     CR00355032940264030209 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR00486904619688001537  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR00486904619688001537  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR00486904619688001537  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR00486904619688001537  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR00523603173907103745  ← CR00523603173907103745.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00523603173907103745.jpg
+uploaded-image  CR00523603173907103745  ← CR00523603173907103745_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00523603173907103745.jpg
+scrape-error     CR00595989985778204673 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR00622910591681429505  ← CR00622910591681429505.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00622910591681429505.jpg
+uploaded-image  CR00622910591681429505  ← CR00622910591681429505_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00622910591681429505.jpg
+uploaded-image  CR00622910591681429505  ← CR00622910591681429505_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00622910591681429505.jpg
+uploaded-image  CR00666386106077413377  ← CR00666386106077413377.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00666386106077413377.jpg
+uploaded-image  CR00708930609002577921  ← CR00708930609002577921.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00708930609002577921.jpg
+uploaded-image  CR00708930609002577921  ← CR00708930609002577921_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00708930609002577921.jpg
+uploaded-image  CR00708930609002577921  ← CR00708930609002577921_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00708930609002577921.jpg
+scrape-error     CR00754063714486845441 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR00870484712919924737 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR00912206643708559361  ← CR00912206643708559361.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00912206643708559361.jpg
+uploaded-image  CR00990928154384138241  ← CR00990928154384138241.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00990928154384138241.jpg
+asset-missing    CR01002423385243779073  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01002423385243779073  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01002423385243779073  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01002423385243779073  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01002423385243779073  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01030743368801452033  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01030743368801452033  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01030743368801452033  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01030743368801452033  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR01080890376157396993  ← CR01080890376157396993.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01080890376157396993.jpg
+uploaded-image  CR01080890376157396993  ← CR01080890376157396993_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01080890376157396993.jpg
+scrape-error     CR01100173104279191553 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01130741245518282753 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01171838378824433665 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01175648702010753025 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01290797153173635073 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01337385900383928321 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01343770764406423553 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01423026208236371969 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR01450103631985508353  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01450103631985508353  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01450103631985508353  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR01533471704569872385 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01557529603101163521 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+text-no-asset    CR01624949414143459329  (Text ad — no upload, analysis in Step 4 uses headline+desc)
+scrape-error     CR01729249061384486913 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01796609473029079041 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01824752607013371905 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR01868085494135390209  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01868085494135390209  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR01868085494135390209  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR01910258705727750145 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR01947827506220367873 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02066686465529610241 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02128424764983738369 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02253422813106929665 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR02300258323368247297  ← CR02300258323368247297.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02300258323368247297.jpg
+uploaded-image  CR02300258323368247297  ← CR02300258323368247297_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02300258323368247297.jpg
+uploaded-image  CR02300258323368247297  ← CR02300258323368247297_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02300258323368247297.jpg
+uploaded-image  CR02332026650268532737  ← CR02332026650268532737.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02332026650268532737.jpg
+uploaded-image  CR02332026650268532737  ← CR02332026650268532737_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02332026650268532737.jpg
+uploaded-image  CR02332026650268532737  ← CR02332026650268532737_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02332026650268532737.jpg
+uploaded-image  CR02345735223804690433  ← CR02345735223804690433.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02345735223804690433.jpg
+uploaded-image  CR02345735223804690433  ← CR02345735223804690433_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02345735223804690433.jpg
+uploaded-image  CR02345735223804690433  ← CR02345735223804690433_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02345735223804690433.jpg
+scrape-error     CR02365103782552928257 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR02400119130498793473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02400119130498793473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02400119130498793473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02400119130498793473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02403692818166972417  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02403692818166972417  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02403692818166972417  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02403692818166972417  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR02441408515131047937 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR02469643449746325505  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02469643449746325505  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02469643449746325505  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02469643449746325505  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR02559491665907679233 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02582431876509597697 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02602988517701189633 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02689703185852923905 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02777872576607682561 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02783458473633906689 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02861963294619467777 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR02876105685622325249  ← CR02876105685622325249.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02876105685622325249.jpg
+uploaded-image  CR02876105685622325249  ← CR02876105685622325249_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02876105685622325249.jpg
+uploaded-image  CR02876105685622325249  ← CR02876105685622325249_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02876105685622325249.jpg
+scrape-error     CR02889213350284099585 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02931127008412827649 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR02953461826194505729  ← CR02953461826194505729.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02953461826194505729.jpg
+uploaded-image  CR02953461826194505729  ← CR02953461826194505729_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02953461826194505729.jpg
+asset-missing    CR02959457325661814785  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02959457325661814785  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02959457325661814785  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR02959457325661814785  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR02969335793392287745 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR02996805261756203009 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR03125866348941410305  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR03202938102549053441 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03218206986164240385 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03247348476706553857 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03274989511834075137 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR03289419536796745729  ← CR03289419536796745729.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03289419536796745729.jpg
+scrape-error     CR03320610242135326721 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR03342477054510628865  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03342477054510628865  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03342477054510628865  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR03356091276205228033 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR03419157983274205185  ← CR03419157983274205185.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03419157983274205185.jpg
+uploaded-image  CR03419157983274205185  ← CR03419157983274205185_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03419157983274205185.jpg
+uploaded-image  CR03419157983274205185  ← CR03419157983274205185_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03419157983274205185.jpg
+asset-missing    CR03444500283185430529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03444500283185430529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03444500283185430529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03444500283185430529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03444500283185430529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR03449188738205220865  ← CR03449188738205220865.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03449188738205220865.jpg
+uploaded-image  CR03449188738205220865  ← CR03449188738205220865_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03449188738205220865.jpg
+uploaded-image  CR03449188738205220865  ← CR03449188738205220865_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03449188738205220865.jpg
+asset-missing    CR03460262881881227265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03460262881881227265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03460262881881227265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03460262881881227265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR03461645655192109057  ← CR03461645655192109057.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03461645655192109057.jpg
+uploaded-image  CR03568382765093093377  ← CR03568382765093093377.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03568382765093093377.jpg
+uploaded-image  CR03568382765093093377  ← CR03568382765093093377_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03568382765093093377.jpg
+uploaded-image  CR03568382765093093377  ← CR03568382765093093377_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03568382765093093377.jpg
+scrape-error     CR03618019358535581697 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03633588460364759041 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03723665057117110273 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03734752051335266305 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03773528837149687809 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03794565483886280705 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03870369698155593729 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR03872881463749771265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03872881463749771265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03872881463749771265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR03872881463749771265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR03935553386014834689 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR03948338679021305857 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR03986498286625226753  ← CR03986498286625226753.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03986498286625226753.jpg
+scrape-error     CR04055412608847577089 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR04074443454317330433  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04074443454317330433  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04074443454317330433  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04074443454317330433  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04074443454317330433  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR04080075221594275841 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR04118908219940667393 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR04123240768200507393  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04123240768200507393  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04123240768200507393  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04123240768200507393  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04123240768200507393  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR04128968115679657985 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR04153116191344295937 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR04243151788338839553  ← CR04243151788338839553.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04243151788338839553.jpg
+uploaded-image  CR04243151788338839553  ← CR04243151788338839553_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04243151788338839553.jpg
+uploaded-image  CR04243151788338839553  ← CR04243151788338839553_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04243151788338839553.jpg
+scrape-error     CR04273584492079218689 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR04306221768172896257  ← CR04306221768172896257.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04306221768172896257.jpg
+uploaded-image  CR04306221768172896257  ← CR04306221768172896257_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04306221768172896257.jpg
+uploaded-image  CR04306221768172896257  ← CR04306221768172896257_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04306221768172896257.jpg
+scrape-error     CR04360477143675699201 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR04442749836390825985 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR04461114927569960961 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR04561899290108100609 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR04593892192258359297 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR04597731824301506561 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR04668698788704026625 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR04691106638109605889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04691106638109605889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR04735206924218269697 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR04763770243443064833 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR04808461817699368961  ← CR04808461817699368961.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04808461817699368961.jpg
+uploaded-image  CR04844956498410864641  ← CR04844956498410864641.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04844956498410864641.jpg
+scrape-error     CR04916521202001903617 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR04921081589686861825  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04921081589686861825  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04921081589686861825  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR04921081589686861825  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR04944055996818391041 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR05087881686918627329 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR05130416070900842497 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR05131027012818829313  ← CR05131027012818829313.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05131027012818829313.jpg
+uploaded-image  CR05131027012818829313  ← CR05131027012818829313_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05131027012818829313.jpg
+scrape-error     CR05308910960352690177 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR05323514484814249985  ← CR05323514484814249985.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05323514484814249985.jpg
+scrape-error     CR05366775199305826305 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR05386581002904666113  ← CR05386581002904666113.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05386581002904666113.jpg
+scrape-error     CR05386588398838349825 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR05404970240389939201 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR05406473573432819713  ← CR05406473573432819713.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05406473573432819713.jpg
+uploaded-image  CR05406473573432819713  ← CR05406473573432819713_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05406473573432819713.jpg
+scrape-error     CR05467319868309110785 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR05543142980434526209 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR05583083874184855553  ← CR05583083874184855553.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05583083874184855553.jpg
+uploaded-image  CR05583083874184855553  ← CR05583083874184855553_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05583083874184855553.jpg
+uploaded-image  CR05657396214384033793  ← CR05657396214384033793.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05657396214384033793.jpg
+asset-missing    CR05666550748196896769  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR05666550748196896769  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR05666550748196896769  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR05666550748196896769  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR05666550748196896769  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR05686368302826258433  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR05686368302826258433  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+text-no-asset    CR05689357643013947393  (Text ad — no upload, analysis in Step 4 uses headline+desc)
+scrape-error     CR05765768727572250625 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR05803985243492843521  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR05863167865607159809 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR05896184894119215105 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR05921300900793548801 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR05930435944044822529  ← CR05930435944044822529.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05930435944044822529.jpg
+uploaded-image  CR05930435944044822529  ← CR05930435944044822529_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05930435944044822529.jpg
+scrape-error     CR05974113296133914625 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR06045526018012217345  ← CR06045526018012217345.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06045526018012217345.jpg
+uploaded-image  CR06045526018012217345  ← CR06045526018012217345_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06045526018012217345.jpg
+uploaded-image  CR06045526018012217345  ← CR06045526018012217345_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06045526018012217345.jpg
+uploaded-image  CR06108857887772114945  ← CR06108857887772114945.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06108857887772114945.jpg
+uploaded-image  CR06108857887772114945  ← CR06108857887772114945_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06108857887772114945.jpg
+uploaded-image  CR06108857887772114945  ← CR06108857887772114945_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06108857887772114945.jpg
+scrape-error     CR06118761094514212865 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR06204449428690960385  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06204449428690960385  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06204449428690960385  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06204449428690960385  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR06272089056159465473  ← CR06272089056159465473.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06272089056159465473.jpg
+uploaded-image  CR06272089056159465473  ← CR06272089056159465473_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06272089056159465473.jpg
+scrape-error     CR06295254838443769857 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR06322497395095502849  ← CR06322497395095502849.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06322497395095502849.jpg
+uploaded-image  CR06322497395095502849  ← CR06322497395095502849_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06322497395095502849.jpg
+uploaded-image  CR06322497395095502849  ← CR06322497395095502849_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06322497395095502849.jpg
+scrape-error     CR06323327603683885057 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR06346806712422367233 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR06417969407074500609  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06417969407074500609  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR06417969407074500609  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR06417975042071592961 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR06426361661501734913  ← CR06426361661501734913.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06426361661501734913.jpg
+uploaded-image  CR06426361661501734913  ← CR06426361661501734913_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06426361661501734913.jpg
+uploaded-image  CR06426361661501734913  ← CR06426361661501734913_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06426361661501734913.jpg
+scrape-error     CR06447154603204018177 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR06516214000831692801 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR06623573614702624769 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR06643980163967090689  ← CR06643980163967090689.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06643980163967090689.jpg
+uploaded-image  CR06643980163967090689  ← CR06643980163967090689_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06643980163967090689.jpg
+uploaded-image  CR06643980163967090689  ← CR06643980163967090689_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06643980163967090689.jpg
+uploaded-image  CR06702948965429542913  ← CR06702948965429542913.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06702948965429542913.jpg
+uploaded-image  CR06702948965429542913  ← CR06702948965429542913_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06702948965429542913.jpg
+uploaded-image  CR06702948965429542913  ← CR06702948965429542913_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06702948965429542913.jpg
+scrape-error     CR06772101898854989825 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR06879456324405428225 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07024839386827063297 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07026656243892617217 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-video  CR07157674058048339969  ← CR07157674058048339969.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07157674058048339969.mp4
+uploaded-video  CR07157674058048339969  ← CR07157674058048339969_v2.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07157674058048339969.mp4
+uploaded-video  CR07157674058048339969  ← CR07157674058048339969_v3.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07157674058048339969.mp4
+asset-missing    CR07158521712793878529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR07158521712793878529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR07158521712793878529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR07175890947085959169 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07269400459658395649 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07325555164188770305 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR07395444761814892545  ← CR07395444761814892545.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07395444761814892545.jpg
+uploaded-image  CR07397178691651895297  ← CR07397178691651895297.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07397178691651895297.jpg
+scrape-error     CR07409546101520334849 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07416723713426456577 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07420746826472488961 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07543396523917180929 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR07563440577941864449  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR07563440577941864449  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR07563440577941864449  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR07563440577941864449  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+text-no-asset    CR07596772822693707777  (Text ad — no upload, analysis in Step 4 uses headline+desc)
+scrape-error     CR07655597528003379201 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07691514965110292481 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07710907360927023105 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07791060006245236737 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07848985989648220161 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07943736713409462273 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR08005037063638351873 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR08032435845430509569  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08032435845430509569  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08032435845430509569  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR08042033241911197697 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR08046156221536796673  ← CR08046156221536796673.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08046156221536796673.jpg
+asset-missing    CR08074942964960329729  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08074942964960329729  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08074942964960329729  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR08084101089365852161 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR08116479232902692865 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR08137586832499015681 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR08336194881999339521 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR08392678426405765121  ← CR08392678426405765121.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08392678426405765121.jpg
+asset-missing    CR08397333973386133505  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08397333973386133505  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08397333973386133505  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08397333973386133505  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08608896597733933057  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08608896597733933057  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08608896597733933057  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR08828366720730136577  ← CR08828366720730136577.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08828366720730136577.jpg
+uploaded-image  CR08828366720730136577  ← CR08828366720730136577_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08828366720730136577.jpg
+uploaded-image  CR08828366720730136577  ← CR08828366720730136577_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08828366720730136577.jpg
+asset-missing    CR08840752513058603009  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08840752513058603009  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08840752513058603009  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR08840752513058603009  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR08869171658821206017  ← CR08869171658821206017.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08869171658821206017.jpg
+uploaded-image  CR08869171658821206017  ← CR08869171658821206017_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08869171658821206017.jpg
+uploaded-image  CR08869171658821206017  ← CR08869171658821206017_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08869171658821206017.jpg
+scrape-error     CR08949231129118900225 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+text-no-asset    CR08983430983034339329  (Text ad — no upload, analysis in Step 4 uses headline+desc)
+uploaded-image  CR08997587753587703809  ← CR08997587753587703809.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08997587753587703809.jpg
+uploaded-image  CR08997587753587703809  ← CR08997587753587703809_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08997587753587703809.jpg
+scrape-error     CR09038894120520646657 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR09046243823176384513 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR09105497088912785409  ← CR09105497088912785409.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09105497088912785409.jpg
+uploaded-image  CR09105497088912785409  ← CR09105497088912785409_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09105497088912785409.jpg
+scrape-error     CR09110127630593556481 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR09139973409873068033  ← CR09139973409873068033.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09139973409873068033.jpg
+scrape-error     CR09173209498897088513 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR09207456520143372289 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR09313024514176581633 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR09322502983012843521  ← CR09322502983012843521.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09322502983012843521.jpg
+uploaded-image  CR09322502983012843521  ← CR09322502983012843521_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09322502983012843521.jpg
+uploaded-image  CR09322502983012843521  ← CR09322502983012843521_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09322502983012843521.jpg
+uploaded-image  CR09323993714621677569  ← CR09323993714621677569.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09323993714621677569.jpg
+uploaded-image  CR09323993714621677569  ← CR09323993714621677569_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09323993714621677569.jpg
+scrape-error     CR09373804932844486657 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR09402136117676867585  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09402136117676867585  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09402136117676867585  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09402136117676867585  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR09524829142751641601  ← CR09524829142751641601.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09524829142751641601.jpg
+uploaded-image  CR09613772203145297921  ← CR09613772203145297921.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09613772203145297921.jpg
+uploaded-image  CR09613772203145297921  ← CR09613772203145297921_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09613772203145297921.jpg
+uploaded-image  CR09613772203145297921  ← CR09613772203145297921_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09613772203145297921.jpg
+scrape-error     CR09669012053871820801 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR09697229533740007425  ← CR09697229533740007425.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09697229533740007425.jpg
+uploaded-image  CR09697229533740007425  ← CR09697229533740007425_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09697229533740007425.jpg
+uploaded-image  CR09697229533740007425  ← CR09697229533740007425_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09697229533740007425.jpg
+uploaded-image  CR09846282628536205313  ← CR09846282628536205313.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09846282628536205313.jpg
+uploaded-image  CR09846282628536205313  ← CR09846282628536205313_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09846282628536205313.jpg
+uploaded-image  CR09846282628536205313  ← CR09846282628536205313_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09846282628536205313.jpg
+scrape-error     CR09879615947029872641 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR09890420641637597185  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09890420641637597185  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09890420641637597185  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR09890420641637597185  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR09904629870921515009 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR09919917480594112513 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR09930385982341775361 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR09952450483471777793 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR09976959662806794241  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10049201622610870273  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10049201622610870273  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10049201622610870273  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10049201622610870273  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR10127300560597024769 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR10134121578548428801  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10134121578548428801  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10134121578548428801  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10134121578548428801  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR10213188705242316801 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR10293516336118104065  ← CR10293516336118104065.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10293516336118104065.jpg
+uploaded-image  CR10293516336118104065  ← CR10293516336118104065_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10293516336118104065.jpg
+uploaded-image  CR10293516336118104065  ← CR10293516336118104065_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10293516336118104065.jpg
+asset-missing    CR10331997937420206081  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10331997937420206081  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10331997937420206081  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10331997937420206081  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR10337104593405607937 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR10370041099870797825 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR10464658688235798529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10464658688235798529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10464658688235798529  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10509336174999371777  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10509336174999371777  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10509336174999371777  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10509336174999371777  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR10607105650884345857 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR10767890362950221825 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR10801463641266716673 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR10807972672793739265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10807972672793739265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10807972672793739265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10807972672793739265  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR10851844329203302401 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR10900726726388613121  ← CR10900726726388613121.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10900726726388613121.jpg
+asset-missing    CR10906009665011712001  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10906009665011712001  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10906009665011712001  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10906009665011712001  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10946004099824353281  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10946004099824353281  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10946004099824353281  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR10946004099824353281  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR10948722848482459649 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR10970625824482394113 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR10989176320809762817 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR11014488306841812993  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11014488306841812993  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11014488306841812993  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11014488306841812993  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11030900854348578817  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11030900854348578817  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11030900854348578817  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11030900854348578817  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR11071163947955519489 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR11212286402819522561 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR11231224038909018113  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11231224038909018113  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11231224038909018113  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11231224038909018113  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR11259239019659132929 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR11265099055857926145  ← CR11265099055857926145.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11265099055857926145.jpg
+scrape-error     CR11338527431658045441 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR11432953335632625665 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR11439713158889996289 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR11527773569144586241  ← CR11527773569144586241.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11527773569144586241.jpg
+scrape-error     CR11536035127717003265 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR11568858504743616513 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR11570853560002281473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11570853560002281473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11570853560002281473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11570853560002281473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR11570853560002281473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR11635652289942781953 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR11780639184581033985 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR11804142516935065601 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR11946280611305488385 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR11947045081124438017  ← CR11947045081124438017.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11947045081124438017.jpg
+uploaded-image  CR12064062315507482625  ← CR12064062315507482625.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12064062315507482625.jpg
+uploaded-image  CR12064062315507482625  ← CR12064062315507482625_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12064062315507482625.jpg
+uploaded-image  CR12064062315507482625  ← CR12064062315507482625_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12064062315507482625.jpg
+asset-missing    CR12068207534473740289  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12068207534473740289  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12068207534473740289  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12068207534473740289  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12068207534473740289  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR12073527658923687937 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12082378504188985345 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12085504759344136193 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12093927018412900353 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12122115155064520705 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR12153520918005547009  ← CR12153520918005547009.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12153520918005547009.jpg
+uploaded-image  CR12153520918005547009  ← CR12153520918005547009_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12153520918005547009.jpg
+uploaded-image  CR12153520918005547009  ← CR12153520918005547009_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12153520918005547009.jpg
+scrape-error     CR12236307623816724481 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12251326437256069121 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR12262115145995517953  ← CR12262115145995517953.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12262115145995517953.jpg
+uploaded-image  CR12262115145995517953  ← CR12262115145995517953_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12262115145995517953.jpg
+uploaded-image  CR12262115145995517953  ← CR12262115145995517953_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12262115145995517953.jpg
+uploaded-image  CR12267137577672245249  ← CR12267137577672245249.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12267137577672245249.jpg
+uploaded-image  CR12267137577672245249  ← CR12267137577672245249_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12267137577672245249.jpg
+uploaded-image  CR12267137577672245249  ← CR12267137577672245249_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12267137577672245249.jpg
+scrape-error     CR12291604107982012417 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12300664204053970945 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12304467620932878337 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12349873362351161345 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12400953958158303233 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12443897171487490049 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR12455594901465202689  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12455594901465202689  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12455594901465202689  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12455594901465202689  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12455594901465202689  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-video  CR12480928817600266241  ← CR12480928817600266241.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12480928817600266241.mp4
+uploaded-video  CR12480928817600266241  ← CR12480928817600266241_v2.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12480928817600266241.mp4
+uploaded-video  CR12480928817600266241  ← CR12480928817600266241_v3.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12480928817600266241.mp4
+asset-missing    CR12480928817600266241  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR12482092727967678465 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR12542398114662711297  ← CR12542398114662711297.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12542398114662711297.jpg
+uploaded-image  CR12542398114662711297  ← CR12542398114662711297_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12542398114662711297.jpg
+asset-missing    CR12659402996719812609  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR12697261329547788289 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR12743741792042614785  ← CR12743741792042614785.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12743741792042614785.jpg
+asset-missing    CR12753894673823563777  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12753894673823563777  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12753894673823563777  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12753894673823563777  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR12769296933353160705  ← CR12769296933353160705.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12769296933353160705.jpg
+scrape-error     CR12809351368858927105 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12812375197634002945 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR12844041441751597057 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-video  CR12863802955647680513  ← CR12863802955647680513.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12863802955647680513.mp4
+uploaded-video  CR12863802955647680513  ← CR12863802955647680513_v2.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12863802955647680513.mp4
+uploaded-video  CR12863802955647680513  ← CR12863802955647680513_v3.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12863802955647680513.mp4
+asset-missing    CR12863802955647680513  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12912006576201531393  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12912006576201531393  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12912006576201531393  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR12912006576201531393  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+text-no-asset    CR12936354161687003137  (Text ad — no upload, analysis in Step 4 uses headline+desc)
+scrape-error     CR13148362689539473409 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR13257516216760664065  ← CR13257516216760664065.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13257516216760664065.jpg
+uploaded-image  CR13257516216760664065  ← CR13257516216760664065_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13257516216760664065.jpg
+uploaded-image  CR13257516216760664065  ← CR13257516216760664065_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13257516216760664065.jpg
+scrape-error     CR13314451892374339585 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR13357102360732631041  ← CR13357102360732631041.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13357102360732631041.jpg
+uploaded-image  CR13388207338523983873  ← CR13388207338523983873.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13388207338523983873.jpg
+scrape-error     CR13461733673938190337 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR13516275463630094337 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR13524496125523918849  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13524496125523918849  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13524496125523918849  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13524496125523918849  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13542136251993292801  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13542136251993292801  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13542136251993292801  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR13560614326582116353  ← CR13560614326582116353.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13560614326582116353.jpg
+uploaded-image  CR13560614326582116353  ← CR13560614326582116353_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13560614326582116353.jpg
+uploaded-image  CR13560614326582116353  ← CR13560614326582116353_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13560614326582116353.jpg
+scrape-error     CR13593416306081660929 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR13615593412664229889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13615593412664229889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13615593412664229889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR13662579023442608129 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR13712223992071323649  ← CR13712223992071323649.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13712223992071323649.jpg
+uploaded-image  CR13712223992071323649  ← CR13712223992071323649_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13712223992071323649.jpg
+uploaded-image  CR13712223992071323649  ← CR13712223992071323649_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13712223992071323649.jpg
+scrape-error     CR13723310548202815489 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR13815933476446142465 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR13972041338493861889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13972041338493861889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13972041338493861889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR13972041338493861889  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR13978443863421878273  ← CR13978443863421878273.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13978443863421878273.jpg
+uploaded-image  CR13978443863421878273  ← CR13978443863421878273_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13978443863421878273.jpg
+uploaded-image  CR13978443863421878273  ← CR13978443863421878273_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13978443863421878273.jpg
+scrape-error     CR13983462524117319681 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR14027582781823909889 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR14039297614361395201 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+text-no-asset    CR14063525172690812929  (Text ad — no upload, analysis in Step 4 uses headline+desc)
+asset-missing    CR14093348600960516097  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14093348600960516097  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14093348600960516097  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14093348600960516097  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR14098023449523912705  ← CR14098023449523912705.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14098023449523912705.jpg
+uploaded-image  CR14098023449523912705  ← CR14098023449523912705_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14098023449523912705.jpg
+uploaded-image  CR14098023449523912705  ← CR14098023449523912705_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14098023449523912705.jpg
+uploaded-image  CR14121301622512418817  ← CR14121301622512418817.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14121301622512418817.jpg
+scrape-error     CR14173431435880300545 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR14175674164723056641 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR14263880732714729473  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14333273969560387585  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14333273969560387585  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14333273969560387585  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14333273969560387585  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR14353788107755618305 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR14433771874959753217 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR14457736933477974017  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14457736933477974017  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14457736933477974017  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR14458025778618564609 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR14512574792445460481  ← CR14512574792445460481.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14512574792445460481.jpg
+uploaded-image  CR14512574792445460481  ← CR14512574792445460481_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14512574792445460481.jpg
+uploaded-image  CR14512574792445460481  ← CR14512574792445460481_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14512574792445460481.jpg
+asset-missing    CR14698326243892264961  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14698326243892264961  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14698326243892264961  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR14708875937701691393 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR14747712157273554945  ← CR14747712157273554945.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14747712157273554945.jpg
+uploaded-image  CR14747712157273554945  ← CR14747712157273554945_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14747712157273554945.jpg
+uploaded-image  CR14764325777969250305  ← CR14764325777969250305.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14764325777969250305.jpg
+uploaded-image  CR14764325777969250305  ← CR14764325777969250305_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14764325777969250305.jpg
+scrape-error     CR14787415977419079681 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR14861807662844084225 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR14862330171385446401 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR14889223220778500097  ← CR14889223220778500097.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14889223220778500097.jpg
+uploaded-image  CR14911460577162297345  ← CR14911460577162297345.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14911460577162297345.jpg
+asset-missing    CR14950572808512471041  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14950572808512471041  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14950572808512471041  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR14950572808512471041  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR14964264038970687489  ← CR14964264038970687489.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14964264038970687489.jpg
+uploaded-image  CR14964264038970687489  ← CR14964264038970687489_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14964264038970687489.jpg
+uploaded-image  CR15062215913526788097  ← CR15062215913526788097.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15062215913526788097.jpg
+uploaded-image  CR15062215913526788097  ← CR15062215913526788097_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15062215913526788097.jpg
+asset-missing    CR15087245196221480961  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15087245196221480961  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15087245196221480961  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15087245196221480961  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15124672915628359681  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15124672915628359681  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15124672915628359681  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15124672915628359681  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-video  CR15129272378925776897  ← CR15129272378925776897.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15129272378925776897.mp4
+uploaded-video  CR15129272378925776897  ← CR15129272378925776897_v2.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15129272378925776897.mp4
+uploaded-video  CR15129272378925776897  ← CR15129272378925776897_v3.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15129272378925776897.mp4
+asset-missing    CR15129272378925776897  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15197344586910400513  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15197344586910400513  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15197344586910400513  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR15252672089329500161 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR15273935123792265217  ← CR15273935123792265217.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15273935123792265217.jpg
+uploaded-image  CR15273935123792265217  ← CR15273935123792265217_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15273935123792265217.jpg
+asset-missing    CR15318706137763676161  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15318706137763676161  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15318706137763676161  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15402426870112714753  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR15560837916962848769 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR15612273062320275457  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15612273062320275457  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15612273062320275457  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15612273062320275457  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR15636233628302704641 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR15685537172801191937 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR15754065884269772801 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR15769365588570275841 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR15799445649725849601 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR15807358937990168577 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR15930982252981256193  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15930982252981256193  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR15930982252981256193  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR15932137702263095297 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-video  CR16014139614470078465  ← CR16014139614470078465.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16014139614470078465.mp4
+uploaded-video  CR16014139614470078465  ← CR16014139614470078465_v2.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16014139614470078465.mp4
+uploaded-video  CR16014139614470078465  ← CR16014139614470078465_v3.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16014139614470078465.mp4
+uploaded-image  CR16058041739377639425  ← CR16058041739377639425.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16058041739377639425.jpg
+uploaded-image  CR16058041739377639425  ← CR16058041739377639425_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16058041739377639425.jpg
+scrape-error     CR16079470319059861505 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR16090918073351012353 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR16107833475628793857 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR16167130962348474369  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16167130962348474369  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16167130962348474369  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR16197097911245340673 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR16328759918955855873  ← CR16328759918955855873.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16328759918955855873.jpg
+uploaded-image  CR16328759918955855873  ← CR16328759918955855873_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16328759918955855873.jpg
+uploaded-image  CR16328759918955855873  ← CR16328759918955855873_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16328759918955855873.jpg
+scrape-error     CR16585265785463635969 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR16651913258306895873  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16651913258306895873  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16652154781497819137  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16652154781497819137  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16652154781497819137  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR16673899548082438145 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR16716632436863139841  ← CR16716632436863139841.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16716632436863139841.jpg
+uploaded-image  CR16716632436863139841  ← CR16716632436863139841_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16716632436863139841.jpg
+uploaded-image  CR16716632436863139841  ← CR16716632436863139841_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16716632436863139841.jpg
+scrape-error     CR16736108060556132353 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR16815035403244404737 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR16860688844016582657  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16860688844016582657  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16860688844016582657  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16860688844016582657  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16979506013294034945  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16979506013294034945  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16979506013294034945  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR16979506013294034945  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR17029122789757419521  ← CR17029122789757419521.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17029122789757419521.jpg
+uploaded-image  CR17029122789757419521  ← CR17029122789757419521_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17029122789757419521.jpg
+uploaded-image  CR17029122789757419521  ← CR17029122789757419521_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17029122789757419521.jpg
+asset-missing    CR17141482123518017537  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17141482123518017537  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17141482123518017537  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR17153246485618360321 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR17180384184938528769 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR17195655018468868097  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17195655018468868097  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17195655018468868097  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR17264945408027656193 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR17276803005278060545 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR17439134721614282753  ← CR17439134721614282753.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17439134721614282753.jpg
+uploaded-image  CR17439134721614282753  ← CR17439134721614282753_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17439134721614282753.jpg
+uploaded-image  CR17439134721614282753  ← CR17439134721614282753_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17439134721614282753.jpg
+scrape-error     CR17480066541629210625 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR17540958921504587777 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR17660929306680885249  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17717268342617669633  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17717268342617669633  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17717268342617669633  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17717268342617669633  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR17807469098284613633 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR17810233090128216065  ← CR17810233090128216065.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17810233090128216065.jpg
+uploaded-image  CR17821800957474766849  ← CR17821800957474766849.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17821800957474766849.jpg
+uploaded-image  CR17821800957474766849  ← CR17821800957474766849_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17821800957474766849.jpg
+uploaded-image  CR17821800957474766849  ← CR17821800957474766849_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17821800957474766849.jpg
+scrape-error     CR17825290051467083777 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR17842371995396734977 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR17915019846790152193  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17915019846790152193  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17915019846790152193  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17915019846790152193  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR17915019846790152193  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR17939601808640966657 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+asset-missing    CR18023376717707476993  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR18023376717707476993  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR18023376717707476993  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR18027554312137211905  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR18027554312137211905  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+asset-missing    CR18027554312137211905  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+scrape-error     CR18037957332813479937 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR18040347791351349249 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR18064978930577702913 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR18136295780196024321 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR18204878951849918465 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR18217646274713223169  ← CR18217646274713223169.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18217646274713223169.jpg
+uploaded-image  CR18217646274713223169  ← CR18217646274713223169_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18217646274713223169.jpg
+uploaded-image  CR18217646274713223169  ← CR18217646274713223169_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18217646274713223169.jpg
+scrape-error     CR18229766569343320065 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-video  CR18247574835192397825  ← CR18247574835192397825.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18247574835192397825.mp4
+uploaded-video  CR18247574835192397825  ← CR18247574835192397825_v2.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18247574835192397825.mp4
+uploaded-video  CR18247574835192397825  ← CR18247574835192397825_v3.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18247574835192397825.mp4
+asset-missing    CR18247574835192397825  (expected local file not found; will upsert on next Step 3 run after Step 2 produces the file)
+uploaded-image  CR18253761168646602753  ← CR18253761168646602753.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18253761168646602753.jpg
+scrape-error     CR18337398930817417217 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+uploaded-image  CR18342870616073306113  ← CR18342870616073306113.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18342870616073306113.jpg
+uploaded-image  CR18342870616073306113  ← CR18342870616073306113_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18342870616073306113.jpg
+uploaded-image  CR18360220282494386177  ← CR18360220282494386177.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18360220282494386177.jpg
+uploaded-image  CR18360220282494386177  ← CR18360220282494386177_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18360220282494386177.jpg
+uploaded-image  CR18360220282494386177  ← CR18360220282494386177_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18360220282494386177.jpg
+scrape-error     CR18381899705446563841 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR18439375644996403201 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR18442760972578848769 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)

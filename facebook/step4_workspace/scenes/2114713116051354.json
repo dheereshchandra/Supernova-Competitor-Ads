@@ -1,0 +1,82 @@
+{
+  "competitor_id": "2114713116051354",
+  "parsed": {
+    "duration_s": 24.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses a split-screen format combining a human actor recording himself on a smartphone with a 3D animated AI avatar. The avatar has typical 3D animation characteristics like smooth skin and stylized features.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "Young adult male, medium build, light complexion, short dark hair, dark beard.",
+        "wardrobe": "Dark grey t-shirt.",
+        "demeanor": "Relaxed, lying down, slightly hesitant but eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated young adult male, light complexion, curly dark hair, wearing black-rimmed glasses.",
+        "wardrobe": "Purple and white floral short-sleeve shirt.",
+        "demeanor": "Friendly, encouraging, attentive, tutor-like."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 22.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Spanish Practice Session",
+        "setting": "Top: dimly lit room. Bottom: bedroom, lying on a pillow.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A 3D animated young man with curly dark hair and glasses (Character B) is resting his chin on his hand, looking directly at the camera. He is wearing a purple and white floral shirt. The background is a dimly lit room with a warm, out-of-focus lamp. The framing is a close-up.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young man with a beard (Character A) is lying down, resting his head on a blue and white patterned pillow. He is wearing a dark grey t-shirt. He is looking directly at the camera and speaking, occasionally using hand gestures. The background is a plain white wall with a black tripod stand partially visible. The framing is a close-up.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen video. The top half shows a 3D animated male avatar acting as a language tutor. The bottom half shows a real human male lying down, practicing his Spanish. The two characters appear to be having a real-time video call.",
+        "audio_transcript": "Character A says: Yo llamo Gustavo. [I call Gustavo.]\nCharacter B says: \u00bfQuieres decir \"Me llamo Gustavo\"? [Do you mean \"My name is Gustavo\"?]\nCharacter A says: Perd\u00f3n... peque\u00f1o espa\u00f1ol. [Sorry... small Spanish.]\nCharacter B says: \u00bfQuieres decir \"Perd\u00f3n, hablo un poco de espa\u00f1ol\"? [Do you mean \"Sorry, I speak a little Spanish\"?]\nCharacter A says: S\u00ed. [Yes.]\nCharacter B says: Est\u00e1 bien. \u00bfCu\u00e1ntas veces has hablado espa\u00f1ol en los \u00faltimos meses? [It's okay. How many times have you spoken Spanish in the last few months?]\nCharacter A says: En realidad, no lo he hecho. [Actually, I haven't.]\nCharacter B says: Est\u00e1s en el lugar correcto. Hablaremos juntos todos los d\u00edas y te volver\u00e1s fluido en muy poco tiempo. [You are in the right place. We will speak together every day and you will become fluent in very little time.]",
+        "on_screen_text": "\ud83c\uddea\ud83c\uddf8 \ud83c\uddea\ud83c\uddf8 \ud83c\uddea\ud83c\uddf8 \ud83c\uddea\ud83c\uddf8 \ud83c\uddea\ud83c\uddf8\nYo llamo Gustavo.\n\u00bfQuieres decir \"Me llamo Gustavo\"?\nPerd\u00f3n... peque\u00f1o espa\u00f1ol.\n\u274c\n\u00bfQuieres decir \"Perd\u00f3n, hablo un poco de espa\u00f1ol\"?\nS\u00ed.\nEst\u00e1 bien. \u00bfCu\u00e1ntas veces has hablado espa\u00f1ol en los \u00faltimos meses?\nEn realidad, no lo he hecho.\nEst\u00e1s en el lugar correcto. Hablaremos juntos todos los d\u00edas y te volver\u00e1s fluido en muy poco tiempo."
+      },
+      {
+        "n": 2,
+        "start_s": 22.0,
+        "end_s": 24.0,
+        "screenshot_at_s": 23.0,
+        "scene_label": "End Card",
+        "setting": "Solid white background.",
+        "characters_in_scene": [],
+        "camera": "full screen graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid white screen displaying the app's logo and name in the center. Below the logo are badges for the Google Play Store and Apple App Store.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779966545.9178512
+}

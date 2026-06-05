@@ -1,0 +1,60 @@
+{
+  "competitor_id": "1182441817236590",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female, 20s, slim build, medium complexion. Dark hair tied back neatly. Symmetrical facial features.",
+        "wardrobe": "Dark blue blazer over a light blue collared shirt.",
+        "demeanor": "Professional, friendly, and slightly static."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Male, 20s, medium build, medium complexion. Short, dark, curly hair and a light mustache/beard.",
+        "wardrobe": "Light grey button-down shirt.",
+        "demeanor": "Casual, enthusiastic, and confident."
+      },
+      {
+        "id": "C",
+        "role": "Female friend",
+        "appearance": "Female, 20s, slim build, medium complexion. Long, dark, wavy hair.",
+        "wardrobe": "White top with subtle purple patterns, a small necklace, and earrings.",
+        "demeanor": "Curious, slightly skeptical initially, then impressed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI Tutor Practice",
+        "supernova_script": "Character A says: यह कॉफ़ी बहुत गरम है। [This coffee is very hot.]\nCharacter A says: This coffee is very hot.\nCharacter B says: The coffee is very hot.\nCharacter A says: मुझे इस कॉफ़ी का टेस्ट बहुत पसंद है। [I like the taste of this coffee.]\nCharacter A says: I like the taste of this coffee.\nCharacter B says: I like the taste of this coffee.",
+        "scene_summary": "- Establishes the core product feature: AI tutor practice.\n- Shows real-time, interactive translation and speaking practice.\n- Sets a practical, everyday context (ordering/drinking coffee) that resonates with learners.",
+        "supernova_on_screen_text": "यह कॉफ़ी बहुत गरम है। (This coffee is very hot.)\nThis coffee is very hot.\nमुझे इस कॉफ़ी का टेस्ट बहुत पसंद है। (I like the taste of this coffee.)\nI like the taste of this coffee."
+      },
+      {
+        "n": 2,
+        "scene_label": "Friend Conversation",
+        "supernova_script": "Character C says: Hey, तुम English कहाँ से सीख रहे हो? [Hey, where are you learning English?]\nCharacter B says: Supernova app पर AI tutor के साथ practice कर रहा हूँ। [I am practicing with an AI tutor on the Supernova app.]\nCharacter C says: क्या? समझ नहीं आया। [What? I didn't get it.]\nCharacter B says: ये एक app है। इसमें तुम daily AI English tutor के साथ बोलने की practice कर सकते हो। [This is an app. In this, you can practice speaking daily with an AI English tutor.]\nCharacter B says: आज के टाइम में English नहीं आती तो job मिलना मुश्किल है। [In today's time, if you don't know English, getting a job is difficult.]\nCharacter B says: और तो और, confidence भी down रहता है, है ना? [Moreover, confidence also stays down, right?]\nCharacter B says: इसीलिए मैं रोज़ 10-15 मिनट Supernova app पर AI tutor के साथ practice करता हूँ। [That's why I practice daily for 10-15 minutes with the AI tutor on the Supernova app.]\nCharacter B says: कुछ ही हफ्तों में मेरी English काफी improve हो गई है। [In just a few weeks, my English has improved a lot.]\nCharacter B says: अब मैं बिना डरे, confident होकर English बोलता हूँ। [Now I speak English confidently, without fear.]\nCharacter B says: और ये काफी affordable भी है। [And it's quite affordable too.]\nCharacter C says: मुझे भी English सीखनी है, पर ऐसे courses तो बहुत costly होते हैं ना? [I also want to learn English, but aren't such courses very costly?]\nCharacter B says: नहीं यार, Supernova के plans बहुत affordable हैं। [No friend, Supernova's plans are very affordable.]\nCharacter C says: Oh super! मैं अभी Supernova app download करती हूँ। [Oh super! I will download the Supernova app right now.]",
+        "scene_summary": "- Transitions to social proof via a relatable peer conversation.\n- Highlights the pain points of job struggles and lack of confidence due to poor English.\n- Positions Supernova as a practical, affordable, and effective daily habit without overpromising specific timelines.",
+        "supernova_on_screen_text": "Hey, तुम English कहाँ से सीख रहे हो? (Hey, where are you learning English?)\nSupernova app पर AI tutor के साथ practice कर रहा हूँ। (I am practicing with an AI tutor on the Supernova app.)\nक्या? समझ नहीं आया। (What? I didn't get it.)\nये एक app है। इसमें तुम daily AI English tutor के साथ बोलने की practice कर सकते हो। (This is an app. In this, you can practice speaking daily with an AI English tutor.)\nआज के टाइम में English नहीं आती तो job मिलना मुश्किल है। (In today's time, if you don't know English, getting a job is difficult.)\nऔर तो और, confidence भी down रहता है, है ना? (Moreover, confidence also stays down, right?)\nइसीलिए मैं रोज़ 10-15 मिनट Supernova app पर AI tutor के साथ practice करता हूँ। (That's why I practice daily for 10-15 minutes with the AI tutor on the Supernova app.)\nकुछ ही हफ्तों में मेरी English काफी improve हो गई है। (In just a few weeks, my English has improved a lot.)\nअब मैं बिना डरे, confident होकर English बोलता हूँ। (Now I speak English confidently, without fear.)\nऔर ये काफी affordable भी है। (And it's quite affordable too.)\nमुझे भी English सीखनी है, पर ऐसे courses तो बहुत costly होते हैं ना? (I also want to learn English, but aren't such courses very costly?)\nनहीं यार, Supernova के plans बहुत affordable हैं। (No friend, Supernova's plans are very affordable.)\nOh super! मैं अभी Supernova app download करती हूँ। (Oh super! I will download the Supernova app right now.)"
+      },
+      {
+        "n": 3,
+        "scene_label": "App Download Call to Action",
+        "supernova_script": "Unknown speaker says: आज ही Supernova app download करें और AI tutor के साथ English बोलना सीखें। [Download the Supernova app today and learn to speak English with an AI tutor.]",
+        "scene_summary": "- Delivers a clear, direct call-to-action.\n- Reinforces the core value proposition of speaking with an AI tutor.\n- Drives app downloads visually and audibly.",
+        "supernova_on_screen_text": "Supernova POWERED BY AI\nLESSON 8: Daily English\nSpeak with AI\nStart speaking without fear today.\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "SpeakX",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889847.6354396
+}

@@ -1,0 +1,50 @@
+{
+  "competitor_id": "1905428543598807",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, slender build, fair complexion, red hair styled in a high bun. She has large green eyes, a small nose, and a soft, friendly face.",
+        "wardrobe": "White top, gold hoop earrings with a small dangling charm.",
+        "demeanor": "Friendly, encouraging, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Young adult male, medium build, fair complexion, short dark hair, and a short beard. He has dark eyes and thick eyebrows.",
+        "wardrobe": "Dark blue collared shirt, white wireless earbuds.",
+        "demeanor": "Curious, slightly hesitant, but engaged."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Spanish Lesson Conversation",
+        "supernova_script": "Character A says: Do you speak English? [Do you speak English?]\nCharacter B says: Yes, I know English. [Yes, I know English.]\nCharacter A says: Technically correct है। लेकिन native speakers कहते हैं, 'I speak English'. [Technically it's correct. But native speakers say, 'I speak English'.]\nCharacter B says: I speak English. [I speak English.]\nCharacter A says: How old are you? [How old are you?]\nCharacter B says: I am 24. [I am 24.]\nCharacter A says: Perfect! अब बताओ, What is your name? [Perfect! Now tell me, What is your name?]\nCharacter B says: My name is Gustavo. [My name is Gustavo.]\nCharacter A says: Native speakers अक्सर कहते हैं, 'I'm Gustavo'. [Native speakers often say, 'I'm Gustavo'.]\nCharacter B says: I'm Gustavo. [I'm Gustavo.]\nCharacter A says: Well done! [Well done!]\nCharacter B says: Thank you. पर आप कौन हो? [Thank you. But who are you?]\nCharacter A says: मैं Supernova पर आपकी AI tutor हूँ। हम रोज़ ऐसे ही बात करके English सीख सकते हैं। [I am your AI tutor on Supernova. We can learn English by talking like this every day.]\nCharacter B says: अरे, पर मेरी English तो बहुत basic है। मैं बोल नहीं पाता। [Oh, but my English is very basic. I can't speak.]\nCharacter A says: कोई बात नहीं! मैं आपको हिंदी में समझा कर English बोलना सिखा सकती हूँ। [No worries! I can explain in Hindi and teach you to speak English.]\nCharacter B says: आपको हिंदी आती है? [You know Hindi?]\nCharacter A says: बिलकुल! मैं एक AI हूँ। [Of course! I am an AI.]\nCharacter B says: सही है। मैं अभी app download करता हूँ। [That's great. I'll download the app now.]",
+        "scene_summary": "- Hooks the viewer with an interactive English correction scenario.\n- Demonstrates the AI tutor's ability to correct mistakes gently and explain in Hindi.\n- Addresses the learner's hesitation about basic English skills.\n- Ends with a clear call to action to download the app.",
+        "supernova_on_screen_text": "Do you speak English?\nYes, I know English.\nTechnically correct है।\nलेकिन native speakers कहते हैं, 'I speak English'.\nI speak English.\nHow old are you?\nI am 24.\nPerfect! अब बताओ, What is your name?\nMy name is Gustavo.\nNative speakers अक्सर कहते हैं,\n'I'm Gustavo'.\nI'm Gustavo.\nWell done!\nThank you. पर आप कौन हो?\nमैं Supernova पर आपकी AI tutor हूँ।\nहम रोज़ ऐसे ही बात करके English सीख सकते हैं।\nअरे, पर मेरी English तो बहुत basic है।\nमैं बोल नहीं पाता।\nकोई बात नहीं!\nमैं आपको हिंदी में समझा कर\nEnglish बोलना सिखा सकती हूँ।\nआपको हिंदी आती है?\nबिलकुल! मैं एक AI हूँ।\nसही है। मैं अभी app download करता हूँ।"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Displays the brand logo and app store badges.\n- Provides a clear visual call to action.",
+        "supernova_on_screen_text": "Supernova\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "praktika.ai",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780630940.916729
+}

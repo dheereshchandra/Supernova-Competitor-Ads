@@ -1,0 +1,53 @@
+{
+  "competitor_id": "2066294067499861",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter/learner",
+        "appearance": "Young adult male, medium build, olive complexion, dark wavy hair, slight stubble.",
+        "wardrobe": "Wears a white t-shirt in the first scene, then an olive green long-sleeve henley and blue jeans. Sunglasses rest on his head throughout.",
+        "demeanor": "Casual, expressive, and conversational."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, fair complexion, short blonde bob, blue eyes.",
+        "wardrobe": "Wears a high-necked grey turtleneck sweater.",
+        "demeanor": "Calm, static, and professional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Car Intro",
+        "supernova_script": "Character A says: \"I am fine\", \"I don't know\" - बस यही बोलते हो? [Do you only say \"I am fine\", \"I don't know\"?]\nCharacter A says: ये बहुत basic है। [This is very basic.]\nCharacter A says: पहले मैं भी ऐसे ही अटकता था। [Earlier, I used to get stuck like this too.]\nCharacter A says: फिर मैंने Supernova के साथ practice शुरू की। [Then I started practicing with Supernova.]\nCharacter A says: Let me show you. [Let me show you.]",
+        "scene_summary": "- Hooks the viewer by calling out repetitive, basic English phrases.\n- Establishes relatability with the presenter admitting his own past struggles with English.\n- Introduces Supernova as the practical solution and transitions into a demo.",
+        "supernova_on_screen_text": "!! STOP SAYING !!\n\"I am fine\"\n\"I don't know\"\nबस यही बोलते हो?\nये बहुत basic है\nपहले मैं भी ऐसे ही अटकता था\nफिर मैंने Supernova के साथ practice शुरू की\nLet me show you"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demo",
+        "supernova_script": "Character B says: Do you speak English? [Do you speak English?]\nCharacter A says: हाँ, थोड़ा-थोड़ा। [Yes, a little bit.]\nCharacter B says: Where are you from? [Where are you from?]\nCharacter A says: I am belong to Delhi. [I am belong to Delhi.]\nCharacter B says: Almost! Better say: \"I am from Delhi\". [Almost! Better say: \"I am from Delhi\".]\nCharacter A says: Oh, मैं हमेशा grammar में confuse हो जाता हूँ। [Oh, I always get confused with grammar.]\nCharacter B says: That's what I'm here for! सही English बोलने में आपकी मदद करने के लिए। [That's what I'm here for! To help you speak correct English.]\nCharacter A says: But private tutors तो बहुत महँगे होते हैं। [But private tutors are very expensive.]\nCharacter B says: Tension मत लो! Supernova private tutor से बहुत affordable है। [Don't worry! Supernova is much more affordable than a private tutor.]\nCharacter A says: सच में? [Really?]\nCharacter B says: बिलकुल! Supernova के AI tutor के साथ आप रोज़ real-life conversations practice कर सकते हो। [Absolutely! With Supernova's AI tutor, you can practice real-life conversations daily.]\nCharacter A says: एकदम असली tutor की तरह? [Just like a real tutor?]\nCharacter B says: Yes! ये आपकी grammar और pronunciation ठीक करता है, ताकि आप confidence के साथ बोल सको। [Yes! It corrects your grammar and pronunciation, so you can speak with confidence.]\nCharacter A says: सही है, फिर तो मैं Supernova आज ही download करूँगा। [That's great, then I will download Supernova today itself.]\nCharacter B says: Great decision. Let's speak English together. [Great decision. Let's speak English together.]",
+        "scene_summary": "- Demonstrates the AI tutor's real-time correction feature using a common Indian-English mistake (\"I am belong to\").\n- Addresses cost objections by positioning Supernova as an affordable, practical alternative to private tutors.\n- Highlights key features: grammar correction, pronunciation, and building speaking confidence.",
+        "supernova_on_screen_text": "Do you speak English?\nहाँ, थोड़ा-थोड़ा\nWhere are you from?\nI am belong to Delhi\nAlmost!\nBetter say: \"I am from Delhi\"\nOh, मैं हमेशा grammar में confuse हो जाता हूँ\nThat's what I'm here for!\nसही English बोलने में आपकी मदद करने के लिए\nBut private tutors तो बहुत महँगे होते हैं\nTension मत लो!\nSupernova private tutor से बहुत affordable है\nसच में?\nबिलकुल!\nSupernova के AI tutor के साथ रोज़ practice करो\nएकदम असली tutor की तरह?\nYes! ये आपकी grammar और pronunciation ठीक करता है\nताकि आप confidence के साथ बोल सको\nसही है, मैं Supernova आज ही download करूँगा\nGreat decision\nLet's speak English together"
+      },
+      {
+        "n": 3,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear call-to-action to download the app.\n- Reinforces the brand name and core value proposition in Hindi/English.",
+        "supernova_on_screen_text": "Supernova App\nआपका अपना AI English Tutor\nDOWNLOAD\nNOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779974839.7829542
+}

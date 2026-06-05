@@ -1,0 +1,160 @@
+{
+  "competitor_id": "1187219770066761",
+  "parsed": {
+    "duration_s": 30.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is a 2D animated screencast of a mobile application. It uses vector graphics and standard motion design techniques, with no signs of AI generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "brand mascot",
+        "appearance": "A stylized, cartoonish green owl with large eyes, a yellow beak, and a simple rounded body.",
+        "wardrobe": "None.",
+        "demeanor": "Expressive, ranging from encouraging to angry."
+      },
+      {
+        "id": "B",
+        "role": "app avatar",
+        "appearance": "A stylized 2D cartoon teenage girl with a pale complexion, short purple hair covering one eye, and a slender build.",
+        "wardrobe": "A purple long-sleeved top.",
+        "demeanor": "Apathetic and unimpressed."
+      },
+      {
+        "id": "C",
+        "role": "app avatar",
+        "appearance": "A stylized 2D cartoon man with a broad build, light complexion, and short blonde hair.",
+        "wardrobe": "A red tracksuit with a white zipper and a pink shirt underneath.",
+        "demeanor": "Confident and energetic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.0,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Language Selection",
+        "setting": "Abstract white background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A stylized green owl face is centered at the top of a plain white background. A cartoonish brown hand with a pointing index finger moves across the screen and taps.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A mobile app interface showing a language selection menu. The Duolingo owl is at the top. A cursor shaped like a hand clicks on 'Intermediate English', followed by a coin animation and a green checkmark.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "What would you like to learn?\nIntermediate English\nSpanish\nFrench\nGerman\nItalian\nCONTINUE"
+      },
+      {
+        "n": 2,
+        "start_s": 5.0,
+        "end_s": 13.0,
+        "screenshot_at_s": 9.0,
+        "scene_label": "Fill in the Blank",
+        "setting": "Abstract white background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A small green owl character stands on a green circular base, looking angry with furrowed brows. A cartoonish brown hand with a pointing index finger moves across the screen and taps.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "An app exercise titled 'Complete the sentence'. The user selects 'woken up' instead of 'wake up'. The owl mascot looks angry. An incorrect feedback banner appears at the bottom in red.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Complete the sentence\nI've three times already, but I don't need to until eight!\nwake up\nwoken up\nCONTINUE\nCHECK\nIncorrect\nCorrect Answer:\nwake up, woken up\nGOT IT\nKeep trying!"
+      },
+      {
+        "n": 3,
+        "start_s": 13.0,
+        "end_s": 18.0,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Speaking Exercise",
+        "setting": "Abstract white background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A stylized 2D cartoon girl with purple hair and a purple top stands on the left side of a plain white background. A cartoonish brown hand with a pointing index finger moves across the screen and taps.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "An app exercise titled 'Speak this sentence'. Character B is shown next to a speech bubble. The user taps a microphone button, an audio waveform appears, and then a green 'Nicely done!' banner appears at the bottom.",
+        "audio_transcript": "Character B says: I didn't expect you to help me so much!",
+        "on_screen_text": "Speak this sentence\nI didn't expect you to help me so much!\nTAP TO SPEAK\nCONTINUE\nNicely done!"
+      },
+      {
+        "n": 4,
+        "start_s": 18.0,
+        "end_s": 25.0,
+        "screenshot_at_s": 22.0,
+        "scene_label": "Typing Exercise",
+        "setting": "Abstract white background.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A stylized 2D cartoon man in a red tracksuit stands on the left side of a plain white background. A cartoonish brown hand with a pointing index finger moves across the screen and taps.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "An app exercise titled 'Type the missing word'. Character C is shown next to a speech bubble. The user types 'set' instead of 'setting' using an on-screen keyboard. A red 'Incorrect' banner appears at the bottom.",
+        "audio_transcript": "Character C says: Tomorrow's Sunday, so why are you setting the alarm?",
+        "on_screen_text": "Type the missing word\nTomorrow's Sunday, so why are you the alarm?\nset\nCHECK\nIncorrect\nCorrect Answer:\nTomorrow's Sunday, so why are you setting the alarm?\nGOT IT"
+      },
+      {
+        "n": 5,
+        "start_s": 25.0,
+        "end_s": 30.0,
+        "screenshot_at_s": 27.0,
+        "scene_label": "End Card",
+        "setting": "Abstract white background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A green owl character sits on a stack of three colorful books (red, yellow, white) and reads a blue book. The background is plain white.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "An end card showing the Duolingo owl reading a book. Text appears above it, followed by the Duolingo logo and app store download buttons.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "improve your english for free\nduolingo\nDownload the world's #1 language learning app.\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.0774093
+}

@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1861692997873496",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female, early 20s, slim build, fair complexion. She has straight blonde hair parted in the middle. Her facial features are symmetrical with a soft, smooth appearance.",
+        "wardrobe": "Light blue collared button-up shirt.",
+        "demeanor": "Calm, professional, and consistently smiling."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young female, mid 20s, average build, fair complexion. She has dark hair pulled back tightly into a bun or ponytail. She wears small hoop earrings.",
+        "wardrobe": "Maroon textured knit sweater.",
+        "demeanor": "Expressive, slightly anxious but eager to learn, using frequent hand gestures."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Split-Screen Tutoring Session",
+        "supernova_script": "Character B says: We need to discuss about the budget. [We need to discuss about the budget.]\nCharacter A says: Careful, correct English is \"discuss the budget\". [Careful, correct English is \"discuss the budget\".]\nCharacter B says: OK, let's discuss the budget. [OK, let's discuss the budget.]\nCharacter B says: I don't understand good this report. [I don't understand good this report.]\nCharacter A says: Say \"I don't understand this report well\". [Say \"I don't understand this report well\".]\nCharacter B says: I don't understand this report well. [I don't understand this report well.]\nCharacter B says: सच बताऊँ, office में मुझसे रोज़ ऐसी गलतियाँ होती हैं। [Honestly, I make such mistakes every day at the office.]\nCharacter B says: बाकी सब confident लगते हैं, और मुझे बहुत घबराहट होती है। [Everyone else seems confident, and I feel very nervous.]\nCharacter A says: इसीलिए रोज़ speaking practice करना ज़रूरी है। [That's why doing daily speaking practice is important.]\nCharacter B says: हाँ, पर tutors के लिए time और पैसे कहाँ हैं? [Yes, but where is the time and money for tutors?]\nCharacter A says: तो मेरे साथ practice करो ना, तुम्हारी Supernova AI tutor! [Then practice with me, your Supernova AI tutor!]\nCharacter A says: मैं हमेशा available हूँ, बिना judge किए तुम्हारी गलतियाँ सुधारने के लिए। [I am always available, to correct your mistakes without judging.]\nCharacter B says: Job के लिए मुझे बस यही चाहिए था! [This is exactly what I needed for my job!]\nCharacter A says: Supernova download करो और हम रोज़ practice करेंगे। [Download Supernova and we will practice every day.]\nCharacter B says: OK, मैं आज ही Supernova download करती हूँ। [OK, I will download Supernova today.]",
+        "scene_summary": "- Hooks the viewer with relatable, common English mistakes made in a workplace setting.\n- Highlights the emotional pain point of feeling nervous and insecure around confident colleagues.\n- Introduces the Supernova AI tutor as an affordable, accessible, and non-judgmental solution for daily practice.\n- Ends with a clear call to action to download the app.",
+        "supernova_on_screen_text": ">>\nWe need to discuss about the budget\nCareful, correct English is \"discuss the budget\"\nOK, let's discuss the budget\nI don't understand good this report\nSay \"I don't understand this report well\"\nI don't understand this report well\nOffice में मुझसे रोज़ ऐसी गलतियाँ होती हैं\nColleagues confident लगते हैं, और मैं nervous\nइसीलिए daily speaking practice ज़रूरी है\nपर tutors के लिए time और पैसे कहाँ हैं?\nPractice with your Supernova AI tutor!\nहमेशा available, बिना judge किए\nJob के लिए बस यही चाहिए था\nDownload Supernova today\nOK, मैं आज ही Supernova download करती हूँ"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Download End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear, visually distinct end card.\n- Reinforces the brand name and core value proposition.\n- Delivers the final Call To Action (CTA) to drive app installs.",
+        "supernova_on_screen_text": "Supernova App\nYour personal AI English Tutor\nDOWNLOAD\nNOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779974839.7766013
+}

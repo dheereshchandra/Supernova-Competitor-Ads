@@ -1,0 +1,34 @@
+{
+  "competitor_id": "1534214218051412",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "boasting young man",
+        "appearance": "A young adult male, likely in his early twenties, with a medium build and fair complexion. He has dark, voluminous hair styled upwards and a neatly trimmed beard and mustache. His facial features are expressive, with prominent eyebrows and a defined jawline.",
+        "wardrobe": "He wears a black and white plaid button-up shirt, unbuttoned at the collar, revealing a silver chain with a small pendant. On his left wrist, he has a silver watch with a light blue strap, and a silver ring on his right hand.",
+        "demeanor": "Initially confident and aggressive, gesturing emphatically while speaking. His demeanor shifts to surprised and slightly bewildered after an interaction."
+      },
+      {
+        "id": "B",
+        "role": "friend / brother-in-law",
+        "appearance": "A young adult male, similar age and build to Character A, with a fair complexion. He has dark, medium-length hair. His appearance is brief, mostly seen from behind or partially from the side.",
+        "wardrobe": "He wears a plain brown button-up shirt.",
+        "demeanor": "Calm and slightly amused, delivering a punchline."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Confrontation and unexpected arrival",
+        "supernova_script": "Character A says: डट जा तू। [You wait.]\nCharacter A says: मेरा साला आ रहा है, वो English में बताएगा तने। [My brother-in-law is coming, he will tell you in English.]\nCharacter A says: Fluent English बोलता है मेरा साला। [My brother-in-law speaks fluent English.]\nCharacter A says: हां जीजा, आ जाओ। [Yes brother-in-law, come.]\nCharacter A says: बताओ इन्हें! [Tell them!]\nCharacter B says: क्या बताऊं? [What to tell?]\nCharacter A says: तूने कहा था ना तेरी English strong है? [Didn't you say your English is strong?]\nCharacter B says: हां, \"Myself is coming!\" [Yes, \"Myself is coming!\"]\nCharacter A says: राजा साहब, [Raja Sahab,]\nCharacter A says: तुम्हारी इस टूटी English के चक्कर में आज हम पिटेंगे। Supernova app से practice शुरू कर दो! [Because of your broken English we will get beaten today. Start practicing with Supernova app!]\nCharacter A says: ओ। [Oh.]",
+        "scene_summary": "- Hooks the viewer with a comedic confrontation where Character A relies on B's English skills.\n- Reveals the problem: B's English is actually terrible, leading to embarrassment.\n- Introduces Supernova as the practical solution to avoid such real-world embarrassments and build true speaking confidence.",
+        "supernova_on_screen_text": "Speak English with Confidence. Download Supernova."
+      }
+    ],
+    "brand_swaps_detected": []
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780634232.9131374
+}

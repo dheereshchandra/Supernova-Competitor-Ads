@@ -1,0 +1,53 @@
+{
+  "competitor_id": "818640181129690",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, early 20s, slim build, fair complexion, long brown hair styled in a side braid.",
+        "wardrobe": "In the airport, a rust-colored cardigan over a white ribbed top with a patterned scarf and dark jeans. In the split-screen, a grey blazer over a white top.",
+        "demeanor": "Initially hesitant and nervous, later enthusiastic and engaged."
+      },
+      {
+        "id": "B",
+        "role": "helpful stranger",
+        "appearance": "Older man, 50s, average build, fair complexion, salt-and-pepper hair.",
+        "wardrobe": "Navy blue quarter-zip pullover and khaki pants.",
+        "demeanor": "Friendly, helpful, and confident."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "Young woman, fair complexion, red hair pulled back.",
+        "wardrobe": "Grey turtleneck sweater.",
+        "demeanor": "Cheerful, encouraging, with a static but expressive face."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Airport Encounter",
+        "supernova_script": "Character A says: I am flying to Dubai. Mere paas ek luggage hai... I mean, one suitcase... [I am flying to Dubai. I have one luggage... I mean, one suitcase...]\nCharacter B says: Pehli baar akele travel kar rahi ho? English bolne mein tension ho rahi hai? [First time traveling alone? Feeling tense about speaking English?]\nCharacter A says: Bohot obvious hai kya? Samajh sab aata hai, bas bolte waqt atak jaati hoon. [Is it that obvious? I understand everything, I just get stuck while speaking.]\nCharacter B says: Meri beti ka bhi yahi haal tha. Ab wo Supernova app par practice karti hai. Usme AI tutor se baat kar sakte ho. Jaise check-in counter par aane se pehle hi poori practice kar lo. [My daughter was the same. Now she practices on the Supernova app. You can talk to an AI tutor there. Like practicing the whole check-in before you even reach the counter.]\nCharacter A says: AI ke saath English practice? [English practice with an AI?]\nCharacter B says: Din mein bas 10 minute. Pichle mahine usne khud confidence se hotel booking ki thi. [Just 10 minutes a day. Last month she confidently booked a hotel herself.]\nCharacter A says: Acha, dikhaiye. Waise bhi line mein pandrah log hain mere aage. [Okay, show me. There are fifteen people ahead of me in line anyway.]",
+        "scene_summary": "- Establishes the core problem: knowing English but freezing while speaking in real-world situations.\n- Introduces Supernova as a practical, AI-based solution for practicing specific scenarios like airport check-ins.\n- Uses a relatable, encouraging older character to validate the app's effectiveness.",
+        "supernova_on_screen_text": "I am flying to Dubai.\nMere paas ek luggage hai...\nI mean, one suitcase...\nPehli baar akele travel kar rahi ho?\nBohot obvious hai kya?\nSamajh sab aata hai, bas bolte waqt atak jaati hoon.\nMeri beti ka bhi yahi haal tha.\nAb wo Supernova app par practice karti hai.\nJaise check-in counter par aane se pehle hi poori practice kar lo.\nAI ke saath English practice?\nDin mein bas 10 minute. Pichle mahine usne khud confidence se hotel booking ki thi.\nAcha, dikhaiye. Waise bhi line mein pandrah log hain mere aage."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Interaction",
+        "supernova_script": "Character C says: What are you doing today? [What are you doing today?]\nCharacter A says: I am working. Aaj mujhe many work hai. [I am working. Today I have many work.]\nCharacter C says: Do you mean: \"I have a lot of work today\"? [Do you mean: \"I have a lot of work today\"?]\nCharacter A says: Yes, I have a lot of work today and mera dimaag not working. [Yes, I have a lot of work today and my brain not working.]\nCharacter C says: Do you mean: \"my brain isn't working\"? [Do you mean: \"my brain isn't working\"?]\nCharacter A says: Yes, I have a lot of work and my brain isn't working! [Yes, I have a lot of work and my brain isn't working!]\nCharacter C says: That's perfect! Bahot badhiya, Priya! [That's perfect! Very good, Priya!]\nCharacter A says: Mujhe roz English bolni hai, but classes bohot expensive hoti hain! [I want to speak English everyday, but classes are very expensive!]\nCharacter C says: Why don't you practice with an AI tutor? [Why don't you practice with an AI tutor?]\nCharacter A says: AI tutor? Mujhe koi aisa chahiye jo meri mistakes correct kare, bina judge kiye. [AI tutor? I want someone who can correct my mistakes, without judging me.]\nCharacter C says: Jaise maine kiya! I am your Supernova AI tutor. Nice to meet you, Priya! [Like I did! I am your Supernova AI tutor. Nice to meet you, Priya!]\nCharacter A says: Tum AI tutor ho? Sach mein? Ye toh amazing hai! [You're an AI tutor? Really? This is amazing!]\nCharacter C says: Supernova app download karo aur roz mere saath practice karo. I'll help you speak fluently! [Download the Supernova app and practice with me daily. I'll help you speak fluently!]\nCharacter A says: Done! Main aaj se hi apni daily practice shuru karungi. [Done! I will start my daily practice from today itself.]",
+        "scene_summary": "- Demonstrates the core app feature: real-time grammar correction by an AI tutor in a conversational setting.\n- Highlights the affordability and non-judgmental nature of the AI compared to expensive human classes.\n- Ends with a strong call-to-action to download Supernova for daily practice.",
+        "supernova_on_screen_text": "What are you doing today?\nI am working.\nAaj mujhe many work hai.\nDo you mean: \"I have a lot of work today\"?\nYes, I have a lot of work today\nand mera dimaag not working.\nDo you mean: \"my brain isn't working\"?\nYes, I have a lot of work and my brain isn't working!\nThat's perfect!\nBahot badhiya, Priya!\nMujhe roz English bolni hai,\nbut classes bohot expensive hoti hain!\nWhy don't you practice with an AI tutor?\nAI tutor?\nMujhe koi aisa chahiye jo meri mistakes correct kare, bina judge kiye.\nJaise maine kiya!\nI am your Supernova AI tutor.\nNice to meet you, Priya!\nTum AI tutor ho?\nSach mein? Ye toh amazing hai!\nSupernova app download karo\naur roz mere saath practice karo.\nDone!\nMain aaj se hi apni daily practice shuru karungi.\nSupernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Loora",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889200.0780694
+}

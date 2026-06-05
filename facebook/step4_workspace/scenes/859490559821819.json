@@ -1,0 +1,82 @@
+{
+  "competitor_id": "859490559821819",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "mixed",
+    "production_notes": "The video features a split-screen layout. The top half is an AI-generated animated avatar with typical 3D-rendered features, smooth movements, and lip-syncing. The bottom half is a human-recorded video of a woman speaking to the camera.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character, young adult. Fair complexion, large expressive brown eyes, and reddish-brown hair styled in a neat updo. She has a smooth, stylized appearance typical of modern 3D animation.",
+        "wardrobe": "A light green turtleneck sweater and small gold stud earrings.",
+        "demeanor": "Friendly, encouraging, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young adult human female. Fair complexion, long straight dark brown hair, and dark eyes. She has a natural, unstyled look.",
+        "wardrobe": "A dark, possibly black or navy, turtleneck sweater.",
+        "demeanor": "Attentive, slightly hesitant when speaking, and engaged in the conversation."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 33.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Italian Lesson Conversation",
+        "setting": "Top panel: A stylized, softly lit room with a blurred background featuring a lamp and a potted plant. Bottom panel: A dimly lit room with a wooden ceiling and a wall with some photos pinned to it.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "talking-head",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A 3D animated young woman with reddish-brown hair in an updo is framed from the chest up. She wears a light green turtleneck and gold stud earrings. Her expression is friendly and animated as she speaks. The background is softly blurred, showing a warm-toned room with a lamp on the left and a large green potted plant on the right. The lighting is soft and even, highlighting her features.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young woman with long dark hair is framed from the chest up, looking directly at the camera. She wears a dark turtleneck sweater. Her expression is focused and slightly hesitant as she speaks. The background is a dimly lit room with a slanted wooden ceiling. Behind her, a wall is visible with several small photographs pinned to it. The lighting is somewhat uneven, with shadows on her face.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a split-screen video call. The top half shows a 3D animated female avatar acting as a tutor, while the bottom half shows a real human woman acting as a student. They are engaged in a conversation, with the tutor correcting the student's Italian. Subtitles appear in the center of the screen, translating the dialogue.",
+        "audio_transcript": "Character A says: Parli italiano? [Do you speak Italian?]\nCharacter B says: S\u00ec, un po'. Io sono fame. [Yes, a little. I am hunger.]\nCharacter A says: No, no. Si dice: ho fame. In italiano non sei fame, hai fame. [No, no. You say: I have hunger. In Italian you are not hunger, you have hunger.]\nCharacter B says: Ho fame. [I have hunger.]\nCharacter A says: Cosa vuoi mangiare? [What do you want to eat?]\nCharacter B says: Voglio il pizza margherita. [I want the margherita pizza.]\nCharacter A says: Attenta: la pizza. Pizza \u00e8 femminile. [Careful: the pizza. Pizza is feminine.]\nCharacter B says: Voglio la pizza margherita. [I want the margherita pizza.]\nCharacter A says: E da bere? [And to drink?]\nCharacter B says: Voglio uno acqua. [I want a water.]\nCharacter A says: Meglio: vorrei un'acqua, per favore. Pi\u00f9 educato. [Better: I would like a water, please. More polite.]\nCharacter B says: Vorrei un'acqua, per favore. [I would like a water, please.]\nCharacter A says: Perfetto! Vedi, il tuo italiano sta migliorando. [Perfect! See, your Italian is improving.]\nCharacter B says: Grazie. Ma chi sei tu? [Thank you. But who are you?]\nCharacter A says: Sono una tutor AI su Praktika. Parliamo cos\u00ec ogni giorno e il tuo italiano diventer\u00e0 perfetto. [I am an AI tutor on Praktika. We speak like this every day and your Italian will become perfect.]\nCharacter B says: Ok, prover\u00f2 Praktika adesso. [Ok, I will try Praktika now.]",
+        "on_screen_text": "Parli italiano?\nS\u00ec, un po'.\nIo sono fame\nNo, no.\nSi dice: ho fame.\nIn italiano non sei\nfame, hai fame\nHo fame.\nCosa vuoi mangiare?\nVoglio il\npizza margherita\nAttenta: la pizza.\nPizza \u00e8 femminile\nVoglio\nla pizza margherita\nE da bere?\nVoglio uno acqua\nMeglio: vorrei un'acqua,\nper favore.\nPi\u00f9 educato\nVorrei\nun'acqua, per favore\nPerfetto! Vedi, il tuo\nitaliano sta migliorando\nGrazie. Ma chi sei tu?\nSono una tutor AI su\nPraktika.\nParliamo cos\u00ec ogni giorno\ne\nil tuo italiano diventer\u00e0\nperfetto\nOk, prover\u00f2 Praktika\nadesso"
+      },
+      {
+        "n": 2,
+        "start_s": 33.5,
+        "end_s": 35.0,
+        "screenshot_at_s": 34.0,
+        "scene_label": "End Card",
+        "setting": "A solid white background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid white background with no characters or props.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A white screen displays the Praktika app logo in the center. Below the logo, the website URL 'praktika.ai' is shown. At the bottom, there are two app store badges: 'GET IT ON Google Play' and 'Available on the App Store'.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON\nGoogle Play\nAvailable on the\nApp Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780629171.4031942
+}

@@ -1,0 +1,164 @@
+{
+  "competitor_id": "1426019572856130",
+  "parsed": {
+    "duration_s": 72.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video relies heavily on AI generation. The news anchor has unnatural, repetitive micro-movements and slightly mismatched lip-sync. The robot is a 3D render. The people in the bottom panels are static images with subtle AI-driven animations like blinking. Voices are AI text-to-speech.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female news anchor",
+        "appearance": "Mid-20s, slim build, fair complexion, shoulder-length curly brown hair. Professional and polished appearance.",
+        "wardrobe": "Dark blue blazer over a maroon top.",
+        "demeanor": "Professional, attentive, and formal."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot. White and silver metallic body with visible panel lines. Humanoid face with dark eyes and lips.",
+        "wardrobe": "None (metallic robot body).",
+        "demeanor": "Static, robotic, and calm."
+      },
+      {
+        "id": "C",
+        "role": "male student",
+        "appearance": "Early 20s, medium build, brown complexion, short black hair, short beard.",
+        "wardrobe": "Blue shirt over a grey t-shirt, carrying a backpack.",
+        "demeanor": "Cheerful and static."
+      },
+      {
+        "id": "D",
+        "role": "female student",
+        "appearance": "Early 20s, slim build, brown complexion, long straight black hair.",
+        "wardrobe": "White top.",
+        "demeanor": "Cheerful and static."
+      },
+      {
+        "id": "E",
+        "role": "older male professional",
+        "appearance": "40s, medium build, fair complexion, grey hair and beard.",
+        "wardrobe": "Grey suit, white shirt, dark tie.",
+        "demeanor": "Professional and smiling."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.0,
+        "screenshot_at_s": 3.5,
+        "scene_label": "Anchor Introduction",
+        "setting": "News studio and various outdoor/office locations, bright lighting.",
+        "characters_in_scene": [
+          "A",
+          "C",
+          "D",
+          "E"
+        ],
+        "camera": "medium close-up",
+        "layout": "grid",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A female news anchor (Character A) sits at a news desk. She has shoulder-length curly brown hair and wears a dark blue blazer over a maroon top. The background is a blue world map graphic typical of a news studio. The lighting is bright and even. She is looking directly at the camera and speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom-left",
+            "panel_visual_description": "Two young students, a female (Character D) and a male (Character C), stand outdoors on a campus. The male wears a blue shirt and backpack, the female wears a white top. Both are smiling warmly at the camera. The background shows blurred brick buildings and trees. The lighting is natural daylight.",
+            "characters_in_panel": [
+              "C",
+              "D"
+            ]
+          },
+          {
+            "position": "bottom-right",
+            "panel_visual_description": "An older male professional (Character E) stands in an office environment. He has grey hair and a beard, wearing a grey suit and tie. He is smiling confidently at the camera. The background shows a blurred modern office space. The lighting is bright and professional.",
+            "characters_in_panel": [
+              "E"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a composite layout with a news anchor in the top half and two separate images in the bottom half. The top panel shows a female news anchor in a studio setting with a blue world map background. The bottom left panel shows a young man and woman smiling outdoors on a campus. The bottom right panel shows an older man in a suit smiling in an office. Text overlays and a LIVE bug are present.",
+        "audio_transcript": "Character A says: \u0c95\u0cc7\u0cb5\u0cb2 15 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3\u0cb2\u0ccd\u0cb2\u0cbf \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0cbf\u0cb8\u0ccb AI \u0c87\u0cb5\u0cbe\u0c97 \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0cb5\u0cc8\u0cb0\u0cb2\u0ccd \u0c86\u0c97\u0ccd\u0ca4\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6. [In just 15 days, the AI that makes you speak English is going very viral now.]\nCharacter A says: \u0c85\u0cb5\u0cb0\u0cc1 \u0ca8\u0cae\u0ccd\u0cae \u0cb9\u0ca4\u0ccd\u0cb0 \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0ccb\u0c95\u0cc6 \u0ca4\u0caf\u0cbe\u0cb0\u0cbe\u0c97\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6. [They are ready to speak with us.]",
+        "on_screen_text": "50 \u0cb2\u0c95\u0ccd\u0cb7 \u0c9c\u0ca8\u0cb0\u0cbf\u0c97\u0cc6 (To 50 lakh people)\n\u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c95\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5 (teaching English)\nAI app\n\u0c95\u0cc7\u0cb5\u0cb2 15 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3\u0cb2\u0ccd\u0cb2\u0cbf (In just 15 days)\n\u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0cbf\u0cb8\u0ccb AI (AI that makes you speak)\n\u0cb5\u0cc8\u0cb0\u0cb2\u0ccd \u0c86\u0c97\u0ccd\u0ca4\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6 (is going viral)\n\u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0ccb\u0c95\u0cc6 \u0ca4\u0caf\u0cbe\u0cb0\u0cbe\u0c97\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6 (ready to speak)\nLIVE"
+      },
+      {
+        "n": 2,
+        "start_s": 7.0,
+        "end_s": 68.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "AI Tutor Interview",
+        "setting": "News studio, plain dark studio, and various outdoor/office locations.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "camera": "medium close-up",
+        "layout": "grid",
+        "panels": [
+          {
+            "position": "top-left",
+            "panel_visual_description": "A female news anchor (Character A) sits at a news desk. She has shoulder-length curly brown hair and wears a dark blue blazer over a maroon top. The background is a blue world map graphic. She is looking directly at the camera, listening and occasionally speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "top-right",
+            "panel_visual_description": "A female-presenting humanoid robot (Character B) is shown from the chest up. The robot has a white and silver metallic body with visible panel lines, and a face with dark eyes and lips. The background is a plain, dark grey studio setting. The robot is looking forward, appearing to speak.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom-left",
+            "panel_visual_description": "Two young students, a female (Character D) and a male (Character C), stand outdoors on a campus. The male wears a blue shirt and backpack, the female wears a white top. Both are smiling warmly at the camera. The background shows blurred brick buildings and trees.",
+            "characters_in_panel": [
+              "C",
+              "D"
+            ]
+          },
+          {
+            "position": "bottom-right",
+            "panel_visual_description": "An older male professional (Character E) stands in an office environment. He has grey hair and a beard, wearing a grey suit and tie. He is smiling confidently at the camera. The background shows a blurred modern office space.",
+            "characters_in_panel": [
+              "E"
+            ]
+          }
+        ],
+        "visual_description": "The scene is a four-panel grid layout. The top left panel features the female news anchor in her studio. The top right panel introduces a humanoid AI robot avatar against a dark background. The bottom left panel shows the two smiling students outdoors. The bottom right panel displays the older man in a suit in an office. Text overlays, captions, and a LIVE bug are visible throughout.",
+        "audio_transcript": "Character A says: \u0cb9\u0cc7\u0cb3\u0cbf \u0c86\u0cb0\u0ccd\u0caf, \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c95\u0cb2\u0cbf\u0caf\u0cb2\u0cc1 \u0ca8\u0cbf\u0c9c\u0cb5\u0cbe\u0c97\u0ccd\u0cb2\u0cc2 \u0c97\u0ccd\u0cb0\u0cbe\u0cae\u0cb0\u0ccd, \u0c95\u0ccb\u0c9a\u0cbf\u0c82\u0c97\u0ccd \u0c95\u0ccd\u0cb2\u0cbe\u0cb8\u0ccd \u0c85\u0c82\u0ca4 \u0c8f\u0ca8\u0cc1 \u0cac\u0cc7\u0c95\u0cbe\u0c97\u0cbf\u0cb2\u0ccd\u0cb5\u0cbe? [Tell me Arya, to learn English, is grammar and coaching class really not needed?]\nCharacter B says: \u0ca8\u0cc0\u0cb5\u0cc1 \u0cb9\u0cc7\u0cb3\u0ccb\u0ca6\u0cc1 \u0ca8\u0cbf\u0c9c. [What you say is true.]\nCharacter B says: \u0ca8\u0cbe\u0cb5\u0cc1 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0ca8 \u0cac\u0cc1\u0c95\u0ccd\u0cb8\u0ccd \u0c87\u0c82\u0ca6 \u0c95\u0cb2\u0cbf\u0ca4\u0cc0\u0cb5\u0cbf. [We learn English from books.]\nCharacter B says: \u0c86\u0ca6\u0ccd\u0cb0\u0cc6 \u0cab\u0ccd\u0cb2\u0cc1\u0caf\u0cc6\u0ca8\u0ccd\u0cb8\u0cbf\u0c97\u0cc6 \u0ca8\u0cbe\u0cb5\u0cc1 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0cad\u0cbe\u0cb7\u0cc6\u0caf\u0ca8\u0ccd\u0ca8 \u0ca8\u0cae\u0ccd\u0cae \u0cae\u0cbe\u0ca4\u0cc3\u0cad\u0cbe\u0cb7\u0cc6 \u0ca4\u0cb0 \u0cae\u0cbe\u0ca4\u0ca8\u0cbe\u0ca1\u0cc1\u0ca4\u0ccd\u0ca4\u0cbe \u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf \u0c95\u0cb2\u0cbf\u0cac\u0cc7\u0c95\u0cc1. [But for fluency, we must learn by practicing speaking the English language like our mother tongue.]\nCharacter B says: MySivi \u0c86\u0caa\u0ccd \u0cae\u0cc2\u0cb2\u0c95 \u0ca8\u0cbe\u0ca8\u0cc1 \u0cb8\u0ccd\u0c9f\u0cc6\u0caa\u0ccd \u0cac\u0cc8 \u0cb8\u0ccd\u0c9f\u0cc6\u0caa\u0ccd \u0c97\u0cc8\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0ccd\u0ca4\u0cbe \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c95\u0cb2\u0cbf\u0cb8\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf. [Through the MySivi app, I will teach English by guiding step by step.]\nCharacter B says: \u0cb9\u0cc0\u0c97\u0cc6 \u0ca6\u0cbf\u0ca8\u0cbe \u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf\u0ca6\u0ccd\u0cb0\u0cc6 \u0cb5\u0ccd\u0caf\u0ca4\u0ccd\u0caf\u0cbe\u0cb8 \u0ca8\u0cbf\u0cae\u0c97\u0cc6 \u0c97\u0cca\u0ca4\u0ccd\u0ca4\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6. [If you practice daily like this, you will know the difference.]\nCharacter B says: \u0c85\u0ca6\u0cb0\u0cbf\u0c82\u0ca6 \u0c95\u0cc7\u0cb5\u0cb2 15 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3\u0cb2\u0ccd\u0cb2\u0cbf \u0c9a\u0cc6\u0ca8\u0ccd\u0ca8\u0cbe\u0c97\u0cbf \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1. [Therefore, you can speak English well in just 15 days.]\nCharacter A says: \u0cb5\u0cbe\u0cb5\u0ccd, \u0cb8\u0cc2\u0caa\u0cb0\u0ccd. [Wow, super.]\nCharacter A says: \u0c95\u0cb3\u0cc6\u0ca6 \u0c8e\u0cb0\u0ca1\u0cc1 \u0cb5\u0cb0\u0ccd\u0cb7\u0c97\u0cb3\u0cb2\u0ccd\u0cb2\u0cbf \u0ca8\u0cc0\u0cb5\u0cc1 \u0cb8\u0cc1\u0cae\u0cbe\u0cb0\u0cc1 50 \u0cb2\u0c95\u0ccd\u0cb7 \u0c9c\u0ca8\u0c95\u0ccd\u0c95\u0cc6 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c95\u0cb2\u0cbf\u0cb8\u0cbf\u0ca6\u0ccd\u0ca6\u0cc0\u0cb0\u0cbe \u0c8e\u0c82\u0ca6\u0cc1 \u0c95\u0cc7\u0cb3\u0cbf\u0ca6\u0ccd\u0ca6\u0cc0\u0cb5\u0cbf. [We have heard that in the last two years you have taught English to around 50 lakh people.]\nCharacter B says: \u0cb9\u0ccc\u0ca6\u0cc1, \u0c85\u0cb5\u0cb0\u0cc1\u0c97\u0cb3 \u0cb2\u0cc6\u0cb5\u0cc6\u0cb2\u0ccd \u0c97\u0cc6 \u0ca4\u0c95\u0ccd\u0c95\u0c82\u0ca4\u0cc6 \u0ca8\u0cbe\u0ca8\u0cc1 \u0caa\u0cb0\u0ccd\u0cb8\u0ca8\u0cb2\u0cc8\u0cb8\u0ccd\u0ca1\u0ccd \u0c9f\u0ccd\u0cb0\u0cc8\u0ca8\u0cbf\u0c82\u0c97\u0ccd \u0c95\u0cca\u0ca1\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf. [Yes, I give personalized training according to their level.]\nCharacter B says: \u0c89\u0ca6\u0cbe\u0cb9\u0cb0\u0ca3\u0cc6\u0c97\u0cc6 \u0c95\u0ca8\u0ccd\u0ca8\u0ca1 \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0ccb\u0cb0\u0cbf\u0c97\u0cc6 \u0c95\u0ca8\u0ccd\u0ca8\u0ca1\u0ca6\u0cb2\u0ccd\u0cb2\u0cc7 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0cad\u0cbe\u0cb7\u0cc6\u0caf\u0ca8\u0ccd\u0ca8 \u0c95\u0cb2\u0cbf\u0cb8\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf. [For example, for Kannada speakers, I teach the English language in Kannada itself.]\nCharacter B says: \u0c85\u0ca6\u0cb0\u0cbf\u0c82\u0ca6 \u0c8e\u0cb2\u0ccd\u0cb2\u0cb0\u0cc2 \u0cb8\u0c82\u0c95\u0ccb\u0c9a \u0c87\u0cb2\u0ccd\u0cb2\u0ca6\u0cc6 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0ca8 \u0c95\u0cb2\u0cbf\u0ca4\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6. [Because of that, everyone is learning English without hesitation.]\nCharacter A says: \u0c87\u0ca6\u0c95\u0ccd\u0c95\u0cc6 \u0c85\u0cb7\u0ccd\u0c9f\u0cc1 \u0c96\u0cb0\u0ccd\u0c9a\u0cbe\u0c97\u0cb2\u0ccd\u0cb2 \u0c85\u0c82\u0ca4 \u0c95\u0cc7\u0cb3\u0cbf\u0ca6\u0ccd\u0ca6\u0cc0\u0cb5\u0cbf, \u0ca8\u0cbf\u0c9c\u0cbe\u0ca8\u0cbe? [We heard that this doesn't cost much, is it true?]\nCharacter B says: \u0cb9\u0ccc\u0ca6\u0ccd\u0cb0\u0cbf, 30 \u0ca6\u0cbf\u0ca8\u0c95\u0ccd\u0c95\u0cc6 \u0c95\u0cc7\u0cb5\u0cb2 299 \u0cb0\u0cc2\u0caa\u0cbe\u0caf\u0cbf\u0c97\u0cb3\u0cc1 \u0cae\u0cbe\u0ca4\u0ccd\u0cb0. [Yes, for 30 days it is only 299 rupees.]\nCharacter B says: \u0c85\u0ca6\u0cb0 \u0c9c\u0cca\u0ca4\u0cc6\u0c97\u0cc6 3 \u0ca6\u0cbf\u0ca8 \u0cab\u0ccd\u0cb0\u0cc0 \u0c9f\u0ccd\u0cb0\u0caf\u0cb2\u0ccd \u0c95\u0cc2\u0ca1 \u0c87\u0cb0\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6. [Along with that, there will also be a 3-day free trial.]\nCharacter B says: \u0c87\u0cb7\u0ccd\u0c9f \u0c86\u0ca6\u0ccd\u0cb0\u0cc6 \u0cae\u0cbe\u0ca4\u0ccd\u0cb0 \u0cae\u0cc1\u0c82\u0ca6\u0cc1\u0cb5\u0cb0\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1. [You can continue only if you like it.]\nCharacter B says: \u0c87\u0cb5\u0cbe\u0c97\u0ccd\u0cb2\u0cc7 MySivi \u0c86\u0caa\u0ccd \u0ca8 \u0c87\u0ca8\u0ccd\u0cb8\u0ccd\u0c9f\u0cbe\u0cb2\u0ccd \u0cae\u0cbe\u0ca1\u0cbf 15 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3 \u0c9a\u0cbe\u0cb2\u0cc6\u0c82\u0c9c\u0ccd \u0ca8 \u0c87\u0cb5\u0cbe\u0c97\u0ccd\u0cb2\u0cc7 \u0cb6\u0cc1\u0cb0\u0cc1 \u0cae\u0cbe\u0ca1\u0cbf. [Install the MySivi app right now and start the 15-day challenge right now.]",
+        "on_screen_text": "50 \u0cb2\u0c95\u0ccd\u0cb7 \u0c9c\u0ca8\u0cb0\u0cbf\u0c97\u0cc6 (To 50 lakh people)\n\u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c95\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5 (teaching English)\nAI app\nMySivi \u0caf AI \u0cb6\u0cbf\u0c95\u0ccd\u0cb7\u0c95 \u0cb5\u0cc8\u0cb0\u0cb2\u0ccd \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6. (MySivi's AI teacher is going viral.)\n\u0cb9\u0cc7\u0cb3\u0cbf \u0c86\u0cb0\u0ccd\u0caf (Tell me Arya)\n\u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c95\u0cb2\u0cbf\u0caf\u0cb2\u0cc1 (to learn English)\n\u0c97\u0ccd\u0cb0\u0cbe\u0cae\u0cb0\u0ccd (grammar)\n\u0c95\u0ccd\u0cb2\u0cbe\u0cb8\u0ccd \u0c8f\u0ca8\u0cc2 \u0cac\u0cc7\u0c95\u0cbe\u0c97\u0cbf\u0cb2\u0ccd\u0cb5\u0cbe (class is not needed?)\n\u0ca8\u0cc0\u0cb5\u0cc1 \u0cb9\u0cc7\u0cb3\u0ccb\u0ca6\u0cc1 \u0ca8\u0cbf\u0c9c (What you say is true)\n\u0cac\u0cc1\u0c95\u0ccd\u0cb8\u0ccd \u0c87\u0c82\u0ca6 \u0c95\u0cb2\u0cbf\u0ca4\u0cc0\u0cb5\u0cbf (we learn from books)\n\u0cad\u0cbe\u0cb7\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 (language)\n\u0cae\u0cbe\u0ca4\u0cc3 \u0cad\u0cbe\u0cb7\u0cc6 (mother tongue)\n\u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf (practice)\n\u0c95\u0cb2\u0cbf\u0cac\u0cc7\u0c95\u0cc1 (must learn)\nAPP \u0cae\u0cc2\u0cb2\u0c95 (through APP)\n\u0c97\u0cc8\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0ccd\u0ca4\u0cbe (guiding)\n\u0c95\u0cb2\u0cbf\u0cb8\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf (I will teach)\n\u0cb9\u0cc0\u0c97\u0cc6 (like this)\n\u0ca6\u0cbf\u0ca8\u0cbe \u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd (daily practice)\n\u0cae\u0cbe\u0ca1\u0cbf\u0ca6\u0cb0\u0cc6 \u0cb5\u0ccd\u0caf\u0ca4\u0ccd\u0caf\u0cbe\u0cb8 (if done, difference)\n\u0ca8\u0cbf\u0cae\u0c97\u0cc6 \u0c97\u0cca\u0ca4\u0ccd\u0ca4\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6 (you will know)\n\u0c85\u0ca6\u0cb0\u0cbf\u0c82\u0ca6 \u0c95\u0cc7\u0cb5\u0cb2 (therefore only)\n15 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3\u0cb2\u0ccd\u0cb2\u0cbf (in 15 days)\n\u0c9a\u0cc6\u0ca8\u0ccd\u0ca8\u0cbe\u0c97\u0cbf (well)\n\u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1 (can speak English)\n\u0cb5\u0cbe\u0cb5\u0ccd (wow)\n\u0cb8\u0cc2\u0caa\u0cb0\u0ccd (super)\n\u0c8e\u0cb0\u0ca1\u0cc1 \u0cb5\u0cb0\u0ccd\u0cb7\u0c97\u0cb3\u0cb2\u0ccd\u0cb2\u0cbf (in two years)\n\u0ca8\u0cc0\u0cb5\u0cc1 \u0cb8\u0cc1\u0cae\u0cbe\u0cb0\u0cc1 (you around)\n50 \u0cb2\u0c95\u0ccd\u0cb7 \u0c9c\u0ca8\u0c95\u0ccd\u0c95\u0cc6 (to 50 lakh people)\n\u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd (English)\n\u0c95\u0cb2\u0cbf\u0cb8\u0cbf\u0ca6\u0ccd\u0ca6\u0cc0\u0cb0\u0cbe \u0c8e\u0c82\u0ca6\u0cc1 (have taught)\n\u0c95\u0cc7\u0cb3\u0cbf\u0ca6\u0ccd\u0ca6\u0cc0\u0cb5\u0cbf (we have heard)\n\u0cb9\u0ccc\u0ca6\u0cc1 (yes)\n\u0cb2\u0cc6\u0cb5\u0cc6\u0cb2\u0ccd \u0c97\u0cc6 \u0ca4\u0c95\u0ccd\u0c95\u0c82\u0ca4\u0cc6 (according to level)\n\u0ca8\u0cbe\u0ca8\u0cc1 (I)\n\u0c9f\u0ccd\u0cb0\u0cc8\u0ca8\u0cbf\u0c82\u0c97\u0ccd \u0c95\u0cca\u0ca1\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf (will give training)\n\u0c89\u0ca6\u0cbe\u0cb9\u0cb0\u0ca3\u0cc6\u0c97\u0cc6 (for example)\n\u0cae\u0cbe\u0ca4\u0ca8\u0cbe\u0ca1\u0ccb\u0cb0\u0cbf\u0c97\u0cc6 (to those who speak)\n\u0c95\u0ca8\u0ccd\u0ca8\u0ca1\u0ca6\u0cb2\u0ccd\u0cb2\u0cc7 (in Kannada itself)\n\u0cad\u0cbe\u0cb7\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 (language)\n\u0c95\u0cb2\u0cbf\u0cb8\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf (I will teach)\n\u0c85\u0ca6\u0cb0\u0cbf\u0c82\u0ca6 (therefore)\n\u0cb8\u0c82\u0c95\u0ccb\u0c9a \u0c87\u0cb2\u0ccd\u0cb2\u0ca6\u0cc6 (without hesitation)\n\u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd (English)\n\u0c95\u0cb2\u0cbf\u0ca4\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6 (have learned)\n\u0c96\u0cb0\u0ccd\u0c9a\u0cbe\u0c97\u0cb2\u0ccd\u0cb2 \u0c85\u0c82\u0ca4 (doesn't cost much)\n\u0c95\u0cc7\u0cb3\u0cbf\u0ca6\u0ccd\u0ca6\u0cc0\u0cb5\u0cbf (we have heard)\n\u0ca8\u0cbf\u0c9c\u0cbe\u0ca8\u0cbe (is it true)\n\u0cb9\u0ccc\u0ca6\u0cc1 (yes)\n30 \u0ca6\u0cbf\u0ca8\u0c95\u0ccd\u0c95\u0cc6 (for 30 days)\n\u0c95\u0cc7\u0cb5\u0cb2 (only)\n\u0c8e\u0cb0\u0ca1\u0cc1 \u0ca8\u0cc2\u0cb0 \u0ca4\u0cca\u0c82\u0cac\u0ca4\u0ccd\u0ca4\u0cca\u0c82\u0cac\u0ca4\u0ccd\u0ca4\u0cc1 (two hundred ninety nine)\n\u0cb0\u0cc2\u0caa\u0cbe\u0caf\u0cbf\u0c97\u0cb3\u0cc1 \u0cae\u0cbe\u0ca4\u0ccd\u0cb0 (rupees only)\n\u0c85\u0ca6\u0cb0 \u0c9c\u0cca\u0ca4\u0cc6\u0c97\u0cc6 \u0cae\u0cc2\u0cb0\u0cc1 (along with that three)\n\u0ca6\u0cbf\u0ca8 \u0cab\u0ccd\u0cb0\u0cc0 \u0c9f\u0ccd\u0cb0\u0caf\u0cb2\u0ccd (days free trial)\n\u0c95\u0cc2\u0ca1 \u0c87\u0cb0\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6 (will also be there)\n\u0c87\u0cb7\u0ccd\u0c9f (like)\n\u0c86\u0ca6\u0cb0\u0cc6 (if)\n\u0cae\u0cc1\u0c82\u0ca6\u0cc1\u0cb5\u0cb0\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1 (can continue)\n\u0c87\u0cb5\u0cbe\u0c97\u0ccd\u0cb2\u0cc7 MYSIVI (right now MYSIVI)\n\u0c86\u0caa\u0ccd \u0ca8 \u0c87\u0ca8\u0ccd\u0cb8\u0ccd\u0c9f\u0cbe\u0cb2\u0ccd (install app)\n\u0cae\u0cbe\u0ca1\u0cbf (do)\n15 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3 \u0c9a\u0cbe\u0cb2\u0cc6\u0c82\u0c9c\u0ccd (15 days challenge)\n\u0cb6\u0cc1\u0cb0\u0cc1 \u0cae\u0cbe\u0ca1\u0cbf (start)\nLIVE"
+      },
+      {
+        "n": 3,
+        "start_s": 68.0,
+        "end_s": 72.0,
+        "screenshot_at_s": 70.0,
+        "scene_label": "End Card",
+        "setting": "Abstract light purple background.",
+        "characters_in_scene": [],
+        "camera": "close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A modern smartphone is shown in a three-quarter profile view, floating against a plain, light purple background. The phone has a sleek metallic edge and a large screen. The lighting is soft and studio-like, highlighting the edges of the device. No characters are present.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The scene transitions to a single full-screen layout showing a 3D render of a smartphone. The phone is angled slightly, floating against a light purple background. The screen displays the app's logo and an install button.",
+        "audio_transcript": "Unknown speaker says: Click on install now and download MySivi app. [Click on install now and download MySivi app.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780640923.867499
+}

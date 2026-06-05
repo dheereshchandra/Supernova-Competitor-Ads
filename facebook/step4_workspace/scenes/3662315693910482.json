@@ -1,0 +1,81 @@
+{
+  "competitor_id": "3662315693910482",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "human-recorded",
+    "production_notes": "The presenter exhibits natural facial movements, blinking, and accurate lip-sync. The screen recording demonstrates genuine software interaction without AI artifacts.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male with a fair complexion and short, neatly styled brown hair. He has a clean-shaven face and an average build.",
+        "wardrobe": "A crisp white collared button-down shirt.",
+        "demeanor": "Focused, instructional, and confident."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 18.0,
+        "screenshot_at_s": 9.0,
+        "scene_label": "First Voice Command",
+        "setting": "Digital workspace, dark color palette",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast with talking-head inset",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A solid dark gray background.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A young man with short brown hair and fair skin is framed from the chest up. He wears a crisp white collared shirt. He looks directly forward with a focused expression. Behind him is a dark background featuring a blurred, glowing red and yellow circular design.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A dark-themed software interface fills the screen. A circular inset at the top center displays a young man speaking directly to the camera. Large text captions appear over the interface as he speaks, and a voice-recording waveform graphic is visible at the bottom.",
+        "audio_transcript": "Character A says: I can speak pretty fast, right? So watch, if I go to flow, hey, can you change the name of my application to be DevLaunch Vault?\nCharacter A says: And it'll pick it up and boom, it puts it in there. I think probably about two to three times faster than if I was actually typing it.\nCharacter A says: However, you can actually directly reference variables, files, and use this with more context inside of Cursor.",
+        "on_screen_text": "Coding in the Future\nI can speak pretty fast, right? So watch, if I go to flow, hey, can you change the name of my application to be DevLaunch Vault? And it'll pick it up and boom, it puts it in there. I think probably about two to three times faster than if I was actually typing it. However, you can actually directly reference variables, files, and use this with more context inside of Cursor."
+      },
+      {
+        "n": 2,
+        "start_s": 18.0,
+        "end_s": 35.0,
+        "screenshot_at_s": 26.0,
+        "scene_label": "Second Voice Command",
+        "setting": "Digital workspace, dark color palette",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "app-screencast with talking-head inset",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A solid dark gray background.",
+            "characters_in_panel": []
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A young man with short brown hair and fair skin is framed from the chest up. He wears a crisp white collared shirt. He looks directly forward with a focused expression. Behind him is a dark background featuring a blurred, glowing red and yellow circular design.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The dark-themed software interface remains in the background. The circular inset of the young man continues at the top center. He speaks another command, and the interface updates to show a text prompt box with a tagged file name. Large text captions continue to appear over the screen.",
+        "audio_transcript": "Character A says: Can you please go inside of the whatyougetsection.tsx file and add additional features.\nCharacter A says: Okay. And wait a second here, and you can see that it automatically actually tags the file for me and adds the context. So this is a feature that's built into Flow.",
+        "on_screen_text": "Can you please go inside of the whatyougetsection.tsx file and add additional features. Okay. And wait a second here, and you can see that it automatically actually tags the file for me and adds the context. So this is a feature that's built into Flow."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779977949.2296867
+}

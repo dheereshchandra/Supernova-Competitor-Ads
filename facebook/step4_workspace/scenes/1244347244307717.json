@@ -1,0 +1,125 @@
+{
+  "competitor_id": "1244347244307717",
+  "parsed": {
+    "duration_s": 20.0,
+    "production_type": "human-recorded",
+    "production_notes": "Live-action footage featuring a human actor, real physical environments, and practical props. No AI generation artifacts are present.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, light brown complexion, short curly dark hair. Wears glasses in later scenes.",
+        "wardrobe": "Olive green t-shirt, light blue jeans.",
+        "demeanor": "Casual, humorous, engaging."
+      },
+      {
+        "id": "B",
+        "role": "animated coach",
+        "appearance": "2D animated older male, dark skin, thick black mustache, dark hair.",
+        "wardrobe": "Pink shirt, teal pants.",
+        "demeanor": "Sarcastic, judgmental."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 2.0,
+        "screenshot_at_s": 1.0,
+        "scene_label": "Couch intro",
+        "setting": "Living room, daytime, white couch, bookshelf.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A falls backward onto a white sectional couch in a bright living room. He holds a smartphone in his hand. A bookshelf and a staircase with black railings are visible in the background.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A dramatically falls onto the couch while holding his phone. Subtitles appear on screen.",
+        "audio_transcript": "Character A says: Plot twist.",
+        "on_screen_text": "Plot twist."
+      },
+      {
+        "n": 2,
+        "start_s": 2.0,
+        "end_s": 10.5,
+        "screenshot_at_s": 6.0,
+        "scene_label": "App screencast",
+        "setting": "Close-up of a smartphone.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up of a person's hand holding a black smartphone. The background is slightly out of focus, showing a light-colored carpet and part of a white couch.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A hand holds a smartphone displaying the Duolingo app. The screen shows a green background with the Duolingo owl logo, then transitions to a dark-themed chess puzzle interface with stylized pieces and an animated character.",
+        "audio_transcript": "Character A says: Duolingo teaches chess. It's all puzzle-based bite-sized strategy that sticks. It's built for beginners and those who pretend to be pros. Coach Oscar helps everyone the same.",
+        "on_screen_text": "Duolingo teaches chess.\nIt's all puzzle-based bite-sized strategy that sticks.\nIt's built for beginners and those who pretend to be pros.\nCoach Oscar helps everyone the same."
+      },
+      {
+        "n": 3,
+        "start_s": 10.5,
+        "end_s": 16.5,
+        "screenshot_at_s": 13.0,
+        "scene_label": "Kitchen with Oscar",
+        "setting": "Kitchen, daytime, white cabinets, island counter.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands in a modern kitchen, leaning on a white countertop. He wears glasses and holds a pair of metal kitchen tongs near his mouth, mimicking a microphone. A small white chess piece sits on the counter in front of him.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A is in a kitchen, speaking into kitchen tongs. A 2D animated character, Character B, is overlaid on the left side of the screen, appearing to speak. Subtitles are displayed at the bottom.",
+        "audio_transcript": "Character B says: Is this your strategy or a cry for help?\nCharacter A says: He loves to humble me as he teaches. But yeah, it's 100% free.",
+        "on_screen_text": "Is this your strategy or a cry for help?\nHe loves to humble me as he teaches.\nBut yeah, it's 100% free."
+      },
+      {
+        "n": 4,
+        "start_s": 16.5,
+        "end_s": 20.0,
+        "screenshot_at_s": 18.0,
+        "scene_label": "Couch outro",
+        "setting": "Living room, daytime, white couch, bookshelf.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits comfortably on a white sectional couch in a bright living room. He wears glasses and holds a blue, translucent chess piece in his hand, gesturing with it towards the camera.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A sits on the couch, holding a blue chess piece and speaking to the camera. Subtitles appear on screen.",
+        "audio_transcript": "Character A says: Your move. Learn chess on Duolingo today for free.",
+        "on_screen_text": "Your move.\nLearn chess on Duolingo today for free."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.1105378
+}

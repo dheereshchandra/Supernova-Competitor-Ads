@@ -1,0 +1,243 @@
+{
+  "competitor_id": "1293067956117881",
+  "parsed": {
+    "duration_s": 58.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human-recorded footage with an AI-generated clip. The bottom panel in the first scene features an AI-generated man with a robotic arm, showing unnatural smoothness and typical AI rendering artifacts in the face and the steam rising from the mug.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, brown complexion. He has short, curly black hair, a beard, and a mustache.",
+        "wardrobe": "Teal and white horizontally striped t-shirt.",
+        "demeanor": "Enthusiastic and informative."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, fair complexion. She has long, dark, wavy hair.",
+        "wardrobe": "Maroon top with a patterned, textured front panel.",
+        "demeanor": "Curious and engaged."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult male, medium build, brown complexion. He has short dark hair and a neat beard. He has a visible robotic right arm.",
+        "wardrobe": "Dark blue t-shirt.",
+        "demeanor": "Smiling and relaxed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Coffee comparison",
+        "setting": "Top: Outdoor, under a metal roof, white wall. Bottom: Indoor, near a window, bookshelf in background.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A stands outdoors under a corrugated metal roof, with a plain white wall behind him. He is looking down at a black smartphone held in both hands. He appears to be speaking while looking at the phone. The lighting is natural daylight, casting soft shadows.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character C sits indoors near a bright window. Behind him is a bookshelf filled with books and a trailing potted plant. He has a distinct robotic right arm made of metal and plastic components. He holds a white ceramic mug with his robotic hand, brings it to his mouth, and drinks. Steam rises from the mug. He smiles broadly after taking a sip.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen showing two different scenes. The top half features a man outdoors looking at his phone and speaking. The bottom half shows a man indoors with a robotic arm drinking from a steaming mug. Text overlays appear on both halves.",
+        "audio_transcript": "Character A says: \u0ca8\u0cbe\u0ca8\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \u0c95\u0cbe\u0cab\u0cbf \u0c95\u0cc1\u0ca1\u0cbf\u0caf\u0c95\u0ccd\u0c95\u0cc6 \u0cac\u0c82\u0ca6\u0cc6 [I came here to have coffee.]\nCharacter C says: I came here to have coffee.\nCharacter A says: \u0c88 \u0c95\u0cbe\u0cab\u0cbf \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0cac\u0cbf\u0cb8\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 [This coffee is very hot.]\nCharacter C says: This coffee is very hot.\nCharacter A says: \u0ca8\u0ca8\u0c97\u0cc6 \u0c88 \u0c95\u0cbe\u0cab\u0cbf\u0caf \u0cb0\u0cc1\u0c9a\u0cbf \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c87\u0cb7\u0ccd\u0c9f\u0cb5\u0cbe\u0caf\u0cbf\u0ca4\u0cc1 [I really like the taste of this coffee.]\nCharacter C says: I really like the taste of this coffee.",
+        "on_screen_text": "\u0ca8\u0cbe\u0ca8\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \u0c95\u0cbe\u0cab\u0cbf \u0c95\u0cc1\u0ca1\u0cbf\u0caf\u0c95\u0ccd\u0c95\u0cc6 \u0cac\u0c82\u0ca6\u0cc6 (I came here to have coffee.)\nI came here to have coffee.\n\u0c88 \u0c95\u0cbe\u0cab\u0cbf \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0cac\u0cbf\u0cb8\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 (This coffee is very hot.)\nThis coffee is very hot.\n\u0ca8\u0ca8\u0c97\u0cc6 \u0c88 \u0c95\u0cbe\u0cab\u0cbf\u0caf \u0cb0\u0cc1\u0c9a\u0cbf \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c87\u0cb7\u0ccd\u0c9f\u0cb5\u0cbe\u0caf\u0cbf\u0ca4\u0cc1 (I really like the taste of this coffee.)\nI really like the taste of this coffee."
+      },
+      {
+        "n": 2,
+        "start_s": 10.0,
+        "end_s": 12.0,
+        "screenshot_at_s": 11.0,
+        "scene_label": "Where did you learn?",
+        "setting": "Outdoor, near a building with a metal roof, trees in background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B stands outdoors with green trees and a building visible in the background. She is looking off-camera to the left, speaking with a questioning expression. Her right hand is slightly raised in a conversational gesture. The lighting is bright natural daylight.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A medium shot of a woman standing outdoors, asking a question. A text overlay appears at the bottom of the screen.",
+        "audio_transcript": "Character B says: \u0cb9\u0cc7 \u0ca8\u0cc0\u0ca8\u0cc1 \u0c8e\u0cb2\u0ccd\u0cb2\u0cbf\u0c82\u0ca6 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c95\u0cb2\u0cbf\u0ca4\u0cbe \u0c87\u0ca6\u0cc0\u0caf\u0cbe [Hey, where are you learning English from?]",
+        "on_screen_text": "\u0cb9\u0cc7 \u0ca8\u0cc0\u0ca8\u0cc1 \u0c8e\u0cb2\u0ccd\u0cb2\u0cbf\u0c82\u0ca6 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c95\u0cb2\u0cbf\u0ca4\u0cbe \u0c87\u0ca6\u0cc0\u0caf\u0cbe (Hey, where are you learning English from?)"
+      },
+      {
+        "n": 3,
+        "start_s": 12.0,
+        "end_s": 14.0,
+        "screenshot_at_s": 13.0,
+        "scene_label": "SpeakX AI Teacher",
+        "setting": "Outdoor, under a metal roof, trees in background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands outdoors under a metal roof structure, with green trees visible behind him. He is looking off-camera to the right, smiling and speaking enthusiastically. The lighting is natural daylight.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A medium close-up of a man standing outdoors, answering a question. A text overlay appears at the bottom of the screen.",
+        "audio_transcript": "Character A says: SpeakX \u0c86\u0caa\u0ccd \u0ca8 AI \u0c9f\u0cc0\u0c9a\u0cb0\u0ccd \u0c87\u0c82\u0ca6 [From the AI teacher on the SpeakX app.]",
+        "on_screen_text": "SpeakX \u0c86\u0caa\u0ccd \u0ca8 AI \u0c9f\u0cc0\u0c9a\u0cb0\u0ccd \u0c87\u0c82\u0ca6 (From the AI teacher on the SpeakX app.)"
+      },
+      {
+        "n": 4,
+        "start_s": 14.0,
+        "end_s": 15.5,
+        "screenshot_at_s": 14.5,
+        "scene_label": "Confusion",
+        "setting": "Outdoor, near a building with a metal roof, trees in background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B stands outdoors in the same location as before, with trees and a building in the background. She looks confused and slightly shakes her head while speaking. The lighting is bright natural daylight.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A medium shot of a woman standing outdoors, expressing confusion. A text overlay appears at the bottom of the screen. There is a bright light leak transition at the end of the shot.",
+        "audio_transcript": "Character B says: \u0ca8\u0ca8\u0c97\u0cc6 \u0c85\u0cb0\u0ccd\u0ca5 \u0c86\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2 [I didn't understand.]",
+        "on_screen_text": "\u0ca8\u0ca8\u0c97\u0cc6 \u0c85\u0cb0\u0ccd\u0ca5 \u0c86\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2 (I didn't understand.)"
+      },
+      {
+        "n": 5,
+        "start_s": 15.5,
+        "end_s": 47.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "App Explanation",
+        "setting": "Outdoor, under a metal roof, trees in background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands outdoors under the metal roof, facing slightly right. He is speaking continuously, using hand gestures to emphasize his points. He points his index finger up at times, and later holds up four fingers to emphasize a point. The background consists of green foliage and a building structure. The lighting is natural daylight.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A medium close-up of a man standing outdoors, giving a detailed explanation. Text overlays appear at the bottom of the screen, changing as he speaks.",
+        "audio_transcript": "Character A says: \u0c87\u0ca6\u0cca\u0c82\u0ca6\u0cc1 \u0c86\u0caa\u0ccd [This is an app.]\nCharacter A says: \u0c87\u0cb2\u0ccd\u0cb2\u0cbf AI \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c9f\u0cc0\u0c9a\u0cb0\u0ccd \u0c9c\u0cca\u0ca4\u0cc6 \u0ca8\u0cc0\u0cb5\u0cc1 \u0ca1\u0cc8\u0cb2\u0cbf [Here, with the AI English teacher, you can daily]\nCharacter A says: \u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1 [practice.]\nCharacter A says: \u0c87\u0cb5\u0ca4\u0ccd\u0ca4\u0cbf\u0ca8 \u0c95\u0cbe\u0cb2\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf [In today's times,]\nCharacter A says: \u0ca8\u0cae\u0c97\u0cc6 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c87\u0cb2\u0ccd\u0cb2 \u0c85\u0c82\u0ca6\u0ccd\u0cb0\u0cc6 [if we don't know English,]\nCharacter A says: \u0ca8\u0cae\u0ccd\u0cae \u0c95\u0cc6\u0cb2\u0cb8 \u0c95\u0cc2\u0ca1 \u0cb8\u0cbf\u0c97\u0cb2\u0ccd\u0cb2 [we won't even get a job,]\nCharacter A says: \u0cb0\u0cc6\u0cb8\u0ccd\u0caa\u0cc6\u0c95\u0ccd\u0c9f\u0ccd \u0c95\u0cc2\u0ca1 \u0cb8\u0cbf\u0c97\u0cb2\u0ccd\u0cb2 [nor will we get respect.]\nCharacter A says: \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c87\u0cb2\u0ccd\u0cb2 \u0c85\u0c82\u0ca6\u0ccd\u0cb0\u0cc6 [If there is no English,]\nCharacter A says: \u0c9c\u0cbe\u0cac\u0ccd \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0cb0\u0cc6\u0cb8\u0ccd\u0caa\u0cc6\u0c95\u0ccd\u0c9f\u0ccd \u0cb8\u0cbf\u0c97\u0cb2\u0ccd\u0cb2 \u0c85\u0c82\u0ca4 [that you won't get a job and respect,]\nCharacter A says: \u0ca8\u0cbf\u0ca8\u0c97\u0cc2 \u0c97\u0cca\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6 \u0c85\u0cb2\u0ccd\u0cb5\u0cbe [you also know that, right?]\nCharacter B says: \u0cb9\u0ccc\u0ca6\u0cc1 [Yes.]\nCharacter A says: \u0c85\u0ca6\u0c95\u0ccd\u0c95\u0cbe\u0c97\u0cbf \u0ca8\u0cbe\u0ca8\u0cc1 SpeakX \u0c85\u0cb2\u0ccd\u0cb2\u0cbf [That's why I, on SpeakX,]\nCharacter A says: AI \u0c9f\u0cc0\u0c9a\u0cb0\u0ccd \u0c9c\u0cca\u0ca4\u0cc6 [with the AI teacher,]\nCharacter A says: \u0ca6\u0cbf\u0ca8\u0c95\u0ccd\u0c95\u0cc6 10 \u0c9f\u0cc1 15 \u0cae\u0cbf\u0ca8\u0cbf\u0c9f\u0ccd\u0cb8\u0ccd \u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0ccd\u0ca4\u0cbe \u0c87\u0ca6\u0cc0\u0ca8\u0cbf [am practicing for 10 to 15 minutes a day.]\nCharacter A says: \u0c88\u0c97 \u0c95\u0cc7\u0cb5\u0cb2 10 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 [Now it's been only 10 days.]\nCharacter A says: \u0ca8\u0ca8\u0ccd\u0ca8 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c87\u0c82\u0caa\u0ccd\u0cb0\u0cc2\u0cb5\u0ccd \u0c86\u0c97\u0cbf\u0ca6\u0cc6 [My English has improved a lot.]\nCharacter A says: \u0c88\u0c97 \u0cad\u0caf \u0c87\u0cb2\u0ccd\u0cb2 [Now there is no fear.]\nCharacter A says: \u0c95\u0cbe\u0ca8\u0ccd\u0cab\u0cbf\u0ca1\u0cc6\u0c82\u0c9f\u0ccd \u0c86\u0c97\u0cbf \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0ccb\u0c95\u0cc6 \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6 [I can speak English confidently.]\nCharacter A says: \u0c87\u0ca6\u0cc1 \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c85\u0cab\u0ccb\u0cb0\u0ccd\u0ca1\u0cac\u0cb2\u0ccd \u0c87\u0ca6\u0cc6 [This is very affordable.]\nCharacter A says: \u0ca6\u0cbf\u0ca8\u0c95\u0ccd\u0c95\u0cc6 \u0c95\u0cc7\u0cb5\u0cb2 4 \u0cb0\u0cc2\u0caa\u0cbe\u0caf\u0cbf \u0cae\u0cbe\u0ca4\u0ccd\u0cb0 [Only 4 rupees per day.]\nCharacter A says: \u0ca8\u0cae\u0c97\u0cc6 7 \u0ca6\u0cbf\u0ca8 \u0c9f\u0ccd\u0cb0\u0caf\u0cb2\u0ccd \u0c95\u0cc2\u0ca1 \u0cb8\u0cbf\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6 [We also get a 7-day trial.]\nCharacter A says: \u0c95\u0cbe\u0ca8\u0ccd\u0cab\u0cbf\u0ca1\u0cc6\u0c82\u0c9f\u0ccd \u0c86\u0c97\u0cbf \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1 [You can speak English confidently.]",
+        "on_screen_text": "\u0c87\u0ca6\u0cca\u0c82\u0ca6\u0cc1 \u0c86\u0caa\u0ccd (This is an app.)\n\u0c87\u0cb2\u0ccd\u0cb2\u0cbf AI \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c9f\u0cc0\u0c9a\u0cb0\u0ccd \u0c9c\u0cca\u0ca4\u0cc6 \u0ca8\u0cc0\u0cb5\u0cc1 \u0ca1\u0cc8\u0cb2\u0cbf (Here, with the AI English teacher, you can daily)\n\u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1 (practice.)\n\u0c87\u0cb5\u0ca4\u0ccd\u0ca4\u0cbf\u0ca8 \u0c95\u0cbe\u0cb2\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf (In today's times,)\n\u0ca8\u0cae\u0c97\u0cc6 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c87\u0cb2\u0ccd\u0cb2 \u0c85\u0c82\u0ca6\u0ccd\u0cb0\u0cc6 (if we don't know English,)\n\u0ca8\u0cae\u0ccd\u0cae \u0c95\u0cc6\u0cb2\u0cb8 \u0c95\u0cc2\u0ca1 \u0cb8\u0cbf\u0c97\u0cb2\u0ccd\u0cb2 (we won't even get a job,)\n\u0cb0\u0cc6\u0cb8\u0ccd\u0caa\u0cc6\u0c95\u0ccd\u0c9f\u0ccd \u0c95\u0cc2\u0ca1 \u0cb8\u0cbf\u0c97\u0cb2\u0ccd\u0cb2 (nor will we get respect.)\n\u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c87\u0cb2\u0ccd\u0cb2 \u0c85\u0c82\u0ca6\u0ccd\u0cb0\u0cc6 (If there is no English,)\n\u0c9c\u0cbe\u0cac\u0ccd \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0cb0\u0cc6\u0cb8\u0ccd\u0caa\u0cc6\u0c95\u0ccd\u0c9f\u0ccd \u0cb8\u0cbf\u0c97\u0cb2\u0ccd\u0cb2 \u0c85\u0c82\u0ca4 (that you won't get a job and respect,)\n\u0ca8\u0cbf\u0ca8\u0c97\u0cc2 \u0c97\u0cca\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6 \u0c85\u0cb2\u0ccd\u0cb5\u0cbe (you also know that, right?)\n\u0cb9\u0ccc\u0ca6\u0cc1 (Yes.)\n\u0c85\u0ca6\u0c95\u0ccd\u0c95\u0cbe\u0c97\u0cbf \u0ca8\u0cbe\u0ca8\u0cc1 SpeakX \u0c85\u0cb2\u0ccd\u0cb2\u0cbf (That's why I, on SpeakX,)\nAI \u0c9f\u0cc0\u0c9a\u0cb0\u0ccd \u0c9c\u0cca\u0ca4\u0cc6 (with the AI teacher,)\n\u0ca6\u0cbf\u0ca8\u0c95\u0ccd\u0c95\u0cc6 10 \u0c9f\u0cc1 15 \u0cae\u0cbf\u0ca8\u0cbf\u0c9f\u0ccd\u0cb8\u0ccd \u0caa\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0ccd\u0ca4\u0cbe \u0c87\u0ca6\u0cc0\u0ca8\u0cbf (am practicing for 10 to 15 minutes a day.)\n\u0c88\u0c97 \u0c95\u0cc7\u0cb5\u0cb2 10 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 (Now it's been only 10 days.)\n\u0ca8\u0ca8\u0ccd\u0ca8 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c87\u0c82\u0caa\u0ccd\u0cb0\u0cc2\u0cb5\u0ccd \u0c86\u0c97\u0cbf\u0ca6\u0cc6 (My English has improved a lot.)\n\u0c88\u0c97 \u0cad\u0caf \u0c87\u0cb2\u0ccd\u0cb2 (Now there is no fear.)\n\u0c95\u0cbe\u0ca8\u0ccd\u0cab\u0cbf\u0ca1\u0cc6\u0c82\u0c9f\u0ccd \u0c86\u0c97\u0cbf \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0ccb\u0c95\u0cc6 \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6 (I can speak English confidently.)\n\u0c87\u0ca6\u0cc1 \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c85\u0cab\u0ccb\u0cb0\u0ccd\u0ca1\u0cac\u0cb2\u0ccd \u0c87\u0ca6\u0cc6 (This is very affordable.)\n\u0ca6\u0cbf\u0ca8\u0c95\u0ccd\u0c95\u0cc6 \u0c95\u0cc7\u0cb5\u0cb2 4 \u0cb0\u0cc2\u0caa\u0cbe\u0caf\u0cbf \u0cae\u0cbe\u0ca4\u0ccd\u0cb0 (Only 4 rupees per day.)\n\u0ca8\u0cae\u0c97\u0cc6 7 \u0ca6\u0cbf\u0ca8 \u0c9f\u0ccd\u0cb0\u0caf\u0cb2\u0ccd \u0c95\u0cc2\u0ca1 \u0cb8\u0cbf\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6 (We also get a 7-day trial.)\n\u0c95\u0cbe\u0ca8\u0ccd\u0cab\u0cbf\u0ca1\u0cc6\u0c82\u0c9f\u0ccd \u0c86\u0c97\u0cbf \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1 (You can speak English confidently.)"
+      },
+      {
+        "n": 6,
+        "start_s": 47.0,
+        "end_s": 51.5,
+        "screenshot_at_s": 49.0,
+        "scene_label": "Expensive concern",
+        "setting": "Outdoor, near a building with a metal roof, trees in background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B stands outdoors, looking slightly to the left. She speaks with a slightly concerned expression, gesturing gently with her hands. The background shows trees and a building. The lighting is bright natural daylight.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A medium shot of a woman standing outdoors, expressing a concern about the cost. Text overlays appear at the bottom of the screen.",
+        "audio_transcript": "Character B says: \u0ca8\u0ca8\u0c97\u0cc2 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c95\u0cb2\u0cbf\u0cac\u0cc7\u0c95\u0cc1 [I also want to learn English.]\nCharacter B says: \u0c86\u0ca6\u0ccd\u0cb0\u0cc6 \u0c88 \u0ca4\u0cb0 \u0c95\u0ccb\u0cb0\u0ccd\u0cb8\u0cb8\u0ccd [But these kinds of courses]\nCharacter B says: \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c8e\u0c95\u0ccd\u0cb8\u0ccd\u0caa\u0cc6\u0ca8\u0ccd\u0cb8\u0cbf\u0cb5\u0ccd \u0c85\u0ca8\u0ccd\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6 \u0c85\u0cb2\u0ccd\u0cb5\u0cbe [seem very expensive, right?]",
+        "on_screen_text": "\u0ca8\u0ca8\u0c97\u0cc2 \u0c87\u0c82\u0c97\u0ccd\u0cb2\u0cbf\u0cb7\u0ccd \u0c95\u0cb2\u0cbf\u0cac\u0cc7\u0c95\u0cc1 (I also want to learn English.)\n\u0c86\u0ca6\u0ccd\u0cb0\u0cc6 \u0c88 \u0ca4\u0cb0 \u0c95\u0ccb\u0cb0\u0ccd\u0cb8\u0cb8\u0ccd (But these kinds of courses)\n\u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c8e\u0c95\u0ccd\u0cb8\u0ccd\u0caa\u0cc6\u0ca8\u0ccd\u0cb8\u0cbf\u0cb5\u0ccd \u0c85\u0ca8\u0ccd\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6 \u0c85\u0cb2\u0ccd\u0cb5\u0cbe (seem very expensive, right?)"
+      },
+      {
+        "n": 7,
+        "start_s": 51.5,
+        "end_s": 53.0,
+        "screenshot_at_s": 52.0,
+        "scene_label": "Trial mention",
+        "setting": "Outdoor, under a metal roof, trees in background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands outdoors under the metal roof, smiling and speaking. He looks off-camera to the right. The background consists of green foliage. The lighting is natural daylight.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A medium close-up of a man standing outdoors, reassuring the woman. A text overlay appears at the bottom of the screen.",
+        "audio_transcript": "Character A says: 7 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3 \u0c9f\u0ccd\u0cb0\u0caf\u0cb2\u0ccd \u0cb8\u0cbf\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6 [You get a 7-day trial.]",
+        "on_screen_text": "7 \u0ca6\u0cbf\u0ca8\u0c97\u0cb3 \u0c9f\u0ccd\u0cb0\u0caf\u0cb2\u0ccd \u0cb8\u0cbf\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cc6 (You get a 7-day trial.)"
+      },
+      {
+        "n": 8,
+        "start_s": 53.0,
+        "end_s": 58.0,
+        "screenshot_at_s": 55.0,
+        "scene_label": "Call to action",
+        "setting": "Outdoor, near a building with a metal roof, trees in background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B stands outdoors, looking pleased and nodding. She speaks enthusiastically, looking slightly to the left. The background shows trees and a building. The lighting is bright natural daylight.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A medium shot of a woman standing outdoors, agreeing to download the app. Text overlays appear at the bottom of the screen.",
+        "audio_transcript": "Character B says: \u0c86\u0cb9\u0cbe [Aha.]\nCharacter B says: \u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c9a\u0cc6\u0ca8\u0ccd\u0ca8\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 [It's very good.]\nCharacter B says: \u0ca8\u0cbe\u0ca8\u0cc1 \u0c88\u0c97\u0cb2\u0cc7 SpeakX \u0c86\u0caa\u0ccd \u0ca8 [I will right now, the SpeakX app,]\nCharacter B says: \u0ca1\u0ccc\u0ca8\u0ccd\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf [download.]",
+        "on_screen_text": "\u0c86\u0cb9\u0cbe (Aha.)\n\u0ca4\u0cc1\u0c82\u0cac\u0cbe \u0c9a\u0cc6\u0ca8\u0ccd\u0ca8\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 (It's very good.)\n\u0ca8\u0cbe\u0ca8\u0cc1 \u0c88\u0c97\u0cb2\u0cc7 SpeakX \u0c86\u0caa\u0ccd \u0ca8 (I will right now, the SpeakX app,)\n\u0ca1\u0ccc\u0ca8\u0ccd\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0ccd\u0ca4\u0cc0\u0ca8\u0cbf (download.)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888788.1220417
+}

@@ -1,0 +1,82 @@
+{
+  "competitor_id": "919639600763237",
+  "parsed": {
+    "duration_s": 51.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines a human-recorded video of a woman with an AI-generated 3D robot avatar. The robot exhibits slightly unnatural lip-sync and static, repetitive micro-movements typical of AI avatars.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "White, humanoid robot with a smooth, metallic surface, blue eyes, and a glowing blue circular core on its chest. Visible mechanical joints at the neck and torso.",
+        "wardrobe": "None, metallic robot body.",
+        "demeanor": "Helpful, attentive, and slightly robotic."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "Young adult woman with fair complexion, blonde hair with bangs, and numerous dark tattoos on her arms and hands.",
+        "wardrobe": "White short-sleeved t-shirt, clear-rimmed glasses, and multiple layered silver chain necklaces.",
+        "demeanor": "Casual, slightly hesitant, and engaged in the conversation."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 47.5,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Split-screen conversation",
+        "setting": "Abstract dark background on the left; softly lit room with a bookshelf on the right.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A white, humanoid robot with blue eyes and a glowing blue circular core on its chest faces forward against a dark background with subtle concentric circular lines. The robot has a smooth, metallic surface with visible joints and mechanical details at the neck and torso. The lighting highlights the contours of its face and body.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A young woman with blonde hair and bangs sits at a table, holding a lighter to a white candle in a glass jar. She wears a white t-shirt, clear-rimmed glasses, and multiple silver chain necklaces. Her arms and hands have numerous dark tattoos. Behind her is a softly lit room with a bookshelf filled with books. The lighting is warm and natural.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout showing an AI robot on the left and a human woman on the right. The robot acts as a tutor, while the woman is the learner. Text captions appear in the center of the screen, translating the spoken dialogue. The woman interacts with the candle while conversing.",
+        "audio_transcript": "Character A says: \u0e17\u0e33\u0e2d\u0e30\u0e44\u0e23\u0e2d\u0e22\u0e39\u0e48? [What are you doing?]\nCharacter B says: I burn candle.\nCharacter A says: \u0e15\u0e49\u0e2d\u0e07\u0e1e\u0e39\u0e14\u0e27\u0e48\u0e32 \"I'm lighting a candle\" \u0e2a\u0e34 [You should say \"I'm lighting a candle\".]\nCharacter A says: \u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e40\u0e1b\u0e47\u0e19\u0e22\u0e31\u0e07\u0e44\u0e07\u0e1a\u0e49\u0e32\u0e07? [How is your English?]\nCharacter B says: \u0e40\u0e2d\u0e48\u0e2d... \u0e01\u0e47\u0e07\u0e31\u0e49\u0e19\u0e46 [Uh... so-so.]\nCharacter A says: \u0e44\u0e21\u0e48\u0e15\u0e49\u0e2d\u0e07\u0e2b\u0e48\u0e27\u0e07 [Don't worry.]\nCharacter A says: \u0e41\u0e04\u0e48\u0e40\u0e14\u0e37\u0e2d\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27\u0e01\u0e47\u0e1e\u0e39\u0e14\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e44\u0e14\u0e49\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e40\u0e08\u0e49\u0e32\u0e02\u0e2d\u0e07\u0e20\u0e32\u0e29\u0e32\u0e40\u0e25\u0e22 [In just one month, you can speak English like a native speaker.]\nCharacter A says: \u0e14\u0e49\u0e27\u0e22\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c AI [With an AI tutor.]\nCharacter B says: AI \u0e40\u0e2b\u0e23\u0e2d? \u0e40\u0e2d\u0e48\u0e2d... \u0e41\u0e15\u0e48\u0e44\u0e21\u0e48\u0e21\u0e35\u0e15\u0e31\u0e07\u0e04\u0e4c\u0e19\u0e30 [AI? Uh... but I don't have money.]\nCharacter A says: \u0e2b\u0e32? [Huh?]\nCharacter A says: \u0e44\u0e21\u0e48\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e40\u0e07\u0e34\u0e19\u0e40\u0e25\u0e22 Learna \u0e1d\u0e36\u0e01\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e1f\u0e23\u0e35 [No need to spend money at all. Learna practices English for free.]\nCharacter A says: \u0e44\u0e21\u0e48\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e41\u0e2d\u0e1b\u0e2d\u0e37\u0e48\u0e19\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e2d\u0e23\u0e4c\u0e2a\u0e41\u0e1e\u0e07\u0e46 [Unlike other apps or expensive courses.]\nCharacter B says: \u0e08\u0e23\u0e34\u0e07\u0e14\u0e34? [Really?]\nCharacter A says: \u0e08\u0e23\u0e34\u0e07\u0e2a\u0e34 \u0e44\u0e21\u0e48\u0e21\u0e35\u0e01\u0e25\u0e25\u0e27\u0e07\u0e2d\u0e30\u0e44\u0e23 [Really, no tricks.]\nCharacter A says: \u0e41\u0e04\u0e48\u0e1d\u0e36\u0e01\u0e2a\u0e19\u0e17\u0e19\u0e32\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e08\u0e23\u0e34\u0e07\u0e46 [Just practice real English conversation.]\nCharacter A says: \u0e01\u0e31\u0e1a\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c AI \u0e02\u0e2d\u0e07\u0e04\u0e38\u0e13 [With your AI tutor.]\nCharacter B says: \u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e21\u0e35\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c\u0e15\u0e31\u0e27\u0e08\u0e23\u0e34\u0e07\u0e40\u0e25\u0e22\u0e40\u0e2b\u0e23\u0e2d? [Like having a real tutor?]\nCharacter A says: \u0e43\u0e0a\u0e48\u0e40\u0e25\u0e22 \u0e41\u0e01\u0e49\u0e41\u0e01\u0e23\u0e21\u0e21\u0e48\u0e32 \u0e41\u0e01\u0e49\u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e40\u0e2a\u0e35\u0e22\u0e07 [Exactly. Corrects grammar, corrects pronunciation.]\nCharacter A says: \u0e41\u0e25\u0e49\u0e27\u0e01\u0e47\u0e0a\u0e48\u0e27\u0e22\u0e43\u0e2b\u0e49\u0e1e\u0e39\u0e14\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e44\u0e14\u0e49\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e21\u0e31\u0e48\u0e19\u0e43\u0e08 [And helps you speak English confidently.]\nCharacter B says: \u0e42\u0e2d\u0e40\u0e04... \u0e07\u0e31\u0e49\u0e19\u0e42\u0e2b\u0e25\u0e14 Learna \u0e40\u0e14\u0e35\u0e4b\u0e22\u0e27\u0e19\u0e35\u0e49\u0e40\u0e25\u0e22\u0e25\u0e30\u0e01\u0e31\u0e19 [Okay... then I'll download Learna right now.]\nCharacter A says: \u0e15\u0e31\u0e14\u0e2a\u0e34\u0e19\u0e43\u0e08\u0e14\u0e35\u0e21\u0e32\u0e01 [Great decision.]\nCharacter A says: \u0e21\u0e32\u0e1e\u0e39\u0e14\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e14\u0e49\u0e27\u0e22\u0e01\u0e31\u0e19\u0e40\u0e16\u0e2d\u0e30 [Let's speak English together.]",
+        "on_screen_text": "\u0e17\u0e33\u0e2d\u0e30\u0e44\u0e23\u0e2d\u0e22\u0e39\u0e48? (What are you doing?)\nI burn candle.\n\u0e15\u0e49\u0e2d\u0e07\u0e1e\u0e39\u0e14\u0e27\u0e48\u0e32 \"I'm lighting a candle\" \u0e2a\u0e34 (You should say \"I'm lighting a candle\".)\n\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e40\u0e1b\u0e47\u0e19\u0e22\u0e31\u0e07\u0e44\u0e07\u0e1a\u0e49\u0e32\u0e07? (How is your English?)\n\u0e40\u0e2d\u0e48\u0e2d... \u0e01\u0e47\u0e07\u0e31\u0e49\u0e19\u0e46 (Uh... so-so.)\n\u0e44\u0e21\u0e48\u0e15\u0e49\u0e2d\u0e07\u0e2b\u0e48\u0e27\u0e07 (Don't worry.)\n\u0e41\u0e04\u0e48\u0e40\u0e14\u0e37\u0e2d\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27\u0e01\u0e47\u0e1e\u0e39\u0e14\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e44\u0e14\u0e49\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e40\u0e08\u0e49\u0e32\u0e02\u0e2d\u0e07\u0e20\u0e32\u0e29\u0e32\u0e40\u0e25\u0e22 (In just one month, you can speak English like a native speaker.)\n\u0e14\u0e49\u0e27\u0e22\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c AI (With an AI tutor.)\nAI \u0e40\u0e2b\u0e23\u0e2d? \u0e40\u0e2d\u0e48\u0e2d... \u0e41\u0e15\u0e48\u0e44\u0e21\u0e48\u0e21\u0e35\u0e15\u0e31\u0e07\u0e04\u0e4c\u0e19\u0e30 (AI? Uh... but I don't have money.)\n\u0e2b\u0e32? (Huh?)\n\u0e44\u0e21\u0e48\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e40\u0e07\u0e34\u0e19\u0e40\u0e25\u0e22 Learna \u0e1d\u0e36\u0e01\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e1f\u0e23\u0e35 (No need to spend money at all. Learna practices English for free.)\n\u0e44\u0e21\u0e48\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e41\u0e2d\u0e1b\u0e2d\u0e37\u0e48\u0e19\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e2d\u0e23\u0e4c\u0e2a\u0e41\u0e1e\u0e07\u0e46 (Unlike other apps or expensive courses.)\n\u0e08\u0e23\u0e34\u0e07\u0e14\u0e34? (Really?)\n\u0e08\u0e23\u0e34\u0e07\u0e2a\u0e34 \u0e44\u0e21\u0e48\u0e21\u0e35\u0e01\u0e25\u0e25\u0e27\u0e07\u0e2d\u0e30\u0e44\u0e23 (Really, no tricks.)\n\u0e41\u0e04\u0e48\u0e1d\u0e36\u0e01\u0e2a\u0e19\u0e17\u0e19\u0e32\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e08\u0e23\u0e34\u0e07\u0e46 (Just practice real English conversation.)\n\u0e01\u0e31\u0e1a\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c AI \u0e02\u0e2d\u0e07\u0e04\u0e38\u0e13 (With your AI tutor.)\n\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e21\u0e35\u0e15\u0e34\u0e27\u0e40\u0e15\u0e2d\u0e23\u0e4c\u0e15\u0e31\u0e27\u0e08\u0e23\u0e34\u0e07\u0e40\u0e25\u0e22\u0e40\u0e2b\u0e23\u0e2d? (Like having a real tutor?)\n\u0e43\u0e0a\u0e48\u0e40\u0e25\u0e22 \u0e41\u0e01\u0e49\u0e41\u0e01\u0e23\u0e21\u0e21\u0e48\u0e32 \u0e41\u0e01\u0e49\u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e40\u0e2a\u0e35\u0e22\u0e07 (Exactly. Corrects grammar, corrects pronunciation.)\n\u0e41\u0e25\u0e49\u0e27\u0e01\u0e47\u0e0a\u0e48\u0e27\u0e22\u0e43\u0e2b\u0e49\u0e1e\u0e39\u0e14\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e44\u0e14\u0e49\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e21\u0e31\u0e48\u0e19\u0e43\u0e08 (And helps you speak English confidently.)\n\u0e42\u0e2d\u0e40\u0e04... \u0e07\u0e31\u0e49\u0e19\u0e42\u0e2b\u0e25\u0e14 Learna \u0e40\u0e14\u0e35\u0e4b\u0e22\u0e27\u0e19\u0e35\u0e49\u0e40\u0e25\u0e22\u0e25\u0e30\u0e01\u0e31\u0e19 (Okay... then I'll download Learna right now.)\n\u0e15\u0e31\u0e14\u0e2a\u0e34\u0e19\u0e43\u0e08\u0e14\u0e35\u0e21\u0e32\u0e01 (Great decision.)\n\u0e21\u0e32\u0e1e\u0e39\u0e14\u0e20\u0e32\u0e29\u0e32\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e14\u0e49\u0e27\u0e22\u0e01\u0e31\u0e19\u0e40\u0e16\u0e2d\u0e30 (Let's speak English together.)"
+      },
+      {
+        "n": 2,
+        "start_s": 47.5,
+        "end_s": 51.0,
+        "screenshot_at_s": 49.0,
+        "scene_label": "End card",
+        "setting": "Solid dark blue background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark blue background with no other elements.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An end-card screen with a dark blue background. The app icon featuring the AI robot is prominently displayed in the center. Text above the icon encourages downloading, and the app name 'Learna' is written below it. App store badges are positioned at the bottom.",
+        "audio_transcript": "Unknown speaker says: \u0e42\u0e2b\u0e25\u0e14\u0e40\u0e25\u0e22! \u0e40\u0e23\u0e34\u0e48\u0e21\u0e1d\u0e36\u0e01\u0e44\u0e14\u0e49\u0e40\u0e25\u0e22\u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49 [Download now! Start practicing right now.]",
+        "on_screen_text": "\u0e42\u0e2b\u0e25\u0e14\u0e40\u0e25\u0e22! \u0e40\u0e23\u0e34\u0e48\u0e21\u0e1d\u0e36\u0e01\u0e44\u0e14\u0e49\u0e40\u0e25\u0e22\u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49 (Download now! Start practicing right now.)\nLearna\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1780125080.989056
+}

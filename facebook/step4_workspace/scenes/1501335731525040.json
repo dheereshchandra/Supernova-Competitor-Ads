@@ -1,0 +1,55 @@
+{
+  "competitor_id": "1501335731525040",
+  "parsed": {
+    "duration_s": 49.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features real human actors with natural movements, expressions, and lighting. There are no AI artifacts like distorted fingers or uncanny facial features.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Immigrant Boyfriend",
+        "appearance": "Young adult male, slim build, light complexion. Short brown hair, mustache.",
+        "wardrobe": "White t-shirt with a small logo on the chest.",
+        "demeanor": "Playful, slightly frustrated but amused."
+      },
+      {
+        "id": "B",
+        "role": "Native Girlfriend",
+        "appearance": "Young adult female, slim build, light complexion. Long straight dark hair.",
+        "wardrobe": "Black spaghetti strap top.",
+        "demeanor": "Supportive, smiling, and laughing."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 49.0,
+        "screenshot_at_s": 24.0,
+        "scene_label": "Pronunciation Practice",
+        "setting": "Indoors, plain white wall background. Two gaming chairs visible.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up, static front-facing.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A and Character B sit closely together indoors. Character A is on the left in a black gaming chair. Character B is on the right in a green gaming chair. They look down towards the center, presumably at a phone. The background is a plain, light-colored wall. Lighting is soft and natural. They take turns speaking, sharing smiles and laughs.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A couple sits together with text labels identifying them. A central inset overlay displays a language learning app interface. The app shows various words and pronunciation scores. The couple takes turns speaking into the app, with the man struggling and the woman demonstrating correct pronunciation.",
+        "audio_transcript": "Character A says: Six\n\nCharacter B says: Sixth\n\nCharacter A says: Jewelry\n\nCharacter B says: Jewelry\n\nCharacter A says: Specific\n\nCharacter B says: Specific\n\nCharacter A says: Thoughtful. N\u00e3o, fodeu. [No, it's messed up.]\n\nCharacter B says: Thoughtful\n\nCharacter A says: The six sick sheep\n\nCharacter B says: The sixth sick sheep",
+        "on_screen_text": "Immigrant Boyfriend\nNative Girlfriend\nAmerican accent app\nPractice My Text\nCoach Elsa\nLet's start! Tap the button below and say the word.\nsixth\njewelry\nspecific\nthoughtful\nThe sixth sick sheep"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779986084.7827806
+}

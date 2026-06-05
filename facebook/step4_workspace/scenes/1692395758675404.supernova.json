@@ -1,0 +1,78 @@
+{
+  "competitor_id": "1692395758675404",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Young woman, English learner",
+        "appearance": "A young adult woman with a slender build and medium complexion. She has long, straight dark hair that reaches her waist, styled with a side part. Her facial features are expressive, with dark eyes and a confident smile.",
+        "wardrobe": "An olive green kurta with a subtle, light-colored block print pattern. The kurta has three-quarter sleeves and side slits, worn over dark trousers.",
+        "demeanor": "Initially confident and assertive, then friendly and enthusiastic when explaining."
+      },
+      {
+        "id": "B",
+        "role": "Young man, friend of A",
+        "appearance": "A young adult man of average build with a medium complexion. He has short, curly dark hair and light stubble. He wears clear-framed glasses, giving him an intellectual look.",
+        "wardrobe": "A black collared shirt with long sleeves, worn untucked, paired with dark blue trousers.",
+        "demeanor": "Observant and initially skeptical, transitioning to surprised and curious."
+      },
+      {
+        "id": "C",
+        "role": "Young man, friend of A",
+        "appearance": "A young adult man of average build with a medium complexion. He has short, curly dark hair and light stubble. His facial features are soft, and he has a friendly expression.",
+        "wardrobe": "A light grey or off-white collared shirt, open at the neck, with short sleeves.",
+        "demeanor": "Observant and initially skeptical, transitioning to surprised and curious."
+      },
+      {
+        "id": "D",
+        "role": "AI English tutor avatar",
+        "appearance": "A young adult woman with a fair complexion and long, wavy dark hair styled over one shoulder. She has a friendly and approachable face with expressive eyes and a warm smile.",
+        "wardrobe": "A bright pink saree with a subtle gold border, accessorized with simple gold earrings.",
+        "demeanor": "Friendly, encouraging, and professional, as if speaking directly to a learner."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Confident English speaker",
+        "supernova_script": "Character A says: अब हँसो? अब मेरी English का मज़ाक उड़ाओगे? [Now laugh? Now you'll make fun of my English?]\nCharacter A says: I've been practicing on this app, and now I can speak better English than you guys.",
+        "scene_summary": "- Hooks the viewer with a relatable scenario of being mocked for poor English.\n- Shows the protagonist's newfound confidence and fluency.\n- Sets up the premise of a transformative app.",
+        "supernova_on_screen_text": "अब हँसो? (Hindi)\nअब मेरी English का मज़ाक उड़ाओगे? (Hindi)\nPracticing on this app, now I can speak better English than you guys. (English)"
+      },
+      {
+        "n": 2,
+        "scene_label": "Friends' surprised reaction",
+        "supernova_script": "Character B says: Seriously?\nCharacter C says: Wow, very fluent English!\nCharacter B says: भाई, कौन सी app है ये? [Brother, which app is this?]",
+        "scene_summary": "- Validates the protagonist's improvement through the friends' surprised reactions.\n- Builds curiosity about the solution.\n- Prompts the reveal of the app.",
+        "supernova_on_screen_text": "Seriously? (English)\nWow, very fluent English! (English)\nभाई, कौन सी app है ये? (Hindi)"
+      },
+      {
+        "n": 3,
+        "scene_label": "Introducing the app",
+        "supernova_script": "Character A says: Supernova app,",
+        "scene_summary": "- Reveals the brand name.\n- Connects the protagonist's success to the product.",
+        "supernova_on_screen_text": "Supernova (Logo)\nSupernova app, (English)"
+      },
+      {
+        "n": 4,
+        "scene_label": "AI tutor demonstration",
+        "supernova_script": "Character A says: ये एक AI English tutor app है, [This is an AI English tutor app,]",
+        "scene_summary": "- Shows the app interface and the AI tutor feature.\n- Explains the core functionality of the app.\n- Reinforces the brand's value proposition.",
+        "supernova_on_screen_text": "Supernova (App UI)\nये एक AI English tutor app है, (Hindi)"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "SpeakX.ai",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "SpeakX",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780634213.645442
+}

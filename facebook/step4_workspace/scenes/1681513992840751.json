@@ -1,0 +1,46 @@
+{
+  "competitor_id": "1681513992840751",
+  "parsed": {
+    "duration_s": 5.0,
+    "production_type": "human-recorded",
+    "production_notes": "This is a standard 2D vector animation created by human animators. There are no generative AI artifacts present.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot presenter",
+        "appearance": "Stylized 2D animated brown bear. It has a round body, small ears, and simple facial features with black eyes and a black nose.",
+        "wardrobe": "A light blue scarf or towel draped around its neck.",
+        "demeanor": "Cheerful and confident."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 5.0,
+        "screenshot_at_s": 2.5,
+        "scene_label": "Bear on the beach",
+        "setting": "Stylized 2D beach with tan sand, blue ocean, and light blue sky.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium shot, centered.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A 2D animated brown bear stands centered on a stylized beach. The background consists of tan sand at the bottom, a blue ocean with wavy white lines in the middle, and a light blue sky above. The bear has its arms crossed and wears a light blue scarf. The bear's mouth moves as it speaks.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene features a 2D animated bear standing on a beach. The Duolingo logo is visible at the top. Text appears above the bear, matching the spoken audio. The bear speaks cheerfully throughout the clip.",
+        "audio_transcript": "Character A says: I've been learning Spanish on Duolingo, for free. [I've been learning Spanish on Duolingo, for free.]\nCharacter A says: \u00a1Me encanta la playa! [I love the beach!]",
+        "on_screen_text": "duolingo\nI've been learning Spanish on Duolingo, for free.\n\u00a1Me encanta la playa!"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779888562.0420527
+}

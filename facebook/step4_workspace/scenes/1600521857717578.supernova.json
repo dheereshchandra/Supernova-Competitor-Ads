@@ -1,0 +1,67 @@
+{
+  "competitor_id": "1600521857717578",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult, fair skin, light brown hair styled in a side braid. Distinctive large gold hoop earrings.",
+        "wardrobe": "Wears a bright blue crewneck sweatshirt in the first half, then switches to a light grey crewneck sweatshirt.",
+        "demeanor": "Expressive, relatable, and friendly."
+      },
+      {
+        "id": "B",
+        "role": "male passenger",
+        "appearance": "Young adult, average build, fair skin, short blonde hair.",
+        "wardrobe": "Dark grey hoodie with black headphones resting around his neck.",
+        "demeanor": "Casual and polite."
+      },
+      {
+        "id": "C",
+        "role": "flight attendant",
+        "appearance": "Adult female, slim build, dark hair pulled back neatly.",
+        "wardrobe": "Navy blue uniform vest worn over a white short-sleeve collared shirt.",
+        "demeanor": "Professional and attentive."
+      },
+      {
+        "id": "D",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female character, fair skin, large expressive eyes, auburn hair pulled back.",
+        "wardrobe": "Dark blue police or border control uniform shirt with a badge, epaulets, and a shoulder microphone.",
+        "demeanor": "Friendly, patient, with slightly exaggerated animated expressions."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Airplane interaction",
+        "supernova_script": "Character B says: Excuse me, could I get some water? And do you have any snacks other than peanuts? [Excuse me, could I get some water? And do you have any snacks other than peanuts?]\nCharacter C says: Sure sir, are cookies okay? [Sure sir, are cookies okay?]\nCharacter B says: Perfect, thank you. [Perfect, thank you.]",
+        "scene_summary": "- Establishes the \"fluent ideal\" standard in a real-world setting.\n- Shows a casual, confident English interaction that subtly intimidates the protagonist.\n- Sets up the core problem: everyday situations requiring spoken English.",
+        "supernova_on_screen_text": "Excuse me, could I get some water?\nAnd do you have any snacks other than peanuts?\nSure sir, are cookies okay?\nPerfect, thank you."
+      },
+      {
+        "n": 2,
+        "scene_label": "Introduction to app",
+        "supernova_script": "Character A says: ये भाई साहब कितनी easily English बोल रहे हैं। [This gentleman is speaking English so easily.]\nCharacter A says: और एक मैं हूँ, जो \"water please\" बोलने से पहले दस बार सोचती हूँ। [And then there's me, who thinks ten times before saying \"water please\".]\nCharacter A says: मुझे अपनी English ठीक करनी ही पड़ेगी। [I really need to fix my English.]\nCharacter A says: मेरी friend ने Supernova app के बारे में बताया था। [My friend told me about the Supernova app.]\nCharacter A says: इसमें आप AI tutor के साथ बात कर सकते हो। Let's try it! [In this, you can talk with an AI tutor. Let's try it!]",
+        "scene_summary": "- Hooks the viewer with a highly relatable insecurity (mental translation and hesitation before speaking).\n- Transitions from the problem to the solution organically.\n- Introduces Supernova as a low-pressure, accessible tool.",
+        "supernova_on_screen_text": "ये भाई साहब कितनी easily English बोल रहे हैं।\nऔर एक मैं हूँ...\nजो \"water please\" बोलने से पहले दस बार सोचती हूँ।\nमुझे अपनी English ठीक करनी ही पड़ेगी।\nमेरी friend ने Supernova app के बारे में बताया था।\nइसमें आप AI tutor के साथ बात कर सकते हो।\nLet's try it!"
+      },
+      {
+        "n": 3,
+        "scene_label": "App interaction",
+        "supernova_script": "Character D says: Hello, where are you flying today? [Hello, where are you flying today?]\nCharacter A says: I fly uh London. [I fly uh London.]\nCharacter D says: Do you mean \"I am flying to London\"? [Do you mean \"I am flying to London\"?]\nCharacter A says: Yes, sorry. I am flying to London. [Yes, sorry. I am flying to London.]\nCharacter D says: Great! Any luggage to check in? [Great! Any luggage to check in?]\nCharacter A says: Um, luggage? [Um, luggage?]\nCharacter D says: Luggage मतलब आपका सामान, जैसे bags या suitcases. [Luggage means your belongings, like bags or suitcases.]\nCharacter A says: Oh, I have one luggage. Sorry, मेरी English इतनी अच्छी नहीं है। [Oh, I have one luggage. Sorry, my English isn't that good.]\nCharacter D says: कोई बात नहीं! You can say, \"My English isn't that good.\" [No worries! You can say, \"My English isn't that good.\"]\nCharacter D says: वैसे, आपने पिछले महीने कितनी बार English में बात की? [By the way, how many times did you speak in English last month?]\nCharacter A says: Um, actually एक बार भी नहीं। [Um, actually not even once.]\nCharacter D says: तो fluency कैसे आएगी? [Then how will fluency come?]\nCharacter A says: मेरे पास practice करने के लिए कोई है ही नहीं। [I don't have anyone to practice with.]\nCharacter D says: Supernova है ना! रोज़ मेरे साथ practice करो, बिना किसी hesitation के। [Supernova is here! Practice with me daily, without any hesitation.]\nCharacter A says: That's amazing. मैं आज से ही रोज़ practice करूँगी! [That's amazing. I will practice daily starting today!]",
+        "scene_summary": "- Demonstrates the core app loop: real-world roleplay, gentle correction, and bilingual Hindi-English support.\n- Highlights the main pain point for Indian learners (lack of a speaking partner).\n- Positions Supernova as a warm, daily practice buddy rather than a magic pill.",
+        "supernova_on_screen_text": "Hello, where are you flying today?\nI fly uh London.\nDo you mean \"I am flying to London\"?\nYes, sorry. I am flying to London.\nGreat! Any luggage to check in?\nUm, luggage?\nLuggage मतलब आपका सामान...\nजैसे bags या suitcases.\nOh, I have one luggage.\nSorry, मेरी English इतनी अच्छी नहीं है।\nकोई बात नहीं!\nYou can say, \"My English isn't that good.\"\nवैसे, आपने पिछले महीने कितनी बार English में बात की?\nUm, actually एक बार भी नहीं।\nतो fluency कैसे आएगी?\nमेरे पास practice करने के लिए कोई है ही नहीं।\nSupernova है ना!\nरोज़ मेरे साथ practice करो...\nबिना किसी hesitation के।\nThat's amazing.\nमैं आज से ही रोज़ practice करूँगी!\nSupernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Loora",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889200.0827265
+}

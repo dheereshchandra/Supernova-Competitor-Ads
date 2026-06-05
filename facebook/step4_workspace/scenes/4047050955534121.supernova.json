@@ -1,0 +1,75 @@
+{
+  "competitor_id": "4047050955534121",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Mascot",
+        "appearance": "A stylized, bright green owl with large eyes, a yellow beak, and small wings.",
+        "wardrobe": "None, though occasionally wears a black graduation cap.",
+        "demeanor": "Cheerful and energetic."
+      },
+      {
+        "id": "B",
+        "role": "Animated character",
+        "appearance": "A woman with dark skin and black hair styled in a high bun.",
+        "wardrobe": "Yellow headband, orange short-sleeve top, blue jeans, and red shoes.",
+        "demeanor": "Active and determined."
+      },
+      {
+        "id": "C",
+        "role": "Animated character",
+        "appearance": "A man with light skin and blonde hair.",
+        "wardrobe": "Red headband, red long-sleeve jacket, red shorts, white socks, and red shoes.",
+        "demeanor": "Confident and strong."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Intro and B2 English",
+        "supernova_script": "Unknown speaker says: क्या आप भी confident English बोलना चाहते हैं? [Do you also want to speak confident English?]\nUnknown speaker says: Supernova के साथ अपनी English improve करें। [Improve your English with Supernova.]",
+        "scene_summary": "- Hooks the viewer by addressing a common pain point (wanting to speak confident English).\n- Introduces Supernova as the clear solution.\n- Establishes a warm, encouraging tone.",
+        "supernova_on_screen_text": "want to speak confident english?\nimprove your english\nwith supernova\nWhat would you like to learn?\nSpoken English\nInterview Prep\nOffice English\nDaily Conversations\nCONTINUE\nSpeak the sentence\nWay to go! Learning to speak English is quite an accomplishment!\nCHECK\nGreat job!\nCONTINUE"
+      },
+      {
+        "n": 2,
+        "scene_label": "Useful Phrases",
+        "supernova_script": "Unknown speaker says: हमारे daily lessons आपको real-life situations के लिए तैयार करते हैं। [Our daily lessons prepare you for real-life situations.]\nUnknown speaker says: जैसे, 'Can you please repeat that?' [Like, 'Can you please repeat that?']",
+        "scene_summary": "- Highlights practical, real-world application of the app.\n- Shows that the learning is relevant to daily life, not just textbook grammar.\n- Builds confidence through relatable examples.",
+        "supernova_on_screen_text": "useful phrases for real life\nSpeak the sentence\nCan you please repeat that?\nCONTINUE\nCHECK\nCorrect!"
+      },
+      {
+        "n": 3,
+        "scene_label": "Career Goals",
+        "supernova_script": "Unknown speaker says: ताकि आप अपने career goals आसानी से achieve कर सकें। [So that you can easily achieve your career goals.]\nUnknown speaker says: यह आसान है, मज़ेदार है, और बहुत effective है। [It's easy, fun, and very effective.]",
+        "scene_summary": "- Connects English learning directly to career advancement, a major motivator for the target audience.\n- Replaces the 'free' claim with 'easy' to align with Supernova's paid model.\n- Reinforces the app's engaging and effective methodology.",
+        "supernova_on_screen_text": "reach your career goals\nComplete the sentence\nI am confident that my skills will add value to your company.\nCONTINUE\nGreat!\nit's easy\nit's fun\nit's effective"
+      },
+      {
+        "n": 4,
+        "scene_label": "Outro",
+        "supernova_script": "Unknown speaker says: आज ही Supernova app download करें और बेझिझक English बोलें! [Download the Supernova app today and speak English without hesitation!]",
+        "scene_summary": "- Delivers a strong, clear Call to Action.\n- Focuses on the emotional payoff: speaking without hesitation.\n- Removes aggressive 'world's #1' hype for a more grounded, trusted tone.",
+        "supernova_on_screen_text": "Download\nSupernova\nDownload India's favorite spoken English app.\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Duolingo",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "free",
+        "supernova_swap": "easy"
+      },
+      {
+        "competitor_brand": "world's #1",
+        "supernova_swap": "India's favorite"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779889337.9670298
+}

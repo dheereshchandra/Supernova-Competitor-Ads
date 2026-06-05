@@ -1,0 +1,49 @@
+# ── supernova-competitor-ads — the rulebook ────────────────────────────────
+# Git holds the small, precious text (scripts, master CSVs with every R2 link,
+# inputs, logs, analysis). Heavy media lives in R2 and is pulled on demand with
+# tools/rehydrate.py. This file controls only what is SHARED — it never deletes
+# or blocks your local files.
+
+# Secrets — never commit
+**/.env
+**/.env.*
+!**/.env.template
+
+# Heavy media — lives in R2, pulled on demand. Never commit.
+**/videos/
+**/images/
+
+# Step 4 working files: exclude the HEAVY stuff, but KEEP every link record
+# (the *.json sidecars, especially r2_urls.json) so all generated links stay in git.
+**/step4_workspace/.gemini_uploads/
+**/step4_workspace/batches/
+**/step4_workspace/frames/
+**/step4_workspace/logs/
+**/step4_workspace/run_logs/
+**/step4_workspace/docs/
+**/step4_workspace/images/**/*.jpg
+**/step4_workspace/images/**/*.jpeg
+**/step4_workspace/images/**/*.png
+# (everything else under step4_workspace — i.e. the .json link + analysis sidecars,
+#  incl. scenes/*.json and images/<id>/r2_urls.json — is KEPT)
+
+# Built Word docs and spreadsheet lock files — the docs live in R2 (links in master).
+**/*.docx
+**/~$*
+**/.~lock.*
+
+# Old manual backups — git history replaces these
+**/*.bak
+**/*.bak.*
+**/*.pre-*
+**/*.savedcopy
+**/*.WRONG-SCHEMA-DO-NOT-RUN.csv
+
+# Python / OS cruft
+**/__pycache__/
+**/*.pyc
+**/.DS_Store
+
+# Local scratch
+**/.part
+**/*.part

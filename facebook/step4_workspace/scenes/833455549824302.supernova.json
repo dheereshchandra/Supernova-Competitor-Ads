@@ -1,0 +1,39 @@
+{
+  "competitor_id": "833455549824302",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Young adult male, slim build, light complexion, short dark hair. Clean-shaven.",
+        "wardrobe": "Plain black short-sleeve t-shirt.",
+        "demeanor": "Focused while working, then enthusiastic when addressing the camera."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Typing vs Flowing Comparison",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Establishes the core problem: struggling to type or translate English vs speaking it effortlessly.\n- Uses the split-screen visual to contrast hesitation with confidence.\n- Sets up the payoff for using Supernova's AI practice.",
+        "supernova_on_screen_text": "Typing English vs Speaking Fluently\nHey Jack! I really enjoyed our lunch meet the other day. Do you think we can setup another one for Thursday or Friday?\nSupernova AI Practice\nConfident ✅"
+      },
+      {
+        "n": 2,
+        "scene_label": "Call to Action",
+        "supernova_script": "Character A says: Supernova के साथ बिना डरे English बोलना सीखो। [Learn to speak English without fear with Supernova.]",
+        "scene_summary": "- Delivers a direct, encouraging call to action.\n- Positions Supernova as the tool to overcome speaking fear.\n- Ends on a warm, supportive note.",
+        "supernova_on_screen_text": "Start speaking with Supernova"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Wispr Flow",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1779982210.776251
+}

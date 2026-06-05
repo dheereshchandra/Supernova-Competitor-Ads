@@ -1,0 +1,103 @@
+{
+  "competitor_id": "1484981409690710",
+  "parsed": {
+    "duration_s": 63.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses a split-screen format combining a human actor with an AI-generated robot avatar. The robot exhibits typical AI traits like slightly unnatural lip-syncing and a static background. The voices are likely AI-generated or heavily processed.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot. Smooth white synthetic face with grey eyes. Metallic body with exposed joints and wiring at the neck and shoulders.",
+        "wardrobe": "No clothing, exposed white and metallic robotic exterior.",
+        "demeanor": "Calm, instructional, and patient."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young adult male, slim build, brown complexion. Short dark hair and a light beard/mustache.",
+        "wardrobe": "Light blue t-shirt with thin white horizontal stripes.",
+        "demeanor": "Curious, slightly hesitant, and eager to learn."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 55.5,
+        "screenshot_at_s": 25.0,
+        "scene_label": "Grammar Correction",
+        "setting": "Top: Bright cafe with plants. Bottom: Cozy living room.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A humanoid female robot sits in a brightly lit cafe. The robot has a smooth, white, synthetic face with grey eyes and a metallic body with exposed joints and wiring at the neck and shoulders. She is framed in a medium close-up, looking directly forward. Her right hand is raised slightly, resting near her chest. Behind her, a large window reveals green foliage outside, while the interior features warm pendant lights and a textured wall.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young man is seated indoors, framed in a medium close-up facing the camera. He has a slim build, brown complexion, short dark hair, and a light beard. He wears a light blue t-shirt with thin white horizontal stripes. The background is a softly blurred living room, showing a portion of a sofa with patterned cushions and warm, natural lighting illuminating his face from the right.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with a robot avatar on top and a human male on the bottom, engaged in a conversation. Dynamic text captions appear in the center of the screen, along with red cross and green checkmark icons to indicate incorrect and correct English usage.",
+        "audio_transcript": "Character A says: \u0915\u093e\u0932 \u0915\u0941\u0920\u0947 \u0917\u0947\u0932\u093e \u0939\u094b\u0924\u093e\u0938? [Where did you go yesterday?]\n\nCharacter B says: I went to \u092e\u093e\u0932 yesterday. [I went to maal yesterday.]\n\nCharacter A says: \u092e\u093e\u0932? \u092a\u094d\u0930\u0923\u093e\u0909\u0928\u094d\u0938\u093f\u090f\u0936\u0928 \u0925\u094b\u0921\u0902 \u091a\u0941\u0915\u0932\u0902. It is Mall. I went to the mall yesterday. [Maal? The pronunciation is a bit wrong. It is Mall. I went to the mall yesterday.]\n\nCharacter A says: \u0915\u093e\u0932 \u0915\u093e\u092f \u0916\u093e\u0932\u094d\u0932\u0938? [What did you eat yesterday?]\n\nCharacter B says: I eat \u092a\u0940\u091c\u093e \u0916\u093e\u0932\u094d\u0932\u093e. [I eat peeja ate.]\n\nCharacter A says: \u092a\u0940\u091c\u093e? \u0928\u093e\u0939\u0940. Pizza. \u0906\u0923\u093f \u0917\u094b\u0937\u094d\u091f \u0915\u093e\u0932\u091a\u0940 \u0906\u0939\u0947 \u092e\u094d\u0939\u0923\u0942\u0928 Eat \u0928\u093e\u0939\u0940 Ate. I ate pizza. [Peeja? No. Pizza. And the event is from yesterday, so not Eat, but Ate. I ate pizza.]\n\nCharacter A says: \u091f\u094d\u0930\u0947\u0928 \u0915\u0941\u0920\u0942\u0928 \u092a\u0915\u0921\u0924\u094b\u0938? [Where do you catch the train from?]\n\nCharacter B says: I pick train from railway \u0908\u0938\u094d\u091f\u0947\u0936\u0928. [I pick train from railway e-station.]\n\nCharacter A says: Pick? Pick \u092e\u094d\u0939\u0923\u091c\u0947 \u0909\u091a\u0932\u0923\u0902. \u091f\u094d\u0930\u0947\u0928 \u0909\u091a\u0932\u0923\u093e\u0930 \u0915\u093e? Catch \u092e\u094d\u0939\u0923\u091c\u0947 \u092a\u0915\u0921\u0923\u0902. \u0906\u0923\u093f \u0908\u0938\u094d\u091f\u0947\u0936\u0928 \u0928\u093e\u0939\u0940, Station. I catch the train from the railway station. [Pick? Pick means to lift. Are you going to lift the train? Catch means to catch. And not e-station, Station. I catch the train from the railway station.]\n\nCharacter B says: Ohhh \u092e\u093e\u091d\u0902 \u092a\u094d\u0930\u0923\u093e\u0909\u0928\u094d\u0938\u093f\u090f\u0936\u0928 \u0935\u0940\u0915 \u0906\u0939\u0947. [Ohhh my pronunciation is weak.]\n\nCharacter A says: \u0915\u093e\u0939\u0940 \u0939\u0930\u0915\u0924 \u0928\u093e\u0939\u0940. AI \u091f\u0940\u091a\u0930 \u091f\u094d\u0930\u093e\u092f \u0915\u0947\u0932\u0902 \u0915\u093e? [No problem. Have you tried an AI teacher?]\n\nCharacter B says: \u0924\u094b \u092e\u0939\u093e\u0917 \u0905\u0938\u0947\u0932 \u0928\u093e? [That must be expensive, right?]\n\nCharacter A says: \u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940. \u0928\u0949\u0930\u094d\u092e\u0932 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0915\u094d\u0932\u093e\u0938\u0947\u0938 \u092a\u0947\u0915\u094d\u0937\u093e \u0938\u093e\u0924\u092a\u091f \u0938\u094d\u0935\u0938\u094d\u0924 \u0906\u0939\u0947. \u092e\u094d\u0939\u0923\u0942\u0928 \u096b\u0966 \u0932\u093e\u0916 \u0932\u094b\u0915 MySivi \u0935\u0930 \u092a\u094d\u0930\u0945\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0924 \u0906\u0939\u0947\u0924. [Not at all. It is seven times cheaper than normal English classes. That's why 50 lakh people are practicing on MySivi.]\n\nCharacter B says: \u092a\u0923 \u091f\u093e\u0908\u092e \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940 \u0930\u094b\u091c. [But I don't get time every day.]\n\nCharacter A says: \u092b\u0915\u094d\u0924 \u0967\u096b \u0924\u0947 \u0968\u0966 \u092e\u093f\u0928\u093f\u091f\u0902 \u092a\u094d\u0930\u0945\u0915\u094d\u091f\u093f\u0938 \u092a\u0941\u0930\u0947\u0938\u0902 \u0906\u0939\u0947. \u0939\u0933\u0942\u0939\u0933\u0942 \u0915\u0949\u0928\u094d\u092b\u093f\u0921\u0902\u091f \u0939\u094b\u0936\u0940\u0932. [Just 15 to 20 minutes of practice is enough. You will slowly become confident.]\n\nCharacter B says: \u0935\u093e\u0935, \u0915\u0938\u0902 \u091c\u0949\u0908\u0928 \u0915\u0930\u0942? [Wow, how do I join?]\n\nCharacter A says: \u0916\u093e\u0932\u0940 \u0907\u0928\u094d\u0938\u094d\u091f\u0949\u0932 \u092c\u091f\u0928\u093e\u0935\u0930 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930. MySivi \u0972\u092a \u0907\u0928\u094d\u0938\u094d\u091f\u0949\u0932 \u0915\u0930, \u0938\u093e\u0908\u0928 \u0905\u092a \u0915\u0930 \u0906\u0923\u093f \u092a\u094d\u0930\u0945\u0915\u094d\u091f\u093f\u0938 \u0938\u0941\u0930\u0942 \u0915\u0930. \u092b\u0915\u094d\u0924 \u0967\u096b \u0926\u093f\u0935\u0938\u093e\u0924 \u0907\u092e\u094d\u092a\u094d\u0930\u0942\u0935\u094d\u0939\u092e\u0947\u0902\u091f \u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932. [Click on the install button below. Install the MySivi app, sign up and start practicing. You will start seeing improvement in just 15 days.]",
+        "on_screen_text": "\u0915\u093e\u0932 \u0915\u0941\u0920\u0947 \u0917\u0947\u0932\u093e \u0939\u094b\u0924\u093e\u0938 (Where did you go yesterday)\nI went to \u092e\u093e\u0932 yesterday\n\u092e\u093e\u0932 (Maal)\n\u092a\u094d\u0930\u0923\u093e\u0909\u0928\u094d\u0938\u093f\u090f\u0936\u0928 \u0925\u094b\u0921\u0902 \u091a\u0941\u0915\u0932\u0902 (Pronunciation is a bit wrong)\nIt is Mall\nI went to the mall yesterday\n\u0915\u093e\u0932 \u0915\u093e\u092f \u0916\u093e\u0932\u094d\u0932\u0938 (What did you eat yesterday)\nI eat \u092a\u0940\u091c\u093e \u0916\u093e\u0932\u094d\u0932\u093e (I eat peeja ate)\n\u092a\u0940\u091c\u093e \u0928\u093e\u0939\u0940 (Not peeja)\nPizza\n\u0906\u0923\u093f \u0917\u094b\u0937\u094d\u091f \u0915\u093e\u0932\u091a\u0940 \u0906\u0939\u0947 (And the event is from yesterday)\n\u092e\u094d\u0939\u0923\u0942\u0928 Eat \u0928\u093e\u0939\u0940 Ate (So not Eat but Ate)\nI ate pizza\n\u091f\u094d\u0930\u0947\u0928 \u0915\u0941\u0920\u0942\u0928 \u092a\u0915\u0921\u0924\u094b\u0938 (Where do you catch the train from)\nI pick train from railway \u0908\u0938\u094d\u091f\u0947\u0936\u0928 (I pick train from railway e-station)\nPick\nPick \u092e\u094d\u0939\u0923\u091c\u0947 \u0909\u091a\u0932\u0923\u0902 (Pick means to lift)\n\u091f\u094d\u0930\u0947\u0928 \u0909\u091a\u0932\u0923\u093e\u0930 \u0915\u093e (Are you going to lift the train)\nCatch \u092e\u094d\u0939\u0923\u091c\u0947 \u092a\u0915\u0921\u0923\u0902 (Catch means to catch)\n\u0906\u0923\u093f \u0908\u0938\u094d\u091f\u0947\u0936\u0928 \u0928\u093e\u0939\u0940 (And not e-station)\nStation\nI catch the train from the railway station\nohhh \u092e\u093e\u091d\u0902 \u092a\u094d\u0930\u0923\u093e\u0909\u0928\u094d\u0938\u093f\u090f\u0936\u0928 \u0935\u0940\u0915 \u0906\u0939\u0947 (ohhh my pronunciation is weak)\n\u0915\u093e\u0939\u0940 \u0939\u0930\u0915\u0924 \u0928\u093e\u0939\u0940 (No problem)\nAI \u091f\u0940\u091a\u0930 \u091f\u094d\u0930\u093e\u092f \u0915\u0947\u0932\u0902 \u0915\u093e (Have you tried AI teacher)\n\u0924\u094b \u092e\u0939\u093e\u0917 \u0905\u0938\u0947\u0932 \u0928\u093e (That must be expensive right)\n\u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940 (Not at all)\n\u0928\u0949\u0930\u094d\u092e\u0932 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0915\u094d\u0932\u093e\u0938\u0947\u0938 \u092a\u0947\u0915\u094d\u0937\u093e \u0938\u093e\u0924\u092a\u091f \u0938\u094d\u0935\u0938\u094d\u0924 \u0906\u0939\u0947 (Seven times cheaper than normal English classes)\n\u092e\u094d\u0939\u0923\u0942\u0928 \u096b\u0966 \u0932\u093e\u0916 \u0932\u094b\u0915 MySivi \u0935\u0930 \u092a\u094d\u0930\u0945\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0924 \u0906\u0939\u0947\u0924 (That's why 50 lakh people are practicing on MySivi)\n\u092a\u0923 \u091f\u093e\u0908\u092e \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940 \u0930\u094b\u091c (But don't get time everyday)\n\u092b\u0915\u094d\u0924 \u0967\u096b \u0924\u0947 \u0968\u0966 \u092e\u093f\u0928\u093f\u091f\u0902 \u092a\u094d\u0930\u0945\u0915\u094d\u091f\u093f\u0938 \u092a\u0941\u0930\u0947\u0938\u0902 \u0906\u0939\u0947 (Just 15 to 20 minutes practice is enough)\n\u0939\u0933\u0942\u0939\u0933\u0942 \u0915\u0949\u0928\u094d\u092b\u093f\u0921\u0902\u091f \u0939\u094b\u0936\u0940\u0932 (Slowly you will become confident)\n\u0935\u093e\u0935 \u0915\u0938\u0902 \u091c\u0949\u0908\u0928 \u0915\u0930\u0942 (Wow how to join)\n\u0916\u093e\u0932\u0940 \u0907\u0928\u094d\u0938\u094d\u091f\u0949\u0932 \u092c\u091f\u0928\u093e\u0935\u0930 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930 (Click on install button below)\nMySivi App \u0907\u0928\u094d\u0938\u094d\u091f\u0949\u0932 \u0915\u0930 (Install MySivi App)\n\u0938\u093e\u0908\u0928 \u0905\u092a \u0915\u0930 \u0906\u0923\u093f \u092a\u094d\u0930\u0945\u0915\u094d\u091f\u093f\u0938 \u0938\u0941\u0930\u0942 \u0915\u0930 (Sign up and start practice)\n\u092b\u0915\u094d\u0924 \u092a\u0902\u0927\u0930\u093e \u0926\u093f\u0935\u0938\u093e\u0924 \u0907\u092e\u094d\u092a\u094d\u0930\u0942\u0935\u094d\u0939\u092e\u0947\u0902\u091f \u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932 (Improvement will be seen in just 15 days)"
+      },
+      {
+        "n": 2,
+        "start_s": 55.5,
+        "end_s": 59.0,
+        "screenshot_at_s": 57.0,
+        "scene_label": "Offer Screen",
+        "setting": "Digital graphic interface.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, dark, almost black background with a subtle gradient. No physical objects, characters, or environments are visible.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A promotional end-card showing a special offer. It features a large '\u20b91' graphic, a crossed-out '\u20b930', and text highlighting the benefits of 'MySivi Pro'. A yellow 'Start Trial at \u20b91' button is at the bottom.",
+        "audio_transcript": "Character A says: \u091f\u094d\u0930\u093e\u092f\u0932 \u092b\u0915\u094d\u0924 \u0967 \u0930\u0941\u092a\u092f\u093e\u0902\u092e\u0927\u094d\u092f\u0947 \u0969 \u0926\u093f\u0935\u0938\u093e\u0902\u0938\u093e\u0920\u0940 \u0906\u0939\u0947. \u0906\u0924\u094d\u0924\u093e\u091a \u0938\u0941\u0930\u0942 \u0915\u0930. [The trial is for just 1 rupee for 3 days. Start right now.]",
+        "on_screen_text": "MySivi\nSale Ends Today\n\u0938\u0917\u0933\u0902 UNLOCK \u0915\u0930\u093e (Unlock everything)\nOFFER \u20b930 \u20b91\nMySivi Pro \u092b\u093e\u092f\u0926\u0947 (MySivi Pro benefits)\n\u0968\u096a/\u096d \u0924\u0941\u092e\u091a\u093e Personal AI English Teacher (24/7 your Personal AI English Teacher)\n\u0924\u0941\u092e\u091a\u0902 grammar correct \u0939\u094b\u0908\u0932 instant feedback \u0938\u094b\u092c\u0924. (Your grammar will be correct with instant feedback.)\nOffer ends in 09:58\nPay using PhonePe\nStart Trial at \u20b91\n\u0938\u0917\u0933\u0947 Payments safe \u0906\u0939\u0947\u0924. \u0915\u0927\u0940\u0939\u0940 Cancel \u0915\u0930\u0942 \u0936\u0915\u0924\u093e. (All payments are safe. Can cancel anytime.)"
+      },
+      {
+        "n": 3,
+        "start_s": 59.0,
+        "end_s": 63.0,
+        "screenshot_at_s": 61.0,
+        "scene_label": "App Install",
+        "setting": "Digital graphic interface.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A 3D render of a modern smartphone standing upright against a solid light purple background. The phone has a sleek, dark metallic edge and a visible front-facing camera cutout at the top center of its screen. The screen itself is blank white.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A 3D mockup of a smartphone against a light purple background. The phone's screen displays the 'MySivi' logo and the text 'English speaking app' along with a purple 'Install Now' button.",
+        "audio_transcript": "Character A says: Install now \u0935\u0930\u0924\u0940 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930\u093e \u0906\u0923\u093f MySivi \u0972\u092a \u0921\u093e\u090a\u0928\u0932\u094b\u0921 \u0915\u0930\u093e. [Click on Install now and download the MySivi app.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779890885.0106611
+}

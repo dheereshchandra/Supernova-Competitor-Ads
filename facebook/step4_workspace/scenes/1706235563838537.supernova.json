@@ -1,0 +1,54 @@
+{
+  "competitor_id": "1706235563838537",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult Indian woman, slim build, medium complexion. Straight dark brown hair parted in the middle. Prominent nose and defined jawline.",
+        "wardrobe": "Brown long-sleeved collared shirt. Small cross earrings.",
+        "demeanor": "Enthusiastic, informative, and engaging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction and First Test",
+        "supernova_script": "Character A says: मुझे लगता था मेरी English काफी अच्छी है, until I tried this app. [I thought my English was pretty good, until I tried this app.]\nCharacter A says: कुछ महीने पहले मैंने Supernova का AI speaking test try किया. [A few months ago, I tried Supernova's AI speaking test.]\nCharacter A says: First time मेरा score सिर्फ 40% आया. [The first time, my score was only 40%.]\nCharacter A says: How can I help you? [How can I help you?]",
+        "scene_summary": "- Hooks the viewer by challenging their assumption about their English proficiency.\n- Introduces the app's diagnostic feature (AI speaking test) and establishes a relatable baseline score.\n- Demonstrates a real-world, practical phrase being tested.",
+        "supernova_on_screen_text": "ENGLISH APP UNTIL I TRIED SUPERNOVA AI TEST 40% Grading your pronunciation... 40% Your Speaking Score Maya 40% Practice AI Tutor Let's begin! Record yourself saying the phrase below. How can I help you? 40%"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Feedback and Practice",
+        "supernova_script": "Character A says: मुझे realize ही नहीं हुआ कि मैं pronunciation में कहाँ गलती कर रही थी. [I never realized where I was making mistakes in my pronunciation.]\nCharacter A says: Supernova के AI tutor ने मुझे मेरी mistakes बताईं, and I've been practicing every single night, सोने से पहले सिर्फ 10 minutes. [Supernova's AI tutor showed me my mistakes, and I've been practicing every single night, just 10 minutes before bed.]",
+        "scene_summary": "- Highlights the problem of not knowing one's own mistakes.\n- Positions the AI tutor as a helpful, non-judgmental guide.\n- Emphasizes that the solution requires only a small, manageable daily commitment (10 minutes).",
+        "supernova_on_screen_text": "MISTAKES AI TUTOR PRACTICING EVERY NIGHT 10 MINS Pronunciation 40 Needs Work Fluency 50 Okay Word stress We found 2 words where you're stressing the wrong syllable. Daily Practice AI Tutor"
+      },
+      {
+        "n": 3,
+        "scene_label": "Second Test and CTA",
+        "supernova_script": "Character A says: आज मैं फिर से test ले रही हूँ, let's see how I do. [Today I'm taking the test again, let's see how I do.]\nCharacter A says: Opportunity. [Opportunity.]\nCharacter A says: Confident. [Confident.]\nCharacter A says: 90%! [90%!]\nCharacter A says: Supernova app download करो और अपना speaking score check करो. [Download the Supernova app and check your speaking score.]",
+        "scene_summary": "- Provides the emotional payoff of seeing tangible improvement.\n- Demonstrates the practice of professional, confidence-building vocabulary.\n- Delivers a clear, direct Call to Action to download the app and test their own score.",
+        "supernova_on_screen_text": "TESTING AGAIN HOW I DO 90% DOWNLOAD SUPERNOVA CHECK YOUR SCORE Practice AI Tutor Let's start! Tap the button below and say the word. opportunity confident Your Speaking Score Maya 90% Supernova Grading your fluency... 95% 100%"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "SpeechScan",
+        "supernova_swap": "AI speaking test"
+      },
+      {
+        "competitor_brand": "for free",
+        "supernova_swap": "[removed]"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658661.8076477
+}

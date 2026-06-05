@@ -1,0 +1,92 @@
+{
+  "competitor_id": "1292724245723832",
+  "parsed": {
+    "duration_s": 28.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human presenter with natural movements, facial expressions, and speech. Lighting and shadows are consistent, and there are no AI artifacts like distorted fingers or uncanny features.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult, slim build, fair complexion, long blonde hair. Expressive facial features.",
+        "wardrobe": "Light blue striped button-down shirt with a white collar.",
+        "demeanor": "Enthusiastic, expressive, and friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 12.5,
+        "screenshot_at_s": 6.0,
+        "scene_label": "Pronunciation test",
+        "setting": "Indoor room, white brick wall, warm circular light, YouTube plaque.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with long blonde hair stands indoors, facing the camera. She wears a light blue striped button-down shirt. She holds a clear glass jar of water with a metal straw in one hand and looks down at a smartphone in her other hand. The background consists of a white brick wall, a circular warm-toned light fixture, and a gold YouTube play button plaque.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter holds a glass of water and a phone, demonstrating a pronunciation app. Text captions appear on screen as she speaks. An app UI overlay shows her pronunciation score, first failing and then succeeding.",
+        "audio_transcript": "Character A says: Let's see if I can pronounce this word correctly.\nCharacter A says: Vater.\nCharacter A says: I need to work on the first consonant sound.\nCharacter A says: Let me try again.\nCharacter A says: Water.\nCharacter A says: Oh wow!\nCharacter A says: Now my score is so much better!",
+        "on_screen_text": "pronounce\ncorrectly.\n0% water\nwork on the\nfirst consonant\nsound.\nLet me try again.\n0% water\n98% water\nOh wow!\nNow my score\nis so much better!"
+      },
+      {
+        "n": 2,
+        "start_s": 12.5,
+        "end_s": 24.5,
+        "screenshot_at_s": 18.0,
+        "scene_label": "App features explanation",
+        "setting": "Indoor room, white brick wall, warm circular light, YouTube plaque.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with long blonde hair stands indoors, looking directly at the camera and speaking. She wears a light blue striped button-down shirt. The background features a white brick wall, a circular warm-toned light, and a gold YouTube play button plaque.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The presenter continues speaking to the camera. Text captions appear on screen. A smartphone mockup overlay appears on the left side of the screen, displaying various video lessons from different coaches demonstrating mouth movements.",
+        "audio_transcript": "Character A says: I love that the app shows me what I'm doing wrong.\nCharacter A says: It also gives me video lessons from coaches who show me how to move my mouth to make those difficult sounds.\nCharacter A says: Ready to sound like a native speaker?\nCharacter A says: Download BoldVoice now!",
+        "on_screen_text": "I love\nthat the app\nshows me\nwhat I'm\ndoing wrong.\nIt also\ngives me\nvideo lessons\nfrom coaches\nwho show\nme how\nto move\nmy mouth\nto make\nthose\ndifficult\nsounds.\nReady to\nsound like a\nnative speaker?\nDownload\nBoldVoice\nnow!"
+      },
+      {
+        "n": 3,
+        "start_s": 24.5,
+        "end_s": 28.0,
+        "screenshot_at_s": 26.0,
+        "scene_label": "End card",
+        "setting": "Dark background",
+        "characters_in_scene": [],
+        "camera": "Wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid dark background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An end card displays a smartphone mockup showing a video lesson. To the right, there is a star rating, the app logo, an App Store download badge, and promotional text offering a free trial.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Unvoiced TH [\u03b8]\ngoing to start with the tip of the\ntongue. Bring it up so that it's almost\n27,000 STAR RATING\nBoldVoice\nDownload on the App Store\nSpeak English Confidently\nGet your first 7 days free"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1779986084.7815557
+}

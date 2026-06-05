@@ -1,0 +1,46 @@
+{
+  "competitor_id": "4534743323518937",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young adult female, slim build, fair complexion. Dark brown hair tied back with loose strands framing her face. Symmetrical, smooth facial features.",
+        "wardrobe": "Dark green long-sleeve turtleneck sweater. Small gold hoop earrings.",
+        "demeanor": "Friendly, encouraging, and slightly robotic in its consistent perfection."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young adult female, fair complexion. Light brown hair tied back. Wearing round, wire-rimmed glasses.",
+        "wardrobe": "Dark grey zip-up hoodie over a lighter-colored shirt.",
+        "demeanor": "Eager, slightly hesitant during initial attempts, becoming excited and confident."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Pronunciation Practice",
+        "supernova_script": "Character A says: चलो, आज English speaking की practice करते हैं। [Let's practice English speaking today.]\nCharacter B says: हाँ, बिल्कुल! [Yes, absolutely!]\nCharacter A says: इस phrase को बोलो: \"Do you want to go?\" [Say this phrase: \"Do you want to go?\"]\nCharacter B says: Do you want to go? [Do you want to go?]\nCharacter A says: इसे थोड़ा naturally बोलो, try \"Jawannago\" [Say it a bit more naturally, try \"Jawannago\"]\nCharacter B says: Do you wanna go? [Do you wanna go?]\nCharacter A says: अब इसे try करो: \"Let me think about it\" [Now try this: \"Let me think about it\"]\nCharacter B says: Let me think about it. [Let me think about it.]\nCharacter A says: Fluent English में हम कहते हैं: \"Lemmee thinkaboudit\" [In fluent English we say: \"Lemmee thinkaboudit\"]\nCharacter B says: Lemme think about it. [Lemme think about it.]\nCharacter B says: अरे वाह, ये तो आसान है! एक और। [Oh wow, this is easy! One more.]\nCharacter A says: \"What did you say?\" [\"What did you say?\"]\nCharacter B says: What did you say? [What did you say?]\nCharacter A says: इसे जल्दी बोलने के लिए try करो: \"Whadjasay\" [To say it faster, try: \"Whadjasay\"]\nCharacter B says: What did you say? [What did you say?]\nCharacter B says: Amazing! मेरी fluency तो अभी से better हो रही है। मैं और कैसे सीख सकती हूँ? [Amazing! My fluency is already getting better. How can I learn more?]\nCharacter A says: बस Supernova app download करो। हम रोज़ practice करेंगे, और तुम confidently English बोलने लगोगी। [Just download the Supernova app. We'll practice daily, and you'll start speaking English confidently.]\nCharacter B says: Perfect! मैं अभी download करती हूँ। [Perfect! I'm downloading it right now.]",
+        "scene_summary": "- Hooks the user with an interactive, split-screen roleplay demonstrating real-time AI pronunciation feedback.\n- Builds confidence by showing the learner easily progressing from formal, rigid English to natural, conversational fluency.\n- Culminates in a clear, encouraging call-to-action positioning the app as a daily practice companion.",
+        "supernova_on_screen_text": "चलो, आज English speaking की practice करते हैं\nहाँ, बिल्कुल!\nइस phrase को बोलो: \"Do you want to go?\"\nDo you want to go?\nTry \"Jawannago\"\n20/100\nJawannago\nDo you wanna go?\nअब इसे try करो: \"Let me think about it\"\nLet me think about it\n32/100\nTry \"Lemmee thinkaboudit\"\nLemme thinkaboudit\nLemme think about it\nअरे वाह, ये तो आसान है! एक और\n100/100\n\"What did you say?\"\nWhat did you say?\n15/100\nSay \"Whadjasay\"\nWhadjasay?\nWhat did you say?\nAmazing! मेरी fluency तो अभी से better हो रही है\n100/100\nमैं और कैसे सीख सकती हूँ?\nबस Supernova app download करो\nहम रोज़ practice करेंगे, और तुम confidently English बोलने लगोगी\nPerfect!\nमैं अभी download करती हूँ"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Provides a clear, distraction-free final screen to reinforce brand identity.\n- Delivers the ultimate call-to-action to drive app installs.",
+        "supernova_on_screen_text": "Supernova App\nआपका अपना AI English Tutor\nDOWNLOAD NOW"
+      }
+    ],
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Fluently App",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1780658623.936479
+}
