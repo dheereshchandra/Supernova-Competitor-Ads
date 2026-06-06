@@ -50,6 +50,7 @@ NEW_AGE_DAYS = 7
 
 ENRICHED_COLS = [
     "pipeline", "competitor", "page_id", "page_name", "ad_id", "media_type",
+    "language", "presenter_type", "device_format", "production_type",
     "first_seen", "last_seen", "times_seen", "weeks_seen",
     "ad_start_date", "run_days", "run_days_is_lower_bound",
     "best_page_rank", "worst_page_rank", "median_page_rank", "current_page_rank",
@@ -69,6 +70,33 @@ def repo_root(explicit: Optional[str]) -> Path:
 def read_csv(path: Path) -> list[dict]:
     with path.open(encoding="utf-8-sig", newline="") as fh:
         return list(csv.DictReader(fh))
+
+
+def load_enrichment(root: Path, pipeline: str, slug: str) -> dict:
+    """Optional Flash-derived signals — {ad_id: {language, presenter_type,
+    device_format, production_type}}. Empty until detect_language / transcribe_tag
+    have been run; the transcript language (if any) overrides the text-only one."""
+    import json as _json
+    base = root / "analysis" / "enrichment" / pipeline
+    enr: dict[str, dict] = {}
+    lang_csv = base / "language" / f"{slug}.csv"
+    if lang_csv.exists():
+        for r in read_csv(lang_csv):
+            enr.setdefault(r["ad_id"], {})["language"] = r.get("language", "")
+    tdir = base / "transcripts" / slug
+    if tdir.is_dir():
+        for p in tdir.glob("*.json"):
+            try:
+                d = _json.loads(p.read_text(encoding="utf-8"))
+            except (ValueError, OSError):
+                continue
+            rec = enr.setdefault(d.get("ad_id") or p.stem, {})
+            if d.get("language"):
+                rec["language"] = d["language"]
+            for k in ("presenter_type", "device_format", "production_type"):
+                if d.get(k):
+                    rec[k] = d[k]
+    return enr
 
 
 def d(s: str) -> Optional[date]:
@@ -110,6 +138,7 @@ def main() -> int:
     for r in rows:
         page_size[(r["page_id"], r["scrape_date"])] += 1
     latest_overall = max(r["scrape_date"] for r in rows)
+    enr_map = load_enrichment(root, args.pipeline, slug)
 
     # ---- group rows per ad ----
     by_ad: dict[str, list[dict]] = defaultdict(list)
@@ -198,6 +227,10 @@ def main() -> int:
             "pipeline": args.pipeline, "competitor": slug,
             "page_id": page_id, "page_name": page_name, "ad_id": ad_id,
             "media_type": ar[-1]["media_type"],
+            "language": enr_map.get(ad_id, {}).get("language", ""),
+            "presenter_type": enr_map.get(ad_id, {}).get("presenter_type", ""),
+            "device_format": enr_map.get(ad_id, {}).get("device_format", ""),
+            "production_type": enr_map.get(ad_id, {}).get("production_type", ""),
             "first_seen": first_seen, "last_seen": last_seen,
             "times_seen": times_seen, "weeks_seen": weeks_seen,
             "ad_start_date": start, "run_days": run_days,
@@ -246,6 +279,31 @@ def main() -> int:
     with wpath.open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=WEEKLY_COLS, extrasaction="ignore")
         w.writeheader(); w.writerows(weekly)
+
+    # ---- per-language / per-format rollups (only if enrichment is present) ----
+    def rollup(key: str) -> list[dict]:
+        agg: dict[str, dict] = defaultdict(lambda: {"ads": 0, "winners": 0})
+        for e in enriched:
+            k = (e.get(key) or "").strip()
+            if not k:
+                continue
+            agg[k]["ads"] += 1
+            if e["verdict"] in ("winner", "strong_winner"):
+                agg[k]["winners"] += 1
+        return [{"pipeline": args.pipeline, "competitor": slug, key: k,
+                 "ads": v["ads"], "winners": v["winners"],
+                 "win_ratio": round(v["winners"] / v["ads"], 3) if v["ads"] else 0.0}
+                for k, v in sorted(agg.items(), key=lambda kv: -kv[1]["ads"])]
+
+    for key, fname in [("language", f"{slug}_by_language.csv"),
+                       ("device_format", f"{slug}_by_format.csv")]:
+        data = rollup(key)
+        if data:
+            with (outdir / fname).open("w", encoding="utf-8", newline="") as fh:
+                w = csv.DictWriter(fh, fieldnames=["pipeline", "competitor", key,
+                                                   "ads", "winners", "win_ratio"])
+                w.writeheader(); w.writerows(data)
+            print(f"  -> {outdir / fname}")
 
     counts = defaultdict(int)
     for e in enriched:
