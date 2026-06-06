@@ -222,6 +222,29 @@ def upsert(history: list[dict], new_rows: list[dict]) -> list[dict]:
     return merged
 
 
+def synth_from_master(rows: list[dict], pipeline: str, competitor: str) -> list[dict]:
+    """Low-fidelity 2-point history from the master: each ad emits a row at its
+    first_scrape_run_date AND its latest_scrape_run_date, ranked (per page+date)
+    by the master's row_rank. Gives times_seen/run_days/best_page_rank now; gets
+    overwritten by real dated snapshots once they accrue. Used for Google, whose
+    input snapshots aren't committed yet."""
+    ad_rows = collapse_to_ads(rows, pipeline)
+    by_date: dict[str, list[dict]] = {}
+    for r in ad_rows:
+        first = (r.get("first_scrape_run_date") or "").strip()
+        latest = (r.get("latest_scrape_run_date") or "").strip()
+        scrape = (r.get("scrape_run_date") or "").strip()
+        use = [d for d in (first, latest) if d]
+        if not use and scrape:
+            use = [scrape]
+        for d in dict.fromkeys(use):           # dedupe, keep order
+            by_date.setdefault(d, []).append(r)
+    out: list[dict] = []
+    for d, drows in sorted(by_date.items()):
+        out.extend(to_history_rows(drows, pipeline, competitor, d))
+    return out
+
+
 def write_history(path: Path, rows: list[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as fh:
@@ -239,6 +262,11 @@ def main() -> int:
     group.add_argument("--scrape", help="A single input snapshot CSV to ingest.")
     group.add_argument("--backfill", action="store_true",
                        help="Replay every real snapshot for this competitor.")
+    group.add_argument("--from-master", action="store_true",
+                       help="Seed a low-fidelity 2-point history from the master's "
+                            "first/latest scrape dates. For Google, which has no "
+                            "committed input snapshots yet — gives longevity now, "
+                            "replaced by real snapshots as they accrue.")
     ap.add_argument("--base", default=None, help="Repo root (default: auto).")
     ap.add_argument("--dry-run", action="store_true",
                     help="Show what would happen; write nothing.")
@@ -247,6 +275,27 @@ def main() -> int:
     root = repo_root(args.base)
     slug = args.competitor.lower().strip()
     hpath = history_path(root, args.pipeline, slug)
+
+    # --- low-fidelity seed from the master (Google has no committed snapshots) ---
+    if args.from_master:
+        master = root / args.pipeline / "master" / f"{slug}.csv"
+        if not master.exists():
+            sys.exit(f"[error] master not found: {master}")
+        new_rows = synth_from_master(read_csv(master), args.pipeline, slug)
+        if not new_rows:
+            print(f"[info] {slug} master has no usable dated rows — nothing to do.")
+            return 0
+        dates = sorted({r["scrape_date"] for r in new_rows})
+        if args.dry_run:
+            print(f"[dry-run] would seed {len(new_rows)} rows across {len(dates)} "
+                  f"date(s) {dates} into {hpath}")
+            return 0
+        history = read_csv(hpath) if hpath.exists() else []
+        history = upsert(history, new_rows)
+        write_history(hpath, history)
+        print(f"from-master: seeded {len(new_rows)} rows across {len(dates)} "
+              f"date(s) {dates} -> {hpath}")
+        return 0
 
     # Build the work list of (scrape_date, path).
     if args.scrape:

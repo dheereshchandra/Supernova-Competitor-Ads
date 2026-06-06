@@ -31,6 +31,32 @@ Re-running is always safe: history is idempotent (re-ingesting a scrape replaces
 that date's rows); everything in `derived/` and `reports/` is regenerated from
 scratch. After a new scrape, run all four and commit.
 
+## One-command runners
+
+```bash
+# refresh the FREE pipeline for every competitor (no API, no cost)
+analysis/scripts/run_all_free.sh facebook
+analysis/scripts/run_all_free.sh google      # Google seeds from master (see below)
+
+# full enrichment for one competitor — defaults to a cheap --limit 5 CALIBRATION
+# pass, so the first run is inspectable before you spend on the whole corpus:
+analysis/scripts/run_enrichment.sh facebook duolingo          # calibrate (5 items)
+analysis/scripts/run_enrichment.sh facebook duolingo --full   # whole competitor
+```
+
+`run_enrichment.sh` starts with `preflight_enrichment.py` (checks google-genai +
+GEMINI_API_KEY + numpy) and stops if anything's missing — so a paid run never
+starts half-configured.
+
+## Google: seed history now, real snapshots later
+
+Google has no committed input snapshots yet (the scraper's snapshots only start
+committing going forward, after the `.gitignore` fix). So `run_all_free.sh google`
+uses **`build_history.py --from-master`** — a low-fidelity 2-point history from each
+master's `first/latest_scrape_run_date`. It gives you the current rank snapshot +
+presence now; real longevity fills in as you accrue Google scrapes (which now
+commit). Until then most Google ads read `new` (too little history) — that's honest.
+
 ## Enrichment (Gemini **Flash** — runs on YOUR Mac)
 
 Adds `language`, `format`, and `transcript` so the metrics can answer per-language,
