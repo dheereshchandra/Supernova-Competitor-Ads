@@ -31,6 +31,32 @@ Re-running is always safe: history is idempotent (re-ingesting a scrape replaces
 that date's rows); everything in `derived/` and `reports/` is regenerated from
 scratch. After a new scrape, run all four and commit.
 
+## Enrichment (Gemini **Flash** — runs on YOUR Mac)
+
+Adds `language`, `format`, and `transcript` so the metrics can answer per-language,
+format-mix, and (later) script-similarity questions. **Flash only, never Pro**
+(cost rule). These need `google-genai` + a `GEMINI_API_KEY` in a `.env`, so they
+run on your Mac, not in the sandbox. Each runs **once per ad and caches** a
+committed sidecar — re-runs only touch new ads, and teammates reuse via `git pull`.
+
+```bash
+# language from ad copy (cheap, batched; no videos needed)
+python3 analysis/scripts/detect_language.py  --pipeline facebook --competitor duolingo
+# transcribe + tag format/production (needs the videos — rehydrate from R2 first)
+python3 tools/rehydrate.py                   --pipeline facebook --competitor duolingo
+python3 analysis/scripts/transcribe_tag.py   --pipeline facebook --competitor duolingo
+# then recompute — metrics auto-pick up the sidecars and add by_language / by_format
+python3 analysis/scripts/compute_rank_metrics.py --pipeline facebook --competitor duolingo
+python3 analysis/scripts/build_report.py         --pipeline facebook --competitor duolingo
+```
+
+Cost: ~$0.005–0.01 per video on Flash (full Facebook corpus ≈ $40–60 one-time,
+then ~$1–3/week for new ads). Add `--dry-run` to preview / `--limit N` to test.
+Sidecars: `enrichment/{pipeline}/language/{competitor}.csv` and
+`enrichment/{pipeline}/transcripts/{competitor}/{ad_id}.json`. The format taxonomy
+(presenter_type × device_format × production_type) is a **starter set** in
+`transcribe_tag.py` — tune the enum to your "Supernova Ad Formats" vocabulary.
+
 ## Verdict tiers (longevity primary, rank confirmatory)
 
 | verdict | meaning |

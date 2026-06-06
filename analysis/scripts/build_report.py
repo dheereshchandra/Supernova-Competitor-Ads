@@ -60,6 +60,8 @@ def main() -> int:
     enriched = read_csv(derived / f"{slug}_enriched.csv")
     weekly = read_csv(derived / f"{slug}_weekly.csv")
     timeline = read_csv(derived / f"{slug}_rank_timeline.csv")
+    by_lang = read_csv(derived / f"{slug}_by_language.csv")
+    by_fmt = read_csv(derived / f"{slug}_by_format.csv")
     if not enriched:
         raise SystemExit(f"[error] no enriched data for {slug} "
                          f"(run compute_rank_metrics.py first).")
@@ -149,6 +151,24 @@ def main() -> int:
     if len(dates) < 3:
         L.append("*Week-on-week deltas are thin until there are ≥3 weekly scrapes; "
                  "with only a couple of dates so far, weekly ≈ scrape-on-scrape.*")
+        L.append("")
+
+    # ---- enrichment sections (only when detect_language / transcribe_tag have run) ----
+    if by_lang:
+        L.append("## By language")
+        L.append("")
+        L.append("| language | ads | winners | win ratio |")
+        L.append("|---|--:|--:|--:|")
+        for r in by_lang:
+            L.append(f"| {r['language']} | {r['ads']} | {r['winners']} | {r['win_ratio']} |")
+        L.append("")
+    if by_fmt:
+        L.append("## Format mix")
+        L.append("")
+        L.append("| format | ads | winners | win ratio |")
+        L.append("|---|--:|--:|--:|")
+        for r in by_fmt:
+            L.append(f"| {r['device_format']} | {r['ads']} | {r['winners']} | {r['win_ratio']} |")
         L.append("")
 
     # ---- biggest movers (rank changes between observations) ----

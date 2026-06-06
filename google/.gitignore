@@ -5,6 +5,10 @@ __pycache__/
 videos/
 images/
 step4_workspace/
+# Commit real dated scrape snapshots (the rank-history source of truth) while
+# still ignoring partial/working CSVs. Matches g-ads-{slug}-YYYY-MM-DD.csv and
+# the inactive variant g-ads-{slug}-inactive-YYYY-MM-DD.csv.
 inputs/*.csv
+!inputs/g-ads-*-[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].csv
 inputs/*.bak
 master/*.bak
