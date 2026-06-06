@@ -51,6 +51,7 @@ NEW_AGE_DAYS = 7
 ENRICHED_COLS = [
     "pipeline", "competitor", "page_id", "page_name", "ad_id", "media_type",
     "language", "presenter_type", "device_format", "production_type",
+    "script_group_id", "replication_type", "variant_role",
     "first_seen", "last_seen", "times_seen", "weeks_seen",
     "ad_start_date", "run_days", "run_days_is_lower_bound",
     "best_page_rank", "worst_page_rank", "median_page_rank", "current_page_rank",
@@ -96,6 +97,13 @@ def load_enrichment(root: Path, pipeline: str, slug: str) -> dict:
             for k in ("presenter_type", "device_format", "production_type"):
                 if d.get(k):
                     rec[k] = d[k]
+    scsv = base / "scripts" / f"{slug}.csv"
+    if scsv.exists():
+        for r in read_csv(scsv):
+            rec = enr.setdefault(r["ad_id"], {})
+            for k in ("script_group_id", "replication_type", "variant_role"):
+                if r.get(k):
+                    rec[k] = r[k]
     return enr
 
 
@@ -231,6 +239,9 @@ def main() -> int:
             "presenter_type": enr_map.get(ad_id, {}).get("presenter_type", ""),
             "device_format": enr_map.get(ad_id, {}).get("device_format", ""),
             "production_type": enr_map.get(ad_id, {}).get("production_type", ""),
+            "script_group_id": enr_map.get(ad_id, {}).get("script_group_id", ""),
+            "replication_type": enr_map.get(ad_id, {}).get("replication_type", ""),
+            "variant_role": enr_map.get(ad_id, {}).get("variant_role", ""),
             "first_seen": first_seen, "last_seen": last_seen,
             "times_seen": times_seen, "weeks_seen": weeks_seen,
             "ad_start_date": start, "run_days": run_days,
@@ -296,7 +307,8 @@ def main() -> int:
                 for k, v in sorted(agg.items(), key=lambda kv: -kv[1]["ads"])]
 
     for key, fname in [("language", f"{slug}_by_language.csv"),
-                       ("device_format", f"{slug}_by_format.csv")]:
+                       ("device_format", f"{slug}_by_format.csv"),
+                       ("replication_type", f"{slug}_by_replication.csv")]:
         data = rollup(key)
         if data:
             with (outdir / fname).open("w", encoding="utf-8", newline="") as fh:

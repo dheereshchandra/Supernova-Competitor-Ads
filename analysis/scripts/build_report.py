@@ -62,6 +62,7 @@ def main() -> int:
     timeline = read_csv(derived / f"{slug}_rank_timeline.csv")
     by_lang = read_csv(derived / f"{slug}_by_language.csv")
     by_fmt = read_csv(derived / f"{slug}_by_format.csv")
+    by_repl = read_csv(derived / f"{slug}_by_replication.csv")
     if not enriched:
         raise SystemExit(f"[error] no enriched data for {slug} "
                          f"(run compute_rank_metrics.py first).")
@@ -169,6 +170,17 @@ def main() -> int:
         L.append("|---|--:|--:|--:|")
         for r in by_fmt:
             L.append(f"| {r['device_format']} | {r['ads']} | {r['winners']} | {r['win_ratio']} |")
+        L.append("")
+    if by_repl:
+        L.append("## Script replication")
+        L.append("")
+        L.append("How much of the output is fresh scripts vs. replays of a script that "
+                 "already worked (same script translated, or re-shot with new visuals).")
+        L.append("")
+        L.append("| replication | ads | winners | win ratio |")
+        L.append("|---|--:|--:|--:|")
+        for r in by_repl:
+            L.append(f"| {r['replication_type']} | {r['ads']} | {r['winners']} | {r['win_ratio']} |")
         L.append("")
 
     # ---- biggest movers (rank changes between observations) ----
