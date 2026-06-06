@@ -57,6 +57,29 @@ Sidecars: `enrichment/{pipeline}/language/{competitor}.csv` and
 (presenter_type × device_format × production_type) is a **starter set** in
 `transcribe_tag.py` — tune the enum to your "Supernova Ad Formats" vocabulary.
 
+## Phase 3 — script similarity, replication & FB↔Google (on the transcripts)
+
+Once transcripts exist, cluster scripts to answer "which winners share a script",
+"how much is translated vs re-shot", and "do FB ads port to Google".
+
+```bash
+# 1) embed each ad's English script-signature (cheap; embeddings, not chat)
+python3 analysis/scripts/embed_scripts.py    --pipeline facebook --competitor duolingo
+# 2) cluster into script groups + label replication_type (OFFLINE, no API)
+python3 analysis/scripts/script_cluster.py   --pipeline facebook --competitor duolingo
+# 3) cross-platform transfer (needs embeddings for BOTH facebook & google)
+python3 analysis/scripts/fb_google_overlap.py --competitor duolingo
+# then recompute → enriched gains script_group_id/replication_type + by_replication
+python3 analysis/scripts/compute_rank_metrics.py --pipeline facebook --competitor duolingo
+python3 analysis/scripts/build_report.py         --pipeline facebook --competitor duolingo
+```
+
+`replication_type` per ad: `original` · `exact_replica` (same script/lang/format) ·
+`translation_replica` (same script, new language) · `visual_variant` (same script,
+new visuals) · `unique` (one-off). Tune `--threshold` on a labelled sample. The
+clustering + overlap math is unit-tested on synthetic embeddings; the only API
+step is `embed_scripts.py` (and it runs on your Mac).
+
 ## Verdict tiers (longevity primary, rank confirmatory)
 
 | verdict | meaning |
