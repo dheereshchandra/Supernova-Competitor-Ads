@@ -43,16 +43,20 @@ _QUOTES = "".join(chr(c) for c in (0x22, 0x27, 0x2018, 0x2019, 0x201c, 0x201d))
 
 
 def load_env(base: pathlib.Path, pipeline: str) -> dict:
-    """Read the first .env found ({pipeline}/.env, then repo-root .env)."""
+    """Merge keys from every common .env location (root, this pipeline's dir, and
+    the other pipeline's dir), first-found wins. So keys put in facebook/.env work
+    for a google run too, without the operator having to copy files around."""
     env: dict = {}
-    for p in (base / pipeline / ".env", base / ".env"):
+    for p in (base / ".env", base / pipeline / ".env",
+              base / "facebook" / ".env", base / "google" / ".env"):
         if p.is_file():
             for line in p.read_text(encoding="utf-8").splitlines():
                 line = line.strip()
                 if line and not line.startswith("#") and "=" in line:
                     k, v = line.split("=", 1)
-                    env[k.strip()] = v.strip().strip(_QUOTES)
-            break
+                    k = k.strip()
+                    if k not in env:                 # earlier files win
+                        env[k] = v.strip().strip(_QUOTES)
     return env
 
 
