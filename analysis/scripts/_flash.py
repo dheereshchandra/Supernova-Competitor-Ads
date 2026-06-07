@@ -33,16 +33,21 @@ def assert_flash(model: str) -> None:
             f"Flash-only (cost rule). Use a Flash model.")
 
 
+# straight + curly quotes — strip any that wrap a value (Macs auto-insert curly
+# "smart quotes" when keys are pasted from Notes/Docs/chat, which corrupts headers)
+_QUOTES = "".join(chr(c) for c in (0x22, 0x27, 0x2018, 0x2019, 0x201c, 0x201d))
+
+
 def load_env(*candidates: Path) -> dict:
     """Read the first .env found among the candidate paths (key=value lines)."""
     for p in candidates:
         if p and p.is_file():
             env = {}
-            for line in p.read_text().splitlines():
+            for line in p.read_text(encoding="utf-8").splitlines():
                 line = line.strip()
                 if line and not line.startswith("#") and "=" in line:
                     k, v = line.split("=", 1)
-                    env[k.strip()] = v.strip().strip('"').strip("'")
+                    env[k.strip()] = v.strip().strip(_QUOTES)
             if env:
                 return env
     return {}
