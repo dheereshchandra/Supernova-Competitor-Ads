@@ -16,12 +16,24 @@ e.g.
         facebook/inputs/fb-ads-duolingo-2026-06-04-1540.csv
 """
 import csv
+import re
 import sys
 from collections import defaultdict
 
 csv.field_size_limit(10 ** 9)
-FIELDS = ["ad_start_date", "ad_media_type", "ad_version_count",
-          "has_low_impression_warning"]
+# every field worth checking for the "zero misses" bar (CDN URLs excluded — they
+# regenerate per scrape and never match by design)
+FIELDS = ["ad_start_date", "ad_end_date", "ad_media_type", "ad_version_count",
+          "ad_has_multiple_versions", "has_low_impression_warning",
+          "ad_primary_text", "ad_cta_label", "ad_destination_url",
+          "ad_distribution_platforms", "creative_count_in_ad",
+          "creative_aspect_ratio", "facebook_page_followers"]
+
+
+def norm(s):
+    """whitespace-insensitive, case-insensitive compare (so trivial formatting
+    differences don't count as a miss)."""
+    return re.sub(r"\s+", " ", (s or "")).strip().lower()
 
 
 def load(path):
@@ -66,10 +78,14 @@ def main() -> int:
               f"matched={len(matched)}  missing={len(missing)}  recall={recall:.0f}%")
         # field agreement on the overlap
         for fld in FIELDS:
-            agree = sum(1 for a in matched
-                        if (ref_ads[a].get(fld) or "").strip() == (new_ads[a].get(fld) or "").strip())
+            agree = sum(1 for a in matched if norm(ref_ads[a].get(fld)) == norm(new_ads[a].get(fld)))
             pct = agree / len(matched) * 100 if matched else 0
-            print(f"      {fld:<28} agree {agree}/{len(matched)} ({pct:.0f}%)")
+            flag = "" if pct >= 99 else "  ← check"
+            print(f"      {fld:<28} agree {agree}/{len(matched)} ({pct:.0f}%){flag}")
+            if 0 < pct < 99:  # show one mismatch to debug
+                bad = next((a for a in matched if norm(ref_ads[a].get(fld)) != norm(new_ads[a].get(fld))), None)
+                if bad:
+                    print(f"        e.g. {bad}: new={new_ads[bad].get(fld)!r}  ref={ref_ads[bad].get(fld)!r}")
         if missing:
             print(f"      missing ad_ids (first 5): {list(missing)[:5]}")
 

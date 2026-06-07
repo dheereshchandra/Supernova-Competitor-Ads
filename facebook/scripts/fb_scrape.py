@@ -226,7 +226,11 @@ def main() -> int:
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=args.headless)
-        page = browser.new_page(viewport={"width": 1400, "height": 1000})
+        # IST + en-IN so Meta renders dates/locale exactly like a real India Chrome
+        # (Playwright defaults to UTC, which shifts "Started running on …" by a day).
+        context = browser.new_context(viewport={"width": 1400, "height": 1000},
+                                      timezone_id="Asia/Kolkata", locale="en-IN")
+        page = context.new_page()
         for i, pg in enumerate(pages, 1):
             print(f"[page {i}/{len(pages)}] {pg['page_name']} ({pg['page_id']}) — loading…")
             page.goto(NAV_URL.format(page_id=pg["page_id"]), wait_until="domcontentloaded", timeout=90000)
