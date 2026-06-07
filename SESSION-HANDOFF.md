@@ -85,43 +85,60 @@ Claude-in-Chrome scrape and the Google CLI scrape: see chat / `facebook/HANDOVER
 - **Local cache (gitignored):** `{facebook,google}/{videos,images}/{slug}-{date}/`.
   Pull on demand: `python3 tools/rehydrate.py --pipeline facebook --competitor X`.
 
-## 🔬 IN PROGRESS — terminal Facebook scraper (the current experiment)
-Goal: move the FB scrape off Claude-in-Chrome to a pure terminal command (Google is
-already terminal). **Success bar (per operator): EVERY field must match a
-Claude-in-Chrome scrape, zero misses — not just ad-id recall.**
+## ⏸️ PAUSED — terminal Facebook scraper experiment (parked 2026-06-07)
+Goal was to move the FB scrape off Claude-in-Chrome to a pure terminal command
+(Google is already terminal). **DECISION: PAUSED — keep Claude-in-Chrome as the FB
+scrape method for now.** A same-day benchmark found real field-level misses, so it's
+not production-ready. Work is committed + documented so it resumes from here —
+**do NOT restart from scratch.** Bar (operator's): every field matches a
+Claude-in-Chrome scrape, zero misses — not just ad-id recall.
 
-State:
+Files (committed, EXPERIMENTAL, NOT wired into the pipeline):
 - `facebook/scripts/fb_scrape_probe.py` (PR #7) — proved Meta lets a Playwright
   browser load the ads (no anti-bot block). ✅
-- `facebook/scripts/fb_scrape.py` + `fb_scrape_diff.py` (PR #8) — first cut. Result:
-  **100% ad-id recall** on Duolingo's page, but metadata (`media_type`, `start_date`,
-  `primary_text`) came back **blank** — the card-container detection grabbed too small
-  a wrapper, and media needs hover.
-- **Latest push (this session):** rewrote `fb_scrape.py` — (a) container fix: climb to
-  the largest ancestor still holding exactly one "Library ID" (no fragile classes),
-  (b) added hover (loads `<video>`/`<img>` + CDN URLs), (c) `--debug` dumps the first
-  card's HTML to `fb_card_debug.html`, (d) prints per-field fill-rates.
+- `facebook/scripts/fb_scrape.py` (PRs #8–#11) — Playwright scraper: reuses the
+  competitor→page map + navigate URL + scroll; climbs to the full ad card; hovers to
+  load media + CDN; `--debug` dumps first card to `fb_card_debug.html`; prints fill-rates.
+- `facebook/scripts/fb_scrape_diff.py` — per-page, per-field fidelity diff vs a
+  Claude-in-Chrome CSV (case/space-insensitive; prints a sample mismatch per field).
 
-Next step (the fix loop):
-1. `python3.13 facebook/scripts/fb_scrape.py "Duolingo" --debug`
-2. `python3.13 facebook/scripts/fb_scrape_diff.py <new_csv> <reference_csv>`
-3. If any field is still blank/wrong → share `fb_card_debug.html` so the exact Meta
-   DOM selectors can be nailed; repeat until every field agrees ~100%.
-4. **Best benchmark:** do a *same-day* Claude-in-Chrome scrape of the same competitor
-   and diff against THAT (the old `06-04` CSV has blank start-dates + a different ad
-   set, so it's an imperfect reference).
-5. Once faithful: add carousel `creative_index` splitting + the per-page mapping gaps
-   (e.g. Duolingo English Test page `1829461027108598` isn't in the map), then wire it
-   into the pipeline as the FB Step-1.
-Fallback if DOM stays fragile: capture Meta's GraphQL responses (structured data)
-instead of scraping the DOM.
+**What WORKS** (validated vs a same-day Claude-in-Chrome scrape of Duolingo, 30 ads):
+✅ anti-bot beatable · ✅ 100% ad recall (30/30 ad_library_ids) · ✅ `ad_media_type`
+correct (8 Image + 22 Video) · ✅ `ad_version_count`, `has_low_impression_warning`
+match · ✅ CDN video URLs captured (22/30) via hover.
 
-## 🔀 PR history
+**What's BROKEN** (remaining work to hit zero-miss):
+1. **`ad_start_date` off by ONE day** (terminal `2026-02-06` vs Claude `2026-02-05`).
+   NOT timezone (`timezone_id=Asia/Kolkata` didn't change it; `locale=en-IN` broke
+   rendering → 0 ads, removed). Likely the regex grabs the wrong date text. Need the
+   card innerText to fix.
+2. **`ad_primary_text` grabs the wrong block** (terminal pulled body "Duolingo is the
+   world's #1…"; Claude has headline "Free language learning"). "Longest text block"
+   heuristic is wrong — need the card structure to pick the right node.
+3. **`page_rank` column missing** — Claude schema = 27 cols incl. `page_rank` (col 2);
+   fb_scrape.py emits 26. Easy fix: per-page 1-based counter. (build_history computes
+   page_rank locally anyway, so analysis isn't blocked.)
+4. Untested/likely: carousel `creative_index` splitting; agreement on `ad_description`/
+   `ad_cta_label`/`ad_destination_url`/`ad_distribution_platforms`/`facebook_page_followers`;
+   per-page mapping gaps (Duolingo English Test page `1829461027108598` not in
+   COMPETITOR_PAGES — but today's Claude scrape also got only the 1 mapped page, so
+   that's a shared mapping limit, not a scraper diff).
+
+**To RESUME (don't restart):**
+1. `python3.13 facebook/scripts/fb_scrape.py "Duolingo" --debug` → share `fb_card_debug.html`.
+2. From the card HTML: fix the start_date regex + primary_text selector; add page_rank col.
+3. Re-run + `fb_scrape_diff.py <terminal_csv> <same-day-claude_csv>` until every field ~100%.
+4. If the DOM stays fragile, capture Meta's GraphQL/AJAX responses (structured data)
+   instead of scraping the rendered DOM — more robust.
+5. Once faithful: add mapping pages + carousel splitting, then wire it in as FB Step 1.
+
+## 🔀 PR history (all merged)
 #1 Phase 1 (free rank) · #2 Phase 0+2 (Google snapshots + Flash enrichment) ·
 #3 Phase 3 (script replication + FB↔Google) · #4 ops (Google seed + runners) ·
 #5 authenticated R2 + smart-quote tolerance · #6 .env found anywhere ·
-#7 FB scrape probe · #8 first-cut terminal FB scraper. (All merged except the
-in-progress scraper iteration.)
+#7 FB scrape probe · #8 first-cut terminal FB scraper · #9 handoff doc + scraper v2 ·
+#10 IST timezone + full-field diff · #11 drop locale (fixed 0-ads) ·
+#12 pause terminal scraper + save learnings (this doc).
 
 ## 📌 Open decisions / later
 - Format taxonomy: re-author a clean schema (the seed CSV is Supernova's own ads).
