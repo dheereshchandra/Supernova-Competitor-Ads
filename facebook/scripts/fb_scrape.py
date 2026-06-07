@@ -226,10 +226,11 @@ def main() -> int:
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=args.headless)
-        # IST + en-IN so Meta renders dates/locale exactly like a real India Chrome
-        # (Playwright defaults to UTC, which shifts "Started running on …" by a day).
+        # IST so Meta renders dates like a real India Chrome (Playwright defaults to
+        # UTC, which shifts "Started running on …" by a day). NOTE: do NOT set
+        # locale="en-IN" — it changes Meta's response and the cards don't render.
         context = browser.new_context(viewport={"width": 1400, "height": 1000},
-                                      timezone_id="Asia/Kolkata", locale="en-IN")
+                                      timezone_id="Asia/Kolkata")
         page = context.new_page()
         for i, pg in enumerate(pages, 1):
             print(f"[page {i}/{len(pages)}] {pg['page_name']} ({pg['page_id']}) — loading…")
