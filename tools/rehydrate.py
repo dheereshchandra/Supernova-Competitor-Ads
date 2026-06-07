@@ -4,16 +4,18 @@ rehydrate.py — refill a competitor's local media cache from Cloudflare R2.
 
 Git holds the master CSV (with every r2_public_url); the heavy media lives in
 R2. This pulls the media back down so you can work a competitor someone else
-scraped, without a 60 GB transfer. R2 public URLs need no credentials.
+scraped, without a 60 GB transfer.
+
+Two download modes (auto-selected):
+  • AUTHENTICATED (preferred) — if R2 keys are in your .env, downloads with the
+    S3 API. Works even when the bucket's public access is off (a 403 on the
+    public URL). The object key is derived from the public URL's path.
+  • PUBLIC — if no keys are present, falls back to the public r2.dev URL (needs
+    the bucket to have public access enabled).
 
 Usage:
   python3 tools/rehydrate.py --pipeline facebook --competitor zinglish
   python3 tools/rehydrate.py --pipeline google   --competitor speakx --dry-run
-
-Reads {repo}/{pipeline}/master/{competitor}.csv and, for every row with a
-non-empty r2_public_url, downloads the asset into
-{pipeline}/videos/{slug}-{date}/ or {pipeline}/images/{slug}-{date}/, using the
-pipeline's id/variant naming. Skips files already on disk. Prints a tally.
 """
 from __future__ import annotations
 
@@ -24,6 +26,7 @@ import pathlib
 import sys
 import urllib.error
 import urllib.request
+from urllib.parse import urlparse
 
 csv.field_size_limit(10 ** 9)
 
@@ -32,15 +35,53 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp"}
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 
-# id / variant column names differ per pipeline
 ID_COL = {"facebook": "ad_library_id", "google": "creative_id"}
 VAR_COL = {"facebook": "creative_index_in_ad", "google": "variant_index"}
+
+# straight + curly quotes — strip any that wrap a .env value
+_QUOTES = "".join(chr(c) for c in (0x22, 0x27, 0x2018, 0x2019, 0x201c, 0x201d))
+
+
+def load_env(base: pathlib.Path, pipeline: str) -> dict:
+    """Read the first .env found ({pipeline}/.env, then repo-root .env)."""
+    env: dict = {}
+    for p in (base / pipeline / ".env", base / ".env"):
+        if p.is_file():
+            for line in p.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    env[k.strip()] = v.strip().strip(_QUOTES)
+            break
+    return env
+
+
+def r2_client(env: dict):
+    """Build an S3 client for R2 if keys are present, else (None, None)."""
+    need = ("R2_S3_ENDPOINT", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY", "R2_BUCKET")
+    if not all(env.get(k) for k in need):
+        return None, None
+    try:
+        import boto3
+    except ImportError:
+        return None, None
+    client = boto3.client(
+        "s3", endpoint_url=env["R2_S3_ENDPOINT"],
+        aws_access_key_id=env["R2_ACCESS_KEY_ID"],
+        aws_secret_access_key=env["R2_SECRET_ACCESS_KEY"],
+        region_name="auto")
+    return client, env["R2_BUCKET"]
 
 
 def ext_of(url: str) -> str:
     path = url.split("?", 1)[0]
     dot = path.rfind(".")
     return path[dot:].lower() if dot != -1 else ""
+
+
+def object_key(url: str) -> str:
+    """The R2 object key = the public URL's path (everything after the host)."""
+    return urlparse(url).path.lstrip("/")
 
 
 def local_name(cid: str, variant, ext: str) -> str:
@@ -64,6 +105,8 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true",
                     help="list what would be downloaded; makes no network calls")
     ap.add_argument("--limit", type=int, help="cap number of downloads (testing)")
+    ap.add_argument("--public", action="store_true",
+                    help="force public-URL download even if R2 keys are present")
     args = ap.parse_args()
 
     base = pathlib.Path(args.base)
@@ -74,6 +117,10 @@ def main() -> int:
 
     id_col = ID_COL[args.pipeline]
     var_col = VAR_COL[args.pipeline]
+
+    client, bucket = (None, None)
+    if not args.public:
+        client, bucket = r2_client(load_env(base, args.pipeline))
 
     with master.open(encoding="utf-8-sig", newline="") as f:
         rows = list(csv.DictReader(f))
@@ -90,7 +137,7 @@ def main() -> int:
         elif ext in IMAGE_EXTS:
             kind = "images"
         else:
-            continue  # unknown asset type — skip
+            continue
         cid = (r.get(id_col) or "").strip()
         if not cid:
             continue
@@ -106,8 +153,13 @@ def main() -> int:
     if args.limit:
         planned = planned[:args.limit]
 
-    print(f"[rehydrate] {args.pipeline}/{slug}: "
-          f"{len(planned)} asset(s) referenced in master")
+    mode = "authenticated (your R2 keys)" if client is not None else "public URL"
+    print(f"[rehydrate] {args.pipeline}/{slug}: {len(planned)} asset(s) referenced "
+          f"in master — mode: {mode}")
+    if client is None and not args.public:
+        print("[rehydrate] note: no R2 keys found in .env — using public URLs. "
+              "If you get 403s, add R2 keys to your .env.")
+
     dl = skip = fail = 0
     for url, dest in planned:
         if dest.exists() and dest.stat().st_size > 0:
@@ -119,11 +171,14 @@ def main() -> int:
         try:
             dest.parent.mkdir(parents=True, exist_ok=True)
             tmp = dest.with_suffix(dest.suffix + ".part")
-            urllib.request.urlretrieve(url, tmp)
+            if client is not None:
+                client.download_file(bucket, object_key(url), str(tmp))
+            else:
+                urllib.request.urlretrieve(url, tmp)
             tmp.replace(dest)
             dl += 1
             print(f"  OK   {dest.name}")
-        except (urllib.error.URLError, OSError) as e:
+        except (urllib.error.URLError, OSError, Exception) as e:  # noqa: BLE001
             fail += 1
             print(f"  FAIL {dest.name} — {e}")
 
