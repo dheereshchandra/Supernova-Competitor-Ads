@@ -44,6 +44,37 @@
 
 *Week-on-week deltas are thin until there are ≥3 weekly scrapes; with only a couple of dates so far, weekly ≈ scrape-on-scrape.*
 
+## By language
+
+| language | ads | winners | win ratio |
+|---|--:|--:|--:|
+| English | 61 | 10 | 0.164 |
+| Arabic, Spanish | 1 | 0 | 0.0 |
+| Spanish | 1 | 0 | 0.0 |
+
+## Format mix
+
+| format | ads | winners | win ratio |
+|---|--:|--:|--:|
+| app-screencast | 22 | 4 | 0.182 |
+| other | 6 | 1 | 0.167 |
+| listicle-montage | 6 | 0 | 0.0 |
+| skit-narrative | 3 | 0 | 0.0 |
+| text-on-screen-only | 2 | 0 | 0.0 |
+| split-screen | 1 | 0 | 0.0 |
+
+## Script replication
+
+How much of the output is fresh scripts vs. replays of a script that already worked (same script translated, or re-shot with new visuals).
+
+| replication | ads | winners | win ratio |
+|---|--:|--:|--:|
+| visual_variant | 17 | 0 | 0.0 |
+| unique | 12 | 3 | 0.25 |
+| original | 5 | 2 | 0.4 |
+| exact_replica | 5 | 0 | 0.0 |
+| translation_replica | 1 | 0 | 0.0 |
+
 ## Biggest rank movers
 
 | ad_id | scrape | Δ rank | new rank |
