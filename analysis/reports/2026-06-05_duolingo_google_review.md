@@ -33,6 +33,45 @@
 
 *Week-on-week deltas are thin until there are ≥3 weekly scrapes; with only a couple of dates so far, weekly ≈ scrape-on-scrape.*
 
+## By language
+
+| language | ads | winners | win ratio |
+|---|--:|--:|--:|
+| English | 37 | 0 | 0.0 |
+| Hindi | 21 | 0 | 0.0 |
+| Bengali | 8 | 0 | 0.0 |
+| Telugu | 6 | 0 | 0.0 |
+| German | 2 | 0 | 0.0 |
+| Spanish | 2 | 0 | 0.0 |
+| Tamil | 2 | 0 | 0.0 |
+| Dutch | 1 | 0 | 0.0 |
+| Greek | 1 | 0 | 0.0 |
+| Romanian | 1 | 0 | 0.0 |
+| Thai | 1 | 0 | 0.0 |
+| Turkish | 1 | 0 | 0.0 |
+| Arabic | 1 | 0 | 0.0 |
+
+## Format mix
+
+| format | ads | winners | win ratio |
+|---|--:|--:|--:|
+| listicle-montage | 7 | 0 | 0.0 |
+| skit-narrative | 5 | 0 | 0.0 |
+| other | 3 | 0 | 0.0 |
+| split-screen | 2 | 0 | 0.0 |
+| talking-head | 2 | 0 | 0.0 |
+
+## Script replication
+
+How much of the output is fresh scripts vs. replays of a script that already worked (same script translated, or re-shot with new visuals).
+
+| replication | ads | winners | win ratio |
+|---|--:|--:|--:|
+| visual_variant | 9 | 0 | 0.0 |
+| unique | 5 | 0 | 0.0 |
+| original | 3 | 0 | 0.0 |
+| exact_replica | 2 | 0 | 0.0 |
+
 ## Biggest rank movers
 
 | ad_id | scrape | Δ rank | new rank |
