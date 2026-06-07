@@ -2,6 +2,12 @@
 """
 fb_scrape.py — EXPERIMENTAL terminal Facebook Ad Library scraper (Playwright).
 
+⏸️ STATUS: PAUSED 2026-06-07 — NOT production. Claude-in-Chrome (scraper_prompt.md)
+remains the FB scrape method. Works: anti-bot, 100% ad recall, media_type,
+version/low-impression, CDN urls. Known misses to fix before use: ad_start_date is
+off by 1 day, ad_primary_text grabs the wrong text block, and the page_rank column is
+missing. Resume plan in SESSION-HANDOFF.md ("PAUSED — terminal Facebook scraper").
+
 Ports the Claude-in-Chrome `scraper_prompt.md` flow to one terminal command:
 reuses the competitor→page mapping, the navigate URL, the lazy-scroll, AND the
 Pass-2 hover interaction (so media type + CDN URLs load). Writes the standard
