@@ -147,8 +147,11 @@ def main() -> int:
             continue
         date = ((r.get("scrape_run_date") or r.get("latest_scrape_run_date")
                  or datetime.date.today().isoformat()).strip())
-        dest = base / args.pipeline / kind / f"{slug}-{date}" / local_name(
-            cid, r.get(var_col), ext)
+        # Local filename = the R2 object key's basename. upload_to_r2.py uses a flat
+        # namespace where the key IS the media filename, so this matches byte-for-byte
+        # what was uploaded — including version-expansion names {id}_ver{V}_c{C}.mp4.
+        dest = base / args.pipeline / kind / f"{slug}-{date}" / pathlib.Path(
+            object_key(url)).name
         if dest in seen_dest:
             continue
         seen_dest.add(dest)

@@ -107,6 +107,29 @@ def write_csv(path: pathlib.Path, fieldnames: list, rows: list) -> None:
 
 # -------- file resolution: CSV row → local file on disk --------
 
+def _int0(x) -> int:
+    try:
+        return int(str(x or "0").strip() or "0")
+    except (ValueError, TypeError):
+        return 0
+
+
+def media_name(ad_id: str, version_index, creative_index, ext: str,
+               v0_creative_prefix: str) -> str:
+    """Canonical local/R2 media filename for a (ad, version, creative). MUST match
+    download_fb_ads.py, rehydrate.py and transcribe_tag.py.
+
+      version 0  → backward-compatible legacy scheme (so existing masters/R2 keep
+                   working): creative 0 → {id}{ext}; creative N≥1 → {id}{prefix}{N+1}{ext}
+                   (prefix is "_v" for video, "_c" for image — the pre-v2.3 conventions).
+      version V≥1 → {id}_ver{V}_c{C}{ext}  (version-expansion; one file per version+creative).
+    """
+    v, c = _int0(version_index), _int0(creative_index)
+    if v <= 0:
+        return f"{ad_id}{ext}" if c == 0 else f"{ad_id}{v0_creative_prefix}{c + 1}{ext}"
+    return f"{ad_id}_ver{v}_c{c}{ext}"
+
+
 def local_file_for_row(row: dict, videos_dir: pathlib.Path,
                        images_dir: Optional[pathlib.Path] = None) -> Tuple[Optional[pathlib.Path], str]:
     """
@@ -125,34 +148,24 @@ def local_file_for_row(row: dict, videos_dir: pathlib.Path,
         return None, "no-creative"
 
     ad_media_type = (row.get("ad_media_type") or "").strip()
-    try:
-        creative_index_in_ad = int((row.get("creative_index_in_ad") or "0").strip())
-    except ValueError:
-        creative_index_in_ad = 0
+    creative_index_in_ad = _int0(row.get("creative_index_in_ad"))
+    version_index = _int0(row.get("version_index"))  # version-expansion (v2.3); blank → 0
 
     # Image-only ads: look for a local .jpg under images_dir before falling through
-    # to image-pending. Naming mirrors the video convention from §8.5:
-    #   creative_index 0 → {id}.jpg
-    #   creative_index N (≥1) → {id}_c{N+1}.jpg
+    # to image-pending. Naming via media_name() (version-aware; v0 keeps {id}.jpg /
+    # {id}_c{N+1}.jpg, vN≥1 → {id}_ver{V}_c{C}.jpg).
     if ad_media_type == "Image":
         if images_dir is not None:
-            if creative_index_in_ad == 0:
-                img_fname = f"{ad_library_id}.jpg"
-            else:
-                img_fname = f"{ad_library_id}_c{creative_index_in_ad + 1}.jpg"
+            img_fname = media_name(ad_library_id, version_index, creative_index_in_ad,
+                                   ".jpg", "_c")
             img_candidate = images_dir / img_fname
             if img_candidate.exists():
                 return img_candidate, "image"
         return None, "image-pending"
 
-    # Map creative_index_in_ad to the filename convention used by Step 2 (download_fb_ads.py):
-    #   creative_index 0 → {id}.mp4
-    #   creative_index N (≥1) → {id}_v{N+1}.mp4
-    if creative_index_in_ad == 0:
-        fname = f"{ad_library_id}.mp4"
-    else:
-        fname = f"{ad_library_id}_v{creative_index_in_ad + 1}.mp4"
-
+    # Video: same filename convention Step 2 (download_fb_ads.py) writes — version-aware.
+    #   v0: creative 0 → {id}.mp4, creative N → {id}_v{N+1}.mp4 ; vN≥1 → {id}_ver{V}_c{C}.mp4
+    fname = media_name(ad_library_id, version_index, creative_index_in_ad, ".mp4", "_v")
     candidate = videos_dir / fname
 
     if candidate.exists():
