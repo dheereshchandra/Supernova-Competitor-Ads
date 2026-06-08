@@ -88,6 +88,7 @@ See `../ARCHITECTURE.md` for the architectural rationale. See the two sub-skills
    - Option: *"Attach the CSV to this chat"*
    - Option: *"Use the latest CSV in inputs/ for a competitor I'll name"*
    - Option: *"Use a specific file path I'll provide"*
+   - If the operator has NOT yet run Step 1, surface this tip: *"facebook.com is a restricted site, so the Claude-in-Chrome scrape asks you to approve ~30-40 JS permission popups per 30-ad page. You can auto-approve them with `facebook/scripts/fb_allow_clicker.py` — run it from a standalone Terminal (needs Screen Recording + Accessibility); see `HANDOVER.md §6.8`. Optional; manual clicking also works."*
 
 2. **Identify the competitor.** Parse the slug from the CSV filename (e.g. `fb-ads-zinglish-2026-05-26.csv` → `zinglish`). If the filename is ambiguous, ask the operator.
 

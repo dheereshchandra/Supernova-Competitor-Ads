@@ -82,6 +82,7 @@ See `HANDOVER.md §9.7` for the full URL contract.
 ## The 4 steps
 
 1. **Scrape** — operator runs `scraper_prompt.md` in Claude-in-Chrome standalone, gets a CSV
+   - While scraping, Meta asks Claude to approve every JS step (~30-40 per 30-ad page). Automate with `facebook/scripts/fb_allow_clicker.py` (run from a standalone Terminal.app, not Conductor; needs Screen Recording + Accessibility) — see `HANDOVER.md §6.8`.
 2. **Download** — `scripts/download_fb_ads.py` saves every video locally
 3. **R2 upload** — `scripts/upload_to_r2.py` uploads to R2, maintains per-competitor master CSV
 4. **AI analysis** — the `scripts/step4_*.py` family (one script per stage of the 9-stage pipeline, plus `step4_audit.py` and `backfill_step4_images.py`) and the `fb-ads-video-analysis` skill produce **two Word documents per ad** (competitor analysis + Supernova-voice rewrite), upload every per-scene image to R2 (originals, regenerated panels, character sheets, all @ 2K), embed an `Asset: <R2 URL>` hyperlink caption beneath every picture in the docs, then upload both docs to R2 and back-fill **five** URL columns in the master (two doc URLs + three JSON arrays of image URLs). Final HEAD-check audit confirms every recorded URL resolves. Validated end-to-end on 5 Zinglish ads, $1.00 actual cost.

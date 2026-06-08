@@ -1,0 +1,6 @@
+{
+  "_comment": "Onboarding v1 — 2026-06-08. One-shot, idempotent workspace setup: installs all Python deps (python3.13) then runs both preflights in report-only mode. It does NOT touch secrets (.env) and does NOT run any paid/scrape step. Brew-level installs (python@3.13, ffmpeg) and the .env secrets file are done by the HUMAN during onboarding — see CLAUDE.md / Supernova-Handoff-Package/START-HERE.md. The agent walks the human through .env in onboarding; the '|| true' on the preflight steps keeps a fresh clone with no .env yet from hard-failing the workspace open. All commands run from the repo root with repo-relative paths and python3.13 (system python3 is 3.9 and lacks packages).",
+  "scripts": {
+    "setup": "if [ \"$CONDUCTOR_IS_LOCAL\" = \"1\" ]; then python3.13 -m pip install --upgrade --break-system-packages --user requests openpyxl boto3 yt-dlp google-genai python-docx Pillow numpy pyobjc-framework-Vision pyobjc-framework-Quartz pyobjc-framework-Cocoa; python3.13 facebook/scripts/preflight.py --skip-gemini || true; python3.13 analysis/scripts/preflight_enrichment.py || true; fi"
+  }
+}

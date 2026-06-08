@@ -37,12 +37,18 @@ supernova-competitor-ads/
 │   └── wispr-flow-cta-analysis.xlsx
 └── tools/
     ├── rehydrate.py              ← pull one competitor's media down from R2
-    └── log_and_commit.sh         ← after a run: stamp RUN_LOG + links manifest + commit
+    ├── log_and_commit.sh         ← after a run: stamp RUN_LOG + links manifest + commit
+    └── daily-sync/               ← one-time setup: 9 AM pull-only auto-sync (launchd)
 ```
 
 ## Daily workflow
 
 1. `git pull` — get the latest (seconds; it's small).
+   *(One-time: run `zsh tools/daily-sync/install.sh` from your **main** clone to
+   automate this — it installs a pull-only launchd job that does `git fetch` +
+   `git pull --ff-only` on `main` every day at 9:00 AM local. It never pushes or
+   resets; if `main` is dirty/ahead/diverged it skips and posts a notification.
+   Details: `tools/daily-sync/README.md`.)*
 2. **Claim a competitor nobody else is doing.** Each competitor has its own
    master file, so two people on different competitors never clash.
 3. Run the pipeline:

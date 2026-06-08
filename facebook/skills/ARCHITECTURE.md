@@ -29,7 +29,7 @@ This document is the single source of truth for *why the skill structure is shap
 └──────────────────────────┘    └─────────────────────────────┘
 ```
 
-Step 1 (scraping) is **not** a skill in Cowork — it runs in the operator's Claude-in-Chrome standalone session (the Chrome extension drives Meta Ad Library directly). The CSV it produces is the input to the pipeline.
+Step 1 (scraping) is **not** a skill in Cowork — it runs in the operator's Claude-in-Chrome standalone session (the Chrome extension drives Meta Ad Library directly). The CSV it produces is the input to the pipeline. During Step 1, facebook.com is a restricted site so Claude requests approval for every JS execution (~30-40 per 30-ad page); the operator can auto-approve only the facebook.com popup with `facebook/scripts/fb_allow_clicker.py` (run from a standalone Terminal, needs Screen Recording + Accessibility) — full setup in `HANDOVER.md §6.8`. This is optional and does not affect the CSV the pipeline consumes.
 
 ## Why three skills, not one
 

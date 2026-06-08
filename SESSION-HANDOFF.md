@@ -1,6 +1,6 @@
 # Session Handoff — Competitor-Ad Analysis System
 
-> Running status so this work can resume in any workspace. Last updated 2026-06-07.
+> Running status so this work can resume in any workspace. Last updated 2026-06-08.
 > Read this first, then the linked docs.
 
 ## What this project is
@@ -43,6 +43,32 @@ transcripts → never re-pay).
 - **Google Duolingo**: full enrichment run + pushed (19 video transcripts). Mostly
   `new` verdicts (Google has only ~2 days of history; longevity needs more scrapes).
 
+## 🆕 NEW (2026-06-08) — Facebook permission auto-clicker
+`fb_allow_clicker.py` (`facebook/scripts/fb_allow_clicker.py`) is a macOS Vision-OCR
+background watcher that auto-approves the Claude-in-Chrome **"Allow this action"**
+popup during the FB scrape. facebook.com is a **RESTRICTED** site so the extension
+prompts for **EVERY** JS execution (30–40 clicks per 30-ad page; upstream bug
+`anthropics/claude-code#55124`). Makes the **current** Claude-in-Chrome method less
+manual — it does **not** replace it.
+
+Run from a **STANDALONE Terminal.app** (not Conductor's built-in terminal), started
+**before** the scrape, **Ctrl-C** when done:
+```bash
+python3.13 facebook/scripts/fb_allow_clicker.py        # for real
+# validate first: python3.13 facebook/scripts/fb_allow_clicker.py --dry-run
+# extra flags: --any-app  --verbose
+```
+- **One-time deps:** `python3.13 -m pip install --user --break-system-packages pyobjc-framework-Vision pyobjc-framework-Quartz pyobjc-framework-Cocoa`
+- **One-time macOS permissions** (granted to the Terminal that launches it): **Screen
+  Recording** + **Accessibility** (Cmd-Q + reopen Terminal after granting).
+- **Safeguards:** clicks **only** the facebook.com "Allow this action" button under 6
+  simultaneous conditions; never Decline / Always-allow.
+- Full operator reference: `facebook/HANDOVER.md §6.8`; onboarding driver: root
+  `CLAUDE.md` + `Supernova-Handoff-Package/START-HERE.md`.
+
+(Unrelated to the PAUSED `fb_scrape.py` terminal-scraper experiment below — that work
+stays separate.)
+
 ## How to run (the everyday rhythm)
 ```bash
 cd <repo>
@@ -66,6 +92,8 @@ Claude-in-Chrome scrape and the Google CLI scrape: see chat / `facebook/HANDOVER
    the loaders now strip them, but bare values are safest).
 3. `python3.13 facebook/scripts/preflight.py` and
    `python3.13 analysis/scripts/preflight_enrichment.py` → both READY.
+4. Daily auto-sync (one-time): `zsh tools/daily-sync/install.sh` — keeps your canonical clone up to date at 9 AM daily.
+   The committed templates live in `tools/daily-sync/` (`sync.sh`, `install.sh`, `uninstall.sh`, `live.gosupernova.repo-sync.plist.template`, `README.md`); pull-only (never pushes/resets — skips + notifies if main is dirty/ahead/diverged). Supersedes the old machine-only sync job (see memory `daily-repo-sync-launchd.md`).
 
 ## 🩹 Operational gotchas hit & fixed (so the friend won't)
 - **Smart quotes in `.env`** → `'ascii' codec can't encode '”'`. Fixed: loaders
@@ -139,6 +167,7 @@ match · ✅ CDN video URLs captured (22/30) via hover.
 #7 FB scrape probe · #8 first-cut terminal FB scraper · #9 handoff doc + scraper v2 ·
 #10 IST timezone + full-field diff · #11 drop locale (fixed 0-ads) ·
 #12 pause terminal scraper + save learnings (this doc).
+New tool (2026-06-08): `facebook/scripts/fb_allow_clicker.py` — FB permission auto-clicker (see section above).
 
 ## 📌 Open decisions / later
 - Format taxonomy: re-author a clean schema (the seed CSV is Supernova's own ads).
