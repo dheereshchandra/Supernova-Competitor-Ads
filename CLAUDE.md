@@ -60,6 +60,8 @@ The 8 steps as a compact checklist (Steps 1–7 are onboarding; Step 8 is a one-
 
 One competitor, end to end.
 
+> **One-command shortcut:** `analysis/scripts/run_pipeline.sh --competitor <slug>` runs Steps 1→6 below as named stages in cost order. The costly Step-4 (Supernova script/image gen — Gemini **Pro** + image-gen) is the EXPLICIT LAST stage and runs only behind a typed cost gate (it prints the real `BATCH TOTAL $X` and needs `yes`); enrichment is incremental (only NEW videos pay). Use `--dry-run` to preview, `--through-stage 5` to stop before Step-4, `--from-stage N` to resume, `--step4-scope top:20` + `--execute-step4 --yes` to actually generate. A missing/stale FB snapshot makes Stage 1 print the manual scrape steps and exit 10 (re-run resumes). The individual numbered steps below remain the source of truth for each stage.
+
 **Step 0. Preflight:** `python3.13 facebook/scripts/preflight.py` (and `python3.13 analysis/scripts/preflight_enrichment.py`)
 
 **Step 1. SCRAPE:**

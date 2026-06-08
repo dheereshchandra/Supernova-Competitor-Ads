@@ -47,3 +47,6 @@
 # Local scratch
 **/.part
 **/*.part
+
+# Orchestrator per-run logs (analysis/scripts/run_pipeline.sh)
+analysis/logs/
