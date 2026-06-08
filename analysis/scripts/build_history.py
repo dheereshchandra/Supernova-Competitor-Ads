@@ -61,6 +61,7 @@ FIELD_MAP = {
         "media_type": "ad_media_type",
         "low_impression": "has_low_impression_warning",
         "creative_index": "creative_index_in_ad",
+        "version_index": "version_index",
     },
     "google": {
         "page_id": "advertiser_id",
@@ -71,6 +72,7 @@ FIELD_MAP = {
         "media_type": "creative_format",
         "low_impression": None,
         "creative_index": "variant_index",
+        "version_index": None,
     },
 }
 
@@ -151,21 +153,30 @@ def discover_snapshots(root: Path, pipeline: str,
 
 
 def collapse_to_ads(rows: list[dict], pipeline: str) -> list[dict]:
-    """One row per ad: keep the creative/variant with index 0 (else lowest index,
-    else first seen). Rank fields are identical across an ad's creatives."""
+    """One row per ad: keep the (version, creative) with the lowest
+    (version_index, creative_index) tuple (else first seen). best[] is keyed on
+    ad_id ONLY so each ad still collapses to exactly ONE row — version_index is
+    folded into the selection comparison, NOT into the dict key (adding it to the
+    key would emit multiple rows per ad and break compute_rank_metrics). Rank
+    fields are identical across an ad's versions/creatives."""
     fm = FIELD_MAP[pipeline]
     idx_col = fm["creative_index"]
-    best: dict[str, tuple[int, dict]] = {}
+    best: dict[str, tuple[tuple[int, int], dict]] = {}
     for r in rows:
         ad_id = (r.get(fm["ad_id"]) or "").strip()
         if not ad_id:
             continue
         try:
-            idx = int((r.get(idx_col) or "0").strip() or "0")
-        except ValueError:
-            idx = 0
-        if ad_id not in best or idx < best[ad_id][0]:
-            best[ad_id] = (idx, r)
+            creative_idx = int(r.get(idx_col) or 0)
+        except (ValueError, TypeError):
+            creative_idx = 0
+        try:
+            ver_idx = int(r.get("version_index") or 0)
+        except (ValueError, TypeError):
+            ver_idx = 0
+        cmp_val = (ver_idx, creative_idx)
+        if ad_id not in best or cmp_val < best[ad_id][0]:
+            best[ad_id] = (cmp_val, r)
     return [v[1] for v in best.values()]
 
 

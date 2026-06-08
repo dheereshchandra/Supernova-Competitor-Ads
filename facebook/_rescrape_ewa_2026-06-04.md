@@ -1,5 +1,7 @@
 # EWA re-scrape — paste this into a fresh Claude-in-Chrome chat
 
+> ⚠️ HISTORICAL (pre-v2.3 26-column schema) — do NOT regenerate from this; the current schema is 36 columns, see facebook/scraper_prompt.md (v2.3).
+
 > ⚠️ **HISTORICAL ARTIFACT (2026-06-04, EWA one-off) — context only; do NOT follow as live instructions.** For any scrape, use the canonical `facebook/scraper_prompt.md` in this repo.
 
 > **Context for the operator.** The 2026-06-04 EWA scrape we received was produced by a *different* tool (Apify/Bright-Data-style output), not the canonical Meta Ad Library scraper in `scraper_prompt.md`. It had a 26-column schema with `library_id`, `media_type`, `started_running`, `spend`, `impressions`, `is_active` etc. — none of which our pipeline can consume. It also used `page_id = 165004157332215` instead of the canonical `61572590343208` from COMPETITOR_PAGES. We need a clean re-run of the standard v2.1 scraper.

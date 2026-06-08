@@ -1,5 +1,7 @@
 # Payload #2 — full scrape logic to send to the Claude-in-Chrome extension
 
+> ⚠️ HISTORICAL (pre-v2.3 26-column schema) — do NOT regenerate from this; the current schema is 36 columns, see facebook/scraper_prompt.md (v2.3).
+
 > Paste the section below (everything inside the `---` markers) into the same Claude-in-Chrome chat as your next message. It's a single self-contained scrape spec: no filesystem dependencies, no external references. The extension can run it end-to-end.
 
 ---

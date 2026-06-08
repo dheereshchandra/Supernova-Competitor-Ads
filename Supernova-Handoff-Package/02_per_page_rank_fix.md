@@ -1,5 +1,7 @@
 # Handoff 02 — Per-Page Rank Fix (so winners on smaller pages aren't missed)
 
+> ⚠️ HISTORICAL (documents the original 26→27-column per-page-rank fix). The live FB schema is now **36 columns** (v2.3 version-expansion) — see `facebook/scraper_prompt.md`.
+
 **Goal:** make the ad rank **restart at 1 for each Facebook page** a competitor runs, so the
 creative team's "top 50 / top 100" filter surfaces the best ads of *every* page — not just the
 biggest one.
