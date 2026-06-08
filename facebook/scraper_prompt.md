@@ -32,7 +32,7 @@
 > **Operator note:** This is the prompt you paste into Claude-in-Chrome to scrape one competitor.
 > Do not edit anything below unless you're adding/removing a competitor in the `COMPETITOR_PAGES` mapping (see Step 1) — everything else is tuned and changes can break the run.
 >
-> **Before pasting:** confirm the version banner at the very top of this file reads `v2.0` or later. If it says `v1` or has no banner, STOP and pull the patched copy from `/Users/iniyan/Desktop/fb-ad-downloader/scraper_prompt.md`. The old prompt produces blank image URLs.
+> **Before pasting:** confirm the version banner at the very top of this file reads `v2.1` or later. If it says `v1` or has no banner, STOP — this in-repo `facebook/scraper_prompt.md` *is* the canonical copy, so run `git pull` to get the latest (or ask the team maintainer). The old prompt produces blank image URLs.
 >
 > See `HANDOVER.md` → "Step 1 — Scrape" for the operator walkthrough (how to open Claude-in-Chrome, paste this, pick a competitor, what to expect, common failures).
 

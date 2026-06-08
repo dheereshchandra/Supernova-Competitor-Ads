@@ -2,7 +2,7 @@
 
 Label: Onboarding v1 — 2026-06-08.
 
-Canonical repo root: `/Users/jaihinth/conductor/workspaces/supernova-competitor-ads/adelaide`. ALL commands run from there and start with `python3.13` (system `python3` is 3.9 and lacks packages).
+Canonical repo root: the folder where you cloned this repo — its path differs on every machine, so ignore any absolute path shown in these docs. ALL commands run from there and start with `python3.13` (system `python3` is 3.9 and lacks packages).
 
 This file is the first thing an agent reads when the repo opens in Conductor. It is the driver + index. The full plain-language roadmap lives in `Supernova-Handoff-Package/START-HERE.md` → "Start from scratch on Conductor (Onboarding v1)"; do not duplicate that prose here.
 
@@ -27,6 +27,7 @@ The 8 steps as a compact checklist (Steps 1–7 are onboarding; Step 8 is a one-
    python3.13 -m pip install --upgrade --break-system-packages --user requests openpyxl boto3 yt-dlp google-genai python-docx Pillow numpy pyobjc-framework-Vision pyobjc-framework-Quartz pyobjc-framework-Cocoa
    ```
    Success: pip finishes with no red `ERROR` lines (a yellow PATH warning is fine).
+   - If a later command fails with `command not found: yt-dlp` (or similar), add Python's user-bin to PATH once: `echo 'export PATH="$HOME/Library/Python/3.13/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc`
 
 3. **Create the repo-root `.env`** with the SIX required keys (the human pastes the values; the agent must never invent or echo them). NO quotes around values; never echo, commit, or paste `.env`:
    ```
@@ -83,6 +84,8 @@ One competitor, end to end.
 
 **RUN IT FROM A STANDALONE `Terminal.app` (NOT the Conductor built-in terminal)**, STARTED BEFORE the scrape; Ctrl-C when done.
 
+> macOS only. On Windows/Linux the auto-clicker can't run — do the Facebook scrape on a Mac (or with a Mac teammate), or skip Facebook and run the Google pipeline (which works on any OS).
+
 Three commands (verbatim):
 ```
 python3.13 facebook/scripts/fb_allow_clicker.py --test-image /path/to/screenshot.png   # validate OCR on a screenshot, no clicking
@@ -116,7 +119,7 @@ For the full walkthrough see **`facebook/HANDOVER.md` §6**.
 
 A one-time setup that keeps your canonical clone current so teammates' pushes land automatically every morning (we work one competitor per person on a shared repo). Walk the teammate through it once, as the final one-time-setup step of onboarding (it is **Step 8 (one-time)** in `START-HERE.md`).
 
-- **INSTALL** (run ONCE from your MAIN clone, NOT a Conductor worktree): `zsh tools/daily-sync/install.sh`
+- **INSTALL** (run ONCE from your MAIN clone, NOT a Conductor worktree — your *main clone* is the primary copy of the repo on your Mac; Conductor workspaces are lightweight worktrees linked to it; if unsure, ask Claude): `zsh tools/daily-sync/install.sh`
   - Installs a macOS launchd job (label `live.gosupernova.repo-sync`) that runs `git fetch` + `git pull --ff-only` on `main` every day at 9:00 AM local.
 - **SAFETY (pull-only):** it NEVER pushes, hard-resets, or force-merges. If `main` is dirty, ahead, diverged, or not checked out, it SKIPS and posts a macOS notification (open Conductor and ask Claude to resolve). Reasons are logged.
 - **VERIFY:** `launchctl kickstart -k gui/$(id -u)/live.gosupernova.repo-sync && sleep 2 && tail -n 5 "$HOME/Library/Application Support/SupernovaRepoSync/sync.log"` (expect an `OK ...` line).

@@ -1,5 +1,7 @@
 # Reply to send back to the Claude-in-Chrome extension
 
+> ⚠️ **HISTORICAL ARTIFACT (EWA 2026-06-04 debugging) — context only; do NOT follow as live instructions.** For any scrape, use the canonical `facebook/scraper_prompt.md` in this repo.
+
 > Paste the section below into your Claude-in-Chrome chat as your next message. The diagnostic comes first; the actual scrape logic comes in a follow-up once we know which page(s) to scrape.
 
 ---
