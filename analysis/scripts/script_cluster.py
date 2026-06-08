@@ -70,6 +70,8 @@ def load_meta(root: Path, pipeline: str, slug: str) -> dict:
                 rec["language"] = d["language"]
             if d.get("device_format"):
                 rec["device_format"] = d["device_format"]
+            if d.get("presenter_type"):
+                rec["presenter_type"] = d["presenter_type"]
     for r in read_csv(root / "analysis" / "derived" / pipeline / f"{slug}_enriched.csv"):
         meta.setdefault(r["ad_id"], {})["first_seen"] = r.get("first_seen", "")
     return meta
@@ -116,8 +118,8 @@ def main() -> int:
     ap.add_argument("--pipeline", required=True, choices=["facebook", "google"])
     ap.add_argument("--competitor", required=True)
     ap.add_argument("--base", default=None)
-    ap.add_argument("--threshold", type=float, default=0.90,
-                    help="cosine >= this = same script (tune on a labeled sample)")
+    ap.add_argument("--threshold", type=float, default=0.95,
+                    help="cosine >= this = same script (honors the >95% bar; tune on a labeled sample)")
     args = ap.parse_args()
 
     root = repo_root(args.base)
@@ -151,17 +153,21 @@ def main() -> int:
         original = min(member_ids, key=_fs)
         olang = meta.get(original, {}).get("language", "")
         ofmt = meta.get(original, {}).get("device_format", "")
+        opres = meta.get(original, {}).get("presenter_type", "")
         for ad in member_ids:
             if ad == original:
                 role, rtype = "original", "original"
             else:
                 lang = meta.get(ad, {}).get("language", "")
                 fmt = meta.get(ad, {}).get("device_format", "")
+                pres = meta.get(ad, {}).get("presenter_type", "")
                 role = "replica"
                 if olang and lang and lang != olang:
                     rtype = "translation_replica"
                 elif ofmt and fmt and fmt != ofmt:
                     rtype = "visual_variant"
+                elif opres and pres and pres != opres:
+                    rtype = "character_variant"
                 else:
                     rtype = "exact_replica"
             rows.append({"ad_id": ad, "script_group_id": gid, "group_size": size,
