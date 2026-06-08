@@ -233,12 +233,17 @@ def main() -> int:
             if c not in master_cols:
                 master_cols.append(c)
 
-    # Index master by (ad_library_id, creative_index_in_ad)
-    def key_for(row: dict) -> Tuple[str, str]:
+    # Index master by (ad_library_id, version_index, creative_index_in_ad).
+    # version_index is part of the row identity so version-expansion produces one
+    # master row per (ad, version, creative slot). A BLANK version_index normalises
+    # to "0" so OLD committed masters (no version_index column) map onto
+    # version_index=0 — additive-safe, no orphaning of pre-existing rows.
+    def key_for(row: dict) -> Tuple[str, str, str]:
         return (str(row.get("ad_library_id", "")).strip(),
+                str(row.get("version_index", "0")).strip() or "0",
                 str(row.get("creative_index_in_ad", "0")).strip() or "0")
 
-    master_by_key: Dict[Tuple[str, str], dict] = {key_for(r): r for r in master_rows}
+    master_by_key: Dict[Tuple[str, str, str], dict] = {key_for(r): r for r in master_rows}
 
     # boto3 client — only if not dry-run
     s3 = None
@@ -261,7 +266,7 @@ def main() -> int:
 
     for row in input_rows:
         k = key_for(row)
-        ad_library_id, creative_index_in_ad = k
+        ad_library_id, version_index, creative_index_in_ad = k
         existing_master = master_by_key.get(k)
 
         # 1. carry-forward path: master already has an R2 URL

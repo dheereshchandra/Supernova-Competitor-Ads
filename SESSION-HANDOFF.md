@@ -69,6 +69,23 @@ python3.13 facebook/scripts/fb_allow_clicker.py        # for real
 (Unrelated to the PAUSED `fb_scrape.py` terminal-scraper experiment below — that work
 stays separate.)
 
+## 🆕 NEW (2026-06-08) — FB scraper v2.3: VERSION-EXPANSION
+The FB scraper is now **v2.3** with **version-expansion**: a **36-column** schema and
+**one row per `(ad_library_id, version_index, creative_index_in_ad)`**.
+- **Row grain:** `version_index` is **0-based** (like `creative_index_in_ad`).
+  Single-version ads have `version_index=0` on every row, with the `version_*` fields
+  copying the `ad_*` baseline. `ad_version_count` = number of **distinct**
+  `version_index` values for the ad (the real enumerated count).
+- **Columns are additive:** the existing `ad_*` columns (`ad_primary_text`,
+  `ad_cta_label`, `ad_media_type`, the CDN urls, etc.) are **RETAINED** as the
+  card / version-0 baseline; new `version_*` columns hold per-version detail. Old
+  masters without `version_index` read **blank** and coerce to **0**.
+- **Downstream wiring:** `build_history.py` collapse now **folds `version_index`**
+  (rank stays **one row per ad**); `upload_to_r2.py`'s key is now a **3-tuple**.
+- **Scope of first release:** keeps **one transcript per ad** (no Flash cost increase).
+  **Per-version transcription** and **per-version media download** are flagged
+  **follow-ups** (not in this release).
+
 ## How to run (the everyday rhythm)
 ```bash
 cd <repo>

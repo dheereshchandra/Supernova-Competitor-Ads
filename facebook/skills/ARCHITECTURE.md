@@ -134,8 +134,8 @@ A row only gets uploaded to R2 + written into the master when **every** verifica
 
 ## The five master columns added by Step 4
 
-Added by Step 4 on top of the 29-column post-Step-3 master (= 26 scraper + 3
-Step-3 columns), bringing the final schema to **34 columns**. Declared in
+Added by Step 4 on top of the 39-column post-Step-3 master (= 36 scraper + 3
+Step-3 columns), bringing the final schema to **44 columns**. Declared in
 `MASTER_EXTRA_COLS` in `scripts/upload_to_r2.py` so they survive Step-3 re-runs:
 
 | Column | Type | What it contains |
