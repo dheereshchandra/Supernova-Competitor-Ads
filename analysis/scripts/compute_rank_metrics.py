@@ -13,7 +13,7 @@ Outputs (under analysis/derived/{pipeline}/):
 Verdict tiers (locked — see .context/rank-tracking-*.md). Longevity is the
 PRIMARY signal; rank is a position proxy that only confirms. First match wins:
   strong_winner : run_days > 45  AND  >=half its life in the page's top 25%
-  winner        : (run_days >= 15 OR weeks_seen >= 3)  AND  best rank in top-10 / top-10% of page
+  winner        : run_days >= 15  AND  best rank in top-100 / top-10% of page (whichever is more permissive)
   sore_loser    : CONFIRMED inactive, ran >= 7 days, never won   (needs inactive scraping; inert in v1)
   loser         : not a winner, gone from the latest scrape, and short-lived / never-ranked
   new           : first seen <= 7 days ago and <= 2 scrapes — too early to judge
@@ -44,7 +44,7 @@ WINNER_WEEKS = 3
 MEANINGFUL_RUN_DAYS = 7          # sore_loser / loser longevity floor
 TOP25_FRACTION = 0.25
 TOP25_GATE = 0.5                 # >= half its life in the page's top 25%
-RANK_GATE_ABS = 10              # top-10 absolute ...
+RANK_GATE_ABS = 100            # top-100 absolute ...  (winner gate; widened from 10 so 'winner' = stayed >15d AND within top-100)
 RANK_GATE_PCT = 0.10           # ... OR top-10% of the page, whichever is more permissive
 NEW_AGE_DAYS = 7
 
@@ -212,7 +212,7 @@ def main() -> int:
         # scrape; any non-winner that has dropped out is a loser (gone, didn't win).
         if run_days > args.strong_days and top25_gate:
             verdict = "strong_winner"
-        elif (run_days >= args.winner_days or weeks_seen >= WINNER_WEEKS) and rank_gate:
+        elif run_days >= args.winner_days and rank_gate:
             verdict = "winner"
         elif confirmed_inactive and run_days >= MEANINGFUL_RUN_DAYS:
             verdict = "sore_loser"

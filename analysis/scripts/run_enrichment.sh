@@ -47,6 +47,7 @@ $PY analysis/scripts/script_cluster.py --pipeline "$PIPELINE" --competitor "$COM
 echo "== 6/6 recompute metrics + report =="
 $PY analysis/scripts/compute_rank_metrics.py --pipeline "$PIPELINE" --competitor "$COMP"
 $PY analysis/scripts/build_report.py --pipeline "$PIPELINE" --competitor "$COMP"
+$PY analysis/scripts/build_strategic_views.py --pipeline "$PIPELINE" --competitor "$COMP"
 
 if [ -f "analysis/enrichment/facebook/embeddings/$COMP.jsonl" ] && \
    [ -f "analysis/enrichment/google/embeddings/$COMP.jsonl" ]; then
