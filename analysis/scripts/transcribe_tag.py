@@ -69,11 +69,22 @@ def read_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(fh))
 
 
-def find_video(root: Path, pipeline: str, competitor: str, ad_id: str) -> Path | None:
-    """Locate the local mp4 for an ad (primary or first variant)."""
+def find_video(root: Path, pipeline: str, competitor: str, ad_id: str,
+               version_index: int = 0) -> Path | None:
+    """Locate the local mp4 for an ad (or a specific version). version-aware naming
+    matches upload_to_r2.media_name / download_fb_ads: version 0 → {id}.mp4 (+ legacy
+    _v2/_v1 variants); version V≥1 → {id}_ver{V}_c0.mp4 (first creative of that version)."""
+    try:
+        v = int(version_index or 0)
+    except (ValueError, TypeError):
+        v = 0
+    if v >= 1:
+        names = (f"{ad_id}_ver{v}_c0.mp4", f"{ad_id}_ver{v}_c1.mp4")
+    else:
+        names = (f"{ad_id}.mp4", f"{ad_id}_v2.mp4", f"{ad_id}_v1.mp4")
     vbase = root / pipeline / "videos"
     for d in sorted(vbase.glob(f"{competitor}-*")):
-        for name in (f"{ad_id}.mp4", f"{ad_id}_v2.mp4", f"{ad_id}_v1.mp4"):
+        for name in names:
             p = d / name
             if p.exists():
                 return p
