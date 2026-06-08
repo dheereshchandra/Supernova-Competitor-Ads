@@ -32,6 +32,7 @@ See `ARCHITECTURE.md` next to this folder for *why* the pipeline is split this w
 One of:
 
 1. **An attached CSV in chat** — the operator drags `fb-ads-{competitor-slug}-{YYYY-MM-DD}.csv` into the conversation. Copy it from `uploads/` to `inputs/fb-ads-{competitor-slug}-{YYYY-MM-DD-HHMM}.csv` (with HHMM = upload time per the §5.1 naming convention).
+   (That CSV is the output of Step 1, the Claude-in-Chrome scrape. If the operator just finished Step 1, they may have used the permission auto-clicker `facebook/scripts/fb_allow_clicker.py` — it does not change the CSV, so proceed normally. See `HANDOVER.md §6.8`.)
 
 2. **A path the operator names** — e.g. *"run on `inputs/fb-ads-zinglish-2026-05-26-0728.csv`"*. Use the path as-is.
 
