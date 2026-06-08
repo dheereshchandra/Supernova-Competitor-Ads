@@ -35,6 +35,9 @@ $PY analysis/scripts/detect_language.py --pipeline "$PIPELINE" --competitor "$CO
 echo "== 2/6 rehydrate videos from R2 =="
 $PY tools/rehydrate.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(rehydrate issue — transcribe will report any missing videos)"
 
+echo "== 2b/6 probe media: resolution + bitrate (ffprobe, offline, no API) =="
+$PY analysis/scripts/probe_media.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(ffprobe issue — non-fatal)"
+
 echo "== 3/6 transcribe + tag [$LABEL] =="
 $PY analysis/scripts/transcribe_tag.py --pipeline "$PIPELINE" --competitor "$COMP" $LIMIT
 
