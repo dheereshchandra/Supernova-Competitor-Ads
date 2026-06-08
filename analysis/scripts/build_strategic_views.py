@@ -12,6 +12,9 @@ Outputs (under analysis/derived/{pipeline}/ unless noted):
   {slug}_raw_presenter_counts.csv    raw per-presenter_type counts (nothing lost)
   {slug}_raw_production_counts.csv    raw per-production_type counts
   {slug}_raw_format_counts.csv        raw per-device_format counts
+  {slug}_by_format_axis.csv          Axis 1 — merged format (app-demo) mix
+  {slug}_by_angle.csv                Axis 3 — message/hook angle mix (NEW)
+  {slug}_by_split_role.csv           split-screen role (ai-corrects-human, ...)
   {slug}_new_per_week.csv            Q9 — new scripts / formats / ads per ISO week
   {slug}_replication_speed.csv       Q10 — per (group, replica) days_to_replica
   {slug}_replication_speed_summary.csv  Q10 — median/mean per replication_type
@@ -74,6 +77,10 @@ BUCKET_CONFIG = {
 #   SPLIT_SCREEN_FORMAT flags device_format=='split-screen' as its own pseudo-bucket row
 #   + raw per-presenter_type / per-production_type / per-device_format count CSVs.
 SPLIT_SCREEN_FORMAT = "split-screen"
+
+# Axis-1 format merge: the two tiny straight-to-camera formats read as one
+# "app-demo" category (each alone is small; together = "straight demo/spokesperson").
+FORMAT_MERGE = {"app-screencast": "app-demo", "talking-head": "app-demo"}
 
 # NOTE on live duolingo enums (verify before trusting buckets):
 #   presenter_type observed: voiceover-only, human-only, none   (NO 'ai-avatar-only'/'ai+human' yet)
@@ -172,6 +179,26 @@ def load_sidecar_fields(tdir: Path, ad_id: str) -> dict:
     return out
 
 
+def load_angle_fields(tdir: Path, ad_id: str) -> dict:
+    """Read the Axis-3 / extra fields (message_angle, split_screen_role,
+    has_price_offer) from a transcript sidecar — these are NOT in enriched.csv,
+    so they always come straight from the sidecar (empty for untagged ads)."""
+    p = tdir / f"{ad_id}.json"
+    if not p.exists():
+        return {}
+    try:
+        obj = json.loads(p.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        return {}
+    return {k: obj.get(k) for k in ("message_angle", "split_screen_role", "has_price_offer")}
+
+
+def merged_format(fmt: str) -> str:
+    """Axis-1 display format: collapse the tiny straight-to-camera formats."""
+    f = (fmt or "").strip()
+    return FORMAT_MERGE.get(f, f)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -218,6 +245,12 @@ def main() -> int:
             if not device_format:
                 device_format = (side.get("device_format") or "").strip()
 
+        # Axis 3 + extras always come from the sidecar (not in enriched.csv)
+        angle = load_angle_fields(tdir, ad_id)
+        message_angle = (angle.get("message_angle") or "").strip()
+        split_screen_role = (angle.get("split_screen_role") or "").strip()
+        has_price_offer = bool(angle.get("has_price_offer"))
+
         smap = scripts_map.get(ad_id, {})
         script_group_id = (smap.get("script_group_id") or r.get("script_group_id") or "").strip()
         replication_type = (smap.get("replication_type") or r.get("replication_type") or "").strip()
@@ -244,6 +277,10 @@ def main() -> int:
             "run_days": _int(r.get("run_days"), default=0),
             "bucket": classify_bucket(presenter_type, production_type, device_format),
             "split_screen": device_format == SPLIT_SCREEN_FORMAT,
+            "format_axis": merged_format(device_format),
+            "message_angle": message_angle,
+            "split_screen_role": split_screen_role,
+            "has_price_offer": has_price_offer,
         })
 
     # quick lookups keyed by ad_id
@@ -306,6 +343,17 @@ def main() -> int:
         ("presenter_type", f"{slug}_raw_presenter_counts.csv"),
         ("production_type", f"{slug}_raw_production_counts.csv"),
         ("device_format", f"{slug}_raw_format_counts.csv"),
+    ]:
+        write_csv(derived / fname,
+                  ["pipeline", "competitor", field, "ads", "winners", "win_ratio"],
+                  raw_counts(field))
+
+    # ---- the locked 3-axis taxonomy views (blank/untagged values are skipped) ----
+    #   Axis 1 = merged format ; Axis 2 = presenter_type (raw above) ; Axis 3 = message angle.
+    for field, fname in [
+        ("format_axis", f"{slug}_by_format_axis.csv"),       # Axis 1 (app-demo merge)
+        ("message_angle", f"{slug}_by_angle.csv"),           # Axis 3 (NEW)
+        ("split_screen_role", f"{slug}_by_split_role.csv"),  # split-screen sub-type
     ]:
         write_csv(derived / fname,
                   ["pipeline", "competitor", field, "ads", "winners", "win_ratio"],
@@ -557,6 +605,33 @@ def main() -> int:
     L.append(f"*split-screen ads (captured both above and in "
              f"`{slug}_raw_format_counts.csv`): {ss_ads}.*")
     L.append("")
+
+    # ---- Format axis (merged) + Message angle (Axis 3) ----
+    L.append("## Format mix (Axis 1 — merged)")
+    L.append("")
+    L.append("| format | ads | winners | win ratio |")
+    L.append("|---|--:|--:|--:|")
+    for r in raw_counts("format_axis"):
+        L.append(f"| {r['format_axis']} | {r['ads']} | {r['winners']} | {r['win_ratio']} |")
+    L.append("")
+
+    L.append("## Message angle (Axis 3)")
+    L.append("")
+    angle_rows = raw_counts("message_angle")
+    if angle_rows:
+        L.append("| message_angle | ads | winners | win ratio |")
+        L.append("|---|--:|--:|--:|")
+        for r in angle_rows:
+            L.append(f"| {r['message_angle']} | {r['ads']} | {r['winners']} | {r['win_ratio']} |")
+        L.append("")
+        n_price = sum(1 for a in ads if a["has_price_offer"])
+        L.append(f"*Price / offer hook present in {n_price} of {len(ads)} ads. "
+                 f"Split-screen role split in `{slug}_by_split_role.csv`.*")
+        L.append("")
+    else:
+        L.append("*No `message_angle` tags yet — captured by transcribe_tag going "
+                 "forward (re-tag) or back-filled into the sidecars.*")
+        L.append("")
 
     # ---- Q5 AI vs human production ----
     L.append("## Q5 AI vs human production")
