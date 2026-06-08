@@ -4,16 +4,26 @@ script_cluster.py — Phase 3 step 2 (OFFLINE, no API). Clusters ads by script
 similarity and labels how each was replicated. Answers Q6-Q10.
 
 From the embedding cache (embed_scripts.py), it builds cosine-similarity groups
-(ads with sim >= --threshold share a script), then within each group labels each
-ad's replication_type using language + format:
+(ads with sim >= --threshold share a script). Within each group, the language/
+format/presenter tags name the axis of variation, and the VERBATIM TEXT (transcript
++ on-screen text from the sidecars) then splits an otherwise-identical replica into
+a true exact copy vs a re-scripted reword (B5):
   original           — the earliest ad in the group (or a singleton's own script)
-  exact_replica      — same script, same language, same format   (Q6 duplicate)
-  translation_replica— same script, DIFFERENT language           (Q7)
-  visual_variant     — same script + language, DIFFERENT format  (Q8)
+  translation_replica— different language                                         (Q8)
+  visual_variant     — same language, different device format                     (Q7)
+  character_variant  — same language/format, different presenter (actor swap)
+  exact_replica      — same language/format/presenter AND verbatim text
+                       (ratio >= --text-exact-threshold, or no text to compare)   (Q6)
+  reworded_replica   — same language/format/presenter, but re-scripted text
+                       (ratio < --text-exact-threshold)                           (Q8)
   unique             — singleton (its own one-off script)
+A per-replica `text_similarity` (difflib ratio vs the group original, 0-1) is
+recorded for every replica, so a "translation" that is actually verbatim (a lying
+language tag) is visible as a high ratio.
 
 Output: analysis/enrichment/{pipeline}/scripts/{competitor}.csv
-        (ad_id, script_group_id, group_size, variant_role, replication_type)
+        (ad_id, script_group_id, group_size, variant_role, replication_type,
+         text_similarity)
 
 Usage:
     python3 analysis/scripts/script_cluster.py --pipeline facebook --competitor duolingo
@@ -23,10 +33,35 @@ from __future__ import annotations
 
 import argparse
 import csv
+import difflib
 import json
+import re
+import unicodedata
 from pathlib import Path
 
 import numpy as np
+
+
+def norm_text(s: str) -> str:
+    """Lowercase, drop [English] bracketed glosses (compare the NATIVE surface so a
+    Hindi original vs its English translation read as different), drop punctuation/
+    symbols, collapse whitespace. Keeps letters AND combining MARKS + digits, so
+    Devanagari/Tamil diacritics survive (a plain `\\w` regex drops Mn/Mc marks and
+    would collapse distinct Hindi words to the same string)."""
+    s = (s or "").lower()
+    s = re.sub(r"\[[^\]]*\]", " ", s)          # drop "[English translation]" glosses
+    s = "".join(ch if (ch.isspace() or unicodedata.category(ch)[0] in ("L", "M", "N"))
+                else " " for ch in s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def text_sim(a: str, b: str):
+    """difflib character ratio of two normalized transcripts, or None when either has
+    too little text to judge (image-only / music-only / un-transcribed)."""
+    na, nb = norm_text(a), norm_text(b)
+    if len(na) < 8 or len(nb) < 8:
+        return None
+    return difflib.SequenceMatcher(None, na, nb).ratio()
 
 
 def repo_root(explicit):
@@ -72,6 +107,9 @@ def load_meta(root: Path, pipeline: str, slug: str) -> dict:
                 rec["device_format"] = d["device_format"]
             if d.get("presenter_type"):
                 rec["presenter_type"] = d["presenter_type"]
+            txt = " ".join(str(d.get(k, "")) for k in ("transcript", "on_screen_text")).strip()
+            if txt:
+                rec["text"] = txt
     for r in read_csv(root / "analysis" / "derived" / pipeline / f"{slug}_enriched.csv"):
         meta.setdefault(r["ad_id"], {})["first_seen"] = r.get("first_seen", "")
     return meta
@@ -120,6 +158,11 @@ def main() -> int:
     ap.add_argument("--base", default=None)
     ap.add_argument("--threshold", type=float, default=0.95,
                     help="cosine >= this = same script (honors the >95% bar; tune on a labeled sample)")
+    ap.add_argument("--text-exact-threshold", type=float, default=0.90,
+                    help="difflib text ratio >= this (vs the group original) = exact_replica (B5)")
+    ap.add_argument("--sweep", action="store_true",
+                    help="diagnostic: print group counts across a range of cosine thresholds "
+                         "(validate the 0.95 cutoff) and exit — writes nothing (B9)")
     args = ap.parse_args()
 
     root = repo_root(args.base)
@@ -132,6 +175,20 @@ def main() -> int:
     ids, mat = load_embeddings(epath)
     if len(ids) == 0:
         raise SystemExit(f"[error] embedding cache is empty: {epath}")
+
+    if args.sweep:   # B9: threshold sensitivity — no output written
+        print(f"{slug}: {len(ids)} ads — cosine-threshold sweep "
+              f"(current default = {args.threshold})")
+        print(f"  {'thresh':>7} {'groups':>7} {'multi':>6} {'clustered':>10} {'largest':>8}")
+        for t in (0.85, 0.88, 0.90, 0.92, 0.95, 0.97, 0.99):
+            comps_t = cluster(ids, mat, t)
+            multi = [c for c in comps_t if len(c) > 1]
+            clustered = sum(len(c) for c in multi)
+            largest = max((len(c) for c in comps_t), default=0)
+            star = "  <-- default" if abs(t - args.threshold) < 1e-9 else ""
+            print(f"  {t:>7.2f} {len(comps_t):>7} {len(multi):>6} {clustered:>10} {largest:>8}{star}")
+        return 0
+
     meta = load_meta(root, args.pipeline, slug)
     comps = cluster(ids, mat, args.threshold)
 
@@ -144,7 +201,8 @@ def main() -> int:
         if size == 1:
             ad = member_ids[0]
             rows.append({"ad_id": ad, "script_group_id": gid, "group_size": 1,
-                         "variant_role": "original", "replication_type": "unique"})
+                         "variant_role": "original", "replication_type": "unique",
+                         "text_similarity": ""})
             counts["unique"] = counts.get("unique", 0) + 1
             continue
         # original = earliest first_seen (fallback: smallest ad_id)
@@ -154,29 +212,41 @@ def main() -> int:
         olang = meta.get(original, {}).get("language", "")
         ofmt = meta.get(original, {}).get("device_format", "")
         opres = meta.get(original, {}).get("presenter_type", "")
+        otext = meta.get(original, {}).get("text", "")
         for ad in member_ids:
             if ad == original:
-                role, rtype = "original", "original"
+                role, rtype, tsim = "original", "original", ""
             else:
                 lang = meta.get(ad, {}).get("language", "")
                 fmt = meta.get(ad, {}).get("device_format", "")
                 pres = meta.get(ad, {}).get("presenter_type", "")
                 role = "replica"
+                sim = text_sim(otext, meta.get(ad, {}).get("text", ""))
+                tsim = "" if sim is None else f"{sim:.3f}"
+                # The tags name the axis of variation (language > format > presenter);
+                # the verbatim text then splits an otherwise-identical replica into a
+                # true exact copy vs a re-scripted reword. text_similarity is recorded
+                # for ALL replicas, so a "translation" that is actually verbatim (a
+                # lying language tag) is still visible as a high ratio.
                 if olang and lang and lang != olang:
                     rtype = "translation_replica"
                 elif ofmt and fmt and fmt != ofmt:
                     rtype = "visual_variant"
                 elif opres and pres and pres != opres:
                     rtype = "character_variant"
+                elif sim is not None and sim < args.text_exact_threshold:
+                    rtype = "reworded_replica"
                 else:
-                    rtype = "exact_replica"
+                    rtype = "exact_replica"              # same tags + verbatim (or no text)
             rows.append({"ad_id": ad, "script_group_id": gid, "group_size": size,
-                         "variant_role": role, "replication_type": rtype})
+                         "variant_role": role, "replication_type": rtype,
+                         "text_similarity": tsim})
             counts[rtype] = counts.get(rtype, 0) + 1
 
     out = root / "analysis" / "enrichment" / args.pipeline / "scripts" / f"{slug}.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
-    cols = ["ad_id", "script_group_id", "group_size", "variant_role", "replication_type"]
+    cols = ["ad_id", "script_group_id", "group_size", "variant_role", "replication_type",
+            "text_similarity"]
     with out.open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=cols)
         w.writeheader(); w.writerows(rows)
