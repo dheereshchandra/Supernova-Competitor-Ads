@@ -38,6 +38,9 @@ $PY tools/rehydrate.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(reh
 echo "== 2b/6 probe media: resolution + bitrate (ffprobe, offline, no API) =="
 $PY analysis/scripts/probe_media.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(ffprobe issue — non-fatal)"
 
+echo "== 2c/6 visual fingerprint: pHash of sampled frames (offline, no API) =="
+$PY analysis/scripts/visual_fingerprint.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(visual fingerprint issue — non-fatal)"
+
 echo "== 3/6 transcribe + tag [$LABEL] =="
 $PY analysis/scripts/transcribe_tag.py --pipeline "$PIPELINE" --competitor "$COMP" $LIMIT
 
@@ -52,6 +55,7 @@ $PY analysis/scripts/compute_rank_metrics.py --pipeline "$PIPELINE" --competitor
 $PY analysis/scripts/build_report.py --pipeline "$PIPELINE" --competitor "$COMP"
 $PY analysis/scripts/build_strategic_views.py --pipeline "$PIPELINE" --competitor "$COMP"
 $PY analysis/scripts/build_launch_timing.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(launch-timing needs ad_start_date; google has none)"
+$PY analysis/scripts/build_language_reconciliation.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(language reconciliation needs language signals)"
 
 if [ -f "analysis/enrichment/facebook/embeddings/$COMP.jsonl" ] && \
    [ -f "analysis/enrichment/google/embeddings/$COMP.jsonl" ]; then
