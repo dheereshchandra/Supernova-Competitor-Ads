@@ -398,6 +398,12 @@ def main() -> int:
 
     new_ads_by_week: Counter = Counter()
     winners_among_new_by_week: Counter = Counter()
+    # B3: ad-level new-script vs reused-script. An ad runs a NEW script if its script
+    # group debuts in the same week it first appeared; else it REUSES an existing
+    # script. (new_ads counts ads regardless of script novelty; new_scripts counts
+    # GROUPS, not ads — this is the missing ad-level split for Q6.)
+    new_script_ads_by_week: Counter = Counter()
+    reused_script_ads_by_week: Counter = Counter()
     for a in ads:
         if a["first_seen"] is None:
             continue
@@ -405,6 +411,12 @@ def main() -> int:
         new_ads_by_week[wk] += 1
         if a["is_winner"]:
             winners_among_new_by_week[wk] += 1
+        gid = a["script_group_id"]
+        if gid:
+            if group_debut_week.get(gid) == wk:
+                new_script_ads_by_week[wk] += 1
+            else:
+                reused_script_ads_by_week[wk] += 1
 
     all_weeks = (set(new_scripts_by_week) | set(new_formats_by_week)
                  | set(new_ads_by_week))
@@ -417,12 +429,15 @@ def main() -> int:
             "new_scripts": new_scripts_by_week.get(wk, 0),
             "new_formats": new_formats_by_week.get(wk, 0),
             "new_ads": na,
+            "new_script_ads": new_script_ads_by_week.get(wk, 0),
+            "reused_script_ads": reused_script_ads_by_week.get(wk, 0),
             "winners_among_new": win,
             "win_ratio": win_ratio(win, na),
         })
     write_csv(derived / f"{slug}_new_per_week.csv",
               ["pipeline", "competitor", "week", "new_scripts", "new_formats",
-               "new_ads", "winners_among_new", "win_ratio"],
+               "new_ads", "new_script_ads", "reused_script_ads",
+               "winners_among_new", "win_ratio"],
               new_per_week_rows)
 
     # =====================================================================
@@ -538,6 +553,7 @@ def main() -> int:
     # OUTPUT 5 (optional): daily_volume (Q1)
     # =====================================================================
     daily_rows = []
+    stops_rows = []
     if history_rows:
         by_date: dict[str, set] = defaultdict(set)
         for r in history_rows:
@@ -545,21 +561,54 @@ def main() -> int:
             if not sd:
                 continue
             by_date[sd].add(r["ad_id"])
-        for sd in sorted(by_date):
+        group_of = {a["ad_id"]: a["script_group_id"] for a in ads}
+        dates = sorted(by_date)
+        for i, sd in enumerate(dates):
             live = by_date[sd]
             ads_live = len(live)
             new_ads = sum(1 for a in live if first_seen_of.get(a, "") == sd)
             winners_live = sum(1 for a in live if verdict_of.get(a) in WINNER_VERDICTS)
+            # B3 (daily): of the ads that first appeared today, how many run a NEW
+            # script (their group debuted today) vs REUSE an existing one?
+            new_script_ads = reused_script_ads = 0
+            for a in live:
+                if first_seen_of.get(a, "") != sd:
+                    continue
+                gid = group_of.get(a)
+                if not gid:
+                    continue
+                if group_first.get(gid) == d(sd):
+                    new_script_ads += 1
+                else:
+                    reused_script_ads += 1
+            # B7: stop-events — ads present on the previous scrape but gone today.
+            stopped = 0
+            if i > 0:
+                gone = by_date[dates[i - 1]] - live
+                stopped = len(gone)
+                for aid in sorted(gone):
+                    stops_rows.append({
+                        "pipeline": pipeline, "competitor": slug, "ad_id": aid,
+                        "stopped_on": sd, "last_seen": dates[i - 1],
+                        "first_seen": first_seen_of.get(aid, ""),
+                    })
             daily_rows.append({
                 "pipeline": pipeline, "competitor": slug, "scrape_date": sd,
                 "ads_live": ads_live, "new_ads": new_ads,
+                "new_script_ads": new_script_ads, "reused_script_ads": reused_script_ads,
+                "stopped_ads": stopped,
                 "winners_live": winners_live,
                 "win_ratio": win_ratio(winners_live, ads_live),
             })
         write_csv(derived / f"{slug}_daily_volume.csv",
                   ["pipeline", "competitor", "scrape_date", "ads_live", "new_ads",
+                   "new_script_ads", "reused_script_ads", "stopped_ads",
                    "winners_live", "win_ratio"],
                   daily_rows)
+        write_csv(derived / f"{slug}_stops.csv",
+                  ["pipeline", "competitor", "ad_id", "stopped_on", "last_seen",
+                   "first_seen"],
+                  stops_rows)
 
     # =====================================================================
     # OUTPUT 6: strategic_report.md
