@@ -1,5 +1,7 @@
 # EWA re-scrape — paste this into a fresh Claude-in-Chrome chat
 
+> ⚠️ **HISTORICAL ARTIFACT (2026-06-04, EWA one-off) — context only; do NOT follow as live instructions.** For any scrape, use the canonical `facebook/scraper_prompt.md` in this repo.
+
 > **Context for the operator.** The 2026-06-04 EWA scrape we received was produced by a *different* tool (Apify/Bright-Data-style output), not the canonical Meta Ad Library scraper in `scraper_prompt.md`. It had a 26-column schema with `library_id`, `media_type`, `started_running`, `spend`, `impressions`, `is_active` etc. — none of which our pipeline can consume. It also used `page_id = 165004157332215` instead of the canonical `61572590343208` from COMPETITOR_PAGES. We need a clean re-run of the standard v2.1 scraper.
 
 ---
@@ -10,7 +12,7 @@ I'm running the Supernova FB competitor-ads pipeline. The last EWA scrape we got
 
 I need a fresh scrape from the canonical v2.1 scraper. Please run it as follows:
 
-1. Open the file `/Users/iniyan/Desktop/fb-ad-downloader/scraper_prompt.md` and **copy its entire contents verbatim** into this chat as your next message — do not paraphrase, summarize, or modify anything.
+1. Open `facebook/scraper_prompt.md` in this repo and **copy its entire contents verbatim** into this chat as your next message — do not paraphrase, summarize, or modify anything.
 2. When the prompt's Step 0 asks "Which competitor should I scrape?", reply with exactly: **EWA**
 3. Before running, confirm out loud:
    - Scraper version sentinel echoed: `v2.1-2026-05-30 — image-extraction fix active`

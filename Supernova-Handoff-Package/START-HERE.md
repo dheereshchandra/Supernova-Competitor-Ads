@@ -11,7 +11,8 @@ should walk you through these steps one at a time, checking each succeeds before
 
 **Prerequisites (before Step 1 — confirm these are in place):**
 
-- macOS (required — the Facebook auto-clicker is macOS-only).
+- macOS (this setup targets macOS — Homebrew, the launchd daily-sync, and the Facebook auto-clicker
+  are Mac-only; on Windows/Linux you can still run the Google pipeline, but do the Facebook scrape on a Mac).
 - The Conductor app is installed and this repo is opened as a Conductor workspace.
 - Git + GitHub access: the repo is cloned and GitHub auth works (`git pull` / `git push`
   succeed without prompting for a password).
@@ -20,8 +21,8 @@ should walk you through these steps one at a time, checking each succeeds before
 
 **Ground rules the agent follows:**
 
-- Always use `python3.13` (never `python3`). Always run from the repo root
-  `/Users/jaihinth/conductor/workspaces/supernova-competitor-ads/adelaide`.
+- Always use `python3.13` (never `python3`). Always run from the repo root — the folder where you
+  cloned this repo (its path differs on every machine; ignore any absolute path shown in these docs).
 - Do ONE step at a time. After each command, check the success signal before moving on. If a
   step fails, do the fix and re-run that same step — do not skip ahead.
 - Never print, commit, or paste the contents of `.env`. Never approve a paid step the human
@@ -234,7 +235,8 @@ once if asked: `git config user.name "Your Name"` and
 
 A one-time setup that keeps your canonical clone current so teammates' pushes land
 automatically every morning (we work one competitor per person on a shared repo). Run this ONCE
-from your MAIN clone (NOT a Conductor worktree):
+from your MAIN clone — the primary copy of the repo on your Mac, NOT a Conductor worktree (Conductor
+workspaces are lightweight worktrees linked to your main clone; if unsure, ask Claude):
 
 ```
 zsh tools/daily-sync/install.sh
