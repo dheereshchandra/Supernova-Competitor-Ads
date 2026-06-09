@@ -26,8 +26,10 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import _flash
@@ -148,6 +150,8 @@ def main() -> int:
     ap.add_argument("--model", default=_flash.DEFAULT_MODEL)
     ap.add_argument("--ids", default=None, help="comma-separated ad ids only")
     ap.add_argument("--limit", type=int, default=None, help="cap new videos (testing)")
+    ap.add_argument("--workers", type=int, default=int(os.environ.get("WORKERS", "6")),
+                    help="videos transcribed in parallel (default 6; ~8-10 max before 429s)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
     _flash.assert_flash(args.model)
@@ -203,11 +207,17 @@ def main() -> int:
 
     client = _flash.get_client(_flash.find_env(root, args.pipeline))
     outdir.mkdir(parents=True, exist_ok=True)
-    ok = 0
-    for i, (ad_id, vpath) in enumerate(ready, 1):
-        print(f"  [{i}/{len(ready)}] {ad_id} ...", flush=True)   # last line = stuck id if it hangs
+    total = len(ready)
+    workers = max(1, args.workers)
+    print(f"transcribing {total} video(s) with {workers} parallel worker(s) ...")
+    lock = threading.Lock()
+    state = {"ok": 0, "done": 0}
 
-        def _do(ad_id=ad_id, vpath=vpath):
+    def transcribe_one(ad_id, vpath):
+        # Per-video body unchanged; the hard 300s cap (run_with_timeout) is the only
+        # guarantee a hung worker is freed since the SDK can swallow exceptions —
+        # a leaked daemon dies with the process. genai.Client is thread-safe (shared).
+        def _do():
             f = upload_active(client, vpath)
             obj = _flash.generate_json(client, args.model, [f, PROMPT])
             obj.update({"ad_id": ad_id, "competitor": slug,
@@ -219,13 +229,21 @@ def main() -> int:
                 client.files.delete(name=f.name)   # tidy server-side upload
             except Exception:  # noqa: BLE001
                 pass
-
         try:
-            run_with_timeout(_do, 300)   # hard cap the whole video (upload+generate+write+delete)
-            ok += 1
-        except Exception as e:  # noqa: BLE001
-            print(f"  [warn] {ad_id} failed: {e}")
-    print(f"done: {ok}/{len(ready)} new sidecars in {outdir}")
+            run_with_timeout(_do, 300)
+            with lock:
+                state["ok"] += 1; state["done"] += 1
+                print(f"  [{state['done']}/{total}] {ad_id} ok", flush=True)
+        except Exception as e:  # noqa: BLE001 — a `start` with no `ok` is the stuck/failed signal
+            with lock:
+                state["done"] += 1
+                print(f"  [{state['done']}/{total}] {ad_id} FAILED: {e}", flush=True)
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futs = [ex.submit(transcribe_one, a, p) for a, p in ready]
+        for _ in as_completed(futs):
+            pass
+    print(f"done: {state['ok']}/{total} new sidecars in {outdir}")
     return 0
 
 

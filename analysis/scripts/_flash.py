@@ -65,10 +65,14 @@ def get_client(env: dict):
                          "(repo root, or {facebook,google}/.env). Runs on your Mac.")
     try:
         from google import genai
+        from google.genai import types as gt
     except ImportError:
         raise SystemExit("[error] google-genai not installed. Run: "
                          "pip install google-genai")
-    return genai.Client(api_key=key)
+    # 75s per-HTTP-call timeout so a dead upload/generate fails fast instead of hanging
+    # (matters under concurrency — a stuck call would otherwise tie up a worker). The
+    # per-video run_with_timeout(300) in transcribe_tag stays as the hard outer cap.
+    return genai.Client(api_key=key, http_options=gt.HttpOptions(timeout=75_000))
 
 
 def parse_json_lenient(text: str):
