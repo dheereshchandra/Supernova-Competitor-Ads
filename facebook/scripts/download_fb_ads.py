@@ -432,6 +432,110 @@ def cleanup_partials(out_dir: Path) -> int:
 
 
 # --------------------------------------------------------------------------
+# version-aware pass (v2.3 CSVs): one media file per (version, creative)
+# --------------------------------------------------------------------------
+
+def _int0(x) -> int:
+    try:
+        return int(str(x or "0").strip() or "0")
+    except (ValueError, TypeError):
+        return 0
+
+
+def media_name(ad_id: str, v, c, ext: str = ".mp4") -> str:
+    """Version-aware media filename — MUST match upload_to_r2.media_name /
+    probe_media / transcribe_tag: version 0 keeps the legacy {id}.mp4 (creative 0) /
+    {id}_v{N+1}.mp4 (creative N); version V>=1 -> {id}_ver{V}_c{C}.mp4."""
+    vi, ci = _int0(v), _int0(c)
+    if vi <= 0:
+        return f"{ad_id}{ext}" if ci == 0 else f"{ad_id}_v{ci + 1}{ext}"
+    return f"{ad_id}_ver{vi}_c{ci}{ext}"
+
+
+_V23_COLS = {"ad_library_id", "version_index", "creative_index_in_ad",
+             "facebook_video_cdn_url_at_scrape"}
+
+
+def _file_sha(p: Path) -> str | None:
+    try:
+        import hashlib
+        return hashlib.sha256(p.read_bytes()).hexdigest()
+    except OSError:
+        return None
+
+
+def download_versions_pass(csv_path: str, out_dir: Path, results: dict) -> tuple[int, int, int, int]:
+    """For a v2.3 input CSV, fetch every (version, creative) video straight from its
+    captured `facebook_video_cdn_url_at_scrape` into the version-aware filename. yt-dlp
+    only fetches an ad's DEFAULT version (it can't drive FB's in-detail version nav), so
+    this fills in extra versions ({id}_ver{V}_c{C}.mp4) and is a CDN fallback for any
+    default the yt-dlp pass missed.
+
+    DEDUP: FB frequently enumerates 2+ "versions" of an ad that are the SAME underlying
+    video (different version_id / signed URL, identical bytes — verified across a whole
+    SpeakX scrape). To avoid duplicate media in R2 (and duplicate transcription), an extra
+    version whose URL matches the default, or whose downloaded bytes are identical to the
+    default, is dropped — the version row keeps its metadata but shares the default media.
+    Only GENUINELY distinct version creatives are kept as separate files.
+
+    Returns (downloaded, skipped_present, failed, deduped). No-op unless v2.3 columns."""
+    try:
+        with open(csv_path, encoding="utf-8-sig", newline="") as fh:
+            rows = list(csv.DictReader(fh))
+    except (OSError, csv.Error):
+        return 0, 0, 0, 0
+    if not rows or not _V23_COLS.issubset(rows[0].keys()):
+        return 0, 0, 0, 0
+
+    by_ad: dict[str, list] = {}
+    for r in rows:
+        if "video" not in (r.get("ad_media_type", "") or "").strip().lower():
+            continue
+        aid = (r.get("ad_library_id") or "").strip()
+        url = (r.get("facebook_video_cdn_url_at_scrape") or "").strip()
+        if aid and url.startswith("http"):
+            by_ad.setdefault(aid, []).append(r)
+
+    got = skip = fail = dedup = 0
+    for aid, rs in by_ad.items():
+        default = out_dir / f"{aid}.mp4"
+        drow = next((r for r in rs if media_name(aid, r.get("version_index"),
+                     r.get("creative_index_in_ad")) == f"{aid}.mp4"), None)
+        if (not default.exists() or default.stat().st_size == 0) and drow:
+            ok, detail = download_cdn(drow["facebook_video_cdn_url_at_scrape"].strip(), default)
+            results[default.name] = ("downloaded" if ok else "failed", detail)
+            got += 1 if ok else 0
+            fail += 0 if ok else 1
+        dsha = _file_sha(default) if default.exists() else None
+        seen_urls = {drow["facebook_video_cdn_url_at_scrape"].strip()} if drow else set()
+        for r in rs:
+            name = media_name(aid, r.get("version_index"), r.get("creative_index_in_ad"))
+            if name == f"{aid}.mp4":
+                continue
+            dest = out_dir / name
+            if dest.exists() and dest.stat().st_size > 0:
+                skip += 1
+                continue
+            url = r["facebook_video_cdn_url_at_scrape"].strip()
+            if url in seen_urls:                 # same signed URL as default → same media
+                dedup += 1
+                continue
+            seen_urls.add(url)
+            ok, detail = download_cdn(url, dest)
+            if not ok:
+                results[name] = ("failed", detail)
+                fail += 1
+                continue
+            if dsha and _file_sha(dest) == dsha:  # identical bytes to default → drop the dup
+                dest.unlink(missing_ok=True)
+                dedup += 1
+                continue
+            results[name] = ("downloaded", detail)  # genuinely distinct version creative
+            got += 1
+    return got, skip, fail, dedup
+
+
+# --------------------------------------------------------------------------
 # main
 # --------------------------------------------------------------------------
 
@@ -540,6 +644,14 @@ def main() -> None:
         ok, detail = download_cdn(url, dest)
         results[url] = ("downloaded" if ok else "failed", detail)
         print(f"[cdn {idx}/{len(cdn)}] {'ok' if ok else 'FAIL'} - {detail}")
+
+    # ----- version-aware pass (v2.3 CSVs): extra versions/creatives via captured CDN -----
+    if args.source.lower().endswith(".csv"):
+        vgot, vskip, vfail, vdedup = download_versions_pass(args.source, out_dir, results)
+        if vgot or vfail or vskip or vdedup:
+            print(f"[versions] {vgot} distinct version/creative file(s) downloaded, "
+                  f"{vdedup} identical version(s) deduped, {vskip} already present, "
+                  f"{vfail} failed (expired/blocked CDN)")
 
     # ----- summary -----
     summary_path = Path(args.summary) if args.summary else out_dir / "download_summary.csv"
