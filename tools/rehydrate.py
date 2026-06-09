@@ -172,6 +172,15 @@ def main() -> int:
         if dest.exists() and dest.stat().st_size > 0:
             skip += 1
             continue
+        # Already downloaded under a DIFFERENT dated folder for this competitor?
+        # The master re-dates rows to the latest scrape, but the file may already sit
+        # in an earlier {slug}-DATE/ folder. Downstream find_video globs {slug}-* across
+        # ALL dates, so re-downloading into a new date folder is pure waste — skip it.
+        # (dest = .../{pipeline}/{kind}/{slug}-{date}/{name}; .parent.parent = the kind dir)
+        if any(p.stat().st_size > 0
+               for p in dest.parent.parent.glob(f"{slug}-*/{dest.name}")):
+            skip += 1
+            continue
         if args.dry_run:
             print(f"  WOULD GET {url}\n            -> {dest}")
             continue
