@@ -71,6 +71,29 @@ def get_client(env: dict):
     return genai.Client(api_key=key)
 
 
+def parse_json_lenient(text: str):
+    """Parse a JSON object out of a possibly-messy model response. Tolerates, in order:
+      • code fences (```json ... ```) and prose before/after the object,
+      • trailing junk after the object (raw_decode stops at the first complete value),
+      • literal control chars inside strings — newlines/tabs in transcripts (strict=False).
+    Raises json.JSONDecodeError only when the object itself is genuinely malformed."""
+    text = (text or "").strip()
+    if text.startswith("```"):                 # ```json\n{...}\n```  ->  {...}
+        text = text.strip("`")
+        if text[:4].lower() == "json":
+            text = text[4:]
+    start = text.find("{")
+    snippet = text[start:] if start != -1 else text
+    try:
+        obj, _ = json.JSONDecoder(strict=False).raw_decode(snippet)
+        return obj
+    except json.JSONDecodeError:
+        end = snippet.rfind("}")               # last resort: trim to the final brace
+        if end != -1:
+            return json.loads(snippet[:end + 1], strict=False)
+        raise
+
+
 def generate_json(client, model: str, contents, *, temperature: float = 0.0,
                   max_retries: int = 4):
     """Call Flash for a JSON response, with simple backoff + lenient parsing.
@@ -84,12 +107,7 @@ def generate_json(client, model: str, contents, *, temperature: float = 0.0,
         try:
             resp = client.models.generate_content(
                 model=model, contents=contents, config=cfg)
-            text = (resp.text or "").strip()
-            # tolerate accidental code fences
-            if text.startswith("```"):
-                text = text.strip("`")
-                text = text[text.find("{") if "{" in text else 0:]
-            return json.loads(text)
+            return parse_json_lenient(resp.text or "")
         except Exception as e:   # noqa: BLE001 — transient API / parse errors
             last = e
             time.sleep(min(2 ** attempt, 20))
