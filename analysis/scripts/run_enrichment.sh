@@ -56,6 +56,7 @@ $PY analysis/scripts/build_report.py --pipeline "$PIPELINE" --competitor "$COMP"
 $PY analysis/scripts/build_strategic_views.py --pipeline "$PIPELINE" --competitor "$COMP"
 $PY analysis/scripts/build_launch_timing.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(launch-timing needs ad_start_date; google has none)"
 $PY analysis/scripts/build_language_reconciliation.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(language reconciliation needs language signals)"
+$PY analysis/scripts/build_version_view.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(version view needs a v2.3 master)"
 
 if [ -f "analysis/enrichment/facebook/embeddings/$COMP.jsonl" ] && \
    [ -f "analysis/enrichment/google/embeddings/$COMP.jsonl" ]; then
