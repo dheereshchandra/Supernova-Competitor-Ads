@@ -42,7 +42,7 @@ echo "== 2c/6 visual fingerprint: pHash of sampled frames (offline, no API) =="
 $PY analysis/scripts/visual_fingerprint.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(visual fingerprint issue — non-fatal)"
 
 echo "== 3/6 transcribe + tag [$LABEL] =="
-$PY analysis/scripts/transcribe_tag.py --pipeline "$PIPELINE" --competitor "$COMP" $LIMIT
+$PY analysis/scripts/transcribe_tag.py --pipeline "$PIPELINE" --competitor "$COMP" $LIMIT --workers "${WORKERS:-6}"
 
 echo "== 4/6 embed scripts [$LABEL] =="
 $PY analysis/scripts/embed_scripts.py --pipeline "$PIPELINE" --competitor "$COMP" $LIMIT || echo "(need transcripts first)"
