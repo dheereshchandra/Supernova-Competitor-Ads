@@ -99,13 +99,20 @@ def parse_json_lenient(text: str):
 
 
 def generate_json(client, model: str, contents, *, temperature: float = 0.0,
-                  max_retries: int = 4):
+                  max_retries: int = 4, response_schema=None):
     """Call Flash for a JSON response, with simple backoff + lenient parsing.
-    Returns the parsed object, or raises after exhausting retries."""
+    Returns the parsed object, or raises after exhausting retries.
+
+    When `response_schema` is given, Gemini uses CONTROLLED generation — the output is
+    guaranteed to be valid JSON conforming to the schema. This eliminates the
+    malformed-JSON failures (an unescaped quote inside a long transcript string →
+    "Expecting ',' delimiter") that no downstream parser can safely repair."""
     assert_flash(model)
     from google.genai import types as gt
-    cfg = gt.GenerateContentConfig(
-        temperature=temperature, response_mime_type="application/json")
+    cfg_kw = dict(temperature=temperature, response_mime_type="application/json")
+    if response_schema is not None:
+        cfg_kw["response_schema"] = response_schema
+    cfg = gt.GenerateContentConfig(**cfg_kw)
     last = None
     for attempt in range(max_retries):
         try:
