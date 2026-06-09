@@ -92,7 +92,16 @@ CONTENT_TYPE_BY_EXT = {
     ".png": "image/png",
     ".webp": "image/webp",
     ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    ".html": "text/html; charset=utf-8",
+    ".pdf": "application/pdf",
+    ".txt": "text/plain; charset=utf-8",
 }
+
+# Types a browser can RENDER — serve these with `Content-Disposition: inline` so the
+# public R2 link OPENS in a tab (read + copy) instead of downloading a file. A .docx
+# can't render in any browser, so it always downloads regardless — that's the whole
+# reason the rewrite link now ships as .html instead.
+INLINE_TYPES = {"text/html; charset=utf-8", "application/pdf", "text/plain; charset=utf-8"}
 
 
 def content_type_for(path: pathlib.Path) -> str:
@@ -106,15 +115,18 @@ def upload_file(s3, env: dict, local_path: pathlib.Path, key: str,
 
     Idempotent: re-uploading the same key just overwrites the existing object,
     which is what we want — every script in the pipeline is resumable, so a
-    re-run should never see a stale R2 object.
+    re-run should never see a stale R2 object. Browser-renderable types are tagged
+    `inline` so the link opens in a tab rather than downloading.
     """
     ct = content_type or content_type_for(local_path)
+    extra = {"ContentDisposition": "inline"} if ct in INLINE_TYPES else {}
     with open(local_path, "rb") as fh:
         s3.put_object(
             Bucket=env["R2_BUCKET"],
             Key=key,
             Body=fh,
             ContentType=ct,
+            **extra,
         )
     return public_url_for(env, key)
 

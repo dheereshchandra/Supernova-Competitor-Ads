@@ -269,6 +269,7 @@ step4_runbook() {  # print the exact ordered commands for the approved ids
     $PY scripts/step4_rewrite.py poll <short_id>                 # repeat until done
     $PY scripts/step4_build_docs.py --competitor $slug $sp
     $PY scripts/step4_upload_and_update.py --competitor $slug $sp
+    $PY scripts/step4_build_html.py --competitor $slug --ids $ids --upload --update-master   # browser-friendly HTML links
   ──────────────────────────────────────────────────────────
 EOF
 }
@@ -296,6 +297,7 @@ step4_execute() {  # auto-run the chain (cwd=facebook); each module is idempoten
     echo "  [stage6] build docs + upload + update master ..."
     $PY scripts/step4_build_docs.py --competitor "$slug" $sp
     $PY scripts/step4_upload_and_update.py --competitor "$slug" $sp
+    $PY scripts/step4_build_html.py --competitor "$slug" --ids "$ids" --upload --update-master
   ) || { echo "  [stage6] chain halted — re-run with --from-stage 6 (idempotent) to resume."; return 1; }
   echo "  [stage6] Step-4 complete for '$slug'."
 }

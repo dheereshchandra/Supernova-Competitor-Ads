@@ -48,7 +48,7 @@ OUTPUT: exactly one JSON object (no markdown fences, no commentary). Schema:
     {
       "n": <same as input>,
       "scene_label": "<same as input>",
-      "supernova_script": "<your Supernova-voice rewrite of audio_transcript. Same character speaker attribution ('Character A says: …'). Keep the same beat/intent of the scene but reframe in Supernova's voice. Keep it in the same native language script + bracketed [English translation] format as the original. Match speaking pace and tone.>",
+      "supernova_script": "<your Supernova-voice rewrite of audio_transcript, written in ENGLISH. Put each spoken turn on its OWN line, prefixed 'Character X says:' (one line per turn — this is what makes the Scene/Character/Script layout clean). Keep the same beat/intent of the scene but reframe in Supernova's voice; match speaking pace and tone.>",
       "scene_summary": "<2-4 bullet points, hyphen-prefixed, summarising what this scene does in the ad — purpose, emotion, payoff. For analyst reference.>",
       "supernova_on_screen_text": "<rewritten version of on_screen_text if relevant; otherwise empty string>"
     }
@@ -61,16 +61,16 @@ OUTPUT: exactly one JSON object (no markdown fences, no commentary). Schema:
 
 SUPERNOVA BRAND VOICE — read carefully:
 - **Audience**: Hindi-first Indian learners who want to speak English with confidence — usually 20–40 year-olds in tier-2/tier-3 cities, often working but feeling stuck because their English holds them back.
-- **Tone**: warm, practical, encouraging, never patronising. Like a trusted older sibling cheering you on. Hindi-English code-mix is OK and authentic ("English बोलना सीखो", "रोज़ practice करो"). Avoid heavy sanskritised Hindi and avoid sounding like an advertisement.
+- **Tone**: warm, practical, encouraging, never patronising. Like a trusted older sibling cheering you on. Write in natural, simple Indian English (the scripting team localises/translates to Hindi etc. afterwards — so the base must be English). Avoid sounding stiff or like an advertisement.
 - **What Supernova offers**: a Hindi-medium English learning app with AI tutor practice, daily lessons, and a focus on real-world speaking situations (interview, customer, friend, shop). It is NOT free; do not invent specific pricing.
 - **Things to STRIP from the rewrite**: competitor brand names (replace with "Supernova" or remove), specific pricing claims (₹3, ₹49, etc — remove or replace with vague "affordable"), aggressive hype ("world's #1", "guaranteed in 30 days"), and any direct disparagement of other apps.
-- **Things to KEEP**: the dramatic beat structure of the original (hook → problem → solution → CTA), the same character voices and emotions, the same length, the same language mix (Hindi/Tamil/Telugu + English).
+- **Things to KEEP**: the dramatic beat structure of the original (hook → problem → solution → CTA), the same character voices and emotions, and roughly the same length.
 
 CONSTRAINTS:
 - Output ONLY a valid JSON object. No commentary, no markdown fences.
 - Every scene from the input must appear in the output with the same `n`.
-- `supernova_script` MUST keep the "Character X says:" prefix on every spoken line.
-- Stay in the same language script as the original (Devanagari for Hindi etc.), with bracketed [English translation] after each line.
+- `supernova_script` MUST put each spoken turn on its OWN line with a "Character X says:" prefix — one line per turn (this renders as a clean Scene → Character → Script layout).
+- Write EVERYTHING (script + on-screen text) in ENGLISH — this is the base the team edits and translates. Do NOT output Hindi/Devanagari or bracketed [translations].
 - If you cannot rewrite a particular scene (e.g. dialogue is too brand-specific), still emit the scene with `supernova_script: "[scene-too-brand-specific-to-rewrite — manual edit needed]"`. Do not silently skip scenes.
 
 INPUT:
