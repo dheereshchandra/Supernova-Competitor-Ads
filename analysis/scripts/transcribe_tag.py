@@ -93,6 +93,29 @@ Be precise; do not invent details not present in the video. Pick the single best
 enum value for each categorical field.
 """
 
+# CONTROLLED-GENERATION schema: forces Gemini to return valid JSON with exactly these
+# fields, so an unescaped quote in a long transcript can no longer break parsing (the
+# chronic "Expecting ',' delimiter" failures). Keys must match the PROMPT's JSON object.
+RESPONSE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "language": {"type": "string"},
+        "presenter_type": {"type": "string"},
+        "device_format": {"type": "string"},
+        "production_type": {"type": "string"},
+        "message_angle": {"type": "string"},
+        "split_screen_role": {"type": "string"},
+        "has_price_offer": {"type": "boolean"},
+        "duration_s": {"type": "number"},
+        "transcript": {"type": "string"},
+        "on_screen_text": {"type": "string"},
+        "summary": {"type": "string"},
+    },
+    "required": ["language", "presenter_type", "device_format", "production_type",
+                 "message_angle", "split_screen_role", "has_price_offer", "duration_s",
+                 "transcript", "on_screen_text", "summary"],
+}
+
 
 def repo_root(explicit):
     return Path(explicit).resolve() if explicit else Path(__file__).resolve().parents[2]
@@ -219,7 +242,8 @@ def main() -> int:
         # a leaked daemon dies with the process. genai.Client is thread-safe (shared).
         def _do():
             f = upload_active(client, vpath)
-            obj = _flash.generate_json(client, args.model, [f, PROMPT])
+            obj = _flash.generate_json(client, args.model, [f, PROMPT],
+                                       response_schema=RESPONSE_SCHEMA)
             obj.update({"ad_id": ad_id, "competitor": slug,
                         "pipeline": args.pipeline, "model": args.model,
                         "source_video": vpath.name, "decoded_at": time.time()})
