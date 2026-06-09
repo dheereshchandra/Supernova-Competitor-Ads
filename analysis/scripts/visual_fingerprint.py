@@ -50,6 +50,7 @@ OUT_COLS = ["ad_id", "version_index", "creative_index", "visual_hash",
 _DCT_N = 32          # frame is downscaled to 32x32 before the DCT
 _HASH_SIDE = 8       # low-frequency 8x8 block -> 64-bit hash
 _FRAME_FRACS = (0.2, 0.5, 0.8)   # sample at 20/50/80% of duration
+_FLUSH_EVERY = 50    # checkpoint the CSV + print progress every N hashed videos
 
 
 # ---- perceptual hash (Pillow + numpy, no scipy/imagehash) -------------------
@@ -202,6 +203,14 @@ def read_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(fh))
 
 
+def write_rows(outpath: Path, rows: list[dict]) -> None:
+    outpath.parent.mkdir(parents=True, exist_ok=True)
+    with outpath.open("w", encoding="utf-8", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=OUT_COLS, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(rows)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -224,7 +233,8 @@ def main() -> int:
     outpath = root / "analysis" / "enrichment" / args.pipeline / "visual" / f"{slug}.csv"
     done = {(r["ad_id"], r["version_index"], r["creative_index"]): r for r in read_csv(outpath)}
 
-    new, missing, hashed = [], 0, 0
+    # locate everything to hash first (cheap) — lets us show progress + a denominator
+    todo, missing = [], 0
     for r in read_csv(master):
         aid = (r.get(id_col) or "").strip()
         if not aid:
@@ -239,11 +249,18 @@ def main() -> int:
         if vpath is None:
             missing += 1
             continue
-        if args.dry_run:
-            hashed += 1
-            if args.limit and hashed >= args.limit:
-                break
-            continue
+        todo.append((aid, v, c, vpath))
+    if args.limit:
+        todo = todo[:args.limit]
+
+    if args.dry_run:
+        print(f"{slug}: would hash {len(todo)} videos ({len(done)} already, {missing} video-missing)")
+        return 0
+
+    # hash with a progress heartbeat + periodic checkpoint, so a long run is visible
+    # and Ctrl-C keeps the frames already hashed (they reload via `done` next time).
+    total, new, hashed = len(todo), [], 0
+    for i, (aid, v, c, vpath) in enumerate(todo, 1):
         frames = sample_hashes(vpath)
         if not frames:
             missing += 1
@@ -251,12 +268,9 @@ def main() -> int:
         new.append({"ad_id": aid, "version_index": v, "creative_index": c,
                     "visual_hash": frames[len(frames) // 2], "phash_frames": ";".join(frames)})
         hashed += 1
-        if args.limit and hashed >= args.limit:
-            break
-
-    if args.dry_run:
-        print(f"{slug}: would hash {hashed} videos ({len(done)} already, {missing} video-missing)")
-        return 0
+        if hashed % _FLUSH_EVERY == 0 or i == total:
+            write_rows(outpath, list(done.values()) + new)   # group ids filled in the final pass
+            print(f"  hashed {hashed}/{total} (checkpointed)")
 
     allrows = list(done.values()) + new
     for rec in allrows:                      # tag slug for group-id construction
@@ -264,12 +278,7 @@ def main() -> int:
         rec.setdefault("visual_group_id", "")
         rec.setdefault("visual_group_size", "")
     group_visuals(allrows, args.hamming)
-
-    outpath.parent.mkdir(parents=True, exist_ok=True)
-    with outpath.open("w", encoding="utf-8", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=OUT_COLS, extrasaction="ignore")
-        w.writeheader()
-        w.writerows(allrows)
+    write_rows(outpath, allrows)
 
     n_multi = sum(1 for r in allrows if _int0(r.get("visual_group_size")) > 1)
     n_groups = len({r["visual_group_id"] for r in allrows if r.get("visual_group_id")})

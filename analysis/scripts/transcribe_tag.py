@@ -26,10 +26,32 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import signal
 import time
+from contextlib import contextmanager
 from pathlib import Path
 
 import _flash
+
+
+class _CallTimeout(Exception):
+    pass
+
+
+@contextmanager
+def _time_limit(seconds: int):
+    """Hard wall-clock bound (SIGALRM, main thread) so a single hung Files API or
+    generate call aborts that one video instead of stalling the whole batch forever.
+    macOS/Unix; transcribe runs single-threaded on the main thread."""
+    def _raise(signum, frame):
+        raise _CallTimeout(f"timed out after {seconds}s")
+    prev = signal.signal(signal.SIGALRM, _raise)
+    signal.alarm(seconds)
+    try:
+        yield
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, prev)
 
 AD_ID = {"facebook": "ad_library_id", "google": "creative_id"}
 MEDIA_COL = {"facebook": "ad_media_type", "google": "creative_format"}
@@ -91,14 +113,18 @@ def find_video(root: Path, pipeline: str, competitor: str, ad_id: str,
     return None
 
 
-def upload_active(client, path: Path, timeout_s: int = 180):
-    """Upload a video and wait until the Files API marks it ACTIVE."""
-    f = client.files.upload(file=str(path))
+def upload_active(client, path: Path, timeout_s: int = 180, call_timeout_s: int = 180):
+    """Upload a video and wait until the Files API marks it ACTIVE. The upload and
+    each status poll are wall-clock-bounded (the upload() call has no timeout of its
+    own, so a stuck CDN/network read would otherwise hang the whole batch forever)."""
+    with _time_limit(call_timeout_s):
+        f = client.files.upload(file=str(path))
     waited = 0
     while getattr(f.state, "name", str(f.state)) == "PROCESSING" and waited < timeout_s:
         time.sleep(3)
         waited += 3
-        f = client.files.get(name=f.name)
+        with _time_limit(60):
+            f = client.files.get(name=f.name)
     state = getattr(f.state, "name", str(f.state))
     if state != "ACTIVE":
         raise RuntimeError(f"file not ACTIVE (state={state})")
@@ -173,7 +199,8 @@ def main() -> int:
     for ad_id, vpath in ready:
         try:
             f = upload_active(client, vpath)
-            obj = _flash.generate_json(client, args.model, [f, PROMPT])
+            with _time_limit(300):     # bound the Flash inference too (generous)
+                obj = _flash.generate_json(client, args.model, [f, PROMPT])
             obj.update({"ad_id": ad_id, "competitor": slug,
                         "pipeline": args.pipeline, "model": args.model,
                         "source_video": vpath.name, "decoded_at": time.time()})
