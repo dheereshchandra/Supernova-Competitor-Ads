@@ -26,9 +26,8 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-import signal
+import threading
 import time
-from contextlib import contextmanager
 from pathlib import Path
 
 import _flash
@@ -38,20 +37,31 @@ class _CallTimeout(Exception):
     pass
 
 
-@contextmanager
-def _time_limit(seconds: int):
-    """Hard wall-clock bound (SIGALRM, main thread) so a single hung Files API or
-    generate call aborts that one video instead of stalling the whole batch forever.
-    macOS/Unix; transcribe runs single-threaded on the main thread."""
-    def _raise(signum, frame):
+def run_with_timeout(fn, seconds: int):
+    """Run fn() on a daemon thread and hard-stop WAITING after `seconds`.
+
+    SIGALRM is unreliable for this: the google-genai SDK retries an upload/generate
+    internally and catches exceptions, so it swallows the signal-raised exception — and
+    signal.alarm() is one-shot, so it never fires again and the batch hangs forever. A
+    thread join with timeout cannot be defeated by anything the SDK does: if the call
+    hasn't returned in time we raise _CallTimeout and move on. The worker is a daemon, so
+    a leaked hung call dies with the process and never blocks the main loop."""
+    box: dict = {}
+
+    def target():
+        try:
+            box["v"] = fn()
+        except Exception as e:   # noqa: BLE001 — re-raised on the main thread below
+            box["e"] = e
+
+    t = threading.Thread(target=target, daemon=True)
+    t.start()
+    t.join(seconds)
+    if t.is_alive():
         raise _CallTimeout(f"timed out after {seconds}s")
-    prev = signal.signal(signal.SIGALRM, _raise)
-    signal.alarm(seconds)
-    try:
-        yield
-    finally:
-        signal.alarm(0)
-        signal.signal(signal.SIGALRM, prev)
+    if "e" in box:
+        raise box["e"]
+    return box.get("v")
 
 AD_ID = {"facebook": "ad_library_id", "google": "creative_id"}
 MEDIA_COL = {"facebook": "ad_media_type", "google": "creative_format"}
@@ -113,18 +123,16 @@ def find_video(root: Path, pipeline: str, competitor: str, ad_id: str,
     return None
 
 
-def upload_active(client, path: Path, timeout_s: int = 180, call_timeout_s: int = 180):
-    """Upload a video and wait until the Files API marks it ACTIVE. The upload and
-    each status poll are wall-clock-bounded (the upload() call has no timeout of its
-    own, so a stuck CDN/network read would otherwise hang the whole batch forever)."""
-    with _time_limit(call_timeout_s):
-        f = client.files.upload(file=str(path))
+def upload_active(client, path: Path, timeout_s: int = 180):
+    """Upload a video and wait until the Files API marks it ACTIVE. The whole per-video
+    operation is wrapped by run_with_timeout at the call site, so no per-call guard is
+    needed here (and the SDK can't swallow a thread-join timeout)."""
+    f = client.files.upload(file=str(path))
     waited = 0
     while getattr(f.state, "name", str(f.state)) == "PROCESSING" and waited < timeout_s:
         time.sleep(3)
         waited += 3
-        with _time_limit(60):
-            f = client.files.get(name=f.name)
+        f = client.files.get(name=f.name)
     state = getattr(f.state, "name", str(f.state))
     if state != "ACTIVE":
         raise RuntimeError(f"file not ACTIVE (state={state})")
@@ -196,11 +204,12 @@ def main() -> int:
     client = _flash.get_client(_flash.find_env(root, args.pipeline))
     outdir.mkdir(parents=True, exist_ok=True)
     ok = 0
-    for ad_id, vpath in ready:
-        try:
+    for i, (ad_id, vpath) in enumerate(ready, 1):
+        print(f"  [{i}/{len(ready)}] {ad_id} ...", flush=True)   # last line = stuck id if it hangs
+
+        def _do(ad_id=ad_id, vpath=vpath):
             f = upload_active(client, vpath)
-            with _time_limit(300):     # bound the Flash inference too (generous)
-                obj = _flash.generate_json(client, args.model, [f, PROMPT])
+            obj = _flash.generate_json(client, args.model, [f, PROMPT])
             obj.update({"ad_id": ad_id, "competitor": slug,
                         "pipeline": args.pipeline, "model": args.model,
                         "source_video": vpath.name, "decoded_at": time.time()})
@@ -210,9 +219,10 @@ def main() -> int:
                 client.files.delete(name=f.name)   # tidy server-side upload
             except Exception:  # noqa: BLE001
                 pass
+
+        try:
+            run_with_timeout(_do, 300)   # hard cap the whole video (upload+generate+write+delete)
             ok += 1
-            if ok % 10 == 0 or ok == len(ready):
-                print(f"  transcribed {ok}/{len(ready)}")
         except Exception as e:  # noqa: BLE001
             print(f"  [warn] {ad_id} failed: {e}")
     print(f"done: {ok}/{len(ready)} new sidecars in {outdir}")
