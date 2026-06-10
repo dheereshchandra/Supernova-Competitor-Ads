@@ -1,7 +1,7 @@
 ---
 name: google-ads-video-analysis
 description: >-
-  Run Step 4 of the Supernova Google competitor-ads pipeline — scene-by-scene
+  Run Creative Studio of the Supernova Google competitor-ads pipeline — scene-by-scene
   decomposition of competitor YouTube ad videos, single-image analysis for
   display ads, and text-only analysis for Search/Text ads. Produces a
   Supernova-voice rewrite and two Word documents per ad. For each candidate
@@ -13,11 +13,13 @@ description: >-
   fills two URL columns in the master CSV. CRITICAL: before any API call, the
   skill estimates total cost and asks the operator for explicit approval. Use
   this skill whenever the operator asks to analyse Google competitor ads, run
-  step 4 on a Google master CSV, decompose Google ad scenes, or produce
+  Creative Studio on a Google master CSV, decompose Google ad scenes, or produce
   Supernova rewrites of Google ad copy.
 ---
 
-# Step 4 — Google competitor ad analysis + Supernova rewrite
+# Creative Studio — Google competitor ad analysis + Supernova rewrite
+
+This skill implements the Creative Studio workflow; its scripts use the legacy step4_ prefix.
 
 This skill turns assets already in R2 (and Text-format rows with copy ready) into two analysis docx files per ad and writes their URLs back into the master CSV. It is the single most expensive stage in the pipeline (Gemini Pro + Nano Banana Pro per video) and therefore is gated by an explicit cost-estimate-and-approval step before any API call fires.
 
@@ -82,7 +84,7 @@ If any stage outputs an error or unexpected count, **stop and surface to the ope
 
 ## When to invoke this skill (and when not to)
 
-**Invoke when** the operator wants the analysis layer on Google ads. Common phrasings: *"run step 4 on Zinglish Google"*, *"analyse 5 random ads from the Zinglish Google master"*, *"decompose these Google ad IDs"*, *"Supernova rewrite of Google ad copy"*.
+**Invoke when** the operator wants the analysis layer on Google ads. Common phrasings: *"run Creative Studio on Zinglish Google"*, *"analyse 5 random ads from the Zinglish Google master"*, *"decompose these Google ad IDs"*, *"Supernova rewrite of Google ad copy"*.
 
 **Don't invoke when** the assets are *not yet in R2* (for video/image formats) — Steps 1+2+3 have to finish first. Run `bash run_all_competitors.sh` or invoke `google-ad-scraper` + `google-ads-download-and-upload` directly to get assets in R2 before invoking this skill. Text rows don't need an R2 asset; they can be analysed from `ad_headline` + `ad_description` in the master.
 
@@ -362,5 +364,5 @@ Re-invoke with the same scope. Already-done work is skipped.
 ## Cross-references
 
 - `../ARCHITECTURE.md` — architectural rationale
-- `../../HANDOVER.md §9` — Step 4 operator walkthrough
+- `../../HANDOVER.md §9` — Creative Studio operator walkthrough
 - `~/Documents/fb-ad-downloader/skills/fb-ads-video-analysis/SKILL.md` — sibling pipeline (the Text-only branch is the main new addition here)

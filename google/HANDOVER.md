@@ -26,7 +26,7 @@ something here disagrees with anything else in the folder, this document
 wins — flag the conflict to the maintainer.
 
 The pipeline is a sibling to `~/Documents/fb-ad-downloader/`. The
-architectural model is identical (cost-gated Step 4, idempotent + resumable
+architectural model is identical (cost-gated Creative Studio, idempotent + resumable
 scripts, master CSV per competitor), so if you've operated that folder,
 most of this will feel familiar. §11 lists everything that's genuinely
 different.
@@ -42,7 +42,7 @@ different.
 4. [Step 1 — Scrape](#4-step-1--scrape) — the CLI scraper
 5. [Step 2 — yt-dlp metadata enrichment](#5-step-2--yt-dlp-metadata-enrichment)
 6. [Step 3 — R2 upload + master CSV](#6-step-3--r2-upload--master-csv)
-7. [Step 4 — AI analysis](#7-step-4--ai-analysis) — gated by cost estimate
+7. [Creative Studio](#7-creative-studio) — gated by cost estimate
 8. [Running all competitors at once](#8-running-all-competitors-at-once)
 9. [Output schemas](#9-output-schemas) — CSV columns explained
 10. [Troubleshooting](#10-troubleshooting)
@@ -88,7 +88,7 @@ bash run_all_competitors.sh --skip-html5      # no Pass 3/4, ~1.5 hours
 bash run_all_competitors.sh --skip-retry      # no Pass 2, ~7-8 hours
 ```
 
-Step 4 (AI analysis) is **deliberately not** part of the wrapper — it's
+Creative Studio (AI analysis) is **deliberately not** part of the wrapper — it's
 gated by an explicit cost estimate and approval. Run it separately when
 you want analysis docs (see §7).
 
@@ -114,7 +114,7 @@ python3 scripts/upload_to_r2.py \
 # HTML5 banner capture (Pass 3 equivalent for one competitor)
 python3 scripts/capture_html5_banners.py --competitor speakx
 
-# Step 4 — AI analysis (gated by cost estimate)
+# Creative Studio — AI analysis (gated by cost estimate)
 python3 scripts/estimate_step4_cost.py --competitor speakx --all
 ```
 
@@ -144,7 +144,7 @@ As of the last full run (June 2026):
 
 - **8 of 9 competitors** are fully through Steps 1+2+3, sitting in
   `master/*.csv`, assets uploaded to R2.
-- **SpeakX** additionally has Step 4 complete — 3 distinct videos analysed,
+- **SpeakX** additionally has Creative Studio complete — 3 distinct videos analysed,
   6 .docx files in R2, master back-filled.
 - **English Seekho** is the only outstanding competitor — the IP got
   rate-limited mid-run during a previous attempt. It needs a retry from
@@ -171,8 +171,8 @@ requests        # Step 1, 3 — HTTP client
 boto3           # Step 3 — Cloudflare R2 (S3-compatible) uploads
 yt-dlp          # Step 2 — YouTube metadata via --write-info-json
 openpyxl        # Step 1 — only if feeding an .xlsx of advertiser IDs
-google-genai    # Step 4 — Gemini Pro + Nano Banana Pro
-python-docx     # Step 4 — building .docx files
+google-genai    # Creative Studio — Gemini Pro + Nano Banana Pro
+python-docx     # Creative Studio — building .docx files
 ```
 
 Install with: `pip3 install --user -r requirements.txt`
@@ -193,7 +193,7 @@ Copy `.env.template` to `.env` and fill these in:
 | `R2_SECRET_ACCESS_KEY` | Same place; shown once at creation | Step 3 |
 | `R2_BUCKET` | Bucket name (we use `video-ads`, shared with FB pipeline) | Step 3 |
 | `R2_PUBLIC_URL_BASE` | Bucket public URL or custom domain | Step 3, master CSV |
-| `GEMINI_API_KEY` | aistudio.google.com → Get API key | Step 4 |
+| `GEMINI_API_KEY` | aistudio.google.com → Get API key | Creative Studio |
 
 **Shortcut: if you already have FB pipeline R2 credentials**
 (`~/Documents/fb-ad-downloader/.env`), the values are likely identical — same
@@ -227,13 +227,13 @@ sequence (Steps 1+2+3 from §0.1) against `--out .` instead of `/tmp/`.
 | 1. Scrape | Your Mac's Terminal | Talks to Google's API; needs your IP + network |
 | 2. Enrich | Your Mac's Terminal | yt-dlp needs YouTube access (Cowork sandbox proxy returns 403) |
 | 3. Upload | Your Mac's Terminal | boto3 needs Cloudflare R2 (Cowork sandbox proxy returns 403) |
-| 4. Analyse | Your Mac's Terminal *or* Cowork | Gemini API works from either; Step 4 is mostly remote API work |
+| 4. Analyse | Your Mac's Terminal *or* Cowork | Gemini API works from either; Creative Studio is mostly remote API work |
 
 **What Cowork IS useful for:**
 
 - Editing scripts, docs, this HANDOVER
 - Inspecting CSVs and logs
-- Running Step 4 (the cost is in API calls, not your local machine)
+- Running Creative Studio (the cost is in API calls, not your local machine)
 - Verifying / auditing master CSV state
 - Sanity-checking scraper logic via small probes
 
@@ -555,7 +555,7 @@ uploaded to R2 (so `r2_public_url` is filled). Non-empty values:
 | `image-url-not-extracted` | Image-format row, but the scraper couldn't extract a `tpc.googlesyndication.com/archive/simgad/...` URL from the variant payload | Scraper edge case — open the `creative_url` in a browser to inspect; report to maintainer if frequent. |
 | `image-url-not-uploaded` | Image URL was extracted but upload to R2 hadn't run yet, or it failed silently | Re-run Step 3 — usually self-heals. |
 | `video-url-not-uploaded` | googlevideo.com URL was extracted but no mp4 landed on disk for upload | Re-run Step 1 to refresh the (short-lived) signed URL, then re-run Step 3. |
-| `text-no-asset` | Text-format row, by design no media | None — Step 4 still analyzes the headline + description. |
+| `text-no-asset` | Text-format row, by design no media | None — Creative Studio still analyzes the headline + description. |
 | `unknown-no-format` | Detail-fetch failed; the scraper has the `creative_id` from the listing but never got the detail to know what format it is | Re-run Step 1 for that competitor — usually a transient 429. |
 | `detail-fetch: HTTPError` | Step 1 hit a 429 / network error specifically on this creative | Re-run Step 1 — backoff in the script handles this on retry. |
 | `asset-missing-from-disk` | The row had an asset URL but the local file wasn't found at Step 3 time (Step 1's `videos/` or `images/` folder was deleted, or a download silently failed) | Re-run Step 1 to re-download, then Step 3. |
@@ -608,7 +608,9 @@ by hand.
 
 ---
 
-## 7. Step 4 — AI analysis
+## 7. Creative Studio
+
+(Implemented by the legacy step4_* scripts.)
 
 **Scripts:** `scripts/estimate_step4_cost.py`, `scripts/step4_*.py`
 **Skill:** `skills/google-ads-video-analysis/SKILL.md`
@@ -685,7 +687,7 @@ row: `competitor_analysis_docx_r2_url` and `supernova_rewrite_docx_r2_url`.
 
 ### Format-aware behaviour
 
-| Format | What Step 4 does |
+| Format | What Creative Studio does |
 |---|---|
 | YouTubeVideo | Full pipeline: decompose, frames, character sheets, panels, rewrite, docs |
 | Image | Simplified: single-image analysis + 1 panel + rewrite + docs |
@@ -772,9 +774,9 @@ Edit the `COMPETITORS=(...)` array near the top of
 `run_all_competitors.sh`. Comment out the ones you don't want, or add a
 new entry — the slug derivation handles spaces and mixed case.
 
-### Why Step 4 isn't part of the wrapper
+### Why Creative Studio isn't part of the wrapper
 
-Step 4 (AI analysis via Gemini + Nano Banana) is **deliberately separate**.
+Creative Studio (AI analysis via Gemini + Nano Banana) is **deliberately separate**.
 It's gated by an explicit cost-estimate-and-approval step because real
 money is spent on the API calls. Run it independently with
 `scripts/estimate_step4_cost.py` and the `step4_*.py` stages — see §7.
@@ -785,7 +787,7 @@ money is spent on the API calls. Run it independently with
 
 ### Per-run input CSV (`inputs/g-ads-{slug}-{date}.csv`)
 
-28 columns, in this exact order (Step 2 + Step 3 + Step 4 all depend on
+28 columns, in this exact order (Step 2 + Step 3 + Creative Studio all depend on
 this layout):
 
 ```
@@ -806,16 +808,16 @@ Step 1 fills the first 18 columns plus `youtube_video_id` and
 
 ### Master CSV (`master/{competitor}.csv`)
 
-All 28 input columns + 6 added by Step 3 / Step 4:
+All 28 input columns + 6 added by Step 3 / Creative Studio:
 
 ```
 r2_public_url                              Step 3 — public URL of mp4/jpg in R2
 first_scrape_run_date                      Step 3 — when the row was first seen
 latest_scrape_run_date                     Step 3 — when last refreshed
-competitor_analysis_docx_r2_url            Step 4 stage 8
-supernova_rewrite_docx_r2_url              Step 4 stage 8
-competitor_analysis_image_r2_urls          Step 4 stage 6a (semicolon-separated)
-supernova_rewrite_image_r2_urls            Step 4 stage 6a (semicolon-separated)
+competitor_analysis_docx_r2_url            Creative Studio stage 8
+supernova_rewrite_docx_r2_url              Creative Studio stage 8
+competitor_analysis_image_r2_urls          Creative Studio stage 6a (semicolon-separated)
+supernova_rewrite_image_r2_urls            Creative Studio stage 6a (semicolon-separated)
 ```
 
 ### Format column values
@@ -861,7 +863,7 @@ Run `pip3 install --user boto3`. Then re-run the failed command.
 
 ### `ImportError: cannot import name 'genai' from 'google'`
 
-Run `pip3 install --user google-genai`. Stage 1 of Step 4 needs it.
+Run `pip3 install --user google-genai`. Stage 1 of Creative Studio needs it.
 
 ### BSD-sed slug bug in `run_all_competitors.sh` (already fixed)
 
@@ -1025,7 +1027,7 @@ Four Cowork skills exist in `skills/`:
 | `google-ads-pipeline` | Master orchestrator — runs the full weekly refresh end-to-end | Operator says "refresh all Google competitors" |
 | `google-ad-scraper` | Step 1 only — CLI scrape for one or more advertisers | Operator pastes AR IDs or a competitor name |
 | `google-ads-download-and-upload` | Steps 2 + 3 — given a Step 1 CSV, enrich + upload | Operator drops a `g-ads-…csv` and asks to push to R2 |
-| `google-ads-video-analysis` | Step 4 — gated by cost estimate | Operator asks for analysis on specific creative IDs |
+| `google-ads-video-analysis` | Creative Studio — gated by cost estimate | Operator asks for analysis on specific creative IDs |
 
 See `skills/ARCHITECTURE.md` for the design rationale behind the split.
 

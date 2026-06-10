@@ -53,7 +53,7 @@ supernova-competitor-ads/
    master file, so two people on different competitors never clash.
 3. Run the pipeline:
    - **Step 1 (scrape):** Facebook → Claude-in-Chrome; Google → `python3 scripts/scrape_google_ads.py` (on your Mac).
-   - **Steps 2–4** (download / R2 upload / AI analysis) → on **your Mac's Terminal**.
+   - **Steps 2–4** (download / R2 upload / free analysis — this is canonical Step 4, Free Analysis: free, no AI) → on **your Mac's Terminal**.
      The Cowork sandbox can't reach Facebook's CDN, R2, YouTube, or the AI API.
 4. Need media a teammate processed? `python3 tools/rehydrate.py --pipeline facebook --competitor <slug>` — pulls it from R2, not a 60 GB transfer.
 5. Finish: `tools/log_and_commit.sh <pipeline> <competitor> "<your name>" "<note>"` then `git push`.
@@ -77,6 +77,6 @@ between runs, 24 h cooldown after a 429) and logs every run to
 ## Every generated link is preserved
 
 Every R2 link the pipeline creates — source asset, both Word docs, and all
-Step-4 image arrays — lives in the committed master CSV (and, per run, in
+Creative Studio image arrays — lives in the committed master CSV (and, per run, in
 `{pipeline}/runs/{competitor}_{date}_links.json`). The heavy files stay in R2.
 Nothing is lost; everything stays one click away.

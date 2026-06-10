@@ -1,7 +1,7 @@
 # Supernova — Casting & Localisation (feedback item #8)
 
 *How the generated VISUALS get cast. The script side (#3/#4) keeps a competitor ad's proven concept;
-this is the rule for the **people and places** in it. Enforced in the Step-4 image generation
+this is the rule for the **people and places** in it. Enforced in the Creative Studio image generation
 (`step4_character_sheets.py`, `step4_panels.py`) via the shared `facebook/scripts/_casting.py`.*
 
 ---

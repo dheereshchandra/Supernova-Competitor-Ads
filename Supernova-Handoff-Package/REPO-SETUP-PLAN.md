@@ -110,16 +110,16 @@ Two layers, working together:
 
 ```
 ## 2026-06-05 14:30 IST — facebook / loora — operator: <name>
-- Steps run: 2+3 (download + master merge). Step 4 not run.
+- Steps run: 2+3 (download + master merge). Creative Studio not run.
 - Result: 9 new ads · 25 carry-forward · 26 retired · master 51 → 60.
 - R2: all 9 new rows have r2_public_url; 0 existing doc URLs changed.
-- Cost: $0 (no Step 4 this run).
+- Cost: $0 (no Creative Studio this run).
 - Full write-up: facebook/runs/loora_2026-06-04.md   ·   commit: <git hash>
 ```
 
 **B) The per-run summary** in `{pipeline}/runs/{competitor}_{date}.md` — the detailed
 write-up you *already* produce today (scope, scrape-vs-master comparison, download counts,
-merge integrity check, Step 4 cost estimate, errors/warnings). We just give it a fixed home.
+merge integrity check, Creative Studio cost estimate, errors/warnings). We just give it a fixed home.
 
 **How "who and when" is guaranteed:** every person sets up git with their own name once, so
 **git automatically stamps every save with the author and exact timestamp** — an unforgeable
@@ -127,7 +127,7 @@ record. The Run Log's "operator:" line makes the same information easy to read a
 
 ---
 
-## Requirement 4 — EVERY generated link stored in git (including all Step 4 links)
+## Requirement 4 — EVERY generated link stored in git (including all Creative Studio links)
 
 Every cloud link the pipeline ever creates must end up in git as text. There are several
 kinds, and **all** of them are covered:
@@ -135,11 +135,11 @@ kinds, and **all** of them are covered:
 | Link | Master CSV column | Created by |
 |---|---|---|
 | Source video / image | `r2_public_url` | Step 3 |
-| Competitor-analysis Word doc | `competitor_analysis_docx_r2_url` | Step 4 |
-| Supernova-rewrite Word doc | `supernova_rewrite_docx_r2_url` | Step 4 |
-| Original scene frames (images) | `orig_frame_urls` *(JSON list)* | Step 4 |
-| Clean regenerated panels (images) | `gen_panel_urls` *(JSON list)* | Step 4 |
-| Character reference sheets (images) | `char_sheet_urls` *(JSON list)* | Step 4 |
+| Competitor-analysis Word doc | `competitor_analysis_docx_r2_url` | Creative Studio |
+| Supernova-rewrite Word doc | `supernova_rewrite_docx_r2_url` | Creative Studio |
+| Original scene frames (images) | `orig_frame_urls` *(JSON list)* | Creative Studio |
+| Clean regenerated panels (images) | `gen_panel_urls` *(JSON list)* | Creative Studio |
+| Character reference sheets (images) | `char_sheet_urls` *(JSON list)* | Creative Studio |
 
 *(The Google pipeline uses the equivalent `competitor_analysis_image_r2_urls` /
 `supernova_rewrite_image_r2_urls` arrays — same idea.)*
@@ -149,12 +149,12 @@ so the full link history is preserved and shared. Three safeguards make sure not
 missed:
 
 1. **Master schema is kept complete.** Some older master files don't yet have the three
-   Step-4 image-array columns (e.g. `zinglish.csv` stops at the two docx columns). Bring
-   every master up to the full link schema so each kind of link has a home. Step 4's final
+   Creative Studio image-array columns (e.g. `zinglish.csv` stops at the two docx columns). Bring
+   every master up to the full link schema so each kind of link has a home. Creative Studio's final
    stage (back-fill) is what writes these columns — make sure it runs to completion, because
    that's the moment the image and docx links enter the master.
 
-2. **Keep the per-image link sidecars in git.** Step 4 writes a small
+2. **Keep the per-image link sidecars in git.** Creative Studio (implemented by the legacy step4_* scripts) writes a small
    `step4_workspace/images/<id>/r2_urls.json` for each ad — the raw map of every generated
    image to its R2 link. Even though the rest of `step4_workspace/` is heavy and excluded,
    **these `r2_urls.json` files are kept in git** (see the rulebook) as a redundant,
@@ -239,7 +239,7 @@ Because this lives in git, every insight is shared, versioned, and never lost.
 > **Important — `.gitignore` does NOT delete or block local files.** Whoever runs a task
 > keeps **every** video, image, and Word doc on their own computer, exactly as today. The
 > rulebook only controls what gets *shared through git* — the heavy files still save to your
-> local disk normally (Step 2 → `videos/`+`images/`, Step 4 → `step4_workspace/docs/`, etc.).
+> local disk normally (Step 2 → `videos/`+`images/`, Creative Studio → `step4_workspace/docs/`, etc.).
 > The only person who *won't* have a given competitor's media locally is the one who didn't
 > run it — and they can pull it from R2 on demand. Nobody ever loses local access.
 
@@ -284,7 +284,7 @@ Because this lives in git, every insight is shared, versioned, and never lost.
 6. Build `tools/log_and_commit.sh` (spec under Requirement 2) — and have it also write the
    per-run links manifest `{pipeline}/runs/{competitor}_{date}_links.json` described in
    Requirement 4 (gather every R2 link from the master row + the `r2_urls.json` sidecars).
-7. Bring every master CSV up to the full link schema so all Step-4 image/docx links have a
+7. Bring every master CSV up to the full link schema so all Creative Studio image/docx links have a
    column to live in (Requirement 4, safeguard 1).
 8. First commit + push. Then your colleague clones it and adds their own `.env`.
 9. From then on: pull → work → log_and_commit → push.
@@ -305,5 +305,5 @@ enough.
 ---
 
 *Result: one tidy shared repo, every run recorded with who/when/what, every generated link —
-source assets, both Word docs, and all Step-4 images — preserved in git, a growing analysis
+source assets, both Word docs, and all Creative Studio images — preserved in git, a growing analysis
 library, and the 60GB of media kept in the cloud where it belongs.*

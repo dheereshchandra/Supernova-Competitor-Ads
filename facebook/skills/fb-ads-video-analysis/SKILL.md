@@ -1,7 +1,7 @@
 ---
 name: fb-ads-video-analysis
 description: >-
-  Run Step 4 of the Supernova FB competitor-ads pipeline — scene-by-scene
+  Run Creative Studio of the Supernova FB competitor-ads pipeline — scene-by-scene
   decomposition of competitor ad videos and Supernova-voice rewrites. For each
   candidate master CSV row (videos already in R2, analysis docs not yet
   produced), this skill uses Gemini 3.1 Pro to decompose the video into scenes,
@@ -18,12 +18,14 @@ description: >-
   explicit approval. Multi-stage verification (including a HEAD-check audit)
   catches empty / broken outputs and missing URLs. Use this skill whenever
   the operator asks to analyse competitor videos, decompose ad scenes,
-  generate Supernova rewrites, produce scene breakdowns, or run step 4 on a
+  generate Supernova rewrites, produce scene breakdowns, or run Creative Studio on a
   competitor's master CSV. Also use when the operator wants ads analysed by
   ID list, by competitor, or by a random sample.
 ---
 
-# Step 4 — Competitor ad video analysis + Supernova rewrite
+# Creative Studio — Competitor ad video analysis + Supernova rewrite
+
+This skill implements the Creative Studio workflow; its scripts use the legacy step4_ prefix.
 
 This skill turns videos already in R2 into two analysis docx files per video and writes their URLs back into the master CSV. It is the single most expensive stage in the pipeline (Gemini Pro + Nano Banana Pro per video) and therefore is gated by an explicit cost-estimate-and-approval step before any API call fires.
 
@@ -36,7 +38,7 @@ See `../ARCHITECTURE.md` for why this skill is shaped this way. See `HANDOVER.md
 1. **Always run Stage -1 (preflight) first.** If it exits non-zero, surface the printed remediation and STOP. Don't pip-install based on guesswork — `google-genai` and `google-generativeai` are two different packages and only `google-genai` works (the import is `from google import genai`). Preflight already encodes this.
 2. **Stage 4.5 MUST run before Stage 6.** If the docx is built before image URLs are uploaded and the sidecar `step4_workspace/images/<id>/r2_urls.json` is written, every `Asset:` caption will say `[missing — Stage 4.5 not run for this image]` and the docs will need a full rebuild. Cowork has hit this exact bug on Learna AI; the canonical command list below is in the correct order.
 3. **Poll commands return exit code 1 while a batch is PENDING/RUNNING — that is not an error.** Any shell wrapper that runs `python3 scripts/step4_decompose.py poll <id>` with `set -e` enabled will die on the very first poll. Use `set +e` around poll loops, OR check stdout for the string `DONE` instead of relying on exit code. We hit this on the Learna AI run and burned a re-submit.
-4. **Default scope is `--top-by-rank 20`.** Do not ask the operator "how many to run?" if they say *"run step 4 on this competitor"* — pick top-20, show the cost estimate, ask for approval at the gate. That is the gate.
+4. **Default scope is `--top-by-rank 20`.** Do not ask the operator "how many to run?" if they say *"run Creative Studio on this competitor"* — pick top-20, show the cost estimate, ask for approval at the gate. That is the gate.
 5. **If a single row's rewrite batch entry fails** (1/20 dropped on Learna AI rank 17), do NOT mark Stage 4 as failed for the whole set. Continue Stages 6–8 on the 19 that succeeded, surface the 1 missing as `rewrite-failed-needs-rerun` at the end, and offer a one-ID retry command. The pipeline is per-row idempotent.
 
 ## The canonical command sequence Cowork follows
@@ -54,11 +56,11 @@ When invoked, run these stages **in order**. After each command Cowork should su
 python3 scripts/preflight.py
 
 # Stage 0 — cost estimate (no API call, FREE).
-# DEFAULT SCOPE FOR STEP 4 = --top-by-rank 20.
+# DEFAULT SCOPE FOR CREATIVE STUDIO = --top-by-rank 20.
 # Per the Learna AI retro (2026-05-30), the operator-canonical scope is "top 20
 # candidates by row_rank ascending" — the most prominent / most-active ads at
 # the top of the FB Ad Library result. Deterministic (no seed needed) and
-# matches what the operator actually wants when they say "run step 4 on this
+# matches what the operator actually wants when they say "run Creative Studio on this
 # competitor". Override only on explicit operator request (--random, --ids,
 # --all, --start-date).
 python3 scripts/estimate_step4_cost.py --competitor <competitor> --top-by-rank 20
@@ -122,7 +124,7 @@ If any stage outputs an error or unexpected count, **stop and surface to the ope
 
 ## When to invoke this skill (and when not to)
 
-**Invoke when** the operator wants the analysis layer — scene breakdowns, Supernova rewrites, two-docx output — on competitor videos that already exist in R2. Common phrasings: *"run step 4 on Zinglish"*, *"analyse 5 random ads from Zinglish"*, *"decompose these ad IDs into scenes"*, *"give me Supernova-voice rewrites of competitor ads"*.
+**Invoke when** the operator wants the analysis layer — scene breakdowns, Supernova rewrites, two-docx output — on competitor videos that already exist in R2. Common phrasings: *"run Creative Studio on Zinglish"*, *"analyse 5 random ads from Zinglish"*, *"decompose these ad IDs into scenes"*, *"give me Supernova-voice rewrites of competitor ads"*.
 
 **Don't invoke when** the videos are *not yet in R2* — Step 3 has to finish first. If asked, refuse politely and point the operator at `fb-ads-download-and-upload` or the master skill `fb-ads-pipeline`.
 
@@ -130,7 +132,7 @@ If any stage outputs an error or unexpected count, **stop and surface to the ope
 
 ## Inputs — what determines the work scope
 
-The skill always reads `master/{competitor}.csv`. **Default scope is `--top-by-rank 20`** per the Learna AI retro — the operator's canonical ask is "run Step 4 on the top 20 ads for this competitor", which deterministically picks the 20 lowest-`row_rank` candidate rows (= FB Ad Library top of result, = most prominent / most-active ads).
+The skill always reads `master/{competitor}.csv`. **Default scope is `--top-by-rank 20`** per the Learna AI retro — the operator's canonical ask is "run Creative Studio on the top 20 ads for this competitor", which deterministically picks the 20 lowest-`row_rank` candidate rows (= FB Ad Library top of result, = most prominent / most-active ads).
 
 The other scope flags exist for explicit operator override:
 
@@ -142,7 +144,7 @@ The other scope flags exist for explicit operator override:
 
 A "candidate row" is any master row where **either** `competitor_analysis_docx_r2_url` **or** `supernova_rewrite_docx_r2_url` is blank, AND `r2_public_url` (the video URL from Step 3) is non-blank. Rows that already have both docx URLs are skipped silently (idempotent re-run).
 
-If the operator says only *"run step 4 on {competitor}"* with no scope mentioned, **use `--top-by-rank 20`** — do NOT ask for clarification, do NOT default to `--all`. The cost gate (Stage 0) will surface the actual $ amount before anything fires, which is where the operator gets to adjust.
+If the operator says only *"run Creative Studio on {competitor}"* with no scope mentioned, **use `--top-by-rank 20`** — do NOT ask for clarification, do NOT default to `--all`. The cost gate (Stage 0) will surface the actual $ amount before anything fires, which is where the operator gets to adjust.
 
 ## Stage 0 — Cost estimate and operator approval gate (MANDATORY, NEVER SKIP)
 
@@ -402,7 +404,7 @@ Surface:
 
 - **Never call any Gemini API endpoint before Stage 0 (cost estimate + approval) has explicit operator yes.** The cost gate is mandatory.
 - **Never upload a docx to R2 that failed Stage 6 verification.** Quality failures stay local until re-run or operator override.
-- **Never modify rows in the master other than the five URL columns owned by Step 4 (`competitor_analysis_docx_r2_url`, `supernova_rewrite_docx_r2_url`, `orig_frame_urls`, `gen_panel_urls`, `char_sheet_urls`) and `latest_scrape_run_date`.** Step 3's columns are read-only here.
+- **Never modify rows in the master other than the five URL columns owned by Creative Studio (`competitor_analysis_docx_r2_url`, `supernova_rewrite_docx_r2_url`, `orig_frame_urls`, `gen_panel_urls`, `char_sheet_urls`) and `latest_scrape_run_date`.** Step 3's columns are read-only here.
 - **Never delete `step4_workspace/`** — intermediate JSONs, images, and the `r2_urls.json` sidecars are the resume mechanism. They take some disk space but they're worth it.
 - **Never run Stage 6 (build_docs) before Stage 4.5 (image upload) has completed for the same ad.** The docx builder reads `r2_urls.json`; if it's missing, every image is captioned `Asset: [missing — Stage 4.5 not run]` and the verifier fails. Run in order.
 - **Never down-scale frames or request smaller-than-2K images from Gemini.** HANDOVER §9.7 mandates high-resolution end-to-end so downstream ad-creation automation can use the same assets.

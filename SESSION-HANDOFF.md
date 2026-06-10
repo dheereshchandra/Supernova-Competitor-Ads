@@ -15,7 +15,7 @@ analysis system + run recipes).
 ## ✅ BUILT & MERGED (PRs #1–#6) — fully working
 The whole analysis system is on `main` and validated end-to-end on a real Mac.
 
-**Free rank pipeline** (`analysis/scripts/`, no API):
+**Free rank pipeline** — canonical Step 4, Free Analysis (free, no AI) — (`analysis/scripts/`, no API):
 `build_history.py` (dated snapshots → append-only per-competitor rank history;
 `--backfill` for FB, `--from-master` for Google) → `compute_rank_metrics.py`
 (winners/losers via 4 tiers: strong_winner >45d & ≥½ life top-25%; winner ≥15d &

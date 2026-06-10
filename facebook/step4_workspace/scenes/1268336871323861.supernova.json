@@ -1,0 +1,71 @@
+{
+  "competitor_id": "1268336871323861",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "A young Indian man in his early 20s with a medium build and fair complexion. He has short, dark, neatly styled hair and light stubble on his face. His facial features are soft, and he has dark eyes.",
+        "wardrobe": "In scene 1 and 3, he wears a green puffer jacket over a dark shirt with a grey and brown plaid flat cap. In scene 2, he wears a dark olive green windbreaker jacket. In scene 3, he wears a textured, dark olive-green collared jacket.",
+        "demeanor": "Initially appears hesitant and slightly confused, but grows more confident and pleased with his progress throughout the video."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "A humanoid robot with a feminine-coded face, constructed from white and grey polished materials. It has large, expressive, glowing light-blue eyes, a small nose, and a subtle mouth. The head is smooth and white, and it wears large, black over-ear headphones.",
+        "wardrobe": "The character is a robot; its body is its 'wardrobe'. It wears a pair of large black headphones.",
+        "demeanor": "Calm, patient, and encouraging, with a consistently neutral-to-pleasant facial expression."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Day 1: First Lesson",
+        "supernova_script": "Character B says: I am Miss Nova. Let's practice your English! Where are you from?\nCharacter A says: I'm coming from Mirzapur.\nCharacter B says: Say 'I come from Mirzapur'. Koi baat nahi, we will fix these small mistakes together.",
+        "scene_summary": "- Hook: Relatable Indian-English error with live correction.\n- Introduces Miss Nova and names English immediately.\n- Sets a warm, encouraging tone.",
+        "supernova_on_screen_text": "Day 1\nLet's practice your English!\nI'm coming from Mirzapur.\nSay 'I come from Mirzapur'."
+      },
+      {
+        "n": 2,
+        "scene_label": "Day 7: Outdoor Practice",
+        "supernova_script": "Character A says: Miss Nova, for my job interview... 'Where do you put up?' Is that right?\nCharacter B says: 'Where are you staying?' is better. You can make 1000 mistakes here, I will never judge you.",
+        "scene_summary": "- Injects the high-stakes 'job interview' scenario (beat e).\n- Delivers the crucial privacy/no-judgement payload (beat b).\n- Continues the speak-and-correct loop.",
+        "supernova_on_screen_text": "Day 7\nJob interview practice\nWhere do you put up?\n'Where are you staying?' is better.\nMake 1000 mistakes, no judgement."
+      },
+      {
+        "n": 3,
+        "scene_label": "Day 15: Showing Confidence",
+        "supernova_script": "Character A says: I used to freeze, but speaking with you every day actually works!\nCharacter B says: Because you are finally speaking, not just reading! I made this plan just for your level.",
+        "scene_summary": "- Learner testimonial showing confidence, not a brand guarantee.\n- Contrasts speaking vs. reading (beat c).\n- Lands the personalization payload (beat a).",
+        "supernova_on_screen_text": "Day 15\nSpeaking every day works!\nFinally speaking, not just reading.\nPersonalized plan."
+      },
+      {
+        "n": 4,
+        "scene_label": "AI Tutor's Call to Action",
+        "supernova_script": "Character B says: Stop wasting hours on English grammar videos. Give me just 15 minutes a day. Join 1 crore+ Indians on Supernova. Install now and start speaking!",
+        "scene_summary": "- Tight close with negative time anchor (wasting hours) and positive time anchor (15 mins/day).\n- Uses approved social proof (1 crore+ Indians).\n- Clean install CTA with no hard price.",
+        "supernova_on_screen_text": "Stop wasting hours\nJust 15 mins/day\n1 Crore+ Learners\nSupernova\nInstall now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (no-judgement), c (speak not read), e (job interview)",
+      "kept_from_seed": "Day 1/7/15 progression and PIP AI tutor visual format",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "Removed the ₹3 hard price completely; no comparative used."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Sivi Pro / MySivi Pro",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Just ₹3",
+        "supernova_swap": "[Removed]"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781075719.968364
+}

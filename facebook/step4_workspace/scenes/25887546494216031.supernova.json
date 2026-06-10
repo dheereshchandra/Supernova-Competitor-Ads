@@ -1,0 +1,88 @@
+{
+  "competitor_id": "25887546494216031",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "A stylized 3D animated woman of Indian descent in her mid-20s. She has a warm, medium complexion, large expressive brown eyes, and perfectly sculpted eyebrows. Her hair is long, black, and styled in voluminous waves parted to the side.",
+        "wardrobe": "A bright turquoise or cyan blazer worn over a plain white crew-neck top.",
+        "demeanor": "Friendly, encouraging, professional, and consistently smiling."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "A young South Indian man in his early 20s with a medium build and a dark complexion. He has thick, curly black hair styled upwards and a light mustache. His facial features are round.",
+        "wardrobe": "A long-sleeved, button-down collared shirt with a brown, blue, and white plaid pattern.",
+        "demeanor": "Initially hesitant, confused, and slightly stressed, transitioning to attentive, curious, and finally convinced and decisive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Initial Conversation & Problem Setup",
+        "supernova_script": "Character B says: I... will to learn English. I... uh... having interview tomorrow.\nCharacter A says: Interview ke liye English speaking practice karni hai? Main Miss Nova hoon.\nCharacter B says: Yes. But... lekin aap Hindi mein samjha sakti hain?\nCharacter A says: Zaroor. Supernova par main aapki hi bhasha mein English bolna sikhati hoon.\nCharacter B says: Haan, par main bolte waqt freeze ho jata hoon. Aur classes ke liye time nahi hai.",
+        "scene_summary": "- Hook: Relatable broken English and high-stakes interview scenario.\n- Introduces Miss Nova by name and establishes the mother-tongue explanation beat.\n- Sets up the core problem: freezing while speaking and lacking time.",
+        "supernova_on_screen_text": "I... will to learn | English. | I... uh... having | interview tomorrow. | Interview ke liye | English speaking | practice karni hai? | Main Miss Nova hoon. | Yes. But... | lekin aap Hindi | mein samjha sakti hain? | Zaroor. | Supernova par main | aapki hi bhasha mein | English bolna sikhati hoon. | Haan, par main | bolte waqt freeze | ho jata hoon. | Aur classes ke liye | time nahi hai."
+      },
+      {
+        "n": 2,
+        "scene_label": "Introducing the Solution",
+        "supernova_script": "Character A says: Supernova try karo. Main sabko same nahi sikhati. Pehle aapka level samajhti hoon, phir sirf aapke liye plan banati hoon. Roz bas 15 minute.\nCharacter B says: Par main toh bahut galtiyan karta hoon.",
+        "scene_summary": "- Delivers beat (a) Personalization: analyzes level, builds custom plan.\n- Sets the positive time anchor (15 minutes a day).\n- Removes the competitor's 1-month guarantee to ensure brand safety.",
+        "supernova_on_screen_text": "Supernova try karo. | Main sabko same | nahi sikhati. | Pehle aapka level | samajhti hoon, | phir sirf aapke liye | plan banati hoon. | Roz bas 15 minute. | Par main toh | bahut galtiyan | karta hoon."
+      },
+      {
+        "n": 3,
+        "scene_label": "App Features Demo",
+        "supernova_script": "Character A says: Yahan aap padhte nahi, bolte ho! 1000 galtiyan karo, main 1000 baar bina hanse theek karungi. Koi aapko judge nahi karega.",
+        "scene_summary": "- Delivers beat (c) You SPEAK, not read.\n- Delivers beat (b) Privacy/no-judgement: make 1000 mistakes, no one is watching.\n- Matches the visual UI of instant grammar correction.",
+        "supernova_on_screen_text": "Yahan aap padhte nahi, | bolte ho! | 1000 galtiyan karo, | main 1000 baar | bina hanse theek karungi. | Koi aapko judge | nahi karega."
+      },
+      {
+        "n": 4,
+        "scene_label": "User is Convinced",
+        "supernova_script": "Character B says: Hmm. ChatGPT toh sirf text deta hai, par aap toh sach mein teacher ho.",
+        "scene_summary": "- Delivers the ChatGPT contrast beat.\n- Shows the user convinced by the active teaching method versus passive AI.",
+        "supernova_on_screen_text": "Hmm. | ChatGPT toh sirf | text deta hai, | par aap toh sach mein | teacher ho."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action & Offer",
+        "supernova_script": "Character A says: Aaj hi Supernova app download karo. 1 crore se zyada log yahan practice kar rahe hain. Yeh coaching classes se sasta hai, aur aapke phone mein hamesha ready hai.",
+        "scene_summary": "- Delivers social proof (1 crore+ users).\n- Replaces hard rupee price with a safe comparative (cheaper than coaching classes).\n- Drives the download CTA.",
+        "supernova_on_screen_text": "Aaj hi Supernova | app download karo. | 1 crore se zyada log | yahan practice kar rahe hain. | Yeh coaching classes | se sasta hai, | aur aapke phone mein | hamesha ready hai."
+      },
+      {
+        "n": 6,
+        "scene_label": "User Downloads the App",
+        "supernova_script": "Character B says: Abhi main phone mein download karta hoon Supernova app. Interview clear karna hai!",
+        "scene_summary": "- Reinforces the high-stakes interview scenario.\n- Shows user taking immediate action.",
+        "supernova_on_screen_text": "Abhi main phone mein | download karta hoon | Supernova app. | Interview clear | karna hai!"
+      },
+      {
+        "n": 7,
+        "scene_label": "Final Call to Action",
+        "supernova_script": "Character A says: Install Supernova, start speaking today.",
+        "scene_summary": "- Clean, tight final CTA.\n- Reinforces the core action: speaking.",
+        "supernova_on_screen_text": "Install Supernova, | start speaking today."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy/no-judgement), c (you speak), e (interview scenario), g (logic in mother-tongue), ChatGPT contrast",
+      "kept_from_seed": "Split-screen AI tutor and stressed learner format",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used comparative 'coaching classes se sasta hai'"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781075719.971054
+}

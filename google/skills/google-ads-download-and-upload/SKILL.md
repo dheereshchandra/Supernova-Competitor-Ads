@@ -107,7 +107,7 @@ Per-row decision logic (HANDOVER §8.3), keyed on `(creative_id, variant_index)`
 - If master has `r2_public_url` → carry forward, no re-upload
 - `YouTubeVideo` with local `.mp4` → upload the .mp4; ALSO read `{stem}.info.json` and populate `youtube_video_title`/`description`/`channel_name`/`duration_s` in the master row
 - `Image` with local image file → upload, write URL
-- `Text` → tag `text-no-asset`, leave `r2_public_url` blank, keep row in master so Step 4 can find it
+- `Text` → tag `text-no-asset`, leave `r2_public_url` blank, keep row in master so Creative Studio can find it
 - Row carries non-empty `error_tag` from Step 1 (scrape failed for that creative) → tag `scrape-error:{tag}`, leave blank, keep in master so a Step 1 re-run can fill it later
 - Local file missing for a format that needs one → tag `asset-missing`, leave blank
 - `Shopping` / `Maps` with no usable asset → tag `unsupported-format`
@@ -125,7 +125,7 @@ After `[done]`:
 
 1. Confirm master row count matches input + prior history.
 2. Spot-check one new R2 URL with `curl -sI` — expect HTTP 200 with correct `content-type`.
-3. Compare uploaded vs. carry-forward vs. text-no-asset vs. unsupported-format vs. scrape-error vs. errors. Surface anything unexpected — `scrape-error` rows in particular indicate Step 1 had per-card failures that may warrant a re-run of the scraper before progressing to Step 4.
+3. Compare uploaded vs. carry-forward vs. text-no-asset vs. unsupported-format vs. scrape-error vs. errors. Surface anything unexpected — `scrape-error` rows in particular indicate Step 1 had per-card failures that may warrant a re-run of the scraper before progressing to Creative Studio.
 
 ## Final report to the operator
 
@@ -166,7 +166,7 @@ If the operator invoked you directly, end here. If invoked by the master, return
 | Many image downloads 403 | Signed URLs expired (>12h since Step 1) | Re-scrape Step 1, then re-run Step 2 |
 | `AccessDenied` on R2 upload | `.env` wrong / token revoked | Confirm with operator |
 | Master CSV column drift | Hand-edit | Restore from most recent `.bak` |
-| All Text rows show `no-asset` in tally | Working as intended | Text ads have no media — they'll be analysed in Step 4 from the copy fields |
+| All Text rows show `no-asset` in tally | Working as intended | Text ads have no media — they'll be analysed in Creative Studio from the copy fields |
 
 ## Cross-references
 

@@ -110,12 +110,12 @@ supernova-competitor-ads/              ← ONE private Git repo
    - Args: `<pipeline> <competitor> "<operator name>" "<one-line note>"`.
    - Append a dated entry to `RUN_LOG.md` (format in handoff 03 / REPO-SETUP-PLAN §3).
    - Write a per-run links manifest `{pipeline}/runs/{competitor}_{date}_links.json` collecting
-     every R2 link produced this run (source asset + both docx + all Step-4 image URLs), pulled
+     every R2 link produced this run (source asset + both docx + all Creative Studio image URLs), pulled
      from the master row and any `step4_workspace/images/*/r2_urls.json` sidecars.
    - `git add` the master CSV, the run's input CSV, `runs/*`, `step3_logs/*<competitor>*`,
      `RUN_LOG.md`; `git commit --author="<operator> <email>" -m "run: <pipeline>/<competitor> by <operator> — <note>"`; print a "now run: git push" reminder.
 
-7. **Bring every master CSV up to the full link schema** so all Step-4 image/docx links have a
+7. **Bring every master CSV up to the full link schema** so all Creative Studio image/docx links have a
    column (some older masters stop at the two docx columns — add the image-array columns).
 
 8. **First commit + push.** Then your teammate clones the repo and adds their own local `.env`

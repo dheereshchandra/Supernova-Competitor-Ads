@@ -1,0 +1,46 @@
+{
+  "competitor_id": "24553583707571927",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "A middle-aged South Asian man, likely in his 40s or 50s, with a heavy build. He has a dark complexion, short, dark, slightly curly hair, and a prominent, thick black mustache. His facial expression is serious and focused.",
+        "wardrobe": "A light brown or tan short-sleeved polo shirt.",
+        "demeanor": "Knowledgeable, authoritative, and helpful."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "A young South Asian woman, likely in her early 20s, with a slender build. She has a fair complexion, long, straight, center-parted black hair, and dark eyes. Her features are soft and expressive.",
+        "wardrobe": "A black top with white floral or leaf-patterned embroidery around the V-neckline.",
+        "demeanor": "Initially pained and confused, she becomes curious, thoughtful, and finally optimistic and happy."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Learning Conversation",
+        "supernova_script": "Character B says: [Sipping sound]\nCharacter A says: What happened?\nCharacter B says: I got a burning tongue.\nCharacter A says: It's 'burnt tongue', not 'burning tongue'.\nCharacter B says: What?\nCharacter A says: 'Burning tongue' is a medical condition. 'Burnt tongue' is when you burn your tongue drinking hot tea.\nCharacter B says: Okay, okay, my English is just weak. I freeze when I have to speak.\nCharacter A says: Then you should practice with Miss Nova on the Supernova app.\nCharacter B says: An AI teacher? But how can AI teach me?\nCharacter A says: She doesn't teach everyone the same way. She understands your level first, then makes a personalized plan just for you.\nCharacter B says: But I make so many mistakes...\nCharacter A says: That's the best part! Make 1000 mistakes, she corrects you 1000 times without judging. And she explains the logic in your own language.\nCharacter B says: Is it expensive? I don't have much time either.\nCharacter A says: It's way cheaper than coaching classes, and you only need 15 minutes a day. Over 1 crore Indians are already learning to speak confidently.\nCharacter B says: Wow! How do I join?\nCharacter A says: Click the install button, download Supernova, and start speaking English today!",
+        "scene_summary": "- Hook: Relatable English error (burning vs burnt tongue) corrected live.\n- Payload: Introduces Miss Nova, hitting personalization (a) and privacy/no-judgment (b).\n- Close: Positive time anchor (15 mins) and comparative cost, ending with a clean CTA without a 15-day guarantee.",
+        "supernova_on_screen_text": "Supernova\nburning tongue\nIt's burnt tongue\nnot burning tongue\nmy English is weak\npractice with Miss Nova\nSupernova app\nPersonalized plan\nNo judgment\nexplains in your language\ncheaper than classes\n15 mins a day\n1 crore+ users\nInstall Supernova\nStart speaking today"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy/no-judgment), g (logic in mother-tongue)",
+      "kept_from_seed": "Split-screen vendor/learner format and the 'burning tongue' error hook.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used comparative 'cheaper than coaching classes'."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781075719.969389
+}
