@@ -33,11 +33,50 @@ BATCHES_DIR = WORKSPACE / "batches"
 
 MODEL = "gemini-3.1-pro-preview"
 
-# Supernova brand voice prompt — internal use. Rewrites a competitor's ad script
-# in Supernova's voice with brand swaps and pricing/hype claims stripped.
-PROMPT = """You are a brand copywriter for **Supernova**, a Hindi-language spoken-English learning app from India.
+# The full Supernova brand + payload context (feedback #3 "re-pitch, don't name-swap" + #4 "real
+# Supernova context") is the single source of truth in facebook/generation/. We load it at runtime
+# and prepend it to the rewrite instructions, so editing the .md updates the prompt everywhere.
+CONTEXT_PATH = pathlib.Path(__file__).resolve().parent.parent / "generation" / "supernova_creative_context.md"
 
-You will receive a structured JSON scene-breakdown of a *competitor's* ad. Your job is to rewrite the audio script and on-screen text in Supernova's voice — same scene-by-scene structure, same character beats, but reframed for Supernova's brand and messaging.
+
+def load_context() -> str:
+    try:
+        return CONTEXT_PATH.read_text()
+    except FileNotFoundError:
+        sys.exit(f"[error] Supernova creative context missing at {CONTEXT_PATH}")
+
+
+# Rewrite instructions, appended AFTER the brand context. The governing idea (validated on 5 proven
+# competitor seeds): KEEP the ad's core visual shell exactly, RE-PITCH only the message into the
+# Supernova payload. The visuals are reused unchanged, so the script must keep fitting them.
+INSTRUCTIONS = """
+
+================================================================================
+YOUR JOB — GENERATE A SUPERNOVA AD FROM A COMPETITOR'S PROVEN AD
+
+Everything above is Supernova's brand + payload context. After INPUT below you receive a structured
+scene-by-scene breakdown of a *competitor's* ad — a PROVEN winner. Each scene carries its VISUALS
+(`setting`, `visual_description`, `panel_visual_description`) plus its AUDIO (`audio_transcript`) and
+its `on_screen_text`.
+
+THE BALANCE — read twice:
+- **KEEP THE CORE OF THE AD AS-IS.** The visual concept, setting, scene order, cast, hook device and
+  overall LOOK are proven and drive performance as much as the words. These visuals are reused
+  UNCHANGED downstream — your script MUST keep fitting them. Do NOT invent a new concept, do NOT drift
+  to a generic "job interview / 15-day transformation" template, do NOT change what the viewer sees.
+  Stay inside this ad's world (if the seed is absurdist, e.g. a skydiving baby, keep it absurdist).
+- **RE-PITCH ONLY THE MESSAGE inside that exact shell.** Rewrite each scene's `audio_transcript` into
+  `supernova_script` and its `on_screen_text` into `supernova_on_screen_text` so the ad now delivers
+  Supernova's disciplined PAYLOAD (above), woven naturally into the EXISTING beats: swap the competitor
+  brand -> Supernova; lead with personalization (a) + privacy/no-judgement (b); name **Miss Nova** as
+  the AI teacher; name **English** within the first ~10s; keep an in-story reveal; add the ChatGPT
+  contrast / mother-tongue reframe / a named real-life scenario WHERE THEY FIT this world. Strip any
+  hard rupee price (a comparative like "7x cheaper than classes" is allowed only if it fits the scene;
+  a "1 crore+ users" social-proof line is fine where it fits — don't let it carry the ad alone).
+- **MATCH PAYLOAD DEPTH TO LENGTH.** A short/absurdist ad (2-3 scenes) should lead with just a+b; a
+  longer narrative can stack more beats. Never cram so many beats that the pace breaks.
+- You MAY lightly expand ONE line within a scene if a payload beat needs it, but NEVER change the
+  visual, the scene order, or what is shown.
 
 OUTPUT: exactly one JSON object (no markdown fences, no commentary). Schema:
 
@@ -48,33 +87,38 @@ OUTPUT: exactly one JSON object (no markdown fences, no commentary). Schema:
     {
       "n": <same as input>,
       "scene_label": "<same as input>",
-      "supernova_script": "<your Supernova-voice rewrite of audio_transcript, written in ENGLISH. Put each spoken turn on its OWN line, prefixed 'Character X says:' (one line per turn — this is what makes the Scene/Character/Script layout clean). Keep the same beat/intent of the scene but reframe in Supernova's voice; match speaking pace and tone.>",
-      "scene_summary": "<2-4 bullet points, hyphen-prefixed, summarising what this scene does in the ad — purpose, emotion, payoff. For analyst reference.>",
-      "supernova_on_screen_text": "<rewritten version of on_screen_text if relevant; otherwise empty string>"
+      "supernova_script": "<your Supernova re-pitch of this scene's audio_transcript, in ENGLISH. Put each spoken turn on its OWN line, prefixed 'Character X says:' (one line per turn — this makes the Scene/Character/Script layout clean). Same visual beat and pacing; Supernova payload + Miss Nova voice.>",
+      "scene_summary": "<2-4 hyphen-prefixed bullets: what this scene does — purpose, emotion, which payload beat(s) it lands. For analyst reference.>",
+      "supernova_on_screen_text": "<re-pitched on_screen_text if relevant; otherwise empty string>"
     }
   ],
+  "payload_audit": {
+    "beats_covered": "<which payload beats a-g the whole ad lands, with a 3-word note each>",
+    "kept_from_seed": "<one line naming the core visual/structure you preserved>",
+    "miss_nova_named": <true|false>,
+    "english_named_early": <true|false>,
+    "price_check": "<confirm no hard rupee figure; note any comparative used>"
+  },
   "brand_swaps_detected": [
     {"competitor_brand": "<original brand name found in script or on-screen text>",
      "supernova_swap": "<what we replaced it with — usually 'Supernova' or removed>"}
   ]
 }
 
-SUPERNOVA BRAND VOICE — read carefully:
-- **Audience**: Hindi-first Indian learners who want to speak English with confidence — usually 20–40 year-olds in tier-2/tier-3 cities, often working but feeling stuck because their English holds them back.
-- **Tone**: warm, practical, encouraging, never patronising. Like a trusted older sibling cheering you on. Write in natural, simple Indian English (the scripting team localises/translates to Hindi etc. afterwards — so the base must be English). Avoid sounding stiff or like an advertisement.
-- **What Supernova offers**: a Hindi-medium English learning app with AI tutor practice, daily lessons, and a focus on real-world speaking situations (interview, customer, friend, shop). It is NOT free; do not invent specific pricing.
-- **Things to STRIP from the rewrite**: competitor brand names (replace with "Supernova" or remove), specific pricing claims (₹3, ₹49, etc — remove or replace with vague "affordable"), aggressive hype ("world's #1", "guaranteed in 30 days"), and any direct disparagement of other apps.
-- **Things to KEEP**: the dramatic beat structure of the original (hook → problem → solution → CTA), the same character voices and emotions, and roughly the same length.
-
 CONSTRAINTS:
 - Output ONLY a valid JSON object. No commentary, no markdown fences.
-- Every scene from the input must appear in the output with the same `n`.
-- `supernova_script` MUST put each spoken turn on its OWN line with a "Character X says:" prefix — one line per turn (this renders as a clean Scene → Character → Script layout).
-- Write EVERYTHING (script + on-screen text) in ENGLISH — this is the base the team edits and translates. Do NOT output Hindi/Devanagari or bracketed [translations].
-- If you cannot rewrite a particular scene (e.g. dialogue is too brand-specific), still emit the scene with `supernova_script: "[scene-too-brand-specific-to-rewrite — manual edit needed]"`. Do not silently skip scenes.
+- Every scene from the input must appear in the output with the same `n`, in the same order.
+- `supernova_script` MUST put each spoken turn on its OWN line with a "Character X says:" prefix — one line per turn (this renders as a clean Scene -> Character -> Script layout).
+- Write EVERYTHING (script + on-screen text) in ENGLISH — this is the base the team edits and localises to Hindi/Telugu/Tamil/etc. Capture the warm, conversational Hinglish *rhythm*, but do NOT output Devanagari/Tamil/etc. script or bracketed [translations].
+- Do NOT change the visuals or scene order. If a scene's dialogue is too brand-specific to re-pitch, still emit it with `supernova_script: "[scene-too-brand-specific-to-rewrite — manual edit needed]"`. Never silently skip scenes.
 
 INPUT:
 """
+
+
+def build_prompt() -> str:
+    """Full rewrite prompt = brand context (single source of truth) + rewrite instructions."""
+    return load_context() + INSTRUCTIONS
 
 
 def load_env() -> dict:
@@ -96,6 +140,7 @@ def get_client():
 
 def cmd_submit(client, ids: list[str], competitor: str) -> int:
     from google.genai import types as gt
+    prompt = build_prompt()
     inlined = []
     missing = []
     for ad_id in ids:
@@ -105,7 +150,7 @@ def cmd_submit(client, ids: list[str], competitor: str) -> int:
             continue
         decompose = json.loads(sidecar.read_text())
         parsed = decompose.get("parsed", {})
-        user_text = PROMPT + json.dumps(parsed, ensure_ascii=False)
+        user_text = prompt + json.dumps(parsed, ensure_ascii=False)
         inlined.append({
             "contents": [
                 gt.Content(role="user", parts=[gt.Part(text=user_text)]),
