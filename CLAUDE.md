@@ -139,7 +139,7 @@ A one-time setup that keeps your canonical clone current so teammates' pushes la
 - `google/HANDOVER.md` — Google pipeline (CLI / direct RPC since 2026-06-01).
 - `analysis/README.md` — free analysis + paid enrichment internals.
 - `SESSION-HANDOFF.md` — current resume state; read it to pick up in any workspace.
-- `tools/` — `rehydrate.py` (pull media from R2: `python3.13 tools/rehydrate.py --pipeline <facebook|google> --competitor <slug>`), `log_and_commit.sh`, `daily-sync/` (one-time Daily 9 AM auto-pull job — see "## One-time setup: Daily 9 AM auto-sync").
+- `tools/` — `rehydrate.py` (pull media from R2: `python3.13 tools/rehydrate.py --pipeline <facebook|google> --competitor <slug>`), `log_and_commit.sh`, `daily-sync/` (one-time Daily 9 AM auto-pull job — see "## One-time setup: Daily 9 AM auto-sync"), `csv-sync/` (one-time twice-daily job that upserts the analysis into ONE Google Sheet — "Supernova Competitor Master", Overview + Analysis tabs; reuses the Drive service account, needs the Sheets API enabled once — see `tools/csv-sync/README.md`).
 - `conductor.json` runs the one-shot setup when the workspace opens.
 
 Data model (one line): Git holds small precious text (scripts, master CSVs with R2 links, dated inputs, analysis outputs); Cloudflare R2 holds heavy media; pull on demand with `python3.13 tools/rehydrate.py ...`. Masters are latest-only; time-series comes from dated `inputs/` snapshots. Conductor workspaces are git worktrees of one canonical clone (a fetch in one updates `origin/*` for all).

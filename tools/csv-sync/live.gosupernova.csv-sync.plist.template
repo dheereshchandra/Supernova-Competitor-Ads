@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template only. Do NOT install this file directly — run tools/csv-sync/install.sh, which fills in
+     __SYNC_SH__ and __LOG__ with absolute paths for your machine and loads the job.
+     Runs TWICE daily at 09:15 and 21:15 local (just after the 9 AM repo pull, plus a PM refresh).
+     TO CHANGE THE TIMES: edit the Hour/Minute below, then re-run install.sh. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>live.gosupernova.csv-sync</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>__SYNC_SH__</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>15</integer></dict>
+    <dict><key>Hour</key><integer>21</integer><key>Minute</key><integer>15</integer></dict>
+  </array>
+  <key>StandardOutPath</key>
+  <string>__LOG__</string>
+  <key>StandardErrorPath</key>
+  <string>__LOG__</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>
