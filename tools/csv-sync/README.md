@@ -36,6 +36,7 @@ python3.13 tools/csv-sync/sync_to_sheets.py --competitor mysivi --dry-run   # of
 
 ## Notes
 - **Single writer:** install on the canonical MAIN clone only (like `daily-sync`) so two machines don't race the same sheet. The spreadsheet id lives in the git-tracked `sheet_id.json`, so every clone resolves the same sheet.
+- **The runner clone's `.env` must carry the 4 Google keys** (`GOOGLE_SERVICE_ACCOUNT_JSON`, `GDRIVE_SHARED_DRIVE_ID`, `GDRIVE_LINK_SHARING`, `GDRIVE_DOMAIN`) — `.env` files are per-clone (gitignored), so adding them in a Conductor worktree does NOT add them on the canonical clone. The preflight gate catches this (`✗ sheets … .env missing`).
 - **Change the times:** edit `Hour`/`Minute` in `live.gosupernova.csv-sync.plist.template`, then re-run `install.sh`.
 - **Remove:** `zsh tools/csv-sync/uninstall.sh` (leaves the sheet + log untouched).
 - **Analysis-first:** a competitor with no `<comp>_enriched.csv` yet contributes nothing (logged) until it's enriched.

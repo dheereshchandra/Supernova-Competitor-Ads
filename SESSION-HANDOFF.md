@@ -1,6 +1,6 @@
 # Session Handoff — Competitor-Ad Analysis System
 
-> Running status so this work can resume in any workspace. Last updated 2026-06-08.
+> Running status so this work can resume in any workspace. Last updated 2026-06-10.
 > Read this first, then the linked docs.
 
 ## What this project is
@@ -11,6 +11,71 @@ script similarity & replication, FB↔Google transfer). Git holds the small prec
 text (scripts, master CSVs with R2 links, the analysis); Cloudflare R2 holds the
 heavy media. See `README.md` (collaboration model) and `analysis/README.md` (the
 analysis system + run recipes).
+
+## 🆕 2026-06-09/10 — the big build-out (PRs #21–#42). READ THIS FIRST TO RESUME.
+
+**1. Enrichment hardened + run at scale (PRs #21–#34).** `transcribe_tag.py` is now concurrent
+(`--workers`, default 6) with a per-video hard timeout and **valid-JSON via `response_schema`**
+(controlled generation — fixed ~90% parse failures); rehydrate dedups across dated folders; lenient
+JSON parsing in `_flash.py`. **MySivi fully enriched: 2,005 ads / 1,937 transcripts**, all committed.
+Strategy outputs: `analysis/reports/mysivi_strategy_memo.md` (senior-analyst teardown — Marathi lever,
+translate>copy, fear-shame underused, AI-presenter wins, whitespace) + the auto
+`2026-06-09_mysivi_facebook_strategic.md`. Orchestrator `analysis/scripts/run_pipeline.sh` (#22) runs
+Steps 1→6 staged with a typed cost gate; `tools/capture-sync/` (#23) is a daily launchd job that
+auto-captures fresh snapshots before CDN expiry.
+
+**2. Creative Studio prompt overhaul (the "subjective feedback" bucket) — PRs #35–#37.**
+- **#35 creative context (feedback #3+#4):** `facebook/generation/supernova_creative_context.md` is the
+  single source of truth (who Supernova/Miss Nova are, the 7-beat payload — lead with personalization +
+  privacy, hook families, format library, DON'Ts, wide-latitude mandate; built from a teardown of 35
+  winning Supernova ads). `step4_rewrite.py` loads it at runtime; governing rule = **keep the
+  competitor ad's proven visual shell, re-pitch only the message**. Eval harness:
+  `facebook/generation/gen_test.py` (5-seed divergence battery).
+- **#36 brand safety (feedback #5):** `facebook/generation/supernova_brand_safety.md` (7 guardrail
+  categories, SEVERE/MODERATE) + `step4_safety_check.py` — an independent Flash audit per script
+  (verdict computed deterministically: any SEVERE→block). Also baked into the generation prompt.
+- **#37 India casting + Miss Nova (feedback #8):** `facebook/scripts/_casting.py` + both image stages —
+  every human re-cast authentically Indian (foreign source descriptions override), settings localised;
+  the AI teacher renders as **Miss Nova** (3D orange-suit mascot; PLACEHOLDER art in
+  `facebook/generation/assets/miss_nova/` — swap when brand assets arrive, no code change).
+
+**3. Collaborative Google Docs — Stage 9 (PR #38) + one-time Google setup DONE.**
+`step4_upload_gdocs.py` converts both deliverable .docx into native Google Docs in a **Shared Drive**
+("Supernova Competitor Docs", id `0AKmBubqd4DqGUk9PVA`), anyone-with-link edit, links into master
+(`supernova_rewrite_gdoc_url`, `competitor_analysis_gdoc_url`). Idempotency = collaboration protection
+(git-tracked sidecar `scenes/<id>.gdocs.json`; re-runs reuse, `--force` creates v2). The Google side is
+LIVE: GCP project `supernova-gdocs`, service account `supernova-gdocs@supernova-gdocs.iam.gserviceaccount.com`
+(key at `~/.config/supernova/gdrive-sa.json`, NEVER in the repo), Drive API + **Sheets API enabled**,
+SA = Content Manager of the Shared Drive. Setup walkthrough: `facebook/HANDOVER.md §9.10`.
+
+**4. Top-5 MySivi Creative Studio run — LIVE END-TO-END (PR #39).** The 5 longest-running winners went
+through decompose → new-prompt rewrite → India-cast visuals → docs → **10 collaborative Google Docs**
+(13/13 audit green; payload_audit shows personalization+privacy beats, Miss Nova named, ₹3 price
+stripped). Data committed (master gdoc links + sidecars).
+
+**5. NAMING RULE (also #39):** "Step N" = ONLY the canonical 6-step pipeline (Step 4 = Free Analysis,
+free/no-AI). The generation workflow is **Creative Studio** — never "a Step"; its scripts keep the
+legacy `step4_` prefix. Published in `CLAUDE.md`; docs aligned repo-wide. Plus `video_path_for`/
+`image_path_for` now search ALL dated media folders (decompose/build_docs/frames).
+
+**6. Team Google Sheet auto-sync (PRs #40–#42) — LIVE.** `tools/csv-sync/` upserts the analysis into
+ONE spreadsheet **"Supernova Competitor Master"**
+(https://docs.google.com/spreadsheets/d/1Iy6gKifge9Y2B1kwXZL2nd3r2xCudB0HB9UNYzyxxRI/edit — id also in
+`tools/csv-sync/sheet_id.json`): tabs **Overview** (21 self-explanatory cols, one row per ad, all
+competitors — verdict/status/ranks/% Time in Top 25%/language/format/angle/price + video & doc links),
+**Analysis** (36-col pivot dataset), **Legend** (auto-generated column definitions). Upsert never
+reorders rows or touches team-added columns. launchd `live.gosupernova.csv-sync` runs **09:15 + 21:15**
+from the canonical clone (installed + verified green). Column renames: edit `OVERVIEW_COLS`/
+`ANALYSIS_COLS`/`COLUMN_DEFS` in `sync_to_sheets.py`, run once with `--rebuild`.
+- Gotchas burned in: launchd has a **minimal PATH** (sync.sh exports `/opt/homebrew/bin`); preflight
+  must run from `facebook/`; **the runner clone's `.env` needs the 4 GDRIVE keys**; `install.sh`'s
+  `chmod +x` used to dirty the clone and silently block `git pull` (modes now committed 755).
+
+**Still open (the short list):** feedback **#6** structured brief/input system (brainstormed, not built);
+**Miss Nova real brand assets** (placeholder in use); English-vs-Hinglish base script decision;
+wire `step4_safety_check.py` as a blocking gate in the pipeline; A2 per-version transcription (deferred —
+FB versions proved byte-identical); R2 public URLs return 403 (pre-existing; Google Docs sidestep it);
+`estimate_step4_cost.py`/`run_step4.py` still use newest-folder-only video lookup (non-critical).
 
 ## ✅ BUILT & MERGED (PRs #1–#6) — fully working
 The whole analysis system is on `main` and validated end-to-end on a real Mac.
@@ -183,8 +248,16 @@ match · ✅ CDN video URLs captured (22/30) via hover.
 #5 authenticated R2 + smart-quote tolerance · #6 .env found anywhere ·
 #7 FB scrape probe · #8 first-cut terminal FB scraper · #9 handoff doc + scraper v2 ·
 #10 IST timezone + full-field diff · #11 drop locale (fixed 0-ads) ·
-#12 pause terminal scraper + save learnings (this doc).
+#12 pause terminal scraper + save learnings.
 New tool (2026-06-08): `facebook/scripts/fb_allow_clicker.py` — FB permission auto-clicker (see section above).
+**2026-06-09/10:** #21 B2/B3/B7 capture metrics · #22 staged orchestrator `run_pipeline.sh` ·
+#23 capture-sync launchd · #24 B5/B6/B9 replica/pHash/language · #26 hang-guard · #27 A1
+version-aware dedup · #28 lenient JSON · #29 thread-timeout · #30 version view · #31 HTML output +
+English/structured prompt · #32 transcribe concurrency · #33 rehydrate cross-date dedup ·
+#34 response_schema valid-JSON · #35 Supernova creative context (feedback #3+#4) · #36 brand-safety
+guardrails + Flash audit (#5) · #37 India casting + Miss Nova (#8) · #38 Stage 9 Google Docs ·
+#39 top-5 run + Creative Studio naming + video_path_for fix · #40 csv-sync Google Sheet ·
+#41 launchd PATH/cwd hotfix · #42 readable sheet columns + Legend tab.
 
 ## 📌 Open decisions / later
 - Format taxonomy: re-author a clean schema (the seed CSV is Supernova's own ads).
