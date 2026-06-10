@@ -46,6 +46,18 @@ def load_context() -> str:
         sys.exit(f"[error] Supernova creative context missing at {CONTEXT_PATH}")
 
 
+# Brand-safety guardrails (feedback #5) — the hard NEVERs, loaded so the writer avoids violations up
+# front. An independent Flash audit (step4_safety_check.py) verifies every script against the same doc.
+SAFETY_PATH = pathlib.Path(__file__).resolve().parent.parent / "generation" / "supernova_brand_safety.md"
+
+
+def load_safety() -> str:
+    try:
+        return SAFETY_PATH.read_text()
+    except FileNotFoundError:
+        sys.exit(f"[error] brand-safety policy missing at {SAFETY_PATH}")
+
+
 # Rewrite instructions, appended AFTER the brand context. The governing idea (validated on 5 proven
 # competitor seeds): KEEP the ad's core visual shell exactly, RE-PITCH only the message into the
 # Supernova payload. The visuals are reused unchanged, so the script must keep fitting them.
@@ -54,10 +66,10 @@ INSTRUCTIONS = """
 ================================================================================
 YOUR JOB — GENERATE A SUPERNOVA AD FROM A COMPETITOR'S PROVEN AD
 
-Everything above is Supernova's brand + payload context. After INPUT below you receive a structured
-scene-by-scene breakdown of a *competitor's* ad — a PROVEN winner. Each scene carries its VISUALS
-(`setting`, `visual_description`, `panel_visual_description`) plus its AUDIO (`audio_transcript`) and
-its `on_screen_text`.
+Everything above is Supernova's brand + payload context AND its brand-safety guardrails. After INPUT
+below you receive a structured scene-by-scene breakdown of a *competitor's* ad — a PROVEN winner. Each
+scene carries its VISUALS (`setting`, `visual_description`, `panel_visual_description`) plus its AUDIO
+(`audio_transcript`) and its `on_screen_text`.
 
 THE BALANCE — read twice:
 - **KEEP THE CORE OF THE AD AS-IS.** The visual concept, setting, scene order, cast, hook device and
@@ -77,6 +89,9 @@ THE BALANCE — read twice:
   longer narrative can stack more beats. Never cram so many beats that the pace breaks.
 - You MAY lightly expand ONE line within a scene if a payload beat needs it, but NEVER change the
   visual, the scene order, or what is shown.
+- **NEVER violate the BRAND-SAFETY GUARDRAILS above** (the hard NEVERs — no brand-voiced guarantees,
+  no hard rupee price, no personal-attribute phrasing, no demeaning of any group, no competitor
+  trashing, shame must resolve in dignity). They override all creative latitude.
 
 OUTPUT: exactly one JSON object (no markdown fences, no commentary). Schema:
 
@@ -117,8 +132,8 @@ INPUT:
 
 
 def build_prompt() -> str:
-    """Full rewrite prompt = brand context (single source of truth) + rewrite instructions."""
-    return load_context() + INSTRUCTIONS
+    """Full rewrite prompt = brand context + brand-safety guardrails + rewrite instructions."""
+    return load_context() + "\n\n" + load_safety() + INSTRUCTIONS
 
 
 def load_env() -> dict:
