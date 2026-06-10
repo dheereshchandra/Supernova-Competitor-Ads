@@ -8,6 +8,12 @@
 **/.env
 **/.env.*
 !**/.env.template
+# Google service-account keys (Stage 9 / Google Docs). Keep these OUTSIDE the repo
+# (e.g. ~/.config/supernova/gdrive-sa.json); this is a safety net if one lands inside.
+**/*service-account*.json
+**/*service_account*.json
+**/gdrive-sa*.json
+**/*-sa-key*.json
 
 # Heavy media — lives in R2, pulled on demand. Never commit.
 **/videos/

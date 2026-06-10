@@ -24,8 +24,9 @@ The 8 steps as a compact checklist (Steps 1–7 are onboarding; Step 8 is a one-
 
 2. **Install all Python packages in one shot:**
    ```
-   python3.13 -m pip install --upgrade --break-system-packages --user requests openpyxl boto3 yt-dlp google-genai python-docx Pillow numpy pyobjc-framework-Vision pyobjc-framework-Quartz pyobjc-framework-Cocoa
+   python3.13 -m pip install --upgrade --break-system-packages --user requests openpyxl boto3 yt-dlp google-genai python-docx Pillow numpy google-api-python-client google-auth google-auth-httplib2 pyobjc-framework-Vision pyobjc-framework-Quartz pyobjc-framework-Cocoa
    ```
+   (`google-api-python-client google-auth google-auth-httplib2` power Step-4 Stage 9 — the Google-Docs deliverable upload.)
    Success: pip finishes with no red `ERROR` lines (a yellow PATH warning is fine).
    - If a later command fails with `command not found: yt-dlp` (or similar), add Python's user-bin to PATH once: `echo 'export PATH="$HOME/Library/Python/3.13/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc`
 

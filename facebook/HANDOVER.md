@@ -815,6 +815,7 @@ Wall-clock estimate: 25–45 min
 | 6. Build two `.docx` files (each image followed by `Asset: <R2 URL>` hyperlink) | python-docx, local | `step4_workspace/docs/<id>_*.docx` | $0 |
 | 7. Upload docs to R2 | boto3, local | Two new R2 keys per row | $0 |
 | 8. Update master CSV (5 URL columns) | Local, per-row checkpoint | All five Step-4 columns back-filled | $0 |
+| **9. Upload both docs as collaborative Google Docs (Shared Drive)** | Drive API, local | Two native Google Docs + 2 `*_gdoc_url` master columns + `scenes/<id>.gdocs.json` | $0 + Drive quota |
 | Audit. HEAD-check every URL in docs + master | `scripts/step4_audit.py` | Pass/fail report per ad | $0 |
 
 Between every stage, a verification gate checks the output: file exists, parses correctly, has expected content, no placeholder strings, no empty sections, **image count == `Asset:` caption count, every URL HEAD-resolves on R2**. If a row fails any gate it's tagged `quality-fail-needs-rerun` in the log and **not** uploaded to R2 — the operator sees it in the final tally and decides whether to re-run that row.
@@ -934,6 +935,10 @@ python3 scripts/step4_build_docs.py --competitor zinglish <ids…>
 # Stage 7+8 — upload docs to R2 and back-fill master CSV (5 URL columns now)
 python3 scripts/step4_upload_and_update.py --competitor zinglish <ids…>
 
+# Stage 9 — store both docs as collaborative Google Docs (Shared Drive) + 2 gdoc columns
+#           (needs the one-time service-account + Shared Drive setup — see §9.10)
+python3 scripts/step4_upload_gdocs.py --competitor zinglish <ids…>   # add --force to make a fresh versioned Doc
+
 # Audit — HEAD-check every URL in docs + master
 python3 scripts/step4_audit.py --competitor zinglish <ids…>
 
@@ -964,6 +969,31 @@ Numbers from the validated first run, useful for sanity-checking future runs:
 These numbers were captured before §9.7 (per-image R2 uploads + 5-column master) shipped. Future runs will additionally produce ~3–10 image uploads per ad (originals + panels + sheets) — at zero marginal cost since R2 storage is per-byte, not per-PUT-call for our usage. The audit step adds ~1–2 seconds per ad (HEAD checks).
 
 If a future run wildly diverges from these numbers (e.g. cost > 3× the estimate, or all panels content-policy-blocked, or the audit step reports any URLs unreachable), pause and surface to the operator before proceeding.
+
+### 9.10 Stage 9 — collaborative Google Docs (Shared Drive)
+
+**Why.** The master CSV's R2 doc links only *download* a `.docx` (or open read-only HTML) — no collaboration. Stage 9 uploads each ad's two `.docx` files and **converts them to native Google Docs** in a Google Workspace **Shared Drive**, so the team can open one shared copy, **assign it, edit, comment, and verify** together. Two new master columns carry the links: `supernova_rewrite_gdoc_url`, `competitor_analysis_gdoc_url`. The R2 columns stay (they're a static snapshot; the Google Docs are the live copies — edits to a Doc do **not** flow back to R2, by design).
+
+**Script:** `scripts/step4_upload_gdocs.py --competitor <slug> <ids…> [--dry-run] [--force]`. Runs after Stage 6 (it needs the `.docx`); place it after 7+8 so master writes stay serial.
+
+**Idempotency = collaboration protection.** A git-tracked sidecar `step4_workspace/scenes/<id>.gdocs.json` records each Doc's `file_id`. A re-run (no `--force`) **reuses** the existing Docs — it never clobbers a Doc the team has been editing/commenting on. `--force` creates a **new versioned** Doc (` (v2)`) and leaves the old one (with its comments) intact. Because the sidecar is in `scenes/` (git-kept), the link/id travels with the repo, so any teammate's re-run reuses the same Docs.
+
+**Sharing:** by default `anyone with the link can edit/comment` (`GDRIVE_LINK_SHARING=anyone`). If a Workspace policy blocks "anyone" links on the Shared Drive, it falls back to domain-restricted, else Shared-Drive-member-only (the link is still recorded; members can open it).
+
+**One-time human setup** (once, by a person):
+1. GCP project → enable the **Google Drive API** (the Docs API is not needed — we convert, not author).
+2. Create a **service account** → create a **JSON key** → move it OUTSIDE the repo, e.g. `~/.config/supernova/gdrive-sa.json` (`chmod 600`). A service account has **no personal Drive quota**, so it can only create files inside a **Shared Drive**.
+3. Create a **Shared Drive** (requires Google Workspace, not consumer Gmail).
+4. Add the service-account email (the JSON's `client_email`, `…@<project>.iam.gserviceaccount.com`) as a Shared-Drive member with role **Content Manager** (the minimum that can create files *and* manage sharing).
+5. Copy the Shared Drive id — the `0A…` segment of its folder URL.
+6. Add to `.env` (repo-root + `facebook/.env`, like the R2 keys):
+   ```
+   GOOGLE_SERVICE_ACCOUNT_JSON=/Users/<you>/.config/supernova/gdrive-sa.json
+   GDRIVE_SHARED_DRIVE_ID=0A...
+   GDRIVE_LINK_SHARING=anyone
+   GDRIVE_DOMAIN=gosupernova.live
+   ```
+7. Verify: `python3.13 facebook/scripts/preflight.py --check-gdrive` → expects a green `gdrive` line naming the Shared Drive. (The gdrive check is **opt-in**, so ordinary preflight and onboarding clones without Google creds are unaffected.)
 
 ---
 

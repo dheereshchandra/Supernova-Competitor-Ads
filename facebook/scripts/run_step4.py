@@ -20,6 +20,9 @@ through the 9-stage pipeline (HANDOVER §9):
     Stage 7:   upload docs to R2       (boto3)
     Stage 8:   update master CSV       (local; per-row checkpoint — fills both
                docx URL columns AND the three JSON-array image URL columns)
+    Stage 9:   Google Docs upload      (Drive API — convert both docx to native
+               Google Docs in a Shared Drive; fills the two *_gdoc_url columns.
+               Real impl: scripts/step4_upload_gdocs.py)
     Audit:    HEAD-check every URL in docs + master (scripts/step4_audit.py)
 
 This file owns the stage glue + verification gates. The actual Gemini /
@@ -274,6 +277,18 @@ def stage8_update_master(rows: list[dict], master_path: pathlib.Path,
     raise StageNotYetWiredError("Stage 8 not yet implemented")
 
 
+def stage9_upload_gdocs(rows: list[dict], env: dict, log) -> None:
+    """Convert both docx to native Google Docs in a Shared Drive + fill the two
+    *_gdoc_url master columns. Needs the service-account + Shared Drive (HANDOVER §9.10).
+
+    The real implementation lives in scripts/step4_upload_gdocs.py; run it directly
+    until this orchestrator stage is wired up.
+    """
+    log("Stage 9: Google Docs — TODO: invoke step4_upload_gdocs.py (needs GDRIVE_* creds)")
+    raise StageNotYetWiredError("Stage 9 not yet wired into run_step4 (call "
+                                "step4_upload_gdocs.py directly until then)")
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -443,6 +458,17 @@ def main() -> int:
             log(f"Stage 8: updating master CSV")
             try:
                 stage8_update_master(passed, master_path, doc_urls, log)
+            except StageNotYetWiredError as e:
+                if args.dry_run_everything:
+                    log(f"  (dry-run) would call: {e}")
+                else:
+                    raise
+
+        # ---- Stage 9: Google Docs (collaborative copies) ----
+        if passed:
+            log(f"Stage 9: uploading {len(passed)} doc pairs to Google Docs (Shared Drive)")
+            try:
+                stage9_upload_gdocs(passed, env, log)
             except StageNotYetWiredError as e:
                 if args.dry_run_everything:
                     log(f"  (dry-run) would call: {e}")
