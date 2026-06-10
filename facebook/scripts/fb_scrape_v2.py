@@ -27,9 +27,13 @@ body/title/cta/link/platforms and own media URLs). So the v2.3 "Pass 3"
 full field map: SESSION-HANDOFF.md ("terminal Facebook scraper — V2").
 
 Known, deliberate mapping decisions (validate during the bench window):
-  * DATE_TZ: card dates come as unix timestamps; the UI renders them in
-    US-Pacific regardless of viewer timezone (root cause of v1's off-by-one
-    day). If the bench diff disagrees, change DATE_TZ below — one line.
+  * DATE_TZ / DATE_SHIFT_DAYS: card dates are unix timestamps at MIDNIGHT
+    US-Pacific. The 2026-06-10 same-day MySivi bench (5 ads spanning both PST
+    and PDT) showed Meta's "Started running on" label — what a Claude-in-Chrome
+    scrape reads — is consistently the day BEFORE that Pacific midnight, in both
+    DST regimes. So we floor to the Pacific date and shift one day back to match
+    the reference. Both knobs are one line; re-validate as more same-day diffs
+    land.
   * ad_end_date is blank while the ad is active (Claude semantics), even
     though the payload carries a rolling end_date for active ads.
   * DCO ads: the payload exposes ALL card variants; the rendered card (what
@@ -82,6 +86,7 @@ SCRIPT_VERSION = "v2.0-payload-2026-06-10"
 # Meta renders "Started running on …" in US-Pacific regardless of browser TZ.
 # v1's off-by-one-day bug was converting in the wrong zone. Bench-validated knob.
 DATE_TZ = zoneinfo.ZoneInfo("America/Los_Angeles")
+DATE_SHIFT_DAYS = -1  # see DATE_TZ note in the module docstring (bench-calibrated)
 
 # ── competitor → page mapping (kept in lockstep with scraper_prompt.md v2.3) ──
 COMPETITOR_PAGES = {
@@ -213,48 +218,58 @@ def embedded_json_blobs(html):
             continue
 
 
-def find_collations(obj, out):
-    """Collect every collated_results[] list (one per search edge = one ad)."""
+def find_ad_nodes(obj, out):
+    """Collect every ad node (anything carrying an ad_archive_id). Each node is
+    one ad VERSION; nodes that share a collation_id are versions of the SAME ad.
+
+    Meta is inconsistent about how it ships an ad's versions: sometimes nested in
+    a node's collated_results[], and sometimes (the MySivi pages, 2026-06-10) as
+    SEPARATE top-level search results that each carry only their own collation_id
+    with an empty collated_results. Gathering every node here and grouping by
+    collation_id in collations_from_sources() handles both shapes; the old code
+    only read collated_results[] and so split scattered versions into separate
+    single-version 'ads'."""
     if isinstance(obj, dict):
-        cr = obj.get("collated_results")
-        if isinstance(cr, list):
-            members = [m for m in cr if isinstance(m, dict) and m.get("ad_archive_id")]
-            if members:
-                out.append(members)
+        if obj.get("ad_archive_id"):
+            out.append(obj)
+            cr = obj.get("collated_results")          # nested siblings, when present
+            if isinstance(cr, list):
+                for v in cr:
+                    find_ad_nodes(v, out)
+            return                                     # don't descend this node's other fields
         for v in obj.values():
-            find_collations(v, out)
+            find_ad_nodes(v, out)
     elif isinstance(obj, list):
         for v in obj:
-            find_collations(v, out)
+            find_ad_nodes(v, out)
 
 
 def collations_from_sources(html, xhr_bodies):
-    """Ordered, de-duplicated collations from embedded HTML + captured XHRs.
-    Embedded blobs come first (impression order of the first batch), then XHR
-    batches in arrival (scroll) order. Dedup by lead member's ad_archive_id;
-    members within a collation dedup by ad_archive_id keeping first."""
-    raw = []
+    """Ordered list of collations (one per ad), each a list of version-member
+    nodes. Nodes are gathered from the embedded first batch (impression order)
+    then the scroll XHRs (arrival order), then GROUPED BY collation_id — the
+    field every version of one ad shares.
+
+    First-seen order is impression order, so members[0] is the lead / version-0:
+    the single card Meta renders in the grid (the highest-impression member),
+    which is exactly the baseline a Claude-in-Chrome scrape captures. Later
+    members are versions 1..n. Within a collation, dedup by ad_archive_id (a node
+    recurs across scroll batches). Ads with no collation_id fall back to a solo
+    group keyed on their own id."""
+    nodes = []
     for ob in embedded_json_blobs(html):
-        find_collations(ob, raw)
+        find_ad_nodes(ob, nodes)
     for body in xhr_bodies:
         for ob in parse_json_blobs(body):
-            find_collations(ob, raw)
-    coll = OrderedDict()
-    for members in raw:
-        seen, uniq = set(), []
-        for m in members:
-            aid = str(m["ad_archive_id"])
-            if aid not in seen:
-                seen.add(aid)
-                uniq.append(m)
-        lead = str(uniq[0]["ad_archive_id"])
-        if lead in coll:
-            # keep the richer sighting (later batches occasionally carry more members)
-            if len(uniq) > len(coll[lead]):
-                coll[lead] = uniq
-        else:
-            coll[lead] = uniq
-    return list(coll.values())
+            find_ad_nodes(ob, nodes)
+    groups = OrderedDict()
+    for n in nodes:
+        aid = str(n.get("ad_archive_id") or "")
+        if not aid:
+            continue
+        cid = str(n.get("collation_id") or "").strip() or f"solo:{aid}"
+        groups.setdefault(cid, OrderedDict()).setdefault(aid, n)
+    return [list(bucket.values()) for bucket in groups.values()]
 
 
 # ───────────────────────────── field mapping ─────────────────────────────
@@ -262,7 +277,8 @@ def collations_from_sources(html, xhr_bodies):
 def unix_to_date(ts):
     if not isinstance(ts, (int, float)) or not ts:
         return ""
-    return datetime.datetime.fromtimestamp(ts, tz=DATE_TZ).date().isoformat()
+    d = datetime.datetime.fromtimestamp(ts, tz=DATE_TZ).date()
+    return (d + datetime.timedelta(days=DATE_SHIFT_DAYS)).isoformat()
 
 
 def decode_expiry(url):
