@@ -1,10 +1,10 @@
-# Daily 9 AM repo auto-sync
+# Daily 11:30 AM repo auto-sync
 
 Keeps your **canonical clone** of this repo up to date automatically, so a teammate's
 pushes appear every morning without you remembering to `git pull`. (We work one
 competitor per person on a shared repo, so staying in sync matters.)
 
-It is a macOS **launchd** job that, every day at **9:00 AM local**, runs
+It is a macOS **launchd** job that, every day at **11:30 AM local**, runs
 `git fetch` + `git pull --ff-only` on `main`.
 
 ## Safety — what it will and won't do

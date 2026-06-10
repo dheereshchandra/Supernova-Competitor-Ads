@@ -29,7 +29,7 @@ sed -e "s|__SYNC_SH__|$SYNC_SH|g" -e "s|__LOG__|$LOG|g" "$TEMPLATE" > "$PLIST_DE
 launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST_DEST"
 
-echo "Installed '$LABEL' — runs twice daily at 09:15 and 21:15 local."
+echo "Installed '$LABEL' — runs twice daily at 11:45 and 19:00 local."
 echo "  repo:   ${SCRIPT_DIR:h:h}"
 echo "  script: $SYNC_SH"
 echo "  log:    $LOG"

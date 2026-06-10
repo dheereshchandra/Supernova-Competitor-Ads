@@ -64,7 +64,7 @@ ONE spreadsheet **"Supernova Competitor Master"**
 `tools/csv-sync/sheet_id.json`): tabs **Overview** (21 self-explanatory cols, one row per ad, all
 competitors — verdict/status/ranks/% Time in Top 25%/language/format/angle/price + video & doc links),
 **Analysis** (36-col pivot dataset), **Legend** (auto-generated column definitions). Upsert never
-reorders rows or touches team-added columns. launchd `live.gosupernova.csv-sync` runs **09:15 + 21:15**
+reorders rows or touches team-added columns. launchd `live.gosupernova.csv-sync` runs **11:45 + 19:00**
 from the canonical clone (installed + verified green). Column renames: edit `OVERVIEW_COLS`/
 `ANALYSIS_COLS`/`COLUMN_DEFS` in `sync_to_sheets.py`, run once with `--rebuild`.
 - Gotchas burned in: launchd has a **minimal PATH** (sync.sh exports `/opt/homebrew/bin`); preflight
@@ -174,7 +174,7 @@ Claude-in-Chrome scrape and the Google CLI scrape: see chat / `facebook/HANDOVER
    the loaders now strip them, but bare values are safest).
 3. `python3.13 facebook/scripts/preflight.py` and
    `python3.13 analysis/scripts/preflight_enrichment.py` → both READY.
-4. Daily auto-sync (one-time): `zsh tools/daily-sync/install.sh` — keeps your canonical clone up to date at 9 AM daily.
+4. Daily auto-sync (one-time): `zsh tools/daily-sync/install.sh` — keeps your canonical clone up to date at 11:30 AM daily.
    The committed templates live in `tools/daily-sync/` (`sync.sh`, `install.sh`, `uninstall.sh`, `live.gosupernova.repo-sync.plist.template`, `README.md`); pull-only (never pushes/resets — skips + notifies if main is dirty/ahead/diverged). Supersedes the old machine-only sync job (see memory `daily-repo-sync-launchd.md`).
 
 ## 🩹 Operational gotchas hit & fixed (so the friend won't)

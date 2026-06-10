@@ -9,8 +9,8 @@
 # template (filling in absolute paths), then loads it. Safe to re-run (idempotent).
 #
 # NOTE: capture-sync commits + pushes captured work. It only acts when main is clean
-# and not diverged (else it SKIPs + notifies). Pair it with tools/daily-sync (09:00
-# pull) — capture-sync runs at 09:30 so it sees the morning's pulled snapshots.
+# and not diverged (else it SKIPs + notifies). Pair it with tools/daily-sync (11:30
+# pull) — capture-sync runs at 11:35 so it sees the freshly pulled snapshots.
 set -eu
 
 SCRIPT_DIR="${0:A:h}"
@@ -32,7 +32,7 @@ sed -e "s|__SYNC_SH__|$SYNC_SH|g" -e "s|__LOG__|$LOG|g" "$TEMPLATE" > "$PLIST_DE
 launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST_DEST"
 
-echo "Installed '$LABEL' — runs every day at 9:30 AM."
+echo "Installed '$LABEL' — runs every day at 11:35 AM."
 echo "  repo:   ${SCRIPT_DIR:h:h}"
 echo "  script: $SYNC_SH"
 echo "  log:    $LOG"

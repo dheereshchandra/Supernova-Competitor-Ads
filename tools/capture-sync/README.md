@@ -5,7 +5,7 @@ snapshot is **downloaded and pushed to R2 before its CDN URLs expire (~4 days)**
 even if you forget to process it that day. It is the recurring half of the pipeline;
 the one-command half is `analysis/scripts/run_pipeline.sh`.
 
-## What it does (every day at 09:30 local)
+## What it does (every day at 11:35 local)
 
 For every competitor master in both pipelines, it finds the newest **canonical**
 input snapshot (`fb-ads-{slug}-DATE.csv` / `g-ads-{slug}-DATE.csv` — working copies
@@ -54,5 +54,5 @@ zsh tools/capture-sync/uninstall.sh
 `CDN_WINDOW_DAYS` at the top of `sync.sh`. Log lives at
 `~/Library/Application Support/SupernovaCaptureSync/capture.log`.
 
-**Pairs with** `tools/daily-sync/` (09:00 pull-only) — capture-sync runs at 09:30 so it
+**Pairs with** `tools/daily-sync/` (11:30 pull-only) — capture-sync runs at 11:35 so it
 sees the morning's freshly-pulled snapshots.

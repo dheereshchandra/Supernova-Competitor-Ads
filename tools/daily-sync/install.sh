@@ -1,5 +1,5 @@
 #!/bin/zsh
-# One-time installer for the daily 9 AM repo auto-sync (macOS launchd).
+# One-time installer for the daily 11:30 AM repo auto-sync (macOS launchd).
 #
 # Run ONCE, from your MAIN clone of the repo (NOT a Conductor worktree):
 #     zsh tools/daily-sync/install.sh
@@ -28,7 +28,7 @@ sed -e "s|__SYNC_SH__|$SYNC_SH|g" -e "s|__LOG__|$LOG|g" "$TEMPLATE" > "$PLIST_DE
 launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST_DEST"
 
-echo "Installed '$LABEL' — runs every day at 9:00 AM (pull-only, safe)."
+echo "Installed '$LABEL' — runs every day at 11:30 AM (pull-only, safe)."
 echo "  repo:   ${SCRIPT_DIR:h:h}"
 echo "  script: $SYNC_SH"
 echo "  log:    $LOG"

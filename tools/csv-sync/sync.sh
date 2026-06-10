@@ -3,7 +3,7 @@
 #
 # WHY: the team reads competitor analysis in a shared Google Sheet. Re-uploading it by hand after
 # every pipeline run is manual + error-prone. This launchd job runs twice daily and UPSERTS the local
-# CSVs (kept fresh by the 9 AM daily-sync git pull) into the persistent "Supernova Competitor Master"
+# CSVs (kept fresh by the 11:30 AM daily-sync git pull) into the persistent "Supernova Competitor Master"
 # spreadsheet — Overview + Analysis tabs — without ever changing the sheet's URL/tabs.
 #
 # Read-only of the repo (it only reads CSVs and writes to the remote Sheet), so the guards are light.
@@ -26,7 +26,7 @@ notify() { osascript -e "display notification \"$2\" with title \"$1\"" >/dev/nu
 cd "$REPO" 2>/dev/null || { log "ERR repo not found: $REPO"; exit 1; }
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || { log "ERR not a git repo: $REPO"; exit 1; }
 
-# Best-effort freshness: FETCH first (the 21:15 run has no prior fetch — without this a teammate's
+# Best-effort freshness: FETCH first (the evening run has no prior fetch — without this a teammate's
 # afternoon push wouldn't reach the sheet until next morning), then ff-only if cleanly on main.
 git fetch -q origin >> "$LOG" 2>&1 || true
 if [ "$(git symbolic-ref --short -q HEAD)" = main ] && [ -z "$(git status --porcelain)" ]; then
