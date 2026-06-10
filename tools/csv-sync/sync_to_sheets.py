@@ -44,10 +44,42 @@ _RANK_ABS = _crm.RANK_GATE_ABS                  # 100 — absolute best-rank bar
 _RANK_PCT = int(_crm.RANK_GATE_PCT * 100)       # 10 — or top-N% of the page, whichever is wider
 _NEW_DAYS = _crm.NEW_AGE_DAYS                   # 7 — "new" age window
 
-MASTER_DIR = REPO / "facebook" / "master"
-ENRICHED_DIR = REPO / "analysis" / "derived" / "facebook"
-TRANSCRIPT_DIR = REPO / "analysis" / "enrichment" / "facebook" / "transcripts"
 SIDECAR_PATH = HERE / "sheet_id.json"
+
+# Per-pipeline source dirs + a master-CSV adapter (the two pipelines' master schemas differ).
+# Each adapter: key = the ad-id column; canon = columns whose MIN picks the canonical creative row;
+# field getters map a master row -> the Overview fields.
+PIPELINES = {
+    "facebook": {
+        "master_dir": REPO / "facebook" / "master",
+        "enriched_dir": REPO / "analysis" / "derived" / "facebook",
+        "transcript_dir": REPO / "analysis" / "enrichment" / "facebook" / "transcripts",
+        "key": "ad_library_id",
+        "canon": ("version_index", "creative_index_in_ad"),
+        "link": lambda m: m.get("ad_library_url", ""),
+        "copy": lambda m: m.get("ad_primary_text", ""),
+        "media": lambda m: m.get("ad_media_type", ""),
+        "started": lambda m: m.get("ad_start_date", ""),
+        "video": lambda m: m.get("r2_public_url", ""),
+        "rewrite_doc": lambda m: m.get("supernova_rewrite_gdoc_url", ""),
+        "analysis_doc": lambda m: m.get("competitor_analysis_gdoc_url", ""),
+    },
+    "google": {
+        "master_dir": REPO / "google" / "master",
+        "enriched_dir": REPO / "analysis" / "derived" / "google",
+        "transcript_dir": REPO / "analysis" / "enrichment" / "google" / "transcripts",
+        "key": "creative_id",
+        "canon": ("variant_index",),
+        "link": lambda m: m.get("creative_url", ""),
+        "copy": lambda m: m.get("ad_headline", "") or m.get("ad_description", ""),
+        "media": lambda m: m.get("creative_format", ""),
+        "started": lambda m: "",  # Google's Transparency Center exposes last-shown, not start
+        "video": lambda m: m.get("r2_public_url", "") or m.get("youtube_video_url", ""),
+        # No Stage-9 Google Docs on the google pipeline yet — fall back to the docx R2 links.
+        "rewrite_doc": lambda m: m.get("supernova_rewrite_gdoc_url", "") or m.get("supernova_rewrite_docx_r2_url", ""),
+        "analysis_doc": lambda m: m.get("competitor_analysis_gdoc_url", "") or m.get("competitor_analysis_docx_r2_url", ""),
+    },
+}
 
 # slugs that are partial/scratch masters, not real competitors
 EXCLUDE = ("_newly_added", "_step4", "_top20", "_new_only", "review", "_run_summary", "_gdoctest")
@@ -61,6 +93,7 @@ EXCLUDE = ("_newly_added", "_step4", "_top20", "_new_only", "review", "_run_summ
 # Overview tab — internal key -> display label, in scannable order.
 OVERVIEW_COLS = [
     ("competitor", "Competitor"),
+    ("pipeline", "Platform"),
     ("ad_id", "Ad ID"),
     ("meta_ad_link", "Ad Library Link"),
     ("verdict", "Verdict"),
@@ -133,10 +166,11 @@ ANALYSIS_COLS = [
 COLUMN_DEFS = {
     "Competitor": "Which competitor this ad belongs to (one row per ad, all competitors stacked in the "
                   "same tab — filter this column to focus on one).",
-    "Ad ID": "The ad's id in Meta's Ad Library — the stable key used to join every dataset in this "
-             "project (master, analysis, transcripts, docs).",
-    "Ad Library Link": "Opens this exact ad in Meta's public Ad Library (live page — shows the ad only "
-                       "while it's still running).",
+    "Ad ID": "The ad's stable id — Meta Ad Library id for facebook rows, Google creative id for google "
+             "rows. The key used to join every dataset in this project.",
+    "Ad Library Link": "Opens this exact ad on its platform — Meta's Ad Library (facebook rows) or "
+                       "Google's Ads Transparency Center (google rows). Live pages: they show the ad "
+                       "only while it's still running.",
     "Verdict": f"The outcome tier, judged in this order: "
                f"• strong_winner = ran MORE than {_STRONG_DAYS} days AND was inside its page's top 25% in at "
                f"least {int(_TOP25_GATE*100)}% of all the scrapes it appeared in (see 'Sustained Top 25%?'). "
@@ -172,7 +206,9 @@ COLUMN_DEFS = {
     "Days = Minimum?": "TRUE = Meta didn't report a start date, so Days Running is counted from OUR first "
                        "sighting — the ad certainly ran AT LEAST this long, probably longer. Also drops "
                        "'Verdict Confidence' to low for winners.",
-    "Start Date": "The ad's start date as reported by Meta in the Ad Library.",
+    "Start Date": "The ad's start date as reported by Meta (facebook rows). Google's Transparency Center "
+                  "doesn't expose a start date, so google rows are blank here and their Days Running counts "
+                  "from our first sighting (Days = Minimum? TRUE).",
     "First Seen": "Date of the FIRST of our scrapes that contained this ad (when it entered our tracking).",
     "Last Seen": "Date of the MOST RECENT of our scrapes that contained it. If this equals the latest "
                  "scrape date, the ad is live.",
@@ -210,17 +246,20 @@ COLUMN_DEFS = {
     "Media": "Video or Image (the ad's creative type).",
     "Ad Copy (first 150)": "The first 150 characters of the ad's primary text (the caption above the "
                            "creative). Full text lives in the master CSV in git.",
-    "Video": "The archived copy of the ad's video in our R2 storage (Meta's own CDN links expire within "
-             "days — this one is permanent).",
+    "Video": "The archived copy of the ad's video in our R2 storage (platform CDN links expire — this "
+             "one is permanent). Google rows fall back to the YouTube link when no R2 copy exists.",
     "Supernova Rewrite Doc": "Our Supernova-voice rewrite of this ad — a collaborative Google Doc "
                              "(script re-pitched with Supernova's payload + Miss Nova, scene by scene, "
-                             "with regenerated India-cast imagery). Open it to review/edit/assign.",
+                             "with regenerated India-cast imagery). Open it to review/edit/assign. Google rows fall back to "
+                             "the .docx download link until the google pipeline gets collaborative Docs.",
     "Competitor Analysis Doc": "The scene-by-scene breakdown of the competitor's original ad (visuals, "
-                               "transcript, on-screen text per scene) — a collaborative Google Doc.",
+                               "transcript, on-screen text per scene) — a collaborative Google Doc. Google rows fall back to "
+                               "the .docx download link.",
     "Platform": "Which ads pipeline the row comes from: facebook (Meta Ad Library) or google "
                 "(Google Ads Transparency Center).",
-    "Page ID": "Numeric id of the Facebook page the ad runs under (one competitor can run several pages).",
-    "Page Name": "Name of the Facebook page the ad runs under.",
+    "Page ID": "Id of the page/advertiser the ad runs under — Facebook page id (facebook rows) or Google "
+               "advertiser id (google rows). One competitor can run several.",
+    "Page Name": "Name of the Facebook page / Google advertiser the ad runs under.",
     "In Latest Scrape?": "TRUE = the ad appears in the competitor's most recent scrape (= Status live). "
                          "The raw flag behind 'Status'.",
     "Retired?": "TRUE = no longer present in the latest scrape (= Status retired). Note: a retired "
@@ -248,7 +287,7 @@ COLUMN_DEFS = {
 }
 
 TRANSCRIPT_FIELDS = ["message_angle", "duration_s", "has_price_offer"]
-KEY_COLS = ("Competitor", "Ad ID")
+KEY_COLS = ("Competitor", "Platform", "Ad ID")
 
 
 def read_csv(path: pathlib.Path):
@@ -268,8 +307,8 @@ def truthy(v) -> bool:
     return str(v).strip().lower() in ("true", "1", "yes")
 
 
-def load_transcript(comp: str, ad_id: str) -> dict:
-    p = TRANSCRIPT_DIR / comp / f"{ad_id}.json"
+def load_transcript(pipeline: str, comp: str, ad_id: str) -> dict:
+    p = PIPELINES[pipeline]["transcript_dir"] / comp / f"{ad_id}.json"
     if not p.exists():
         return {}
     try:
@@ -278,47 +317,50 @@ def load_transcript(comp: str, ad_id: str) -> dict:
         return {}
 
 
-def master_by_ad(comp: str) -> dict:
-    """ad_library_id -> the canonical-creative master row (min version_index, creative_index)."""
-    path = MASTER_DIR / f"{comp}.csv"
+def master_by_ad(pipeline: str, comp: str) -> dict:
+    """ad id -> the canonical-creative master row (min of the pipeline's canon columns)."""
+    cfg = PIPELINES[pipeline]
+    path = cfg["master_dir"] / f"{comp}.csv"
     if not path.exists():
         return {}
     rows, _ = read_csv(path)
     best = {}
     for m in rows:
-        aid = (m.get("ad_library_id") or "").strip()
+        aid = (m.get(cfg["key"]) or "").strip()
         if not aid:
             continue
-        vk = (safe_int(m.get("version_index")), safe_int(m.get("creative_index_in_ad")))
+        vk = tuple(safe_int(m.get(c)) for c in cfg["canon"])
         if aid not in best or vk < best[aid][0]:
             best[aid] = (vk, m)
     return {k: v[1] for k, v in best.items()}
 
 
-def build_overview_row(comp: str, e: dict, m: dict, t: dict) -> dict:
+def build_overview_row(pipeline: str, comp: str, e: dict, m: dict, t: dict) -> dict:
+    cfg = PIPELINES[pipeline]
     is_live = "live" if truthy(e.get("present_latest")) else ("retired" if truthy(e.get("is_retired")) else "")
     return {
         "competitor": e.get("competitor") or comp,
+        "pipeline": e.get("pipeline") or pipeline,
         "ad_id": (e.get("ad_id") or "").strip(),
-        "meta_ad_link": m.get("ad_library_url", ""),
+        "meta_ad_link": cfg["link"](m),
         "verdict": e.get("verdict", ""),
         "is_live": is_live,
         "rank": e.get("current_page_rank", ""),
         "best_rank": e.get("best_page_rank", ""),
         "pct_top25": e.get("frac_top_25", ""),
         "run_days": e.get("run_days", ""),
-        "started": m.get("ad_start_date", "") or e.get("ad_start_date", ""),
+        "started": cfg["started"](m) or e.get("ad_start_date", ""),
         "language": e.get("language", ""),
         "format": e.get("device_format", ""),
         "presenter": e.get("presenter_type", ""),
         "angle": t.get("message_angle", ""),
         "replication": e.get("replication_type", ""),
         "has_price_offer": t.get("has_price_offer", ""),
-        "media": m.get("ad_media_type", "") or e.get("media_type", ""),
-        "ad_copy": (m.get("ad_primary_text", "") or "")[:150],
-        "video": m.get("r2_public_url", ""),
-        "supernova_rewrite": m.get("supernova_rewrite_gdoc_url", ""),
-        "competitor_analysis": m.get("competitor_analysis_gdoc_url", ""),
+        "media": cfg["media"](m) or e.get("media_type", ""),
+        "ad_copy": (cfg["copy"](m) or "")[:150],
+        "video": cfg["video"](m),
+        "supernova_rewrite": cfg["rewrite_doc"](m),
+        "competitor_analysis": cfg["analysis_doc"](m),
     }
 
 
@@ -335,21 +377,22 @@ def relabel(row: dict, cols: list) -> dict:
     return {label: row.get(key, "") for key, label in cols}
 
 
-def build_views(comp: str):
-    """Return (overview_rows, analysis_rows) for one competitor, or ([],[]) if no enriched CSV."""
-    enriched_path = ENRICHED_DIR / f"{comp}_enriched.csv"
+def build_views(pipeline: str, comp: str):
+    """Return (overview_rows, analysis_rows) for one (pipeline, competitor), or ([],[]) if no enriched CSV."""
+    enriched_path = PIPELINES[pipeline]["enriched_dir"] / f"{comp}_enriched.csv"
     if not enriched_path.exists():
         return [], []
     enriched, _ = read_csv(enriched_path)
-    masters = master_by_ad(comp)
+    masters = master_by_ad(pipeline, comp)
     overview, analysis = [], []
     for e in enriched:
         aid = (e.get("ad_id") or "").strip()
         if not aid:
             continue
+        e.setdefault("pipeline", pipeline)
         m = masters.get(aid, {})
-        t = load_transcript(comp, aid)
-        overview.append(relabel(build_overview_row(comp, e, m, t), OVERVIEW_COLS))
+        t = load_transcript(pipeline, comp, aid)
+        overview.append(relabel(build_overview_row(pipeline, comp, e, m, t), OVERVIEW_COLS))
         analysis.append(relabel(build_analysis_row(e, t), ANALYSIS_COLS))
     return overview, analysis
 
@@ -444,9 +487,9 @@ def write_sidecar(ssid: str) -> None:
     os.replace(tmp, SIDECAR_PATH)
 
 
-def discover_competitors() -> list:
+def discover_competitors(pipeline: str) -> list:
     out = []
-    for p in sorted(ENRICHED_DIR.glob("*_enriched.csv")):
+    for p in sorted(PIPELINES[pipeline]["enriched_dir"].glob("*_enriched.csv")):
         slug = p.name[:-len("_enriched.csv")]
         if any(x in slug for x in EXCLUDE):
             continue
@@ -465,21 +508,19 @@ def main() -> int:
     args = ap.parse_args()
 
     os.chdir(REPO)  # launchd cwd-agnostic
-    comps = [args.competitor] if args.competitor else discover_competitors()
-    if not comps:
-        sys.exit("[error] no competitors with enriched CSVs in analysis/derived/facebook/")
-
     overview_all, analysis_all = [], []
-    for comp in comps:
-        ov, an = build_views(comp)
-        if not an:
-            print(f"  [{comp}] SKIP — no enriched CSV")
-            continue
-        print(f"  [{comp}] built {len(an)} ads")
-        overview_all += ov
-        analysis_all += an
+    for pipeline in PIPELINES:
+        comps = [args.competitor] if args.competitor else discover_competitors(pipeline)
+        for comp in comps:
+            ov, an = build_views(pipeline, comp)
+            if not an:
+                print(f"  [{pipeline}/{comp}] SKIP — no enriched CSV")
+                continue
+            print(f"  [{pipeline}/{comp}] built {len(an)} ads")
+            overview_all += ov
+            analysis_all += an
     if not analysis_all:
-        sys.exit("[error] nothing to sync")
+        sys.exit("[error] nothing to sync — no enriched CSVs found")
 
     if args.dry_run:
         print(f"\n[dry-run] would sync — Overview: {len(overview_all)} rows · Analysis: {len(analysis_all)} rows")
