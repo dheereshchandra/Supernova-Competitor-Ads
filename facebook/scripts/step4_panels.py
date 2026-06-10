@@ -26,6 +26,9 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from io import BytesIO
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import _casting  # noqa: E402  — shared India-localisation + Miss Nova casting rules (feedback #8)
+
 WORKSPACE = pathlib.Path("step4_workspace")
 SCENES_DIR = WORKSPACE / "scenes"
 IMAGES_DIR = WORKSPACE / "images"
@@ -100,11 +103,18 @@ def build_panel_prompt(panel: dict, scene: dict, characters: list[dict]) -> str:
     char_descs = []
     for c in characters:
         if c.get("id") in chars_in_panel:
-            char_descs.append(
-                f"Character {c.get('id', '?')} — {c.get('role', '')}. "
-                f"Appearance: {c.get('appearance', '')} "
-                f"Wardrobe: {c.get('wardrobe', '')}."
-            )
+            if _casting.is_ai_teacher(c):
+                char_descs.append(
+                    f"Character {c.get('id', '?')} is the AI teacher — render as MISS NOVA: "
+                    f"{_casting.MISS_NOVA_DESC}"
+                )
+            else:
+                char_descs.append(
+                    f"Character {c.get('id', '?')} — {c.get('role', '')}. "
+                    f"Source appearance (use for age/build/gender/expression, NOT ethnicity): "
+                    f"{c.get('appearance', '')} "
+                    f"Source wardrobe (localise to the Indian equivalent): {c.get('wardrobe', '')}."
+                )
 
     return f"""Generate a single clean photorealistic image of this scene panel for an internal storyboarding workflow.
 
@@ -118,13 +128,17 @@ SCENE CONTEXT:
 CHARACTERS IN THIS PANEL:
 {chr(10).join(char_descs) if char_descs else 'No human characters in this panel.'}
 
+{_casting.INDIA_CASTING_RULE}
+
+{_casting.INDIA_SETTING_RULE}
+
 HARD REQUIREMENTS:
-- Photorealistic. Match the panel description precisely.
+- Photorealistic for human characters; Miss Nova stays clean 3D-animated. Match the panel description's composition precisely.
 - ZERO text overlays. ZERO captions. ZERO subtitles. ZERO infographics.
 - ZERO brand logos, watermarks, app UI, end-cards, brand bugs.
 - ZERO progress bars or video player controls.
 - Just the underlying scene as if all those overlays were removed.
-- Characters must match the appearance/wardrobe descriptions exactly so that the same character looks consistent across panels.
+- Keep each character consistent across panels (same person/look).
 
 Output: one image, no text, no commentary."""
 
