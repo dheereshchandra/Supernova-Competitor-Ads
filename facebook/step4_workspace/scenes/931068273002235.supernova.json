@@ -1,0 +1,39 @@
+{
+  "competitor_id": "931068273002235",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Male learner",
+        "appearance": "A middle-aged South Indian man with a dark complexion, a medium build, and short black hair. He has prominent, expressive facial features and is known for his comedic expressions.",
+        "wardrobe": "In the 'before' state, he wears a simple, short-sleeved, collared orange shirt. In the 'after' state, he wears a light blue suit jacket over a white collared shirt, a patterned blue tie, and black sunglasses.",
+        "demeanor": "Initially distressed and crying, then transitioning to hysterical laughter. In the second state, he is extremely confident, cool, and self-assured."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Before and After Learning English",
+        "supernova_script": "Voiceover says: Scared of expensive English classes where everyone judges your mistakes?\nVoiceover says: Practice speaking privately with Miss Nova on Supernova! Zero judgment, and way more affordable.",
+        "scene_summary": "- Hooks with the relatable fear of expensive, judgmental English classes (matching the crying visual).\n- Introduces Supernova and Miss Nova as the private, judgment-free solution (Beat B).\n- Replaces the competitor's 1-rupee claim with a compliant 'more affordable' comparative.",
+        "supernova_on_screen_text": "Top: Stressing over expensive English classes where everyone judges my mistakes...\n\nBottom: Me after practicing speaking privately with Miss Nova on Supernova! (Zero judgment, fraction of the cost)"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "b (Privacy/no-judgement), c (You SPEAK)",
+      "kept_from_seed": "Split-screen meme format with crying/confident actor",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used 'fraction of the cost' and 'more affordable' comparatives."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781113055.017771
+}
