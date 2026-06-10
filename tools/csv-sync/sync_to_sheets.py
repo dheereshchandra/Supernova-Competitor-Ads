@@ -30,8 +30,19 @@ HERE = pathlib.Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(REPO / "facebook" / "scripts"))
+sys.path.insert(0, str(REPO / "analysis" / "scripts"))
 import _gsheets  # noqa: E402
 from r2_utils import load_env  # noqa: E402
+# Verdict thresholds come straight from the metric computation, so the Legend can never
+# drift from the actual tuning (if someone retunes compute_rank_metrics, the Legend follows).
+import compute_rank_metrics as _crm  # noqa: E402
+
+_STRONG_DAYS = _crm.STRONG_WINNER_RUN_DAYS      # 45 — strong_winner longevity bar
+_WINNER_DAYS = _crm.WINNER_RUN_DAYS             # 15 — winner longevity bar
+_TOP25_GATE = _crm.TOP25_GATE                   # 0.5 — share of sightings needed in the top 25%
+_RANK_ABS = _crm.RANK_GATE_ABS                  # 100 — absolute best-rank bar
+_RANK_PCT = int(_crm.RANK_GATE_PCT * 100)       # 10 — or top-N% of the page, whichever is wider
+_NEW_DAYS = _crm.NEW_AGE_DAYS                   # 7 — "new" age window
 
 MASTER_DIR = REPO / "facebook" / "master"
 ENRICHED_DIR = REPO / "analysis" / "derived" / "facebook"
@@ -113,49 +124,127 @@ ANALYSIS_COLS = [
 ]
 
 # Label -> plain-English definition (drives the Legend tab; shared across tabs).
+# Legend definitions are deliberately LONG and fully objective — every threshold is a real
+# number imported from compute_rank_metrics.py, with examples. Background for several of them:
+# we scrape each competitor's Ad Library repeatedly (every few days); "rank" = the ad's position
+# in its page's ad list at that scrape (1 = top). Meta gives no spend/impressions, so rank +
+# longevity are our revealed-preference proxy for "the competitor keeps funding this and Meta
+# keeps surfacing it".
 COLUMN_DEFS = {
-    "Competitor": "Which competitor this ad belongs to.",
-    "Ad ID": "Meta Ad Library id of the ad (the join key everywhere).",
-    "Ad Library Link": "Opens the live ad in Meta's Ad Library.",
-    "Verdict": "Outcome tier: strong_winner (ran long AND sustained the page's top 25%), winner (ran long AND hit top ranks), loser (dropped out without winning), new (just appeared), undecided. Winners keep their verdict even after retiring.",
-    "Status": "live = ad appears in the most recent scrape; retired = it has dropped out.",
-    "Current Rank": "Position in its page's ad list at the latest scrape it was seen in (1 = top).",
-    "Best Rank": "Best (lowest) rank it ever reached across all scrapes.",
-    "Worst Rank": "Worst (highest) rank observed across all scrapes.",
-    "Median Rank": "Median rank across all scrapes.",
-    "% Time in Top 25%": "Of all the scrapes this ad was seen in, the share where it ranked in the TOP 25% of its page's ads (1.0 = always near the top).",
-    "Days Running": "Calendar days from the ad's start date to the last time we saw it.",
-    "Days = Minimum?": "TRUE = the start date was missing, so Days Running is counted from when WE first saw it — the real figure is at least this.",
-    "Start Date": "The ad's start date as reported by Meta.",
-    "First Seen": "Date of the first scrape that included this ad.",
-    "Last Seen": "Date of the most recent scrape that included this ad.",
-    "Scrapes Seen": "How many scrape snapshots this ad appeared in.",
-    "Weeks Seen": "How many distinct calendar weeks it was seen in.",
-    "Language": "Detected language of the ad.",
-    "Ad Format": "The visual container: split-screen, skit-narrative, talking-head, app-screencast, pen-and-paper, …",
-    "Presenter": "Who fronts the ad: ai-avatar, human, ai+human, voiceover-only, none.",
-    "Production": "How it was made: human-recorded, AI-generated, or mixed.",
-    "Message Angle": "The persuasion angle: speak-correctly, fear-shame, social-proof, habit-aspiration, translation-practice, …",
-    "Script Reuse": "How this ad's script relates to others: original, translation_replica (same script translated), exact_replica, reworded, or unique.",
-    "Script Group": "Id of the cluster of ads sharing (near-)identical scripts — same number = same script family.",
-    "Original/Replica": "This ad's role inside its script group (the original vs a replica).",
-    "Price Offer?": "TRUE = the ad mentions a price / discount / offer.",
-    "Media": "Video or Image.",
-    "Ad Copy (first 150)": "First 150 characters of the ad's primary text.",
-    "Video": "The archived video file (R2 link).",
-    "Supernova Rewrite Doc": "Our Supernova-voice rewrite of this ad — collaborative Google Doc.",
-    "Competitor Analysis Doc": "Scene-by-scene breakdown of the competitor ad — collaborative Google Doc.",
-    "Platform": "Which ads pipeline: facebook or google.",
-    "Page ID": "Facebook page id the ad runs under.",
-    "Page Name": "Facebook page name the ad runs under.",
-    "In Latest Scrape?": "TRUE = the ad appears in the competitor's most recent scrape.",
-    "Retired?": "TRUE = no longer present in the latest scrape.",
-    "Page Ad Count": "How many ads its page runs in total (largest observed) — context for rank.",
-    "Hit Top Ranks?": "TRUE = its best rank reached the page's top band — the eligibility bar for 'winner'.",
-    "Sustained Top 25%?": "TRUE = '% Time in Top 25%' cleared the threshold — the eligibility bar for 'strong_winner'.",
-    "Low-Impression Flag": "TRUE = Meta flagged this ad as low-impression in at least one scrape.",
-    "Verdict Confidence": "high = run dates are solid; low = inferred (missing start date, or a loser inferred from absence).",
-    "Duration (s)": "Video length in seconds.",
+    "Competitor": "Which competitor this ad belongs to (one row per ad, all competitors stacked in the "
+                  "same tab — filter this column to focus on one).",
+    "Ad ID": "The ad's id in Meta's Ad Library — the stable key used to join every dataset in this "
+             "project (master, analysis, transcripts, docs).",
+    "Ad Library Link": "Opens this exact ad in Meta's public Ad Library (live page — shows the ad only "
+                       "while it's still running).",
+    "Verdict": f"The outcome tier, judged in this order: "
+               f"• strong_winner = ran MORE than {_STRONG_DAYS} days AND was inside its page's top 25% in at "
+               f"least {int(_TOP25_GATE*100)}% of all the scrapes it appeared in (see 'Sustained Top 25%?'). "
+               f"• winner = ran {_WINNER_DAYS}+ days AND its best-ever rank reached the page's top band (see "
+               f"'Hit Top Ranks?'). "
+               f"• loser = vanished from the latest scrape without ever meeting a winner bar. "
+               f"• new = first seen within the last {_NEW_DAYS} days and seen in at most 2 scrapes so far — too "
+               f"early to judge. "
+               f"• undecided = still running but hasn't met a winner bar yet. "
+               f"IMPORTANT: winners KEEP their verdict after the ad stops (they get Status=retired, never "
+               f"demoted) — so 'strong_winner + retired' means a proven ad that finished its run.",
+    "Status": "live = this ad appears in the competitor's MOST RECENT scrape (still running as of our last "
+              "check). retired = it was present in an earlier scrape but is gone from the latest one — the "
+              "competitor stopped it (or Meta did).",
+    "Current Rank": "The ad's position in its page's ad list at the LATEST scrape it appeared in (1 = the "
+                    "very top). Lower number = Meta is surfacing it harder. For a retired ad this is its "
+                    "final rank before it disappeared.",
+    "Best Rank": "The best (lowest) position this ad EVER reached across all scrapes — its peak. An ad "
+                 "currently at rank 200 with Best Rank 3 was once a top performer and is fading.",
+    "Worst Rank": "The worst (highest) position observed across all scrapes — the floor of its range.",
+    "Median Rank": "The middle of all its observed ranks — its typical position, robust to one-off spikes.",
+    "% Time in Top 25%": "Of ALL the scrapes this ad appeared in, the fraction where it ranked inside the "
+                         "TOP 25% of its page's ads. Example: a page running 100 ads → top 25% = ranks 1–25; "
+                         "if we saw the ad in 8 scrapes and it was ranked 1–25 in 6 of them, this = 0.75. "
+                         "1.0 = every single time we looked, it was in the top quarter. "
+                         f"The strong_winner bar needs ≥ {_TOP25_GATE} (at least {int(_TOP25_GATE*100)}% of its "
+                         f"observed life near the top).",
+    "Days Running": "Calendar days from the ad's Meta-reported START date to the most recent scrape that "
+                    "still contained it. Example: started 2026-03-01, last seen 2026-04-15 → 45 days. This "
+                    "is the longevity signal: competitors keep paying only for ads that work. "
+                    f"(Bars: winner needs {_WINNER_DAYS}+, strong_winner needs more than {_STRONG_DAYS}.) If Meta "
+                    "gave no start date, we count from when WE first saw it and flag 'Days = Minimum?'.",
+    "Days = Minimum?": "TRUE = Meta didn't report a start date, so Days Running is counted from OUR first "
+                       "sighting — the ad certainly ran AT LEAST this long, probably longer. Also drops "
+                       "'Verdict Confidence' to low for winners.",
+    "Start Date": "The ad's start date as reported by Meta in the Ad Library.",
+    "First Seen": "Date of the FIRST of our scrapes that contained this ad (when it entered our tracking).",
+    "Last Seen": "Date of the MOST RECENT of our scrapes that contained it. If this equals the latest "
+                 "scrape date, the ad is live.",
+    "Scrapes Seen": "How many of our scrape snapshots contained this ad. We scrape each competitor "
+                    "repeatedly (typically every few days), so an ad with Scrapes Seen = 6 survived 6 "
+                    "checkpoints. Counts observations — 'Days Running' measures calendar time instead.",
+    "Weeks Seen": "How many DISTINCT calendar weeks it was seen in (deduplicates several scrapes landing "
+                  "in the same week). Weeks Seen = 5 means it was alive across 5 different weeks.",
+    "Language": "The ad's language, detected by AI from the actual audio + on-screen text during "
+                "enrichment (Hindi, Tamil, Marathi, English, …). Code-mixed ads get their dominant language.",
+    "Ad Format": "The visual container, classified by AI from the video: split-screen (teacher + learner "
+                 "panels), skit-narrative (acted story), talking-head, app-screencast (app demo), "
+                 "pen-and-paper, listicle-montage, …",
+    "Presenter": "Who fronts the ad: ai-avatar-only (animated/AI character), human-only, ai+human (both, "
+                 "e.g. AI teacher + human learner), voiceover-only (no on-screen presenter), none.",
+    "Production": "How the creative was made: human-recorded (filmed people), AI-generated (fully "
+                  "synthetic), or mixed (filmed + AI elements).",
+    "Message Angle": "The persuasion angle of the script, classified by AI from the transcript: "
+                     "speak-correctly (fixes your English mistakes), fear-shame (embarrassment → triumph), "
+                     "social-proof (others succeeded), habit-aspiration (daily practice → fluency), "
+                     "translation-practice, understand-cant-speak, feature-demo, …",
+    "Script Reuse": "How this ad's script relates to other ads' scripts (from transcript clustering): "
+                    "original = the earliest ad of a script family that later got copied · "
+                    "translation_replica = the SAME script translated into another language · "
+                    "exact_replica = near-verbatim re-run · reworded/character/visual variants = same "
+                    "script lightly reworked · unique = no other ad shares this script. "
+                    "Competitor insight: translation_replicas typically outperform exact_replicas.",
+    "Script Group": "Id of the script family — every ad sharing (near-)identical script text gets the "
+                    "same group id. Filter by one id to see all clones of one script across languages.",
+    "Original/Replica": "This ad's role INSIDE its script group: the original (first/earliest version) "
+                        "or a replica (a later copy).",
+    "Price Offer?": "TRUE = the ad's script/on-screen text mentions a price, discount, trial offer or "
+                    "₹-amount (detected by AI from the transcript). Useful for spotting discount-led vs "
+                    "value-led creative strategies.",
+    "Media": "Video or Image (the ad's creative type).",
+    "Ad Copy (first 150)": "The first 150 characters of the ad's primary text (the caption above the "
+                           "creative). Full text lives in the master CSV in git.",
+    "Video": "The archived copy of the ad's video in our R2 storage (Meta's own CDN links expire within "
+             "days — this one is permanent).",
+    "Supernova Rewrite Doc": "Our Supernova-voice rewrite of this ad — a collaborative Google Doc "
+                             "(script re-pitched with Supernova's payload + Miss Nova, scene by scene, "
+                             "with regenerated India-cast imagery). Open it to review/edit/assign.",
+    "Competitor Analysis Doc": "The scene-by-scene breakdown of the competitor's original ad (visuals, "
+                               "transcript, on-screen text per scene) — a collaborative Google Doc.",
+    "Platform": "Which ads pipeline the row comes from: facebook (Meta Ad Library) or google "
+                "(Google Ads Transparency Center).",
+    "Page ID": "Numeric id of the Facebook page the ad runs under (one competitor can run several pages).",
+    "Page Name": "Name of the Facebook page the ad runs under.",
+    "In Latest Scrape?": "TRUE = the ad appears in the competitor's most recent scrape (= Status live). "
+                         "The raw flag behind 'Status'.",
+    "Retired?": "TRUE = no longer present in the latest scrape (= Status retired). Note: a retired "
+                "winner KEEPS its winner verdict.",
+    "Page Ad Count": "How many ads this ad's page runs in total (the largest count we ever observed). "
+                     "Context for rank: rank 30 on a 600-ad page = top 5% (excellent); rank 30 on a "
+                     "40-ad page = bottom half.",
+    "Hit Top Ranks?": f"TRUE = the ad's best-ever rank reached its page's top band, defined as: rank ≤ "
+                      f"{_RANK_ABS}, OR within the top {_RANK_PCT}% of the page's ads — whichever is more "
+                      f"generous (the {_RANK_PCT}% rule matters only for pages running more than "
+                      f"{int(_RANK_ABS/(_RANK_PCT/100))} ads). This is the quality bar for 'winner' "
+                      f"(combined with {_WINNER_DAYS}+ days running).",
+    "Sustained Top 25%?": f"TRUE = '% Time in Top 25%' is at least {_TOP25_GATE} — i.e. in at least "
+                          f"{int(_TOP25_GATE*100)}% of all the scrapes where this ad appeared, it ranked inside "
+                          f"its page's top 25%. Being there once isn't enough; this requires holding the top "
+                          f"quarter for at least half its observed life. The consistency bar for "
+                          f"'strong_winner' (combined with {_STRONG_DAYS}+ days running).",
+    "Low-Impression Flag": "TRUE = Meta showed its 'low impressions' warning on this ad in at least one "
+                           "scrape (Meta's signal that the ad got little delivery).",
+    "Verdict Confidence": "high = the verdict rests on solid data (real start date, so Days Running is "
+                          "exact). low = something was inferred: the start date was missing (Days = "
+                          "Minimum? TRUE), or a 'loser' verdict inferred purely from the ad's absence in "
+                          "the latest scrape.",
+    "Duration (s)": "The video's length in seconds (measured by AI during transcription).",
 }
 
 TRANSCRIPT_FIELDS = ["message_angle", "duration_s", "has_price_offer"]
