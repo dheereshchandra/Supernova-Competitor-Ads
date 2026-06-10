@@ -26,7 +26,9 @@ notify() { osascript -e "display notification \"$2\" with title \"$1\"" >/dev/nu
 cd "$REPO" 2>/dev/null || { log "ERR repo not found: $REPO"; exit 1; }
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || { log "ERR not a git repo: $REPO"; exit 1; }
 
-# Best-effort freshness: if cleanly on main, fast-forward (daily-sync usually already did this at 9 AM).
+# Best-effort freshness: FETCH first (the 21:15 run has no prior fetch — without this a teammate's
+# afternoon push wouldn't reach the sheet until next morning), then ff-only if cleanly on main.
+git fetch -q origin >> "$LOG" 2>&1 || true
 if [ "$(git symbolic-ref --short -q HEAD)" = main ] && [ -z "$(git status --porcelain)" ]; then
   git rev-parse --abbrev-ref @{u} >/dev/null 2>&1 && git merge --ff-only @{u} >> "$LOG" 2>&1 || true
 fi
