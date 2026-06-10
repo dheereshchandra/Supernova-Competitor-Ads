@@ -6,9 +6,12 @@ reads the local CSVs (kept fresh by the 9 AM `daily-sync` git pull), and **upser
 cross-competitor tabs into **"Supernova Competitor Master"** (auto-created in the existing Shared Drive).
 
 ## What's in the sheet
-One spreadsheet, two tabs, **one row per `(competitor, ad_id)`** across all competitors:
-- **`Overview`** — the decision-scan (~21 cols): `verdict · is_live · rank · best_rank · pct_top25 · run_days · language · format · presenter · angle · replication · has_price_offer · ad_copy` + links (`video`, `supernova_rewrite` doc, `competitor_analysis` doc).
-- **`Analysis`** — the full per-ad pivot dataset: the entire enriched CSV + `message_angle / duration_s / has_price_offer`.
+One spreadsheet, three tabs, data tabs **one row per `(Competitor, Ad ID)`** across all competitors:
+- **`Overview`** — the decision-scan (21 cols): Verdict · Status · Current/Best Rank · % Time in Top 25% · Days Running · Language · Ad Format · Presenter · Message Angle · Script Reuse · Price Offer? · Ad Copy + links (Video, Supernova Rewrite Doc, Competitor Analysis Doc).
+- **`Analysis`** — the full per-ad pivot dataset (36 cols): the entire enriched CSV + Message Angle / Duration (s) / Price Offer?.
+- **`Legend`** — auto-generated reference: every column, which tab(s) it's on, and what it means in plain English.
+
+Column headers are **short, self-explanatory display names** mapped at the sheet layer (`OVERVIEW_COLS` / `ANALYSIS_COLS` / `COLUMN_DEFS` in `sync_to_sheets.py`); the internal CSV column names are unchanged. To rename or add a column: edit those mappings, then run once with `--rebuild` (drops + reseeds the two data tabs with the new headers — same spreadsheet/URL; any team notes typed on those tabs are lost, so warn first).
 
 Each row is a **join**: `<comp>_enriched.csv` (the per-ad spine) ⋈ `master/<comp>.csv` (links/copy, canonical creative) ⋈ the transcript sidecar (angle/duration/price). Everything trimmed out stays in git/R2 and is surfaced on request.
 
