@@ -15,7 +15,7 @@ currently outdated. Two teammates collaborate across two computers.
 
 | # | Item | Document | Priority | Depends on |
 |---|---|---|---|---|
-| 0 | **Start-from-scratch onboarding (Onboarding v1 — 2026-06-08)** — non-technical, agent-driven setup on Conductor: installs, .env, preflight, smoke test, full per-competitor pipeline incl. the Facebook auto-clicker + **one-time**: daily 9 AM auto-sync setup (`tools/daily-sync/install.sh`) | `START-HERE.md` → "Start from scratch on Conductor" (+ root `CLAUDE.md`) | High | — |
+| 0 | **Start-from-scratch onboarding (Onboarding v1 — 2026-06-08)** — non-technical, agent-driven setup on Conductor: installs, .env, preflight, smoke test, full per-competitor pipeline incl. the Facebook auto-clicker + **one-time**: daily 11:30 AM auto-sync setup (`tools/daily-sync/install.sh`) | `START-HERE.md` → "Start from scratch on Conductor" (+ root `CLAUDE.md`) | High | — |
 | 1 | **Collaboration setup** — one shared Git repo with two folders (facebook + google); heavy media stays in R2; all links + run logs in git | `01_collaboration_git_r2_repo.md` (+ long-form `REPO-SETUP-PLAN.md`) | High | — |
 | 2 | **Per-page rank fix** — make the ad rank restart at 1 for each Facebook page so winners on smaller pages aren't buried below the top-100 cutoff | `02_per_page_rank_fix.md` | High | — |
 | 3 | **Analysis system** — the data model (history log + enrichment columns + format taxonomy) and the metrics that answer the competitive-intelligence questions | `03_analysis_system.md` | High | 1 (storage), 2 (page_rank) |
@@ -40,7 +40,7 @@ currently outdated. Two teammates collaborate across two computers.
   stored in git as text; the heavy files themselves live in R2 and are pulled on demand.
 - **One competitor per person at a time** — each competitor has its own master file, so two
   people on different competitors never clash.
-- **Daily 9 AM auto-sync (one-time setup).** Each person runs `zsh tools/daily-sync/install.sh`
+- **Daily 11:30 AM auto-sync (one-time setup).** Each person runs `zsh tools/daily-sync/install.sh`
   once from their main clone to install a pull-only macOS launchd job (`live.gosupernova.repo-sync`)
   that fast-forwards `main` every morning so teammates' pushes land automatically. It never pushes
   or force-merges; full details in `tools/daily-sync/README.md`. (Part of onboarding Item 0.)
