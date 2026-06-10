@@ -6,7 +6,11 @@ reads the local CSVs (kept fresh by the 9 AM `daily-sync` git pull), and **upser
 cross-competitor tabs into **"Supernova Competitor Master"** (auto-created in the existing Shared Drive).
 
 ## What's in the sheet
-One spreadsheet, three tabs, data tabs **one row per `(Competitor, Ad ID)`** across all competitors:
+One spreadsheet, three tabs, data tabs **one row per `(Competitor, Platform, Ad ID)`** across all
+competitors and **both pipelines (facebook + google)** — filter the `Platform` column to split them.
+Google master schemas differ (creative_id / creative_url / ad_headline …), handled by the per-pipeline
+adapter in `PIPELINES` (`sync_to_sheets.py`); google rows fall back to .docx links until the google
+pipeline gets Stage-9 collaborative Docs:
 - **`Overview`** — the decision-scan (21 cols): Verdict · Status · Current/Best Rank · % Time in Top 25% · Days Running · Language · Ad Format · Presenter · Message Angle · Script Reuse · Price Offer? · Ad Copy + links (Video, Supernova Rewrite Doc, Competitor Analysis Doc).
 - **`Analysis`** — the full per-ad pivot dataset (36 cols): the entire enriched CSV + Message Angle / Duration (s) / Price Offer?.
 - **`Legend`** — auto-generated reference: every column, which tab(s) it's on, and what it means in plain English.
