@@ -204,7 +204,7 @@ def upsert_tab(sheets, ssid: str, title: str, header: list, rows: list, key_cols
             appends.append(desired[:width])
             appended += 1
         else:
-            existing = values[rn - 2]
+            existing = values[rn - 1]  # values[0] is the header; sheet row N = values[N-1]
             same = all(_cells_equal(existing[col_idx[c]] if col_idx[c] < len(existing) else "",
                                     desired[col_idx[c]]) for c in header)
             if same:
