@@ -237,6 +237,36 @@ confirm via the per-page log on the next same-day run. **Day-2 blocker: a
 same-day Claude-in-Chrome run (SpeakX or MySivi) → `fb_scrape_diff.py` → fix
 every MISS/mismatch.**
 
+**Parallel-run day 2 (MySivi, 2026-06-10 — same-day V2 vs a partial Claude ref):**
+operator ran a partial Claude-in-Chrome scrape (page-1 top ~20 ads = 5 multi-version
+ads, 21 rows) and a same-day V2 page-1 run. The diff exposed — and we FIXED — two
+real V2 bugs, both validated to clean against the reference:
+- **Version grouping (the big one).** On MySivi, Meta ships an ad's versions as
+  SEPARATE top-level search results that share a `collation_id` (with empty
+  `collated_results[]`), NOT nested. V2 read only `collated_results[]`, so it
+  emitted each version as its own single-version "ad" — 907 phantom ads, every
+  multi-version ad flagged `ad_version_count=1`. FIX: `find_ad_nodes` +
+  group-by-`collation_id` in `collations_from_sources` (lead/version-0 = first in
+  impression order = the grid card Claude scrapes). Result: 907→**650 real ads,
+  140 multi-version**, version sets + per-version dates/CTA/URL match the reference
+  exactly. Handles BOTH payload shapes (Duolingo's nested collations still 30/30,
+  unchanged — no regression).
+- **Date off-by-one.** Payload timestamps are midnight US-Pacific; Meta's
+  "Started running on" (what Claude reads) is the day BEFORE, in both PST and PDT.
+  FIX: `DATE_SHIFT_DAYS=-1`. All 5 ref ads' dates now agree (were 0/5).
+- **Diff tool:** versions now matched by stable `version_id`, not positional
+  `version_index` (the two scrapers enumerate versions in different orders).
+- **Residual diff flags are all REFERENCE artifacts, not V2 misses:** (a) ad
+  `914613221634852` — Claude emitted 2 identical duplicate rows with body text
+  "Open Dropdown" (a UI label) and blank version_ids; Meta says `collation_count=1`
+  and V2 correctly emits 1 real version. (b) `ad_primary_text`/`description`
+  "mismatches" — V2 maps Meta's `body`→primary (full text) and `title`→description
+  faithfully; Claude TRUNCATED the body and misattributed its tail as the
+  description, missing the real title. **V2 is strictly more correct on both.**
+  Net: zero V2 data loss/error on the overlap; remaining flags are Claude
+  DOM-scraping artifacts. Takeaway: Claude-in-Chrome is NOT a perfect golden
+  reference — V2 (payload) corrects some of its truncation/duplication.
+
 **Parallel-run protocol (next few days):** for each competitor scraped, run BOTH
 (Claude-in-Chrome as production + `python3.13 facebook/scripts/fb_scrape_v2.py
 "<Competitor>"`), then
@@ -245,13 +275,16 @@ agree / richer / MISS / mismatch, version-grain aware). Fix every MISS/mismatch;
 cut over per-competitor only on CLEAN verdicts.
 
 **Open bench items (validate on same-day diffs):**
-1. `DATE_TZ` (top of fb_scrape_v2.py): payload dates are unix ts rendered by the UI
-   in some fixed TZ — confirm which matches Claude's rendered dates.
+1. ✅ RESOLVED (day 2): `DATE_TZ`/`DATE_SHIFT_DAYS` — dates are midnight US-Pacific;
+   Claude shows the day before → `DATE_SHIFT_DAYS=-1`. 5/5 same-day MySivi ads agree.
+   Re-validate as more same-day diffs land (calibrated on one page, one moment).
 2. `has_low_impression_warning`: read from the card badge via a zero-click DOM pass;
    payload-field mapping still unknown (`--debug` records candidates per ad —
    needs a page that actually has badges, Duolingo had none).
-3. Large collations: members verified complete only for count=2; watch the
-   "version-truncations" counter on MySivi-class pages.
+3. ✅ RESOLVED (day 2): large/scattered collations — versions arrive as separate
+   top-level results sharing a `collation_id`; group-by-`collation_id` recovers
+   all of them from the listing (MySivi page 1: 140 multi-version ads, 0 residual
+   truncations). No deeplink fallback needed.
 4. `creative_aspect_ratio`: V2 computes from preview-image pixels; one cross-date
    variant seen (`1200x628` vs ref `1.91:1` — bucket naming, single ad).
 5. DCO ads: payload exposes ALL card variants; default `--dco-mode card` mimics

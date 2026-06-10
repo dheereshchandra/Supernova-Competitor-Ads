@@ -78,13 +78,24 @@ def by_page_ad(rows):
 
 
 def version_rows(rows):
-    """(ad_id, version_index) -> first row of that version."""
+    """(ad_id, version_key) -> first row of that version. version_key is the
+    STABLE version_id (the version's own ad_archive_id) when present, else the
+    positional version_index.
+
+    Two scrapers enumerate an ad's versions in different orders (the listing
+    payload is impression-ordered; a Claude detail-view walk is in Meta's version
+    order), so the same version gets a different version_index in each file.
+    Matching on version_id is what lets identical versions line up; we fall back
+    to the index only when a scrape left version_id blank (e.g. some Claude rows
+    for ads Meta reports as single-version)."""
     d = {}
     for r in rows:
         aid = (r.get("ad_library_id") or "").strip()
-        vi = (r.get("version_index") or "0").strip() or "0"
-        if aid:
-            d.setdefault((aid, vi), r)
+        if not aid:
+            continue
+        vid = (r.get("version_id") or "").strip()
+        vkey = ("id", vid) if vid else ("idx", (r.get("version_index") or "0").strip() or "0")
+        d.setdefault((aid, vkey), r)
     return d
 
 
@@ -177,7 +188,11 @@ def main() -> int:
         print("\n" + "=" * 64)
         print("VERSION-GRAIN CHECK (multi-version ads, matched on both sides)")
         ref_v, new_v = version_rows(ref_rows), version_rows(new_rows)
-        ref_multi_ads = {aid for (aid, vi) in ref_v if vi not in ("", "0")}
+        # an ad is multi-version if it has >1 distinct version row in the reference
+        ref_ad_vcount = defaultdict(int)
+        for (aid, _vk) in ref_v:
+            ref_ad_vcount[aid] += 1
+        ref_multi_ads = {aid for aid, c in ref_ad_vcount.items() if c > 1}
         matched_ads = {aid for (aid, _) in ref_v} & {aid for (aid, _) in new_v}
         multi_matched = ref_multi_ads & matched_ads
         if not ref_multi_ads:
