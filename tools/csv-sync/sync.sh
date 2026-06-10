@@ -10,6 +10,9 @@
 # Install ONCE from your canonical MAIN clone (single writer): zsh tools/csv-sync/install.sh
 set -u
 
+# launchd runs with a minimal PATH (/usr/bin:/bin:...) — Homebrew's python3.13 lives outside it.
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+
 SCRIPT_DIR="${0:A:h}"
 REPO="${SCRIPT_DIR:h:h}"
 PY="python3.13"
@@ -29,7 +32,8 @@ if [ "$(git symbolic-ref --short -q HEAD)" = main ] && [ -z "$(git status --porc
 fi
 
 # Gate: Sheets readiness (libs present + service account + Sheets API enabled + sheet reachable).
-if ! "$PY" facebook/scripts/preflight.py --check-sheets --skip-gemini >> "$LOG" 2>&1; then
+# (preflight's layout check expects cwd=facebook/, so run it from there)
+if ! (cd "$REPO/facebook" && "$PY" scripts/preflight.py --check-sheets --skip-gemini) >> "$LOG" 2>&1; then
   log "SKIP — Sheets preflight failed (is the Google Sheets API enabled + .env set?)"
   notify "CSV-sync skipped" "Sheets preflight failed — open Conductor / check sync.log"
   exit 0
