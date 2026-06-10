@@ -45,7 +45,7 @@ the per-scrape CSVs already archived in `inputs/`.
 
 ### Layer 3 — Enrichment (NEW — computed, stored so you just filter/sort)
 Per-ad attributes added by the analysis scripts:
-`language`, `format_type` (from the taxonomy), `production_type` (human/AI/mixed — reuse Step 4
+`language`, `format_type` (from the taxonomy), `production_type` (human/AI/mixed — reuse Creative Studio
 decompose where it exists), `duration_s`, `is_winner`, `run_days`, `best_page_rank`,
 `times_seen`, `weeks_seen`, `script_group_id`, `replication_type`
 (original / translation_replica / character_swap / scene_change / new), `variant_role`,
@@ -60,7 +60,7 @@ decompose where it exists), `duration_s`, `is_winner`, `run_days`, `best_page_ra
 2. **`detect_language.py`** — tag each ad's language from `ad_primary_text` / transcript (the
    data is country-keyed = all `IN`, so language must be detected). Cheap.
 3. **`classify_format.py`** — tag each ad with the **format taxonomy** (see open decision
-   below). Reuses Step 4 decomposition (`production_type`, layout, characters) where present; a
+   below). Reuses Creative Studio decomposition (`production_type`, layout, characters) where present; a
    light Gemini call otherwise. *Answers Q2, Q5-by-format.*
 4. **`script_similarity.py`** — transcribe → translate to a common language → embed → cluster.
    One engine answers Q6–Q10: same script, translation replica, character/scene-swap, brand-new

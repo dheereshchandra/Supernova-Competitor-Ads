@@ -67,7 +67,7 @@ python3 scripts/upload_to_r2.py \
 python3 scripts/capture_html5_banners.py --competitor speakx
 # After capture, re-run Step 3 to upload the new mp4s
 
-# Step 4 — AI analysis (optional, gated by cost estimate)
+# Creative Studio — AI analysis (optional, gated by cost estimate)
 python3 scripts/estimate_step4_cost.py --competitor speakx --all
 # Review the estimate, then run stages 1-6 if approved — see HANDOVER §7
 ```
@@ -129,23 +129,23 @@ google-ad-downloader/
 │   ├── scrape_google_ads.py           ← Step 1 — Google API → CSV + assets
 │   ├── download_google_ads.py         ← Step 2 — yt-dlp metadata sidecars
 │   ├── upload_to_r2.py                ← Step 3 — R2 upload + master CSV
-│   ├── estimate_step4_cost.py         ← Step 4 stage 0 — cost estimate (free)
-│   ├── step4_decompose.py             ← Step 4 stage 1 — Gemini Batch decompose
-│   ├── step4_frames.py                ← Step 4 stage 2 — ffmpeg scene-frame extract
-│   ├── step4_character_sheets.py      ← Step 4 stage 3 — Nano Banana character sheets
-│   ├── step4_panels.py                ← Step 4 stage 4 — Nano Banana clean panels
-│   ├── step4_rewrite.py               ← Step 4 stage 5 — Gemini Batch Supernova rewrite
-│   ├── step4_upload_images.py         ← Step 4 stage 6a — image upload to R2
-│   ├── step4_build_docs.py            ← Step 4 stage 6b — build .docx with captions
-│   ├── step4_audit_docs.py            ← Step 4 stage 7a — strict programmatic audit
-│   └── step4_upload_and_update.py     ← Step 4 stage 8 — R2 docx upload + master update
+│   ├── estimate_step4_cost.py         ← Creative Studio stage 0 — cost estimate (free)
+│   ├── step4_decompose.py             ← Creative Studio stage 1 — Gemini Batch decompose
+│   ├── step4_frames.py                ← Creative Studio stage 2 — ffmpeg scene-frame extract
+│   ├── step4_character_sheets.py      ← Creative Studio stage 3 — Nano Banana character sheets
+│   ├── step4_panels.py                ← Creative Studio stage 4 — Nano Banana clean panels
+│   ├── step4_rewrite.py               ← Creative Studio stage 5 — Gemini Batch Supernova rewrite
+│   ├── step4_upload_images.py         ← Creative Studio stage 6a — image upload to R2
+│   ├── step4_build_docs.py            ← Creative Studio stage 6b — build .docx with captions
+│   ├── step4_audit_docs.py            ← Creative Studio stage 7a — strict programmatic audit
+│   └── step4_upload_and_update.py     ← Creative Studio stage 8 — R2 docx upload + master update
 │
 ├── skills/                            ← how-to docs per pipeline step
 │   ├── ARCHITECTURE.md                ← design rationale, read first if editing skills
 │   ├── google-ads-pipeline/           ← master orchestrator (weekly refresh)
 │   ├── google-ad-scraper/             ← Step 1 docs
 │   ├── google-ads-download-and-upload/ ← Steps 2 + 3 docs
-│   └── google-ads-video-analysis/     ← Step 4 docs
+│   └── google-ads-video-analysis/     ← Creative Studio docs
 │
 ├── archive/                           ← old Chrome-extension prompts (do not use)
 │   ├── README.md                      ← explains why these are here
@@ -158,7 +158,7 @@ google-ad-downloader/
 ├── images/{competitor}-{date}/        ← .jpg / .png banner images
 ├── master/{competitor}.csv            ← rolling per-competitor truth (Step 3+ owns columns)
 ├── step3_logs/                        ← per-row upload outcome
-├── step4_workspace/                   ← created on first Step 4 run
+├── step4_workspace/                   ← created on first Creative Studio run
 └── logs/                              ← run_all_competitors.sh wrapper logs
 ```
 
@@ -181,7 +181,7 @@ google-ad-downloader/
 | 4. Analyse | Your Mac's Terminal *or* Cowork | Gemini API works from either |
 
 Cowork is best used for editing scripts/docs, inspecting CSVs and logs, and
-running Step 4 (which is mostly remote API work). The data-movement steps
+running Creative Studio (which is mostly remote API work). The data-movement steps
 (1, 2, 3) run on your Mac because they need your network and credentials.
 See `HANDOVER.md §1` for the full reasoning.
 

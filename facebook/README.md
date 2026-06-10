@@ -25,26 +25,26 @@ fb-competitor-ads-pipeline/
 │   │   └── SKILL.md
 │   ├── fb-ads-download-and-upload/      ← Steps 2 + 3 sub-skill
 │   │   └── SKILL.md
-│   └── fb-ads-video-analysis/           ← Step 4 sub-skill (scene analysis)
+│   └── fb-ads-video-analysis/           ← Creative Studio sub-skill (scene analysis)
 │       ├── SKILL.md
-│       └── scripts/                     ← Step 4 helper scripts (to be filled in
+│       └── scripts/                     ← Creative Studio helper scripts (to be filled in
 │                                          when GEMINI_API_KEY arrives)
 │
 ├── scripts/                             ← All pipeline scripts
 │   ├── r2_utils.py                      ← shared R2 client / upload helpers / image key conventions
 │   ├── download_fb_ads.py               ← Step 2 — videos from Meta CDN
 │   ├── upload_to_r2.py                  ← Step 3 — videos → R2 + master CSV (declares MASTER_EXTRA_COLS)
-│   ├── estimate_step4_cost.py           ← Step 4 cost estimator (no API call, free)
-│   ├── run_step4.py                     ← Step 4 high-level orchestrator scaffold
-│   ├── step4_decompose.py               ← Step 4 Stage 1 — Gemini Batch video decompose
-│   ├── step4_frames.py                  ← Step 4 Stage 2 — ffmpeg scene-frame extract (source-native res)
-│   ├── step4_character_sheets.py        ← Step 4 Stage 3 — Nano Banana Pro char sheets @ 2K
-│   ├── step4_panels.py                  ← Step 4 Stage 4 — Nano Banana Pro clean panels @ 2K
-│   ├── step4_upload_images.py           ← Step 4 Stage 4.5 — upload every image to R2 + r2_urls.json sidecar
-│   ├── step4_rewrite.py                 ← Step 4 Stage 5 — Gemini Batch Supernova rewrite
-│   ├── step4_build_docs.py              ← Step 4 Stage 6 — assemble the two docx files (Asset: URL captions)
-│   ├── step4_upload_and_update.py       ← Step 4 Stages 7+8 — R2 upload + master update (5 URL columns)
-│   ├── step4_audit.py                   ← Step 4 audit — HEAD-checks every URL in docs + master
+│   ├── estimate_step4_cost.py           ← Creative Studio cost estimator (no API call, free)
+│   ├── run_step4.py                     ← Creative Studio high-level orchestrator scaffold
+│   ├── step4_decompose.py               ← Creative Studio Stage 1 — Gemini Batch video decompose
+│   ├── step4_frames.py                  ← Creative Studio Stage 2 — ffmpeg scene-frame extract (source-native res)
+│   ├── step4_character_sheets.py        ← Creative Studio Stage 3 — Nano Banana Pro char sheets @ 2K
+│   ├── step4_panels.py                  ← Creative Studio Stage 4 — Nano Banana Pro clean panels @ 2K
+│   ├── step4_upload_images.py           ← Creative Studio Stage 4.5 — upload every image to R2 + r2_urls.json sidecar
+│   ├── step4_rewrite.py                 ← Creative Studio Stage 5 — Gemini Batch Supernova rewrite
+│   ├── step4_build_docs.py              ← Creative Studio Stage 6 — assemble the two docx files (Asset: URL captions)
+│   ├── step4_upload_and_update.py       ← Creative Studio Stages 7+8 — R2 upload + master update (5 URL columns)
+│   ├── step4_audit.py                   ← Creative Studio audit — HEAD-checks every URL in docs + master
 │   └── backfill_step4_images.py         ← One-shot: re-process existing docs to add image URLs
 │
 ├── inputs/                              ← per-run input CSVs (from Step 1)
@@ -52,7 +52,7 @@ fb-competitor-ads-pipeline/
 ├── videos/{competitor}-{date}/          ← .mp4 files from Step 2
 ├── master/{competitor}.csv              ← rolling per-competitor truth (all steps own columns)
 ├── step3_logs/                          ← per-run upload logs from Step 3
-└── step4_workspace/                     ← created on first Step 4 run
+└── step4_workspace/                     ← created on first Creative Studio run
     ├── .gemini_uploads/<competitor>.json   Gemini Files API state for resume
     ├── batches/decompose_<short>.json      Active/completed Gemini batch jobs
     ├── batches/rewrite_<short>.json
@@ -64,10 +64,10 @@ fb-competitor-ads-pipeline/
     ├── images/<id>/r2_urls.json            Stage 4.5 sidecar: image → R2 URL map
     ├── docs/<id>_competitor_analysis.docx  Final deliverable Doc 1 (Asset: URL beneath each image)
     ├── docs/<id>_supernova_rewrite.docx    Final deliverable Doc 2 (Asset: URL beneath each image)
-    └── logs/                               Per-run Step 4 audit trail
+    └── logs/                               Per-run Creative Studio audit trail
 ```
 
-### Final master CSV — Step 4 columns
+### Final master CSV — Creative Studio columns
 
 | Column | Type | Owner |
 |---|---|---|
@@ -89,7 +89,7 @@ See `HANDOVER.md §9.7` for the full URL contract.
 
 ## Running the pipeline — three entry points
 
-**End-to-end (most common)**: tell Cowork *"run the full pipeline on this CSV"* — invokes the `fb-ads-pipeline` master skill which runs Steps 2+3, asks for cost approval, then runs Step 4.
+**End-to-end (most common)**: tell Cowork *"run the full pipeline on this CSV"* — invokes the `fb-ads-pipeline` master skill which runs Steps 2+3, asks for cost approval, then runs Creative Studio.
 
 **Just download + upload (videos in R2, no analysis)**: tell Cowork *"run the downloader and upload on `inputs/fb-ads-{competitor}-{date}.csv`"* — invokes the `fb-ads-download-and-upload` sub-skill directly.
 

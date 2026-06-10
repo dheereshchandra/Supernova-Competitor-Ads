@@ -2,9 +2,10 @@
 # =============================================================================
 # run_pipeline.sh — the ONE staged orchestrator for a competitor, end to end.
 #
-# Six named stages, in COST order. The costliest step (Stage 6, Supernova
-# script/image generation — Gemini *Pro* + Nano-Banana image-gen) is the
-# EXPLICIT LAST stage and runs only behind a typed cost gate:
+# Six named stages, in COST order. The costliest stage (Stage 6, Creative Studio
+# — Supernova script/image generation, Gemini *Pro* + Nano-Banana image-gen;
+# implemented by the legacy step4_* scripts) is the EXPLICIT LAST stage and runs
+# only behind a typed cost gate:
 #
 #   1 scrape    detect a fresh input snapshot (FB scrape is MANUAL; google is
 #               guardrailed) — missing/stale → print how-to + exit 10 (resumable)
@@ -12,8 +13,9 @@
 #   3 r2upload  push media to R2 + refresh master (upload_to_r2.py)
 #   4 free      build_history → metrics → chart → report   (FREE, no API)
 #   5 enrich    run_enrichment.sh --full — INCREMENTAL (only NEW videos pay)
-#   6 step4     GATED. estimate → show BATCH TOTAL → typed `yes` → runbook
-#               (default) or auto-run the chain (--execute-step4). Pro + image-gen.
+#   6 step4     Creative Studio. GATED. estimate → show BATCH TOTAL → typed `yes`
+#               → runbook (default) or auto-run the chain (--execute-step4). Pro
+#               + image-gen.
 #
 # This REUSES the existing runners — it does NOT reimplement them, and it routes
 # AROUND the unwired facebook/scripts/run_step4.py skeleton, driving the real
@@ -45,7 +47,7 @@ PIPELINE=facebook
 COMP=""
 ALL=0
 FROM=1
-THROUGH=5            # Step-4 (6) is opt-in: providing --step4-scope bumps this to 6
+THROUGH=5            # Creative Studio (6) is opt-in: providing --step4-scope bumps this to 6
 STEP4_SCOPE=""       # top:N | ids:a,b,c | random:N | start:YYYY-MM-DD | all
 EXECUTE_STEP4=0      # default: emit a runbook after the gate, don't auto-spend
 ASSUME_YES=0
@@ -73,7 +75,7 @@ done
 
 case "$PIPELINE" in facebook|google) ;; *) echo "[error] --pipeline must be facebook|google" >&2; exit 2;; esac
 [ "$ALL" = 1 ] || [ -n "$COMP" ] || { echo "[error] need --competitor SLUG or --all" >&2; usage 2; }
-# Providing a Step-4 scope opts that stage in (extends the range to 6).
+# Providing a Creative Studio scope opts that stage in (extends the range to 6).
 [ -n "$STEP4_SCOPE" ] && [ "$THROUGH" -lt 6 ] && THROUGH=6
 
 STAMP="$(date +%Y%m%d-%H%M%S)"
@@ -192,7 +194,7 @@ stage5_enrich() {  # PAID-but-incremental: only NEW videos hit Flash
   run bash analysis/scripts/run_enrichment.sh "$PIPELINE" "$slug" --full
 }
 
-# ---- Stage 6: the gated Step-4 (Pro + image-gen) ----------------------------
+# ---- Stage 6: the gated Creative Studio (Pro + image-gen) -------------------
 # Maps --step4-scope to estimate_step4_cost.py flags.
 scope_flags() {
   case "$STEP4_SCOPE" in
@@ -207,9 +209,9 @@ scope_flags() {
 
 stage6_step4() {
   local slug="$1"
-  [ "$PIPELINE" = facebook ] || { echo "  [stage6] Step-4 is facebook-only — skipping."; return 0; }
+  [ "$PIPELINE" = facebook ] || { echo "  [stage6] Creative Studio is facebook-only — skipping."; return 0; }
   local flags; flags="$(scope_flags)"
-  echo "  [stage6] estimating Step-4 cost for '$slug' (scope: ${STEP4_SCOPE:-top:20}) ..."
+  echo "  [stage6] estimating Creative Studio cost for '$slug' (scope: ${STEP4_SCOPE:-top:20}) ..."
 
   # estimate must run from facebook/ (relative master-dir + videos auto-discovery)
   local json; json="$( cd "$ROOT/facebook" && $PY scripts/estimate_step4_cost.py \
@@ -226,7 +228,7 @@ PYEOF
 )"
   local total sel vids ids; IFS='|' read -r total sel vids ids <<<"$parsed"
   echo "  ┌──────────────────────────────────────────────"
-  echo "  │ Step-4 (Supernova script/image gen — Gemini PRO + Nano-Banana)"
+  echo "  │ Creative Studio (Supernova script/image gen — Gemini PRO + Nano-Banana)"
   echo "  │ competitor : $slug      scope: ${STEP4_SCOPE:-top:20}"
   echo "  │ selected   : ${sel} ad(s)   (videos: ${vids})"
   echo "  │ BATCH TOTAL: \$${total}"
@@ -242,7 +244,7 @@ PYEOF
       echo "  [stage6] BLOCKED: non-interactive and no --yes. Nothing spent."
       step4_runbook "$slug" "$ids"; return 0
     fi
-    printf "  Type 'yes' to spend \$%s on Step-4 for %s ad(s): " "$total" "$sel"
+    printf "  Type 'yes' to spend \$%s on Creative Studio for %s ad(s): " "$total" "$sel"
     local ans; read -r ans
     [ "$ans" = yes ] || { echo "  [stage6] not approved — nothing spent."; step4_runbook "$slug" "$ids"; return 0; }
   fi
@@ -257,7 +259,7 @@ PYEOF
 step4_runbook() {  # print the exact ordered commands for the approved ids
   local slug="$1" ids="$2" sp; sp="${ids//,/ }"
   cat <<EOF
-  ── Step-4 runbook (run from $ROOT/facebook) ──────────────
+  ── Creative Studio runbook (run from $ROOT/facebook) ─────
     cd "$ROOT/facebook"
     $PY scripts/step4_decompose.py upload $sp
     $PY scripts/step4_decompose_sync.py $slug $sp        # sync decompose (Pro)
@@ -299,7 +301,7 @@ step4_execute() {  # auto-run the chain (cwd=facebook); each module is idempoten
     $PY scripts/step4_upload_and_update.py --competitor "$slug" $sp
     $PY scripts/step4_build_html.py --competitor "$slug" --ids "$ids" --upload --update-master
   ) || { echo "  [stage6] chain halted — re-run with --from-stage 6 (idempotent) to resume."; return 1; }
-  echo "  [stage6] Step-4 complete for '$slug'."
+  echo "  [stage6] Creative Studio complete for '$slug'."
 }
 
 # ----------------------------------------------------------------------------

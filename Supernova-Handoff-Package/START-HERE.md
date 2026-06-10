@@ -188,7 +188,7 @@ URL opens.
 If it fails: re-run the same command — it's idempotent (already-uploaded rows are carried
 forward).
 
-**6d. FREE ANALYSIS:**
+**6d. FREE ANALYSIS** (this is canonical Step 4, Free Analysis — free, no AI)**:**
 
 ```
 analysis/scripts/run_all_free.sh <pipeline>

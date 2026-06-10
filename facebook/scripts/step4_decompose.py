@@ -130,31 +130,28 @@ def ensure_dirs():
 
 
 def video_path_for(ad_id: str, competitor: str) -> Optional[pathlib.Path]:
-    """Find the local .mp4 for an ad_library_id. Tries primary + variants."""
-    candidates = sorted(pathlib.Path("videos").glob(f"{competitor}-*"))
-    if not candidates:
-        return None
-    vdir = candidates[-1]
-    for fname in (f"{ad_id}.mp4", f"{ad_id}_v2.mp4", f"{ad_id}_v3.mp4"):
-        p = vdir / fname
-        if p.exists():
-            return p
+    """Find the local .mp4 for an ad_library_id. Searches ALL dated folders
+    (newest first), not just the latest — a long-running ad's video may have been
+    downloaded in an earlier scrape and never re-downloaded. Tries primary + variants."""
+    for vdir in sorted(pathlib.Path("videos").glob(f"{competitor}-*"), reverse=True):
+        for fname in (f"{ad_id}.mp4", f"{ad_id}_v2.mp4", f"{ad_id}_v3.mp4"):
+            p = vdir / fname
+            if p.exists():
+                return p
     return None
 
 
 def image_path_for(ad_id: str, competitor: str) -> Optional[pathlib.Path]:
     """Find the local .jpg for an Image-type ad_library_id. Mirrors video_path_for()
     but in images/{competitor}-*/ instead of videos/. Tries primary + variants per
-    the convention in scripts/download_fb_images.py and HANDOVER §8.5."""
-    candidates = sorted(pathlib.Path("images").glob(f"{competitor}-*"))
-    if not candidates:
-        return None
-    idir = candidates[-1]
-    for fname in (f"{ad_id}.jpg", f"{ad_id}_c2.jpg", f"{ad_id}_c3.jpg",
-                  f"{ad_id}_c4.jpg", f"{ad_id}_c5.jpg"):
-        p = idir / fname
-        if p.exists():
-            return p
+    the convention in scripts/download_fb_images.py and HANDOVER §8.5. Searches ALL
+    dated folders (newest first), not just the latest."""
+    for idir in sorted(pathlib.Path("images").glob(f"{competitor}-*"), reverse=True):
+        for fname in (f"{ad_id}.jpg", f"{ad_id}_c2.jpg", f"{ad_id}_c3.jpg",
+                      f"{ad_id}_c4.jpg", f"{ad_id}_c5.jpg"):
+            p = idir / fname
+            if p.exists():
+                return p
     return None
 
 

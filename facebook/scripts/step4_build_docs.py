@@ -140,28 +140,25 @@ def ensure_packages():
 
 
 def video_path_for(ad_id: str, competitor: str) -> Optional[pathlib.Path]:
-    candidates = sorted(pathlib.Path("videos").glob(f"{competitor}-*"))
-    if not candidates:
-        return None
-    vdir = candidates[-1]
-    for fname in (f"{ad_id}.mp4", f"{ad_id}_v2.mp4", f"{ad_id}_v3.mp4"):
-        p = vdir / fname
-        if p.exists():
-            return p
+    # Search ALL dated folders (newest first), not just the latest — a long-running
+    # ad's video may have come from an earlier scrape (see step4_decompose.video_path_for).
+    for vdir in sorted(pathlib.Path("videos").glob(f"{competitor}-*"), reverse=True):
+        for fname in (f"{ad_id}.mp4", f"{ad_id}_v2.mp4", f"{ad_id}_v3.mp4"):
+            p = vdir / fname
+            if p.exists():
+                return p
     return None
 
 
 def image_path_for(ad_id: str, competitor: str) -> Optional[pathlib.Path]:
-    """Mirror of video_path_for() for Image-type ads (HANDOVER §8.5/§9.5)."""
-    candidates = sorted(pathlib.Path("images").glob(f"{competitor}-*"))
-    if not candidates:
-        return None
-    idir = candidates[-1]
-    for fname in (f"{ad_id}.jpg", f"{ad_id}_c2.jpg", f"{ad_id}_c3.jpg",
-                  f"{ad_id}_c4.jpg", f"{ad_id}_c5.jpg"):
-        p = idir / fname
-        if p.exists():
-            return p
+    """Mirror of video_path_for() for Image-type ads (HANDOVER §8.5/§9.5).
+    Searches ALL dated folders (newest first), not just the latest."""
+    for idir in sorted(pathlib.Path("images").glob(f"{competitor}-*"), reverse=True):
+        for fname in (f"{ad_id}.jpg", f"{ad_id}_c2.jpg", f"{ad_id}_c3.jpg",
+                      f"{ad_id}_c4.jpg", f"{ad_id}_c5.jpg"):
+            p = idir / fname
+            if p.exists():
+                return p
     return None
 
 

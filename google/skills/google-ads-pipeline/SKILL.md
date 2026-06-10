@@ -6,7 +6,7 @@ description: >-
   scraper against Google's Ads Transparency Center API), the
   google-ads-download-and-upload sub-skill (Steps 2 + 3 — yt-dlp metadata,
   R2 upload, master CSV update), then the google-ads-video-analysis sub-skill
-  (Step 4 — scene decomposition for video, single-page treatment for image,
+  (Creative Studio — scene decomposition for video, single-page treatment for image,
   text-only branch for Text ads, two docx per ad, gated by a
   cost-estimate-and-approval step). Use when the operator wants the full
   weekly/fortnightly refresh for a competitor — phrasings like "run the full
@@ -42,7 +42,7 @@ See `../ARCHITECTURE.md` for the architectural rationale. See the three sub-skil
 
 - Operator only wants Step 1 (just the CSV + asset download) → use `google-ad-scraper`
 - Operator only wants Steps 2+3 (no analysis) → use `google-ads-download-and-upload`
-- Operator only wants Step 4 against existing master rows → use `google-ads-video-analysis`
+- Operator only wants Creative Studio against existing master rows → use `google-ads-video-analysis`
 - This is about Meta/FB ads, not Google ads → switch to `~/Documents/fb-ad-downloader/`
 
 **For the operator running things from Terminal directly** (the most common case), they don't invoke skills at all — they run a single command:
@@ -51,7 +51,7 @@ See `../ARCHITECTURE.md` for the architectural rationale. See the three sub-skil
 bash run_all_competitors.sh
 ```
 
-That wrapper does the same four passes this skill orchestrates (Steps 1+2+3 → 429 retry → HTML5 capture → final R2 re-upload) without a Cowork agent in the loop. See `../../HANDOVER.md §8`. The skills exist for Cowork-mediated invocations where an agent is driving the work end-to-end and may need to ask the operator for input (e.g. cost approval before Step 4).
+That wrapper does the same four passes this skill orchestrates (Steps 1+2+3 → 429 retry → HTML5 capture → final R2 re-upload) without a Cowork agent in the loop. See `../../HANDOVER.md §8`. The skills exist for Cowork-mediated invocations where an agent is driving the work end-to-end and may need to ask the operator for input (e.g. cost approval before Creative Studio).
 
 ## The shape of a master-skill run
 
@@ -91,14 +91,14 @@ That wrapper does the same four passes this skill orchestrates (Steps 1+2+3 → 
 │  Phase D — Cost gate                                              │
 │  ────────────────                                                 │
 │  Read master/{competitor}.csv                                     │
-│  Identify candidate Step 4 rows                                   │
+│  Identify candidate Creative Studio rows                          │
 │  Ask scope: random N / all / specific IDs                         │
 │  Run scripts/estimate_step4_cost.py — pure local math             │
 │  Show per-row breakdown + batch total + wall-clock                │
 │  Ask: approve / reduce / cancel                                   │
 │  WAIT for explicit yes                                            │
 │                                                                   │
-│  Phase E — Step 4 (google-ads-video-analysis)                     │
+│  Phase E — Creative Studio (google-ads-video-analysis)            │
 │  ──────────────────────────────                                   │
 │  Invoke sub-skill with approved scope                             │
 │  Stream stage-by-stage progress                                   │
@@ -117,9 +117,9 @@ That wrapper does the same four passes this skill orchestrates (Steps 1+2+3 → 
    operator says "everyone". Otherwise take a list.
 
 2. **Sanity-check `.env`.** R2 credentials are required for Steps 2+3.
-   `GEMINI_API_KEY` is required for Step 4. If Gemini is missing, surface:
-   > *"Step 4 requires a Gemini API key. Steps 1-3 will still run, but
-   > Step 4 will be skipped. Continue, or pause until the key is available?"*
+   `GEMINI_API_KEY` is required for Creative Studio. If Gemini is missing, surface:
+   > *"Creative Studio requires a Gemini API key. Steps 1-3 will still run, but
+   > Creative Studio will be skipped. Continue, or pause until the key is available?"*
 
 ## Phase B — Invoke `google-ad-scraper` per competitor
 
@@ -151,7 +151,7 @@ path. When complete, capture the tally:
 Surface compactly. Don't proceed automatically — pause for the operator.
 
 If a sub-skill failed mid-way, surface the error and ask whether to retry
-or stop. Don't push to Step 4 if Step 3 didn't finish cleanly.
+or stop. Don't push to Creative Studio if Step 3 didn't finish cleanly.
 
 ## Phase D — Cost gate (the critical UX moment)
 
@@ -228,7 +228,7 @@ Phase C (Steps 2+3):
   • Asset-missing:          ~556  (HTML5 banners, expected)
   • Errors:                 0
 
-Phase E (Step 4):
+Phase E (Creative Studio):
   • Rows analysed:          3 (variant 0 of each distinct creative)
   • Both docs uploaded:     3
   • Actual cost:            $1.34
@@ -242,7 +242,7 @@ Artefacts:
 ## Hard rules (don't violate)
 
 - **Never proceed past Phase D without explicit operator approval.** The cost gate is sacred.
-- **Never invoke `google-ads-video-analysis` if Phase C failed.** Step 4 has no value without Step 3's URLs in the master.
+- **Never invoke `google-ads-video-analysis` if Phase C failed.** Creative Studio has no value without Step 3's URLs in the master.
 - **Never invent a Gemini API key** — if missing, ask explicitly or offer to run only Phases A-C.
 - **Never invoke sub-skills with scopes the operator didn't approve.** If they said "variant 0 of each", don't process all variants.
 - **Never mix Google and Meta workflows in the same skill invocation.** Each pipeline has its own folder, its own skill set, its own master CSV.
@@ -252,7 +252,7 @@ Artefacts:
 
 - If Cowork session is killed during Phase B (scraping), re-invoke — Step 1 is idempotent for already-downloaded assets and the CSV gets rewritten cleanly.
 - If killed during Phase C (Steps 2+3), the sub-skill resumes from the master CSV (carry-forward logic).
-- If killed during Phase E (Step 4), the sub-skill resumes cleanly (intermediate JSONs + image files are the recovery state).
+- If killed during Phase E (Creative Studio), the sub-skill resumes cleanly (intermediate JSONs + image files are the recovery state).
 - If the operator deferred Phase E until later, they can invoke `google-ads-video-analysis` directly later — no need to re-run Phases A-C.
 
 ## Cross-references
@@ -260,7 +260,7 @@ Artefacts:
 - `../ARCHITECTURE.md` — architectural rationale
 - `../google-ad-scraper/SKILL.md` — Phase B sub-skill (Step 1)
 - `../google-ads-download-and-upload/SKILL.md` — Phase C sub-skill (Steps 2+3)
-- `../google-ads-video-analysis/SKILL.md` — Phase E sub-skill (Step 4)
+- `../google-ads-video-analysis/SKILL.md` — Phase E sub-skill (Creative Studio)
 - `../../HANDOVER.md` — operator manual for the whole pipeline
 - `../../run_all_competitors.sh` — the Bash wrapper an operator runs from Terminal for the same end-to-end refresh
 - `~/Documents/fb-ad-downloader/skills/fb-ads-pipeline/SKILL.md` — sibling pipeline for Meta ads

@@ -26,7 +26,7 @@ The 8 steps as a compact checklist (Steps 1–7 are onboarding; Step 8 is a one-
    ```
    python3.13 -m pip install --upgrade --break-system-packages --user requests openpyxl boto3 yt-dlp google-genai python-docx Pillow numpy google-api-python-client google-auth google-auth-httplib2 pyobjc-framework-Vision pyobjc-framework-Quartz pyobjc-framework-Cocoa
    ```
-   (`google-api-python-client google-auth google-auth-httplib2` power Step-4 Stage 9 — the Google-Docs deliverable upload.)
+   (`google-api-python-client google-auth google-auth-httplib2` power Creative Studio's Google-Docs deliverable upload — Stage 9 of `step4_*`.)
    Success: pip finishes with no red `ERROR` lines (a yellow PATH warning is fine).
    - If a later command fails with `command not found: yt-dlp` (or similar), add Python's user-bin to PATH once: `echo 'export PATH="$HOME/Library/Python/3.13/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc`
 
@@ -61,7 +61,7 @@ The 8 steps as a compact checklist (Steps 1–7 are onboarding; Step 8 is a one-
 
 One competitor, end to end.
 
-> **One-command shortcut:** `analysis/scripts/run_pipeline.sh --competitor <slug>` runs Steps 1→6 below as named stages in cost order. The costly Step-4 (Supernova script/image gen — Gemini **Pro** + image-gen) is the EXPLICIT LAST stage and runs only behind a typed cost gate (it prints the real `BATCH TOTAL $X` and needs `yes`); enrichment is incremental (only NEW videos pay). Use `--dry-run` to preview, `--through-stage 5` to stop before Step-4, `--from-stage N` to resume, `--step4-scope top:20` + `--execute-step4 --yes` to actually generate. A missing/stale FB snapshot makes Stage 1 print the manual scrape steps and exit 10 (re-run resumes). The individual numbered steps below remain the source of truth for each stage.
+> **One-command shortcut:** `analysis/scripts/run_pipeline.sh --competitor <slug>` runs Steps 1→6 below as named stages in cost order. The costly **Creative Studio** stage (Supernova script/image gen — Gemini **Pro** + image-gen; this is the optional generation workflow, NOT canonical Step 4) is the EXPLICIT LAST stage and runs only behind a typed cost gate (it prints the real `BATCH TOTAL $X` and needs `yes`); enrichment is incremental (only NEW videos pay). Use `--dry-run` to preview, `--through-stage 5` to stop before Creative Studio, `--from-stage N` to resume, `--step4-scope top:20` + `--execute-step4 --yes` to actually generate (the `step4`/`--step4-` identifiers are the legacy internal name for Creative Studio). A missing/stale FB snapshot makes Stage 1 print the manual scrape steps and exit 10 (re-run resumes). The individual numbered steps below remain the source of truth for each stage.
 
 **Step 0. Preflight:** `python3.13 facebook/scripts/preflight.py` (and `python3.13 analysis/scripts/preflight_enrichment.py`)
 
@@ -73,11 +73,13 @@ One competitor, end to end.
 
 **Step 3. R2 UPLOAD** (updates `master/{slug}.csv`): `python3.13 <pipeline>/scripts/upload_to_r2.py ...`
 
-**Step 4. FREE ANALYSIS:** `analysis/scripts/run_all_free.sh <pipeline>` (chains `build_history.py` → `compute_rank_metrics.py` → `build_rank_chart.py` → `build_report.py`)
+**Step 4. FREE ANALYSIS (free, no AI):** `analysis/scripts/run_all_free.sh <pipeline>` (chains `build_history.py` → `compute_rank_metrics.py` → `build_rank_chart.py` → `build_report.py`)
 
 **Step 5. FULL ENRICHMENT** (paid, Flash only): `analysis/scripts/run_enrichment.sh <pipeline> <slug>` (DEFAULT = cheap `--limit 5` calibration); add `--full` only after eyeballing calibration output. Chains preflight → detect_language → rehydrate → transcribe_tag (1 Flash call/video) → embed_scripts → script_cluster → compute_rank_metrics → build_report → (if both platforms) fb_google_overlap.
 
 **Step 6. COMMIT/PUSH:** `tools/log_and_commit.sh <pipeline> <slug> "<operator name>" "<one-line note>"` then `git push`
+
+> **Naming rule (read once, applies everywhere):** "**Step N**" refers ONLY to this canonical 6-step pipeline (Step 4 = Free Analysis — *free, no AI*). The optional, expensive **creative-generation workflow** — competitor decompose → Supernova rewrite → deliverable docs → collaborative Google Docs — is called **Creative Studio**. It is NOT a numbered canonical step: it runs only behind a typed cost gate, has its OWN internal Stages 0–9, and its scripts carry the legacy `step4_` filename prefix (`facebook/scripts/step4_*.py`, working dir `step4_workspace/`). Never call Creative Studio a "Step". Full Creative Studio docs: `facebook/HANDOVER.md §9`.
 
 ## Facebook scrape: run the auto-clicker
 

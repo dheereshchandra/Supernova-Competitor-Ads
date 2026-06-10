@@ -68,9 +68,9 @@ See **§6.8** for the full reference (safeguards, flags, startup diagnostics, an
 3. Cowork will:
    - Save the CSV to `inputs/` with a timestamp
    - Run Steps 2 + 3 (download videos, upload to R2, update master) — ~5–15 min
-   - Show you the cost estimate for Step 4
+   - Show you the cost estimate for Creative Studio
    - **Ask you to approve** (or reduce scope or cancel)
-   - On approval, run Step 4 — ~20–60 min, mostly waiting on Gemini's queue
+   - On approval, run Creative Studio — ~20–60 min, mostly waiting on Gemini's queue
    - Present the final docs to you for review
 
 **Step C** (verify the master):
@@ -95,7 +95,7 @@ That's the entire workflow.
 |---|---|
 | Cowork doesn't know where to start | Tell it *"read HANDOVER.md sections 0 and 17, then re-confirm what step we're on"* |
 | Step 2 says HTTP 429 (rate limit) | Wait 30 minutes, re-run the same command. Facebook rate-limits aggressively. |
-| Step 3 / Step 4 mid-run gets killed | Cowork's 45-second bash cap. Just re-invoke the same command — every step is resumable (per-row checkpointing). |
+| Step 3 / Creative Studio mid-run gets killed | Cowork's 45-second bash cap. Just re-invoke the same command — every step is resumable (per-row checkpointing). |
 | The cost estimate looks 3× higher than expected | Stop, surface to maintainer. Don't approve. |
 | A docx has obviously broken text or images | Cowork has a per-doc review step that should catch this. If it slipped through, tell Cowork *"the doc for ad X is broken, re-build it"* — re-running rebuilds without re-decomposing. |
 | Audit reports a URL not reachable | The R2 object was lost or never uploaded. Re-run `python3 scripts/backfill_step4_images.py --competitor {slug} {ad_id}` — idempotent. |
@@ -108,7 +108,7 @@ That's the entire workflow.
 - **Never** edit `master/{competitor}.csv` by hand. The pipeline owns it. Hand-edits will be overwritten on the next run. (This now includes the three new image-URL JSON-array columns — see §9.7.)
 - **Never** edit `scraper_prompt.md` unless adding a new competitor to `COMPETITOR_PAGES` (see §6.6). Don't touch the JS or the prompt logic.
 - **Never** share `.env` with anyone. It contains R2 + Gemini secrets.
-- **Never** approve a Step 4 cost estimate above $50 without checking with the maintainer.
+- **Never** approve a Creative Studio cost estimate above $50 without checking with the maintainer.
 - **Never** delete files in `step4_workspace/`. They're the resume state for partial runs.
 
 ---
@@ -130,6 +130,8 @@ Competitor ad research is a recurring need. We track what other ed-tech and spok
 ---
 
 ## 2. The 4-step pipeline at a glance
+
+> **Naming note:** the step numbers in THIS section are the facebook folder's *own local* framing of this folder's scripts (Scrape → Download → R2 → a future DB push). They are NOT the canonical "Step N" from CLAUDE.md (where **Step 4 = Free Analysis**, free/no-AI), and the video-analysis work is **Creative Studio** (§9), never a "Step". When the two disagree, CLAUDE.md + "Creative Studio" are authoritative.
 
 ```
 Step 1 — Scrape                   Step 2 — Download              Step 3 — Upload to R2          Step 4 — Push to DB
@@ -154,7 +156,7 @@ Each step's output is the next step's input. Skip a step and the next one breaks
 | 1. Scrape | ✅ Ready | `scraper_prompt.md` + Section 6 below |
 | 2. Download | ✅ Ready | `scripts/download_fb_ads.py` + Section 7 below |
 | 3. R2 upload | ✅ Ready | `scripts/upload_to_r2.py` + Section 8 below |
-| 4. Video analysis | ✅ Ready | `skills/fb-ads-video-analysis/` + 7 `scripts/step4_*.py` + Section 9 below |
+| 4. Creative Studio (video analysis) | ✅ Ready | `skills/fb-ads-video-analysis/` + 7 `scripts/step4_*.py` + Section 9 below |
 | (5. DB push) | Future, not yet designed | Will be added when needed |
 
 ---
@@ -168,7 +170,7 @@ If you've never run this pipeline on this Mac before, do these in order. Each it
 3. **Run Step 1** (Scrape) → Section 6. Pick one competitor, paste `scraper_prompt.md` into Claude-in-Chrome, get a CSV in `~/Downloads/`.
 4. **Run Step 2** (Download) → Section 7.1. Drop the CSV into Cowork, say *"save this to inputs/ and run the downloader"*. Cowork does the rest.
 5. **Run Step 3** (R2 upload) → Section 7.1's same drop-in-Cowork flow, against the enriched CSV from Step 2. Say *"run step 3"* and Cowork executes `scripts/upload_to_r2.py`.
-6. **Do Step 4 manually** → Section 9 (still placeholder today). Push the enriched CSV to the DB by hand.
+6. **(Optional) Run Creative Studio** → Section 9, the gated generation workflow (competitor analysis + Supernova rewrite + Google Docs). A DB push is a future facebook-local step (not yet built — nothing to do for it today).
 7. **If anything breaks** → Section 13. Symptom → cause → fix table covers every known failure.
 
 Easiest possible kickoff: open this folder in Cowork and just say *"I want to run the FB competitor ads pipeline from the beginning."* Cowork reads this doc and walks you through. The playbook it uses is in Section 16.
@@ -696,14 +698,14 @@ fb-ad-downloader/
 
 ### 8.7 Master CSV schema
 
-36 scraper columns + 3 added by Step 3 + 5 reserved for Step 4 = 44 total. The master identity (the key a row is upserted on) is now `(ad_library_id, version_index, creative_index_in_ad)` — both `version_index` and `creative_index_in_ad` are 0-based, so a single-version single-creative ad keys on `(id, 0, 0)`. All `version_*` columns are additive: old masters written before version-expansion have no `version_index` column, so it reads blank and coerces to `0`.
+36 scraper columns + 3 added by Step 3 + 5 reserved for Creative Studio = 44 total. The master identity (the key a row is upserted on) is now `(ad_library_id, version_index, creative_index_in_ad)` — both `version_index` and `creative_index_in_ad` are 0-based, so a single-version single-creative ad keys on `(id, 0, 0)`. All `version_*` columns are additive: old masters written before version-expansion have no `version_index` column, so it reads blank and coerces to `0`.
 
 Step 3 columns:
 - `r2_public_url` — the public Cloudflare URL of the uploaded file (empty for Image rows until §8.5 is decided)
 - `first_scrape_run_date` — date this `(ad_library_id, creative_index_in_ad)` first appeared in any run
-- `latest_scrape_run_date` — date of the most recent run where this row was observed (lets Step 4 compute "ads retired")
+- `latest_scrape_run_date` — date of the most recent run where this row was observed (lets Creative Studio compute "ads retired")
 
-Step 4 columns (declared in `MASTER_EXTRA_COLS` in `scripts/upload_to_r2.py` so they survive Step-3 re-runs even when empty):
+Creative Studio columns (declared in `MASTER_EXTRA_COLS` in `scripts/upload_to_r2.py` so they survive Step-3 re-runs even when empty):
 - `competitor_analysis_docx_r2_url` — URL of the per-ad competitor analysis Word doc
 - `supernova_rewrite_docx_r2_url` — URL of the per-ad Supernova-voice rewrite Word doc
 - `orig_frame_urls` — JSON-encoded array of R2 URLs for every original scene frame, in scene order
@@ -747,17 +749,19 @@ For posterity, the first successful end-to-end run on Zinglish:
 
 ---
 
-## 9. Step 4 — Video analysis (scene decomposition + Supernova rewrite)
+## 9. Creative Studio (scene decomposition + Supernova rewrite)
+
+Implemented by the `step4_*.py` scripts (legacy filename prefix) and the `step4_workspace/` directory; this is **NOT** canonical Step 4 — canonical Step 4 is Free Analysis in CLAUDE.md. Creative Studio is the optional, expensive creative-generation workflow, gated by a typed cost estimate, with its own internal Stages 0–9 + Audit.
 
 ✅ **Ready and validated end-to-end.** First production run completed on a 5-video Zinglish sample: 10 docs built, all R2 URLs reachable, master CSV updated, $1.00 actual cost (under the $1.25 estimate).
 
-**What this step does**: for every row in `master/{competitor}.csv` that has a video in R2 but no analysis docs yet, run the 9-stage AI pipeline (plus a HEAD-check audit) that produces **two Word documents** per video — one with a scene-by-scene competitor breakdown, one with a Supernova-voice rewrite — uploads every per-scene image AND both docs to R2, embeds an `Asset: <R2 URL>` hyperlink caption beneath every embedded picture, and back-fills the **five** new URL columns in the master (two doc URLs + three JSON-array image-URL columns; see §9.7).
+**What Creative Studio does**: for every row in `master/{competitor}.csv` that has a video in R2 but no analysis docs yet, run the 9-stage AI pipeline (plus a HEAD-check audit) that produces **two Word documents** per video — one with a scene-by-scene competitor breakdown, one with a Supernova-voice rewrite — uploads every per-scene image AND both docs to R2, embeds an `Asset: <R2 URL>` hyperlink caption beneath every embedded picture, and back-fills the **five** new URL columns in the master (two doc URLs + three JSON-array image-URL columns; see §9.7).
 
 **Operator-facing details live in the skill**: `skills/fb-ads-video-analysis/SKILL.md`. That file has the exact script invocations.
 
 **Operator-facing details live in the skill**: `skills/fb-ads-video-analysis/SKILL.md`. That file is the source of truth for the per-stage logic, the verification gates, the cost-approval gate, and the hard rules. This section just gives the pipeline-level overview.
 
-### 9.1 The five master columns Step 4 owns
+### 9.1 The five master columns Creative Studio owns
 
 | Column | Type | What it contains |
 |---|---|---|
@@ -767,15 +771,15 @@ For posterity, the first successful end-to-end run on Zinglish:
 | `gen_panel_urls` | JSON array | R2 URLs of every AI-regenerated clean panel, scene+position order |
 | `char_sheet_urls` | JSON array | R2 URLs of every character reference sheet, character-id order |
 
-All five are empty in master rows until Step 4 runs for them. The image-URL columns are populated by Stage 4.5 (image upload) and propagated by Stage 8 (master update). See §9.7 for the URL contract.
+All five are empty in master rows until Creative Studio runs for them. The image-URL columns are populated by Stage 4.5 (image upload) and propagated by Stage 8 (master update). See §9.7 for the URL contract.
 
 ### 9.2 The cost-approval gate (mandatory before any Gemini call)
 
-This is *the* most important UX feature of Step 4. The operator cannot accidentally burn through Gemini quota.
+This is *the* most important UX feature of Creative Studio. The operator cannot accidentally burn through Gemini quota.
 
 Workflow:
 
-1. Operator invokes Step 4 (via the master skill `fb-ads-pipeline` or directly via `fb-ads-video-analysis`) with a scope: `--random 5`, `--all`, `--ids X,Y,Z`, etc.
+1. Operator invokes Creative Studio (via the master skill `fb-ads-pipeline` or directly via `fb-ads-video-analysis`) with a scope: `--random 5`, `--all`, `--ids X,Y,Z`, etc.
 2. Before any API call fires, `scripts/estimate_step4_cost.py` runs locally — pure math, no Gemini call. It probes each candidate video's duration with `ffprobe`, estimates scene count + character count, and computes per-row cost.
 3. The operator sees a per-row breakdown table + batch total + wall-clock estimate.
 4. The operator must explicitly approve via AskUserQuestion (`Approve / Reduce scope / Cancel`).
@@ -801,7 +805,7 @@ BATCH TOTAL:         $1.25
 Wall-clock estimate: 25–45 min
 ```
 
-### 9.3 The 9-stage pipeline + audit (with verification at every transition)
+### 9.3 The Creative Studio 9-stage pipeline + audit (with verification at every transition)
 
 | Stage | Engine | What it produces | Cost band |
 |---|---|---|---|
@@ -814,7 +818,7 @@ Wall-clock estimate: 25–45 min
 | 5. Supernova-voice rewrite | Gemini 3.1 Pro Batch API | `step4_workspace/scenes/<id>.supernova.json` | ~$0.02/row |
 | 6. Build two `.docx` files (each image followed by `Asset: <R2 URL>` hyperlink) | python-docx, local | `step4_workspace/docs/<id>_*.docx` | $0 |
 | 7. Upload docs to R2 | boto3, local | Two new R2 keys per row | $0 |
-| 8. Update master CSV (5 URL columns) | Local, per-row checkpoint | All five Step-4 columns back-filled | $0 |
+| 8. Update master CSV (5 URL columns) | Local, per-row checkpoint | All five Creative Studio columns back-filled | $0 |
 | **9. Upload both docs as collaborative Google Docs (Shared Drive)** | Drive API, local | Two native Google Docs + 2 `*_gdoc_url` master columns + `scenes/<id>.gdocs.json` | $0 + Drive quota |
 | Audit. HEAD-check every URL in docs + master | `scripts/step4_audit.py` | Pass/fail report per ad | $0 |
 
@@ -832,7 +836,7 @@ If review fails, the docs stay in `step4_workspace/docs/` (not uploaded). The ro
 
 ### 9.5 Image-only ads — the simpler single-page treatment
 
-For master rows with `ad_media_type=Image`, Step 4 runs a simpler pipeline:
+For master rows with `ad_media_type=Image`, Creative Studio runs a simpler pipeline:
 
 - No decompose batch — single Gemini Pro call analyses the image + ad copy
 - No character sheets, no panel imagery
@@ -840,7 +844,7 @@ For master rows with `ad_media_type=Image`, Step 4 runs a simpler pipeline:
 - Two single-page docs (analysis + rewrite of just the ad copy)
 - Total cost: ~$0.05 per image-only row vs. ~$0.20–0.40 per video row
 
-### 9.6 Resume behaviour (Step 4 is fully idempotent)
+### 9.6 Resume behaviour (Creative Studio is fully idempotent)
 
 If Cowork's bash cap kills any stage mid-way: just re-invoke. Already-completed work is skipped:
 
@@ -852,16 +856,16 @@ The expected pattern is "re-run until status reports clear" — same as Steps 2 
 
 ### 9.7 The image-URL contract — high-res images, every image addressable in R2
 
-This is the contract Step 4 makes with downstream ad-creation automation. Read this if anything about images, resolutions, R2 keys, or doc captions looks confusing.
+This is the contract Creative Studio makes with downstream ad-creation automation. Read this if anything about images, resolutions, R2 keys, or doc captions looks confusing.
 
-**The high-resolution policy.** Every image produced by Step 4 is high-res end-to-end:
+**The high-resolution policy.** Every image produced by Creative Studio is high-res end-to-end:
 
 - ffmpeg frame extraction uses no `-vf scale=...` filter → output is source-native resolution (typically 720×1280 or 1080×1920 for vertical mobile ads).
 - ffmpeg quality is `-q:v 2` (≈90% MJPEG). Do not lower.
 - Both Nano Banana Pro calls (Stage 3 character sheets, Stage 4 panels) pass `image_config={"image_size": "2K"}` — the largest output the model supports (~2048px). Aspect ratio is `1:1` for character sheets; for panels it's inferred from the source video and falls back to `9:16`.
 - Validity floor for original frames raised from 5 KB to 20 KB so degenerate writes can't slip through.
 
-**The R2 key layout.** Every Step-4 image lives under a per-ad folder so a single consumer can list all assets for an ad with one `list_objects_v2(Prefix="images/<ad_id>/")`:
+**The R2 key layout.** Every Creative Studio image lives under a per-ad folder so a single consumer can list all assets for an ad with one `list_objects_v2(Prefix="images/<ad_id>/")`:
 
 ```
 images/<ad_library_id>/orig_<NN>.jpg          original scene frames (Stage 2)
@@ -966,7 +970,7 @@ Numbers from the validated first run, useful for sanity-checking future runs:
 | Programmatic verification | All passed |
 | Errors | 0 |
 
-These numbers were captured before §9.7 (per-image R2 uploads + 5-column master) shipped. Future runs will additionally produce ~3–10 image uploads per ad (originals + panels + sheets) — at zero marginal cost since R2 storage is per-byte, not per-PUT-call for our usage. The audit step adds ~1–2 seconds per ad (HEAD checks).
+These numbers were captured before §9.7 (per-image R2 uploads + 5-column master) shipped. Future Creative Studio runs will additionally produce ~3–10 image uploads per ad (originals + panels + sheets) — at zero marginal cost since R2 storage is per-byte, not per-PUT-call for our usage. The audit step adds ~1–2 seconds per ad (HEAD checks).
 
 If a future run wildly diverges from these numbers (e.g. cost > 3× the estimate, or all panels content-policy-blocked, or the audit step reports any URLs unreachable), pause and surface to the operator before proceeding.
 
@@ -1185,10 +1189,10 @@ When the operator says anything like *"run the pipeline"*, *"start from the begi
 1. Identify the input CSV (the per-run one in `inputs/`, e.g. `fb-ads-zinglish-2026-05-26-0728.csv`) and the matching videos folder (`videos/zinglish-2026-05-26/`)
 2. Optionally `--dry-run` first to surface any `video-missing` / `image-pending` rows
 3. Run `python3 scripts/upload_to_r2.py --input <csv> --videos <dir>`. If the bash cap kills it mid-run, just re-invoke — already-uploaded rows are in the master and become carry-forwards
-4. Surface to the operator: uploaded count, carried-forward count, errors (if any), path to `master/{competitor}.csv` and the enriched CSV. The `r2_public_url` column in the enriched CSV is now ready for Step 4
+4. Surface to the operator: uploaded count, carried-forward count, errors (if any), path to `master/{competitor}.csv` and the enriched CSV. The `r2_public_url` column in the enriched CSV is now ready for Creative Studio
 5. If you see `image-pending` rows, tell the operator clearly that image-handling is deferred (per HANDOVER §8.5) and ask whether to flag for follow-up or just proceed without those URLs
 
-**Step 4 (video analysis):** Owned by the `fb-ads-video-analysis` skill. Don't try to run its stages directly — invoke the skill and follow its SKILL.md. Specifically: never call any Gemini API endpoint before the cost-estimate + operator-approval gate has explicit yes. After the skill finishes, run `python3 scripts/step4_audit.py --competitor {slug} --all` to HEAD-check every URL recorded in the docs and master CSV — see §9.7 for the URL contract this step enforces. See §17 below for how the three-skill model fits together.
+**Creative Studio (video analysis):** Owned by the `fb-ads-video-analysis` skill. Don't try to run its stages directly — invoke the skill and follow its SKILL.md. Specifically: never call any Gemini API endpoint before the cost-estimate + operator-approval gate has explicit yes. After the skill finishes, run `python3 scripts/step4_audit.py --competitor {slug} --all` to HEAD-check every URL recorded in the docs and master CSV — see §9.7 for the URL contract this step enforces. See §17 below for how the three-skill model fits together.
 
 **Backfill (one-off):** If the operator asks to "add R2 image URLs to existing docs" or notices missing image URLs in the master, run `python3 scripts/backfill_step4_images.py --competitor {slug} --all-with-docs`. It re-uploads every image, rebuilds the docs with `Asset:` hyperlink captions, patches the master columns, and runs the audit. Idempotent.
 
@@ -1216,7 +1220,7 @@ The pipeline is organised as **three Cowork skills**, all living under `skills/`
 
 Two reasons:
 
-1. **Different cost profiles.** Steps 2+3 are essentially free (just bandwidth + R2 storage). Step 4 burns Gemini Pro + Nano Banana Pro — meaningful money. Splitting them lets the master skill interpose a *cost estimate + approval gate* before any expensive call fires.
+1. **Different cost profiles.** Steps 2+3 are essentially free (just bandwidth + R2 storage). Creative Studio burns Gemini Pro + Nano Banana Pro — meaningful money. Splitting them lets the master skill interpose a *cost estimate + approval gate* before any expensive call fires.
 2. **Different invocation patterns.** Sometimes you only want videos in R2 (no analysis). Sometimes you only want analysis on rows already in R2 (no fresh download). The sub-skills are usable on their own; the master is the convenience wrapper for the full refresh.
 
 ### 17.2 The three skills
@@ -1225,7 +1229,7 @@ Two reasons:
 |---|---|---|
 | `fb-ads-pipeline` (master) | Orchestrates the other two with a cost gate between | Full weekly/fortnightly refresh — *"run the pipeline end-to-end on this CSV"* |
 | `fb-ads-download-and-upload` (sub) | Steps 2 + 3 — CSV in, videos in R2, master CSV back-filled with `r2_public_url` | Just want videos in R2, no analysis — or invoked by the master |
-| `fb-ads-video-analysis` (sub) | Step 4 — scene decomposition + two-docx output + per-image R2 uploads + 5-column master URL back-fill + HEAD-check audit | Just want analysis on existing R2 videos — or invoked by the master |
+| `fb-ads-video-analysis` (sub) | Creative Studio — scene decomposition + two-docx output + per-image R2 uploads + 5-column master URL back-fill + HEAD-check audit | Just want analysis on existing R2 videos — or invoked by the master |
 
 **Step 1 is not a skill** — it runs in the operator's Claude-in-Chrome standalone session (the Chrome extension drives Meta Ad Library directly). The CSV it produces is the input that flows into the master skill.
 
@@ -1233,17 +1237,17 @@ Two reasons:
 
 When the operator says *"run the full pipeline on this CSV"*:
 
-1. **Phase A — Setup.** Master skill asks for the Step 1 CSV (attachment in chat or a path). Identifies the competitor slug from the filename. Sanity-checks `.env` for both R2 and Gemini keys; if Gemini is missing, offers to run only Phases A-B and pause Step 4 for later.
+1. **Phase A — Setup.** Master skill asks for the Step 1 CSV (attachment in chat or a path). Identifies the competitor slug from the filename. Sanity-checks `.env` for both R2 and Gemini keys; if Gemini is missing, offers to run only Phases A-B and pause Creative Studio for later.
 2. **Phase B — Steps 2+3.** Invokes `fb-ads-download-and-upload` sub-skill. Sub-skill runs `scripts/download_fb_ads.py` (chunked re-runs for the 45s cap) then `scripts/upload_to_r2.py`. Master surfaces the tally.
-3. **Phase C — Cost gate.** Master reads `master/{competitor}.csv`, identifies candidate Step 4 rows (missing one or both docx URLs). Asks the operator how many to analyse (random N, all, specific IDs). Runs `scripts/estimate_step4_cost.py` — **pure local math, no Gemini call**. Shows the operator a per-row cost breakdown + batch total. Asks for explicit approval.
-4. **Phase D — Step 4.** Only on explicit approval, invokes `fb-ads-video-analysis` sub-skill. Sub-skill runs the 9 stages (including Stage 4.5 image upload, see §9.7) with verification at every transition + per-doc Claude review, then runs `scripts/step4_audit.py` to HEAD-check every URL. Resumable across Cowork bash-cap interruptions.
+3. **Phase C — Cost gate.** Master reads `master/{competitor}.csv`, identifies candidate Creative Studio rows (missing one or both docx URLs). Asks the operator how many to analyse (random N, all, specific IDs). Runs `scripts/estimate_step4_cost.py` — **pure local math, no Gemini call**. Shows the operator a per-row cost breakdown + batch total. Asks for explicit approval.
+4. **Phase D — Creative Studio.** Only on explicit approval, invokes `fb-ads-video-analysis` sub-skill. Sub-skill runs the 9 stages (including Stage 4.5 image upload, see §9.7) with verification at every transition + per-doc Claude review, then runs `scripts/step4_audit.py` to HEAD-check every URL. Resumable across Cowork bash-cap interruptions.
 5. **Phase E — Final report.** Master shows: Phase B tally, Phase D tally, actual Gemini cost, wall-clock, any quality-failed rows with explanations, path to the updated master CSV.
 
 ### 17.4 Invoking sub-skills directly (skip the master)
 
 - *"Run the downloader and upload on `inputs/fb-ads-zinglish-2026-05-26-0728.csv`"* → invoke `fb-ads-download-and-upload` directly
 - *"Analyse 5 random ads from the Zinglish master"* → invoke `fb-ads-video-analysis` directly (still subject to its own internal cost gate)
-- *"Re-run Step 4 on these specific ad IDs: X, Y, Z"* → invoke `fb-ads-video-analysis` with `--ids X,Y,Z`
+- *"Re-run Creative Studio on these specific ad IDs: X, Y, Z"* → invoke `fb-ads-video-analysis` with `--ids X,Y,Z`
 
 The cost gate inside `fb-ads-video-analysis` enforces approval regardless of whether the master or the sub-skill is invoked. There's no way to bypass the gate.
 
@@ -1254,7 +1258,7 @@ skills/
 ├── ARCHITECTURE.md                          ← read first, design rationale
 ├── fb-ads-pipeline/SKILL.md                 ← master orchestrator
 ├── fb-ads-download-and-upload/SKILL.md      ← Steps 2+3 sub-skill
-└── fb-ads-video-analysis/SKILL.md           ← Step 4 sub-skill
+└── fb-ads-video-analysis/SKILL.md           ← Creative Studio sub-skill
 ```
 
 The skills *don't* contain their own scripts — they reference scripts that live in the pipeline root's `scripts/` folder. That way the existing `scripts/download_fb_ads.py` and `scripts/upload_to_r2.py` stay where they are (no breaking moves), and the new `scripts/estimate_step4_cost.py` and `scripts/run_step4.py` sit alongside them.

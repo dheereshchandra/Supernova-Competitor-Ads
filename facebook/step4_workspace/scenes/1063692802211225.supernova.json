@@ -1,0 +1,95 @@
+{
+  "competitor_id": "1063692802211225",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Interviewer / Mentor",
+        "appearance": "A man in his late 20s or early 30s with a medium build and a dark complexion. He has short black hair styled up, a full, well-groomed beard and mustache, and wears black-rimmed glasses.",
+        "wardrobe": "A plain black t-shirt.",
+        "demeanor": "Professional, calm, and encouraging."
+      },
+      {
+        "id": "B",
+        "role": "Interviewee / Learner",
+        "appearance": "A young man in his early 20s with a medium build and a dark complexion. He has short, dark hair and a mustache. He appears friendly and earnest.",
+        "wardrobe": "A bright orange polo shirt with a small logo on the left chest.",
+        "demeanor": "Initially nervous and hesitant, becoming more confident and agreeable."
+      },
+      {
+        "id": "C",
+        "role": "AI App User",
+        "appearance": "A young man in his mid-20s with a medium build, dark complexion, short dark hair, and a well-groomed beard. He is seen in a dimly lit room.",
+        "wardrobe": "A grey hooded sweatshirt.",
+        "demeanor": "Engaged and pleasantly surprised."
+      },
+      {
+        "id": "D",
+        "role": "Female Co-learner 1",
+        "appearance": "A woman in her late 20s or early 30s with a slim build and a warm, medium complexion. She has dark hair tied back neatly.",
+        "wardrobe": "A traditional green and red saree with gold jewelry.",
+        "demeanor": "Happy and smiling pleasantly."
+      },
+      {
+        "id": "E",
+        "role": "Male Co-learner 1",
+        "appearance": "A man in his late 20s with a slim build and a medium complexion. He has dark, medium-length hair and a full beard.",
+        "wardrobe": "A light beige or cream-colored button-down shirt.",
+        "demeanor": "Thoughtful and engaged in conversation."
+      },
+      {
+        "id": "F",
+        "role": "Female Co-learner 2",
+        "appearance": "A woman in her mid-20s with a fair complexion and a slim build. She has shoulder-length dark hair with reddish highlights and a fringe, and a prominent tattoo on her left bicep.",
+        "wardrobe": "A black V-neck top.",
+        "demeanor": "Serious and focused on her conversation."
+      },
+      {
+        "id": "G",
+        "role": "Male Co-learner 2",
+        "appearance": "A young man in his early 20s with a slim build and a fair complexion. He has thick, curly dark hair.",
+        "wardrobe": "A light-colored t-shirt.",
+        "demeanor": "Worried or distressed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Language Barrier",
+        "supernova_script": "Character A says: Tell me about yourself.\nCharacter B says: Sir... can I answer in Hindi? I freeze when I have to speak English.\nCharacter A says: You studied in English medium for 12 years, right?\nCharacter B says: Yes, sir.\nCharacter A says: See, you learned your mother tongue by actually speaking it, not by reading grammar books. English works exactly the same way. You just need a safe space to practice speaking out loud.",
+        "scene_summary": "- Hooks viewer with high-stakes job interview scenario.\n- Names English immediately and introduces the mother-tongue reframe (beat f).\n- Highlights the failure of old methods (beat d).",
+        "supernova_on_screen_text": "Interviews going like this?\nTell me about yourself.\nSir... can I answer in Hindi?\nI freeze when I have to speak English.\nStudied in English medium for 12 years?\nYou learned your mother tongue\nby actually speaking it.\nEnglish works exactly the same way.\nYou just need a safe space to speak."
+      },
+      {
+        "n": 2,
+        "scene_label": "Introducing the Solution: MySivi",
+        "supernova_script": "Character A says: That's why I always recommend the Supernova app. It has a personal AI teacher named Miss Nova.\nCharacter A says: She doesn't just give you generic lessons. She analyzes your exact level and builds a personalized plan just for you.\nCharacter A says: You practice speaking in real-life scenarios, like client calls or interviews.\nCharacter A says: And the best part? You can make 1000 mistakes at 3 a.m. She corrects you in your own language, with zero judgment.",
+        "scene_summary": "- Introduces Supernova and Miss Nova as the solution.\n- Delivers core retention beats: personalization (beat a) and privacy/no-judgment (beat b).\n- Reframes the visual cutaways as practicing real-life scenarios (beat e) and getting logic explained in your language (beat g).",
+        "supernova_on_screen_text": "Try the Supernova app.\nPersonal AI teacher: Miss Nova.\nBuilds a personalized plan just for you.\nPractice real-life scenarios.\nMake 1000 mistakes at 3 a.m.\nCorrects you in your own language.\nZero judgment."
+      },
+      {
+        "n": 3,
+        "scene_label": "Social Proof and Decision",
+        "supernova_script": "Character B says: But how can an AI teach me better than a human?\nCharacter A says: ChatGPT is just an assistant, but Miss Nova is a real teacher. Plus, over 1 crore Indians are already using it. Stop wasting hours on grammar PDFs. Just 15 minutes a day.\nCharacter B says: Okay, I will install Supernova and start speaking today.\nCharacter A says: Perfect.",
+        "scene_summary": "- Handles the AI skepticism objection with the ChatGPT contrast.\n- Provides approved social proof (1 crore+ users).\n- Closes with negative/positive time anchors and a clean install CTA.",
+        "supernova_on_screen_text": "How can AI teach me?\nChatGPT is an assistant.\nMiss Nova is a teacher.\n1 Crore+ users in India.\nStop wasting hours on PDFs.\nJust 15 minutes a day.\nInstall Supernova and start speaking today.\nPerfect.\n[App Store Screenshot Text]: Top Charts, Free Apps, Paid Apps, 2 Supernova Learn & Speak English, Your Personal AI English Tutor, Open"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a, b, d, e, f, g",
+      "kept_from_seed": "Split-screen interview format with AI/co-learner cutaways",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781075719.97009
+}

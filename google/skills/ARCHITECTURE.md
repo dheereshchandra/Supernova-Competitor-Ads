@@ -42,7 +42,7 @@ Google-specific differences called out in §1.5.
         ▼                 ▼                              ▼
 ┌──────────────────┐ ┌──────────────────────────┐ ┌─────────────────────────────┐
 │ google-ad-       │ │ google-ads-download-     │ │ google-ads-video-analysis   │
-│ scraper          │ │ and-upload               │ │ (Step 4)                    │
+│ scraper          │ │ and-upload               │ │ (Creative Studio)           │
 │ (Step 1)         │ │ (Steps 2 + 3)            │ │                             │
 │                  │ │                          │ │  • cost estimate + gate     │
 │ Advertiser IDs   │ │ CSV in → yt-dlp metadata │ │  • per-format branching     │
@@ -82,7 +82,7 @@ Five things shape the Google variant:
 
 3. **Format heterogeneity.** A Meta advertiser is mostly Video, occasionally
    Image. A Google advertiser is a mix of YouTubeVideo / Image / Text /
-   Shopping / Maps. Step 4 branches on `creative_format`. The text-only path
+   Shopping / Maps. Creative Studio branches on `creative_format`. The text-only path
    (single Gemini sync call analysing the headline + description → two
    single-page docs) doesn't exist in the FB pipeline.
 
@@ -128,7 +128,7 @@ Five things shape the Google variant:
 
 Everything else — the four-skill split, the cost-approval gate, the
 idempotency rules, the per-row checkpointing, the verification gates between
-Step 4 stages, the Claude-reviews-the-docx pattern — is the same as the FB
+Creative Studio stages, the Claude-reviews-the-docx pattern — is the same as the FB
 pipeline.
 
 ## Step 1 architecture (Google-specific)
@@ -179,16 +179,16 @@ Nothing else in the folder needs touching.
 Same three arguments as FB:
 
 1. **Different cost profiles.** Steps 1+2+3 are essentially free
-   (HTTP + R2 PUT charges). Step 4 burns Gemini Pro + Nano Banana Pro —
+   (HTTP + R2 PUT charges). Creative Studio burns Gemini Pro + Nano Banana Pro —
    meaningful money. Splitting them lets the master skill interpose a
    cost-estimate + approval gate.
 2. **Different invocation patterns.** Sometimes you only want to add a new
    competitor (Step 1 only). Sometimes you only want assets in R2 (Steps
    1-3 only, no analysis). Sometimes you only want analysis on existing R2
-   assets (Step 4 only, no fresh download). The sub-skills are usable on
+   assets (Creative Studio only, no fresh download). The sub-skills are usable on
    their own; the master is the convenience wrapper.
 3. **Different failure modes.** Step 1 fails on Google rate-limits.
-   Step 2/3 fail on yt-dlp / R2 credentials. Step 4 fails on Gemini billing
+   Step 2/3 fail on yt-dlp / R2 credentials. Creative Studio fails on Gemini billing
    or content-policy blocks. Keeping them separate makes each failure
    localised and retryable.
 
@@ -203,7 +203,7 @@ Same three arguments as FB:
 - Surfaces Step 1's tally
 - Invokes `google-ads-download-and-upload` with the resulting CSVs
 - Surfaces that sub-skill's tally
-- Asks: "ready to estimate Step 4 cost?" — waits for explicit yes
+- Asks: "ready to estimate Creative Studio cost?" — waits for explicit yes
 - Invokes `google-ads-video-analysis` with the chosen scope
 - Surfaces the final tally including R2 URLs for all generated docs
 
@@ -253,7 +253,7 @@ Per-row decision logic, branching on `creative_format`:
 
 It does **not** touch Gemini, image generation, or document building.
 
-### `google-ads-video-analysis` (Step 4)
+### `google-ads-video-analysis` (Creative Studio)
 
 **One job:** for every analysable master row whose docx URLs are missing,
 produce two analysis docs and back-fill those columns.
@@ -281,7 +281,7 @@ Pipeline stages — same as FB plus the Text branch:
 intermediate state to `step4_workspace/`, and updates four columns in the
 master at the end.
 
-## How the cost-estimate-and-approval gate works (Step 4)
+## How the cost-estimate-and-approval gate works (Creative Studio)
 
 1. Read the master CSV.
 2. Identify candidate rows (missing one or both docx URLs).
@@ -298,7 +298,7 @@ master at the end.
 
 This gate is the operator's single most important safety net. Never bypass.
 
-## How verification works at every Step 4 stage
+## How verification works at every Creative Studio stage
 
 - **After decompose**: every row has a sidecar JSON, JSON parses. For video:
   `scenes ≥ 1`, each scene has non-empty `audio_transcript`. For image: 1
@@ -319,7 +319,7 @@ A row only gets uploaded + master-updated when all gates pass. Otherwise
 tagged `quality-fail-needs-rerun` and the orchestrator continues with other
 rows.
 
-## The four new master columns added by Step 4
+## The four new master columns added by Creative Studio
 
 | Column | What it contains |
 |---|---|
@@ -394,7 +394,7 @@ google-ad-downloader/
 
 ## API key handling
 
-Same `.env` file used by Step 3. Step 4 reads `GEMINI_API_KEY`. When
+Same `.env` file used by Step 3. Creative Studio reads `GEMINI_API_KEY`. When
 missing, the analysis skill refuses to run with a clear error. The cost
 estimator (Stage 0) works without the key.
 
@@ -409,7 +409,7 @@ The skill structure should hold up unless one of these changes:
 - The cost-estimate-then-approval pattern becomes operator-burdensome. If
   small fixed batches become the norm, the gate could move from the
   analysis skill to the master only.
-- Google adds a major new ad format we hadn't anticipated. Then the Step 4
+- Google adds a major new ad format we hadn't anticipated. Then the Creative Studio
   skill grows a new branch.
 
 Until one of those triggers, this is the shape.

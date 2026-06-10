@@ -1,7 +1,7 @@
 # analysis/ — competitor-ad rank-over-time analysis
 
 Turns the dated scrape snapshots into rank-over-time charts and winner/loser
-verdicts per competitor. **Phase 1 (this folder) is free — pure Python, no API.**
+verdicts per competitor. **Phase 1 (this folder) — canonical Step 4, Free Analysis (free, no AI) — is free — pure Python, no API.**
 
 ## The model (git holds the precious text)
 

@@ -19,7 +19,7 @@ like `_enriched`/`_NEW_ONLY` are ignored) and:
   macOS notification. The Facebook scrape is manual (Claude-in-Chrome), so the job can
   only remind you — it never scrapes.
 
-It deliberately stops at Stage 5: **Step-4 (Supernova script/image generation — Gemini
+It deliberately stops at Stage 5: **Creative Studio (Supernova script/image generation — Gemini
 Pro + image-gen) is never run automatically.** Run that yourself, gated, with
 `run_pipeline.sh --competitor <slug> --step4-scope top:20 --execute-step4`.
 

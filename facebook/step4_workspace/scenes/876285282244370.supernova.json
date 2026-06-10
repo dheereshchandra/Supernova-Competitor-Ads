@@ -1,0 +1,46 @@
+{
+  "competitor_id": "876285282244370",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Male student",
+        "appearance": "A man in his late 30s or early 40s with a fair complexion, lean to medium build, and prominent facial features. He has dark eyes and short, dark hair, though his hairstyle changes between scenes (from a buzz cut to a slightly longer style).",
+        "wardrobe": "In the 'before' state, he wears a simple, loose-fitting white tunic. In the 'after' state, he wears a pale yellow t-shirt with a faint graphic print on the chest.",
+        "demeanor": "His demeanor shifts dramatically from extreme distress, frustration, and confusion to calm, serious, and confident."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Struggling with English",
+        "supernova_script": "Character A (Voiceover) says: 12 years of school and expensive coaching, but when it's time to speak English in an interview...\nCharacter A says: [Screaming and crying in frustration]",
+        "scene_summary": "- Hooks viewer with relatable frustration of freezing during an interview (Payload beat d & e)\n- Names English immediately in the first 5 seconds\n- Sets up the dramatic contrast between old failed methods and the new solution",
+        "supernova_on_screen_text": "My English after spending thousands on coaching classes\n\nMy English after practicing 15 minutes a day on the Supernova app"
+      },
+      {
+        "n": 2,
+        "scene_label": "Confident English Speaker",
+        "supernova_script": "Character A says: Now, I speak flawlessly. How? I stopped reading and started speaking on Supernova.\nCharacter A says: My AI teacher, Miss Nova, practices real job interviews with me.\nCharacter A says: I make a hundred mistakes, and she corrects me live without any judgment.\nCharacter A says: She even explains the logic in my mother tongue. \nCharacter A says: Just 15 minutes a day. That's how I learned, and you can too.",
+        "scene_summary": "- Delivers the core retention engine: privacy/no-judgment (beat b) and personalization (beat a)\n- Highlights the 'speak, don't read' differentiator (beat c) and mother-tongue logic (beat g)\n- Closes with positive time anchor (15 mins) and universality claim",
+        "supernova_on_screen_text": "My English after spending thousands on coaching classes\n\nMy English after practicing 15 minutes a day on the Supernova app\n\nInstall Supernova, start speaking today"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (corrects live), b (without judgment), c (started speaking), d (expensive coaching), e (job interviews), g (mother tongue)",
+      "kept_from_seed": "Preserved the split-screen '3 Idiots' meme format of frustrated vs flawless speaker",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure used; removed the competitor's '3 rupee' claim"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781075719.97186
+}

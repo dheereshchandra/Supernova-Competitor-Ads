@@ -17,7 +17,7 @@ This document is the single source of truth for *why the skill structure is shap
         ▼                                   ▼
 ┌──────────────────────────┐    ┌─────────────────────────────┐
 │ fb-ads-download-and-     │    │  fb-ads-video-analysis      │
-│ upload                   │    │  (Step 4)                   │
+│ upload                   │    │  (Creative Studio)          │
 │ (Steps 2 + 3)            │    │                             │
 │                          │    │  • cost estimate + gate     │
 │  CSV in → videos out     │    │  • decompose + frames +     │
@@ -35,7 +35,7 @@ Step 1 (scraping) is **not** a skill in Cowork — it runs in the operator's Cla
 
 Two arguments shape the split:
 
-1. **Different cost profiles**. Steps 2+3 are essentially free (just disk + R2 storage). Step 4 burns Gemini Pro + Nano Banana Pro per video — meaningful money. Keeping them in separate skills lets the master interpose a *cost estimate + approval gate* between the cheap deterministic stages and the expensive AI stages. The operator gets to see exactly how much Step 4 will cost before authorizing it.
+1. **Different cost profiles**. Steps 2+3 are essentially free (just disk + R2 storage). Creative Studio burns Gemini Pro + Nano Banana Pro per video — meaningful money. Keeping them in separate skills lets the master interpose a *cost estimate + approval gate* between the cheap deterministic stages and the expensive AI stages. The operator gets to see exactly how much Creative Studio will cost before authorizing it.
 
 2. **Different invocation patterns**. The download-and-upload sub-skill is the right unit to invoke on its own when you only want raw videos in R2 — e.g. you're feeding videos to a separate skill, or just stocking the bucket without doing analysis. The video-analysis sub-skill is the right unit when the videos are already in R2 (from a previous run) and you only want to refresh the analysis. The master skill is the right unit when you're doing the full weekly/fortnightly refresh from scratch.
 
@@ -48,11 +48,11 @@ Two arguments shape the split:
 - Asks the operator for the Step 1 CSV (file upload in chat, or a path)
 - Invokes `fb-ads-download-and-upload` with that CSV
 - Surfaces that sub-skill's tally
-- Asks the operator: "ready to estimate Step 4 cost?" — and *waits for explicit yes*
+- Asks the operator: "ready to estimate Creative Studio cost?" — and *waits for explicit yes*
 - Invokes `fb-ads-video-analysis` with the chosen scope (random N rows, all rows, filtered subset)
 - Surfaces the final tally including R2 URLs for all generated docs
 
-If the operator only needs Steps 2+3, they invoke `fb-ads-download-and-upload` directly. If they only need Step 4 against the existing master, they invoke `fb-ads-video-analysis` directly. The master is the convenience wrapper.
+If the operator only needs Steps 2+3, they invoke `fb-ads-download-and-upload` directly. If they only need Creative Studio against the existing master, they invoke `fb-ads-video-analysis` directly. The master is the convenience wrapper.
 
 ### `fb-ads-download-and-upload` (Steps 2 + 3)
 
@@ -65,7 +65,7 @@ It wraps the existing two scripts:
 
 The skill's SKILL.md describes the invocation, the chunked-resume behaviour (Cowork bash cap), and the post-rename column schema. It does **not** touch Gemini, image generation, or document building.
 
-### `fb-ads-video-analysis` (Step 4)
+### `fb-ads-video-analysis` (Creative Studio)
 
 **One job:** for every row in `master/{competitor}.csv` whose `competitor_analysis_docx_r2_url` and `supernova_rewrite_docx_r2_url` are empty, produce two analysis docs and back-fill those columns.
 
@@ -88,7 +88,7 @@ Pipeline stages it owns:
 
 ### Strict rule: the analysis sub-skill never modifies `videos/`, `inputs/`, or any non-master CSV. It only reads from `master/`, writes intermediate state to its own `step4_workspace/`, and updates five columns in the master at the end (`competitor_analysis_docx_r2_url`, `supernova_rewrite_docx_r2_url`, `orig_frame_urls`, `gen_panel_urls`, `char_sheet_urls`) plus the `latest_scrape_run_date` cell.
 
-## How the cost-estimate-and-approval gate works (Step 4)
+## How the cost-estimate-and-approval gate works (Creative Studio)
 
 This is the single most important UX requirement from the operator side.
 
@@ -114,7 +114,7 @@ When `fb-ads-video-analysis` is invoked, BEFORE any Gemini API call fires:
 
 This gate is *the* operator safety net. It makes "accidentally burn $200 on a misclick" impossible.
 
-## How verification works at every stage (Step 4)
+## How verification works at every stage (Creative Studio)
 
 Goal: never end up with a 90%-empty docx after 1–2 hours of compute. Detect failures early; flag quality issues; never silently publish bad output.
 
@@ -132,9 +132,9 @@ After each stage, the orchestrator runs `verify_stage_<N>.py` which checks:
 
 A row only gets uploaded to R2 + written into the master when **every** verification gate passes. Otherwise the row is logged as `quality-fail-needs-rerun` and the orchestrator continues with other rows.
 
-## The five master columns added by Step 4
+## The five master columns added by Creative Studio
 
-Added by Step 4 on top of the 39-column post-Step-3 master (= 36 scraper + 3
+Added by Creative Studio on top of the 39-column post-Step-3 master (= 36 scraper + 3
 Step-3 columns), bringing the final schema to **44 columns**. Declared in
 `MASTER_EXTRA_COLS` in `scripts/upload_to_r2.py` so they survive Step-3 re-runs:
 
@@ -170,7 +170,7 @@ For master rows with `ad_media_type=Image`:
 - Doc 1 (competitor analysis): single page with the ad's image embedded, the `ad_primary_text` / `ad_description` / `ad_cta_label` verbatim, plus a brief AI-generated description of what the image conveys
 - Doc 2 (Supernova rewrite): single page with a regenerated brand-safe image (or the original if regeneration is blocked) + Supernova-voice rewrite of the ad copy
 
-Image fetch: Step 4 will re-resolve the image fresh from `ad_library_url` at processing time (the scraper's `facebook_thumbnail_cdn_url_at_scrape` is stale by then). Caches to `images/{competitor}-{date}/{ad_library_id}.jpg` so re-runs skip the fetch.
+Image fetch: Creative Studio will re-resolve the image fresh from `ad_library_url` at processing time (the scraper's `facebook_thumbnail_cdn_url_at_scrape` is stale by then). Caches to `images/{competitor}-{date}/{ad_library_id}.jpg` so re-runs skip the fetch.
 
 ## Where intermediate state lives
 
@@ -200,7 +200,7 @@ Once a doc is uploaded to R2 and its URL is in the master, the local `.docx` in 
 
 ## API key handling
 
-Same `.env` file we already use for R2. Step 4 reads:
+Same `.env` file we already use for R2. Creative Studio reads:
 
 - `GEMINI_API_KEY` — from `.env` or environment
 
@@ -212,6 +212,6 @@ The skill structure should hold up unless one of these changes:
 
 - We start running Step 1 in Cowork (today it's in Claude-in-Chrome standalone). If that ever happens, add a `fb-ads-scrape` sub-skill and the master picks up another stage.
 - We add a Step 5 (push the master to a DB). That becomes a third sub-skill; the master gains another stage.
-- The cost-estimate-then-approval pattern becomes operator-burdensome. If Step 4 ends up running on small fixed-cost batches (e.g. always 5 videos), the gate could move from `fb-ads-video-analysis` itself into the master only.
+- The cost-estimate-then-approval pattern becomes operator-burdensome. If Creative Studio ends up running on small fixed-cost batches (e.g. always 5 videos), the gate could move from `fb-ads-video-analysis` itself into the master only.
 
 Until one of those triggers, this is the shape.
