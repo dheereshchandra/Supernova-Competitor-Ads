@@ -26,6 +26,9 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from io import BytesIO
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import _casting  # noqa: E402  — shared India-localisation + Miss Nova casting rules (feedback #8)
+
 WORKSPACE = pathlib.Path("step4_workspace")
 SCENES_DIR = WORKSPACE / "scenes"
 IMAGES_DIR = WORKSPACE / "images"
@@ -45,25 +48,38 @@ def load_env() -> dict:
 
 
 def build_sheet_prompt(character: dict) -> str:
+    common_tail = """REQUIREMENTS:
+- A single clean studio-style portrait against a neutral light grey background.
+- 3/4 view, head-and-shoulders to mid-torso, looking slightly off-camera.
+- Natural lighting, no text, no captions, no watermarks, no logos.
+- Composition: subject centred, plenty of clean space around for clipping.
+
+Output: one image, no text, no commentary."""
+
+    # The AI teacher -> Miss Nova (consistent 3D mascot), not a generic/foreign person.
+    if _casting.is_ai_teacher(character):
+        return f"""Generate a single clean character reference sheet image of Supernova's AI English-teacher mascot, for an internal storyboarding workflow.
+
+{_casting.MISS_NOVA_RULE}
+
+Her role in this ad: {character.get('role', '')}
+
+{common_tail}"""
+
+    # Human character -> re-cast as authentically Indian (keep role/age/build/demeanour, not ethnicity).
     return f"""Generate a single clean character reference sheet image. This is for an internal storyboarding workflow at Supernova, a Hindi spoken-English app — we are recreating a competitor advertisement and need a consistent visual reference for one character across multiple scenes.
 
 Character ID: {character.get('id', '?')}
 Role: {character.get('role', '')}
 
-Appearance: {character.get('appearance', '')}
-
-Wardrobe: {character.get('wardrobe', '')}
-
+Source appearance (use ONLY for age / build / gender / expression — NOT for ethnicity or skin tone): {character.get('appearance', '')}
+Source wardrobe (keep role-appropriate items like uniforms, but localise to the Indian equivalent): {character.get('wardrobe', '')}
 Demeanor: {character.get('demeanor', '')}
 
-REQUIREMENTS:
-- A single clean studio-style portrait of this character against a neutral light grey background.
-- 3/4 view, head-and-shoulders to mid-torso, looking slightly off-camera.
-- Photorealistic style, natural lighting, no text, no captions, no watermarks, no logos.
-- Skin tone, hair, build, age, wardrobe MUST match the description above precisely.
-- Composition: subject centred, plenty of clean space around for clipping.
+{_casting.INDIA_CASTING_RULE}
 
-Output: one image, no text, no commentary."""
+Photorealistic style, natural lighting.
+{common_tail}"""
 
 
 def _build_image_config(gt, aspect_ratio: str = "1:1", image_size: str = "2K"):
@@ -108,9 +124,15 @@ def generate_one_sheet(client, character: dict, out_path: pathlib.Path) -> tuple
     try:
         from google.genai import types as gt
         prompt = build_sheet_prompt(character)
+        contents = [prompt]
+        # Condition Miss Nova on her reference art so she stays consistent across ads.
+        if _casting.is_ai_teacher(character):
+            ref = _casting.miss_nova_ref_image_part(gt)
+            if ref is not None:
+                contents = [ref, prompt]
         resp = client.models.generate_content(
             model=MODEL_IMG,
-            contents=prompt,
+            contents=contents,
             config=_build_image_config(gt, aspect_ratio="1:1", image_size="2K"),
         )
         # Pull the first inline image part out of the response
