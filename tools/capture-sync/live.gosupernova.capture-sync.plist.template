@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!-- Template only. Do NOT install this file directly — run tools/capture-sync/install.sh,
      which fills in __SYNC_SH__ and __LOG__ with absolute paths for your machine and
-     loads the job. Runs daily at 09:30 local — AFTER the 09:00 daily repo pull, so it
+     loads the job. Runs daily at 11:35 local — AFTER the 11:30 daily repo pull, so it
      sees teammates' freshly-pushed snapshots, and well inside the ~4-day CDN window. -->
 <plist version="1.0">
 <dict>
@@ -15,8 +15,8 @@
   </array>
   <key>StartCalendarInterval</key>
   <dict>
-    <key>Hour</key><integer>9</integer>
-    <key>Minute</key><integer>30</integer>
+    <key>Hour</key><integer>11</integer>
+    <key>Minute</key><integer>35</integer>
   </dict>
   <key>StandardOutPath</key>
   <string>__LOG__</string>

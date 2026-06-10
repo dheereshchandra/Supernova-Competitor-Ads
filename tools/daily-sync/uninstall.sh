@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Remove the daily 9 AM repo auto-sync launchd job.
+# Remove the daily 11:30 AM repo auto-sync launchd job.
 #     zsh tools/daily-sync/uninstall.sh
 set -u
 LABEL="live.gosupernova.repo-sync"

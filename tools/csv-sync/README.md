@@ -1,8 +1,8 @@
 # tools/csv-sync — auto-sync local analysis → one Google Sheet (twice daily)
 
 Pushes the local competitor-ad data into ONE persistent Google Sheet the team reads, so nobody has to
-re-upload a CSV by hand. A launchd job runs **twice daily (09:15 + 21:15)** on the canonical clone,
-reads the local CSVs (kept fresh by the 9 AM `daily-sync` git pull), and **upserts** two curated,
+re-upload a CSV by hand. A launchd job runs **twice daily (11:45 + 19:00)** on the canonical clone,
+reads the local CSVs (kept fresh by the 11:30 AM `daily-sync` git pull), and **upserts** two curated,
 cross-competitor tabs into **"Supernova Competitor Master"** (auto-created in the existing Shared Drive).
 
 ## What's in the sheet

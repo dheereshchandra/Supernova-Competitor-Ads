@@ -55,7 +55,7 @@ The 8 steps as a compact checklist (Steps 1–7 are onboarding; Step 8 is a one-
    - `git push`
    Success: helper prints `[ok] committed`, `RUN_LOG.md` gains a new top entry, push succeeds. (Push rejected / non-fast-forward → `git pull --no-rebase` then `git push` again.)
 
-**Step 8 (one-time): Daily 9 AM auto-sync.** Walk the teammate through installing the daily auto-pull once so teammates' morning pushes land automatically. Run from their MAIN clone (NOT a Conductor worktree): `zsh tools/daily-sync/install.sh`. Verify with `launchctl kickstart -k gui/$(id -u)/live.gosupernova.repo-sync && sleep 2 && tail -n 5 "$HOME/Library/Application Support/SupernovaRepoSync/sync.log"` (expect an `OK ...` line). It is pull-only and never pushes/resets — full description under "## One-time setup: Daily 9 AM auto-sync" below.
+**Step 8 (one-time): Daily 11:30 AM auto-sync.** Walk the teammate through installing the daily auto-pull once so teammates' morning pushes land automatically. Run from their MAIN clone (NOT a Conductor worktree): `zsh tools/daily-sync/install.sh`. Verify with `launchctl kickstart -k gui/$(id -u)/live.gosupernova.repo-sync && sleep 2 && tail -n 5 "$HOME/Library/Application Support/SupernovaRepoSync/sync.log"` (expect an `OK ...` line). It is pull-only and never pushes/resets — full description under "## One-time setup: Daily 11:30 AM auto-sync" below.
 
 ## The canonical pipeline (the one true numbered list)
 
@@ -120,12 +120,12 @@ For the full walkthrough see **`facebook/HANDOVER.md` §6**.
 - **Never commit or paste `.env`** (it is `.gitignored`; values are bare — no quotes, since Mac smart-quotes break the API).
 - **Google guardrail:** always check first with `python3.13 google/scripts/scrape_guardrail.py status`. Policy: 1 competitor/run, MIN 24h gap, 24h cooldown after a 429. If BLOCKED, do NOT scrape — tell the operator when the next run is allowed. Ledger `google/logs/scrape_history.jsonl` is never deleted.
 
-## One-time setup: Daily 9 AM auto-sync
+## One-time setup: Daily 11:30 AM auto-sync
 
 A one-time setup that keeps your canonical clone current so teammates' pushes land automatically every morning (we work one competitor per person on a shared repo). Walk the teammate through it once, as the final one-time-setup step of onboarding (it is **Step 8 (one-time)** in `START-HERE.md`).
 
 - **INSTALL** (run ONCE from your MAIN clone, NOT a Conductor worktree — your *main clone* is the primary copy of the repo on your Mac; Conductor workspaces are lightweight worktrees linked to it; if unsure, ask Claude): `zsh tools/daily-sync/install.sh`
-  - Installs a macOS launchd job (label `live.gosupernova.repo-sync`) that runs `git fetch` + `git pull --ff-only` on `main` every day at 9:00 AM local.
+  - Installs a macOS launchd job (label `live.gosupernova.repo-sync`) that runs `git fetch` + `git pull --ff-only` on `main` every day at 11:30 AM local.
 - **SAFETY (pull-only):** it NEVER pushes, hard-resets, or force-merges. If `main` is dirty, ahead, diverged, or not checked out, it SKIPS and posts a macOS notification (open Conductor and ask Claude to resolve). Reasons are logged.
 - **VERIFY:** `launchctl kickstart -k gui/$(id -u)/live.gosupernova.repo-sync && sleep 2 && tail -n 5 "$HOME/Library/Application Support/SupernovaRepoSync/sync.log"` (expect an `OK ...` line).
 - **CHANGE TIME:** edit `Hour`/`Minute` in `tools/daily-sync/live.gosupernova.repo-sync.plist.template` then re-run `install.sh`. **REMOVE:** `zsh tools/daily-sync/uninstall.sh`.
@@ -139,7 +139,7 @@ A one-time setup that keeps your canonical clone current so teammates' pushes la
 - `google/HANDOVER.md` — Google pipeline (CLI / direct RPC since 2026-06-01).
 - `analysis/README.md` — free analysis + paid enrichment internals.
 - `SESSION-HANDOFF.md` — current resume state; read it to pick up in any workspace.
-- `tools/` — `rehydrate.py` (pull media from R2: `python3.13 tools/rehydrate.py --pipeline <facebook|google> --competitor <slug>`), `log_and_commit.sh`, `daily-sync/` (one-time Daily 9 AM auto-pull job — see "## One-time setup: Daily 9 AM auto-sync"), `csv-sync/` (one-time twice-daily job that upserts the analysis into ONE Google Sheet — "Supernova Competitor Master", Overview + Analysis tabs; reuses the Drive service account, needs the Sheets API enabled once — see `tools/csv-sync/README.md`).
+- `tools/` — `rehydrate.py` (pull media from R2: `python3.13 tools/rehydrate.py --pipeline <facebook|google> --competitor <slug>`), `log_and_commit.sh`, `daily-sync/` (one-time Daily 11:30 AM auto-pull job — see "## One-time setup: Daily 11:30 AM auto-sync"), `csv-sync/` (one-time twice-daily job that upserts the analysis into ONE Google Sheet — "Supernova Competitor Master", Overview + Analysis tabs; reuses the Drive service account, needs the Sheets API enabled once — see `tools/csv-sync/README.md`).
 - `conductor.json` runs the one-shot setup when the workspace opens.
 
 Data model (one line): Git holds small precious text (scripts, master CSVs with R2 links, dated inputs, analysis outputs); Cloudflare R2 holds heavy media; pull on demand with `python3.13 tools/rehydrate.py ...`. Masters are latest-only; time-series comes from dated `inputs/` snapshots. Conductor workspaces are git worktrees of one canonical clone (a fetch in one updates `origin/*` for all).

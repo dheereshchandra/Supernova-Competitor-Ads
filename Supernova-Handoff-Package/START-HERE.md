@@ -231,7 +231,7 @@ a blank merge editor opens, close it; if needed run `git commit --no-edit`). Set
 once if asked: `git config user.name "Your Name"` and
 `git config user.email "you@gosupernova.live"`.
 
-**Step 8 (one-time) — Set up the daily 9 AM auto-sync.**
+**Step 8 (one-time) — Set up the daily 11:30 AM auto-sync.**
 
 A one-time setup that keeps your canonical clone current so teammates' pushes land
 automatically every morning (we work one competitor per person on a shared repo). Run this ONCE
@@ -243,7 +243,7 @@ zsh tools/daily-sync/install.sh
 ```
 
 It installs a macOS launchd job (label `live.gosupernova.repo-sync`) that runs `git fetch` +
-`git pull --ff-only` on `main` every day at 9:00 AM local time.
+`git pull --ff-only` on `main` every day at 11:30 AM local time.
 
 Success looks like: the installer reports the job was loaded. Verify it actually runs:
 

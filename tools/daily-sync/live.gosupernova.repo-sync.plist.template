@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!-- Template only. Do NOT install this file directly — run tools/daily-sync/install.sh,
      which fills in __SYNC_SH__ and __LOG__ with absolute paths for your machine and
-     loads the job. Runs daily at 09:00 local. -->
+     loads the job. Runs daily at 11:30 local. -->
 <plist version="1.0">
 <dict>
   <key>Label</key>
@@ -14,8 +14,8 @@
   </array>
   <key>StartCalendarInterval</key>
   <dict>
-    <key>Hour</key><integer>9</integer>
-    <key>Minute</key><integer>0</integer>
+    <key>Hour</key><integer>11</integer>
+    <key>Minute</key><integer>30</integer>
   </dict>
   <key>StandardOutPath</key>
   <string>__LOG__</string>
