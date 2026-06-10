@@ -195,52 +195,61 @@ Claude-in-Chrome scrape and the Google CLI scrape: see chat / `facebook/HANDOVER
 - **Local cache (gitignored):** `{facebook,google}/{videos,images}/{slug}-{date}/`.
   Pull on demand: `python3 tools/rehydrate.py --pipeline facebook --competitor X`.
 
-## ⏸️ PAUSED — terminal Facebook scraper experiment (parked 2026-06-07)
-Goal was to move the FB scrape off Claude-in-Chrome to a pure terminal command
-(Google is already terminal). **DECISION: PAUSED — keep Claude-in-Chrome as the FB
-scrape method for now.** A same-day benchmark found real field-level misses, so it's
-not production-ready. Work is committed + documented so it resumes from here —
-**do NOT restart from scratch.** Bar (operator's): every field matches a
+## 🧪 BENCH — terminal Facebook scraper V2 (payload interception, 2026-06-10)
+Goal: move the FB scrape off Claude-in-Chrome to a pure terminal command (Google is
+already terminal). **Status: V2 BUILT and smoke-tested — now in a PARALLEL-RUN
+window.** Production scrape **remains Claude-in-Chrome** (`scraper_prompt.md` v2.3)
+until V2 passes same-day diffs. Bar (operator's, unchanged): every field matches a
 Claude-in-Chrome scrape, zero misses — not just ad-id recall.
 
-Files (committed, EXPERIMENTAL, NOT wired into the pipeline):
-- `facebook/scripts/fb_scrape_probe.py` (PR #7) — proved Meta lets a Playwright
-  browser load the ads (no anti-bot block). ✅
-- `facebook/scripts/fb_scrape.py` (PRs #8–#11) — Playwright scraper: reuses the
-  competitor→page map + navigate URL + scroll; climbs to the full ad card; hovers to
-  load media + CDN; `--debug` dumps first card to `fb_card_debug.html`; prints fill-rates.
-- `facebook/scripts/fb_scrape_diff.py` — per-page, per-field fidelity diff vs a
-  Claude-in-Chrome CSV (case/space-insensitive; prints a sample mismatch per field).
+**What V2 is** — `facebook/scripts/fb_scrape_v2.py`: drives the same listing URL with
+Playwright but reads the STRUCTURED JSON the page itself receives (server-embedded
+first batch + every `AdLibrarySearchPaginationQuery` XHR via `page.on("response")`)
+instead of parsing the rendered DOM (which is what the old, still-PAUSED
+`fb_scrape.py` did and why it mis-read dates/text). Key discovery (probe 2026-06-10):
+each search edge is a *collation* whose `collated_results[]` are the ad's VERSIONS —
+full nodes with own id/unix dates/text/cta/link/platforms/media. So the v2.3
+"Pass 3" (the detail-view click-walk that makes Claude runs take 10–24 h) arrives
+free with the listing. Emits the full 36-column v2.3 schema; `-v2`-suffixed
+filenames are structurally invisible to `build_history.py`'s snapshot regex, so
+bench CSVs can NEVER pollute the time series. Official Ad Library API was confirmed
+unusable (non-EU commercial ads excluded, per Meta's own docs).
 
-**What WORKS** (validated vs a same-day Claude-in-Chrome scrape of Duolingo, 30 ads):
-✅ anti-bot beatable · ✅ 100% ad recall (30/30 ad_library_ids) · ✅ `ad_media_type`
-correct (8 Image + 22 Video) · ✅ `ad_version_count`, `has_low_impression_warning`
-match · ✅ CDN video URLs captured (22/30) via hover.
+**Smoke test (Duolingo, 2026-06-10, headless, ~50 s):** audit PASS · 30/30 recall ·
+31 rows (1 multi-version ad expanded with per-version ids+dates) · 23 V / 8 I ·
+100% media-URL fill (no hover) · cross-date diff vs the 06-04 Claude CSV:
+**zero MISS on every field**; old killer bugs gone (`ad_primary_text` 100%,
+`ad_media_type` 100%, `creative_count_in_ad` 100%); V2 filled start_date /
+destination_url / platforms / 5 CTAs where the old CSV was blank.
 
-**What's BROKEN** (remaining work to hit zero-miss):
-1. **`ad_start_date` off by ONE day** (terminal `2026-02-06` vs Claude `2026-02-05`).
-   NOT timezone (`timezone_id=Asia/Kolkata` didn't change it; `locale=en-IN` broke
-   rendering → 0 ads, removed). Likely the regex grabs the wrong date text. Need the
-   card innerText to fix.
-2. **`ad_primary_text` grabs the wrong block** (terminal pulled body "Duolingo is the
-   world's #1…"; Claude has headline "Free language learning"). "Longest text block"
-   heuristic is wrong — need the card structure to pick the right node.
-3. **`page_rank` column missing** — Claude schema = 27 cols incl. `page_rank` (col 2);
-   fb_scrape.py emits 26. Easy fix: per-page 1-based counter. (build_history computes
-   page_rank locally anyway, so analysis isn't blocked.)
-4. Untested/likely: carousel `creative_index` splitting; agreement on `ad_description`/
-   `ad_cta_label`/`ad_destination_url`/`ad_distribution_platforms`/`facebook_page_followers`;
-   per-page mapping gaps (Duolingo English Test page `1829461027108598` not in
-   COMPETITOR_PAGES — but today's Claude scrape also got only the 1 mapped page, so
-   that's a shared mapping limit, not a scraper diff).
+**Parallel-run protocol (next few days):** for each competitor scraped, run BOTH
+(Claude-in-Chrome as production + `python3.13 facebook/scripts/fb_scrape_v2.py
+"<Competitor>"`), then
+`python3.13 facebook/scripts/fb_scrape_diff.py <v2_csv> <claude_csv>` (now 4-class:
+agree / richer / MISS / mismatch, version-grain aware). Fix every MISS/mismatch;
+cut over per-competitor only on CLEAN verdicts.
 
-**To RESUME (don't restart):**
-1. `python3.13 facebook/scripts/fb_scrape.py "Duolingo" --debug` → share `fb_card_debug.html`.
-2. From the card HTML: fix the start_date regex + primary_text selector; add page_rank col.
-3. Re-run + `fb_scrape_diff.py <terminal_csv> <same-day-claude_csv>` until every field ~100%.
-4. If the DOM stays fragile, capture Meta's GraphQL/AJAX responses (structured data)
-   instead of scraping the rendered DOM — more robust.
-5. Once faithful: add mapping pages + carousel splitting, then wire it in as FB Step 1.
+**Open bench items (validate on same-day diffs):**
+1. `DATE_TZ` (top of fb_scrape_v2.py): payload dates are unix ts rendered by the UI
+   in some fixed TZ — confirm which matches Claude's rendered dates.
+2. `has_low_impression_warning`: read from the card badge via a zero-click DOM pass;
+   payload-field mapping still unknown (`--debug` records candidates per ad —
+   needs a page that actually has badges, Duolingo had none).
+3. Large collations: members verified complete only for count=2; watch the
+   "version-truncations" counter on MySivi-class pages.
+4. `creative_aspect_ratio`: V2 computes from preview-image pixels; one cross-date
+   variant seen (`1200x628` vs ref `1.91:1` — bucket naming, single ad).
+5. DCO ads: payload exposes ALL card variants; default `--dco-mode card` mimics
+   Claude (lead variant only); decide later whether to switch to `full` (richer).
+6. Coverage gap inherited from the PROMPT's map: Duolingo English Test page
+   `1829461027108598` (33 ads on 06-04) is in neither the prompt's
+   COMPETITOR_PAGES nor V2's — re-add to BOTH if it should be tracked.
+
+(Historical: the DOM-based `fb_scrape.py` + `fb_scrape_probe.py` stay committed,
+PAUSED, unwired — superseded by V2 but kept for the probe + driver lineage. Old
+DOM-era misses for the record: start_date off-by-one, wrong primary_text block,
+missing page_rank — all root-caused by rendered-DOM parsing and all structurally
+fixed in V2 by reading the payload.)
 
 ## 🔀 PR history (all merged)
 #1 Phase 1 (free rank) · #2 Phase 0+2 (Google snapshots + Flash enrichment) ·
