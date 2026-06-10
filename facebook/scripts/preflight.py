@@ -145,6 +145,52 @@ def check_gdrive(env: dict) -> tuple[bool, str]:
                        "Shared Drive member (role Content Manager). See HANDOVER §9.10.")
 
 
+def check_sheets(env: dict) -> tuple[bool, str]:
+    """csv-sync readiness: libs + service-account + the Google Sheets API enabled.
+    Opt-in (via --check-sheets). Same SA as Drive; needs the Sheets API turned on in the GCP project."""
+    try:
+        from google.oauth2 import service_account  # type: ignore
+        from googleapiclient.discovery import build  # type: ignore
+        from googleapiclient.errors import HttpError  # type: ignore
+    except ImportError:
+        return False, ("google-api-python-client / google-auth not installed — run "
+                       "`python3.13 -m pip install --break-system-packages --user "
+                       "google-api-python-client google-auth google-auth-httplib2`")
+    missing = [k for k in REQUIRED_GDRIVE_KEYS if not env.get(k)]
+    if missing:
+        return False, f".env missing Google Drive key(s): {', '.join(missing)}"
+    sa_path = pathlib.Path(os.path.expanduser(env["GOOGLE_SERVICE_ACCOUNT_JSON"]))
+    if not sa_path.is_file():
+        return False, f"service-account json not found: {sa_path}"
+    try:
+        creds = service_account.Credentials.from_service_account_file(
+            str(sa_path), scopes=["https://www.googleapis.com/auth/drive",
+                                  "https://www.googleapis.com/auth/spreadsheets"])
+        sheets = build("sheets", "v4", credentials=creds, cache_discovery=False)
+    except Exception as e:  # noqa: BLE001
+        return False, f"sheets client build failed: {e}"
+    sidecar = pathlib.Path(__file__).resolve().parents[2] / "tools" / "csv-sync" / "sheet_id.json"
+    try:
+        if sidecar.is_file():
+            sid = json.loads(sidecar.read_text()).get("spreadsheet_id")
+            if sid:
+                m = sheets.spreadsheets().get(spreadsheetId=sid, fields="properties.title").execute()
+                return True, f"sheets ok — '{m.get('properties', {}).get('title', '?')}' reachable"
+        # No spreadsheet yet: probe a bogus id. API enabled → 400/404; API disabled → 403 SERVICE_DISABLED.
+        sheets.spreadsheets().get(spreadsheetId="0", fields="spreadsheetId").execute()
+        return True, "sheets ok (API enabled; no spreadsheet created yet)"
+    except HttpError as e:
+        status = getattr(getattr(e, "resp", None), "status", None)
+        if status in (400, 404):
+            return True, "sheets ok (API enabled; no spreadsheet created yet)"
+        if status == 403 and "SERVICE_DISABLED" in str(e):
+            return False, ("Google Sheets API is NOT enabled — turn it on at console.cloud.google.com "
+                           "→ APIs & Services → Library → Google Sheets API → Enable.")
+        return False, f"Sheets API probe failed: {e}"
+    except Exception as e:  # noqa: BLE001
+        return False, f"Sheets check failed: {e}"
+
+
 def check_layout() -> tuple[bool, str]:
     root = pathlib.Path.cwd()
     must_exist = ["scripts", ".env"]
@@ -167,6 +213,8 @@ def main() -> int:
                     help="Don't require GEMINI_API_KEY or google-genai (Steps 2/3 only).")
     ap.add_argument("--check-gdrive", action="store_true",
                     help="Also verify Stage-9 Google Docs readiness (service account + Shared Drive).")
+    ap.add_argument("--check-sheets", action="store_true",
+                    help="Also verify csv-sync readiness (service account + Google Sheets API enabled).")
     ap.add_argument("--json", action="store_true", help="Machine-readable output.")
     args = ap.parse_args()
 
@@ -196,6 +244,8 @@ def main() -> int:
         checks.append(("module:google-genai", *check_genai()))
     if args.check_gdrive:
         checks.append(("gdrive", *check_gdrive(env)))
+    if args.check_sheets:
+        checks.append(("sheets", *check_sheets(env)))
 
     all_ok = all(ok for _, ok, _ in checks)
 
