@@ -28,6 +28,9 @@ CDN_WINDOW_DAYS=4          # process snapshots newer than this; older ⇒ "re-sc
 OPERATOR="capture-sync"    # author label passed to log_and_commit.sh
 DRY="${CAPTURE_DRY:-0}"    # CAPTURE_DRY=1 → preview the scan; no pipeline, no git writes
 
+# launchd runs with a minimal PATH (/usr/bin:/bin:...) — Homebrew's python3.13 lives outside it.
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+
 SCRIPT_DIR="${0:A:h}"
 REPO="${SCRIPT_DIR:h:h}"
 PY="python3.13"
