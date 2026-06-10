@@ -222,6 +222,21 @@ unusable (non-EU commercial ads excluded, per Meta's own docs).
 `ad_media_type` 100%, `creative_count_in_ad` 100%); V2 filled start_date /
 destination_url / platforms / 5 CTAs where the old CSV was blank.
 
+**Parallel-run day 1 (SpeakX, 2026-06-10 — V2 side only):**
+`fb-ads-speakx-2026-06-10-1636-v2.csv` (committed) — audit PASS · 170 rows /
+168 ads / 2 multi-version expanded · 0 blank thumbnails. No same-day Claude run
+was made, so the only possible diff was cross-date vs the 06-04 (pre-v2.3) CSV:
+**zero MISS again**; 89% recall + 16 extra ads = 6 days of ad churn, not a
+recall bug; the mismatches cluster exactly on the open items below —
+`has_low_impression_warning` ×24 (badges may legitimately decay as impressions
+accrue; only a same-day diff settles item 2), `ad_version_count` ×2,
+`ad_primary_text` ×32 (ref text looks like title-block capture / DCO rotation).
+NEW check item: SpeakX page `104428871316786` ("SpeakX English") is absent from
+BOTH the 06-04 Claude CSV and the 06-10 V2 run → likely just 0 active ads;
+confirm via the per-page log on the next same-day run. **Day-2 blocker: a
+same-day Claude-in-Chrome run (SpeakX or MySivi) → `fb_scrape_diff.py` → fix
+every MISS/mismatch.**
+
 **Parallel-run protocol (next few days):** for each competitor scraped, run BOTH
 (Claude-in-Chrome as production + `python3.13 facebook/scripts/fb_scrape_v2.py
 "<Competitor>"`), then
