@@ -1,0 +1,76 @@
+{
+  "competitor_id": "968807285891024",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "mixed",
+    "production_notes": "The video features a human actor recorded in a real physical environment, while the tablet screen displays an AI-generated animated avatar with a synthetic voice.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult woman, medium build, fair complexion. She has blonde hair tied back in a ponytail and wears dark-rimmed glasses.",
+        "wardrobe": "A plain white hooded sweatshirt.",
+        "demeanor": "Focused on her task, slightly hesitant when speaking, but receptive and positive when corrected."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated female character, fair complexion, wavy red hair.",
+        "wardrobe": "A white t-shirt.",
+        "demeanor": "Friendly, helpful, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 33.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Kitchen English Lesson",
+        "setting": "A home kitchen during the daytime. Props include a cutting board, knife, apple, and a tablet. The color palette features warm wood tones, yellow walls, and white.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands at a kitchen counter, slicing an apple on a white cutting board with a knife. A tablet is propped up on the counter to her right, displaying Character B. The kitchen features wooden paneled walls and a yellow wall in the background. Natural light illuminates the scene from a nearby window. Character A focuses on cutting the apple, occasionally looking towards the tablet.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A continuous medium shot of a woman in a kitchen cutting an apple while interacting with an AI tutor on a tablet. Dynamic text captions appear on screen, along with red 'X' and green checkmark graphics to indicate incorrect and correct grammar. A banner of US flags is visible at the top of the frame.",
+        "audio_transcript": "Character B says: What are you doing?\nCharacter A says: I am cooking my daughter.\nCharacter B says: What? You are cooking your daughter!?\nCharacter A says: No no, I mean I am making food for my daughter!\nCharacter B says: Oh thank god. Then say: I am cooking for my daughter.\nCharacter A says: I am cooking for my daughter.\nCharacter B says: How old is your daughter?\nCharacter A says: She has 3.\nCharacter B says: Say: She is three years old.\nCharacter A says: She is three years old.\nCharacter A says: I have many work today.\nCharacter B says: Do you mean: \"I have a lot of work today\"?\nCharacter A says: I have a lot of work today.\nCharacter A says: How can I improve my English?\nCharacter B says: By talking to me every day! I'm Skye, an AI tutor on Praktika. I can teach you and correct your English while you're working. 15 minutes daily is all you need!\nCharacter A says: Amazing, let's start!",
+        "on_screen_text": "What are you doing?\nI am cooking my daughter.\nWhat?\nYou are cooking your daughter!?\nNo no, I mean\nI am making food\nfor my daughter!\nOh thank God.\nThen say:\nI am cooking for my daughter.\nI am cooking for my daughter.\nHow old is your daughter?\nShe has 3.\nSay:\nShe is three years old.\nShe is three years old.\nI have many work today.\nDo you mean:\n\"I have a lot of work today\"?\nI have a lot of work today.\nHow can I improve my English?\nBy talking to me every day!\nI'm Skye,\nan AI tutor on Praktika.\nI can teach you\nand correct your English\nwhile you're working.\n15 minutes daily\nis all you need!\nAmazing, let's start!"
+      },
+      {
+        "n": 2,
+        "start_s": 33.5,
+        "end_s": 35.0,
+        "screenshot_at_s": 34.0,
+        "scene_label": "End Card",
+        "setting": "Abstract digital background, purple color palette.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid purple background with a subtle gradient.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A static end card featuring a solid purple background. A white brand logo is centered, with two app store download badges positioned below it.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781147906.407265
+}

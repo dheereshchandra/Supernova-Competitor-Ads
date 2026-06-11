@@ -1,0 +1,53 @@
+{
+  "competitor_id": "2459086837887364",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "Human male, late 20s. Medium build, light complexion. Short dark hair, trimmed beard, dark eyes.",
+        "wardrobe": "Solid brown crew-neck t-shirt. White wireless earbuds.",
+        "demeanor": "Casual, slightly hesitant, expressive."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated male, 20s. Medium build, light complexion. Curly dark hair, dark eyes, thick black glasses.",
+        "wardrobe": "White t-shirt under an open, short-sleeved purple shirt with a white leaf pattern.",
+        "demeanor": "Friendly, encouraging, slightly sassy."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Split-screen Italian Lesson",
+        "supernova_script": "Character B says: Most people freeze when speaking English in an interview. Let's practice. Introduce yourself.\nCharacter A says: Ah... I passed out in 2022.\nCharacter B says: Almost! 'Passed out' means fainting. Say 'I graduated in 2022.'\nCharacter A says: Oh, I graduated in 2022.\nCharacter B says: Perfect! I'm Miss Nova. On Supernova, I analyze your exact level and build a plan just for you.\nCharacter A says: But... practicing with an AI? What if I mess up?\nCharacter B says: Make 1000 mistakes at 3 AM. I'll correct you 1000 times without judging. No one is watching.\nCharacter A says: I've studied English for 12 years, but I still hesitate.\nCharacter B says: Because you only read it! On Supernova, you actually SPEAK out loud.\nCharacter A says: And if I don't understand the grammar?\nCharacter B says: I explain the logic in Hindi, so it finally makes sense.\nCharacter A says: So it's just like ChatGPT?\nCharacter B says: ChatGPT gives you answers. I make you speak them.\nCharacter A says: That sounds... actually helpful.\nCharacter B says: Stop wasting hours scrolling reels. Give me just 15 minutes a day.\nCharacter A says: Okay... teach me English.\nCharacter B says: I will! But you have to do the talking.\nCharacter A says: Ah... okay, Miss Nova!\nCharacter B says: Install Supernova and start speaking today.\nCharacter A says: Okay, okay! I'm downloading it.",
+        "scene_summary": "- Third-person hook avoids Meta G4.1 violation while setting up a relatable interview scenario.\n- Rapidly delivers beats 'a' (personalization) and 'b' (privacy) in the first third of the dialogue.\n- Stacks payload beats seamlessly: old methods, speaking vs reading, Hindi logic, and ChatGPT contrast.\n- Closes with a strong negative/positive time anchor and a clean CTA without any price guarantees.",
+        "supernova_on_screen_text": "Most people freeze when speaking English in an interview.\nLet's practice. Introduce yourself.\nAh... I passed out in 2022.\nAlmost! 'Passed out' means fainting. Say 'I graduated in 2022.'\nOh, I graduated in 2022.\nPerfect! I'm Miss Nova.\nI analyze your exact level and build a plan just for you.\nBut... practicing with an AI? What if I mess up?\nMake 1000 mistakes at 3 AM.\nI'll correct you without judging. No one is watching.\nI've studied English for 12 years, but I still hesitate.\nBecause you only read it! On Supernova, you actually SPEAK out loud.\nAnd if I don't understand the grammar?\nI explain the logic in Hindi, so it finally makes sense.\nSo it's just like ChatGPT?\nChatGPT gives you answers. I make you speak them.\nThat sounds... actually helpful.\nStop wasting hours scrolling reels. Give me just 15 minutes a day.\nOkay... teach me English.\nI will! But you have to do the talking.\nAh... okay, Miss Nova!\nInstall Supernova and start speaking today.\nOkay, okay! I'm downloading it."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Standard end card displaying the Supernova logo and app store badges.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speak), d (old methods), e (interview), g (Hindi logic), ChatGPT contrast, tight close",
+      "kept_from_seed": "Split-screen live correction format between human learner and AI tutor",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781158875.619023
+}

@@ -1,0 +1,82 @@
+{
+  "competitor_id": "876989718762101",
+  "parsed": {
+    "duration_s": 34.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines a 3D animated AI avatar in the top half with a human-recorded video in the bottom half. The AI avatar has a stylized, Pixar-like appearance with smooth movements and perfect lighting, contrasting with the natural imperfections and lighting of the human footage.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Male, 20s-30s, medium build, fair complexion. He has curly dark hair and wears dark-rimmed glasses. His features are stylized and animated.",
+        "wardrobe": "A cream-colored, chunky cable-knit sweater.",
+        "demeanor": "Friendly, encouraging, and patient."
+      },
+      {
+        "id": "B",
+        "role": "Human learner",
+        "appearance": "Male, 40s-50s, stocky build, olive complexion. He has short dark hair with some graying and a stubble beard.",
+        "wardrobe": "A rust-orange t-shirt and white wireless earbuds.",
+        "demeanor": "Eager to learn, slightly hesitant but willing to try."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 31.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "French Lesson",
+        "setting": "Top: A cozy, warmly lit room with a window and string lights. Bottom: A darker room with blurred warm string lights in the background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is framed in a medium close-up, looking directly at the camera. He is positioned in the center of the frame. The background is a cozy room with warm, inviting lighting. There is a window behind him to the right, and blurred string lights are visible in the background to the left. He makes subtle conversational gestures with his hands and head.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B is framed in a close-up, looking directly at the camera. He is centered in the frame. The background is dark, with out-of-focus warm string lights draped vertically behind him on the left side. The lighting on his face is slightly uneven, typical of a webcam or smartphone recording. He reacts to the conversation with facial expressions and slight head movements.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with a 3D animated character on top and a real human on the bottom. Both characters are looking directly at the camera, appearing to have a video call conversation. Text overlays appear in the center of the screen, translating their spoken dialogue. The top half has a bright, cozy aesthetic, while the bottom half is darker with bokeh lighting.",
+        "audio_transcript": "Character A says: Tu parles fran\u00e7ais? [Do you speak French?]\nCharacter B says: Yes, a little. Je suis faim. [I am hunger.]\nCharacter A says: Non, non, on dit: j'ai faim. En fran\u00e7ais, tu n'es pas faim, tu as faim. [No, no, we say: I have hunger. In French, you are not hunger, you have hunger.]\nCharacter B says: J'ai faim. [I am hungry.]\nCharacter A says: Qu'est-ce que tu veux manger? [What do you want to eat?]\nCharacter B says: Je veux le pizza margherita. [I want the margherita pizza.]\nCharacter A says: Attention: la pizza. Pizza c'est f\u00e9minin. [Careful: the pizza. Pizza is feminine.]\nCharacter B says: Je veux la pizza margherita. [I want the margherita pizza.]\nCharacter A says: Et \u00e0 boire? [And to drink?]\nCharacter B says: Je veux de l'eau. [I want some water.]\nCharacter A says: Mieux: Je voudrais de l'eau, s'il te pla\u00eet. Plus poli. [Better: I would like some water, please. More polite.]\nCharacter B says: Je voudrais de l'eau, s'il te pla\u00eet. [I would like some water, please.]\nCharacter A says: Parfait! Ton fran\u00e7ais s'am\u00e9liore. [Perfect! Your French is improving.]\nCharacter B says: Thanks! Wait, who are you?\nCharacter A says: Je suis un tuteur IA sur Praktika. On parle chaque jour, ton fran\u00e7ais devient parfait. [I am an AI tutor on Praktika. We speak every day, your French becomes perfect.]\nCharacter B says: Okay, downloading Praktika now.",
+        "on_screen_text": "Tu parles fran\u00e7ais?\nYes, a little.\nJe suis faim\nOn dit: j'ai faim.\nEn fran\u00e7ais, tu n'es pas\nfaim, tu as faim.\nJ'ai faim\nQu'est-ce que tu veux\nmanger?\nJe veux le pizza\nmargherita\nAttention: la pizza.\nPizza c'est f\u00e9minin\nJe veux la pizza\nmargherita\nEt \u00e0 boire?\nJe veux de l'eau.\nMieux: Je voudrais de\nl'eau, s'il te pla\u00eet.\nPlus poli.\nJe voudrais de l'eau,\ns'il te pla\u00eet\nParfait! Ton fran\u00e7ais\ns'am\u00e9liore\nThanks! Wait, who are\nyou?\nJe suis un tuteur\nIA sur Praktika.\nOn parle chaque jour,\nton fran\u00e7ais devient\nparfait\nOkay, downloading\nPraktika now"
+      },
+      {
+        "n": 2,
+        "start_s": 31.5,
+        "end_s": 34.0,
+        "screenshot_at_s": 32.5,
+        "scene_label": "End Card",
+        "setting": "Solid white background.",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A completely blank, solid white screen with no other elements or details.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A solid white screen serves as the background for the app's logo and download information. A purple app icon with a white 'P' shape appears in the center, followed by the app name and app store badges below it.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781147906.406566
+}

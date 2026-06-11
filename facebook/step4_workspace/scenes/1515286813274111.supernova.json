@@ -1,0 +1,71 @@
+{
+  "competitor_id": "1515286813274111",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, light brown complexion. Dark hair tied back with some loose strands framing her face. She has dark eyes and defined facial features.",
+        "wardrobe": "Dark grey or black long-sleeved button-up shirt with light-colored stitching details.",
+        "demeanor": "Casual, slightly hesitant at first, but becomes engaged and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated female character. Bright red hair styled in a bob, fair skin, large expressive eyes, and rosy cheeks.",
+        "wardrobe": "Simple white t-shirt.",
+        "demeanor": "Friendly, encouraging, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Correction",
+        "supernova_script": "Character B says: Let's practice your English. Where are you from?\nCharacter A says: Uh... I am France.\nCharacter B says: Close! Say, 'I am from France'. I am Miss Nova. I analyze your exact level to build a plan just for you.\nCharacter A says: Okay, I am from France. But I feel so shy speaking with my bad English.\nCharacter B says: No one is judging you here. Make a thousand mistakes at 3 AM, I will correct you a thousand times without laughing.",
+        "scene_summary": "- Hook: Relatable English error and live correction.\n- Payload a (Personalization): Miss Nova introduces herself and explains she builds a custom plan.\n- Payload b (Privacy): Reassures the learner that she can make mistakes without judgement.",
+        "supernova_on_screen_text": "Let's practice your English.\nUh... I am France.\nClose! Try: \"I am from France.\"\nI analyze your exact level\nto build a plan just for you.\nBut I feel so shy speaking.\nNo one is judging you here.\nMake 1000 mistakes,\nI'll correct you without laughing."
+      },
+      {
+        "n": 2,
+        "scene_label": "The Pitch",
+        "supernova_script": "Character A says: Hey Miss Nova, how will I actually learn to speak fluently?\nCharacter B says: By speaking out loud! ChatGPT just gives you text, but Supernova makes you actually talk.\nCharacter A says: But what if I get stuck on grammar?\nCharacter B says: You learned your mother tongue by speaking it, right? English works the same. Plus, I explain the logic in your own language.",
+        "scene_summary": "- Payload c (You SPEAK): Contrasts Supernova's active speaking with ChatGPT's passive text.\n- Payload f (Mother-tongue reframe): Equates learning English to learning a native language.\n- Payload g (Logic in native language): Promises comprehension without anxiety.",
+        "supernova_on_screen_text": "Hey Miss Nova,\nhow will I actually learn to speak?\nBy speaking out loud!\nChatGPT just gives you text,\nbut Supernova makes you talk.\nBut what if I get stuck?\nYou learned your mother tongue\nby speaking it, right?\nEnglish works the same."
+      },
+      {
+        "n": 3,
+        "scene_label": "The Realization",
+        "supernova_script": "Character A says: Wait, that could actually work. I just practiced an interview without freezing.\nCharacter B says: Exactly. Stop wasting hours scrolling feeds. Just fifteen minutes a day on Supernova, and you can build real confidence.\nCharacter A says: Oh, you know what, fair enough. I'm installing Supernova right now! Let's go.",
+        "scene_summary": "- Payload e (Real-life scenarios): Mentions practicing for an interview.\n- Tight Close: Negative time anchor (scrolling feeds) + positive time anchor (15 mins/day).\n- CTA: Clear instruction to install the app.",
+        "supernova_on_screen_text": "Wait, that could actually work.\nI practiced an interview without freezing.\nStop wasting hours scrolling feeds.\nJust 15 minutes a day,\nand you can build real confidence.\nFair enough.\nI'm installing Supernova right now!\nLet's go."
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Visual close: Supernova branding and app store badges.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speak), e (interview scenario), f (mother-tongue), g (logic in native language), plus ChatGPT contrast and tight close",
+      "kept_from_seed": "Preserved the split-screen tablet interaction, the apple-cutting visual, and the live correction hook format.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure or price mentioned."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Skye",
+        "supernova_swap": "Miss Nova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781158557.4776409
+}

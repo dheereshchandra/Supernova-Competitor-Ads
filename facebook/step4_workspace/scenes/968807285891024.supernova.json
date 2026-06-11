@@ -1,0 +1,57 @@
+{
+  "competitor_id": "968807285891024",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult woman, medium build, fair complexion. She has blonde hair tied back in a ponytail and wears dark-rimmed glasses.",
+        "wardrobe": "A plain white hooded sweatshirt.",
+        "demeanor": "Focused on her task, slightly hesitant when speaking, but receptive and positive when corrected."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated female character, fair complexion, wavy red hair.",
+        "wardrobe": "A white t-shirt.",
+        "demeanor": "Friendly, helpful, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Kitchen English Lesson",
+        "supernova_script": "Character B says: What are you doing?\nCharacter A says: I am cooking my daughter.\nCharacter B says: What? You are cooking your daughter!?\nCharacter A says: No no, I mean making food! I am trying to speak English.\nCharacter B says: Then say: \"I am cooking for my daughter.\" Make 1000 mistakes here, I will never judge you.\nCharacter A says: Phew. My daughter... she has 3.\nCharacter B says: Say: \"She is three years old.\" I analyze your exact level and build a plan just for you.\nCharacter A says: I have many work today.\nCharacter B says: Say: \"I have a lot of work today.\" See? ChatGPT just gives text, but I make you speak.\nCharacter A says: Who are you?\nCharacter B says: I'm Miss Nova, your AI teacher on Supernova. I explain the logic in your own language.\nCharacter B says: Stop passively watching videos, just practice 15 minutes a day!\nCharacter A says: Amazing, let's start!",
+        "scene_summary": "- Hook: Relatable Indian-English error (cooking my daughter) grabs attention immediately.\n- Payload: Lands privacy/no-judgment (b) and personalization (a) early during the correction loop.\n- Payload: Integrates ChatGPT contrast and mother-tongue logic (g) before the tight close.\n- Close: Negative time anchor (watching videos) + positive time anchor (15 mins/day) with no absolute guarantees.",
+        "supernova_on_screen_text": "What are you doing?\nI am cooking my daughter.\nWhat? You are cooking your daughter!?\nNo no, I mean making food!\nI am trying to speak English.\nThen say:\n\"I am cooking for my daughter.\"\nMake 1000 mistakes here,\nI will never judge you.\nPhew. My daughter... she has 3.\nSay: \"She is three years old.\"\nI analyze your exact level\nand build a plan just for you.\nI have many work today.\nSay: \"I have a lot of work today.\"\nChatGPT just gives text,\nbut I make you speak.\nWho are you?\nI'm Miss Nova,\nyour AI teacher on Supernova.\nI explain the logic\nin your own language.\nStop passively watching videos,\njust practice 15 minutes a day!\nAmazing, let's start!"
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Visual close: Displays the Supernova brand and app store badges for a clean CTA.",
+        "supernova_on_screen_text": "Supernova\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (you speak), g (logic in own language), ChatGPT contrast, time anchors",
+      "kept_from_seed": "kitchen setting, tablet AI interaction, funny translation mistake hook",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Skye",
+        "supernova_swap": "Miss Nova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781158557.479088
+}

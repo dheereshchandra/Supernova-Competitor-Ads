@@ -1,0 +1,130 @@
+{
+  "competitor_id": "1515286813274111",
+  "parsed": {
+    "duration_s": 56.0,
+    "production_type": "mixed",
+    "production_notes": "The video features a human actor recorded in a real environment, but she is interacting with an AI-generated animated avatar on a tablet. The avatar's voice is also synthetic.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, light brown complexion. Dark hair tied back with some loose strands framing her face. She has dark eyes and defined facial features.",
+        "wardrobe": "Dark grey or black long-sleeved button-up shirt with light-colored stitching details.",
+        "demeanor": "Casual, slightly hesitant at first, but becomes engaged and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Animated female character. Bright red hair styled in a bob, fair skin, large expressive eyes, and rosy cheeks.",
+        "wardrobe": "Simple white t-shirt.",
+        "demeanor": "Friendly, encouraging, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 20.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "English Correction",
+        "setting": "Dimly lit room with strong blue ambient lighting. A table with a grey cutting board, a yellow apple, a small knife, and a tablet on a stand.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young woman with dark hair tied back sits at a table in a dimly lit room illuminated by blue ambient light. She wears a dark grey, long-sleeved button-up shirt. In front of her, a tablet is propped up on a stand. She is looking down at the tablet while simultaneously using a small knife to slice a yellow apple on a grey cutting board. The tablet screen displays an animated female character with bright red hair and a white shirt. The woman's expression is focused as she interacts with the device.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a woman interacting with a language learning app on her tablet. She is cutting an apple while practicing English. The tablet displays an animated red-haired avatar. Text overlays show the conversation, with the woman's mistakes highlighted and corrected. A row of American flags is displayed at the top of the screen.",
+        "audio_transcript": "Character B says: Do you speak English?\nCharacter A says: Uh, Tarzan style.\nCharacter B says: Can you at least say your name?\nCharacter A says: My name is Jenny.\nCharacter B says: Nice. Where are you from?\nCharacter A says: I am France.\nCharacter B says: You said I am France. Close though! Try: I am from France.\nCharacter A says: Okay, I am from France. I am France... no... wait, I am from France.\nCharacter B says: There you go!",
+        "on_screen_text": "Do you speak English?\nUh, Tarzan style.\nCan you at least say your name?\nMy name is Jenny.\nNice. Where are you from?\nI am France.\nYou said \"I'm from France.\"\nclose though! Try:\n\"I'm from France.\"\nOkay,\nI'm from France.\nI am France.\nNo... wait,\nI am from France.\nThere you go!"
+      },
+      {
+        "n": 2,
+        "start_s": 20.5,
+        "end_s": 38.5,
+        "screenshot_at_s": 30.0,
+        "scene_label": "The Pitch",
+        "setting": "Dimly lit room with strong blue ambient lighting. A table with a grey cutting board, a yellow apple, a small knife, and a tablet on a stand.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The young woman continues to sit at the table in the blue-lit room, wearing her dark grey shirt. She is still holding the knife and apple slices, but her attention is more focused on the tablet. She looks up and speaks directly to the tablet with a questioning expression. The tablet still displays the red-haired animated character. The woman's body language is relaxed but engaged.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The woman asks the app how she can improve her English. The app suggests daily conversation practice. The woman expresses doubt about who she can practice with, and the app suggests itself, highlighting the benefits of an AI teacher. The American flags remain at the top.",
+        "audio_transcript": "Character A says: Hey Skye, how am I going to improve my English?\nCharacter B says: Daily conversation practice is a must.\nCharacter A says: But who am I going to speak with this bad English?\nCharacter B says: With me, of course!\nCharacter A says: With you?\nCharacter B says: Haven't you heard of AI English teachers? You can make as many mistakes as you want without boring anyone.",
+        "on_screen_text": "Hey Skye,\nHow am I going to\nimprove my English?\nDaily conversation\npractice is a must.\nBut who am I going to\nspeak with this bad English?\nWith me, of course!\nWith you?\nHaven't you heard of\nAI English teachers?\nYou can make as\nmany mistakes as you want\nwithout boring anyone."
+      },
+      {
+        "n": 3,
+        "start_s": 38.5,
+        "end_s": 53.5,
+        "screenshot_at_s": 45.0,
+        "scene_label": "The Realization",
+        "setting": "Dimly lit room with strong blue ambient lighting. A table with a grey cutting board, a yellow apple, a small knife, and a tablet on a stand.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The woman in the dark grey shirt is at the table in the blue-lit room. She stops cutting the apple and looks at the tablet with an expression of pleasant surprise and realization. She gestures slightly with her hands as she speaks, showing enthusiasm. The tablet continues to show the animated red-haired character. The lighting remains consistent.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The woman realizes the app is actually helpful and different from other language apps. She expresses her surprise and decides to download it. The app reinforces its value proposition. The American flags are still visible.",
+        "audio_transcript": "Character A says: Wait, that could actually work. You just taught me something in two seconds.\nCharacter B says: We're nothing like those pointless word-matching apps. Download Praktika and see the difference.\nCharacter A says: Oh, you know what, fair enough. I'm downloading Praktika right now! Let's go.",
+        "on_screen_text": "Wait,\nthat could actually work.\nYou just taught me something\nin two seconds.\nWe're nothing like those\npointless word-matching apps.\nDownload Praktika\nand see the difference.\nOh,\nYou know what,\nfair enough.\nI'm downloading\nPraktika right now!\nLet's go."
+      },
+      {
+        "n": 4,
+        "start_s": 53.5,
+        "end_s": 56.0,
+        "screenshot_at_s": 54.5,
+        "scene_label": "End Card",
+        "setting": "Abstract background",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid, light purple gradient background. There are no characters, props, or physical elements present in the frame. The lighting is even and flat, creating a smooth, featureless surface.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A simple end card with a light purple gradient background. The Praktika logo is displayed in the center, with app store download buttons below it.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "Praktika\nDownload on the App Store\nGET IT ON Google Play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781147906.40567
+}
