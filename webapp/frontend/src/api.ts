@@ -206,6 +206,7 @@ export type JobStatus =
   | 'queued'
   | 'running'
   | 'interrupted'
+  | 'awaiting_confirm'
   | 'failed'
   | 'cancelled'
   | 'done'
@@ -214,7 +215,9 @@ export interface PipelineEstimate {
   eligible: boolean
   reason?: string
   backlog_videos?: number
-  cost_usd?: number
+  backlog_cost_usd?: number
+  per_video_usd?: number
+  two_phase?: boolean
   note?: string
   excludes?: string
   wall_clock?: string
@@ -241,6 +244,8 @@ export interface Job {
   analysis_gdoc_url?: string
   rewrite_html_url?: string
   queue_position?: number | null
+  /** pipeline runs paused after the free scrape: exact enrichment count + cost */
+  enrich?: { videos: number; cost: number; summary: string } | null
 }
 
 export interface JobDetail extends Job {
@@ -324,6 +329,11 @@ export const getPipelineEstimate = (pipeline: string, competitor: string) =>
 
 export const runPipeline = (pipeline: string, competitor: string) =>
   api<{ job_id: string }>('/api/pipeline/run', { json: { pipeline, competitor } })
+
+export const confirmEnrich = (jobId: string, proceed: boolean) =>
+  api<{ ok: boolean }>(`/api/jobs/${encodeURIComponent(jobId)}/enrich-confirm`, {
+    json: { proceed },
+  })
 
 export const getTracker = () => api<{ rows: TrackerRow[] }>('/api/tracker')
 

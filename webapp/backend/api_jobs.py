@@ -16,7 +16,9 @@ router = APIRouter()
 
 TRACKER_STATUSES = ("shortlisted", "generating", "script_ready", "in_edit",
                     "approved", "in_production", "shipped", "dismissed", "dropped")
-ACTIVE = ("queued", "running", "interrupted")
+# awaiting_confirm = a pipeline run paused after the free scrape, waiting for the
+# user to approve the (now-exact) enrichment cost. Treated as in-flight.
+ACTIVE = ("queued", "running", "interrupted", "awaiting_confirm")
 FALLBACK_FORCE_COST = 0.35  # estimator lists only doc-less candidates
 
 
@@ -62,6 +64,9 @@ def _job_payload(r: dict, queue_ids: list[int]) -> dict:
         "steps": steps,
         "step_index": keys.index(cur) if cur in keys else None,
         "queue_position": queue_ids.index(r["id"]) + 1 if r["id"] in queue_ids else None,
+        # post-scrape enrichment count+cost, shown on the awaiting_confirm prompt
+        "enrich": (json.loads(r["estimate_json"])
+                   if r.get("kind") == "pipeline" and r.get("estimate_json") else None),
     }
 
 
@@ -158,6 +163,30 @@ def retry_job(job_id: int, user: str = Depends(require_user)):
     db.execute("UPDATE jobs SET status='queued', error=NULL, finished_at=NULL WHERE id=?",
                (job_id,))
     _log(r["pipeline"], r["competitor"], r["ad_id"], user, "retry", f"job #{job_id}")
+    return {"ok": True}
+
+
+class EnrichConfirm(BaseModel):
+    proceed: bool
+
+
+@router.post("/api/jobs/{job_id}/enrich-confirm")
+def enrich_confirm(job_id: int, body: EnrichConfirm, user: str = Depends(require_user)):
+    r = db.query_one("SELECT * FROM jobs WHERE id=?", (job_id,))
+    if not r:
+        raise HTTPException(404, "Job not found")
+    if r["kind"] != "pipeline" or r["status"] != "awaiting_confirm":
+        raise HTTPException(409, "This run is not waiting for enrichment confirmation")
+    if body.proceed:
+        # hand back to the worker for stage 5 (enrichment)
+        db.execute("UPDATE jobs SET status='queued', current_step='enrich' WHERE id=?", (job_id,))
+        _log(r["pipeline"], r["competitor"], r["ad_id"], user, "enrich_confirm",
+             f"approved enrichment (~${r['cost_estimate_usd'] or 0:.2f})")
+    else:
+        # skip enrichment — the free ranking refresh is already committed
+        db.execute("UPDATE jobs SET status='done', finished_at=datetime('now') WHERE id=?", (job_id,))
+        _log(r["pipeline"], r["competitor"], r["ad_id"], user, "enrich_skip",
+             "skipped enrichment; kept the free ranking update")
     return {"ok": True}
 
 
