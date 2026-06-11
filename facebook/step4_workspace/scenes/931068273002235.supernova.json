@@ -15,17 +15,17 @@
       {
         "n": 1,
         "scene_label": "Before and After Learning English",
-        "supernova_script": "Voiceover says: Scared of expensive English classes where everyone judges your mistakes?\nVoiceover says: Practice speaking privately with Miss Nova on Supernova! Zero judgment, and way more affordable.",
-        "scene_summary": "- Hooks with the relatable fear of expensive, judgmental English classes (matching the crying visual).\n- Introduces Supernova and Miss Nova as the private, judgment-free solution (Beat B).\n- Replaces the competitor's 1-rupee claim with a compliant 'more affordable' comparative.",
-        "supernova_on_screen_text": "Top: Stressing over expensive English classes where everyone judges my mistakes...\n\nBottom: Me after practicing speaking privately with Miss Nova on Supernova! (Zero judgment, fraction of the cost)"
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Establishes the relatable frustration of old learning methods and freezing while speaking (Beat d).\n- Introduces Supernova and Miss Nova as the private, speaking-first solution.\n- Lands the no-judgement (Beat b) and positive time anchor via on-screen text.",
+        "supernova_on_screen_text": "Top: Me stressing because I studied English for 12 years but still freeze when speaking...\n\nBottom: ...Me after practicing privately with Miss Nova on Supernova. 15 mins a day, zero judgement!"
       }
     ],
     "payload_audit": {
-      "beats_covered": "b (Privacy/no-judgement), c (You SPEAK)",
-      "kept_from_seed": "Split-screen meme format with crying/confident actor",
+      "beats_covered": "b (privacy/no-judgement), d (old methods failed)",
+      "kept_from_seed": "Split-screen meme format with crying/laughing vs confident walk",
       "miss_nova_named": true,
       "english_named_early": true,
-      "price_check": "No hard rupee figure; used 'fraction of the cost' and 'more affordable' comparatives."
+      "price_check": "No hard rupee price used. Removed the 1 rupee and 2000-3000 rupee claims from the original."
     },
     "brand_swaps_detected": [
       {
@@ -35,5 +35,5 @@
     ]
   },
   "model": "gemini-3.1-pro-preview",
-  "rewrote_at": 1781113055.017771
+  "rewrote_at": 1781149753.9888
 }
