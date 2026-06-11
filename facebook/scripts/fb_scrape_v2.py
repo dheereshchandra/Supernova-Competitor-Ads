@@ -135,6 +135,14 @@ COMPETITOR_PAGES = {
         # never produced ads in any scrape (not in the master) — a wrong/empty page_id.
     ],
     "EWA": [{"page_id": "165004157332215", "page_name": "EWA: Learn Languages"}],
+    # page_ids recovered from the existing masters (these had data from manual scrapes).
+    "BoldVoice": [{"page_id": "108128217985547", "page_name": "BoldVoice"}],
+    "Fluently": [
+        {"page_id": "61572409659045", "page_name": "Fluently - AI English Tutor"},
+        {"page_id": "627280337124461", "page_name": "Fluently - AI English Tutor"},
+    ],
+    "Learna AI": [{"page_id": "521600091028761", "page_name": "Learna AI: English Learning App"}],
+    "Wispr Flow": [{"page_id": "110864474787474", "page_name": "Wispr Flow"}],
 }
 
 NAV_URL = ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all"

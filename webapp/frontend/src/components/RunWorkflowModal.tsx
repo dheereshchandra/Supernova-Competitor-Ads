@@ -122,6 +122,13 @@ export default function RunWorkflowModal({
           >
             All with pending
           </button>
+          <button
+            onClick={() => setSelected(new Set())}
+            disabled={selected.size === 0}
+            className="text-xs text-zinc-400 hover:underline disabled:opacity-40"
+          >
+            Clear
+          </button>
         </div>
 
         {/* competitor checklist */}
