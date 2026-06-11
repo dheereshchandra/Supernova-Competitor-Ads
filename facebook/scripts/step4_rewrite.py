@@ -85,6 +85,13 @@ THE BALANCE — read twice:
   contrast / mother-tongue reframe / a named real-life scenario WHERE THEY FIT this world. Strip any
   hard rupee price (a comparative like "7x cheaper than classes" is allowed only if it fits the scene;
   a "1 crore+ users" social-proof line is fine where it fits — don't let it carry the ad alone).
+- **LEAD WITH a + b — DON'T BACK-LOAD THEM.** Personalization (a) and privacy/no-judgement (b) are the
+  retention engine; the failure to avoid is letting the final CTA be the FIRST place they appear. In a
+  4+ scene ad, land a+b by the MIDPOINT; in a 2–3 scene ad, put them in the BODY of scene 2 (right after
+  the hook, before the CTA tail). A correction-skit may ALSO restate a+b in its close — fine, as long as
+  they already landed earlier. Front-load by choosing WHICH existing early lines to re-pitch into the a+b
+  message — you change what early lines SAY, never their position (scene order is fixed, per the rules
+  above).
 - **MATCH PAYLOAD DEPTH TO LENGTH.** A short/absurdist ad (2-3 scenes) should lead with just a+b; a
   longer narrative can stack more beats. Never cram so many beats that the pace breaks.
 - You MAY lightly expand ONE line within a scene if a payload beat needs it, but NEVER change the
@@ -121,6 +128,24 @@ OUTPUT: exactly one JSON object (no markdown fences, no commentary). Schema:
 }
 
 CONSTRAINTS:
+- **Kept or lightly-expanded seed lines are NOT exempt from the BRAND-SAFETY GUARDRAILS.** Rewrite any
+  brand-voiced OUTCOME or SUFFICIENCY absolute — "all you need", "guaranteed", "100%", "fluent in X days",
+  "you'll never struggle again", "so you never get confused" — into a non-promise. The brand/Miss Nova
+  NEVER guarantees a RESULT; only a CHARACTER may give a personal testimonial (a learner saying "I improved
+  in two weeks" is fine — the brand/VO must not promise a timeframe). **Carve-out:** the no-judgement
+  REASSURANCE of beat b is NOT an outcome promise — "I'll never laugh at you", "no one is ever
+  watching/judging you", "make 1000 mistakes" are ALLOWED and encouraged (it's the highest-leverage beat).
+  Safe swaps: time anchor = "just 15 minutes a day" (NOT "15 minutes is all you need"); logic beat = "so it
+  finally makes sense / explained in your own language" (NOT "so you never get confused" — the problem is
+  the absolute "never", not the comprehension benefit itself, which is beat g and encouraged).
+- **Opener must not assert or question a personal ATTRIBUTE of the viewer (Meta G4.1, SEVERE).** Re-pitch
+  ONLY openers where the AD tells the VIEWER they are deficient — "You who can't speak English", "Can you
+  even speak English?". Allowed: a third-person/aspirational hook ("Millions freeze when they have to speak
+  English"); a self-diagnosed error a CHARACTER owns ("I used to say 'I passed out in 2022' — turns out
+  that means I fainted"); a RELATABLE shared error the viewer self-diagnoses, framed as common not personal
+  ("Most of us have said 'I passed out in 2022' — here's the fix") — the workhorse hook, and fine; or any
+  NEUTRAL second-person prompt/imperative ("Describe this clip in English", "Tell me about your interview").
+  Don't avoid second person itself — only the line that pins a deficiency on the viewer.
 - Output ONLY a valid JSON object. No commentary, no markdown fences.
 - Every scene from the input must appear in the output with the same `n`, in the same order.
 - `supernova_script` MUST put each spoken turn on its OWN line with a "Character X says:" prefix — one line per turn (this renders as a clean Scene -> Character -> Script layout).

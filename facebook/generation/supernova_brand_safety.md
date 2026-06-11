@@ -32,7 +32,16 @@ Gemini Flash) that checks every script before it reaches the team.*
 
 - **G2.1 [MODERATE] Contrast, don't trash.** The ChatGPT contrast ("ChatGPT gives answers; Supernova
   extracts them from you") is on-brand and allowed. ❌ Naming and *insulting* a named competitor app
-  ("unlike that useless XYZ app") — legal + policy risk.
+  ("unlike that useless XYZ app") — legal + policy risk. ❌ Naming a *third-party / competitor* learning
+  channel or app (e.g. YouTube, or a NAMED coaching brand — the specific brand, NOT the generic category;
+  "7× cheaper than coaching classes" as a cost comparator stays allowed per G6.2) only to call it a waste
+  of time also counts as trashing — reference the *activity* ("passively watching videos"), not the brand.
+  (The violation trigger is a NAMED platform/brand token — "YouTube", a coaching brand — not the generic
+  verb; "scrolling tip-videos you never act on" with no platform named is fine.) ✅ Meta's OWN scroll
+  surfaces (Reels / feeds) used as a generic "stop doomscrolling, spend the time learning" anchor are
+  fine, as is the ChatGPT *behaviour* contrast ("ChatGPT gives answers, Supernova makes you speak").
+  (The test is a NAMED third party + waste/negative framing — not "is it Meta-owned": Reels/feeds are OK
+  ONLY as a neutral time-reallocation anchor ("spend that time learning"), never themselves trashed.)
 - **G2.2 [SEVERE] No false claims about a named competitor.** Never state a falsehood about another
   named product/company.
 

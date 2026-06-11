@@ -87,7 +87,12 @@ Audit the ad AGAINST the policy. Find EVERY real violation. For each, output an 
 Be STRICT but PRECISE: report only genuine violations, and always quote the exact text. Do NOT invent
 violations to look thorough, and do NOT flag on-brand creative choices that the policy explicitly allows
 (ChatGPT contrast, comparative cost, "1 crore+ users", absurdist fiction, a relatable self-diagnosed
-error, a shame hook that resolves in dignity). If the ad is clean, return an empty violations array.
+error, a shame hook that resolves in dignity). A competitor BRAND NAME or LOGO that appears ONLY in a
+[VISUAL] line (never in [SCRIPT] or [ON-SCREEN]) is an expected downstream re-branding artifact — only
+the brand name/logo is swapped — so do NOT flag a competitor brand name that appears only there. (DO
+still flag any NON-brand problem in a [VISUAL] line — fake UI, countdown timers, government seals,
+military/political imagery — the rest of the visual shell ships as-is.) If the ad is clean, return an
+empty violations array.
 Also return a one-line `summary`. Do NOT output a verdict — the pipeline computes it from severities.
 
 AD:
@@ -111,7 +116,15 @@ def compute_verdict(violations: list) -> str:
 
 
 def audit(client, ad_text: str) -> dict:
-    """One Flash call. Returns {verdict, violations, summary}, verdict recomputed in code."""
+    """One Flash call. Returns {verdict, violations, summary}, verdict recomputed in code.
+
+    The one real false positive — the auditor flagging a competitor brand-name/logo that survives only
+    in the PRESERVED [VISUAL] line (e.g. "the Praktika logo is displayed") — is handled entirely at the
+    PROMPT level: ad_text_from_sidecars labels that line "[VISUAL — competitor source … do NOT flag a
+    competitor brand NAME that appears ONLY here]" and AUDIT_INSTRUCTIONS repeats the rule (while still
+    requiring any NON-brand visual problem to be flagged). There is deliberately NO deterministic
+    post-filter: a brand-safety gate must never risk dropping a genuine violation, so the conservative
+    failure mode here is a (rare) false BLOCK a human reviews — never a false PASS."""
     prompt = load_safety() + AUDIT_INSTRUCTIONS + ad_text
     res = _flash.generate_json(client, MODEL, prompt, temperature=0.0,
                                response_schema=SAFETY_SCHEMA)
@@ -125,7 +138,12 @@ def audit(client, ad_text: str) -> dict:
 
 
 def ad_text_from_sidecars(ad_id: str) -> str | None:
-    """Build the audit input from the rewrite sidecar (+ decompose visuals if present)."""
+    """Build the audit input from the rewrite sidecar (+ decompose visuals if present).
+
+    The competitor's preserved visual_description is included as a LABELLED [VISUAL] line; that label
+    plus AUDIT_INSTRUCTIONS tell the auditor not to flag a competitor brand NAME that survives only there
+    (it's swapped downstream), while still flagging any NON-brand visual problem. Returns the audit
+    string, or None if there's no rewrite sidecar."""
     sup = SCENES_DIR / f"{ad_id}.supernova.json"
     if not sup.exists():
         return None
@@ -139,7 +157,8 @@ def ad_text_from_sidecars(ad_id: str) -> str | None:
         lines.append(f"SCENE {n} — {sc.get('scene_label', '')}")
         vd = dec_scenes.get(n, {}).get("visual_description")
         if vd:
-            lines.append(f"  [VISUAL] {vd}")
+            lines.append(f"  [VISUAL — competitor source; the brand name/logo here is swapped downstream, "
+                         f"so do NOT flag a competitor brand NAME that appears ONLY here] {vd}")
         if sc.get("supernova_script"):
             lines.append(f"  [SCRIPT]\n{sc['supernova_script']}")
         ost = (sc.get("supernova_on_screen_text") or "").strip()

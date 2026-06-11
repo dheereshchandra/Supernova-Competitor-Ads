@@ -27,6 +27,55 @@ SCENES_DIR = WORKSPACE / "scenes"
 FRAMES_DIR = WORKSPACE / "frames"
 
 
+def _is_embeddable_jpeg(path: pathlib.Path) -> bool:
+    """True if the JPEG is already a normalised baseline JFIF (JFIF marker present AND no Exif).
+
+    JFIF is the marker python-docx needs and Pillow writes; ffmpeg MJPEG frames (build-dependent) often
+    start with a COM marker ("Lavc…") and no JFIF, so they fail this and get normalised. We check JFIF at
+    its canonical offset (byte 6, immediately after SOI + APP0 length) — where python-docx + Pillow put
+    it — and ALSO require Exif to be absent: an Exif block may carry an Orientation tag we must bake into
+    pixels, so an Exif-bearing JPEG is normalised once (after which it is JFIF-only and this returns True
+    — idempotent, no repeated re-encode on re-runs). A cheap 128-byte header read."""
+    try:
+        with open(path, "rb") as fh:
+            head = fh.read(128)
+    except OSError:
+        return False
+    return head[:2] == b"\xff\xd8" and head[6:10] == b"JFIF" and b"Exif" not in head
+
+
+def _normalize_jpeg(path: pathlib.Path) -> None:
+    """Rewrite a JPEG as a baseline JFIF via Pillow so python-docx can embed it.
+
+    ffmpeg's MJPEG encoder can emit a COM-marked JPEG with no JFIF APP0 marker (build-dependent;
+    observed on Homebrew ffmpeg 8.1), which python-docx's strict image parser then rejects with
+    UnrecognizedImageError — so the frame
+    silently fails to embed and the competitor-analysis doc loses ALL its original
+    screenshots (Stage 6, step4_build_docs.py). A Pillow round-trip rewrites a standard
+    baseline JFIF JPEG python-docx accepts, at the SAME native resolution (no downscale)
+    and visually-lossless quality (q95, 4:4:4). EXIF orientation is baked into the pixels
+    first, so a rotated scraped source JPEG doesn't embed sideways.
+
+    Idempotent (no-op when the frame is already baseline JFIF — so it's safe + cheap to
+    call on the skip path, which fixes frames left by the pre-fix script on re-run) and
+    best-effort (on any error, incl. Pillow missing, the original frame is left untouched
+    — never worse than before)."""
+    if _is_embeddable_jpeg(path):
+        return
+    tmp = path.with_suffix(".norm.jpg")
+    try:
+        from PIL import Image, ImageOps
+        with Image.open(path) as im:
+            im = ImageOps.exif_transpose(im)        # bake orientation in (no-op w/o EXIF)
+            im.convert("RGB").save(tmp, "JPEG", quality=95, subsampling=0)
+        tmp.replace(path)
+    except Exception:
+        try:
+            tmp.unlink()
+        except OSError:
+            pass
+
+
 def video_path_for(ad_id: str, competitor: str) -> pathlib.Path | None:
     # Search ALL dated folders (newest first), not just the latest — a long-running
     # ad's video may have come from an earlier scrape (see step4_decompose.video_path_for).
@@ -70,6 +119,11 @@ def extract_one(video_path: pathlib.Path, t: float, out_path: pathlib.Path) -> b
              "-vframes", "1", "-q:v", "2", str(out_path)],
             capture_output=True, timeout=15, check=True,
         )
+        if not (out_path.exists() and out_path.stat().st_size > 20_000):
+            return False
+        # ffmpeg MJPEG output is not python-docx-embeddable; rewrite it as a baseline
+        # JPEG so Stage 6 can embed the original screenshot (see _normalize_jpeg).
+        _normalize_jpeg(out_path)
         return out_path.exists() and out_path.stat().st_size > 20_000
     except (subprocess.SubprocessError, subprocess.TimeoutExpired, OSError):
         return False
@@ -99,10 +153,12 @@ def process_row(ad_id: str, competitor: str) -> dict:
             return {"id": ad_id, "status": "no-image", "extracted": 0, "failed": 0}
         out_path = frame_dir / f"orig_{scenes[0].get('n', 1):02d}.jpg"
         if out_path.exists() and out_path.stat().st_size > 20_000:
+            _normalize_jpeg(out_path)   # idempotent; fixes frames left by the pre-fix script
             return {"id": ad_id, "status": "ok", "extracted": 0,
                     "skipped": 1, "failed": 0, "scenes": 1}
         try:
             shutil.copyfile(img, out_path)
+            _normalize_jpeg(out_path)  # scraped source jpgs can also be non-embeddable
             return {"id": ad_id, "status": "ok", "extracted": 1,
                     "skipped": 0, "failed": 0, "scenes": 1}
         except OSError as e:
@@ -126,6 +182,7 @@ def process_row(ad_id: str, competitor: str) -> dict:
             t = (s + e) / 2
         out_path = frame_dir / f"orig_{n:02d}.jpg"
         if out_path.exists() and out_path.stat().st_size > 20_000:
+            _normalize_jpeg(out_path)   # idempotent; fixes frames left by the pre-fix script
             skipped += 1
             continue
         if extract_one(video, float(t), out_path):
