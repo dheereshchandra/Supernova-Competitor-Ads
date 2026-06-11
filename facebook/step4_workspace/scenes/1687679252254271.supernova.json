@@ -1,0 +1,31 @@
+{
+  "competitor_id": "1687679252254271",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Text-heavy graphic with partial portrait",
+        "supernova_script": "Narrator says: Still freezing when you have to speak English? Meet Miss Nova on the Supernova app.\nNarrator says: She's an AI teacher who actually listens to you speak, catches your mistakes, and explains them in your own language.\nNarrator says: Practice for job interviews or client calls with zero judgement.\nNarrator says: Just 15 minutes a day. Install Supernova and start speaking today.",
+        "scene_summary": "- Hooks with the relatable problem of freezing while speaking English.\n- Introduces Miss Nova and the core speak-and-correct loop (beats c, g).\n- Highlights zero-judgement practice for high-stakes scenarios like interviews (beats b, e).\n- Closes with a positive time anchor (15 mins/day) and clear CTA.",
+        "supernova_on_screen_text": "FINALLY SPEAK ENGLISH CONFIDENTLY with Supernova. Millions freeze when they have to speak English. Meet Miss Nova, your personal AI teacher. She listens, corrects you live, and explains the logic in your own language. Practice for job interviews or client calls with zero judgement. Just 15 minutes a day. Install Supernova and start speaking today."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "b (privacy/no-judgement), c (speak not read), e (real-life scenarios), g (mother-tongue logic)",
+      "kept_from_seed": "Static composite graphic with portrait and text layout",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "BoldVoice",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781149143.6888478
+}
