@@ -393,8 +393,16 @@ def main() -> int:
         print(f"[done] master:   {master_path}  ({len(master_rows)} rows total)")
     print(f"[done] log:      {log_path}")
 
-    # exit code: non-zero only if there were real errors (video-missing/error)
-    return 1 if (counts["error"] + counts["video-missing"]) else 0
+    # exit code: non-zero ONLY on real upload errors (S3/network). video-missing is
+    # surfaced as a warning but is NON-FATAL — it's usually benign (re-keyed
+    # multi-version rows whose key changed, or an ad whose CDN expired). Treating it
+    # as fatal halted whole competitors (the MySivi case). The per-run audit
+    # (tools/pipeline-run/audit.py) checks LEAD-creative coverage and escalates if a
+    # real creative was actually lost.
+    if counts["video-missing"]:
+        print(f"[warn] {counts['video-missing']} video-missing row(s) — surfaced, NON-FATAL "
+              f"(logged in {log_path}); audit verifies lead-creative coverage.")
+    return 1 if counts["error"] else 0
 
 
 if __name__ == "__main__":

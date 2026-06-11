@@ -679,7 +679,14 @@ def main() -> None:
         print("       The facebook:ads extractor is also occasionally flaky, so a few")
         print("       may recover on a later run - re-run the script and it will retry")
         print("       only what is still missing (already-downloaded ads are skipped).")
-    sys.exit(1 if n_fail else 0)
+    # exit code: PARTIAL failures are NON-FATAL — expired/removed-ad CDN links are
+    # expected, the succeeded ads are in hand, and the master carries forward the
+    # rest. Halting the whole competitor on a few dead links was the old all-or-
+    # nothing trap. Exit non-zero ONLY if the download wholly failed (nothing came
+    # down while ads were attempted) — a real outage worth stopping for.
+    if n_fail:
+        print(f"[warn] {n_fail} download(s) failed — surfaced, NON-FATAL ({n_ok} available).")
+    sys.exit(1 if (n_ok == 0 and n_fail > 0) else 0)
 
 
 if __name__ == "__main__":

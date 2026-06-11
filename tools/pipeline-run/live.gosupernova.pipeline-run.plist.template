@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template only. Do NOT install directly — run tools/pipeline-run/install.sh, which
+     fills __RUN_BATCH__ and __LOG__ with absolute paths and loads the job.
+
+     Durable Facebook pipeline runner. ON-DEMAND ONLY (no daily schedule) — it runs
+     when you trigger it (the planned Ad Studio "run" button, or directly):
+       • on demand / resume:  launchctl kickstart -k gui/$UID/live.gosupernova.pipeline-run
+
+     KeepAlive{SuccessfulExit:false}: if the runner exits NON-ZERO (crash, kill, or its
+     own "work remains" signal) launchd relaunches it and it RESUMES; once everything is
+     done it exits 0 and launchd leaves it stopped. ThrottleInterval spaces relaunches. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>live.gosupernova.pipeline-run</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>__RUN_BATCH__</string>
+  </array>
+  <key>KeepAlive</key>
+  <dict>
+    <key>SuccessfulExit</key><false/>
+  </dict>
+  <key>ThrottleInterval</key>
+  <integer>120</integer>
+  <key>RunAtLoad</key>
+  <false/>
+  <key>StandardOutPath</key>
+  <string>__LOG__</string>
+  <key>StandardErrorPath</key>
+  <string>__LOG__</string>
+</dict>
+</plist>
