@@ -417,7 +417,11 @@ async def _worker():
                 await asyncio.sleep(2)
                 continue
             job = dict(row)
-            await JobRunner(job).run()
+            if job.get("kind") == "pipeline":
+                from .pipeline import PipelineRunner
+                await PipelineRunner(job).run()
+            else:
+                await JobRunner(job).run()
         except Exception as e:  # worker must never die
             try:
                 if job is not None:

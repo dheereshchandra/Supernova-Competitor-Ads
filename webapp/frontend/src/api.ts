@@ -210,8 +210,19 @@ export type JobStatus =
   | 'cancelled'
   | 'done'
 
+export interface PipelineEstimate {
+  eligible: boolean
+  reason?: string
+  backlog_videos?: number
+  cost_usd?: number
+  note?: string
+  excludes?: string
+  wall_clock?: string
+}
+
 export interface Job {
   id: string
+  kind?: 'generate' | 'pipeline'
   pipeline: string
   competitor: string
   ad_id: string
@@ -305,6 +316,14 @@ export const retryJob = (id: string) =>
 
 export const cancelJob = (id: string) =>
   api<unknown>(`/api/jobs/${encodeURIComponent(id)}/cancel`, { method: 'POST' })
+
+export const getPipelineEstimate = (pipeline: string, competitor: string) =>
+  api<PipelineEstimate>(
+    `/api/pipeline/estimate?pipeline=${encodeURIComponent(pipeline)}&competitor=${encodeURIComponent(competitor)}`,
+  )
+
+export const runPipeline = (pipeline: string, competitor: string) =>
+  api<{ job_id: string }>('/api/pipeline/run', { json: { pipeline, competitor } })
 
 export const getTracker = () => api<{ rows: TrackerRow[] }>('/api/tracker')
 
