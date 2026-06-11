@@ -143,12 +143,28 @@ for slug in "${slugs[@]}"; do
   # skip competitors already finished today (resume semantics).
   # NB: 'status' is a read-only special var in zsh — use cstat.
   cstat="$(st summary | grep -E "^   . ${slug} " | awk '{print $3}')"
-  if [ "$cstat" = "done" ]; then log "skip $slug (already done today)"; continue; fi
+  # GUARDRAIL: skip both done AND blocked competitors on later passes — a blocked
+  # scrape must NOT be re-scraped (that was the 7×/3h storm).
+  if [ "$cstat" = "done" ] || [ "$cstat" = "blocked" ]; then
+    log "skip $slug (already $cstat today — not re-running)"; continue; fi
 
   att="$(st summary | grep -E "^   . ${slug} " | grep -oE 'attempt [0-9]+' | awk '{print $2}')"
   att=$(( ${att:-0} + 1 ))
 
   run_one "$slug"; prc=$?
+
+  # GUARDRAIL: a scrape that returned 0 ads / failed audit (run_pipeline rc=10) is
+  # BLOCKED — do NOT auto-retry. Re-scraping a paused/blocked page is pointless and
+  # worsens throttling (this is the 7-retries-over-3-hours bug). Flag a human; the
+  # existing master/enrichment is untouched. Subsequent passes skip 'blocked'.
+  if [ "$prc" = 10 ]; then
+    st set "$slug" blocked "$att"
+    log "BLOCKED $slug — scrape returned 0 ads / failed audit; NOT auto-retrying (needs attention)."
+    REPORT+=("⚠ $slug — scrape BLOCKED (0 ads / audit-FAIL); not retried, existing data kept")
+    notify "Pipeline: $slug scrape blocked" "0 ads / scrape failed — NOT retried. Check the page's Ad Library / page_id."
+    st current "" ""; st heartbeat
+    continue
+  fi
 
   # per-run sanity AUDIT (C) — catches "exit 0 but BAD" (0 ads, silent enrichment hole)
   averdict="$("$PY" "$SCRIPT_DIR/audit.py" "$slug" 2>>"$LOG" | grep '^AUDIT ' | head -1)"

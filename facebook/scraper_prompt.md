@@ -180,8 +180,7 @@ const COMPETITOR_PAGES = {
     { page_id: "1704560136456926", page_name: "Multibhashi" }
   ],
   "Praktika AI": [
-    { page_id: "104781132385804", page_name: "Praktika" },
-    { page_id: "902151746306097", page_name: "Praktika - Learn English with AI" }
+    { page_id: "104781132385804", page_name: "Praktika" }
   ],
   "EWA": [
     // Migrated 2026-06-04: brand moved off page_id 61572590343208 (now empty —

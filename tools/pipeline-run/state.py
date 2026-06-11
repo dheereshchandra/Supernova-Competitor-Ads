@@ -129,18 +129,20 @@ def cmd_heartbeat():
     d["heartbeat"] = _now()
     _save(d)
 
+def _settled(v) -> bool:
+    """A competitor needs no more work this run: done, BLOCKED (scrape returned
+    0 ads / failed audit — deliberately NOT retried), or failed at the attempt cap."""
+    s = v.get("status")
+    return s in ("done", "blocked") or (s == "failed" and v.get("attempts", 0) >= MAX_ATTEMPTS)
+
 def _all_settled(d) -> bool:
     pc = d.get("per_competitor", {})
-    return all(v.get("status") == "done" or
-               (v.get("status") == "failed" and v.get("attempts", 0) >= MAX_ATTEMPTS)
-               for v in pc.values()) and bool(pc)
+    return bool(pc) and all(_settled(v) for v in pc.values())
 
 def cmd_pending():
     d = _load()
     out = [s for s in d.get("competitors", [])
-           if not (d["per_competitor"].get(s, {}).get("status") == "done"
-                   or (d["per_competitor"].get(s, {}).get("status") == "failed"
-                       and d["per_competitor"].get(s, {}).get("attempts", 0) >= MAX_ATTEMPTS))]
+           if not _settled(d["per_competitor"].get(s, {}))]
     print(" ".join(out))
 
 def cmd_verdict():
@@ -173,7 +175,7 @@ def cmd_summary():
     for s in d.get("competitors", []):
         v = d["per_competitor"].get(s, {})
         st = v.get("status", "pending"); att = v.get("attempts", 0)
-        mark = {"done": "✓", "running": "▶", "failed": "✗", "pending": "·"}.get(st, "?")
+        mark = {"done": "✓", "running": "▶", "failed": "✗", "pending": "·", "blocked": "⚠"}.get(st, "?")
         extra = f" (attempt {att})" if att else ""
         fin = f" @ {v.get('finished_at','')[-8:]}" if v.get("finished_at") else ""
         print(f"   {mark} {s:<16} {st}{extra}{fin}")

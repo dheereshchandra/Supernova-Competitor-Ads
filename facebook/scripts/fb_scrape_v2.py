@@ -131,7 +131,8 @@ COMPETITOR_PAGES = {
     "Multibhashi": [{"page_id": "1704560136456926", "page_name": "Multibhashi"}],
     "Praktika AI": [
         {"page_id": "104781132385804", "page_name": "Praktika"},
-        {"page_id": "902151746306097", "page_name": "Praktika - Learn English with AI"},
+        # Removed dud page_id 902151746306097 ("Praktika - Learn English with AI"): it
+        # never produced ads in any scrape (not in the master) — a wrong/empty page_id.
     ],
     "EWA": [{"page_id": "165004157332215", "page_name": "EWA: Learn Languages"}],
 }

@@ -141,10 +141,11 @@ fb_v2_scrape() {
   echo "  [stage1] scraping '$slug' with the V2 terminal scraper (fb_scrape_v2.py) ..."
   if [ "$DRY" = 1 ]; then echo "  \$ $PY facebook/scripts/fb_scrape_v2.py $slug"; return 0; fi
   $PY facebook/scripts/fb_scrape_v2.py "$slug" || {
-    echo "  [stage1] V2 scrape did not finish clean (login wall / audit FAIL / throttle) — see output above."
-    return 1; }
+    echo "  [stage1] V2 scrape did not finish clean (0 ads / audit FAIL / login wall / throttle) — see above."
+    return 10; }   # 10 = scrape needs ATTENTION → the runner BLOCKS this competitor (NO auto-retry).
+                   # Re-scraping a 0-ad / blocked page is pointless and worsens throttling.
   local v2csv; v2csv="$(ls -1t facebook/inputs/fb-ads-${slug}-${today}-*-v2.csv 2>/dev/null | head -1)"
-  [ -n "$v2csv" ] || { echo "  [stage1] no clean -v2 output produced — aborting '$slug'."; return 1; }
+  [ -n "$v2csv" ] || { echo "  [stage1] no clean -v2 output produced — aborting '$slug'."; return 10; }
   cp "$v2csv" "${v2csv/-v2.csv/.csv}"
   echo "  [stage1] canonicalised → $(basename "${v2csv/-v2.csv/.csv}")"
 }
@@ -157,7 +158,7 @@ stage1_scrape() {
     if [ -n "$inp" ] && [ "$(input_date "$inp")" = "$today" ] && [ "$RESCRAPE" != 1 ]; then
       echo "  [stage1] today's snapshot already present: $inp  (--rescrape to force a fresh scrape)"
     else
-      fb_v2_scrape "$slug" || return 1
+      fb_v2_scrape "$slug" || return $?   # propagate 10 (scrape-blocked) so the runner won't retry
       inp="$(newest_input "$slug")"
     fi
   fi
