@@ -286,13 +286,18 @@ def main() -> int:
     if failed > 10:
         print(f"  ... and {failed - 10} more failures")
     rate = (failed / total) if total else 0.0
-    if total and rate > max_fail_rate:
-        # FAIL LOUD: a degraded batch must not pass as success — the orchestrator
-        # surfaces + alerts instead of committing an enrichment full of holes.
-        print(f"[error] transcription failure rate {rate:.0%} exceeds the "
-              f"{max_fail_rate:.0%} cap — failing the step. Re-run resumes (the {state['ok']} "
-              f"ok sidecars are cached; only the {failed} failures retry).", flush=True)
+    # FAIL LOUD only when failures are BOTH a meaningful fraction AND an absolute
+    # count. A single straggler in a tiny daily delta (e.g. 1/1 new ad that's
+    # music-only or a transient blip) must NOT fail the whole competitor — that was
+    # a false-failure that halted MySivi. Real degradation (many videos failing on a
+    # real batch) still trips it.
+    if failed > max(3, int(total * max_fail_rate)):
+        print(f"[error] transcription: {failed}/{total} FAILED ({rate:.0%}) exceeds the "
+              f"gate (>{max(3, int(total * max_fail_rate))}) — failing the step. Re-run resumes "
+              f"(the {state['ok']} ok sidecars are cached; only the {failed} failures retry).", flush=True)
         return 2
+    if failed:
+        print(f"  ({failed} failed but under the gate — tolerated; they retry next run)")
     return 0
 
 
