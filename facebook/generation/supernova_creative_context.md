@@ -56,7 +56,7 @@ The 7 payload beats, in order of importance. **a) is non-negotiable — it appea
 - **The ChatGPT / general-AI contrast** (rare in winners, high-value): *"ChatGPT aapko jawab deta hai; Supernova aapse jawab nikalta hai." / "ChatGPT ek assistant hai, teacher nahi — ek Yes-Man."*
 - **The universality claim:** *"Aap bhi seekh sakte ho." / "That's how I learnt English, and you can too."*
 
-**The tight close (every ad):** **negative time anchor** (the hours wasted scrolling Reels / saving English-tip PDFs / YouTube) **+ positive time anchor** (just 10–15 min/day) **+ one clean CTA** ("Install Supernova, start speaking today"). **Avoid a hard rupee price**; a *comparative* cost ("7× cheaper than coaching classes") is fine **when the script calls for it** — it need not appear in every ad. The most payload-complete winners ("Grammar is the LAST thing," "New Vowel Logic") nail exactly this close.
+**The tight close (every ad):** **negative time anchor** (name Meta's own surfaces or the generic activity; avoid naming a *third-party* brand like YouTube — e.g. the hours lost to scrolling Reels/feeds / tip-videos that never turn into speaking / saved English-tip PDFs that never get opened) **+ positive time anchor** (just 10–15 min/day) **+ one clean CTA** ("Install Supernova, start speaking today"). **Avoid a hard rupee price**; a *comparative* cost ("7× cheaper than coaching classes") is fine **when the script calls for it** — it need not appear in every ad. The most payload-complete winners ("Grammar is the LAST thing," "New Vowel Logic") nail exactly this close.
 
 ---
 

@@ -1,0 +1,76 @@
+{
+  "competitor_id": "1244334620666324",
+  "parsed": {
+    "duration_s": 39.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a real human actor in a physical kitchen environment. Movements, lighting, and textures are natural, with no AI artifacts like distorted fingers or uncanny facial expressions.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young woman, slim build, fair complexion. She has long, straight blonde hair tied half-up. Natural facial features with light makeup.",
+        "wardrobe": "Dark grey, oversized graphic t-shirt.",
+        "demeanor": "Initially confused and hesitant, becoming impressed and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Digital avatar of a young woman with red hair and fair skin, visible only on the phone screen.",
+        "wardrobe": "White top.",
+        "demeanor": "Friendly and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 37.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Language Practice at the Sink",
+        "setting": "Kitchen, daytime. Blue cabinets, stainless steel sink, running water, dirty dishes.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot, slightly low angle.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young blonde woman washes dishes at a kitchen sink under running water. She wears a dark grey graphic t-shirt. A smartphone lies flat on the granite counter next to the sink, displaying an animated red-haired female avatar. The kitchen has light blue cabinets. The woman looks down at the phone periodically while washing plates and pans.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A continuous shot of a woman washing dishes while talking to her phone. Dynamic text overlays appear in the center of the screen, showing the dialogue, translations, and country flags. The text uses various colors and includes icons like checkmarks and crosses to indicate pronunciation accuracy.",
+        "audio_transcript": "Character B says: Buongiorno [Good morning]\n\nCharacter A says: No hablo italiano [I don't speak Italian]\n\nCharacter B says: Non parlo italiano! [I don't speak Italian!]\n\nCharacter A says: Ah, non parlo italiano. [Ah, I don't speak Italian.]\n\nCharacter B says: Bonjour? [Hello?]\n\nCharacter A says: No France?\n\nCharacter B says: Je parle pas fran\u00e7ais [I don't speak French.]\n\nCharacter A says: Ah, je parle pas fran\u00e7ais. [Ah, I don't speak French.]\n\nCharacter B says: \u3053\u3093\u306b\u3061\u306f [Hello?]\n\nCharacter A says: Huh?\n\nCharacter B says: Hallo? [Hello?]\n\nCharacter A says: Ummm....\n\nCharacter B says: \uc548\ub155\ud558\uc138\uc694 [Hello?]\n\nCharacter A says: Wow, how many languages can you speak!\n\nCharacter B says: Many! I'm an AI tutor on Praktika, and the best part is that I can teach you any language you want!\n\nCharacter A says: But I'm really bad with languages.\n\nCharacter B says: Don't worry, I can teach you in your native language too!\n\nCharacter A says: You know my language?\n\nCharacter B says: Of course, I'm an AI! Download Praktika and you will become a language pro!\n\nCharacter A says: Okay, I will download Praktika right now!",
+        "on_screen_text": "BUONGIORNO GOOD MORNING\nNo hablo italiano I don't hablo Italian\nNon parlo italiano! I don't speak Italian!\nNon parlo italiano. I don't speak Italian!\nBonjour? Hello?\nNo France?\nJe parle pas fran\u00e7ais I don't speak French.\n\u3053\u3093\u306b\u3061\u306f Konnichiwa? Hello?\nHuh?\nUmmm....\n\uc548\ub155\ud558\uc138\uc694 Annyeonghaseyo? Hello?\nWow, how many languages can you speak!\nMany! I'm an AI tutor on Praktika,\nand the best part is that I can teach you any language you want!\nBut I'm really bad with languages.\nDon't worry, I can teach you in your native language too!\nYou know my language?\nOf course, I'm an AI!\nDownload Praktika and you will become a language pro!\nOkay, I will download Praktika right now!"
+      },
+      {
+        "n": 2,
+        "start_s": 37.5,
+        "end_s": 39.0,
+        "screenshot_at_s": 38.2,
+        "scene_label": "End Card",
+        "setting": "Solid white background.",
+        "characters_in_scene": [],
+        "camera": "Full screen graphic.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A completely blank white screen.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A white end card featuring the purple Praktika app logo in the center. App store download buttons are positioned at the bottom.",
+        "audio_transcript": "[sound effect only, no speech]",
+        "on_screen_text": "praktika.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781147906.4062269
+}

@@ -1,0 +1,53 @@
+{
+  "competitor_id": "876989718762101",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Male, 20s-30s, medium build, fair complexion. He has curly dark hair and wears dark-rimmed glasses. His features are stylized and animated.",
+        "wardrobe": "A cream-colored, chunky cable-knit sweater.",
+        "demeanor": "Friendly, encouraging, and patient."
+      },
+      {
+        "id": "B",
+        "role": "Human learner",
+        "appearance": "Male, 40s-50s, stocky build, olive complexion. He has short dark hair with some graying and a stubble beard.",
+        "wardrobe": "A rust-orange t-shirt and white wireless earbuds.",
+        "demeanor": "Eager to learn, slightly hesitant but willing to try."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "French Lesson",
+        "supernova_script": "Character A says: Ready to practice speaking English? Nobody is judging you here, so make all the mistakes you want!\nCharacter B says: Yes. I am passed out in 2022.\nCharacter A says: No, no, we say: I graduated. 'Passed out' means to faint. I analyze your level and personalize your plan.\nCharacter B says: I graduated in 2022.\nCharacter A says: Perfect! Now, what is your biggest goal?\nCharacter B says: I am wanting to clear a job interview.\nCharacter A says: Careful: 'I want to clear'. You don't type, you just speak, and I explain the logic in your language.\nCharacter B says: I want to clear a job interview.\nCharacter A says: Much better! You learned your mother tongue by speaking, English is exactly the same.\nCharacter B says: Wow, I am feeling confident.\nCharacter A says: See? ChatGPT just gives you answers, but Supernova actually makes you speak.\nCharacter B says: You make me speak.\nCharacter A says: Exactly! Your English is already improving.\nCharacter B says: Thanks! Wait, who are you?\nCharacter A says: I am Miss Nova, your AI teacher on Supernova. Practice just 15 minutes a day, and build your confidence.\nCharacter B says: Okay, downloading Supernova now.",
+        "scene_summary": "- Establishes privacy and no-judgement immediately to lower viewer anxiety.\n- Uses a relatable Indian-English error ('passed out') for the live correction hook.\n- Weaves in personalization, mother-tongue reframe, and ChatGPT contrast naturally into the back-and-forth.\n- Preserves the in-story reveal device to introduce Miss Nova and the 15-minute time anchor.",
+        "supernova_on_screen_text": "Ready to practice speaking English?\nNobody is judging you here.\nYes. I am passed out in 2022.\nNo, no, we say: I graduated.\n'Passed out' means to faint.\nI analyze your level and personalize your plan.\nI graduated in 2022.\nPerfect! Now, what is your biggest goal?\nI am wanting to clear a job interview.\nCareful: 'I want to clear'.\nYou don't type, you just speak.\nI explain the logic in your language.\nI want to clear a job interview.\nMuch better!\nYou learned your mother tongue by speaking, English is exactly the same.\nWow, I am feeling confident.\nSee? ChatGPT just gives you answers, but Supernova actually makes you speak.\nYou make me speak.\nExactly! Your English is already improving.\nThanks! Wait, who are you?\nI am Miss Nova, your AI teacher on Supernova.\nPractice just 15 minutes a day, and build your confidence.\nOkay, downloading Supernova now."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Clean end card displaying the brand logo and download calls to action.",
+        "supernova_on_screen_text": "supernova.ai\nGET IT ON Google Play\nAvailable on the App Store"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speak not type), e (interview scenario), f (mother-tongue), g (logic in language), plus ChatGPT contrast",
+      "kept_from_seed": "Split-screen live correction format and in-story reveal device",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure or price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Praktika",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781158557.4784691
+}
