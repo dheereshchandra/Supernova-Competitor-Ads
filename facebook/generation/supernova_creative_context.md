@@ -15,6 +15,7 @@ What makes it real (use these, don't invent features):
 - **It explains the logic in YOUR language** (Hindi / Telugu / Tamil / Marathi / Kannada / Malayalam / Bengali / Gujarati) — so you never feel lost.
 - **It's judgement-free and always on.** Make 1000 mistakes at 3 a.m.; it corrects you 1000 times and never laughs at you.
 - **It's affordable and low-time** — cheaper than classes, ~15 min/day. *(See the price rule in Part 6 — a comparative like "7× cheaper than classes" is fine when apt; avoid a hard rupee figure.)*
+- **You feel real progress fast.** With ~15 min a day, most learners *start* noticing **visible progress in their speaking within about a month** — momentum that keeps them going. *(Frame as a realistic expectation from consistent practice — never a guaranteed result; see the timeline rule in Part 6 and brand-safety G1.1.)*
 
 **Optional truths (deploy when a concept calls for them — no hard rule, not default):** Supernova is **built by IITians** (good fuel for an authority/credibility hook); concrete features you may name — a **level test**, **1000+ practice activities/scenarios**, **scenario-based practice** (interview, manager, shopkeeper…). Reach for these when a particular script benefits; they need not appear in every ad.
 
@@ -40,7 +41,7 @@ She can appear two ways, both proven: **(a) on-screen** as the AI/robot teacher 
 
 > **The #1 lesson from the data:** the **hook** controls whether people survive the first hour (cancellation); the **payload** controls whether they make the **2nd payment**. *More complete payload → lower 2nd-pay CAC.* When in doubt, **add a payload beat, not a flashier hook.** A great hook with thin payload (e.g. the 58%-hook "Describe-this-in-English" or 56%-hook "Mother-in-law") still posts a *high* 2nd-pay CAC.
 
-The 7 payload beats, in order of importance. **a) is non-negotiable — it appears in the best winners and is the #1 objection-handler ("how can AI teach ME?").** Aim to land **a + b first**, then 3–4 more.
+The 7 payload beats, in order of importance. **a) is non-negotiable — it appears in the best winners and is the #1 objection-handler ("how can AI teach ME?").** **Every ad must land AT LEAST 3–4 of the a–g beats** (lead with **a + b**), choosing the specific beats that best fit this script's world/skit. Do **not** settle for 1–2 — if the seed only naturally carries 1–2, re-pitch additional existing lines until the ad reaches 3–4.
 
 | | Beat | What it sounds like | Status in current winners |
 |---|---|---|---|
@@ -52,9 +53,9 @@ The 7 payload beats, in order of importance. **a) is non-negotiable — it appea
 | **f** | **Mother-tongue reframe** — you learned your native language by *speaking* it, English works the same | *"Aapne Hindi bhi to aise hi seekhi thi na — bolte-bolte. Grammar baad mein."* | **RARE & distinctive** — a hard, memorable beat. Use it more. |
 | **g** | **Logic explained in your language** — removes comprehension anxiety | *"'Pick' matlab uthaana, 'catch' matlab pakadna."* | Common in correction demos. Keep. |
 
-**Two more near-mandatory elements:**
-- **The ChatGPT / general-AI contrast** (rare in winners, high-value): *"ChatGPT aapko jawab deta hai; Supernova aapse jawab nikalta hai." / "ChatGPT ek assistant hai, teacher nahi — ek Yes-Man."*
-- **The universality claim:** *"Aap bhi seekh sakte ho." / "That's how I learnt English, and you can too."*
+**Optional accent elements (use sparingly — a MINORITY of ads, only where they genuinely fit; NEVER a default, and NEVER ahead of the a–g beats above):**
+- **The ChatGPT / general-AI contrast** (high-value but rare in winners — *deploy in only some ads; do not reach for it by reflex, and never let it crowd out the a–g beats*): *"ChatGPT aapko jawab deta hai; Supernova aapse jawab nikalta hai." / "ChatGPT ek assistant hai, teacher nahi — ek Yes-Man."*
+- **The universality claim** (occasional reinforcement, not required): *"Aap bhi seekh sakte ho." / "That's how I learnt English, and you can too."*
 
 **The tight close (every ad):** **negative time anchor** (name Meta's own surfaces or the generic activity; avoid naming a *third-party* brand like YouTube — e.g. the hours lost to scrolling Reels/feeds / tip-videos that never turn into speaking / saved English-tip PDFs that never get opened) **+ positive time anchor** (just 10–15 min/day) **+ one clean CTA** ("Install Supernova, start speaking today"). **Avoid a hard rupee price**; a *comparative* cost ("7× cheaper than coaching classes") is fine **when the script calls for it** — it need not appear in every ad. The most payload-complete winners ("Grammar is the LAST thing," "New Vowel Logic") nail exactly this close.
 
@@ -99,7 +100,7 @@ Eight proven containers (use them as starting points; recombine and invent):
 
 **Hard DON'Ts (these recruit the wrong buyer or break brand — the data backs each):**
 - ❌ **No hard rupee price** (₹9, "cheaper than chai"). The ₹9 ads (Casual-TED, Mother-in-law, Marathi-interview) post *higher* 2nd-pay CAC — a cheap absolute price recruits a low-commitment buyer who churns before the 2nd payment. ✅ A **comparative** cost ("affordable," "7× cheaper than coaching classes") is fine **when it fits the script** — just not every ad, and never a bare rupee figure.
-- ❌ **No brand-voiced guaranteed timeline.** "Fluent in 30 days" must not come from the brand/VO. A *character* may say "I improved in 2 weeks" (testimonial) — the brand never guarantees.
+- ❌ **No brand-voiced guaranteed *outcome* on a timeline** ("Fluent in 30 days," "100%/job in 30 days") — a guaranteed END-STATE must not come from the brand/VO. ✅ The brand MAY set a **soft, hedged progress *expectation*** ("start seeing visible progress in ~30 days with daily practice," "speak more confidently within a month" — progress/confidence, not a finished result). A *character* may still give a personal testimonial ("I improved in 2 weeks"). *(The hard line, mirrored in brand-safety G1.1: hedged progress = allowed; guaranteed fluency/job/exam outcome = banned.)*
 - ❌ **No vague "ek skill."** Always **name English** explicitly (and in the first 10s).
 - ❌ **No pure mockery / insult hook without an authoritative resolution.** Shame is allowed *only* when the underdog or authority *resolves* it in triumph/proof.
 - ❌ **Don't skip personalization (beat a)** — it's the #1 "how can AI teach ME?" objection-handler.
@@ -112,7 +113,7 @@ Eight proven containers (use them as starting points; recombine and invent):
 
 **The blueprint winning structure** (3 acts):
 1. **HOOK (0–5s):** one of the 7 hook families; name English by 10s.
-2. **DEMO + PAYLOAD (the body):** *show* the speak→correct→explain-in-your-language loop, then stack the beats — **a (personalization) + b (privacy) are the retention engine**, plus the ChatGPT contrast, mother-tongue reframe, old-methods-failed, and a named real-life scenario (interview first). An in-story character question triggers the Miss Nova / Supernova reveal.
+2. **DEMO + PAYLOAD (the body):** *show* the speak→correct→explain-in-your-language loop, then stack the beats — **a (personalization) + b (privacy) are the retention engine** (land at least 3–4 of a–g total), plus mother-tongue reframe, old-methods-failed, and a named real-life scenario (interview first), and *optionally* the ChatGPT contrast where it fits. An in-story character question triggers the Miss Nova / Supernova reveal.
 3. **TIGHT CLOSE:** negative time anchor + positive (15 min/day) + one clean install CTA + universality claim. **No price.**
 
 The single most *payload-complete* proven script ("Grammar is the LAST thing") + the strongest *hooks* (shame-reversal, describe-this-in-English, news) point to the optimization: **that dense payload, fired behind a more emotional/pattern-break hook.**
