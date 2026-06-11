@@ -1,4 +1,4 @@
-# pipeline-run — durable, self-healing daily Facebook pipeline
+# pipeline-run — durable, self-healing, on-demand Facebook pipeline
 
 Runs the full Facebook pipeline (scrape → download → R2 → free analysis → enrichment;
 **Creative Studio excluded**) for a list of competitors, under **macOS launchd** so it
@@ -20,14 +20,16 @@ session, and every pipeline stage is already idempotent, so a relaunch just resu
 - `competitors.txt` — the daily list (one slug per line).
 - `install.sh` / `uninstall.sh` / `*.plist.template` — the LaunchAgent.
 
-## Install (daily production)
+## Install (on-demand runner — no daily schedule)
 Run ONCE from your **main clone** (not a Conductor worktree — single writer):
 ```
 zsh tools/pipeline-run/install.sh
 ```
-Installs `live.gosupernova.pipeline-run`: runs **daily at 12:15 PM** and **auto-resumes
-on crash** (`KeepAlive{SuccessfulExit:false}`). Change the time in the plist template +
-re-run install. Remove with `uninstall.sh`.
+Installs `live.gosupernova.pipeline-run`: **ON-DEMAND only — it does NOT run on a daily
+schedule.** It runs when you **trigger** it (the `launchctl kickstart` below, or a UX
+"run" button), and **auto-resumes on crash** (`KeepAlive{SuccessfulExit:false}`). Remove
+with `uninstall.sh`. *(Daily automation was intentionally removed — runs are triggered
+manually/by the Ad Studio UX so they stay controlled.)*
 
 ## Run now / resume (any time, detached — survives the session dying)
 ```

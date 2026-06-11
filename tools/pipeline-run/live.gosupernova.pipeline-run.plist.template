@@ -3,8 +3,8 @@
 <!-- Template only. Do NOT install directly — run tools/pipeline-run/install.sh, which
      fills __RUN_BATCH__ and __LOG__ with absolute paths and loads the job.
 
-     Durable Facebook pipeline runner. Two ways it runs:
-       • daily at 12:15 (StartCalendarInterval) — after the 11:30 pull / 11:35 capture
+     Durable Facebook pipeline runner. ON-DEMAND ONLY (no daily schedule) — it runs
+     when you trigger it (the planned Ad Studio "run" button, or directly):
        • on demand / resume:  launchctl kickstart -k gui/$UID/live.gosupernova.pipeline-run
 
      KeepAlive{SuccessfulExit:false}: if the runner exits NON-ZERO (crash, kill, or its
@@ -19,11 +19,6 @@
     <string>/bin/zsh</string>
     <string>__RUN_BATCH__</string>
   </array>
-  <key>StartCalendarInterval</key>
-  <dict>
-    <key>Hour</key><integer>12</integer>
-    <key>Minute</key><integer>15</integer>
-  </dict>
   <key>KeepAlive</key>
   <dict>
     <key>SuccessfulExit</key><false/>
