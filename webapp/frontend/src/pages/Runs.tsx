@@ -116,8 +116,10 @@ function RunCard({ job, onChange }: { job: Job; onChange: () => void }) {
             <div className="mt-2 rounded-lg border border-amber-400/30 bg-amber-500/10 p-3">
               <div className="text-sm text-amber-100">
                 Rankings updated{job.enrich?.summary ? ` (${job.enrich.summary})` : ''}. Found{' '}
-                <span className="font-semibold">{job.enrich?.videos ?? '?'} videos</span> to enrich —
-                enrich them for <span className="font-semibold">≈ {money(job.enrich?.cost ?? job.cost_estimate_usd)}</span>?
+                <span className="font-semibold">
+                  {job.enrich?.videos ?? '?'} {job.enrich?.videos === 1 ? 'video' : 'videos'}
+                </span> to enrich —
+                enrich for <span className="font-semibold">≈ {money(job.enrich?.cost ?? job.cost_estimate_usd)}</span>?
               </div>
               <div className="mt-2 flex gap-2">
                 <button
