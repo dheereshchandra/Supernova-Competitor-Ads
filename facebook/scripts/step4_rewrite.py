@@ -81,10 +81,19 @@ THE BALANCE — read twice:
   `supernova_script` and its `on_screen_text` into `supernova_on_screen_text` so the ad now delivers
   Supernova's disciplined PAYLOAD (above), woven naturally into the EXISTING beats: swap the competitor
   brand -> Supernova; lead with personalization (a) + privacy/no-judgement (b); name **Miss Nova** as
-  the AI teacher; name **English** within the first ~10s; keep an in-story reveal; add the ChatGPT
-  contrast / mother-tongue reframe / a named real-life scenario WHERE THEY FIT this world. Strip any
+  the AI teacher; name **English** within the first ~10s; keep an in-story reveal; weave in the
+  mother-tongue reframe / a named real-life scenario WHERE THEY FIT this world (and, only OCCASIONALLY —
+  not every ad — the ChatGPT contrast, when it genuinely fits). Strip any
   hard rupee price (a comparative like "7x cheaper than classes" is allowed only if it fits the scene;
   a "1 crore+ users" social-proof line is fine where it fits — don't let it carry the ad alone).
+- **INDIANIZE EVERY REFERENCE — the ad targets Indians in India.** The competitor seed may run abroad;
+  in your re-pitch, convert ALL foreign references in `supernova_script` + `supernova_on_screen_text` to
+  an Indian frame — character names → Indian names (Rahul, Priya, Anjali, Imran…, never "Jenny"/"John");
+  cities/places → Indian (Mumbai/Delhi/Lucknow/a Tier-2 town, NEVER Paris/France/London-as-home); plus
+  currency (₹), brands, food, festivals and any foreign-language line → Hindi/English Indian equivalents.
+  (Real failure to avoid: a "Where are you from?" beat answered "I am from France", or a learner named
+  "Jenny" — make them an Indian city and an Indian name.) Only an element FORCED by the reused VISUALS
+  may remain on screen; everything you WRITE must read as unmistakably Indian.
 - **LEAD WITH a + b — DON'T BACK-LOAD THEM.** Personalization (a) and privacy/no-judgement (b) are the
   retention engine; the failure to avoid is letting the final CTA be the FIRST place they appear. In a
   4+ scene ad, land a+b by the MIDPOINT; in a 2–3 scene ad, put them in the BODY of scene 2 (right after
@@ -92,8 +101,10 @@ THE BALANCE — read twice:
   they already landed earlier. Front-load by choosing WHICH existing early lines to re-pitch into the a+b
   message — you change what early lines SAY, never their position (scene order is fixed, per the rules
   above).
-- **MATCH PAYLOAD DEPTH TO LENGTH.** A short/absurdist ad (2-3 scenes) should lead with just a+b; a
-  longer narrative can stack more beats. Never cram so many beats that the pace breaks.
+- **LAND AT LEAST 3–4 PAYLOAD BEATS — every ad.** Deliver a minimum of **3–4** of the a–g beats (a is
+  non-negotiable; lead with a + b), picking the ones that fit THIS ad's world and pacing. Even a
+  short/absurdist 2–3 scene ad must reach 3–4 — weave them into the EXISTING beats rather than dropping
+  to just a+b. A longer narrative can stack more. Never cram so many beats that the pace breaks.
 - You MAY lightly expand ONE line within a scene if a payload beat needs it, but NEVER change the
   visual, the scene order, or what is shown.
 - **NEVER violate the BRAND-SAFETY GUARDRAILS above** (the hard NEVERs — no brand-voiced guarantees,
@@ -115,7 +126,7 @@ OUTPUT: exactly one JSON object (no markdown fences, no commentary). Schema:
     }
   ],
   "payload_audit": {
-    "beats_covered": "<which payload beats a-g the whole ad lands, with a 3-word note each>",
+    "beats_covered": "<which payload beats a-g the whole ad lands (MUST be at least 3–4), with a 3-word note each>",
     "kept_from_seed": "<one line naming the core visual/structure you preserved>",
     "miss_nova_named": <true|false>,
     "english_named_early": <true|false>,
@@ -135,6 +146,9 @@ CONSTRAINTS:
   in two weeks" is fine — the brand/VO must not promise a timeframe). **Carve-out:** the no-judgement
   REASSURANCE of beat b is NOT an outcome promise — "I'll never laugh at you", "no one is ever
   watching/judging you", "make 1000 mistakes" are ALLOWED and encouraged (it's the highest-leverage beat).
+  **Carve-out (30-day progress):** a soft, hedged progress EXPECTATION tied to daily practice — "start
+  seeing visible progress in ~30 days", "speak more confidently within a month" — is ALLOWED (it's a
+  benefit, not a guarantee); only HARD guarantees ("fluent/100%/job in X days") get rewritten.
   Safe swaps: time anchor = "just 15 minutes a day" (NOT "15 minutes is all you need"); logic beat = "so it
   finally makes sense / explained in your own language" (NOT "so you never get confused" — the problem is
   the absolute "never", not the comprehension benefit itself, which is beat g and encouraged).

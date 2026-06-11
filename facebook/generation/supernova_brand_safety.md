@@ -20,6 +20,12 @@ Gemini Flash) that checks every script before it reaches the team.*
 - **G1.1 [SEVERE] No brand-voiced outcome guarantees.** The brand/VO/on-screen text must never *promise*
   a result. ❌ "Guaranteed fluent in 7 days," "100% job after this course." ✅ A *character* may give a
   personal testimonial ("I improved in two weeks") — the brand never guarantees.
+  - ✅ **Carve-out — soft progress expectation.** The brand MAY set a realistic, *non-guaranteed* progress
+    expectation tied to consistent practice — "with daily practice you'll **start** seeing visible progress
+    in about 30 days," "speak more confidently within a month." It must use hedge language
+    (start / begin / most learners / can) and name **progress / confidence**, never a guaranteed end-state.
+    ❌ Still BANNED: "guaranteed fluent in 30 days," "100% fluent in a month," or any job / income / visa /
+    exam outcome on a timeline (see G1.2).
 - **G1.2 [SEVERE] No false job / income / visa / exam outcomes.** ❌ "Get a US visa," "Double your
   salary," "Pass IELTS guaranteed." English is a confidence/skill tool, not a guaranteed outcome.
 - **G1.3 [SEVERE] No fake authority or credentials.** ❌ presenting an actor as "a certified Cambridge
