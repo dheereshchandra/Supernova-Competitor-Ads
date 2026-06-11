@@ -22,6 +22,8 @@ interface AppState {
   /** True once the jobs API has answered at least once (404 counts as answered). */
   jobsApiAvailable: boolean
   refreshActiveJobs: () => void
+  /** Bumps whenever a data-pipeline run finishes — screens watch it to re-fetch. */
+  dataVersion: number
 }
 
 const Ctx = createContext<AppState | null>(null)
@@ -33,6 +35,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [dataAsOf, setDataAsOf] = useState<string | null>(null)
   const [activeJobs, setActiveJobs] = useState<Job[]>([])
   const [jobsApiAvailable, setJobsApiAvailable] = useState(true)
+  const [dataVersion, setDataVersion] = useState(0)
+  const prevPipelineJobs = useRef<Set<string>>(new Set())
   const pollRef = useRef<number | null>(null)
 
   useEffect(() => {
@@ -65,7 +69,18 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const refreshActiveJobs = useCallback(() => {
     getJobs('active')
       .then((r) => {
-        setActiveJobs(r.jobs ?? [])
+        const jobs = r.jobs ?? []
+        // a pipeline job that was active and is now gone = it finished → new data
+        const nowPipeline = new Set(
+          jobs.filter((j) => j.kind === 'pipeline').map((j) => String(j.id)),
+        )
+        let finished = false
+        prevPipelineJobs.current.forEach((id) => {
+          if (!nowPipeline.has(id)) finished = true
+        })
+        prevPipelineJobs.current = nowPipeline
+        if (finished) setDataVersion((v) => v + 1)
+        setActiveJobs(jobs)
         setJobsApiAvailable(true)
       })
       .catch((e: unknown) => {
@@ -99,6 +114,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         activeJobs,
         jobsApiAvailable,
         refreshActiveJobs,
+        dataVersion,
       }}
     >
       {children}

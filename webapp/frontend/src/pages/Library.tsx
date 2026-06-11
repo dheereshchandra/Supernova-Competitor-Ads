@@ -10,6 +10,7 @@ import {
 import { useApp } from '../AppContext'
 import { formatCount, parseDate, VERDICT_MAP } from '../format'
 import AdCard from '../components/AdCard'
+import RunWorkflowModal from '../components/RunWorkflowModal'
 import { EmptyState, ErrorNote, PageLoading, Spinner } from '../components/ui'
 
 const PAGE_SIZE = 60
@@ -103,10 +104,11 @@ function buildQuery(f: Filters, page: number): URLSearchParams {
 }
 
 export default function Library() {
-  const { noteDataAsOf } = useApp()
+  const { noteDataAsOf, dataVersion, refreshActiveJobs } = useApp()
   const [searchParams, setSearchParams] = useSearchParams()
   const filters = useMemo(() => filtersFromParams(searchParams), [searchParams])
 
+  const [showRun, setShowRun] = useState(false)
   const [competitors, setCompetitors] = useState<Competitor[]>([])
   const [ads, setAds] = useState<Ad[]>([])
   const [total, setTotal] = useState(0)
@@ -118,7 +120,7 @@ export default function Library() {
   const [searchText, setSearchText] = useState(filters.q)
   const fetchSeq = useRef(0)
 
-  // -------- competitors for the select --------
+  // -------- competitors for the select (re-fetch when a data run finishes) --------
   useEffect(() => {
     getCompetitors()
       .then((r) => {
@@ -126,7 +128,7 @@ export default function Library() {
         noteDataAsOf(r.data_as_of)
       })
       .catch(() => {})
-  }, [noteDataAsOf])
+  }, [noteDataAsOf, dataVersion])
 
   const updateFilters = useCallback(
     (patch: Partial<Filters>, toCustom = true) => {
@@ -160,7 +162,7 @@ export default function Library() {
       .finally(() => {
         if (seq === fetchSeq.current) setLoading(false)
       })
-  }, [filters, noteDataAsOf])
+  }, [filters, noteDataAsOf, dataVersion])
 
   const loadMore = () => {
     const nextPage = page + 1
@@ -254,6 +256,23 @@ export default function Library() {
 
   return (
     <div className="space-y-4">
+      {/* ---------- title + run-workflow ---------- */}
+      <div className="flex items-center justify-between gap-4">
+        <div>
+          <h1 className="text-lg font-semibold text-white">Competitor ad library</h1>
+          <p className="text-sm text-zinc-500">
+            {formatCount(total)} ads · pick a winner to turn into a Supernova script
+          </p>
+        </div>
+        <button
+          onClick={() => setShowRun(true)}
+          className="flex shrink-0 items-center gap-2 rounded-lg border border-violet-400/30 bg-violet-500/15 px-4 py-2 text-sm font-semibold text-violet-200 transition-colors hover:bg-violet-500/25"
+          title="Scrape + refresh the latest data for a competitor"
+        >
+          ↻ Run data update
+        </button>
+      </div>
+
       {/* ---------- sticky filter bar ---------- */}
       <div className="sticky top-14 z-30 -mx-6 border-b border-white/10 bg-zinc-950/95 px-6 py-3 backdrop-blur">
         <div className="flex flex-wrap items-center gap-3">
@@ -479,6 +498,19 @@ export default function Library() {
             </div>
           )}
         </>
+      )}
+
+      {showRun && (
+        <RunWorkflowModal
+          competitors={competitors}
+          defaultPipeline={filters.pipeline}
+          defaultCompetitor={filters.competitor}
+          onClose={() => setShowRun(false)}
+          onStarted={() => {
+            setShowRun(false)
+            refreshActiveJobs()
+          }}
+        />
       )}
     </div>
   )

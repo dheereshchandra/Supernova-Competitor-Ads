@@ -63,13 +63,20 @@ function RunCard({ job, onChange }: { job: Job; onChange: () => void }) {
   return (
     <div className="rounded-xl border border-white/10 bg-zinc-900/60 p-4">
       <div className="flex items-start gap-4">
-        <Link
-          to={`/ad/${job.pipeline}/${job.competitor}/${job.ad_id}`}
-          className="shrink-0 text-sm font-medium text-zinc-200 hover:text-white"
-        >
-          <div className="text-zinc-100">{job.competitor}</div>
-          <div className="text-xs text-zinc-500">#{job.ad_id.slice(-8)}</div>
-        </Link>
+        {job.kind === 'pipeline' ? (
+          <div className="shrink-0 text-sm font-medium text-zinc-200">
+            <div className="text-zinc-100">{job.competitor}</div>
+            <div className="text-xs text-violet-300/80">↻ data update</div>
+          </div>
+        ) : (
+          <Link
+            to={`/ad/${job.pipeline}/${job.competitor}/${job.ad_id}`}
+            className="shrink-0 text-sm font-medium text-zinc-200 hover:text-white"
+          >
+            <div className="text-zinc-100">{job.competitor}</div>
+            <div className="text-xs text-zinc-500">#{job.ad_id.slice(-8)}</div>
+          </Link>
+        )}
 
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">

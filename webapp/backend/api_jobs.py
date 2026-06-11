@@ -47,11 +47,15 @@ class JobBody(BaseModel):
 
 
 def _job_payload(r: dict, queue_ids: list[int]) -> dict:
-    steps = jobs.steps_payload(r.get("media_type") or "Video")
+    if r.get("kind") == "pipeline":
+        from .pipeline import PIPELINE_STEPS
+        steps = PIPELINE_STEPS
+    else:
+        steps = jobs.steps_payload(r.get("media_type") or "Video")
     keys = [s["key"] for s in steps]
     cur = r.get("current_step")
     return {**{k: r.get(k) for k in (
-        "id", "pipeline", "competitor", "ad_id", "status", "current_step",
+        "id", "kind", "pipeline", "competitor", "ad_id", "status", "current_step",
         "requested_by", "created_at", "started_at", "finished_at",
         "cost_estimate_usd", "error", "stderr_tail", "rewrite_gdoc_url",
         "analysis_gdoc_url", "rewrite_html_url", "needs_push")},
@@ -171,6 +175,50 @@ def cancel_job(job_id: int, user: str = Depends(require_user)):
         raise HTTPException(409, f"Job is {r['status']}")
     _log(r["pipeline"], r["competitor"], r["ad_id"], user, "cancel", f"job #{job_id}")
     return {"ok": True}
+
+
+# ---------------- pipeline (full data-update run) ----------------
+
+class PipelineBody(BaseModel):
+    pipeline: str
+    competitor: str
+
+
+@router.get("/api/pipeline/estimate")
+def pipeline_estimate(pipeline: str, competitor: str, _user: str = Depends(require_user)):
+    from .pipeline import estimate_cost
+    if pipeline not in ("facebook", "google"):
+        raise HTTPException(422, "pipeline must be facebook or google")
+    return estimate_cost(pipeline, competitor)
+
+
+@router.post("/api/pipeline/run", status_code=201)
+def pipeline_run(body: PipelineBody, user: str = Depends(require_user)):
+    from .pipeline import estimate_cost
+    if body.pipeline not in ("facebook", "google"):
+        raise HTTPException(422, "pipeline must be facebook or google")
+    est = estimate_cost(body.pipeline, body.competitor)
+    if not est.get("eligible"):
+        raise HTTPException(422, est.get("reason", "Not eligible"))
+    # one pipeline run per competitor at a time; the serial worker handles the rest
+    active = db.query_one(
+        f"SELECT id FROM jobs WHERE kind='pipeline' AND pipeline=? AND competitor=? "
+        f"AND status IN {ACTIVE}", (body.pipeline, body.competitor))
+    if active:
+        raise HTTPException(409, f"A data update for {body.competitor} is already running (job #{active['id']})")
+    cfg = settings()
+    cost = est.get("cost_usd", 0)
+    if cost > cfg.max_daily_cost:
+        raise HTTPException(422, f"Estimated ${cost:.2f} exceeds the cap (${cfg.max_daily_cost:.0f}) — "
+                                 f"raise STUDIO_MAX_DAILY_COST or enrich in smaller batches")
+    cur = db.execute(
+        "INSERT INTO jobs (kind, pipeline, competitor, ad_id, requested_by, cost_estimate_usd) "
+        "VALUES ('pipeline', ?, ?, '(full-run)', ?, ?)",
+        (body.pipeline, body.competitor, user, cost))
+    job_id = cur.lastrowid
+    _log(body.pipeline, body.competitor, "(full-run)", user, "pipeline_run",
+         f"queued data update (~${cost:.2f}, {est.get('backlog_videos', 0)} videos)")
+    return {"job_id": job_id}
 
 
 # ---------------- tracker ----------------
