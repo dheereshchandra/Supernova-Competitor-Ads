@@ -281,7 +281,7 @@ class Catalog:
                  language: list[str] | None = None, device_format: list[str] | None = None,
                  retired: str = "any", generated: str = "any", has_media: bool = True,
                  has_transcript: str = "any", q: str = "",
-                 min_run_days: int | None = None,
+                 min_run_days: int | None = None, first_seen_days: int | None = None,
                  sort: str = "run_days", order: str = "", page: int = 1,
                  page_size: int = 60) -> dict:
         self.reload_if_stale()
@@ -312,6 +312,11 @@ class Catalog:
             preds["has_media"] = lambda a: bool(a["media_url"])
         if has_transcript == "yes":
             preds["has_transcript"] = lambda a: a["has_transcript"]
+        if first_seen_days is not None:
+            import datetime
+            cutoff = (datetime.date.today()
+                      - datetime.timedelta(days=first_seen_days)).isoformat()
+            preds["first_seen"] = lambda a: (a["first_seen"] or "") >= cutoff
         if min_run_days is not None:
             preds["min_run_days"] = lambda a: (a["run_days"] or 0) >= min_run_days
         if needle:

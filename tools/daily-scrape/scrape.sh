@@ -26,10 +26,18 @@ if [ "$(git rev-parse --git-common-dir 2>/dev/null)" != ".git" ]; then
   log "REFUSING: not the canonical clone (a worktree). Skipping."; exit 1
 fi
 
-# Date guard — launchd may re-fire on wake after a missed 6 AM; only run once per day.
+# Optional competitor args: `scrape.sh duolingo speak` runs just those (a manual/test
+# run — skips the once-per-day date guard and doesn't write the daily stamp).
 TODAY="$(date '+%Y-%m-%d')"
-if [ "$(cat "$STAMP_FILE" 2>/dev/null)" = "$TODAY" ]; then
-  log "already ran today ($TODAY) — skipping."; exit 0
+MANUAL=0
+if [ "$#" -gt 0 ]; then
+  MANUAL=1
+  log "manual targeted run: $*"
+else
+  # Date guard — launchd may re-fire on wake after a missed 6 AM; only run once per day.
+  if [ "$(cat "$STAMP_FILE" 2>/dev/null)" = "$TODAY" ]; then
+    log "already ran today ($TODAY) — skipping."; exit 0
+  fi
 fi
 
 # Single-instance lock (don't overlap a still-running batch).
@@ -41,11 +49,16 @@ trap 'rmdir "$LOCK" 2>/dev/null' EXIT
 
 DRY=""; [ "${DAILY_SCRAPE_DRYRUN:-0}" = "1" ] && DRY="--dry-run"
 
-# Commit one competitor's free-refresh data (master + analysis/derived + history).
+# Commit one competitor's free-refresh data (master + analysis/derived + history +
+# report). log_and_commit alone misses the derived CSVs that drive verdicts/ranks.
 commit_one() {
   local slug="$1" p=facebook
+  # NULL_GLOB: an empty glob expands to nothing instead of aborting the whole git add
+  # (zsh's default nomatch would otherwise stage NOTHING when e.g. {slug}-* matches none).
+  setopt LOCAL_OPTIONS NULL_GLOB
   git add -- "$p/master/$slug.csv" "analysis/history/$p/$slug.csv" \
-    "analysis/derived/$p/${slug}_"* "analysis/derived/$p/${slug}-"* "analysis/derived/$p/${slug}."* 2>/dev/null || true
+    analysis/derived/$p/${slug}_* analysis/derived/$p/${slug}-* analysis/derived/$p/${slug}.* \
+    analysis/reports/*_${slug}_* 2>/dev/null || true
   bash tools/log_and_commit.sh "$p" "$slug" "daily-scrape" "daily free refresh (stages 1-4)" >> "$LOG" 2>&1 || true
 }
 
@@ -62,7 +75,7 @@ while read -r slug; do
     if [ "$rc" = 10 ]; then log "   $slug: scrape BLOCKED (0 ads/throttle) — skipped"; blocked=$((blocked+1))
     else log "   $slug: FAILED rc=$rc"; failed=$((failed+1)); fi
   fi
-done < <(grep -vE '^\s*(#|$)' "$LIST")
+done < <(if [ "$MANUAL" = 1 ]; then printf '%s\n' "$@"; else grep -vE '^\s*(#|$)' "$LIST"; fi)
 
 # Push everything once (with one pull-retry), so main stays fast-forwardable.
 if ! git diff --quiet HEAD origin/main 2>/dev/null; then :; fi
@@ -72,5 +85,5 @@ else
   git pull --no-rebase >> "$LOG" 2>&1 && git push >> "$LOG" 2>&1 && log "pushed after pull." || log "PUSH FAILED — resolve manually."
 fi
 
-echo "$TODAY" > "$STAMP_FILE"
+[ "$MANUAL" = 0 ] && echo "$TODAY" > "$STAMP_FILE"
 log "=== done: ok=$ok blocked=$blocked failed=$failed ==="

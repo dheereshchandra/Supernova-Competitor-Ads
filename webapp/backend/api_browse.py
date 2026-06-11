@@ -13,6 +13,9 @@ from .data import catalog
 
 router = APIRouter(dependencies=[Depends(require_user)])
 
+# Statuses hidden from the main Library listing (still visible on the Pipeline board).
+HIDDEN_FROM_LIBRARY = {"approved", "in_production", "shipped"}
+
 
 def _csv(v: str | None) -> list[str]:
     return [s for s in (v or "").split(",") if s]
@@ -61,6 +64,7 @@ def list_ads(
     has_media: bool = True,
     has_transcript: str = "any",
     min_run_days: int | None = None,
+    first_seen_days: int | None = None,
     q: str = "",
     sort: str = "run_days",
     order: str = "",
@@ -75,14 +79,18 @@ def list_ads(
         media_type=_csv(media_type), language=_csv(language),
         device_format=_csv(device_format), retired=retired, generated=generated,
         has_media=has_media, has_transcript=has_transcript,
-        min_run_days=min_run_days, q=q, sort=sort, order=order,
-        page=1, page_size=10 ** 9)
+        min_run_days=min_run_days, first_seen_days=first_seen_days,
+        q=q, sort=sort, order=order, page=1, page_size=10 ** 9)
     ads = _attach_status(full["ads"])
     if status:
         wanted = set(_csv(status))
         none_wanted = "none" in wanted
         ads = [a for a in ads
                if a["status"] in wanted or (none_wanted and not a["status"])]
+    else:
+        # Main listing hides ads already moved to production (Approved onward) —
+        # they're done being "picked"; the Pipeline board still shows them.
+        ads = [a for a in ads if a["status"] not in HIDDEN_FROM_LIBRARY]
     total = len(ads)
     start = (page - 1) * page_size
     return {"total": total, "page": page, "page_size": page_size,
