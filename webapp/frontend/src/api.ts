@@ -327,8 +327,20 @@ export const getPipelineEstimate = (pipeline: string, competitor: string) =>
     `/api/pipeline/estimate?pipeline=${encodeURIComponent(pipeline)}&competitor=${encodeURIComponent(competitor)}`,
   )
 
-export const runPipeline = (pipeline: string, competitor: string) =>
-  api<{ job_id: string }>('/api/pipeline/run', { json: { pipeline, competitor } })
+export interface PipelinePending {
+  per_competitor: Record<string, number>
+  total: number
+  total_cost_usd: number
+  per_video_usd: number
+}
+
+export const getPipelinePending = (pipeline: string) =>
+  api<PipelinePending>(`/api/pipeline/pending?pipeline=${encodeURIComponent(pipeline)}`)
+
+export const runPipeline = (pipeline: string, competitors: string[]) =>
+  api<{ job_ids: number[]; queued: string[]; skipped: string[] }>('/api/pipeline/run', {
+    json: { pipeline, competitors },
+  })
 
 export const confirmEnrich = (jobId: string, proceed: boolean) =>
   api<{ ok: boolean }>(`/api/jobs/${encodeURIComponent(jobId)}/enrich-confirm`, {

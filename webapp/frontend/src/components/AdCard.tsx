@@ -68,8 +68,8 @@ export default function AdCard({ ad }: { ad: Ad }) {
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
       >
-        {/* Media area, roughly 9:16 */}
-        <div className="relative aspect-[9/14] w-full overflow-hidden bg-zinc-900">
+        {/* Media area (fixed aspect → every tile is the same size) */}
+        <div className="relative aspect-[9/13] w-full overflow-hidden bg-zinc-900">
           {showVideo ? (
             <video
               ref={videoRef}
@@ -116,42 +116,36 @@ export default function AdCard({ ad }: { ad: Ad }) {
           )}
         </div>
 
-        <div className="space-y-1.5 p-3">
+        {/* compact, FIXED-height footer so every tile is identical */}
+        <div className="space-y-1 p-2.5">
           <div className="flex items-center justify-between gap-2">
-            <span className="flex items-center gap-1.5 text-[13px] font-semibold text-zinc-100">
+            <span className="flex items-center gap-1 text-xs font-semibold text-zinc-100">
               🔥 {runDaysLabel(ad)}
             </span>
             {!ad.is_retired ? (
-              <span className="flex items-center gap-1 text-[11px] font-medium text-emerald-400">
+              <span className="flex items-center gap-1 text-[10px] font-medium text-emerald-400">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                still live
+                live
               </span>
             ) : (
-              <span className="text-[11px] text-zinc-500">no longer running</span>
+              <span className="text-[10px] text-zinc-500">retired</span>
             )}
           </div>
-
-          <div className="truncate text-xs text-zinc-400">{ad.page_name}</div>
-
-          {jobActive ? (
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-violet-400/30 bg-violet-500/15 px-2.5 py-0.5 text-[11px] font-semibold text-violet-300">
-              <Spinner className="h-3 w-3" />
-              Generating…
-            </span>
-          ) : ad.status ? (
-            <StatusChip
-              status={ad.status}
-              suffix={
-                ad.status === 'in_edit' && ad.claimed_by ? ad.claimed_by : undefined
-              }
-            />
-          ) : null}
-
-          {ad.ad_text && (
-            <p className="line-clamp-2 text-xs leading-relaxed text-zinc-500">
-              {ad.ad_text}
-            </p>
-          )}
+          <div className="truncate text-[11px] text-zinc-400">{ad.page_name}</div>
+          {/* reserved status row (keeps tiles uniform whether or not a chip shows) */}
+          <div className="flex h-[18px] items-center">
+            {jobActive ? (
+              <span className="inline-flex items-center gap-1 rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold text-violet-300">
+                <Spinner className="h-2.5 w-2.5" />
+                Generating…
+              </span>
+            ) : ad.status ? (
+              <StatusChip
+                status={ad.status}
+                suffix={ad.status === 'in_edit' && ad.claimed_by ? ad.claimed_by : undefined}
+              />
+            ) : null}
+          </div>
         </div>
       </div>
     </Link>

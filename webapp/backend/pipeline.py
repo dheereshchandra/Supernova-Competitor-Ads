@@ -65,6 +65,27 @@ def count_unenriched(pipeline: str, slug: str) -> int:
     return todo
 
 
+def pending_by_competitor(pipeline: str) -> dict:
+    """{slug: pending_videos} for every competitor that has a master CSV, plus a
+    total. 'Pending' = scraped video ads that don't have a transcript yet — the
+    work an enrichment run would do (and where the full data is still missing)."""
+    base = REPO / pipeline / "master"
+    out: dict[str, int] = {}
+    if base.is_dir():
+        for m in sorted(base.glob("*.csv")):
+            slug = m.stem
+            # skip the variant/snapshot files (e.g. praktika-ai_newly_added_2026-06-04)
+            if any(x in slug for x in ("_newly_added", "_step4_", "_top20")):
+                continue
+            n = count_unenriched(pipeline, slug)
+            if n:
+                out[slug] = n
+    total = sum(out.values())
+    return {"per_competitor": out, "total": total,
+            "total_cost_usd": round(total * PER_VIDEO_USD, 2),
+            "per_video_usd": PER_VIDEO_USD}
+
+
 def estimate_cost(pipeline: str, slug: str) -> dict:
     """Pre-run estimate. The headline is deliberately the FREE work — because the
     real enrichment cost can't be known until the scrape reveals how many new
@@ -249,10 +270,16 @@ class PipelineRunner:
             return
 
         cost = round(backlog * PER_VIDEO_USD, 2)
-        self._set(status="awaiting_confirm", current_step=None,
-                  cost_estimate_usd=cost,
+        self._set(cost_estimate_usd=cost,
                   estimate_json=json.dumps({"videos": backlog, "cost": cost,
                                             "summary": summary}))
+        if self.job.get("mode", "full") == "full":
+            # cost was confirmed upfront in the modal → enrich straight away
+            self._ev("refresh", f"✓ Rankings updated ({summary}). "
+                                f"Enriching {backlog} videos (~${cost:.2f})…")
+            return await self._enrich_phase()
+        # two-phase: pause and let the user approve the now-exact cost
+        self._set(status="awaiting_confirm", current_step=None)
         self._ev("refresh", f"✓ Rankings updated ({summary}). "
                             f"{backlog} videos to enrich (~${cost:.2f}) — awaiting confirmation.")
 
