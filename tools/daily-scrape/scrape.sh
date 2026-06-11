@@ -13,7 +13,6 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 
 REPO="${0:A:h:h:h}"            # tools/daily-scrape/scrape.sh -> repo root
 cd "$REPO" || exit 1
-PY=python3.13
 LIST="$REPO/tools/daily-scrape/competitors.txt"
 LOG_DIR="$HOME/Library/Application Support/SupernovaDailyScrape"
 LOG="$LOG_DIR/scrape.log"
@@ -56,7 +55,7 @@ ok=0; blocked=0; failed=0
 while read -r slug; do
   slug="${slug// /}"; [ -z "$slug" ] && continue
   log "-- $slug --"
-  if $PY analysis/scripts/run_pipeline.sh --competitor "$slug" --pipeline facebook --through-stage 4 $DRY >> "$LOG" 2>&1; then
+  if bash analysis/scripts/run_pipeline.sh --competitor "$slug" --pipeline facebook --through-stage 4 $DRY >> "$LOG" 2>&1; then
     commit_one "$slug"; log "   $slug: ok"; ok=$((ok+1))
   else
     rc=$?
