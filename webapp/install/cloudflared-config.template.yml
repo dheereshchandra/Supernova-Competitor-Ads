@@ -1,0 +1,9 @@
+# Cloudflare named-tunnel config for Ad Studio.
+# Copy to ~/.cloudflared/config.yml and fill in the two __PLACEHOLDERS__
+# (the tunnel-setup.sh helper does this for you).
+tunnel: ad-studio
+credentials-file: __CREDENTIALS_FILE__
+ingress:
+  - hostname: __HOSTNAME__
+    service: http://localhost:8787
+  - service: http_status:404
