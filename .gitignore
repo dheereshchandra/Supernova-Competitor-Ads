@@ -56,3 +56,6 @@
 
 # Orchestrator per-run logs (analysis/scripts/run_pipeline.sh)
 analysis/logs/
+
+# Durable runner runtime state + lock (tools/pipeline-run/ — per-clone, not shared)
+analysis/state/

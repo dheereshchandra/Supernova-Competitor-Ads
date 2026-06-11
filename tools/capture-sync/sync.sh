@@ -80,9 +80,13 @@ newest_input() {
 }
 age_days() { local mt; mt=$(stat -f %m "$1" 2>/dev/null || echo 0); echo $(( ($(date +%s) - mt) / 86400 )); }
 
-# ---- scan every competitor in both pipelines --------------------------------
+# ---- scan every competitor (GOOGLE only) ------------------------------------
+# Facebook is now driven by tools/pipeline-run (it auto-scrapes via the V2 terminal
+# scraper + runs stages 1–5 daily). Capture-sync keeps the Google pipeline + is the
+# safety-net for manually-dropped Google snapshots. Owning FB here too would
+# double-process / double-commit. See tools/pipeline-run/README.md.
 processed=(); scrape_needed=(); changed=0
-for pipeline in facebook google; do
+for pipeline in google; do
   for master in "$REPO/$pipeline"/master/*.csv(N); do
     slug="${master:t:r}"
     case "$slug" in *_newly_added*|*_step4*|*_top20*|*_new_only*) continue;; esac

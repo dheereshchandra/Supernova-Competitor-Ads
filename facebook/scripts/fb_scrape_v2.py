@@ -497,7 +497,11 @@ def main():
                     help="dump raw payload nodes + low-impression payload candidates to /tmp")
     args = ap.parse_args()
 
-    key = next((k for k in COMPETITOR_PAGES if k.lower() == args.competitor.lower()), None)
+    # Accept either the display name ("MySivi", "English Seekho") or the pipeline
+    # slug ("mysivi", "english-seekho") so run_pipeline.sh can call this directly.
+    arg = args.competitor.lower()
+    key = next((k for k in COMPETITOR_PAGES
+                if k.lower() == arg or slugify(k) == arg), None)
     if not key:
         sys.exit(f"[error] unknown competitor '{args.competitor}'. "
                  f"Known: {', '.join(COMPETITOR_PAGES)}")

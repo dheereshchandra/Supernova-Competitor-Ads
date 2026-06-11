@@ -53,6 +53,8 @@ EXECUTE_STEP4=0      # default: emit a runbook after the gate, don't auto-spend
 ASSUME_YES=0
 DRY=0
 MAX_INPUT_AGE=0      # 0 = ignore snapshot age; >0 = exit 10 if newest input older
+RESCRAPE=0           # force a fresh FB V2 scrape even if today's snapshot exists
+NO_SCRAPE=0          # never scrape — use the newest existing snapshot as-is
 
 usage() { sed -n '2,40p' "$0" | sed 's/^# \{0,1\}//'; exit "${1:-2}"; }
 
@@ -67,6 +69,8 @@ while [ $# -gt 0 ]; do
     --execute-step4) EXECUTE_STEP4=1; shift;;
     --yes|-y) ASSUME_YES=1; shift;;
     --dry-run) DRY=1; shift;;
+    --rescrape) RESCRAPE=1; shift;;
+    --no-scrape) NO_SCRAPE=1; shift;;
     --max-input-age-days) MAX_INPUT_AGE="${2:-}"; shift 2;;
     -h|--help) usage 0;;
     *) echo "[error] unknown arg: $1" >&2; usage 2;;
@@ -126,19 +130,46 @@ run() {  # echo + run (or just echo under --dry-run)
 # Stage implementations (each takes the competitor slug)
 # ----------------------------------------------------------------------------
 
+# Facebook auto-scrape via the V2 terminal scraper (fb_scrape_v2.py). Writes a
+# -v2 file, then CANONICALISES it (strips -v2) so the rest of the pipeline — whose
+# input selector ignores -v2 by design — ingests it. Only canonicalises on a clean
+# exit (audit-FAIL / partial runs keep their -AUDITFAIL/-PARTIAL suffix and are NOT
+# promoted). Skips scraping if today's canonical snapshot already exists (idempotent
+# re-runs); --rescrape forces, --no-scrape uses the newest existing snapshot as-is.
+fb_v2_scrape() {
+  local slug="$1" today; today="$(date +%Y-%m-%d)"
+  echo "  [stage1] scraping '$slug' with the V2 terminal scraper (fb_scrape_v2.py) ..."
+  if [ "$DRY" = 1 ]; then echo "  \$ $PY facebook/scripts/fb_scrape_v2.py $slug"; return 0; fi
+  $PY facebook/scripts/fb_scrape_v2.py "$slug" || {
+    echo "  [stage1] V2 scrape did not finish clean (login wall / audit FAIL / throttle) — see output above."
+    return 1; }
+  local v2csv; v2csv="$(ls -1t facebook/inputs/fb-ads-${slug}-${today}-*-v2.csv 2>/dev/null | head -1)"
+  [ -n "$v2csv" ] || { echo "  [stage1] no clean -v2 output produced — aborting '$slug'."; return 1; }
+  cp "$v2csv" "${v2csv/-v2.csv/.csv}"
+  echo "  [stage1] canonicalised → $(basename "${v2csv/-v2.csv/.csv}")"
+}
+
 stage1_scrape() {
-  local slug="$1" inp; inp="$(newest_input "$slug")"
-  if [ -z "$inp" ]; then
-    echo "  [stage1] no input snapshot for '$slug' in $PIPELINE/inputs/ — scrape is MANUAL."
-    if [ "$PIPELINE" = facebook ]; then
-      echo "    → Claude-in-Chrome: paste facebook/scraper_prompt.md, pick '$slug', reply yes;"
-      echo "      move ~/Downloads/fb-ads-${slug}-YYYY-MM-DD.csv → facebook/inputs/ ; run the auto-clicker."
+  local slug="$1" inp today; inp="$(newest_input "$slug")"; today="$(date +%Y-%m-%d)"
+
+  # Facebook: auto-scrape with V2 unless today's snapshot already exists (or --no-scrape).
+  if [ "$PIPELINE" = facebook ] && [ "$NO_SCRAPE" != 1 ]; then
+    if [ -n "$inp" ] && [ "$(input_date "$inp")" = "$today" ] && [ "$RESCRAPE" != 1 ]; then
+      echo "  [stage1] today's snapshot already present: $inp  (--rescrape to force a fresh scrape)"
     else
+      fb_v2_scrape "$slug" || return 1
+      inp="$(newest_input "$slug")"
+    fi
+  fi
+
+  if [ -z "$inp" ]; then
+    if [ "$PIPELINE" = facebook ]; then
+      echo "  [stage1] no snapshot for '$slug' and scraping disabled/failed — provide one or drop --no-scrape."
+    else
+      echo "  [stage1] no input snapshot for '$slug' — google scrape is guardrailed/manual:"
       echo "    → $PY google/scripts/scrape_guardrail.py status   # check first"
       echo "    → $PY google/scripts/scrape_google_ads.py --competitor <Name> --region IN --out ."
     fi
-    [ "$ALL" = 1 ] && { echo "  [stage1] --all: skipping '$slug' downstream (no input)."; return 10; }
-    echo "  [stage1] re-run this command after the scrape lands to resume."
     return 10
   fi
   echo "  [stage1] input: $inp"
@@ -146,7 +177,6 @@ stage1_scrape() {
     local a; a="$(age_days "$inp")"
     if [ "$a" -gt "$MAX_INPUT_AGE" ]; then
       echo "  [stage1] STALE: newest snapshot is ${a}d old (> ${MAX_INPUT_AGE}d) — re-scrape '$slug'."
-      [ "$ALL" = 1 ] && return 10
       return 10
     fi
   fi
@@ -160,7 +190,29 @@ stage2_download() {
   local d; d="$(input_date "$inp")"; [ -z "$d" ] && d="$STAMP"
   local vdir="$PIPELINE/videos/${slug}-${d}"
   if [ "$PIPELINE" = facebook ]; then
-    run $PY facebook/scripts/download_fb_ads.py "$inp" --out "$vdir"
+    # INCREMENTAL: download only ads NOT already in the master. The rest already
+    # live in R2 and carry forward at upload (Stage 3), so re-fetching them is pure
+    # waste — a fresh worktree has no local videos and a mature competitor is ~90%+
+    # already archived. No master yet (first run) → download everything.
+    local master="$PIPELINE/master/${slug}.csv" dlsrc="$inp"
+    if [ -f "$master" ] && [ "$DRY" != 1 ]; then
+      local newcsv="$LOGDIR/${slug}-${d}-new-ads.csv" n
+      n="$($PY - "$inp" "$master" "$newcsv" <<'PYEOF'
+import csv, sys
+inp, master, out = sys.argv[1:4]
+have = {r["ad_library_id"] for r in csv.DictReader(open(master, encoding="utf-8-sig"))}
+rows = list(csv.DictReader(open(inp, encoding="utf-8-sig")))
+new = [r for r in rows if r["ad_library_id"] not in have]
+with open(out, "w", newline="", encoding="utf-8-sig") as f:
+    w = csv.DictWriter(f, fieldnames=rows[0].keys()); w.writeheader(); w.writerows(new)
+print(len({r["ad_library_id"] for r in new}))
+PYEOF
+)"
+      echo "  [stage2] incremental: ${n:-0} new ad(s) to fetch (the rest carry forward from R2)"
+      [ "${n:-0}" = 0 ] && { echo "  [stage2] nothing new — skipping download."; return 0; }
+      dlsrc="$newcsv"
+    fi
+    run $PY facebook/scripts/download_fb_ads.py "$dlsrc" --out "$vdir"
   else
     run $PY google/scripts/download_google_ads.py "$inp" \
       --videos-out "$vdir" --images-out "$PIPELINE/images/${slug}-${d}"
@@ -172,18 +224,27 @@ stage3_r2upload() {
   [ -z "$inp" ] && { echo "  [stage3] no input for '$slug' — skipping."; return 0; }
   local d; d="$(input_date "$inp")"; [ -z "$d" ] && d="$STAMP"
   local vdir="$PIPELINE/videos/${slug}-${d}" idir="$PIPELINE/images/${slug}-${d}"
+  # upload_to_r2's --master-dir/--log-dir default to ./master and ./step3_logs
+  # (relative to cwd). The orchestrator runs from the repo ROOT, so they MUST be
+  # passed explicitly — otherwise it writes a stray master to repo-root/master/
+  # and carries forward nothing.
   if [ "$PIPELINE" = facebook ]; then
     run $PY facebook/scripts/upload_to_r2.py --input "$inp" --videos "$vdir" \
-      $( [ -d "$idir" ] && echo --images "$idir" ) --competitor "$slug"
+      $( [ -d "$idir" ] && echo --images "$idir" ) --competitor "$slug" \
+      --master-dir "$PIPELINE/master" --log-dir "$PIPELINE/step3_logs"
   else
     run $PY google/scripts/upload_to_r2.py --input "$inp" --videos "$vdir" \
-      --images "$idir" --competitor "$slug"
+      --images "$idir" --competitor "$slug" \
+      --master-dir "$PIPELINE/master" --log-dir "$PIPELINE/step3_logs"
   fi
 }
 
 stage4_free() {  # FREE — mirrors run_all_free.sh's body, for one competitor
   local slug="$1"
-  run $PY analysis/scripts/build_history.py --pipeline "$PIPELINE" --competitor "$slug"
+  # build_history requires a source mode; --backfill replays every dated snapshot
+  # in inputs/ oldest→newest (google has no snapshots → seed from master).
+  local mode=--backfill; [ "$PIPELINE" = google ] && mode=--from-master
+  run $PY analysis/scripts/build_history.py --pipeline "$PIPELINE" --competitor "$slug" $mode
   run $PY analysis/scripts/compute_rank_metrics.py --pipeline "$PIPELINE" --competitor "$slug"
   run $PY analysis/scripts/build_rank_chart.py --pipeline "$PIPELINE" --competitor "$slug"
   run $PY analysis/scripts/build_report.py --pipeline "$PIPELINE" --competitor "$slug"
