@@ -24,6 +24,10 @@ LOG="$LOG_DIR/serve.log"
 cd "$REPO"
 
 # --- guardrails ---
+# allow the override from .env too (so it matches serve.sh + the README)
+if grep -q '^STUDIO_ALLOW_WORKTREE=1' "$REPO/.env" 2>/dev/null; then
+  STUDIO_ALLOW_WORKTREE=1
+fi
 if [ "$(git rev-parse --git-common-dir 2>/dev/null)" != ".git" ]; then
   if [ "${STUDIO_ALLOW_WORKTREE:-0}" = "1" ]; then
     echo "WARN installing from a git worktree (STUDIO_ALLOW_WORKTREE=1). OK for v0; move to the canonical clone for production."
