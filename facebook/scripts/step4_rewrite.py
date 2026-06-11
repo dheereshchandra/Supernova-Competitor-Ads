@@ -86,6 +86,14 @@ THE BALANCE — read twice:
   not every ad — the ChatGPT contrast, when it genuinely fits). Strip any
   hard rupee price (a comparative like "7x cheaper than classes" is allowed only if it fits the scene;
   a "1 crore+ users" social-proof line is fine where it fits — don't let it carry the ad alone).
+- **INDIANIZE EVERY REFERENCE — the ad targets Indians in India.** The competitor seed may run abroad;
+  in your re-pitch, convert ALL foreign references in `supernova_script` + `supernova_on_screen_text` to
+  an Indian frame — character names → Indian names (Rahul, Priya, Anjali, Imran…, never "Jenny"/"John");
+  cities/places → Indian (Mumbai/Delhi/Lucknow/a Tier-2 town, NEVER Paris/France/London-as-home); plus
+  currency (₹), brands, food, festivals and any foreign-language line → Hindi/English Indian equivalents.
+  (Real failure to avoid: a "Where are you from?" beat answered "I am from France", or a learner named
+  "Jenny" — make them an Indian city and an Indian name.) Only an element FORCED by the reused VISUALS
+  may remain on screen; everything you WRITE must read as unmistakably Indian.
 - **LEAD WITH a + b — DON'T BACK-LOAD THEM.** Personalization (a) and privacy/no-judgement (b) are the
   retention engine; the failure to avoid is letting the final CTA be the FIRST place they appear. In a
   4+ scene ad, land a+b by the MIDPOINT; in a 2–3 scene ad, put them in the BODY of scene 2 (right after

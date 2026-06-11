@@ -19,7 +19,7 @@ What makes it real (use these, don't invent features):
 
 **Optional truths (deploy when a concept calls for them — no hard rule, not default):** Supernova is **built by IITians** (good fuel for an authority/credibility hook); concrete features you may name — a **level test**, **1000+ practice activities/scenarios**, **scenario-based practice** (interview, manager, shopkeeper…). Reach for these when a particular script benefits; they need not appear in every ad.
 
-The customer (esp. the **2nd-payment** audience that matters most): **non-college, blue-collar / Tier 2–3 Indians** who *understand* some English but freeze when they have to speak — and whose **dignity, jobs, and family standing** ride on it.
+The customer (esp. the **2nd-payment** audience that matters most): **non-college, blue-collar / Tier 2–3 Indians** who *understand* some English but freeze when they have to speak — and whose **dignity, jobs, and family standing** ride on it. **Every ad is targeted at Indians in India** — so when the competitor seed runs abroad, the script must be fully localized to an Indian frame (names, cities, references); see the **India-first localization** rule in Part 6.
 
 ---
 
@@ -98,9 +98,12 @@ Eight proven containers (use them as starting points; recombine and invent):
 
 **Voice:** natural **Hinglish / code-mix** (native language + English, the way the audience actually talks), warm and conversational, never advertise-y, never heavy/Sanskritised. The teacher reassures; the learner is relatable, not stupid. Subtitles are dense, bilingual, line-by-line (sound-off feed).
 
+**India-first localization (HARD RULE — the whole audience is in India).** Supernova is for Indians, so every ad must read as unmistakably Indian. The competitor seed often runs abroad — so RE-SET every reference in the script + on-screen text to an Indian frame: **character names → Indian names** (Rahul, Priya, Anjali, Imran…, never "Jenny"/"John"); **cities/places → Indian** (Mumbai, Delhi, Lucknow, a Tier-2 town — the "Where are you from?" beat is answered with an Indian city, **never** "France"/"London"-as-home); money → ₹/Indian; plus food, festivals, workplaces, and any foreign-language snippet → Hindi (or the target Indian language). The reused VISUALS may force-keep a foreign element on screen — then simply don't have the script lean on it.
+
 **Hard DON'Ts (these recruit the wrong buyer or break brand — the data backs each):**
 - ❌ **No hard rupee price** (₹9, "cheaper than chai"). The ₹9 ads (Casual-TED, Mother-in-law, Marathi-interview) post *higher* 2nd-pay CAC — a cheap absolute price recruits a low-commitment buyer who churns before the 2nd payment. ✅ A **comparative** cost ("affordable," "7× cheaper than coaching classes") is fine **when it fits the script** — just not every ad, and never a bare rupee figure.
 - ❌ **No brand-voiced guaranteed *outcome* on a timeline** ("Fluent in 30 days," "100%/job in 30 days") — a guaranteed END-STATE must not come from the brand/VO. ✅ The brand MAY set a **soft, hedged progress *expectation*** ("start seeing visible progress in ~30 days with daily practice," "speak more confidently within a month" — progress/confidence, not a finished result). A *character* may still give a personal testimonial ("I improved in 2 weeks"). *(The hard line, mirrored in brand-safety G1.1: hedged progress = allowed; guaranteed fluency/job/exam outcome = banned.)*
+- ❌ **No un-Indianized foreign references carried from the seed** (e.g. a learner named "Jenny" answering "I am from France"). Convert every name / city / place / cultural cue to an Indian frame — see the **India-first localization** rule above.
 - ❌ **No vague "ek skill."** Always **name English** explicitly (and in the first 10s).
 - ❌ **No pure mockery / insult hook without an authoritative resolution.** Shame is allowed *only* when the underdog or authority *resolves* it in triumph/proof.
 - ❌ **Don't skip personalization (beat a)** — it's the #1 "how can AI teach ME?" objection-handler.
