@@ -8,21 +8,13 @@ import {
   type Competitor,
 } from '../api'
 import { useApp } from '../AppContext'
-import { formatCount, parseDate, VERDICT_MAP } from '../format'
+import { formatCount } from '../format'
 import AdCard from '../components/AdCard'
 import RunWorkflowModal from '../components/RunWorkflowModal'
 import { EmptyState, ErrorNote, PageLoading, Spinner } from '../components/ui'
 
 const PAGE_SIZE = 60
-
-type SmartView = 'winners' | 'new' | 'scripted' | 'unreviewed' | 'custom'
-
-const SMART_VIEWS: { id: SmartView; label: string }[] = [
-  { id: 'winners', label: '🏆 Proven winners' },
-  { id: 'new', label: '🆕 New this week' },
-  { id: 'scripted', label: '📝 Has script already' },
-  { id: 'unreviewed', label: '👀 Not reviewed' },
-]
+const NEW_DAYS = 7 // "newly added this week"
 
 const SORTS = [
   { id: 'run_days', label: 'Longest running' },
@@ -30,70 +22,65 @@ const SORTS = [
   { id: 'first_seen', label: 'Newest' },
 ]
 
-const VERDICT_ORDER = ['strong_winner', 'winner', 'undecided', 'new', 'loser']
+// Row-2 quick filters. `top`+`win` are on by default (the library opens on winners).
+const QUICK = ['top', 'win', 'new', 'script', 'notrev'] as const
+type Quick = (typeof QUICK)[number]
+const DEFAULT_QUICK: Quick[] = ['top', 'win']
 
 interface Filters {
   pipeline: string
   competitor: string
-  verdicts: string[]
-  mediaType: string
   language: string
   retired: 'any' | 'yes' | 'no'
-  unprocessed: boolean
-  generated: 'any' | 'yes'
-  q: string
+  mediaType: '' | 'Video' | 'Image'
   sort: string
-  view: SmartView
+  q: string
+  quick: Quick[]
 }
 
 function filtersFromParams(sp: URLSearchParams): Filters {
-  const view = (sp.get('view') as SmartView) || 'winners'
-  const hasVerdictParam = sp.has('verdict')
   return {
     pipeline: sp.get('pipeline') ?? 'facebook',
     competitor: sp.get('competitor') ?? '',
-    verdicts: hasVerdictParam
-      ? sp.get('verdict')!.split(',').filter(Boolean)
-      : view === 'new' || view === 'scripted'
-        ? []
-        : ['strong_winner', 'winner'],
-    mediaType: sp.get('media_type') ?? '',
     language: sp.get('language') ?? '',
     retired: (sp.get('retired') as Filters['retired']) ?? 'any',
-    unprocessed: sp.get('unprocessed') === '1' || view === 'unreviewed',
-    generated: sp.get('generated') === 'yes' || view === 'scripted' ? 'yes' : 'any',
+    mediaType: (sp.get('media') as Filters['mediaType']) ?? '',
+    sort: sp.get('sort') ?? 'run_days',
     q: sp.get('q') ?? '',
-    sort: sp.get('sort') ?? (view === 'new' ? 'first_seen' : 'run_days'),
-    view,
+    quick: sp.has('qf')
+      ? (sp.get('qf')!.split(',').filter((x) => QUICK.includes(x as Quick)) as Quick[])
+      : DEFAULT_QUICK,
   }
 }
 
 function paramsFromFilters(f: Filters): URLSearchParams {
   const sp = new URLSearchParams()
-  if (f.view !== 'winners') sp.set('view', f.view)
   if (f.pipeline !== 'facebook') sp.set('pipeline', f.pipeline)
   if (f.competitor) sp.set('competitor', f.competitor)
-  sp.set('verdict', f.verdicts.join(','))
-  if (f.mediaType) sp.set('media_type', f.mediaType)
   if (f.language) sp.set('language', f.language)
   if (f.retired !== 'any') sp.set('retired', f.retired)
-  if (f.unprocessed) sp.set('unprocessed', '1')
-  if (f.generated === 'yes') sp.set('generated', 'yes')
-  if (f.q) sp.set('q', f.q)
+  if (f.mediaType) sp.set('media', f.mediaType)
   if (f.sort !== 'run_days') sp.set('sort', f.sort)
+  if (f.q) sp.set('q', f.q)
+  sp.set('qf', f.quick.join(',')) // always present so toggling all-off round-trips
   return sp
 }
 
 function buildQuery(f: Filters, page: number): URLSearchParams {
   const p = new URLSearchParams()
-  if (f.pipeline) p.set('pipeline', f.pipeline)
+  p.set('pipeline', f.pipeline)
   if (f.competitor) p.set('competitor', f.competitor)
-  if (f.verdicts.length) p.set('verdict', f.verdicts.join(','))
+  const verdicts = [
+    f.quick.includes('top') ? 'strong_winner' : '',
+    f.quick.includes('win') ? 'winner' : '',
+  ].filter(Boolean)
+  if (verdicts.length) p.set('verdict', verdicts.join(','))
+  if (f.quick.includes('new')) p.set('first_seen_days', String(NEW_DAYS))
+  if (f.quick.includes('script')) p.set('generated', 'yes')
+  if (f.quick.includes('notrev')) p.set('status', 'none')
   if (f.mediaType) p.set('media_type', f.mediaType)
   if (f.language) p.set('language', f.language)
   if (f.retired !== 'any') p.set('retired', f.retired)
-  if (f.unprocessed) p.set('status', 'none')
-  if (f.generated === 'yes') p.set('generated', 'yes')
   p.set('has_media', 'true')
   if (f.q.trim()) p.set('q', f.q.trim())
   p.set('sort', f.sort)
@@ -101,6 +88,14 @@ function buildQuery(f: Filters, page: number): URLSearchParams {
   p.set('page', String(page))
   p.set('page_size', String(PAGE_SIZE))
   return p
+}
+
+const QUICK_LABELS: Record<Quick, string> = {
+  top: '🏆 Top winners',
+  win: '🥈 Winners',
+  new: '🆕 Newly added this week',
+  script: '📝 Has script ready',
+  notrev: '👀 Not reviewed yet',
 }
 
 export default function Library() {
@@ -114,6 +109,7 @@ export default function Library() {
   const [ads, setAds] = useState<Ad[]>([])
   const [total, setTotal] = useState(0)
   const [facets, setFacets] = useState<AdsResponse['facets'] | null>(null)
+  const [newCount, setNewCount] = useState<number | null>(null)
   const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(true)
   const [loadingMore, setLoadingMore] = useState(false)
@@ -121,7 +117,14 @@ export default function Library() {
   const [searchText, setSearchText] = useState(filters.q)
   const fetchSeq = useRef(0)
 
-  // -------- competitors for the select (re-fetch when a data run finishes) --------
+  const updateFilters = useCallback(
+    (patch: Partial<Filters>) => {
+      setSearchParams(paramsFromFilters({ ...filters, ...patch }), { replace: false })
+    },
+    [filters, setSearchParams],
+  )
+
+  // competitors for the select + "new this week" count (re-fetch after a data run)
   useEffect(() => {
     getCompetitors()
       .then((r) => {
@@ -131,16 +134,20 @@ export default function Library() {
       .catch(() => {})
   }, [noteDataAsOf, dataVersion])
 
-  const updateFilters = useCallback(
-    (patch: Partial<Filters>, toCustom = true) => {
-      const next: Filters = { ...filters, ...patch }
-      if (toCustom && patch.view === undefined) next.view = 'custom'
-      setSearchParams(paramsFromFilters(next), { replace: false })
-    },
-    [filters, setSearchParams],
-  )
+  useEffect(() => {
+    const p = new URLSearchParams({
+      pipeline: filters.pipeline,
+      first_seen_days: String(NEW_DAYS),
+      has_media: 'true',
+      page_size: '1',
+    })
+    if (filters.competitor) p.set('competitor', filters.competitor)
+    getAds(p)
+      .then((r) => setNewCount(r.total))
+      .catch(() => setNewCount(null))
+  }, [filters.pipeline, filters.competitor, dataVersion])
 
-  // -------- fetch ads on filter change --------
+  // main fetch on filter change
   useEffect(() => {
     const seq = ++fetchSeq.current
     setLoading(true)
@@ -177,72 +184,22 @@ export default function Library() {
       .finally(() => setLoadingMore(false))
   }
 
-  // -------- debounced search --------
   useEffect(() => {
     setSearchText(filters.q)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filters.view, filters.pipeline, filters.competitor])
+  }, [filters.pipeline, filters.competitor])
   const searchTimer = useRef<number | null>(null)
   const onSearch = (text: string) => {
     setSearchText(text)
     if (searchTimer.current) window.clearTimeout(searchTimer.current)
-    searchTimer.current = window.setTimeout(() => {
-      updateFilters({ q: text })
-    }, 300)
+    searchTimer.current = window.setTimeout(() => updateFilters({ q: text }), 300)
   }
 
-  const applySmartView = (view: SmartView) => {
-    if (view === 'winners') {
-      updateFilters(
-        {
-          view,
-          verdicts: ['strong_winner', 'winner'],
-          unprocessed: false,
-          generated: 'any',
-          sort: 'run_days',
-        },
-        false,
-      )
-    } else if (view === 'new') {
-      updateFilters(
-        { view, verdicts: [], unprocessed: false, generated: 'any', sort: 'first_seen' },
-        false,
-      )
-    } else if (view === 'scripted') {
-      updateFilters(
-        { view, verdicts: [], unprocessed: false, generated: 'yes', sort: 'run_days' },
-        false,
-      )
-    } else if (view === 'unreviewed') {
-      updateFilters(
-        {
-          view,
-          verdicts: ['strong_winner', 'winner'],
-          unprocessed: true,
-          generated: 'any',
-          sort: 'run_days',
-        },
-        false,
-      )
-    }
-  }
-
-  // "New this week" — client-side cut on first_seen within 7 days
-  const visibleAds = useMemo(() => {
-    if (filters.view !== 'new') return ads
-    const cutoff = Date.now() - 7 * 86_400_000
-    return ads.filter((a) => {
-      const d = parseDate(a.first_seen)
-      return d !== null && d.getTime() >= cutoff
-    })
-  }, [ads, filters.view])
-
-  const toggleVerdict = (v: string) => {
-    const has = filters.verdicts.includes(v)
-    const next = has
-      ? filters.verdicts.filter((x) => x !== v)
-      : [...filters.verdicts, v]
-    updateFilters({ verdicts: next })
+  const toggleQuick = (q: Quick) => {
+    const next = filters.quick.includes(q)
+      ? filters.quick.filter((x) => x !== q)
+      : [...filters.quick, q]
+    updateFilters({ quick: next })
   }
 
   const pipelineCompetitors = competitors.filter(
@@ -250,7 +207,12 @@ export default function Library() {
   )
   const languageFacet = facets?.language ?? {}
   const hasLanguages = Object.keys(languageFacet).length > 0
-  const mediaTypes = Object.entries(facets?.media_type ?? {})
+  const quickCount = (q: Quick): number | null => {
+    if (q === 'top') return facets?.verdict?.strong_winner ?? null
+    if (q === 'win') return facets?.verdict?.winner ?? null
+    if (q === 'new') return newCount
+    return null
+  }
 
   const selectCls =
     'rounded-lg border border-white/10 bg-zinc-900 px-2.5 py-1.5 text-sm text-zinc-200 outline-none focus:border-violet-400/50'
@@ -265,19 +227,36 @@ export default function Library() {
             {formatCount(total)} ads · pick a winner to turn into a Supernova script
           </p>
         </div>
-        <button
-          onClick={() => setShowRun(true)}
-          className="flex shrink-0 items-center gap-2 rounded-lg border border-violet-400/30 bg-violet-500/15 px-4 py-2 text-sm font-semibold text-violet-200 transition-colors hover:bg-violet-500/25"
-          title="Scrape + refresh the latest data for a competitor"
-        >
-          ↻ Run data update
-        </button>
+        <div className="flex shrink-0 items-center gap-3">
+          {newCount != null && newCount > 0 && (
+            <button
+              onClick={() =>
+                updateFilters({
+                  quick: filters.quick.includes('new')
+                    ? filters.quick
+                    : [...filters.quick, 'new'],
+                })
+              }
+              className="rounded-lg border border-sky-400/30 bg-sky-500/10 px-3 py-2 text-sm font-medium text-sky-200 transition-colors hover:bg-sky-500/20"
+              title="Ads first seen in the last 7 days (from the daily 6 AM refresh)"
+            >
+              🆕 {formatCount(newCount)} new this week
+            </button>
+          )}
+          <button
+            onClick={() => setShowRun(true)}
+            className="flex items-center gap-2 rounded-lg border border-violet-400/30 bg-violet-500/15 px-4 py-2 text-sm font-semibold text-violet-200 transition-colors hover:bg-violet-500/25"
+            title="Scrape + refresh the latest data for a competitor"
+          >
+            ↻ Run data update
+          </button>
+        </div>
       </div>
 
-      {/* ---------- sticky filter bar ---------- */}
-      <div className="sticky top-14 z-30 -mx-6 border-b border-white/10 bg-zinc-950/95 px-6 py-3 backdrop-blur">
+      {/* ---------- sticky filter bar (3 stable rows) ---------- */}
+      <div className="sticky top-14 z-30 -mx-6 space-y-3 border-b border-white/10 bg-zinc-950/95 px-6 py-3 backdrop-blur">
+        {/* row 1: the dropdowns + toggles */}
         <div className="flex items-center gap-3">
-          {/* pipeline */}
           <select
             className={selectCls}
             value={filters.pipeline}
@@ -290,7 +269,6 @@ export default function Library() {
             <option value="google">Google</option>
           </select>
 
-          {/* competitor (fixed width so a longer name never shifts the row) */}
           <select
             className={`${selectCls} w-[230px] truncate`}
             value={filters.competitor}
@@ -299,16 +277,15 @@ export default function Library() {
           >
             <option value="">All competitors</option>
             {pipelineCompetitors.map((c) => {
-              const winners = c.by_verdict.strong_winner + c.by_verdict.winner
+              const w = c.by_verdict.strong_winner + c.by_verdict.winner
               return (
                 <option key={`${c.pipeline}/${c.slug}`} value={c.slug}>
-                  {c.page_name} ({winners} winners)
+                  {c.page_name} ({w} winners)
                 </option>
               )
             })}
           </select>
 
-          {/* language (always rendered so it never pops in/out) */}
           <select
             className={`${selectCls} w-[150px]`}
             value={filters.language}
@@ -326,136 +303,71 @@ export default function Library() {
               ))}
           </select>
 
-          {/* live / retired */}
-          <div className="flex overflow-hidden rounded-lg border border-white/10">
-            {(
-              [
-                ['any', 'Any'],
-                ['no', 'Live'],
-                ['yes', 'Retired'],
-              ] as const
-            ).map(([val, label]) => (
-              <button
-                key={val}
-                onClick={() => updateFilters({ retired: val })}
-                className={`px-2.5 py-1.5 text-xs font-medium transition-colors ${
-                  filters.retired === val
-                    ? 'bg-violet-500/25 text-violet-200'
-                    : 'text-zinc-500 hover:bg-white/5 hover:text-zinc-300'
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-
-          {/* not yet processed */}
-          <button
-            onClick={() => updateFilters({ unprocessed: !filters.unprocessed })}
-            className={`rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
-              filters.unprocessed
-                ? 'border-amber-400/40 bg-amber-500/15 text-amber-200'
-                : 'border-white/10 text-zinc-500 hover:border-white/25 hover:text-zinc-300'
-            }`}
-            title="Only show ads nobody has reviewed or scripted yet"
-          >
-            Not yet processed
-          </button>
-        </div>
-
-        {/* row 2: verdict + media chips — isolated on their own row so their
-            (count-driven) width can never shift the controls above */}
-        <div className="mt-3 flex flex-wrap items-center gap-1.5">
-          {VERDICT_ORDER.map((v) => {
-            const on = filters.verdicts.includes(v)
-            const count = facets?.verdict?.[v]
-            return (
-              <button
-                key={v}
-                onClick={() => toggleVerdict(v)}
-                className={`rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
-                  on
-                    ? `${VERDICT_MAP[v].className}`
-                    : 'border-white/10 text-zinc-500 hover:border-white/25 hover:text-zinc-300'
-                }`}
-              >
-                {VERDICT_MAP[v].label}
-                <span className="ml-1 inline-block min-w-[2ch] text-right tabular-nums opacity-70">
-                  {count != null ? formatCount(count) : ''}
-                </span>
-              </button>
-            )
-          })}
-          {mediaTypes.map(([mt, count]) => {
-            const on = filters.mediaType === mt
-            return (
-              <button
-                key={mt}
-                onClick={() => updateFilters({ mediaType: on ? '' : mt })}
-                className={`ml-1 rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
-                  on
-                    ? 'border-violet-400/40 bg-violet-500/20 text-violet-200'
-                    : 'border-white/10 text-zinc-500 hover:border-white/25 hover:text-zinc-300'
-                }`}
-              >
-                {mt} <span className="tabular-nums opacity-60">{formatCount(count)}</span>
-              </button>
-            )
-          })}
-        </div>
-
-        {/* row 3: search + sort on their own line so the filters never shift them */}
-        <div className="mt-3 flex items-center gap-3">
-          <input
-            type="search"
-            placeholder="Search ad text…"
-            value={searchText}
-            onChange={(e) => onSearch(e.target.value)}
-            className="min-w-[180px] flex-1 rounded-lg border border-white/10 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 outline-none focus:border-violet-400/50"
+          <Toggle
+            value={filters.retired}
+            onChange={(v) => updateFilters({ retired: v as Filters['retired'] })}
+            options={[
+              ['any', 'Any'],
+              ['no', 'Live'],
+              ['yes', 'Retired'],
+            ]}
           />
+          <Toggle
+            value={filters.mediaType}
+            onChange={(v) => updateFilters({ mediaType: v as Filters['mediaType'] })}
+            options={[
+              ['', 'Any'],
+              ['Video', 'Video'],
+              ['Image', 'Image'],
+            ]}
+          />
+
           <select
-            className={`${selectCls} w-[170px]`}
+            className={`${selectCls} ml-auto w-[210px]`}
             value={filters.sort}
             onChange={(e) => updateFilters({ sort: e.target.value })}
-            title="Sort order"
+            title="Order by"
           >
             {SORTS.map((s) => (
               <option key={s.id} value={s.id}>
-                {s.label}
+                Order by: {s.label}
               </option>
             ))}
           </select>
         </div>
-      </div>
 
-      {/* ---------- smart views + count ---------- */}
-      <div className="flex flex-wrap items-center gap-2">
-        {SMART_VIEWS.map((sv) => (
-          <button
-            key={sv.id}
-            onClick={() => applySmartView(sv.id)}
-            className={`rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors ${
-              filters.view === sv.id
-                ? 'border-violet-400/40 bg-violet-500/20 text-violet-100'
-                : 'border-white/10 bg-zinc-900/50 text-zinc-400 hover:border-white/25 hover:text-zinc-200'
-            }`}
-          >
-            {sv.label}
-          </button>
-        ))}
-        <span className="ml-auto text-sm text-zinc-500">
-          {loading ? (
-            'Loading…'
-          ) : (
-            <>
-              <span className="font-semibold text-zinc-200">{formatCount(total)}</span>{' '}
-              {filters.view === 'winners' ? 'winning ads' : 'ads'}
-              {filters.view === 'new' && visibleAds.length !== ads.length
-                ? ` · ${visibleAds.length} first seen this week`
-                : ''}
-            </>
-          )}
-        </span>
+        {/* row 2: quick filters */}
+        <div className="flex flex-wrap items-center gap-2">
+          {QUICK.map((q) => {
+            const on = filters.quick.includes(q)
+            const count = quickCount(q)
+            return (
+              <button
+                key={q}
+                onClick={() => toggleQuick(q)}
+                className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+                  on
+                    ? 'border-violet-400/40 bg-violet-500/20 text-violet-100'
+                    : 'border-white/10 text-zinc-400 hover:border-white/25 hover:text-zinc-200'
+                }`}
+              >
+                {QUICK_LABELS[q]}
+                {count != null && (
+                  <span className="ml-1.5 tabular-nums opacity-70">{formatCount(count)}</span>
+                )}
+              </button>
+            )
+          })}
+        </div>
+
+        {/* row 3: search (also matches ad ID) */}
+        <input
+          type="search"
+          placeholder="Search ad text or ad ID…"
+          value={searchText}
+          onChange={(e) => onSearch(e.target.value)}
+          className="w-full rounded-lg border border-white/10 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 outline-none focus:border-violet-400/50"
+        />
       </div>
 
       {/* ---------- grid ---------- */}
@@ -463,35 +375,34 @@ export default function Library() {
         <ErrorNote message={error} />
       ) : loading ? (
         <PageLoading label="Loading the ad library…" />
-      ) : visibleAds.length === 0 ? (
+      ) : ads.length === 0 ? (
         <EmptyState
           icon="🔍"
           title="No ads match these filters"
-          hint={
-            filters.view === 'new'
-              ? 'Nothing new was spotted in the last 7 days. Try another view.'
-              : 'Try widening the filters — switch verdicts back on or clear the search.'
-          }
+          hint="Try widening the filters — turn on more quick filters or clear the search."
         />
       ) : (
         <>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-            {visibleAds.map((ad) => (
+            {ads.map((ad) => (
               <AdCard key={`${ad.pipeline}/${ad.competitor}/${ad.ad_id}`} ad={ad} />
             ))}
           </div>
-          {ads.length < total && filters.view !== 'new' && (
-            <div className="flex justify-center pt-2 pb-8">
+          <div className="flex flex-col items-center gap-3 pt-2 pb-8">
+            <span className="text-xs text-zinc-500">
+              Showing {formatCount(ads.length)} of {formatCount(total)}
+            </span>
+            {ads.length < total && (
               <button
                 onClick={loadMore}
                 disabled={loadingMore}
                 className="flex items-center gap-2 rounded-xl border border-white/10 bg-zinc-900 px-6 py-2.5 text-sm font-medium text-zinc-200 transition-colors hover:border-violet-400/40 hover:text-white disabled:opacity-50"
               >
                 {loadingMore && <Spinner className="h-4 w-4" />}
-                Load more ({formatCount(total - ads.length)} remaining)
+                Load {Math.min(PAGE_SIZE, total - ads.length)} more
               </button>
-            </div>
-          )}
+            )}
+          </div>
         </>
       )}
 
@@ -508,6 +419,34 @@ export default function Library() {
           }}
         />
       )}
+    </div>
+  )
+}
+
+function Toggle({
+  value,
+  onChange,
+  options,
+}: {
+  value: string
+  onChange: (v: string) => void
+  options: readonly (readonly [string, string])[]
+}) {
+  return (
+    <div className="flex shrink-0 overflow-hidden rounded-lg border border-white/10">
+      {options.map(([val, label]) => (
+        <button
+          key={val}
+          onClick={() => onChange(val)}
+          className={`px-2.5 py-1.5 text-xs font-medium transition-colors ${
+            value === val
+              ? 'bg-violet-500/25 text-violet-200'
+              : 'text-zinc-500 hover:bg-white/5 hover:text-zinc-300'
+          }`}
+        >
+          {label}
+        </button>
+      ))}
     </div>
   )
 }
