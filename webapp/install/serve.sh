@@ -11,10 +11,20 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 REPO="${0:A:h:h:h}"   # webapp/install/serve.sh -> repo root
 cd "$REPO" || exit 1
 
-# --- preflight: refuse to run from a Conductor worktree (no videos/, wrong branch) ---
+# Read the worktree override from .env too (launchd doesn't inherit shell env).
+if grep -q '^STUDIO_ALLOW_WORKTREE=1' "$REPO/.env" 2>/dev/null; then
+  export STUDIO_ALLOW_WORKTREE=1
+fi
+
+# --- preflight: prefer the canonical clone (no videos/, wrong branch in a worktree).
+# STUDIO_ALLOW_WORKTREE=1 overrides for v0 testing from a Conductor worktree. ---
 if [ "$(git rev-parse --git-common-dir 2>/dev/null)" != ".git" ]; then
-  echo "[ad-studio] REFUSING: this is a git worktree, not the canonical clone. Run from the main clone." >&2
-  exit 1
+  if [ "${STUDIO_ALLOW_WORKTREE:-0}" = "1" ]; then
+    echo "[ad-studio] WARNING: running from a git worktree (STUDIO_ALLOW_WORKTREE=1). Fine for v0 testing; move to the canonical clone for production." >&2
+  else
+    echo "[ad-studio] REFUSING: this is a git worktree, not the canonical clone. Run from the main clone, or set STUDIO_ALLOW_WORKTREE=1 to override." >&2
+    exit 1
+  fi
 fi
 
 PORT="${STUDIO_PORT:-8787}"

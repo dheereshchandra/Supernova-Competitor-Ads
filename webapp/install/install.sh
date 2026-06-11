@@ -25,8 +25,13 @@ cd "$REPO"
 
 # --- guardrails ---
 if [ "$(git rev-parse --git-common-dir 2>/dev/null)" != ".git" ]; then
-  echo "ERR this looks like a git worktree, not the canonical clone. Install from your MAIN clone." >&2
-  exit 1
+  if [ "${STUDIO_ALLOW_WORKTREE:-0}" = "1" ]; then
+    echo "WARN installing from a git worktree (STUDIO_ALLOW_WORKTREE=1). OK for v0; move to the canonical clone for production."
+  else
+    echo "ERR this looks like a git worktree, not the canonical clone. Install from your MAIN clone," >&2
+    echo "    or re-run with STUDIO_ALLOW_WORKTREE=1 to override for v0 testing." >&2
+    exit 1
+  fi
 fi
 command -v python3.13 >/dev/null || { echo "ERR python3.13 not found (brew install python@3.13)"; exit 1; }
 python3.13 -c "import fastapi, uvicorn, itsdangerous" 2>/dev/null || {

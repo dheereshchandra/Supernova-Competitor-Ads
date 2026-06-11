@@ -49,33 +49,31 @@ revived if it crashes or after the Mac wakes. Logs:
 A **named** tunnel (stable hostname), not a quick tunnel (random URL each restart).
 Requires `gosupernova.live` to be a Cloudflare-managed zone.
 
-```sh
-brew install cloudflared
-cloudflared tunnel login                       # authorize the gosupernova.live zone
-cloudflared tunnel create ad-studio            # writes ~/.cloudflared/<UUID>.json
-cloudflared tunnel route dns ad-studio studio.gosupernova.live
-```
-
-Create `~/.cloudflared/config.yml`:
-
-```yaml
-tunnel: ad-studio
-credentials-file: /Users/<you>/.cloudflared/<UUID>.json
-ingress:
-  - hostname: studio.gosupernova.live
-    service: http://localhost:8787
-  - service: http_status:404
-```
-
-Install it as a background service (cloudflared ships its own keepalive LaunchDaemon —
-use it, don't write another plist):
+Use the guided helper — it runs everything it can and pauses for the two steps that
+need you (the browser login can't be automated):
 
 ```sh
-sudo cloudflared service install
+zsh webapp/install/tunnel-setup.sh           # default host studio.gosupernova.live
 ```
 
-The team now opens **https://studio.gosupernova.live**, signs in with their name + the
+It walks through: `cloudflared tunnel login` (browser) → creates the `ad-studio`
+tunnel → writes `~/.cloudflared/config.yml` from `cloudflared-config.template.yml` →
+routes DNS. The last step it prints for you:
+
+```sh
+sudo cloudflared service install             # run the tunnel as a keepalive service
+```
+
+The team then opens **https://studio.gosupernova.live**, signs in with their name + the
 shared password, and they're in.
+
+## 3a. v0 from a Conductor worktree (before merging to `main`)
+
+The installer normally insists on the canonical clone. To run it from a worktree for
+v0 testing, set `STUDIO_ALLOW_WORKTREE=1` in `.env` (already done if this was set up by
+the agent) — then `install.sh`/`serve.sh` proceed with a warning. Move to the canonical
+clone (merge the `webapp/` branch to `main`, pull) for the real production home so the
+11:30 data refresh and single-writer guarantees apply.
 
 ## 4. Keep the Mac awake
 
