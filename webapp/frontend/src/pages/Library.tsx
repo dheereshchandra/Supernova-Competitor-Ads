@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import {
   getAds,
   getCompetitors,
+  getPipelinePending,
   type Ad,
   type AdsResponse,
   type Competitor,
@@ -110,6 +111,7 @@ export default function Library() {
   const [total, setTotal] = useState(0)
   const [facets, setFacets] = useState<AdsResponse['facets'] | null>(null)
   const [newCount, setNewCount] = useState<number | null>(null)
+  const [pendingCount, setPendingCount] = useState<number | null>(null)
   const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(true)
   const [loadingMore, setLoadingMore] = useState(false)
@@ -146,6 +148,13 @@ export default function Library() {
       .then((r) => setNewCount(r.total))
       .catch(() => setNewCount(null))
   }, [filters.pipeline, filters.competitor, dataVersion])
+
+  // ads pending enrichment (the actionable backlog shown by the button)
+  useEffect(() => {
+    getPipelinePending(filters.pipeline)
+      .then((p) => setPendingCount(p.total))
+      .catch(() => setPendingCount(null))
+  }, [filters.pipeline, dataVersion])
 
   // main fetch on filter change
   useEffect(() => {
@@ -228,25 +237,19 @@ export default function Library() {
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-3">
-          {newCount != null && newCount > 0 && (
+          {pendingCount != null && pendingCount > 0 && (
             <button
-              onClick={() =>
-                updateFilters({
-                  quick: filters.quick.includes('new')
-                    ? filters.quick
-                    : [...filters.quick, 'new'],
-                })
-              }
-              className="rounded-lg border border-sky-400/30 bg-sky-500/10 px-3 py-2 text-sm font-medium text-sky-200 transition-colors hover:bg-sky-500/20"
-              title="Ads first seen in the last 7 days (from the daily 6 AM refresh)"
+              onClick={() => setShowRun(true)}
+              className="rounded-lg border border-amber-400/30 bg-amber-500/10 px-3 py-2 text-sm font-medium text-amber-200 transition-colors hover:bg-amber-500/20"
+              title="Scraped ads not yet enriched (transcripts, language, format). Click to enrich."
             >
-              🆕 {formatCount(newCount)} new this week
+              ⏳ {formatCount(pendingCount)} pending enrichment
             </button>
           )}
           <button
             onClick={() => setShowRun(true)}
             className="flex items-center gap-2 rounded-lg border border-violet-400/30 bg-violet-500/15 px-4 py-2 text-sm font-semibold text-violet-200 transition-colors hover:bg-violet-500/25"
-            title="Scrape + refresh the latest data for a competitor"
+            title="Scrape + enrich the latest data for one or more competitors"
           >
             ↻ Run data update
           </button>
@@ -383,7 +386,7 @@ export default function Library() {
         />
       ) : (
         <>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
             {ads.map((ad) => (
               <AdCard key={`${ad.pipeline}/${ad.competitor}/${ad.ad_id}`} ad={ad} />
             ))}
@@ -412,10 +415,10 @@ export default function Library() {
           defaultPipeline={filters.pipeline}
           defaultCompetitor={filters.competitor}
           onClose={() => setShowRun(false)}
-          onStarted={() => {
+          onStarted={(jobIds) => {
             setShowRun(false)
             refreshActiveJobs()
-            navigate('/runs')
+            if (jobIds.length) navigate('/runs')
           }}
         />
       )}

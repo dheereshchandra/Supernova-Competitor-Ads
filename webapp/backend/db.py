@@ -15,6 +15,7 @@ _SCHEMA = """
 CREATE TABLE IF NOT EXISTS jobs (
   id            INTEGER PRIMARY KEY AUTOINCREMENT,
   kind          TEXT NOT NULL DEFAULT 'generate',
+  mode          TEXT NOT NULL DEFAULT 'full',
   pipeline      TEXT NOT NULL,
   competitor    TEXT NOT NULL,
   ad_id         TEXT NOT NULL,
@@ -96,6 +97,9 @@ def conn() -> sqlite3.Connection:
         cols = {r[1] for r in c.execute("PRAGMA table_info(jobs)").fetchall()}
         if "kind" not in cols:
             c.execute("ALTER TABLE jobs ADD COLUMN kind TEXT NOT NULL DEFAULT 'generate'")
+            c.commit()
+        if "mode" not in cols:
+            c.execute("ALTER TABLE jobs ADD COLUMN mode TEXT NOT NULL DEFAULT 'full'")
             c.commit()
         _conn = c
     return _conn

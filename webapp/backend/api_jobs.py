@@ -210,7 +210,17 @@ def cancel_job(job_id: int, user: str = Depends(require_user)):
 
 class PipelineBody(BaseModel):
     pipeline: str
-    competitor: str
+    competitors: list[str] = []
+    competitor: str | None = None  # back-compat single
+
+
+@router.get("/api/pipeline/pending")
+def pipeline_pending(pipeline: str = "facebook", _user: str = Depends(require_user)):
+    """Ads pending enrichment, per competitor + total — the actionable backlog."""
+    from .pipeline import pending_by_competitor
+    if pipeline not in ("facebook", "google"):
+        raise HTTPException(422, "pipeline must be facebook or google")
+    return pending_by_competitor(pipeline)
 
 
 @router.get("/api/pipeline/estimate")
@@ -223,31 +233,45 @@ def pipeline_estimate(pipeline: str, competitor: str, _user: str = Depends(requi
 
 @router.post("/api/pipeline/run", status_code=201)
 def pipeline_run(body: PipelineBody, user: str = Depends(require_user)):
-    from .pipeline import estimate_cost
+    from .pipeline import count_unenriched, PER_VIDEO_USD
     if body.pipeline not in ("facebook", "google"):
         raise HTTPException(422, "pipeline must be facebook or google")
-    est = estimate_cost(body.pipeline, body.competitor)
-    if not est.get("eligible"):
-        raise HTTPException(422, est.get("reason", "Not eligible"))
-    # one pipeline run per competitor at a time; the serial worker handles the rest
-    active = db.query_one(
-        f"SELECT id FROM jobs WHERE kind='pipeline' AND pipeline=? AND competitor=? "
-        f"AND status IN {ACTIVE}", (body.pipeline, body.competitor))
-    if active:
-        raise HTTPException(409, f"A data update for {body.competitor} is already running (job #{active['id']})")
+    slugs = list(dict.fromkeys(body.competitors or ([body.competitor] if body.competitor else [])))
+    if not slugs:
+        raise HTTPException(422, "pick at least one competitor")
+
+    # reject ones already running; estimate total cost up front (pending enrichment)
+    running = {r["competitor"] for r in db.query(
+        f"SELECT competitor FROM jobs WHERE kind='pipeline' AND pipeline=? AND status IN {ACTIVE}",
+        (body.pipeline,))}
+    from .config import REPO
+    queued, skipped = [], []
+    total_cost = 0.0
+    for slug in slugs:
+        if slug in running or not (REPO / body.pipeline / "master" / f"{slug}.csv").is_file():
+            skipped.append(slug)
+            continue
+        total_cost += count_unenriched(body.pipeline, slug) * PER_VIDEO_USD
+        queued.append(slug)
+    if not queued:
+        raise HTTPException(409, "Those competitors are already running, or have no data yet.")
+
     cfg = settings()
-    cost = est.get("cost_usd", 0)
-    if cost > cfg.max_daily_cost:
-        raise HTTPException(422, f"Estimated ${cost:.2f} exceeds the cap (${cfg.max_daily_cost:.0f}) — "
-                                 f"raise STUDIO_MAX_DAILY_COST or enrich in smaller batches")
-    cur = db.execute(
-        "INSERT INTO jobs (kind, pipeline, competitor, ad_id, requested_by, cost_estimate_usd) "
-        "VALUES ('pipeline', ?, ?, '(full-run)', ?, ?)",
-        (body.pipeline, body.competitor, user, cost))
-    job_id = cur.lastrowid
-    _log(body.pipeline, body.competitor, "(full-run)", user, "pipeline_run",
-         f"queued data update (~${cost:.2f}, {est.get('backlog_videos', 0)} videos)")
-    return {"job_id": job_id}
+    if total_cost > cfg.max_daily_cost:
+        raise HTTPException(422, f"Estimated ${total_cost:.2f} of enrichment exceeds the "
+                                 f"${cfg.max_daily_cost:.0f} cap — pick fewer competitors or raise "
+                                 f"STUDIO_MAX_DAILY_COST.")
+    job_ids = []
+    for slug in queued:
+        cost = round(count_unenriched(body.pipeline, slug) * PER_VIDEO_USD, 2)
+        cur = db.execute(
+            "INSERT INTO jobs (kind, mode, pipeline, competitor, ad_id, requested_by, "
+            "cost_estimate_usd) VALUES ('pipeline','full',?,?,'(full-run)',?,?)",
+            (body.pipeline, slug, user, cost))
+        job_ids.append(cur.lastrowid)
+        _log(body.pipeline, slug, "(full-run)", user, "pipeline_run",
+             f"queued data update (~${cost:.2f})")
+    return {"job_ids": job_ids, "queued": queued, "skipped": skipped}
 
 
 # ---------------- tracker ----------------
