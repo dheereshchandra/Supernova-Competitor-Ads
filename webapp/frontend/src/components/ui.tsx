@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { statusBadge, verdictBadge } from '../format'
+import { friendlyDate, statusBadge, verdictBadge } from '../format'
 
 export function VerdictBadge({ verdict }: { verdict: string }) {
   const b = verdictBadge(verdict)
@@ -93,11 +93,13 @@ export function PageLoading({ label = 'Loading…' }: { label?: string }) {
   )
 }
 
-/** Inline SVG sparkline of rank-over-time. Rank 1 is the TOP of the chart. */
+/** Rank-over-time chart. Best rank (lowest #) is at the TOP; a left Y-axis shows
+ * the best/worst rank in the window, and the first & last points are labelled
+ * with their rank so it's clear where the line sits. */
 export function RankSparkline({
   points,
-  width = 280,
-  height = 64,
+  width = 300,
+  height = 104,
 }: {
   points: { date: string; rank: number }[]
   width?: number
@@ -106,42 +108,55 @@ export function RankSparkline({
   if (!points.length) {
     return <div className="text-xs text-zinc-500">No rank history yet</div>
   }
-  const pad = 6
   const ranks = points.map((p) => p.rank)
-  const min = Math.min(...ranks)
-  const max = Math.max(...ranks)
+  const min = Math.min(...ranks) // best rank (smallest number)
+  const max = Math.max(...ranks) // worst rank
+  const flat = min === max
   const span = Math.max(1, max - min)
+  const gutter = 40, rightPad = 24, topPad = 18, botPad = 16
+  const pL = gutter, pR = width - rightPad, pT = topPad, pB = height - botPad
   const x = (i: number) =>
-    points.length === 1
-      ? width / 2
-      : pad + (i * (width - pad * 2)) / (points.length - 1)
-  // rank 1 (best) at the top → low rank = low y
-  const y = (r: number) => pad + ((r - min) / span) * (height - pad * 2)
-
+    points.length === 1 ? (pL + pR) / 2 : pL + (i * (pR - pL)) / (points.length - 1)
+  const y = (r: number) => (flat ? (pT + pB) / 2 : pT + ((r - min) / span) * (pB - pT))
   const path = points
     .map((p, i) => `${i === 0 ? 'M' : 'L'}${x(i).toFixed(1)},${y(p.rank).toFixed(1)}`)
     .join(' ')
+  const last = points[points.length - 1]
 
   return (
-    <svg
-      width="100%"
-      viewBox={`0 0 ${width} ${height}`}
-      className="block"
-      role="img"
-      aria-label="Rank over time (higher line = better rank)"
-    >
-      {points.length > 1 && (
-        <path d={path} fill="none" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" />
-      )}
-      {points.map((p, i) => (
-        <circle
-          key={`${p.date}-${i}`}
-          cx={x(i)}
-          cy={y(p.rank)}
-          r={points.length === 1 ? 4 : 2.5}
-          fill="#a78bfa"
-        />
-      ))}
-    </svg>
+    <div>
+      <svg width="100%" viewBox={`0 0 ${width} ${height}`} className="block" role="img"
+        aria-label="Rank over time — higher on the chart is a better rank">
+        {/* y-axis */}
+        <line x1={gutter} y1={pT - 4} x2={gutter} y2={pB + 4} stroke="#ffffff14" />
+        {flat ? (
+          <text x={gutter - 6} y={(pT + pB) / 2 + 3} textAnchor="end"
+            className="fill-zinc-500" fontSize="10">#{min}</text>
+        ) : (
+          <>
+            <text x={gutter - 6} y={pT + 3} textAnchor="end" className="fill-zinc-500" fontSize="10">#{min}</text>
+            <text x={gutter - 6} y={pB + 3} textAnchor="end" className="fill-zinc-500" fontSize="10">#{max}</text>
+          </>
+        )}
+        {points.length > 1 && (
+          <path d={path} fill="none" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" />
+        )}
+        {points.map((p, i) => (
+          <circle key={`${p.date}-${i}`} cx={x(i)} cy={y(p.rank)} r={points.length === 1 ? 4 : 2.6} fill="#a78bfa" />
+        ))}
+        {/* label the first point (and the last, if different) with its rank */}
+        <text x={x(0)} y={y(points[0].rank) - 7} textAnchor="middle"
+          className="fill-violet-300 font-medium" fontSize="10">#{points[0].rank}</text>
+        {points.length > 1 && (
+          <text x={x(points.length - 1)} y={y(last.rank) - 7} textAnchor="middle"
+            className="fill-violet-300 font-medium" fontSize="10">#{last.rank}</text>
+        )}
+      </svg>
+      <div className="mt-1 flex items-center justify-between px-1 text-[10px] text-zinc-600">
+        <span>{friendlyDate(points[0].date)}</span>
+        <span className="text-zinc-500">↑ better rank</span>
+        <span>{friendlyDate(last.date)}</span>
+      </div>
+    </div>
   )
 }
