@@ -15,8 +15,27 @@ the operator's Mac, not in the sandbox.
 from __future__ import annotations
 
 import json
+import random
 import time
 from pathlib import Path
+
+
+def _err_kind(e: Exception) -> str:
+    """Classify a Gemini SDK exception so retries are smart:
+      'rate'      — 429 / RESOURCE_EXHAUSTED / quota → back off HARD and long
+      'transient' — 500/503/timeout/connection → normal backoff retry
+      'permanent' — safety block / 400 / permission / invalid → DON'T retry (waste)
+      'parse'     — malformed JSON from the model → quick retry"""
+    s = (str(e) or "").lower()
+    code = getattr(e, "code", None) or getattr(e, "status_code", None)
+    if code == 429 or "429" in s or "resource_exhausted" in s or "rate limit" in s or "quota" in s:
+        return "rate"
+    if any(t in s for t in ("safety", "blocked", "permission", "invalid argument",
+                            "400", "401", "403", "not found", "unsupported")):
+        return "permanent"
+    if isinstance(e, json.JSONDecodeError) or "expecting" in s or "json" in s:
+        return "parse"
+    return "transient"
 
 # Flash only. (`-latest` is a stable alias; set --model if your key needs an
 # explicit Flash version like gemini-2.5-flash.)
@@ -99,14 +118,22 @@ def parse_json_lenient(text: str):
 
 
 def generate_json(client, model: str, contents, *, temperature: float = 0.0,
-                  max_retries: int = 4, response_schema=None):
-    """Call Flash for a JSON response, with simple backoff + lenient parsing.
+                  max_retries: int = 5, response_schema=None):
+    """Call Flash for a JSON response, with ERROR-AWARE backoff + lenient parsing.
     Returns the parsed object, or raises after exhausting retries.
 
     When `response_schema` is given, Gemini uses CONTROLLED generation — the output is
     guaranteed to be valid JSON conforming to the schema. This eliminates the
     malformed-JSON failures (an unescaped quote inside a long transcript string →
-    "Expecting ',' delimiter") that no downstream parser can safely repair."""
+    "Expecting ',' delimiter") that no downstream parser can safely repair.
+
+    Retry policy (was a flat 1..20s backoff that caused 429 thundering-herds at 6
+    parallel workers): classify the error and back off accordingly —
+      • rate-limit (429/quota): long backoff (base 8s, ×2, cap 120s) + jitter
+      • transient (5xx/timeout): normal backoff (base 2s, cap 30s) + jitter
+      • parse error: quick retry (1s)
+      • permanent (safety block / 400 / permission): raise immediately, no retry
+        (retrying just burns time + the worker — it will never succeed)."""
     assert_flash(model)
     from google.genai import types as gt
     cfg_kw = dict(temperature=temperature, response_mime_type="application/json")
@@ -119,7 +146,18 @@ def generate_json(client, model: str, contents, *, temperature: float = 0.0,
             resp = client.models.generate_content(
                 model=model, contents=contents, config=cfg)
             return parse_json_lenient(resp.text or "")
-        except Exception as e:   # noqa: BLE001 — transient API / parse errors
+        except Exception as e:   # noqa: BLE001
             last = e
-            time.sleep(min(2 ** attempt, 20))
+            kind = _err_kind(e)
+            if kind == "permanent":
+                raise RuntimeError(f"Flash call failed (non-retriable: {kind}): {e}") from e
+            if attempt == max_retries - 1:
+                break
+            if kind == "rate":
+                base = min(8 * (2 ** attempt), 120)
+            elif kind == "parse":
+                base = 1
+            else:  # transient
+                base = min(2 * (2 ** attempt), 30)
+            time.sleep(base + random.uniform(0, base * 0.3))   # jitter avoids herd
     raise RuntimeError(f"Flash call failed after {max_retries} tries: {last}")

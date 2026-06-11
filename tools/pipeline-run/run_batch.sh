@@ -41,11 +41,48 @@ LOCK="$REPO/analysis/state/pipeline-run.lock"
 RUN_ID="$(date +%Y%m%d-%H%M%S)"
 mkdir -p "$LOG_DIR" "$REPO/analysis/state"
 
+cd "$REPO" 2>/dev/null || { log "ERR repo not found: $REPO"; exit 1; }
+
+# config from .env (grep, not source — values can contain anything): Slack alerts +
+# the daily cost cap. Defaults are generous enough for the one-time first backfill
+# (~$35); lower PIPELINE_COST_CAP_USD for steady-state daily once enrichment is built.
+SLACK_URL="$(grep -E '^SLACK_WEBHOOK_URL=' "$REPO/.env" 2>/dev/null | head -1 | cut -d= -f2- | tr -d '"'\'' ')"
+COST_CAP="$(grep -E '^PIPELINE_COST_CAP_USD=' "$REPO/.env" 2>/dev/null | head -1 | cut -d= -f2- | tr -d ' ')"; COST_CAP="${COST_CAP:-50}"
+COST_PER_VIDEO=0.012
+
+json_escape() { "$PY" -c 'import json,sys; print(json.dumps(sys.argv[1]))' "$1"; }
+slack() {  # best-effort Slack post; never fails the run. Works headless (curl).
+  [ -n "$SLACK_URL" ] || return 0
+  curl -sS -m 10 -X POST "$SLACK_URL" -H 'Content-Type: application/json' \
+       --data "{\"text\": $(json_escape "$1")}" >/dev/null 2>&1 || true
+}
 log()    { print -r -- "$(date '+%Y-%m-%d %H:%M:%S')  $1" | tee -a "$LOG"; }
-notify() { osascript -e "display notification \"$2\" with title \"$1\"" >/dev/null 2>&1 || true; }
+notify() { # $1 title, $2 body → macOS notification + Slack + log (reaches you when away)
+  osascript -e "display notification \"$2\" with title \"$1\"" >/dev/null 2>&1 || true
+  slack "*$1* — $2"
+}
 st()     { "$PY" "$STATE_PY" "$@" 2>>"$LOG"; }
 
-cd "$REPO" 2>/dev/null || { log "ERR repo not found: $REPO"; exit 1; }
+# estimate enrichment $ for a slug = (video ads in master with NO transcript) × per-video.
+# Uses existing files (pre-scrape), so it slightly under-counts today's brand-new ads —
+# fine for a guardrail. Prints "<dollars> <video_count>".
+est_cost() {
+  "$PY" - "$1" "$COST_PER_VIDEO" <<'PY'
+import sys, csv, pathlib
+slug, per = sys.argv[1], float(sys.argv[2])
+master = pathlib.Path(f"facebook/master/{slug}.csv")
+tdir = pathlib.Path(f"analysis/enrichment/facebook/transcripts/{slug}")
+done = {p.stem for p in tdir.glob("*.json")} if tdir.is_dir() else set()
+todo, seen = 0, set()
+if master.is_file():
+    for r in csv.DictReader(open(master, encoding="utf-8-sig")):
+        aid = (r.get("ad_library_id") or "").strip()
+        mt = (r.get("ad_media_type") or "").strip().lower()
+        if aid and aid not in seen and aid not in done and ("video" in mt or mt == ""):
+            seen.add(aid); todo += 1
+print(f"{todo*per:.2f} {todo}")
+PY
+}
 
 # ── single-writer lock (steal a stale lock whose pid is dead) ────────────────
 if [ -f "$LOCK" ]; then
@@ -72,19 +109,33 @@ fi
 
 st ensure "$RUN_ID" "${slugs[@]}"
 st pid "$$"
+spent=0.00                       # cumulative estimated enrichment spend this run
+typeset -a REPORT                # per-competitor lines for the daily report
 log "BATCH start (run $RUN_ID) pid=$$ competitors: ${(j:, :)slugs}"
+slack ":rocket: Pipeline run *$RUN_ID* started — ${(j:, :)slugs} (cost cap \$$COST_CAP)"
 
-# ── per-competitor pipeline with a live heartbeat ───────────────────────────
+# ── per-competitor pipeline (cost-capped) with a live heartbeat ─────────────
 run_one() {
-  local slug="$1" rc child
-  st current "$slug" "1-5"
+  local slug="$1" rc child stage=5 est ed en
+  # cost cap (F): estimate enrichment $; if it would bust the cap, run stages 1–4
+  # only (NO enrichment) and alert — never blow the budget silently.
+  est="$(est_cost "$slug")"; ed="${est%% *}"; en="${est##* }"
+  if "$PY" -c "import sys; sys.exit(0 if ($spent + $ed) > $COST_CAP else 1)"; then
+    stage=4
+    log "  [cost] $slug est \$$ed ($en videos) + spent \$$spent would exceed cap \$$COST_CAP → stages 1–4 only (skip enrichment)"
+    notify "Pipeline: cost cap hit" "$slug enrichment skipped (est \$$ed, cap \$$COST_CAP). Raise PIPELINE_COST_CAP_USD to run it."
+  fi
+  st current "$slug" "1-$stage"
   st set "$slug" running
-  log "── $slug: run_pipeline --through-stage 5 ──"
+  log "── $slug: run_pipeline --through-stage $stage ──"
   bash "$REPO/analysis/scripts/run_pipeline.sh" \
-       --pipeline facebook --competitor "$slug" --through-stage 5 >> "$LOG" 2>&1 &
+       --pipeline facebook --competitor "$slug" --through-stage "$stage" >> "$LOG" 2>&1 &
   child=$!
   while kill -0 "$child" 2>/dev/null; do st heartbeat; sleep 20; done
   wait "$child"; rc=$?
+  if [ "$stage" = 5 ] && [ "$rc" = 0 ]; then
+    spent="$("$PY" -c "print(f'{$spent + $ed:.2f}')")"
+  fi
   return $rc
 }
 
@@ -97,15 +148,22 @@ for slug in "${slugs[@]}"; do
   att="$(st summary | grep -E "^   . ${slug} " | grep -oE 'attempt [0-9]+' | awk '{print $2}')"
   att=$(( ${att:-0} + 1 ))
 
-  if run_one "$slug"; then
+  run_one "$slug"; prc=$?
+
+  # per-run sanity AUDIT (C) — catches "exit 0 but BAD" (0 ads, silent enrichment hole)
+  averdict="$("$PY" "$SCRIPT_DIR/audit.py" "$slug" 2>>"$LOG" | grep '^AUDIT ' | head -1)"
+  averd="$(echo "$averdict" | awk '{print $3}')"; areason="${averdict#*| }"
+
+  if [ "$prc" = 0 ] && [ "$averd" != FAIL ]; then
     st set "$slug" done "$att"
-    log "OK $slug done"
-    notify "Pipeline: $slug ✓" "Finished stages 1–5."
+    log "OK $slug done — audit:$averd"
+    REPORT+=("✓ $slug — done (audit ${averd:-?}; $areason)")
+    [ "$averd" = WARN ] && notify "Pipeline: $slug ⚠" "Done but audit WARN: $areason"
   else
-    rc=$?
     st set "$slug" failed "$att"
-    log "FAIL $slug (rc=$rc, attempt $att)"
-    notify "Pipeline: $slug failed" "Attempt $att, rc=$rc — will retry; check $LOG"
+    log "FAIL $slug (pipeline rc=$prc, audit=$averd, attempt $att)"
+    REPORT+=("✗ $slug — FAIL (pipeline rc=$prc; audit ${averd:-?}; $areason)")
+    notify "Pipeline: $slug FAILED" "rc=$prc, audit=$averd — $areason. Retry $att; see log."
   fi
   st current "" ""
   st heartbeat
@@ -114,8 +172,28 @@ done
 # ── decide exit code (drives launchd auto-resume) ───────────────────────────
 verdict="$(st verdict)"
 log "BATCH pass done — verdict: $verdict"
+
+write_daily_report() {  # durable, committed record of the day's run
+  local f="$REPO/analysis/reports/daily-run-$(date +%Y-%m-%d).md"
+  mkdir -p "$REPO/analysis/reports"
+  {
+    echo "# Daily pipeline run — $(date +%Y-%m-%d)  (run $RUN_ID)"
+    echo
+    echo "- Competitors: ${(j:, :)slugs}"
+    echo "- Estimated enrichment spend: \$$spent  (cap \$$COST_CAP)"
+    echo "- Verdict: $verdict"
+    echo
+    echo "## Results (pipeline status + sanity-audit verdict)"
+    for line in "${REPORT[@]}"; do echo "- $line"; done
+    echo
+    echo "Full log: \`analysis/logs/pipeline-run-$(date +%Y-%m-%d).log\`"
+  } > "$f"
+  log "daily report → ${f#$REPO/}"
+}
+
 if [ "$verdict" = "done" ]; then
   log "ALL competitors settled — exiting 0 (launchd will not relaunch)."
+  write_daily_report
   # Persist the day's data so csv-sync (and teammates) pick it up — but ONLY from a
   # clean main checkout (the daily-production install). A Conductor worktree / dirty
   # tree / non-main branch is left for a human to commit (so this never stomps edits).
@@ -127,14 +205,25 @@ if [ "$verdict" = "done" ]; then
       git push >> "$LOG" 2>&1 || { git pull --no-rebase >> "$LOG" 2>&1; git push >> "$LOG" 2>&1; } \
         || { log "WARN push failed — commit is local"; notify "Pipeline: push failed" "Committed locally; push manually."; }
       log "committed + pushed the day's data"
+      # E: refresh the Sheet now (don't wait for the 19:00 csv-sync) so today's
+      # ranks/columns are visible same-hour.
+      launchctl kickstart -k "gui/$(id -u)/live.gosupernova.csv-sync" >/dev/null 2>&1 \
+        && log "triggered csv-sync (Sheet refresh)" \
+        || log "(csv-sync job not installed — Sheet refreshes on its own schedule)"
     fi
   else
-    log "not committing (branch=$branch, or clean) — commit manually if this is a worktree run"
+    log "not committing (branch=$branch, or clean) — worktree run; commit manually + the Sheet refreshes from main"
   fi
-  notify "Pipeline batch complete" "All competitors processed. See $LOG"
+  # final summary to Slack (reaches you when away) + macOS
+  fails=$(printf '%s\n' "${REPORT[@]}" | grep -c '^✗') || true
+  icon=":white_check_mark:"; [ "${fails:-0}" -gt 0 ] && icon=":warning:"
+  slack "$icon Pipeline run *$RUN_ID* complete — ${fails:-0} failed, spend ~\$$spent.
+${(F)REPORT}"
+  notify "Pipeline batch complete" "${fails:-0} failed. See $LOG"
   exit 0
 fi
 # pending/retriable work remains → non-zero so launchd KeepAlive relaunches (throttled)
 pend="$(st pending)"
 log "pending after this pass: ${pend:-none} — exiting 1 so launchd relaunches to continue."
+slack ":hourglass_flowing_sand: Pipeline run *$RUN_ID* pass done — still pending: ${pend:-none}. Auto-retrying."
 exit 1

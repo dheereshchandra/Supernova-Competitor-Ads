@@ -25,6 +25,7 @@ fi
 LIMIT="--limit 5"; LABEL="calibration (5 items)"
 if [ "$MODE" = "--full" ]; then LIMIT=""; LABEL="FULL"; fi
 PY="$(command -v python3.13 2>/dev/null || command -v python3)"
+DEGRADED=0   # set if a CRITICAL step (transcription) fails its quality gate
 
 echo "== preflight =="
 $PY analysis/scripts/preflight_enrichment.py || { echo ">> fix preflight, then re-run."; exit 1; }
@@ -42,7 +43,16 @@ echo "== 2c/6 visual fingerprint: pHash of sampled frames (offline, no API) =="
 $PY analysis/scripts/visual_fingerprint.py --pipeline "$PIPELINE" --competitor "$COMP" || echo "(visual fingerprint issue — non-fatal)"
 
 echo "== 3/6 transcribe + tag [$LABEL] =="
+# CRITICAL paid step. transcribe_tag exits non-zero when its failure-rate gate
+# trips (a degraded enrichment) — DON'T swallow it; record it so the run is marked
+# degraded and the orchestrator/runner surfaces + alerts instead of committing holes.
 $PY analysis/scripts/transcribe_tag.py --pipeline "$PIPELINE" --competitor "$COMP" $LIMIT --workers "${WORKERS:-6}"
+trc=$?
+if [ "$trc" != 0 ]; then
+  DEGRADED=1
+  echo ">> [DEGRADED] transcription step exited $trc (failure-rate gate). The ok sidecars"
+  echo "   are cached; re-running retries only the failures. Surfacing this, not hiding it."
+fi
 
 echo "== 4/6 embed scripts [$LABEL] =="
 $PY analysis/scripts/embed_scripts.py --pipeline "$PIPELINE" --competitor "$COMP" $LIMIT || echo "(need transcripts first)"
@@ -65,9 +75,15 @@ if [ -f "analysis/enrichment/facebook/embeddings/$COMP.jsonl" ] && \
 fi
 
 echo ""
-echo "DONE ($LABEL)."
+if [ "$DEGRADED" != 0 ]; then
+  echo "DONE WITH WARNINGS ($LABEL) — transcription was DEGRADED (see above)."
+  echo "Re-run resumes (cached sidecars skip); exiting non-zero so the pipeline surfaces it."
+else
+  echo "DONE ($LABEL)."
+fi
 if [ -n "$LIMIT" ]; then
   echo "Eyeball a sidecar: analysis/enrichment/$PIPELINE/transcripts/$COMP/"
   echo "Happy? run full:   analysis/scripts/run_enrichment.sh $PIPELINE $COMP --full"
 fi
 echo "Commit:  tools/log_and_commit.sh $PIPELINE $COMP \"<you>\" \"enrichment\" && git push"
+exit $DEGRADED

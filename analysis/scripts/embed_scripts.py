@@ -108,7 +108,7 @@ def main() -> int:
 
     client = _flash.get_client(_flash.find_env(root, args.pipeline))
     out.parent.mkdir(parents=True, exist_ok=True)
-    n = 0
+    n = 0; failed = []
     with out.open("a", encoding="utf-8") as fh:
         for ad_id, sig in todo:
             try:
@@ -119,8 +119,15 @@ def main() -> int:
                 if n % 50 == 0 or n == len(todo):
                     print(f"  embedded {n}/{len(todo)}")
             except Exception as e:  # noqa: BLE001
+                failed.append((ad_id, str(e)[:160]))
                 print(f"  [warn] {ad_id} failed: {e}")
-    print(f"done: {n} new vectors -> {out}")
+    print(f"done: {n} new vectors, {len(failed)} FAILED -> {out}")
+    # Embeddings are recoverable (re-run retries the misses), so only fail LOUD if
+    # the step is broadly broken (>50% failed → likely API/key/network down).
+    if todo and len(failed) > 0.5 * len(todo):
+        print(f"[error] embedding failed for {len(failed)}/{len(todo)} (>50%) — "
+              f"surfacing (API/key/network issue?). Re-run retries only the misses.")
+        return 2
     return 0
 
 

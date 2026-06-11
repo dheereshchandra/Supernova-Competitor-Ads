@@ -51,7 +51,25 @@ bash analysis/scripts/watch_pipeline.sh <slug>    # live file-count watch
 | Mac tries to idle-sleep | `caffeinate -i` holds it awake for the run |
 | Done | Exits 0 → launchd leaves it stopped until the next scheduled run |
 
-macOS notifications fire on each competitor finishing, batch completion, and failures.
+## Safeguards (so a bad run can't pass silently)
+Durability keeps the job *running*; these keep it *honest* — errors are surfaced, not swallowed, and benign conditions don't halt it.
+
+| Risk | Safeguard |
+|---|---|
+| Benign condition halts a competitor (e.g. re-keyed `video-missing`, a few dead CDN links) | `upload_to_r2`/`download_fb_ads` now exit 0 + **surface a warning**; only a real S3 error or a total download failure is fatal |
+| Gemini errors during enrichment swallowed | `transcribe_tag` **validates each transcript** (empty/safety-block isn't written or counted — it retries), **lists failures**, and **fails the step if >10% fail**; `_flash` does 429-aware backoff + jitter; `run_enrichment.sh` propagates the degraded signal |
+| "Exit 0 but BAD" (anti-bot 0-ad scrape, silent enrichment hole, R2 collapse) | `audit.py` runs per competitor → **OK/WARN/FAIL** on ad-count drop, transcribed/expected, R2 lead-coverage; a FAIL is alerted and never treated as clean |
+| You're away when it breaks | **Slack** alert (incoming webhook, headless `curl`) on start, each competitor's verdict, every WARN/FAIL, and the final summary — plus macOS + log. A committed `analysis/reports/daily-run-YYYY-MM-DD.md` is the durable record |
+| Cost runaway (unexpected ad surge) | Hard **cost cap** (`PIPELINE_COST_CAP_USD`): estimates enrichment $ per competitor; if it would exceed the cap, runs stages 1–4 only (no enrichment) + alerts |
+| Stale Sheet | On completion the runner **triggers csv-sync** so today's ranks/columns hit the Sheet same-hour (not just at 19:00) |
+| False stall during a long scrape | fingerprint counts input snapshots + `STALL_MINUTES=30` (> a normal 6-page scrape) |
+
+## Config (`.env`, gitignored — operator sets these)
+```
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/...   # off-Mac alerts (recommended)
+PIPELINE_COST_CAP_USD=50                                  # daily cap; raise for a first backfill, lower (~15) for steady daily
+```
+Both are optional: no webhook → falls back to macOS + log; no cap → defaults to $50.
 
 ## Ad-hoc (no launchd)
 You can also run it directly (still caffeinate-wrapped + locked, but tied to your shell):

@@ -234,7 +234,9 @@ def main() -> int:
     workers = max(1, args.workers)
     print(f"transcribing {total} video(s) with {workers} parallel worker(s) ...")
     lock = threading.Lock()
-    state = {"ok": 0, "done": 0}
+    state = {"ok": 0, "done": 0, "failed": 0, "failures": []}
+    # A degraded run must FAIL LOUD, not silently commit holes. Tunable.
+    max_fail_rate = float(os.environ.get("TRANSCRIBE_MAX_FAIL_RATE", "0.10"))
 
     def transcribe_one(ad_id, vpath):
         # Per-video body unchanged; the hard 300s cap (run_with_timeout) is the only
@@ -244,6 +246,14 @@ def main() -> int:
             f = upload_active(client, vpath)
             obj = _flash.generate_json(client, args.model, [f, PROMPT],
                                        response_schema=RESPONSE_SCHEMA)
+            # QUALITY GATE: a Gemini safety-block / failed extraction returns a valid
+            # JSON shell with empty content. Do NOT write it — a written sidecar is
+            # counted "done" and NEVER retried, silently poisoning downstream
+            # clustering. Raise instead, so it's recorded as a failure and retried.
+            if not (obj.get("transcript") or "").strip() \
+               and not (obj.get("on_screen_text") or "").strip():
+                raise ValueError("empty transcript AND on_screen_text "
+                                 "(likely safety-block / failed extraction)")
             obj.update({"ad_id": ad_id, "competitor": slug,
                         "pipeline": args.pipeline, "model": args.model,
                         "source_video": vpath.name, "decoded_at": time.time()})
@@ -260,14 +270,29 @@ def main() -> int:
                 print(f"  [{state['done']}/{total}] {ad_id} ok", flush=True)
         except Exception as e:  # noqa: BLE001 — a `start` with no `ok` is the stuck/failed signal
             with lock:
-                state["done"] += 1
+                state["done"] += 1; state["failed"] += 1
+                state["failures"].append((ad_id, str(e)[:200]))
                 print(f"  [{state['done']}/{total}] {ad_id} FAILED: {e}", flush=True)
 
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futs = [ex.submit(transcribe_one, a, p) for a, p in ready]
         for _ in as_completed(futs):
             pass
-    print(f"done: {state['ok']}/{total} new sidecars in {outdir}")
+
+    failed = state["failed"]
+    print(f"done: {state['ok']}/{total} transcribed, {failed} FAILED in {outdir}")
+    for aid, err in state["failures"][:10]:          # surface failures, don't bury them
+        print(f"  FAILED {aid}: {err}")
+    if failed > 10:
+        print(f"  ... and {failed - 10} more failures")
+    rate = (failed / total) if total else 0.0
+    if total and rate > max_fail_rate:
+        # FAIL LOUD: a degraded batch must not pass as success — the orchestrator
+        # surfaces + alerts instead of committing an enrichment full of holes.
+        print(f"[error] transcription failure rate {rate:.0%} exceeds the "
+              f"{max_fail_rate:.0%} cap — failing the step. Re-run resumes (the {state['ok']} "
+              f"ok sidecars are cached; only the {failed} failures retry).", flush=True)
+        return 2
     return 0
 
 

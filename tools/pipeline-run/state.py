@@ -22,7 +22,10 @@ import json, os, sys, datetime, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 STATE = ROOT / "analysis" / "state" / "pipeline-run.json"
-STALL_MINUTES = 12          # runner alive but fingerprint unchanged this long ⇒ STALLED
+STALL_MINUTES = 30          # runner alive but fingerprint unchanged this long ⇒ STALLED.
+                            # Must exceed the longest no-progress window — the scrape
+                            # stage is in-memory (nothing on disk grows) for up to
+                            # ~15 min on a 6-page competitor, so 30 leaves margin.
 MAX_ATTEMPTS = 3            # give up on a competitor after this many failed passes
 
 def _now() -> str:
@@ -49,6 +52,7 @@ def _fingerprint(slugs: list[str]) -> int:
     enr = ROOT / "analysis" / "enrichment" / "facebook" / "transcripts"
     mas = ROOT / "facebook" / "master"
     vids = ROOT / "facebook" / "videos"
+    inp = ROOT / "facebook" / "inputs"
     for s in slugs:
         d = enr / s
         if d.is_dir():
@@ -60,6 +64,9 @@ def _fingerprint(slugs: list[str]) -> int:
         for vd in vids.glob(f"{s}-*"):
             if vd.is_dir():
                 total += sum(1 for _ in vd.glob("*.mp4"))
+        # input snapshots: bumps when a scrape COMPLETES (resets the stall timer for
+        # the next stages, so a long but healthy scrape isn't flagged STALLED).
+        total += sum(1 for _ in inp.glob(f"fb-ads-{s}-*.csv"))
     return max(total, 0)
 
 def _pid_alive(pid) -> bool:

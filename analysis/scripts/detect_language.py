@@ -108,7 +108,9 @@ def main() -> int:
 
     client = _flash.get_client(_flash.find_env(root, args.pipeline))
     results: dict[str, str] = {}
+    n_batches = 0; failed_batches = 0
     for i in range(0, len(items), args.batch):
+        n_batches += 1
         chunk = items[i:i + args.batch]
         payload = [{"id": a, "text": t} for a, t in chunk]
         contents = PROMPT_HEAD + json.dumps(payload, ensure_ascii=False)
@@ -118,6 +120,7 @@ def main() -> int:
                 if rec.get("id"):
                     results[str(rec["id"])] = (rec.get("language") or "unknown").strip()
         except Exception as e:  # noqa: BLE001
+            failed_batches += 1
             print(f"  [warn] batch {i // args.batch} failed: {e}")
         print(f"  detected {len(results)}/{len(items)}")
 
@@ -130,7 +133,13 @@ def main() -> int:
         w.writerow(["ad_id", "language"])
         for ad_id, lang in sorted(merged.items()):
             w.writerow([ad_id, lang])
-    print(f"wrote {len(merged)} total -> {out_path}")
+    print(f"wrote {len(merged)} total ({failed_batches}/{n_batches} batches FAILED) -> {out_path}")
+    # Language is recoverable (re-run retries skipped ads), so only fail LOUD if the
+    # step is broadly broken (>50% of batches failed).
+    if n_batches and failed_batches > 0.5 * n_batches:
+        print(f"[error] {failed_batches}/{n_batches} language batches failed (>50%) — "
+              f"surfacing (API/network issue?). Re-run retries the missing ads.")
+        return 2
     return 0
 
 
