@@ -36,7 +36,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [activeJobs, setActiveJobs] = useState<Job[]>([])
   const [jobsApiAvailable, setJobsApiAvailable] = useState(true)
   const [dataVersion, setDataVersion] = useState(0)
-  const prevPipelineJobs = useRef<Set<string>>(new Set())
+  const prevPipelineJobs = useRef<Map<string, string>>(new Map())
   const pollRef = useRef<number | null>(null)
 
   useEffect(() => {
@@ -70,16 +70,22 @@ export function AppProvider({ children }: { children: ReactNode }) {
     getJobs('active')
       .then((r) => {
         const jobs = r.jobs ?? []
-        // a pipeline job that was active and is now gone = it finished → new data
-        const nowPipeline = new Set(
-          jobs.filter((j) => j.kind === 'pipeline').map((j) => String(j.id)),
+        // New data lands twice in a pipeline run: when the free scrape commits
+        // (job → awaiting_confirm) and when it fully finishes (job disappears).
+        // Bump dataVersion on either so every screen re-fetches.
+        const nowMap = new Map(
+          jobs.filter((j) => j.kind === 'pipeline').map((j) => [String(j.id), j.status]),
         )
-        let finished = false
-        prevPipelineJobs.current.forEach((id) => {
-          if (!nowPipeline.has(id)) finished = true
+        let changed = false
+        prevPipelineJobs.current.forEach((_st, id) => {
+          if (!nowMap.has(id)) changed = true // finished/skipped → gone from active
         })
-        prevPipelineJobs.current = nowPipeline
-        if (finished) setDataVersion((v) => v + 1)
+        nowMap.forEach((st, id) => {
+          if (st === 'awaiting_confirm' && prevPipelineJobs.current.get(id) !== 'awaiting_confirm')
+            changed = true // free phase just committed
+        })
+        prevPipelineJobs.current = nowMap
+        if (changed) setDataVersion((v) => v + 1)
         setActiveJobs(jobs)
         setJobsApiAvailable(true)
       })

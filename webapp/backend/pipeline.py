@@ -43,13 +43,13 @@ PIPELINE_STEPS = [
 _STAGE_RE = re.compile(r"--\s*stage\s+(\d+)\s*\(([a-z0-9]+)\)", re.I)
 
 
-def estimate_cost(pipeline: str, slug: str) -> dict:
-    """Approx cost = video ads in master with NO transcript yet × per-video.
-    Stages 1–4 are free; only enrichment (stage 5) spends, and only on videos
-    that haven't been enriched. New ads the scrape finds add ~$0.012 each."""
+def count_unenriched(pipeline: str, slug: str) -> int:
+    """Video ads in the master CSV that don't have a transcript yet. Before a
+    scrape this is the current backlog; AFTER a scrape it's the true number
+    enrichment will process (existing backlog + any new ads the scrape added)."""
     master = REPO / pipeline / "master" / f"{slug}.csv"
     if not master.is_file():
-        return {"eligible": False, "reason": f"No data yet for {slug} on {pipeline}."}
+        return 0
     tdir = REPO / "analysis" / "enrichment" / pipeline / "transcripts" / slug
     done = {p.stem for p in tdir.glob("*.json")} if tdir.is_dir() else set()
     id_col = "ad_library_id" if pipeline == "facebook" else "creative_id"
@@ -62,13 +62,28 @@ def estimate_cost(pipeline: str, slug: str) -> dict:
                 seen.add(aid)
                 if aid not in done and ("video" in mt or mt == ""):
                     todo += 1
-    return {"eligible": True, "backlog_videos": todo,
-            "cost_usd": round(todo * PER_VIDEO_USD, 2),
-            "note": "Covers transcript/tagging for videos not yet enriched. "
-                    "New ads the scrape finds add ~$0.012 each. "
-                    "Scraping, download, upload and analysis are free.",
+    return todo
+
+
+def estimate_cost(pipeline: str, slug: str) -> dict:
+    """Pre-run estimate. The headline is deliberately the FREE work — because the
+    real enrichment cost can't be known until the scrape reveals how many new
+    videos there are. We surface the current backlog only as a hint; the exact
+    enrichment cost is confirmed after the (free) scrape."""
+    master = REPO / pipeline / "master" / f"{slug}.csv"
+    if not master.is_file():
+        return {"eligible": False, "reason": f"No data yet for {slug} on {pipeline}."}
+    backlog = count_unenriched(pipeline, slug)
+    return {"eligible": True, "backlog_videos": backlog,
+            "backlog_cost_usd": round(backlog * PER_VIDEO_USD, 2),
+            "per_video_usd": PER_VIDEO_USD,
+            "two_phase": True,
+            "note": "The scrape, download, upload and ranking refresh are free. "
+                    "We can't know the real enrichment cost until the scrape reveals "
+                    f"how many new videos exist — so you'll confirm the exact cost "
+                    "(≈$0.012/video) after the free scrape, before anything is spent.",
             "excludes": "Supernova script generation is NOT part of this run.",
-            "wall_clock": "20–90 min depending on how many new videos"}
+            "wall_clock": "free scrape ~10–25 min, then enrichment if you confirm"}
 
 
 def _snapshot(pipeline: str, slug: str) -> dict:
@@ -168,22 +183,44 @@ class PipelineRunner:
             self._set(needs_push=1)
             self._ev("commit", "push failed — flagged needs_push")
 
+    def _dryrun(self) -> bool:
+        import os
+        return (os.environ.get("STUDIO_PIPELINE_DRYRUN") == "1"
+                or settings().env.get("STUDIO_PIPELINE_DRYRUN") == "1")
+
+    async def _refresh_sheet(self):
+        catalog().reload_if_stale()
+        try:
+            import os
+            await self._run("refresh", [
+                "launchctl", "kickstart", "-k",
+                f"gui/{os.getuid()}/live.gosupernova.csv-sync"], timeout=30)
+        except Exception:
+            pass
+
     async def run(self):
+        # Phase B (enrichment) — set when the user confirms the cost
+        if self.job.get("current_step") == "enrich":
+            return await self._enrich_phase()
+        return await self._free_phase()
+
+    async def _free_phase(self):
+        """Stages 1–4: scrape → download → upload → analysis. All FREE. Commits
+        the ranking refresh, then counts the REAL number of videos to enrich and
+        pauses for confirmation (the cost is only knowable now, post-scrape)."""
+        import json
         from .jobs import _now
         before = _snapshot(self.pipeline, self.slug)
         self._set(status="running", current_step="scrape",
                   started_at=self.job.get("started_at") or _now())
-        self._ev("scrape", f"▶ Running data update for {self.slug} ({self.pipeline})")
-
+        self._ev("scrape", f"▶ Free refresh for {self.slug} ({self.pipeline}) — "
+                           f"scraping & recomputing rankings")
         argv = ["bash", "analysis/scripts/run_pipeline.sh",
                 "--competitor", self.slug, "--pipeline", self.pipeline,
-                "--through-stage", "5"]
-        import os
-        if (os.environ.get("STUDIO_PIPELINE_DRYRUN") == "1"
-                or settings().env.get("STUDIO_PIPELINE_DRYRUN") == "1"):
-            argv.append("--dry-run")  # plumbing test: prints stages, no scrape/spend
+                "--through-stage", "4"]
+        if self._dryrun():
+            argv.append("--dry-run")
         rc = await self._run("scrape", argv, timeout=7200)
-
         if rc == 10:
             self._set(status="failed", finished_at=_now(),
                       error="Scrape was blocked (0 ads / login wall / throttle). "
@@ -192,27 +229,54 @@ class PipelineRunner:
             return
         if rc != 0:
             self._set(status="failed", finished_at=_now(),
-                      error=f"Pipeline failed (exit {rc}) — see the log.",
+                      error=f"Scrape/analysis failed (exit {rc}) — see the log.",
                       stderr_tail="\n".join(self.tail[-50:]))
             return
 
+        # commit the free ranking update now (goes live + keeps the tree clean)
         self._set(current_step="commit")
-        self._ev("commit", "▶ Saving the new data")
+        self._ev("commit", "▶ Saving the rankings update")
         await self._commit()
-
-        self._set(current_step="refresh")
-        catalog().reload_if_stale()
-        # nudge the twice-daily Sheet sync so the master Sheet reflects new ranks now
-        try:
-            await self._run("refresh", [
-                "launchctl", "kickstart", "-k",
-                f"gui/{__import__('os').getuid()}/live.gosupernova.csv-sync"], timeout=30)
-        except Exception:
-            pass
+        await self._refresh_sheet()
 
         after = _snapshot(self.pipeline, self.slug)
         summary = (f"{self.slug}: ads {before['ads']}→{after['ads']}, "
                    f"winners {before['winners']}→{after['winners']}")
-        self._ev("refresh", f"✓ {summary}")
-        self._set(status="done", finished_at=_now(), current_step=None,
-                  error=None)
+        backlog = count_unenriched(self.pipeline, self.slug)
+        if backlog == 0:
+            self._ev("refresh", f"✓ {summary} · nothing new to enrich")
+            self._set(status="done", finished_at=_now(), current_step=None, error=None)
+            return
+
+        cost = round(backlog * PER_VIDEO_USD, 2)
+        self._set(status="awaiting_confirm", current_step=None,
+                  cost_estimate_usd=cost,
+                  estimate_json=json.dumps({"videos": backlog, "cost": cost,
+                                            "summary": summary}))
+        self._ev("refresh", f"✓ Rankings updated ({summary}). "
+                            f"{backlog} videos to enrich (~${cost:.2f}) — awaiting confirmation.")
+
+    async def _enrich_phase(self):
+        """Stage 5: enrichment (the only paid stage). Runs only after the user
+        confirmed the exact cost shown post-scrape."""
+        from .jobs import _now
+        self._set(status="running", current_step="enrich")
+        self._ev("enrich", "▶ Enriching videos (transcripts & tags)")
+        argv = ["bash", "analysis/scripts/run_pipeline.sh",
+                "--competitor", self.slug, "--pipeline", self.pipeline,
+                "--from-stage", "5", "--through-stage", "5"]
+        if self._dryrun():
+            argv.append("--dry-run")
+        rc = await self._run("enrich", argv, timeout=7200)
+        if rc != 0:
+            self._set(status="failed", finished_at=_now(),
+                      error=f"Enrichment failed (exit {rc}) — see the log.",
+                      stderr_tail="\n".join(self.tail[-50:]))
+            return
+        self._set(current_step="commit")
+        self._ev("commit", "▶ Saving the enriched data")
+        await self._commit()
+        self._set(current_step="refresh")
+        await self._refresh_sheet()
+        self._ev("refresh", "✓ Enrichment complete — data is live.")
+        self._set(status="done", finished_at=_now(), current_step=None, error=None)

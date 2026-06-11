@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import {
   getAds,
   getCompetitors,
@@ -105,6 +105,7 @@ function buildQuery(f: Filters, page: number): URLSearchParams {
 
 export default function Library() {
   const { noteDataAsOf, dataVersion, refreshActiveJobs } = useApp()
+  const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const filters = useMemo(() => filtersFromParams(searchParams), [searchParams])
 
@@ -509,6 +510,7 @@ export default function Library() {
           onStarted={() => {
             setShowRun(false)
             refreshActiveJobs()
+            navigate('/runs')
           }}
         />
       )}

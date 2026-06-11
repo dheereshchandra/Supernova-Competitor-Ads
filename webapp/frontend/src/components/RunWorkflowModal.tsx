@@ -134,21 +134,27 @@ export default function RunWorkflowModal({
             </div>
           ) : estimate ? (
             <div className="space-y-3">
-              <div className="flex items-center justify-between rounded-xl border border-white/10 bg-zinc-950/60 p-4">
-                <div>
-                  <div className="text-3xl font-bold tracking-tight text-white">
-                    ≈ {money(estimate.cost_usd)}
-                  </div>
-                  <div className="text-xs text-zinc-500">
-                    {estimate.backlog_videos} video{estimate.backlog_videos === 1 ? '' : 's'} to enrich · {estimate.wall_clock}
-                  </div>
+              <div className="rounded-xl border border-white/10 bg-zinc-950/60 p-4">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-2xl font-bold tracking-tight text-emerald-300">Free</span>
+                  <span className="text-sm text-zinc-300">scrape + refresh rankings</span>
                 </div>
-                <div className="text-right text-[11px] leading-tight text-zinc-500">
-                  scrape · download<br />upload · analysis<br />
-                  <span className="text-emerald-400/80">all free</span>
-                </div>
+                <p className="mt-2 text-xs text-zinc-400">
+                  We can't know the enrichment cost until the scrape reveals how many
+                  new videos there are. So this runs the free part first
+                  <span className="text-zinc-300"> (~{estimate.wall_clock?.includes('min') ? '10–25 min' : 'a few min'})</span>,
+                  then asks you to confirm the exact enrichment cost
+                  <span className="text-zinc-300"> (≈${estimate.per_video_usd?.toFixed(3)}/video)</span> before
+                  anything is spent.
+                </p>
+                {estimate.backlog_videos ? (
+                  <p className="mt-2 text-[11px] text-zinc-500">
+                    For context: ≈{estimate.backlog_videos} video
+                    {estimate.backlog_videos === 1 ? '' : 's'} are already pending enrichment
+                    (~{money(estimate.backlog_cost_usd)}); the scrape may add more.
+                  </p>
+                ) : null}
               </div>
-              <p className="text-xs text-zinc-500">{estimate.note}</p>
             </div>
           ) : null}
         </div>
@@ -173,7 +179,7 @@ export default function RunWorkflowModal({
               className="flex items-center gap-2 rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-violet-950/50 transition-colors hover:bg-violet-500 disabled:opacity-60"
             >
               {submitting && <Spinner className="h-4 w-4 text-white" />}
-              Run update {estimate?.cost_usd ? `for ≈ ${money(estimate.cost_usd)}` : ''}
+              Start free refresh →
             </button>
           )}
         </div>

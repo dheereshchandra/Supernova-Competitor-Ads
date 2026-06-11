@@ -111,6 +111,10 @@ export const JOB_STATUS_MAP: Record<string, BadgeStyle> = {
     label: 'Interrupted',
     className: 'bg-amber-500/20 text-amber-300 border border-amber-400/30',
   },
+  awaiting_confirm: {
+    label: 'Needs your OK',
+    className: 'bg-amber-500/20 text-amber-200 border border-amber-400/40',
+  },
   failed: {
     label: 'Failed',
     className: 'bg-red-500/20 text-red-300 border border-red-400/30',

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { cancelJob, getJobs, retryJob, type Job } from '../api'
+import { cancelJob, confirmEnrich, getJobs, retryJob, type Job } from '../api'
 import { elapsedBetween, JOB_STATUS_MAP, money, timeAgo } from '../format'
 import { EmptyState, ErrorNote, PageLoading, Spinner } from '../components/ui'
 
@@ -112,7 +112,41 @@ function RunCard({ job, onChange }: { job: Job; onChange: () => void }) {
             </div>
           )}
 
-          {job.status === 'done' && (
+          {job.status === 'awaiting_confirm' && (
+            <div className="mt-2 rounded-lg border border-amber-400/30 bg-amber-500/10 p-3">
+              <div className="text-sm text-amber-100">
+                Rankings updated{job.enrich?.summary ? ` (${job.enrich.summary})` : ''}. Found{' '}
+                <span className="font-semibold">
+                  {job.enrich?.videos ?? '?'} {job.enrich?.videos === 1 ? 'video' : 'videos'}
+                </span> to enrich —
+                enrich for <span className="font-semibold">≈ {money(job.enrich?.cost ?? job.cost_estimate_usd)}</span>?
+              </div>
+              <div className="mt-2 flex gap-2">
+                <button
+                  onClick={() => act(() => confirmEnrich(job.id, true))}
+                  disabled={busy}
+                  className="rounded-lg bg-violet-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-violet-500 disabled:opacity-50"
+                >
+                  Enrich for ≈ {money(job.enrich?.cost ?? job.cost_estimate_usd)}
+                </button>
+                <button
+                  onClick={() => act(() => confirmEnrich(job.id, false))}
+                  disabled={busy}
+                  className="rounded-lg border border-white/15 px-3 py-1.5 text-xs text-zinc-300 hover:bg-white/5 disabled:opacity-50"
+                >
+                  Skip — keep the free update
+                </button>
+              </div>
+            </div>
+          )}
+
+          {job.status === 'done' && job.kind === 'pipeline' && (
+            <div className="mt-2 text-xs text-emerald-300">
+              ✓ Data updated{job.enrich?.summary ? ` — ${job.enrich.summary}` : ''}
+            </div>
+          )}
+
+          {job.status === 'done' && job.kind !== 'pipeline' && (
             <div className="mt-2 flex gap-2">
               {job.rewrite_gdoc_url && (
                 <a href={job.rewrite_gdoc_url} target="_blank" rel="noreferrer"
