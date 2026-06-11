@@ -1,0 +1,64 @@
+{
+  "competitor_id": "1511111056828106",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Male presenter / English learner",
+        "appearance": "A young Indian man in his early 20s with a slim build and a light brown complexion. He has a full head of thick, curly black hair, prominent dark eyebrows, and a clean-shaven face. He has a friendly and expressive face.",
+        "wardrobe": "Initially wears a white long-sleeved button-down shirt with a faint light blue pattern on the rolled-up cuffs, paired with dark grey trousers. Later, he wears a black long-sleeved button-down shirt. He wears a silver-toned metal link watch on his left wrist throughout.",
+        "demeanor": "Starts off nervous and makes a mistake, leading to embarrassment and regret. He then becomes thoughtful and reflective, and finally transitions to being confident, friendly, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Presentation Mistake",
+        "supernova_script": "Character A says: And from here, I goes here...\nUnknown speaker says: Abey, 'I goes' nahi hota, 'I go' hota hai. English kab seekhega?",
+        "scene_summary": "- Hook: Relatable Indian-English error in a high-stakes setting.\n- Emotion: Embarrassment/Shame.\n- Payload: Names English immediately (within 10s).",
+        "supernova_on_screen_text": "And From Here I Goes Here\nAbey, 'I Goes' Nahi Hota\n'I Go' Hota Hai\nEnglish Kab Seekhega?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Regret and App Introduction",
+        "supernova_script": "Character A says (voiceover): Yaar, kaash maine pehle hi Supernova app download kar liya hota.\nCharacter A says (voiceover): Isme Miss Nova meri personal AI teacher hain.\nCharacter A says (voiceover): Woh pehle mera level samajhti hain, phir sirf mere liye plan banati hain.\nCharacter A says (voiceover): Yahan koi mujhe judge nahi karta.",
+        "scene_summary": "- Purpose: Introduces Supernova and Miss Nova as the solution.\n- Emotion: Realization and relief.\n- Payload: Lands beat a (Personalization) and beat b (Privacy/no-judgement) early.",
+        "supernova_on_screen_text": "Kaash Supernova Download Kiya Hota\nMiss Nova: Personal AI Teacher\nCustom Plan For Me\nZero Judgement"
+      },
+      {
+        "n": 3,
+        "scene_label": "App Features Showcase",
+        "supernova_script": "Character A says (voiceover): Main raat ke 2 baje 1000 galtiyan karun, toh bhi Miss Nova bina hanse mujhe theek karti hain.\nCharacter A says (voiceover): Isme main sirf padhta nahi, actually English bolta hoon.\nCharacter A says (voiceover): Office presentation ho ya client call, har real-life scenario ki practice hoti hai.\nCharacter A says (voiceover): Aur logic meri hi bhasha mein samjhati hain!",
+        "scene_summary": "- Purpose: Demonstrates the core mechanism of the app while visual shows features.\n- Emotion: Confidence building.\n- Payload: Reinforces beat b (Privacy), lands beat c (You SPEAK), beat e (Real-life scenarios), and beat g (Logic in your language).",
+        "supernova_on_screen_text": "Make 1000 Mistakes\nLearn By SPEAKING\nOffice & Client Calls\nLogic In Your Language"
+      },
+      {
+        "n": 4,
+        "scene_label": "Confident Testimonial",
+        "supernova_script": "Character A says: But better late than never!\nCharacter A says: Ab main Reels scroll karne mein time waste karne ke bajaye, roz 15 minute Supernova par English bolne ki practice karta hoon.\nCharacter A says: Aap bhi aaj hi Supernova install karein, aur confidently bolna shuru karein!",
+        "scene_summary": "- Purpose: Dignity restored, strong call to action.\n- Emotion: Triumphant and encouraging.\n- Payload: Tight close with negative time anchor (Reels), positive time anchor (15 min/day), and a clear install CTA.",
+        "supernova_on_screen_text": "Better Late Than Never\nStop Scrolling Reels\nPractice 15 Mins/Day\nInstall Supernova Today"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (Personalization), b (Privacy/no-judgement), c (You SPEAK), e (Real-life scenarios), g (Logic in own language)",
+      "kept_from_seed": "Presentation mistake hook, regret transition, app demo, confident talking-head close",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Speakx",
+        "supernova_swap": "Supernova"
+      },
+      {
+        "competitor_brand": "Speakx premium",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781180346.605037
+}
