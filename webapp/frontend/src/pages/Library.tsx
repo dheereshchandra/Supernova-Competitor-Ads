@@ -276,7 +276,7 @@ export default function Library() {
 
       {/* ---------- sticky filter bar ---------- */}
       <div className="sticky top-14 z-30 -mx-6 border-b border-white/10 bg-zinc-950/95 px-6 py-3 backdrop-blur">
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex items-center gap-3">
           {/* pipeline */}
           <select
             className={selectCls}
@@ -290,9 +290,9 @@ export default function Library() {
             <option value="google">Google</option>
           </select>
 
-          {/* competitor */}
+          {/* competitor (fixed width so a longer name never shifts the row) */}
           <select
-            className={`${selectCls} max-w-[260px]`}
+            className={`${selectCls} w-[230px] truncate`}
             value={filters.competitor}
             onChange={(e) => updateFilters({ competitor: e.target.value })}
             title="Competitor"
@@ -308,70 +308,23 @@ export default function Library() {
             })}
           </select>
 
-          {/* verdict chips */}
-          <div className="flex items-center gap-1.5">
-            {VERDICT_ORDER.map((v) => {
-              const on = filters.verdicts.includes(v)
-              const count = facets?.verdict?.[v]
-              return (
-                <button
-                  key={v}
-                  onClick={() => toggleVerdict(v)}
-                  className={`rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
-                    on
-                      ? `${VERDICT_MAP[v].className}`
-                      : 'border-white/10 text-zinc-500 hover:border-white/25 hover:text-zinc-300'
-                  }`}
-                >
-                  {VERDICT_MAP[v].label}
-                  {on && count != null ? (
-                    <span className="ml-1 opacity-70">{formatCount(count)}</span>
-                  ) : null}
-                </button>
-              )
-            })}
-          </div>
-
-          {/* media type chips */}
-          {mediaTypes.length > 0 && (
-            <div className="flex items-center gap-1.5">
-              {mediaTypes.map(([mt, count]) => {
-                const on = filters.mediaType === mt
-                return (
-                  <button
-                    key={mt}
-                    onClick={() => updateFilters({ mediaType: on ? '' : mt })}
-                    className={`rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
-                      on
-                        ? 'border-violet-400/40 bg-violet-500/20 text-violet-200'
-                        : 'border-white/10 text-zinc-500 hover:border-white/25 hover:text-zinc-300'
-                    }`}
-                  >
-                    {mt} <span className="opacity-60">{formatCount(count)}</span>
-                  </button>
-                )
-              })}
-            </div>
-          )}
-
-          {/* language */}
-          {hasLanguages && (
-            <select
-              className={selectCls}
-              value={filters.language}
-              onChange={(e) => updateFilters({ language: e.target.value })}
-              title="Language"
-            >
-              <option value="">All languages</option>
-              {Object.entries(languageFacet)
-                .sort((a, b) => b[1] - a[1])
-                .map(([lang, count]) => (
-                  <option key={lang} value={lang}>
-                    {lang} ({formatCount(count)})
-                  </option>
-                ))}
-            </select>
-          )}
+          {/* language (always rendered so it never pops in/out) */}
+          <select
+            className={`${selectCls} w-[150px]`}
+            value={filters.language}
+            onChange={(e) => updateFilters({ language: e.target.value })}
+            title="Language"
+            disabled={!hasLanguages}
+          >
+            <option value="">All languages</option>
+            {Object.entries(languageFacet)
+              .sort((a, b) => b[1] - a[1])
+              .map(([lang, count]) => (
+                <option key={lang} value={lang}>
+                  {lang} ({formatCount(count)})
+                </option>
+              ))}
+          </select>
 
           {/* live / retired */}
           <div className="flex overflow-hidden rounded-lg border border-white/10">
@@ -408,8 +361,51 @@ export default function Library() {
           >
             Not yet processed
           </button>
+        </div>
 
-          {/* search */}
+        {/* row 2: verdict + media chips — isolated on their own row so their
+            (count-driven) width can never shift the controls above */}
+        <div className="mt-3 flex flex-wrap items-center gap-1.5">
+          {VERDICT_ORDER.map((v) => {
+            const on = filters.verdicts.includes(v)
+            const count = facets?.verdict?.[v]
+            return (
+              <button
+                key={v}
+                onClick={() => toggleVerdict(v)}
+                className={`rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
+                  on
+                    ? `${VERDICT_MAP[v].className}`
+                    : 'border-white/10 text-zinc-500 hover:border-white/25 hover:text-zinc-300'
+                }`}
+              >
+                {VERDICT_MAP[v].label}
+                <span className="ml-1 inline-block min-w-[2ch] text-right tabular-nums opacity-70">
+                  {count != null ? formatCount(count) : ''}
+                </span>
+              </button>
+            )
+          })}
+          {mediaTypes.map(([mt, count]) => {
+            const on = filters.mediaType === mt
+            return (
+              <button
+                key={mt}
+                onClick={() => updateFilters({ mediaType: on ? '' : mt })}
+                className={`ml-1 rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
+                  on
+                    ? 'border-violet-400/40 bg-violet-500/20 text-violet-200'
+                    : 'border-white/10 text-zinc-500 hover:border-white/25 hover:text-zinc-300'
+                }`}
+              >
+                {mt} <span className="tabular-nums opacity-60">{formatCount(count)}</span>
+              </button>
+            )
+          })}
+        </div>
+
+        {/* row 3: search + sort on their own line so the filters never shift them */}
+        <div className="mt-3 flex items-center gap-3">
           <input
             type="search"
             placeholder="Search ad text…"
@@ -417,10 +413,8 @@ export default function Library() {
             onChange={(e) => onSearch(e.target.value)}
             className="min-w-[180px] flex-1 rounded-lg border border-white/10 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 outline-none focus:border-violet-400/50"
           />
-
-          {/* sort */}
           <select
-            className={selectCls}
+            className={`${selectCls} w-[170px]`}
             value={filters.sort}
             onChange={(e) => updateFilters({ sort: e.target.value })}
             title="Sort order"

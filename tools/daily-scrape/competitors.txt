@@ -1,0 +1,18 @@
+# Competitors the daily 6 AM FREE refresh scrapes (Facebook, pipeline stages 1–4 only:
+# scrape → download → R2 upload → rankings/analysis. NO enrichment — that's paid and
+# stays on the "Enrich" button in Ad Studio).
+#
+# One slug per line. '#' comments and blank lines are ignored.
+# Each slug MUST be a competitor fb_scrape_v2.py knows (a key in its COMPETITOR_PAGES).
+# Edit this list and the next 6 AM run picks it up — no reinstall needed.
+mysivi
+speakx
+zinglish
+praktika-ai
+loora
+englishbhashi
+duolingo
+english-seekho
+ewa
+memrise
+speak
