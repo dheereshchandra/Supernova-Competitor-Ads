@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template only. Do NOT install directly — run `zsh webapp/install/install.sh`, which fills in
+     __SERVE_SH__ and __LOG__ and loads the job. Unlike the cron-style sync jobs, this is a SERVER:
+     RunAtLoad + KeepAlive so it starts at login and is revived if it ever exits (or after a wake). -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>live.gosupernova.ad-studio</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>__SERVE_SH__</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>__LOG__</string>
+  <key>StandardErrorPath</key>
+  <string>__LOG__</string>
+</dict>
+</plist>

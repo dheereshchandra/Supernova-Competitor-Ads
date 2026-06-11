@@ -1,0 +1,53 @@
+{
+  "competitor_id": "931068273002235",
+  "parsed": {
+    "duration_s": 6.6,
+    "production_type": "human-recorded",
+    "production_notes": "The video uses pre-existing clips from movies featuring a well-known actor. The footage is clearly human-recorded, with natural expressions, lighting, and movements.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Male learner",
+        "appearance": "A middle-aged South Indian man with a dark complexion, a medium build, and short black hair. He has prominent, expressive facial features and is known for his comedic expressions.",
+        "wardrobe": "In the 'before' state, he wears a simple, short-sleeved, collared orange shirt. In the 'after' state, he wears a light blue suit jacket over a white collared shirt, a patterned blue tie, and black sunglasses.",
+        "demeanor": "Initially distressed and crying, then transitioning to hysterical laughter. In the second state, he is extremely confident, cool, and self-assured."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.6,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Before and After Learning English",
+        "setting": "A split-screen comparison. The top panel is an indoor setting with a light green wall. The bottom panel is an outdoor village street with a tiled roof building in the background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium shot",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium shot of Character A, a middle-aged South Indian man, indoors. He is leaning against a white pillar next to a light green wall, wearing a bright orange collared shirt. His expression shifts from crying with his head down to looking up with a wide, hysterical laugh, showing his teeth. The lighting is simple and even.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium shot of Character A walking confidently towards the camera on an outdoor village street. He is wearing a light blue suit, a white shirt, a patterned blue tie, and dark sunglasses. He holds a white paper or book in his left hand. The background shows a building with a traditional tiled roof and several other people, including women in sarees, walking behind him. The lighting is bright daylight.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A static, vertically split-screen meme format. The top panel shows Character A in an orange shirt, first crying and then laughing hysterically against an indoor wall. The bottom panel shows the same Character A, now dressed in a smart blue suit and sunglasses, walking confidently down a village street. Text overlays are present on both panels. The top text reads '\u0ba8\u0bbe\u0ba9\u0bcd 2000-3000 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd \u0b9a\u0bc6\u0bb2\u0bb5\u0bc1 \u0baa\u0ba3\u0bcd\u0ba3\u0bbf \u0b86\u0b99\u0bcd\u0b95\u0bbf\u0bb2\u0bae\u0bcd \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95 \u0bae\u0bc1\u0b9f\u0bbf\u0baf\u0bbe\u0ba4\u0bc1\u0ba9\u0bc1 \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0bbf \u0b85\u0bb4\u0bc1\u0ba4\u0bc1\u0b9f\u0bcd\u0b9f\u0bc7 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc7\u0ba9\u0bcd.' The bottom text reads 'MySivi app\u0bb2 1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd\u0b95\u0bcd\u0b95\u0bc1 English \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95 \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b9a\u0bcd\u0b9a \u0b85\u0baa\u0bcd\u0baa\u0bb1\u0bae\u0bcd'.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u0ba8\u0bbe\u0ba9\u0bcd 2000-3000 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd \u0b9a\u0bc6\u0bb2\u0bb5\u0bc1 \u0baa\u0ba3\u0bcd\u0ba3\u0bbf \u0b86\u0b99\u0bcd\u0b95\u0bbf\u0bb2\u0bae\u0bcd \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95 \u0bae\u0bc1\u0b9f\u0bbf\u0baf\u0bbe\u0ba4\u0bc1\u0ba9\u0bc1 \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0bbf \u0b85\u0bb4\u0bc1\u0ba4\u0bc1\u0b9f\u0bcd\u0b9f\u0bc7 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc7\u0ba9\u0bcd. (I was crying, saying I can't learn English by spending 2000-3000 rupees.)\n\nMySivi app\u0bb2 1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd\u0b95\u0bcd\u0b95\u0bc1 English \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95 \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b9a\u0bcd\u0b9a \u0b85\u0baa\u0bcd\u0baa\u0bb1\u0bae\u0bcd (After starting to learn English for 1 rupee on the MySivi app)"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1781112891.5206358
+}
