@@ -20,6 +20,7 @@ import re
 from . import db
 from .config import REPO, settings
 from .data import catalog
+from .notify import notify
 
 PER_VIDEO_USD = 0.012  # Gemini Flash transcribe+tag, ~$0.012/new video (run_batch.sh)
 
@@ -188,7 +189,13 @@ class PipelineRunner:
             patterns.append(f"analysis/enrichment/{p}/{sub}/{slug}")
             patterns.append(f"analysis/enrichment/{p}/{sub}/{slug}.*")
             patterns.append(f"analysis/enrichment/{p}/{sub}/{slug}_*")
-        await self._run("commit", ["git", "add", "--", *patterns], timeout=120)
+        # expand the globs HERE: `git add -- <pathspecs>` aborts the WHOLE add
+        # (rc=128, nothing staged) when any one pathspec matches no files — which
+        # silently dropped every derived/enrichment file from pipeline commits
+        import glob
+        matched = [m for pat in patterns for m in glob.glob(str(REPO / pat))]
+        if matched:
+            await self._run("commit", ["git", "add", "--", *matched], timeout=120)
         # log_and_commit adds master+inputs+RUN_LOG and commits the whole staged index
         rc = await self._run("commit", [
             "bash", "tools/log_and_commit.sh", p, slug,
@@ -247,11 +254,15 @@ class PipelineRunner:
                       error="Scrape was blocked (0 ads / login wall / throttle). "
                             "Don't retry immediately — try again later.",
                       stderr_tail="\n".join(self.tail[-50:]))
+            notify("Ad Studio: data update blocked",
+                   f"{self.slug} ({self.pipeline}) — scrape blocked (0 ads/throttle).")
             return
         if rc != 0:
             self._set(status="failed", finished_at=_now(),
                       error=f"Scrape/analysis failed (exit {rc}) — see the log.",
                       stderr_tail="\n".join(self.tail[-50:]))
+            notify("Ad Studio: data update failed",
+                   f"{self.slug} ({self.pipeline}) — scrape/analysis exit {rc}.")
             return
 
         # commit the free ranking update now (goes live + keeps the tree clean)
@@ -299,6 +310,8 @@ class PipelineRunner:
             self._set(status="failed", finished_at=_now(),
                       error=f"Enrichment failed (exit {rc}) — see the log.",
                       stderr_tail="\n".join(self.tail[-50:]))
+            notify("Ad Studio: enrichment failed",
+                   f"{self.slug} ({self.pipeline}) — exit {rc}.")
             return
         self._set(current_step="commit")
         self._ev("commit", "▶ Saving the enriched data")

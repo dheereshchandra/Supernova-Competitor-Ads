@@ -20,6 +20,8 @@ STAMP_FILE="$LOG_DIR/last-run-date"
 mkdir -p "$LOG_DIR"
 
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG"; }
+# macOS banner + Slack (when SLACK_WEBHOOK_URL is in .env) via the shared notifier
+notify() { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
 
 # Run from the canonical clone only (has videos/, on main, single writer).
 if [ "$(git rev-parse --git-common-dir 2>/dev/null)" != ".git" ]; then
@@ -73,7 +75,10 @@ while read -r slug; do
   else
     rc=$?
     if [ "$rc" = 10 ]; then log "   $slug: scrape BLOCKED (0 ads/throttle) — skipped"; blocked=$((blocked+1))
-    else log "   $slug: FAILED rc=$rc"; failed=$((failed+1)); fi
+    else
+      log "   $slug: FAILED rc=$rc"; failed=$((failed+1))
+      notify "Daily scrape: $slug FAILED" "exit $rc — see scrape.log"
+    fi
   fi
 done < <(if [ "$MANUAL" = 1 ]; then printf '%s\n' "$@"; else grep -vE '^\s*(#|$)' "$LIST"; fi)
 
@@ -82,8 +87,13 @@ if ! git diff --quiet HEAD origin/main 2>/dev/null; then :; fi
 if git push >> "$LOG" 2>&1; then
   log "pushed."
 else
-  git pull --no-rebase >> "$LOG" 2>&1 && git push >> "$LOG" 2>&1 && log "pushed after pull." || log "PUSH FAILED — resolve manually."
+  git pull --no-rebase >> "$LOG" 2>&1 && git push >> "$LOG" 2>&1 && log "pushed after pull." \
+    || { log "PUSH FAILED — resolve manually."; notify "Daily scrape: push failed" "Commits are local — open Conductor to push."; }
 fi
 
 [ "$MANUAL" = 0 ] && echo "$TODAY" > "$STAMP_FILE"
 log "=== done: ok=$ok blocked=$blocked failed=$failed ==="
+if [ "$failed" -gt 0 ] || [ "$blocked" -gt 0 ]; then
+  notify "Daily scrape: ok=$ok blocked=$blocked failed=$failed" \
+    "blocked = FB gave 0 ads / throttled (not retried) · failed = real errors — see scrape.log"
+fi
