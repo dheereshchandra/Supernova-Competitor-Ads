@@ -45,6 +45,7 @@ def create_app() -> FastAPI:
             "auth": "enabled" if settings().auth_enabled else "DISABLED (set STUDIO_PASSWORD)",
             "data_as_of": cat.loaded_at,
             "competitors": len(cat.competitors()),
+            "usd_to_inr": settings().usd_to_inr,
             "git": _git_state(),
         }
 

@@ -18,7 +18,7 @@ import pathlib
 import re
 
 from . import db
-from .config import REPO, settings
+from .config import REPO, inr, settings
 from .data import catalog
 from .notify import notify
 
@@ -103,7 +103,7 @@ def estimate_cost(pipeline: str, slug: str) -> dict:
             "note": "The scrape, download, upload and ranking refresh are free. "
                     "We can't know the real enrichment cost until the scrape reveals "
                     f"how many new videos exist — so you'll confirm the exact cost "
-                    "(≈$0.012/video) after the free scrape, before anything is spent.",
+                    f"(≈{inr(PER_VIDEO_USD)}/video) after the free scrape, before anything is spent.",
             "excludes": "Supernova script generation is NOT part of this run.",
             "wall_clock": "free scrape ~10–25 min, then enrichment if you confirm"}
 
@@ -287,12 +287,12 @@ class PipelineRunner:
         if self.job.get("mode", "full") == "full":
             # cost was confirmed upfront in the modal → enrich straight away
             self._ev("refresh", f"✓ Rankings updated ({summary}). "
-                                f"Enriching {backlog} videos (~${cost:.2f})…")
+                                f"Enriching {backlog} videos (~{inr(cost)})…")
             return await self._enrich_phase()
         # two-phase: pause and let the user approve the now-exact cost
         self._set(status="awaiting_confirm", current_step=None)
         self._ev("refresh", f"✓ Rankings updated ({summary}). "
-                            f"{backlog} videos to enrich (~${cost:.2f}) — awaiting confirmation.")
+                            f"{backlog} videos to enrich (~{inr(cost)}) — awaiting confirmation.")
 
     async def _enrich_phase(self):
         """Stage 5: enrichment (the only paid stage). Runs only after the user

@@ -52,6 +52,8 @@ class Settings:
         # Spend guardrails (USD). Estimates come from estimate_step4_cost.py.
         self.max_job_cost = float(self.env.get("STUDIO_MAX_JOB_COST", "5"))
         self.max_daily_cost = float(self.env.get("STUDIO_MAX_DAILY_COST", "15"))
+        # Costs are computed in USD (Gemini billing) but DISPLAYED in rupees.
+        self.usd_to_inr = float(self.env.get("STUDIO_USD_TO_INR", "95"))
         # No job may START inside this local-time window — it protects the
         # 11:30 repo-sync / 11:35 capture-sync / 11:45 csv-sync launchd jobs
         # from seeing a dirty tree (jobs run up to ~20 min).
@@ -73,3 +75,12 @@ def settings() -> Settings:
     if _settings is None:
         _settings = Settings()
     return _settings
+
+
+def inr(usd: float) -> str:
+    """Format a USD-computed cost as rupees for anything user-facing.
+    Internal math + caps + DB columns stay in USD."""
+    amount = (usd or 0) * settings().usd_to_inr
+    if amount < 10:
+        return f"₹{amount:.2f}"
+    return f"₹{amount:,.0f}"

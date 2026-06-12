@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from 'react'
 import { getJobs, getMe, getHealth, setAuthDisabled, type Job } from './api'
+import { setUsdToInr } from './format'
 
 interface AppState {
   /** null = still checking; '' = not signed in */
@@ -75,7 +76,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
       })
     getHealth()
       .then((h) => {
-        if (!cancelled && h.data_as_of) setDataAsOf(h.data_as_of)
+        if (cancelled) return
+        if (h.data_as_of) setDataAsOf(h.data_as_of)
+        setUsdToInr(h.usd_to_inr)
       })
       .catch(() => {})
     return () => {
