@@ -65,6 +65,7 @@ export interface HealthInfo {
   auth?: string
   data_as_of?: string
   competitors?: number
+  usd_to_inr?: number
   git?: { dirty?: boolean; unpushed?: number | null }
   [k: string]: unknown
 }

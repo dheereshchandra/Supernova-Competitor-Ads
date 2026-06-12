@@ -195,9 +195,23 @@ export function elapsedBetween(
   return `${Math.floor(min / 60)}h ${min % 60}m`
 }
 
+// Costs are computed in USD (Gemini billing) but the team thinks in rupees.
+// The backend sends the conversion rate (STUDIO_USD_TO_INR) via /api/health;
+// 95 is only the pre-fetch fallback.
+let usdToInr = 95
+
+export function setUsdToInr(rate: number | null | undefined): void {
+  if (rate && rate > 0) usdToInr = rate
+}
+
+/** Format a USD-denominated cost as rupees, e.g. ₹1.14 (small) / ₹2,850. */
 export function money(n: number | null | undefined): string {
   if (n == null) return '—'
-  return `$${n.toFixed(2)}`
+  const inr = n * usdToInr
+  return `₹${inr.toLocaleString('en-IN', {
+    minimumFractionDigits: inr < 10 ? 2 : 0,
+    maximumFractionDigits: inr < 10 ? 2 : 0,
+  })}`
 }
 
 export function formatCount(n: number): string {

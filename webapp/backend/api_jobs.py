@@ -9,7 +9,7 @@ from pydantic import BaseModel
 
 from . import db, jobs
 from .auth import require_user
-from .config import FACEBOOK_DIR, settings
+from .config import FACEBOOK_DIR, inr, settings
 from .data import catalog
 
 router = APIRouter()
@@ -101,12 +101,12 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
         pass
     cfg = settings()
     if cost > cfg.max_job_cost:
-        raise HTTPException(422, f"Estimated ${cost:.2f} exceeds the per-job cap (${cfg.max_job_cost:.0f})")
+        raise HTTPException(422, f"Estimated {inr(cost)} exceeds the per-job cap ({inr(cfg.max_job_cost)})")
     spent = db.query_one(
         "SELECT COALESCE(SUM(cost_estimate_usd),0) AS s FROM jobs "
         "WHERE status NOT IN ('failed','cancelled') AND date(created_at)=date('now')")
     if (spent["s"] or 0) + cost > cfg.max_daily_cost:
-        raise HTTPException(429, f"Daily spend cap reached (${cfg.max_daily_cost:.0f}) — try tomorrow "
+        raise HTTPException(429, f"Daily spend cap reached ({inr(cfg.max_daily_cost)}) — try tomorrow "
                                  f"or ask the operator to raise STUDIO_MAX_DAILY_COST")
 
     cur = db.execute(
@@ -117,7 +117,7 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
     job_id = cur.lastrowid
     _ensure_tracker(body.pipeline, body.competitor, body.ad_id, "generating", user)
     _log(body.pipeline, body.competitor, body.ad_id, user, "generate",
-         f"queued job #{job_id} (~${cost:.2f})")
+         f"queued job #{job_id} (~{inr(cost)})")
     try:
         from . import sheets
         sheets.mark_dirty()
@@ -181,7 +181,7 @@ def enrich_confirm(job_id: int, body: EnrichConfirm, user: str = Depends(require
         # hand back to the worker for stage 5 (enrichment)
         db.execute("UPDATE jobs SET status='queued', current_step='enrich' WHERE id=?", (job_id,))
         _log(r["pipeline"], r["competitor"], r["ad_id"], user, "enrich_confirm",
-             f"approved enrichment (~${r['cost_estimate_usd'] or 0:.2f})")
+             f"approved enrichment (~{inr(r['cost_estimate_usd'] or 0)})")
     else:
         # skip enrichment — the free ranking refresh is already committed
         db.execute("UPDATE jobs SET status='done', finished_at=datetime('now') WHERE id=?", (job_id,))
@@ -258,8 +258,8 @@ def pipeline_run(body: PipelineBody, user: str = Depends(require_user)):
 
     cfg = settings()
     if total_cost > cfg.max_daily_cost:
-        raise HTTPException(422, f"Estimated ${total_cost:.2f} of enrichment exceeds the "
-                                 f"${cfg.max_daily_cost:.0f} cap — pick fewer competitors or raise "
+        raise HTTPException(422, f"Estimated {inr(total_cost)} of enrichment exceeds the "
+                                 f"{inr(cfg.max_daily_cost)} cap — pick fewer competitors or raise "
                                  f"STUDIO_MAX_DAILY_COST.")
     job_ids = []
     for slug in queued:
@@ -270,7 +270,7 @@ def pipeline_run(body: PipelineBody, user: str = Depends(require_user)):
             (body.pipeline, slug, user, cost))
         job_ids.append(cur.lastrowid)
         _log(body.pipeline, slug, "(full-run)", user, "pipeline_run",
-             f"queued data update (~${cost:.2f})")
+             f"queued data update (~{inr(cost)})")
     return {"job_ids": job_ids, "queued": queued, "skipped": skipped}
 
 
