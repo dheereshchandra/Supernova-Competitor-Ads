@@ -147,3 +147,33 @@ def find_doc_in_folder(svc, env: dict, name: str, parent_folder_id: str) -> tupl
 def get_web_view_link(svc, file_id: str) -> str:
     meta = svc.files().get(fileId=file_id, supportsAllDrives=True, fields="webViewLink").execute()
     return meta.get("webViewLink", "")
+
+
+def export_doc_text(svc, file_id: str) -> str:
+    """Export a Google Doc as plain text — the team's LIVE edited content (localization
+    reads this as the source of truth, not the originally-generated sidecar)."""
+    data = svc.files().export(fileId=file_id, mimeType="text/plain").execute()
+    if isinstance(data, bytes):
+        return data.decode("utf-8", "replace")
+    return str(data)
+
+
+def list_unresolved_comments(svc, file_id: str) -> list[str]:
+    """Return the text of UNRESOLVED comment threads on a Doc — these are binding
+    localization instructions from the reviewer (resolved threads are ignored)."""
+    out: list[str] = []
+    try:
+        resp = svc.comments().list(
+            fileId=file_id, fields="comments(content,resolved,quotedFileContent/value)",
+            pageSize=100).execute()
+    except Exception:
+        return out
+    for c in resp.get("comments", []):
+        if c.get("resolved"):
+            continue
+        body = (c.get("content") or "").strip()
+        if not body:
+            continue
+        anchor = ((c.get("quotedFileContent") or {}).get("value") or "").strip()
+        out.append(f'on "{anchor[:80]}": {body}' if anchor else body)
+    return out
