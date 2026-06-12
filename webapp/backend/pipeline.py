@@ -189,7 +189,13 @@ class PipelineRunner:
             patterns.append(f"analysis/enrichment/{p}/{sub}/{slug}")
             patterns.append(f"analysis/enrichment/{p}/{sub}/{slug}.*")
             patterns.append(f"analysis/enrichment/{p}/{sub}/{slug}_*")
-        await self._run("commit", ["git", "add", "--", *patterns], timeout=120)
+        # expand the globs HERE: `git add -- <pathspecs>` aborts the WHOLE add
+        # (rc=128, nothing staged) when any one pathspec matches no files — which
+        # silently dropped every derived/enrichment file from pipeline commits
+        import glob
+        matched = [m for pat in patterns for m in glob.glob(str(REPO / pat))]
+        if matched:
+            await self._run("commit", ["git", "add", "--", *matched], timeout=120)
         # log_and_commit adds master+inputs+RUN_LOG and commits the whole staged index
         rc = await self._run("commit", [
             "bash", "tools/log_and_commit.sh", p, slug,
