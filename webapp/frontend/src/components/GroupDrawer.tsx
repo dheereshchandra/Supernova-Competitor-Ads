@@ -1,17 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getGroup, type Ad, type GroupDetail } from '../api'
-import { runDaysLabel } from '../format'
+import { getGroup, type GroupDetail } from '../api'
+import { posterUrl, runDaysLabel } from '../format'
 import { ErrorNote, Spinner, StatusChip, VerdictBadge } from './ui'
-
-function posterUrl(ad: Ad): string {
-  if (ad.thumb_url) return ad.thumb_url
-  return `/api/thumb/${ad.pipeline}/${ad.competitor}/${ad.ad_id}`
-}
 
 /**
  * Right-side panel listing every ad that runs the same script — unfiltered,
  * so the team sees all language/visual variants even when the grid is narrowed.
+ * Render with key={gid} — a gid change remounts, resetting the loading state.
  */
 export default function GroupDrawer({
   pipeline,
@@ -29,8 +25,6 @@ export default function GroupDrawer({
 
   useEffect(() => {
     let cancelled = false
-    setDetail(null)
-    setError('')
     getGroup(pipeline, competitor, gid)
       .then((d) => !cancelled && setDetail(d))
       .catch((e: Error) => !cancelled && setError(e.message || 'Could not load the group'))

@@ -391,6 +391,63 @@ export const confirmEnrich = (jobId: string, proceed: boolean) =>
 
 export const getTracker = () => api<{ rows: TrackerRow[] }>('/api/tracker')
 
+// ---------- Bulk actions (multi-select in the Library) ----------
+
+export interface AdRef {
+  pipeline: string
+  competitor: string
+  ad_id: string
+}
+
+export interface BulkSkipped extends AdRef {
+  reason: string
+}
+
+export interface BulkTrackerResult {
+  changed: number
+  unchanged: number
+  skipped: BulkSkipped[]
+}
+
+export interface BulkEstimateItem extends AdRef {
+  eligible: boolean
+  reason: string | null
+  cost_usd?: number
+  media_type?: string
+  duration_s?: number | null
+  scenes?: number | null
+}
+
+export interface BulkEstimateResult {
+  items: BulkEstimateItem[]
+  total_cost_usd: number
+  daily_cap_usd: number
+  daily_spent_usd: number
+  daily_remaining_usd: number
+  max_job_cost_usd: number
+}
+
+export interface BulkCreateResult {
+  queued: (AdRef & { job_id: number; cost_usd: number })[]
+  skipped: BulkSkipped[]
+  total_queued_usd: number
+}
+
+export const adRef = (a: { pipeline: string; competitor: string; ad_id: string }): AdRef => ({
+  pipeline: a.pipeline,
+  competitor: a.competitor,
+  ad_id: a.ad_id,
+})
+
+export const bulkPatchTracker = (items: AdRef[], status: 'shortlisted' | 'dismissed') =>
+  api<BulkTrackerResult>('/api/tracker/bulk', { method: 'PATCH', json: { items, status } })
+
+export const bulkEstimate = (items: AdRef[]) =>
+  api<BulkEstimateResult>('/api/jobs/bulk-estimate', { json: { items } })
+
+export const bulkCreateJobs = (items: AdRef[]) =>
+  api<BulkCreateResult>('/api/jobs/bulk', { json: { items } })
+
 export const patchTracker = (
   pipeline: string,
   slug: string,

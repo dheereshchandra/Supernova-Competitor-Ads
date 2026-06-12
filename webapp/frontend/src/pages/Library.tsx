@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import {
+  adRef,
+  bulkPatchTracker,
   getAds,
   getCompetitors,
   getPipelinePending,
@@ -12,10 +14,14 @@ import {
 import { useApp } from '../AppContext'
 import { formatCount, rankPctLabel } from '../format'
 import AdCard from '../components/AdCard'
+import BulkGenerateModal from '../components/BulkGenerateModal'
 import GroupCard from '../components/GroupCard'
 import GroupDrawer from '../components/GroupDrawer'
 import RunWorkflowModal from '../components/RunWorkflowModal'
+import SelectionBar from '../components/SelectionBar'
 import { EmptyState, ErrorNote, PageLoading, Spinner } from '../components/ui'
+
+const adKey = (a: Ad) => `${a.pipeline}/${a.competitor}/${a.ad_id}`
 
 const PAGE_SIZE = 60
 const NEW_DAYS = 7 // "newly added this week"
@@ -136,11 +142,25 @@ export default function Library() {
   const [loadingMore, setLoadingMore] = useState(false)
   const [error, setError] = useState('')
   const [searchText, setSearchText] = useState(filters.q)
+  const [refreshTick, setRefreshTick] = useState(0)
   const fetchSeq = useRef(0)
+
+  // multi-select (bulk shortlist / generate / dismiss)
+  const [selectMode, setSelectMode] = useState(false)
+  const [selected, setSelected] = useState<Set<string>>(new Set())
+  const [showBulkGen, setShowBulkGen] = useState(false)
+  const [bulkBusy, setBulkBusy] = useState(false)
+  const [bulkNote, setBulkNote] = useState('')
+  const lastIndexRef = useRef<number | null>(null)
 
   const updateFilters = useCallback(
     (patch: Partial<Filters>) => {
       setSearchParams(paramsFromFilters({ ...filters, ...patch }), { replace: false })
+      // the selection points at tiles that may no longer be visible — drop it
+      setSelected(new Set())
+      setSelectMode(false)
+      setBulkNote('')
+      lastIndexRef.current = null
     },
     [filters, setSearchParams],
   )
@@ -218,7 +238,7 @@ export default function Library() {
         if (seq === fetchSeq.current) setLoading(false)
       })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filtersKey, noteDataAsOf, dataVersion])
+  }, [filtersKey, noteDataAsOf, dataVersion, refreshTick])
 
   const loadMore = () => {
     const nextPage = page + 1
@@ -249,6 +269,107 @@ export default function Library() {
       ? filters.quick.filter((x) => x !== q)
       : [...filters.quick, q]
     updateFilters({ quick: next })
+  }
+
+  // ---------- multi-select ----------
+
+  // What the grid currently shows, one Ad per tile (group tiles contribute
+  // their representative — one script per group is the point of dedup).
+  const tiles: Ad[] = useMemo(
+    () => (filters.grouped && groups ? groups.map((g) => g.representative) : ads),
+    [filters.grouped, groups, ads],
+  )
+  const selectedAds = useMemo(
+    () => tiles.filter((a) => selected.has(adKey(a))),
+    [tiles, selected],
+  )
+  // client pre-filter for the Generate button; the server re-checks everything
+  const generatableAds = useMemo(
+    () =>
+      selectedAds.filter(
+        (a) =>
+          a.pipeline === 'facebook' &&
+          a.media_url &&
+          !a.has_docs &&
+          !a.has_gdocs &&
+          !(a.job && (a.job.status === 'queued' || a.job.status === 'running')),
+      ),
+    [selectedAds],
+  )
+
+  const toggleSelect = (ad: Ad, shiftKey: boolean) => {
+    const idx = tiles.findIndex((a) => adKey(a) === adKey(ad))
+    setSelected((prev) => {
+      const next = new Set(prev)
+      if (shiftKey && lastIndexRef.current != null && idx >= 0) {
+        const lo = Math.min(lastIndexRef.current, idx)
+        const hi = Math.max(lastIndexRef.current, idx)
+        for (let i = lo; i <= hi; i++) next.add(adKey(tiles[i]))
+      } else if (next.has(adKey(ad))) {
+        next.delete(adKey(ad))
+      } else {
+        next.add(adKey(ad))
+      }
+      return next
+    })
+    if (idx >= 0) lastIndexRef.current = idx
+    setSelectMode(true)
+    setBulkNote('')
+  }
+
+  const clearSelection = () => {
+    setSelected(new Set())
+    setSelectMode(false)
+    setBulkNote('')
+    lastIndexRef.current = null
+  }
+
+  // Esc clears the selection — unless the drawer is open (it owns Esc then)
+  useEffect(() => {
+    if (drawerTarget) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelected(new Set())
+        setSelectMode(false)
+        setBulkNote('')
+        lastIndexRef.current = null
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [drawerTarget])
+
+  const applyBulkStatus = async (status: 'shortlisted' | 'dismissed') => {
+    if (selectedAds.length === 0) return
+    setBulkBusy(true)
+    setBulkNote('')
+    try {
+      const r = await bulkPatchTracker(selectedAds.map(adRef), status)
+      // flip statuses in place — no refetch, so the grid doesn't reflow
+      const targeted = new Set(selectedAds.map(adKey))
+      const skipped = new Set(
+        r.skipped.map((s) => `${s.pipeline}/${s.competitor}/${s.ad_id}`),
+      )
+      const flip = (a: Ad): Ad =>
+        targeted.has(adKey(a)) && !skipped.has(adKey(a)) ? { ...a, status } : a
+      setAds((prev) => prev.map(flip))
+      setGroups((prev) =>
+        prev
+          ? prev.map((g) => ({ ...g, representative: flip(g.representative) }))
+          : prev,
+      )
+      const verb = status === 'shortlisted' ? 'Shortlisted' : 'Dismissed'
+      setBulkNote(
+        `${verb} ${r.changed}` +
+          (r.unchanged ? ` · ${r.unchanged} already were` : '') +
+          (r.skipped.length ? ` · ${r.skipped.length} skipped (already in the flow)` : ''),
+      )
+      setSelected(new Set())
+    } catch (e) {
+      setBulkNote((e as Error).message || 'Something went wrong')
+    } finally {
+      setBulkBusy(false)
+    }
   }
 
   const pipelineCompetitors = competitors.filter(
@@ -288,6 +409,17 @@ export default function Library() {
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-3">
+          <button
+            onClick={() => (selectMode ? clearSelection() : setSelectMode(true))}
+            className={`rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${
+              selectMode
+                ? 'border-violet-400/40 bg-violet-500/20 text-violet-100'
+                : 'border-white/10 text-zinc-400 hover:border-white/25 hover:text-zinc-200'
+            }`}
+            title="Select several ads, then shortlist or generate scripts in one go"
+          >
+            {selectMode ? 'Done selecting' : '☑ Select'}
+          </button>
           {pendingCount != null && pendingCount > 0 && (
             <button
               onClick={() => setShowRun(true)}
@@ -485,28 +617,44 @@ export default function Library() {
             {grouped && groups
               ? groups.map((g) => {
                   const rep = g.representative
-                  const key =
-                    g.script_group_id ||
-                    `${rep.pipeline}/${rep.competitor}/${rep.ad_id}`
+                  const key = g.script_group_id || adKey(rep)
                   const pill =
                     filters.sort === 'rank_pct'
                       ? rankPctLabel(rep.best_page_rank, rep.page_count)
                       : undefined
                   return g.group_size_total > 1 ? (
-                    <GroupCard key={key} group={g} to={openDrawer(g)} rankPill={pill} />
+                    <GroupCard
+                      key={key}
+                      group={g}
+                      to={openDrawer(g)}
+                      rankPill={pill}
+                      selectMode={selectMode}
+                      selected={selected.has(adKey(rep))}
+                      onToggleSelect={toggleSelect}
+                    />
                   ) : (
-                    <AdCard key={key} ad={rep} rankPill={pill} />
+                    <AdCard
+                      key={key}
+                      ad={rep}
+                      rankPill={pill}
+                      selectMode={selectMode}
+                      selected={selected.has(adKey(rep))}
+                      onToggleSelect={toggleSelect}
+                    />
                   )
                 })
               : ads.map((ad) => (
                   <AdCard
-                    key={`${ad.pipeline}/${ad.competitor}/${ad.ad_id}`}
+                    key={adKey(ad)}
                     ad={ad}
                     rankPill={
                       filters.sort === 'rank_pct'
                         ? rankPctLabel(ad.best_page_rank, ad.page_count)
                         : undefined
                     }
+                    selectMode={selectMode}
+                    selected={selected.has(adKey(ad))}
+                    onToggleSelect={toggleSelect}
                   />
                 ))}
           </div>
@@ -538,10 +686,38 @@ export default function Library() {
       {/* ---------- script-group drawer (deep-linkable via ?g=) ---------- */}
       {drawerTarget && drawerTarget.includes('::') && (
         <GroupDrawer
+          key={drawerTarget}
           pipeline={filters.pipeline}
           competitor={drawerTarget.split('::')[0]}
           gid={drawerTarget.split('::').slice(1).join('::')}
           onClose={closeDrawer}
+        />
+      )}
+
+      {/* ---------- multi-select action bar + bulk generate ---------- */}
+      {(selectMode || selected.size > 0) && !showBulkGen && (
+        <SelectionBar
+          count={selected.size}
+          generateCount={generatableAds.length}
+          busy={bulkBusy}
+          note={bulkNote}
+          onShortlist={() => applyBulkStatus('shortlisted')}
+          onDismiss={() => applyBulkStatus('dismissed')}
+          onGenerate={() => setShowBulkGen(true)}
+          onSelectAll={() => setSelected(new Set(tiles.map(adKey)))}
+          onClear={clearSelection}
+        />
+      )}
+      {showBulkGen && (
+        <BulkGenerateModal
+          ads={generatableAds}
+          onClose={() => setShowBulkGen(false)}
+          onStarted={(queued) => {
+            setShowBulkGen(false)
+            clearSelection()
+            refreshActiveJobs()
+            if (queued > 0) setRefreshTick((t) => t + 1) // re-fetch → "Generating…" chips
+          }}
         />
       )}
 

@@ -225,6 +225,18 @@ export function runDaysLabel(ad: {
   return `${ad.run_days}${ad.run_days_is_lower_bound ? '+' : ''} days`
 }
 
+// Server-extracted poster (tiny JPG, cached). Far lighter than streaming the MP4
+// just to show a still — and it avoids a grid of <video> tags hammering R2.
+export function posterUrl(ad: {
+  pipeline: string
+  competitor: string
+  ad_id: string
+  thumb_url: string
+}): string {
+  if (ad.thumb_url) return ad.thumb_url
+  return `/api/thumb/${ad.pipeline}/${ad.competitor}/${ad.ad_id}`
+}
+
 /** Page-size-aware rank label: "top 1%" on big pages, "#1 / 3" on tiny ones
  * (a percentile of a 3-ad page is noise). */
 export function rankPctLabel(

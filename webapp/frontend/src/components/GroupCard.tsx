@@ -1,19 +1,26 @@
-import type { AdGroup } from '../api'
+import type { Ad, AdGroup } from '../api'
 import AdCard from './AdCard'
 
 /**
  * A script-group tile: the representative ad's card with a stacked-cards
  * effect, an "N ads" badge and the languages the script was replicated into.
- * Clicking opens the variants drawer (Library passes the link).
+ * Clicking opens the variants drawer (Library passes the link). Selecting a
+ * group selects only its representative — one script per group is the point.
  */
 export default function GroupCard({
   group,
   to,
   rankPill,
+  selectMode,
+  selected,
+  onToggleSelect,
 }: {
   group: AdGroup
   to: string
   rankPill?: string
+  selectMode?: boolean
+  selected?: boolean
+  onToggleSelect?: (ad: Ad, shiftKey: boolean) => void
 }) {
   const narrowed = group.members_matching < group.group_size_total
   const langs = group.languages.slice(0, 2)
@@ -28,6 +35,9 @@ export default function GroupCard({
           ad={group.representative}
           to={to}
           rankPill={rankPill}
+          selectMode={selectMode}
+          selected={selected}
+          onToggleSelect={onToggleSelect}
           topRight={
             <span className="rounded-full bg-violet-600/90 px-2 py-0.5 text-[10px] font-semibold text-white shadow">
               ⧉ {group.group_size_total} ads

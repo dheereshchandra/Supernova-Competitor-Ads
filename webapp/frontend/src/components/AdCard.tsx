@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import type { ReactNode } from 'react'
+import type { MouseEvent as ReactMouseEvent, ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import type { Ad } from '../api'
-import { runDaysLabel } from '../format'
+import { posterUrl, runDaysLabel } from '../format'
 import { StatusChip, VerdictBadge, Spinner } from './ui'
 
 /**
@@ -10,12 +10,6 @@ import { StatusChip, VerdictBadge, Spinner } from './ui'
  * viewport (IntersectionObserver) so a 60-card grid stays light. Hovering
  * plays the video muted; leaving pauses and rewinds it.
  */
-// Server-extracted poster (tiny JPG, cached). Far lighter than streaming the MP4
-// just to show a still — and it avoids a grid of <video> tags hammering R2.
-function posterUrl(ad: Ad): string {
-  if (ad.thumb_url) return ad.thumb_url
-  return `/api/thumb/${ad.pipeline}/${ad.competitor}/${ad.ad_id}`
-}
 
 export default function AdCard({
   ad,
@@ -23,6 +17,9 @@ export default function AdCard({
   topRight,
   subtitle,
   rankPill,
+  selectMode = false,
+  selected = false,
+  onToggleSelect,
 }: {
   ad: Ad
   /** Link target override (e.g. a group tile opens the variants drawer). */
@@ -33,6 +30,10 @@ export default function AdCard({
   subtitle?: ReactNode
   /** Small rank label shown next to run-days (page-adjusted rank sort). */
   rankPill?: string
+  /** Multi-select: any tile click toggles instead of navigating. */
+  selectMode?: boolean
+  selected?: boolean
+  onToggleSelect?: (ad: Ad, shiftKey: boolean) => void
 }) {
   const ref = useRef<HTMLDivElement | null>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
@@ -74,14 +75,25 @@ export default function AdCard({
   const jobActive =
     ad.job && (ad.job.status === 'queued' || ad.job.status === 'running')
 
+  const toggle = (e: ReactMouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    onToggleSelect?.(ad, e.shiftKey)
+  }
+
   return (
     <Link
       to={to ?? `/ad/${ad.pipeline}/${ad.competitor}/${ad.ad_id}`}
       className="group block"
+      onClick={selectMode && onToggleSelect ? toggle : undefined}
     >
       <div
         ref={ref}
-        className="overflow-hidden rounded-xl border border-white/10 bg-zinc-900/60 transition-all duration-200 hover:-translate-y-0.5 hover:border-violet-400/40 hover:shadow-xl hover:shadow-violet-950/40"
+        className={`overflow-hidden rounded-xl border bg-zinc-900/60 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-violet-950/40 ${
+          selected
+            ? 'border-violet-400/70 ring-2 ring-violet-400/60'
+            : 'border-white/10 hover:border-violet-400/40'
+        }`}
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
       >
@@ -133,6 +145,23 @@ export default function AdCard({
               {ad.media_type}
             </div>
           ) : null}
+
+          {/* selection checkbox (hover-revealed; always shown while selecting) */}
+          {onToggleSelect && (
+            <button
+              onClick={toggle}
+              title={selected ? 'Unselect' : 'Select'}
+              className={`absolute bottom-2 right-2 flex h-5 w-5 items-center justify-center rounded border text-[11px] transition-opacity ${
+                selected
+                  ? 'border-violet-400 bg-violet-500 text-white opacity-100'
+                  : selectMode
+                    ? 'border-white/40 bg-black/50 text-transparent opacity-100'
+                    : 'border-white/40 bg-black/50 text-transparent opacity-0 group-hover:opacity-100'
+              }`}
+            >
+              ✓
+            </button>
+          )}
         </div>
 
         {/* compact, FIXED-height footer so every tile is identical */}
