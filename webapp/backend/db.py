@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS jobs (
   id            INTEGER PRIMARY KEY AUTOINCREMENT,
   kind          TEXT NOT NULL DEFAULT 'generate',
   mode          TEXT NOT NULL DEFAULT 'full',
+  languages     TEXT,
   pipeline      TEXT NOT NULL,
   competitor    TEXT NOT NULL,
   ad_id         TEXT NOT NULL,
@@ -63,6 +64,8 @@ CREATE TABLE IF NOT EXISTS tracker (
   rewrite_gdoc_url  TEXT,
   analysis_gdoc_url TEXT,
   rewrite_html_url  TEXT,
+  localization_gdoc_urls TEXT,
+  verified_languages TEXT,
   imported    INTEGER NOT NULL DEFAULT 0,
   created_at  TEXT NOT NULL DEFAULT (datetime('now')),
   updated_at  TEXT NOT NULL DEFAULT (datetime('now')),
@@ -100,6 +103,17 @@ def conn() -> sqlite3.Connection:
             c.commit()
         if "mode" not in cols:
             c.execute("ALTER TABLE jobs ADD COLUMN mode TEXT NOT NULL DEFAULT 'full'")
+            c.commit()
+        # localization (PR 4): per-job target languages + per-ad localized links/verify state
+        if "languages" not in cols:
+            c.execute("ALTER TABLE jobs ADD COLUMN languages TEXT")
+            c.commit()
+        tcols = {r[1] for r in c.execute("PRAGMA table_info(tracker)").fetchall()}
+        if "localization_gdoc_urls" not in tcols:
+            c.execute("ALTER TABLE tracker ADD COLUMN localization_gdoc_urls TEXT")
+            c.commit()
+        if "verified_languages" not in tcols:
+            c.execute("ALTER TABLE tracker ADD COLUMN verified_languages TEXT")
             c.commit()
         _conn = c
     return _conn

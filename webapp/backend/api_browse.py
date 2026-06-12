@@ -201,6 +201,13 @@ def ad_detail(pipeline: str, slug: str, ad_id: str):
     full["group_total"] = (cat.group_meta(pipeline, slug, ad["script_group_id"])["size"]
                            if ad["script_group_id"] else 0)
     key = (pipeline, slug, ad_id)
+    trow = db.query_one("SELECT verified_languages FROM tracker "
+                        "WHERE pipeline=? AND competitor=? AND ad_id=?", key)
+    try:
+        full["verified_languages"] = (json.loads(trow["verified_languages"])
+                                      if trow and trow["verified_languages"] else {})
+    except Exception:
+        full["verified_languages"] = {}
     full["activity"] = [dict(r) for r in db.query(
         "SELECT ts, who, action, detail FROM activity "
         "WHERE pipeline=? AND competitor=? AND ad_id=? ORDER BY id DESC LIMIT 50", key)]
