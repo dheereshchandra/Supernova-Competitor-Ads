@@ -1,6 +1,12 @@
 #!/bin/zsh
 # Guided Cloudflare named-tunnel setup for Ad Studio.
 #
+# LEGACY (June 2026): production hosting moved to a Tailscale Funnel
+# (https://dheeresh.tail92accf.ts.net — see README.md §3) because the
+# gosupernova.live DNS zone sits in an inaccessible Cloudflare account.
+# Kept as the documented alternative if hosting ever moves back to a
+# Cloudflare-managed domain.
+#
 # The browser-login step CANNOT be automated, so this script walks you through it:
 # it runs what it can and pauses for the two interactive commands. Re-running is safe.
 #

@@ -63,3 +63,11 @@ analysis/state/
 # Ad Studio (webapp)
 webapp/state/
 webapp/frontend/node_modules/
+
+# Scrape diagnostics + interrupted-commit leftovers — must never dirty the
+# canonical clone (the 11:30 repo-sync / 11:35 capture-sync SKIP on a dirty tree)
+facebook/inputs/*-AUDITFAIL.csv
+google/inputs/*-AUDITFAIL.csv
+RUN_LOG.md.tmp
+fb_card_debug.html
+fb_probe.png

@@ -3,7 +3,9 @@
 A team web app over the competitor-ads repo: browse winning competitor ads, watch
 them, one-click generate a Supernova script (the Creative Studio pipeline), and track
 each ad from shortlist → script → production. Runs on the operator's Mac (the canonical
-clone), exposed to the team through a Cloudflare Tunnel.
+clone), exposed to the team through a **Tailscale Funnel** (live June 2026 at
+https://dheeresh.tail92accf.ts.net — teammates need only the URL + the shared password,
+no install).
 
 > **Run from the canonical MAIN clone only** — not a Conductor worktree. The worktree
 > lacks the `facebook/videos/` cache, sits on a feature branch, and isn't the single
@@ -24,8 +26,10 @@ Add to the repo-root `.env` (no quotes — Mac smart-quotes break values):
 ```
 STUDIO_PASSWORD=<one shared team password>
 STUDIO_SESSION_SECRET=<random 40+ chars; e.g. `python3.13 -c "import secrets;print(secrets.token_hex(32))"`>
-STUDIO_PUBLIC_URL=https://studio.gosupernova.live      # used for the "Open in Ad Studio" deep links in the Sheet
+STUDIO_PUBLIC_URL=https://dheeresh.tail92accf.ts.net   # the live Funnel URL — feeds the "Open in Ad Studio" deep links in the Sheet
 STUDIO_SHEET_SYNC=1                                     # mirror the Production Tracker to the team Sheet (omit to keep it local)
+# optional: Slack alerts on any automation/job failure (see tools/notify/notify.sh)
+# SLACK_WEBHOOK_URL=https://hooks.slack.com/services/...
 # optional guardrails (defaults shown):
 # STUDIO_MAX_JOB_COST=5     STUDIO_MAX_DAILY_COST=15    STUDIO_BLACKOUT=11:05-11:55
 ```
@@ -44,28 +48,37 @@ sleep 3 && curl -s localhost:8787/api/health | head -c 300; echo
 revived if it crashes or after the Mac wakes. Logs:
 `~/Library/Application Support/SupernovaAdStudio/serve.log`.
 
-## 3. Public URL — Cloudflare named tunnel (one-time)
+## 3. Public URL — Tailscale Funnel (one-time)
 
-A **named** tunnel (stable hostname), not a quick tunnel (random URL each restart).
-Requires `gosupernova.live` to be a Cloudflare-managed zone.
+The app is public at **https://dheeresh.tail92accf.ts.net** — a Tailscale Funnel
+terminates HTTPS on Tailscale's edge and proxies to `localhost:8787` on the
+operator's Mac. The hostname is permanent (derived from the device + the operator's
+tailnet) and teammates need **no install** — the URL is open internet; the shared
+password is the only gate, so share it privately.
 
-Use the guided helper — it runs everything it can and pauses for the two steps that
-need you (the browser login can't be automated):
-
-```sh
-zsh webapp/install/tunnel-setup.sh           # default host studio.gosupernova.live
-```
-
-It walks through: `cloudflared tunnel login` (browser) → creates the `ad-studio`
-tunnel → writes `~/.cloudflared/config.yml` from `cloudflared-config.template.yml` →
-routes DNS. The last step it prints for you:
+One-time setup (already done on the current Mac; repeat only on a new machine):
 
 ```sh
-sudo cloudflared service install             # run the tunnel as a keepalive service
+brew install tailscale            # or the Tailscale Mac app
+tailscale up                      # sign in as the tailnet OWNER (Funnel needs admin approval)
+tailscale funnel --bg 8787        # first run prints an enable link — approve it in the browser, re-run
+tailscale funnel status           # → https://<device>.<tailnet>.ts.net proxying 127.0.0.1:8787
 ```
 
-The team then opens **https://studio.gosupernova.live**, signs in with their name + the
-shared password, and they're in.
+Durability (verified against Tailscale docs): the `--bg` config **persists** —
+Funnel auto-resumes after reboots and tailscaled restarts. The one manual case is
+a cold reboot with FileVault on: someone must log into the Mac once, then the
+backend (launchd KeepAlive) and the Funnel both come back on their own.
+
+If the URL ever changes (new device / new tailnet), update `STUDIO_PUBLIC_URL` in
+`.env` and restart the backend — it feeds the Sheet's "Open in Ad Studio" links.
+Disable: `tailscale funnel --https=443 off`. A stale "foreground listener already
+exists" error: `tailscale serve reset`, then re-run.
+
+> **Legacy alternative — Cloudflare named tunnel** (`tunnel-setup.sh` +
+> `cloudflared-config.template.yml`): kept for reference. It needs the domain's
+> DNS zone in a Cloudflare account you can access — which is exactly what blocked
+> it in June 2026 (gosupernova.live lives in an inaccessible account).
 
 ## 3a. v0 from a Conductor worktree (before merging to `main`)
 
@@ -78,10 +91,12 @@ clone (merge the `webapp/` branch to `main`, pull) for the real production home 
 ## 4. Keep the Mac awake
 
 `serve.sh` already wraps uvicorn in `caffeinate -s` (no idle sleep while serving on AC).
-Belt-and-suspenders for an always-on box:
+Belt-and-suspenders for an always-on box — note `caffeinate`/`sleep 0` do NOT cover
+closing the lid; clamshell mode needs `disablesleep`:
 
 ```sh
-sudo pmset -c sleep 0 displaysleep 10     # never sleep on power; screen may sleep
+sudo pmset -c sleep 0 displaysleep 10     # never idle-sleep on power; screen may sleep
+sudo pmset -a disablesleep 1              # keep serving with the lid CLOSED (undo: =0)
 ```
 
 If the Mac ever does sleep mid-generation, launchd revives the backend on wake and the
@@ -121,8 +136,11 @@ launchctl kickstart -k gui/$(id -u)/live.gosupernova.repo-sync
 
 ## 7. Lifting to a cloud Linux box later
 
-The serve/generate path is python3.13 + ffmpeg + git + cloudflared — all Linux-trivial.
-Only macOS-specific surface is the launchd plist (→ a systemd unit) and `caffeinate`/`pmset`
-(drop them). The `pyobjc-*` deps are scraper-only and never imported here. Lifting the app
-also means lifting the pipeline (videos cache, `.env`, the generation scripts) — the app is
-a thin layer over the repo, so move the repo + secrets and re-point the tunnel.
+The serve/generate path is python3.13 + ffmpeg + git + tailscale — all Linux-trivial
+(`tailscale funnel` works the same on Linux; a cloud LB or Cloudflare tunnel are
+alternatives). Only macOS-specific surface is the launchd plist (→ a systemd unit) and
+`caffeinate`/`pmset` (drop them). The `pyobjc-*` deps are scraper-only and never imported
+here. Lifting the app also means lifting the pipeline (videos cache, `.env`, the
+generation scripts) — the app is a thin layer over the repo, so move the repo + secrets
+and re-point the funnel. Caveat: the FB scraper needs a residential IP, so the scrape
+stays on a Mac (or a residential proxy) even if the app lifts.

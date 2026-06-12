@@ -24,6 +24,7 @@ from urllib.parse import urlparse
 from . import db
 from .config import FACEBOOK_DIR, REPO, settings
 from .data import catalog
+from .notify import notify
 
 PY = "python3.13"
 
@@ -346,6 +347,8 @@ class JobRunner:
             except StepFailed as e:
                 _set(self.id, status="failed", error=str(e), finished_at=_now(),
                      stderr_tail="\n".join(self.tail))
+                notify("Ad Studio: script generation failed",
+                       f"{self.slug}/{self.ad_id} — {e}")
                 return
         rewrite, analysis = self.collect_results()
         _set(self.id, status="done", finished_at=_now(), current_step=None,
@@ -427,6 +430,11 @@ async def _worker():
                 if job is not None:
                     _set(job["id"], status="failed", error=f"runner crashed: {e}",
                          finished_at=_now())
+                    # timeouts & unexpected crashes land here, not in the per-step
+                    # failure branches — without this, a hung run fails silently
+                    notify("Ad Studio: job crashed",
+                           f"{job.get('competitor') or job.get('slug') or '?'}"
+                           f" (job {job['id']}) — {e}")
             except Exception:
                 pass
             await asyncio.sleep(5)

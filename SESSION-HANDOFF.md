@@ -1,6 +1,6 @@
 # Session Handoff — Competitor-Ad Analysis System
 
-> Running status so this work can resume in any workspace. Last updated 2026-06-10.
+> Running status so this work can resume in any workspace. Last updated 2026-06-12.
 > Read this first, then the linked docs.
 
 ## What this project is
@@ -11,6 +11,33 @@ script similarity & replication, FB↔Google transfer). Git holds the small prec
 text (scripts, master CSVs with R2 links, the analysis); Cloudflare R2 holds the
 heavy media. See `README.md` (collaboration model) and `analysis/README.md` (the
 analysis system + run recipes).
+
+## 🆕 2026-06-12 — Ad Studio is PUBLIC (Tailscale Funnel) + failure alerts
+
+**Hosting — LIVE.** The Ad Studio web app (`webapp/`, see PRs #53–#65) is publicly
+reachable at **https://dheeresh.tail92accf.ts.net** — a **Tailscale Funnel** on the
+operator's Mac (operator's personal tailnet; the company tailnet blocked Funnel —
+no admin). Cloudflare was abandoned: the `gosupernova.live` DNS zone sits in an
+inaccessible Cloudflare account. Teammates need NO install — URL + shared
+`STUDIO_PASSWORD` (the only gate; the URL is open internet, share privately).
+Durability: hostname is permanent; `tailscale funnel --bg 8787` persists across
+reboot/daemon restarts; backend launchd (`live.gosupernova.ad-studio`) is
+KeepAlive+RunAtLoad. Only manual step: after a FileVault cold reboot, log into the
+Mac once. Lid-closed serving needs `sudo pmset -c sleep 0` + `sudo pmset -a
+disablesleep 1`. When the Mac is unreachable the frontend shows the "😴 offline —
+ping Dheeresh" overlay (PR #65) and auto-reconnects. Full runbook:
+`webapp/install/README.md` §3–4. `STUDIO_PUBLIC_URL` in `.env` = the ts.net URL
+(feeds the Sheet's "Open in Ad Studio" links).
+
+**Failure alerts — ONE shared notifier.** `tools/notify/notify.sh` posts a macOS
+banner + a Slack message (when `SLACK_WEBHOOK_URL` is set in `.env` — create an
+Incoming Webhook at api.slack.com/apps). Wired into: daily-scrape (per-competitor
+FAIL, push-fail, end-of-run summary when blocked/failed>0), daily-sync +
+csv-sync + capture-sync (their existing notify() now goes through it), and the
+Ad Studio backend (`webapp/backend/notify.py` — generation-job failures, pipeline
+scrape-blocked/failed, enrichment failures). App-DOWN alerting can't come from the
+Mac itself — use an external uptime monitor (e.g. UptimeRobot free) on
+`https://dheeresh.tail92accf.ts.net/api/health`.
 
 ## 🆕 2026-06-09/10 — the big build-out (PRs #21–#42). READ THIS FIRST TO RESUME.
 

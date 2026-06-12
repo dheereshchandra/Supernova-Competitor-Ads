@@ -6,6 +6,9 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
+    // Dev-only: the Vite dev server proxies /api to a locally-running backend.
+    // Production serves the committed dist/ from FastAPI on the same origin
+    // (reached via the public Tailscale Funnel) — no absolute URLs anywhere.
     proxy: {
       '/api': 'http://localhost:8787',
     },

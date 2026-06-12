@@ -20,6 +20,7 @@ import re
 from . import db
 from .config import REPO, settings
 from .data import catalog
+from .notify import notify
 
 PER_VIDEO_USD = 0.012  # Gemini Flash transcribe+tag, ~$0.012/new video (run_batch.sh)
 
@@ -247,11 +248,15 @@ class PipelineRunner:
                       error="Scrape was blocked (0 ads / login wall / throttle). "
                             "Don't retry immediately — try again later.",
                       stderr_tail="\n".join(self.tail[-50:]))
+            notify("Ad Studio: data update blocked",
+                   f"{self.slug} ({self.pipeline}) — scrape blocked (0 ads/throttle).")
             return
         if rc != 0:
             self._set(status="failed", finished_at=_now(),
                       error=f"Scrape/analysis failed (exit {rc}) — see the log.",
                       stderr_tail="\n".join(self.tail[-50:]))
+            notify("Ad Studio: data update failed",
+                   f"{self.slug} ({self.pipeline}) — scrape/analysis exit {rc}.")
             return
 
         # commit the free ranking update now (goes live + keeps the tree clean)
@@ -299,6 +304,8 @@ class PipelineRunner:
             self._set(status="failed", finished_at=_now(),
                       error=f"Enrichment failed (exit {rc}) — see the log.",
                       stderr_tail="\n".join(self.tail[-50:]))
+            notify("Ad Studio: enrichment failed",
+                   f"{self.slug} ({self.pipeline}) — exit {rc}.")
             return
         self._set(current_step="commit")
         self._ev("commit", "▶ Saving the enriched data")
