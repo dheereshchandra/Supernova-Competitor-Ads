@@ -29,6 +29,9 @@ VERDICTS = ("strong_winner", "winner", "undecided", "new", "loser")
 SORTS = {
     "run_days": (lambda a: a["run_days"] or 0, True),
     "best_page_rank": (lambda a: a["best_page_rank"] if a["best_page_rank"] is not None else 10 ** 9, False),
+    # rank normalized by page size: #3 on a 600-ad page beats #1 on a 30-ad page
+    "rank_pct": (lambda a: (a["best_page_rank"] / a["page_count"])
+                 if a["best_page_rank"] is not None and a["page_count"] else 10 ** 9, False),
     "first_seen": (lambda a: a["first_seen"] or "", True),
     "last_seen": (lambda a: a["last_seen"] or "", True),
     "ad_start_date": (lambda a: a["ad_start_date"] or "", True),
@@ -68,6 +71,7 @@ class Catalog:
         self._lock = threading.Lock()
         self._ads: dict[str, list[dict]] = {p: [] for p in PIPELINES}
         self._by_key: dict[tuple, dict] = {}
+        self._groups: dict[tuple, list[dict]] = {}
         self._mtimes: dict[pathlib.Path, float] = {}
         self._last_stat = 0.0
         self._loaded_at: str | None = None
@@ -199,6 +203,8 @@ class Catalog:
             "production_type": (e.get("production_type") or "").strip(),
             "script_group_id": (e.get("script_group_id") or "").strip(),
             "replication_type": (e.get("replication_type") or "").strip(),
+            "variant_role": (e.get("variant_role") or "").strip(),
+            "page_count": _int(e.get("page_count")),
             "first_seen": (e.get("first_seen") or "").strip(),
             "last_seen": (e.get("last_seen") or "").strip(),
             "ad_start_date": (e.get("ad_start_date") or "").strip(),
@@ -240,9 +246,18 @@ class Catalog:
                 ads = {p: self._load_pipeline(p, gdocs) for p in PIPELINES}
             except Exception:  # keep last good snapshot on torn reads
                 return
+            groups: dict[tuple, list[dict]] = {}
+            for p in PIPELINES:
+                for a in ads[p]:
+                    if a["script_group_id"]:
+                        groups.setdefault(
+                            (p, a["competitor"], a["script_group_id"]), []).append(a)
+            for members in groups.values():
+                members.sort(key=lambda a: (-(a["run_days"] or 0), a["ad_id"]))
             self._ads = ads
             self._by_key = {(a["pipeline"], a["competitor"], a["ad_id"]): a
                             for p in PIPELINES for a in ads[p]}
+            self._groups = groups
             self._loaded_at = time.strftime("%Y-%m-%d %H:%M:%S")
 
     # ---------- queries ----------
@@ -279,6 +294,7 @@ class Catalog:
     def list_ads(self, pipeline: str = "facebook", competitor: str = "",
                  verdict: list[str] | None = None, media_type: list[str] | None = None,
                  language: list[str] | None = None, device_format: list[str] | None = None,
+                 page_name: list[str] | None = None,
                  retired: str = "any", generated: str = "any", has_media: bool = True,
                  has_transcript: str = "any", q: str = "",
                  min_run_days: int | None = None, first_seen_days: int | None = None,
@@ -302,6 +318,8 @@ class Catalog:
             preds["language"] = lambda a: a["language"] in language
         if device_format:
             preds["device_format"] = lambda a: a["device_format"] in device_format
+        if page_name:
+            preds["page"] = lambda a: a["page_name"] in page_name
         if retired in ("yes", "no"):
             preds["retired"] = (lambda a: a["is_retired"]) if retired == "yes" \
                 else (lambda a: not a["is_retired"])
@@ -333,13 +351,16 @@ class Catalog:
         ads = apply(base)
 
         # Facet counts: for each dimension, exclude its own selection so all options remain visible.
-        FACET_DIMS = {"verdict": "verdict", "media_type": "media_type",
+        # dim (= its predicate name) -> the ad field counted.
+        facet_dims = {"verdict": "verdict", "media_type": "media_type",
                       "language": "language", "device_format": "device_format"}
+        if competitor:  # page facet only within one competitor (names collide across them)
+            facet_dims["page"] = "page_name"
         facets = {}
-        for dim, skip_pred in FACET_DIMS.items():
+        for dim, field in facet_dims.items():
             facets[dim] = {}
-            for a in apply(base, skip=skip_pred):
-                v = a[dim]
+            for a in apply(base, skip=dim):
+                v = a[field]
                 if v:
                     facets[dim][v] = facets[dim].get(v, 0) + 1
 
@@ -395,14 +416,30 @@ class Catalog:
             cached = self._timeline_cache[(pipeline, slug)]
         return cached[1].get(ad_id, [])
 
-    def related(self, ad: dict, limit: int = 8) -> list[dict]:
+    # ---------- script groups ----------
+
+    def group_members(self, pipeline: str, slug: str, gid: str) -> list[dict]:
+        """All ads in a script group, longest-running first."""
+        self.reload_if_stale()
+        return list(self._groups.get((pipeline, slug, gid), []))
+
+    def group_meta(self, pipeline: str, slug: str, gid: str) -> dict:
+        """Unfiltered group rollup (the grid may be showing a narrowed subset)."""
+        members = self._groups.get((pipeline, slug, gid), [])
+        return {
+            "size": len(members),
+            "languages_total": len({a["language"] for a in members if a["language"]}),
+            "winners_total": sum(1 for a in members
+                                 if a["verdict"] in ("strong_winner", "winner")),
+        }
+
+    def related(self, ad: dict, limit: int = 24) -> list[dict]:
         """Other ads in the same script group (competitor ran N variants)."""
         gid = ad["script_group_id"]
         if not gid:
             return []
-        return [a for a in self._ads.get(ad["pipeline"], [])
-                if a["script_group_id"] == gid and a["competitor"] == ad["competitor"]
-                and a["ad_id"] != ad["ad_id"]][:limit]
+        members = self._groups.get((ad["pipeline"], ad["competitor"], gid), [])
+        return [a for a in members if a["ad_id"] != ad["ad_id"]][:limit]
 
 
 _catalog: Catalog | None = None

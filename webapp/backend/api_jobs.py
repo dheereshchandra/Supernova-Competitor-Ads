@@ -206,6 +206,201 @@ def cancel_job(job_id: int, user: str = Depends(require_user)):
     return {"ok": True}
 
 
+# ---------------- bulk actions (multi-select in the Library) ----------------
+
+class AdRef(BaseModel):
+    pipeline: str
+    competitor: str
+    ad_id: str
+
+
+class BulkTrackerBody(BaseModel):
+    items: list[AdRef]
+    status: str
+
+
+class BulkItemsBody(BaseModel):
+    items: list[AdRef]
+
+
+# Bulk never downgrades work in flight: shortlist applies to untouched /
+# dismissed / dropped ads, dismiss to untouched / shortlisted ones.
+_BULK_ALLOWED_FROM = {
+    "shortlisted": ("", "dismissed", "dropped"),
+    "dismissed": ("", "shortlisted"),
+}
+
+
+def _dedupe(items: list[AdRef]) -> list[AdRef]:
+    seen: set[tuple] = set()
+    out = []
+    for it in items:
+        k = (it.pipeline, it.competitor, it.ad_id)
+        if k not in seen:
+            seen.add(k)
+            out.append(it)
+    return out
+
+
+def _mark_sheet_dirty():
+    try:
+        from . import sheets
+        sheets.mark_dirty()
+    except Exception:
+        pass
+
+
+@router.patch("/api/tracker/bulk")
+def bulk_tracker(body: BulkTrackerBody, user: str = Depends(require_user)):
+    if body.status not in _BULK_ALLOWED_FROM:
+        raise HTTPException(422, f"Bulk supports {tuple(_BULK_ALLOWED_FROM)}, not {body.status!r}")
+    items = _dedupe(body.items)
+    if not items:
+        raise HTTPException(422, "No ads given")
+    if len(items) > 200:
+        raise HTTPException(422, "Too many ads in one batch (max 200)")
+    changed, unchanged, skipped = 0, 0, []
+    for it in items:
+        if not catalog().get(it.pipeline, it.competitor, it.ad_id):
+            skipped.append({**it.model_dump(), "reason": "not_found"})
+            continue
+        row = db.query_one(
+            "SELECT status FROM tracker WHERE pipeline=? AND competitor=? AND ad_id=?",
+            (it.pipeline, it.competitor, it.ad_id))
+        current = (row["status"] if row else "") or ""
+        if current == body.status:
+            unchanged += 1
+            continue
+        if current not in _BULK_ALLOWED_FROM[body.status]:
+            skipped.append({**it.model_dump(), "reason": "already_in_flow"})
+            continue
+        _ensure_tracker(it.pipeline, it.competitor, it.ad_id, body.status, user)
+        _log(it.pipeline, it.competitor, it.ad_id, user, body.status, "bulk")
+        changed += 1
+    if changed:
+        _mark_sheet_dirty()
+    return {"changed": changed, "unchanged": unchanged, "skipped": skipped}
+
+
+def _batch_estimates(slug: str, ad_ids: list[str]) -> dict[str, dict]:
+    """One estimator subprocess per competitor (it accepts --ids a,b,c);
+    returns ad_id -> estimate row. The estimator only lists doc-less candidates."""
+    try:
+        proc = subprocess.run(
+            ["python3.13", "scripts/estimate_step4_cost.py", "--competitor", slug,
+             "--ids", ",".join(ad_ids), "--json"],
+            cwd=FACEBOOK_DIR, capture_output=True, text=True, timeout=180)
+        est = json.loads(proc.stdout[proc.stdout.index("{"):])
+        return {str(r.get("ad_library_id")): r for r in est.get("estimates", [])}
+    except Exception:
+        return {}
+
+
+def _daily_spent() -> float:
+    spent = db.query_one(
+        "SELECT COALESCE(SUM(cost_estimate_usd),0) AS s FROM jobs "
+        "WHERE status NOT IN ('failed','cancelled') AND date(created_at)=date('now')")
+    return float(spent["s"] or 0)
+
+
+def _classify_bulk(items: list[AdRef]) -> list[dict]:
+    """Per-ad eligibility + real cost, shared by bulk-estimate and bulk-create
+    (the enqueue path re-runs this — client-supplied costs are never trusted)."""
+    by_slug: dict[str, list[str]] = {}
+    for it in items:
+        if it.pipeline == "facebook":
+            by_slug.setdefault(it.competitor, []).append(it.ad_id)
+    est = {slug: _batch_estimates(slug, ids) for slug, ids in by_slug.items()}
+    cfg = settings()
+    out = []
+    for it in items:
+        ref = it.model_dump()
+        if it.pipeline != "facebook":
+            out.append({**ref, "eligible": False, "reason": "facebook_only"})
+            continue
+        ad = catalog().get(it.pipeline, it.competitor, it.ad_id)
+        if not ad:
+            out.append({**ref, "eligible": False, "reason": "not_found"})
+            continue
+        if not ad["media_url"]:
+            out.append({**ref, "eligible": False, "reason": "no_media"})
+            continue
+        active = db.query_one(
+            f"SELECT id FROM jobs WHERE pipeline=? AND competitor=? AND ad_id=? "
+            f"AND status IN {ACTIVE}", (it.pipeline, it.competitor, it.ad_id))
+        if active:
+            out.append({**ref, "eligible": False, "reason": "in_flight"})
+            continue
+        row = est.get(it.competitor, {}).get(it.ad_id)
+        if row is None:
+            reason = ("already_generated" if (ad["has_docs"] or ad["has_gdocs"])
+                      else "not_a_candidate")
+            out.append({**ref, "eligible": False, "reason": reason})
+            continue
+        cost = round(float(row.get("cost_total", 0)), 3)
+        if cost > cfg.max_job_cost:
+            out.append({**ref, "eligible": False, "reason": "job_cap", "cost_usd": cost})
+            continue
+        out.append({**ref, "eligible": True, "reason": None, "cost_usd": cost,
+                    "media_type": row.get("media_type") or ad["media_type"],
+                    "duration_s": row.get("duration_s"), "scenes": row.get("scenes")})
+    return out
+
+
+@router.post("/api/jobs/bulk-estimate")
+def bulk_estimate(body: BulkItemsBody, _user: str = Depends(require_user)):
+    items = _dedupe(body.items)
+    if not items:
+        raise HTTPException(422, "No ads given")
+    if len(items) > 50:
+        raise HTTPException(422, "Too many ads in one batch (max 50)")
+    rows = _classify_bulk(items)
+    cfg = settings()
+    spent = _daily_spent()
+    return {"items": rows,
+            "total_cost_usd": round(sum(r.get("cost_usd", 0) for r in rows if r["eligible"]), 3),
+            "daily_cap_usd": cfg.max_daily_cost,
+            "daily_spent_usd": round(spent, 2),
+            "daily_remaining_usd": round(max(0.0, cfg.max_daily_cost - spent), 2),
+            "max_job_cost_usd": cfg.max_job_cost}
+
+
+@router.post("/api/jobs/bulk", status_code=201)
+def bulk_create(body: BulkItemsBody, user: str = Depends(require_user)):
+    items = _dedupe(body.items)
+    if not items:
+        raise HTTPException(422, "No ads given")
+    if len(items) > 50:
+        raise HTTPException(422, "Too many ads in one batch (max 50)")
+    rows = _classify_bulk(items)
+    cfg = settings()
+    spent = _daily_spent()
+    queued, skipped = [], []
+    for r in rows:  # request order; enqueue-what-fits under the daily cap
+        ref = {k: r[k] for k in ("pipeline", "competitor", "ad_id")}
+        if not r["eligible"]:
+            skipped.append({**ref, "reason": r["reason"]})
+            continue
+        cost = r["cost_usd"]
+        if spent + cost > cfg.max_daily_cost:
+            skipped.append({**ref, "reason": "daily_cap"})
+            continue
+        cur = db.execute(
+            "INSERT INTO jobs (pipeline, competitor, ad_id, media_type, requested_by, "
+            "force_regen, cost_estimate_usd) VALUES (?,?,?,?,?,0,?)",
+            (r["pipeline"], r["competitor"], r["ad_id"], r["media_type"], user, cost))
+        job_id = cur.lastrowid
+        spent += cost
+        _ensure_tracker(r["pipeline"], r["competitor"], r["ad_id"], "generating", user)
+        _log(r["pipeline"], r["competitor"], r["ad_id"], user, "generate",
+             f"queued job #{job_id} (~{inr(cost)}) [bulk]")
+        queued.append({**ref, "job_id": job_id, "cost_usd": cost})
+    if queued:
+        _mark_sheet_dirty()
+    return {"queued": queued, "skipped": skipped,
+            "total_queued_usd": round(sum(q["cost_usd"] for q in queued), 3)}
+
+
 # ---------------- pipeline (full data-update run) ----------------
 
 class PipelineBody(BaseModel):

@@ -12,6 +12,7 @@ import {
   domainOf,
   friendlyDate,
   friendlyDateTime,
+  rankPctLabel,
   runDaysLabel,
   STATUS_FLOW,
 } from '../format'
@@ -214,23 +215,43 @@ export default function AdDetail() {
           {/* Related */}
           {ad.related.length > 0 && (
             <div>
-              <div className="mb-2 text-sm text-zinc-400">
-                This competitor ran {ad.related.length + 1} variants of this script
+              <div className="mb-2 flex items-baseline justify-between gap-2 text-sm text-zinc-400">
+                <span>
+                  This competitor ran {ad.group_total || ad.related.length + 1} variants
+                  of this script
+                </span>
+                {ad.group_total > ad.related.length + 1 && (
+                  <Link
+                    to={`/?${new URLSearchParams({
+                      ...(ad.pipeline !== 'facebook' ? { pipeline: ad.pipeline } : {}),
+                      competitor: ad.competitor,
+                      g: `${ad.competitor}::${ad.script_group_id}`,
+                    }).toString()}`}
+                    className="shrink-0 text-xs text-violet-400 hover:underline"
+                  >
+                    View all {ad.group_total} →
+                  </Link>
+                )}
               </div>
               <div className="flex gap-2 overflow-x-auto pb-1">
                 {ad.related.map((r) => (
                   <Link
                     key={r.ad_id}
                     to={`/ad/${r.pipeline}/${r.competitor}/${r.ad_id}`}
-                    className="h-28 w-20 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-zinc-900"
+                    className="w-20 shrink-0"
                   >
-                    {r.media_url && (r.media_type || '').toLowerCase().includes('video') ? (
-                      <video src={r.media_url} muted className="h-full w-full object-cover" />
-                    ) : r.media_url ? (
-                      <img src={r.media_url} alt="" className="h-full w-full object-cover" />
-                    ) : (
-                      <div className="flex h-full items-center justify-center text-lg opacity-30">🎬</div>
-                    )}
+                    <div className="h-28 overflow-hidden rounded-lg border border-white/10 bg-zinc-900">
+                      {r.media_url && (r.media_type || '').toLowerCase().includes('video') ? (
+                        <video src={r.media_url} muted className="h-full w-full object-cover" />
+                      ) : r.media_url ? (
+                        <img src={r.media_url} alt="" className="h-full w-full object-cover" />
+                      ) : (
+                        <div className="flex h-full items-center justify-center text-lg opacity-30">🎬</div>
+                      )}
+                    </div>
+                    <div className="mt-0.5 truncate text-center text-[10px] text-zinc-500">
+                      {r.language || '—'}
+                    </div>
                   </Link>
                 ))}
               </div>
@@ -372,8 +393,32 @@ export default function AdDetail() {
               )}
             </div>
             <div className="grid grid-cols-3 gap-2 text-center">
-              <Stat label="Best rank" value={ad.best_page_rank != null ? `#${ad.best_page_rank}` : '—'} />
-              <Stat label="Current" value={ad.current_page_rank != null ? `#${ad.current_page_rank}` : '—'} />
+              <Stat
+                label="Best rank"
+                value={
+                  ad.best_page_rank != null
+                    ? `#${ad.best_page_rank}${ad.page_count ? ` / ${ad.page_count}` : ''}`
+                    : '—'
+                }
+                sub={
+                  ad.page_count != null && ad.page_count >= 20
+                    ? rankPctLabel(ad.best_page_rank, ad.page_count)
+                    : undefined
+                }
+              />
+              <Stat
+                label="Current"
+                value={
+                  ad.current_page_rank != null
+                    ? `#${ad.current_page_rank}${ad.page_count ? ` / ${ad.page_count}` : ''}`
+                    : '—'
+                }
+                sub={
+                  ad.page_count != null && ad.page_count >= 20
+                    ? rankPctLabel(ad.current_page_rank, ad.page_count)
+                    : undefined
+                }
+              />
               <Stat
                 label="In top 25%"
                 value={ad.frac_top_25 != null ? `${Math.round(ad.frac_top_25 * 100)}%` : '—'}
@@ -430,10 +475,11 @@ export default function AdDetail() {
   )
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function Stat({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
     <div className="rounded-lg bg-white/5 px-2 py-2">
       <div className="text-base font-semibold text-zinc-100">{value}</div>
+      {sub && <div className="text-[10px] font-medium text-violet-300">{sub}</div>}
       <div className="text-[11px] text-zinc-500">{label}</div>
     </div>
   )
