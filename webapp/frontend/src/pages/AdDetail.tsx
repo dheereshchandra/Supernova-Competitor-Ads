@@ -17,6 +17,8 @@ import {
   STATUS_FLOW,
 } from '../format'
 import GenerateModal from '../components/GenerateModal'
+import LocalizeModal from '../components/LocalizeModal'
+import LocalizedDocsChips from '../components/LocalizedDocsChips'
 import {
   ErrorNote,
   PageLoading,
@@ -43,6 +45,7 @@ export default function AdDetail() {
   const [ad, setAd] = useState<AdDetailT | null>(null)
   const [error, setError] = useState('')
   const [showGenerate, setShowGenerate] = useState<false | 'normal' | 'force'>(false)
+  const [showLocalize, setShowLocalize] = useState(false)
   const [job, setJob] = useState<JobDetail | null>(null)
   const [busy, setBusy] = useState(false)
 
@@ -339,6 +342,23 @@ export default function AdDetail() {
               /* script_ready and beyond */
               <div className="space-y-3">
                 <DocButtons script={scriptLink} analysis={analysisLink} />
+                {scriptLink && (
+                  <button
+                    onClick={() => setShowLocalize(true)}
+                    disabled={busy}
+                    className="w-full rounded-lg border border-violet-400/30 bg-violet-600/15 px-4 py-2 text-sm font-medium text-violet-200 hover:bg-violet-600/25 disabled:opacity-60"
+                  >
+                    🌍 Replicate to languages
+                  </button>
+                )}
+                <LocalizedDocsChips
+                  pipeline={pipeline}
+                  competitor={slug}
+                  adId={adId}
+                  locales={ad.locales || {}}
+                  verified={ad.verified_languages || {}}
+                  onChanged={load}
+                />
                 <StatusStepper status={status} />
                 {status === 'script_ready' &&
                   (ad.claimed_by ? (
@@ -466,6 +486,25 @@ export default function AdDetail() {
           onClose={() => setShowGenerate(false)}
           onStarted={() => {
             setShowGenerate(false)
+            load()
+            refreshActiveJobs()
+          }}
+        />
+      )}
+      {showLocalize && (
+        <LocalizeModal
+          pipeline={pipeline}
+          competitor={slug}
+          adId={adId}
+          suggestedLanguages={[
+            ...new Set(
+              [ad.language, ...ad.related.map((r) => r.language)].filter(Boolean),
+            ),
+          ]}
+          alreadyLocalized={Object.keys(ad.locales || {})}
+          onClose={() => setShowLocalize(false)}
+          onStarted={() => {
+            setShowLocalize(false)
             load()
             refreshActiveJobs()
           }}

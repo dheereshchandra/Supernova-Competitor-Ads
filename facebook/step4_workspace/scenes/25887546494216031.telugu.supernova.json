@@ -1,0 +1,69 @@
+{
+  "ad_library_id": "25887546494216031",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Initial Conversation & Problem Setup",
+        "script": "Character B says: I... will to learn English. I... uh... having interview tomorrow.\nCharacter A says: Interview kosam English speaking practice cheyyala? Nenu Miss Nova ni.\nCharacter B says: Yes. But... meeru Telugu lo explain cheyyagulara?\nCharacter A says: Tappakunda. Supernova lo nenu mee language lone English matladadam nerpistanu.\nCharacter B says: Avunu, kani nenu matladeppudu freeze aypotanu. Inka classes ki time ledu.",
+        "on_screen_text": "I... will to learn | English. | I... uh... having | interview tomorrow. | Interview kosam | English speaking | practice cheyyala? | Nenu Miss Nova ni. | Yes. But... | meeru Telugu lo | explain cheyyagulara? | Tappakunda. | Supernova lo nenu | mee language lone | English matladadam nerpistanu. | Avunu, kani nenu | matladeppudu freeze | aypotanu. | Inka classes ki | time ledu."
+      },
+      {
+        "n": 2,
+        "scene_label": "Introducing the Solution",
+        "script": "Character A says: Supernova try cheyandi. Nenu andariki same nerpinchanu. First mee level artham chesukuni, tarvata mee kosame plan ready chestanu. Daily just 15 minutes.\nCharacter B says: Kani nenu chala mistakes chestanu.",
+        "on_screen_text": "Supernova try cheyandi. | Nenu andariki same | nerpinchanu. | First mee level | artham chesukuni, | tarvata mee kosame | plan ready chestanu. | Daily just 15 minutes. | Kani nenu chala | mistakes chestanu."
+      },
+      {
+        "n": 3,
+        "scene_label": "App Features Demo",
+        "script": "Character A says: Ikkada meeru chadavadam kadu, matladataru! 1000 mistakes cheyandi, nenu 1000 times navvakunda correct chestanu. Evaru mimmalni judge cheyyaru.",
+        "on_screen_text": "Ikkada meeru chadavadam kadu, | matladataru! | 1000 mistakes cheyandi, | nenu 1000 times | navvakunda correct chestanu. | Evaru mimmalni judge | cheyyaru."
+      },
+      {
+        "n": 4,
+        "scene_label": "User is Convinced",
+        "script": "Character B says: Hmm. ChatGPT ayithe just text matrame istundi, kani meeru nijamga oka teacher.",
+        "on_screen_text": "Hmm. | ChatGPT ayithe just | text matrame istundi, | kani meeru nijamga | oka teacher."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action & Offer",
+        "script": "Character A says: Eroje Supernova app download cheyandi. 1 crore kante ekkuva mandi ikkada practice chestunnaru. Idi coaching classes kante budget-friendly, inka mee phone lo eppudu ready ga untundi.",
+        "on_screen_text": "Eroje Supernova | app download cheyandi. | 1 crore kante ekkuva mandi | ikkada practice chestunnaru. | Idi coaching classes | kante budget-friendly, | inka mee phone lo | eppudu ready ga untundi."
+      },
+      {
+        "n": 6,
+        "scene_label": "User Downloads the App",
+        "script": "Character B says: Ippude nenu phone lo Supernova app download chestanu. Interview clear cheyyali!",
+        "on_screen_text": "Ippude nenu phone lo | download chestanu | Supernova app. | Interview clear | cheyyali!"
+      },
+      {
+        "n": 7,
+        "scene_label": "Final Call to Action",
+        "script": "Character A says: Supernova install cheyandi, eroje speaking start cheyandi.",
+        "on_screen_text": "Supernova install cheyandi, | eroje speaking start cheyandi."
+      }
+    ],
+    "self_critique_fixed": "The script has been successfully localized into Romanized Telugu using the 'mixed' register module. The first line retains the broken English setup as per the hook rule exception (T7). Miss Nova's lines use the polite plural 'meeru' and 'cheyandi' verb forms, while the learner uses a respectful yet casual tone. The language self-reference has been correctly swapped from Hindi to Telugu. All numbers, brand names, and product vocabulary remain in English as per T2. No brand safety violations were detected."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 5",
+        "quote": "a screen showing a limited-time offer for a 3-rupee trial is displayed",
+        "why": "The visual displays a specific rupee price ('3-rupee trial') which is an unapproved hard price point.",
+        "fix": "Modify the visual to show a generic trial screen or a 'budget-friendly' offer without mentioning a specific rupee amount."
+      }
+    ],
+    "summary": "The ad is mostly compliant but violates G6.1 by displaying an unapproved 3-rupee trial price in the Scene 5 visual.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781289890.918903
+}

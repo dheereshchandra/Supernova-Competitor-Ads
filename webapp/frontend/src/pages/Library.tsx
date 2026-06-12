@@ -15,6 +15,7 @@ import { useApp } from '../AppContext'
 import { formatCount, rankPctLabel } from '../format'
 import AdCard from '../components/AdCard'
 import BulkGenerateModal from '../components/BulkGenerateModal'
+import BulkLocalizeModal from '../components/BulkLocalizeModal'
 import GroupCard from '../components/GroupCard'
 import GroupDrawer from '../components/GroupDrawer'
 import RunWorkflowModal from '../components/RunWorkflowModal'
@@ -149,6 +150,7 @@ export default function Library() {
   const [selectMode, setSelectMode] = useState(false)
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [showBulkGen, setShowBulkGen] = useState(false)
+  const [showBulkLocalize, setShowBulkLocalize] = useState(false)
   const [bulkBusy, setBulkBusy] = useState(false)
   const [bulkNote, setBulkNote] = useState('')
   const lastIndexRef = useRef<number | null>(null)
@@ -292,6 +294,17 @@ export default function Library() {
           a.media_url &&
           !a.has_docs &&
           !a.has_gdocs &&
+          !(a.job && (a.job.status === 'queued' || a.job.status === 'running')),
+      ),
+    [selectedAds],
+  )
+  // client pre-filter for the Localize button: needs an English Supernova script
+  const localizableAds = useMemo(
+    () =>
+      selectedAds.filter(
+        (a) =>
+          a.pipeline === 'facebook' &&
+          (a.rewrite_gdoc_url || a.has_gdocs) &&
           !(a.job && (a.job.status === 'queued' || a.job.status === 'running')),
       ),
     [selectedAds],
@@ -694,16 +707,18 @@ export default function Library() {
         />
       )}
 
-      {/* ---------- multi-select action bar + bulk generate ---------- */}
-      {(selectMode || selected.size > 0) && !showBulkGen && (
+      {/* ---------- multi-select action bar + bulk generate / localize ---------- */}
+      {(selectMode || selected.size > 0) && !showBulkGen && !showBulkLocalize && (
         <SelectionBar
           count={selected.size}
           generateCount={generatableAds.length}
+          localizeCount={localizableAds.length}
           busy={bulkBusy}
           note={bulkNote}
           onShortlist={() => applyBulkStatus('shortlisted')}
           onDismiss={() => applyBulkStatus('dismissed')}
           onGenerate={() => setShowBulkGen(true)}
+          onLocalize={() => setShowBulkLocalize(true)}
           onSelectAll={() => setSelected(new Set(tiles.map(adKey)))}
           onClear={clearSelection}
         />
@@ -717,6 +732,18 @@ export default function Library() {
             clearSelection()
             refreshActiveJobs()
             if (queued > 0) setRefreshTick((t) => t + 1) // re-fetch → "Generating…" chips
+          }}
+        />
+      )}
+      {showBulkLocalize && (
+        <BulkLocalizeModal
+          ads={localizableAds}
+          onClose={() => setShowBulkLocalize(false)}
+          onStarted={(queued) => {
+            setShowBulkLocalize(false)
+            clearSelection()
+            refreshActiveJobs()
+            if (queued > 0) setRefreshTick((t) => t + 1)
           }}
         />
       )}

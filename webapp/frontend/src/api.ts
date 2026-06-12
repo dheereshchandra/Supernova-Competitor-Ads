@@ -147,6 +147,8 @@ export interface Ad {
   char_sheet_urls: string[]
   rewrite_gdoc_url: string
   analysis_gdoc_url: string
+  /** localized Supernova Doc per language, e.g. { Hindi: "https://docs.google…" } */
+  locales: Record<string, string>
   rewrite_docx_url: string
   analysis_docx_url: string
   rewrite_html_url: string
@@ -217,6 +219,12 @@ export interface ActivityEntry {
   detail: string
 }
 
+export interface LangVerify {
+  verified: boolean
+  verified_by: string
+  at: string
+}
+
 export interface AdDetail extends Ad {
   transcript: Transcript | null
   rank_timeline: { date: string; rank: number }[]
@@ -224,6 +232,8 @@ export interface AdDetail extends Ad {
   group_total: number
   activity: ActivityEntry[]
   latest_job: Job | null
+  /** per-language verification state, e.g. { Hindi: { verified, verified_by, at } } */
+  verified_languages: Record<string, LangVerify>
 }
 
 export interface Estimate {
@@ -462,4 +472,49 @@ export const patchTracker = (
   api<TrackerRow>(
     `/api/tracker/${encodeURIComponent(pipeline)}/${encodeURIComponent(slug)}/${encodeURIComponent(adId)}`,
     { method: 'PATCH', json: body },
+  )
+
+// ---------- Localization (replicate the English master into N languages) ----------
+
+export const SUPPORTED_LANGUAGES = [
+  'Hindi', 'Telugu', 'Tamil', 'Marathi', 'Kannada',
+  'Malayalam', 'Bengali', 'Gujarati', 'Assamese', 'Punjabi',
+] as const
+
+export const createLocalizeJob = (
+  pipeline: string,
+  competitor: string,
+  ad_id: string,
+  languages: string[],
+  force = false,
+) =>
+  api<{ job_id: string }>('/api/jobs/localize', {
+    json: { pipeline, competitor, ad_id, languages, force },
+  })
+
+export interface BulkLocalizeEstimate {
+  items: (AdRef & { eligible: boolean; reason?: string; cost_usd?: number })[]
+  languages: string[]
+  total_cost_usd: number
+  daily_cap_usd: number
+  daily_spent_usd: number
+  daily_remaining_usd: number
+}
+
+export const bulkLocalizeEstimate = (items: AdRef[], languages: string[]) =>
+  api<BulkLocalizeEstimate>('/api/jobs/localize/bulk-estimate', { json: { items, languages } })
+
+export const bulkLocalize = (items: AdRef[], languages: string[]) =>
+  api<BulkCreateResult>('/api/jobs/localize/bulk', { json: { items, languages } })
+
+export const verifyLocalizeLanguage = (
+  pipeline: string,
+  slug: string,
+  adId: string,
+  language: string,
+  verified: boolean,
+) =>
+  api<{ verified_languages: Record<string, LangVerify> }>(
+    `/api/tracker/${encodeURIComponent(pipeline)}/${encodeURIComponent(slug)}/${encodeURIComponent(adId)}/localize-verify`,
+    { method: 'PATCH', json: { language, verified } },
   )

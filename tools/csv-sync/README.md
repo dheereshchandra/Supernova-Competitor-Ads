@@ -21,6 +21,11 @@ Each row is a **join**: `<comp>_enriched.csv` (the per-ad spine) ⋈ `master/<co
 
 **Upsert, not rewrite:** changed rows update in place, new ads append at the bottom — it **never reorders rows or touches columns you add to the right** (your manual notes survive), and the sheet's URL/tabs never change.
 
+**Localized-script columns (auto-expanding):** when an ad has language replications (the `locales`
+map on its `step4_workspace/scenes/<id>.gdocs.json` sidecar, written by `step4_localize.py` / the
+Ad Studio 🌍 Localize action), the Overview tab gains one **"<Lang> Script Doc"** column per
+language present — added automatically on the next sync, empty for ads without that language.
+
 ## One-time setup
 1. **Enable the Google Sheets API** in the same GCP project as the service-account key (`gdrive-sa.json`):
    console.cloud.google.com → APIs & Services → Library → **Google Sheets API** → **Enable**. (The

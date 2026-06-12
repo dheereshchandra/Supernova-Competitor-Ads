@@ -7,22 +7,27 @@ import { Spinner } from './ui'
 export default function SelectionBar({
   count,
   generateCount,
+  localizeCount,
   busy,
   note,
   onShortlist,
   onDismiss,
   onGenerate,
+  onLocalize,
   onSelectAll,
   onClear,
 }: {
   count: number
   /** selected ads that look generatable (client pre-filter; server re-checks) */
   generateCount: number
+  /** selected ads with an English script — eligible for language replication */
+  localizeCount: number
   busy: boolean
   note: string
   onShortlist: () => void
   onDismiss: () => void
   onGenerate: () => void
+  onLocalize: () => void
   onSelectAll: () => void
   onClear: () => void
 }) {
@@ -60,6 +65,18 @@ export default function SelectionBar({
             className={`${btn} bg-violet-600 text-white hover:bg-violet-500`}
           >
             ✨ Generate scripts{generateCount > 0 ? ` (${generateCount})` : ''}…
+          </button>
+          <button
+            onClick={onLocalize}
+            disabled={busy || localizeCount === 0}
+            title={
+              localizeCount === 0
+                ? 'None of the selected ads has an English Supernova script yet'
+                : undefined
+            }
+            className={`${btn} border border-violet-400/40 bg-violet-600/20 text-violet-200 hover:bg-violet-600/35`}
+          >
+            🌍 Localize{localizeCount > 0 ? ` (${localizeCount})` : ''}…
           </button>
           <button
             onClick={onDismiss}
