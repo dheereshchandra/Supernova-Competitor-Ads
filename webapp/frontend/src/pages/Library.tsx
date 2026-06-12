@@ -5,12 +5,15 @@ import {
   getCompetitors,
   getPipelinePending,
   type Ad,
+  type AdGroup,
   type AdsResponse,
   type Competitor,
 } from '../api'
 import { useApp } from '../AppContext'
-import { formatCount } from '../format'
+import { formatCount, rankPctLabel } from '../format'
 import AdCard from '../components/AdCard'
+import GroupCard from '../components/GroupCard'
+import GroupDrawer from '../components/GroupDrawer'
 import RunWorkflowModal from '../components/RunWorkflowModal'
 import { EmptyState, ErrorNote, PageLoading, Spinner } from '../components/ui'
 
@@ -19,7 +22,7 @@ const NEW_DAYS = 7 // "newly added this week"
 
 const SORTS = [
   { id: 'run_days', label: 'Longest running' },
-  { id: 'best_page_rank', label: 'Best rank' },
+  { id: 'rank_pct', label: 'Best rank (page-adjusted)' },
   { id: 'first_seen', label: 'Newest' },
 ]
 
@@ -32,21 +35,26 @@ interface Filters {
   pipeline: string
   competitor: string
   language: string
+  fbpage: string
   retired: 'any' | 'yes' | 'no'
   mediaType: '' | 'Video' | 'Image'
+  grouped: boolean
   sort: string
   q: string
   quick: Quick[]
 }
 
 function filtersFromParams(sp: URLSearchParams): Filters {
+  const sort = sp.get('sort') ?? 'run_days'
   return {
     pipeline: sp.get('pipeline') ?? 'facebook',
     competitor: sp.get('competitor') ?? '',
     language: sp.get('language') ?? '',
+    fbpage: sp.get('fbpage') ?? '',
     retired: (sp.get('retired') as Filters['retired']) ?? 'any',
     mediaType: (sp.get('media') as Filters['mediaType']) ?? '',
-    sort: sp.get('sort') ?? 'run_days',
+    grouped: sp.get('group') !== 'none', // grouped is the default view
+    sort: sort === 'best_page_rank' ? 'rank_pct' : sort, // old links → page-adjusted
     q: sp.get('q') ?? '',
     quick: sp.has('qf')
       ? (sp.get('qf')!.split(',').filter((x) => QUICK.includes(x as Quick)) as Quick[])
@@ -59,8 +67,10 @@ function paramsFromFilters(f: Filters): URLSearchParams {
   if (f.pipeline !== 'facebook') sp.set('pipeline', f.pipeline)
   if (f.competitor) sp.set('competitor', f.competitor)
   if (f.language) sp.set('language', f.language)
+  if (f.fbpage) sp.set('fbpage', f.fbpage)
   if (f.retired !== 'any') sp.set('retired', f.retired)
   if (f.mediaType) sp.set('media', f.mediaType)
+  if (!f.grouped) sp.set('group', 'none')
   if (f.sort !== 'run_days') sp.set('sort', f.sort)
   if (f.q) sp.set('q', f.q)
   sp.set('qf', f.quick.join(',')) // always present so toggling all-off round-trips
@@ -81,11 +91,13 @@ function buildQuery(f: Filters, page: number): URLSearchParams {
   if (f.quick.includes('notrev')) p.set('status', 'none')
   if (f.mediaType) p.set('media_type', f.mediaType)
   if (f.language) p.set('language', f.language)
+  if (f.fbpage) p.set('page_name', f.fbpage)
   if (f.retired !== 'any') p.set('retired', f.retired)
+  if (f.grouped) p.set('group', 'script')
   p.set('has_media', 'true')
   if (f.q.trim()) p.set('q', f.q.trim())
   p.set('sort', f.sort)
-  p.set('order', f.sort === 'best_page_rank' ? 'asc' : 'desc')
+  p.set('order', f.sort === 'rank_pct' || f.sort === 'best_page_rank' ? 'asc' : 'desc')
   p.set('page', String(page))
   p.set('page_size', String(PAGE_SIZE))
   return p
@@ -104,11 +116,18 @@ export default function Library() {
   const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const filters = useMemo(() => filtersFromParams(searchParams), [searchParams])
+  // The drawer param (`g`) lives in the URL too — exclude it from the key that
+  // drives data fetches so opening/closing the drawer never refetches the grid.
+  const filtersKey = useMemo(() => paramsFromFilters(filters).toString(), [filters])
+  const drawerTarget = searchParams.get('g') // "<competitor>::<gid>"
 
   const [showRun, setShowRun] = useState(false)
   const [competitors, setCompetitors] = useState<Competitor[]>([])
   const [ads, setAds] = useState<Ad[]>([])
+  const [groups, setGroups] = useState<AdGroup[] | null>(null)
   const [total, setTotal] = useState(0)
+  const [totalAds, setTotalAds] = useState<number | null>(null)
+  const [ungroupedAds, setUngroupedAds] = useState<number | null>(null)
   const [facets, setFacets] = useState<AdsResponse['facets'] | null>(null)
   const [newCount, setNewCount] = useState<number | null>(null)
   const [pendingCount, setPendingCount] = useState<number | null>(null)
@@ -125,6 +144,20 @@ export default function Library() {
     },
     [filters, setSearchParams],
   )
+
+  const openDrawer = useCallback(
+    (g: AdGroup) => {
+      const sp = new URLSearchParams(searchParams)
+      sp.set('g', `${g.representative.competitor}::${g.script_group_id}`)
+      return `?${sp.toString()}`
+    },
+    [searchParams],
+  )
+  const closeDrawer = useCallback(() => {
+    const sp = new URLSearchParams(searchParams)
+    sp.delete('g')
+    setSearchParams(sp, { replace: false })
+  }, [searchParams, setSearchParams])
 
   // competitors for the select + "new this week" count (re-fetch after a data run)
   useEffect(() => {
@@ -156,7 +189,8 @@ export default function Library() {
       .catch(() => setPendingCount(null))
   }, [filters.pipeline, dataVersion])
 
-  // main fetch on filter change
+  // main fetch on filter change (keyed on filtersKey, NOT the filters object —
+  // the drawer param recreates `filters` without changing anything meaningful)
   useEffect(() => {
     const seq = ++fetchSeq.current
     setLoading(true)
@@ -166,7 +200,10 @@ export default function Library() {
       .then((r) => {
         if (seq !== fetchSeq.current) return
         setAds(r.ads ?? [])
+        setGroups(r.groups ?? null)
         setTotal(r.total ?? 0)
+        setTotalAds(r.total_ads ?? null)
+        setUngroupedAds(r.ungrouped_ads ?? null)
         setFacets(r.facets ?? null)
         noteDataAsOf(r.data_as_of)
       })
@@ -174,12 +211,14 @@ export default function Library() {
         if (seq !== fetchSeq.current) return
         setError(e.message || 'Could not load ads')
         setAds([])
+        setGroups(null)
         setTotal(0)
       })
       .finally(() => {
         if (seq === fetchSeq.current) setLoading(false)
       })
-  }, [filters, noteDataAsOf, dataVersion])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filtersKey, noteDataAsOf, dataVersion])
 
   const loadMore = () => {
     const nextPage = page + 1
@@ -187,6 +226,7 @@ export default function Library() {
     getAds(buildQuery(filters, nextPage))
       .then((r) => {
         setAds((prev) => [...prev, ...(r.ads ?? [])])
+        if (r.groups) setGroups((prev) => [...(prev ?? []), ...r.groups!])
         setPage(nextPage)
       })
       .catch(() => {})
@@ -216,6 +256,15 @@ export default function Library() {
   )
   const languageFacet = facets?.language ?? {}
   const hasLanguages = Object.keys(languageFacet).length > 0
+  // page facet only exists when a single competitor is selected (backend rule)
+  const pageFacet = Object.entries(facets?.page ?? {}).sort((a, b) => b[1] - a[1])
+  const grouped = filters.grouped
+  const showEnrichBanner =
+    grouped &&
+    ungroupedAds != null &&
+    totalAds != null &&
+    totalAds > 0 &&
+    ungroupedAds / totalAds > 0.05
   const quickCount = (q: Quick): number | null => {
     if (q === 'top') return facets?.verdict?.strong_winner ?? null
     if (q === 'win') return facets?.verdict?.winner ?? null
@@ -233,7 +282,9 @@ export default function Library() {
         <div>
           <h1 className="text-lg font-semibold text-white">Competitor ad library</h1>
           <p className="text-sm text-zinc-500">
-            {formatCount(total)} ads · pick a winner to turn into a Supernova script
+            {grouped && totalAds != null
+              ? `${formatCount(total)} scripts · ${formatCount(totalAds)} ads · pick a winner to turn into a Supernova script`
+              : `${formatCount(total)} ads · pick a winner to turn into a Supernova script`}
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-3">
@@ -264,7 +315,12 @@ export default function Library() {
             className={selectCls}
             value={filters.pipeline}
             onChange={(e) =>
-              updateFilters({ pipeline: e.target.value, competitor: '', language: '' })
+              updateFilters({
+                pipeline: e.target.value,
+                competitor: '',
+                language: '',
+                fbpage: '',
+              })
             }
             title="Ad platform"
           >
@@ -275,7 +331,7 @@ export default function Library() {
           <select
             className={`${selectCls} w-[230px] truncate`}
             value={filters.competitor}
-            onChange={(e) => updateFilters({ competitor: e.target.value })}
+            onChange={(e) => updateFilters({ competitor: e.target.value, fbpage: '' })}
             title="Competitor"
           >
             <option value="">All competitors</option>
@@ -288,6 +344,22 @@ export default function Library() {
               )
             })}
           </select>
+
+          {filters.competitor && pageFacet.length >= 2 && (
+            <select
+              className={`${selectCls} w-[200px] truncate`}
+              value={filters.fbpage}
+              onChange={(e) => updateFilters({ fbpage: e.target.value })}
+              title="This competitor runs ads from several Facebook pages — ranks are only comparable within one page"
+            >
+              <option value="">All pages ({pageFacet.length})</option>
+              {pageFacet.map(([name, count]) => (
+                <option key={name} value={name}>
+                  {name} ({formatCount(count)} ads)
+                </option>
+              ))}
+            </select>
+          )}
 
           <select
             className={`${selectCls} w-[150px]`}
@@ -322,6 +394,14 @@ export default function Library() {
               ['', 'Any'],
               ['Video', 'Video'],
               ['Image', 'Image'],
+            ]}
+          />
+          <Toggle
+            value={grouped ? 'on' : 'off'}
+            onChange={(v) => updateFilters({ grouped: v === 'on' })}
+            options={[
+              ['on', 'Grouped'],
+              ['off', 'All ads'],
             ]}
           />
 
@@ -373,12 +453,27 @@ export default function Library() {
         />
       </div>
 
+      {/* ---------- enrichment-coverage note (grouped mode) ---------- */}
+      {showEnrichBanner && !loading && !error && (
+        <p className="text-xs text-zinc-600">
+          Variant grouping uses transcripts — {formatCount(ungroupedAds!)} of{' '}
+          {formatCount(totalAds!)} matching ads aren't transcribed yet and show
+          individually.{' '}
+          <button
+            onClick={() => setShowRun(true)}
+            className="text-violet-400/80 hover:underline"
+          >
+            Run enrichment →
+          </button>
+        </p>
+      )}
+
       {/* ---------- grid ---------- */}
       {error ? (
         <ErrorNote message={error} />
       ) : loading ? (
         <PageLoading label="Loading the ad library…" />
-      ) : ads.length === 0 ? (
+      ) : (grouped && groups ? groups.length : ads.length) === 0 ? (
         <EmptyState
           icon="🔍"
           title="No ads match these filters"
@@ -387,26 +482,67 @@ export default function Library() {
       ) : (
         <>
           <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
-            {ads.map((ad) => (
-              <AdCard key={`${ad.pipeline}/${ad.competitor}/${ad.ad_id}`} ad={ad} />
-            ))}
+            {grouped && groups
+              ? groups.map((g) => {
+                  const rep = g.representative
+                  const key =
+                    g.script_group_id ||
+                    `${rep.pipeline}/${rep.competitor}/${rep.ad_id}`
+                  const pill =
+                    filters.sort === 'rank_pct'
+                      ? rankPctLabel(rep.best_page_rank, rep.page_count)
+                      : undefined
+                  return g.group_size_total > 1 ? (
+                    <GroupCard key={key} group={g} to={openDrawer(g)} rankPill={pill} />
+                  ) : (
+                    <AdCard key={key} ad={rep} rankPill={pill} />
+                  )
+                })
+              : ads.map((ad) => (
+                  <AdCard
+                    key={`${ad.pipeline}/${ad.competitor}/${ad.ad_id}`}
+                    ad={ad}
+                    rankPill={
+                      filters.sort === 'rank_pct'
+                        ? rankPctLabel(ad.best_page_rank, ad.page_count)
+                        : undefined
+                    }
+                  />
+                ))}
           </div>
           <div className="flex flex-col items-center gap-3 pt-2 pb-8">
             <span className="text-xs text-zinc-500">
-              Showing {formatCount(ads.length)} of {formatCount(total)}
+              Showing {formatCount(grouped && groups ? groups.length : ads.length)} of{' '}
+              {formatCount(total)}
+              {grouped ? ' scripts' : ''}
             </span>
-            {ads.length < total && (
+            {(grouped && groups ? groups.length : ads.length) < total && (
               <button
                 onClick={loadMore}
                 disabled={loadingMore}
                 className="flex items-center gap-2 rounded-xl border border-white/10 bg-zinc-900 px-6 py-2.5 text-sm font-medium text-zinc-200 transition-colors hover:border-violet-400/40 hover:text-white disabled:opacity-50"
               >
                 {loadingMore && <Spinner className="h-4 w-4" />}
-                Load {Math.min(PAGE_SIZE, total - ads.length)} more
+                Load{' '}
+                {Math.min(
+                  PAGE_SIZE,
+                  total - (grouped && groups ? groups.length : ads.length),
+                )}{' '}
+                more
               </button>
             )}
           </div>
         </>
+      )}
+
+      {/* ---------- script-group drawer (deep-linkable via ?g=) ---------- */}
+      {drawerTarget && drawerTarget.includes('::') && (
+        <GroupDrawer
+          pipeline={filters.pipeline}
+          competitor={drawerTarget.split('::')[0]}
+          gid={drawerTarget.split('::').slice(1).join('::')}
+          onClose={closeDrawer}
+        />
       )}
 
       {showRun && (

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import type { Ad } from '../api'
 import { runDaysLabel } from '../format'
@@ -16,7 +17,23 @@ function posterUrl(ad: Ad): string {
   return `/api/thumb/${ad.pipeline}/${ad.competitor}/${ad.ad_id}`
 }
 
-export default function AdCard({ ad }: { ad: Ad }) {
+export default function AdCard({
+  ad,
+  to,
+  topRight,
+  subtitle,
+  rankPill,
+}: {
+  ad: Ad
+  /** Link target override (e.g. a group tile opens the variants drawer). */
+  to?: string
+  /** Replaces the media-type tag slot (top-right of the media area). */
+  topRight?: ReactNode
+  /** Replaces the page-name row in the footer. */
+  subtitle?: ReactNode
+  /** Small rank label shown next to run-days (page-adjusted rank sort). */
+  rankPill?: string
+}) {
   const ref = useRef<HTMLDivElement | null>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [inView, setInView] = useState(false)
@@ -59,7 +76,7 @@ export default function AdCard({ ad }: { ad: Ad }) {
 
   return (
     <Link
-      to={`/ad/${ad.pipeline}/${ad.competitor}/${ad.ad_id}`}
+      to={to ?? `/ad/${ad.pipeline}/${ad.competitor}/${ad.ad_id}`}
       className="group block"
     >
       <div
@@ -108,12 +125,14 @@ export default function AdCard({ ad }: { ad: Ad }) {
           <div className="absolute left-2 top-2">
             <VerdictBadge verdict={ad.verdict} />
           </div>
-          {/* media-type tag for non-video */}
-          {ad.media_type && !isVideo && (
+          {/* top-right slot: group badge, else media-type tag for non-video */}
+          {topRight ? (
+            <div className="absolute right-2 top-2">{topRight}</div>
+          ) : ad.media_type && !isVideo ? (
             <div className="absolute right-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-medium text-zinc-300">
               {ad.media_type}
             </div>
-          )}
+          ) : null}
         </div>
 
         {/* compact, FIXED-height footer so every tile is identical */}
@@ -121,6 +140,11 @@ export default function AdCard({ ad }: { ad: Ad }) {
           <div className="flex items-center justify-between gap-2">
             <span className="flex items-center gap-1 text-xs font-semibold text-zinc-100">
               🔥 {runDaysLabel(ad)}
+              {rankPill && (
+                <span className="rounded-full bg-white/10 px-1.5 py-0.5 text-[10px] font-medium text-zinc-300">
+                  {rankPill}
+                </span>
+              )}
             </span>
             {!ad.is_retired ? (
               <span className="flex items-center gap-1 text-[10px] font-medium text-emerald-400">
@@ -131,7 +155,9 @@ export default function AdCard({ ad }: { ad: Ad }) {
               <span className="text-[10px] text-zinc-500">retired</span>
             )}
           </div>
-          <div className="truncate text-[11px] text-zinc-400">{ad.page_name}</div>
+          {subtitle ?? (
+            <div className="truncate text-[11px] text-zinc-400">{ad.page_name}</div>
+          )}
           {/* reserved status row (keeps tiles uniform whether or not a chip shows) */}
           <div className="flex h-[18px] items-center">
             {jobActive ? (

@@ -114,12 +114,17 @@ export interface Ad {
   pipeline: string
   competitor: string
   ad_id: string
+  page_id: string
   page_name: string
+  page_count: number | null
   verdict: Verdict | string
   verdict_confidence: string
   media_type: string
   language: string
   device_format: string
+  script_group_id: string
+  replication_type: string
+  variant_role: string
   first_seen: string
   last_seen: string
   ad_start_date: string
@@ -153,8 +158,28 @@ export interface Ad {
   job: JobSummary | null
 }
 
+/** One Library tile in grouped mode: a script + every ad that runs it. */
+export interface AdGroup {
+  script_group_id: string // '' for an ungrouped (untranscribed) singleton
+  representative: Ad // first member matching the current filters, in sort order
+  members_matching: number
+  group_size_total: number
+  languages: string[]
+  languages_total: number
+  max_run_days: number
+  max_run_days_is_lower_bound: boolean
+  best_verdict: Verdict | string
+  winners: number
+  live_count: number
+  statuses: Record<string, number>
+  member_ids: string[]
+}
+
 export interface AdsResponse {
   total: number
+  /** grouped mode only: matching ads across all groups / ads with no script group */
+  total_ads?: number
+  ungrouped_ads?: number
   page: number
   page_size: number
   facets: {
@@ -162,9 +187,19 @@ export interface AdsResponse {
     media_type: Record<string, number>
     language: Record<string, number>
     device_format: Record<string, number>
+    page?: Record<string, number>
   }
   ads: Ad[]
+  groups?: AdGroup[]
   data_as_of?: string
+}
+
+export interface GroupDetail {
+  script_group_id: string
+  group_size_total: number
+  languages_total: number
+  winners_total: number
+  members: Ad[]
 }
 
 export interface Transcript {
@@ -186,6 +221,7 @@ export interface AdDetail extends Ad {
   transcript: Transcript | null
   rank_timeline: { date: string; rank: number }[]
   related: Ad[]
+  group_total: number
   activity: ActivityEntry[]
   latest_job: Job | null
 }
@@ -294,6 +330,11 @@ export const getAds = (params: URLSearchParams) =>
 export const getAd = (pipeline: string, slug: string, adId: string) =>
   api<AdDetail>(
     `/api/ads/${encodeURIComponent(pipeline)}/${encodeURIComponent(slug)}/${encodeURIComponent(adId)}`,
+  )
+
+export const getGroup = (pipeline: string, slug: string, gid: string) =>
+  api<GroupDetail>(
+    `/api/groups/${encodeURIComponent(pipeline)}/${encodeURIComponent(slug)}/${encodeURIComponent(gid)}`,
   )
 
 export const getEstimate = (pipeline: string, slug: string, adId: string) =>

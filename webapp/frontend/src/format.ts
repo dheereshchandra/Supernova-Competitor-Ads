@@ -225,6 +225,18 @@ export function runDaysLabel(ad: {
   return `${ad.run_days}${ad.run_days_is_lower_bound ? '+' : ''} days`
 }
 
+/** Page-size-aware rank label: "top 1%" on big pages, "#1 / 3" on tiny ones
+ * (a percentile of a 3-ad page is noise). */
+export function rankPctLabel(
+  rank: number | null | undefined,
+  pageCount: number | null | undefined,
+): string {
+  if (rank == null) return ''
+  if (!pageCount) return `#${rank}`
+  if (pageCount < 20) return `#${rank} / ${pageCount}`
+  return `top ${Math.max(1, Math.round((rank / pageCount) * 100))}%`
+}
+
 export function domainOf(url: string | null | undefined): string {
   if (!url) return ''
   try {
