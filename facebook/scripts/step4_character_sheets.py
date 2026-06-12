@@ -28,6 +28,7 @@ from io import BytesIO
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import _casting  # noqa: E402  — shared India-localisation + Miss Nova casting rules (feedback #8)
+import _image_ledger  # noqa: E402  — image-once guardrail (skip on the git-tracked R2 ledger)
 
 WORKSPACE = pathlib.Path("step4_workspace")
 SCENES_DIR = WORKSPACE / "scenes"
@@ -112,14 +113,21 @@ def _build_image_config(gt, aspect_ratio: str = "1:1", image_size: str = "2K"):
     return gt.GenerateContentConfig(**cfg)
 
 
-def generate_one_sheet(client, character: dict, out_path: pathlib.Path) -> tuple[bool, str]:
+def generate_one_sheet(client, character: dict, out_path: pathlib.Path,
+                       force: bool = False) -> tuple[bool, str]:
     """Returns (success, msg). Writes to out_path on success.
 
     Resolution: requests 2K @ 1:1 — character sheets are studio-portrait style,
     square framing is the cleanest reference for downstream panel generation.
     """
-    if out_path.exists() and out_path.stat().st_size > 50000:
-        return True, "skip-exists"
+    if not force:
+        if out_path.exists() and out_path.stat().st_size > 50000:
+            return True, "skip-exists"
+        # Image-once guardrail: already in R2 per the git-tracked ledger → never regenerate
+        # (bypassed only by --regenerate). ad_id + char id derive from the path.
+        if _image_ledger.ledger_has(IMAGES_DIR, out_path.parent.name, "char",
+                                    out_path.stem[len("char_"):-len("_sheet")]):
+            return True, "skip-ledger"
 
     try:
         from google.genai import types as gt
@@ -156,7 +164,7 @@ def generate_one_sheet(client, character: dict, out_path: pathlib.Path) -> tuple
         return False, f"error: {msg}"
 
 
-def collect_pending_work(ids: list[str]) -> list[tuple[str, dict, pathlib.Path]]:
+def collect_pending_work(ids: list[str], force: bool = False) -> list[tuple[str, dict, pathlib.Path]]:
     """Return list of (ad_id, character_dict, out_path) for sheets not yet on disk."""
     work = []
     for ad_id in ids:
@@ -170,8 +178,11 @@ def collect_pending_work(ids: list[str]) -> list[tuple[str, dict, pathlib.Path]]
         for char in chars:
             cid = char.get("id", "?")
             out_path = img_dir / f"char_{cid}_sheet.jpg"
-            if out_path.exists() and out_path.stat().st_size > 50000:
-                continue
+            if not force:
+                if out_path.exists() and out_path.stat().st_size > 50000:
+                    continue
+                if _image_ledger.ledger_has(IMAGES_DIR, ad_id, "char", cid):
+                    continue  # already in R2 — image-once guardrail
             work.append((ad_id, char, out_path))
     return work
 
@@ -182,6 +193,9 @@ def main() -> int:
     ap.add_argument("--competitor", required=True)
     ap.add_argument("ids", nargs="+")
     ap.add_argument("--max-parallel", type=int, default=8)
+    ap.add_argument("--regenerate", action="store_true",
+                    help="deliberate operator action: bypass the image-once guardrail and "
+                         "re-generate even sheets already in R2 (overwrites at the same key)")
     args = ap.parse_args()
 
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
@@ -192,7 +206,7 @@ def main() -> int:
     from google import genai
     client = genai.Client(api_key=env["GEMINI_API_KEY"])
 
-    work = collect_pending_work(args.ids)
+    work = collect_pending_work(args.ids, force=args.regenerate)
     print(f"Stage 3 — {len(work)} character sheets to generate "
           f"(across {len(args.ids)} videos)")
     if not work:
@@ -205,8 +219,8 @@ def main() -> int:
     errored = 0
 
     with ThreadPoolExecutor(max_workers=args.max_parallel) as ex:
-        futs = {ex.submit(generate_one_sheet, client, char, out): (aid, char.get('id'))
-                for aid, char, out in work}
+        futs = {ex.submit(generate_one_sheet, client, char, out, args.regenerate):
+                (aid, char.get('id')) for aid, char, out in work}
         for fut in as_completed(futs):
             aid, cid = futs[fut]
             ok, msg = fut.result()
