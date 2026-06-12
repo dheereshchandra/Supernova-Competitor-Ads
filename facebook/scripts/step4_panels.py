@@ -28,6 +28,7 @@ from io import BytesIO
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import _casting  # noqa: E402  — shared India-localisation + Miss Nova casting rules (feedback #8)
+import _image_ledger  # noqa: E402  — image-once guardrail (skip on the git-tracked R2 ledger)
 
 WORKSPACE = pathlib.Path("step4_workspace")
 SCENES_DIR = WORKSPACE / "scenes"
@@ -144,10 +145,15 @@ Output: one image, no text, no commentary."""
 
 
 def generate_one_panel(client, ad_id: str, scene: dict, panel: dict,
-                        characters: list[dict], out_path: pathlib.Path
-                        ) -> tuple[bool, str]:
-    if out_path.exists() and out_path.stat().st_size > 30000:
-        return True, "skip-exists"
+                        characters: list[dict], out_path: pathlib.Path,
+                        force: bool = False) -> tuple[bool, str]:
+    if not force:
+        if out_path.exists() and out_path.stat().st_size > 30000:
+            return True, "skip-exists"
+        # Image-once guardrail: already in R2 per the git-tracked ledger → never regenerate
+        # (bypassed only by --regenerate, the deliberate operator action).
+        if _image_ledger.ledger_has(IMAGES_DIR, ad_id, "gen", out_path.stem[len("gen_"):]):
+            return True, "skip-ledger"
 
     try:
         from google.genai import types as gt
@@ -177,7 +183,7 @@ def generate_one_panel(client, ad_id: str, scene: dict, panel: dict,
         return False, f"error: {msg}"
 
 
-def collect_pending_work(ids: list[str]) -> list[tuple]:
+def collect_pending_work(ids: list[str], force: bool = False) -> list[tuple]:
     """Return list of (ad_id, scene, panel, characters, out_path)."""
     work = []
     for ad_id in ids:
@@ -195,8 +201,11 @@ def collect_pending_work(ids: list[str]) -> list[tuple]:
             for panel in scene.get("panels", []):
                 pos = panel.get("position", "full")
                 out_path = img_dir / f"gen_{n:02d}_{pos}.jpg"
-                if out_path.exists() and out_path.stat().st_size > 30000:
-                    continue
+                if not force:
+                    if out_path.exists() and out_path.stat().st_size > 30000:
+                        continue
+                    if _image_ledger.ledger_has(IMAGES_DIR, ad_id, "gen", f"{n:02d}_{pos}"):
+                        continue  # already in R2 — image-once guardrail
                 work.append((ad_id, scene, panel, characters, out_path))
     return work
 
@@ -207,6 +216,10 @@ def main() -> int:
     ap.add_argument("--competitor", required=True)
     ap.add_argument("ids", nargs="+")
     ap.add_argument("--max-parallel", type=int, default=8)
+    ap.add_argument("--regenerate", action="store_true",
+                    help="deliberate operator action: bypass the image-once guardrail and "
+                         "re-generate even panels already in R2 (overwrites at the same key, "
+                         "so existing doc links stay valid)")
     args = ap.parse_args()
 
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
@@ -217,7 +230,7 @@ def main() -> int:
     from google import genai
     client = genai.Client(api_key=env["GEMINI_API_KEY"])
 
-    work = collect_pending_work(args.ids)
+    work = collect_pending_work(args.ids, force=args.regenerate)
     print(f"Stage 4 — {len(work)} panels to generate (across {len(args.ids)} videos)")
     if not work:
         print("Nothing to do.")
@@ -229,7 +242,8 @@ def main() -> int:
     errored = 0
 
     with ThreadPoolExecutor(max_workers=args.max_parallel) as ex:
-        futs = {ex.submit(generate_one_panel, client, aid, scene, panel, chars, out):
+        futs = {ex.submit(generate_one_panel, client, aid, scene, panel, chars, out,
+                          args.regenerate):
                 (aid, scene.get('n'), panel.get('position'))
                 for aid, scene, panel, chars, out in work}
         for fut in as_completed(futs):
