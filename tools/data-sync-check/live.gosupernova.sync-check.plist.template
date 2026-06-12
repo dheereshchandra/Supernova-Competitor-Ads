@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template only. Do NOT install this file directly — run tools/data-sync-check/install.sh,
+     which fills in __CHECK_SH__ and __LOG__ with absolute paths and loads the job.
+     Runs daily at 12:15 local — after the 11:30 repo-sync, 11:35 capture-sync and 11:45
+     csv-sync, so it validates the whole morning data chain end-to-end.
+     TO CHANGE THE TIME: edit Hour/Minute below, then re-run install.sh. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>live.gosupernova.sync-check</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>__CHECK_SH__</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>15</integer></dict>
+  </array>
+  <key>StandardOutPath</key>
+  <string>__LOG__</string>
+  <key>StandardErrorPath</key>
+  <string>__LOG__</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

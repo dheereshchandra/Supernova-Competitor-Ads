@@ -29,6 +29,18 @@ ping Dheeresh" overlay (PR #65) and auto-reconnects. Full runbook:
 `webapp/install/README.md` §3–4. `STUDIO_PUBLIC_URL` in `.env` = the ts.net URL
 (feeds the Sheet's "Open in Ad Studio" links).
 
+**Daily data-sync watchdog — `tools/data-sync-check/` (12:15).** A read-only
+launchd job (`live.gosupernova.sync-check`) that verifies the Mac, the repo and
+the Google Sheet all show the SAME data: git clean/in-sync, Ad Studio backend
+serving a clean pushed clone, Sheet Overview+Analysis keys == what
+`sync_to_sheets.py`'s own builder produces from local CSVs (so the comparison
+can't drift from the real sync), and Production Tracker == the app's SQLite
+tracker (keys + status). Runs after the 11:30/11:35/11:45 chain to validate the
+whole morning pipeline; silent when consistent, alerts via `tools/notify` on
+mismatch or when it can't verify. Install: `zsh tools/data-sync-check/install.sh`
+(canonical clone). First live run found + fixed 2 orphan test rows in the
+tracker tab; now fully CONSISTENT (11,454 ads match across all three).
+
 **Failure alerts — ONE shared notifier.** `tools/notify/notify.sh` posts a macOS
 banner + a Slack message (when `SLACK_WEBHOOK_URL` is set in `.env` — create an
 Incoming Webhook at api.slack.com/apps). Wired into: daily-scrape (per-competitor
