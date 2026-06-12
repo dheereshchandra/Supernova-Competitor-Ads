@@ -1,0 +1,74 @@
+{
+  "competitor_id": "1384519936752533",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Male presenter",
+        "appearance": "A South Asian man in his late 20s or early 30s with a medium build and a medium-dark complexion. He has short black hair, a full beard and mustache, and wears black-rimmed glasses.",
+        "wardrobe": "A dark blue hooded sweatshirt.",
+        "demeanor": "Friendly, knowledgeable, and encouraging, often using hand gestures to emphasize his points while speaking directly to the camera."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Hook: Fluency in 2 Weeks",
+        "supernova_script": "Character A says: I've taught English for 9 years, and I can tell you why most of us freeze when we have to speak.",
+        "scene_summary": "- Replaces the 'fluency in 2 weeks' guarantee with a relatable, third-person hook.\n- Names English immediately.\n- Sets up the problem without attacking the viewer's personal attributes.",
+        "supernova_on_screen_text": "I've taught English for 9 years...\nHere is why most of us\nfreeze when speaking"
+      },
+      {
+        "n": 2,
+        "scene_label": "The Problem: Practice & Confidence",
+        "supernova_script": "Character A says: You didn't learn Hindi by reading grammar books, you learned by speaking it.\nCharacter A says: English works exactly the same way, but practicing in public is scary.",
+        "scene_summary": "- Lands Beat f (mother-tongue reframe).\n- Removes the personal attack ('if you're afraid') and replaces it with a universal truth about public speaking anxiety.\n- Prepares the pivot to the AI solution.",
+        "supernova_on_screen_text": "You learned Hindi by speaking.\nEnglish works the same way.\nBut practicing in public is scary."
+      },
+      {
+        "n": 3,
+        "scene_label": "The AI Solution: MySivi App",
+        "supernova_script": "Character A says: That's why you need Supernova. Meet Miss Nova, your personal AI teacher.\nCharacter A says: She doesn't give everyone the same lesson. She analyzes your level and builds a plan just for you.",
+        "scene_summary": "- Introduces Supernova and names Miss Nova.\n- Lands Beat a (Personalization) early in the ad.\n- Removes the '7 days to activate your brain' guarantee.",
+        "supernova_on_screen_text": "Meet Miss Nova, your AI teacher.\nShe analyzes your level\nand builds a plan just for you."
+      },
+      {
+        "n": 4,
+        "scene_label": "How It Works: Practice with People",
+        "supernova_script": "Character A says: Practice for a job interview at 3 a.m. Make a thousand mistakes, and she will never judge you.\nCharacter A says: You speak, she listens, corrects you live, and explains the logic in Hindi.",
+        "scene_summary": "- Lands Beat b (Privacy/No-judgement) and Beat e (Job interview scenario).\n- Lands Beat c (You speak) and Beat g (Logic in Hindi).\n- Removes the 'talk to strangers' feature which is inaccurate for Supernova.",
+        "supernova_on_screen_text": "Practice for a job interview.\nMake 1000 mistakes, no judgement.\nYou speak, she corrects you live,\nand explains the logic in Hindi."
+      },
+      {
+        "n": 5,
+        "scene_label": "App Features Showcase",
+        "supernova_script": "Character A says: Stop scrolling Reels for hours. Give Miss Nova just fifteen minutes a day.\nCharacter A says: With daily practice, you'll start seeing visible progress in your confidence within a month.",
+        "scene_summary": "- Negative time anchor (Reels) + positive time anchor (15 mins/day).\n- Replaces the 'unlock confidence in 2 weeks' absolute guarantee with a safe, hedged progress expectation.",
+        "supernova_on_screen_text": "Stop scrolling Reels.\nJust 15 minutes a day.\nStart seeing visible progress\nin about a month."
+      },
+      {
+        "n": 6,
+        "scene_label": "Call to Action: Install Now",
+        "supernova_script": "Character A says: Install the Supernova app and start speaking English today.",
+        "scene_summary": "- Clean, direct CTA.\n- Re-emphasizes speaking.",
+        "supernova_on_screen_text": "Install Supernova App\nand start speaking today"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (Personalization), b (Privacy/No-judgement), c (You speak), e (Job interview), f (Mother-tongue reframe), g (Logic in Hindi)",
+      "kept_from_seed": "Inset presenter teaching over background visuals of classrooms, celebrities, and app UI.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure or comparative price used."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781259354.476855
+}
