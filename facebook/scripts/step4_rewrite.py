@@ -21,6 +21,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import pathlib
 import re
@@ -69,7 +70,9 @@ YOUR JOB — GENERATE A SUPERNOVA AD FROM A COMPETITOR'S PROVEN AD
 Everything above is Supernova's brand + payload context AND its brand-safety guardrails. After INPUT
 below you receive a structured scene-by-scene breakdown of a *competitor's* ad — a PROVEN winner. Each
 scene carries its VISUALS (`setting`, `visual_description`, `panel_visual_description`) plus its AUDIO
-(`audio_transcript`) and its `on_screen_text`.
+(`audio_transcript`) and its `on_screen_text`. The INPUT also names the SEED LANGUAGE — the language the
+competitor ad was originally made in (its target audience). USE that to adapt idioms, world and tone to
+that audience's reality — but your OUTPUT is always 100% English (see CONSTRAINTS).
 
 THE BALANCE — read twice:
 - **KEEP THE CORE OF THE AD AS-IS.** The visual concept, setting, scene order, cast, hook device and
@@ -152,18 +155,26 @@ CONSTRAINTS:
   Safe swaps: time anchor = "just 15 minutes a day" (NOT "15 minutes is all you need"); logic beat = "so it
   finally makes sense / explained in your own language" (NOT "so you never get confused" — the problem is
   the absolute "never", not the comprehension benefit itself, which is beat g and encouraged).
-- **Opener must not assert or question a personal ATTRIBUTE of the viewer (Meta G4.1, SEVERE).** Re-pitch
-  ONLY openers where the AD tells the VIEWER they are deficient — "You who can't speak English", "Can you
-  even speak English?". Allowed: a third-person/aspirational hook ("Millions freeze when they have to speak
-  English"); a self-diagnosed error a CHARACTER owns ("I used to say 'I passed out in 2022' — turns out
-  that means I fainted"); a RELATABLE shared error the viewer self-diagnoses, framed as common not personal
-  ("Most of us have said 'I passed out in 2022' — here's the fix") — the workhorse hook, and fine; or any
-  NEUTRAL second-person prompt/imperative ("Describe this clip in English", "Tell me about your interview").
-  Don't avoid second person itself — only the line that pins a deficiency on the viewer.
+- **KEEP THE SEED'S HOOK ENERGY — be permissive here (relaxed G4.1).** The hook is often WHY the seed
+  wins; do NOT sand it down by reflex, and do NOT soften it into "most of us…" framing. A character
+  speaking bluntly to the viewer is FINE: tough-love, direct second person, even an accusatory callout of
+  the viewer's BEHAVIOR or choices ("you scroll 4 hours a day but can't find 15 minutes for English — that's
+  your mistake", "still hiding behind ChatGPT?", "describe this clip in English") is allowed and encouraged
+  when the seed does it. PRESERVE it. ONLY re-pitch a hook that crosses a hard red line: it asserts or
+  derides a personal/PROTECTED ATTRIBUTE of the viewer (caste, religion, income, region, disability, gender,
+  age, body — e.g. "you illiterate?", "you who can't speak English are worthless"), demeans them as a
+  PERSON (vs. critiquing a behavior), or shames without resolving in dignity (G3.1). Behavior and choices
+  are fair game; identity and self-worth are not. When unsure, KEEP the seed's energy — the independent
+  brand-safety audit will catch a true violation.
 - Output ONLY a valid JSON object. No commentary, no markdown fences.
 - Every scene from the input must appear in the output with the same `n`, in the same order.
 - `supernova_script` MUST put each spoken turn on its OWN line with a "Character X says:" prefix — one line per turn (this renders as a clean Scene -> Character -> Script layout).
-- Write EVERYTHING (script + on-screen text) in ENGLISH — this is the base the team edits and localises to Hindi/Telugu/Tamil/etc. Capture the warm, conversational Hinglish *rhythm*, but do NOT output Devanagari/Tamil/etc. script or bracketed [translations].
+- **WRITE 100% PURE ENGLISH — every word.** Script + on-screen text are entirely in English: NO Hindi/
+  Tamil/Telugu/etc. words at all, not even romanized flavor lines ("Koi baat nahi", "yaar", "bindhast").
+  This English master is the SINGLE SOURCE the team reviews and then localizes into Indian languages
+  downstream; the code-mix is added at THAT stage, not here. Keep the warm, conversational rhythm — but
+  express it in plain English. Never output Devanagari/Tamil/etc. script or bracketed [translations].
+  EXCEPTION: a proper noun the brand keeps as-is (Supernova, Miss Nova) stays; that is not a foreign word.
 - Do NOT change the visuals or scene order. If a scene's dialogue is too brand-specific to re-pitch, still emit it with `supernova_script: "[scene-too-brand-specific-to-rewrite — manual edit needed]"`. Never silently skip scenes.
 
 INPUT:
@@ -192,9 +203,32 @@ def get_client():
     return genai.Client(api_key=env["GEMINI_API_KEY"])
 
 
+# Seed (source) language per ad — fed to the rewrite so the model adapts idioms/world to the
+# competitor ad's original audience (output is still 100% English). Sourced from the enriched
+# CSV's `language` column; falls back to inference-from-transcript when unavailable.
+ENRICHED_DIR = pathlib.Path(__file__).resolve().parent.parent.parent / "analysis" / "derived" / "facebook"
+
+
+def load_seed_languages(competitor: str) -> dict:
+    path = ENRICHED_DIR / f"{competitor}_enriched.csv"
+    out: dict[str, str] = {}
+    if not path.exists():
+        return out
+    try:
+        with path.open(encoding="utf-8-sig", newline="") as fh:
+            for r in csv.DictReader(fh):
+                aid, lang = r.get("ad_id"), (r.get("language") or "").strip()
+                if aid and lang:
+                    out.setdefault(aid, lang)
+    except Exception:
+        pass
+    return out
+
+
 def cmd_submit(client, ids: list[str], competitor: str) -> int:
     from google.genai import types as gt
     prompt = build_prompt()
+    seed_langs = load_seed_languages(competitor)
     inlined = []
     missing = []
     for ad_id in ids:
@@ -204,7 +238,8 @@ def cmd_submit(client, ids: list[str], competitor: str) -> int:
             continue
         decompose = json.loads(sidecar.read_text())
         parsed = decompose.get("parsed", {})
-        user_text = prompt + json.dumps(parsed, ensure_ascii=False)
+        seed_lang = seed_langs.get(ad_id) or "unknown (infer it from the audio_transcript)"
+        user_text = f"{prompt}SEED LANGUAGE: {seed_lang}\n\n" + json.dumps(parsed, ensure_ascii=False)
         inlined.append({
             "contents": [
                 gt.Content(role="user", parts=[gt.Part(text=user_text)]),
