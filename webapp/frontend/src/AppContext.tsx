@@ -24,9 +24,24 @@ interface AppState {
   refreshActiveJobs: () => void
   /** Bumps whenever a data-pipeline run finishes — screens watch it to re-fetch. */
   dataVersion: number
+  /** True when the backend (the operator's Mac) can't be reached — drives the offline overlay. */
+  serverDown: boolean
 }
 
 const Ctx = createContext<AppState | null>(null)
+
+/** Lightweight reachability ping — /api/health is unauthenticated, so 200 = up. */
+async function pingHealth(): Promise<boolean> {
+  try {
+    const ctrl = new AbortController()
+    const t = window.setTimeout(() => ctrl.abort(), 8000)
+    const r = await fetch('/api/health', { cache: 'no-store', signal: ctrl.signal })
+    window.clearTimeout(t)
+    return r.ok
+  } catch {
+    return false // network error / timeout / tunnel reports the origin is down
+  }
+}
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [userName, setUserName] = useState<string | null>(null)
@@ -36,7 +51,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [activeJobs, setActiveJobs] = useState<Job[]>([])
   const [jobsApiAvailable, setJobsApiAvailable] = useState(true)
   const [dataVersion, setDataVersion] = useState(0)
+  const [serverDown, setServerDown] = useState(false)
   const prevPipelineJobs = useRef<Map<string, string>>(new Map())
+  const failRef = useRef(0)
   const pollRef = useRef<number | null>(null)
 
   useEffect(() => {
@@ -104,6 +121,29 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
   }, [refreshActiveJobs])
 
+  // Reachability watcher — show the offline overlay after 2 consecutive misses
+  // (so a single network blip doesn't flash it).
+  useEffect(() => {
+    let cancelled = false
+    const check = async () => {
+      const up = await pingHealth()
+      if (cancelled) return
+      if (up) {
+        failRef.current = 0
+        setServerDown(false)
+      } else {
+        failRef.current += 1
+        if (failRef.current >= 2) setServerDown(true)
+      }
+    }
+    check()
+    const id = window.setInterval(check, 15_000)
+    return () => {
+      cancelled = true
+      window.clearInterval(id)
+    }
+  }, [])
+
   const noteDataAsOf = useCallback((s: string | null | undefined) => {
     if (s) setDataAsOf(s)
   }, [])
@@ -121,6 +161,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         jobsApiAvailable,
         refreshActiveJobs,
         dataVersion,
+        serverDown,
       }}
     >
       {children}

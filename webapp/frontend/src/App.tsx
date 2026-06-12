@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { AppProvider, useApp } from './AppContext'
 import Shell from './components/Shell'
+import ServerDownOverlay from './components/ServerDownOverlay'
 import { PageLoading } from './components/ui'
 import Library from './pages/Library'
 import AdDetail from './pages/AdDetail'
@@ -24,6 +25,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <AppProvider>
+        <ServerDownOverlay />
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route
