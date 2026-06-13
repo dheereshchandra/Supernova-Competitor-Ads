@@ -95,13 +95,17 @@ CONTENT_TYPE_BY_EXT = {
     ".html": "text/html; charset=utf-8",
     ".pdf": "application/pdf",
     ".txt": "text/plain; charset=utf-8",
+    ".mp3": "audio/mpeg",
+    ".wav": "audio/wav",
+    ".m4a": "audio/mp4",
 }
 
 # Types a browser can RENDER — serve these with `Content-Disposition: inline` so the
 # public R2 link OPENS in a tab (read + copy) instead of downloading a file. A .docx
 # can't render in any browser, so it always downloads regardless — that's the whole
 # reason the rewrite link now ships as .html instead.
-INLINE_TYPES = {"text/html; charset=utf-8", "application/pdf", "text/plain; charset=utf-8"}
+INLINE_TYPES = {"text/html; charset=utf-8", "application/pdf", "text/plain; charset=utf-8",
+                "audio/mpeg", "audio/wav", "audio/mp4"}
 
 
 def content_type_for(path: pathlib.Path) -> str:

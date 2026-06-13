@@ -49,6 +49,7 @@ STEP_LABELS = {
     "commit_push": "Saving to the repo",
     "sheet_sync": "Updating the tracker sheet",
     "localize": "Translating into the chosen languages",
+    "tts": "Generating the voiceover",
 }
 
 # Image generation (char_sheets, panels — Nano Banana Pro) is NO LONGER part of the
@@ -65,6 +66,9 @@ STEPS_IMAGE = ["hydrate", "estimate", "decompose_images",
 # Localization (PR 4): translate an existing English master into N languages. No image/decompose
 # stages — step4_localize.py reuses the ad's existing images (image-once guardrail).
 STEPS_LOCALIZE = ["localize", "commit_push", "sheet_sync"]
+# TTS (Stage 5a, voiceover only): synth a per-language voiceover from the approved script —
+# multi-provider (Cartesia + ElevenLabs), voice-mapped per character. No image/decompose stages.
+STEPS_TTS = ["tts", "commit_push", "sheet_sync"]
 
 _cancel_requested: set[int] = set()
 
@@ -94,6 +98,8 @@ def _download(url: str, dest: pathlib.Path) -> None:
 def steps_for(media_type: str, kind: str = "generate") -> list[str]:
     if kind == "localize":
         return STEPS_LOCALIZE
+    if kind == "tts":
+        return STEPS_TTS
     return STEPS_IMAGE if media_type == "Image" else STEPS_VIDEO
 
 
@@ -339,6 +345,20 @@ class JobRunner:
             if self.job.get("force_regen"):
                 argv.append("--regenerate")
             await self.must(step, argv, timeout_s=1200)
+        elif step == "tts":
+            raw = self.job.get("languages") or "[]"
+            try:
+                langs = json.loads(raw) if raw.strip().startswith("[") else \
+                    [x.strip() for x in raw.split(",") if x.strip()]
+            except Exception:
+                langs = [x.strip() for x in raw.split(",") if x.strip()]
+            if not langs:
+                raise StepFailed("tts: no target languages")
+            argv = [PY, "scripts/step4_tts.py", self.ad_id, "--competitor", self.slug,
+                    "--languages", ",".join(langs), "--source", "auto"]
+            if self.job.get("force_regen"):
+                argv.append("--regenerate")
+            await self.must(step, argv, timeout_s=1800)
         elif step == "commit_push":
             await self.step_commit_push()
         elif step == "sheet_sync":
@@ -354,6 +374,14 @@ class JobRunner:
         sidecar = FACEBOOK_DIR / "step4_workspace" / "scenes" / f"{self.ad_id}.gdocs.json"
         try:
             return json.loads(sidecar.read_text()).get("locales", {}) or {}
+        except Exception:
+            return {}
+
+    def collect_tts(self) -> dict:
+        """Read the per-language voiceover URLs the TTS engine wrote to the sidecar."""
+        sidecar = FACEBOOK_DIR / "step4_workspace" / "scenes" / f"{self.ad_id}.gdocs.json"
+        try:
+            return json.loads(sidecar.read_text()).get("tts", {}) or {}
         except Exception:
             return {}
 
@@ -389,6 +417,10 @@ class JobRunner:
         if kind == "localize":
             _set(self.id, status="done", finished_at=_now(), current_step=None)
             _tracker_on_localize(self.job, self.collect_locales())
+            return
+        if kind == "tts":
+            _set(self.id, status="done", finished_at=_now(), current_step=None)
+            _tracker_on_tts(self.job, self.collect_tts())
             return
         rewrite, analysis = self.collect_results()
         _set(self.id, status="done", finished_at=_now(), current_step=None,
@@ -435,6 +467,39 @@ def _tracker_on_localize(job: dict, locales: dict) -> None:
         "VALUES (?,?,?,?,?,?)",
         (job["pipeline"], job["competitor"], job["ad_id"], job.get("requested_by") or "system",
          "localized", f"Localized into: {', '.join(locales.keys())}"))
+    try:
+        from . import sheets
+        sheets.mark_dirty()
+    except Exception:
+        pass
+
+
+def _tracker_on_tts(job: dict, tts_map: dict) -> None:
+    """Write per-language voiceover URLs + seed verify state onto the tracker (status
+    unchanged — TTS is an append-only enrichment, like localization)."""
+    urls = {lang: (v or {}).get("track_url", "") for lang, v in tts_map.items()}
+    row = db.execute(
+        "SELECT tts_verified_languages FROM tracker WHERE pipeline=? AND competitor=? AND ad_id=?",
+        (job["pipeline"], job["competitor"], job["ad_id"])).fetchone()
+    verified = {}
+    if row and row["tts_verified_languages"]:
+        try:
+            verified = json.loads(row["tts_verified_languages"])
+        except Exception:
+            verified = {}
+    for lang in tts_map:
+        verified.setdefault(lang, {"verified": False, "verified_by": "", "at": ""})
+    db.execute(
+        """UPDATE tracker SET tts_audio_urls=?, tts_verified_languages=?,
+           updated_at=datetime('now')
+           WHERE pipeline=? AND competitor=? AND ad_id=?""",
+        (json.dumps(urls), json.dumps(verified),
+         job["pipeline"], job["competitor"], job["ad_id"]))
+    db.execute(
+        "INSERT INTO activity (pipeline, competitor, ad_id, who, action, detail) "
+        "VALUES (?,?,?,?,?,?)",
+        (job["pipeline"], job["competitor"], job["ad_id"], job.get("requested_by") or "system",
+         "tts", f"Voiceover for: {', '.join(tts_map.keys())}"))
     try:
         from . import sheets
         sheets.mark_dirty()
