@@ -10,6 +10,7 @@ export default function SelectionBar({
   localizeCount,
   busy,
   note,
+  warning,
   onShortlist,
   onDismiss,
   onGenerate,
@@ -24,6 +25,8 @@ export default function SelectionBar({
   localizeCount: number
   busy: boolean
   note: string
+  /** live heads-up that some selected ads are already in the pipeline */
+  warning?: string
   onShortlist: () => void
   onDismiss: () => void
   onGenerate: () => void
@@ -36,6 +39,11 @@ export default function SelectionBar({
   return (
     <div className="fixed bottom-4 left-1/2 z-40 -translate-x-1/2">
       <div className="fade-in-up flex flex-col items-center gap-1.5">
+        {warning && (
+          <div className="max-w-md rounded-full border border-amber-400/30 bg-amber-500/15 px-3 py-1 text-center text-[11px] text-amber-200 shadow-lg">
+            ⚠ {warning}
+          </div>
+        )}
         {note && (
           <div className="rounded-full border border-white/10 bg-zinc-900/95 px-3 py-1 text-[11px] text-zinc-300 shadow-lg">
             {note}

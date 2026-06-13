@@ -415,11 +415,12 @@ export interface AdRef {
 
 export interface BulkSkipped extends AdRef {
   reason: string
+  /** the ad's current pipeline stage (for 'unchanged' / 'already_in_flow') */
+  status?: string
 }
 
 export interface BulkTrackerResult {
   changed: number
-  unchanged: number
   skipped: BulkSkipped[]
 }
 

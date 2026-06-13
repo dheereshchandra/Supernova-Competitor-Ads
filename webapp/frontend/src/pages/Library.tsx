@@ -12,7 +12,7 @@ import {
   type Competitor,
 } from '../api'
 import { useApp } from '../AppContext'
-import { formatCount, rankPctLabel } from '../format'
+import { formatCount, rankPctLabel, STATUS_FLOW, statusBadge } from '../format'
 import AdCard from '../components/AdCard'
 import BulkGenerateModal from '../components/BulkGenerateModal'
 import BulkLocalizeModal from '../components/BulkLocalizeModal'
@@ -23,6 +23,22 @@ import SelectionBar from '../components/SelectionBar'
 import { EmptyState, ErrorNote, InfoDot, PageLoading, Spinner } from '../components/ui'
 
 const adKey = (a: Ad) => `${a.pipeline}/${a.competitor}/${a.ad_id}`
+
+// An ad is "in the pipeline" once shortlisted, through to shipped (dismissed/dropped
+// are out of the flow). Each ad can be there only once, so re-adding is blocked.
+const IN_PIPELINE = new Set<string>(STATUS_FLOW)
+
+/** "2 Shortlisted · 1 In edit" — counts by stage, in pipeline order. */
+function summarizeStages(items: { status?: string | null }[]): string {
+  const counts: Record<string, number> = {}
+  for (const it of items) {
+    const s = it.status || ''
+    if (s) counts[s] = (counts[s] ?? 0) + 1
+  }
+  return STATUS_FLOW.filter((s) => counts[s])
+    .map((s) => `${counts[s]} ${statusBadge(s).label}`)
+    .join(' · ')
+}
 
 const PAGE_SIZE = 60
 const NEW_DAYS = 7 // "newly added this week"
@@ -315,6 +331,19 @@ export default function Library() {
       ),
     [selectedAds],
   )
+  // selected ads that are already in the pipeline → re-shortlisting them is a
+  // no-op (skipped server-side); surface a live heads-up so it's no surprise.
+  const selectedInPipeline = useMemo(
+    () => selectedAds.filter((a) => a.status && IN_PIPELINE.has(a.status)),
+    [selectedAds],
+  )
+  const pipelineWarning = selectedInPipeline.length
+    ? `${selectedInPipeline.length} of your selection ${
+        selectedInPipeline.length === 1 ? 'is' : 'are'
+      } already in the pipeline (${summarizeStages(
+        selectedInPipeline,
+      )}) — Shortlist won't add them again.`
+    : ''
 
   const toggleSelect = (ad: Ad, shiftKey: boolean) => {
     const idx = tiles.findIndex((a) => adKey(a) === adKey(ad))
@@ -378,11 +407,17 @@ export default function Library() {
           : prev,
       )
       const verb = status === 'shortlisted' ? 'Shortlisted' : 'Dismissed'
-      setBulkNote(
-        `${verb} ${r.changed}` +
-          (r.unchanged ? ` · ${r.unchanged} already were` : '') +
-          (r.skipped.length ? ` · ${r.skipped.length} skipped (already in the flow)` : ''),
+      const inPipe = r.skipped.filter(
+        (s) => s.reason === 'already_in_flow' || s.reason === 'unchanged',
       )
+      const notFound = r.skipped.filter((s) => s.reason === 'not_found').length
+      let note = `${verb} ${r.changed}`
+      if (inPipe.length)
+        note += ` · ${inPipe.length} already in the pipeline (${summarizeStages(
+          inPipe,
+        )}) — left as-is`
+      if (notFound) note += ` · ${notFound} not found`
+      setBulkNote(note)
       setSelected(new Set())
     } catch (e) {
       setBulkNote((e as Error).message || 'Something went wrong')
@@ -761,6 +796,7 @@ export default function Library() {
           localizeCount={localizableAds.length}
           busy={bulkBusy}
           note={bulkNote}
+          warning={pipelineWarning}
           onShortlist={() => applyBulkStatus('shortlisted')}
           onDismiss={() => applyBulkStatus('dismissed')}
           onGenerate={() => setShowBulkGen(true)}
