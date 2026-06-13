@@ -3,9 +3,9 @@
 # run_pipeline.sh — the ONE staged orchestrator for a competitor, end to end.
 #
 # Six named stages, in COST order. The costliest stage (Stage 6, Creative Studio
-# — Supernova script/image generation, Gemini *Pro* + Nano-Banana image-gen;
-# implemented by the legacy step4_* scripts) is the EXPLICIT LAST stage and runs
-# only behind a typed cost gate:
+# — Supernova script + document generation, Gemini *Pro* text; image generation
+# is a separate later step, NOT part of this pass; implemented by the legacy
+# step4_* scripts) is the EXPLICIT LAST stage and runs only behind a typed cost gate:
 #
 #   1 scrape    detect a fresh input snapshot (FB scrape is MANUAL; google is
 #               guardrailed) — missing/stale → print how-to + exit 10 (resumable)
@@ -290,7 +290,7 @@ PYEOF
 )"
   local total sel vids ids; IFS='|' read -r total sel vids ids <<<"$parsed"
   echo "  ┌──────────────────────────────────────────────"
-  echo "  │ Creative Studio (Supernova script/image gen — Gemini PRO + Nano-Banana)"
+  echo "  │ Creative Studio (Supernova script + docs — Gemini PRO text; images: separate later step)"
   echo "  │ competitor : $slug      scope: ${STEP4_SCOPE:-top:20}"
   echo "  │ selected   : ${sel} ad(s)   (videos: ${vids})"
   echo "  │ BATCH TOTAL: \$${total}"
@@ -326,9 +326,7 @@ step4_runbook() {  # print the exact ordered commands for the approved ids
     $PY scripts/step4_decompose.py upload $sp
     $PY scripts/step4_decompose_sync.py $slug $sp        # sync decompose (Pro)
     $PY scripts/step4_frames.py --competitor $slug $sp
-    $PY scripts/step4_character_sheets.py --competitor $slug $sp
-    $PY scripts/step4_panels.py --competitor $slug $sp
-    $PY scripts/step4_upload_images.py --competitor $slug $sp
+    $PY scripts/step4_upload_images.py --competitor $slug $sp        # original frames only (image gen is a separate later step)
     $PY scripts/step4_rewrite.py submit --competitor $slug $sp   # prints a poll id
     $PY scripts/step4_rewrite.py poll <short_id>                 # repeat until done
     $PY scripts/step4_build_docs.py --competitor $slug $sp
@@ -345,11 +343,9 @@ step4_execute() {  # auto-run the chain (cwd=facebook); each module is idempoten
     echo "  [stage6] decompose (upload + sync) ..."
     $PY scripts/step4_decompose.py upload $sp
     $PY scripts/step4_decompose_sync.py "$slug" $sp
-    echo "  [stage6] frames / character-sheets / panels ..."
+    echo "  [stage6] frames (original screenshots) ..."
     $PY scripts/step4_frames.py --competitor "$slug" $sp
-    $PY scripts/step4_character_sheets.py --competitor "$slug" $sp
-    $PY scripts/step4_panels.py --competitor "$slug" $sp
-    $PY scripts/step4_upload_images.py --competitor "$slug" $sp
+    $PY scripts/step4_upload_images.py --competitor "$slug" $sp   # original frames only; image generation is a separate later step
     echo "  [stage6] rewrite (submit → poll) ..."
     short="$($PY scripts/step4_rewrite.py submit --competitor "$slug" $sp \
              | tee /dev/stderr | grep -oE 'poll [A-Za-z0-9_-]+' | awk '{print $2}' | tail -1)"

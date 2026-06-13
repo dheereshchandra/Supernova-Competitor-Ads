@@ -51,12 +51,15 @@ STEP_LABELS = {
     "localize": "Translating into the chosen languages",
 }
 
+# Image generation (char_sheets, panels — Nano Banana Pro) is NO LONGER part of the
+# script/document chain; it runs as a separate later step. Frames (free) stay so the
+# competitor doc keeps the original video screenshots.
 STEPS_VIDEO = ["hydrate", "estimate", "decompose_upload", "decompose", "frames",
-               "char_sheets", "panels", "upload_images", "rewrite_submit",
+               "upload_images", "rewrite_submit",
                "rewrite_poll", "build_docs", "upload_and_update", "build_html",
                "upload_gdocs", "commit_push", "sheet_sync"]
 STEPS_IMAGE = ["hydrate", "estimate", "decompose_images",
-               "char_sheets", "panels", "upload_images", "rewrite_submit",
+               "upload_images", "rewrite_submit",
                "rewrite_poll", "build_docs", "upload_and_update", "build_html",
                "upload_gdocs", "commit_push", "sheet_sync"]
 # Localization (PR 4): translate an existing English master into N languages. No image/decompose
@@ -310,10 +313,9 @@ class JobRunner:
             await self.step_hydrate()
         elif step == "estimate":
             await self.step_estimate()
-        elif step == "char_sheets":
-            await self.step_loop_imagegen(step, "step4_character_sheets.py")
-        elif step == "panels":
-            await self.step_loop_imagegen(step, "step4_panels.py")
+        # char_sheets / panels (Nano Banana Pro image generation) were removed from the
+        # script/document chain — image generation runs as a separate later step.
+        # step_loop_imagegen() is retained for that future workflow.
         elif step == "rewrite_submit":
             await self.step_rewrite_submit()
         elif step == "rewrite_poll":
@@ -359,8 +361,13 @@ class JobRunner:
         kind = self.job.get("kind", "generate")
         steps = steps_for(self.media_type, kind)
         start_at = 0
-        if self.job.get("current_step") in steps:  # resume from the interrupted step
-            start_at = steps.index(self.job["current_step"])
+        cur = self.job.get("current_step")
+        if cur in steps:  # resume from the interrupted step
+            start_at = steps.index(cur)
+        elif cur in ("char_sheets", "panels") and "upload_images" in steps:
+            # image-gen stages were removed from the chain (now a separate later step);
+            # a job paused at one of them resumes at the next surviving step.
+            start_at = steps.index("upload_images")
         _set(self.id, status="running",
              started_at=self.job.get("started_at") or _now())
         for step in steps[start_at:]:
