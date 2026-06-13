@@ -66,6 +66,18 @@ def _json_list(v) -> list:
         return []
 
 
+def _os_from_url(url: str) -> str:
+    """Infer the target OS from an ad's destination link. Meta's Ad Library does
+    NOT publish OS targeting, so a direct app-store link is the only unambiguous
+    signal; web funnels / lead forms are OS-agnostic → "" (unknown)."""
+    u = (url or "").lower()
+    if "play.google.com" in u or "/store/apps/details" in u:
+        return "Android"
+    if "apps.apple.com" in u or "itunes.apple.com" in u:
+        return "iOS"
+    return ""
+
+
 class Catalog:
     def __init__(self) -> None:
         self._lock = threading.Lock()
@@ -223,6 +235,7 @@ class Catalog:
             "ad_text": text,
             "cta": (m.get("ad_cta_label") or m.get("ad_cta_text") or "").strip(),
             "destination_url": (m.get("ad_destination_url") or "").strip(),
+            "platform_os": _os_from_url(m.get("ad_destination_url") or ""),
             "ad_library_url": ad_link,
             "media_url": media_url,
             "thumb_url": frames[0] if frames else "",
@@ -298,7 +311,7 @@ class Catalog:
     def list_ads(self, pipeline: str = "facebook", competitor: str = "",
                  verdict: list[str] | None = None, media_type: list[str] | None = None,
                  language: list[str] | None = None, device_format: list[str] | None = None,
-                 page_name: list[str] | None = None,
+                 page_name: list[str] | None = None, platform_os: str = "",
                  retired: str = "any", generated: str = "any", has_media: bool = True,
                  has_transcript: str = "any", q: str = "",
                  min_run_days: int | None = None, first_seen_days: int | None = None,
@@ -324,6 +337,8 @@ class Catalog:
             preds["device_format"] = lambda a: a["device_format"] in device_format
         if page_name:
             preds["page"] = lambda a: a["page_name"] in page_name
+        if platform_os:
+            preds["platform_os"] = lambda a: a["platform_os"] == platform_os
         if retired in ("yes", "no"):
             preds["retired"] = (lambda a: a["is_retired"]) if retired == "yes" \
                 else (lambda a: not a["is_retired"])
@@ -368,6 +383,17 @@ class Catalog:
                 if v:
                     facets[dim][v] = facets[dim].get(v, 0) + 1
 
+        # OS coverage for the disclaimer: counted over the current view but with the
+        # OS filter itself excluded, so the % is stable whether or not iOS/Android is
+        # selected. OS is only known for ads whose destination is a direct store link.
+        os_view = apply(base, skip="platform_os")
+        os_coverage = {
+            "ios": sum(1 for a in os_view if a["platform_os"] == "iOS"),
+            "android": sum(1 for a in os_view if a["platform_os"] == "Android"),
+            "total": len(os_view),
+        }
+        os_coverage["known"] = os_coverage["ios"] + os_coverage["android"]
+
         key, default_desc = SORTS.get(sort, SORTS["run_days"])
         desc = default_desc if order == "" else (order == "desc")
         ads = sorted(ads, key=key, reverse=desc)
@@ -376,7 +402,8 @@ class Catalog:
         page = max(1, page)
         start = (page - 1) * page_size
         return {"total": total, "page": page, "page_size": page_size,
-                "facets": facets, "ads": ads[start:start + page_size]}
+                "facets": facets, "os_coverage": os_coverage,
+                "ads": ads[start:start + page_size]}
 
     # ---------- detail extras ----------
 

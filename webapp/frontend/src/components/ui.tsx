@@ -30,6 +30,33 @@ export function StatusChip({
   )
 }
 
+/** A small ⓘ dot that reveals a popover on hover/focus (full explanation). */
+export function InfoDot({
+  label = 'More info',
+  children,
+}: {
+  label?: string
+  children: ReactNode
+}) {
+  return (
+    <span className="group relative inline-flex">
+      <button
+        type="button"
+        aria-label={label}
+        className="flex h-4 w-4 items-center justify-center rounded-full border border-white/20 text-[10px] font-semibold text-zinc-400 hover:border-violet-400/50 hover:text-violet-300"
+      >
+        i
+      </button>
+      <span
+        role="tooltip"
+        className="pointer-events-none absolute left-1/2 top-6 z-50 hidden w-64 -translate-x-1/2 rounded-lg border border-white/10 bg-zinc-900 p-3 text-left text-[11px] leading-relaxed text-zinc-400 shadow-2xl group-hover:block group-focus-within:block"
+      >
+        {children}
+      </span>
+    </span>
+  )
+}
+
 export function Spinner({ className = 'h-4 w-4' }: { className?: string }) {
   return (
     <svg

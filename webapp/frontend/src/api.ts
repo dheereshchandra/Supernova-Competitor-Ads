@@ -139,6 +139,8 @@ export interface Ad {
   ad_text: string
   cta: string
   destination_url: string
+  /** inferred from the destination link: "iOS" | "Android" | "" (unknown/agnostic) */
+  platform_os: string
   ad_library_url: string
   media_url: string
   thumb_url: string
@@ -191,6 +193,8 @@ export interface AdsResponse {
     device_format: Record<string, number>
     page?: Record<string, number>
   }
+  /** OS classifiable from the destination link, over the current view (minus the OS filter). */
+  os_coverage?: { ios: number; android: number; known: number; total: number }
   ads: Ad[]
   groups?: AdGroup[]
   data_as_of?: string
