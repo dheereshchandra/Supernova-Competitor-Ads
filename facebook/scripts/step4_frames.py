@@ -22,9 +22,13 @@ import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import _image_ledger  # noqa: E402  — image-once guardrail (skip on the git-tracked R2 ledger)
+
 WORKSPACE = pathlib.Path("step4_workspace")
 SCENES_DIR = WORKSPACE / "scenes"
 FRAMES_DIR = WORKSPACE / "frames"
+IMAGES_DIR = WORKSPACE / "images"
 
 
 def _is_embeddable_jpeg(path: pathlib.Path) -> bool:
@@ -129,7 +133,7 @@ def extract_one(video_path: pathlib.Path, t: float, out_path: pathlib.Path) -> b
         return False
 
 
-def process_row(ad_id: str, competitor: str) -> dict:
+def process_row(ad_id: str, competitor: str, force: bool = False) -> dict:
     sidecar = SCENES_DIR / f"{ad_id}.json"
     if not sidecar.exists():
         return {"id": ad_id, "status": "no-sidecar", "extracted": 0, "failed": 0}
@@ -165,6 +169,15 @@ def process_row(ad_id: str, competitor: str) -> dict:
             return {"id": ad_id, "status": f"copy-failed: {e}",
                     "extracted": 0, "failed": 1, "scenes": 1}
 
+    # Image-once guardrail: if every frame is already in R2 (git-tracked ledger), skip — and
+    # crucially, DON'T require the source video on a fresh clone just to re-extract free frames.
+    # Bypassed by --regenerate (the deliberate operator action).
+    if not force and scenes and all(
+            _image_ledger.ledger_has(IMAGES_DIR, ad_id, "orig", f"{s.get('n', 0):02d}")
+            for s in scenes):
+        return {"id": ad_id, "status": "ok", "extracted": 0,
+                "skipped": len(scenes), "failed": 0, "scenes": len(scenes)}
+
     video = video_path_for(ad_id, competitor)
     if video is None:
         return {"id": ad_id, "status": "no-video", "extracted": 0, "failed": 0}
@@ -184,6 +197,9 @@ def process_row(ad_id: str, competitor: str) -> dict:
         if out_path.exists() and out_path.stat().st_size > 20_000:
             _normalize_jpeg(out_path)   # idempotent; fixes frames left by the pre-fix script
             skipped += 1
+            continue
+        if not force and _image_ledger.ledger_has(IMAGES_DIR, ad_id, "orig", f"{n:02d}"):
+            skipped += 1   # already in R2 — image-once guardrail
             continue
         if extract_one(video, float(t), out_path):
             extracted += 1
@@ -218,6 +234,9 @@ def main() -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--competitor", required=True)
     ap.add_argument("ids", nargs="+")
+    ap.add_argument("--regenerate", action="store_true",
+                    help="deliberate operator action: bypass the image-once guardrail and "
+                         "re-extract frames even when they already exist in R2")
     args = ap.parse_args()
 
     check_ffmpeg_available()
@@ -227,7 +246,7 @@ def main() -> int:
     print(f"Stage 2 — extracting frames for {len(args.ids)} videos")
     results = []
     with ThreadPoolExecutor(max_workers=4) as ex:
-        futs = {ex.submit(process_row, aid, competitor): aid for aid in args.ids}
+        futs = {ex.submit(process_row, aid, competitor, args.regenerate): aid for aid in args.ids}
         for fut in as_completed(futs):
             r = fut.result()
             results.append(r)

@@ -62,15 +62,23 @@ Gemini Flash) that checks every script before it reaches the team.*
   "illiterate," or a punchline.
 - **G3.3 [MODERATE] No language/accent mockery as the joke.** A *relatable* Indian-English error the
   viewer self-diagnoses is the hook; an accent or a person being the object of ridicule is not.
-- **G3.4 [MODERATE] No fear/insecurity that attacks self-worth.** Motivate toward aspiration ("you can
-  speak confidently"), don't tell someone they're worthless without English.
+- **G3.4 [MODERATE] No attack on self-WORTH (behavior critique IS allowed).** Don't tell someone they're
+  worthless or "less than" *as a person* without English. But motivating urgency about a HABIT or a missed
+  opportunity is fine and often the winning hook — "you waste 4 hours a day scrolling but skip 15 minutes
+  of English", "your appraisal is 30 days away" — because it targets a *choice*, not the person's worth.
+  Tough-love, blunt, direct second person is allowed; only an attack on identity/worth is not.
 
 ## G4 — Meta / Facebook ad policy (these run as FB ads — violations get auto-rejected)
 
-- **G4.1 [SEVERE] No personal-attribute assertions.** Meta prohibits implying you *know* a personal
-  trait of the viewer. ❌ "Are you someone who *can't* speak English?", "You who *failed* at English,"
-  "Struggling illiterate?" ✅ Third-person / aspirational ("Millions freeze when they have to speak
-  English — here's how to fix it").
+- **G4.1 [SEVERE] No assertion of a SENSITIVE / PROTECTED personal attribute.** Meta prohibits implying
+  you *know* a sensitive trait of the viewer — health, finances, religion, caste, sexual orientation, a
+  disability, or a worth-judgement like "illiterate". ❌ "Struggling illiterate?", "You who *failed* at
+  English are worthless." ✅ Critiquing a BEHAVIOR or choice is fine and is often the winning hook:
+  "you scroll 4 hours a day but skip 15 minutes of English — that's your mistake", "still hiding behind
+  ChatGPT?", a relatable self-diagnosed error ("I used to say 'I passed out in 2022'"), or a neutral
+  second-person prompt ("Describe this clip in English"). Blunt, tough-love second person is allowed —
+  only a claimed sensitive trait or an attack on the viewer's identity/worth is not. (Real winners run on
+  Meta for months with behavior-callout hooks; do not over-block them.)
 - **G4.2 [SEVERE] No misleading mechanics / fake UI.** No fake "play" buttons, fake system warnings,
   fake chat notifications, sham countdown timers, or claims the app does something it doesn't.
 - **G4.3 [MODERATE] No sensational / shocking before-after.** No exaggerated transformation claims or
