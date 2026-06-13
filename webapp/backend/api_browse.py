@@ -119,6 +119,7 @@ def list_ads(
     language: str = "",
     device_format: str = "",
     page_name: str = "",
+    platform_os: str = "",
     retired: str = "any",
     generated: str = "any",
     status: str = "",
@@ -140,7 +141,7 @@ def list_ads(
         pipeline=pipeline, competitor=competitor, verdict=_csv(verdict),
         media_type=_csv(media_type), language=_csv(language),
         device_format=_csv(device_format), page_name=_csv(page_name),
-        retired=retired, generated=generated,
+        platform_os=platform_os, retired=retired, generated=generated,
         has_media=has_media, has_transcript=has_transcript,
         min_run_days=min_run_days, first_seen_days=first_seen_days,
         q=q, sort=sort, order=order, page=1, page_size=10 ** 9)
@@ -162,14 +163,16 @@ def list_ads(
         return {"total": len(groups), "total_ads": len(ads),
                 "ungrouped_ads": ungrouped,
                 "page": page, "page_size": page_size,
-                "facets": full["facets"], "ads": [],
+                "facets": full["facets"], "os_coverage": full["os_coverage"],
+                "ads": [],
                 "groups": groups[start:start + page_size],
                 "data_as_of": catalog().loaded_at}
 
     total = len(ads)
     start = (page - 1) * page_size
     return {"total": total, "page": page, "page_size": page_size,
-            "facets": full["facets"], "ads": ads[start:start + page_size],
+            "facets": full["facets"], "os_coverage": full["os_coverage"],
+            "ads": ads[start:start + page_size],
             "data_as_of": catalog().loaded_at}
 
 

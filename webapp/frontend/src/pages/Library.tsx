@@ -20,7 +20,7 @@ import GroupCard from '../components/GroupCard'
 import GroupDrawer from '../components/GroupDrawer'
 import RunWorkflowModal from '../components/RunWorkflowModal'
 import SelectionBar from '../components/SelectionBar'
-import { EmptyState, ErrorNote, PageLoading, Spinner } from '../components/ui'
+import { EmptyState, ErrorNote, InfoDot, PageLoading, Spinner } from '../components/ui'
 
 const adKey = (a: Ad) => `${a.pipeline}/${a.competitor}/${a.ad_id}`
 
@@ -43,6 +43,7 @@ interface Filters {
   competitor: string
   language: string
   fbpage: string
+  platformOs: '' | 'iOS' | 'Android'
   retired: 'any' | 'yes' | 'no'
   mediaType: '' | 'Video' | 'Image'
   grouped: boolean
@@ -58,6 +59,7 @@ function filtersFromParams(sp: URLSearchParams): Filters {
     competitor: sp.get('competitor') ?? '',
     language: sp.get('language') ?? '',
     fbpage: sp.get('fbpage') ?? '',
+    platformOs: (sp.get('os') as Filters['platformOs']) ?? '',
     retired: (sp.get('retired') as Filters['retired']) ?? 'any',
     mediaType: (sp.get('media') as Filters['mediaType']) ?? '',
     grouped: sp.get('group') !== 'none', // grouped is the default view
@@ -75,6 +77,7 @@ function paramsFromFilters(f: Filters): URLSearchParams {
   if (f.competitor) sp.set('competitor', f.competitor)
   if (f.language) sp.set('language', f.language)
   if (f.fbpage) sp.set('fbpage', f.fbpage)
+  if (f.platformOs) sp.set('os', f.platformOs)
   if (f.retired !== 'any') sp.set('retired', f.retired)
   if (f.mediaType) sp.set('media', f.mediaType)
   if (!f.grouped) sp.set('group', 'none')
@@ -99,6 +102,7 @@ function buildQuery(f: Filters, page: number): URLSearchParams {
   if (f.mediaType) p.set('media_type', f.mediaType)
   if (f.language) p.set('language', f.language)
   if (f.fbpage) p.set('page_name', f.fbpage)
+  if (f.platformOs) p.set('platform_os', f.platformOs)
   if (f.retired !== 'any') p.set('retired', f.retired)
   if (f.grouped) p.set('group', 'script')
   p.set('has_media', 'true')
@@ -136,6 +140,7 @@ export default function Library() {
   const [totalAds, setTotalAds] = useState<number | null>(null)
   const [ungroupedAds, setUngroupedAds] = useState<number | null>(null)
   const [facets, setFacets] = useState<AdsResponse['facets'] | null>(null)
+  const [osCoverage, setOsCoverage] = useState<AdsResponse['os_coverage'] | null>(null)
   const [newCount, setNewCount] = useState<number | null>(null)
   const [pendingCount, setPendingCount] = useState<number | null>(null)
   const [page, setPage] = useState(1)
@@ -227,6 +232,7 @@ export default function Library() {
         setTotalAds(r.total_ads ?? null)
         setUngroupedAds(r.ungrouped_ads ?? null)
         setFacets(r.facets ?? null)
+        setOsCoverage(r.os_coverage ?? null)
         noteDataAsOf(r.data_as_of)
       })
       .catch((e: Error) => {
@@ -399,6 +405,10 @@ export default function Library() {
     totalAds != null &&
     totalAds > 0 &&
     ungroupedAds / totalAds > 0.05
+  // OS is inferred from the destination link → only some ads can be classified.
+  const osTotal = osCoverage?.total ?? 0
+  const osKnown = osCoverage?.known ?? 0
+  const osPct = osTotal ? Math.round((osKnown / osTotal) * 100) : 0
   const quickCount = (q: Quick): number | null => {
     if (q === 'top') return facets?.verdict?.strong_winner ?? null
     if (q === 'win') return facets?.verdict?.winner ?? null
@@ -550,6 +560,40 @@ export default function Library() {
             ]}
           />
 
+          {/* OS filter — derived from the destination link; only ~part of ads classify */}
+          <div className="flex items-center gap-1">
+            <Toggle
+              value={filters.platformOs}
+              onChange={(v) => updateFilters({ platformOs: v as Filters['platformOs'] })}
+              options={[
+                ['', 'All platforms'],
+                ['iOS', 'iOS'],
+                ['Android', 'Android'],
+              ]}
+            />
+            <InfoDot label="How the OS filter works">
+              <p className="font-medium text-zinc-200">Operating-system filter</p>
+              <p className="mt-1">
+                Meta's Ad Library doesn't publish OS targeting, so we infer it from
+                each ad's destination link — only a direct App Store / Play Store link
+                is unambiguous.
+              </p>
+              {osTotal > 0 && (
+                <p className="mt-2 text-zinc-300">
+                  In this view: <b>{osPct}%</b> have a recognizable OS
+                  {' '}({formatCount(osKnown)} of {formatCount(osTotal)}) —
+                  iOS {formatCount(osCoverage?.ios ?? 0)} ·
+                  Android {formatCount(osCoverage?.android ?? 0)}.
+                </p>
+              )}
+              <p className="mt-2 text-zinc-500">
+                The rest point to OS-agnostic web pages / lead forms, so they show only
+                under “All platforms.” Use iOS/Android only when you specifically want
+                that store's ads.
+              </p>
+            </InfoDot>
+          </div>
+
           <select
             className={`${selectCls} ml-auto w-[210px]`}
             value={filters.sort}
@@ -597,6 +641,15 @@ export default function Library() {
           className="w-full rounded-lg border border-white/10 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 outline-none focus:border-violet-400/50"
         />
       </div>
+
+      {/* ---------- OS-coverage disclaimer (always visible so the limit is clear) ---------- */}
+      {osTotal > 0 && !loading && !error && (
+        <p className="text-xs text-zinc-600">
+          🛈 OS known for only <span className="text-zinc-400">~{osPct}%</span> of these
+          ads ({formatCount(osKnown)} of {formatCount(osTotal)} link to a store) — the
+          rest are OS-agnostic, so the iOS / Android filter shows a limited set.
+        </p>
+      )}
 
       {/* ---------- enrichment-coverage note (grouped mode) ---------- */}
       {showEnrichBanner && !loading && !error && (
