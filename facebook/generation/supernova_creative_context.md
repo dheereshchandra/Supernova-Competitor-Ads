@@ -1,5 +1,5 @@
-# Supernova — Creative Context & Generation Playbook
-*The brand + winning-creative context for the ad-script generation step (feedback items #3 "make the pitch real, not a name-swap" and #4 "give the prompt real Supernova context"). Built from the team's strategy pointers + a teardown of 35 proven winning Supernova scripts across 7 languages (2nd-pay CAC ₹416–₹706).*
+# Supernova AI — Creative Context & Generation Playbook
+*The brand + winning-creative context for the ad-script generation step (feedback items #3 "make the pitch real, not a name-swap" and #4 "give the prompt real Supernova AI context"). Built from the team's strategy pointers + a teardown of 35 proven winning Supernova AI scripts across 7 languages (2nd-pay CAC ₹416–₹706).*
 
 > **How to use this document.** This is **context + a playbook, not a template.** The generator should treat it as the brand truth and the proven pattern library to draw on — then invent **widely**. Winners come in 8+ very different formats and 7+ hook types; the goal is *differentiated, on-brand* creative, not narrow clones. When in doubt, keep the **payload** disciplined and let the **hook/format/world** range freely.
 
@@ -7,7 +7,7 @@
 
 ## PART 1 — WHO SUPERNOVA IS (the product truth)
 
-Supernova is an **AI-powered spoken-English app for India**. The core promise is not "learn English" — it's **"finally learn to actually SPEAK English,"** through a personal AI teacher, in your own language, in 10–15 minutes a day.
+Supernova AI is an **AI-powered spoken-English app for India**. The core promise is not "learn English" — it's **"finally learn to actually SPEAK English,"** through a personal AI teacher, in your own language, in 10–15 minutes a day.
 
 What makes it real (use these, don't invent features):
 - **You SPEAK, it listens, it corrects you live.** Not typing, not reading, not watching — talking out loud. This is the whole differentiator.
@@ -17,7 +17,7 @@ What makes it real (use these, don't invent features):
 - **It's affordable and low-time** — cheaper than classes, ~15 min/day. *(See the price rule in Part 6 — a comparative like "7× cheaper than classes" is fine when apt; avoid a hard rupee figure.)*
 - **You feel real progress fast.** With ~15 min a day, most learners *start* noticing **visible progress in their speaking within about a month** — momentum that keeps them going. *(Frame as a realistic expectation from consistent practice — never a guaranteed result; see the timeline rule in Part 6 and brand-safety G1.1.)*
 
-**Optional truths (deploy when a concept calls for them — no hard rule, not default):** Supernova is **built by IITians** (good fuel for an authority/credibility hook); concrete features you may name — a **level test**, **1000+ practice activities/scenarios**, **scenario-based practice** (interview, manager, shopkeeper…). Reach for these when a particular script benefits; they need not appear in every ad.
+**Optional truths (deploy when a concept calls for them — no hard rule, not default):** Supernova AI is **built by IITians** (good fuel for an authority/credibility hook); concrete features you may name — a **level test**, **1000+ practice activities/scenarios**, **scenario-based practice** (interview, manager, shopkeeper…). Reach for these when a particular script benefits; they need not appear in every ad.
 
 The customer (esp. the **2nd-payment** audience that matters most): **non-college, blue-collar / Tier 2–3 Indians** who *understand* some English but freeze when they have to speak — and whose **dignity, jobs, and family standing** ride on it. **Every ad is targeted at Indians in India** — so when the competitor seed runs abroad, the script must be fully localized to an Indian frame (names, cities, references); see the **India-first localization** rule in Part 6.
 
@@ -25,13 +25,13 @@ The customer (esp. the **2nd-payment** audience that matters most): **non-colleg
 
 ## PART 2 — WHO MISS NOVA IS (the AI teacher persona)
 
-Supernova's AI teacher is **Miss Nova** (also "Nova"). She is the brand's recurring character and should be the *named* teacher whenever a teacher appears — naming her builds recall and warmth (winners that name her read as a friend, not a tool).
+Supernova AI's teacher is **Miss Nova** (also "Nova"). She is the brand's recurring character and should be the *named* teacher whenever a teacher appears — naming her builds recall and warmth (winners that name her read as a friend, not a tool).
 
 **Personality:** warm, patient, encouraging, quietly confident — *a supportive friend/older-sibling who happens to be a brilliant teacher*, never a scold, never a salesperson.
 **Tone:** calm reassurance + gentle correction. Signature beats: *"Koi baat nahi" / "Better late than never" / "Dheere-dheere confident ho jaoge."*
 **What she does on screen:** asks you something → you answer in broken English → she corrects it **and explains *why* in your language** → she reassures you it's normal → she invites you to practice with her.
 **What she never does:** mock you, rush you, talk down, or hard-sell.
-**Her core line of self-introduction (paraphrase, keep the spirit):** *"Main Miss Nova hoon. Main Supernova par logon ko English bolna sikhaati hoon — aapki hi bhasha mein."*
+**Her core line of self-introduction (paraphrase, keep the spirit):** *"Main Miss Nova hoon. Main Supernova AI par logon ko English bolna sikhaati hoon — aapki hi bhasha mein."*
 
 She can appear two ways, both proven: **(a) on-screen** as the AI/robot teacher in a correction scene, or **(b) named in dialogue** by a learner who credits her ("saari baatein main Miss Nova se karti hoon"). Use either.
 
@@ -54,10 +54,10 @@ The 7 payload beats, in order of importance. **a) is non-negotiable — it appea
 | **g** | **Logic explained in your language** — removes comprehension anxiety | *"'Pick' matlab uthaana, 'catch' matlab pakadna."* | Common in correction demos. Keep. |
 
 **Optional accent elements (use sparingly — a MINORITY of ads, only where they genuinely fit; NEVER a default, and NEVER ahead of the a–g beats above):**
-- **The ChatGPT / general-AI contrast** (high-value but rare in winners — *deploy in only some ads; do not reach for it by reflex, and never let it crowd out the a–g beats*): *"ChatGPT aapko jawab deta hai; Supernova aapse jawab nikalta hai." / "ChatGPT ek assistant hai, teacher nahi — ek Yes-Man."*
+- **The ChatGPT / general-AI contrast** (high-value but rare in winners — *deploy in only some ads; do not reach for it by reflex, and never let it crowd out the a–g beats*): *"ChatGPT aapko jawab deta hai; Supernova AI aapse jawab nikalta hai." / "ChatGPT ek assistant hai, teacher nahi — ek Yes-Man."*
 - **The universality claim** (occasional reinforcement, not required): *"Aap bhi seekh sakte ho." / "That's how I learnt English, and you can too."*
 
-**The tight close (every ad):** **negative time anchor** (name Meta's own surfaces or the generic activity; avoid naming a *third-party* brand like YouTube — e.g. the hours lost to scrolling Reels/feeds / tip-videos that never turn into speaking / saved English-tip PDFs that never get opened) **+ positive time anchor** (just 10–15 min/day) **+ one clean CTA** ("Install Supernova, start speaking today"). **Avoid a hard rupee price**; a *comparative* cost ("7× cheaper than coaching classes") is fine **when the script calls for it** — it need not appear in every ad. The most payload-complete winners ("Grammar is the LAST thing," "New Vowel Logic") nail exactly this close.
+**The tight close (every ad):** **negative time anchor** (name Meta's own surfaces or the generic activity; avoid naming a *third-party* brand like YouTube — e.g. the hours lost to scrolling Reels/feeds / tip-videos that never turn into speaking / saved English-tip PDFs that never get opened) **+ positive time anchor** (just 10–15 min/day) **+ one clean CTA** ("Install Supernova AI, start speaking today"). **Avoid a hard rupee price**; a *comparative* cost ("7× cheaper than coaching classes") is fine **when the script calls for it** — it need not appear in every ad. The most payload-complete winners ("Grammar is the LAST thing," "New Vowel Logic") nail exactly this close.
 
 ---
 
@@ -98,7 +98,7 @@ Eight proven containers (use them as starting points; recombine and invent):
 
 **Voice:** natural **Hinglish / code-mix** (native language + English, the way the audience actually talks), warm and conversational, never advertise-y, never heavy/Sanskritised. The teacher reassures; the learner is relatable, not stupid. Subtitles are dense, bilingual, line-by-line (sound-off feed).
 
-**India-first localization (HARD RULE — the whole audience is in India).** Supernova is for Indians, so every ad must read as unmistakably Indian. The competitor seed often runs abroad — so RE-SET every reference in the script + on-screen text to an Indian frame: **character names → Indian names** (Rahul, Priya, Anjali, Imran…, never "Jenny"/"John"); **cities/places → Indian** (Mumbai, Delhi, Lucknow, a Tier-2 town — the "Where are you from?" beat is answered with an Indian city, **never** "France"/"London"-as-home); money → ₹/Indian; plus food, festivals, workplaces, and any foreign-language snippet → Hindi (or the target Indian language). The reused VISUALS may force-keep a foreign element on screen — then simply don't have the script lean on it.
+**India-first localization (HARD RULE — the whole audience is in India).** Supernova AI is for Indians, so every ad must read as unmistakably Indian. The competitor seed often runs abroad — so RE-SET every reference in the script + on-screen text to an Indian frame: **character names → Indian names** (Rahul, Priya, Anjali, Imran…, never "Jenny"/"John"); **cities/places → Indian** (Mumbai, Delhi, Lucknow, a Tier-2 town — the "Where are you from?" beat is answered with an Indian city, **never** "France"/"London"-as-home); money → ₹/Indian; plus food, festivals, workplaces, and any foreign-language snippet → Hindi (or the target Indian language). The reused VISUALS may force-keep a foreign element on screen — then simply don't have the script lean on it.
 
 **Hard DON'Ts (these recruit the wrong buyer or break brand — the data backs each):**
 - ❌ **No hard rupee price** (₹9, "cheaper than chai"). The ₹9 ads (Casual-TED, Mother-in-law, Marathi-interview) post *higher* 2nd-pay CAC — a cheap absolute price recruits a low-commitment buyer who churns before the 2nd payment. ✅ A **comparative** cost ("affordable," "7× cheaper than coaching classes") is fine **when it fits the script** — just not every ad, and never a bare rupee figure.
@@ -108,7 +108,7 @@ Eight proven containers (use them as starting points; recombine and invent):
 - ❌ **No pure mockery / insult hook without an authoritative resolution.** Shame is allowed *only* when the underdog or authority *resolves* it in triumph/proof.
 - ❌ **Don't skip personalization (beat a)** — it's the #1 "how can AI teach ME?" objection-handler.
 - ❌ **Don't over-build the hook at the payload's expense** — 2nd payments come from the habit/retention beats, not from CTR.
-- ✅ **"1 crore+ users" social proof is fine to use** where it fits. (Note: in *competitor* data a generic "crore users" line under-indexed, but for Supernova it's an approved, true proof point — just don't let it carry the ad on its own; the **AI-teacher mechanism** and **download** CTA over-index, so pair them.)
+- ✅ **"1 crore+ users" social proof is fine to use** where it fits. (Note: in *competitor* data a generic "crore users" line under-indexed, but for Supernova AI it's an approved, true proof point — just don't let it carry the ad on its own; the **AI-teacher mechanism** and **download** CTA over-index, so pair them.)
 
 ---
 
@@ -116,12 +116,12 @@ Eight proven containers (use them as starting points; recombine and invent):
 
 **The blueprint winning structure** (3 acts):
 1. **HOOK (0–5s):** one of the 7 hook families; name English by 10s.
-2. **DEMO + PAYLOAD (the body):** *show* the speak→correct→explain-in-your-language loop, then stack the beats — **a (personalization) + b (privacy) are the retention engine** (land at least 3–4 of a–g total), plus mother-tongue reframe, old-methods-failed, and a named real-life scenario (interview first), and *optionally* the ChatGPT contrast where it fits. An in-story character question triggers the Miss Nova / Supernova reveal.
+2. **DEMO + PAYLOAD (the body):** *show* the speak→correct→explain-in-your-language loop, then stack the beats — **a (personalization) + b (privacy) are the retention engine** (land at least 3–4 of a–g total), plus mother-tongue reframe, old-methods-failed, and a named real-life scenario (interview first), and *optionally* the ChatGPT contrast where it fits. An in-story character question triggers the Miss Nova / Supernova AI reveal.
 3. **TIGHT CLOSE:** negative time anchor + positive (15 min/day) + one clean install CTA + universality claim. **No price.**
 
 The single most *payload-complete* proven script ("Grammar is the LAST thing") + the strongest *hooks* (shame-reversal, describe-this-in-English, news) point to the optimization: **that dense payload, fired behind a more emotional/pattern-break hook.**
 
-**Now the latitude (important):** Supernova's winners are *wildly* varied — a whisper, a fake newscast, a kitty-party revenge drama, a skydiving-grandma pattern-break, a talent-show flip, a TED puzzle. **Do NOT converge on one format.** The generator should:
+**Now the latitude (important):** Supernova AI's winners are *wildly* varied — a whisper, a fake newscast, a kitty-party revenge drama, a skydiving-grandma pattern-break, a talent-show flip, a TED puzzle. **Do NOT converge on one format.** The generator should:
 - Invent **new worlds, characters, and hooks** freely (the audience fatigues on sameness).
 - Vary **format, setting, character, emotion, and hook family** ad-to-ad.
 - Keep only **two things constant: the brand truth (Part 1–2) and a disciplined payload (Part 3) with a no-price tight close (Part 6).**
