@@ -136,6 +136,9 @@ class Catalog:
                 out[str(d.get("ad_library_id") or p.name.split(".")[0])] = {
                     "rewrite": (d.get("supernova_doc") or {}).get("link", ""),
                     "analysis": (d.get("competitor_doc") or {}).get("link", ""),
+                    # per-language localized Doc links (Title-cased lang -> url)
+                    "locales": {lang.title(): (loc or {}).get("link", "")
+                                for lang, loc in (d.get("locales") or {}).items()},
                 }
             except (json.JSONDecodeError, OSError):
                 continue
@@ -228,6 +231,7 @@ class Catalog:
             "char_sheet_urls": self._publicize_list(_json_list(m.get("char_sheet_urls"))),
             "rewrite_gdoc_url": rewrite_gdoc,
             "analysis_gdoc_url": analysis_gdoc,
+            "locales": sidecar.get("locales", {}),  # {Lang: localized Doc url}
             "rewrite_docx_url": rewrite_docx,
             "analysis_docx_url": analysis_docx,
             "rewrite_html_url": self._publicize((m.get("supernova_rewrite_html_r2_url") or "").strip()),

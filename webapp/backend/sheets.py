@@ -13,6 +13,7 @@ All writes are debounced + best-effort: a Sheets outage never breaks the app.
 from __future__ import annotations
 
 import asyncio
+import json
 import pathlib
 import sys
 import threading
@@ -70,22 +71,59 @@ def _studio_link(row: dict) -> str:
     return f"{base}{path}" if base else path
 
 
-def _row_values(t: dict) -> list[str]:
+def _json_col(t: dict, col: str) -> dict:
+    try:
+        return json.loads(t[col]) if t.get(col) else {}
+    except Exception:
+        return {}
+
+
+def _langs_in_tracker() -> list[str]:
+    """Union of localized languages across all tracker rows → the per-language
+    column set (auto-expanding: a new language adds its columns on next sync)."""
+    langs: set[str] = set()
+    for r in db.query("SELECT localization_gdoc_urls, verified_languages FROM tracker "
+                      "WHERE localization_gdoc_urls IS NOT NULL "
+                      "   OR verified_languages IS NOT NULL"):
+        t = dict(r)
+        langs.update(_json_col(t, "localization_gdoc_urls").keys())
+        langs.update(_json_col(t, "verified_languages").keys())
+    return sorted(langs)
+
+
+def _lang_headers(langs: list[str]) -> list[str]:
+    out = []
+    for lang in langs:
+        out += [f"{lang} Script (GDoc)", f"{lang} Verified"]
+    return out
+
+
+def _row_dict(t: dict, langs: list[str]) -> dict[str, str]:
     ad = catalog().get(t["pipeline"], t["competitor"], t["ad_id"]) or {}
-    return [
-        STATUS_LABEL.get(t["status"], t["status"]),
-        t["competitor"], t["pipeline"], t["ad_id"],
-        ad.get("page_name", ""), ad.get("verdict", ""),
-        str(ad.get("run_days") or ""),
-        ad.get("media_url", ""), ad.get("ad_library_url", ""),
-        t["rewrite_gdoc_url"] or ad.get("rewrite_gdoc_url", ""),
-        t["analysis_gdoc_url"] or ad.get("analysis_gdoc_url", ""),
-        t["rewrite_html_url"] or ad.get("rewrite_html_url", ""),
-        _studio_link(t),
-        t["requested_by"] or "", t["claimed_by"] or "",
-        t["created_at"] or "", t["script_ready_at"] or "", t["updated_at"] or "",
-        t["notes"] or "", t["final_video_url"] or "",
-    ]
+    d = {
+        "Status": STATUS_LABEL.get(t["status"], t["status"]),
+        "Competitor": t["competitor"], "Platform": t["pipeline"], "Ad ID": t["ad_id"],
+        "Page": ad.get("page_name", ""), "Verdict": ad.get("verdict", ""),
+        "Run Days": str(ad.get("run_days") or ""),
+        "Video (R2)": ad.get("media_url", ""),
+        "Ad Library": ad.get("ad_library_url", ""),
+        "Supernova Script (GDoc)": t["rewrite_gdoc_url"] or ad.get("rewrite_gdoc_url", ""),
+        "Competitor Analysis (GDoc)": t["analysis_gdoc_url"] or ad.get("analysis_gdoc_url", ""),
+        "Script (HTML)": t["rewrite_html_url"] or ad.get("rewrite_html_url", ""),
+        "Open in Ad Studio": _studio_link(t),
+        "Requested By": t["requested_by"] or "", "Claimed By": t["claimed_by"] or "",
+        "Created": t["created_at"] or "", "Script Ready": t["script_ready_at"] or "",
+        "Last Update": t["updated_at"] or "",
+        "Notes": t["notes"] or "", "Final Video Link": t["final_video_url"] or "",
+    }
+    links = _json_col(t, "localization_gdoc_urls")
+    verified = _json_col(t, "verified_languages")
+    for lang in langs:
+        d[f"{lang} Script (GDoc)"] = links.get(lang, "")
+        v = verified.get(lang) or {}
+        d[f"{lang} Verified"] = (f"✓ {v.get('verified_by', '')}".strip()
+                                 if v.get("verified") else ("pending" if lang in links else ""))
+    return d
 
 
 def _sync_once() -> None:
@@ -93,11 +131,20 @@ def _sync_once() -> None:
     from _gsheets import (append_rows, batch_update_values, col_to_a1,
                           read_tab_values, sanitize_cell, with_backoff)
     sheets_svc, ssid = _connect()
+    langs = _langs_in_tracker()
+    wanted = HEADERS + _lang_headers(langs)
     values = with_backoff(lambda: read_tab_values(sheets_svc, ssid, TAB))
     if not values:  # brand-new tab: write the header
-        with_backoff(lambda: append_rows(sheets_svc, ssid, TAB, [HEADERS]))
-        values = [HEADERS]
+        with_backoff(lambda: append_rows(sheets_svc, ssid, TAB, [wanted]))
+        values = [wanted]
     header = values[0]
+    # auto-expand: append any missing columns (e.g. a newly localized language)
+    missing = [h for h in wanted if h not in header]
+    if missing:
+        header = header + missing
+        rng = f"'{TAB}'!A1:{col_to_a1(len(header) - 1)}1"
+        with_backoff(lambda: batch_update_values(
+            sheets_svc, ssid, [{"range": rng, "values": [header]}]))
     idx = {h: i for i, h in enumerate(header)}
     key_idx = [idx[k] for k in KEY_COLS if k in idx]
     remote: dict[tuple, tuple[int, list]] = {}
@@ -123,11 +170,13 @@ def _sync_once() -> None:
                        "WHERE pipeline=? AND competitor=? AND ad_id=?",
                        (final, r["pipeline"], r["competitor"], r["ad_id"]))
 
-    # 2) upsert every tracker row (update changed, append new)
+    # 2) upsert every tracker row (update changed, append new) — cells serialized
+    #    in the REMOTE header's order, so team column rearrangements survive
     updates, appends = [], []
     for r in db.query("SELECT * FROM tracker"):
         t = dict(r)
-        vals = [sanitize_cell(v) for v in _row_values(t)]
+        d = _row_dict(t, langs)
+        vals = [sanitize_cell(d.get(h, "")) for h in header]
         key = (t["competitor"], t["pipeline"], t["ad_id"])
         hit = remote.get(key)
         if hit is None:

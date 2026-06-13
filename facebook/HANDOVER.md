@@ -999,6 +999,33 @@ If a future run wildly diverges from these numbers (e.g. cost > 3× the estimate
    ```
 7. Verify: `python3.13 facebook/scripts/preflight.py --check-gdrive` → expects a green `gdrive` line naming the Shared Drive. (The gdrive check is **opt-in**, so ordinary preflight and onboarding clones without Google creds are unaffected.)
 
+### 9.11 Localization — replicate the English master into Indian languages
+
+**The workflow** (designed + operator-locked 2026-06-12): every ad's Supernova script is generated
+ONCE in **pure English** (the master, Stage 5). The team reviews/edits the English **Google Doc
+directly** (direct edits + comments only — no suggesting mode; the edited Doc is the source of
+truth). Then it is replicated into any of **10 languages** (Hindi, Telugu, Tamil, Marathi, Kannada,
+Malayalam, Bengali, Gujarati, Assamese, Punjabi) — romanized, code-mixed, governed by
+`generation/supernova_translation_rules.md` (runtime-loaded; per-language register blocks grow from
+language-owner corrections). **Images are NEVER regenerated** — every language version reuses the
+ad's existing visuals via the R2 image ledger (`_image_ledger.py` skip in frames/panels/char-sheets;
+bypass only via the deliberate `--regenerate` flag).
+
+**Script:** `scripts/step4_localize.py <ad_id> --competitor <slug> --languages Hindi,Telugu
+[--source auto|gdoc|sidecar] [--dry-run] [--regenerate]`. Per language: read the EDITED English Doc
+(live text + unresolved comments via Drive API; falls back to the committed sidecar and says so) →
+Flash translation (schema-constrained) → brand-safety audit → per-language `.docx` (same images) →
+one Google Doc per language ("<Competitor> <id> — Supernova Rewrite (<Language>)") → a `locales` map
+on `<id>.gdocs.json` (idempotent — re-runs reuse the same Docs). Per-language sidecar:
+`<id>.<lang>.supernova.json` (includes the safety verdict; note a BLOCK can be FOOTAGE-inherent —
+e.g. a ₹-price stamp baked into the reused visuals — not a script problem).
+
+**In Ad Studio:** the ad page's "🌍 Replicate to languages" card (or the bulk 🌍 Localize action in
+the Library) queues a `localize` job → per-language chips appear with the Doc link and a
+**Verified** toggle (each language is verified by its language owner; `verified_by` is recorded and
+displayed, not enforced). Per-language columns propagate to the Production Tracker tab and the
+csv-sync Overview tab automatically (auto-expanding).
+
 ---
 
 ## 10. The Excel scientific-notation trap

@@ -335,6 +335,35 @@ def master_by_ad(pipeline: str, comp: str) -> dict:
     return {k: v[1] for k, v in best.items()}
 
 
+# ---- localized scripts (per-language Doc links from the gdocs.json sidecars) ----
+LOCALES: dict[str, dict] = {}        # ad_id -> {Lang: doc_url}
+LOCALE_LANGS: list[str] = []          # sorted union of languages seen
+
+
+def load_locales() -> None:
+    """Scan the git-tracked gdocs sidecars for per-language localized Docs and extend
+    the Overview columns with one '<Lang> Script Doc' column per language present.
+    Auto-expanding: a newly localized language adds its column on the next sync."""
+    global LOCALE_LANGS, OVERVIEW_HEADER
+    langs: set[str] = set()
+    for p in (REPO / "facebook" / "step4_workspace" / "scenes").glob("*.gdocs.json"):
+        try:
+            d = json.loads(p.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        locs = d.get("locales") or {}
+        if not locs:
+            continue
+        aid = str(d.get("ad_library_id") or p.name.split(".")[0])
+        LOCALES[aid] = {lang.title(): (loc or {}).get("link", "")
+                        for lang, loc in locs.items()}
+        langs.update(LOCALES[aid].keys())
+    LOCALE_LANGS = sorted(langs)
+    for lang in LOCALE_LANGS:
+        OVERVIEW_COLS.append((f"loc_{lang.lower()}", f"{lang} Script Doc"))
+    OVERVIEW_HEADER = [label for _, label in OVERVIEW_COLS]
+
+
 def build_overview_row(pipeline: str, comp: str, e: dict, m: dict, t: dict) -> dict:
     cfg = PIPELINES[pipeline]
     is_live = "live" if truthy(e.get("present_latest")) else ("retired" if truthy(e.get("is_retired")) else "")
@@ -361,6 +390,8 @@ def build_overview_row(pipeline: str, comp: str, e: dict, m: dict, t: dict) -> d
         "video": cfg["video"](m),
         "supernova_rewrite": cfg["rewrite_doc"](m),
         "competitor_analysis": cfg["analysis_doc"](m),
+        **{f"loc_{lang.lower()}": LOCALES.get((e.get("ad_id") or "").strip(), {}).get(lang, "")
+           for lang in LOCALE_LANGS},
     }
 
 
@@ -508,6 +539,7 @@ def main() -> int:
     args = ap.parse_args()
 
     os.chdir(REPO)  # launchd cwd-agnostic
+    load_locales()  # per-language Doc columns (must run before headers/rows build)
     overview_all, analysis_all = [], []
     for pipeline in PIPELINES:
         comps = [args.competitor] if args.competitor else discover_competitors(pipeline)

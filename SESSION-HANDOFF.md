@@ -1,7 +1,28 @@
 # Session Handoff — Competitor-Ad Analysis System
 
-> Running status so this work can resume in any workspace. Last updated 2026-06-12.
+> Running status so this work can resume in any workspace. Last updated 2026-06-13.
 > Read this first, then the linked docs.
+
+## 🆕 2026-06-13 — Localization workflow BUILT (PRs #70–#72 merged + the Ad Studio PR)
+
+English-master → multi-language replication is live end-to-end (design + translation rules locked
+with the operator 2026-06-12; W25 20-ad verification batch passed first-cut review):
+- **#70** relaxed replication rules (seed-faithful hooks; writer+auditor in lockstep) + pure-English
+  master + seed language passed to the rewrite + `facebook/generation/supernova_translation_rules.md`
+  (10 languages, runtime-loaded).
+- **#71** image-once guardrail: frames/panels/char-sheets skip on the git-tracked R2 image ledger
+  (`facebook/scripts/_image_ledger.py`) — a fresh clone never re-pays for images; `--regenerate` is
+  the only bypass.
+- **#72** `facebook/scripts/step4_localize.py` — the engine: edited English Doc (live text +
+  unresolved comments via Drive API) → Flash translation per language → safety audit → per-language
+  docx (SAME images) → one Google Doc per language → `locales` map on `<id>.gdocs.json`.
+- **Ad Studio PR (loc-p4-adstudio)**: `localize` job kind + ₹ bulk cost gates, "🌍 Replicate to
+  languages" card + per-language verify chips (verified_by recorded, not enforced; each language has
+  its own owner), bulk 🌍 Localize in the Library, per-language columns auto-expanding into the
+  Production Tracker + csv-sync Overview tabs. Full doc: `facebook/HANDOVER.md` §9.11.
+
+Parked (operator): TTS inputs (romanized + native-script, post-edit); post-approval production flow;
+extra English-master rules. Register blocks grow from language-owner corrections.
 
 ## What this project is
 A competitor-ad intelligence system (Facebook + Google) for Supernova. It scrapes

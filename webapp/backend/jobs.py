@@ -48,6 +48,7 @@ STEP_LABELS = {
     "upload_gdocs": "Creating the Google Docs",
     "commit_push": "Saving to the repo",
     "sheet_sync": "Updating the tracker sheet",
+    "localize": "Translating into the chosen languages",
 }
 
 STEPS_VIDEO = ["hydrate", "estimate", "decompose_upload", "decompose", "frames",
@@ -58,6 +59,9 @@ STEPS_IMAGE = ["hydrate", "estimate", "decompose_images",
                "char_sheets", "panels", "upload_images", "rewrite_submit",
                "rewrite_poll", "build_docs", "upload_and_update", "build_html",
                "upload_gdocs", "commit_push", "sheet_sync"]
+# Localization (PR 4): translate an existing English master into N languages. No image/decompose
+# stages — step4_localize.py reuses the ad's existing images (image-once guardrail).
+STEPS_LOCALIZE = ["localize", "commit_push", "sheet_sync"]
 
 _cancel_requested: set[int] = set()
 
@@ -84,12 +88,14 @@ def _download(url: str, dest: pathlib.Path) -> None:
         f.write(r.read())
 
 
-def steps_for(media_type: str) -> list[str]:
+def steps_for(media_type: str, kind: str = "generate") -> list[str]:
+    if kind == "localize":
+        return STEPS_LOCALIZE
     return STEPS_IMAGE if media_type == "Image" else STEPS_VIDEO
 
 
-def steps_payload(media_type: str) -> list[dict]:
-    return [{"key": k, "label": STEP_LABELS[k]} for k in steps_for(media_type)]
+def steps_payload(media_type: str, kind: str = "generate") -> list[dict]:
+    return [{"key": k, "label": STEP_LABELS[k]} for k in steps_for(media_type, kind)]
 
 
 def _event(job_id: int, step: str, line: str) -> None:
@@ -317,6 +323,20 @@ class JobRunner:
             if self.job.get("force_regen"):
                 argv.append("--force")
             await self.must(step, argv, timeout_s=300)
+        elif step == "localize":
+            raw = self.job.get("languages") or "[]"
+            try:
+                langs = json.loads(raw) if raw.strip().startswith("[") else \
+                    [x.strip() for x in raw.split(",") if x.strip()]
+            except Exception:
+                langs = [x.strip() for x in raw.split(",") if x.strip()]
+            if not langs:
+                raise StepFailed("localize: no target languages")
+            argv = [PY, "scripts/step4_localize.py", self.ad_id, "--competitor", self.slug,
+                    "--languages", ",".join(langs), "--source", "auto"]
+            if self.job.get("force_regen"):
+                argv.append("--regenerate")
+            await self.must(step, argv, timeout_s=1200)
         elif step == "commit_push":
             await self.step_commit_push()
         elif step == "sheet_sync":
@@ -327,8 +347,17 @@ class JobRunner:
         else:
             raise StepFailed(f"unknown step {step}")
 
+    def collect_locales(self) -> dict:
+        """Read the per-language Google Doc links the localize engine wrote to the sidecar."""
+        sidecar = FACEBOOK_DIR / "step4_workspace" / "scenes" / f"{self.ad_id}.gdocs.json"
+        try:
+            return json.loads(sidecar.read_text()).get("locales", {}) or {}
+        except Exception:
+            return {}
+
     async def run(self):
-        steps = steps_for(self.media_type)
+        kind = self.job.get("kind", "generate")
+        steps = steps_for(self.media_type, kind)
         start_at = 0
         if self.job.get("current_step") in steps:  # resume from the interrupted step
             start_at = steps.index(self.job["current_step"])
@@ -350,6 +379,10 @@ class JobRunner:
                 notify("Ad Studio: script generation failed",
                        f"{self.slug}/{self.ad_id} — {e}")
                 return
+        if kind == "localize":
+            _set(self.id, status="done", finished_at=_now(), current_step=None)
+            _tracker_on_localize(self.job, self.collect_locales())
+            return
         rewrite, analysis = self.collect_results()
         _set(self.id, status="done", finished_at=_now(), current_step=None,
              rewrite_html_url=_html_url(self.slug, self.ad_id))
@@ -367,6 +400,40 @@ def _html_url(slug: str, ad_id: str) -> str:
 
 
 # ---------- tracker side-effects ----------
+
+def _tracker_on_localize(job: dict, locales: dict) -> None:
+    """Write per-language links + seed verify state onto the tracker (status unchanged —
+    the ad stays where it is; localization is an append-only enrichment)."""
+    links = {lang: (loc or {}).get("link", "") for lang, loc in locales.items()}
+    # preserve any existing verify state; seed unseen languages as unverified
+    row = db.execute(
+        "SELECT verified_languages FROM tracker WHERE pipeline=? AND competitor=? AND ad_id=?",
+        (job["pipeline"], job["competitor"], job["ad_id"])).fetchone()
+    verified = {}
+    if row and row["verified_languages"]:
+        try:
+            verified = json.loads(row["verified_languages"])
+        except Exception:
+            verified = {}
+    for lang in locales:
+        verified.setdefault(lang, {"verified": False, "verified_by": "", "at": ""})
+    db.execute(
+        """UPDATE tracker SET localization_gdoc_urls=?, verified_languages=?,
+           updated_at=datetime('now')
+           WHERE pipeline=? AND competitor=? AND ad_id=?""",
+        (json.dumps(links), json.dumps(verified),
+         job["pipeline"], job["competitor"], job["ad_id"]))
+    db.execute(
+        "INSERT INTO activity (pipeline, competitor, ad_id, who, action, detail) "
+        "VALUES (?,?,?,?,?,?)",
+        (job["pipeline"], job["competitor"], job["ad_id"], job.get("requested_by") or "system",
+         "localized", f"Localized into: {', '.join(locales.keys())}"))
+    try:
+        from . import sheets
+        sheets.mark_dirty()
+    except Exception:
+        pass
+
 
 def _tracker_on_done(job: dict, rewrite: str, analysis: str, html: str) -> None:
     db.execute(

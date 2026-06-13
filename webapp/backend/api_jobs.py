@@ -1,6 +1,7 @@
 """Job + tracker API: enqueue generation, watch progress, manage workflow status."""
 from __future__ import annotations
 
+import datetime
 import json
 import subprocess
 
@@ -53,7 +54,7 @@ def _job_payload(r: dict, queue_ids: list[int]) -> dict:
         from .pipeline import PIPELINE_STEPS
         steps = PIPELINE_STEPS
     else:
-        steps = jobs.steps_payload(r.get("media_type") or "Video")
+        steps = jobs.steps_payload(r.get("media_type") or "Video", r.get("kind") or "generate")
     keys = [s["key"] for s in steps]
     cur = r.get("current_step")
     return {**{k: r.get(k) for k in (
@@ -124,6 +125,152 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
     except Exception:
         pass
     return {"job_id": job_id}
+
+
+# ---------------- localization (replicate an English master into N languages) ----------------
+
+SUPPORTED_LANGUAGES = ("Hindi", "Telugu", "Tamil", "Marathi", "Kannada", "Malayalam",
+                       "Bengali", "Gujarati", "Assamese", "Punjabi")
+LOCALIZE_COST_PER_LANG = 0.02  # Flash translate + safety audit; images are REUSED (₹0)
+
+
+def _ad_has_english(ad: dict) -> bool:
+    return bool((ad.get("rewrite_gdoc_url") or "").strip() or ad.get("has_gdocs"))
+
+
+def _validate_langs(langs: list[str]) -> None:
+    if not langs:
+        raise HTTPException(422, "Pick at least one language")
+    bad = [l for l in langs if l not in SUPPORTED_LANGUAGES]
+    if bad:
+        raise HTTPException(422, f"Unsupported language(s): {', '.join(bad)}")
+
+
+def _daily_spent() -> float:
+    row = db.query_one(
+        "SELECT COALESCE(SUM(cost_estimate_usd),0) AS s FROM jobs "
+        "WHERE status NOT IN ('failed','cancelled') AND date(created_at)=date('now')")
+    return (row["s"] or 0) if row else 0
+
+
+class LocalizeBody(BaseModel):
+    pipeline: str
+    competitor: str
+    ad_id: str
+    languages: list[str]
+    force: bool = False
+
+
+@router.post("/api/jobs/localize", status_code=201)
+def create_localize_job(body: LocalizeBody, user: str = Depends(require_user)):
+    if body.pipeline != "facebook":
+        raise HTTPException(422, "Localization is Facebook-only for now")
+    _validate_langs(body.languages)
+    ad = catalog().get(body.pipeline, body.competitor, body.ad_id)
+    if not ad:
+        raise HTTPException(404, "Ad not found")
+    if not _ad_has_english(ad):
+        raise HTTPException(422, "Generate the English Supernova script first")
+    active = db.query_one(
+        f"SELECT id FROM jobs WHERE pipeline=? AND competitor=? AND ad_id=? "
+        f"AND status IN {ACTIVE}", (body.pipeline, body.competitor, body.ad_id))
+    if active:
+        raise HTTPException(409, f"A run for this ad is already in flight (job #{active['id']})")
+    cost = len(body.languages) * LOCALIZE_COST_PER_LANG
+    cfg = settings()
+    if _daily_spent() + cost > cfg.max_daily_cost:
+        raise HTTPException(429, f"Daily spend cap reached ({inr(cfg.max_daily_cost)})")
+    cur = db.execute(
+        "INSERT INTO jobs (pipeline, competitor, ad_id, media_type, requested_by, "
+        "force_regen, cost_estimate_usd, kind, languages) VALUES (?,?,?,?,?,?,?,?,?)",
+        (body.pipeline, body.competitor, body.ad_id, ad.get("media_type"), user,
+         int(body.force), cost, "localize", json.dumps(body.languages)))
+    job_id = cur.lastrowid
+    _log(body.pipeline, body.competitor, body.ad_id, user, "localize",
+         f"queued localize job #{job_id} → {', '.join(body.languages)} (~{inr(cost)})")
+    try:
+        from . import sheets
+        sheets.mark_dirty()
+    except Exception:
+        pass
+    return {"job_id": job_id}
+
+
+class BulkLocalizeBody(BaseModel):
+    items: list[AdRef]
+    languages: list[str]
+
+
+def _classify_localize(items: list[AdRef]) -> list[dict]:
+    out = []
+    seen = set()
+    for it in items:
+        key = (it.pipeline, it.competitor, it.ad_id)
+        if key in seen:
+            continue
+        seen.add(key)
+        base = {"pipeline": it.pipeline, "competitor": it.competitor, "ad_id": it.ad_id}
+        ad = catalog().get(it.pipeline, it.competitor, it.ad_id)
+        if it.pipeline != "facebook":
+            out.append({**base, "eligible": False, "reason": "facebook_only"}); continue
+        if not ad:
+            out.append({**base, "eligible": False, "reason": "not_found"}); continue
+        if not _ad_has_english(ad):
+            out.append({**base, "eligible": False, "reason": "no_english_script"}); continue
+        active = db.query_one(
+            f"SELECT id FROM jobs WHERE pipeline=? AND competitor=? AND ad_id=? "
+            f"AND status IN {ACTIVE}", key)
+        if active:
+            out.append({**base, "eligible": False, "reason": "in_flight"}); continue
+        out.append({**base, "eligible": True})
+    return out
+
+
+@router.post("/api/jobs/localize/bulk-estimate")
+def bulk_localize_estimate(body: BulkLocalizeBody, _user: str = Depends(require_user)):
+    _validate_langs(body.languages)
+    items = _classify_localize(body.items)
+    per = len(body.languages) * LOCALIZE_COST_PER_LANG
+    for it in items:
+        if it.get("eligible"):
+            it["cost_usd"] = per
+    total = sum(it.get("cost_usd", 0) for it in items if it.get("eligible"))
+    cfg = settings()
+    return {"items": items, "languages": body.languages, "total_cost_usd": total,
+            "daily_cap_usd": cfg.max_daily_cost, "daily_spent_usd": _daily_spent(),
+            "daily_remaining_usd": max(0, cfg.max_daily_cost - _daily_spent())}
+
+
+@router.post("/api/jobs/localize/bulk", status_code=201)
+def bulk_localize(body: BulkLocalizeBody, user: str = Depends(require_user)):
+    _validate_langs(body.languages)
+    items = _classify_localize(body.items)
+    per = len(body.languages) * LOCALIZE_COST_PER_LANG
+    cfg = settings()
+    spent = _daily_spent()
+    queued, skipped = [], []
+    for it in items:
+        if not it.get("eligible"):
+            skipped.append(it); continue
+        if spent + per > cfg.max_daily_cost:
+            skipped.append({**it, "eligible": False, "reason": "daily_cap"}); continue
+        ad = catalog().get(it["pipeline"], it["competitor"], it["ad_id"]) or {}
+        cur = db.execute(
+            "INSERT INTO jobs (pipeline, competitor, ad_id, media_type, requested_by, "
+            "force_regen, cost_estimate_usd, kind, languages) VALUES (?,?,?,?,?,?,?,?,?)",
+            (it["pipeline"], it["competitor"], it["ad_id"], ad.get("media_type"), user,
+             0, per, "localize", json.dumps(body.languages)))
+        spent += per
+        queued.append({**it, "job_id": cur.lastrowid, "cost_usd": per})
+        _log(it["pipeline"], it["competitor"], it["ad_id"], user, "localize",
+             f"bulk localize → {', '.join(body.languages)}")
+    try:
+        from . import sheets
+        sheets.mark_dirty()
+    except Exception:
+        pass
+    return {"queued": queued, "skipped": skipped,
+            "total_queued_usd": sum(q["cost_usd"] for q in queued)}
 
 
 @router.get("/api/jobs")
@@ -530,3 +677,38 @@ def patch_tracker(pipeline: str, slug: str, ad_id: str, body: TrackerPatch,
     out = dict(db.query_one("SELECT * FROM tracker WHERE pipeline=? AND competitor=? AND ad_id=?",
                             (pipeline, slug, ad_id)))
     return out
+
+
+class LocalizeVerify(BaseModel):
+    language: str
+    verified: bool
+
+
+@router.patch("/api/tracker/{pipeline}/{slug}/{ad_id}/localize-verify")
+def localize_verify(pipeline: str, slug: str, ad_id: str, body: LocalizeVerify,
+                    user: str = Depends(require_user)):
+    """Record (display-only, not enforced) who verified a localized language."""
+    row = db.query_one("SELECT verified_languages FROM tracker "
+                       "WHERE pipeline=? AND competitor=? AND ad_id=?", (pipeline, slug, ad_id))
+    if row is None:
+        raise HTTPException(404, "No tracker row for this ad")
+    try:
+        verified = json.loads(row["verified_languages"]) if row["verified_languages"] else {}
+    except Exception:
+        verified = {}
+    verified[body.language] = {
+        "verified": body.verified,
+        "verified_by": user if body.verified else "",
+        "at": datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M") if body.verified else "",
+    }
+    db.execute("UPDATE tracker SET verified_languages=?, updated_at=datetime('now') "
+               "WHERE pipeline=? AND competitor=? AND ad_id=?",
+               (json.dumps(verified), pipeline, slug, ad_id))
+    _log(pipeline, slug, ad_id, user,
+         "localize_verify" if body.verified else "localize_unverify", body.language)
+    try:
+        from . import sheets
+        sheets.mark_dirty()
+    except Exception:
+        pass
+    return {"verified_languages": verified}
