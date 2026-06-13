@@ -293,23 +293,23 @@ def build_competitor_doc(ad_id: str, competitor: str, decompose: dict,
         else:
             doc.add_paragraph("(no original screenshot extracted)")
 
-        # Clean panels
+        # Clean regenerated panels — only shown when they actually exist. Image
+        # generation is a separate later step, so their absence here is expected
+        # and must not emit "unavailable" noise; the per-panel text descriptions
+        # below carry the visual detail in the meantime.
         panels = scene.get("panels", [])
-        if panels:
+        gen_panels = [(p.get("position", "full"),
+                       panel_image_path(ad_id, n, p.get("position", "full"))) for p in panels]
+        gen_panels = [(pos, pp) for pos, pp in gen_panels if pp]
+        if gen_panels:
             doc.add_paragraph("Clean regenerated panels:")
-            for panel in panels:
-                pos = panel.get("position", "full")
-                pp = panel_image_path(ad_id, n, pos)
-                if pp:
-                    try:
-                        doc.add_paragraph(f"  Panel: {pos}")
-                        doc.add_picture(str(pp), width=Inches(4.5))
-                        add_asset_caption(doc, gen_urls.get(f"{n:02d}_{pos}"))
-                    except Exception as e:
-                        log(f"    panel embed failed for {pp}: {e}")
-                else:
-                    doc.add_paragraph(f"  Panel: {pos} — (regeneration unavailable; "
-                                      f"content-policy block or pending)")
+            for pos, pp in gen_panels:
+                try:
+                    doc.add_paragraph(f"  Panel: {pos}")
+                    doc.add_picture(str(pp), width=Inches(4.5))
+                    add_asset_caption(doc, gen_urls.get(f"{n:02d}_{pos}"))
+                except Exception as e:
+                    log(f"    panel embed failed for {pp}: {e}")
 
         # Visual description
         if scene.get("visual_description"):
@@ -341,7 +341,8 @@ def build_competitor_doc(ad_id: str, competitor: str, decompose: dict,
     # Footer / provenance
     doc.add_heading("Provenance", level=2)
     doc.add_paragraph(f"Decomposed with: {decompose.get('model', '?')}")
-    doc.add_paragraph(f"Image generation: gemini-3-pro-image-preview (Nano Banana Pro)")
+    doc.add_paragraph("Clean-panel / character-sheet image generation runs as a separate later "
+                      "step (not part of this script/document pass).")
     doc.add_paragraph(f"This document is for internal competitor research. "
                       f"All copy and imagery is summarised from the competitor's public ad library.")
 
@@ -380,6 +381,25 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
                       "as a starting point for original Supernova creative — do not ship "
                       "this as-is.")
     doc.add_paragraph()
+
+    # Cast / legend — map each character id to its assigned name + role so a reader
+    # can follow the NAMED script below without mentally tracking "Character A".
+    # The rewrite assigns each character a `name` (Miss Nova for the AI teacher);
+    # older sidecars without names fall back to the id — role line.
+    cast = parsed_rewrite.get("characters", [])
+    if cast:
+        doc.add_heading("Cast / Legend", level=2)
+        for c in cast:
+            cid = c.get("id", "?")
+            role = c.get("role", "")
+            name = c.get("name")
+            if name:
+                doc.add_paragraph(f"Character {cid} = {name}" + (f" ({role})" if role else ""),
+                                  style="List Bullet")
+            else:
+                doc.add_paragraph(f"Character {cid} — {role}", style="List Bullet")
+        doc.add_paragraph()
+
     doc.add_paragraph("─" * 60)
 
     # Per-scene blocks
@@ -401,6 +421,20 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
                     add_asset_caption(doc, gen_urls.get(f"{n:02d}_{pos}"))
                 except Exception as e:
                     log(f"    supernova doc image embed failed: {e}")
+
+        # Scene visuals (kept from the competitor ad) — rendered as TEXT so this doc is
+        # self-contained without generated panels. Image generation is a separate later
+        # step; until it runs there are no panel images, so the look must be described here.
+        panel_descs = [p for p in panels if p.get("panel_visual_description")]
+        if scene_d.get("setting") or scene_d.get("visual_description") or panel_descs:
+            doc.add_heading("Scene visuals (kept from the competitor ad)", level=3)
+            if scene_d.get("setting"):
+                doc.add_paragraph(f"Setting: {scene_d['setting']}")
+            if scene_d.get("visual_description"):
+                doc.add_paragraph(scene_d["visual_description"])
+            for panel in panel_descs:
+                pos = panel.get("position", "full")
+                doc.add_paragraph(f"[{pos}] {panel['panel_visual_description']}", style="List Bullet")
 
         # Scene summary bullets
         if scene_r.get("scene_summary"):

@@ -1,5 +1,5 @@
-# Supernova — Brand-Safety Guardrails
-*The hard NEVERs for every generated Supernova ad (feedback item #5). This is the single source of
+# Supernova AI — Brand-Safety Guardrails
+*The hard NEVERs for every generated Supernova AI ad (feedback item #5). This is the single source of
 truth used in two places: (1) it's loaded into the generation prompt so the writer avoids violations
 up front, and (2) it's the rubric for the independent automated safety audit (`step4_safety_check.py`,
 Gemini Flash) that checks every script before it reaches the team.*
@@ -36,7 +36,7 @@ Gemini Flash) that checks every script before it reaches the team.*
 
 ## G2 — Competitors & disparagement
 
-- **G2.1 [MODERATE] Contrast, don't trash.** The ChatGPT contrast ("ChatGPT gives answers; Supernova
+- **G2.1 [MODERATE] Contrast, don't trash.** The ChatGPT contrast ("ChatGPT gives answers; Supernova AI
   extracts them from you") is on-brand and allowed. ❌ Naming and *insulting* a named competitor app
   ("unlike that useless XYZ app") — legal + policy risk. ❌ Naming a *third-party / competitor* learning
   channel or app (e.g. YouTube, or a NAMED coaching brand — the specific brand, NOT the generic category;
@@ -45,7 +45,7 @@ Gemini Flash) that checks every script before it reaches the team.*
   (The violation trigger is a NAMED platform/brand token — "YouTube", a coaching brand — not the generic
   verb; "scrolling tip-videos you never act on" with no platform named is fine.) ✅ Meta's OWN scroll
   surfaces (Reels / feeds) used as a generic "stop doomscrolling, spend the time learning" anchor are
-  fine, as is the ChatGPT *behaviour* contrast ("ChatGPT gives answers, Supernova makes you speak").
+  fine, as is the ChatGPT *behaviour* contrast ("ChatGPT gives answers, Supernova AI makes you speak").
   (The test is a NAMED third party + waste/negative framing — not "is it Meta-owned": Reels/feeds are OK
   ONLY as a neutral time-reallocation anchor ("spend that time learning"), never themselves trashed.)
 - **G2.2 [SEVERE] No false claims about a named competitor.** Never state a falsehood about another

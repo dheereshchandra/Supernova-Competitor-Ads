@@ -1,4 +1,4 @@
-# Supernova — Localization / Translation Rules (v2 — FINALIZED 2026-06-12, pending test validation)
+# Supernova AI — Localization / Translation Rules (v2 — FINALIZED 2026-06-12, pending test validation)
 
 *The consolidated rules for replicating a team-approved ENGLISH master script into the 10 target
 languages. Assembled per job as:*
@@ -40,7 +40,7 @@ Flash can't hold the register.*
      (City names INSIDE a quoted teaching line still re-cast per T6 — the line must stay believable
      for that viewer: Telugu version teaches "I am from Vijayawada", not "…Lucknow".)
   b. Grammar terms (tense, verb, sentence, pronunciation…).
-  c. Brand + proper nouns: **Supernova, Miss Nova**, people names, app/platform names.
+  c. Brand + proper nouns: **Supernova AI, Miss Nova**, people names, app/platform names.
   d. Product vocabulary: "English", "Spoken English", "AI Teacher", app, install, download,
      practice, level, plan, interview.
   e. Daily-speech English: phone, office, computer, time, late, please, ready, help, correct,
@@ -50,6 +50,13 @@ Flash can't hold the register.*
   g. Pleasantries: Perfect!, Thank you!, Good job!, Congrats!
   h. **Numbers stay numerals, English form:** "10–15 minutes", "1 crore+", "3 a.m.", "Day 15".
      Never spelled out in native words. "Crore" stays "crore" in ALL languages (no kodi/koti swap).
+     - **Carve-out — comparative multipliers go LOCAL.** A cost/quantity comparative like
+       "7× cheaper", "10× faster", "5 times more" sounds dubbed kept in English ("7 times cheaper")
+       but natural said in the language — so render the WHOLE multiplier (the spoken number-word +
+       the local "times/fold" word) in the target language: Hindi "coaching se **saat guna** sasta".
+       Use each language's natural multiplier word (§3). This is the ONLY money/number case that
+       localizes — every other number (amounts, durations, "1 crore+", "Day 15", times of day)
+       stays English numerals per the rule above.
   i. Hyphenated English compounds stay whole: "job-interview", "level-test" — never half-translated.
 
 **T3. Anti-newspaperish (the strongest rule).**
@@ -144,6 +151,11 @@ casting table. Native-script examples teach register; output is romanized (T10).
 > **Register-block status:** Tamil's block is complete (the gold standard). The other nine carry a
 > seeded block of the same shape, to be enriched by each language owner from their first 2–3
 > verified scripts — owner corrections get folded back into their language's block.
+>
+> **Multiplier word (the T2h carve-out):** each language renders comparative multipliers ("7×") with
+> its natural spoken multiplier word + the number (Hindi "saat guna"). Only Hindi's is seeded below;
+> every other language's is for its owner to fill from the natural spoken form (how a friend would
+> actually say "X times cheaper") — don't invent or dictionary-pick one.
 
 ### 3.1 Hindi
 - **Colloquial forms:** वो, ये, इसमें, क्या, यहाँ; spoken verb forms (कर रहा हूँ, करूँगा); never
@@ -153,6 +165,7 @@ casting table. Native-script examples teach register; output is romanized (T10).
 - **Politeness:** viewer/Miss Nova: आप + कीजिए/करिए/करो — never तू. Peers: तुम-tier.
 - **Register block (seed):** prefer "try karna" over "इस्तेमाल/प्रयास करना"; "tension mat lo",
   "ho jayega", "bas itna hi"; red flag: any सम्पूर्ण/अत्यंत-class Sanskritized word.
+- **Multiplier word:** "guna" — "7× cheaper than coaching" → "coaching se saat guna sasta".
 - **Casting:** M: Rahul, Amit, Rohit, Saurabh, Vikas, Ankit, Manish, Deepak · F: Priya, Neha,
   Pooja, Anjali, Shweta, Ritu, Sakshi, Nisha · default pair **Rahul/Priya** · Cities: Lucknow,
   Kanpur, Delhi, Patna, Indore · Language name: "Hindi".

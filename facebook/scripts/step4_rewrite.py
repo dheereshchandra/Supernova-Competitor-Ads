@@ -67,7 +67,7 @@ INSTRUCTIONS = """
 ================================================================================
 YOUR JOB — GENERATE A SUPERNOVA AD FROM A COMPETITOR'S PROVEN AD
 
-Everything above is Supernova's brand + payload context AND its brand-safety guardrails. After INPUT
+Everything above is Supernova AI's brand + payload context AND its brand-safety guardrails. After INPUT
 below you receive a structured scene-by-scene breakdown of a *competitor's* ad — a PROVEN winner. Each
 scene carries its VISUALS (`setting`, `visual_description`, `panel_visual_description`) plus its AUDIO
 (`audio_transcript`) and its `on_screen_text`. The INPUT also names the SEED LANGUAGE — the language the
@@ -82,8 +82,8 @@ THE BALANCE — read twice:
   Stay inside this ad's world (if the seed is absurdist, e.g. a skydiving baby, keep it absurdist).
 - **RE-PITCH ONLY THE MESSAGE inside that exact shell.** Rewrite each scene's `audio_transcript` into
   `supernova_script` and its `on_screen_text` into `supernova_on_screen_text` so the ad now delivers
-  Supernova's disciplined PAYLOAD (above), woven naturally into the EXISTING beats: swap the competitor
-  brand -> Supernova; lead with personalization (a) + privacy/no-judgement (b); name **Miss Nova** as
+  Supernova AI's disciplined PAYLOAD (above), woven naturally into the EXISTING beats: swap the competitor
+  brand -> Supernova AI; lead with personalization (a) + privacy/no-judgement (b); name **Miss Nova** as
   the AI teacher; name **English** within the first ~10s; keep an in-story reveal; weave in the
   mother-tongue reframe / a named real-life scenario WHERE THEY FIT this world (and, only OCCASIONALLY —
   not every ad — the ChatGPT contrast, when it genuinely fits). Strip any
@@ -97,6 +97,12 @@ THE BALANCE — read twice:
   (Real failure to avoid: a "Where are you from?" beat answered "I am from France", or a learner named
   "Jenny" — make them an Indian city and an Indian name.) Only an element FORCED by the reused VISUALS
   may remain on screen; everything you WRITE must read as unmistakably Indian.
+- **NAME EVERY CHARACTER — and use the name, not "Character A".** In the output `characters[]`, give each
+  character a `name`: a consistent Indian name for every human (the SAME name in every scene they appear in),
+  and **"Miss Nova"** for the AI teacher / assistant / robot / avatar (Supernova AI's teacher is always Miss
+  Nova). Then write every `supernova_script` line with that NAME as the speaker label ("Ramesh says: …",
+  "Miss Nova says: …") — never "Character A says:". The reader sees real names; the id→name mapping lives in
+  `characters[]`.
 - **LEAD WITH a + b — DON'T BACK-LOAD THEM.** Personalization (a) and privacy/no-judgement (b) are the
   retention engine; the failure to avoid is letting the final CTA be the FIRST place they appear. In a
   4+ scene ad, land a+b by the MIDPOINT; in a 2–3 scene ad, put them in the BODY of scene 2 (right after
@@ -118,12 +124,21 @@ OUTPUT: exactly one JSON object (no markdown fences, no commentary). Schema:
 
 {
   "production_type": "<same as input>",
-  "characters": [<same as input — copy through unchanged>],
+  "characters": [
+    {
+      "id": "<same as input — the stable A/B/C label>",
+      "name": "<the character's ASSIGNED NAME, used as the speaker label in supernova_script. Human → the consistent Indian name you give them (same name in every scene). AI teacher/assistant/robot/avatar → \"Miss Nova\". A minor non-speaking or purely-functional figure may take a short descriptive label (e.g. \"Interviewer\").>",
+      "role": "<same as input>",
+      "appearance": "<same as input — copy through>",
+      "wardrobe": "<same as input — copy through>",
+      "demeanor": "<same as input — copy through>"
+    }
+  ],
   "scenes": [
     {
       "n": <same as input>,
       "scene_label": "<same as input>",
-      "supernova_script": "<your Supernova re-pitch of this scene's audio_transcript, in ENGLISH. Put each spoken turn on its OWN line, prefixed 'Character X says:' (one line per turn — this makes the Scene/Character/Script layout clean). Same visual beat and pacing; Supernova payload + Miss Nova voice.>",
+      "supernova_script": "<your Supernova AI re-pitch of this scene's audio_transcript, in ENGLISH. Put each spoken turn on its OWN line, prefixed with the speaking character's ASSIGNED NAME + ' says:' — e.g. 'Ramesh says:' / 'Miss Nova says:' — taking the name from the characters[] list above (one line per turn — this makes the Scene/Character/Script layout clean). Same visual beat and pacing; Supernova AI payload + Miss Nova voice.>",
       "scene_summary": "<2-4 hyphen-prefixed bullets: what this scene does — purpose, emotion, which payload beat(s) it lands. For analyst reference.>",
       "supernova_on_screen_text": "<re-pitched on_screen_text if relevant; otherwise empty string>"
     }
@@ -137,7 +152,7 @@ OUTPUT: exactly one JSON object (no markdown fences, no commentary). Schema:
   },
   "brand_swaps_detected": [
     {"competitor_brand": "<original brand name found in script or on-screen text>",
-     "supernova_swap": "<what we replaced it with — usually 'Supernova' or removed>"}
+     "supernova_swap": "<what we replaced it with — usually 'Supernova AI' or removed>"}
   ]
 }
 
@@ -168,13 +183,13 @@ CONSTRAINTS:
   brand-safety audit will catch a true violation.
 - Output ONLY a valid JSON object. No commentary, no markdown fences.
 - Every scene from the input must appear in the output with the same `n`, in the same order.
-- `supernova_script` MUST put each spoken turn on its OWN line with a "Character X says:" prefix — one line per turn (this renders as a clean Scene -> Character -> Script layout).
+- `supernova_script` MUST put each spoken turn on its OWN line prefixed with the speaker's ASSIGNED NAME + " says:" (e.g. "Ramesh says:", "Miss Nova says:"), using the names from `characters[]` — never "Character A says:". One line per turn (this renders as a clean Scene -> Character -> Script layout).
 - **WRITE 100% PURE ENGLISH — every word.** Script + on-screen text are entirely in English: NO Hindi/
   Tamil/Telugu/etc. words at all, not even romanized flavor lines ("Koi baat nahi", "yaar", "bindhast").
   This English master is the SINGLE SOURCE the team reviews and then localizes into Indian languages
   downstream; the code-mix is added at THAT stage, not here. Keep the warm, conversational rhythm — but
   express it in plain English. Never output Devanagari/Tamil/etc. script or bracketed [translations].
-  EXCEPTION: a proper noun the brand keeps as-is (Supernova, Miss Nova) stays; that is not a foreign word.
+  EXCEPTION: a proper noun the brand keeps as-is (Supernova AI, Miss Nova) stays; that is not a foreign word.
 - Do NOT change the visuals or scene order. If a scene's dialogue is too brand-specific to re-pitch, still emit it with `supernova_script: "[scene-too-brand-specific-to-rewrite — manual edit needed]"`. Never silently skip scenes.
 
 INPUT:

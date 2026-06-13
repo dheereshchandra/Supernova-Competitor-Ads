@@ -108,7 +108,7 @@ def estimate_row_cost(row: dict, videos_dir: Path) -> dict:
             + IMAGE_ONLY_DECOMPOSE_TOKENS_OUT / 1_000_000 * GEMINI_PRO_OUTPUT_PER_1M_TOKENS
         )
         cost_sheets = 0.0    # no character sheets for static images
-        cost_panels = IMAGE_ONLY_GEN_IMAGES * NANO_BANANA_PRO_PER_IMAGE
+        cost_panels = 0.0    # image generation is a separate later step (see video branch)
         cost_rewrite = (
             IMAGE_ONLY_DECOMPOSE_TOKENS_OUT / 1_000_000 * GEMINI_PRO_INPUT_PER_1M_TOKENS  # re-feed
             + 1000 / 1_000_000 * GEMINI_PRO_OUTPUT_PER_1M_TOKENS
@@ -166,11 +166,11 @@ def estimate_row_cost(row: dict, videos_dir: Path) -> dict:
         + DECOMPOSE_OUTPUT_TOKENS / 1_000_000 * GEMINI_PRO_OUTPUT_PER_1M_TOKENS
     )
 
-    # Character sheets
-    cost_sheets = characters_est * NANO_BANANA_PRO_PER_IMAGE
-
-    # Panels — assume 1 panel per scene (carousels would cost more, but rare)
-    cost_panels = scenes_est * NANO_BANANA_PRO_PER_IMAGE
+    # Character sheets + panels (Nano Banana Pro image generation) are NO LONGER part of
+    # the script/document pass — image generation runs as a separate later step. Zeroed
+    # here so the cost gate reflects the text-only (decompose + rewrite) spend.
+    cost_sheets = 0.0
+    cost_panels = 0.0
 
     # Supernova rewrite
     cost_rewrite = (
@@ -360,7 +360,8 @@ def main() -> int:
     print()
     print(f"BATCH TOTAL:         ${total_cost:.2f}")
     print(f"Wall-clock estimate: {15 + len(estimates) * 2}–{30 + len(estimates) * 3} min")
-    print(f"                     (Gemini Batch API queue + image generation)")
+    print(f"                     (Gemini Batch API queue — text decompose + rewrite; "
+          f"image generation is a separate later step)")
     print()
     print(f"NOTE: pricing constants in this script are mid-2025 figures. Verify")
     print(f"against your actual Gemini billing after the first run.")
