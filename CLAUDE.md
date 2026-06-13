@@ -138,6 +138,7 @@ A one-time setup that keeps your canonical clone current so teammates' pushes la
 - `facebook/HANDOVER.md` — Facebook single source of truth (auto-clicker walkthrough in §6).
 - `google/HANDOVER.md` — Google pipeline (CLI / direct RPC since 2026-06-01).
 - `analysis/README.md` — free analysis + paid enrichment internals.
+- `webapp/WORKFLOW.md` — Ad Studio end-to-end **production workflow** map (the target gated flow: shortlist → scripts → in-house/agency fork → final approval → Notion), with owners + what's built vs. net-new. Read it before building any production-pipeline piece.
 - `SESSION-HANDOFF.md` — current resume state; read it to pick up in any workspace.
 - `tools/` — `rehydrate.py` (pull media from R2: `python3.13 tools/rehydrate.py --pipeline <facebook|google> --competitor <slug>`), `log_and_commit.sh`, `daily-sync/` (one-time Daily 11:30 AM auto-pull job — see "## One-time setup: Daily 11:30 AM auto-sync"), `csv-sync/` (one-time twice-daily job that upserts the analysis into ONE Google Sheet — "Supernova Competitor Master", Overview + Analysis tabs; reuses the Drive service account, needs the Sheets API enabled once — see `tools/csv-sync/README.md`).
 - `conductor.json` runs the one-shot setup when the workspace opens.
