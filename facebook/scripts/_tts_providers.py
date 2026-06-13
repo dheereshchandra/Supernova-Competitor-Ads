@@ -141,14 +141,24 @@ class CartesiaProvider(_Provider):
         return resp.content
 
     def list_voices(self, language=None) -> list[dict]:
-        resp = requests.get(f"{CARTESIA_BASE}/voices", headers=self._headers(), timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        voices = data.get("data", data) if isinstance(data, dict) else data
-        out = []
-        for v in (voices or []):
-            out.append({"voice_id": v.get("id"), "name": v.get("name"),
-                        "language": v.get("language", ""), "gender": v.get("gender", "")})
+        # /voices is paginated (default 10/page) — walk all pages via starting_after.
+        out, seen, params = [], set(), {"limit": 100}
+        for _ in range(25):  # page cap
+            resp = requests.get(f"{CARTESIA_BASE}/voices", headers=self._headers(),
+                                params=params, timeout=30)
+            resp.raise_for_status()
+            d = resp.json()
+            data = (d.get("data") if isinstance(d, dict) else d) or []
+            for v in data:
+                vid = v.get("id")
+                if vid in seen:
+                    continue
+                seen.add(vid)
+                out.append({"voice_id": vid, "name": v.get("name"),
+                            "language": v.get("language", ""), "gender": v.get("gender", "")})
+            if not (isinstance(d, dict) and d.get("has_more")) or not data:
+                break
+            params = {"limit": 100, "starting_after": data[-1].get("id")}
         if language:
             code = self.LANG_CODES.get(language, language.lower())
             pref = [v for v in out if (v.get("language") or "").lower() in (code, language.lower())]

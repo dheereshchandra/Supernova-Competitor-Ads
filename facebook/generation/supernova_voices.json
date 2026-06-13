@@ -1,5 +1,5 @@
 {
-  "_doc": "Voice registry for step4_tts.py — maps character SLOTS to TTS voices across providers. RESOLVE ORDER per (language, slot): language_overrides[language][slot] if present, else slots[slot]; the provider's entry in `providers` supplies the default model + settings (a slot may override model/settings inline). SLOTS: miss_nova (the AI teacher Miss Nova — ONE consistent warm brand voice everywhere), female_lead, male_lead, female_secondary, male_secondary, narrator. A character maps to a slot at runtime: Miss Nova -> miss_nova; a narrator/voiceover line -> narrator; otherwise inferred gender + first-of-that-gender -> *_lead, the rest -> *_secondary. FILL voice_id from each provider's library: `python3.13 facebook/scripts/step4_tts.py --list-voices --provider elevenlabs` (or cartesia). ElevenLabs multilingual voices carry across languages (set once in `slots`); Cartesia voices are usually language-specific (set per language under `language_overrides`). A voice_id still beginning with 'TODO' makes live synth fail loudly for that slot/language.",
+  "_doc": "Voice registry for step4_tts.py — maps character SLOTS to TTS voices across providers. RESOLVE ORDER per (language, slot): language_overrides[language][slot] if present, else slots[slot]; the provider's entry in `providers` supplies the default model + settings (a slot may override model/settings inline). SLOTS: miss_nova (the AI teacher Miss Nova — ONE consistent warm brand voice everywhere), female_lead, male_lead, female_secondary, male_secondary, narrator. A character maps to a slot at runtime: Miss Nova -> miss_nova; a narrator/voiceover line -> narrator; otherwise inferred gender + first-of-that-gender -> *_lead, the rest -> *_secondary. These are a SEED (operator swaps voice_ids to taste): the `slots` defaults use ElevenLabs multilingual voices (one voice works across all languages); `language_overrides` route specific languages to Cartesia's native voices. Re-list any time: `python3.13 facebook/scripts/step4_tts.py --list-voices --provider elevenlabs|cartesia [--language Hindi]`.",
   "providers": {
     "elevenlabs": {
       "model": "eleven_multilingual_v2",
@@ -11,17 +11,28 @@
     }
   },
   "slots": {
-    "miss_nova":        {"provider": "elevenlabs", "voice_id": "TODO_miss_nova",        "_note": "Miss Nova — warm, patient, encouraging young woman; the brand AI teacher, identical voice across every language"},
-    "female_lead":      {"provider": "elevenlabs", "voice_id": "TODO_female_lead"},
-    "male_lead":        {"provider": "elevenlabs", "voice_id": "TODO_male_lead"},
-    "female_secondary": {"provider": "elevenlabs", "voice_id": "TODO_female_secondary"},
-    "male_secondary":   {"provider": "elevenlabs", "voice_id": "TODO_male_secondary"},
-    "narrator":         {"provider": "elevenlabs", "voice_id": "TODO_narrator"}
+    "miss_nova":        {"provider": "elevenlabs", "voice_id": "gHu9GtaHOXcSqFTK06ux", "_voice": "Anjali — warm, cheerful & clear (hi/F): the brand AI teacher, consistent across languages"},
+    "female_lead":      {"provider": "elevenlabs", "voice_id": "1BK71v7U93MC0DdzoHhj", "_voice": "Aishwarya — sweet & natural (hi/F)"},
+    "male_lead":        {"provider": "elevenlabs", "voice_id": "k7nOSUCadIEwB6fdJmbw", "_voice": "Ahmed — clear, deep & natural (hi/M)"},
+    "female_secondary": {"provider": "elevenlabs", "voice_id": "RABOvaPec1ymXz02oDQi", "_voice": "Anika — sweet, lively & warm (hi/F)"},
+    "male_secondary":   {"provider": "elevenlabs", "voice_id": "LHJy3mhZWsvhUjy0zUM1", "_voice": "Amrut Deshmukh — educational Hindi (hi/M)"},
+    "narrator":         {"provider": "elevenlabs", "voice_id": "JBFqnCBsd6RMkjVDRZzb", "_voice": "George — warm storyteller (multilingual)"}
   },
   "language_overrides": {
-    "Hindi": {},
-    "Telugu": {},
-    "Tamil": {},
+    "Hindi": {
+      "female_lead":      {"provider": "cartesia", "voice_id": "95d51f79-c397-46f9-b49a-23763d3eaa2d", "_voice": "Arushi — Hinglish speaker (hi/F), great for code-mix"},
+      "male_lead":        {"provider": "cartesia", "voice_id": "4877b818-c7fe-4c89-b1cf-eadf8e23da72", "_voice": "Rohan — steady communicator (hi/M)"},
+      "female_secondary": {"provider": "cartesia", "voice_id": "faf0731e-dfb9-4cfc-8119-259a79b27e12", "_voice": "Riya — college roommate (hi/F)"}
+    },
+    "Telugu": {
+      "female_lead":      {"provider": "cartesia", "voice_id": "3a8e6fea-81e5-4d4d-8755-86093146cdb8", "_voice": "Vidya — empathetic (te/F)"},
+      "female_secondary": {"provider": "cartesia", "voice_id": "4418bb06-8329-49a1-bb11-53bb64ca0547", "_voice": "Shanti — calm authority (te/F)"},
+      "male_lead":        {"provider": "elevenlabs", "voice_id": "EMxdghWQV7gqV33j4J3F", "_voice": "Abhi — authentic Telugu male (te/M)"}
+    },
+    "Tamil": {
+      "female_lead":      {"provider": "cartesia", "voice_id": "80e4e2b3-ec54-4930-97ac-667eba950352", "_voice": "Nithya — polished presence (ta/F)"},
+      "female_secondary": {"provider": "cartesia", "voice_id": "d4470f50-295e-4e11-82a2-158d45bf6abc", "_voice": "Anitha — warm guide (ta/F)"}
+    },
     "Marathi": {},
     "Kannada": {},
     "Malayalam": {},

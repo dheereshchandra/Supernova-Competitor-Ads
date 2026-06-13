@@ -248,7 +248,8 @@ class Catalog:
             "rewrite_gdoc_url": rewrite_gdoc,
             "analysis_gdoc_url": analysis_gdoc,
             "locales": sidecar.get("locales", {}),  # {Lang: localized Doc url}
-            "tts_audio": sidecar.get("tts_audio", {}),  # {Lang: voiceover track url}
+            "tts_audio": {lg: self._publicize(u)  # {Lang: public voiceover url} (browser-playable)
+                          for lg, u in (sidecar.get("tts_audio") or {}).items()},
             "rewrite_docx_url": rewrite_docx,
             "analysis_docx_url": analysis_docx,
             "rewrite_html_url": self._publicize((m.get("supernova_rewrite_html_r2_url") or "").strip()),
