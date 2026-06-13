@@ -151,6 +151,8 @@ export interface Ad {
   analysis_gdoc_url: string
   /** localized Supernova Doc per language, e.g. { Hindi: "https://docs.google…" } */
   locales: Record<string, string>
+  /** per-language voiceover (TTS) track URL, e.g. { Hindi: "https://…/hindi.mp3" } */
+  tts_audio: Record<string, string>
   rewrite_docx_url: string
   analysis_docx_url: string
   rewrite_html_url: string
@@ -238,6 +240,8 @@ export interface AdDetail extends Ad {
   latest_job: Job | null
   /** per-language verification state, e.g. { Hindi: { verified, verified_by, at } } */
   verified_languages: Record<string, LangVerify>
+  /** per-language voiceover verification state */
+  tts_verified_languages: Record<string, LangVerify>
 }
 
 export interface Estimate {
@@ -521,5 +525,33 @@ export const verifyLocalizeLanguage = (
 ) =>
   api<{ verified_languages: Record<string, LangVerify> }>(
     `/api/tracker/${encodeURIComponent(pipeline)}/${encodeURIComponent(slug)}/${encodeURIComponent(adId)}/localize-verify`,
+    { method: 'PATCH', json: { language, verified } },
+  )
+
+// ---- TTS (Stage 5a voiceover) ----
+
+/** English master + the localized languages can each get a voiceover. */
+export const TTS_LANGUAGES = ['English', ...SUPPORTED_LANGUAGES] as const
+
+export const createTtsJob = (
+  pipeline: string,
+  competitor: string,
+  ad_id: string,
+  languages: string[],
+  force = false,
+) =>
+  api<{ job_id: string }>('/api/jobs/tts', {
+    json: { pipeline, competitor, ad_id, languages, force },
+  })
+
+export const verifyTtsLanguage = (
+  pipeline: string,
+  slug: string,
+  adId: string,
+  language: string,
+  verified: boolean,
+) =>
+  api<{ tts_verified_languages: Record<string, LangVerify> }>(
+    `/api/tracker/${encodeURIComponent(pipeline)}/${encodeURIComponent(slug)}/${encodeURIComponent(adId)}/tts-verify`,
     { method: 'PATCH', json: { language, verified } },
   )

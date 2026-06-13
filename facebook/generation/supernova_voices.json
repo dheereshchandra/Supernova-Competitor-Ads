@@ -1,0 +1,34 @@
+{
+  "_doc": "Voice registry for step4_tts.py — maps character SLOTS to TTS voices across providers. RESOLVE ORDER per (language, slot): language_overrides[language][slot] if present, else slots[slot]; the provider's entry in `providers` supplies the default model + settings (a slot may override model/settings inline). SLOTS: miss_nova (the AI teacher Miss Nova — ONE consistent warm brand voice everywhere), female_lead, male_lead, female_secondary, male_secondary, narrator. A character maps to a slot at runtime: Miss Nova -> miss_nova; a narrator/voiceover line -> narrator; otherwise inferred gender + first-of-that-gender -> *_lead, the rest -> *_secondary. FILL voice_id from each provider's library: `python3.13 facebook/scripts/step4_tts.py --list-voices --provider elevenlabs` (or cartesia). ElevenLabs multilingual voices carry across languages (set once in `slots`); Cartesia voices are usually language-specific (set per language under `language_overrides`). A voice_id still beginning with 'TODO' makes live synth fail loudly for that slot/language.",
+  "providers": {
+    "elevenlabs": {
+      "model": "eleven_multilingual_v2",
+      "settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.0, "use_speaker_boost": true}
+    },
+    "cartesia": {
+      "model": "sonic-2",
+      "settings": {}
+    }
+  },
+  "slots": {
+    "miss_nova":        {"provider": "elevenlabs", "voice_id": "TODO_miss_nova",        "_note": "Miss Nova — warm, patient, encouraging young woman; the brand AI teacher, identical voice across every language"},
+    "female_lead":      {"provider": "elevenlabs", "voice_id": "TODO_female_lead"},
+    "male_lead":        {"provider": "elevenlabs", "voice_id": "TODO_male_lead"},
+    "female_secondary": {"provider": "elevenlabs", "voice_id": "TODO_female_secondary"},
+    "male_secondary":   {"provider": "elevenlabs", "voice_id": "TODO_male_secondary"},
+    "narrator":         {"provider": "elevenlabs", "voice_id": "TODO_narrator"}
+  },
+  "language_overrides": {
+    "Hindi": {},
+    "Telugu": {},
+    "Tamil": {},
+    "Marathi": {},
+    "Kannada": {},
+    "Malayalam": {},
+    "Bengali": {},
+    "Gujarati": {},
+    "Assamese": {},
+    "Punjabi": {},
+    "English": {}
+  }
+}

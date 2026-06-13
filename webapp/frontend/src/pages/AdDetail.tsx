@@ -19,6 +19,8 @@ import {
 import GenerateModal from '../components/GenerateModal'
 import LocalizeModal from '../components/LocalizeModal'
 import LocalizedDocsChips from '../components/LocalizedDocsChips'
+import TtsModal from '../components/TtsModal'
+import AudioChips from '../components/AudioChips'
 import {
   ErrorNote,
   PageLoading,
@@ -46,6 +48,7 @@ export default function AdDetail() {
   const [error, setError] = useState('')
   const [showGenerate, setShowGenerate] = useState<false | 'normal' | 'force'>(false)
   const [showLocalize, setShowLocalize] = useState(false)
+  const [showTts, setShowTts] = useState(false)
   const [job, setJob] = useState<JobDetail | null>(null)
   const [busy, setBusy] = useState(false)
 
@@ -351,12 +354,29 @@ export default function AdDetail() {
                     🌍 Replicate to languages
                   </button>
                 )}
+                {scriptLink && (
+                  <button
+                    onClick={() => setShowTts(true)}
+                    disabled={busy}
+                    className="w-full rounded-lg border border-sky-400/30 bg-sky-600/15 px-4 py-2 text-sm font-medium text-sky-200 hover:bg-sky-600/25 disabled:opacity-60"
+                  >
+                    🔊 Generate voiceover
+                  </button>
+                )}
                 <LocalizedDocsChips
                   pipeline={pipeline}
                   competitor={slug}
                   adId={adId}
                   locales={ad.locales || {}}
                   verified={ad.verified_languages || {}}
+                  onChanged={load}
+                />
+                <AudioChips
+                  pipeline={pipeline}
+                  competitor={slug}
+                  adId={adId}
+                  audio={ad.tts_audio || {}}
+                  verified={ad.tts_verified_languages || {}}
                   onChanged={load}
                 />
                 <StatusStepper status={status} />
@@ -505,6 +525,21 @@ export default function AdDetail() {
           onClose={() => setShowLocalize(false)}
           onStarted={() => {
             setShowLocalize(false)
+            load()
+            refreshActiveJobs()
+          }}
+        />
+      )}
+      {showTts && (
+        <TtsModal
+          pipeline={pipeline}
+          competitor={slug}
+          adId={adId}
+          suggestedLanguages={Object.keys(ad.locales || {})}
+          alreadyTts={Object.keys(ad.tts_audio || {})}
+          onClose={() => setShowTts(false)}
+          onStarted={() => {
+            setShowTts(false)
             load()
             refreshActiveJobs()
           }}

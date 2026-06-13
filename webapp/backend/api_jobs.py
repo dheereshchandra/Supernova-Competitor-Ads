@@ -132,6 +132,10 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
 SUPPORTED_LANGUAGES = ("Hindi", "Telugu", "Tamil", "Marathi", "Kannada", "Malayalam",
                        "Bengali", "Gujarati", "Assamese", "Punjabi")
 LOCALIZE_COST_PER_LANG = 0.02  # Flash translate + safety audit; images are REUSED (₹0)
+# TTS (Stage 5a voiceover) targets the localized scripts AND the English master. Real cost is
+# per-character at the provider; this flat per-language figure is the spend-gate estimate.
+TTS_LANGUAGES = ("English",) + SUPPORTED_LANGUAGES
+TTS_COST_PER_LANG = 0.25
 
 
 def _ad_has_english(ad: dict) -> bool:
@@ -142,6 +146,14 @@ def _validate_langs(langs: list[str]) -> None:
     if not langs:
         raise HTTPException(422, "Pick at least one language")
     bad = [l for l in langs if l not in SUPPORTED_LANGUAGES]
+    if bad:
+        raise HTTPException(422, f"Unsupported language(s): {', '.join(bad)}")
+
+
+def _validate_tts_langs(langs: list[str]) -> None:
+    if not langs:
+        raise HTTPException(422, "Pick at least one language")
+    bad = [l for l in langs if l not in TTS_LANGUAGES]
     if bad:
         raise HTTPException(422, f"Unsupported language(s): {', '.join(bad)}")
 
@@ -264,6 +276,127 @@ def bulk_localize(body: BulkLocalizeBody, user: str = Depends(require_user)):
         queued.append({**it, "job_id": cur.lastrowid, "cost_usd": per})
         _log(it["pipeline"], it["competitor"], it["ad_id"], user, "localize",
              f"bulk localize → {', '.join(body.languages)}")
+    try:
+        from . import sheets
+        sheets.mark_dirty()
+    except Exception:
+        pass
+    return {"queued": queued, "skipped": skipped,
+            "total_queued_usd": sum(q["cost_usd"] for q in queued)}
+
+
+# ---------------- TTS (per-language voiceover from the approved script) ----------------
+
+class TTSBody(BaseModel):
+    pipeline: str
+    competitor: str
+    ad_id: str
+    languages: list[str]
+    force: bool = False
+
+
+@router.post("/api/jobs/tts", status_code=201)
+def create_tts_job(body: TTSBody, user: str = Depends(require_user)):
+    if body.pipeline != "facebook":
+        raise HTTPException(422, "TTS is Facebook-only for now")
+    _validate_tts_langs(body.languages)
+    ad = catalog().get(body.pipeline, body.competitor, body.ad_id)
+    if not ad:
+        raise HTTPException(404, "Ad not found")
+    if not _ad_has_english(ad):
+        raise HTTPException(422, "Generate the Supernova script first")
+    active = db.query_one(
+        f"SELECT id FROM jobs WHERE pipeline=? AND competitor=? AND ad_id=? "
+        f"AND status IN {ACTIVE}", (body.pipeline, body.competitor, body.ad_id))
+    if active:
+        raise HTTPException(409, f"A run for this ad is already in flight (job #{active['id']})")
+    cost = len(body.languages) * TTS_COST_PER_LANG
+    cfg = settings()
+    if _daily_spent() + cost > cfg.max_daily_cost:
+        raise HTTPException(429, f"Daily spend cap reached ({inr(cfg.max_daily_cost)})")
+    cur = db.execute(
+        "INSERT INTO jobs (pipeline, competitor, ad_id, media_type, requested_by, "
+        "force_regen, cost_estimate_usd, kind, languages) VALUES (?,?,?,?,?,?,?,?,?)",
+        (body.pipeline, body.competitor, body.ad_id, ad.get("media_type"), user,
+         int(body.force), cost, "tts", json.dumps(body.languages)))
+    job_id = cur.lastrowid
+    _log(body.pipeline, body.competitor, body.ad_id, user, "tts",
+         f"queued tts job #{job_id} → {', '.join(body.languages)} (~{inr(cost)})")
+    try:
+        from . import sheets
+        sheets.mark_dirty()
+    except Exception:
+        pass
+    return {"job_id": job_id}
+
+
+class BulkTTSBody(BaseModel):
+    items: list[AdRef]
+    languages: list[str]
+
+
+def _classify_tts(items: list[AdRef]) -> list[dict]:
+    out, seen = [], set()
+    for it in items:
+        key = (it.pipeline, it.competitor, it.ad_id)
+        if key in seen:
+            continue
+        seen.add(key)
+        base = {"pipeline": it.pipeline, "competitor": it.competitor, "ad_id": it.ad_id}
+        ad = catalog().get(it.pipeline, it.competitor, it.ad_id)
+        if it.pipeline != "facebook":
+            out.append({**base, "eligible": False, "reason": "facebook_only"}); continue
+        if not ad:
+            out.append({**base, "eligible": False, "reason": "not_found"}); continue
+        if not _ad_has_english(ad):
+            out.append({**base, "eligible": False, "reason": "no_english_script"}); continue
+        active = db.query_one(
+            f"SELECT id FROM jobs WHERE pipeline=? AND competitor=? AND ad_id=? "
+            f"AND status IN {ACTIVE}", key)
+        if active:
+            out.append({**base, "eligible": False, "reason": "in_flight"}); continue
+        out.append({**base, "eligible": True})
+    return out
+
+
+@router.post("/api/jobs/tts/bulk-estimate")
+def bulk_tts_estimate(body: BulkTTSBody, _user: str = Depends(require_user)):
+    _validate_tts_langs(body.languages)
+    items = _classify_tts(body.items)
+    per = len(body.languages) * TTS_COST_PER_LANG
+    for it in items:
+        if it.get("eligible"):
+            it["cost_usd"] = per
+    total = sum(it.get("cost_usd", 0) for it in items if it.get("eligible"))
+    cfg = settings()
+    return {"items": items, "languages": body.languages, "total_cost_usd": total,
+            "daily_cap_usd": cfg.max_daily_cost, "daily_spent_usd": _daily_spent(),
+            "daily_remaining_usd": max(0, cfg.max_daily_cost - _daily_spent())}
+
+
+@router.post("/api/jobs/tts/bulk", status_code=201)
+def bulk_tts(body: BulkTTSBody, user: str = Depends(require_user)):
+    _validate_tts_langs(body.languages)
+    items = _classify_tts(body.items)
+    per = len(body.languages) * TTS_COST_PER_LANG
+    cfg = settings()
+    spent = _daily_spent()
+    queued, skipped = [], []
+    for it in items:
+        if not it.get("eligible"):
+            skipped.append(it); continue
+        if spent + per > cfg.max_daily_cost:
+            skipped.append({**it, "eligible": False, "reason": "daily_cap"}); continue
+        ad = catalog().get(it["pipeline"], it["competitor"], it["ad_id"]) or {}
+        cur = db.execute(
+            "INSERT INTO jobs (pipeline, competitor, ad_id, media_type, requested_by, "
+            "force_regen, cost_estimate_usd, kind, languages) VALUES (?,?,?,?,?,?,?,?,?)",
+            (it["pipeline"], it["competitor"], it["ad_id"], ad.get("media_type"), user,
+             0, per, "tts", json.dumps(body.languages)))
+        spent += per
+        queued.append({**it, "job_id": cur.lastrowid, "cost_usd": per})
+        _log(it["pipeline"], it["competitor"], it["ad_id"], user, "tts",
+             f"bulk tts → {', '.join(body.languages)}")
     try:
         from . import sheets
         sheets.mark_dirty()
@@ -716,3 +849,38 @@ def localize_verify(pipeline: str, slug: str, ad_id: str, body: LocalizeVerify,
     except Exception:
         pass
     return {"verified_languages": verified}
+
+
+class TtsVerify(BaseModel):
+    language: str
+    verified: bool
+
+
+@router.patch("/api/tracker/{pipeline}/{slug}/{ad_id}/tts-verify")
+def tts_verify(pipeline: str, slug: str, ad_id: str, body: TtsVerify,
+               user: str = Depends(require_user)):
+    """Record (display-only, not enforced) who verified a language's voiceover."""
+    row = db.query_one("SELECT tts_verified_languages FROM tracker "
+                       "WHERE pipeline=? AND competitor=? AND ad_id=?", (pipeline, slug, ad_id))
+    if row is None:
+        raise HTTPException(404, "No tracker row for this ad")
+    try:
+        verified = json.loads(row["tts_verified_languages"]) if row["tts_verified_languages"] else {}
+    except Exception:
+        verified = {}
+    verified[body.language] = {
+        "verified": body.verified,
+        "verified_by": user if body.verified else "",
+        "at": datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M") if body.verified else "",
+    }
+    db.execute("UPDATE tracker SET tts_verified_languages=?, updated_at=datetime('now') "
+               "WHERE pipeline=? AND competitor=? AND ad_id=?",
+               (json.dumps(verified), pipeline, slug, ad_id))
+    _log(pipeline, slug, ad_id, user,
+         "tts_verify" if body.verified else "tts_unverify", body.language)
+    try:
+        from . import sheets
+        sheets.mark_dirty()
+    except Exception:
+        pass
+    return {"tts_verified_languages": verified}

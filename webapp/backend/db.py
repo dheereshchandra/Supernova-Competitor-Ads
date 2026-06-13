@@ -115,6 +115,13 @@ def conn() -> sqlite3.Connection:
         if "verified_languages" not in tcols:
             c.execute("ALTER TABLE tracker ADD COLUMN verified_languages TEXT")
             c.commit()
+        # TTS (Stage 5a, voiceover): per-ad per-language audio URLs + verify state
+        if "tts_audio_urls" not in tcols:
+            c.execute("ALTER TABLE tracker ADD COLUMN tts_audio_urls TEXT")
+            c.commit()
+        if "tts_verified_languages" not in tcols:
+            c.execute("ALTER TABLE tracker ADD COLUMN tts_verified_languages TEXT")
+            c.commit()
         _conn = c
     return _conn
 
