@@ -807,6 +807,8 @@ Wall-clock estimate: 25–45 min
 
 ### 9.3 The Creative Studio 9-stage pipeline + audit (with verification at every transition)
 
+> **⚠️ Updated 2026-06-13 (PR #77): image generation was SPLIT OUT of the script/document pass.** The active flows (`run_pipeline.sh` Stage 6 and the Ad Studio job state machine) no longer run **Stage 3 (character sheets)** or **Stage 4 (clean panels)** — they go decompose → frames → upload (frames only) → rewrite → build_docs → gdocs. The Supernova rewrite doc is now self-contained **text** (the scene's look is written out); the competitor doc keeps the original video frames. Per-ad cost is text-only (~$0.05; Stages 3 & 4 show **$0** in the estimate). `step4_character_sheets.py` / `step4_panels.py` and the decompose panel descriptions remain in-repo for a **separate later image-generation workflow**. The full table below is kept for that future workflow and manual reference, but Stages 3 & 4 do NOT fire in the current chain.
+
 | Stage | Engine | What it produces | Cost band |
 |---|---|---|---|
 | 0. Cost estimate + approval gate | Local Python | Operator decision | $0 |

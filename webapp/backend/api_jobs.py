@@ -20,7 +20,7 @@ TRACKER_STATUSES = ("shortlisted", "generating", "script_ready", "in_edit",
 # awaiting_confirm = a pipeline run paused after the free scrape, waiting for the
 # user to approve the (now-exact) enrichment cost. Treated as in-flight.
 ACTIVE = ("queued", "running", "interrupted", "awaiting_confirm")
-FALLBACK_FORCE_COST = 0.35  # estimator lists only doc-less candidates
+FALLBACK_FORCE_COST = 0.10  # force-regen of an already-doc'd ad (estimator lists only doc-less candidates). Text-only now — decompose+rewrite; image generation moved to a separate step.
 
 
 def _log(pipeline, slug, ad_id, who, action, detail=""):
