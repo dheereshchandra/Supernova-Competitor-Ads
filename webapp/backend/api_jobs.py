@@ -406,27 +406,31 @@ def bulk_tracker(body: BulkTrackerBody, user: str = Depends(require_user)):
         raise HTTPException(422, "No ads given")
     if len(items) > 200:
         raise HTTPException(422, "Too many ads in one batch (max 200)")
-    changed, unchanged, skipped = 0, 0, []
+    # Each ad lives at exactly one pipeline stage (tracker PK). Bulk never adds an
+    # ad that's already in the pipeline a second time, nor downgrades one in flight —
+    # such ads are skipped and reported with their CURRENT stage so the UI can say
+    # exactly where they already are.
+    changed, skipped = 0, []
     for it in items:
         if not catalog().get(it.pipeline, it.competitor, it.ad_id):
-            skipped.append({**it.model_dump(), "reason": "not_found"})
+            skipped.append({**it.model_dump(), "reason": "not_found", "status": ""})
             continue
         row = db.query_one(
             "SELECT status FROM tracker WHERE pipeline=? AND competitor=? AND ad_id=?",
             (it.pipeline, it.competitor, it.ad_id))
         current = (row["status"] if row else "") or ""
         if current == body.status:
-            unchanged += 1
+            skipped.append({**it.model_dump(), "reason": "unchanged", "status": current})
             continue
         if current not in _BULK_ALLOWED_FROM[body.status]:
-            skipped.append({**it.model_dump(), "reason": "already_in_flow"})
+            skipped.append({**it.model_dump(), "reason": "already_in_flow", "status": current})
             continue
         _ensure_tracker(it.pipeline, it.competitor, it.ad_id, body.status, user)
         _log(it.pipeline, it.competitor, it.ad_id, user, body.status, "bulk")
         changed += 1
     if changed:
         _mark_sheet_dirty()
-    return {"changed": changed, "unchanged": unchanged, "skipped": skipped}
+    return {"changed": changed, "skipped": skipped}
 
 
 def _batch_estimates(slug: str, ad_ids: list[str]) -> dict[str, dict]:
