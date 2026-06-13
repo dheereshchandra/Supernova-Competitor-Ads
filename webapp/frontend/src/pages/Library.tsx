@@ -560,7 +560,22 @@ export default function Library() {
             ]}
           />
 
-          {/* OS filter — derived from the destination link; only ~part of ads classify */}
+          <select
+            className={`${selectCls} ml-auto w-[210px]`}
+            value={filters.sort}
+            onChange={(e) => updateFilters({ sort: e.target.value })}
+            title="Order by"
+          >
+            {SORTS.map((s) => (
+              <option key={s.id} value={s.id}>
+                Order by: {s.label}
+              </option>
+            ))}
+          </select>
+
+          {/* OS filter — last control so the ⓘ sits right after "Android",
+              clearly belonging to this toggle (not the sort dropdown).
+              OS is derived from the destination link; only some ads classify. */}
           <div className="flex items-center gap-1">
             <Toggle
               value={filters.platformOs}
@@ -593,19 +608,6 @@ export default function Library() {
               </p>
             </InfoDot>
           </div>
-
-          <select
-            className={`${selectCls} ml-auto w-[210px]`}
-            value={filters.sort}
-            onChange={(e) => updateFilters({ sort: e.target.value })}
-            title="Order by"
-          >
-            {SORTS.map((s) => (
-              <option key={s.id} value={s.id}>
-                Order by: {s.label}
-              </option>
-            ))}
-          </select>
         </div>
 
         {/* row 2: quick filters */}
@@ -641,15 +643,6 @@ export default function Library() {
           className="w-full rounded-lg border border-white/10 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 outline-none focus:border-violet-400/50"
         />
       </div>
-
-      {/* ---------- OS-coverage disclaimer (always visible so the limit is clear) ---------- */}
-      {osTotal > 0 && !loading && !error && (
-        <p className="text-xs text-zinc-600">
-          🛈 OS known for only <span className="text-zinc-400">~{osPct}%</span> of these
-          ads ({formatCount(osKnown)} of {formatCount(osTotal)} link to a store) — the
-          rest are OS-agnostic, so the iOS / Android filter shows a limited set.
-        </p>
-      )}
 
       {/* ---------- enrichment-coverage note (grouped mode) ---------- */}
       {showEnrichBanner && !loading && !error && (
