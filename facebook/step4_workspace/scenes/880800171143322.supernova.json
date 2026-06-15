@@ -1,0 +1,61 @@
+{
+  "competitor_id": "880800171143322",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "Female AI presenter",
+        "appearance": "An Indian woman in her late 20s or early 30s with a slim build and a medium-dark complexion. She has long, voluminous, wavy black hair parted to the side. Her facial features are sharp and symmetrical, with large, expressive dark eyes, defined eyebrows, a straight nose, and full lips. She wears a small red bindi on her forehead.",
+        "wardrobe": "A crisp, white, long-sleeved collared shirt, a black pencil skirt, a delicate gold necklace with dark beads, and a simple bracelet on her right wrist.",
+        "demeanor": "Confident, friendly, and encouraging. She maintains direct eye contact with the camera and smiles frequently."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introducing the Problem",
+        "supernova_script": "Miss Nova says: You know why you freeze when it is time to speak English?\nMiss Nova says: Because you cannot learn to speak just by reading. You have to actually talk out loud.\nMiss Nova says: But practicing with people is scary. You worry they will judge your mistakes.\nMiss Nova says: I am Miss Nova, your personal AI teacher on Supernova AI. With me, you can make a thousand mistakes, and I will never laugh at you.",
+        "scene_summary": "- Hook addresses the fear of speaking English\n- Lands beat (c) You SPEAK instead of reading\n- Lands beat (b) Privacy/no-judgement early\n- Introduces Miss Nova by name",
+        "supernova_on_screen_text": "Why do you freeze\nwhen speaking English?\nYou have to actually talk\nBut people judge mistakes\nI am Miss Nova\nyour AI teacher\nMake 1000 mistakes\nI will never laugh"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "supernova_script": "Miss Nova says: I do not give everyone the same boring lessons.\nMiss Nova says: I analyze your exact level and build a personalized plan just for you.\nMiss Nova says: We practice real-life situations together, like your next job interview or a client call.\nMiss Nova says: And when you get stuck, I explain the logic right in your own language, so you actually understand.",
+        "scene_summary": "- Lands beat (a) Personalization\n- Lands beat (e) Real-life scenarios (job interview)\n- Lands beat (g) Logic explained in native language",
+        "supernova_on_screen_text": "Personalized plan\njust for you\nPractice real-life situations\nlike a job interview\nLogic explained\nin your own language"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action: Download",
+        "supernova_script": "Miss Nova says: Stop wasting hours scrolling your feed every day.\nMiss Nova says: Just spend fifteen minutes a day practicing with me.",
+        "scene_summary": "- Negative time anchor (scrolling feeds)\n- Positive time anchor (15 minutes a day)",
+        "supernova_on_screen_text": "Stop scrolling feeds\nSpend 15 minutes a day\npracticing with me"
+      },
+      {
+        "n": 4,
+        "scene_label": "The Final Promise",
+        "supernova_script": "Miss Nova says: Download Supernova AI today, and you will start speaking more confidently within a month.",
+        "scene_summary": "- Replaces the seed's fluency guarantee with a safe, hedged progress expectation\n- Clean download CTA",
+        "supernova_on_screen_text": "Download Supernova AI\nStart speaking confidently\nwithin a month"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "b (privacy/no-judgement), c (you speak), a (personalization), e (real-life scenarios), g (logic explained)",
+      "kept_from_seed": "AI presenter direct-to-camera format and app demonstration split-screen",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure or comparative price used."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "SpeakX",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781522951.790219
+}
