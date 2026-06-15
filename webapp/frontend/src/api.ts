@@ -151,6 +151,8 @@ export interface Ad {
   analysis_gdoc_url: string
   /** localized Supernova Doc per language, e.g. { Hindi: "https://docs.google…" } */
   locales: Record<string, string>
+  /** per-language reviewer signal from the brand-safety audit, e.g. { Hindi: { verdict: 'block', notes: '…' } } */
+  review: Record<string, { verdict: string; notes: string }>
   /** per-language voiceover (TTS) track URL, e.g. { Hindi: "https://…/hindi.mp3" } */
   tts_audio: Record<string, string>
   rewrite_docx_url: string

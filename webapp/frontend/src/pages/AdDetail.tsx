@@ -368,6 +368,7 @@ export default function AdDetail() {
                   competitor={slug}
                   adId={adId}
                   locales={ad.locales || {}}
+                  review={ad.review || {}}
                   verified={ad.verified_languages || {}}
                   onChanged={load}
                 />

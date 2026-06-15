@@ -5,11 +5,20 @@ import { type LangVerify, verifyLocalizeLanguage } from '../api'
  * Per-language localized-script chips: open the Doc + a verify toggle.
  * Each language is verified by its language owner (recorded + displayed, not enforced).
  */
+/** brand-safety verdict -> reviewer-focused badge (every script still gets human review;
+ * this only says how much focus + what to check). */
+const REVIEW_BADGE: Record<string, { emoji: string; label: string }> = {
+  block: { emoji: '🔴', label: 'Priority review' },
+  flag: { emoji: '🟡', label: 'Review suggested' },
+  pass: { emoji: '🟢', label: 'Standard' },
+}
+
 export default function LocalizedDocsChips({
   pipeline,
   competitor,
   adId,
   locales,
+  review = {},
   verified,
   onChanged,
 }: {
@@ -18,6 +27,8 @@ export default function LocalizedDocsChips({
   adId: string
   /** { Hindi: docUrl, … } */
   locales: Record<string, string>
+  /** { Hindi: { verdict: 'pass'|'flag'|'block', notes }, … } — reviewer signal */
+  review?: Record<string, { verdict: string; notes: string }>
   /** { Hindi: { verified, verified_by, at }, … } */
   verified: Record<string, LangVerify>
   onChanged: (v: Record<string, LangVerify>) => void
@@ -73,6 +84,19 @@ export default function LocalizedDocsChips({
               >
                 📄 {lang}
               </a>
+              {(() => {
+                const r = review[lang]
+                const meta = r && REVIEW_BADGE[r.verdict]
+                if (!meta) return null
+                return (
+                  <span
+                    className="cursor-help text-[11px] leading-none"
+                    title={`${meta.label}${r.notes ? ` — ${r.notes}` : ''}`}
+                  >
+                    {meta.emoji}
+                  </span>
+                )
+              })()}
               <button
                 onClick={() => toggle(lang)}
                 disabled={busy === lang}
