@@ -145,18 +145,75 @@ class Catalog:
         for p in (REPO / "facebook" / "step4_workspace" / "scenes").glob("*.gdocs.json"):
             try:
                 d = json.loads(p.read_text(encoding="utf-8"))
-                out[str(d.get("ad_library_id") or p.name.split(".")[0])] = {
+                aid = str(d.get("ad_library_id") or p.name.split(".")[0])
+                locales_raw = d.get("locales") or {}
+                out[aid] = {
                     "rewrite": (d.get("supernova_doc") or {}).get("link", ""),
                     "analysis": (d.get("competitor_doc") or {}).get("link", ""),
                     # per-language localized Doc links (Title-cased lang -> url)
                     "locales": {lang.title(): (loc or {}).get("link", "")
-                                for lang, loc in (d.get("locales") or {}).items()},
+                                for lang, loc in locales_raw.items()},
                     # per-language voiceover (TTS) track URLs (Title-cased lang -> url)
                     "tts_audio": {lang.title(): (v or {}).get("track_url", "")
                                   for lang, v in (d.get("tts") or {}).items()},
+                    # per-language reviewer signal {Lang: {verdict, notes}} from the safety audit
+                    "review": self._review_map(aid, locales_raw),
                 }
             except (json.JSONDecodeError, OSError):
                 continue
+        return out
+
+    # Brand-safety guardrail -> plain-English "what to check" for whoever verifies the script.
+    _REVIEW_GUIDANCE = {
+        "G1.1": "soften the progress claim with a hedge ('start to' / 'can')",
+        "G1.2": "remove the job/income/visa/exam outcome promise",
+        "G1.3": "remove fake credential / authority claim",
+        "G1.4": "drop the absolute superlative ('best', 'only', '#1')",
+        "G2.1": "don't name/trash a competitor or 3rd-party platform",
+        "G2.2": "remove false claim about a named competitor",
+        "G3.1": "make the shame hook resolve in dignity/triumph",
+        "G3.2": "remove demeaning of a caste/religion/region/group",
+        "G3.3": "remove accent/language mockery",
+        "G3.4": "critique the behaviour, not the person's worth",
+        "G4.1": "drop the sensitive personal-attribute claim",
+        "G4.2": "price/UI overlay in the VISUAL — strip from production or confirm it's the source ad",
+        "G4.3": "tone down the sensational before/after",
+        "G4.4": "remove get-rich / health-cure framing",
+        "G5.1": "keep trauma fictional/absurdist, not real fear-mongering",
+        "G5.2": "remove political/religious/communal content",
+        "G5.3": "remove real-person likeness",
+        "G6.1": "price/discount shown — remove the hard rupee figure or confirm it's the source visual",
+        "G6.2": "comparative cost only — no bare rupee figure",
+        "G6.3": "use only the approved '1 crore+' proof point",
+        "G7.1": "remove surveillance / 'everyone can hear you' framing",
+        "G7.2": "remove data-sharing implication",
+    }
+
+    def _review_map(self, aid: str, locales_raw: dict) -> dict:
+        """Per-language reviewer signal from each <id>.<lang>.supernova.json safety block.
+        Returns {Lang: {verdict: pass|flag|block, notes: 'what to check'}}; the frontend
+        turns the verdict into 🟢 Standard / 🟡 Review suggested / 🔴 Priority review."""
+        scenes = REPO / "facebook" / "step4_workspace" / "scenes"
+        out: dict[str, dict] = {}
+        for lang in locales_raw:
+            sp = scenes / f"{aid}.{lang.lower()}.supernova.json"
+            if not sp.exists():
+                continue
+            try:
+                saf = (json.loads(sp.read_text(encoding="utf-8")).get("safety") or {})
+            except (json.JSONDecodeError, OSError):
+                continue
+            verdict = str(saf.get("verdict") or "").lower()
+            seen: list[str] = []
+            for v in (saf.get("violations") or saf.get("issues") or []):
+                gid = (v.get("guardrail_id") or v.get("guardrail") or v.get("id") or "").strip()
+                if gid and gid not in seen:
+                    seen.append(gid)
+            items = [f"{self._REVIEW_GUIDANCE.get(g, 'review this guideline')} ({g})" for g in seen[:3]]
+            if len(seen) > 3:
+                items.append(f"+{len(seen) - 3} more")
+            notes = "; ".join(items) if items else ("Auto-checks clean — routine verify." if verdict == "pass" else "")
+            out[lang.title()] = {"verdict": verdict, "notes": notes}
         return out
 
     def _transcript_ids(self, pipeline: str, slug: str) -> set[str]:
@@ -248,6 +305,7 @@ class Catalog:
             "rewrite_gdoc_url": rewrite_gdoc,
             "analysis_gdoc_url": analysis_gdoc,
             "locales": sidecar.get("locales", {}),  # {Lang: localized Doc url}
+            "review": sidecar.get("review", {}),    # {Lang: {verdict, notes}} reviewer signal
             "tts_audio": {lg: self._publicize(u)  # {Lang: public voiceover url} (browser-playable)
                           for lg, u in (sidecar.get("tts_audio") or {}).items()},
             "rewrite_docx_url": rewrite_docx,
