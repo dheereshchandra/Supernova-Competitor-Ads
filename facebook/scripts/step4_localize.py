@@ -56,10 +56,11 @@ LOCALE_SCHEMA = {
             "properties": {
                 "n": {"type": "integer"},
                 "scene_label": {"type": "string"},
-                "script": {"type": "string"},
-                "on_screen_text": {"type": "string"},
+                # Two code-mixed forms of the SAME dialogue, for the 2-form TTS feed.
+                "script_native": {"type": "string"},   # native script + English (Devanagari/Tamil/…)
+                "script_roman": {"type": "string"},     # romanized Latin + English
             },
-            "required": ["n", "scene_label", "script", "on_screen_text"],
+            "required": ["n", "scene_label", "script_native", "script_roman"],
         }},
         "self_critique_fixed": {"type": "string"},
     },
@@ -95,18 +96,30 @@ def _extract_section(scene_body: str, start_marker: str) -> str:
 
 
 def parse_doc_scenes(text: str) -> dict:
-    """Parse exported Supernova-rewrite Doc text back into {n: {script, on_screen_text}}.
-    Anchors on the stable 'Scene N — …' headings the docx builder writes."""
-    parts = re.split(r"(?m)^Scene (\d+)\s+[—–-]\s+", text)
+    """Parse exported Supernova Script Doc text back into {n: {script}} for the 3-zone layout:
+    the 'Script' zone (after 'Same cast as above.') holds 'Scene N' headings, each followed by
+    'Name says: …' dialogue lines, until the TTS / Provenance section or a separator. This lets the
+    team's EDITS to the English Doc overlay the committed skeleton before localization."""
+    start = text.find("Same cast as above.")
+    if start < 0:
+        m = re.search(r"(?m)^Script\s*$", text)
+        start = m.start() if m else 0
+    zone = text[start:]
+    for stop in ("TTS input", "Provenance"):
+        i = zone.find(stop)
+        if i >= 0:
+            zone = zone[:i]
     out = {}
+    parts = re.split(r"(?m)^\s*Scene (\d+)\s*$", zone)
     for i in range(1, len(parts) - 1, 2):
         try:
             n = int(parts[i])
         except ValueError:
             continue
-        body = parts[i + 1]
-        out[n] = {"script": _extract_section(body, "Supernova-voice script"),
-                  "on_screen_text": _extract_section(body, "On-screen text (Supernova version)")}
+        lines = [s for ln in parts[i + 1].splitlines()
+                 if (s := ln.strip()) and set(s) > {"─", "-", " "}]
+        if lines:
+            out[n] = {"script": "\n".join(lines)}
     return out
 
 
@@ -120,8 +133,7 @@ def resolve_english_source(ad_id: str, prefer_gdoc: bool):
     sup = json.loads(sup_path.read_text())
     parsed = sup.get("parsed", {})
     skeleton = [{"n": s.get("n"), "scene_label": s.get("scene_label", ""),
-                 "script": s.get("supernova_script", ""),
-                 "on_screen_text": s.get("supernova_on_screen_text", "")}
+                 "script": s.get("supernova_script", "")}
                 for s in parsed.get("scenes", [])]
     dec_path = SCENES_DIR / f"{ad_id}.json"
     decompose = json.loads(dec_path.read_text()) if dec_path.exists() else {"parsed": {}}
@@ -140,8 +152,6 @@ def resolve_english_source(ad_id: str, prefer_gdoc: bool):
                     e = edited.get(sc["n"])
                     if e and e.get("script"):
                         sc["script"] = e["script"]
-                        if e.get("on_screen_text"):
-                            sc["on_screen_text"] = e["on_screen_text"]
                         applied += 1
                 comments = _gdrive.list_unresolved_comments(svc, fid)
                 source = (f"EDITED gdoc — {applied}/{len(skeleton)} scenes parsed, "
@@ -170,8 +180,12 @@ for something the brand-safety guardrails ban (e.g. a hard rupee price), IGNORE 
 comment and say so in self_critique_fixed:
 {chr(10).join('- ' + c for c in comments) if comments else '(none)'}
 
-Translate the APPROVED ENGLISH MASTER below — scene-for-scene, line-for-line — into romanized,
-code-mixed {target}. Keep '[music only, no speech]' scenes as-is. Same scene count and order.
+Translate the APPROVED ENGLISH MASTER below — scene-for-scene, line-for-line — into code-mixed
+{target}. Output BOTH forms of every scene's dialogue (same words, same speaker labels 'Name says:',
+one turn per line):
+  - script_native : {target} in its NATIVE script + English keywords kept inline (code-mix).
+  - script_roman  : the SAME, romanized in Latin letters + English keywords.
+Keep '[music only, no speech]' scenes as-is. Same scene count and order.
 
 ENGLISH MASTER:
 """
@@ -190,26 +204,35 @@ def audit_text(translated: dict, decompose: dict) -> str:
         if vd:
             lines.append(f"  [VISUAL — competitor source; brand swapped downstream, do NOT flag a "
                          f"competitor brand NAME only here] {vd}")
-        if s.get("script"):
-            lines.append(f"  [SCRIPT]\n{s['script']}")
-        if (s.get("on_screen_text") or "").strip():
-            lines.append(f"  [ON-SCREEN] {s['on_screen_text']}")
+        script = s.get("script_native") or s.get("script_roman") or s.get("script") or ""
+        if script:
+            lines.append(f"  [SCRIPT]\n{script}")
     return "\n".join(lines)
 
 
 def to_rewrite_shape(translated: dict, english_skeleton: list, base_parsed: dict) -> dict:
-    """Adapt a translation into the rewrite shape build_supernova_doc expects."""
-    summ = {s["n"]: s for s in english_skeleton}
-    scenes = [{
-        "n": s.get("n"), "scene_label": s.get("scene_label", ""),
-        "supernova_script": s.get("script", ""),
-        "scene_summary": "",
-        "supernova_on_screen_text": s.get("on_screen_text", ""),
-    } for s in translated.get("scenes", [])]
+    """Adapt a translation into the rewrite shape build_supernova_doc expects.
+    The visuals are identical to the English master, so reuse its format / visual_overview /
+    per-scene brief (English context for the editor). The Script zone uses the NATIVE-script form;
+    the TTS block carries BOTH forms (romanized + native), speaker labels stripped."""
+    base_scenes = {s.get("n"): s for s in base_parsed.get("scenes", [])}
+    scenes, roman_lines, native_lines = [], [], []
+    for s in translated.get("scenes", []):
+        native = s.get("script_native") or s.get("script") or ""
+        roman = s.get("script_roman") or ""
+        scenes.append({
+            "n": s.get("n"), "scene_label": s.get("scene_label", ""),
+            "scene_brief": base_scenes.get(s.get("n"), {}).get("scene_brief", ""),
+            "supernova_script": native,
+        })
+        native_lines += [sp for ln in native.split("\n") if (sp := build_docs._strip_speaker(ln))]
+        roman_lines += [sp for ln in roman.split("\n") if (sp := build_docs._strip_speaker(ln))]
     return {"production_type": base_parsed.get("production_type", ""),
+            "format": base_parsed.get("format", ""),
+            "visual_overview": base_parsed.get("visual_overview", ""),
             "characters": base_parsed.get("characters", []),
             "scenes": scenes,
-            "payload_audit": {}, "brand_swaps_detected": []}
+            "tts": {"romanized": roman_lines, "native": native_lines}}
 
 
 # ---------------------------------------------------------------- per-language run

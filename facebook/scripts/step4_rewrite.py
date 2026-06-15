@@ -59,138 +59,100 @@ def load_safety() -> str:
         sys.exit(f"[error] brand-safety policy missing at {SAFETY_PATH}")
 
 
-# Rewrite instructions, appended AFTER the brand context. The governing idea (validated on 5 proven
-# competitor seeds): KEEP the ad's core visual shell exactly, RE-PITCH only the message into the
-# Supernova payload. The visuals are reused unchanged, so the script must keep fitting them.
+# Rewrite instructions, appended AFTER the brand context. The governing idea (v3, faithful-replication):
+# the competitor ad is PROVEN — replicate it as-is and only re-skin it for Supernova. Change as little as
+# possible; apply the concept brief; never rewrite in the name of "guidelines" (only the 4 hard lines).
 INSTRUCTIONS = """
 
 ================================================================================
-YOUR JOB — GENERATE A SUPERNOVA AD FROM A COMPETITOR'S PROVEN AD
+YOUR JOB — REPLICATE A PROVEN COMPETITOR AD, LIGHTLY RE-SKINNED FOR SUPERNOVA
 
-Everything above is Supernova AI's brand + payload context AND its brand-safety guardrails. After INPUT
-below you receive a structured scene-by-scene breakdown of a *competitor's* ad — a PROVEN winner. Each
-scene carries its VISUALS (`setting`, `visual_description`, `panel_visual_description`) plus its AUDIO
-(`audio_transcript`) and its `on_screen_text`. The INPUT also names the SEED LANGUAGE — the language the
-competitor ad was originally made in (its target audience). USE that to adapt idioms, world and tone to
-that audience's reality — but your OUTPUT is always 100% English (see CONSTRAINTS).
+Everything above is Supernova's context + pitch points + the few HARD LINES. After INPUT below you get a
+scene-by-scene breakdown of a *competitor's* ad (a PROVEN winner), the SEED LANGUAGE it was made in, and
+a CONCEPT BRIEF. The competitor ad works for a reason we don't fully know — hook, script, or visuals — so
+**CHANGE AS LITTLE AS POSSIBLE.** You are RE-SKINNING it, not rewriting it. Your OUTPUT is 100% English.
 
-THE BALANCE — read twice:
-- **KEEP THE CORE OF THE AD AS-IS.** The visual concept, setting, scene order, cast, hook device and
-  overall LOOK are proven and drive performance as much as the words. These visuals are reused
-  UNCHANGED downstream — your script MUST keep fitting them. Do NOT invent a new concept, do NOT drift
-  to a generic "job interview / 15-day transformation" template, do NOT change what the viewer sees.
-  Stay inside this ad's world (if the seed is absurdist, e.g. a skydiving baby, keep it absurdist).
-- **RE-PITCH ONLY THE MESSAGE inside that exact shell.** Rewrite each scene's `audio_transcript` into
-  `supernova_script` and its `on_screen_text` into `supernova_on_screen_text` so the ad now delivers
-  Supernova AI's disciplined PAYLOAD (above), woven naturally into the EXISTING beats: swap the competitor
-  brand -> Supernova AI; lead with personalization (a) + privacy/no-judgement (b); name **Miss Nova** as
-  the AI teacher; name **English** within the first ~10s; keep an in-story reveal; weave in the
-  mother-tongue reframe / a named real-life scenario WHERE THEY FIT this world (and, only OCCASIONALLY —
-  not every ad — the ChatGPT contrast, when it genuinely fits). Strip any
-  hard rupee price (a comparative like "7x cheaper than classes" is allowed only if it fits the scene;
-  a "1 crore+ users" social-proof line is fine where it fits — don't let it carry the ad alone).
-- **INDIANIZE EVERY REFERENCE — the ad targets Indians in India.** The competitor seed may run abroad;
-  in your re-pitch, convert ALL foreign references in `supernova_script` + `supernova_on_screen_text` to
-  an Indian frame — character names → Indian names (Rahul, Priya, Anjali, Imran…, never "Jenny"/"John");
-  cities/places → Indian (Mumbai/Delhi/Lucknow/a Tier-2 town, NEVER Paris/France/London-as-home); plus
-  currency (₹), brands, food, festivals and any foreign-language line → Hindi/English Indian equivalents.
-  (Real failure to avoid: a "Where are you from?" beat answered "I am from France", or a learner named
-  "Jenny" — make them an Indian city and an Indian name.) Only an element FORCED by the reused VISUALS
-  may remain on screen; everything you WRITE must read as unmistakably Indian.
-- **NAME EVERY CHARACTER — and use the name, not "Character A".** In the output `characters[]`, give each
-  character a `name`: a consistent Indian name for every human (the SAME name in every scene they appear in),
-  and **"Miss Nova"** for the AI teacher / assistant / robot / avatar (Supernova AI's teacher is always Miss
-  Nova). Then write every `supernova_script` line with that NAME as the speaker label ("Ramesh says: …",
-  "Miss Nova says: …") — never "Character A says:". The reader sees real names; the id→name mapping lives in
-  `characters[]`.
-- **LEAD WITH a + b — DON'T BACK-LOAD THEM.** Personalization (a) and privacy/no-judgement (b) are the
-  retention engine; the failure to avoid is letting the final CTA be the FIRST place they appear. In a
-  4+ scene ad, land a+b by the MIDPOINT; in a 2–3 scene ad, put them in the BODY of scene 2 (right after
-  the hook, before the CTA tail). A correction-skit may ALSO restate a+b in its close — fine, as long as
-  they already landed earlier. Front-load by choosing WHICH existing early lines to re-pitch into the a+b
-  message — you change what early lines SAY, never their position (scene order is fixed, per the rules
-  above).
-- **LAND AT LEAST 3–4 PAYLOAD BEATS — every ad.** Deliver a minimum of **3–4** of the a–g beats (a is
-  non-negotiable; lead with a + b), picking the ones that fit THIS ad's world and pacing. Even a
-  short/absurdist 2–3 scene ad must reach 3–4 — weave them into the EXISTING beats rather than dropping
-  to just a+b. A longer narrative can stack more. Never cram so many beats that the pace breaks.
-- You MAY lightly expand ONE line within a scene if a payload beat needs it, but NEVER change the
-  visual, the scene order, or what is shown.
-- **NEVER violate the BRAND-SAFETY GUARDRAILS above** (the hard NEVERs — no brand-voiced guarantees,
-  no hard rupee price, no personal-attribute phrasing, no demeaning of any group, no competitor
-  trashing, shame must resolve in dignity). They override all creative latitude.
+THE HEADLINE: the competitor's script is the source of truth — keep its hook, its specific lines and
+examples, who speaks first, and the turn order. Re-skin = swap the brand to Supernova + weave in ≥3 pitch
+points + re-point the CTA + apply the concept brief. Above all, the result must read as a SMOOTH, NATURAL
+conversation — never a sales pitch, never an abrupt Miss Nova drop-in.
 
-OUTPUT: exactly one JSON object (no markdown fences, no commentary). Schema:
+PRIORITY ORDER:
+1. **[HARD] Apply the CONCEPT BRIEF first — it is MANDATORY.** It overrides the competitor original where
+   they differ: character swaps (e.g. a baby or a robot instead of the original person), format
+   reclassification (treat as a talking-head / TED; if the seed is an ASMR split-screen with filler video
+   below, treat it as a single talking-head and DO NOT mention ASMR), and any script/visual direction it
+   gives. The script + visuals may flex to accommodate the brief. (If no brief is provided, replicate the
+   competitor faithfully.)
+2. **[HARD] Then replicate the competitor faithfully for everything the brief doesn't change:**
+   - **[SOFT, strong default] Keep the specific line content** — the exact wrong-English example being
+     corrected ("I'm having two brothers" STAYS "I'm having two brothers", NOT "I'm having a doubt"), the
+     specific question, the exact beat. Change a line ONLY if the brief requires it or the script genuinely
+     needs it to flow. Do NOT substitute a different example or invent new dialogue.
+   - **[SOFT, strong default] Keep the opening speaker + turn order** — if the robot / Miss Nova opens,
+     keep it; flip it ONLY if the brief or natural flow demands.
+   - **[SOFT] Keep the hook** unless the brief changes it or it names the competitor brand.
+3. **[HARD] Re-skin for Supernova — the only deliberate changes:**
+   - Swap the competitor brand -> **Supernova AI**; the AI teacher -> **Miss Nova**.
+   - Weave in **AT LEAST 3 pitch points** (PART 2) into the EXISTING beats, naturally — never jammed. If a
+     pitch point doesn't fit, pick one that does. Minimum 3; more only if there's room.
+   - Re-point the **CTA** to Supernova (install, ~10–15 min/day, with the help of Hindi).
+   - **[SOFT] Benefits first, brand second** — lean toward the first half carrying the relatable / benefit
+     content and bringing Supernova / Miss Nova in around the second half — but follow the seed if it
+     reveals the product early.
+4. **[HARD] SMOOTH, NATURAL FLOW IS THE #1 GOAL.** The script must read like a real conversation. NEVER add
+   a pitch point just to hit the count; NEVER drop Miss Nova in abruptly. Flow wins over count — but you
+   must still land at least 3 pitch points, woven lightly enough that the conversation stays natural.
+5. **[HARD] INDIANIZE EVERY REFERENCE** — names -> Indian (Rahul, Priya, Anjali, Imran…, never
+   "Jenny"/"John"), cities/places -> Indian (never France/London-as-home), currency/food/festivals ->
+   Indian. The audience is in India.
+6. **[HARD] NEVER cross the four HARD LINES above.** Otherwise do NOT rewrite anything in the name of
+   guidelines — when unsure, KEEP THE SEED.
+
+OUTPUT: exactly one JSON object (no markdown fences, no commentary). The deliverable doc has two
+zones for this English master — a skim-able **Visual & Cast** block (format + look + cast +
+scenes-at-a-glance) and the clean **Script** (a TTS feed is generated later, only on the localized
+versions). Put all visual/analyst detail in the top-level fields and keep `supernova_script` PURE
+DIALOGUE (no stage directions, no on-screen text, no narration). Schema:
 
 {
   "production_type": "<same as input>",
+  "format": "<the ad's format/container in a few words — e.g. 'Split-screen grammar-correction skit', 'TED-style stage monologue', 'Interview / talk-show', 'Family narrative drama', 'Mock breaking-news bulletin'. Name the container (Part 5) + whether it's split-screen / single-presenter / multi-cast.>",
+  "visual_overview": "<2–4 plain sentences describing what the ad LOOKS like end to end — the setting(s), who is on screen and where (left/right in a split-screen), any app-UI cutaways or end card, and the caption style. Faithful to the seed's REUSED visuals. This is skim-context for the editor, NOT the script.>",
   "characters": [
     {
       "id": "<same as input — the stable A/B/C label>",
-      "name": "<the character's ASSIGNED NAME, used as the speaker label in supernova_script. Human → the consistent Indian name you give them (same name in every scene). AI teacher/assistant/robot/avatar → \"Miss Nova\". A minor non-speaking or purely-functional figure may take a short descriptive label (e.g. \"Interviewer\").>",
-      "role": "<same as input>",
-      "appearance": "<same as input — copy through>",
-      "wardrobe": "<same as input — copy through>",
-      "demeanor": "<same as input — copy through>"
+      "name": "<the character's ASSIGNED NAME, used as the speaker label in supernova_script. Human → a consistent Indian name (the SAME in every scene they appear in). AI teacher/assistant/robot/avatar → \"Miss Nova\". A minor non-speaking figure may take a short descriptive label (e.g. \"Interviewer\").>",
+      "role": "<same as input — short>",
+      "brief": "<ONE short line: who they are + key look, e.g. 'AI tutor avatar, glossy white-grey robot casing' or 'young male office-worker learner'>"
     }
   ],
   "scenes": [
     {
       "n": <same as input>,
       "scene_label": "<same as input>",
-      "supernova_script": "<your Supernova AI re-pitch of this scene's audio_transcript, in ENGLISH. Put each spoken turn on its OWN line, prefixed with the speaking character's ASSIGNED NAME + ' says:' — e.g. 'Ramesh says:' / 'Miss Nova says:' — taking the name from the characters[] list above (one line per turn — this makes the Scene/Character/Script layout clean). Same visual beat and pacing; Supernova AI payload + Miss Nova voice.>",
-      "scene_summary": "<2-4 hyphen-prefixed bullets: what this scene does — purpose, emotion, which payload beat(s) it lands. For analyst reference.>",
-      "supernova_on_screen_text": "<re-pitched on_screen_text if relevant; otherwise empty string>"
+      "scene_brief": "<ONE short line — what this scene does, for the 'scenes at a glance' list. e.g. 'Rapid present→past verb drill' / 'No-judgement: speak out loud, make 1000 mistakes' / 'Affordability + 15 min/day close'.>",
+      "supernova_script": "<your Supernova AI re-pitch of this scene's audio_transcript, in ENGLISH. Each spoken turn on its OWN line, prefixed with the speaking character's ASSIGNED NAME + ' says:' — e.g. 'Ramesh says:' / 'Miss Nova says:' — using the names from characters[] (one line per turn). PURE DIALOGUE — what is SPOKEN, nothing else. Same visual beat + pacing; Supernova payload + Miss Nova voice.>"
     }
   ],
-  "payload_audit": {
-    "beats_covered": "<which payload beats a-g the whole ad lands (MUST be at least 3–4), with a 3-word note each>",
-    "kept_from_seed": "<one line naming the core visual/structure you preserved>",
-    "miss_nova_named": <true|false>,
-    "english_named_early": <true|false>,
-    "price_check": "<confirm no hard rupee figure; note any comparative used>"
-  },
-  "brand_swaps_detected": [
-    {"competitor_brand": "<original brand name found in script or on-screen text>",
-     "supernova_swap": "<what we replaced it with — usually 'Supernova AI' or removed>"}
-  ]
+  "pitch_points_used": ["<the >=3 Supernova pitch points you landed — e.g. 'personalization', 'no-judgement', 'cheaper than coaching'>"],
+  "self_check": "<one line: confirm the flow is natural, the brand sits in the back half (or why the seed put it early), and you KEPT the seed's hook / opening speaker / specific lines (or note exactly what the concept brief changed)>"
 }
 
 CONSTRAINTS:
-- **Kept or lightly-expanded seed lines are NOT exempt from the BRAND-SAFETY GUARDRAILS.** Rewrite any
-  brand-voiced OUTCOME or SUFFICIENCY absolute — "all you need", "guaranteed", "100%", "fluent in X days",
-  "you'll never struggle again", "so you never get confused" — into a non-promise. The brand/Miss Nova
-  NEVER guarantees a RESULT; only a CHARACTER may give a personal testimonial (a learner saying "I improved
-  in two weeks" is fine — the brand/VO must not promise a timeframe). **Carve-out:** the no-judgement
-  REASSURANCE of beat b is NOT an outcome promise — "I'll never laugh at you", "no one is ever
-  watching/judging you", "make 1000 mistakes" are ALLOWED and encouraged (it's the highest-leverage beat).
-  **Carve-out (30-day progress):** a soft, hedged progress EXPECTATION tied to daily practice — "start
-  seeing visible progress in ~30 days", "speak more confidently within a month" — is ALLOWED (it's a
-  benefit, not a guarantee); only HARD guarantees ("fluent/100%/job in X days") get rewritten.
-  Safe swaps: time anchor = "just 15 minutes a day" (NOT "15 minutes is all you need"); logic beat = "so it
-  finally makes sense / explained in your own language" (NOT "so you never get confused" — the problem is
-  the absolute "never", not the comprehension benefit itself, which is beat g and encouraged).
-- **KEEP THE SEED'S HOOK ENERGY — be permissive here (relaxed G4.1).** The hook is often WHY the seed
-  wins; do NOT sand it down by reflex, and do NOT soften it into "most of us…" framing. A character
-  speaking bluntly to the viewer is FINE: tough-love, direct second person, even an accusatory callout of
-  the viewer's BEHAVIOR or choices ("you scroll 4 hours a day but can't find 15 minutes for English — that's
-  your mistake", "still hiding behind ChatGPT?", "describe this clip in English") is allowed and encouraged
-  when the seed does it. PRESERVE it. ONLY re-pitch a hook that crosses a hard red line: it asserts or
-  derides a personal/PROTECTED ATTRIBUTE of the viewer (caste, religion, income, region, disability, gender,
-  age, body — e.g. "you illiterate?", "you who can't speak English are worthless"), demeans them as a
-  PERSON (vs. critiquing a behavior), or shames without resolving in dignity (G3.1). Behavior and choices
-  are fair game; identity and self-worth are not. When unsure, KEEP the seed's energy — the independent
-  brand-safety audit will catch a true violation.
 - Output ONLY a valid JSON object. No commentary, no markdown fences.
-- Every scene from the input must appear in the output with the same `n`, in the same order.
-- `supernova_script` MUST put each spoken turn on its OWN line prefixed with the speaker's ASSIGNED NAME + " says:" (e.g. "Ramesh says:", "Miss Nova says:"), using the names from `characters[]` — never "Character A says:". One line per turn (this renders as a clean Scene -> Character -> Script layout).
-- **WRITE 100% PURE ENGLISH — every word.** Script + on-screen text are entirely in English: NO Hindi/
-  Tamil/Telugu/etc. words at all, not even romanized flavor lines ("Koi baat nahi", "yaar", "bindhast").
-  This English master is the SINGLE SOURCE the team reviews and then localizes into Indian languages
-  downstream; the code-mix is added at THAT stage, not here. Keep the warm, conversational rhythm — but
-  express it in plain English. Never output Devanagari/Tamil/etc. script or bracketed [translations].
-  EXCEPTION: a proper noun the brand keeps as-is (Supernova AI, Miss Nova) stays; that is not a foreign word.
-- Do NOT change the visuals or scene order. If a scene's dialogue is too brand-specific to re-pitch, still emit it with `supernova_script: "[scene-too-brand-specific-to-rewrite — manual edit needed]"`. Never silently skip scenes.
+- Every scene from the input appears in the output with the same `n`, in the same order. Keep the same
+  OPENING SPEAKER and TURN ORDER as the seed, unless the concept brief or natural flow requires a change.
+- Keep the seed's SPECIFIC lines and examples (the exact wrong-English phrase being corrected, the exact
+  question). Do not substitute a different example or invent dialogue — only re-skin (brand + pitch points
+  + CTA) and apply the concept brief.
+- `supernova_script` MUST put each spoken turn on its OWN line prefixed with the speaker's ASSIGNED NAME + " says:" (e.g. "Ramesh says:", "Miss Nova says:"), using the names from `characters[]` — never "Character A says:". One line per turn. PURE DIALOGUE only — no stage directions, no on-screen text.
+- **WRITE 100% PURE ENGLISH — every word.** The master is entirely in English: NO Hindi/Tamil/Telugu/etc.
+  words at all, not even romanized flavour ("yaar", "koi baat nahi"). The code-mix is added later at
+  localization, not here. Keep the warm, conversational rhythm — in plain English. Never output
+  Devanagari/Tamil/etc. script. EXCEPTION: brand proper nouns (Supernova AI, Miss Nova).
+- Do NOT change the visuals or scene order. If a scene's dialogue is genuinely impossible to re-skin, emit
+  it with `supernova_script: "[scene needs manual edit]"`. Never silently skip scenes.
 
 INPUT:
 """
@@ -254,7 +216,15 @@ def cmd_submit(client, ids: list[str], competitor: str) -> int:
         decompose = json.loads(sidecar.read_text())
         parsed = decompose.get("parsed", {})
         seed_lang = seed_langs.get(ad_id) or "unknown (infer it from the audio_transcript)"
-        user_text = f"{prompt}SEED LANGUAGE: {seed_lang}\n\n" + json.dumps(parsed, ensure_ascii=False)
+        # Concept brief (MANDATORY input when present): step4_workspace/scenes/<id>.brief.txt — the
+        # team's replication direction (character swaps, ASMR->talking-head, format). The driver / Ad
+        # Studio writes it from the Ideas-sheet `Concept Brief` column; absent → faithful replication.
+        brief_path = SCENES_DIR / f"{ad_id}.brief.txt"
+        brief = brief_path.read_text(encoding="utf-8").strip() if brief_path.exists() else ""
+        brief_block = (f"CONCEPT BRIEF (MANDATORY — apply over the competitor original where they differ):\n{brief}\n\n"
+                       if brief else "CONCEPT BRIEF: (none provided — replicate the competitor faithfully)\n\n")
+        user_text = (f"{prompt}SEED LANGUAGE: {seed_lang}\n\n{brief_block}"
+                     + json.dumps(parsed, ensure_ascii=False))
         inlined.append({
             "contents": [
                 gt.Content(role="user", parts=[gt.Part(text=user_text)]),
