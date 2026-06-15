@@ -143,6 +143,7 @@ COMPETITOR_PAGES = {
     ],
     "Learna AI": [{"page_id": "521600091028761", "page_name": "Learna AI: English Learning App"}],
     "Wispr Flow": [{"page_id": "110864474787474", "page_name": "Wispr Flow"}],
+    "Lingo AI": [{"page_id": "599204246602758", "page_name": "Lingo AI"}],  # HongKong Gleaming Ltd; ~147 active IN ads (2026-06-15)
 }
 
 NAV_URL = ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all"
