@@ -1,0 +1,41 @@
+{
+  "ad_library_id": "880800171143322",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introducing the Problem",
+        "script": "Miss Nova says: Meeru English matladeyappudu enduku freeze aypotaro telusa?\nMiss Nova says: Endukante, kevalam chadavadam valla English matladadam raadu. Meeru actually out loud ga matladali.\nMiss Nova says: Kani vere vallatho practice cheyyalante bhayam. Mana mistakes chusi judge chestharemo ani tension.\nMiss Nova says: Nene Miss Nova, Supernova AI lo mee personal AI teacher. Naatho meeru veyyi mistakes chesina, nenu mimmalni eppudu chusi navvanu.",
+        "on_screen_text": "English matladeyappudu\nenduku freeze aypotaru?\nActually matladali\nKani janalu judge chestharu\nNene Miss Nova\nmee AI teacher\n1000 mistakes chesina\nnenu eppudu navvanu"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "script": "Miss Nova says: Nenu andariki oke boring lessons ivvanu.\nMiss Nova says: Mee exact level ni analyze chesi, mee kosam oka personalized plan ready chesthanu.\nMiss Nova says: Mana next job-interview leda client call lanti real-life situations ni kalisi practice chestham.\nMiss Nova says: Inka meeru ekkadaina stuck ayipothe, logic ni direct ga Telugu lone explain chesthanu, so that meeru easily understand cheskovachu.",
+        "on_screen_text": "Personalized plan\nmee kosame\nReal-life situations\npractice cheyyandi\nLogic direct ga\nTelugu lo explain chesthanu"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action: Download",
+        "script": "Miss Nova says: Prathi roju hours koddi feed scroll chesthu time waste cheyyakandi.\nMiss Nova says: Just 15 minutes naatho practice cheyyandi, anthe.",
+        "on_screen_text": "Feed scroll cheyyadam aapandi\nRoju ki just 15 minutes\nnaatho practice cheyyandi"
+      },
+      {
+        "n": 4,
+        "scene_label": "The Final Promise",
+        "script": "Miss Nova says: Eroje Supernova AI app download cheyandi, and single month lo meeru confident ga English matladadam start chestharu.",
+        "on_screen_text": "Supernova AI download cheyandi\n1 month lo\nconfident ga matladandi"
+      }
+    ],
+    "self_critique_fixed": "Applied the T7 hook rule by opening with a native Telugu word ('Meeru') instead of starting directly with 'English'. Ensured Miss Nova uses the warm, polite plural register ('meeru', 'cheyandi', 'mimmalni') throughout. Successfully code-mixed standard daily-speech English terms per T2 while keeping the sentence structure entirely natural and conversational (T3). Localized 'your own language' to 'Telugu' in Scene 2 per T5."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved behavior critiques and soft progress expectations within the allowed carve-outs.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781524127.563691
+}

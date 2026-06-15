@@ -1,0 +1,51 @@
+{
+  "ad_library_id": "880800171143322",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introducing the Problem",
+        "script": "Miss Nova says: Aapko pata hai jab English bolne ki baari aati hai, toh aap freeze kyun ho jaate ho?\nMiss Nova says: Kyunki sirf padhne se aap bolna nahi seekh sakte. Aapko actually out loud baat karni padegi.\nMiss Nova says: Lekin logon ke saath practice karna scary hota hai. Aapko tension hoti hai ki wo aapki mistakes ko judge karenge.\nMiss Nova says: Main hoon Miss Nova, Supernova AI par aapki personal AI teacher. Mere saath aap 1000 mistakes bhi karo, main aap par kabhi nahi hansungi.",
+        "on_screen_text": "English bolte waqt\nfreeze kyun ho jaate ho?\nActually out loud bolna padega\nLekin log mistakes judge karte hain\nMain hoon Miss Nova\naapki AI teacher\n1000 mistakes karo\nmain kabhi nahi hansungi"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demonstration",
+        "script": "Miss Nova says: Main sabko wahi same boring lessons nahi deti.\nMiss Nova says: Main aapka exact level analyze karti hoon aur sirf aapke liye ek personalized plan banati hoon.\nMiss Nova says: Hum saath mein real-life situations practice karte hain, jaise aapka next job interview ya koi client call.\nMiss Nova says: Aur jab aap kahin atak jaate ho, toh main aapko Hindi mein logic samjhati hoon, taaki aapko actually samajh aaye.",
+        "on_screen_text": "Personalized plan\nsirf aapke liye\nReal-life situations practice karo\njaise job interview\nLogic samjhiye\nHindi mein"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action: Download",
+        "script": "Miss Nova says: Har roz ghanton feed scroll karke apna time waste karna band kijiye.\nMiss Nova says: Bas din mein 15 minutes mere saath practice kijiye.",
+        "on_screen_text": "Feed scroll karna band kijiye\nRoz bas 15 minutes\nmere saath practice kijiye"
+      },
+      {
+        "n": 4,
+        "scene_label": "The Final Promise",
+        "script": "Miss Nova says: Aaj hi Supernova AI download kijiye, aur aap 1 month ke andar zyada confidently bolna shuru kar denge.",
+        "on_screen_text": "Supernova AI download kijiye\n1 month mein\nconfidently bolna shuru kijiye"
+      }
+    ],
+    "self_critique_fixed": "Ensured the hook opens with native Hindi ('Aapko pata hai...'). Applied T5 to swap 'your own language' to 'Hindi'. Maintained polite 'aap' register for Miss Nova. Used natural, conversational code-mixed Hindi (WhatsApp style romanization) without any literary or Sanskritized words. Kept numbers as English numerals per T2h."
+  },
+  "safety": {
+    "verdict": "flag",
+    "violations": [
+      {
+        "guardrail_id": "G2.1",
+        "category": "Competitors & disparagement",
+        "severity": "moderate",
+        "scene": "Scene 3",
+        "quote": "Har roz ghanton feed scroll karke apna time waste karna band kijiye.",
+        "why": "It violates the policy by explicitly trashing Meta's feed scrolling surface as 'time waste' instead of framing it as a neutral time-reallocation anchor.",
+        "fix": "Har roz ghanton feed scroll karne ke bajaye, bas 15 minutes nikal kar practice kijiye."
+      }
+    ],
+    "summary": "The script is highly compliant overall, with only a moderate violation in Scene 3 where feed scrolling is trashed as a waste of time.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781524076.672141
+}
