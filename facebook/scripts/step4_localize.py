@@ -43,6 +43,7 @@ import _gdrive            # noqa: E402
 import step4_safety_check as safety   # noqa: E402
 import step4_build_docs as build_docs  # noqa: E402
 import _flash             # noqa: E402
+import _tts_text as ttx   # noqa: E402
 from r2_utils import load_env  # noqa: E402
 
 SUPPORTED_LANGUAGES = ["Hindi", "Telugu", "Tamil", "Marathi", "Kannada", "Malayalam",
@@ -82,7 +83,7 @@ def _extract_section(scene_body: str, start_marker: str) -> str:
     if idx < 0:
         return ""
     stops = ("On-screen text (Supernova version)", "Scene summary", "Brand swaps applied",
-             "Provenance", "Supernova-voice script", "────", "──")
+             "Provenance", "Supernova-voice script", ttx.TTS_BLOCK_TITLE, "────", "──")
     out = []
     for line in scene_body[idx + len(start_marker):].splitlines()[1:]:
         s = line.strip()
@@ -209,6 +210,7 @@ def to_rewrite_shape(translated: dict, english_skeleton: list, base_parsed: dict
     return {"production_type": base_parsed.get("production_type", ""),
             "characters": base_parsed.get("characters", []),
             "scenes": scenes,
+            "tts_lines": translated.get("tts_lines", []),
             "payload_audit": {}, "brand_swaps_detected": []}
 
 
@@ -231,6 +233,14 @@ def localize_one(client, svc, env, ad_id, competitor, target, skeleton, comments
         print(f"  [{target}] script OK — safety={verdict['verdict'].upper()} | "
               f"{side['parsed'].get('self_critique_fixed', '')[:80]}")
 
+    # Build the dual-form (romanized + native-script) TTS-input lines once and persist
+    # them on the sidecar — they render into the Doc's "TTS input" block AND drive synthesis.
+    if not side.get("parsed", {}).get("tts_lines"):
+        side.setdefault("parsed", {})["tts_lines"] = ttx.build_tts_lines(
+            side.get("parsed", {}).get("scenes", []), target, client)
+        if not dry_run:
+            side_path.write_text(json.dumps(side, indent=2, ensure_ascii=False))
+
     # gdoc (idempotent via the locales map)
     locales = gdocs.setdefault("locales", {})
     link = (locales.get(lang_key) or {}).get("link")
@@ -242,7 +252,7 @@ def localize_one(client, svc, env, ad_id, competitor, target, skeleton, comments
     docx_path = DOCS_DIR / f"{ad_id}_{lang_key}_supernova_rewrite.docx"
     rewrite_shaped = {"parsed": to_rewrite_shape(side["parsed"], skeleton, base_parsed)}
     build_docs.build_supernova_doc(ad_id, competitor, decompose, rewrite_shaped, docx_path,
-                                   lambda m: None)
+                                   lambda m: None, language=target)
     title = f"{competitor.title()} {ad_id} — Supernova Rewrite ({target})"
     fid, link = _gdrive.upload_docx_as_gdoc(svc, env, docx_path, title, folder_id)
     _gdrive.set_link_permission(svc, env, fid)

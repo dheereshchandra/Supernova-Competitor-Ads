@@ -352,11 +352,13 @@ def build_competitor_doc(ad_id: str, competitor: str, decompose: dict,
 
 
 def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
-                        rewrite: dict, out_path: pathlib.Path, log) -> bool:
+                        rewrite: dict, out_path: pathlib.Path, log,
+                        language: str = "English") -> bool:
     """Build the Supernova-rewrite docx. Returns True on success."""
     from docx import Document
     from docx.shared import Inches, Pt
     from docx.enum.text import WD_ALIGN_PARAGRAPH
+    import _tts_text as ttx
 
     parsed_decompose = decompose.get("parsed", {})
     parsed_rewrite = rewrite.get("parsed", {})
@@ -468,6 +470,22 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
 
     doc.add_heading("Provenance", level=2)
     doc.add_paragraph(f"Rewritten with: {rewrite.get('model', '?')}")
+
+    # TTS input — the spoken lines only (no names; those would be read aloud), in turn
+    # order, for pasting into a voice provider. Localized docs show native script +
+    # romanized; the English master shows one list. The voiceover synthesizes from this.
+    tts_lines = parsed_rewrite.get("tts_lines") or ttx.build_tts_lines(scenes_r, language, None)
+    groups = ttx.tts_block_groups(tts_lines, language)
+    if groups:
+        doc.add_paragraph()
+        doc.add_paragraph("─" * 60)
+        doc.add_heading(ttx.TTS_BLOCK_TITLE, level=2)
+        doc.add_paragraph(ttx.TTS_NOTE)
+        for lbl, lns in groups:
+            doc.add_heading(lbl, level=3)
+            for ln in lns:
+                if ln.strip():
+                    doc.add_paragraph(ln.strip())
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     doc.save(out_path)
