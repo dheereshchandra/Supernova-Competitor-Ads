@@ -134,6 +134,20 @@ launchctl kickstart -k gui/$(id -u)/live.gosupernova.repo-sync
 # rotate the team password: edit STUDIO_PASSWORD in .env, then restart (kickstart above).
 ```
 
+## 6a. Uptime safeguards (watchdog + external monitor)
+
+The public door is a single Mac + a single Tailscale Funnel. A transient host network/IP
+flap can leave the Funnel's public ingress stale (remote users get `ERR_CONNECTION_CLOSED`
+while the app looks healthy locally). `tools/ad-studio-watchdog/` guards against this:
+
+```sh
+zsh tools/ad-studio-watchdog/install.sh        # local self-heal (every 60s + on net change)
+zsh tools/ad-studio-watchdog/harden-host.sh    # cold-boot/power posture report (--apply for tweaks)
+```
+Plus an off-tailnet uptime check in `.github/workflows/ad-studio-uptime.yml`
+(`gh secret set SLACK_WEBHOOK_URL`). Full details + the FileVault cold-boot decision and
+the IPv6/carrier caveat: `tools/ad-studio-watchdog/README.md`.
+
 ## 7. Lifting to a cloud Linux box later
 
 The serve/generate path is python3.13 + ffmpeg + git + tailscale — all Linux-trivial
