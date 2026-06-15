@@ -1,0 +1,62 @@
+name: Ad Studio uptime (public)
+
+# Off-tailnet uptime check for the Ad Studio public URL. This is the ONLY vantage that
+# tests the real public Funnel edge — a check from the host Mac resolves the *.ts.net
+# name via MagicDNS to the tailnet IP and bypasses the public edge, so it can't catch
+# the "remote users can't reach it" outage. GitHub runners are off-tailnet, so they hit
+# the genuine public path.
+#
+# Setup (once): add the Slack webhook as a repo secret so failures page the team:
+#     gh secret set SLACK_WEBHOOK_URL --body "https://hooks.slack.com/services/..."
+#
+# NOTE: GitHub's scheduled cron is best-effort (can lag/skip under load) and the runners
+# are IPv4-only — so this catches a TOTAL public outage (stale Funnel edge / host down)
+# but NOT a carrier-IPv6-only failure. For 1-minute checks, confirmation counts, and an
+# IPv6 probe, add a free UptimeRobot/BetterStack monitor too (see the watchdog README).
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'      # every ~5 minutes (best-effort)
+  workflow_dispatch: {}         # allow a manual run from the Actions tab
+
+concurrency:
+  group: ad-studio-uptime
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    env:
+      URL: https://dheeresh.tail92accf.ts.net/api/health   # must match STUDIO_PUBLIC_URL
+    steps:
+      - name: Probe public /api/health (IPv4, 2 strikes)
+        id: probe
+        run: |
+          probe() { curl -4 -sS --max-time 20 "$URL"; }
+          ok=false
+          for attempt in 1 2; do
+            body="$(probe || true)"
+            echo "attempt $attempt: ${body:0:200}"
+            if printf '%s' "$body" | grep -q '"ok":true'; then ok=true; break; fi
+            [ "$attempt" = 1 ] && sleep 20
+          done
+          if [ "$ok" = true ]; then
+            echo "down=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "down=true"  >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Alert Slack (public outage)
+        if: steps.probe.outputs.down == 'true'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
+            echo "::warning::SLACK_WEBHOOK_URL secret not set — cannot alert. Run: gh secret set SLACK_WEBHOOK_URL"
+            exit 1
+          fi
+          curl -sS -m 10 -X POST "$SLACK_WEBHOOK_URL" \
+            -H 'Content-Type: application/json' \
+            --data '{"text":":rotating_light: *Ad Studio is DOWN on the public URL* — '"$URL"' did not return ok over the public internet (2 strikes). The Tailscale Funnel edge or the host Mac is unreachable. Check the Mac, then tail ~/Library/Application Support/SupernovaAdStudioWatchdog/watchdog.log"}'
+          # fail the job so the run is visibly red in the Actions tab
+          exit 1

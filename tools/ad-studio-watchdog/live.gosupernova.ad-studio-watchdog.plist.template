@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template only. Do NOT install directly — run `zsh tools/ad-studio-watchdog/install.sh`,
+     which fills in __WATCHDOG_SH__ and __LOG__ and loads the job.
+     Fires at load, every 60s, and whenever the system's DNS/network config changes
+     (WatchPaths on resolv.conf) — so a LAN-IP flap that wedges the Funnel is re-asserted
+     within seconds rather than waiting for the next interval. launchd never overlaps a
+     job with itself, so the WatchPaths + StartInterval triggers can't stack up. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>live.gosupernova.ad-studio-watchdog</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>__WATCHDOG_SH__</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartInterval</key>
+  <integer>60</integer>
+  <key>WatchPaths</key>
+  <array>
+    <string>/etc/resolv.conf</string>
+    <string>/var/run/resolv.conf</string>
+  </array>
+  <key>StandardOutPath</key>
+  <string>__LOG__</string>
+  <key>StandardErrorPath</key>
+  <string>__LOG__</string>
+</dict>
+</plist>
