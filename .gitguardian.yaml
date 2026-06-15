@@ -1,0 +1,17 @@
+# GitGuardian / ggshield config.
+# The scrape data dirs below contain Facebook CDN signed URLs whose `oh=00_Af...` parameter
+# (a 49-char base64url hash) trips GitGuardian's "Okta Token" detector. These are public,
+# EXPIRING CDN URLs snapshotted by the scraper, not secrets — see SESSION-HANDOFF.md.
+# Read by ggshield (CLI / pre-commit / CI). The GitGuardian dashboard alert is dismissed
+# separately on the GitGuardian web UI.
+version: 2
+secret:
+  ignored-paths:
+    - "facebook/inputs/**"
+    - "facebook/master/**"
+    - "facebook/runs/**"
+    - "facebook/step3_logs/**"
+    - "google/master/**"
+    - "google/archive/**"
+    - "google/logs/**"
+    - "google/step3_logs/**"

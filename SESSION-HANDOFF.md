@@ -1,7 +1,26 @@
 # Session Handoff — Competitor-Ad Analysis System
 
-> Running status so this work can resume in any workspace. Last updated 2026-06-13.
+> Running status so this work can resume in any workspace. Last updated 2026-06-15.
 > Read this first, then the linked docs.
+
+## 🆕 2026-06-15 — GitGuardian "Okta Token" alert = KNOWN FALSE POSITIVE (no leak)
+
+If you get a **GitGuardian** email "Okta Token exposed on GitHub" for this repo: **it is a false
+positive — do not panic, nothing leaked.** What it actually matched is the **Facebook CDN
+signed-URL `oh=00_Af...` parameter** (a 49-char base64url hash that trips GitGuardian's "Okta
+Token" detector). These are public, **expiring** CDN URLs the scraper snapshots into the
+`facebook_*_cdn_url_at_scrape` columns — *not* credentials. Verified 2026-06-15: `.env` was never
+committed (`**/.env` is gitignored), and there are **zero** real secrets in the tree or any push
+(no `AIza` Gemini keys, AWS/GitHub/Slack tokens, JWTs, private keys). There is **no Okta
+integration** anywhere. Nothing to rotate; no git-history rewrite.
+
+- Added `.gitguardian.yaml` (repo root) ignoring the scrape data dirs — keeps any local/CI
+  `ggshield` run clean and documents intent.
+- **Recurrence:** `daily-scrape` pushes tens of thousands of fbcdn URLs daily, so GitGuardian will
+  **re-fire this alert every day** until it's silenced on the GitGuardian **dashboard** (the
+  GitHub-App monitor does NOT read the in-repo config). Operator action: dismiss the alert as
+  "False Positive" via the email's *Fix This Secret Leak* link, and add a repo path-exclusion in
+  GitGuardian workspace settings.
 
 ## 🆕 2026-06-13 — Localization workflow BUILT (PRs #70–#72 merged + the Ad Studio PR)
 
