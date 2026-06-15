@@ -401,6 +401,26 @@ def _derive_overview(parsed_decompose: dict) -> str:
     return "; ".join(settings[:4])
 
 
+def competitor_video_url(ad_id: str, competitor: str) -> str:
+    """The competitor's R2 video URL, so a reviewer can watch the original clip straight from the
+    doc. Primary: the master CSV's `r2_public_url`; fallback: {R2_PUBLIC_URL_BASE}/<id>.mp4."""
+    import csv as _csv
+    master = pathlib.Path("master") / f"{competitor}.csv"
+    if master.exists():
+        try:
+            with master.open(encoding="utf-8-sig", newline="") as f:
+                for r in _csv.DictReader(f):
+                    if (r.get("ad_library_id") or "").strip() == str(ad_id) and (r.get("r2_public_url") or "").strip():
+                        return r["r2_public_url"].strip()
+        except Exception:
+            pass
+    try:
+        import r2_utils
+        return r2_utils.public_url_for(r2_utils.load_env(), f"{ad_id}.mp4")
+    except Exception:
+        return ""
+
+
 def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
                         rewrite: dict, out_path: pathlib.Path, log) -> bool:
     """Build the Supernova-rewrite docx. Returns True on success.
@@ -430,6 +450,13 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
 
     title = doc.add_heading(f"Supernova Script — based on {competitor.title()} Ad {ad_id}", level=0)
     title.alignment = WD_ALIGN_PARAGRAPH.LEFT
+
+    # Competitor's original video — so whoever edits the script can watch the source clip first.
+    vurl = competitor_video_url(ad_id, competitor)
+    if vurl:
+        p = doc.add_paragraph()
+        p.add_run("🎬 Competitor video (watch the original): ").bold = True
+        _add_hyperlink(p, vurl, vurl)
 
     # ===================== ZONE 1 — Visual & Cast (skim only) =====================
     doc.add_heading("Visual & Cast", level=1)
