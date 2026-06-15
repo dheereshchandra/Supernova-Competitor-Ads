@@ -132,10 +132,14 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
 SUPPORTED_LANGUAGES = ("Hindi", "Telugu", "Tamil", "Marathi", "Kannada", "Malayalam",
                        "Bengali", "Gujarati", "Assamese", "Punjabi")
 LOCALIZE_COST_PER_LANG = 0.02  # Flash translate + safety audit; images are REUSED (₹0)
-# TTS (Stage 5a voiceover) targets the localized scripts AND the English master. Real cost is
-# per-character at the provider; this flat per-language figure is the spend-gate estimate.
+# TTS (Stage 5a voiceover) targets the localized scripts AND the English master.
+# APPROXIMATE per-language estimate, shown as an AVERAGE across both providers (the real
+# split depends on which voices the registry routes to which provider). Per-character:
+# ElevenLabs Pro ≈ $165/1M chars ($99 / 600k credits; multilingual v2 = 1 credit/char),
+# Cartesia enterprise = $7.5/1M. Average ≈ $86/1M; a typical ad ≈ ~1.2k spoken chars/
+# language → ≈ $0.10/language.
 TTS_LANGUAGES = ("English",) + SUPPORTED_LANGUAGES
-TTS_COST_PER_LANG = 0.25
+TTS_COST_PER_LANG = 0.10
 
 
 def _ad_has_english(ad: dict) -> bool:

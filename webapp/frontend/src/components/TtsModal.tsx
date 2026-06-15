@@ -3,8 +3,10 @@ import { ApiError, createTtsJob, TTS_LANGUAGES } from '../api'
 import { money } from '../format'
 import { Spinner } from './ui'
 
-/** Approx; matches TTS_COST_PER_LANG (per-language voiceover) on the backend. */
-const COST_PER_LANG_USD = 0.25
+/** APPROXIMATE — an AVERAGE across providers (matches TTS_COST_PER_LANG on the backend).
+ * ElevenLabs Pro ≈ $165/1M chars + Cartesia enterprise $7.5/1M → avg ≈ $86/1M × ~1.2k
+ * spoken chars/ad ≈ $0.10/language. Actual depends on script length + the voice mix. */
+const COST_PER_LANG_USD = 0.10
 
 /**
  * "Generate voiceover" confirmation: pick languages, confirm the scripts are final
@@ -123,10 +125,11 @@ export default function TtsModal({
 
         <div className="mt-4 rounded-xl border border-white/10 bg-zinc-950/60 p-4 text-center">
           <div className="text-3xl font-bold tracking-tight text-white">
-            {langs.length ? money(cost) : '—'}
+            {langs.length ? `≈ ${money(cost)}` : '—'}
           </div>
           <div className="mt-1 text-xs text-zinc-500">
-            {langs.length} language{langs.length === 1 ? '' : 's'} · est. voiceover cost
+            {langs.length} language{langs.length === 1 ? '' : 's'} · approx. average across
+            Cartesia + ElevenLabs (varies with script length)
           </div>
         </div>
 
