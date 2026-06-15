@@ -1,0 +1,18 @@
+# Competitors the WEEKLY Google scrape pulls (Google Ads Transparency → download → R2 upload →
+# free analysis). Google is slower + rate-limited, so this runs ONCE A WEEK (not daily like FB),
+# with a throttle between competitors (default 30 min) to dodge Google's 429 IP block.
+#
+# One competitor per line, using the exact name from scrape_google_ads.py's COMPETITOR map.
+# '#' comments and blank lines are ignored. Edit this list and the next weekly run picks it up.
+#
+# NOTE (heaviest last): "English Seekho" (Keyaro Edutech) has ~4K ads and takes 30-40 min; it is
+# also the most 429-prone, so it runs last.
+Memrise
+Busuu
+Loora
+Speak
+SpeakX
+Duolingo
+Praktika AI
+MySivi
+English Seekho

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template only. Do NOT install directly — run `zsh tools/google-weekly-scrape/install.sh`
+     from the canonical MAIN clone, which fills in __SCRAPE_SH__ and __LOG__ and loads the job.
+     Runs the FREE Google refresh (scrape → R2 → analysis) ONCE A WEEK on Monday at 12:00 local.
+     Weekday: 0/7 = Sunday, 1 = Monday … 6 = Saturday.
+     If the Mac is asleep at the scheduled time, launchd runs it on the next wake (the script's
+     once-per-week guard prevents a double run). TO CHANGE: edit Weekday/Hour/Minute, re-run install.sh.
+     ⚠ The scrape needs the VPN / fresh IP active at run time or Google 429-blocks every competitor. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>live.gosupernova.google-weekly-scrape</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>__SCRAPE_SH__</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>1</integer>
+    <key>Hour</key><integer>12</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>__LOG__</string>
+  <key>StandardErrorPath</key>
+  <string>__LOG__</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>
