@@ -70,30 +70,36 @@ SAFETY_SCHEMA = {
 AUDIT_INSTRUCTIONS = """
 
 ================================================================================
-YOU ARE AN INDEPENDENT BRAND-SAFETY & AD-POLICY AUDITOR FOR SUPERNOVA.
+YOU ARE AN INDEPENDENT REVIEWER FOR SUPERNOVA AD SCRIPTS.
 
-Everything above is Supernova's brand-safety policy (the rubric). Below (after AD) is a GENERATED
-Supernova ad — its per-scene script, on-screen text, and visual descriptions.
-
-Audit the ad AGAINST the policy. Find EVERY real violation. For each, output an object:
-  - guardrail_id : the policy id, e.g. "G6.1"
-  - category     : the section name, e.g. "Price & financial"
-  - severity     : "severe" or "moderate" (use the tag on that guardrail)
-  - scene        : which scene/line it is in (e.g. "Scene 3" or "on-screen text")
+Everything above is Supernova's policy: the FOUR hard lines + your rubric. Below (after AD) is, per
+scene, the COMPETITOR's [ORIGINAL] dialogue, our [SCRIPT] rewrite, and the [VISUAL]. Run THREE checks
+and report EVERY real finding as an object:
+  - guardrail_id : the check type — "hard_line", "deviation", or "error"
+  - category     : the specific issue (e.g. "shame without dignity", "hook changed", "wrong name")
+  - severity     : "severe" or "moderate"
+  - scene        : which scene/line (e.g. "Scene 3")
   - quote        : the EXACT offending text, verbatim
-  - why          : one sentence on why it violates that guardrail
-  - fix          : a concrete one-line rewrite that resolves it
+  - why          : one sentence
+  - fix          : a concrete one-line fix
 
-Be STRICT but PRECISE: report only genuine violations, and always quote the exact text. Do NOT invent
-violations to look thorough, and do NOT flag on-brand creative choices that the policy explicitly allows
-(ChatGPT contrast, comparative cost, "1 crore+ users", absurdist fiction, a relatable self-diagnosed
-error, a shame hook that resolves in dignity). A competitor BRAND NAME or LOGO that appears ONLY in a
-[VISUAL] line (never in [SCRIPT] or [ON-SCREEN]) is an expected downstream re-branding artifact — only
-the brand name/logo is swapped — so do NOT flag a competitor brand name that appears only there. (DO
-still flag any NON-brand problem in a [VISUAL] line — fake UI, countdown timers, government seals,
-military/political imagery — the rest of the visual shell ships as-is.) If the ad is clean, return an
-empty violations array.
-Also return a one-line `summary`. Do NOT output a verdict — the pipeline computes it from severities.
+THE THREE CHECKS:
+1. HARD LINES (guardrail_id "hard_line", severity "severe") — does the [SCRIPT] (or a NON-brand [VISUAL])
+   cross any of the 4 hard lines: shame left undignified · demeaning a protected group · real-trauma
+   fear-mongering · political/religious/communal or unlicensed real-person likeness?
+2. DEVIATION (guardrail_id "deviation", severity "severe") — compare [ORIGINAL] vs [SCRIPT]: has the
+   rewrite SIGNIFICANTLY changed the competitor's hook, its specific lines/examples, or the opening
+   speaker / turn order? If so, flag it as "human review needed". Do NOT flag normal re-skinning — the
+   brand swap to Supernova AI / Miss Nova, the woven-in pitch points, a re-pointed CTA, or Indianized
+   names/places are all EXPECTED and must NOT be flagged as deviation.
+3. ERRORS (guardrail_id "error", severity "moderate", or "severe" if it breaks the ad) — wrong or
+   inconsistent character names (should be Indian + consistent; "Miss Nova" for the AI), non-Indian or
+   invented locations, hallucinated content, or brand mislabels.
+
+A competitor BRAND NAME/LOGO that appears ONLY in a [VISUAL] line is an expected re-branding artifact —
+do NOT flag it (still flag any NON-brand visual problem). Be STRICT but PRECISE: only genuine findings,
+always quote the exact text, never invent findings. If the ad is clean on all three checks, return an
+empty array. Also return a one-line `summary`. Do NOT output a verdict — the pipeline computes it.
 
 AD:
 """
@@ -154,16 +160,17 @@ def ad_text_from_sidecars(ad_id: str) -> str | None:
     lines = []
     for sc in parsed.get("scenes", []):
         n = sc.get("n")
+        dsc = dec_scenes.get(n, {})
         lines.append(f"SCENE {n} — {sc.get('scene_label', '')}")
-        vd = dec_scenes.get(n, {}).get("visual_description")
+        orig = (dsc.get("audio_transcript") or "").strip()
+        if orig:
+            lines.append(f"  [ORIGINAL competitor dialogue — compare against the rewrite for DEVIATION] {orig}")
+        vd = dsc.get("visual_description")
         if vd:
             lines.append(f"  [VISUAL — competitor source; the brand name/logo here is swapped downstream, "
                          f"so do NOT flag a competitor brand NAME that appears ONLY here] {vd}")
         if sc.get("supernova_script"):
-            lines.append(f"  [SCRIPT]\n{sc['supernova_script']}")
-        ost = (sc.get("supernova_on_screen_text") or "").strip()
-        if ost:
-            lines.append(f"  [ON-SCREEN] {ost}")
+            lines.append(f"  [SCRIPT — our rewrite]\n{sc['supernova_script']}")
     return "\n".join(lines)
 
 
