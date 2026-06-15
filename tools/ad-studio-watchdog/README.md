@@ -57,6 +57,28 @@ or repo data, so it doesn't interfere with the 11:30 sync chain or its blackout 
 > edge and always passes — even when remote users are dead. That blind spot is exactly the
 > 2026-06-15 failure, and it's why Tier 1b exists.
 
+### VPN for scraping → automatic recovery
+
+The Google scraper sometimes needs a system-wide rotating-IP VPN (the site is intentionally
+down for everyone while that VPN owns the Mac's connection — see
+`scraper-rotating-ip-vs-ad-studio-funnel`). The watchdog is **VPN-aware**:
+
+- **While a VPN owns the default route** (a `utun`/`ppp`/`ipsec` interface, not Tailscale's
+  `100.x`): it stays **quiet** — no churn, no alerts. The public outage is expected.
+- **The moment you turn the VPN off** and your normal IP returns: it re-asserts the Funnel
+  **automatically within ~1-2 minutes** — no operator action. (It also auto-recovers from a
+  plain Wi-Fi switch / DHCP change; each new network signature is re-asserted once.)
+
+So the workflow is just: turn VPN on → scrape → turn VPN off → walk away; the site comes
+back on its own. Want it back **instantly** instead of waiting ~2 min?
+
+```sh
+zsh tools/ad-studio-watchdog/recover.sh     # = watchdog.sh --force: serve reset && funnel --bg 8787
+```
+
+> Note: the "VPN active" detection assumes Tailscale is used as a Funnel, not an exit node
+> (an exit node would make Tailscale own the default route and look like a VPN).
+
 ## Tier 1b — External monitor (`.github/workflows/ad-studio-uptime.yml`)
 
 A GitHub Actions cron (every ~5 min) curls the **public** `/api/health` from off-tailnet

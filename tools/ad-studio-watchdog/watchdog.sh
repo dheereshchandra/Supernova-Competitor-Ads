@@ -1,24 +1,24 @@
 #!/bin/zsh
 # Supernova Ad Studio — funnel/backend WATCHDOG (detect + auto-heal the public door).
 #
-# Background: the team reaches Ad Studio through a Tailscale Funnel that proxies the
-# public URL -> 127.0.0.1:8787 on this Mac. A transient host network / LAN-IP change
-# (DHCP renewal, Wi-Fi reconnect) leaves the Funnel's PUBLIC ingress registration
-# STALE with no automatic recovery — remote users get "site can't be reached"
-# (ERR_CONNECTION_CLOSED) while the operator on localhost/tailnet sees nothing. The
-# documented repair is `tailscale serve reset && tailscale funnel --bg 8787`.
-# This watchdog does that automatically, plus restarts the backend if it's down, and
-# alerts via the shared notifier. Runs every 60s (and on a network change) via launchd.
+# The team reaches Ad Studio through a Tailscale Funnel proxying the public URL ->
+# 127.0.0.1:8787 on this Mac. A change to this Mac's network identity (DHCP renewal,
+# Wi-Fi switch, or turning a system-wide VPN on/off) leaves the Funnel's PUBLIC ingress
+# STALE with no auto-recovery — remote users get "site can't be reached" while the
+# operator on localhost/tailnet sees nothing. The documented repair is
+# `tailscale serve reset && tailscale funnel --bg 8787`; this does it automatically.
 #
-# IMPORTANT — it can only verify LOCAL truth (backend port, tailscale Online, funnel
-# config) and re-assert the funnel after an IP change; the genuinely PUBLIC path can
-# only be checked from off-tailnet (see .github/workflows/ad-studio-uptime.yml), because
-# MagicDNS resolves the *.ts.net name to the tailnet IP and bypasses the public edge.
+# VPN-AWARE: the operator sometimes turns on a system-wide rotating-IP VPN to run the
+# Google scraper (which needs a fresh IP). While that VPN owns the default route, the
+# public site is intentionally down — so the watchdog stays QUIET (no churn, no alerts).
+# The moment the VPN is turned off and the normal IP returns, it re-asserts the Funnel
+# automatically (~1-2 min) so the site comes back with NO operator action.
 #
-# Install once (from the canonical clone): zsh tools/ad-studio-watchdog/install.sh
+# Runs every 60s + on every network change (launchd WatchPaths). Manual instant fix:
+#   zsh tools/ad-studio-watchdog/watchdog.sh --force   (or tools/ad-studio-watchdog/recover.sh)
+#
+# Install once (canonical clone): zsh tools/ad-studio-watchdog/install.sh
 set -u
-# launchd hands jobs a minimal PATH; we need homebrew (python3.13), /usr/local/bin
-# (tailscale), and /usr/sbin + /sbin (ipconfig, route).
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 SCRIPT_DIR="${0:A:h}"
@@ -31,41 +31,56 @@ mkdir -p "$STATE"
 PORT="${STUDIO_PORT:-8787}"
 STUDIO_LABEL="live.gosupernova.ad-studio"
 HEALTH_URL="http://127.0.0.1:${PORT}/api/health"
-IP_FILE="$STATE/last_ip"
-HEAL_CNT="$STATE/heal_count"
-HEAL_WIN="$STATE/heal_window"
-MAX_HEALS_PER_HOUR=4          # hard cap so a wedged edge can't loop/alert forever
+ASSERTED_FILE="$STATE/asserted_netsig"   # the network signature we last re-asserted the funnel for
+VPN_FLAG="$STATE/vpn_active"             # present while a system VPN owns the default route
+NOTIFY_FILE="$STATE/last_recover_notify"
+HEAL_CNT="$STATE/heal_count"; HEAL_WIN="$STATE/heal_window"
+MAX_HEALS_PER_HOUR=6                      # backstop for backend/funnel repairs (recovery re-assert is exempt)
+NOTIFY_COOLDOWN=1200                      # min seconds between recovery Slack notes
+FORCE=0; [ "${1:-}" = "--force" ] && FORCE=1
 
 log()    { print -r -- "$(date '+%Y-%m-%d %H:%M:%S')  $1" >> "$LOG"; }
 notify() { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+reassert_funnel() { tailscale serve reset >> "$LOG" 2>&1 || true; tailscale funnel --bg "$PORT" >> "$LOG" 2>&1 || true; }
 
-# --- heal rate-limit (per wall-clock hour) ---
+# heal cap (per wall-clock hour) — guards backend/funnel-config repair loops, NOT recovery
 now_hour=$(( $(date +%s) / 3600 ))
-win="$(cat "$HEAL_WIN" 2>/dev/null || echo 0)"
+[ "$(cat "$HEAL_WIN" 2>/dev/null || echo 0)" != "$now_hour" ] && { print -r -- "$now_hour" > "$HEAL_WIN"; print -r -- 0 > "$HEAL_CNT"; }
 cnt="$(cat "$HEAL_CNT" 2>/dev/null || echo 0)"
-if [ "$win" != "$now_hour" ]; then win="$now_hour"; cnt=0; print -r -- "$win" > "$HEAL_WIN"; fi
 can_heal()  { [ "$cnt" -lt "$MAX_HEALS_PER_HOUR" ]; }
 bump_heal() { cnt=$((cnt + 1)); print -r -- "$cnt" > "$HEAL_CNT"; }
 
-reassert_funnel() {                      # the de-facto repair for a stale public ingress
-  tailscale serve reset >> "$LOG" 2>&1 || true
-  tailscale funnel --bg "$PORT" >> "$LOG" 2>&1 || true
-}
-
-problems=()
-healed=()
-
-# --- 1. backend on 127.0.0.1:PORT (KeepAlive should cover this; we add detect + alert) ---
-if ! curl -fsS --max-time 8 "$HEALTH_URL" >/dev/null 2>&1; then
-  problems+=("backend :${PORT} not responding")
-  if can_heal; then
-    log "HEAL backend down -> kickstart $STUDIO_LABEL"
-    launchctl kickstart -k "gui/$(id -u)/$STUDIO_LABEL" >> "$LOG" 2>&1 || true
-    bump_heal; healed+=("restarted backend"); sleep 3
-  fi
+# --- network signature + is a system VPN owning the default route? ---
+def_iface="$(route -n get default 2>/dev/null | awk '/interface:/{print $2}')"
+gw="$(route -n get default 2>/dev/null | awk '/gateway:/{print $2}')"
+lan_ip="$(ipconfig getifaddr "${def_iface:-en0}" 2>/dev/null || true)"
+[ -z "$lan_ip" ] && lan_ip="$(ipconfig getifaddr en0 2>/dev/null || true)"
+netsig="${def_iface:-?}|${lan_ip:-?}|${gw:-?}"
+# A tunnel interface owning the default route => a system VPN (Surfshark etc.) is active.
+# Tailscale's own utun carries a 100.64.0.0/10 address; we do NOT treat that as a VPN
+# (the operator uses Funnel, not an exit node, so Tailscale never owns the default route).
+vpn_active=0
+if [[ "$def_iface" == utun* || "$def_iface" == ppp* || "$def_iface" == ipsec* ]]; then
+  ifa="$(ifconfig "$def_iface" 2>/dev/null | awk '/inet /{print $2; exit}')"
+  case "$ifa" in 100.*) vpn_active=0 ;; *) vpn_active=1 ;; esac
 fi
 
-# --- 2. tailscaled up & node online? ---
+reassert_funnel_record() { reassert_funnel; print -r -- "$netsig" > "$ASSERTED_FILE"; }
+
+# --- manual instant recovery (works regardless of VPN state) ---
+if [ "$FORCE" = "1" ]; then
+  log "FORCE re-assert on [$netsig]"; reassert_funnel_record
+  echo "Funnel re-asserted (serve reset && funnel --bg $PORT). Public URL should be back in a few seconds."
+  exit 0
+fi
+
+# --- VPN active: site is intentionally down; stay quiet and just remember it ---
+if [ "$vpn_active" = "1" ]; then
+  [ -f "$VPN_FLAG" ] || { touch "$VPN_FLAG"; log "VPN active (default route via $def_iface) — site intentionally down; holding. Auto-recovers when VPN is turned off."; }
+  exit 0
+fi
+
+# --- normal (no system VPN) ---
 ts_ok="$(tailscale status --json 2>/dev/null | python3.13 -c '
 import sys, json
 try:
@@ -74,47 +89,49 @@ try:
 except Exception:
     print("bad")
 ' 2>/dev/null || echo bad)"
-[ "$ts_ok" != "ok" ] && problems+=("tailscale not Online/Running")
 
-# --- 3. funnel still configured to proxy our port? ---
-if ! tailscale funnel status 2>/dev/null | grep -q "127.0.0.1:${PORT}"; then
+asserted_sig="$(cat "$ASSERTED_FILE" 2>/dev/null || true)"
+problems=(); healed=()
+
+# AUTO-RECOVERY: we just came back from a VPN, OR the network signature changed
+# (Wi-Fi switch / DHCP). Re-assert ONCE per new signature (deduped, so it can't loop).
+if [ -z "$asserted_sig" ]; then            # first run after install: assume healthy, no spurious re-assert
+  print -r -- "$netsig" > "$ASSERTED_FILE"
+elif [ "$ts_ok" = "ok" ] && { [ -f "$VPN_FLAG" ] || [ "$netsig" != "$asserted_sig" ]; }; then
+  reason="network changed -> [$netsig]"; [ -f "$VPN_FLAG" ] && reason="VPN turned off; normal IP back [$netsig]"
+  log "RECOVERY $reason -> re-asserting funnel"
+  reassert_funnel_record; rm -f "$VPN_FLAG"; healed+=("auto-recovered Funnel")
+  now="$(date +%s)"
+  if [ $((now - $(cat "$NOTIFY_FILE" 2>/dev/null || echo 0))) -ge "$NOTIFY_COOLDOWN" ]; then
+    print -r -- "$now" > "$NOTIFY_FILE"
+    notify "Ad Studio: Funnel re-asserted" "$reason — public URL should be back within seconds. (normal after toggling a VPN)"
+  fi
+fi
+
+# --- immediate repairs (capped) ---
+if ! curl -fsS --max-time 8 "$HEALTH_URL" >/dev/null 2>&1; then
+  problems+=("backend :${PORT} down")
+  if can_heal; then log "HEAL kickstart $STUDIO_LABEL"; launchctl kickstart -k "gui/$(id -u)/$STUDIO_LABEL" >> "$LOG" 2>&1 || true; bump_heal; healed+=("restarted backend"); sleep 3; fi
+fi
+if [ "$ts_ok" != "ok" ]; then
+  problems+=("tailscale not Online/Running")
+elif ! tailscale funnel status 2>/dev/null | grep -q "127.0.0.1:${PORT}"; then
   problems+=("funnel not proxying :${PORT}")
-  if [ "$ts_ok" = "ok" ] && can_heal; then
-    log "HEAL funnel config missing -> re-assert"
-    reassert_funnel; bump_heal; healed+=("re-asserted funnel (config missing)")
-  fi
+  if can_heal; then log "HEAL funnel config missing -> re-assert"; reassert_funnel_record; bump_heal; healed+=("re-asserted funnel (config missing)"); fi
 fi
-
-# --- 4. LAN IP changed since last run? THIS is the flap that wedges the public ingress.
-#        Re-assert proactively so the stale-edge outage self-heals within ~60s. ---
-cur_ip="$(route -n get default 2>/dev/null | awk '/interface:/{print $2}' \
-          | xargs -I{} ipconfig getifaddr {} 2>/dev/null)"
-[ -z "$cur_ip" ] && cur_ip="$(ipconfig getifaddr en0 2>/dev/null || true)"
-last_ip="$(cat "$IP_FILE" 2>/dev/null || true)"
-if [ -n "$cur_ip" ] && [ -n "$last_ip" ] && [ "$cur_ip" != "$last_ip" ]; then
-  log "INFO LAN IP changed ${last_ip} -> ${cur_ip}; re-asserting funnel"
-  if [ "$ts_ok" = "ok" ] && can_heal; then
-    reassert_funnel; bump_heal; healed+=("re-asserted funnel after IP change ${last_ip}->${cur_ip}")
-  fi
-fi
-[ -n "$cur_ip" ] && print -r -- "$cur_ip" > "$IP_FILE"
 
 # --- verdict ---
 if [ ${#problems[@]} -eq 0 ]; then
-  log "OK backend+tailscale+funnel healthy (ip=${cur_ip:-?})"
+  [ ${#healed[@]} -gt 0 ] && log "RECOVERED ${(j:; :)healed} (sig=$netsig)" || log "OK healthy (sig=$netsig)"
   exit 0
 fi
-
 detail="${(j:; :)problems}"
-if [ ${#healed[@]} -gt 0 ]; then
-  acts="${(j:; :)healed}"
-  log "RECOVERED [$detail] via [$acts]"
-  notify "Ad Studio auto-recovered" "$detail -> $acts. (heal $cnt/$MAX_HEALS_PER_HOUR this hr)"
-  if ! can_heal; then
-    notify "Ad Studio: heal cap hit" "Auto-healed $cnt× this hour — likely flapping. Check the Mac's network + watchdog.log."
-  fi
+if ! can_heal; then
+  log "ALERT persistent [$detail] (heal cap $MAX_HEALS_PER_HOUR/hr reached)"
+  notify "Ad Studio DEGRADED" "$detail — auto-heal couldn't resolve it after $MAX_HEALS_PER_HOUR tries this hour. See watchdog.log."
+elif [ ${#healed[@]} -gt 0 ]; then
+  log "RECOVERED-with-issues [$detail] via [${(j:; :)healed}]"
 else
-  log "ALERT unhealed [$detail] (heal cap reached or tailscale down)"
-  notify "Ad Studio DEGRADED" "$detail — auto-heal could not resolve it. See watchdog.log."
+  log "WARN [$detail] (will recheck next run)"
 fi
 exit 0
