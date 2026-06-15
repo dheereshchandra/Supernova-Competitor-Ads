@@ -54,9 +54,15 @@ Flash can't hold the register.*
        "7× cheaper", "10× faster", "5 times more" sounds dubbed kept in English ("7 times cheaper")
        but natural said in the language — so render the WHOLE multiplier (the spoken number-word +
        the local "times/fold" word) in the target language: Hindi "coaching se **saat guna** sasta".
-       Use each language's natural multiplier word (§3). This is the ONLY money/number case that
-       localizes — every other number (amounts, durations, "1 crore+", "Day 15", times of day)
-       stays English numerals per the rule above.
+       Use each language's natural multiplier word (§3).
+     - **Carve-out — time-UNIT words may go LOCAL where the hybrid sounds dubbed.** The DIGIT always
+       stays an English numeral (10, 15, 30), but the trailing unit word (minutes / hours / days /
+       months / years) DEFAULTS to English — yet a §3 language module MAY override it to the native
+       word when "<number> <English-unit>-<case>" reads glued/dubbed (e.g. Malayalam "oru month-il"
+       → "oru maasathil"; hours → "manikyoorugal"; days → "divusangal"). **"Seconds" stays English
+       in every language.** A module that doesn't opt in keeps the English unit word.
+     - Outside these two carve-outs every other number (amounts, durations, "1 crore+", "Day 15",
+       times of day) stays English numerals per the rule above.
   i. Hyphenated English compounds stay whole: "job-interview", "level-test" — never half-translated.
 
 **T3. Anti-newspaperish (the strongest rule).**
@@ -156,6 +162,10 @@ casting table. Native-script examples teach register; output is romanized (T10).
 > its natural spoken multiplier word + the number (Hindi "saat guna"). Only Hindi's is seeded below;
 > every other language's is for its owner to fill from the natural spoken form (how a friend would
 > actually say "X times cheaper") — don't invent or dictionary-pick one.
+>
+> **Odia (future — not yet supported).** Planned 11th language; anchor city **Bhubaneswar**. NOT
+> wired into the engine (`SUPPORTED_LANGUAGES` in `step4_localize.py`) — add a full §3.11 module +
+> engine entry when ready. Noted here so it isn't forgotten.
 
 ### 3.1 Hindi
 - **Colloquial forms:** वो, ये, इसमें, क्या, यहाँ; spoken verb forms (कर रहा हूँ, करूँगा); never
@@ -167,8 +177,8 @@ casting table. Native-script examples teach register; output is romanized (T10).
   "ho jayega", "bas itna hi"; red flag: any सम्पूर्ण/अत्यंत-class Sanskritized word.
 - **Multiplier word:** "guna" — "7× cheaper than coaching" → "coaching se saat guna sasta".
 - **Casting:** M: Rahul, Amit, Rohit, Saurabh, Vikas, Ankit, Manish, Deepak · F: Priya, Neha,
-  Pooja, Anjali, Shweta, Ritu, Sakshi, Nisha · default pair **Rahul/Priya** · Cities: Lucknow,
-  Kanpur, Delhi, Patna, Indore · Language name: "Hindi".
+  Pooja, Anjali, Shweta, Ritu, Sakshi, Nisha · default pair **Rahul/Priya** · Cities: Delhi,
+  Mumbai, Lucknow, Kanpur, Jaipur, Indore · Language name: "Hindi".
 
 ### 3.2 Telugu
 - **Colloquial forms:** అది, ఇది, ఏమి, ఇక్కడ; spoken verbs (చేస్తున్నాను, వెళ్తున్నారు).
@@ -183,7 +193,7 @@ casting table. Native-script examples teach register; output is romanized (T10).
     **ivvadhu**" (NOT cheyadu / ivvadu). Flash gets this wrong by default — enforce it.
 - **Casting:** M: Ramesh, Suresh, Ravi, Srinu, Mahesh, Venkat, Kiran, Sai · F: Lakshmi, Anusha,
   Swathi, Kavya, Priyanka, Sravani, Harika, Divya · default **Ravi/Lakshmi** · Cities: Hyderabad,
-  Vijayawada, Warangal, Guntur · Language name: "Telugu".
+  Vijayawada · Language name: "Telugu".
 
 ### 3.3 Tamil — register block COMPLETE (gold standard)
 - **Colloquial forms:** அத, இத, இதுல, இங்க; spoken verbs (பண்றேன், இருக்கு, வர்றேன்).
@@ -205,7 +215,7 @@ casting table. Native-script examples teach register; output is romanized (T10).
     grammatical agreement where fragments are natural, news-anchor cadence.
 - **Casting:** M: Karthik, Suresh, Prakash, Arjun, Vijay, Saravanan, Dinesh, Senthil · F: Priya,
   Kavitha, Divya, Lakshmi, Meena, Nithya, Revathi, Gayathri · default **Karthik/Kavitha** ·
-  Cities: Chennai, Madurai, Coimbatore, Trichy · Language name: "Tamil".
+  Cities: Chennai · Language name: "Tamil".
 
 ### 3.4 Marathi
 - **Colloquial forms:** spoken short forms (मला धावायचं आहे; ती गात असेल).
@@ -216,7 +226,7 @@ casting table. Native-script examples teach register; output is romanized (T10).
   शुद्ध-Marathi literary compounds.
 - **Casting (proposed — confirm):** M: Sachin, Amol, Prasad, Nikhil, Swapnil, Sandeep, Vishal,
   Rohan · F: Pooja, Snehal, Prachi, Vaishnavi, Shraddha, Aarti, Madhuri, Manasi · default
-  **Amol/Snehal** · Cities: Pune, Nagpur, Nashik, Aurangabad · Language name: "Marathi".
+  **Amol/Snehal** · Cities: Pune, Mumbai · Language name: "Marathi".
 
 ### 3.5 Bengali
 - **Colloquial forms:** ওটা, এটা, কী, এখানে; spoken verbs (যাচ্ছে, খাচ্ছিল).
@@ -227,7 +237,7 @@ casting table. Native-script examples teach register; output is romanized (T10).
   literary verb endings.
 - **Casting (proposed — confirm):** M: Sourav, Arnab, Abhijit, Debashish, Sandip, Raju, Subho,
   Rana · F: Moumita, Ananya, Riya, Priyanka, Payel, Tania, Sudipta, Sraboni · default
-  **Sourav/Moumita** · Cities: Kolkata, Howrah, Siliguri, Durgapur · Language name: "Bangla".
+  **Sourav/Moumita** · Cities: Kolkata · Language name: "Bangla".
 
 ### 3.6 Malayalam
 - **Colloquial forms:** അത്, ഇത്, എന്ത്, ഇവിടെ; spoken verbs (ചെയ്യുന്നു, പോകണം).
@@ -235,11 +245,32 @@ casting table. Native-script examples teach register; output is romanized (T10).
   എങ്ങനെ pen offer ചെയ്യും?" · "ഞാൻ വീട്ടിൽ എത്തുമ്പോൾ നിങ്ങളെ call ചെയ്യും".
 - **Politeness:** viewer/Miss Nova: നിങ്ങൾ + ചെയ്യൂ/ചെയ്യുക — never നീ ചെയ്യ്. Peers: natural
   മച്ചാനെ/അളിയാ tone where the format allows.
-- **Register block (seed):** "pole", "alle", "okke", "scene illa", "adipoli"; red flag:
-  Sanskritized formal Malayalam.
+- **Register block (native-review enriched, 2026-06-15):**
+  - **"Speak" = native verb stem, not the English+Malayalam hybrid.** ✓ "English samsaarikyunnu",
+    "English samsaarikyumbol" — ✗ "English speak cheyyunnu", "speak cheythu".
+  - **"Give" is person-sensitive** (Malayalam has two verbs): 1st person / give-to-me → *tharunna*;
+    2nd or 3rd person / give-to-them/everyone → *kodukunna*. ✓ "Ellavarkum **kodukunna** adhe same
+    boring lessons alla Miss Nova ningalku tharunnadhu." ✗ "Ellavarkkum **tharunna** aa same boring
+    lessons alla Miss Nova tharunnathu."
+  - **Don't carry English comma-chained clauses over literally** — they sound robotic. Restructure
+    with natural connectors. ✓ "Ningal aayiram mistakes varuthiyaalum, Miss Nova ningale orikyam
+    kaliyaakilla.. judge-um cheyyilla." ✗ "1000 mistakes varuthiyalum, Miss Nova ningale judge
+    cheyyilla, kaliyakki chirikkukayumilla."
+  - **"Laugh at" (mocking) = *kaliyaakal*, NOT *chirikyuka*** (literal laugh) — the shame/judgement
+    sense is teasing, not laughing.
+  - **"In the same way" = *athupole*, NOT *athey vazhiyil*** — *vazhi* means a physical route, wrong
+    sense for "method".
+  - **No English-noun + Malayalam-case-ending hybrids.** ✓ *Malayalathil*, *oru maasathil* — ✗
+    "Malayalam-il", "oru month-il". A phrase is pure Malayalam or pure English, never glued (same
+    fault as "speak cheydhu") — UNLESS it's a stay-English keyword (grammar, vocabulary, spoken
+    English, improvement, brand names).
+  - **Time-UNIT words go native (T2h Malayalam override):** hours → *manikyoorugal*, months →
+    *maasangal*, days → *divusangal*. Exception: **seconds stays English**; digits stay numerals.
+  - Seed flavor: "pole", "alle", "okke", "scene illa", "adipoli". Red flag: Sanskritized formal
+    Malayalam.
 - **Casting:** M: Arun, Anoop, Suresh, Rajesh, Vishnu, Jithin, Akhil, Nikhil · F: Anu, Lakshmi,
-  Divya, Arya, Athira, Sneha, Reshma, Aparna · default **Arun/Anu** · Cities: Kochi, Kozhikode,
-  Thrissur, Thiruvananthapuram · Language name: "Malayalam".
+  Divya, Arya, Athira, Sneha, Reshma, Aparna · default **Arun/Anu** · Cities: Kochi, Thrissur,
+  Kozhikode, Thiruvananthapuram · Language name: "Malayalam".
 
 ### 3.7 Kannada
 - **Colloquial forms:** ಅದು, ಇದು, ಏನು, ಇಲ್ಲಿ; spoken verbs (ಮಾಡ್ತಾ ಇದ್ದೀನಿ, ಹೋಗ್ತಾ ಇದ್ದಾರೆ).
@@ -247,11 +278,27 @@ casting table. Native-script examples teach register; output is romanized (T10).
   ಮಾಡ್ತೀರಾ" · "ನಾನು ಮನೆಗೆ reach ಆದ್ಮೇಲೆ ನಿಮಗೆ call ಮಾಡ್ತೀನಿ".
 - **Politeness:** viewer/Miss Nova: ನೀವು + ಮಾಡಿ — never ನೀನು ಮಾಡು. Peers: maga/guru tone where
   format allows.
-- **Register block (seed):** "super aagide", "swalpa adjust maadi", "yen problem illa"; red flag:
-  ಗ್ರಾಂಥಿಕ literary Kannada.
+- **Register block (native-review enriched, 2026-06-15):** overall good — the main fault is lines
+  that read as literal English translation. Fix with:
+  - **Don't keep an English word where a Kannada idiom flows better.** ✓ "Ivru ishtu sulabhavaagi
+    henge maatadtare **anta anisbahudu**." ✗ "ivru henge maatadtare anta neevu **wonder** aagbodu."
+  - **Add the implicit specifier — don't translate vaguely.** ✓ "nimma **English** level-na analyze
+    maadi, **nimgaagi ondh personalized plan ready maadtare**." ✗ "nimma exact level-na analyze
+    maadi" (analyze *what* level?).
+  - **Don't pack too many English words into one sentence.** Stay-English (concepts everyone gets):
+    *speaking environment, personalized plan, analyze, meetings, logic, explain, hour* (plus the
+    global T2 list). Go-Kannada (conversational): *speak out loud, custom, simulation, sudden panic,
+    wonder*. ✓ "Illi full privacy iratthe, so nivu aaraamaagi English practice maadbahudu." ✗ "Full
+    privacy-nalli, neevu actual aagi out loud speak maadi practice maadbodu."
+  - **Use contracted modern spoken forms**, not long literary ones: ನೀವು → ನೀವ್ (*neevu* → *niv*),
+    ಒಂದು → ಒಂದ್ (*ondu* → *ondh*). ✓ "Niv ondh AI teacher." ✗ "Neevu ondu AI teacher."
+  - **Vary repeated phrasing** — not always "15 minutes tegedu"; rotate "15 minutes spend maadi",
+    "15 minutes kodi".
+  - Seed flavor: "super aagide", "swalpa adjust maadi", "yen problem illa". Red flag: ಗ್ರಾಂಥಿಕ
+    literary Kannada.
 - **Casting:** M: Manjunath, Ramesh, Naveen, Kiran, Pradeep, Santhosh, Chethan, Lohith · F:
   Lakshmi, Asha, Kavya, Divya, Shruthi, Pooja, Sowmya, Rashmi · default **Manjunath/Asha** ·
-  Cities: Bengaluru, Mysuru, Hubli, Mangaluru · Language name: "Kannada".
+  Cities: Bengaluru · Language name: "Kannada".
 
 ### 3.8 Gujarati
 - **Colloquial forms:** spoken short forms (મારે દોડવું છે; તે study કરે છે).
@@ -262,7 +309,7 @@ casting table. Native-script examples teach register; output is romanized (T10).
   Gujarati compounds.
 - **Casting (proposed — confirm):** M: Hardik, Jignesh, Chirag, Mehul, Ketan, Parth, Ravi, Sanjay ·
   F: Hetal, Krupa, Dhwani, Nisha, Falguni, Jinal, Pooja, Bhavna · default **Hardik/Hetal** ·
-  Cities: Ahmedabad, Surat, Rajkot, Vadodara · Language name: "Gujarati".
+  Cities: Ahmedabad · Language name: "Gujarati".
 
 ### 3.9 Assamese — includes the 4 grammar rules
 - **Colloquial forms:** যে, এই, কি, ইয়াত; spoken verbs (গৈ আছে, খাই আছিল).
@@ -277,7 +324,7 @@ casting table. Native-script examples teach register; output is romanized (T10).
 - **Register block (seed):** to be enriched by the Assamese owner.
 - **Casting (proposed — confirm):** M: Rupam, Ankur, Bikash, Dipankar, Manash, Pranjal, Jintu,
   Himangshu · F: Pallabi, Juri, Barsha, Nilakshi, Bhanita, Gitashree, Mridusmita, Priyanka ·
-  default **Rupam/Pallabi** · Cities: Guwahati, Dibrugarh, Jorhat, Tezpur · Language name:
+  default **Rupam/Pallabi** · Cities: Guwahati · Language name:
   "Assamese (Axomiya)".
 
 ### 3.10 Punjabi — includes the 4 syntax rules
@@ -293,7 +340,7 @@ casting table. Native-script examples teach register; output is romanized (T10).
 - **Register block (seed):** "vadhiya!", "koi gal nahi", "ho jauga"; red flag: literary Punjabi.
 - **Casting (proposed — confirm):** M: Gurpreet, Harpreet, Jaspreet, Manpreet, Karan, Amrit,
   Rajinder, Sukhdev · F: Simran, Harleen, Navjot, Kiran, Jasleen, Amrita, Gurleen, Raman ·
-  default **Gurpreet/Simran** · Cities: Ludhiana, Amritsar, Jalandhar, Patiala · Language name:
+  default **Gurpreet/Simran** · Cities: Chandigarh, Amritsar, Ludhiana · Language name:
   "Punjabi".
 
 ## §4 — QA gates (per language version, before it reaches the team)
