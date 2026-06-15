@@ -69,6 +69,9 @@ webapp/frontend/node_modules/
 # canonical clone (the 11:30 repo-sync / 11:35 capture-sync SKIP on a dirty tree)
 facebook/inputs/*-AUDITFAIL.csv
 google/inputs/*-AUDITFAIL.csv
+# Google scraper resume checkpoints + HTML5-capture run logs — transient, machine-local (deleted on clean success).
+**/*.checkpoint.jsonl
+google/logs/html5-capture-*.log
 RUN_LOG.md.tmp
 fb_card_debug.html
 fb_probe.png

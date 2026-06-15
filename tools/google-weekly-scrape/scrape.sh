@@ -1,14 +1,22 @@
 #!/bin/zsh
-# WEEKLY Google FREE data refresh — full cycle (scrape → yt-dlp metadata → R2 upload), then one
-# free-analysis pass, for every competitor in competitors.txt. Google is slower + rate-limited
+# WEEKLY Google FREE data refresh — full cycle per competitor (scrape → yt-dlp metadata → R2 upload →
+# Pass 3 HTML5-banner capture → Pass 4 re-upload), then one free-analysis pass, for every competitor
+# in competitors.txt. Google is slower + rate-limited
 # than Facebook, so this runs ONCE A WEEK and throttles ~30 min between competitors to avoid a
 # 429 IP block. NO enrichment (that's paid + stays on the Ad Studio "Enrich" button).
 #
 # Each competitor is committed; pushed after each + once at the end so origin stays
 # fast-forwardable. Scheduled runs use the canonical clone (single writer) + a once-per-week guard.
 #
-# ⚠ REQUIRES the same VPN / fresh IP that let the manual run through — without it Google may 429
-#   every competitor. A blocked competitor is SKIPPED (not retried), so a bad-IP week fails cleanly.
+# ⚠ REQUIRES a working VPN / fresh IP — without it Google 429s. Guardrails (mirroring the FB
+#   pipeline-run pattern): the scraper checkpoints every fetched creative so a 429-STALL is RESUMED,
+#   not restarted; the runner RETRIES a stalled competitor up to GOOGLE_SCRAPE_MAX_ATTEMPTS (default 3,
+#   cooling GOOGLE_SCRAPE_RETRY_COOLDOWN between attempts for a rotating IP to refresh), then GIVES UP,
+#   salvages the partial, and notifies. A 0-ads/429-at-search competitor is skipped (not retried).
+#   Every outcome (start/ok/blocked/partial/fail/done) fires a macOS+Slack notification — no silent fail.
+#   Pass 3 (HTML5 banners → mp4, headless Chromium): gated on Playwright; bounded PER ROUND via
+#   GOOGLE_HTML5_LIMIT (default 150 — capture is resumable, so the rest carry to next round); bounded
+#   retries (GOOGLE_HTML5_MAX_ATTEMPTS); notifies. Set GOOGLE_HTML5_CAPTURE=0 to skip the pass entirely.
 #
 # Triggered by launchd weekly (see install.sh). Manual/targeted run (skips guards, may run from a
 # worktree, no week-stamp written):
@@ -57,31 +65,50 @@ LOCK="$LOG_DIR/run.lock"
 if ! mkdir "$LOCK" 2>/dev/null; then log "another run holds the lock — skipping."; exit 0; fi
 trap 'rmdir "$LOCK" 2>/dev/null' EXIT
 
-# run_one — scrape + yt-dlp + R2 upload for one competitor. 0=ok, 10=blocked/no-ads, 1=error.
+# run_one — scrape ONE competitor (resumable). Returns:
+#   0  = full scrape ok + ingested (yt-dlp + R2 + master)
+#   4  = STALL-ABORT (IP throttled mid-scrape; partial CSV + checkpoint saved, NOT ingested —
+#        caller should cool down + retry; the scraper resumes from its checkpoint)
+#   10 = blocked / 0 ads (429 at the search step, or no ads) — not worth retrying
+#   1  = error (ingest/upload failed)
 run_one() {
+  local comp="$1"
+  local slug; slug=$(slugify "$comp")
+  local d;    d=$(date +%Y-%m-%d)
+  local csv="google/inputs/g-ads-${slug}-${d}.csv"
+
+  if [ "${GOOGLE_SCRAPE_DRYRUN:-0}" = "1" ]; then
+    log "   [dry-run] would scrape+ingest $comp (slug=$slug) — no network, no commit"; return 10
+  fi
+
+  log "[1/3] scrape $comp (slug=$slug)"
+  python3.13 google/scripts/scrape_google_ads.py \
+      --competitor "$comp" --region IN --out google --no-guardrail >> "$LOG" 2>&1
+  local src_rc=$?
+  if [ "$src_rc" = 4 ]; then
+    log "   $slug: STALL-ABORT (scraper rc=4) — IP throttled; partial CSV + checkpoint saved."
+    return 4
+  fi
+  if [ ! -f "$csv" ]; then log "   $slug: no CSV (429 at search / 0 ads) — skipped"; return 10; fi
+  local rows; rows=$(( $(wc -l < "$csv") - 1 ))
+  if [ "$rows" -le 0 ]; then log "   $slug: 0 rows — skipped"; return 10; fi
+  log "   $slug: scraped $rows rows"
+  ingest_one "$comp" && return 0 || return 1
+}
+
+# ingest_one — yt-dlp metadata + R2 upload + master for whatever CSV is on disk
+# (used on full success AND on give-up to salvage the partial). Idempotent.
+ingest_one() {
   local comp="$1"
   local slug; slug=$(slugify "$comp")
   local d;    d=$(date +%Y-%m-%d)
   local csv="google/inputs/g-ads-${slug}-${d}.csv"
   local videos="google/videos/${slug}-${d}"
   local images="google/images/${slug}-${d}"
-
-  if [ "${GOOGLE_SCRAPE_DRYRUN:-0}" = "1" ]; then
-    log "   [dry-run] would scrape+upload $comp (slug=$slug) — no network, no commit"; return 10
-  fi
-
-  log "[1/3] scrape $comp (slug=$slug)"
-  python3.13 google/scripts/scrape_google_ads.py \
-      --competitor "$comp" --region IN --out google --no-guardrail >> "$LOG" 2>&1 || true
-  if [ ! -f "$csv" ]; then log "   $slug: no CSV (429 / 0 ads) — skipped"; return 10; fi
-  local rows; rows=$(( $(wc -l < "$csv") - 1 ))
-  if [ "$rows" -le 0 ]; then log "   $slug: 0 rows — skipped"; return 10; fi
-  log "   $slug: scraped $rows rows"
-
+  [ -f "$csv" ] || { log "   $slug: no CSV to ingest"; return 1; }
   log "[2/3] yt-dlp metadata"
   python3.13 google/scripts/download_google_ads.py "$csv" \
       --videos-out "$videos/" --images-out "$images/" --batch-size 600 >> "$LOG" 2>&1 || true
-
   log "[3/3] R2 upload + master"
   python3.13 google/scripts/upload_to_r2.py --input "$csv" \
       --videos "$videos/" --images "$images/" --competitor "$slug" \
@@ -99,6 +126,63 @@ commit_one() {
   bash tools/log_and_commit.sh "$p" "$slug" "google-weekly" "weekly Google scrape (scrape→R2)" >> "$LOG" 2>&1 || true
 }
 
+# count_html5_pending SLUG -> number of html5-banner-no-mp4 rows still uncaptured in the master CSV
+count_html5_pending() {
+  local master="google/master/$1.csv"
+  [ -f "$master" ] || { echo 0; return; }
+  python3.13 - "$master" <<'PY' 2>/dev/null
+import csv, sys
+try:
+    print(sum(1 for r in csv.DictReader(open(sys.argv[1], encoding="utf-8-sig"))
+              if (r.get("error_tag", "") or "") == "html5-banner-no-mp4"))
+except Exception:
+    print(0)
+PY
+}
+
+# capture_html5_one COMP — Pass 3 (render HTML5 banners -> mp4) + Pass 4 (re-upload so r2_public_url fills).
+# Guardrailed like the scrape: gated on GOOGLE_HTML5_CAPTURE + Playwright availability; bounded per round
+# via --limit (capture is RESUMABLE — it skips banners already on disk — so the remainder resume next round);
+# bounded retries on crash; notifies on every outcome. NON-FATAL: never blocks the competitor's commit.
+capture_html5_one() {
+  local comp="$1"; local slug; slug=$(slugify "$comp"); local d; d=$(date +%Y-%m-%d)
+  [ "$HTML5_CAPTURE" = 1 ] || { log "   $slug: Pass 3 disabled (GOOGLE_HTML5_CAPTURE=0)"; return 0; }
+  if ! python3.13 -c "import playwright" 2>/dev/null; then
+    log "   $slug: Pass 3 SKIPPED — Playwright not installed on this machine"
+    notify "Google HTML5 capture skipped" "$slug: Playwright missing — run 'python3.13 -m playwright install chromium' on the canonical clone to enable Pass 3."
+    return 0
+  fi
+  local pending; pending=$(count_html5_pending "$slug")
+  if [ "${pending:-0}" -eq 0 ]; then log "   $slug: Pass 3 — no HTML5 banners to capture"; return 0; fi
+  log "   $slug: Pass 3 — capturing up to $HTML5_LIMIT of $pending pending HTML5 banner(s) (up to ${HTML5_MAX_ATTEMPTS}x)"
+  # capture_html5_banners.py exits 0 even when every banner fails (e.g. google-captcha-redirect on a
+  # blocked IP), so we judge success by the pending-count DROP, not the exit code: retry only when an
+  # attempt made NO progress (IP anti-abuse), cooling for a fresh IP between tries.
+  local a=1 left="$pending"
+  while [ "$a" -le "$HTML5_MAX_ATTEMPTS" ]; do
+    python3.13 google/scripts/capture_html5_banners.py --competitor "$slug" \
+        --master-dir google/master --out google --limit "$HTML5_LIMIT" >> "$LOG" 2>&1 || true
+    local now; now=$(count_html5_pending "$slug")
+    if [ "${now:-$left}" -lt "$left" ]; then left="$now"; break; fi   # progress → captured up to the cap; rest (if any) resume next round
+    log "   $slug: Pass 3 attempt $a/$HTML5_MAX_ATTEMPTS — no progress (IP captcha/anti-abuse?); cooling ${RETRY_COOLDOWN}s for a fresh IP"
+    a=$((a+1)); [ "$a" -le "$HTML5_MAX_ATTEMPTS" ] && sleep "$RETRY_COOLDOWN"
+  done
+  local captured=$(( pending - left ))
+  if [ "$captured" -gt 0 ]; then
+    log "   $slug: Pass 4 — re-uploading $captured newly-captured banner(s) to R2"
+    python3.13 google/scripts/upload_to_r2.py --input "google/inputs/g-ads-${slug}-${d}.csv" \
+        --videos "google/videos/${slug}-${d}/" --images "google/images/${slug}-${d}/" \
+        --competitor "$slug" --master-dir google/master --log-dir google/step3_logs >> "$LOG" 2>&1 || true
+  fi
+  if [ "${left:-0}" -gt 0 ]; then
+    log "   $slug: Pass 3 — captured $captured, $left still pending (resumes next round)"
+    notify "Google HTML5: $slug $captured/$pending captured" "$left banner(s) deferred to next round (per-round cap ${HTML5_LIMIT})."
+  else
+    log "   $slug: Pass 3 — all $pending HTML5 banner(s) captured."
+  fi
+  return 0
+}
+
 # ---- build the work list ----
 if [ "$MANUAL" = 1 ]; then
   comps=("$@")
@@ -113,19 +197,45 @@ else
 fi
 n=${#comps[@]}
 
-log "=== weekly Google scrape start ($(date '+%Y-%m-%d %H:%M')) — $n competitor(s), throttle=${THROTTLE}s ==="
-ok=0; blocked=0; failed=0; i=0
+MAX_ATTEMPTS="${GOOGLE_SCRAPE_MAX_ATTEMPTS:-3}"        # per-competitor scrape attempts before giving up
+RETRY_COOLDOWN="${GOOGLE_SCRAPE_RETRY_COOLDOWN:-180}"  # seconds between resume attempts (lets a rotating IP refresh)
+HTML5_CAPTURE="${GOOGLE_HTML5_CAPTURE:-1}"             # Pass 3: render HTML5 banners -> mp4 (1=on, 0=skip)
+HTML5_MAX_ATTEMPTS="${GOOGLE_HTML5_MAX_ATTEMPTS:-2}"   # Pass 3 capture retries per competitor (resumable)
+HTML5_LIMIT="${GOOGLE_HTML5_LIMIT:-150}"               # max banners captured per competitor PER ROUND (rest resume next round)
+log "=== weekly Google scrape start ($(date '+%Y-%m-%d %H:%M')) — $n competitor(s), throttle=${THROTTLE}s, max_attempts=${MAX_ATTEMPTS} ==="
+notify "Google scrape started" "$n competitor(s); throttle ${THROTTLE}s, up to ${MAX_ATTEMPTS} attempts each."
+ok=0; blocked=0; partial=0; failed=0; i=0
 for comp in "${comps[@]}"; do
-  i=$((i+1))
+  i=$((i+1)); slug="$(slugify "$comp")"; attempt=1
   log "---- ($i/$n) $comp ----"
-  run_one "$comp"; rc=$?
-  if [ "$rc" = 0 ]; then
-    commit_one "$(slugify "$comp")"; push_now; log "   $comp: ok"; ok=$((ok+1))
-  elif [ "$rc" = 10 ]; then
-    blocked=$((blocked+1))
-  else
-    failed=$((failed+1)); notify "Google weekly: $comp FAILED" "see scrape.log"
-  fi
+  while :; do
+    [ "$attempt" -gt 1 ] && log "   $comp: attempt $attempt/$MAX_ATTEMPTS (resuming from checkpoint)"
+    run_one "$comp"; rc=$?
+    if [ "$rc" = 0 ]; then
+      capture_html5_one "$comp"   # Pass 3 (HTML5 banners -> mp4) + Pass 4 (re-upload) — gated, guardrailed, non-fatal
+      commit_one "$slug"; push_now; log "   $comp: ok"; ok=$((ok+1)); break
+    elif [ "$rc" = 10 ]; then
+      log "   $comp: blocked (0 ads / 429 at search) — not retried"; blocked=$((blocked+1)); break
+    elif [ "$rc" = 4 ]; then
+      # stall-abort: the scraper saved a checkpoint; retry (it resumes), up to MAX_ATTEMPTS.
+      if [ "$attempt" -ge "$MAX_ATTEMPTS" ]; then
+        log "   $comp: GAVE UP after $MAX_ATTEMPTS stall(s) — salvaging partial data."
+        ingest_one "$comp" && { capture_html5_one "$comp"; commit_one "$slug"; push_now; }
+        notify "Google: $comp partial (gave up)" "IP throttled; stalled ${MAX_ATTEMPTS}× — partial committed. Re-run later on a fresh IP to finish (it resumes)."
+        partial=$((partial+1)); break
+      fi
+      log "   $comp: stalled — cooling ${RETRY_COOLDOWN}s for a fresh IP, then resuming."
+      sleep "$RETRY_COOLDOWN"; attempt=$((attempt+1))
+    else  # rc=1 (ingest/upload error)
+      if [ "$attempt" -ge "$MAX_ATTEMPTS" ]; then
+        log "   $comp: FAILED after $MAX_ATTEMPTS attempts (rc=$rc)."
+        notify "Google: $comp FAILED" "rc=$rc after $MAX_ATTEMPTS attempts — see scrape.log"
+        failed=$((failed+1)); break
+      fi
+      log "   $comp: error rc=$rc — retry in ${RETRY_COOLDOWN}s."
+      sleep "$RETRY_COOLDOWN"; attempt=$((attempt+1))
+    fi
+  done
   if [ "$i" -lt "$n" ]; then
     log "throttle: sleeping ${THROTTLE}s before the next competitor (resume ~$(date -v+${THROTTLE}S '+%H:%M' 2>/dev/null || echo '?'))..."
     sleep "$THROTTLE"
@@ -144,5 +254,5 @@ else
   push_now
   [ "$MANUAL" = 0 ] && echo "$(date '+%G-W%V')" > "$STAMP_FILE"
 fi
-log "=== done: ok=$ok blocked=$blocked failed=$failed ==="
-notify "Google weekly scrape done" "ok=$ok blocked=$blocked failed=$failed — see scrape.log (blocked = 429/0-ads, not retried)"
+log "=== done: ok=$ok blocked=$blocked partial=$partial failed=$failed ==="
+notify "Google weekly scrape done" "ok=$ok blocked=$blocked partial=$partial failed=$failed — see scrape.log (blocked=0-ads/429; partial=gave-up after retries)"

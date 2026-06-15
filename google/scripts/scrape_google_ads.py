@@ -797,6 +797,45 @@ CSV_HEADER = [
 ]
 
 
+# ── Resume checkpoint + stall guard ─────────────────────────────────────────
+# scrape() fetches creative detail one creative at a time, accumulating rows in
+# memory and writing the CSV only at the very end — so a kill / 429-stall mid-run
+# loses everything. To make runs RESUMABLE, every successfully-fetched creative's
+# rows are appended to a per-run JSONL checkpoint as they arrive; a re-run loads
+# the checkpoint, skips creatives already done, and re-fetches only the remainder
+# (plus any that previously failed). The checkpoint is deleted on a clean finish.
+# STALL_ABORT_THRESHOLD bounds the catastrophic per-creative 429 grind: N
+# consecutive block-listed detail failures aborts the advertiser (rc=4) so the
+# caller can retry — ideally on a fresh IP — and resume from the checkpoint.
+STALL_ABORT_THRESHOLD = 4
+
+
+def _load_checkpoint(path: pathlib.Path):
+    """Return (rows_already_done, set_of_done_creative_ids) from a checkpoint JSONL."""
+    rows: list = []
+    done: set = set()
+    if path.exists():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            cid = rec.get("creative_id")
+            if cid:
+                done.add(cid)
+                rows.extend(rec.get("rows", []))
+    return rows, done
+
+
+def _append_checkpoint(path: pathlib.Path, creative_id: str, creative_rows: list) -> None:
+    with path.open("a", encoding="utf-8") as f:
+        f.write(json.dumps({"creative_id": creative_id, "rows": creative_rows},
+                           separators=(",", ":")) + "\n")
+
+
 def scrape(args: argparse.Namespace) -> int:
     today = datetime.date.today().isoformat()
     slug = re.sub(r"[^a-z0-9]+", "-", (args.slug or "batch").lower()).strip("-")
@@ -836,8 +875,15 @@ def scrape(args: argparse.Namespace) -> int:
 
     client = TransparencyClient(region_code=region_code)
 
-    rows: list[dict] = []
+    checkpoint_path = inputs_dir / f"g-ads-{slug}-{today}.checkpoint.jsonl"
+    _resumed_rows, done_ids = _load_checkpoint(checkpoint_path)
+    if done_ids:
+        print(f"[resume] checkpoint found: {len(done_ids)} creative(s) already "
+              f"fetched — skipping them and resuming the rest.")
+    rows: list[dict] = list(_resumed_rows)
     total_creatives = 0
+    consecutive_block = 0   # consecutive block-listed detail failures (stall guard)
+    stalled = False
     video_jobs: list[tuple[str, str, str, str, int]] = []  # (advid, crid, video_url, watch_id, variant_idx)
     image_jobs: list[tuple[str, str, str, int]] = []        # (advid, crid, image_url, variant_idx)
 
@@ -863,18 +909,36 @@ def scrape(args: argparse.Namespace) -> int:
             cr_id = c.get("2")
             if not cr_id:
                 continue
+            if cr_id in done_ids:          # resume: fetched in a prior run
+                continue
             try:
                 detail = client.get_creative_detail(adv_id, cr_id)
             except Exception as e:  # noqa: BLE001
                 print(f"          ! detail failed for {cr_id}: {e}")
                 rows.append(_error_row(adv, cr_id, args, today,
                                        f"detail-fetch: {e.__class__.__name__}"))
+                # Stall guard: a run of consecutive block-listed (429-exhausted)
+                # failures means the IP is throttled — abort this advertiser
+                # rather than burn ~7 min on every remaining creative. The
+                # checkpoint preserves everything fetched; re-run to resume.
+                if (isinstance(e, requests.exceptions.HTTPError)
+                        or "block-listed" in str(e) or "429" in str(e)):
+                    consecutive_block += 1
+                    if consecutive_block >= STALL_ABORT_THRESHOLD:
+                        print(f"\n[STALL-ABORT] {consecutive_block} consecutive "
+                              f"block-listed failures on {adv_id} — IP throttled. "
+                              f"Aborting; {len(done_ids)} creative(s) checkpointed "
+                              f"for resume (re-run on a fresh IP).")
+                        stalled = True
+                        break
                 continue
+            consecutive_block = 0          # a success clears the stall counter
             parsed = parse_creative_detail(detail)
             adv_name = (adv.get("advertiser_name")
                         or parsed.get("advertiser_name") or "")
             variants = parsed["variants"] or [{}]
             n_variants = len(variants)
+            creative_rows: list = []
             for v_idx, variant in enumerate(variants):
                 content_url = variant.get("content_url") or ""
                 image_url = variant.get("image_url") or ""
@@ -925,7 +989,7 @@ def scrape(args: argparse.Namespace) -> int:
                 elif fmt_here in ("", "Unknown", "Other"):
                     row_error_tag = "unknown-no-format"
 
-                rows.append({
+                _row = {
                     "row_rank": 0,  # filled after sort
                     "competitor_name": args.competitor or slug,
                     "advertiser_id": adv_id,
@@ -958,11 +1022,17 @@ def scrape(args: argparse.Namespace) -> int:
                     "aspect_ratio": aspect,
                     "scrape_run_date": today,
                     "error_tag": row_error_tag,
-                })
+                }
+                rows.append(_row)
+                creative_rows.append(_row)
+            _append_checkpoint(checkpoint_path, cr_id, creative_rows)
+            done_ids.add(cr_id)
             if i % 20 == 0:
                 print(f"          processed {i}/{len(creatives)}", flush=True)
             time.sleep(guardrail.DETAIL_DELAY_SECONDS
                        + random.uniform(0, guardrail.DETAIL_JITTER))
+        if stalled:
+            break
 
     # Sort + rank rows
     rows.sort(key=lambda r: (r["advertiser_id"], r["creative_id"],
@@ -984,6 +1054,18 @@ def scrape(args: argparse.Namespace) -> int:
             w.writerow(r)
     print(f"\n[csv] wrote {len(rows)} rows → {csv_path}")
 
+    if stalled:
+        guardrail.record_run(
+            out_root, competitor=slug,
+            advertisers=[a["advertiser_id"] for a in advertisers],
+            region=args.region, outcome="blocked",
+            creatives=total_creatives, rows=len(rows),
+            note=f"stall-abort: {consecutive_block} consecutive block failures; "
+                 f"{len(done_ids)} creatives checkpointed for resume")
+        print(f"[stall] partial CSV written ({len(rows)} rows); {len(done_ids)} "
+              f"creative(s) checkpointed. Re-run (fresh IP) to resume the rest.")
+        return 4
+
     if args.no_download:
         print("[info] --no-download set; skipping asset downloads")
         guardrail.record_run(
@@ -992,6 +1074,7 @@ def scrape(args: argparse.Namespace) -> int:
             region=args.region, outcome="success",
             creatives=total_creatives, rows=len(rows),
             note="no-download (CSV only)")
+        checkpoint_path.unlink(missing_ok=True)
         return 0
 
     n_video_ok = n_video_fail = 0
@@ -1041,6 +1124,7 @@ def scrape(args: argparse.Namespace) -> int:
         creatives=total_creatives, rows=len(rows),
         note=f"videos {n_video_ok}ok/{n_video_fail}fail, "
              f"images {n_image_ok}ok/{n_image_fail}fail")
+    checkpoint_path.unlink(missing_ok=True)
     return 1 if (n_video_fail + n_image_fail) else 0
 
 

@@ -8,12 +8,15 @@ between competitors** to avoid a 429 IP block.
 ## What it does
 
 For every competitor in `competitors.txt`, in order:
-1. **scrape** — `scrape_google_ads.py --competitor "<Name>" --region IN --out google --no-guardrail`
+1. **scrape** — `scrape_google_ads.py --competitor "<Name>" --region IN --out google --no-guardrail` (resumable — checkpoints every creative)
 2. **yt-dlp metadata** — `download_google_ads.py`
 3. **R2 upload + master** — `upload_to_r2.py … --master-dir google/master --log-dir google/step3_logs`
-4. commit that competitor, push.
+4. **Pass 3 — HTML5 banner capture** — `capture_html5_banners.py --competitor <slug> --out google --limit $GOOGLE_HTML5_LIMIT`: renders `html5-banner-no-mp4` ads in headless Chromium → mp4. **Pass 4** then re-runs the R2 upload so the new mp4s fill `r2_public_url`.
+5. commit that competitor, push.
 
 Then one `analysis/scripts/run_all_free.sh google` pass, commit, push.
+
+**Pass 3 guardrails** (mirror the scrape's): gated on `GOOGLE_HTML5_CAPTURE` (default on) + Playwright/ffmpeg presence (self-skips + notifies if missing); bounded **per round** via `GOOGLE_HTML5_LIMIT` (default 150 — the capture is **resumable**, skipping banners already on disk, so the remainder carry to the next round); bounded retries via `GOOGLE_HTML5_MAX_ATTEMPTS`; notifies on outcome; **non-fatal** (never blocks the commit). As of 2026-06-15 there are ~1,780 HTML5 banners pending across the masters, so capture fills in over several weekly rounds (raise `GOOGLE_HTML5_LIMIT` to go faster).
 
 A competitor that 429s / returns 0 ads is **skipped, not retried** (logged as `blocked`). It uses
 `--no-guardrail` because the per-CLI 24h-gap guardrail would otherwise block competitors 2..N in the

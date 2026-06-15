@@ -1,0 +1,43 @@
+# Step 3 run log
+# competitor : pw-talk
+# started_at : 2026-06-15T14:03:17
+# input      : facebook/inputs/fb-ads-pw-talk-2026-06-15-1358.csv
+# videos     : facebook/videos/pw-talk-2026-06-15
+# master     : facebook/master/pw-talk.csv  (updated)
+# enriched   : facebook/inputs/fb-ads-pw-talk-2026-06-15-1358_enriched.csv
+# bucket     : video-ads
+# public_base: https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com
+# dry_run    : False
+#
+# counts     : {'uploaded': 20, 'carried-forward': 0, 'image-pending': 5, 'video-missing': 5, 'no-creative': 0, 'error': 0}
+#
+image-pending    2349362925531593 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1668604657811317 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1668604657811317 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1542662291202539 c0  (video) ← 1542662291202539.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1542662291202539.mp4
+video-missing    1542662291202539 c0  (expected file not found in facebook/videos/pw-talk-2026-06-15)
+uploaded         1324708162884438 c0  (video) ← 1324708162884438.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1324708162884438.mp4
+video-missing    1324708162884438 c0  (expected file not found in facebook/videos/pw-talk-2026-06-15)
+uploaded         2118422772240776 c0  (video) ← 2118422772240776.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2118422772240776.mp4
+uploaded         1281960683918283 c0  (video) ← 1281960683918283.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1281960683918283.mp4
+uploaded         1724197118748377 c0  (video) ← 1724197118748377.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1724197118748377.mp4
+uploaded         1007300494972391 c0  (video) ← 1007300494972391.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1007300494972391.mp4
+uploaded         956692124024564 c0  (video) ← 956692124024564.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/956692124024564.mp4
+uploaded         1023770803552722 c0  (video) ← 1023770803552722.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1023770803552722.mp4
+video-missing    1023770803552722 c0  (expected file not found in facebook/videos/pw-talk-2026-06-15)
+uploaded         941613088747926 c0  (video) ← 941613088747926.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/941613088747926.mp4
+uploaded         1545545373757343 c0  (video) ← 1545545373757343.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1545545373757343.mp4
+uploaded         982593771083391 c0  (video) ← 982593771083391.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/982593771083391.mp4
+uploaded         1470471397608970 c0  (video) ← 1470471397608970.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1470471397608970.mp4
+uploaded         954609790259093 c0  (video) ← 954609790259093.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/954609790259093.mp4
+video-missing    954609790259093 c0  (expected file not found in facebook/videos/pw-talk-2026-06-15)
+video-missing    954609790259093 c0  (expected file not found in facebook/videos/pw-talk-2026-06-15)
+uploaded         2147829419384950 c0  (video) ← 2147829419384950.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2147829419384950.mp4
+image-pending    1616029346132773 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1616029346132773 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1459802412348522 c0  (video) ← 1459802412348522.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1459802412348522.mp4
+uploaded         1271072245182250 c0  (video) ← 1271072245182250.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1271072245182250.mp4
+uploaded         26964483843185846 c0  (video) ← 26964483843185846.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/26964483843185846.mp4
+uploaded         1510838230642930 c0  (video) ← 1510838230642930.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1510838230642930.mp4
+uploaded         1888603368477515 c0  (video) ← 1888603368477515.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1888603368477515.mp4
+uploaded         1484334716724850 c0  (video) ← 1484334716724850.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1484334716724850.mp4
