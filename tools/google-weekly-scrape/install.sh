@@ -18,6 +18,9 @@ if [ "$(git rev-parse --git-common-dir 2>/dev/null)" != ".git" ]; then
 fi
 command -v python3.13 >/dev/null || { echo "ERR python3.13 missing"; exit 1; }
 [ -f "$SCRAPE_SH" ]  || { echo "ERR $SCRAPE_SH not found (merge the PR + pull first)"; exit 1; }
+# Pass 3 (HTML5 banner capture) needs Playwright + ffmpeg — non-fatal (Pass 3 self-skips + notifies if absent).
+python3.13 -c "import playwright" 2>/dev/null || echo "WARN Playwright missing — Pass 3 (HTML5 banner capture) will skip. Enable: python3.13 -m pip install --user playwright && python3.13 -m playwright install chromium"
+command -v ffmpeg >/dev/null || echo "WARN ffmpeg missing — Pass 3 needs it to convert captures to mp4 (brew install ffmpeg)"
 
 chmod +x "$SCRAPE_SH"
 mkdir -p "$(dirname "$LOG")" "$HOME/Library/LaunchAgents"
@@ -33,6 +36,8 @@ echo
 echo "⚠ The scrape needs your VPN / fresh IP active at run time, or Google 429-blocks every"
 echo "  competitor (blocked ones are skipped, not retried — a bad-IP week just fails cleanly)."
 echo "⚠ A full round throttles ~30 min/competitor (≈4-5 h). Lower it with GOOGLE_SCRAPE_THROTTLE."
+echo "  Pass 3 (HTML5 banners → mp4) runs per competitor, capped GOOGLE_HTML5_LIMIT/round (default 150, resumable);"
+echo "  GOOGLE_HTML5_CAPTURE=0 skips it. With ~1,780 banners pending today it fills in over several weekly rounds."
 echo
 echo "IMPORTANT — the Mac must be awake at the scheduled time (or it runs on the next wake, once/week)."
 echo "Change time/day: edit Weekday/Hour/Minute in the .plist.template and re-run this installer."
