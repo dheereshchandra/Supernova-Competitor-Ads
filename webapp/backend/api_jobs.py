@@ -49,6 +49,9 @@ class JobBody(BaseModel):
     ad_id: str
     force: bool = False
     concept_brief: str = ""   # replication direction (char swaps / format / ASMR→talking-head)
+    # Languages to generate up front. When non-empty, generate produces ONE combined Doc per
+    # language (English + that language) via the localize engine — no standalone English Doc.
+    languages: list[str] = []
 
 
 def _job_payload(r: dict, queue_ids: list[int]) -> dict:
@@ -56,7 +59,8 @@ def _job_payload(r: dict, queue_ids: list[int]) -> dict:
         from .pipeline import PIPELINE_STEPS
         steps = PIPELINE_STEPS
     else:
-        steps = jobs.steps_payload(r.get("media_type") or "Video", r.get("kind") or "generate")
+        steps = jobs.steps_payload(r.get("media_type") or "Video", r.get("kind") or "generate",
+                                   jobs._parse_langs(r.get("languages")))
     keys = [s["key"] for s in steps]
     cur = r.get("current_step")
     return {**{k: r.get(k) for k in (
@@ -82,12 +86,16 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
         raise HTTPException(404, "Ad not found")
     if not ad["media_url"]:
         raise HTTPException(422, "This ad has no media in R2 to work from")
+    langs = [l.strip() for l in (body.languages or []) if l.strip()]
+    bad = [l for l in langs if l not in SUPPORTED_LANGUAGES]
+    if bad:
+        raise HTTPException(422, f"Unsupported language(s): {', '.join(bad)}")
     active = db.query_one(
         f"SELECT id FROM jobs WHERE pipeline=? AND competitor=? AND ad_id=? "
         f"AND status IN {ACTIVE}", (body.pipeline, body.competitor, body.ad_id))
     if active:
         raise HTTPException(409, f"A run for this ad is already in flight (job #{active['id']})")
-    if (ad["has_docs"] or ad["has_gdocs"]) and not body.force:
+    if (ad["has_docs"] or ad["has_gdocs"] or ad.get("has_locales")) and not body.force:
         raise HTTPException(409, "Docs already exist for this ad — open them, or force-regenerate")
 
     # cost gate: real estimate, then per-job + per-day caps
@@ -102,6 +110,9 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
             cost = est["estimates"][0].get("cost_total", cost)
     except Exception:
         pass
+    # Merged generate also localizes into the chosen languages (Flash translate + safety audit,
+    # images reused) — add that to the estimate so the daily-cap accounting stays honest.
+    cost += len(langs) * LOCALIZE_COST_PER_LANG
     cfg = settings()
     if cost > cfg.max_job_cost:
         raise HTTPException(422, f"Estimated {inr(cost)} exceeds the per-job cap ({inr(cfg.max_job_cost)})")
@@ -114,9 +125,9 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
 
     cur = db.execute(
         "INSERT INTO jobs (pipeline, competitor, ad_id, media_type, requested_by, "
-        "force_regen, cost_estimate_usd) VALUES (?,?,?,?,?,?,?)",
+        "force_regen, cost_estimate_usd, languages) VALUES (?,?,?,?,?,?,?,?)",
         (body.pipeline, body.competitor, body.ad_id, ad["media_type"], user,
-         int(body.force), cost))
+         int(body.force), cost, json.dumps(langs)))
     job_id = cur.lastrowid
     # Concept brief (mandatory replication input): persist it so step4_rewrite picks it up from
     # step4_workspace/scenes/<id>.brief.txt when the worker runs the rewrite step.
@@ -155,7 +166,10 @@ TTS_COST_PER_LANG = 0.10
 
 
 def _ad_has_english(ad: dict) -> bool:
-    return bool((ad.get("rewrite_gdoc_url") or "").strip() or ad.get("has_gdocs"))
+    # A merged generate produces no standalone English Doc, but every per-language combined Doc
+    # embeds the English script — so locales count as "the script exists" for TTS / add-languages.
+    return bool((ad.get("rewrite_gdoc_url") or "").strip() or ad.get("has_gdocs")
+                or ad.get("has_locales") or any((ad.get("locales") or {}).values()))
 
 
 def _validate_langs(langs: list[str]) -> None:

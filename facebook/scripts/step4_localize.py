@@ -210,20 +210,26 @@ def audit_text(translated: dict, decompose: dict) -> str:
     return "\n".join(lines)
 
 
-def to_rewrite_shape(translated: dict, english_skeleton: list, base_parsed: dict) -> dict:
+def to_rewrite_shape(translated: dict, english_skeleton: list, base_parsed: dict,
+                     language: str = "") -> dict:
     """Adapt a translation into the rewrite shape build_supernova_doc expects.
     The visuals are identical to the English master, so reuse its format / visual_overview /
-    per-scene brief (English context for the editor). The Script zone uses the NATIVE-script form;
-    the TTS block carries BOTH forms (romanized + native), speaker labels stripped."""
+    per-scene brief (English context for the editor). The Script zone carries BOTH the English
+    source line (`english_script`, from the same edited skeleton the translation was made from) and
+    the NATIVE-script localized form (`supernova_script`) — the doc renders them as English + the
+    target language per scene. The TTS block carries BOTH forms (romanized + native), labels stripped."""
     base_scenes = {s.get("n"): s for s in base_parsed.get("scenes", [])}
+    skel_by_n = {sc.get("n"): (sc.get("script") or "") for sc in english_skeleton}
     scenes, roman_lines, native_lines = [], [], []
     for s in translated.get("scenes", []):
+        n = s.get("n")
         native = s.get("script_native") or s.get("script") or ""
         roman = s.get("script_roman") or ""
         scenes.append({
-            "n": s.get("n"), "scene_label": s.get("scene_label", ""),
-            "scene_brief": base_scenes.get(s.get("n"), {}).get("scene_brief", ""),
+            "n": n, "scene_label": s.get("scene_label", ""),
+            "scene_brief": base_scenes.get(n, {}).get("scene_brief", ""),
             "supernova_script": native,
+            "english_script": skel_by_n.get(n) or base_scenes.get(n, {}).get("supernova_script", ""),
         })
         native_lines += [sp for ln in native.split("\n") if (sp := build_docs._strip_speaker(ln))]
         roman_lines += [sp for ln in roman.split("\n") if (sp := build_docs._strip_speaker(ln))]
@@ -231,6 +237,7 @@ def to_rewrite_shape(translated: dict, english_skeleton: list, base_parsed: dict
             "format": base_parsed.get("format", ""),
             "visual_overview": base_parsed.get("visual_overview", ""),
             "characters": base_parsed.get("characters", []),
+            "language": language,
             "scenes": scenes,
             "tts": {"romanized": roman_lines, "native": native_lines}}
 
@@ -263,7 +270,7 @@ def localize_one(client, svc, env, ad_id, competitor, target, skeleton, comments
         return {"language": target, "verdict": side["safety"]["verdict"], "link": "(dry-run)"}
 
     docx_path = DOCS_DIR / f"{ad_id}_{lang_key}_supernova_rewrite.docx"
-    rewrite_shaped = {"parsed": to_rewrite_shape(side["parsed"], skeleton, base_parsed)}
+    rewrite_shaped = {"parsed": to_rewrite_shape(side["parsed"], skeleton, base_parsed, target)}
     build_docs.build_supernova_doc(ad_id, competitor, decompose, rewrite_shaped, docx_path,
                                    lambda m: None)
     title = f"{competitor.title()} {ad_id} — Supernova Rewrite ({target})"

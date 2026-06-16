@@ -439,6 +439,9 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
     scenes_d = {s.get("n"): s for s in parsed_decompose.get("scenes", [])}
     scenes_r = parsed_rewrite.get("scenes", [])
     brand_swaps = parsed_rewrite.get("brand_swaps_detected", [])
+    # On localized docs the Script zone carries the language label (set by step4_localize via
+    # to_rewrite_shape). When present, each Scene shows an English block + a "<language>" block.
+    lang_label = (parsed_rewrite.get("language") or "").strip()
 
     # Same Stage-4.5 sidecar as the competitor doc — keeps both docs consistent.
     image_urls = load_image_urls(ad_id)
@@ -448,7 +451,10 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
     style = doc.styles["Normal"]
     style.font.size = Pt(10)
 
-    title = doc.add_heading(f"Supernova Script — based on {competitor.title()} Ad {ad_id}", level=0)
+    title_txt = (f"Supernova Script ({lang_label}) — based on {competitor.title()} Ad {ad_id}"
+                 if lang_label else
+                 f"Supernova Script — based on {competitor.title()} Ad {ad_id}")
+    title = doc.add_heading(title_txt, level=0)
     title.alignment = WD_ALIGN_PARAGRAPH.LEFT
 
     # Competitor's original video — so whoever edits the script can watch the source clip first.
@@ -507,9 +513,23 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
     for scene_r in scenes_r:
         n = scene_r.get("n", 0)
         doc.add_heading(f"Scene {n}", level=2)
-        for line in (scene_r.get("supernova_script") or "").split("\n"):
-            if line.strip():
-                doc.add_paragraph(line.strip())
+        eng = (scene_r.get("english_script") or "").strip()
+        loc = (scene_r.get("supernova_script") or "").strip()
+        if eng:
+            # Combined per-language doc — English block first, then the language block, so the
+            # reviewer reads both side by side and can fix any structure the translation broke.
+            doc.add_heading("English", level=3)
+            for line in eng.split("\n"):
+                if line.strip():
+                    doc.add_paragraph(line.strip())
+            doc.add_heading(lang_label or "Localized", level=3)
+            for line in loc.split("\n"):
+                if line.strip():
+                    doc.add_paragraph(line.strip())
+        else:
+            for line in loc.split("\n"):
+                if line.strip():
+                    doc.add_paragraph(line.strip())
 
     doc.add_paragraph("─" * 60)
 
@@ -532,9 +552,6 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
             for ln in native:
                 if str(ln).strip():
                     doc.add_paragraph(str(ln).strip())
-
-    doc.add_heading("Provenance", level=2)
-    doc.add_paragraph(f"Rewritten with: {rewrite.get('model', '?')}")
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     doc.save(out_path)

@@ -368,9 +368,10 @@ export const createJob = (
   ad_id: string,
   force = false,
   concept_brief = '',
+  languages: string[] = [],
 ) =>
   api<{ job_id: string }>('/api/jobs', {
-    json: { pipeline, competitor, ad_id, force, concept_brief },
+    json: { pipeline, competitor, ad_id, force, concept_brief, languages },
   })
 
 export const getJobs = (scope: 'active' | 'recent' | 'all' = 'recent') =>
