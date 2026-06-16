@@ -4,6 +4,7 @@ from __future__ import annotations
 import datetime
 import json
 import subprocess
+from pathlib import Path
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
@@ -47,6 +48,7 @@ class JobBody(BaseModel):
     competitor: str
     ad_id: str
     force: bool = False
+    concept_brief: str = ""   # replication direction (char swaps / format / ASMR→talking-head)
 
 
 def _job_payload(r: dict, queue_ids: list[int]) -> dict:
@@ -116,6 +118,16 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
         (body.pipeline, body.competitor, body.ad_id, ad["media_type"], user,
          int(body.force), cost))
     job_id = cur.lastrowid
+    # Concept brief (mandatory replication input): persist it so step4_rewrite picks it up from
+    # step4_workspace/scenes/<id>.brief.txt when the worker runs the rewrite step.
+    scenes_dir = Path(FACEBOOK_DIR) / "step4_workspace" / "scenes"
+    brief_path = scenes_dir / f"{body.ad_id}.brief.txt"
+    brief = (body.concept_brief or "").strip()
+    if brief:
+        scenes_dir.mkdir(parents=True, exist_ok=True)
+        brief_path.write_text(brief, encoding="utf-8")
+    elif body.force and brief_path.exists():
+        brief_path.unlink()   # force-regen with no brief clears a stale one
     _ensure_tracker(body.pipeline, body.competitor, body.ad_id, "generating", user)
     _log(body.pipeline, body.competitor, body.ad_id, user, "generate",
          f"queued job #{job_id} (~{inr(cost)})")
@@ -132,10 +144,14 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
 SUPPORTED_LANGUAGES = ("Hindi", "Telugu", "Tamil", "Marathi", "Kannada", "Malayalam",
                        "Bengali", "Gujarati", "Assamese", "Punjabi")
 LOCALIZE_COST_PER_LANG = 0.02  # Flash translate + safety audit; images are REUSED (₹0)
-# TTS (Stage 5a voiceover) targets the localized scripts AND the English master. Real cost is
-# per-character at the provider; this flat per-language figure is the spend-gate estimate.
+# TTS (Stage 5a voiceover) targets the localized scripts AND the English master.
+# APPROXIMATE per-language estimate, shown as an AVERAGE across both providers (the real
+# split depends on which voices the registry routes to which provider). Per-character:
+# ElevenLabs Pro ≈ $165/1M chars ($99 / 600k credits; multilingual v2 = 1 credit/char),
+# Cartesia enterprise = $7.5/1M. Average ≈ $86/1M; a typical ad ≈ ~1.2k spoken chars/
+# language → ≈ $0.10/language.
 TTS_LANGUAGES = ("English",) + SUPPORTED_LANGUAGES
-TTS_COST_PER_LANG = 0.25
+TTS_COST_PER_LANG = 0.10
 
 
 def _ad_has_english(ad: dict) -> bool:

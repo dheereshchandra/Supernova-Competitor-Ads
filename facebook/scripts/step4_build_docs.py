@@ -351,9 +351,85 @@ def build_competitor_doc(ad_id: str, competitor: str, decompose: dict,
     return True
 
 
+def _strip_speaker(line: str) -> str:
+    """'Rahul says: I went' -> 'I went' (for the TTS block). Continuation lines pass through."""
+    import re
+    line = line.strip()
+    if not line:
+        return ""
+    m = re.match(r"^.{1,40}?\bsays:\s*(.*)$", line)
+    return (m.group(1).strip() if m else line)
+
+
+def _first_line(s: str) -> str:
+    for ln in (s or "").split("\n"):
+        ln = ln.strip().lstrip("-*• ").strip()
+        if ln:
+            return ln
+    return ""
+
+
+def _char_brief(dchar: dict) -> str:
+    """One short line of look for a character, from the decompose record."""
+    ap = (dchar.get("appearance") or "").strip()
+    return ap.split(".")[0][:80] if ap else ""
+
+
+def _derive_format(parsed_decompose: dict) -> str:
+    """Fallback ad-format label when the rewrite didn't emit one (e.g. old sidecars)."""
+    pt = (parsed_decompose.get("production_type") or "").strip()
+    blob = " ".join(((s.get("setting") or "") + " " + (s.get("scene_label") or ""))
+                    for s in parsed_decompose.get("scenes", [])).lower()
+    shape = ("Split-screen" if "split" in blob
+             else "Interview / talk-show" if "interview" in blob
+             else "Stage / monologue" if ("stage" in blob or "ted" in blob)
+             else "")
+    return " · ".join(x for x in [shape, pt] if x)
+
+
+def _derive_overview(parsed_decompose: dict) -> str:
+    """Fallback Look paragraph from the decompose (production notes / distinct settings)."""
+    notes = (parsed_decompose.get("production_notes") or "").strip()
+    if notes:
+        return notes
+    seen, settings = set(), []
+    for s in parsed_decompose.get("scenes", []):
+        st = (s.get("setting") or "").strip()
+        if st and st not in seen:
+            seen.add(st)
+            settings.append(st)
+    return "; ".join(settings[:4])
+
+
+def competitor_video_url(ad_id: str, competitor: str) -> str:
+    """The competitor's R2 video URL, so a reviewer can watch the original clip straight from the
+    doc. Primary: the master CSV's `r2_public_url`; fallback: {R2_PUBLIC_URL_BASE}/<id>.mp4."""
+    import csv as _csv
+    master = pathlib.Path("master") / f"{competitor}.csv"
+    if master.exists():
+        try:
+            with master.open(encoding="utf-8-sig", newline="") as f:
+                for r in _csv.DictReader(f):
+                    if (r.get("ad_library_id") or "").strip() == str(ad_id) and (r.get("r2_public_url") or "").strip():
+                        return r["r2_public_url"].strip()
+        except Exception:
+            pass
+    try:
+        import r2_utils
+        return r2_utils.public_url_for(r2_utils.load_env(), f"{ad_id}.mp4")
+    except Exception:
+        return ""
+
+
 def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
                         rewrite: dict, out_path: pathlib.Path, log) -> bool:
-    """Build the Supernova-rewrite docx. Returns True on success."""
+    """Build the Supernova-rewrite docx. Returns True on success.
+
+    Layout (3 zones, lean — for the team to read/edit fast):
+      1. Visual & Cast  — format, Look paragraph, cast one-liners, scenes-at-a-glance (skim only)
+      2. Script         — just 'Scene N' + the dialogue
+      3. TTS input      — spoken words only, no speaker labels
+    Used for BOTH the English master and (via step4_localize) the localized docs."""
     from docx import Document
     from docx.shared import Inches, Pt
     from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -372,99 +448,90 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
     style = doc.styles["Normal"]
     style.font.size = Pt(10)
 
-    title = doc.add_heading(f"Supernova-Voice Rewrite — based on {competitor.title()} Ad {ad_id}",
-                            level=0)
+    title = doc.add_heading(f"Supernova Script — based on {competitor.title()} Ad {ad_id}", level=0)
     title.alignment = WD_ALIGN_PARAGRAPH.LEFT
 
-    doc.add_paragraph("This is an internal brand-safe rewrite of a competitor's ad, "
-                      "produced for Supernova's creative team. Use the visuals + script "
-                      "as a starting point for original Supernova creative — do not ship "
-                      "this as-is.")
-    doc.add_paragraph()
+    # Competitor's original video — so whoever edits the script can watch the source clip first.
+    vurl = competitor_video_url(ad_id, competitor)
+    if vurl:
+        p = doc.add_paragraph()
+        p.add_run("🎬 Competitor video (watch the original): ").bold = True
+        _add_hyperlink(p, vurl, vurl)
 
-    # Cast / legend — map each character id to its assigned name + role so a reader
-    # can follow the NAMED script below without mentally tracking "Character A".
-    # The rewrite assigns each character a `name` (Miss Nova for the AI teacher);
-    # older sidecars without names fall back to the id — role line.
+    # ===================== ZONE 1 — Visual & Cast (skim only) =====================
+    doc.add_heading("Visual & Cast", level=1)
+
+    fmt = (parsed_rewrite.get("format") or "").strip() or _derive_format(parsed_decompose)
+    if fmt:
+        p = doc.add_paragraph(); p.add_run("Format: ").bold = True; p.add_run(fmt)
+    meta = " · ".join(x for x in [
+        (parsed_decompose.get("production_type") or "").strip(),
+        f"{len(scenes_r)} scenes",
+        (f"{parsed_decompose.get('duration_s')}s" if parsed_decompose.get("duration_s") else ""),
+    ] if x)
+    if meta:
+        doc.add_paragraph(meta)
+
+    overview = (parsed_rewrite.get("visual_overview") or "").strip() or _derive_overview(parsed_decompose)
+    if overview:
+        p = doc.add_paragraph(); p.add_run("Look: ").bold = True; p.add_run(overview)
+
     cast = parsed_rewrite.get("characters", [])
+    dchars = {c.get("id"): c for c in parsed_decompose.get("characters", [])}
     if cast:
-        doc.add_heading("Cast / Legend", level=2)
+        doc.add_heading("Cast", level=2)
         for c in cast:
             cid = c.get("id", "?")
-            role = c.get("role", "")
-            name = c.get("name")
-            if name:
-                doc.add_paragraph(f"Character {cid} = {name}" + (f" ({role})" if role else ""),
-                                  style="List Bullet")
-            else:
-                doc.add_paragraph(f"Character {cid} — {role}", style="List Bullet")
-        doc.add_paragraph()
+            name = c.get("name") or c.get("role", "")
+            tail = (c.get("brief") or "").strip() or _char_brief(dchars.get(cid, {})) or c.get("role", "")
+            doc.add_paragraph(f"Character {cid} = {name}" + (f" — {tail}" if tail and tail != name else ""),
+                              style="List Bullet")
+
+    doc.add_heading("Scenes at a glance", level=2)
+    for scene_r in scenes_r:
+        n = scene_r.get("n", 0)
+        label = scene_r.get("scene_label") or scenes_d.get(n, {}).get("scene_label", "")
+        brief = (scene_r.get("scene_brief") or "").strip() or _first_line(scene_r.get("scene_summary", ""))
+        if label and brief and brief.lower() != label.lower():
+            line = f"Scene {n} — {label}: {brief}"
+        else:
+            line = f"Scene {n} — {brief or label}"
+        doc.add_paragraph(line, style="List Bullet")
 
     doc.add_paragraph("─" * 60)
 
-    # Per-scene blocks
+    # ===================== ZONE 2 — Script (read & edit this) =====================
+    doc.add_heading("Script", level=1)
+    if cast:
+        doc.add_paragraph("Same cast as above.")
     for scene_r in scenes_r:
         n = scene_r.get("n", 0)
-        scene_d = scenes_d.get(n, {})
-        label = scene_r.get("scene_label") or scene_d.get("scene_label", "?")
+        doc.add_heading(f"Scene {n}", level=2)
+        for line in (scene_r.get("supernova_script") or "").split("\n"):
+            if line.strip():
+                doc.add_paragraph(line.strip())
 
-        doc.add_heading(f"Scene {n} — {label}", level=1)
+    doc.add_paragraph("─" * 60)
 
-        # Clean panel imagery (from Stage 4)
-        panels = scene_d.get("panels", [])
-        for panel in panels:
-            pos = panel.get("position", "full")
-            pp = panel_image_path(ad_id, n, pos)
-            if pp:
-                try:
-                    doc.add_picture(str(pp), width=Inches(4.5))
-                    add_asset_caption(doc, gen_urls.get(f"{n:02d}_{pos}"))
-                except Exception as e:
-                    log(f"    supernova doc image embed failed: {e}")
-
-        # Scene visuals (kept from the competitor ad) — rendered as TEXT so this doc is
-        # self-contained without generated panels. Image generation is a separate later
-        # step; until it runs there are no panel images, so the look must be described here.
-        panel_descs = [p for p in panels if p.get("panel_visual_description")]
-        if scene_d.get("setting") or scene_d.get("visual_description") or panel_descs:
-            doc.add_heading("Scene visuals (kept from the competitor ad)", level=3)
-            if scene_d.get("setting"):
-                doc.add_paragraph(f"Setting: {scene_d['setting']}")
-            if scene_d.get("visual_description"):
-                doc.add_paragraph(scene_d["visual_description"])
-            for panel in panel_descs:
-                pos = panel.get("position", "full")
-                doc.add_paragraph(f"[{pos}] {panel['panel_visual_description']}", style="List Bullet")
-
-        # Scene summary bullets
-        if scene_r.get("scene_summary"):
-            doc.add_heading("Scene summary", level=3)
-            for line in scene_r["scene_summary"].split("\n"):
-                line = line.strip().lstrip("- *•").strip()
-                if line:
-                    doc.add_paragraph(line, style="List Bullet")
-
-        # Supernova rewrite script
-        if scene_r.get("supernova_script"):
-            doc.add_heading("Supernova-voice script", level=3)
-            for line in scene_r["supernova_script"].split("\n"):
-                if line.strip():
-                    doc.add_paragraph(line.strip())
-
-        # On-screen text rewrite
-        if scene_r.get("supernova_on_screen_text"):
-            doc.add_heading("On-screen text (Supernova version)", level=3)
-            doc.add_paragraph(scene_r["supernova_on_screen_text"])
-
+    # ===================== ZONE 3 — TTS input (LOCALIZED docs only, two forms) =====================
+    # The English master has no TTS block. step4_localize supplies `tts` = {romanized, native}, each a
+    # list of spoken lines (speaker labels already stripped) — both code-mixed, taught-English kept.
+    tts = parsed_rewrite.get("tts") or {}
+    roman, native = tts.get("romanized") or [], tts.get("native") or []
+    if roman or native:
         doc.add_paragraph("─" * 60)
-
-    # Brand swaps log
-    if brand_swaps:
-        doc.add_heading("Brand swaps applied", level=2)
-        for swap in brand_swaps:
-            cb = swap.get("competitor_brand", "?")
-            sw = swap.get("supernova_swap", "?")
-            doc.add_paragraph(f"{cb} → {sw}", style="List Bullet")
+        doc.add_heading("TTS input", level=1)
+        doc.add_paragraph("Spoken words only, in order — feed to the voiceover engine.")
+        if roman:
+            doc.add_heading("Romanized (Latin + English)", level=2)
+            for ln in roman:
+                if str(ln).strip():
+                    doc.add_paragraph(str(ln).strip())
+        if native:
+            doc.add_heading("Native script + English", level=2)
+            for ln in native:
+                if str(ln).strip():
+                    doc.add_paragraph(str(ln).strip())
 
     doc.add_heading("Provenance", level=2)
     doc.add_paragraph(f"Rewritten with: {rewrite.get('model', '?')}")
