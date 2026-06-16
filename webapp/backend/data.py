@@ -313,6 +313,10 @@ class Catalog:
             "rewrite_html_url": self._publicize((m.get("supernova_rewrite_html_r2_url") or "").strip()),
             "has_docs": bool(rewrite_docx and analysis_docx),
             "has_gdocs": bool(rewrite_gdoc and analysis_gdoc),
+            # Merged generate (one combined Doc per language) produces no standalone English Doc —
+            # the per-language locales ARE the deliverable. has_locales lets such an ad still read
+            # as "generated" / "has a script" for the generated filter, TTS, and add-more-languages.
+            "has_locales": bool(any((sidecar.get("locales") or {}).values())),
             "has_transcript": aid in transcripts,
             "scene_count": None,
         }
@@ -362,7 +366,7 @@ class Catalog:
                     s["with_media"] += 1
                 if a["verdict"] in s["by_verdict"]:
                     s["by_verdict"][a["verdict"]] += 1
-                if a["has_docs"] or a["has_gdocs"]:
+                if a["has_docs"] or a["has_gdocs"] or a["has_locales"]:
                     s["generated"] += 1
             out.extend(sorted(by_slug.values(), key=lambda s: -s["total"]))
         return out
@@ -406,8 +410,9 @@ class Catalog:
             preds["retired"] = (lambda a: a["is_retired"]) if retired == "yes" \
                 else (lambda a: not a["is_retired"])
         if generated in ("yes", "no"):
-            preds["generated"] = (lambda a: a["has_docs"] or a["has_gdocs"]) if generated == "yes" \
-                else (lambda a: not (a["has_docs"] or a["has_gdocs"]))
+            preds["generated"] = (lambda a: a["has_docs"] or a["has_gdocs"] or a["has_locales"]) \
+                if generated == "yes" \
+                else (lambda a: not (a["has_docs"] or a["has_gdocs"] or a["has_locales"]))
         if has_media:
             preds["has_media"] = lambda a: bool(a["media_url"])
         if has_transcript == "yes":

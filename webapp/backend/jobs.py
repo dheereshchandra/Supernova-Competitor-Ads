@@ -63,6 +63,15 @@ STEPS_IMAGE = ["hydrate", "estimate", "decompose_images",
                "upload_images", "rewrite_submit",
                "rewrite_poll", "build_docs", "upload_and_update", "build_html",
                "upload_gdocs", "commit_push", "sheet_sync"]
+# When the operator picks languages up front, generate produces ONE combined Doc per language
+# (English + that language) through the localize engine — so the English-only doc tail
+# (build_docs/upload_and_update/build_html/upload_gdocs) is replaced by the single `localize` step.
+STEPS_VIDEO_LOCALIZED = ["hydrate", "estimate", "decompose_upload", "decompose", "frames",
+                         "upload_images", "rewrite_submit", "rewrite_poll",
+                         "localize", "commit_push", "sheet_sync"]
+STEPS_IMAGE_LOCALIZED = ["hydrate", "estimate", "decompose_images",
+                         "upload_images", "rewrite_submit", "rewrite_poll",
+                         "localize", "commit_push", "sheet_sync"]
 # Localization (PR 4): translate an existing English master into N languages. No image/decompose
 # stages — step4_localize.py reuses the ad's existing images (image-once guardrail).
 STEPS_LOCALIZE = ["localize", "commit_push", "sheet_sync"]
@@ -95,16 +104,34 @@ def _download(url: str, dest: pathlib.Path) -> None:
         f.write(r.read())
 
 
-def steps_for(media_type: str, kind: str = "generate") -> list[str]:
+def _parse_langs(raw) -> list[str]:
+    """Job.languages is stored as a JSON array (web) or a comma string (legacy). Either → list."""
+    raw = (raw or "").strip() if isinstance(raw, str) else raw
+    if not raw:
+        return []
+    if isinstance(raw, list):
+        return [str(x).strip() for x in raw if str(x).strip()]
+    try:
+        v = json.loads(raw)
+        if isinstance(v, list):
+            return [str(x).strip() for x in v if str(x).strip()]
+    except Exception:
+        pass
+    return [x.strip() for x in raw.split(",") if x.strip()]
+
+
+def steps_for(media_type: str, kind: str = "generate", languages=None) -> list[str]:
     if kind == "localize":
         return STEPS_LOCALIZE
     if kind == "tts":
         return STEPS_TTS
+    if languages:  # generate up front into N languages → combined per-language Docs
+        return STEPS_IMAGE_LOCALIZED if media_type == "Image" else STEPS_VIDEO_LOCALIZED
     return STEPS_IMAGE if media_type == "Image" else STEPS_VIDEO
 
 
-def steps_payload(media_type: str, kind: str = "generate") -> list[dict]:
-    return [{"key": k, "label": STEP_LABELS[k]} for k in steps_for(media_type, kind)]
+def steps_payload(media_type: str, kind: str = "generate", languages=None) -> list[dict]:
+    return [{"key": k, "label": STEP_LABELS[k]} for k in steps_for(media_type, kind, languages)]
 
 
 def _event(job_id: int, step: str, line: str) -> None:
@@ -332,12 +359,7 @@ class JobRunner:
                 argv.append("--force")
             await self.must(step, argv, timeout_s=300)
         elif step == "localize":
-            raw = self.job.get("languages") or "[]"
-            try:
-                langs = json.loads(raw) if raw.strip().startswith("[") else \
-                    [x.strip() for x in raw.split(",") if x.strip()]
-            except Exception:
-                langs = [x.strip() for x in raw.split(",") if x.strip()]
+            langs = _parse_langs(self.job.get("languages"))
             if not langs:
                 raise StepFailed("localize: no target languages")
             argv = [PY, "scripts/step4_localize.py", self.ad_id, "--competitor", self.slug,
@@ -346,12 +368,7 @@ class JobRunner:
                 argv.append("--regenerate")
             await self.must(step, argv, timeout_s=1200)
         elif step == "tts":
-            raw = self.job.get("languages") or "[]"
-            try:
-                langs = json.loads(raw) if raw.strip().startswith("[") else \
-                    [x.strip() for x in raw.split(",") if x.strip()]
-            except Exception:
-                langs = [x.strip() for x in raw.split(",") if x.strip()]
+            langs = _parse_langs(self.job.get("languages"))
             if not langs:
                 raise StepFailed("tts: no target languages")
             argv = [PY, "scripts/step4_tts.py", self.ad_id, "--competitor", self.slug,
@@ -387,7 +404,8 @@ class JobRunner:
 
     async def run(self):
         kind = self.job.get("kind", "generate")
-        steps = steps_for(self.media_type, kind)
+        langs = _parse_langs(self.job.get("languages"))
+        steps = steps_for(self.media_type, kind, langs)
         start_at = 0
         cur = self.job.get("current_step")
         if cur in steps:  # resume from the interrupted step
@@ -421,6 +439,12 @@ class JobRunner:
         if kind == "tts":
             _set(self.id, status="done", finished_at=_now(), current_step=None)
             _tracker_on_tts(self.job, self.collect_tts())
+            return
+        if langs:
+            # Merged generate+localize: the per-language combined Docs ARE the deliverable
+            # (no standalone English Doc). Mark script_ready AND record the per-language links.
+            _set(self.id, status="done", finished_at=_now(), current_step=None)
+            _tracker_on_done_localized(self.job, self.collect_locales())
             return
         rewrite, analysis = self.collect_results()
         _set(self.id, status="done", finished_at=_now(), current_step=None,
@@ -500,6 +524,30 @@ def _tracker_on_tts(job: dict, tts_map: dict) -> None:
         "VALUES (?,?,?,?,?,?)",
         (job["pipeline"], job["competitor"], job["ad_id"], job.get("requested_by") or "system",
          "tts", f"Voiceover for: {', '.join(tts_map.keys())}"))
+    try:
+        from . import sheets
+        sheets.mark_dirty()
+    except Exception:
+        pass
+
+
+def _tracker_on_done_localized(job: dict, locales: dict) -> None:
+    """End of a merged generate+localize run: the per-language combined Docs ARE the deliverable
+    (no standalone English Doc). Mark script_ready AND record the per-language links + verify seed —
+    a union of _tracker_on_done's status flip and _tracker_on_localize's link write."""
+    links = {lang: (loc or {}).get("link", "") for lang, loc in locales.items()}
+    verified = {lang: {"verified": False, "verified_by": "", "at": ""} for lang in locales}
+    db.execute(
+        """UPDATE tracker SET status='script_ready', localization_gdoc_urls=?,
+           verified_languages=?, script_ready_at=datetime('now'), updated_at=datetime('now')
+           WHERE pipeline=? AND competitor=? AND ad_id=?""",
+        (json.dumps(links), json.dumps(verified),
+         job["pipeline"], job["competitor"], job["ad_id"]))
+    db.execute(
+        "INSERT INTO activity (pipeline, competitor, ad_id, who, action, detail) "
+        "VALUES (?,?,?,?,?,?)",
+        (job["pipeline"], job["competitor"], job["ad_id"], "system",
+         "script_ready", f"Supernova scripts generated: {', '.join(locales.keys()) or '(none)'}"))
     try:
         from . import sheets
         sheets.mark_dirty()
