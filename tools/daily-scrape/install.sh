@@ -26,13 +26,18 @@ sed -e "s|__SCRAPE_SH__|$SCRAPE_SH|g" -e "s|__LOG__|$LOG|g" "$TEMPLATE" > "$PLIS
 launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST_DEST"
 
-echo "Installed '$LABEL' — runs the FREE refresh daily at 06:00 for the competitors in"
+echo "Installed '$LABEL' — runs the FREE refresh TWICE daily (06:00 AM batch + 13:00 PM batch,"
+echo "split in tools/daily-scrape/competitors.txt at the 'batch-split' line to dodge FB's IP"
+echo "rate limit) for the competitors in:"
 echo "  tools/daily-scrape/competitors.txt"
 echo "  log: $LOG"
 echo
-echo "IMPORTANT — the Mac must be awake at 6 AM for it to run on time. Two options:"
-echo "  • keep it plugged in and let it wake itself:  sudo pmset repeat wakeorpoweron MTWRFSU 05:58:00"
-echo "  • or do nothing — if it's asleep at 6 AM, the job runs the next time you wake it (once/day)."
+echo "IMPORTANT — the Mac must be awake at 06:00 / 13:00 for each batch to run on time. Options:"
+echo "  • keep it plugged in and let it wake itself for the AM batch:"
+echo "      sudo pmset repeat wakeorpoweron MTWRFSU 05:58:00"
+echo "    (the Mac is normally in use by 13:00, so the PM batch usually just fires.)"
+echo "  • or do nothing — if it's asleep at a fire time, that batch runs the next time you wake"
+echo "    it; a single wake that missed BOTH fires catches up AM then (after a cool-down) PM."
 echo
 echo "Test it now (real scrape, ~free):  launchctl kickstart -k gui/$(id -u)/$LABEL && tail -f \"$LOG\""
 echo "Remove later:  zsh tools/daily-scrape/uninstall.sh"

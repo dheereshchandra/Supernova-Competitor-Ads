@@ -1,10 +1,18 @@
-# Competitors the daily 6 AM FREE refresh scrapes (Facebook, pipeline stages 1–4 only:
+# Competitors the daily FREE refresh scrapes (Facebook, pipeline stages 1–4 only:
 # scrape → download → R2 upload → rankings/analysis. NO enrichment — that's paid and
 # stays on the "Enrich" button in Ad Studio).
 #
 # One slug per line. '#' comments and blank lines are ignored.
 # Each slug MUST be a competitor fb_scrape_v2.py knows (a key in its COMPETITOR_PAGES).
-# Edit this list and the next 6 AM run picks it up — no reinstall needed.
+# Edit this list and the next run picks it up — no reinstall needed.
+#
+# ── TWO BATCHES (rate-limit hardening, 2026-06-16) ──────────────────────────────────────
+# FB throttles this Mac's single IP after ~8 back-to-back scrapes/downloads, so the list is
+# split: slugs ABOVE the "batch-split" line run in the 06:00 batch (fresh IP); slugs BELOW
+# run in the 13:00 batch (cooled IP). Keep each half ≲ 8–9 competitors. Put the HEAVY one
+# (english-seekho — hundreds of ads / a big video download, which is what trips the limit)
+# LAST in the AM half so nothing after it gets caught in its throttle wash.
+# (Remove the batch-split line and it all runs as one paced + retried morning batch.)
 mysivi
 speakx
 zinglish
@@ -13,6 +21,7 @@ loora
 englishbhashi
 duolingo
 english-seekho
+# ===== batch-split — ABOVE = 06:00 batch (fresh IP) · BELOW = 13:00 batch (cooled IP) =====
 ewa
 memrise
 speak

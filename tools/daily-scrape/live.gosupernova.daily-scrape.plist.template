@@ -2,9 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!-- Template only. Do NOT install directly — run `zsh tools/daily-scrape/install.sh`,
      which fills in __SCRAPE_SH__ and __LOG__ and loads the job.
-     Runs the FREE Facebook refresh (stages 1-4) every day at 06:00 local.
-     If the Mac is asleep at 6 AM, launchd runs it on the next wake (the script's
-     date-guard prevents a double run). TO CHANGE THE TIME: edit Hour/Minute and re-run install.sh. -->
+     Runs the FREE Facebook refresh (stages 1-4) TWICE a day — 06:00 (AM batch, fresh IP)
+     and 13:00 (PM batch, cooled IP) — to stay under Facebook's per-IP rate limit. The
+     batch is split in tools/daily-scrape/competitors.txt at the "batch-split" line.
+     If the Mac is asleep at a fire time, launchd runs the job on the next wake; the
+     script's per-batch date-guard prevents a double run and a coalesced wake catches up
+     both halves. TO CHANGE THE TIMES: edit the Hour/Minute below AND DAILY_SCRAPE_PM_HOUR
+     in scrape.sh (the morning/afternoon cutoff), then re-run install.sh. -->
 <plist version="1.0">
 <dict>
   <key>Label</key>
@@ -15,10 +19,10 @@
     <string>__SCRAPE_SH__</string>
   </array>
   <key>StartCalendarInterval</key>
-  <dict>
-    <key>Hour</key><integer>6</integer>
-    <key>Minute</key><integer>0</integer>
-  </dict>
+  <array>
+    <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>13</integer><key>Minute</key><integer>0</integer></dict>
+  </array>
   <key>StandardOutPath</key>
   <string>__LOG__</string>
   <key>StandardErrorPath</key>
