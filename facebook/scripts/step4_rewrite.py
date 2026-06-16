@@ -340,6 +340,30 @@ def cmd_submit(client, ids: list[str], competitor: str, target_languages=None) -
     return 0
 
 
+def _expected_keys(state: dict) -> list[str]:
+    """The (id × language) metadata keys this batch was SUPPOSED to produce — used to detect a
+    language that silently dropped (model error / malformed JSON) instead of letting it pass."""
+    ids = state.get("ids", [])
+    tl = [l.strip() for l in (state.get("target_languages") or []) if l.strip()]
+    nonenglish = [l for l in tl if l.lower() != "english"]
+    make_english = (not tl) or any(l.lower() == "english" for l in tl)
+    keys: list[str] = []
+    for ad in ids:
+        if make_english:
+            keys.append(ad)
+        keys += [f"{ad}.{l.lower()}" for l in nonenglish]
+    return keys
+
+
+def _lenient_parser():
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent.parent / "analysis" / "scripts"))
+    try:
+        from _flash import parse_json_lenient
+        return parse_json_lenient
+    except Exception:
+        return json.loads
+
+
 def cmd_poll(client, short_id: str) -> int:
     state_path = BATCHES_DIR / f"rewrite_{short_id}.json"
     if not state_path.exists():
@@ -362,20 +386,18 @@ def cmd_poll(client, short_id: str) -> int:
         print(f"  still running. Re-run in ~60s.")
         return 1
 
-    written = failed = 0
+    parse_json = _lenient_parser()   # tolerates fences/control-chars/trailing-junk before we give up
+    written_keys: set[str] = set()
+    failures: dict[str, str] = {}
     for resp in job.dest.inlined_responses:
         key = resp.metadata.get("key") if hasattr(resp, "metadata") and resp.metadata else None
         if not key:
             continue
         try:
             if hasattr(resp, "error") and resp.error:
-                print(f"  [{key}] error: {resp.error}")
-                failed += 1
+                failures[key] = f"model/batch error: {str(resp.error)[:200]}"
                 continue
-            text = resp.response.candidates[0].content.parts[0].text
-            text = re.sub(r"^```(?:json)?\s*", "", text.strip())
-            text = re.sub(r"\s*```$", "", text)
-            parsed = json.loads(text)
+            parsed = parse_json(resp.response.candidates[0].content.parts[0].text)
             if "." in key:   # direct seed→target: key = "<id>.<lang>" → localized sidecar shape
                 ad_id, lang = key.rsplit(".", 1)
                 sidecar = {"ad_library_id": ad_id, "language": lang.title(),
@@ -387,14 +409,26 @@ def cmd_poll(client, short_id: str) -> int:
                            "model": MODEL, "rewrote_at": time.time()}
                 out_path = SCENES_DIR / f"{key}.supernova.json"
             out_path.write_text(json.dumps(sidecar, indent=2, ensure_ascii=False))
-            written += 1
+            written_keys.add(key)
             print(f"  [{key}] OK — {len(parsed.get('scenes', []))} scenes")
         except Exception as e:
-            print(f"  [{key}] {type(e).__name__}: {e}")
-            failed += 1
+            failures[key] = f"{type(e).__name__}: {str(e)[:160]}"
 
-    print(f"\nDONE — {written} sidecars written, {failed} failed")
-    return 0
+    # Completeness: a REQUESTED (id × language) key that produced no sidecar is a DROP — never silent.
+    expected = _expected_keys(state)
+    missing = [k for k in expected if k not in written_keys]
+    for k in missing:
+        print(f"  DROPPED {k}: {failures.get(k, 'no response in the batch')}")
+    fail_path = BATCHES_DIR / f"rewrite_{short_id}.failures.json"
+    if missing:
+        fail_path.write_text(json.dumps(
+            {"missing": missing, "reasons": {k: failures.get(k, "no response in the batch") for k in missing}},
+            indent=2, ensure_ascii=False))
+    elif fail_path.exists():
+        fail_path.unlink()
+
+    print(f"\nDONE — {len(written_keys)} sidecars written, {len(missing)} dropped")
+    return 4 if missing else 0   # 4 = batch finished but ≥1 requested language dropped (caller retries)
 
 
 def cmd_status() -> int:
