@@ -536,15 +536,27 @@ export const verifyLocalizeLanguage = (
 /** English master + the localized languages can each get a voiceover. */
 export const TTS_LANGUAGES = ['English', ...SUPPORTED_LANGUAGES] as const
 
+export type TtsVoice = { provider: string; voice_id: string; name: string }
+export type TtsCharacter = { name: string; role: string; slot: string; default_voice_id: string }
+export type TtsSetup = { characters: TtsCharacter[]; voices: TtsVoice[] }
+
+/** Voice-picker data for an ad+language: its characters (+ default voice) and the voice catalog. */
+export const getTtsSetup = (pipeline: string, competitor: string, ad_id: string, language: string) =>
+  api<TtsSetup>(
+    `/api/tts/setup?pipeline=${pipeline}&competitor=${competitor}&ad_id=${ad_id}` +
+      `&language=${encodeURIComponent(language)}`,
+  )
+
 export const createTtsJob = (
   pipeline: string,
   competitor: string,
   ad_id: string,
   languages: string[],
   force = false,
+  voice_overrides: Record<string, string> = {},
 ) =>
   api<{ job_id: string }>('/api/jobs/tts', {
-    json: { pipeline, competitor, ad_id, languages, force },
+    json: { pipeline, competitor, ad_id, languages, force, voice_overrides },
   })
 
 export const verifyTtsLanguage = (

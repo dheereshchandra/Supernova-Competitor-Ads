@@ -90,6 +90,33 @@ def resolve_voice(reg: dict, language: str, slot: str) -> dict | None:
     }
 
 
+def voice_catalog(reg: dict) -> dict:
+    """Every distinct configured voice in the registry (slots + all language overrides),
+    keyed by voice_id -> a resolve_voice-shaped entry, so a per-character OVERRIDE voice_id
+    drops straight into the synth path. Carries the human `name` (the registry `_voice`)."""
+    out: dict = {}
+
+    def add(entry: dict, slot: str):
+        vid, prov = entry.get("voice_id"), entry.get("provider")
+        if not vid or not prov or str(vid).startswith("TODO") or vid in out:
+            return
+        pdef = (reg.get("providers") or {}).get(prov, {})
+        out[vid] = {
+            "slot": slot, "provider": prov, "voice_id": vid,
+            "name": entry.get("_voice") or vid,
+            "model": entry.get("model") or pdef.get("model"),
+            "settings": {**(pdef.get("settings") or {}), **(entry.get("settings") or {})},
+            "configured": True,
+        }
+
+    for slot, e in (reg.get("slots") or {}).items():
+        add(e, slot)
+    for _lang, slots in (reg.get("language_overrides") or {}).items():
+        for slot, e in (slots or {}).items():
+            add(e, slot)
+    return out
+
+
 def infer_gender(name: str, role: str) -> str:
     text = f"{name} {role}"
     if FEMALE_RE.search(text):
@@ -259,14 +286,25 @@ def tts_one(client, s3, env, reg, ad_id, competitor, language, source_mode,
         nsrc = "on-the-fly conversion"
     print(f"  [{language}] voicing from: {nsrc}")
 
+    # Per-character voice OVERRIDES (from the Ad Studio picker): {character name -> voice_id}.
+    # An override wins over the auto-assigned slot voice; unknown ids fall back to the slot.
+    overrides = {str(k).lower(): v for k, v in
+                 _load_json(SCENES_DIR / f"{ad_id}.voices.json").items()}
+    catalog = voice_catalog(reg)
+    if overrides:
+        print(f"  [{language}] voice overrides for: {', '.join(sorted(overrides))}")
+
     out_dir = AUDIO_DIR / ad_id / lang_key
     out_dir.mkdir(parents=True, exist_ok=True)
     clip_paths, line_meta = [], []
     for n, (ln, native) in enumerate(zip(lines, natives)):
-        slot = slot_by_name.get(ln["speaker"].lower())
-        if not slot:  # unknown speaker (not in roster) -> narrator
-            slot = "narrator"
-        voice = resolve_voice(reg, language, slot)
+        ov = overrides.get(ln["speaker"].lower())
+        if ov and ov in catalog:
+            voice = catalog[ov]
+            slot = voice["slot"]
+        else:
+            slot = slot_by_name.get(ln["speaker"].lower()) or "narrator"
+            voice = resolve_voice(reg, language, slot)
         clip = out_dir / f"line_{n:03d}_{slot}.mp3"
         if dry_run:
             _silence_clip(clip, max(1.0, len(native) / 14.0))
@@ -357,6 +395,32 @@ def cmd_list_voices(provider: str, language: str | None) -> int:
     return 0
 
 
+def cmd_setup(ad_id: str, competitor: str, language: str) -> int:
+    """Emit JSON for the Ad Studio voice picker: the ad's CHARACTERS (each with its
+    auto-assigned default voice for this language) + the VOICE CATALOG to choose from.
+    Cast comes from the English master sidecar (same across languages); the default voice
+    is language-specific (per the registry overrides)."""
+    reg = load_registry()
+    base = _load_json(SCENES_DIR / f"{ad_id}.supernova.json").get("parsed", {})
+    characters = base.get("characters", [])
+    slot_by_name = assign_slots(characters)
+    cat = voice_catalog(reg)
+    chars, seen = [], set()
+    for c in characters:
+        name = (c.get("name") or "").strip()
+        if not name or name.lower() in seen:
+            continue
+        seen.add(name.lower())
+        slot = slot_by_name.get(name.lower()) or "narrator"
+        dv = resolve_voice(reg, language or "English", slot) or {}
+        chars.append({"name": name, "role": c.get("role", ""), "slot": slot,
+                      "default_voice_id": dv.get("voice_id", "")})
+    voices = sorted(({"provider": v["provider"], "voice_id": v["voice_id"], "name": v["name"]}
+                     for v in cat.values()), key=lambda x: (x["provider"], x["name"]))
+    print(json.dumps({"characters": chars, "voices": voices}, ensure_ascii=False))
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -367,14 +431,20 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--regenerate", action="store_true")
     ap.add_argument("--list-voices", action="store_true")
+    ap.add_argument("--setup", action="store_true", help="emit picker JSON (characters + voices)")
     ap.add_argument("--provider", choices=["elevenlabs", "cartesia"])
-    ap.add_argument("--language", help="filter for --list-voices")
+    ap.add_argument("--language", help="filter for --list-voices / target for --setup")
     args = ap.parse_args()
 
     if args.list_voices:
         if not args.provider:
             sys.exit("[error] --list-voices needs --provider elevenlabs|cartesia")
         return cmd_list_voices(args.provider, args.language)
+
+    if args.setup:
+        if not args.ad_id or not args.language:
+            sys.exit("[error] --setup needs <ad_id> --competitor X --language L")
+        return cmd_setup(args.ad_id, args.competitor.lower().strip(), args.language)
 
     if not args.ad_id or not args.languages:
         sys.exit("[error] usage: step4_tts.py <ad_id> --competitor X --languages Hindi,Telugu")
