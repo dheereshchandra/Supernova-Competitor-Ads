@@ -274,6 +274,21 @@ export default function AdDetail() {
               {status && <StatusChip status={status} suffix={ad.claimed_by || undefined} />}
             </div>
 
+            {/* Edge-case reviewer note(s) — shown in EVERY status so the warning is seen before
+                the reviewer proceeds (a generated ad can sit at shortlisted / dropped / no-status). */}
+            {ad.remarks && ad.remarks.length > 0 && (
+              <div className="mb-3 rounded-lg border border-amber-400/30 bg-amber-500/10 px-3 py-2.5 text-xs text-amber-100">
+                <div className="mb-1 font-semibold">
+                  ⚠️ Reviewer note{ad.remarks.length > 1 ? 's' : ''}
+                </div>
+                <ul className="list-disc space-y-0.5 pl-4">
+                  {ad.remarks.map((r, i) => (
+                    <li key={i}>{r}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             {/* live job */}
             {job && (job.status === 'queued' || job.status === 'running') ? (
               <JobProgressInline job={job} />
@@ -538,6 +553,7 @@ export default function AdDetail() {
           adId={adId}
           suggestedLanguages={Object.keys(ad.locales || {})}
           alreadyTts={Object.keys(ad.tts_audio || {})}
+          remarks={ad.remarks || []}
           onClose={() => setShowTts(false)}
           onStarted={() => {
             setShowTts(false)

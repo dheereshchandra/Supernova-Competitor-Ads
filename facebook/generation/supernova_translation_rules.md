@@ -191,6 +191,16 @@ casting table. Native-script examples teach register; output is romanized (T10).
   - **GENDER AGREEMENT (native-review flag, 2026-06-12):** a FEMALE subject's negative/verb forms end
     **-dhu**, not the masculine **-du** — "Miss Nova ninnu judge **cheyyadhu**" / "ame andariki oke lesson
     **ivvadhu**" (NOT cheyadu / ivvadu). Flash gets this wrong by default — enforce it.
+  - **NATURALNESS (native-review flag, 2026-06-16, from live output review):**
+    - **"7× cheaper than offline classes":** render the WHOLE multiplier in Telugu — spell out the
+      number-word like the Hindi "saat guna" exemplar (§1 carve-out), e.g. "offline classes
+      **kante edu rettlu thakkuva**" ('edu' = seven, 'rettlu' = times/fold; flag 'edu'/'ezu' for
+      native review). Never the calque "7 times cheap" or a bare rupee figure.
+    - **"speak out loud":** don't calque it — render naturally, e.g. "**gattiga matladatam**"
+      ("speak aloud/firmly"), not a word-for-word "out loud".
+    - **Time-per-day line (proven phrasing):** prefer "**Meeku rojuki kevalam 10–15 mins padutundi
+      anthe, paiga Supernova AI meeku Telugu lone explain chestundi**" over the stiff "10 to 15
+      minutes chalu … explain chestundi" — same meaning, natural spoken rhythm.
 - **Casting:** M: Ramesh, Suresh, Ravi, Srinu, Mahesh, Venkat, Kiran, Sai · F: Lakshmi, Anusha,
   Swathi, Kavya, Priyanka, Sravani, Harika, Divya · default **Ravi/Lakshmi** · Cities: Hyderabad,
   Vijayawada · Language name: "Telugu".

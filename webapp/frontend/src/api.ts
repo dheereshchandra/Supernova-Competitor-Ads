@@ -155,6 +155,8 @@ export interface Ad {
   review: Record<string, { verdict: string; notes: string }>
   /** per-language voiceover (TTS) track URL, e.g. { Hindi: "https://…/hindi.mp3" } */
   tts_audio: Record<string, string>
+  /** ad-level edge-case reviewer notes, e.g. ["Original ad is in English — …", "No voiceover — …"] */
+  remarks: string[]
   rewrite_docx_url: string
   analysis_docx_url: string
   rewrite_html_url: string
@@ -368,9 +370,10 @@ export const createJob = (
   ad_id: string,
   force = false,
   concept_brief = '',
+  languages: string[] = [],
 ) =>
   api<{ job_id: string }>('/api/jobs', {
-    json: { pipeline, competitor, ad_id, force, concept_brief },
+    json: { pipeline, competitor, ad_id, force, concept_brief, languages },
   })
 
 export const getJobs = (scope: 'active' | 'recent' | 'all' = 'recent') =>

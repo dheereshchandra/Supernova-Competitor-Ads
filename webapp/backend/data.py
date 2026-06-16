@@ -21,6 +21,18 @@ from .config import ANALYSIS_DIR, REPO
 
 csv.field_size_limit(10 ** 9)
 
+# Deterministic edge-case "reviewer remarks" (English-original / no-voiceover) share one source
+# of truth with the pipeline: facebook/scripts/_remarks.py. Loaded by path (it's pure stdlib) so
+# we don't pollute sys.path with the whole facebook/scripts dir.
+try:
+    import importlib.util as _ilu
+    _spec = _ilu.spec_from_file_location(
+        "_remarks_helper", REPO / "facebook" / "scripts" / "_remarks.py")
+    _remarks = _ilu.module_from_spec(_spec)
+    _spec.loader.exec_module(_remarks)
+except Exception:  # never let a helper-load failure take down the catalog
+    _remarks = None
+
 PIPELINES = ("facebook", "google")
 ID_COL = {"facebook": "ad_library_id", "google": "creative_id"}
 VAR_COL = {"facebook": "creative_index_in_ad", "google": "variant_index"}
@@ -216,6 +228,24 @@ class Catalog:
             out[lang.title()] = {"verdict": verdict, "notes": notes}
         return out
 
+    def _remarks_for(self, aid: str, seed_language: str) -> list[str]:
+        """Ad-level edge-case remarks (English-original / no-voiceover) computed fresh from the
+        decompose sidecar + seed language, so EXISTING ads surface them with no backfill. Only
+        called for generated ads (those with a gdocs sidecar)."""
+        if _remarks is None:
+            return []
+        parsed: dict = {}
+        dp = REPO / "facebook" / "step4_workspace" / "scenes" / f"{aid}.json"
+        if dp.exists():
+            try:
+                parsed = json.loads(dp.read_text(encoding="utf-8")).get("parsed", {})
+            except Exception:  # incl. UnicodeDecodeError on a torn write — degrade this one ad, not the reload
+                parsed = {}
+        try:
+            return _remarks.detect_remarks(parsed, seed_language)
+        except Exception:
+            return []
+
     def _transcript_ids(self, pipeline: str, slug: str) -> set[str]:
         d = ANALYSIS_DIR / "enrichment" / pipeline / "transcripts" / slug
         if not d.is_dir():
@@ -249,6 +279,9 @@ class Catalog:
     def _merge(self, pipeline: str, slug: str, aid: str, e: dict, m: dict,
                transcripts: set[str], gdocs: dict[str, dict]) -> dict:
         sidecar = gdocs.get(aid, {}) if pipeline == "facebook" else {}
+        # Edge-case reviewer remarks only matter for generated ads (those with a gdocs sidecar);
+        # gating here keeps the decompose read off the thousands of un-generated ads.
+        remarks = self._remarks_for(aid, (e.get("language") or "").strip()) if sidecar else []
         rewrite_gdoc = (m.get("supernova_rewrite_gdoc_url") or "").strip() or sidecar.get("rewrite", "")
         analysis_gdoc = (m.get("competitor_analysis_gdoc_url") or "").strip() or sidecar.get("analysis", "")
         rewrite_docx = self._publicize((m.get("supernova_rewrite_docx_r2_url") or "").strip())
@@ -306,6 +339,7 @@ class Catalog:
             "analysis_gdoc_url": analysis_gdoc,
             "locales": sidecar.get("locales", {}),  # {Lang: localized Doc url}
             "review": sidecar.get("review", {}),    # {Lang: {verdict, notes}} reviewer signal
+            "remarks": remarks,                     # ad-level edge-case notes (English-original / no-voice)
             "tts_audio": {lg: self._publicize(u)  # {Lang: public voiceover url} (browser-playable)
                           for lg, u in (sidecar.get("tts_audio") or {}).items()},
             "rewrite_docx_url": rewrite_docx,
@@ -313,6 +347,10 @@ class Catalog:
             "rewrite_html_url": self._publicize((m.get("supernova_rewrite_html_r2_url") or "").strip()),
             "has_docs": bool(rewrite_docx and analysis_docx),
             "has_gdocs": bool(rewrite_gdoc and analysis_gdoc),
+            # Merged generate (one combined Doc per language) produces no standalone English Doc —
+            # the per-language locales ARE the deliverable. has_locales lets such an ad still read
+            # as "generated" / "has a script" for the generated filter, TTS, and add-more-languages.
+            "has_locales": bool(any((sidecar.get("locales") or {}).values())),
             "has_transcript": aid in transcripts,
             "scene_count": None,
         }
@@ -362,7 +400,7 @@ class Catalog:
                     s["with_media"] += 1
                 if a["verdict"] in s["by_verdict"]:
                     s["by_verdict"][a["verdict"]] += 1
-                if a["has_docs"] or a["has_gdocs"]:
+                if a["has_docs"] or a["has_gdocs"] or a["has_locales"]:
                     s["generated"] += 1
             out.extend(sorted(by_slug.values(), key=lambda s: -s["total"]))
         return out
@@ -406,8 +444,9 @@ class Catalog:
             preds["retired"] = (lambda a: a["is_retired"]) if retired == "yes" \
                 else (lambda a: not a["is_retired"])
         if generated in ("yes", "no"):
-            preds["generated"] = (lambda a: a["has_docs"] or a["has_gdocs"]) if generated == "yes" \
-                else (lambda a: not (a["has_docs"] or a["has_gdocs"]))
+            preds["generated"] = (lambda a: a["has_docs"] or a["has_gdocs"] or a["has_locales"]) \
+                if generated == "yes" \
+                else (lambda a: not (a["has_docs"] or a["has_gdocs"] or a["has_locales"]))
         if has_media:
             preds["has_media"] = lambda a: bool(a["media_url"])
         if has_transcript == "yes":

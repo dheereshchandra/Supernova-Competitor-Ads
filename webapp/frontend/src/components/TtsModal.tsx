@@ -25,6 +25,7 @@ export default function TtsModal({
   adId,
   suggestedLanguages = [],
   alreadyTts = [],
+  remarks = [],
   onClose,
   onStarted,
 }: {
@@ -35,6 +36,8 @@ export default function TtsModal({
   suggestedLanguages?: string[]
   /** languages that already have a voiceover (shown as re-runs) */
   alreadyTts?: string[]
+  /** ad-level edge-case notes (English-original / no-voiceover) — must be acknowledged before TTS */
+  remarks?: string[]
   onClose: () => void
   onStarted: (jobId: string) => void
 }) {
@@ -45,6 +48,7 @@ export default function TtsModal({
       ),
   )
   const [consented, setConsented] = useState(false)
+  const [ackRemarks, setAckRemarks] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
   const [setup, setSetup] = useState<TtsSetup | null>(null)
@@ -134,6 +138,30 @@ export default function TtsModal({
           <span className="text-zinc-200">approved script</span>. Pick a voice per character
           below — set the same voice for several to reuse it.
         </p>
+
+        {remarks.length > 0 && (
+          <label className="mt-4 flex cursor-pointer items-start gap-2 rounded-xl border border-amber-400/30 bg-amber-500/10 p-3 text-sm text-amber-100">
+            <input
+              type="checkbox"
+              checked={ackRemarks}
+              onChange={(e) => setAckRemarks(e.target.checked)}
+              className="mt-0.5 accent-amber-500"
+            />
+            <span>
+              <span className="font-semibold">
+                ⚠️ Reviewer note{remarks.length > 1 ? 's' : ''}:
+              </span>
+              <ul className="mt-1 list-disc space-y-0.5 pl-4">
+                {remarks.map((r, i) => (
+                  <li key={i}>{r}</li>
+                ))}
+              </ul>
+              <span className="mt-1.5 block text-amber-200/80">
+                I understand — generate the voiceover anyway.
+              </span>
+            </span>
+          </label>
+        )}
 
         <div className="mt-4 flex flex-wrap gap-2">
           {TTS_LANGUAGES.map((lang) => {
@@ -249,7 +277,12 @@ export default function TtsModal({
           </button>
           <button
             onClick={confirm}
-            disabled={submitting || !consented || langs.length === 0}
+            disabled={
+              submitting ||
+              !consented ||
+              (remarks.length > 0 && !ackRemarks) ||
+              langs.length === 0
+            }
             className="flex items-center gap-2 rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-950/50 transition-colors hover:bg-sky-500 disabled:opacity-60"
           >
             {submitting && <Spinner className="h-4 w-4 text-white" />}
