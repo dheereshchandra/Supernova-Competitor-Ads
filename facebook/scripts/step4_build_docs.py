@@ -225,6 +225,14 @@ def build_competitor_doc(ad_id: str, competitor: str, decompose: dict,
     doc = Document()
     style = doc.styles["Normal"]
     style.font.size = Pt(10)
+    # Indic complex-script shaping: python-docx sets only the Latin font (w:ascii/w:hAnsi); the
+    # complex-script slot (w:cs) is left unset, so viewers render Devanagari/Tamil/Telugu/Bengali
+    # WITHOUT shaping (vowel matras detach from their consonant). Set w:cs on the Normal style so Indic
+    # runs take the complex-script path and shape correctly (falls back to a system Indic font if the
+    # named font isn't installed); Latin text is unaffected.
+    from docx.oxml.ns import qn as _qn
+    _rf = style.element.get_or_add_rPr().get_or_add_rFonts()
+    _rf.set(_qn("w:cs"), "Nirmala UI")
 
     # Title
     title = doc.add_heading(f"Competitor Ad Analysis — {competitor.title()} — Ad {ad_id}", level=0)
@@ -472,6 +480,14 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
     doc = Document()
     style = doc.styles["Normal"]
     style.font.size = Pt(10)
+    # Indic complex-script shaping: python-docx sets only the Latin font (w:ascii/w:hAnsi); the
+    # complex-script slot (w:cs) is left unset, so viewers render Devanagari/Tamil/Telugu/Bengali
+    # WITHOUT shaping (vowel matras detach from their consonant). Set w:cs on the Normal style so Indic
+    # runs take the complex-script path and shape correctly (falls back to a system Indic font if the
+    # named font isn't installed); Latin text is unaffected.
+    from docx.oxml.ns import qn as _qn
+    _rf = style.element.get_or_add_rPr().get_or_add_rFonts()
+    _rf.set(_qn("w:cs"), "Nirmala UI")
 
     title_txt = (f"Supernova Script ({lang_label}) — based on {competitor.title()} Ad {ad_id}"
                  if lang_label else

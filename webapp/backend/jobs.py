@@ -323,15 +323,54 @@ class JobRunner:
         if not short:  # resumed without a submit — redo it (direct)
             await self.step_direct_submit()
             short = self.job["rewrite_short_id"]
+        rc = await self._poll_until_terminal(short)
+        if rc == 2:
+            raise StepFailed("direct_poll: batch terminally failed")
+        # rc == 4: ≥1 requested language DROPPED (model error / malformed JSON). Regenerate ONCE
+        # (persist the guard FIRST so a crash can't loop), then surface any still-dropped language and
+        # proceed with the survivors — never silently lose a language, never silently ship a partial.
+        if rc == 4 and not self.job.get("direct_retried"):
+            _set(self.id, direct_retried=1); self.job["direct_retried"] = 1
+            _event(self.id, "direct_poll", "some languages dropped — regenerating once")
+            await self.step_direct_submit()
+            short = self.job["rewrite_short_id"]
+            rc = await self._poll_until_terminal(short)
+            if rc == 2:
+                raise StepFailed("direct_poll: batch terminally failed on retry")
+        if rc == 4:
+            dropped = self._dropped_langs(short)            # {Language: reason}
+            _set(self.id, dropped_languages=json.dumps(dropped))
+            _event(self.id, "direct_poll", "DROPPED — " + "; ".join(f"{l}: {r}" for l, r in dropped.items()))
+            survivors = [l for l in _parse_langs(self.job.get("languages"))
+                         if l.lower() not in {d.lower() for d in dropped}]
+            self.job["languages"] = json.dumps(survivors)   # downstream steps run on the survivors only
+            if not survivors:
+                raise StepFailed("direct_poll: every requested language was dropped — "
+                                 + "; ".join(f"{l}: {r}" for l, r in dropped.items()))
+
+    async def _poll_until_terminal(self, short: str) -> int:
         for _ in range(80):
             rc, _out = await self.run_cmd("direct_poll", [
                 PY, "scripts/step4_rewrite.py", "poll", short], timeout_s=180)
-            if rc == 0:
-                return
-            if rc == 2:
-                raise StepFailed("direct_poll: batch terminally failed")
+            if rc in (0, 2, 4):
+                return rc
             await asyncio.sleep(30)
         raise StepFailed("direct_poll: not done after 80 polls (~40 min)")
+
+    def _dropped_langs(self, short: str) -> dict:
+        """Map the rewrite poll's failures.json (missing metadata keys → reasons) to {Language: reason}."""
+        fp = FACEBOOK_DIR / "step4_workspace" / "batches" / f"rewrite_{short}.failures.json"
+        if not fp.is_file():
+            return {}
+        try:
+            d = json.loads(fp.read_text())
+        except Exception:
+            return {}
+        out = {}
+        for k in d.get("missing", []):
+            lang = "English" if "." not in k else k.rsplit(".", 1)[1].title()
+            out[lang] = d.get("reasons", {}).get(k, "no response in the batch")
+        return out
 
     async def step_qc(self):
         """QC gate. Lint the generated sidecars; on a BLOCK, auto-regenerate ONCE (persisting the
@@ -340,6 +379,9 @@ class JobRunner:
         qc_path = scenes / f"{self.ad_id}.qc.json"
         corr_path = scenes / f"{self.ad_id}.qc_correction.txt"
         qc_argv = [PY, "scripts/step4_qc.py", self.ad_id, "--competitor", self.slug]
+        _qc_langs = _parse_langs(self.job.get("languages"))   # scope QC to this job's (surviving) languages
+        if _qc_langs:                                          # → no stale English-master / other-lang contamination
+            qc_argv += ["--langs", ",".join(_qc_langs)]
 
         def _block_reason() -> str:
             try:

@@ -226,17 +226,28 @@ def main() -> int:
     ap.add_argument("ids", nargs="*")
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--lang", default=None)
+    ap.add_argument("--langs", default=None,
+                    help="comma list — lint ONLY these languages' sidecars (scopes out stale English "
+                         "masters / other-language / prototype .direct. sidecars). 'English' = the master.")
     ap.add_argument("--competitor", default=None, help="informational (env is auto-resolved)")
     ap.add_argument("--no-llm", action="store_true", help="deterministic checks only (no Flash spend)")
     args = ap.parse_args()
 
+    langs = [l.strip().lower() for l in (args.langs or "").split(",") if l.strip()]
     if args.all:
         paths = sorted(SCENES.glob("*.supernova.json"))
     else:
         paths = []
         for ad in args.ids:
-            paths += (list(SCENES.glob(f"{ad}.{args.lang.lower()}*.supernova.json")) if args.lang
-                      else sorted(SCENES.glob(f"{ad}*.supernova.json")))
+            if args.lang:                                # single language (legacy)
+                paths += list(SCENES.glob(f"{ad}.{args.lang.lower()}*.supernova.json"))
+            elif langs:                                  # scoped to the job's languages — exact match only
+                for L in langs:
+                    p = SCENES / (f"{ad}.supernova.json" if L == "english" else f"{ad}.{L}.supernova.json")
+                    if p.exists():
+                        paths.append(p)
+            else:                                        # everything for the ad (may include stale masters)
+                paths += sorted(SCENES.glob(f"{ad}*.supernova.json"))
     if not paths:
         sys.exit("[error] no sidecars to lint (pass ad ids or --all)")
 

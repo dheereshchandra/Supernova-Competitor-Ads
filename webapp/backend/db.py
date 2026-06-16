@@ -39,7 +39,9 @@ CREATE TABLE IF NOT EXISTS jobs (
   rewrite_html_url  TEXT,
   needs_push    INTEGER NOT NULL DEFAULT 0,
   qc_retried    INTEGER NOT NULL DEFAULT 0,
-  qc_block      TEXT
+  qc_block      TEXT,
+  direct_retried INTEGER NOT NULL DEFAULT 0,
+  dropped_languages TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_jobs_ad ON jobs (pipeline, competitor, ad_id);
 CREATE INDEX IF NOT EXISTS idx_jobs_status ON jobs (status);
@@ -116,6 +118,13 @@ def conn() -> sqlite3.Connection:
             c.commit()
         if "qc_block" not in cols:
             c.execute("ALTER TABLE jobs ADD COLUMN qc_block TEXT")
+            c.commit()
+        # direct-mode drop handling: one-retry guard + the per-language drop reasons surfaced to the team
+        if "direct_retried" not in cols:
+            c.execute("ALTER TABLE jobs ADD COLUMN direct_retried INTEGER NOT NULL DEFAULT 0")
+            c.commit()
+        if "dropped_languages" not in cols:
+            c.execute("ALTER TABLE jobs ADD COLUMN dropped_languages TEXT")
             c.commit()
         tcols = {r[1] for r in c.execute("PRAGMA table_info(tracker)").fetchall()}
         if "localization_gdoc_urls" not in tcols:
