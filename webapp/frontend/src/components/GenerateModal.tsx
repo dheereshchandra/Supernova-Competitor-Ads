@@ -31,6 +31,7 @@ export default function GenerateModal({
   const [estimateError, setEstimateError] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
+  const [conceptBrief, setConceptBrief] = useState('')
 
   useEffect(() => {
     let cancelled = false
@@ -50,7 +51,7 @@ export default function GenerateModal({
     setSubmitting(true)
     setSubmitError('')
     try {
-      const r = await createJob(pipeline, competitor, adId, force)
+      const r = await createJob(pipeline, competitor, adId, force, conceptBrief)
       onStarted(r.job_id)
     } catch (e) {
       if (e instanceof ApiError && e.status === 409) {
@@ -133,6 +134,22 @@ export default function GenerateModal({
                 <span className="text-zinc-300">{money(estimate.month_to_date_usd)}</span>
                 {estimate.notes ? <> · {estimate.notes}</> : null}
               </p>
+              <div>
+                <label className="mb-1 block text-xs font-medium text-zinc-300">
+                  Concept brief{' '}
+                  <span className="font-normal text-zinc-500">(optional — replication direction)</span>
+                </label>
+                <textarea
+                  value={conceptBrief}
+                  onChange={(e) => setConceptBrief(e.target.value)}
+                  rows={3}
+                  placeholder="e.g. Replace the man with a baby; treat the ASMR split-screen as a single talking-head; keep the hook…"
+                  className="w-full resize-y rounded-lg border border-white/10 bg-zinc-950/60 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-violet-500/50 focus:outline-none"
+                />
+                <p className="mt-1 text-[11px] text-zinc-500">
+                  Character swaps, format changes, ASMR→talking-head — followed over the competitor's original.
+                </p>
+              </div>
               {force && (
                 <p className="rounded-lg border border-amber-400/20 bg-amber-500/10 px-3 py-2 text-xs text-amber-200">
                   This will re-generate and replace the existing docs.

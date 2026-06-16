@@ -50,6 +50,7 @@ import _flash                       # noqa: E402
 import _gdrive                      # noqa: E402
 import _tts_providers as tts        # noqa: E402
 import step4_localize as loc        # noqa: E402  (reuse parse_doc_scenes)
+import _tts_text as ttx             # noqa: E402  (shared TTS text helpers)
 from r2_utils import load_env, make_r2_client, upload_file  # noqa: E402
 
 SUPPORTED_LANGUAGES = ["English", "Hindi", "Telugu", "Tamil", "Marathi", "Kannada",
@@ -61,18 +62,6 @@ AI_TEACHER_RE = re.compile(r"miss\s*nova|\b(a\.?i\.?|robot|avatar|assistant|tuto
 NARRATOR_RE = re.compile(r"\b(narrator|voice\s*-?\s*over|voiceover|\bvo\b)\b", re.I)
 FEMALE_RE = re.compile(r"\b(female|woman|women|girl|lady|mother|mom|mum|aunt|sister|daughter|wife|grandmother|she|her)\b", re.I)
 MALE_RE = re.compile(r"\b(male|man|men|boy|father|dad|uncle|brother|son|husband|grandfather|he|him)\b", re.I)
-
-NATIVE_SCHEMA = {
-    "type": "object",
-    "properties": {
-        "lines": {"type": "array", "items": {
-            "type": "object",
-            "properties": {"i": {"type": "integer"}, "text": {"type": "string"}},
-            "required": ["i", "text"],
-        }},
-    },
-    "required": ["lines"],
-}
 
 
 # ---------------------------------------------------------------- registry / voices
@@ -159,28 +148,33 @@ def resolve_script(ad_id: str, language: str, source_mode: str) -> tuple[list, l
         side = _load_json(SCENES_DIR / f"{ad_id}.{language.lower()}.supernova.json")
         if not side:
             sys.exit(f"[error] no {language} script for {ad_id} — run localization first.")
+        # post-#90 the localized sidecar carries script_roman + script_native (older: script).
         scenes = [{"n": s.get("n"), "label": s.get("scene_label", ""),
-                   "script": s.get("script", "")}
+                   "script": s.get("script_roman") or s.get("script", "")}
                   for s in side.get("parsed", {}).get("scenes", [])]
         gdocs = _load_json(SCENES_DIR / f"{ad_id}.gdocs.json")
         fid = ((gdocs.get("locales") or {}).get(language.lower()) or {}).get("file_id")
 
     source = "sidecar (committed script)"
+    doc_native: list = []
     if source_mode in ("auto", "gdoc") and fid:
         try:
             svc = _gdrive.build_drive_service(load_env())
-            edited = loc.parse_doc_scenes(_gdrive.export_doc_text(svc, fid))
+            txt = _gdrive.export_doc_text(svc, fid)
+            edited = loc.parse_doc_scenes(txt)
             applied = 0
             for sc in scenes:
                 e = edited.get(sc["n"])
                 if e and e.get("script"):
                     sc["script"] = e["script"]; applied += 1
-            source = f"EDITED gdoc — {applied}/{len(scenes)} scenes overlaid"
+            doc_native = ttx.parse_tts_input_block(txt, language)  # team edits to the TTS block
+            source = (f"EDITED gdoc — {applied}/{len(scenes)} scenes overlaid"
+                      + (f", {len(doc_native)} TTS-input lines" if doc_native else ""))
         except Exception as ex:
             source = f"sidecar (gdoc read failed: {type(ex).__name__})"
             if source_mode == "gdoc":
                 sys.exit(f"[error] --source gdoc but {source}")
-    return scenes, characters, source
+    return scenes, characters, source, doc_native
 
 
 def parse_lines(scenes: list) -> list:
@@ -199,31 +193,6 @@ def parse_lines(scenes: list) -> list:
             if text:
                 out.append({"scene": sc.get("n"), "idx": k, "speaker": speaker, "text": text})
     return out
-
-
-def to_native_script(client, language: str, texts: list[str]) -> list[str]:
-    """Romanized code-mix -> native-script + English code-mix (Flash). English: unchanged."""
-    if language.lower() == "english" or not texts:
-        return texts
-    payload = [{"i": i, "text": t} for i, t in enumerate(texts)]
-    prompt = (
-        f"You convert romanized {language} ad-script lines into the SAME language written in its "
-        f"NATIVE SCRIPT, for a text-to-speech engine.\n\n"
-        f"RULES:\n"
-        f"- Transliterate the romanized {language} words into correct native {language} script. This "
-        f"is transliteration into proper spelling, NOT translation — keep the SAME words.\n"
-        f"- Keep English words in Latin script (code-mix), and keep numbers, 'Supernova AI', "
-        f"'Miss Nova' and proper nouns exactly as written.\n"
-        f"- Do NOT add, drop, reorder, or paraphrase words. Exactly one output line per input line, "
-        f"same index i.\n"
-        f"- It will be read aloud, so spell native words the natural, correct way.\n\n"
-        f"Return ONE JSON object: {{\"lines\":[{{\"i\":<index>,\"text\":\"<native-script line>\"}}]}}\n\n"
-        f"INPUT LINES:\n{json.dumps(payload, ensure_ascii=False)}"
-    )
-    res = _flash.generate_json(client, _flash.DEFAULT_MODEL, prompt,
-                               temperature=0.0, response_schema=NATIVE_SCHEMA)
-    by_i = {ln.get("i"): ln.get("text", "") for ln in res.get("lines", [])}
-    return [by_i.get(i) or texts[i] for i in range(len(texts))]
 
 
 # ---------------------------------------------------------------- ffmpeg helpers
@@ -264,14 +233,31 @@ def tts_one(client, s3, env, reg, ad_id, competitor, language, source_mode,
         print(f"  [{language}] reuse — {side.get('track_url', '(no track)')}")
         return side
 
-    scenes, characters, source = resolve_script(ad_id, language, source_mode)
+    scenes, characters, source, doc_native = resolve_script(ad_id, language, source_mode)
     print(f"  [{language}] source: {source}")
     slot_by_name = assign_slots(characters)
     lines = parse_lines(scenes)
     if not lines:
         raise RuntimeError(f"no spoken lines parsed for {language}")
 
-    natives = to_native_script(client, language, [ln["text"] for ln in lines])
+    # Native synth text, in priority: the edited Doc's TTS-input block (so team edits get voiced)
+    # → the localized sidecar's persisted script_native → on-the-fly conversion. The speaker for
+    # each turn always comes from the main script's turn order (lines).
+    sc_path = (f"{ad_id}.{lang_key}.supernova.json" if lang_key != "english"
+               else f"{ad_id}.supernova.json")
+    sidecar_native = [t["text"]
+                      for s in _load_json(SCENES_DIR / sc_path).get("parsed", {}).get("scenes", [])
+                      for t in ttx.parse_turns(s.get("script_native") or "")]
+    if doc_native and len(doc_native) == len(lines):
+        natives, nsrc = doc_native, "edited Doc TTS-input block"
+    elif sidecar_native and len(sidecar_native) == len(lines):
+        natives, nsrc = sidecar_native, "localized sidecar (script_native)"
+    else:
+        if doc_native or sidecar_native:
+            print(f"  [{language}] [warn] TTS-input line count mismatch — reconverting on the fly")
+        natives = ttx.to_native_script(client, language, [ln["text"] for ln in lines])
+        nsrc = "on-the-fly conversion"
+    print(f"  [{language}] voicing from: {nsrc}")
 
     out_dir = AUDIO_DIR / ad_id / lang_key
     out_dir.mkdir(parents=True, exist_ok=True)
