@@ -3,19 +3,20 @@ import {
   ApiError,
   createJob,
   getEstimate,
-  SUPPORTED_LANGUAGES,
+  GENERATE_LANGUAGES,
   type Estimate,
 } from '../api'
 import { money } from '../format'
 import { Spinner } from './ui'
 
-/** Matches LOCALIZE_COST_PER_LANG on the backend (Flash translate + safety audit, images reused). */
-const COST_PER_LANG_USD = 0.02
+/** Matches DIRECT_COST_PER_LANG on the backend (each language is its own Gemini Pro generation). */
+const COST_PER_LANG_USD = 0.05
 
 /**
  * Cost-gated "Generate Supernova Script" confirmation.
  * Fetches the live estimate on open; the confirm button shows the real price.
- * Generate produces ONE combined Doc per chosen language (English + that language) — pick ≥1.
+ * Generate produces ONE Doc per selected language, generated DIRECTLY from the ad's seed language —
+ * English is produced only if you pick it. Pick ≥1.
  */
 export default function GenerateModal({
   pipeline,
@@ -44,7 +45,7 @@ export default function GenerateModal({
     () =>
       new Set(
         suggestedLanguages.filter((l) =>
-          (SUPPORTED_LANGUAGES as readonly string[]).includes(l),
+          (GENERATE_LANGUAGES as readonly string[]).includes(l),
         ),
       ),
   )
@@ -187,7 +188,7 @@ export default function GenerateModal({
                   Languages <span className="font-normal text-zinc-500">(pick at least one)</span>
                 </label>
                 <div className="flex flex-wrap gap-2">
-                  {SUPPORTED_LANGUAGES.map((lang) => {
+                  {GENERATE_LANGUAGES.map((lang) => {
                     const on = selected.has(lang)
                     return (
                       <button
@@ -206,8 +207,8 @@ export default function GenerateModal({
                   })}
                 </div>
                 <p className="mt-1.5 text-[11px] text-zinc-500">
-                  One Google Doc per language — English + that language together. Add more later
-                  from the ad page.
+                  One Google Doc per selected language, generated directly from the ad's own language.
+                  English is created only if you pick it. Add more later from the ad page.
                 </p>
               </div>
               {force && (

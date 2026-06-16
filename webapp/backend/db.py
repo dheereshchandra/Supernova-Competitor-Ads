@@ -37,7 +37,9 @@ CREATE TABLE IF NOT EXISTS jobs (
   rewrite_gdoc_url  TEXT,
   analysis_gdoc_url TEXT,
   rewrite_html_url  TEXT,
-  needs_push    INTEGER NOT NULL DEFAULT 0
+  needs_push    INTEGER NOT NULL DEFAULT 0,
+  qc_retried    INTEGER NOT NULL DEFAULT 0,
+  qc_block      TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_jobs_ad ON jobs (pipeline, competitor, ad_id);
 CREATE INDEX IF NOT EXISTS idx_jobs_status ON jobs (status);
@@ -107,6 +109,13 @@ def conn() -> sqlite3.Connection:
         # localization (PR 4): per-job target languages + per-ad localized links/verify state
         if "languages" not in cols:
             c.execute("ALTER TABLE jobs ADD COLUMN languages TEXT")
+            c.commit()
+        # QC gate (direct-mode PR): one-retry guard + the block reason surfaced on a hard-gate
+        if "qc_retried" not in cols:
+            c.execute("ALTER TABLE jobs ADD COLUMN qc_retried INTEGER NOT NULL DEFAULT 0")
+            c.commit()
+        if "qc_block" not in cols:
+            c.execute("ALTER TABLE jobs ADD COLUMN qc_block TEXT")
             c.commit()
         tcols = {r[1] for r in c.execute("PRAGMA table_info(tracker)").fetchall()}
         if "localization_gdoc_urls" not in tcols:

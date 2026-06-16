@@ -262,7 +262,8 @@ def audit_text(translated: dict, decompose: dict) -> str:
         if vd:
             lines.append(f"  [VISUAL — competitor source; brand swapped downstream, do NOT flag a "
                          f"competitor brand NAME only here] {vd}")
-        script = s.get("script_native") or s.get("script_roman") or s.get("script") or ""
+        script = (s.get("script_native") or s.get("script_roman")
+                  or s.get("supernova_script") or s.get("script") or "")
         if script:
             lines.append(f"  [SCRIPT]\n{script}")
     return "\n".join(lines)
@@ -344,11 +345,131 @@ def localize_one(client, svc, env, ad_id, competitor, target, skeleton, comments
     return {"language": target, "verdict": side["safety"]["verdict"], "link": link}
 
 
-def cmd_localize(ad_id, competitor, languages, source_mode, dry_run, regenerate) -> int:
+def to_direct_shape(direct_parsed: dict, decompose_parsed: dict, language: str,
+                    remarks: list | None = None) -> dict:
+    """Adapt a DIRECT (no-English) sidecar's parsed into the rewrite shape build_supernova_doc expects.
+    There is no English master, so `english_script` is "" — the doc then renders ONE flowing native-script
+    block (no 'English' column, no per-scene headings). format/characters/visual_overview come from the
+    direct parsed itself; the TTS block carries both romanized + native forms (labels stripped)."""
+    dec_scenes = {s.get("n"): s for s in decompose_parsed.get("scenes", [])}
+    scenes, roman_lines, native_lines = [], [], []
+    for s in direct_parsed.get("scenes", []):
+        n = s.get("n")
+        native = s.get("script_native") or ""
+        roman = s.get("script_roman") or ""
+        scenes.append({
+            "n": n,
+            "scene_label": s.get("scene_label", "") or (dec_scenes.get(n, {}) or {}).get("scene_label", ""),
+            "scene_brief": "",
+            "supernova_script": native,
+            "english_script": "",
+        })
+        native_lines += [sp for ln in native.split("\n") if (sp := build_docs._strip_speaker(ln))]
+        roman_lines += [sp for ln in roman.split("\n") if (sp := build_docs._strip_speaker(ln))]
+    return {"production_type": direct_parsed.get("production_type", ""),
+            "format": direct_parsed.get("format", ""),
+            "visual_overview": direct_parsed.get("visual_overview", ""),
+            "characters": direct_parsed.get("characters", []),
+            "language": language,
+            "remarks": remarks or [],
+            "scenes": scenes,
+            "tts": {"romanized": roman_lines, "native": native_lines}}
+
+
+def to_english_shape(eng_parsed: dict, remarks: list | None = None) -> dict:
+    """Adapt an English-master parsed (scenes[].supernova_script) into the rewrite shape for a per-language
+    English deliverable in direct mode — flowing English block (english_script=''), no TTS zone."""
+    scenes = [{"n": s.get("n"), "scene_label": s.get("scene_label", ""),
+               "scene_brief": s.get("scene_brief", ""),
+               "supernova_script": s.get("supernova_script", ""), "english_script": ""}
+              for s in eng_parsed.get("scenes", [])]
+    return {"production_type": eng_parsed.get("production_type", ""),
+            "format": eng_parsed.get("format", ""),
+            "visual_overview": eng_parsed.get("visual_overview", ""),
+            "characters": eng_parsed.get("characters", []),
+            "language": "English",
+            "remarks": remarks or [],
+            "scenes": scenes,
+            "tts": {}}
+
+
+def direct_one(client, svc, env, ad_id, competitor, target, decompose, folder_id, gdocs,
+               dry_run, remarks=None):
+    """Build + upload a per-language Doc from a DIRECT sidecar (no English master). English reads the
+    English-master sidecar <id>.supernova.json; other languages read <id>.<lang>.supernova.json."""
+    lang_key = target.lower()
+    is_english = (lang_key == "english")
+    side_path = SCENES_DIR / (f"{ad_id}.supernova.json" if is_english
+                              else f"{ad_id}.{lang_key}.supernova.json")
+    if not side_path.exists():
+        raise FileNotFoundError(f"no sidecar {side_path} — run step4_rewrite submit --target-languages first")
+    side = json.loads(side_path.read_text())
+    parsed = side.get("parsed", {})
+    verdict = safety.audit(client, audit_text(parsed, decompose))
+    side["safety"] = verdict
+    if not dry_run:
+        side_path.write_text(json.dumps(side, indent=2, ensure_ascii=False))
+    print(f"  [{target}] {'english master' if is_english else 'direct sidecar'} OK — "
+          f"safety={verdict['verdict'].upper()}")
+
+    shaped = {"parsed": (to_english_shape(parsed, remarks) if is_english
+                         else to_direct_shape(parsed, decompose.get("parsed", {}), target, remarks))}
+    docx_path = DOCS_DIR / f"{ad_id}_{lang_key}_supernova_rewrite.docx"
+    build_docs.build_supernova_doc(ad_id, competitor, decompose, shaped, docx_path, lambda m: None)
+    if dry_run:
+        return {"language": target, "verdict": verdict["verdict"], "link": "(dry-run)"}
+    title = f"{competitor.title()} {ad_id} — Supernova Script ({target})"
+    fid, link = _gdrive.upload_docx_as_gdoc(svc, env, docx_path, title, folder_id)
+    _gdrive.set_link_permission(svc, env, fid)
+    link = link or _gdrive.get_web_view_link(svc, fid)
+    gdocs.setdefault("locales", {})[lang_key] = {"file_id": fid, "link": link, "verified": False,
+                                                 "verified_by": "", "localized_at": time.time()}
+    return {"language": target, "verdict": verdict["verdict"], "link": link}
+
+
+def _cmd_direct(ad_id, competitor, languages, dry_run) -> int:
+    """Direct seed→target: build per-language Docs from the direct sidecars (NO English master needed)."""
+    competitor = (competitor or "").lower().strip()
+    if not competitor:
+        sys.exit("[error] --direct requires --competitor")
+    dec_path = SCENES_DIR / f"{ad_id}.json"
+    if not dec_path.exists():
+        sys.exit(f"[error] no decompose sidecar {dec_path} — decompose the ad first")
+    decompose = json.loads(dec_path.read_text())
+    seed_lang = _seed_language(competitor, ad_id)
+    remarks = _remarks.detect_remarks(decompose.get("parsed", {}), seed_lang)
+    print(f"Direct docs {ad_id} ({competitor}) → {', '.join(languages)}  [no English master]")
+    print(f"  seed language: {seed_lang}" + (f" | remarks: {' | '.join(remarks)}" if remarks else ""))
+    env = load_env()
+    client = _flash.get_client(env)
+    svc = None if dry_run else _gdrive.build_drive_service(env)
+    folder_id = None if dry_run else _gdrive.ensure_competitor_folder(svc, env, competitor, {})
+    gdocs_path = SCENES_DIR / f"{ad_id}.gdocs.json"
+    gdocs = json.loads(gdocs_path.read_text()) if gdocs_path.exists() else \
+        {"ad_library_id": ad_id, "competitor": competitor}
+    results = []
+    for target in languages:
+        try:
+            results.append(direct_one(client, svc, env, ad_id, competitor, target, decompose,
+                                      folder_id, gdocs, dry_run, remarks))
+        except Exception as ex:
+            print(f"  [{target}] FAILED — {type(ex).__name__}: {str(ex)[:140]}")
+            results.append({"language": target, "verdict": "error", "link": "", "error": str(ex)})
+    if not dry_run:
+        gdocs_path.write_text(json.dumps(gdocs, indent=2, ensure_ascii=False))
+    print("\nDONE:")
+    for r in results:
+        print(f"  {r['language']:<10} safety={str(r.get('verdict','?')).upper():<6} {r.get('link','')}")
+    return 0 if all(r.get("verdict") != "error" for r in results) else 1
+
+
+def cmd_localize(ad_id, competitor, languages, source_mode, dry_run, regenerate, direct=False) -> int:
+    DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    if direct:
+        return _cmd_direct(ad_id, competitor, languages, dry_run)
     for lg in languages:
         if lg not in SUPPORTED_LANGUAGES:
             sys.exit(f"[error] unsupported language '{lg}'. One of: {', '.join(SUPPORTED_LANGUAGES)}")
-    DOCS_DIR.mkdir(parents=True, exist_ok=True)
 
     prefer_gdoc = source_mode in ("auto", "gdoc")
     skeleton, comments, source, decompose, comp_from_side = resolve_english_source(ad_id, prefer_gdoc)
@@ -421,10 +542,13 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--regenerate", action="store_true",
                     help="re-translate + re-create Docs even if they already exist")
+    ap.add_argument("--direct", action="store_true",
+                    help="DIRECT seed→target mode: build per-language Docs from the <id>.<lang>.supernova.json "
+                         "sidecars written by `step4_rewrite submit --target-languages` (NO English master).")
     args = ap.parse_args()
     langs = [x.strip() for x in args.languages.split(",") if x.strip()]
     return cmd_localize(args.ad_id, args.competitor, langs, args.source,
-                        args.dry_run, args.regenerate)
+                        args.dry_run, args.regenerate, args.direct)
 
 
 if __name__ == "__main__":

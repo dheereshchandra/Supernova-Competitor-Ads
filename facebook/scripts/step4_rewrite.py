@@ -59,6 +59,32 @@ def load_safety() -> str:
         sys.exit(f"[error] brand-safety policy missing at {SAFETY_PATH}")
 
 
+# Direct seed→target generation (NO English master): the combined re-skin+localize instruction +
+# the localization rules. Loaded at runtime like the others. See supernova_direct_rewrite.md.
+DIRECT_PATH = pathlib.Path(__file__).resolve().parent.parent / "generation" / "supernova_direct_rewrite.md"
+RULES_PATH = pathlib.Path(__file__).resolve().parent.parent / "generation" / "supernova_translation_rules.md"
+
+
+def load_direct() -> str:
+    try:
+        return DIRECT_PATH.read_text()
+    except FileNotFoundError:
+        sys.exit(f"[error] direct-rewrite prompt missing at {DIRECT_PATH}")
+
+
+def load_rules() -> str:
+    try:
+        return RULES_PATH.read_text()
+    except FileNotFoundError:
+        sys.exit(f"[error] translation rules missing at {RULES_PATH}")
+
+
+def build_direct_prompt() -> str:
+    """Direct seed→target prompt = brand context + brand-safety + translation rules + direct instructions.
+    The SEED/TARGET language names + decompose INPUT are appended per-ad at submit time."""
+    return load_context() + "\n\n" + load_safety() + "\n\n" + load_rules() + "\n\n" + load_direct()
+
+
 # Rewrite instructions, appended AFTER the brand context. The governing idea (v3, faithful-replication):
 # the competitor ad is PROVEN — replicate it as-is and only re-skin it for Supernova. Change as little as
 # possible; apply the concept brief; never rewrite in the name of "guidelines" (only the 4 hard lines).
@@ -231,19 +257,35 @@ def load_seed_languages(competitor: str) -> dict:
     return out
 
 
-def cmd_submit(client, ids: list[str], competitor: str) -> int:
+def cmd_submit(client, ids: list[str], competitor: str, target_languages=None) -> int:
+    """Submit a rewrite Batch. Default = the English master (metadata key = ad_id). With
+    target_languages, generate DIRECTLY in each language (one request per (ad, lang), metadata key
+    `<id>.<lang>`, the direct re-skin+localize prompt) — and ALSO an English master only if "English"
+    is among the target languages."""
     from google.genai import types as gt
-    prompt = build_prompt()
     seed_langs = load_seed_languages(competitor)
-    inlined = []
-    missing = []
+    langs = [l.strip() for l in (target_languages or []) if l.strip()]
+    direct = bool(langs)
+    nonenglish = [l for l in langs if l.lower() != "english"]
+    make_english = (not direct) or any(l.lower() == "english" for l in langs)
+    eng_prompt = build_prompt()
+    direct_prompt = build_direct_prompt() if nonenglish else None
+
+    def _req(text: str, key: str) -> dict:
+        return {
+            "contents": [gt.Content(role="user", parts=[gt.Part(text=text)])],
+            "config": gt.GenerateContentConfig(temperature=0.4, max_output_tokens=16384,
+                                               response_mime_type="application/json"),
+            "metadata": {"key": key},
+        }
+
+    inlined, missing = [], []
     for ad_id in ids:
         sidecar = SCENES_DIR / f"{ad_id}.json"
         if not sidecar.exists():
             missing.append(ad_id)
             continue
-        decompose = json.loads(sidecar.read_text())
-        parsed = decompose.get("parsed", {})
+        parsed = json.loads(sidecar.read_text()).get("parsed", {})
         seed_lang = seed_langs.get(ad_id) or "unknown (infer it from the audio_transcript)"
         # Concept brief (MANDATORY input when present): step4_workspace/scenes/<id>.brief.txt — the
         # team's replication direction (character swaps, ASMR->talking-head, format). The driver / Ad
@@ -252,26 +294,27 @@ def cmd_submit(client, ids: list[str], competitor: str) -> int:
         brief = brief_path.read_text(encoding="utf-8").strip() if brief_path.exists() else ""
         brief_block = (f"CONCEPT BRIEF (MANDATORY — apply over the competitor original where they differ):\n{brief}\n\n"
                        if brief else "CONCEPT BRIEF: (none provided — replicate the competitor faithfully)\n\n")
-        user_text = (f"{prompt}SEED LANGUAGE: {seed_lang}\n\n{brief_block}"
-                     + json.dumps(parsed, ensure_ascii=False))
-        inlined.append({
-            "contents": [
-                gt.Content(role="user", parts=[gt.Part(text=user_text)]),
-            ],
-            "config": gt.GenerateContentConfig(
-                temperature=0.4,
-                max_output_tokens=16384,
-                response_mime_type="application/json",
-            ),
-            "metadata": {"key": ad_id},
-        })
+        # QC corrective (written by the QC gate before a regenerate): <id>.qc_correction.txt
+        corr_path = SCENES_DIR / f"{ad_id}.qc_correction.txt"
+        corr_block = (f"PRIOR ATTEMPT FAILED QC — fix EXACTLY these and change nothing else:\n"
+                      f"{corr_path.read_text(encoding='utf-8').strip()}\n\n" if corr_path.exists() else "")
+        if make_english:
+            user_text = (f"{eng_prompt}SEED LANGUAGE: {seed_lang}\n\n{brief_block}{corr_block}"
+                         + json.dumps(parsed, ensure_ascii=False))
+            inlined.append(_req(user_text, ad_id))
+        for lang in nonenglish:
+            user_text = (f"{direct_prompt}\n\n{brief_block}{corr_block}"
+                         f"SEED LANGUAGE: {seed_lang}\nTARGET LANGUAGE: {lang}\n"
+                         f"INPUT (competitor decompose):\n" + json.dumps(parsed, ensure_ascii=False))
+            inlined.append(_req(user_text, f"{ad_id}.{lang.lower()}"))
 
     if missing:
         sys.exit(f"[error] no decompose sidecar for: {missing}. Run Stage 1 first.")
     if not inlined:
         sys.exit("[error] nothing to submit")
 
-    print(f"Submitting Supernova-rewrite batch with {len(inlined)} requests…")
+    mode = "direct seed→target" if direct else "English master"
+    print(f"Submitting Supernova-rewrite batch ({mode}) with {len(inlined)} requests…")
     job = client.batches.create(
         model=MODEL,
         src=inlined,
@@ -284,6 +327,7 @@ def cmd_submit(client, ids: list[str], competitor: str) -> int:
         "job_name": job.name,
         "competitor": competitor,
         "ids": ids,
+        "target_languages": langs,
         "submitted_at": time.time(),
         "state_history": [{"t": time.time(), "state": str(job.state.name)}],
     }, indent=2))
@@ -332,9 +376,17 @@ def cmd_poll(client, short_id: str) -> int:
             text = re.sub(r"^```(?:json)?\s*", "", text.strip())
             text = re.sub(r"\s*```$", "", text)
             parsed = json.loads(text)
-            sidecar = {"competitor_id": key, "parsed": parsed,
-                       "model": MODEL, "rewrote_at": time.time()}
-            (SCENES_DIR / f"{key}.supernova.json").write_text(json.dumps(sidecar, indent=2, ensure_ascii=False))
+            if "." in key:   # direct seed→target: key = "<id>.<lang>" → localized sidecar shape
+                ad_id, lang = key.rsplit(".", 1)
+                sidecar = {"ad_library_id": ad_id, "language": lang.title(),
+                           "mode": "direct-no-english", "parsed": parsed,
+                           "model": MODEL, "rewrote_at": time.time()}
+                out_path = SCENES_DIR / f"{ad_id}.{lang}.supernova.json"
+            else:            # English master (unchanged shape)
+                sidecar = {"competitor_id": key, "parsed": parsed,
+                           "model": MODEL, "rewrote_at": time.time()}
+                out_path = SCENES_DIR / f"{key}.supernova.json"
+            out_path.write_text(json.dumps(sidecar, indent=2, ensure_ascii=False))
             written += 1
             print(f"  [{key}] OK — {len(parsed.get('scenes', []))} scenes")
         except Exception as e:
@@ -360,6 +412,9 @@ def main() -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     p_submit = sub.add_parser("submit")
     p_submit.add_argument("--competitor", required=True)
+    p_submit.add_argument("--target-languages", default="",
+                          help="comma list (e.g. Telugu,Hindi) → generate DIRECTLY in each from the seed "
+                               "language, NO English master unless 'English' is included. Omit = English master.")
     p_submit.add_argument("ids", nargs="+")
     p_poll = sub.add_parser("poll")
     p_poll.add_argument("short_id")
@@ -373,7 +428,8 @@ def main() -> int:
         return cmd_status()
     client = get_client()
     if args.cmd == "submit":
-        return cmd_submit(client, args.ids, args.competitor.lower().strip())
+        tl = [x.strip() for x in args.target_languages.split(",") if x.strip()]
+        return cmd_submit(client, args.ids, args.competitor.lower().strip(), tl)
     if args.cmd == "poll":
         return cmd_poll(client, args.short_id)
     return 1
