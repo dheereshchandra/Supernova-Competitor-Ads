@@ -464,6 +464,14 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
         p.add_run("🎬 Competitor video (watch the original): ").bold = True
         _add_hyperlink(p, vurl, vurl)
 
+    # Reviewer note(s): deterministic edge-case flags (English-original / no-voiceover) supplied
+    # by step4_localize via _remarks.detect_remarks. Shown up top so the reviewer sees them first.
+    for rm in (parsed_rewrite.get("remarks") or []):
+        if str(rm).strip():
+            p = doc.add_paragraph()
+            p.add_run("⚠️ Reviewer note: ").bold = True
+            p.add_run(str(rm).strip())
+
     # ===================== ZONE 1 — Visual & Cast (skim only) =====================
     doc.add_heading("Visual & Cast", level=1)
 
