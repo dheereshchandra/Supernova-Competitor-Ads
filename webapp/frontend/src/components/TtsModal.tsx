@@ -3,10 +3,16 @@ import { ApiError, createTtsJob, TTS_LANGUAGES } from '../api'
 import { money } from '../format'
 import { Spinner } from './ui'
 
-/** APPROXIMATE — an AVERAGE across providers (matches TTS_COST_PER_LANG on the backend).
- * ElevenLabs Pro ≈ $165/1M chars + Cartesia enterprise $7.5/1M → avg ≈ $86/1M × ~1.2k
- * spoken chars/ad ≈ $0.10/language. Actual depends on script length + the voice mix. */
-const COST_PER_LANG_USD = 0.10
+/** Voiceover cost is per-CHARACTER at the provider, so it depends on the script length and on
+ * WHICH provider each character's voice is on. We show an APPROXIMATE range per language:
+ *   Cartesia  ≈ $7.5 / 1M chars   (cheap end — all voices on Cartesia)
+ *   ElevenLabs ≈ $165 / 1M chars  (expensive end — all voices on ElevenLabs)
+ * A real ad uses a mix (per the voice registry), so the true cost sits in between. */
+const AVG_CHARS_PER_LANG = 1200            // ~spoken chars in a typical ad script
+const CARTESIA_PER_M = 7.5
+const ELEVENLABS_PER_M = 165
+const COST_LOW_PER_LANG = (AVG_CHARS_PER_LANG * CARTESIA_PER_M) / 1_000_000   // ≈ $0.009
+const COST_HIGH_PER_LANG = (AVG_CHARS_PER_LANG * ELEVENLABS_PER_M) / 1_000_000 // ≈ $0.198
 
 /**
  * "Generate voiceover" confirmation: pick languages, confirm the scripts are final
@@ -51,7 +57,8 @@ export default function TtsModal({
   }
 
   const langs = [...selected]
-  const cost = langs.length * COST_PER_LANG_USD
+  const costLow = langs.length * COST_LOW_PER_LANG
+  const costHigh = langs.length * COST_HIGH_PER_LANG
 
   const confirm = async () => {
     setSubmitting(true)
@@ -125,11 +132,11 @@ export default function TtsModal({
 
         <div className="mt-4 rounded-xl border border-white/10 bg-zinc-950/60 p-4 text-center">
           <div className="text-3xl font-bold tracking-tight text-white">
-            {langs.length ? `≈ ${money(cost)}` : '—'}
+            {langs.length ? `${money(costLow)}–${money(costHigh)}` : '—'}
           </div>
           <div className="mt-1 text-xs text-zinc-500">
-            {langs.length} language{langs.length === 1 ? '' : 's'} · approx. average across
-            Cartesia + ElevenLabs (varies with script length)
+            {langs.length} language{langs.length === 1 ? '' : 's'} · Cartesia (~${CARTESIA_PER_M}/1M chars)
+            → ElevenLabs (~${ELEVENLABS_PER_M}/1M) — depends on each character's voice
           </div>
         </div>
 
