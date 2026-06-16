@@ -1,0 +1,59 @@
+{
+  "competitor_id": "1257639629903436",
+  "parsed": {
+    "production_type": "AI-generated",
+    "format": "Over-the-shoulder digital interaction skit",
+    "visual_overview": "A continuous over-the-shoulder shot of a young Indian woman sitting in front of a large vertical screen on a balcony. The screen displays a white, humanoid AI robot face that she converses with. Text overlays pop up to highlight key phrases, corrections, and app UI elements.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "female learner",
+        "brief": "Young Indian woman seen from behind, wearing a black top with her hair in a bun."
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "brief": "White, humanoid robot face with bright blue eyes on a digital display."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Grammar Correction",
+        "scene_brief": "Priya sits facing the large screen and makes a common English mistake, which the AI avatar gently corrects.",
+        "supernova_script": "Miss Nova says: How many brothers do you have?\nPriya says: I am having two brothers.\nMiss Nova says: (warmly) Not 'having'. Are you holding them in your hands right now? Say, 'I have two brothers'.\nPriya says: Oh, okay, okay. I just freeze when I have to speak English."
+      },
+      {
+        "n": 2,
+        "scene_label": "Cost and Popularity",
+        "scene_brief": "The AI avatar addresses Priya's concerns about cost, bringing up the app's affordability and massive user base.",
+        "supernova_script": "Miss Nova says: That's okay! Have you tried practicing with an AI teacher?\nPriya says: But wouldn't that be really expensive?\nMiss Nova says: Not at all. Supernova AI is seven times cheaper than normal English classes. That's why over one crore people are practicing with it.\nPriya says: But I really don't get time."
+      },
+      {
+        "n": 3,
+        "scene_label": "Time Commitment",
+        "scene_brief": "The AI avatar counters the time objection by explaining the quick, daily speaking practice method.",
+        "supernova_script": "Miss Nova says: Just 10 to 15 minutes a day is enough. No boring grammar rules, you just speak out loud, and I correct you without any judgment.\nPriya says: Wow. How do I join?"
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "scene_brief": "The AI avatar delivers a direct call to action to download the app and start practicing immediately.",
+        "supernova_script": "Miss Nova says: Click the install button and download Supernova AI right now. Sign up and start speaking with me today. You will see improvement in just 21 days. Come on, let's start!"
+      }
+    ],
+    "pitch_points_used": [
+      "~7x cheaper",
+      "1 crore+ users",
+      "Time is not the blocker (~10-15 mins a day)",
+      "Not boring grammar lessons",
+      "You SPEAK",
+      "No-judgement / privacy",
+      "Improve in just 21 days"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781608518.108734
+}

@@ -1,0 +1,59 @@
+{
+  "competitor_id": "1458602939352865",
+  "parsed": {
+    "production_type": "AI-generated",
+    "format": "TED-style stage monologue, single-presenter",
+    "visual_overview": "A young woman in a graduation gown delivers a confident, tough-love stage monologue from a wooden podium. The video cuts briefly to a screencast of the Supernova AI app interface showing an AI avatar, and later to an app store installation screen. It ends with the presenter delivering a final call-to-action with an on-screen install prompt.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "female presenter",
+        "brief": "Young adult Indian female in a black graduation gown, delivering an authoritative, confident speech."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Graduation Speech Intro",
+        "scene_brief": "Presenter delivers a speech from a podium, calling out the viewer's daily phone habits.",
+        "supernova_script": "Priya says: What do you do when you wake up in the morning? Instagram.\nPriya says: Before going to sleep at night? Reels.\nPriya says: In between? Reels again.\nPriya says: You scroll for four hours every day, but you can't find 15 minutes for English?\nPriya says: This is your mistake.\nPriya says: I am not saying don't use your phone.\nPriya says: Just take out 15 minutes from those four hours.\nPriya says: Download Supernova AI."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Interface - AI Teacher",
+        "scene_brief": "App screencast showing the AI teacher interface with a robotic avatar and control buttons.",
+        "supernova_script": "Priya says: You get a personal AI teacher right on your phone,"
+      },
+      {
+        "n": 3,
+        "scene_label": "Graduation Speech Continuation",
+        "scene_brief": "Presenter continues her stage speech, emphasizing the value of 15 minutes of practice.",
+        "supernova_script": "Priya says: who lets you practice real speaking, corrects your mistakes live, and explains the logic in your own language.\nPriya says: In the time it takes to watch one reel, you can learn to speak a proper sentence.\nPriya says: Reels give you nothing, but these 15 minutes can change your future.\nPriya says: You ask, \"How do I practice? No one speaks English at home.\"\nPriya says: On Supernova AI, your AI teacher is available 24/7.\nPriya says: You can make a thousand mistakes, and she will never judge or laugh at you.\nPriya says: Over 1 crore users are already learning this way.\nPriya says: \"I'll do it later\"—you've been saying this for years.\nPriya says: But you can actually see improvement in just 30 days.\nPriya says: Plus, it is seven times cheaper than offline coaching.\nPriya says: Because the one who practices 15 minutes every day, goes ahead."
+      },
+      {
+        "n": 4,
+        "scene_label": "App Store Installation",
+        "scene_brief": "App store screencast showing the app in the process of installing.",
+        "supernova_script": "Priya says: It is time to take action."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "scene_brief": "Presenter concludes her speech as a final call-to-action overlay appears.",
+        "supernova_script": "Priya says: Click the install button, download Supernova AI today, and start speaking English right now!"
+      }
+    ],
+    "pitch_points_used": [
+      "10-15 minutes a day",
+      "You SPEAK",
+      "Explains in your language",
+      "No-judgement / privacy",
+      "1 crore+ users",
+      "Improve in just 30 days",
+      "7x cheaper"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781612084.747063
+}

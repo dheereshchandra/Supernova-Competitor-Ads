@@ -1,0 +1,39 @@
+{
+  "ad_library_id": "4364553960461634",
+  "language": "Bengali",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction and Correction",
+        "script_native": "Priya says: আপনি কী করছেন?\nMiss Nova says: I'm adding oil.\nPriya says: ওটা...\nMiss Nova says: 'I'm applying oil.' Or else you should say, 'I'm oiling my hair.' আপনি কি confidently English বলা শিখতে চান?\nPriya says: হ্যাঁ, কিন্তু offline classes গুলো অনেক expensive.\nMiss Nova says: সেইজন্যই তো 1 crore-এরও বেশি users নিজের phone-এ একটা AI teacher-এর সাথে শিখছে, আর এটা coaching-এর থেকে সাত গুণ সস্তা!\nPriya says: Really? এটা কীভাবে কাজ করে?",
+        "script_roman": "Priya says: Apni ki korchen?\nMiss Nova says: I'm adding oil.\nPriya says: Ota...\nMiss Nova says: 'I'm applying oil.' Or else you should say, 'I'm oiling my hair.' Apni ki confidently English bola shikhte chan?\nPriya says: Hya, kintu offline classes gulo onek expensive.\nMiss Nova says: Sheijonnoi to 1 crore-ero beshi users nijer phone-e ekta AI teacher-er shathe shikche, aar eta coaching-er theke shaath gun shosta!\nPriya says: Really? Eta kibhabe kaaj kore?"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Interface Showcase",
+        "script_native": "Miss Nova says: আপনি শুধু দিনে মাত্র 10 minutes আমার সাথে Supernova AI-তে জোরে জোরে কথা বলবেন। আমি শুনব, আপনার mistakes গুলো live correct করব, আর logic-টা Bangla-য় explain করব যাতে আপনার সবকিছু সহজে মাথায় ঢোকে।",
+        "script_roman": "Miss Nova says: Apni shudhu dine matro 10 minutes amar shathe Supernova AI-te jore jore kotha bolben. Ami shunbo, apnar mistakes gulo live correct korbo, aar logic-ta Bangla-y explain korbo jate apnar shobkichu shohoje mathay dhoke."
+      },
+      {
+        "n": 3,
+        "scene_label": "Effectiveness and Price Question",
+        "script_native": "Priya says: কিন্তু এটা কি সত্যি আমার কাজে আসবে?\nMiss Nova says: এটা boring grammar books-এর চেয়ে অনেক বেশি effective. এটা আপনার exact level analyze করে শুধু আপনার জন্যই একটা personalized plan বানিয়ে দেয়, যাতে আপনি মাত্র 21 days-েই real improvement দেখতে পান।\nPriya says: মাত্র 21 days-এ এই সব কিছু?",
+        "script_roman": "Priya says: Kintu eta ki shotyi amar kaje ashbe?\nMiss Nova says: Eta boring grammar books-er cheye onek beshi effective. Eta apnar exact level analyze kore shudhu apnar jonnoi ekta personalized plan baniye dey, jate apni matro 21 days-ei real improvement dekhte pan.\nPriya says: Matro 21 days-e ei shob kichu?"
+      },
+      {
+        "n": 4,
+        "scene_label": "Pricing Offer",
+        "script_native": "Miss Nova says: হ্যাঁ! আর সবচেয়ে ভালো ব্যাপার হলো, এখানে কোনো judgement-এর ভয় নেই। আপনি কোনো job interview বা office call-এর জন্য practice করার সময় হাজারটা mistake করলেও কেউ আপনাকে নিয়ে হাসবে না।",
+        "script_roman": "Miss Nova says: Hya! Aar shobcheye bhalo bepar holo, ekhane kono judgement-er bhoy nei. Apni kono job interview ba office call-er jonno practice korar shomoy hazarta mistake korleo keu apnake niye hashbe na."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script_native": "Miss Nova says: তাই এখনই Supernova AI download করতে নিচে দেওয়া install button-এ click করুন, আর আজ থেকেই আমার সাথে কথা বলা শুরু করুন!",
+        "script_roman": "Miss Nova says: Tai ekhoni Supernova AI download korte niche dewa install button-e click korun, aar aaj thekei amar shathe kotha bola shuru korun!"
+      }
+    ],
+    "self_critique_fixed": "Applied the Bengali language module rules. Replaced 'Tamil' with 'Bangla' for the language self-reference swap (T5). Converted the comparative multiplier 'seven times cheaper' to the natural Bengali 'saat gun shosta' (T2h carve-out). Kept taught English lines exactly verbatim (T2a). Ensured the politeness architecture uses 'apni' for Miss Nova to maintain a warm, respectful, yet highly colloquial spoken tone (T3 & T4)."
+  }
+}

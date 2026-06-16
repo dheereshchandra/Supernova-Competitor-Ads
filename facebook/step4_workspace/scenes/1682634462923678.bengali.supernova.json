@@ -1,0 +1,33 @@
+{
+  "ad_library_id": "1682634462923678",
+  "language": "Bengali",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Mesh and Sand",
+        "script_native": "Miss Nova says: সত্যি বলতে, out loud speak না করে আপনি কখনই ভালো English বলতে পারবেন না।\nMiss Nova says: কিন্তু এটাও ঠিক, সবাই সবসময় আপনার সাথে practice করার জন্য ready থাকে না।",
+        "script_roman": "Miss Nova says: Sotti bolte, out loud speak na kore apni kokhoni bhalo English bolte parben na.\nMiss Nova says: Kintu etao thik, sobai sob somoy apnar sathe practice korar jonno ready thake na."
+      },
+      {
+        "n": 2,
+        "scene_label": "Carving Green Sand",
+        "script_native": "Miss Nova says: তার ওপর, অন্যদের সামনে mistake করার একটা ভয় তো থাকেই।\nMiss Nova says: আর ঠিক এই কারণেই 1 crore-এরও বেশি users Supernova AI-এর সাথে practice করেন।\nMiss Nova says: এটা offline classes-এর চেয়ে প্রায় সাত গুণ সস্তা।\nMiss Nova says: কোনো shy না পেয়ে, আপনি আমার সাথে যত খুশি speak করতে পারেন।",
+        "script_roman": "Miss Nova says: Tar opor, onnyder samne mistake korar ekta bhoy to thakei.\nMiss Nova says: Ar thik ei karonei 1 crore-ero beshi users Supernova AI-er sathe practice koren.\nMiss Nova says: Eta offline classes-er cheye pray saat gun sosta.\nMiss Nova says: Kono shy na peye, apni amar sathe joto khushi speak korte paren."
+      },
+      {
+        "n": 3,
+        "scene_label": "Slicing Foam",
+        "script_native": "Miss Nova says: হাজারটা mistake করলেও, আমি আপনাকে কখনো judge করব না আর কখনো bored হব না।\nMiss Nova says: আমি জাস্ট আপনার নিজের Bangla-তে correct করে দেব যাতে সহজে বুঝতে পারেন।\nMiss Nova says: তাই এখনই install button-এ click করুন আর Supernova AI download করুন।",
+        "script_roman": "Miss Nova says: Hajarta mistake korleo, ami apnake kokhono judge korbo na ar kokhono bored hobo na.\nMiss Nova says: Ami just apnar nijer Bangla-te correct kore debo jate shohoje bujhte paren.\nMiss Nova says: Tai ekhoni install button-e click korun ar Supernova AI download korun."
+      },
+      {
+        "n": 4,
+        "scene_label": "Rolling Pink Sand",
+        "script_native": "Miss Nova says: আজ থেকেই আমার সাথে speak করা start করুন, আর মাত্র 21 days-এ নিজের মধ্যে real improvement দেখুন!",
+        "script_roman": "Miss Nova says: Aj thekei amar sathe speak kora start korun, ar matro 21 days-e nijer moddhe real improvement dekhun!"
+      }
+    ],
+    "self_critique_fixed": "Applied the Bengali language module and global rules. Handled the T7 hook rule by opening with the native phrase 'Sotti bolte' instead of English words. Handled the T2h multiplier carve-out by translating 'seven times cheaper' to 'saat gun sosta'. Applied the T5 language self-reference swap by localizing 'your own language' to 'Bangla-te'. Kept all stay-English keywords as specified in T2. Ensured the polite 'apni' register is consistently used for Miss Nova's dialogue."
+  }
+}
