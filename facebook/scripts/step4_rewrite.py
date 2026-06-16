@@ -73,9 +73,16 @@ a CONCEPT BRIEF. The competitor ad works for a reason we don't fully know — ho
 **CHANGE AS LITTLE AS POSSIBLE.** You are RE-SKINNING it, not rewriting it. Your OUTPUT is 100% English.
 
 THE HEADLINE: the competitor's script is the source of truth — keep its hook, its specific lines and
-examples, who speaks first, and the turn order. Re-skin = swap the brand to Supernova + weave in ≥3 pitch
-points + re-point the CTA + apply the concept brief. Above all, the result must read as a SMOOTH, NATURAL
-conversation — never a sales pitch, never an abrupt Miss Nova drop-in.
+examples, who speaks first, and the turn order. Re-skin = swap the brand to Supernova AI + weave in the
+benefits its beats invite + re-point the CTA + apply the concept brief. Above all, **write the WHOLE ad as
+ONE single, continuous, natural conversation** — never a sales pitch, never an abrupt self-introduction.
+
+WRITE IT AS ONE CONTINUOUS SCRIPT (not scene-by-scene fragments). The input is split into scenes only so
+the visuals line up — do NOT write each scene as an isolated mini-pitch. Compose the FULL conversation as
+one arc first (one opening, one build, one close), then place each turn into the scene where it happens.
+Read top to bottom, the scenes MUST form one unbroken conversation: do not recap, do not re-introduce the
+brand or the teacher more than once, do not restart the pitch in each scene. Introduce the product once
+(in the back half if the seed allows) and let momentum build to a single close.
 
 PRIORITY ORDER:
 1. **[HARD] Apply the CONCEPT BRIEF first — it is MANDATORY.** It overrides the competitor original where
@@ -87,33 +94,48 @@ PRIORITY ORDER:
 2. **[HARD] Then replicate the competitor faithfully for everything the brief doesn't change:**
    - **[SOFT, strong default] Keep the specific line content** — the exact wrong-English example being
      corrected ("I'm having two brothers" STAYS "I'm having two brothers", NOT "I'm having a doubt"), the
-     specific question, the exact beat. Change a line ONLY if the brief requires it or the script genuinely
-     needs it to flow. Do NOT substitute a different example or invent new dialogue.
+     specific question, the exact beat. Do NOT *substitute* a different example or change what the beat is
+     about. You MAY add a short, natural clarifying or warmth line ON the kept example — a light joke, a
+     reassuring "that's okay, your English is fine", an extra explanatory clause — when it makes the
+     exchange warmer and more human. Just keep the seed's example and what the beat is about.
    - **[SOFT, strong default] Keep the opening speaker + turn order** — if the robot / Miss Nova opens,
      keep it; flip it ONLY if the brief or natural flow demands.
    - **[SOFT] Keep the hook** unless the brief changes it or it names the competitor brand.
 3. **[HARD] Re-skin for Supernova — the only deliberate changes:**
-   - Swap the competitor brand -> **Supernova AI**; the AI teacher -> **Miss Nova**.
-   - Weave in **AT LEAST 3 pitch points** (PART 2) into the EXISTING beats, naturally — never jammed. If a
-     pitch point doesn't fit, pick one that does. Minimum 3; more only if there's room.
-   - Re-point the **CTA** to Supernova (install, ~10–15 min/day, with the help of Hindi).
+   - Swap the competitor brand -> **Supernova AI**. ALWAYS use the FULL product name **"Supernova AI"** in
+     spoken lines and the CTA — never bare "Supernova".
+   - The AI teacher's speaker label is **Miss Nova**, BUT **she is NEVER named aloud in the dialogue.** She
+     never says "I am Miss Nova"; no one calls her "Miss Nova" in speech. In the voiceover she is "I" / "me"
+     / "with me"; others refer to her as "an AI teacher" / "this AI teacher on your phone". (The name appears
+     ONLY as the speaker label and on-screen — never spoken.)
+   - Weave in the **benefits the ad's beats invite** (PART 2) — usually **3 or more**, smoothly into the one
+     conversation, never jammed. **Lead with the two flagship claims when they fit — "1 crore+ users" and
+     "improve in just 21 days".** If a benefit doesn't fit a beat, use one that does. Flow always wins over
+     the count.
+   - Re-point the **CTA** to Supernova AI as **ONE single, urgent, action-specific close** at the very end
+     (never split across scenes): name the action ("install", "click the install button", "download
+     Supernova AI now"), keep it in the **speaking character's own first-person voice** ("…start speaking
+     with me today"), restate the core benefit, and give it energy/urgency ("right now", "today").
    - **[SOFT] Benefits first, brand second** — lean toward the first half carrying the relatable / benefit
-     content and bringing Supernova / Miss Nova in around the second half — but follow the seed if it
-     reveals the product early.
-4. **[HARD] SMOOTH, NATURAL FLOW IS THE #1 GOAL.** The script must read like a real conversation. NEVER add
-   a pitch point just to hit the count; NEVER drop Miss Nova in abruptly. Flow wins over count — but you
-   must still land at least 3 pitch points, woven lightly enough that the conversation stays natural.
+     content and bringing Supernova AI in around the second half — but follow the seed if it reveals the
+     product early.
+4. **[HARD] ONE SMOOTH, NATURAL CONVERSATION IS THE #1 GOAL.** The whole ad must read like one real,
+   continuous exchange — warm and human, the way a friendly teacher actually talks. NEVER add a benefit
+   just to hit a count; NEVER introduce the product abruptly. Where the FORMAT invites it you MAY add a
+   light connecting beat the seed implies — a short reaction from a second voice / the audience
+   ("What?? How??"), a momentum-building reaction line — but ONLY if it keeps the seed's hook, examples and
+   turn order intact and makes the conversation flow better. Permitted, never required.
 5. **[HARD] INDIANIZE EVERY REFERENCE** — names -> Indian (Rahul, Priya, Anjali, Imran…, never
    "Jenny"/"John"), cities/places -> Indian (never France/London-as-home), currency/food/festivals ->
    Indian. The audience is in India.
 6. **[HARD] NEVER cross the four HARD LINES above.** Otherwise do NOT rewrite anything in the name of
    guidelines — when unsure, KEEP THE SEED.
 
-OUTPUT: exactly one JSON object (no markdown fences, no commentary). The deliverable doc has two
-zones for this English master — a skim-able **Visual & Cast** block (format + look + cast +
-scenes-at-a-glance) and the clean **Script** (a TTS feed is generated later, only on the localized
-versions). Put all visual/analyst detail in the top-level fields and keep `supernova_script` PURE
-DIALOGUE (no stage directions, no on-screen text, no narration). Schema:
+OUTPUT: exactly one JSON object (no markdown fences, no commentary). The deliverable doc renders the
+per-scene `supernova_script` fields back-to-back as ONE flowing script (no scene headings shown), so they
+must join into one unbroken, natural conversation. Put all visual/analyst detail in the top-level fields;
+keep `supernova_script` DIALOGUE ONLY (what is spoken — no on-screen text, no narration, no camera
+directions), though a LIGHT inline performance cue in parentheses is allowed (see schema). Schema:
 
 {
   "production_type": "<same as input>",
@@ -131,12 +153,11 @@ DIALOGUE (no stage directions, no on-screen text, no narration). Schema:
     {
       "n": <same as input>,
       "scene_label": "<same as input>",
-      "scene_brief": "<ONE short line — what this scene does, for the 'scenes at a glance' list. e.g. 'Rapid present→past verb drill' / 'No-judgement: speak out loud, make 1000 mistakes' / 'Affordability + 15 min/day close'.>",
-      "supernova_script": "<your Supernova AI re-pitch of this scene's audio_transcript, in ENGLISH. Each spoken turn on its OWN line, prefixed with the speaking character's ASSIGNED NAME + ' says:' — e.g. 'Ramesh says:' / 'Miss Nova says:' — using the names from characters[] (one line per turn). PURE DIALOGUE — what is SPOKEN, nothing else. Same visual beat + pacing; Supernova payload + Miss Nova voice.>"
+      "scene_brief": "<ONE short line describing what HAPPENS visually / in action in this scene, for the skim-only 'scenes at a glance' list. Describe the action or moment, NOT the marketing beat — e.g. 'Learner oils her hair while the robot corrects her' / 'App interface: speaking-practice screen' / 'Final install call-to-action'. NEVER a pitch-point label like 'Lands no-judgement beat' or 'Personalization beat'.>",
+      "supernova_script": "<this scene's slice of the ONE continuous conversation, in ENGLISH. Each spoken turn on its OWN line, prefixed with the speaking character's ASSIGNED NAME + ' says:' — e.g. 'Ramesh says:' / 'Miss Nova says:' — using the names from characters[] (one line per turn). When all scenes' scripts are read in order they MUST form one unbroken, natural conversation (no recap, no re-introducing the brand/teacher). DIALOGUE ONLY — what is SPOKEN. A LIGHT inline performance cue in parentheses is allowed where it aids delivery, e.g. '(laughs)' or '(warmly)' — but NO on-screen text, narration, or camera directions, and NEVER speak the name 'Miss Nova'. If a scene has NO spoken dialogue (music-only / pure visual), set this to an EMPTY string \"\" — never a placeholder like '[music only]'.>"
     }
   ],
-  "pitch_points_used": ["<the >=3 Supernova pitch points you landed — e.g. 'personalization', 'no-judgement', 'cheaper than coaching'>"],
-  "self_check": "<one line: confirm the flow is natural, the brand sits in the back half (or why the seed put it early), and you KEPT the seed's hook / opening speaker / specific lines (or note exactly what the concept brief changed)>"
+  "pitch_points_used": ["<the Supernova benefits you landed — e.g. 'personalization', 'no-judgement', '21 days', '1 crore users'>"]
 }
 
 CONSTRAINTS:
@@ -144,15 +165,19 @@ CONSTRAINTS:
 - Every scene from the input appears in the output with the same `n`, in the same order. Keep the same
   OPENING SPEAKER and TURN ORDER as the seed, unless the concept brief or natural flow requires a change.
 - Keep the seed's SPECIFIC lines and examples (the exact wrong-English phrase being corrected, the exact
-  question). Do not substitute a different example or invent dialogue — only re-skin (brand + pitch points
-  + CTA) and apply the concept brief.
-- `supernova_script` MUST put each spoken turn on its OWN line prefixed with the speaker's ASSIGNED NAME + " says:" (e.g. "Ramesh says:", "Miss Nova says:"), using the names from `characters[]` — never "Character A says:". One line per turn. PURE DIALOGUE only — no stage directions, no on-screen text.
+  question) and the turn order. Do not SUBSTITUTE a different example or change what a beat is about — but
+  you may add a short clarifying / warmth line on the kept example, and a light connecting reaction where
+  the format invites it (see priority 4), as long as the seed's hook, examples and order stay intact.
+- `supernova_script` MUST put each spoken turn on its OWN line prefixed with the speaker's ASSIGNED NAME + " says:" (e.g. "Ramesh says:", "Miss Nova says:"), using the names from `characters[]` — never "Character A says:". One line per turn. DIALOGUE ONLY — no on-screen text, no narration, no camera directions; a LIGHT inline performance cue in parentheses (e.g. "(laughs)") is allowed where it aids delivery. The character name "Miss Nova" is a speaker LABEL only — it must NOT appear inside any spoken line.
 - **WRITE 100% PURE ENGLISH — every word.** The master is entirely in English: NO Hindi/Tamil/Telugu/etc.
-  words at all, not even romanized flavour ("yaar", "koi baat nahi"). The code-mix is added later at
-  localization, not here. Keep the warm, conversational rhythm — in plain English. Never output
-  Devanagari/Tamil/etc. script. EXCEPTION: brand proper nouns (Supernova AI, Miss Nova).
-- Do NOT change the visuals or scene order. If a scene's dialogue is genuinely impossible to re-skin, emit
-  it with `supernova_script: "[scene needs manual edit]"`. Never silently skip scenes.
+  *words or phrases* at all, not even romanized flavour ("yaar", "koi baat nahi"). The code-mix is added
+  later at localization, not here. Keep the warm, conversational rhythm — in plain English. Never output
+  Devanagari/Tamil/etc. script. EXCEPTIONS: brand proper nouns (Supernova AI, Miss Nova); and you MAY NAME
+  an Indian language as an English word where the seed does ("learn English through Kannada", "in your own
+  Hindi") — *naming* a language is allowed; *writing in it* is not.
+- Do NOT change the visuals or scene order. A scene with NO spoken dialogue (music-only / pure visual) gets
+  `supernova_script: ""` (empty). Only if a scene's dialogue is genuinely impossible to re-skin, emit it
+  with `supernova_script: "[scene needs manual edit]"`. Never silently drop a scene from the JSON.
 
 INPUT:
 """

@@ -375,6 +375,28 @@ def _char_brief(dchar: dict) -> str:
     return ap.split(".")[0][:80] if ap else ""
 
 
+# Placeholders the rewrite/localizer may put in a scene that has no spoken dialogue — never rendered
+# into the flowing script (a music-only / pure-visual scene contributes no voiceover line).
+_SCRIPT_PLACEHOLDERS = ("[music only, no speech]", "[music only]", "[no speech]", "[scene needs manual edit]")
+
+
+def _is_placeholder_script(s: str) -> bool:
+    t = (s or "").strip().lower()
+    return (not t) or t in (p.lower() for p in _SCRIPT_PLACEHOLDERS)
+
+
+def scene_scripts_in_order(parsed_rewrite: dict, field: str = "supernova_script") -> list:
+    """The per-scene script slices that carry real dialogue, in scene order, placeholders dropped.
+    Joined top-to-bottom these form the ONE flowing master script the deliverable shows (the script is
+    composed as a single continuous conversation; the scene split is only for visual alignment)."""
+    out = []
+    for s in parsed_rewrite.get("scenes", []):
+        txt = (s.get(field) or "").strip()
+        if not _is_placeholder_script(txt):
+            out.append(txt)
+    return out
+
+
 def _derive_format(parsed_decompose: dict) -> str:
     """Fallback ad-format label when the rewrite didn't emit one (e.g. old sidecars)."""
     pt = (parsed_decompose.get("production_type") or "").strip()
@@ -515,27 +537,35 @@ def build_supernova_doc(ad_id: str, competitor: str, decompose: dict,
     doc.add_paragraph("─" * 60)
 
     # ===================== ZONE 2 — Script (read & edit this) =====================
+    # English MASTER: the script is ONE continuous conversation — rendered as a single flowing block with
+    # NO per-scene headings (per-scene slices joined in order; music-only / placeholder scenes dropped).
+    # LOCALIZED doc: kept per-scene ("Scene N" + English + language) — the TTS/round-trip parser keys off
+    # those headings, and the reviewer reads both languages side by side. The "Same cast as above." marker
+    # stays either way so the localize/TTS round-trip can locate the Script zone.
     doc.add_heading("Script", level=1)
     if cast:
         doc.add_paragraph("Same cast as above.")
-    for scene_r in scenes_r:
-        n = scene_r.get("n", 0)
-        doc.add_heading(f"Scene {n}", level=2)
-        eng = (scene_r.get("english_script") or "").strip()
-        loc = (scene_r.get("supernova_script") or "").strip()
-        if eng:
-            # Combined per-language doc — English block first, then the language block, so the
-            # reviewer reads both side by side and can fix any structure the translation broke.
-            doc.add_heading("English", level=3)
-            for line in eng.split("\n"):
+    is_localized = any((s.get("english_script") or "").strip() for s in scenes_r)
+    if is_localized:
+        for scene_r in scenes_r:
+            n = scene_r.get("n", 0)
+            eng = (scene_r.get("english_script") or "").strip()
+            loc_s = (scene_r.get("supernova_script") or "").strip()
+            doc.add_heading(f"Scene {n}", level=2)
+            if eng:
+                # Combined per-language doc — English block first, then the language block, so the
+                # reviewer reads both side by side and can fix any structure the translation broke.
+                doc.add_heading("English", level=3)
+                for line in eng.split("\n"):
+                    if line.strip():
+                        doc.add_paragraph(line.strip())
+                doc.add_heading(lang_label or "Localized", level=3)
+            for line in loc_s.split("\n"):
                 if line.strip():
                     doc.add_paragraph(line.strip())
-            doc.add_heading(lang_label or "Localized", level=3)
-            for line in loc.split("\n"):
-                if line.strip():
-                    doc.add_paragraph(line.strip())
-        else:
-            for line in loc.split("\n"):
+    else:
+        for block in scene_scripts_in_order(parsed_rewrite, "supernova_script"):
+            for line in block.split("\n"):
                 if line.strip():
                     doc.add_paragraph(line.strip())
 
@@ -631,9 +661,12 @@ def verify_docs(ad_id: str, comp_path: pathlib.Path, sn_path: pathlib.Path,
         paragraphs = list(doc.paragraphs)
         if len(paragraphs) < min_scenes * 3:
             issues.append(f"{label}: only {len(paragraphs)} paragraphs (expected ≥ {min_scenes * 3})")
-        scene_headings = [p for p in paragraphs if p.text.startswith("Scene ")]
-        if len(scene_headings) < min_scenes:
-            issues.append(f"{label}: only {len(scene_headings)} scene headings (expected ≥ {min_scenes})")
+        # The competitor analyst doc is per-scene ("Scene N" headings). The Supernova deliverable is now
+        # ONE flowing script (no per-scene headings in the Script zone), so only assert this on competitor.
+        if label == "competitor":
+            scene_headings = [p for p in paragraphs if p.text.startswith("Scene ")]
+            if len(scene_headings) < min_scenes:
+                issues.append(f"{label}: only {len(scene_headings)} scene headings (expected ≥ {min_scenes})")
         # Check for empty paragraphs masquerading as headings
         for p in paragraphs:
             if p.style.name.startswith("Heading") and not p.text.strip():

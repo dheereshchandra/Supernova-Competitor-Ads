@@ -94,7 +94,12 @@ THE THREE CHECKS:
    names/places are all EXPECTED and must NOT be flagged as deviation.
 3. ERRORS (guardrail_id "error", severity "moderate", or "severe" if it breaks the ad) — wrong or
    inconsistent character names (should be Indian + consistent; "Miss Nova" for the AI), non-Indian or
-   invented locations, hallucinated content, or brand mislabels.
+   invented locations, hallucinated content, or brand mislabels. ALSO (moderate) flag a [SCRIPT] line that
+   SPEAKS the character name "Miss Nova" aloud — she is an internal speaker label only and is never named in
+   the voiceover (she says "I"/"me"; others say "an AI teacher"). IMPORTANT: the "Name says:" prefix at the
+   START of every [SCRIPT] line is a speaker LABEL, not spoken words — judge ONLY the dialogue AFTER "says:".
+   So "Miss Nova says: Hello" is FINE (label); flag only if "Miss Nova" appears in the spoken portion (e.g.
+   "Anjali says: I learned this from Miss Nova"). The spoken product name "Supernova AI" is always fine.
 
 A competitor BRAND NAME/LOGO that appears ONLY in a [VISUAL] line is an expected re-branding artifact —
 do NOT flag it (still flag any NON-brand visual problem). Be STRICT but PRECISE: only genuine findings,
