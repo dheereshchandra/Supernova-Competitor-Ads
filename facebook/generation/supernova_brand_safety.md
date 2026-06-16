@@ -34,7 +34,12 @@ AND our **rewrite**, so it can compare them. It runs **three** checks and emits 
    re-pointed CTA, Indianized names/places) as deviation.
 3. **`error`** — wrong or inconsistent **character names** (must be Indian + consistent; "Miss Nova" for
    the AI), **non-Indian or invented locations**, hallucinated content, or brand mislabels (moderate, or
-   severe if it breaks the ad).
+   severe if it breaks the ad). **Also flag (moderate) any spoken line that says the character name
+   "Miss Nova" aloud** — "Miss Nova" is the AI teacher's internal speaker-label only and is NEVER named in
+   the voiceover (she refers to herself as "I"/"me"; others say "an AI teacher" / "this AI teacher"). NOTE:
+   the "Name says:" prefix is a speaker LABEL, not spoken words — judge only the text AFTER "says:", so
+   "Miss Nova says: …" is fine; flag only if "Miss Nova" is in the spoken portion. The spoken **product**
+   name "Supernova AI" is fine — only the **character** name "Miss Nova" must not appear inside a spoken line.
 
 **Severity → verdict** (computed deterministically): any **severe** → `block` (🔴 Priority review) ·
 any **moderate** → `flag` (🟡 Review suggested) · none → `pass` (🟢 Standard). Be precise, quote the exact

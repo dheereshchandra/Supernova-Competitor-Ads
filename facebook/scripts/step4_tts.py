@@ -188,12 +188,7 @@ def resolve_script(ad_id: str, language: str, source_mode: str) -> tuple[list, l
         try:
             svc = _gdrive.build_drive_service(load_env())
             txt = _gdrive.export_doc_text(svc, fid)
-            edited = loc.parse_doc_scenes(txt)
-            applied = 0
-            for sc in scenes:
-                e = edited.get(sc["n"])
-                if e and e.get("script"):
-                    sc["script"] = e["script"]; applied += 1
+            applied = loc.overlay_doc_edits(scenes, txt)
             doc_native = ttx.parse_tts_input_block(txt, language)  # team edits to the TTS block
             source = (f"EDITED gdoc — {applied}/{len(scenes)} scenes overlaid"
                       + (f", {len(doc_native)} TTS-input lines" if doc_native else ""))

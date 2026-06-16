@@ -124,6 +124,69 @@ def parse_doc_scenes(text: str) -> dict:
     return out
 
 
+def parse_doc_script_lines(text: str) -> list:
+    """Ordered dialogue lines in the 'Script' zone of an exported Supernova Doc, as a FLAT list — for the
+    flowing (header-less) English master where the script is one continuous block with no 'Scene N'
+    headings. Same zone bounds as parse_doc_scenes; skips separators / zone labels."""
+    start = text.find("Same cast as above.")
+    if start < 0:
+        m = re.search(r"(?m)^Script\s*$", text)
+        start = m.start() if m else 0
+    zone = text[start:]
+    for stop in ("TTS input", "Provenance"):
+        i = zone.find(stop)
+        if i >= 0:
+            zone = zone[:i]
+    out = []
+    for ln in zone.splitlines():
+        s = ln.strip()
+        if not s or set(s) <= {"─", "-", " "}:
+            continue
+        if s in ("Same cast as above.", "Script", "English") or re.match(r"^Scene \d+$", s):
+            continue
+        out.append(s)
+    return out
+
+
+def overlay_doc_edits(scenes: list, doc_text: str) -> int:
+    """Overlay the team's EDITED English Doc onto the per-scene skeleton (each {n, script, ...}).
+    Two doc shapes are supported so the round-trip survives the move to a flowing master:
+      • headed (legacy / localized docs): 'Scene N' headings → map edits per scene.
+      • flowing English master (current): no scene headings → re-segment the edited Script zone back into
+        scenes by each scene's committed line count (graceful: any extra lines append to the last spoken
+        scene; if the team added/removed lines the grouping is approximate but no text is lost).
+    Mutates scenes in place; returns how many scenes were overlaid."""
+    headed = parse_doc_scenes(doc_text)
+    if headed:
+        applied = 0
+        for sc in scenes:
+            e = headed.get(sc.get("n"))
+            if e and e.get("script"):
+                sc["script"] = e["script"]
+                applied += 1
+        return applied
+    flat = parse_doc_script_lines(doc_text)
+    if not flat:
+        return 0
+    # Only scenes that actually rendered dialogue into the doc consume `flat` lines — use the SAME
+    # predicate build_supernova_doc used (scene_scripts_in_order drops empty AND placeholder scenes such
+    # as "[music only, no speech]"), so the committed per-scene line counts stay in lockstep with the
+    # rendered line stream. (Counting a non-empty placeholder scene here would offset every later scene.)
+    spoken = [sc for sc in scenes if not build_docs._is_placeholder_script(sc.get("script"))]
+    i, applied = 0, 0
+    for idx, sc in enumerate(spoken):
+        count = len([l for l in (sc.get("script") or "").split("\n") if l.strip()])
+        chunk = flat[i:i + count]
+        i += count
+        if idx == len(spoken) - 1 and i < len(flat):   # dump any remainder onto the last spoken scene
+            chunk += flat[i:]
+            i = len(flat)
+        if chunk:
+            sc["script"] = "\n".join(chunk)
+            applied += 1
+    return applied
+
+
 def resolve_english_source(ad_id: str, prefer_gdoc: bool):
     """Return (skeleton, comments, source_label, decompose, competitor).
     skeleton = list of {n, scene_label, script, on_screen_text}: the committed structure
@@ -147,13 +210,7 @@ def resolve_english_source(ad_id: str, prefer_gdoc: bool):
         if fid:
             try:
                 svc = _gdrive.build_drive_service(load_env())
-                edited = parse_doc_scenes(_gdrive.export_doc_text(svc, fid))
-                applied = 0
-                for sc in skeleton:
-                    e = edited.get(sc["n"])
-                    if e and e.get("script"):
-                        sc["script"] = e["script"]
-                        applied += 1
+                applied = overlay_doc_edits(skeleton, _gdrive.export_doc_text(svc, fid))
                 comments = _gdrive.list_unresolved_comments(svc, fid)
                 source = (f"EDITED gdoc — {applied}/{len(skeleton)} scenes parsed, "
                           f"{len(comments)} unresolved comments"
