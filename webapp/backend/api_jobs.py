@@ -309,6 +309,24 @@ class TTSBody(BaseModel):
     ad_id: str
     languages: list[str]
     force: bool = False
+    voice_overrides: dict[str, str] = {}   # {character name -> voice_id} from the picker
+
+
+@router.get("/api/tts/setup")
+def tts_setup(pipeline: str, competitor: str, ad_id: str, language: str = "English",
+              _user: str = Depends(require_user)):
+    """Voice-picker data: the ad's characters (each with its auto-assigned default voice for
+    this language) + the catalog of named voices to choose from."""
+    if pipeline != "facebook":
+        raise HTTPException(422, "TTS is Facebook-only for now")
+    try:
+        proc = subprocess.run(
+            ["python3.13", "scripts/step4_tts.py", ad_id, "--competitor", competitor,
+             "--setup", "--language", language or "English"],
+            cwd=FACEBOOK_DIR, capture_output=True, text=True, timeout=60)
+        return json.loads(proc.stdout[proc.stdout.index("{"):])
+    except Exception as e:
+        raise HTTPException(500, f"Could not load voices ({type(e).__name__})")
 
 
 @router.post("/api/jobs/tts", status_code=201)
@@ -336,6 +354,14 @@ def create_tts_job(body: TTSBody, user: str = Depends(require_user)):
         (body.pipeline, body.competitor, body.ad_id, ad.get("media_type"), user,
          int(body.force), cost, "tts", json.dumps(body.languages)))
     job_id = cur.lastrowid
+    # Persist the per-character voice picks ({name -> voice_id}); step4_tts reads <id>.voices.json.
+    vpath = Path(FACEBOOK_DIR) / "step4_workspace" / "scenes" / f"{body.ad_id}.voices.json"
+    overrides = {k: v for k, v in (body.voice_overrides or {}).items() if v}
+    if overrides:
+        vpath.parent.mkdir(parents=True, exist_ok=True)
+        vpath.write_text(json.dumps(overrides, ensure_ascii=False), encoding="utf-8")
+    elif vpath.exists():
+        vpath.unlink()
     _log(body.pipeline, body.competitor, body.ad_id, user, "tts",
          f"queued tts job #{job_id} → {', '.join(body.languages)} (~{inr(cost)})")
     try:
