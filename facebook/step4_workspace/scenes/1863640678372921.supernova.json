@@ -1,0 +1,107 @@
+{
+  "competitor_id": "1863640678372921",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "male presenter",
+        "appearance": "Male, 30s, medium build, fair complexion. He has short black hair styled upwards. His facial features are smooth and symmetrical.",
+        "wardrobe": "Wearing a black t-shirt underneath a dark navy blazer.",
+        "demeanor": "Confident, smiling, and engaging."
+      },
+      {
+        "id": "B",
+        "name": "Vikram",
+        "role": "male audience member",
+        "appearance": "Male, 20s, medium build, fair complexion. He has short black hair and wears dark-rimmed glasses.",
+        "wardrobe": "Wearing a dark green button-down shirt.",
+        "demeanor": "Serious and earnest."
+      },
+      {
+        "id": "C",
+        "name": "Amit",
+        "role": "male audience member",
+        "appearance": "Male, 20s, medium build, fair complexion. He has short black hair.",
+        "wardrobe": "Wearing a dark brown jacket over a dark shirt.",
+        "demeanor": "Serious and slightly concerned."
+      },
+      {
+        "id": "D",
+        "name": "Priya",
+        "role": "female audience member",
+        "appearance": "Female, 20s, slim build, fair complexion. She has long, wavy black hair.",
+        "wardrobe": "Wearing a light purple patterned top and silver earrings.",
+        "demeanor": "Serious and attentive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Presenter's Question",
+        "supernova_script": "Rahul says: Why do you still freeze when it's time to speak English?",
+        "scene_summary": "- Hooks the viewer with a direct, relatable question\n- Names English immediately\n- Sets up the problem to be solved",
+        "supernova_on_screen_text": "Why do you freeze when speaking English?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Audience Excuses",
+        "supernova_script": "Vikram says: I studied in a Hindi medium school, sir.\nRahul says: Right.\nAmit says: I have no one to practice speaking with without being judged.\nRahul says: I hear you.\nPriya says: Between work and family, I just don't have the time.",
+        "scene_summary": "- Validates common learner struggles\n- Sets up the need for a private, non-judgmental space\n- Introduces the time constraint objection",
+        "supernova_on_screen_text": "Hindi medium school. No one to practice with. No time to learn."
+      },
+      {
+        "n": 3,
+        "scene_label": "Presenter's Solution",
+        "supernova_script": "Rahul says: What if I told you there's a way?\nUnknown speaker says: How, sir?\nRahul says: Meet Miss Nova on the Supernova AI app. She is your personal AI teacher who tests your level and builds a plan just for you.",
+        "scene_summary": "- Introduces Supernova AI and Miss Nova\n- Lands Beat a (Personalization)\n- In-story character question triggers the reveal",
+        "supernova_on_screen_text": "Meet Miss Nova on Supernova AI. Personal AI teacher. Tests your level."
+      },
+      {
+        "n": 4,
+        "scene_label": "App Store",
+        "supernova_script": "Rahul says: Join over one crore Indians. You speak, she listens, and she explains your mistakes in Hindi so you never feel lost.",
+        "scene_summary": "- Lands Beat c (You SPEAK)\n- Lands Beat g (Logic in your language)\n- Uses approved social proof matching the visual",
+        "supernova_on_screen_text": "Supernova AI. 1 Crore+ Downloads. Speak and learn in Hindi."
+      },
+      {
+        "n": 5,
+        "scene_label": "Final Pitch",
+        "supernova_script": "Rahul says: Make a thousand mistakes, she will never judge you.\nRahul says: Stop wasting hours scrolling your feed.\nRahul says: Give Supernova AI just fifteen minutes a day, and start seeing real progress in your interviews.",
+        "scene_summary": "- Lands Beat b (Privacy/No-judgment)\n- Negative and positive time anchors\n- Lands Beat e (Real-life scenarios: interviews)",
+        "supernova_on_screen_text": "No judgment. Just 15 mins a day. Start seeing progress in interviews."
+      },
+      {
+        "n": 6,
+        "scene_label": "End Card",
+        "supernova_script": "Rahul says: Click install and start speaking English with Supernova AI today.",
+        "scene_summary": "- Delivers a clean, direct call to action\n- Reinforces the core promise of speaking",
+        "supernova_on_screen_text": "Supernova AI English speaking app. Install Now."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (Personalization), b (Privacy/No-judgment), c (You SPEAK), e (Real-life scenarios), g (Logic in your language)",
+      "kept_from_seed": "Split-screen stage presenter addressing audience excuses",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure used; no comparative cost used."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "MySivi App",
+        "supernova_swap": "Supernova AI app"
+      },
+      {
+        "competitor_brand": "MySivi AI",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.657036
+}

@@ -1,0 +1,29 @@
+{
+  "ad_library_id": "876285282244370",
+  "language": "Marathi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Struggling with English",
+        "script": "Character A (Voiceover) says: 12 varshacha school ani mahaagda coaching, pan jenvha interview madhe English bolaychi vel yete...\nCharacter A says: [Screaming and crying in frustration]",
+        "on_screen_text": "Coaching classes var hazaro rupaye kharch kelya nantar mazi English\n\nSupernova app var divsaatun fakt 15 minutes practice kelya nantar mazi English"
+      },
+      {
+        "n": 2,
+        "scene_label": "Confident English Speaker",
+        "script": "Character A says: Ata me flawlessly bolto. Kasa? Vachna band kela ani Supernova var bolna suru kela.\nCharacter A says: Mazi AI teacher, Miss Nova, mazyasobat real job interviews chi practice karte.\nCharacter A says: Me 100 mistakes karto, ani te mala kontahi judge na karta live correct karte.\nCharacter A says: Te logic pan mala Marathi madhe explain karte.\nCharacter A says: Fakt 15 minutes a day. Me tashi shiklo, ani tu pan shiku shakto.",
+        "on_screen_text": "Coaching classes var hazaro rupaye kharch kelya nantar mazi English\n\nSupernova app var divsaatun fakt 15 minutes practice kelya nantar mazi English\n\nSupernova install kara, aajach bolayla suru kara"
+      }
+    ],
+    "self_critique_fixed": "The script has been successfully localized into romanized, code-mixed Marathi. Applied the 'Whisper / intimate UGC' register using the warm, peer-to-peer 'tu-tier' address for the viewer, which is natural in Marathi. Replaced 'mother tongue' with 'Marathi' as per T5. Kept all brand names, product vocabulary, and numbers in English numerals as per T2. Checked syllable counts to ensure a perfect ±20% line-fit."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing an approved character testimonial and generic category contrasts without any violations.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517692.980541
+}

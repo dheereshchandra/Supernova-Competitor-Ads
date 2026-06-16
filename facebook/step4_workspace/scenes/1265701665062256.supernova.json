@@ -1,0 +1,107 @@
+{
+  "competitor_id": "1265701665062256",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Anjali",
+        "role": "Protagonist / Narrator",
+        "appearance": "Young Indian woman, fair complexion, large expressive eyes, dark hair often tied back or braided. Features change slightly between shots due to AI generation.",
+        "wardrobe": "Wears various outfits including a yellow saree, a light blue top, and a yellow top.",
+        "demeanor": "Shifts from worried and anxious to confident, happy, and successful."
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "Anjali's Husband",
+        "appearance": "Young Indian man, fair complexion, short dark hair.",
+        "wardrobe": "Wears a light blue shirt and dark trousers. Carries a backpack and a steel tiffin.",
+        "demeanor": "Appears tired and ordinary."
+      },
+      {
+        "id": "C",
+        "name": "Savita",
+        "role": "Mother-in-law",
+        "appearance": "Older Indian woman, grey hair tied in a bun, wears glasses.",
+        "wardrobe": "Wears a red saree.",
+        "demeanor": "Initially stern and critical, later respectful."
+      },
+      {
+        "id": "D",
+        "name": "Rekha",
+        "role": "Rekha (Friend)",
+        "appearance": "Young Indian woman, fair complexion, dark hair.",
+        "wardrobe": "Wears a green saree, then modern suits and kurtas.",
+        "demeanor": "Happy, carefree, and affluent."
+      },
+      {
+        "id": "E",
+        "name": "Mr. Sharma",
+        "role": "Boss",
+        "appearance": "Middle-aged Indian man, fair complexion, short dark hair.",
+        "wardrobe": "Wears a white shirt and dark tie.",
+        "demeanor": "Professional, encouraging, and pleased."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Financial Struggle",
+        "supernova_script": "Anjali says: My husband's salary was just twenty-two thousand rupees.\nAnjali says: And my mother-in-law would taunt me, \"Why do you need a fifty-rupee cream when you can't even speak English?\"",
+        "scene_summary": "- Establishes the shame/dignity hook\n- Names English immediately\n- Sets up the underdog narrative",
+        "supernova_on_screen_text": "My husband's salary was just ₹22,000. Taunts for a ₹50 cream."
+      },
+      {
+        "n": 2,
+        "scene_label": "Comparing Lives",
+        "supernova_script": "Anjali says: My name is Anjali. My friend Rekha and I both got married in 2022.\nAnjali says: Rekha spoke fluent English, got a great corporate job, and her husband earns well too.\nAnjali says: They go to five-star hotels in Mumbai.\nAnjali says: I wanted to work, but I would freeze during interviews because of my broken English.\nAnjali says: I had to ask for money even to buy vegetables.",
+        "supernova_on_screen_text": "Rekha: Fluent English, great job, 5-star hotels.\nAnjali: Broken English, struggling for vegetable money.",
+        "scene_summary": "- Deepens the emotional stakes and dignity gap\n- Connects financial struggle directly to the lack of spoken English\n- Lands real-life scenario beat (job interviews)"
+      },
+      {
+        "n": 3,
+        "scene_label": "Finding the App",
+        "supernova_script": "Anjali says: One day I decided to change my life, so I downloaded Supernova AI.\nAnjali says: I met Miss Nova, my personal AI teacher.\nAnjali says: She didn't give me generic lessons. She analyzed my level and built a plan just for me.\nAnjali says: I made a thousand mistakes, but she never judged me. She just corrected me in Marathi.",
+        "supernova_on_screen_text": "Downloaded Supernova AI.\nMiss Nova: Personal AI Teacher.\nAnalyzes your level.\n100% Private & No Judgement.",
+        "scene_summary": "- Introduces Supernova AI and Miss Nova\n- Lands payload beat A (personalization)\n- Lands payload beat B (privacy/no-judgement)\n- Lands payload beat G (logic in mother tongue)"
+      },
+      {
+        "n": 4,
+        "scene_label": "Career Success",
+        "supernova_script": "Anjali says: Slowly, my confidence grew. I finally cleared a job interview!\nAnjali says: Soon, I was speaking up in meetings and handling client calls.\nAnjali says: Because I learned by actually speaking, not just reading grammar books.\nAnjali says: Within a few months, my boss noticed my progress and gave me a promotion.",
+        "supernova_on_screen_text": "Cleared a job interview!\nSpeaking in meetings & client calls.\nLearned by speaking, not reading.",
+        "scene_summary": "- Resolves the career stakes\n- Lands payload beat C (you speak, not read)\n- Lands payload beat D (old methods failed)\n- Delivers personal testimonial of progress"
+      },
+      {
+        "n": 5,
+        "scene_label": "Financial Independence",
+        "supernova_script": "Anjali says: Now I help with the household expenses, and my mother-in-law speaks to me with respect.\nAnjali says: Because my English is strong, and I am finally financially independent.",
+        "supernova_on_screen_text": "Financially independent. Earning respect.",
+        "scene_summary": "- Resolves the shame hook into dignity/respect\n- Emotional payoff for the target demographic"
+      },
+      {
+        "n": 6,
+        "scene_label": "Call to Action",
+        "supernova_script": "Anjali says: Stop wasting hours scrolling through reels.\nAnjali says: Just give fifteen minutes a day to Supernova AI.\nAnjali says: Click install, meet Miss Nova, and start speaking English today.",
+        "supernova_on_screen_text": "Stop scrolling.\nJust 15 mins/day.\nInstall Supernova AI.\nStart speaking English today.",
+        "scene_summary": "- Delivers tight close with negative/positive time anchors\n- Clean CTA without any hard price or fake urgency"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a, b, c, d, e, g",
+      "kept_from_seed": "Narrative shame-drama and career success visual sequence",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee price; removed 1 rupee offer."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.647425
+}

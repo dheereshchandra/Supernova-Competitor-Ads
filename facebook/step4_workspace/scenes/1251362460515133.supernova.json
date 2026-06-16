@@ -1,0 +1,92 @@
+{
+  "competitor_id": "1251362460515133",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "male protagonist/learner",
+        "appearance": "Young Indian male, early 20s, slim build, brown complexion, short curly dark hair. Expressive face with thick eyebrows.",
+        "wardrobe": "Initially wears a light blue patterned short-sleeve shirt, then a plain blue t-shirt, and later a dark blue suit jacket over a white shirt.",
+        "demeanor": "Transitions from highly anxious and sweating to pleasantly surprised, and finally to confident and happy."
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Small, floating, blue robotic avatar. It has a glowing screen for a face with simple digital eyes and small mechanical arms.",
+        "wardrobe": "N/A (robotic body)",
+        "demeanor": "Friendly and helpful."
+      },
+      {
+        "id": "C",
+        "name": "Priya",
+        "role": "female co-learner",
+        "appearance": "Young woman, early 20s, fair complexion, long straight dark hair.",
+        "wardrobe": "Yellow long-sleeve sweater.",
+        "demeanor": "Warm, friendly, and engaged."
+      },
+      {
+        "id": "D",
+        "name": "Interviewer",
+        "role": "interviewer",
+        "appearance": "Older male, 50s, grey hair, wearing glasses. Partially visible from the side.",
+        "wardrobe": "Dark suit.",
+        "demeanor": "Professional and welcoming."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Anxious Learner",
+        "supernova_script": "Rahul says: I used to freeze whenever I had to speak English. I was terrified of making mistakes.",
+        "scene_summary": "- Hook: Relatable anxiety around speaking English\n- Emotion: Stress and fear\n- Payload: Names English immediately",
+        "supernova_on_screen_text": "Afraid to speak English? Worried about making mistakes?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Discovering the App",
+        "supernova_script": "Rahul says: Then I found Supernova AI. My AI teacher, Miss Nova, analyzes my level and builds a personalized plan just for me.\nRahul says: Plus, I can practice in private. No one is watching, and she never judges my mistakes.",
+        "scene_summary": "- Purpose: Introduce Supernova AI and Miss Nova\n- Emotion: Relief and pleasant surprise\n- Payload: Beats a (personalization) and b (privacy/no-judgement)",
+        "supernova_on_screen_text": "Meet Supernova AI! Practice speaking with your personal AI teacher anytime."
+      },
+      {
+        "n": 3,
+        "scene_label": "Co-learner Practice",
+        "supernova_script": "Rahul says: I don't just read textbooks anymore. I actually speak out loud, practicing with Miss Nova and other learners like Priya.",
+        "scene_summary": "- Purpose: Show active speaking practice\n- Emotion: Engagement and connection\n- Payload: Beat c (You SPEAK, not type/read)",
+        "supernova_on_screen_text": "Speak out loud and practice with a supportive community!"
+      },
+      {
+        "n": 4,
+        "scene_label": "Confident Interview",
+        "supernova_script": "Rahul says: We practice real-life situations, like my upcoming job interview in Mumbai.\nRahul says: With daily practice, I started seeing visible progress in my confidence.",
+        "scene_summary": "- Purpose: Show the real-world payoff of practice\n- Emotion: Confidence and professional success\n- Payload: Beat e (Real-life scenarios - job interview)",
+        "supernova_on_screen_text": "Practice real-life scenarios like job interviews. Start your journey today!"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "supernova_script": "Rahul says: Stop wasting hours scrolling. Give Supernova AI fifteen minutes a day. Download the app and start speaking!",
+        "scene_summary": "- Purpose: Drive app installs\n- Emotion: Motivation and urgency\n- Payload: Tight close with negative/positive time anchors and clear CTA",
+        "supernova_on_screen_text": "Just 15 minutes a day. Download Supernova AI today!"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speak out loud), e (interview scenario)",
+      "kept_from_seed": "Anxious to confident transformation with AI avatar and interview payoff",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "Removed hard rupee prices (1 Rupee, 299 rupees) from seed; no price mentioned."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi App",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.645953
+}

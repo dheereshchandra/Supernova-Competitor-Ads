@@ -1,0 +1,57 @@
+{
+  "ad_library_id": "1458602939352865",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Problem with Reels",
+        "script": "Priya says: Subah uthte hi sabse pehle kya karte ho?\nPriya says: Instagram.\nPriya says: Aur raat ko sone se pehle?\nPriya says: Reels.\nPriya says: Aur beech mein?\nPriya says: Phir se Reels.\nPriya says: Din ke 4 hours scrolling mein nikal dete ho, par English bolne ke liye 15 minutes nahi nikal sakte?\nPriya says: Isiliye toh bolne ke time par tum freeze ho jaate ho.\nPriya says: Main yeh nahi keh rahi ki phone use mat karo.\nPriya says: Bas un 4 hours mein se 15 minutes nikal lo.\nPriya says: Supernova AI app download karo.",
+        "on_screen_text": "Subah uthte hi\nInstagram\nSone se pehle\nReels\nAur beech mein\nPhir se Reels\nDaily 4 hours par English nahi?\nIsiliye tum freeze ho jaate ho\nMain yeh nahi keh rahi\nki phone use mat karo\nBas 15 minutes nikaalo\nSupernova AI app download karo\nSupernova AI logo"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Interface",
+        "script": "[music only, no speech]",
+        "on_screen_text": "MISS NOVA\nHello, Rahul! I'm so glad to meet you! How can I assist you in improving your English today?\nStart talking to interrupt Miss Nova"
+      },
+      {
+        "n": 3,
+        "scene_label": "The Solution",
+        "script": "Priya says: Supernova AI tumhe deta hai ek personal AI teacher, jiska naam hai Miss Nova.\nPriya says: Woh sabko same lessons nahi deti. Woh tumhari speech analyze karke tumhare liye ek personalized plan banati hai.\nPriya says: Tum real-life situations ki practice kar sakte ho, jaise job interview ya manager call.\nPriya says: Aur sabse best part? Tum full privacy mein practice kar sakte ho.\nPriya says: Aadhi raat ko 1000 mistakes karo. Woh tumhe instantly correct karegi aur tum par kabhi nahi hasegi.\nPriya says: Plus, woh logic Hindi mein samjhati hai, taaki tum kabhi lost feel na karo.\nPriya says: Tumne apni native language bolkar hi seekhi, aur English bhi bilkul waise hi kaam karti hai.\nPriya says: Baad mein karunga, yeh kehna band karo.\nPriya says: Bas daily 15 minutes ki practice se, tum ek month mein visible progress dekh sakte ho.",
+        "on_screen_text": "Personal AI teacher\nMiss Nova\nTumhari speech analyze karti hai\nTumhare liye plan banati hai\nJob interviews ki practice karo\nFull privacy\n1000 mistakes karo\nWoh kabhi nahi hasegi\nLogic Hindi mein samjhati hai\nBolkar seekho\nBaad mein karunga kehna band karo\nDaily 15 minutes\nVisible progress dekhna shuru karo"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Install",
+        "script": "[music only, no speech]",
+        "on_screen_text": "Supernova AI English Spe...\nPending...\nVerified by Play Protect\nCancel\nMaster Spoken Eng\nSharpen your English with 1-on-1 calls. Try Supernova AI fast"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Priya says: Feeds par time waste karna band karo.\nPriya says: Aaj hi Supernova AI install karo aur confidently English bolna shuru karo.",
+        "on_screen_text": "Time waste karna band karo\nSupernova AI install karo\nAaj se hi bolna shuru karo\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "The translation is fully romanized and code-mixed for a Hindi audience. I selected the 'Friends / peer conversation' register module to match the blunt, tough-love tone of the original English master, using the natural 'tum'-tier register. The hook opens in native Hindi ('Subah uthte hi...'). All stay-English keywords (like 'scrolling', 'freeze', 'practice', 'personalized plan', 'privacy') and English numerals are preserved per T2 rules. The self-reference to the language has been kept as 'Hindi' per T5."
+  },
+  "safety": {
+    "verdict": "flag",
+    "violations": [
+      {
+        "guardrail_id": "G2.1",
+        "category": "Competitors & disparagement",
+        "severity": "moderate",
+        "scene": "Scene 5",
+        "quote": "Feeds par time waste karna band karo.",
+        "why": "It uses negative/trashing framing ('time waste') against 'Feeds' (a scroll surface), which violates the rule that Reels/feeds must only be used as neutral time-reallocation anchors.",
+        "fix": "Feeds scroll karne ke bajay, aaj hi Supernova AI install karo."
+      }
+    ],
+    "summary": "The ad is mostly compliant, but Scene 5 contains a moderate violation of G2.1 by trashing 'Feeds' as a waste of time instead of using it as a neutral time-reallocation anchor.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781516961.710398
+}

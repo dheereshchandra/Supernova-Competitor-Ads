@@ -1,0 +1,35 @@
+{
+  "ad_library_id": "1592044018737354",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Struggling with English",
+        "script": "Rahul says: Mujhe toh English seekhna impossible lagta hai. Maine saalon grammar books par waste kar diye, par aaj bhi job-interview me freeze ho jata hoon.\nMiss Nova says: Wo isliye kyunki aap sirf padhte hain, kabhi bolte nahi. Main hoon Miss Nova, Supernova AI se. Main aapka exact level analyze karke aapke liye ek personalized plan ready karti hoon.",
+        "on_screen_text": "Rahul: Mujhe toh English seekhna impossible lagta hai. Maine saalon grammar books par waste kar diye, par aaj bhi job-interview me freeze ho jata hoon.\nMiss Nova: Wo isliye kyunki aap sirf padhte hain, kabhi bolte nahi. Main hoon Miss Nova, Supernova AI se. Main aapka exact level analyze karke aapke liye ek personalized plan ready karti hoon."
+      },
+      {
+        "n": 2,
+        "scene_label": "Going Crazy",
+        "script": "Rahul says: Par bolte waqt main itni mistakes karta hoon! Log hamesha mujh par haste hain.\nMiss Nova says: Yahan nahi. Aap raat ke 3 a.m. ko bhi thousand mistakes kar sakte hain, aur main aapko bina judge kiye correct karungi.",
+        "on_screen_text": "Rahul: Par bolte waqt main itni mistakes karta hoon! Log hamesha mujh par haste hain.\nMiss Nova: Yahan nahi. Aap raat ke 3 a.m. ko bhi thousand mistakes kar sakte hain, aur main aapko bina judge kiye correct karungi."
+      },
+      {
+        "n": 3,
+        "scene_label": "Confident and Cool",
+        "script": "Rahul says: Sach me? Aur agar mujhe koi word samajh na aaye toh?\nMiss Nova says: Main logic aapki apni language Hindi me explain karungi taaki sab easily samajh aa jaye. Ab scrolling band kijiye aur din me bas 15 minutes practice kijiye.\nRahul says: Main abhi Supernova AI install kar raha hoon.",
+        "on_screen_text": "Rahul: Sach me? Aur agar mujhe koi word samajh na aaye toh?\nMiss Nova: Main logic aapki apni language Hindi me explain karungi taaki sab easily samajh aa jaye. Ab scrolling band kijiye aur din me bas 15 minutes practice kijiye.\nRahul: Main abhi Supernova AI install kar raha hoon."
+      }
+    ],
+    "self_critique_fixed": "The translation strictly adheres to all localization rules. The hook in Scene 1 starts with a native word ('Mujhe') to satisfy T7. The character 'Karthik' has been successfully re-cast to 'Rahul' (the default Hindi male name) per T6. Miss Nova maintains a warm, polite plural ('aap' / 'kijiye') register, while Rahul speaks in a natural, casual-respectful tone. Key product and daily-speech terms are kept in English per T2, and 'fifteen minutes' is correctly formatted as '15 minutes'. The language self-reference in Scene 3 has been localized to 'Hindi' per T5."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved behavior-critique hooks and resolving the character's struggle in a dignified, confident manner.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517236.572294
+}

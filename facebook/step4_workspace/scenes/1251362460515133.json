@@ -1,0 +1,179 @@
+{
+  "competitor_id": "1251362460515133",
+  "parsed": {
+    "duration_s": 29.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video consists of AI-generated illustrations with limited, morphing animation typical of generative video tools. The character designs exhibit an overly smooth, slightly uncanny quality, and the lighting is highly stylized.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male protagonist/learner",
+        "appearance": "Young Indian male, early 20s, slim build, brown complexion, short curly dark hair. Expressive face with thick eyebrows.",
+        "wardrobe": "Initially wears a light blue patterned short-sleeve shirt, then a plain blue t-shirt, and later a dark blue suit jacket over a white shirt.",
+        "demeanor": "Transitions from highly anxious and sweating to pleasantly surprised, and finally to confident and happy."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Small, floating, blue robotic avatar. It has a glowing screen for a face with simple digital eyes and small mechanical arms.",
+        "wardrobe": "N/A (robotic body)",
+        "demeanor": "Friendly and helpful."
+      },
+      {
+        "id": "C",
+        "role": "female co-learner",
+        "appearance": "Young woman, early 20s, fair complexion, long straight dark hair.",
+        "wardrobe": "Yellow long-sleeve sweater.",
+        "demeanor": "Warm, friendly, and engaged."
+      },
+      {
+        "id": "D",
+        "role": "interviewer",
+        "appearance": "Older male, 50s, grey hair, wearing glasses. Partially visible from the side.",
+        "wardrobe": "Dark suit.",
+        "demeanor": "Professional and welcoming."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Anxious Learner",
+        "setting": "Indoors at a desk, warm blurred background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A sits at a desk, looking extremely nervous and stressed. He has visible sweat drops on his face and neck. His mouth is slightly open in anxiety, and his eyebrows are furrowed. He is wearing a light blue patterned short-sleeve shirt. The background is a softly blurred interior setting with warm lighting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A young man sits at a desk looking very anxious and sweaty. A text box overlays the center of the screen with a question about being afraid to speak English.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\"English-\u0c32\u0c4b \u0c2e\u0c3e\u0c1f\u0c4d\u0c32\u0c3e\u0c21\u0c3e\u0c32\u0c02\u0c1f\u0c47 \u0c2d\u0c2f\u0c02\u0c17\u0c3e \u0c09\u0c02\u0c26\u0c3e? \u0c24\u0c2a\u0c4d\u0c2a\u0c41\u0c17\u0c3e \u0c2e\u0c3e\u0c1f\u0c4d\u0c32\u0c3e\u0c21\u0c24\u0c3e\u0c2e\u0c47\u0c2e\u0c4b \u0c05\u0c28\u0c3f \u0c15\u0c02\u0c17\u0c3e\u0c30\u0c41\u0c17\u0c3e \u0c09\u0c02\u0c26\u0c3e?\" (Are you afraid to speak in English? Are you worried you might speak incorrectly?)"
+      },
+      {
+        "n": 2,
+        "start_s": 4.5,
+        "end_s": 11.5,
+        "screenshot_at_s": 8.0,
+        "scene_label": "Discovering the App",
+        "setting": "Cozy living room, sitting on a sofa, natural window light.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is relaxing on a sofa, holding a smartphone in both hands and looking at the screen. He is wearing a plain blue t-shirt. Character B, a small, glowing blue robotic avatar, is floating in the air just above the phone. Character A has an expression of pleasant surprise, with wide eyes and a slight smile. The background shows a cozy living room with warm, natural light coming from a window.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The young man is on a couch looking at his phone. A small blue robot avatar pops out of the phone screen, surprising him. Text overlays appear explaining the app and the AI teacher feature.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u0c07\u0c26\u0c3f\u0c17\u0c4b MySivi App! (Here is the MySivi App!)\n\u0c07\u0c15\u0c4d\u0c15\u0c21 \u0c2e\u0c28 AI Teacher \u0c24\u0c4b \u0c2e\u0c40\u0c30\u0c41 \u0c0e\u0c2a\u0c4d\u0c2a\u0c41\u0c21\u0c41 \u0c15\u0c3e\u0c35\u0c3e\u0c32\u0c02\u0c1f\u0c47 \u0c05\u0c2a\u0c4d\u0c2a\u0c41\u0c21\u0c41 \u0c2e\u0c3e\u0c1f\u0c4d\u0c32\u0c3e\u0c21\u0c35\u0c1a\u0c4d\u0c1a\u0c41. (Here you can talk to our AI Teacher whenever you want.)"
+      },
+      {
+        "n": 3,
+        "start_s": 11.5,
+        "end_s": 15.5,
+        "screenshot_at_s": 13.5,
+        "scene_label": "Co-learner Practice",
+        "setting": "Two different indoor living spaces, softly lit.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character C is sitting indoors, holding a smartphone and smiling warmly at the screen. She is wearing a yellow long-sleeve top. The background features a bookshelf and a potted plant, lit by soft daylight.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character A is sitting on a sofa, holding a smartphone. He is wearing a plain blue t-shirt. He is smiling broadly and looking directly at the phone screen, appearing engaged in a pleasant conversation. The background is a softly lit living room.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen view showing a young woman on top and the young man on the bottom, both smiling at their phones as if on a video call. A text overlay describes practicing with other co-learners.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u0c05\u0c02\u0c24\u0c47 \u0c15\u0c3e\u0c26\u0c41, \u0c2e\u0c40\u0c32\u0c3e\u0c17\u0c47 \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c41\u0c28\u0c47 \u0c07\u0c24\u0c30 \u0c35\u0c4d\u0c2f\u0c15\u0c4d\u0c24\u0c41\u0c32\u0c24\u0c4b (Co-learners) \u0c15\u0c32\u0c3f\u0c38\u0c3f \u0c2e\u0c3e\u0c1f\u0c4d\u0c32\u0c3e\u0c21\u0c3f \u0c2e\u0c40\u0c30\u0c41 Practice \u0c1a\u0c47\u0c2f\u0c35\u0c1a\u0c4d\u0c1a\u0c41! (Not only that, you can practice by talking with other people (Co-learners) who are learning just like you!)"
+      },
+      {
+        "n": 4,
+        "start_s": 15.5,
+        "end_s": 24.5,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Confident Interview",
+        "setting": "Professional office environment, bright lighting.",
+        "characters_in_scene": [
+          "A",
+          "D"
+        ],
+        "camera": "medium",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is dressed in a professional dark blue suit jacket over a white shirt. He is sitting at a desk across from Character D, an older man with grey hair and glasses, who is partially visible from the side. Character A is smiling confidently and extending his hand to shake Character D's hand. The setting appears to be an office environment with bright, professional lighting.",
+            "characters_in_panel": [
+              "A",
+              "D"
+            ]
+          }
+        ],
+        "visual_description": "The young man, now wearing a suit and looking confident, shakes hands with an older man across a desk in an office setting. Text overlays promote the app's learning path and a trial offer.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\"\u0c07\u0c02\u0c26\u0c41\u0c32\u0c4b \u0c09\u0c28\u0c4d\u0c28 'Learning Path' \u0c26\u0c4d\u0c35\u0c3e\u0c30\u0c3e \u0c2e\u0c40 English-\u0c28\u0c3f \u0c15\u0c4d\u0c30\u0c2e\u0c15\u0c4d\u0c30\u0c2e\u0c02\u0c17\u0c3e \u0c2e\u0c46\u0c30\u0c41\u0c17\u0c41\u0c2a\u0c30\u0c41\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c1a\u0c4d\u0c1a\u0c41.\" (You can gradually improve your English through the 'Learning Path' in this.)\n\u0c15\u0c47\u0c35\u0c32\u0c02 1 \u0c30\u0c42\u0c2a\u0c3e\u0c2f\u0c32\u0c15\u0c47 Trial \u0c2a\u0c4d\u0c30\u0c3e\u0c30\u0c02\u0c2d\u0c3f\u0c02\u0c1a\u0c02\u0c21\u0c3f! (Start the Trial for just 1 Rupee!)"
+      },
+      {
+        "n": 5,
+        "start_s": 24.5,
+        "end_s": 29.0,
+        "screenshot_at_s": 26.5,
+        "scene_label": "Call to Action",
+        "setting": "Indoors, softly blurred warm background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A is standing indoors, wearing a plain blue t-shirt. He is looking directly forward with a bright, confident smile. He is raising his right hand to give a clear thumbs-up gesture. The background is a softly blurred, warm-toned living space.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The young man, back in casual clothes, smiles and gives a thumbs-up to the camera. A text overlay provides pricing information and a call to download the app.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u0c06 \u0c24\u0c30\u0c4d\u0c35\u0c3e\u0c24 \u0c28\u0c46\u0c32\u0c15\u0c41 299 \u0c30\u0c42\u0c2a\u0c3e\u0c2f\u0c32\u0c41 \u0c2e\u0c3e\u0c24\u0c4d\u0c30\u0c2e\u0c47. \u0c08\u0c30\u0c4b\u0c1c\u0c47 Download \u0c1a\u0c47\u0c38\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f! (After that, only 299 rupees per month. Download today!)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.371528
+}

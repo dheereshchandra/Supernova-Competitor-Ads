@@ -1,0 +1,57 @@
+{
+  "ad_library_id": "4333182190269237",
+  "language": "Kannada",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Farmer impresses doctor",
+        "script": "Ramesh says: I struggled to catch my breath, doctor. The pain in my chest is constant now, and the medicine is not helping.\nDr. Kiran says: Wow! Nimma English nijvaaglu amazing aagide. Bengaluru-nalli yaavdaadhru expensive coaching class-ge hogidra?\nRamesh says: Illa doctor, aa classes thumba costly aagutthe. Adhakkinta hechhaagi, naanu nanna halliyalli bari 5th standard vargu maathra odhirodu.\nDr. Kiran says: Matthe niv ishtu confidently aagi English henge maatadtidira?\nRamesh says: Ella Supernova AI indha doctor. Naanu nanna personal AI teacher, Miss Nova jothe daily practice maadtheeni.",
+        "on_screen_text": "English confidently henge maatadodu?\nI struggled to catch my breath, doctor.\nWow! Nimma English amazing aagide.\nYaavdaadhru expensive coaching class-ge hogidra?\nIlla doctor, aa classes thumba costly.\nMatthe ishtu confidently henge maatadtidira?\nElla Supernova AI indha!\nNaanu daily Miss Nova jothe practice maadtheeni."
+      },
+      {
+        "n": 2,
+        "scene_label": "App interface showcase",
+        "script": "Ramesh says: Ivru ellargu adhe same boring lessons kodalla. Nanna exact English level-na analyze maadi, nangaagi ondh personalized plan ready maadtare.\nRamesh says: Matthe ishralli best part andre, naanu midnight-nalli saavira mistakes maadidru, ivru nannanna yaavatthu judge maadalla, kaliyaadi nagalla.",
+        "on_screen_text": "Miss Nova AI Teacher\nPersonalized Learning Path\nPractice without judgement\nNangaagi ondh personalized plan ready maadtare.\nSaavira mistakes maadidru, ivru judge-e maadalla."
+      },
+      {
+        "n": 3,
+        "scene_label": "Learning commitment",
+        "script": "Ramesh says: Naanu elladhru stuck aadre, ivru logic-na direct aagi Kannada-nallene explain maadtare, so nange yaavatthu lost ansolla.\nRamesh says: Niv daily bari 10 to 15 minutes ivra jothe maatadbeku anthe. Naavu namma mother tongue-na henge kalithvo, adhe thara... direct aagi maatadi kalibahudu!\nDr. Kiran says: Idhu nijvaaglu incredible aagide. Naanu idhanna use maadoke start maadbeku.\nRamesh says: Kanditha use maadi! Olley English maatadodhrindha jana namge kodo respect-e change aagutthe.",
+        "on_screen_text": "30 DAYS\n10-15 mins\nLogic-na Kannada-nallene explain maadtare.\nDaily 10 to 15 minutes maatadi.\nMother tongue thara maatadi kaliyiri!\nOlley English maatadodhrindha jana kodo respect-e change aagutthe."
+      },
+      {
+        "n": 4,
+        "scene_label": "App installation",
+        "script": "Ramesh says: Videos scroll maadtha hours waste maadodhna nillisi. Ivatthu Supernova AI app-na download maadi.\nRamesh says: Daily practice maadodhrindha, ondh month-nallene nimma speaking-nalli visible progress nodbahudu.",
+        "on_screen_text": "Supernova AI English App\nInstalling...\nHours waste maadodhna nillisi.\nIvatthu Supernova AI app download maadi.\nOndh month-nalli visible progress nodi."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to action",
+        "script": "Miss Nova says: Eegle install mela click maadi, Supernova AI download maadi.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied the Kannada language module rules: used modern spoken contractions like 'niv' and 'ondh' instead of formal 'neevu' and 'ondu'. Swapped the language self-reference from Hindi to Kannada in Scene 3. Recast the city to Bengaluru to feel natural for a Kannada audience. Kept the quoted medical English lines verbatim as required by T2a. Ensured Miss Nova uses the polite plural register while keeping the overall dialogue anti-newspaperish and highly conversational."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 4",
+        "quote": "Installing...",
+        "why": "The use of a simulated app store installation pop-up and download progress indicator constitutes a fake UI/misleading mechanic, which is prohibited under Meta's ad policies.",
+        "fix": "Replace the simulated installation pop-up with a standard app interface demonstration or a clean call-to-action screen."
+      }
+    ],
+    "summary": "The ad is highly compliant and creative, but contains a severe Meta policy violation in Scene 4 due to a simulated app installation UI.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517591.0089788
+}

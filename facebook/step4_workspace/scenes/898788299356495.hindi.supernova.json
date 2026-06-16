@@ -1,0 +1,23 @@
+{
+  "ad_library_id": "898788299356495",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Sad vs Confident Meme",
+        "script": "Rahul says: Saalon waste kar diye expensive English classes par, fir bhi interviews me freeze ho jata tha. Fir mujhe mili Supernova AI.\nRahul says: Ab mai Miss Nova ke saath privately speaking practice karta hoon. Wo mere liye ek custom plan banati hain aur meri mistakes ko kabhi judge nahi karti!",
+        "on_screen_text": "Top: Expensive English classes par paise waste karne ke baad bhi interviews me freeze hone wala mai.\n\nBottom: Supernova AI par Miss Nova ke saath privately speaking practice karne ke baad mai."
+      }
+    ],
+    "self_critique_fixed": "Applied the Hindi module and global rules. The hook opens with the native word 'Saalon' to ensure a strong local thumbstop. Kept all key product terms like 'English classes', 'interviews', 'privately speaking practice', 'custom plan', and 'mistakes' in English to maintain the code-mixed, natural WhatsApp-style register. Addressed Miss Nova with respectful honorifics ('karti hain') to adhere to the politeness architecture. No Sanskritized or formal words were used, keeping the tone highly colloquial and relatable."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, featuring a safe shame-to-triumph resolution and emphasizing private, non-judgmental practice.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517680.239158
+}

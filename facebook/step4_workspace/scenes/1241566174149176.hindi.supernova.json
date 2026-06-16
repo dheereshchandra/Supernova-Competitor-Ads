@@ -1,0 +1,69 @@
+{
+  "ad_library_id": "1241566174149176",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Presenter and Audience",
+        "script": "Rahul says: Main fluent English bolta hoon, par agar aap mujhse pucho ki past perfect tense kya hai... toh mujhe bilkul nahi pata. Aur isse koi farq nahi padta! Aapne apni mother tongue grammar rules ratt kar toh nahi seekhi na? Bol kar seekhi hai. Agar aap sach mein English bolna chahte ho, toh rules ratna band karo.",
+        "on_screen_text": "Supernova AI\nMain fluent English bolta hoon\npar agar aap pucho\npast perfect tense kya hai\ntoh mujhe nahi pata\nAur isse koi farq nahi padta\nAapne apni mother tongue\ngrammar rules ratt kar\nnahi seekhi\nBol kar seekhi hai\nRules ratna band karo"
+      },
+      {
+        "n": 2,
+        "scene_label": "Presenter and App UI",
+        "script": "Rahul says: Aur yahin kaam aata hai Supernova AI. Aapki AI teacher, Miss Nova, sabko ek jaisa lesson nahi deti. Wo aapka level test karti hai aur aapke liye ek personalized plan banati hai.",
+        "on_screen_text": "Supernova AI\nMeet Miss Nova\nWo aapka level test karti hai\naur banati hai ek\npersonalized plan\nsirf aapke liye\nMiss Nova\nPractice Now"
+      },
+      {
+        "n": 3,
+        "scene_label": "Presenter and User",
+        "script": "Rahul says: Aap actually zor se bol kar practice karte ho, type kar ke nahi.",
+        "on_screen_text": "Supernova AI\nAap actually\nzor se bol kar\npractice karte ho\ntype kar ke nahi"
+      },
+      {
+        "n": 4,
+        "scene_label": "Presenter and Audience Return",
+        "script": "Rahul says: Aur kyunki ye ek AI hai, toh aap bina kisi judgement ke hazaaron mistakes kar sakte ho. Koi aapko dekh nahi raha hai.",
+        "on_screen_text": "Supernova AI\nBina kisi judgement ke\n1000 mistakes karo\nKoi nahi dekh raha"
+      },
+      {
+        "n": 5,
+        "scene_label": "Presenter and Chat UI",
+        "script": "Rahul says: Wo aapki mistakes ko instantly correct karti hai aur Hindi mein logic samjhati hai, taaki aap kabhi lost feel na karo.",
+        "on_screen_text": "Supernova AI\nWo instantly\ncorrect karti hai aur\nHindi mein logic\nsamjhati hai"
+      },
+      {
+        "n": 6,
+        "scene_label": "Presenter, Audience, and CTA",
+        "script": "Rahul says: 1 crore se zyada users pehle se hi job interviews jaise real-life scenarios practice kar rahe hain. Feeds scroll karne mein ghanton waste karna band karo.",
+        "on_screen_text": "Supernova AI\n1 CRORE+\nusers practice kar rahe hain\njob interviews\nGhanton waste karna\nband karo"
+      },
+      {
+        "n": 7,
+        "scene_label": "End Card",
+        "script": "Rahul says: Supernova AI ko din mein bas 15 minutes do, aur khud visible progress dekho. Abhi install karo.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nAbhi install karo"
+      }
+    ],
+    "self_critique_fixed": "Applied the 'Authority / stage monologue' register for a confident, natural presenter tone. Ensured the hook opens with a native word ('Main') per T7. Replaced 'your own language' with 'Hindi' per T5. Kept all grammar terms, brand names, and numbers in their correct English/numeral formats per T2."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 7",
+        "quote": "Supernova AI ko din mein bas 15 minutes do, aur khud visible progress dekho.",
+        "why": "The brand voice promises a guaranteed outcome of visible progress without using the required hedge language such as 'start to' or 'can'.",
+        "fix": "Supernova AI ko din mein bas 15 minutes do, aur khud visible progress dekhna shuru karo."
+      }
+    ],
+    "summary": "The ad is highly compliant but contains a single severe violation in Scene 7 where a progress claim lacks the required hedge language.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781515082.740124
+}

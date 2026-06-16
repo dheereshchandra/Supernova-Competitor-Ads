@@ -1,0 +1,61 @@
+{
+  "competitor_id": "898788299356495",
+  "parsed": {
+    "duration_s": 10.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is a meme constructed from existing Bollywood movie clips featuring actor Shah Rukh Khan. It uses a split-screen format to contrast two different emotional states.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "sad man",
+        "appearance": "Male, 30s, medium build, fair complexion, dark hair styled with volume. He has a clean-shaven look with sharp facial features.",
+        "wardrobe": "Wearing a light grey suit jacket over a white collared shirt.",
+        "demeanor": "Sad, tearful, and emotional."
+      },
+      {
+        "id": "B",
+        "role": "confident man",
+        "appearance": "Male, 30s, medium build, fair complexion, dark hair slicked back. He has a clean-shaven look with sharp facial features.",
+        "wardrobe": "Wearing a dark suit jacket, a white collared shirt, and dark sunglasses.",
+        "demeanor": "Confident, stylish, and cool."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Sad vs Confident Meme",
+        "setting": "Top: Indoor with decorative lights. Bottom: Outdoor daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up of Character A. He is indoors, surrounded by out-of-focus, ornate hanging lights that create a warm, golden bokeh effect in the background. He is wearing a light grey suit jacket and a white shirt. His expression is deeply sad, and he appears to be crying or on the verge of tears, looking slightly downwards and to the side. The lighting is soft and cinematic.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium shot of Character B walking outdoors during the daytime. He is wearing a dark suit jacket, a white collared shirt, and dark sunglasses. His hair is slicked back. He is walking confidently towards the camera, adjusting his sunglasses at one point. The background is slightly blurred, showing what appears to be a street or outdoor public area with some indistinct structures. The lighting is bright and natural.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen video with a horizontal division. The top half shows a sad, crying man in a light suit indoors. The bottom half shows the same man looking confident and cool in a dark suit and sunglasses, walking outdoors. Text overlays are present at the top and middle of the screen, providing context for the meme comparison.",
+        "audio_transcript": "Unknown speaker says: \u0926\u0938 \u092c\u0939\u093e\u0928\u0947 \u0915\u0930\u0915\u0947 \u0932\u0947 \u0917\u090f \u0926\u093f\u0932 [Took my heart by making ten excuses]\nUnknown speaker says: \u0932\u0947 \u0917\u090f \u0926\u093f\u0932 [Took my heart]\nUnknown speaker says: \u0926\u0938 \u092c\u0939\u093e\u0928\u0947 \u0915\u0930\u0915\u0947 \u0932\u0947 \u0917\u090f \u0926\u093f\u0932 [Took my heart by making ten excuses]\nUnknown speaker says: \u0932\u0947 \u0917\u090f \u0926\u093f\u0932 [Took my heart]\nUnknown speaker says: \u0926\u0938 \u092c\u0939\u093e\u0928\u0947 [Ten excuses]",
+        "on_screen_text": "2000-3000 rupaye kharch karke bhi\n\"English nahi seekh paaya\"\nkehkar rota hua main\n\nMysivi app par sirf \u20b93 mein\nEnglish seekhne ke baad."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.389947
+}

@@ -1,0 +1,51 @@
+{
+  "ad_library_id": "2528689397550560",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "App Icon",
+        "script": "Rahul says: Chivariki 1 crore+ Indians Supernova AI lo English matladadam nerchukuntunnaru. Asalu idi ela pani chesthundo chuddam.",
+        "on_screen_text": "Gemini, Instagram, ET Mo..., Amazon, Slack, WhatsApp, Truecaller, Supernova AI, Calendar, Swiggy, GPay, BHIM"
+      },
+      {
+        "n": 2,
+        "scene_label": "AI Chat Interface",
+        "script": "Rahul says: Meeru directly Miss Nova tho practice cheyochu. Enni mistakes chesina, aame mimmalni eppudu judge cheyyadhu, ventane correct chesthundi. Mana Telugu lone grammar logic explain chesthundi, so meeku clear ga artham avuthundi. Anthe kadu, mee exact level ni analyze chesi, meekosam oka personalized plan ready chesthundi.",
+        "on_screen_text": "epdi irukka, How are you?, Miss Nova, I understand you're asking how I'm doing! I'm doing well, thank you! How about you? How do you feel today?, i doing great, I am doing great., That's amazing! Just a small tweak: you can say, \"I'm doing great.\" What makes you feel great today?, That is amazing! A small change: you can say \"I am doing great\". What makes you feel good today?"
+      },
+      {
+        "n": 3,
+        "scene_label": "Learning Path",
+        "script": "Rahul says: Indulo meeku job interviews nundi real-life practice scenarios untayi. Daily just 15 minutes aame tho practice chesthe, one month lone mee confidence lo chala change chustharu.",
+        "on_screen_text": "Learning Path, Unit 1 Meet and Greet, 1 Chapter, Informal greetings, Informal Opening Greeting words and Phrases, START +20 STARS, What is Learning Path?, Master basic to advanced English speaking skills, Structured Learning: Progress through units, chapters, and lessons, Basic to advanced English: a structured path to learn and practice, Designed by expert teachers and aligned with global learning standards, Get hints during conversations to keep them engaging and learn new sentences, Continue"
+      },
+      {
+        "n": 4,
+        "scene_label": "Play Store",
+        "script": "Rahul says: Feeds scroll chesthu hours waste cheyadam apandi. Ippude Supernova AI install chesi, ee roje English matladadam start cheyandi.",
+        "on_screen_text": "English Speaking App - Supernova AI, Improve Your Spoken English and Fluency with AI Support, #10 top free in education, Language, 4.6 star, 64K reviews, Rated for 3+, 1Cr+ Downloads, Supernova AI, Improve English speaking with AI, Data safety, Ratings and reviews"
+      }
+    ],
+    "self_critique_fixed": "Applied the Telugu language module rules strictly. The hook in Scene 1 opens with the native word 'Chivariki' to capture attention immediately. Applied the mandatory female subject verb agreement rule for Miss Nova in Scene 2 ('judge cheyyadhu' instead of the masculine 'cheyadu'). Replaced the English self-reference with 'Telugu' in Scene 2. Kept all stay-English words and numbers intact while maintaining a natural, conversational, and respectful 'meeru' register throughout."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 3",
+        "quote": "Daily just 15 minutes aame tho practice chesthe, one month lone mee confidence lo chala change chustharu.",
+        "why": "The script promises a definite improvement in confidence within a month without using the required hedge language such as 'can' or 'start to see'.",
+        "fix": "Daily just 15 minutes aame tho practice chesthe, one month lone mee confidence lo change start avvadam chuda vachu."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe violation in Scene 3 where a progress outcome is promised without hedge language.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517676.422691
+}

@@ -1,0 +1,66 @@
+{
+  "competitor_id": "954609790259093",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "male presenter",
+        "appearance": "Bald male with a full black beard and round glasses. Medium build, brown complexion. Expressive facial features.",
+        "wardrobe": "Black t-shirt with a white graphic ('OPERATION SAFED SAGAR') and khaki pants.",
+        "demeanor": "Confident, authoritative, and slightly exasperated."
+      },
+      {
+        "id": "B",
+        "name": "Amit",
+        "role": "male learner",
+        "appearance": "Male with short black hair and a light mustache and beard. Medium build, brown complexion.",
+        "wardrobe": "White and blue plaid shirt worn unbuttoned over a maroon t-shirt with white text, paired with black pants.",
+        "demeanor": "Clueless, passive, and slightly embarrassed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Pronunciation comparison",
+        "supernova_script": "Rahul says: Schedule.\nAmit says: Shedule.\nRahul says: Alarm.\nAmit says: Alaram.\nRahul says: Salad.\nAmit says: Salaad.",
+        "scene_summary": "- Hook: Relatable Indian-English pronunciation errors.\n- Emotion: Humorous self-diagnosis for the viewer.\n- Payload: Sets up the need for spoken practice.",
+        "supernova_on_screen_text": "SCHEDULE ✔️ SHEDULE ❌ ALARM ✔️ ALARAM ❌ SALAD ✔️ SALAAD ❌"
+      },
+      {
+        "n": 2,
+        "scene_label": "App pitch",
+        "supernova_script": "Rahul says: Stop it, Amit. Knowing the words is not enough if you freeze when it is time to speak.\nRahul says: Reading books for twelve years will not fix it. You have to actually practice speaking.\nRahul says: That is why I use Supernova AI. You just talk to Miss Nova, your personal AI teacher.\nRahul says: She analyzes your exact level and builds a custom plan just for you.\nRahul says: And the best part? You can make a thousand mistakes at three in the morning, and she will never judge you or laugh at you.\nRahul says: She corrects your pronunciation instantly and explains the logic in your own language, so you never feel lost.\nRahul says: You learn by actually speaking out loud, not just passively watching videos.\nRahul says: Do not wait for your next job interview to feel embarrassed. Get Supernova AI and start speaking today.",
+        "scene_summary": "- Purpose: Delivers the core Supernova AI value proposition.\n- Payload beats: a (personalization), b (privacy/no-judgement), c (you speak), d (old methods failed), e (job interview), g (logic in own language).\n- Emotion: Authoritative, reassuring, and urgent.",
+        "supernova_on_screen_text": "Stop it, Amit. Knowing the words is not enough if you freeze when it is time to speak. Reading books for twelve years will not fix it. You have to actually practice speaking. That is why I use Supernova AI. You just talk to Miss Nova, your personal AI teacher. She analyzes your exact level and builds a custom plan just for you. And the best part? You can make a thousand mistakes at three in the morning, and she will never judge you or laugh at you. She corrects your pronunciation instantly and explains the logic in your own language, so you never feel lost. You learn by actually speaking out loud, not just passively watching videos. Do not wait for your next job interview to feel embarrassed. Get Supernova AI and start speaking today."
+      },
+      {
+        "n": 3,
+        "scene_label": "App screencast and CTA",
+        "supernova_script": "Rahul says: Stop wasting hours scrolling. Give it just fifteen minutes a day. Install Supernova AI and start speaking confidently.",
+        "scene_summary": "- Purpose: Final call to action.\n- Payload beats: Negative time anchor + positive time anchor (15 min/day).\n- Emotion: Direct and motivating.",
+        "supernova_on_screen_text": "Download Supernova AI Now GET IT ON Google play"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (you speak), d (old methods), e (interview scenario), g (logic in own language)",
+      "kept_from_seed": "Pronunciation comparison hook and side-by-side pitch format",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "PW Talk",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "Riva",
+        "supernova_swap": "Miss Nova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.665452
+}

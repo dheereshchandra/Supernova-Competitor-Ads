@@ -1,0 +1,96 @@
+{
+  "ad_library_id": "1314122850567353",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Need for English",
+        "script": "Rahul says: Bina freeze hue actually English bolna kaise seekhein? Yeh ek aisa question hai jo hum sabke paas hai.",
+        "on_screen_text": "ENGLISH"
+      },
+      {
+        "n": 2,
+        "scene_label": "Career and Travel Goals",
+        "script": "Rahul says: Chahe job interview clear karna ho, promotion paana ho, ya bas confident feel karna ho...",
+        "on_screen_text": "PROMOTED!"
+      },
+      {
+        "n": 3,
+        "scene_label": "Social Status",
+        "script": "Rahul says: Dusron ke samne respect earn karne aur stand out karne ke liye English ki zaroorat hoti hi hai.",
+        "on_screen_text": "English"
+      },
+      {
+        "n": 4,
+        "scene_label": "Common Excuses",
+        "script": "Rahul says: Par purane methods fail ho gaye kyunki aap sirf books padhte the, kabhi actually bolte nahi the. Aur coaching classes mein time bhi bohot lagta hai.",
+        "on_screen_text": "ENGLISH, TIME"
+      },
+      {
+        "n": 5,
+        "scene_label": "The Solution",
+        "script": "Rahul says: Isiliye aapko zaroorat hai Supernova AI ki. Miliye Miss Nova se, jo hain aapki personal AI English teacher.",
+        "on_screen_text": "SOLUTION!, Supernova AI"
+      },
+      {
+        "n": 6,
+        "scene_label": "AI Teacher Features",
+        "script": "Rahul says: Miss Nova ke saath aap out loud bolkar practice karte hain. Chahe 1000 mistakes karo, woh bina judge kiye ya hase aapko correct karengi.",
+        "on_screen_text": "ANYTIME LEARNING!, AI TEACHER"
+      },
+      {
+        "n": 7,
+        "scene_label": "Adaptive Learning",
+        "script": "Rahul says: Woh sabko ek hi tarike se nahi padhaati. Woh aapka exact level samajhkar aapke liye ek personalized plan ready karti hain.",
+        "on_screen_text": "LEVEL 1 -> LEVEL 2, AI LEVEL ADAPTING"
+      },
+      {
+        "n": 8,
+        "scene_label": "User Base",
+        "script": "Rahul says: Feeds scroll karte hue ghanton waste karna band karo, aur un 1 crore+ Indians ko join karo jo pehle se seekh rahe hain.",
+        "on_screen_text": "1 CRORE+ PEOPLE"
+      },
+      {
+        "n": 9,
+        "scene_label": "Ratings and Trust",
+        "script": "Rahul says: Jab woh aapki mistakes correct karti hain, toh logic Hindi mein samjhati hain, taaki sab kuch easily samajh aa jaye.",
+        "on_screen_text": "4.6, Ratings and reviews, Play Store, BEST CHOICE"
+      },
+      {
+        "n": 10,
+        "scene_label": "Call to Action",
+        "script": "Rahul says: Yeh coaching classes se bohot sasta hai. Din mein bas 15 minutes dijiye. Supernova AI install karein aur aaj se hi bolna start karein.",
+        "on_screen_text": "AFFORDABLE, INSTALL NOW, Supernova AI"
+      }
+    ],
+    "self_critique_fixed": "Successfully localized the script into Romanized, code-mixed Hindi following the 'Authority / stage monologue' register. Applied the hook rule (T7) to open Scene 1 with a native word ('Bina'). Followed the stay-English list (T2) for product terms, brand names, and numbers (using numerals like '1000', '1 crore+', '15'). Performed the language self-reference swap (T5) in Scene 9, changing 'your own language' to 'Hindi'. Maintained a warm, respectful yet conversational tone for Rahul addressing the viewer, and ensured Miss Nova is referred to with polite plural verbs. No brand safety conflicts or reviewer comments were present."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 10",
+        "quote": "1 Rupee coin",
+        "why": "The visual depicts a specific 1 Rupee coin, which represents an unapproved hard rupee price.",
+        "fix": "Replace the 1 Rupee coin drawing with a generic savings or discount icon."
+      },
+      {
+        "guardrail_id": "G1.4",
+        "category": "Claims & legal",
+        "severity": "moderate",
+        "scene": "Scene 9",
+        "quote": "BEST CHOICE",
+        "why": "The 'BEST CHOICE' stamp uses an absolute superlative, which is prohibited under brand guidelines.",
+        "fix": "Replace 'BEST CHOICE' with 'TOP RATED' or 'USER FAVORITE'."
+      }
+    ],
+    "summary": "The ad contains a severe violation regarding an unapproved hard rupee price representation (1 Rupee coin) and a moderate violation for using an absolute superlative (BEST CHOICE).",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781516814.1750479
+}

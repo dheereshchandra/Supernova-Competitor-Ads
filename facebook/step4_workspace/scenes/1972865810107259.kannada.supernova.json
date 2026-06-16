@@ -1,0 +1,66 @@
+{
+  "ad_library_id": "1972865810107259",
+  "language": "Kannada",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction and Problem",
+        "script": "Kiran says: Yavaagalaadru interview-nalli English maatadbeku andre, nanna brain full slow motion-ge hogbidutthe. Nanna career dreams ishteena?\nMiss Nova says: Khanditha illa! Naanu Miss Nova. Niv nanna jothe speaking practice maadidre, thumba confident aagi English maatadoke start maadtira.\nKiran says: Nijavaaglu? Ondh AI teacher-aa? Naan arthha maadkollo thara actual aagi explain maadthira?\nMiss Nova says: Of course! Naanu logic-na nimma swantha Kannada-dallene explain maadtini, so niv yavaaglu confuse aagolla. Niv ready idira?",
+        "on_screen_text": "Interview-nalli English maatadbeku andre brain slow aagbidutthe.\nKhanditha illa! Naanu Miss Nova. Nanna jothe practice maadi.\nNange arthha aago thara explain maadtira?\nLogic-na nimma language-alle explain maadtini. Ready idira?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Objections",
+        "script": "Kiran says: Nange kalibeku anta ide, aadre coaching classes thumba expensive iratthe. Matte college, travel madodrallene time ella hogbidutthe, nange zero time irodu. Idhakkella time henge adjust maadli?\nMiss Nova says: Adhu yene problem illa. Supernova AI app-nalli, naanu nimma English level-na analyze maadi, niv yelli struggle maadtira nodi ondh personalized plan ready maadtini.",
+        "on_screen_text": "Coaching classes expensive. Time-e illa. Henge adjust maadli?\nYene problem illa. Supernova AI nimgaagi personalized plan ready maadutthe.\nSupernova AI"
+      },
+      {
+        "n": 3,
+        "scene_label": "Solution and Time Commitment",
+        "script": "Miss Nova says: Dinaa nanna jothe just 15 minutes out loud speak maadi practice maadi. Consistent practice maadidre, ondh month-nallene nimge visible progress kanisutthe.\nKiran says: Aadre naan mistakes maadidre? Nanna hale teachers thara nivu nanna judge maadtira?",
+        "on_screen_text": "Dinaa 15 minutes practice maadi. Ondh month-nalli progress nodi.\n15 mins\nMistakes maadidre judge maadtira?"
+      },
+      {
+        "n": 4,
+        "scene_label": "Teacher Persona",
+        "script": "Miss Nova says: Naanu nimma personal teacher. Niv rathri 3 a.m.-galaadru saavira mistakes maadidru, naanu live aagi correct maadtini, yavaaglu nimma nodi nagolla.\nKiran says: Super! Yaaru judge maadade iro ondh private space-e nange bekaagiddu!",
+        "on_screen_text": "3 a.m.-galaadru saavira mistakes maadi. Live correct maadtini, nagolla.\nSuper! Yaaru judge maadade iro private space!"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: Feeds scroll maadtha hours-gatte waste maadodna nilsi. Supernova AI-nalli English maatadoke kalithiro 1 crore-ginta hechhu Indians jothe join aagi. App install maadi, ivatthu maatadoke start maadi!\nKiran says: Naanu eegle install maadtini!",
+        "on_screen_text": "Scroll maadodna nilsi. 1 crore+ Indians jothe join aagi. Ivatte install maadi!\n1 CRORE+\nSupernova AI English Speaking... Install\nEegle install maadtini!"
+      }
+    ],
+    "self_critique_fixed": "Applied all Kannada localization rules. Recast Karthik to Kiran to fit the Kannada casting table. Ensured the hook opens with a native word ('Yavaagalaadru') rather than English. Used colloquial modern contractions like 'niv' instead of 'neevu' and 'ondh' instead of 'ondu' per the Kannada module guidelines. Kept proper nouns, brand names, and technical terms in English while maintaining a highly conversational, non-literary Kannada flow throughout."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "SCENE 5 — Call to Action",
+        "quote": "a pricing graphic with crossed-out text and a '₹1' offer appears",
+        "why": "The visual contains an unapproved hard rupee price offer of ₹1, which must be approved by the team rather than generated.",
+        "fix": "Remove the pricing graphic and the ₹1 offer, displaying only the standard app store installation interface."
+      },
+      {
+        "guardrail_id": "G6.3",
+        "category": "Price & financial",
+        "severity": "moderate",
+        "scene": "SCENE 5 — Call to Action",
+        "quote": "large 3D text reading '50 LAKHS' pops up",
+        "why": "The visual uses a fabricated social proof number instead of the single approved '1 crore+' metric.",
+        "fix": "Replace the '50 LAKHS' text with the approved '1 CRORE+' social proof graphic."
+      }
+    ],
+    "summary": "The ad contains a severe pricing violation (₹1 offer) and a moderate social proof violation (50 LAKHS graphic) in the Scene 5 visuals.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517382.2257862
+}

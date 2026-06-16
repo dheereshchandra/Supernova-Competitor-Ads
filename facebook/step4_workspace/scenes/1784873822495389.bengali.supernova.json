@@ -1,0 +1,66 @@
+{
+  "ad_library_id": "1784873822495389",
+  "language": "Bengali",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Price negotiation",
+        "script": "Sourav says: Dada, ek kilo chingri-r daam koto?\nArnab says: Ek kilo five hundred, kintu jodi du kilo nao, tahole two hundred discount diye debo.",
+        "on_screen_text": "Dada, ek kilo chingri-r daam koto?\n1 kilo 500 kintu 2 kilo nile 200 discount"
+      },
+      {
+        "n": 2,
+        "scene_label": "Customer surprise",
+        "script": "Sourav says: Wow! Dada, tumi eto fluently English bolchho ki kore?\nArnab says: Ami Supernova AI app-e practice kori.\nSourav says: Supernova AI? Sheta abar ki?",
+        "on_screen_text": "Wow! Dada, tumi eto fluently English bolchho ki kore?\nSupernova AI\nSupernova AI? Sheta abar ki?"
+      },
+      {
+        "n": 3,
+        "scene_label": "App explanation",
+        "script": "Arnab says: Ete ekjon personal AI teacher achhe, Miss Nova. She amar level check kore amar jonne ekta custom plan baniye dey.\nArnab says: Ami or sathe out loud kotha boli, ar she kono judge na kore amar mistakes gulo correct kore dey.\nArnab says: She emonki logic-gulo amar nijer bhashay, mane Bangla-te explain kore, tai ami kokhono lost feel kori na.",
+        "on_screen_text": "Personal AI teacher Miss Nova\nAmar jonne custom plan banay\nOut loud kotha bola\nJudge na kore mistakes correct kore\nNijer bhashay logic explain kore"
+      },
+      {
+        "n": 4,
+        "scene_label": "Fee inquiry",
+        "script": "Sourav says: Kintu er fees toh prochur beshi hobe, tai na?",
+        "on_screen_text": "Kintu fees toh prochur beshi hobe, tai na?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to action",
+        "script": "Arnab says: Ekdom-i na, coaching classes-er theke eta 7 gun sasta.\nArnab says: Phone scroll kora bondho koro ar dine jast 15 minutes practice koro. Ek maash-er modhyei visible progress dekhte pabe.\nArnab says: 1 crore-er-o beshi manush eta use kore. Install koro Supernova AI ar aaj thekei kotha bola shuru koro!",
+        "on_screen_text": "Coaching classes-er theke 7 gun sasta\nDine jast 15 mins practice koro\nEk maash-e visible progress\n1 crore+ users\nInstall koro Supernova AI aaj-i!"
+      }
+    ],
+    "self_critique_fixed": "The script has been localized into natural, code-mixed Bengali using the peer/friend register (tumi-tier). The characters have been re-cast to Sourav and Arnab from the Bengali casting table, and the hook opens entirely in native Bengali ('Dada, ek kilo chingri-r daam koto?') to maximize thumbstops. The multiplier '7x cheaper' was successfully localized to '7 gun sasta' per the T2h carve-out, and the language self-reference was swapped to 'Bangla-te' per T5. All other brand keywords and numerals remain correctly in English."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 5",
+        "quote": "Ek maash-er modhyei visible progress dekhte pabe.",
+        "why": "The script guarantees a result within a month without using required hedge language like 'start to see' or 'can see'.",
+        "fix": "Change the script to 'Ek maash-er modhyei visible progress dekhte shuru korbe' to indicate the start of progress."
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 5",
+        "quote": "1 RUPEE",
+        "why": "The visual description contains an unapproved hard rupee price graphic ('1 RUPEE').",
+        "fix": "Remove the '1 RUPEE' graphic from the visual description."
+      }
+    ],
+    "summary": "The ad contains a severe claim guarantee violation in Scene 5 and an unapproved hard rupee price graphic in the Scene 5 visual.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517362.4498088
+}

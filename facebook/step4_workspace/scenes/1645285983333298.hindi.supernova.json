@@ -1,0 +1,59 @@
+{
+  "ad_library_id": "1645285983333298",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Grammar correction",
+        "script": "Priya says: Miss Nova, 'When are you coming?' ka English mein reply kaise karein?\nMiss Nova says: Kabhi mat bolo, 'I will return back on Monday'.\nPriya says: Sahi baat hai, 'return back' nahi. Return ka matlab hi hota hai coming back. Dono use karna ek common mistake hai. Mujhe bas kehna chahiye, 'I will return on Monday'.\nMiss Nova says: Perfect! Aur tum toh kehti thi ki tumhe English bilkul nahi aati.\nPriya says: Mujhe bas judge hone ka darr tha! Par Supernova AI par, main aapke saath privately practice karti hoon.\nMiss Nova says: Exactly. Main aapki speech analyze karti hoon aur aapke liye ek personalized plan banati hoon.\nPriya says: Plus, yeh normal English classes se 7 guna sasta hai.",
+        "on_screen_text": "English mein reply kaise karein?\nKabhi mat bolo: I will return back\nReturn ka matlab hi hai coming back\nBas bolo: I will return on Monday\nTum toh kehti thi English nahi aati\nBina kisi judgement ke privately practice karo\nAapke liye personalized plan\nNormal classes se 7 guna sasta"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Store",
+        "script": "Priya says: Isiliye toh 1 crore se zyada Indians Supernova AI par English practice kar rahe hain.",
+        "on_screen_text": "1 crore+ Indians Supernova AI par practice kar rahe hain"
+      },
+      {
+        "n": 3,
+        "scene_label": "Time objection",
+        "script": "Miss Nova says: Aur unke liye jo kehte hain ki unke paas time nahi hai...\nPriya says: Aapko bas din mein 15 minutes English bolna hai...",
+        "on_screen_text": "Time nahi hai?\nDin mein bas 15 minutes boliye"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Interface",
+        "script": "Priya says: ...feeds scroll karne ke bajaye. Aapko ek month mein hi visible progress dikhne lagegi.",
+        "on_screen_text": "Feeds scroll karna band karo\nEk month mein visible progress dekho"
+      },
+      {
+        "n": 5,
+        "scene_label": "How to join",
+        "script": "Miss Nova says: Toh, woh humein kaise join karein, Priya?\nPriya says: Bas neeche diye gaye install button ko press karein...",
+        "on_screen_text": "Kaise join karein?\nInstall button press karein"
+      },
+      {
+        "n": 6,
+        "scene_label": "Installing App",
+        "script": "Priya says: ...aur Supernova AI app download karein.",
+        "on_screen_text": "Supernova AI download karein"
+      },
+      {
+        "n": 7,
+        "scene_label": "Call to action",
+        "script": "Priya says: ChatGPT ke peeche chhupna band karo. Supernova AI install karo, aur aaj se hi confidently English bolna shuru karo!",
+        "on_screen_text": "ChatGPT ke peeche chhupna band karo\nSupernova AI install karo\nAaj se hi confidently English bolna shuru karo"
+      }
+    ],
+    "self_critique_fixed": "Applied the 'Teaching / correction skit' register module. Ensured the hook opens in romanized Hindi while keeping the quoted English question intact. Applied the T2h carve-out for the multiplier ('7 times cheaper' -> '7 guna sasta'). Ensured Miss Nova uses warm, polite plural language, and Priya responds with respectful Hindi. All brand names and product keywords remain in English as per T2."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved comparative costs, social proof, and soft progress expectations.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517288.700843
+}

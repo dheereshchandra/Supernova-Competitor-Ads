@@ -1,0 +1,60 @@
+{
+  "ad_library_id": "810618368177111",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Practice",
+        "script": "Miss Nova says: Let's practice your English, Arun. Where are you going?\nArun says: I go to home.\nMiss Nova says: Udeshichathu, 'I am going home'. 'Go to' places-nu vendiyullathaanu, pakshe 'home'-nu 'to' venda.\nArun says: Yes, I am going home. I am very hurry.\nMiss Nova says: 'I am in a hurry' ennaanu ithu parayenda correct way.\nArun says: Okay, thank you.",
+        "on_screen_text": "Let's practice your English, Arun. Where are you going? I go to home. Udeshichathu, 'I am going home'. 'Go to' places-nu vendiyullathaanu, pakshe 'home'-nu 'to' venda. Yes, I am going home. I am very hurry. 'I am in a hurry' ennaanu ithu parayenda correct way. Okay, thank you."
+      },
+      {
+        "n": 2,
+        "scene_label": "Introduction and Objection",
+        "script": "Arun says: Wait, ningal aara? Ente car-il irunnu enne enganeya correct cheyyunnathu?\nMiss Nova says: Njan Miss Nova, Supernova AI-yile ningalude personal AI teacher. Njan ningalude exact level analyze cheythu ningalkku mathramayi oru personalized plan ready aakkum.\nArun says: Pakshe njan silly mistakes varuthiyalo? Enikku naanam thonnum.\nMiss Nova says: Ivide ningale aarum nokkunnumilla, judge cheyyunnumilla. Ningal aayiram mistakes varuthiyaalum, njan orikkalum kaliyaakkaathe athu correct cheythu tharaam.",
+        "on_screen_text": "Wait, ningal aara? Ente car-il irunnu enne enganeya correct cheyyunnathu? Njan Miss Nova, Supernova AI-yile ningalude personal AI teacher. Njan ningalude exact level analyze cheythu ningalkku mathramayi oru personalized plan ready aakkum. Pakshe njan silly mistakes varuthiyalo? Enikku naanam thonnum. Ivide ningale aarum nokkunnumilla, judge cheyyunnumilla. Ningal aayiram mistakes varuthiyaalum, njan orikkalum kaliyaakkaathe athu correct cheythu tharaam."
+      },
+      {
+        "n": 3,
+        "scene_label": "Pricing Offer",
+        "script": "Miss Nova says: Athupole, njan logic nammude swantham Malayalathil explain cheyyum, so ellam nannaayi manassilaakum.\nArun says: Ithinu nalla expense aakumo?\nMiss Nova says: Ithu valare affordable aanu, parayan poyal normal coaching classes-nekkal ezhu madangu laabhamaanu.",
+        "on_screen_text": "Athupole, njan logic nammude swantham Malayalathil explain cheyyum, so ellam nannaayi manassilaakum. Ithinu nalla expense aakumo? Ithu valare affordable aanu, parayan poyal normal coaching classes-nekkal ezhu madangu laabhamaanu."
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: 1 crore-il adhikam Indians ippo ente koode padikkunnu. Scroll cheyyunnathu nirthi, divasavum just 15 minutes English samsaarikkan practice cheyyoo.\nArun says: Njan ippo thanne Supernova AI download cheyyuka aanu. Thank you, Miss Nova!",
+        "on_screen_text": "1 crore-il adhikam Indians ippo ente koode padikkunnu. Scroll cheyyunnathu nirthi, divasavum just 15 minutes English samsaarikkan practice cheyyoo. Njan ippo thanne Supernova AI download cheyyuka aanu. Thank you, Miss Nova!"
+      }
+    ],
+    "self_critique_fixed": "Applied Malayalam-specific rules: recast character to Arun; used 'samsaarikkan' instead of 'speak cheyyan'; used 'Malayalathil' instead of 'Malayalam-il'; used 'kaliyaakkaathe' for 'without laughing/mocking'; translated '7 times cheaper' using the natural multiplier 'ezhu madangu laabhamaanu'. All quoted English grammar teaching lines are preserved verbatim."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 4 visual",
+        "quote": "a Google Play Store app installation pop-up overlay appears in the center of the screen",
+        "why": "A fake Google Play Store installation pop-up overlay is a misleading mechanic/fake UI that violates Meta's ad policies.",
+        "fix": "Replace the fake Play Store pop-up overlay with a standard, non-interactive Supernova AI logo and a 'Download Now' call-to-action button."
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 3 visual",
+        "quote": "The graphic displays pricing information, showing a discounted rate.",
+        "why": "The visual includes unapproved pricing and discount information which must only come from the team.",
+        "fix": "Remove the pricing and discount graphic overlay, keeping only the comparative cost dialogue."
+      }
+    ],
+    "summary": "The ad contains a severe Meta policy violation (fake Play Store UI overlay) and a severe pricing violation (unapproved pricing/discount graphic).",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517704.69934
+}

@@ -1,0 +1,45 @@
+{
+  "ad_library_id": "929881406663276",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The 'Circle Back' Confusion",
+        "script": "Rahul says: Mere boss ne mujhe 'circle back' karne ko bola, toh main literally gol-gol ghumne laga!\nMiss Nova says: 'Circle back' just means to discuss a topic again later. Main hoon Miss Nova, aapki personal AI English teacher.\nRahul says: Achha, toh iska ye matlab hai! Par main seekhu kaise? English bolne me mujhe bohot nervousness hoti hai, aur mere paas bilkul time nahi hai.",
+        "on_screen_text": "MERE BOSS NE MUJHE CIRCLE BACK KARNE KO BOLA TOH MAIN LITERALLY GOL GOL GHUMNE LAGA CIRCLE BACK JUST MEANS TO DISCUSS A TOPIC AGAIN LATER MAIN HOON MISS NOVA AAPKI PERSONAL AI ENGLISH TEACHER ACHHA TOH ISKA YE MATLAB HAI PAR MAIN SEEKHU KAISE ENGLISH BOLNE ME MUJHE BOHOT NERVOUSNESS HOTI HAI AUR MERE PAAS BILKUL TIME NAHI HAI"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Features Screencast",
+        "script": "Miss Nova says: Supernova AI ke saath, aap actually bolkar seekhte hain. Main aapka exact level analyze karke aapke liye ek personalized plan banati hoon. Chahe raat ke 3 a.m. pe 1000 mistakes kariye, main aapko kabhi judge nahi karungi.",
+        "on_screen_text": "SUPERNOVA AI KE SAATH AAP ACTUALLY BOLKAR SEEKHTE HAIN MAIN AAPKA EXACT LEVEL ANALYZE KARKE AAPKE LIYE EK PERSONALIZED PLAN BANATI HOON CHAHE RAAT KE 3 AM PE 1000 MISTAKES KARIYE MAIN AAPKO KABHI JUDGE NAHI KARUNGI"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action and Pricing",
+        "script": "Rahul says: Sacch me? Par mujhe karna kya hoga?\nMiss Nova says: Hours tak scroll karna band kariye. Bas mere saath din me 15 minutes practice kariye. Supernova AI download kariye, aur 1 month me aapko apni confidence me visible progress dikhne lagegi.",
+        "on_screen_text": "SACCH ME PAR MUJHE KARNA KYA HOGA HOURS TAK SCROLL KARNA BAND KARIYE BAS MERE SAATH DIN ME 15 MINUTES PRACTICE KARIYE DOWNLOAD KARIYE SUPERNOVA AI AUR 1 MONTH ME AAPKO APNI CONFIDENCE ME VISIBLE PROGRESS DIKHNE LAGEGI"
+      }
+    ],
+    "self_critique_fixed": "Audited the Hindi translation to ensure it strictly follows the WhatsApp-style Romanization without diacritics. Applied T7 to ensure the hook starts with a native word ('Mere boss ne...'). Maintained Miss Nova's warm, polite 'aap-tier' register ('kariye', 'karungi') and Rahul's casual-respectful tone. Kept all required English terms, numerals, and the taught phrase intact per T2."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 3",
+        "quote": "a pricing page showing a 1 Rupee offer",
+        "why": "The visual description contains a specific rupee price offer ('1 Rupee offer'), which violates the strict ban on generating hard rupee prices or unapproved offers.",
+        "fix": "Remove the pricing page and the 1 Rupee offer from the visual description, showing only a standard app download screen instead."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe violation in Scene 3 due to a visual reference to a '1 Rupee offer'.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517741.770713
+}

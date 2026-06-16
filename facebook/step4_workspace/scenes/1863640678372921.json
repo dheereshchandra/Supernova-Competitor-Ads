@@ -1,0 +1,213 @@
+{
+  "competitor_id": "1863640678372921",
+  "parsed": {
+    "duration_s": 34.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video exhibits clear signs of AI generation. The presenter's lip-sync is slightly off, and his face has an uncanny, overly smooth appearance. Furthermore, the audience shown in the bottom half of the split-screen is a completely static image, showing no movement or life whatsoever.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Male, 30s, medium build, fair complexion. He has short black hair styled upwards. His facial features are smooth and symmetrical.",
+        "wardrobe": "Wearing a black t-shirt underneath a dark navy blazer.",
+        "demeanor": "Confident, smiling, and engaging."
+      },
+      {
+        "id": "B",
+        "role": "male audience member",
+        "appearance": "Male, 20s, medium build, fair complexion. He has short black hair and wears dark-rimmed glasses.",
+        "wardrobe": "Wearing a dark green button-down shirt.",
+        "demeanor": "Serious and earnest."
+      },
+      {
+        "id": "C",
+        "role": "male audience member",
+        "appearance": "Male, 20s, medium build, fair complexion. He has short black hair.",
+        "wardrobe": "Wearing a dark brown jacket over a dark shirt.",
+        "demeanor": "Serious and slightly concerned."
+      },
+      {
+        "id": "D",
+        "role": "female audience member",
+        "appearance": "Female, 20s, slim build, fair complexion. She has long, wavy black hair.",
+        "wardrobe": "Wearing a light purple patterned top and silver earrings.",
+        "demeanor": "Serious and attentive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 1.5,
+        "screenshot_at_s": 0.7,
+        "scene_label": "Presenter's Question",
+        "setting": "Stage with blue lighting, dark background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A stands on a stage holding a microphone in his right hand. He is speaking and looking slightly off-camera. The background is dark, illuminated by bright blue stage lights.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A large group of young adults are seated in an auditorium setting. They are looking forward and smiling. The lighting is dim with a noticeable blue tint.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A split-screen layout shows the presenter on the top and an audience on the bottom. The presenter asks a question to the audience. Text overlays display his spoken words.",
+        "audio_transcript": "Character A says: \u0906\u092a \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0915\u094d\u092f\u094b\u0902 \u0928\u0939\u0940\u0902 \u092c\u094b\u0932 \u092a\u093e \u0930\u0939\u0947 \u0939\u0948\u0902? [Why are you not able to speak English?]",
+        "on_screen_text": "aap English kyo"
+      },
+      {
+        "n": 2,
+        "start_s": 1.5,
+        "end_s": 10.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Audience Excuses",
+        "setting": "Auditorium seating, dark background with blue tint.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Three different people are shown in sequence, each holding a microphone and speaking. First is Character B. Second is Character C. Third is Character D. They are all seated in an auditorium environment with dim lighting.",
+            "characters_in_panel": [
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A large group of young adults are seated in an auditorium setting. They are looking forward and smiling. The lighting is dim with a noticeable blue tint.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The split-screen continues. The top panel cuts between three different audience members giving excuses for not speaking English. The bottom panel remains a static shot of the audience. Text overlays show their words.",
+        "audio_transcript": "Character B says: \u092e\u0948\u0902\u0928\u0947 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092e\u0940\u0921\u093f\u092f\u092e \u092e\u0947\u0902 \u092a\u0922\u093c\u093e\u0908 \u0928\u0939\u0940\u0902 \u0915\u0940 \u0939\u0948 \u0938\u0930\u0964 [I haven't studied in English medium, sir.]\nCharacter A says: \u0913\u0939\u094b\u0964 [Oh.]\nCharacter C says: \u092c\u094b\u0932\u0928\u0947 \u0915\u0940 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0947 \u0932\u093f\u090f \u0915\u094b\u0908 \u0939\u0947\u0932\u094d\u092a \u0928\u0939\u0940\u0902 \u0915\u0930\u0924\u093e \u0938\u0930\u0964 [No one helps with speaking practice, sir.]\nCharacter A says: \u0913\u0939\u094b\u0964 [Oh.]\nCharacter D says: \u0938\u0940\u0916\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u091f\u093e\u0907\u092e \u0928\u0939\u0940\u0902 \u0939\u0948 \u0938\u0930\u0964 [There is no time to learn, sir.]",
+        "on_screen_text": "medium me parhai sir. oho. bolane ki practice ke liye koi help oho. sikhaane ke liye time nahi hai,"
+      },
+      {
+        "n": 3,
+        "start_s": 10.0,
+        "end_s": 18.0,
+        "screenshot_at_s": 14.0,
+        "scene_label": "Presenter's Solution",
+        "setting": "Stage with blue lighting, dark background.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is back on stage, holding a microphone. He smiles and gestures with his free hand while speaking. The background features dark space with blue stage lights.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A large group of young adults are seated in an auditorium setting. They are looking forward and smiling. The lighting is dim with a noticeable blue tint.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The split-screen shows the presenter on top and the static audience on the bottom. The presenter offers a solution to the audience's excuses. App branding and text overlays appear on screen.",
+        "audio_transcript": "Character A says: \u0906\u0939\u093e! \u0924\u094b \u0905\u0917\u0930 \u092e\u094c\u0915\u093e \u092e\u093f\u0932\u0947 \u0924\u094b \u0938\u0940\u0916\u094b\u0917\u0947, \u0939\u0948 \u0928\u093e? [Aha! So if you get a chance, you will learn, right?]\nUnknown speaker says: \u0939\u093e\u0901 \u0938\u0930\u0964 [Yes sir.]\nCharacter A says: \u0924\u094b MySivi \u0910\u092a \u092a\u0947 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u094b\u0964 \u092f\u0939\u093e\u0901 \u0906\u092a\u0915\u093e \u0932\u0947\u0935\u0932 \u0938\u092e\u091d\u0915\u0930 \u0909\u0938\u0940 \u0939\u093f\u0938\u093e\u092c \u0938\u0947 \u0938\u093f\u0916\u093e\u0928\u0947 \u0935\u093e\u0932\u093e \u090f\u0915 AI \u091f\u0940\u091a\u0930 \u0939\u0948\u0964 [Then practice on the MySivi app. Here there is an AI teacher who understands your level and teaches accordingly.]",
+        "on_screen_text": "aha! to agar mauka mile to sikhoge, haan sir. to MySivi App pe practice karo. yaha apka level hisab se sikhane vala ek AI teacher"
+      },
+      {
+        "n": 4,
+        "start_s": 18.0,
+        "end_s": 20.5,
+        "screenshot_at_s": 19.0,
+        "scene_label": "App Store",
+        "setting": "Digital screen",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A digital interface showing a generic mobile app store page layout. It includes an area for an app icon, a title section, download statistics, a prominent install button, and a promotional video thumbnail.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A full-screen screencast of an app store page for the promoted app. The presenter continues speaking in a voiceover.",
+        "audio_transcript": "Character A says: \u0914\u0930 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f 1 \u0915\u0930\u094b\u0921\u093c \u0938\u0947 \u091c\u094d\u092f\u093e\u0926\u093e \u0915\u094b-\u0932\u0930\u094d\u0928\u0930\u094d\u0938 \u092d\u0940 \u0939\u0948\u0902\u0964 [And to practice, there are more than 1 crore co-learners too.]",
+        "on_screen_text": "Start English Learning -MySivi MySivi AI 10M+ Downloads Install Sivi IS NOW MySivi Improve English speaking with AI About this app Start your English learning with a Trial at No Cost | Practice English Now"
+      },
+      {
+        "n": 5,
+        "start_s": 20.5,
+        "end_s": 30.0,
+        "screenshot_at_s": 25.0,
+        "scene_label": "Final Pitch",
+        "setting": "Stage with blue lighting, dark background.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "D"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is on stage holding a microphone and speaking. The view briefly cuts to Character D, then Character B, before returning to Character A on stage.",
+            "characters_in_panel": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A large group of young adults are seated in an auditorium setting. They are looking forward and smiling. The lighting is dim with a noticeable blue tint.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The split-screen returns. The presenter makes a final pitch, with brief cutaways to audience members in the top panel. The bottom panel remains the static audience. Text overlays and a download progress bar appear.",
+        "audio_transcript": "Character A says: \u092f\u0947 \u0932\u094b, \u0907\u0938\u0938\u0947 \u0905\u091a\u094d\u091b\u093e \u092e\u094c\u0915\u093e \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u0947\u0917\u093e\u0964 [Here, you won't get a better opportunity than this.]\nCharacter A says: \u0914\u0930 \u0906\u092a, \u0915\u094b\u0908 \u0914\u0930 \u090f\u0915\u094d\u0938\u0915\u094d\u092f\u0942\u091c \u0930\u0916\u093e \u0939\u0948 \u0915\u094d\u092f\u093e? [And you, do you have any other excuse?]\nCharacter A says: \u0905\u0917\u0930 \u0905\u092a\u0928\u0940 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0907\u092e\u094d\u092a\u094d\u0930\u0942\u0935 \u0915\u0930\u0928\u0940 \u0939\u0948 \u0924\u094b \u0905\u092d\u0940 \u0924\u0941\u0930\u0902\u0924 MySivi \u0910\u092a \u092a\u0947 \u091f\u094d\u0930\u0947\u0928\u093f\u0902\u0917 \u0936\u0941\u0930\u0942 \u0915\u0930 \u0926\u094b\u0964 [If you want to improve your English, start training on the MySivi app right now.]",
+        "on_screen_text": "ye lo, isse achha mauka nahi milega. aur aap koi aur excuse agar apani English to abhi turant MySivi AI English Spe... 0% of 62.82 MB Verified by Play Protect Cancel Master Spoken Eng Sharpen your English 1-on-1 calls. Try MyS fast"
+      },
+      {
+        "n": 6,
+        "start_s": 30.0,
+        "end_s": 34.0,
+        "screenshot_at_s": 32.0,
+        "scene_label": "End Card",
+        "setting": "Digital screen",
+        "characters_in_scene": [],
+        "camera": "wide",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A plain white background featuring a mockup of a smartphone. The smartphone screen is blank white.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A full-screen end card showing a smartphone mockup on a white background. App branding and a call to action are displayed.",
+        "audio_transcript": "Character A says: \u0907\u0928\u0938\u094d\u091f\u0949\u0932 \u0928\u093e\u0909 \u092a\u0947 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930\u094b \u0914\u0930 MySivi \u0910\u092a \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 [Click on install now and download the MySivi app.]",
+        "on_screen_text": "MySivi English speaking app Install Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.382528
+}

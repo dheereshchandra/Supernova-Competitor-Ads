@@ -1,0 +1,63 @@
+{
+  "ad_library_id": "1276393614386637",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Problem with One-Way Learning",
+        "script": "Prakash says: Har koi English confidently bolna chahta hai, haina?\nPrakash says: Par hum actually karte kya hain? Bas passively videos dekhte hain, grammar books padhte hain, ya crowded classes join kar lete hain.\nPrakash says: Aur phir sochte hain ki jab job-interview mein bolne ki baari aati hai, toh hum freeze kyun ho jaate hain.\nPrakash says: Problem yeh hai ki yeh sab one-way learning hai. Aap sirf sun rahe ho, bol nahi rahe.\nPrakash says: Bina apna munh khole aap koi bhi language bolna nahi seekh sakte.\nPrakash says: Aur jab aap bolne ki koshish karte ho, toh bina mazaak udaye aapki mistakes correct karne ke liye kaun hai?\nPrakash says: Bas isiliye humne banaya hai Supernova AI.",
+        "on_screen_text": "Want to speak English?\nOne-way learning fails\nSupernova AI"
+      },
+      {
+        "n": 2,
+        "scene_label": "Introducing the AI Teacher",
+        "script": "Prakash says: Miliye Miss Nova se, aapki personal AI English teacher jo actually aapke saath baat karti hai.",
+        "on_screen_text": "Miss Nova - AI Teacher"
+      },
+      {
+        "n": 3,
+        "scene_label": "App Features and Feedback",
+        "script": "Prakash says: Woh sabko same boring lessons nahi deti. Woh aapki speech ko analyze karke aapki weak areas dhoondti hai, aur aapke liye ek custom plan banati hai.\nPrakash says: Aap real-life scenarios, jaise manager call ya interview, bilkul private mein practice kar sakte hain.\nPrakash says: Raat ke 2 AM par hazaar mistakes karo. Woh aapko kabhi judge nahi karegi, na hi aap par hasegi.\nPrakash says: Woh bas sunti hai, aapki broken English ko correct karti hai, aur aapki apni language Hindi mein logic samjhati hai taaki sab aasani se samajh aa jaye.",
+        "on_screen_text": "Miss Nova AI Teacher\nPersonalized Plan\nZero Judgement\nReal-time Feedback\nExplained in your language"
+      },
+      {
+        "n": 4,
+        "scene_label": "User Practicing",
+        "script": "Prakash says: Din mein bas 15 minutes ki speaking practice kaafi hai.",
+        "on_screen_text": "Just 15 mins/day"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Prakash says: Daily practice se, 1 month ke andar aapko apne confidence mein visible progress dikhne lagegi.\nPrakash says: Toh ghanton feeds scroll karna band kariye, aur 15 minutes actually bolne mein bitaiye.\nPrakash says: 1 crore+ Indians pehle se hi apni life badalne ke liye Supernova AI use kar rahe hain.\nPrakash says: Peeche mat rahiye. Aaj hi Supernova AI install kariye.",
+        "on_screen_text": "1 Crore+ Users\nSupernova AI English App\nInstall"
+      },
+      {
+        "n": 6,
+        "scene_label": "App Download and End Card",
+        "script": "Prakash says: Abhi Supernova AI app download kariye.\nPrakash says: Install now par click kariye aur bolna shuru kariye.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "The script has been translated into natural, conversational, and highly code-mixed romanized Hindi. The hook successfully opens with a native word ('Har koi'). All numbers are kept as English numerals ('15 minutes', '2 AM', '1 crore+', '1 month') per the global rules. The language self-reference has been correctly swapped to 'Hindi' in Scene 3. The tone is polite yet engaging, perfectly matching the authority monologue register."
+  },
+  "safety": {
+    "verdict": "flag",
+    "violations": [
+      {
+        "guardrail_id": "G6.3",
+        "category": "Price & financial",
+        "severity": "moderate",
+        "scene": "Scene 5",
+        "quote": "50L+ USERS",
+        "why": "The visual displays a fabricated user count of '50L+ USERS' instead of the approved '1 crore+ users' proof point.",
+        "fix": "Change the badge graphic in the visual to display '1 Crore+ Users' to align with the approved social proof."
+      }
+    ],
+    "summary": "The ad is highly compliant but contains an unapproved, fabricated user count badge ('50L+ USERS') in the Scene 5 visual.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781516621.192694
+}

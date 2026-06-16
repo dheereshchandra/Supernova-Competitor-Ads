@@ -1,0 +1,192 @@
+{
+  "competitor_id": "2397605794050606",
+  "parsed": {
+    "duration_s": 33.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human actors with an AI-generated robot avatar, which exhibits unnatural lip-syncing and slightly stiff, repetitive gestures. The app interfaces and end-card are digitally inserted screencasts and graphics.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Silver humanoid robot with a metallic body, glowing blue eyes, and articulated joints. Features a glowing blue circle on its chest.",
+        "wardrobe": "None (metallic robot body).",
+        "demeanor": "Helpful, instructional, with slightly stiff and repetitive gestures."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "Young Indian woman, slim build, medium complexion, long dark wavy hair. Distinctive sharp facial features.",
+        "wardrobe": "Black long-sleeve top and grey trousers.",
+        "demeanor": "Calm, attentive, and focused."
+      },
+      {
+        "id": "C",
+        "role": "male learner",
+        "appearance": "Young Indian man, medium build, light complexion, short dark hair.",
+        "wardrobe": "Olive green zip-up jacket.",
+        "demeanor": "Animated, engaged, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.0,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Translation Practice",
+        "setting": "Modern, dimly lit room with vertical blue light strips and glass panels.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A silver humanoid robot with glowing blue eyes stands on the left, facing a young woman on the right. The robot has a smooth metallic body with articulated joints and a glowing blue circle on its chest. The woman has long dark hair, wears a black long-sleeve top and grey trousers, and stands with her arms crossed. The background is a modern, dimly lit room with vertical blue light strips and glass panels. The robot gestures with its hands as if speaking, while the woman maintains a neutral, attentive expression. The lighting highlights the metallic texture of the robot and casts soft shadows on the woman's face. The framing is a medium shot capturing both characters from the waist up.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene features a single shot of a robot and a woman interacting. Text overlays show the Kannada and English translations of their dialogue. The robot translates the woman's Kannada phrases into English. The camera remains static throughout the scene.",
+        "audio_transcript": "Character B says: \u0ca8\u0ca8\u0ccd\u0ca8 \u0c95\u0ca1\u0cc6 \u0ca8\u0ccb\u0ca1\u0cc1. [Look at me.]\nCharacter A says: Look at me.\nCharacter B says: \u0ca8\u0cbf\u0ca7\u0cbe\u0ca8\u0cb5\u0cbe\u0c97\u0cbf \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0cc1. [Speak slowly.]\nCharacter A says: Speak slowly.\nCharacter B says: \u0cac\u0cbe\u0c97\u0cbf\u0cb2\u0cc1 \u0cae\u0cc1\u0c9a\u0ccd\u0c9a\u0cc1. [Close the door.]\nCharacter A says: Close the door.\nCharacter B says: \u0ca8\u0cbe\u0ca8\u0cc1 \u0cac\u0cb0\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0ccd\u0ca6\u0cc7\u0ca8\u0cc6. [I am coming.]\nCharacter A says: I am coming.\nCharacter B says: \u0c85\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cc6 \u0cb9\u0cc7\u0cb3\u0cc1. [Say that again.]\nCharacter A says: Say that again.",
+        "on_screen_text": "\u0ca8\u0ca8\u0ccd\u0ca8 \u0c95\u0ca1\u0cc6 \u0ca8\u0ccb\u0ca1\u0cc1. (Look at me.)\nLOOK AT ME.\n\u0ca8\u0cbf\u0ca7\u0cbe\u0ca8\u0cb5\u0cbe\u0c97\u0cbf \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0cc1. (Speak slowly.)\nSPEAK SLOWLY.\n\u0cac\u0cbe\u0c97\u0cbf\u0cb2\u0cc1 \u0cae\u0cc1\u0c9a\u0ccd\u0c9a\u0cc1. (Close the door.)\nCLOSE THE DOOR.\n\u0ca8\u0cbe\u0ca8\u0cc1 \u0cac\u0cb0\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0ccd\u0ca6\u0cc7\u0ca8\u0cc6. (I am coming.)\nI AM COMING.\n\u0c85\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cc6 \u0cb9\u0cc7\u0cb3\u0cc1. (Say that again.)\nSAY THAT AGAIN."
+      },
+      {
+        "n": 2,
+        "start_s": 11.0,
+        "end_s": 16.5,
+        "screenshot_at_s": 14.0,
+        "scene_label": "App Introduction",
+        "setting": "Split screen: Modern room (top) and outdoor balcony (bottom).",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A silver humanoid robot with glowing blue eyes faces forward, looking directly at the viewer. The robot has a smooth metallic body with articulated joints and a glowing blue circle on its chest. It gestures with its right hand, holding it up slightly. The background features vertical blue light strips and glass panels in a modern, dimly lit setting. The lighting emphasizes the sleek, reflective surface of the robot's metallic casing.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young man with short dark hair, wearing an olive green zip-up jacket, stands outdoors near a window. He holds a smartphone in his left hand, bringing it close to his mouth as if speaking into it. His facial expression is animated and engaged. The background shows a plain wall and a window frame, suggesting a balcony or patio setting. Natural daylight illuminates the scene, casting soft shadows.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The scene uses a horizontal split-screen layout. The top half shows the robot speaking directly to the camera. The bottom half briefly shows an app interface before cutting to a young man speaking into his phone. Text overlays display the robot's dialogue in Kannada and English.",
+        "audio_transcript": "Character A says: MySivi app \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0ca8\u0ca8\u0ccd\u0ca8 \u0c9c\u0cca\u0ca4\u0cc6 \u0cb9\u0cc0\u0c97\u0cc6 practice \u0cae\u0cbe\u0ca1\u0cbf, \u0c95\u0ca8\u0ccd\u0ca8\u0ca1\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0cc1\u0ca4\u0ccd\u0ca4\u0cbe easy \u0c86\u0c97\u0cbf English \u0c95\u0cb2\u0cbf\u0caf\u0cbf\u0cb0\u0cbf. [Practice with me like this on the MySivi app, learn English easily while speaking in Kannada.]",
+        "on_screen_text": "MySivi\nAPP \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0ca8\u0ca8\u0ccd\u0ca8 \u0c9c\u0cca\u0ca4\u0cc6 \u0cb9\u0cc0\u0c97\u0cc6 PRACTICE \u0cae\u0cbe\u0ca1\u0cbf,\n\u0c95\u0ca8\u0ccd\u0ca8\u0ca1\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0cae\u0cbe\u0ca4\u0cbe\u0ca1\u0cc1\u0ca4\u0ccd\u0ca4\u0cbe EASY \u0c86\u0c97\u0cbf ENGLISH \u0c95\u0cb2\u0cbf\u0caf\u0cbf\u0cb0\u0cbf."
+      },
+      {
+        "n": 3,
+        "start_s": 16.5,
+        "end_s": 22.0,
+        "screenshot_at_s": 18.0,
+        "scene_label": "Daily Practice",
+        "setting": "Modern, dimly lit room with vertical blue light strips.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A silver humanoid robot with glowing blue eyes faces forward, looking directly at the viewer. The robot has a smooth metallic body with articulated joints and a glowing blue circle on its chest. It gestures with its right hand, holding it up slightly. The background features vertical blue light strips and glass panels in a modern, dimly lit setting. The lighting emphasizes the sleek, reflective surface of the robot's metallic casing. The framing is a medium close-up, focusing on the robot's upper body and facial features.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene starts with a medium close-up of the robot speaking, with text overlays highlighting key phrases. It then cuts briefly to the young man speaking into his phone. The robot's dialogue is shown in text overlays.",
+        "audio_transcript": "Character A says: Daily just 10-15 min \u0cb8\u0cbe\u0c95\u0cc1 - \u0ca8\u0cc0\u0cb5\u0cc1 \u0c95\u0cc2\u0ca1 confident \u0c86\u0c97\u0cbf English \u0cae\u0cbe\u0ca4\u0ca8\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1. [Daily just 10-15 min is enough - you too can speak English confidently.]",
+        "on_screen_text": "DAILY JUST\n10-15 MIN \u0cb8\u0cbe\u0c95\u0cc1 - \u0ca8\u0cc0\u0cb5\u0cc1 \u0c95\u0cc2\u0ca1 CONFIDENT \u0c86\u0c97\u0cbf\nENGLISH \u0cae\u0cbe\u0ca4\u0ca8\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1."
+      },
+      {
+        "n": 4,
+        "start_s": 22.0,
+        "end_s": 26.0,
+        "screenshot_at_s": 25.0,
+        "scene_label": "Features Overview",
+        "setting": "Modern, dimly lit room with vertical blue light strips.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A silver humanoid robot with glowing blue eyes faces forward, looking directly at the viewer. The robot has a smooth metallic body with articulated joints and a glowing blue circle on its chest. It gestures with its right hand, holding it up slightly. The background features vertical blue light strips and glass panels in a modern, dimly lit setting. The lighting emphasizes the sleek, reflective surface of the robot's metallic casing. The framing is a medium close-up, focusing on the robot's upper body and facial features.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene begins with several quick cuts of an app interface demonstrating grammar and sentence building features. It then cuts back to the robot speaking. Text overlays highlight words like 'GRAMMAR' and 'JUST FOR 1'. The app UI is shown in detail before returning to the robot.",
+        "audio_transcript": "Character A says: Speaking, grammar, sentence building - \u0c8e\u0cb2\u0ccd\u0cb2\u0cb5\u0cc2 \u0c92\u0c82\u0ca6\u0cc7 place \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf, just for 1 \u0cb0\u0cc2\u0caa\u0cbe\u0caf\u0cbf\u0c97\u0cc6. [Speaking, grammar, sentence building - everything in one place, just for 1 rupee.]",
+        "on_screen_text": "SPEAKING,\nGRAMMAR,\nSENTENCE BUILDING\n- \u0c8e\u0cb2\u0ccd\u0cb2\u0cb5\u0cc2 \u0c92\u0c82\u0ca6\u0cc7 PLACE \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf,\nJUST FOR 1 \u0cb0\u0cc2\u0caa\u0cbe\u0caf\u0cbf\u0c97\u0cc6."
+      },
+      {
+        "n": 5,
+        "start_s": 26.0,
+        "end_s": 30.0,
+        "screenshot_at_s": 29.0,
+        "scene_label": "Call to Action",
+        "setting": "Modern, dimly lit room with vertical blue light strips.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A silver humanoid robot with glowing blue eyes faces forward, looking directly at the viewer. The robot has a smooth metallic body with articulated joints and a glowing blue circle on its chest. It gestures with both hands, holding them up slightly with open palms. The background features vertical blue light strips and glass panels in a modern, dimly lit setting. The lighting emphasizes the sleek, reflective surface of the robot's metallic casing. The framing is a medium close-up, focusing on the robot's upper body and facial features.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The scene starts with a screencast of the Google Play Store page for the MySivi app, showing the install button. It then cuts back to the robot speaking, with text overlays urging the viewer to 'DOWNLOAD' and 'START'. The robot gestures with both hands.",
+        "audio_transcript": "Character A says: MySivi download \u0cae\u0cbe\u0ca1\u0cbf, \u0c87\u0c82\u0ca6\u0cc7 start \u0cae\u0cbe\u0ca1\u0cbf. [Download MySivi, start today.]",
+        "on_screen_text": "MySivi\nDOWNLOAD \u0cae\u0cbe\u0ca1\u0cbf,\n\u0c87\u0c82\u0ca6\u0cc7 START \u0cae\u0cbe\u0ca1\u0cbf."
+      },
+      {
+        "n": 6,
+        "start_s": 30.0,
+        "end_s": 33.0,
+        "screenshot_at_s": 31.5,
+        "scene_label": "End Card",
+        "setting": "Plain, light-colored background.",
+        "characters_in_scene": [],
+        "camera": "Graphic",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A modern smartphone is shown straight-on against a plain, light-colored background. The phone has a large, blank screen with thin black bezels. A small front-facing camera cutout is visible at the top center of the screen. The phone's sleek design is highlighted by subtle reflections on its edges. The composition is minimalistic, focusing entirely on the device itself. The lighting is even and bright, eliminating any harsh shadows.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The final scene is an end card featuring a smartphone mockup against a light background. The phone screen displays the MySivi logo and an 'Install Now' button. A voiceover prompts the viewer to download the app.",
+        "audio_transcript": "Unknown speaker says: Click on install now and download MySivi app. [Click on install now and download MySivi app.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.385602
+}

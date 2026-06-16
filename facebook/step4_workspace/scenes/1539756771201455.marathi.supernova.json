@@ -1,0 +1,78 @@
+{
+  "ad_library_id": "1539756771201455",
+  "language": "Marathi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Practice",
+        "script": "Rahul says: I am eating.\nAarav says: I am eating.\nRahul says: Are you eating?\nAarav says: Are you eating?\nRahul says: What are you eating?\nAarav says: What are you eating?\nRahul says: I want to eat.\nAarav says: I want to eat.\nRahul says: Wow Aarav! Tuzha English kiti fluent jhalay. Tu asa bolayla kuthe shiklas?\nAarav says: Supernova AI app var, Dad! Mi Miss Nova sobat bolto, mazi personal AI teacher.\nAarav says: Tya maza level check karun mazyasathi ek plan banavtat.\nAarav says: Mi 1000 mistakes kelya tari tya mala kadhich judge karat nahit. Plus, tya Marathi-madhye logic explain kartat!\nAarav says: Reels var vel waste karnyapekshya, divasatun fakt 15 minutes bola. Tumhala 1 month-madhye visible progress disel.",
+        "on_screen_text": "I am eating.\nAre you eating?\nWhat are you eating?\nI want to eat.\nWow Aarav! Tuzha English kiti fluent jhalay. Tu asa bolayla kuthe shiklas?\nSupernova AI app var, Dad!\nMi Miss Nova sobat bolto, mazi personal AI teacher.\nTya maza level check karun mazyasathi ek plan banavtat.\nMi 1000 mistakes kelya tari tya mala kadhich judge karat nahit.\nPlus, tya Marathi-madhye logic explain kartat!\nReels var vel waste karnyapekshya, divasatun fakt 15 minutes bola.\nTumhala 1 month-madhye visible progress disel."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Offer",
+        "script": "[music only, no speech]",
+        "on_screen_text": "Supernova AI\nTumcha confidence unlock kara\n24/7 Personal AI English Teacher\nInstant feedback, no judgement\nKadhihi practice kara\nAajch bolayla suruvat kara"
+      },
+      {
+        "n": 3,
+        "scene_label": "Father's Decision",
+        "script": "Rahul says: He tar khupch amazing ahe! Mi lagech Supernova AI install karto ani maziya next interview sathi practice suru karto.",
+        "on_screen_text": "He tar khupch amazing ahe! Mi lagech Supernova AI install karto ani maziya next interview sathi practice suru karto.\nSupernova AI"
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "script": "Narrator says: Scrolling thambva. Supernova AI install kara ani aajch English bolayla suruvat kara.",
+        "on_screen_text": "Supernova AI\nSpoken English App\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "The script has been translated into natural, conversational, and code-mixed Marathi using standard WhatsApp-style romanization. Family dynamics are respected: Aarav addresses his father with polite plural forms ('bola', 'tumhala') and uses respectful pronouns ('tya') for Miss Nova, while Rahul speaks to his son in the warm 'tu' register. English terms like 'fluent', 'reels', 'mistakes', 'interview', and 'install' have been preserved to maintain the modern spoken register and avoid overly formal or Sanskritized Marathi."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 1 — English Practice",
+        "quote": "Tumhala 1 month-madhye visible progress disel.",
+        "why": "The script promises a guaranteed outcome of visible progress within a specific timeframe without using required hedge language like 'start to' or 'can'.",
+        "fix": "Change to: 'Tumhala 1 month-madhye visible progress disayla suruvat hou shakate.' (You can start seeing visible progress in 1 month.)"
+      },
+      {
+        "guardrail_id": "G2.1",
+        "category": "Competitors & disparagement",
+        "severity": "moderate",
+        "scene": "Scene 1 — English Practice",
+        "quote": "Reels var vel waste karnyapekshya",
+        "why": "It trashes Reels as a waste of time ('vel waste') instead of using it as a neutral time-reallocation anchor.",
+        "fix": "Change to: 'Reels scroll karnyapekshya, divasatun fakt 15 minutes bola.' (Instead of scrolling Reels, speak for just 15 minutes a day.)"
+      },
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 2 — App Offer",
+        "quote": "A countdown timer",
+        "why": "The visual contains a countdown timer, which is a prohibited misleading mechanic/fake UI element under Meta's ad policy.",
+        "fix": "Remove the countdown timer from the promotional graphic."
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 2 — App Offer",
+        "quote": "highlighting a prominent '1' rupee offer, with the original '30' rupee price crossed out. A countdown timer and a yellow 'Start Trial at ₹1' button are positioned at the bottom.",
+        "why": "The visual displays hard rupee prices (₹1 and ₹30) and unapproved promotional pricing, which must only come from the team.",
+        "fix": "Remove the specific rupee amounts and replace the button text with 'Start Free Trial' or 'Get Special Offer'."
+      }
+    ],
+    "summary": "The ad contains severe violations regarding hard rupee pricing (G6.1), a fake UI countdown timer (G4.2), and an unhedged progress guarantee (G1.1), alongside a moderate violation for trashing Reels (G2.1).",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517329.936748
+}

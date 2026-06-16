@@ -1,0 +1,81 @@
+{
+  "competitor_id": "1470471397608970",
+  "parsed": {
+    "duration_s": 32.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features real human actors in a physical classroom setting. Movements, facial expressions, and interactions are natural, with no signs of AI generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female teacher",
+        "appearance": "Young adult female, slim build, fair complexion. Long, straight black hair. Expressive facial features.",
+        "wardrobe": "Black short-sleeved polo shirt with a small white logo on the left chest.",
+        "demeanor": "Expressive, slightly exasperated but encouraging and corrective."
+      },
+      {
+        "id": "B",
+        "role": "male student",
+        "appearance": "Young adult male, medium build, fair complexion. Short dark hair and a short, neatly trimmed beard.",
+        "wardrobe": "White long-sleeved button-down shirt.",
+        "demeanor": "Confused, hesitant, and slightly embarrassed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 24.0,
+        "screenshot_at_s": 12.0,
+        "scene_label": "Pronunciation Lesson",
+        "setting": "Classroom setting, black chalkboard, desk with markers. Dark color palette.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A female teacher (Character A) and a male student (Character B) stand in front of a black chalkboard. Character A, positioned on the right, gestures towards the board with a marker in her hand. Character B, on the left, looks at the board and then turns his head towards Character A. The chalkboard has handwritten text in white chalk. A desk with markers is visible at the bottom edge of the frame. The lighting is bright and even.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A dark, almost black background with a subtle, faint grid pattern. The space is empty, serving as a backdrop.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The screen is split horizontally. The top half shows a classroom scene where a teacher points to words on a blackboard, and a student attempts to pronounce them. The bottom half is a dark, textured background where the words being discussed appear as large text overlays, highlighting the correct pronunciation as the teacher corrects the student.",
+        "audio_transcript": "Character A says: Can you please pronounce these words? [Can you please pronounce these words?]\nCharacter B says: \u091a\u093e\u091a\u0940 [Chachi]\nCharacter A says: Oh god, it's not chachi, it's cache. What about this one? [Oh god, it's not chachi, it's cache. What about this one?]\nCharacter B says: \u0939\u093f\u092a\u094b\u0915\u094d\u0930\u0947\u0938\u0940 [Hypocrisy]\nCharacter A says: Oh god, it's not hypocrisy, it's hypocrisy. What about this one? [Oh god, it's not hypocrisy, it's hypocrisy. What about this one?]\nCharacter B says: \u0928\u0940\u091a\u0947 [Nichey]\nCharacter A says: Oh god, it's not nichey, it's niche. What about this? [Oh god, it's not nichey, it's niche. What about this?]\nCharacter B says: \u0905\u0938\u0932\u0940 [Asli]\nCharacter A says: It's not asli, it's aisle. [It's not asli, it's aisle.]",
+        "on_screen_text": "PW Talk\nCache\nHypocrisy\nNiche\nAisle"
+      },
+      {
+        "n": 2,
+        "start_s": 24.0,
+        "end_s": 32.0,
+        "screenshot_at_s": 28.0,
+        "scene_label": "App Promo End Card",
+        "setting": "Digital graphic background, white and light blue color palette.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A digital graphic featuring a 3D render of a smartphone. The phone is positioned in the center, slightly angled, displaying an app interface. The background consists of clean, abstract white and light blue geometric shapes.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A promotional end card. A smartphone is displayed in the center, showing the Google Play Store page for the 'PW Talk' app. Text overlays encourage the viewer to download the app to improve their English fluency.",
+        "audio_transcript": "Unknown speaker says: \u0930\u094b\u091c\u093c \u092c\u0938 \u0926\u0938 \u092e\u093f\u0928\u091f \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u094b\u0917\u0947 \u0914\u0930 \u092b\u0930\u094d\u0915 \u0916\u0941\u0926 \u092e\u0939\u0938\u0942\u0938 \u0939\u094b\u0917\u093e\u0964 [If you practice for just ten minutes every day, you will feel the difference yourself.]\nUnknown speaker says: \u0906\u091c \u0939\u0940 \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b \u092a\u0940\u0921\u092c\u094d\u0932\u094d\u092f\u0942 \u091f\u0949\u0915 \u0910\u092a \u0914\u0930 \u0905\u092a\u0928\u0940 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0915\u094b \u092c\u0928\u093e\u0913 \u092b\u094d\u0932\u0942\u090f\u0902\u091f\u0964 [Download the PW Talk app today and make your English fluent.]",
+        "on_screen_text": "Learn to speak English fluently\nDOWNLOAD THE PW TALK APP\nGET IT ON Google Play\nPW Talk: English Speaking App\nPhysicswallah\n4.8 star\n2K reviews\nRated for 3+\nInstall\nAbout this app\nEnglish Speaking App by PhysicsWallah: Improve Spoken English with AI Practice\nEducation"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.377314
+}

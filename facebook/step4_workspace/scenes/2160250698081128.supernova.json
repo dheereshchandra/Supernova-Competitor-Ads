@@ -1,0 +1,63 @@
+{
+  "competitor_id": "2160250698081128",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "male user",
+        "appearance": "Young male, early 20s, slim build, fair complexion, dark curly hair. Clean-shaven.",
+        "wardrobe": "Dark grey polo shirt, blue jeans, black over-ear headphones, black cross-body bag strap.",
+        "demeanor": "Relaxed, casual, engaged with his phone."
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Metallic humanoid female robot. Silver plating, smooth sculpted face, glowing blue eyes, articulated joints.",
+        "wardrobe": "None (metallic body).",
+        "demeanor": "Static, robotic, conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Train Conversation",
+        "supernova_script": "Rahul says: I am giving an English interview tomorrow.\nMiss Nova says: Almost, Rahul! Say, I am appearing for an English interview tomorrow. Give means to hand something over.\nRahul says: Ah, got it. You know, my English is actually getting so much better.\nMiss Nova says: Very good! Where are you learning to speak so well?\nRahul says: From you, on the Supernova AI app! You are Miss Nova, my personal AI teacher.\nRahul says: I love that you do not just give me random lessons. You figured out my exact level and built a personalized plan just for me.\nMiss Nova says: And I never judge your mistakes.\nRahul says: Exactly! I can make a thousand mistakes sitting right here on this crowded train, and you correct me without laughing.\nMiss Nova says: Because you learn by actually speaking out loud, not just reading.\nRahul says: Yes. People waste hours scrolling feeds on their phones, but I just spend fifteen minutes a day speaking with you.\nMiss Nova says: That is right. With daily practice, most learners start seeing visible progress in about a month.",
+        "scene_summary": "- Hook: Live correction of a common Indian-English error (giving an interview) to name English early.\n- Payload: Hits personalization (a) and privacy/no-judgement (b) heavily in the middle.\n- Close: Contrasts scrolling feeds with 15 mins/day of speaking practice.",
+        "supernova_on_screen_text": "I am giving an English interview tomorrow.\nSay: I am appearing for an English interview tomorrow.\nMy English is actually getting so much better.\nWhere are you learning to speak so well?\nFrom you, on the Supernova AI app!\nYou figured out my exact level and built a personalized plan.\nAnd I never judge your mistakes.\nI can make a thousand mistakes and you correct me without laughing.\nYou learn by actually speaking out loud.\nPeople waste hours scrolling feeds.\nI just spend 15 minutes a day speaking with you.\nStart seeing visible progress in about a month."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "supernova_script": "Rahul says: Stop scrolling. Install Supernova AI and start speaking today.",
+        "scene_summary": "- Tight close with a clear call to action.\n- Replaces the competitor brand with Supernova AI.\n- No hard price mentioned.",
+        "supernova_on_screen_text": "Supernova AI\nSpoken English App\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalized plan), b (never judge mistakes), c (speaking out loud), e (interview scenario), g (logic: give means hand over)",
+      "kept_from_seed": "PIP format of man on train conversing with AI robot avatar",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "ARYA AI",
+        "supernova_swap": "Miss Nova"
+      },
+      {
+        "competitor_brand": "Instagram",
+        "supernova_swap": "scrolling feeds"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.6589172
+}

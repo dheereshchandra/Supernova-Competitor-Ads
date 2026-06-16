@@ -1,0 +1,41 @@
+{
+  "ad_library_id": "2528689397550560",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "App Icon",
+        "script": "Arun says: Oru crore-il adhikam Indians ippo Supernova AI vazhi English samsaarikkan padikkunnu. Ith enganeyaanu work aagunnath ennu namukku nokkaam.",
+        "on_screen_text": "Gemini, Instagram, ET Mo..., Amazon, Slack, WhatsApp, Truecaller, Supernova AI, Calendar, Swiggy, GPay, BHIM"
+      },
+      {
+        "n": 2,
+        "scene_label": "AI Chat Interface",
+        "script": "Arun says: Ningal direct aayi Miss Nova-yodu practice cheyyuka. Ningal 1000 mistakes varuthiyaalum, avar appol thanne athu correct cheyyum, orikkalum judge cheyyilla. Malayalathil grammar logic paranju tharunnathu kondu kaaryangal nannaayi manassilaakum. Athupole, ningalude exact level analyze cheythu ningalkkaayi oru personalized plan-um ready aakkum.",
+        "on_screen_text": "epdi irukka, How are you?, Miss Nova, I understand you're asking how I'm doing! I'm doing well, thank you! How about you? How do you feel today?, i doing great, I am doing great., That's amazing! Just a small tweak: you can say, \"I'm doing great.\" What makes you feel great today?, That is amazing! A small change: you can say \"I am doing great\". What makes you feel good today?"
+      },
+      {
+        "n": 3,
+        "scene_label": "Learning Path",
+        "script": "Arun says: Job interviews thudangi real-life practice scenarios vare ningalkku ithil labhikkum. Divasavum just 15 minutes avarodu practice cheythaal, oru maasathil thanne ningalude confidence-il nalla maattam kaanaam.",
+        "on_screen_text": "Learning Path, Unit 1 Meet and Greet, 1 Chapter, Informal greetings, Informal Opening Greeting words and Phrases, START +20 STARS, What is Learning Path?, Master basic to advanced English speaking skills, Structured Learning: Progress through units, chapters, and lessons, Basic to advanced English: a structured path to learn and practice, Designed by expert teachers and aligned with global learning standards, Get hints during conversations to keep them engaging and learn new sentences, Continue"
+      },
+      {
+        "n": 4,
+        "scene_label": "Play Store",
+        "script": "Arun says: Feeds scroll cheythu manikyoorugal kalayunnath nirthoo. Supernova AI install cheythu innu thanne English samsaarikkoo.",
+        "on_screen_text": "English Speaking App - Supernova AI, Improve Your Spoken English and Fluency with AI Support, #10 top free in education, Language, 4.6 star, 64K reviews, Rated for 3+, 1Cr+ Downloads, Supernova AI, Improve English speaking with AI, Data safety, Ratings and reviews"
+      }
+    ],
+    "self_critique_fixed": "Localized the script to Malayalam using the 'Authority / stage monologue' register. Recast the character 'Rahul' to 'Arun' from the Malayalam casting table. Ensured the hook opens with a native word ('Oru'). Applied Malayalam-specific rules: used native verb stems for speaking ('English samsaarikkan', 'English samsaarikkoo'), correctly used 'tharunnathu' for giving to the user, avoided 'month-il' and 'hours' hybrids by using 'oru maasathil' and 'manikyoorugal', and used 'Malayalathil' instead of 'Malayalam-il'. The tone is warm, polite, and highly colloquial."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The script is fully compliant with all brand-safety guardrails, correctly utilizing the approved 1 crore+ social proof and soft progress expectations.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517632.6954129
+}

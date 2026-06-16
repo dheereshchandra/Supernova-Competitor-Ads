@@ -1,0 +1,51 @@
+{
+  "ad_library_id": "1587377062318723",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction and Corrections",
+        "script": "Miss Nova says: Hello, what is your name?\nRahul says: My name is Rahul.\nMiss Nova says: How old are you?\nRahul says: I have 22.\nMiss Nova says: Not 'I have 22', aapko kehna chahiye 'I am 22 years old'. Main aapko logic aapki apni language Hindi mein samjhati hoon taaki sab clear ho jaye.\nRahul says: Okay, okay. I am 22 years old.\nMiss Nova says: Where are you from?\nRahul says: I am Delhi.\nMiss Nova says: It should be 'I am from Delhi'. Mistakes ki tension mat lijiye. Main hoon Miss Nova. Main aapki weakness samajhkar aapke liye ek personalized plan banati hoon.",
+        "on_screen_text": "what is your name\nMy name is Rahul\nHow old are you\nI have 22\nNot 'I have 22', aapko kehna chahiye 'I am 22 years old'\nMain logic aapki language Hindi mein samjhati hoon\nOkay, I am 22 years old\nWhere are you from\nI am Delhi\nIt should be 'I am from Delhi'\nMain aapke liye personalized plan banati hoon"
+      },
+      {
+        "n": 2,
+        "scene_label": "Cost Discussion",
+        "script": "Rahul says: Par ek personal AI teacher bahut costly nahi hoga?\nMiss Nova says: Ye regular English classes se saat guna sasta hai.\nMiss Nova says: Plus, koi aapko dekh nahi raha hai. Aap chahe 1000 mistakes karein, main bina judge kiye aapko correct karungi.\nMiss Nova says: Isiliye 1 crore+ users Supernova AI par trust karte hain.",
+        "on_screen_text": "Par personal AI teacher bahut costly nahi hoga?\n7x Cheaper\nregular English classes se\nkoi aapko dekh nahi raha hai\nbina judge kiye correct karein\n1 CRORE+ USERS\nSupernova AI"
+      },
+      {
+        "n": 3,
+        "scene_label": "Time Commitment",
+        "script": "Rahul says: Par mujhe zyada time nahi milta.\nMiss Nova says: Yahan aapko books nahi padhni hain, aapko actually speak karna hai. Daily bas 15 minutes bolna hi confident banne ke liye kaafi hai.\nRahul says: Wow...",
+        "on_screen_text": "Par mujhe zyada time nahi milta\naapko actually speak karna hai\nBas 15 minutes daily\nkaafi hai\nconfident banne ke liye\nWow..."
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "script": "Rahul says: Main kaise join karoon?\nMiss Nova says: Install button press kijiye aur Supernova AI app download kijiye.\nMiss Nova says: Daily practice se, aapko bas 15 days mein visible improvement dikhne lagega.\nMiss Nova says: Toh chaliye, aaj se hi bolna start karte hain.",
+        "on_screen_text": "Main kaise join karoon?\ninstall now\nInstall button press kijiye\ndownload Supernova AI\nvisible improvement dikhne lagega\nbas 15 days mein\nAaj se hi bolna start karte hain"
+      }
+    ],
+    "self_critique_fixed": "I have localized the script into romanized, code-mixed Hindi following all global and language-specific rules. Character 'Karthik' was recast to 'Rahul' and the city 'Chennai' was recast to 'Delhi' to fit the Hindi region. Taught English sentences inside quotes are kept verbatim in English. The multiplier 'seven times cheaper' was successfully translated to 'saat guna sasta' using the Hindi multiplier word 'guna'. Miss Nova's tone is kept warm and polite using 'aap' and respectful verb endings, while Rahul uses a natural, casual-respectful tone. The language self-reference was updated to 'Hindi'."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 4",
+        "quote": "Daily practice se, aapko bas 15 days mein visible improvement dikhne lagega.",
+        "why": "The script promises visible improvement in just 15 days, which violates the minimum 30-day/one-month timeline allowed for soft progress expectations.",
+        "fix": "Daily practice se, aapko lagbhag 30 days mein visible progress dikhne lag sakti hai."
+      }
+    ],
+    "summary": "The ad is mostly compliant but violates G1.1 by promising visible improvement within an unapproved 15-day timeline instead of the allowed 30-day window.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517239.3005838
+}

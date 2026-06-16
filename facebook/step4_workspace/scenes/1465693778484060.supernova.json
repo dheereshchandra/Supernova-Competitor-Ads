@@ -1,0 +1,74 @@
+{
+  "competitor_id": "1465693778484060",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with a slim build and fair complexion. She has dark hair slicked back behind her ears and symmetrical, smooth facial features. Her appearance is highly polished and slightly artificial.",
+        "wardrobe": "Bright pink, high-necked sleeveless top.",
+        "demeanor": "Calm, static, and robotic."
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "Female learner",
+        "appearance": "Young female with a medium build and medium complexion. She has dark, wavy, shoulder-length hair and expressive facial features. Her appearance is natural and relatable.",
+        "wardrobe": "Dark magenta button-up shirt.",
+        "demeanor": "Expressive, animated, shifting from frustrated to surprised."
+      },
+      {
+        "id": "Unknown",
+        "name": "Unknown Voice",
+        "role": "Off-screen voice",
+        "appearance": "Off-screen",
+        "wardrobe": "Off-screen",
+        "demeanor": "Off-screen"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Problem",
+        "supernova_script": "Priya says: Ah!\nUnknown Voice says: What happened?\nPriya says: My hands on fire!\nMiss Nova says: Actually, it's \"My hands are burning.\"\nPriya says: Easy for you to say! I freeze every time I have to speak English.\nMiss Nova says: I am Miss Nova. I teach English on Supernova AI, by actually making you speak.",
+        "scene_summary": "- Hook: Relatable Indian-English error and live correction.\n- Emotion: Frustration turning into curiosity.\n- Payload: (c) You speak, not type/read. Names English and Miss Nova early.",
+        "supernova_on_screen_text": "What happened?\nMy hands on fire\nMy hands are burning.\nI freeze every time\nSpeak English\nSupernova AI"
+      },
+      {
+        "n": 2,
+        "scene_label": "The Solution",
+        "supernova_script": "Miss Nova says: I analyze your exact level and build a personalized plan just for you.\nPriya says: But what if I make mistakes? I feel so shy.\nMiss Nova says: Make a thousand mistakes! No one is judging you here. I correct you and explain the logic in your own language.\nMiss Nova says: Practice real-life scenarios for fifteen minutes a day, and you will start seeing visible progress in a month.",
+        "scene_summary": "- Purpose: Deliver the core retention payload while addressing skepticism.\n- Emotion: Reassurance and confidence building.\n- Payload: (a) Personalization, (b) Privacy/no-judgement, (g) Logic in mother tongue, (e) Real-life scenarios.",
+        "supernova_on_screen_text": "Personalized plan just for you\nMake 1000 mistakes\nNo one is judging you\nExplained in your language\n15 MINUTES A DAY\nVisible progress in a month"
+      },
+      {
+        "n": 3,
+        "scene_label": "Pricing and CTA",
+        "supernova_script": "Priya says: That sounds great, but I cannot afford expensive classes right now.\nMiss Nova says: Supernova AI is seven times cheaper than regular coaching classes.\nPriya says: Really? Seven times cheaper?\nMiss Nova says: Stop wasting hours scrolling through reels. Spend fifteen minutes speaking with me instead.\nPriya says: I am downloading Supernova AI right now to start speaking!",
+        "scene_summary": "- Purpose: Handle the price objection and drive action.\n- Emotion: Pleasant surprise and motivation.\n- Payload: Comparative cost, negative time anchor (scrolling), positive time anchor (15 mins), clean CTA.",
+        "supernova_on_screen_text": "Cannot afford classes\n7x Cheaper than coaching\nStop scrolling reels\n15 minutes a day\nDownload Supernova AI\nStart speaking today"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "(a) Personalization, (b) Privacy/no-judgement, (c) You speak, (e) Real-life scenarios, (g) Logic in mother tongue",
+      "kept_from_seed": "Split-screen format, AI avatar on top, human in kitchen on bottom, relatable error hook.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure used; replaced seed's 1 rupee offer with the allowed '7x cheaper than regular coaching classes' comparative."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi AI",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.651246
+}

@@ -1,0 +1,57 @@
+{
+  "ad_library_id": "2154159342046433",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Confrontation",
+        "script": "Rahul says: Priya, hum kitni acchi team hain. Chalo hamesha saath rehte hain.\nVikram says: Priya? Tum abhi bhi Rahul ke saath ghum rahi ho? Isko to proper English bolni bhi nahi aati.\nPriya says: Wo try kar raha hai.\nVikram says: Please, jab bhi bolna hota hai ye freeze ho jata hai. Ye meri tarah kabhi fluent nahi ho payega.",
+        "on_screen_text": "Priya, hum kitni acchi team hain.\nChalo hamesha saath rehte hain.\nTum abhi bhi Rahul ke saath ho?\nIsko proper English bolni bhi nahi aati.\nWo try kar raha hai.\nYe har baar freeze ho jata hai.\nYe meri tarah fluent nahi ho payega."
+      },
+      {
+        "n": 2,
+        "scene_label": "The Breakup",
+        "script": "Priya says: Vikram sahi keh raha hai. Tumhare saath rehne se meri image kharab ho rahi hai. We are done.\nRahul says: Nahi, rone se kuch nahi hoga. Mujhe use dikhana hoga ki main bhi English bol sakta hoon. Main Supernova AI download kar raha hoon.",
+        "on_screen_text": "DO DIN BAAD...\nVikram sahi keh raha hai.\nTumhare saath rehne se meri image kharab ho rahi hai.\nWe are done.\nRone se kuch nahi hoga.\nMujhe use dikhana hoga ki main English bol sakta hoon.\nSupernova AI"
+      },
+      {
+        "n": 3,
+        "scene_label": "Learning English",
+        "script": "Rahul says: Main apni personal AI Teacher, Miss Nova ke saath speaking practice karta hoon. Wo mera level check karti hain aur mere liye ek custom plan banati hain. Aur sabse acchi baat? Main hazar mistakes bhi karoon, wo mujhe kabhi judge nahi karti.",
+        "on_screen_text": "Miss Nova ke saath speaking practice karo.\nMere liye custom plan.\nHazar mistakes karo.\nZero judgment."
+      },
+      {
+        "n": 4,
+        "scene_label": "The Interview",
+        "script": "Rahul says: Ek baar kisi ne mujhe meri broken English ki wajah se reject kar diya tha. Lekin Miss Nova ne mujhe Hindi mein logic samjhaya, aur maine roz speaking practice ki. Ab main confidence ke saath interviews clear karta hoon.\nVikram says: Wait, Rahul English mein interview de raha hai? Ye kaise possible hai?\nPriya says: Maine use chhod kar bohot badi galti kar di.",
+        "on_screen_text": "DO HAFTE BAAD\nMeri broken English ki wajah se reject kiya tha.\nMiss Nova ne Hindi mein logic samjhaya.\nAb main confidence ke saath interviews clear karta hoon.\nRahul English bol raha hai?\nMaine bohot badi galti kar di."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Rahul says: Apne phone par ghanton scroll karna band karo. Supernova AI par din mein bas 15 minutes aapko confidently bolne mein help kar sakte hain. Agar main kar sakta hoon, toh aap bhi kar sakte hain. Download Supernova AI aur aaj hi bolna start karo.",
+        "on_screen_text": "Ghanton scroll karna band karo.\nBas 15 minutes ek din mein.\nConfidently bolo.\nDownload Supernova AI.\nMujhe aaj hi bolna start karo."
+      }
+    ],
+    "self_critique_fixed": "I have successfully translated the script into romanized, code-mixed Hindi. The peer characters (Rahul, Priya, Vikram) use the natural 'tum' register to avoid sounding dubbed or overly formal. Miss Nova is referenced with respectful plural verbs. The final CTA uses the polite 'aap' register for the viewer. All stay-English words, brand names, and numerals have been preserved. The language self-reference in Scene 4 has been localized to 'Hindi' per rule T5. The first line opens in native Hindi to grab attention per rule T7."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.2",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 4",
+        "quote": "Ab main confidence ke saath interviews clear karta hoon.",
+        "why": "The ad depicts a job-related outcome (clearing interviews) on a rapid two-week timeline, which violates the strict ban on job or career outcomes on a timeline.",
+        "fix": "Shift the focus from clearing interviews to speaking progress, such as: 'Ab main bina darr ke English mein baat karta hoon.'"
+      }
+    ],
+    "summary": "The ad is blocked due to a severe violation of G1.2, depicting a job-related outcome (clearing interviews) on a two-week timeline.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517438.073828
+}

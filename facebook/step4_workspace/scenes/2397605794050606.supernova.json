@@ -1,0 +1,91 @@
+{
+  "competitor_id": "2397605794050606",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Silver humanoid robot with a metallic body, glowing blue eyes, and articulated joints. Features a glowing blue circle on its chest.",
+        "wardrobe": "None (metallic robot body).",
+        "demeanor": "Helpful, instructional, with slightly stiff and repetitive gestures."
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "female learner",
+        "appearance": "Young Indian woman, slim build, medium complexion, long dark wavy hair. Distinctive sharp facial features.",
+        "wardrobe": "Black long-sleeve top and grey trousers.",
+        "demeanor": "Calm, attentive, and focused."
+      },
+      {
+        "id": "C",
+        "name": "Rahul",
+        "role": "male learner",
+        "appearance": "Young Indian man, medium build, light complexion, short dark hair.",
+        "wardrobe": "Olive green zip-up jacket.",
+        "demeanor": "Animated, engaged, and expressive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Translation Practice",
+        "supernova_script": "Priya says: I am giving an interview.\nMiss Nova says: Say, \"I am taking an interview.\"\nPriya says: He is my cousin brother.\nMiss Nova says: Say, \"He is my cousin.\"\nPriya says: I belong to Delhi.\nMiss Nova says: Say, \"I am from Delhi.\"\nPriya says: I am sleeping now.\nMiss Nova says: Say, \"I am going to sleep.\"\nPriya says: How to learn English?\nMiss Nova says: Practice speaking with me.",
+        "scene_summary": "- Hooks viewer with relatable Indian-English errors\n- Demonstrates live correction loop (beat c)\n- Names English early",
+        "supernova_on_screen_text": "I am giving an interview.\nI AM TAKING AN INTERVIEW.\nHe is my cousin brother.\nHE IS MY COUSIN.\nI belong to Delhi.\nI AM FROM DELHI.\nI am sleeping now.\nI AM GOING TO SLEEP.\nHow to learn English?\nPRACTICE SPEAKING WITH ME."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Introduction",
+        "supernova_script": "Miss Nova says: I am Miss Nova from Supernova AI. I analyze your English level and build a personalized plan just for you.",
+        "scene_summary": "- Introduces Miss Nova and brand\n- Lands personalization beat (beat a)\n- Shows user actively speaking",
+        "supernova_on_screen_text": "Supernova AI\nPERSONALIZED PLAN\nJUST FOR YOU"
+      },
+      {
+        "n": 3,
+        "scene_label": "Daily Practice",
+        "supernova_script": "Miss Nova says: Make a thousand mistakes at three a.m. No one is watching, and I will never judge you.",
+        "scene_summary": "- Lands privacy and no-judgement beat (beat b)\n- Reassures the learner",
+        "supernova_on_screen_text": "MAKE 1000 MISTAKES\nZERO JUDGEMENT"
+      },
+      {
+        "n": 4,
+        "scene_label": "Features Overview",
+        "supernova_script": "Miss Nova says: I explain the logic in your own language, so you actually learn by speaking, not just reading.",
+        "scene_summary": "- Lands logic in mother-tongue beat (beat g)\n- Reinforces speaking over reading (beat c)\n- Removes the competitor's 1-rupee price claim",
+        "supernova_on_screen_text": "LOGIC IN YOUR LANGUAGE\nLEARN BY SPEAKING"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "supernova_script": "Miss Nova says: Stop scrolling. Just fifteen minutes a day is all you need to start seeing visible progress.",
+        "scene_summary": "- Negative time anchor (stop scrolling)\n- Positive time anchor (15 mins/day)\n- Soft, hedged progress expectation",
+        "supernova_on_screen_text": "JUST 15 MINS A DAY\nSTART SEEING VISIBLE PROGRESS"
+      },
+      {
+        "n": 6,
+        "scene_label": "End Card",
+        "supernova_script": "Miss Nova says: Install Supernova AI and start speaking today.",
+        "scene_summary": "- Clean install CTA\n- Brand reinforcement",
+        "supernova_on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speak not read), g (logic in language)",
+      "kept_from_seed": "Robot avatar split-screen and rapid-fire correction loop",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "Removed 1 rupee claim; no hard price used"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.65969
+}

@@ -1,0 +1,63 @@
+{
+  "ad_library_id": "4434299713468696",
+  "language": "Kannada",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Audience and Presenter",
+        "script": "Kavya says: Nanna maathanna dhyanadhinda keli.\nKavya says: English maatadoke bandhaga nivu innu freeze aadhre, nimma career-na neeve hinde hakthidira.\nKavya says: Aadre nivu ivthe practice maadoke start maadidhre, nimma confidence-na build maadbahudu.\nKavya says: Nimge time illa illa money illa anta ankondidira? Ivella bari excuses anthe.",
+        "on_screen_text": "Nanna maathanna dhyanadhinda keli\nEnglish maatadoke freeze aagthidira?\nNimma career-na hinde hakthidira\nNimma confidence build maadi\nTime mathu money bari excuses"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Pricing and Chat",
+        "script": "Kavya says: Yakanre Supernova AI thumba affordable mathu videos nododhkintha thumba different aagide.\nKavya says: Illi nimge Miss Nova sigtare, nimma personal AI teacher. Yaroo nimmannu judge maadada full private space idhu.\nKavya says: Avaru ellargu adhe same lesson kodalla. Nimma English level-na analyze maadi, nimgaagi ondh personalized plan ready maadtare.",
+        "on_screen_text": "Supernova AI\nAffordable learning\nMeet Miss Nova\n100% Private & No Judgement\nPersonalized plan nimgaagi"
+      },
+      {
+        "n": 3,
+        "scene_label": "Presenter at Podium",
+        "script": "Kavya says: Dinaa bari 10-15 minutes spend maadidhre saaku, nimge visible progress kanisutthe.\nKavya says: Nivu tough job-interview ge prepare aagthidro illa manager round ge, Supernova AI nimmannu real life ge prepare maadutthe.",
+        "on_screen_text": "Bari 10-15 minutes dinaa\nVisible progress nodi\nJob-interviews ge prepare aagi\nReal-life practice"
+      },
+      {
+        "n": 4,
+        "scene_label": "Grammar Correction Feature",
+        "script": "Kavya says: Nivu bari type maadodhalla, actual aagi out loud speak maadthira.\nKavya says: Nivu 1000 mistakes maadidhru, Miss Nova adhannu correct maadi Kannada-dhalle logic explain maadtare.",
+        "on_screen_text": "Out loud speak maadi, bari type maadbedi\n1000 mistakes maadi\nLogic Kannada-dhalle explain aagutthe"
+      },
+      {
+        "n": 5,
+        "scene_label": "Final Call to Action",
+        "script": "Kavya says: Matthe innu yaake wait maadthidira?",
+        "on_screen_text": "Innu yaake wait maadthidira?"
+      },
+      {
+        "n": 6,
+        "scene_label": "App Install Screen",
+        "script": "Kavya says: Videos scroll maadodhanna nilsi. Ivthe Supernova AI install maadi, speak maadoke start maadi.",
+        "on_screen_text": "Supernova AI\nSpoken English App\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied the Kannada language module rules: localized the character name to Kavya from the casting table; ensured the hook starts with a native phrase ('Nanna maathanna dhyanadhinda keli'); used modern spoken contractions ('niv', 'ondh'); applied the correct polite plural register for the viewer-facing lines; swapped the self-referential language to 'Kannada'; kept all required English terminology intact; and formatted the output in clean, WhatsApp-style romanized Kannada."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 2",
+        "quote": "promotional pricing page with a countdown timer",
+        "why": "The visual description includes a countdown timer on a promotional pricing page, which violates the prohibition against sham countdown timers under Meta's ad policy.",
+        "fix": "Remove the countdown timer from the promotional pricing page visual."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe violation of Meta's ad policy due to a countdown timer in the Scene 2 visual.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517529.9550772
+}

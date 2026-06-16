@@ -1,0 +1,57 @@
+{
+  "ad_library_id": "4364553960461634",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Hair Oiling Correction",
+        "script": "Priya says: \"What are you doing?\"\nMiss Nova says: \"I'm adding oil.\"\nPriya says: Woh...\nMiss Nova says: \"I'm applying oil.\" Ya aap bol sakte ho, \"I'm oiling my hair.\"\nMiss Nova says: Kya aap bhi finally confidently English bolna chahte hain?\nPriya says: Haan, par mistakes karne me bohot sharm aati hai.\nMiss Nova says: Main hoon Miss Nova. Supernova AI ke saath, aapko tension lene ki koi zaroorat nahi hai.",
+        "on_screen_text": "\"What are you doing?\"\n\"I'm adding oil\"\n\"I'm applying oil\"\nYa aap bol sakte ho\n\"I'm oiling my hair\"\nEnglish bolna chahte ho?\nHaan, par sharm aati hai\nSupernova AI"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Interface Introduction",
+        "script": "Miss Nova says: Aap daily English speaking practice kar sakte ho. 1000 mistakes karo, main aapko kabhi judge nahi karungi, aur koi aapko dekh nahi raha hai.",
+        "on_screen_text": "Daily speaking practice karo\n1000 mistakes karo\nZero judgement\nKoi nahi dekh raha"
+      },
+      {
+        "n": 3,
+        "scene_label": "Explaining Benefits",
+        "script": "Miss Nova says: Main aapko sikhaungi ki actually out loud baat karke naturally kaise bolte hain.\nPriya says: Kya ye actually mere liye kaam karega?\nMiss Nova says: Ye purani coaching classes se kahi zyada effective hai, kyunki main aapka exact level analyze karke aapke liye ek personalized plan banati hoon.\nPriya says: Kya ye affordable hai?",
+        "on_screen_text": "Naturally bolo\nOut loud baat karo\nKya ye mere liye kaam karega?\nCoaching classes se behtar\nExact level analyze karein\nPersonalized plan sirf aapke liye\nKya ye affordable hai?"
+      },
+      {
+        "n": 4,
+        "scene_label": "Pricing Offer",
+        "script": "Miss Nova says: Haan, ye regular classes se saat guna sasta hai. Bas mujhe din me 15 minutes dijiye, aur aap ek month me visible progress dekhne lagenge.",
+        "on_screen_text": "Regular classes se 7x sasta\nBas 15 minutes rozana\nVisible progress dekhna shuru karein\nEk month mein"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: Scrolling karke time waste karna band karo. Abhi Supernova AI install karo aur aaj se hi bolna shuru karo.",
+        "on_screen_text": "Scrolling me time waste mat karo\nInstall Supernova AI\nAaj se hi bolna shuru karo"
+      }
+    ],
+    "self_critique_fixed": "Applied the 'Teaching / correction skit' register module. Kept all English teaching lines verbatim in double quotes as per T2a. Applied the T2h comparative multiplier carve-out ('seven times cheaper' -> 'saat guna sasta') and converted numbers to English numerals. Ensured Miss Nova maintains a warm, polite 'aap' register while Priya uses a natural, casual-respectful tone. Romanized the text into standard, clean WhatsApp-style Hindi."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 4 — Pricing Offer",
+        "quote": "The UI highlights a discounted price of 1 rupee, crossing out the original price of 30.",
+        "why": "The visual description contains a specific, unapproved rupee price and discount offer which violates the ban on hard pricing.",
+        "fix": "Update the visual description to show a generic subscription interface or comparative cost graphic instead of specific rupee amounts."
+      }
+    ],
+    "summary": "The ad is compliant except for a G6.1 violation in Scene 4 where unapproved hard rupee pricing is shown in the visual.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517535.660954
+}

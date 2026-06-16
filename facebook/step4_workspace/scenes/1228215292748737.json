@@ -1,0 +1,49 @@
+{
+  "competitor_id": "1228215292748737",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video is entirely a screen recording or 2D animation of a messaging app interface. There is no live-action footage, only static profile pictures and animated text bubbles.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Pallavi (Messaging Contact)",
+        "appearance": "Visible only as a small circular profile picture. Young Indian woman with a fair complexion and dark hair. She has a gentle smile.",
+        "wardrobe": "Wearing a grey or silver top or saree.",
+        "demeanor": "Friendly and helpful, based on the static profile picture."
+      },
+      {
+        "id": "B",
+        "role": "Me (User)",
+        "appearance": "Visible only as a small circular profile picture. Young Indian man with a fair complexion and short dark hair.",
+        "wardrobe": "Wearing a black t-shirt.",
+        "demeanor": "Casual and relaxed, based on the static profile picture."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 38.0,
+        "screenshot_at_s": 19.0,
+        "scene_label": "Messaging App Screencast",
+        "setting": "Digital interface, dark mode.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A solid black background. There are no physical characters, props, or settings visible. The entire visual consists of digital interface elements which are excluded from this description.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A vertical screencast of a mobile messaging application in dark mode. A digital keyboard is visible at the bottom. Throughout the video, blue and dark grey chat bubbles appear sequentially, simulating a text conversation between two users. Small circular profile pictures accompany the chat bubbles.",
+        "audio_transcript": "[sound effects only, no speech]",
+        "on_screen_text": "Pallavi\nHappy with your English ?\nI can read and write\nWhat about speaking?\nLight, light! \ud83d\ude05\nNervous to speak?\nYeahhh!!\nHave you tried any courses?\nYeahhh!!\nWhat about AI training?\nAI? \ud83e\udd28\nAI Teacher makes you speak English faster than other methods.\nIt's very useful.\nHow to join?\nInstall MySivi.\nThe ARYA AI provides personalized training based on your level.\nYou'll learn to speak English faster than you think.\nCan't believe!\n50 lakh + learners are using the app.\nJoin MySivi Pro and start your AI Training."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.369615
+}

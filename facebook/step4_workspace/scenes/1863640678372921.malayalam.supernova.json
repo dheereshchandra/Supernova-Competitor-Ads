@@ -1,0 +1,63 @@
+{
+  "ad_library_id": "1863640678372921",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Presenter's Question",
+        "script": "Arun says: Samsaarikaan neram varumpol, English samsaarikyaan pinneyum freeze aavunnathu enthukonda?",
+        "on_screen_text": "English samsaarikyumpol freeze aavunnundo?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Audience Excuses",
+        "script": "Anoop says: Njaan Malayalam medium school-ilaanu padichathu, sir.\nArun says: Athe.\nSuresh says: Judge cheyyaathe, koode practice cheyyaan aarumilla.\nArun says: Manasilaayi.\nAnu says: Work-um family-um karanam, enikku samayame kittunnilla.",
+        "on_screen_text": "Malayalam medium school. Practice cheyyaan aarumilla. Padikkaan samayamilla."
+      },
+      {
+        "n": 3,
+        "scene_label": "Presenter's Solution",
+        "script": "Arun says: Ithinoru vazhiyundennu njaan paranjaalo?\nUnknown speaker says: Athu enganeya, sir?\nArun says: Supernova AI app-il Miss Nova-ye parichayappedoo. Ningalude level test cheythu, personalized plan ready aakkunna personal AI teacher aanu avar.",
+        "on_screen_text": "Supernova AI-il Miss Nova-ye parichayappedoo. Personal AI teacher. Level test cheyyunnu."
+      },
+      {
+        "n": 4,
+        "scene_label": "App Store",
+        "script": "Arun says: 1 crore-il adhikam Indians-inte koode join cheyyoo. Ningal samsaarikkoo, avar kelkkum. Mistakes ellaam Malayalathil paranju tharum.",
+        "on_screen_text": "Supernova AI. 1 Crore+ Downloads. Malayalathil samsaarikkoo, padikkoo."
+      },
+      {
+        "n": 5,
+        "scene_label": "Final Pitch",
+        "script": "Arun says: Aayiram mistakes varuthiyaalum, Miss Nova ningale judge cheyyilla.\nArun says: Feed scroll cheythu manikyoorugal waste aakkunnathu nirthoo.\nArun says: Divusavum 15 minutes Supernova AI-kkaayi spend cheyyoo, interviews-il real progress kanduthudanngoo.",
+        "on_screen_text": "No judgment. Divusavum 15 minutes mathram. Interviews-il progress kanduthudanngoo."
+      },
+      {
+        "n": 6,
+        "scene_label": "End Card",
+        "script": "Arun says: Innu thanne install click cheyyoo, Supernova AI-yiloode English samsaarikkoo.",
+        "on_screen_text": "Supernova AI English speaking app. Install Now."
+      }
+    ],
+    "self_critique_fixed": "Applied the Malayalam language module rules strictly: 1. Changed 'Hindi medium' to 'Malayalam medium' and localized 'in Hindi' to 'Malayalathil' (no hybrid ending). 2. Used 'manikyoorugal' for 'hours' and 'divusavum' for daily/day. 3. Opened the hook with native words ('Samsaarikaan neram...'). 4. Used 'samsaarikyaan' instead of 'speak cheyyaan' to respect the native verb stem rule. 5. Mapped characters to the Malayalam casting table (Rahul -> Arun, Vikram -> Anoop, Amit -> Suresh, Priya -> Anu). 6. Maintained polite plural forms ('ningal', '-oo' endings) for Arun's address to the audience."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 5 — Final Pitch",
+        "quote": "download progress bar appear",
+        "why": "The inclusion of a download progress bar in the visual mimics an interactive system download mechanic, which constitutes a misleading mechanic/fake UI under Meta's ad policies.",
+        "fix": "Replace the download progress bar with a standard static call-to-action button or app logo."
+      }
+    ],
+    "summary": "The ad is highly compliant and on-brand, but contains a severe Meta policy violation due to a fake UI element (download progress bar) in Scene 5.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517390.419057
+}

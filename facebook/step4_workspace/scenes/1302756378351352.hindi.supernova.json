@@ -1,0 +1,66 @@
+{
+  "ad_library_id": "1302756378351352",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Translation Practice",
+        "script": "Priya says: I am having a doubt.\nMiss Nova says: Boliye, 'I have a doubt'. Main aapko bolte hue sunti hoon aur live correct karti hoon.\nPriya says: I didn't knew that.\nMiss Nova says: Boliye, 'I didn't know that'. 'did' ke saath humesha root verb use hota hai.\nPriya says: You teach very nice.\nMiss Nova says: Boliye, 'You teach very well'. Aap English bolkar hi seekhte ho, bilkul apni Hindi ki tarah.",
+        "on_screen_text": "I am having a doubt\n- I have a doubt.\nI didn't knew that\n- I didn't know that.\nYou teach very nice\n- You teach very well."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Pitch",
+        "script": "Miss Nova says: Main hoon Miss Nova, Supernova AI par aapki AI Teacher. Main sabko same lessons nahi deti. Main aapka level test karti hoon aur bilkul aapke liye ek personalized plan banati hoon.",
+        "on_screen_text": "Supernova AI\nPersonal AI English Teacher\nCustomized Learning Plan\nInstant feedback ke saath apni grammar check karein."
+      },
+      {
+        "n": 3,
+        "scene_label": "User Practice",
+        "script": "Miss Nova says: Mere saath kabhi bhi practice karein. 1000 mistakes kijiye, aur main bina judge kiye ya mazaak udaye aapko correct karungi.",
+        "on_screen_text": "Kabhi bhi practice karein\nZero judgement\n1000 mistakes kijiye"
+      },
+      {
+        "n": 4,
+        "scene_label": "Features List",
+        "script": "Miss Nova says: Feeds scroll karte hue ghanto waste karna band karein. Roz bas 15 minutes nikaalein aur real-life situations jaise job-interviews aur office-meetings ki practice karein.",
+        "on_screen_text": "Roz bas 15 minutes\nJob Interviews\nOffice Meetings\nGrammar Feedback"
+      },
+      {
+        "n": 5,
+        "scene_label": "End Card",
+        "script": "Miss Nova says: Supernova AI install karein aur aaj se hi English bolna shuru karein.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nAbhi install karein"
+      }
+    ],
+    "self_critique_fixed": "The translation successfully applies the 'Teaching / correction skit' register module. It keeps all quoted English lines verbatim per T2a, applies the Hindi language module rules, maintains polite address for Miss Nova ('karein', 'kijiye'), and localizes the mother-tongue reference to 'Hindi' per T5. The tone is highly colloquial, natural, and free of formal Sanskritized words."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 2",
+        "quote": "1 Rupee",
+        "why": "The visual contains an unapproved hard rupee price ('1 Rupee') which is strictly prohibited.",
+        "fix": "Remove the price reference from the UI overlay."
+      },
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 2",
+        "quote": "Sale Ends Today",
+        "why": "The visual contains a sham urgency promotion ('Sale Ends Today') which violates Meta's policy on misleading mechanics.",
+        "fix": "Remove the promotional urgency text from the UI overlay."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a hard rupee price and a sham urgency promotion in the Scene 2 visual overlay.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781516767.118669
+}

@@ -1,0 +1,77 @@
+{
+  "competitor_id": "1770363464324959",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Neha",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, brown complexion. Long, dark, wavy hair. Distinctive facial features include prominent cheekbones and a wide smile.",
+        "wardrobe": "Rust-colored satin slip dress worn under a cropped beige leather jacket. Gold hoop earrings and a small pendant necklace.",
+        "demeanor": "Enthusiastic, confident, and expressive."
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "male interviewer",
+        "appearance": "Young adult male, medium build, fair complexion. Short brown hair styled upwards, with a light beard and mustache.",
+        "wardrobe": "Light blue button-down shirt under a tan corduroy jacket. Dark blue jeans.",
+        "demeanor": "Curious, engaged, and friendly."
+      },
+      {
+        "id": "C",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot. White and silver smooth casing with visible joints. Pale, synthetic face with bright blue eyes and neutral features.",
+        "wardrobe": "None; exposed robotic chassis.",
+        "demeanor": "Calm, helpful, and slightly robotic in movement."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Street Interview",
+        "supernova_script": "Rahul says: What is your native language?\nNeha says: My native language is Hindi.\nRahul says: Wow, your English sounds really good.\nNeha says: A few months ago, I couldn't speak at all and kept failing job interviews.\nRahul says: Seriously? How did you learn so fast?\nNeha says: I practice speaking with Supernova AI. She understands my exact level and builds a plan just for me.\nRahul says: Wow, that's amazing. Show me.",
+        "scene_summary": "- Hook: Street interview format with a relatable language question.\n- Payload beat (e): Mentions job interviews as the high-stakes scenario.\n- Payload beat (a): Introduces personalization and the AI teacher early.",
+        "supernova_on_screen_text": "WHAT IS YOUR NATIVE LANGUAGE\nMY NATIVE LANGUAGE IS HINDI\nWOW YOUR ENGLISH SOUNDS REALLY GOOD\nA FEW MONTHS AGO I COULDN'T SPEAK AT ALL\nAND KEPT FAILING JOB INTERVIEWS\nSERIOUSLY HOW DID YOU LEARN SO FAST\nI PRACTICE WITH SUPERNOVA AI\nSHE BUILDS A PLAN JUST FOR ME\nWOW THATS AMAZING SHOW ME"
+      },
+      {
+        "n": 2,
+        "scene_label": "AI Tutor Video Call",
+        "supernova_script": "Miss Nova says: Hey Neha, how are you today?\nNeha says: I was being interviewed right now.\nMiss Nova says: Not 'I was', you should say 'I am being interviewed right now' because it is happening in the present.\nNeha says: Oh, I am being interviewed right now.\nMiss Nova says: Absolutely right. What is the interview about?\nNeha says: It's about my English skills. They say me I speak with confidence.\nMiss Nova says: Not 'They say me', it will be 'They say I speak with confidence'. And remember, you can make a thousand mistakes here, I will never judge you.\nNeha says: You're right. They say I speak with confidence.",
+        "scene_summary": "- Demo: Shows the live speak-correct-explain loop.\n- Payload beat (g): Explains the logic behind the grammar correction.\n- Payload beat (b): Emphasizes privacy and a judgement-free environment.",
+        "supernova_on_screen_text": "HEY NEHA HOW ARE YOU TODAY\nI WAS BEING INTERVIEWED RIGHT NOW\nNOT I WAS YOU SHOULD SAY I AM BEING INTERVIEWED\nOH I AM BEING INTERVIEWED RIGHT NOW\nABSOLUTELY RIGHT WHAT IS THE INTERVIEW ABOUT\nITS ABOUT MY ENGLISH SKILLS\nTHEY SAY ME I SPEAK WITH CONFIDENCE\nNOT THEY SAY ME IT WILL BE THEY SAY I SPEAK WITH CONFIDENCE\nMAKE 1000 MISTAKES I WILL NEVER JUDGE YOU\nYOURE RIGHT THEY SAY I SPEAK WITH CONFIDENCE"
+      },
+      {
+        "n": 3,
+        "scene_label": "Robot Tutor Pitch",
+        "supernova_script": "Miss Nova says: Stop wasting hours scrolling feeds, and start speaking English with me.\nMiss Nova says: Practice speaking with me for just fifteen minutes a day, and you will start seeing visible progress in a month.\nMiss Nova says: Over one crore users are already practicing on Supernova AI. You should too.\nMiss Nova says: It is way cheaper than any coaching class.",
+        "scene_summary": "- Tight Close: Negative time anchor (scrolling feeds) to positive time anchor (15 mins/day).\n- Payload beat (c): Focuses on speaking practice.\n- Guardrail check: Soft progress expectation and comparative pricing used.",
+        "supernova_on_screen_text": "STOP WASTING HOURS SCROLLING FEEDS\nPRACTICE SPEAKING FOR 15 MINUTES A DAY\nSTART SEEING VISIBLE PROGRESS IN A MONTH\nOVER 1 CRORE USERS PRACTICE ON SUPERNOVA AI\nYOU SHOULD TOO\nWAY CHEAPER THAN COACHING CLASSES"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "Unknown speaker says: Click on install now and download the Supernova AI app today.",
+        "scene_summary": "- CTA: Clear instruction to download the app.",
+        "supernova_on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy/no-judgement), c (you speak), e (job interviews), g (logic explained)",
+      "kept_from_seed": "Street interview hook and split-screen AI video call format",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used comparative 'way cheaper than any coaching class'"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.6562119
+}

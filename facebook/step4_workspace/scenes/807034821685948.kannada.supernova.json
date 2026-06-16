@@ -1,0 +1,65 @@
+{
+  "ad_library_id": "807034821685948",
+  "language": "Kannada",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Podcast Intro",
+        "script": "Manjunath says: Mulu desha maatadtiro aa viral AI English teacher ivattu namma jothe iddare. Welcome, Miss Nova.",
+        "on_screen_text": "MULU DESHA MAATADTIRO\nVIRAL AI ENGLISH TEACHER\nIVATTU NAMMA JOTHE IDDARE.\nWELCOME MISS NOVA."
+      },
+      {
+        "n": 2,
+        "scene_label": "Presenter Question 1",
+        "script": "Manjunath says: Helgiri Miss Nova, nijavaaglu English maatadoke varshagattale grammar books athva expensive coaching classes yenu bekaagilva?",
+        "on_screen_text": "HELGIRI MISS NOVA,\nENGLISH MAATADOKE NIJAVAAGLU\nGRAMMAR BOOKS ATHVA\nCOACHING CLASSES BEKAAGILVA?"
+      },
+      {
+        "n": 3,
+        "scene_label": "Robot Answer 1",
+        "script": "Miss Nova says: Exactly, Manjunath. Hale methods fail aagutte, yaakandre neevu bari read maadtira, yaavaaglu actual aagi speak maadolla.\nMiss Nova says: Neevu nimma mother tongue-na out loud speak maadi kalitiri, alva? English kooda adhe thara work aagutte.\nMiss Nova says: Supernova AI app nalli, neevu type athva read maadbekilla. Neevu nanna jothe speak maadi, naanu nimma mistakes-na instantly correct maadthini.\nMiss Nova says: Naavu job interviews athva nimma manager jothe maatador thara real-life situations-na practice maadtivi.\nMiss Nova says: Daily just 15 minutes practice maadidre, most learners-ge ondh month-nalli visible progress kanisoke start aagutte.",
+        "on_screen_text": "HALE METHODS FAIL AAGUTTE\nYAAKANDRE NEEVU SPEAK MAADOLLA.\nNIMMA MOTHER TONGUE-NA\nSPEAK MAADI KALITIRI.\nSUPERNOVA AI NALLI,\nNEEVU SPEAK MAADI, NAAN CORRECT MAADTHINI.\nJOB INTERVIEWS THARA\nREAL-LIFE SITUATIONS PRACTICE MAADTIVI.\nONDH MONTH-NALLI\nPROGRESS KANISOKE START AAGUTTE."
+      },
+      {
+        "n": 4,
+        "scene_label": "Presenter Question 2",
+        "script": "Manjunath says: Naanu kelidhe, 1 crore-gintha hechu Indians English kaliyoke Supernova AI use maadtiddare anta. Neevu ishtu janaakke henge teach maadtira?",
+        "on_screen_text": "1 CRORE-GINTHA HECHU INDIANS\nSUPERNOVA AI USE MAADTIDDARE.\nNEEVU ISHTU JANAAKKE\nHENGE TEACH MAADTIRA?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Robot Answer 2",
+        "script": "Miss Nova says: Yaakandre naanu ellarigu adhe same thara teach maadolla. Nimma speech-na analyze maadi, nimge yelli problem aagthide anta huduki, nimgaagi ondh personalized plan ready maadtini.\nMiss Nova says: Mattu best part andre, idhu completely private. Neevu 2 a.m. ge kooda 1000 mistakes maadidru, naanu nimmanna yaavaaglu judge maadolla.\nMiss Nova says: Adhe thara, naanu logic-na nimma Kannada-dallene explain maadtini, so neevu yaavaaglu lost aagolla.",
+        "on_screen_text": "NIMGAAGI ONDH PERSONALIZED PLAN\nREADY MAADTINI.\nCOMPLETELY PRIVATE.\n1000 MISTAKES MAADIDRU,\nNAAN JUDGE MAADOLLA.\nLOGIC-NA KANNADA-DALLI\nEXPLAIN MAADTINI."
+      },
+      {
+        "n": 6,
+        "scene_label": "Presenter Question 3",
+        "script": "Manjunath says: Mattu nimma jothe practice maadodu, regular coaching classes-gintha hattu guna sasta anta helthare, nijana?",
+        "on_screen_text": "REGULAR COACHING CLASSES-GINTHA\nHATTU GUNA SASTA?"
+      },
+      {
+        "n": 7,
+        "scene_label": "Robot Answer 3 & CTA",
+        "script": "Miss Nova says: Houdu, idhu thumba affordable.\nMiss Nova says: Nimma speak maadoke help aagada reels-na scroll maadtha hours waste maadodanna nillisi.\nMiss Nova says: Dinakke just 15 minutes kodi, naanu neevu confidently English speak maadoke help maadtini.\nMiss Nova says: Ivatthe Supernova AI app install maadi, nimma journey-na start maadi.",
+        "on_screen_text": "THUMBA AFFORDABLE.\nREELS SCROLL MAADTHA\nHOURS WASTE MAADODANNA NILLISI.\nDAILY JUST 15 MINUTES\nCONFIDENTLY SPEAK MAADOKE.\nIVATTHE SUPERNOVA AI INSTALL MAADI."
+      },
+      {
+        "n": 8,
+        "scene_label": "End Card",
+        "script": "Miss Nova says: Eegle install click maadi, Supernova AI download maadi.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied the Kannada language module rules. Swapped the presenter name 'Karthik' to 'Manjunath' from the Kannada casting table. Replaced 'ten times cheaper' with the local multiplier 'hattu guna sasta' per T2h. Ensured the first scene opens with native words ('Mulu desha...') per T7. Handled the self-reference swap in Scene 5 ('Kannada-dallene'). Applied conversational, modern spoken contractions (e.g., 'ondh', 'nivu', 'alva') to avoid a textbook tone."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved social proof, comparative costs, and progress expectations.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517638.73196
+}

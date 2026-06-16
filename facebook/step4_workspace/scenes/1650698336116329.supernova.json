@@ -1,0 +1,59 @@
+{
+  "competitor_id": "1650698336116329",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "Supervisor",
+        "appearance": "Young male, mid-20s, slim build, fair complexion, short dark hair. Clean-shaven with sharp facial features.",
+        "wardrobe": "Yellow hard hat, white long-sleeve button-down shirt, khaki trousers. Holds a clipboard and pen.",
+        "demeanor": "Initially aggressive and demanding, transitioning to surprised and impressed."
+      },
+      {
+        "id": "B",
+        "name": "Ramesh",
+        "role": "Construction Worker",
+        "appearance": "Older male, 50s, thin build, dark complexion. Has grey stubble and weathered facial features.",
+        "wardrobe": "Faded blue button-down shirt with a red and white checkered cloth wrapped around his head.",
+        "demeanor": "Calm, confident, and respectful throughout the interaction."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Confrontation and Explanation",
+        "supernova_script": "Rahul says: What is this? It has been three days, and the work is still not finished. Are you guys just wasting time?\nRamesh says: Sir, the delay is not from our side. We completed the brickwork yesterday. We are just waiting for the cement supply.\nRahul says: Wait... how are you speaking such good English?\nRamesh says: Supernova AI, sir.\nRahul says: Supernova?\nRamesh says: Yes. I practice speaking with Miss Nova, my personal AI teacher. She tests my level and builds a custom plan just for me.\nRamesh says: I can make a thousand mistakes, and she corrects me without ever judging or laughing.\nRamesh says: She even explains the logic in my own language. With just fifteen minutes of practice a day, I started seeing visible progress in a month.\nRahul says: But a personal AI teacher... that must be expensive, right?\nRamesh says: Not at all. It is much more affordable than regular coaching classes.\nRahul says: Very impressive. I will tell my son to install this app.\nRamesh says: Sure, sir. The work will be completed on time.",
+        "scene_summary": "- Hook: Workplace confrontation flipped by fluent English\n- Payload: Lands personalization (a) and privacy/no-judgement (b) early\n- Payload: Adds logic in mother tongue (g) and hedged progress expectation",
+        "supernova_on_screen_text": "Dynamic subtitles of the dialogue. UI Overlays: 'Supernova AI' logo. App interface showing 'Miss Nova AI Teacher', 'Practice Now', 'Your Custom Plan'. Graphic: '15 Mins/Day'."
+      },
+      {
+        "n": 2,
+        "scene_label": "Call to Action",
+        "supernova_script": "Ramesh says: Stop wasting hours scrolling. Install Supernova AI and start speaking English today.",
+        "scene_summary": "- Tight close: Negative time anchor (scrolling) to positive (learning)\n- Clear install CTA",
+        "supernova_on_screen_text": "Dynamic subtitles of the dialogue. UI Overlay: App installation prompt for 'Supernova AI'."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy/no-judgement), g (logic in own language), e (workplace scenario)",
+      "kept_from_seed": "Workplace confrontation and power-dynamic flip",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used comparative 'more affordable than regular coaching classes'"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "Arya AI Teacher",
+        "supernova_swap": "Miss Nova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.65442
+}

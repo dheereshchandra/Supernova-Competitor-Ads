@@ -1,0 +1,81 @@
+{
+  "ad_library_id": "1701651697935230",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Childhood Basics vs Reality",
+        "script": "Ravi says: Chinnappudu 'A for Apple' ani gurtupettukunnav kada?\nRavi says: Kaani sad ga, years paatu school ki vellina, English lo oka full sentence matlade time vachina pratisari freeze aypotunnav.",
+        "on_screen_text": "A FOR APPLE, YEARS OF SCHOOL, STILL FREEZE, FULL SENTENCE IN ENGLISH"
+      },
+      {
+        "n": 2,
+        "scene_label": "The Need for English",
+        "script": "Ravi says: Nijam cheppalante, Spoken English lekapothe, work lo neeku ravalsina respect neeku dorakadu.\nRavi says: Anduke neeku Supernova AI kavali.\nRavi says: Idi andariki oke lesson ivvadhu—nee level ni analyze chesi, nee kosam oka personalized plan ready chestundi.",
+        "on_screen_text": "SPOKEN ENGLISH LEKAPOTHE RESPECT UNDADU, SUPERNOVA AI, PERSONALIZED PLAN"
+      },
+      {
+        "n": 3,
+        "scene_label": "AI Teacher Introduction",
+        "script": "Ravi says: Meet Miss Nova, nee personal AI Teacher, eeme 24/7 available ga untundi.\nRavi says: Nuvu 1000 mistakes chesina, eeme ninnu eppudu judge cheyyadhu, nee paina navvadhu.",
+        "on_screen_text": "MISS NOVA, AI TEACHER, 24/7 AVAILABLE, 1000 MISTAKES, NO JUDGMENT"
+      },
+      {
+        "n": 4,
+        "scene_label": "Practice Conversations",
+        "script": "Ravi says: Deenilo best part entante, neeku emi ardham kakapoina, eeme logic ni Telugu lone explain chestundi.\nRavi says: Job interview lanti real-life scenarios ni nuvu direct ga out loud ga matladi practice cheyochu.",
+        "on_screen_text": "LOGIC IN TELUGU, REAL-LIFE SCENARIOS, JOB INTERVIEW, SPEAK OUT LOUD"
+      },
+      {
+        "n": 5,
+        "scene_label": "Surprising Results",
+        "script": "Ravi says: Roju ki just 15 minutes spend chey, 1 month lone nee confidence lo visible progress chustav.\nRavi says: Already 1 crore+ Indians Supernova AI tho English nerchukuntunnaru.",
+        "on_screen_text": "ROJU KI 15 MINUTES, VISIBLE PROGRESS, 1 CRORE+ INDIANS, SUPERNOVA AI"
+      },
+      {
+        "n": 6,
+        "scene_label": "Call to Action",
+        "script": "Ravi says: So phone lo hours koddi scroll chestu time waste cheyadam aapey.\nRavi says: Idi expensive coaching classes kante chala affordable.\nRavi says: Ippude install paina click chesi, ee roje Supernova AI app ni download chesko.",
+        "on_screen_text": "SCROLLING AAPEYANDI, AFFORDABLE, INSTALL NOW, SUPERNOVA AI APP"
+      }
+    ],
+    "self_critique_fixed": "Applied the direct-friend register (nuvvu-tier) for Ravi's monologue to match the blunt, tough-love energy of the English master. Ensured strict gender-agreement compliance for Miss Nova/Supernova AI (using female negative verb endings '-dhu' like 'ivvadhu' and 'cheyyadhu' instead of the masculine '-du'). Swapped the language self-reference from English to Telugu in Scene 4. Recast the character name 'Rahul' to 'Ravi' from the Telugu casting table. Opened the hook in Scene 1 with a native Telugu word ('Chinnappudu') to satisfy the hook rule. Kept all brand names, product terms, and numbers as English numerals/code-mixed terms."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G3.4",
+        "category": "Dignity & representation",
+        "severity": "moderate",
+        "scene": "Scene 2",
+        "quote": "Spoken English lekapothe, work lo neeku ravalsina respect neeku dorakadu.",
+        "why": "It attacks the viewer's self-worth by claiming they will not receive respect at work without spoken English.",
+        "fix": "Spoken English unte, work lo neeku inka manchi opportunities vache chance untundi."
+      },
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 5",
+        "quote": "1 month lone nee confidence lo visible progress chustav.",
+        "why": "It promises a definite outcome ('you will see') within a specific timeframe without using required hedge language like 'can' or 'start to'.",
+        "fix": "1 month lone nee confidence lo visible progress ni start cheyochu."
+      },
+      {
+        "guardrail_id": "G1.2",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 5",
+        "quote": "a paper with a group of people and a '50 Lakhs' graphic.",
+        "why": "The '50 Lakhs' graphic in the visual implies a false, highly exaggerated income outcome from using the app.",
+        "fix": "Replace the '50 Lakhs' graphic with a visual representing career growth or a professional handshake."
+      }
+    ],
+    "summary": "The ad contains severe violations regarding guaranteed outcomes and false income representations, along with a moderate violation attacking the viewer's self-worth.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517318.777577
+}

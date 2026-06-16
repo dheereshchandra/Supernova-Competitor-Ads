@@ -1,0 +1,48 @@
+{
+  "competitor_id": "1974355020143862",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "female learner",
+        "appearance": "Young Indian woman with a slim build and medium complexion. She has long, dark, straight hair parted down the middle. Her facial features are expressive with dark eyes.",
+        "wardrobe": "A blue and white vertically striped button-down shirt.",
+        "demeanor": "Conversational, initially skeptical but becoming convinced and engaged."
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Not physically present; represented on-screen by a circular blue robot icon.",
+        "wardrobe": "N/A",
+        "demeanor": "Helpful, encouraging, and informative."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Video Call with AI Tutor",
+        "supernova_script": "Priya says: I can read and write English perfectly fine.\nMiss Nova says: But when it is time to actually speak English, do you freeze?\nPriya says: Yes! I get so shy. I have tried so many courses, but nothing works.\nMiss Nova says: Because in those courses, you never actually spoke. I am Miss Nova, an AI teacher on Supernova AI.\nPriya says: An AI teacher? How can an AI teach me to speak?\nMiss Nova says: I do not just give you generic lessons. I listen to you speak, find exactly where you struggle, and build a personalized plan just for you.\nPriya says: But what if I make mistakes? I feel embarrassed.\nMiss Nova says: You can practice with me at two in the morning. Make a thousand mistakes, and I will correct you without ever judging or laughing at you.\nPriya says: Really? And you explain things so I can understand?\nMiss Nova says: Yes, I explain the logic right in your own language. Over one crore Indians are already practicing with me.\nPriya says: That sounds amazing.\nMiss Nova says: Stop wasting hours scrolling through videos. Just practice speaking with me for fifteen minutes a day. Install Supernova AI and start speaking today.",
+        "scene_summary": "- Hooks with the relatable reading vs speaking gap.\n- Introduces Miss Nova and handles the AI objection with personalization (beat a).\n- Delivers the privacy/no-judgement reassurance (beat b) and closes with the 15-min daily anchor.",
+        "supernova_on_screen_text": "You\nI can read and write English perfectly fine.\nAI Feedback\nBut when it is time to actually speak English, do you freeze?\nYou\nYes! I get so shy. I have tried so many courses, but nothing works.\nAI Feedback\nBecause in those courses, you never actually spoke. I am Miss Nova, an AI teacher on Supernova AI.\nYou\nAn AI teacher? How can an AI teach me to speak?\nAI Feedback\nI listen to you speak, find exactly where you struggle, and build a personalized plan just for you.\nYou\nBut what if I make mistakes? I feel embarrassed.\nAI Feedback\nMake a thousand mistakes. I will correct you without ever judging or laughing at you. I explain the logic right in your own language. Over one crore Indians are already practicing with me.\nYou\nThat sounds amazing.\nAI Feedback\nStop wasting hours scrolling through videos. Just practice speaking with me for 15 minutes a day. Install Supernova AI and start speaking today."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (Personalization), b (Privacy), c (You speak), g (Logic in your language)",
+      "kept_from_seed": "Video call UI and the reading vs speaking gap hook.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard price used; no comparative used."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi / Sivi Pro",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.657862
+}

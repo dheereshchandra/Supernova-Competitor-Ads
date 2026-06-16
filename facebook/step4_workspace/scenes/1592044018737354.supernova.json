@@ -1,0 +1,62 @@
+{
+  "competitor_id": "1592044018737354",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Karthik",
+        "role": "struggling learner / confident speaker",
+        "appearance": "Middle-aged Indian male, stocky build, medium complexion. He has short salt-and-pepper hair and a matching beard. He wears a silver chain necklace and a small hoop earring in his left ear.",
+        "wardrobe": "Initially wears a dark blue button-down shirt. Later changes to a bright red button-down shirt. Wears dark aviator sunglasses in the final scene.",
+        "demeanor": "Highly expressive, ranging from stressed and confused to maniacally laughing, and finally confident and swaggering."
+      },
+      {
+        "id": "AI",
+        "name": "Miss Nova",
+        "role": "AI teacher",
+        "appearance": "Not visible; represents the persona behind the chat interface.",
+        "wardrobe": "N/A",
+        "demeanor": "Warm, patient, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Struggling with English",
+        "supernova_script": "Karthik says: Learning English feels impossible. I spent years on grammar books but still freeze in job interviews.\nMiss Nova says: That is because you only read, you never speak. I am Miss Nova from Supernova AI. I analyze your exact level and build a personalized plan just for you.",
+        "scene_summary": "- Hooks the viewer with the relatable failure of old methods and high-stakes interview anxiety.\n- Introduces Miss Nova and lands the personalization beat (a) immediately.\n- Replaces the seed's hard price with the core AI teacher mechanism.",
+        "supernova_on_screen_text": "Karthik: Learning English feels impossible. I spent years on grammar books but still freeze in job interviews.\nMiss Nova: That is because you only read, you never speak. I am Miss Nova from Supernova AI. I analyze your exact level and build a personalized plan just for you."
+      },
+      {
+        "n": 2,
+        "scene_label": "Going Crazy",
+        "supernova_script": "Karthik says: But I make so many mistakes when I speak! People always laugh at me.\nMiss Nova says: Not here. You can make a thousand mistakes at 3 a.m., and I will correct you without ever judging you.",
+        "scene_summary": "- Matches the manic, hair-pulling visual to the intense anxiety of being mocked for broken English.\n- Lands the crucial privacy and no-judgement beat (b).\n- Pre-sells retention by removing the fear of speaking out loud.",
+        "supernova_on_screen_text": "Karthik: But I make so many mistakes when I speak! People always laugh at me.\nMiss Nova: Not here. You can make a thousand mistakes at 3 a.m., and I will correct you without ever judging you."
+      },
+      {
+        "n": 3,
+        "scene_label": "Confident and Cool",
+        "supernova_script": "Karthik says: Really? And what if I do not understand a word?\nMiss Nova says: I explain the logic in your own language so it finally makes sense. Stop scrolling and practice just fifteen minutes a day.\nKarthik says: I am installing Supernova AI right now.",
+        "scene_summary": "- Resolves the narrative with confidence, matching the visual swagger of putting on sunglasses.\n- Lands mother-tongue logic (g) and the negative/positive time anchors.\n- Ends with a clean, price-free CTA to install the app.",
+        "supernova_on_screen_text": "Karthik: Really? And what if I do not understand a word?\nMiss Nova: I explain the logic in your own language so it finally makes sense. Stop scrolling and practice just 15 minutes a day.\nKarthik: I am installing Supernova AI right now."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), d (old methods), e (interview), g (mother-tongue logic)",
+      "kept_from_seed": "Split-screen chat interface over movie clips of the actor's emotional progression",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure used; removed the ₹3 claim from the seed."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.6529322
+}

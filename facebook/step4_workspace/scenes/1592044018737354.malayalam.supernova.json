@@ -1,0 +1,35 @@
+{
+  "ad_library_id": "1592044018737354",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Struggling with English",
+        "script": "Arun says: Pala varshamaayi sremichittum English padikkunnathu nadakkatha oru karyam poleyaanu. Grammar books nokkiyittum, job interviews-il ethumpol njan freeze aayi pokum.\nMiss Nova says: Athu ningal vaayikkuka mathrame cheyyunnulloo, samsaarikkarilla. Njan Supernova AI-yil ninnulla Miss Nova aanu. Njan ningalude exact level analyze cheythittu, ningalkkaayi mathram oru personalized plan ready aakkum.",
+        "on_screen_text": "Arun: Pala varshamaayi sremichittum English padikkunnathu nadakkatha oru karyam poleyaanu. Grammar books nokkiyittum, job interviews-il ethumpol njan freeze aayi pokum.\nMiss Nova: Athu ningal vaayikkuka mathrame cheyyunnulloo, samsaarikkarilla. Njan Supernova AI-yil ninnulla Miss Nova aanu. Njan ningalude exact level analyze cheythittu, ningalkkaayi mathram oru personalized plan ready aakkum."
+      },
+      {
+        "n": 2,
+        "scene_label": "Going Crazy",
+        "script": "Arun says: Pakshe njan samsaarikyumbol orupaadu mistakes varuthum! Aalukal eppozhum enne kaliyaakkum.\nMiss Nova says: Ivide athilla. Ningal rathri 3 a.m.-il aayiram mistakes varuthiyaalum njan athu correct cheyyithu tharaam, orikkalum judge cheyyilla.",
+        "on_screen_text": "Arun: Pakshe njan samsaarikyumbol orupaadu mistakes varuthum! Aalukal eppozhum enne kaliyaakkum.\nMiss Nova: Ivide athilla. Ningal rathri 3 a.m.-il aayiram mistakes varuthiyaalum njan athu correct cheyyithu tharaam, orikkalum judge cheyyilla."
+      },
+      {
+        "n": 3,
+        "scene_label": "Confident and Cool",
+        "script": "Arun says: Sathyamayittum? Enittu enikku oru word polum manassilayillengilo?\nMiss Nova says: Njan logic Malayalathil explain cheyyithu tharaam, appol ellam manassilaakum. Scrolling nirthi divusavum just 15 minutes practice cheyyoo.\nArun says: Njan ippo thanne Supernova AI install cheyyukayaanu.",
+        "on_screen_text": "Arun: Sathyamayittum? Enittu enikku oru word polum manassilayillengilo?\nMiss Nova: Njan logic Malayalathil explain cheyyithu tharaam, appol ellam manassilaakum. Scrolling nirthi divusavum just 15 minutes practice cheyyoo.\nArun: Njan ippo thanne Supernova AI install cheyyukayaanu."
+      }
+    ],
+    "self_critique_fixed": "Applied all Malayalam-specific rules: 1) Replaced Karthik with Arun. 2) Started the hook with native words ('Pala varshamaayi sremichittum...'). 3) Used native verb stems for 'speak' ('samsaarikkarilla', 'samsaarikyumbol') instead of 'speak cheyyunnu'. 4) Used 'tharaam' (give to me/us) for Miss Nova's explanations. 5) Used 'kaliyaakkum' instead of 'chirikkum' for mocking/laughing at. 6) Avoided English-noun + Malayalam-case-ending hybrids by using 'Malayalathil' instead of 'Malayalam-il'. 7) Converted the time-unit 'day' to 'divusavum' while keeping '15 minutes' and '3 a.m.' as English numerals."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety and ad-policy guardrails, resolving the shame hook into dignity and avoiding any prohibited guarantees or competitor disparagement.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517283.31214
+}

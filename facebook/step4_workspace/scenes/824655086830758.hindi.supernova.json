@@ -1,0 +1,57 @@
+{
+  "ad_library_id": "824655086830758",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Correcting 'Remove' to 'Take off'",
+        "script": "Priya says: What are you doing? I am removing my jacket.\nMiss Nova says: Removing? Are you deleting it permanently? For clothes, hum 'taking off' kehte hain. Try kijiye, 'I am taking off my jacket'.\nPriya says: I am taking off my jacket. Oh, jab bhi English bolni hoti hai, main hamesha freeze ho jaati hoon.\nMiss Nova says: Ye normal hai! Main hoon Miss Nova. Supernova AI par, main sabko ek jaise lessons nahi deti. Main aapka level analyze karke aapke liye ek personalized plan banati hoon.\nPriya says: Par agar mujhse mistakes ho gayi toh?\nMiss Nova says: Raat ke 3 a.m. par bhi hazaar mistakes kijiye! Main aapko correct karungi, bina judge kiye ya hase.",
+        "on_screen_text": "What are you doing? I am removing my jacket\nRemoving? Are you deleting it?\nSay: I am taking off my jacket\nEnglish bolte waqt main freeze ho jaati hoon\nAapke liye personalized plan\n1000 mistakes kijiye, zero judgement"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Store Page",
+        "script": "Miss Nova says: Isiliye toh 1 crore se zyada Indians ab Supernova AI ke saath sach mein English bolna seekh rahe hain.",
+        "on_screen_text": "1 crore+ Indians practice kar rahe hain Supernova AI par\nStart English Learning - Supernova AI\nInstall"
+      },
+      {
+        "n": 3,
+        "scene_label": "Time Commitment",
+        "script": "Priya says: Par mere paas lambi classes ke liye time nahi hai.\nMiss Nova says: Ghanto tak feeds scroll karna band kijiye. Mere saath roz sirf 15 minutes out loud bolna kaafi hai. Aur main saara logic Hindi mein samjhati hoon, taaki aap kabhi lost feel na karein.\nPriya says: Wow. Main kaise join karoon?",
+        "on_screen_text": "Lambi classes ke liye time nahi hai?\nFeeds scroll karna band kijiye\nSirf 15 minutes a day\nLogic aapki apni language Hindi mein\nWow. Kaise join karoon?"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Installation",
+        "script": "Miss Nova says: Install button par click kijiye aur Supernova AI app download kijiye.",
+        "on_screen_text": "Install button press karke Supernova AI download kijiye\nSupernova AI English Speaking\nInstalling..."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: Sign up kijiye aur aaj hi bolna shuru kijiye. Ye coaching classes se saat guna sasta hai, aur daily practice se aapko lagbhag ek month mein visible progress dikhne lagegi. Chaliye shuru karte hain!",
+        "on_screen_text": "Sign up kijiye aur aaj hi bolna shuru kijiye\nCoaching classes se 7 guna sasta\n~30 days mein visible progress dekhein\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "I have successfully localized the script into romanized, code-mixed Hindi. Taught lines are kept verbatim in English per T2a. The comparative multiplier '7x cheaper' was translated to 'saat guna sasta' per the T2h carve-out. Language self-reference was correctly swapped to 'Hindi' per T5. Miss Nova's lines maintain the warm, polite plural register ('kijiye', 'aapka') per T4, and the overall tone is highly colloquial and natural, avoiding any Sanskritized or textbook-like phrasing per T3."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 5",
+        "quote": "A circular graphic with a price and an 'Install Now' button overlay appears towards the end.",
+        "why": "The visual description includes a graphic displaying a price, which violates the prohibition against generating hard prices or unapproved offers.",
+        "fix": "Remove the price from the circular graphic, displaying only the 'Install Now' call-to-action."
+      }
+    ],
+    "summary": "The ad is mostly compliant but violates G6.1 by including an unapproved price graphic in the final scene's visual overlay.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517612.3570502
+}

@@ -1,0 +1,181 @@
+{
+  "competitor_id": "810618368177111",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with a fair complexion, long dark wavy hair, and large, expressive brown eyes in a stylized 3D animation style. She has smooth, flawless skin and a friendly, approachable face.",
+        "wardrobe": "She wears a light blue blazer over a white top.",
+        "demeanor": "Patient, encouraging, and consistently cheerful."
+      },
+      {
+        "id": "B",
+        "name": "Ramesh",
+        "role": "Male learner",
+        "appearance": "Middle-aged male with a dark complexion, short black hair, and a prominent, thick black mustache. He has a sturdy build and natural facial lines.",
+        "wardrobe": "He wears a white button-down shirt with a traditional white cloth featuring a gold border (angavastram) draped over his left shoulder.",
+        "demeanor": "Earnest, slightly hesitant when speaking English, but eager to learn and appreciative."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "English Practice",
+        "setting": "Split screen: Abstract studio background top, inside a moving car bottom. Daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A 3D-animated young woman with long dark wavy hair and large brown eyes faces the camera directly from the chest up. She is wearing a light blue blazer. The background behind her is an abstract pattern of blue and purple geometric shapes. She has a friendly expression and her mouth moves as if speaking. The lighting is bright and even, typical of a rendered environment.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A middle-aged man with a thick mustache is seen in profile, sitting in the driver's seat of a moving car. He is wearing a white shirt with a traditional cloth draped over his shoulder. His hands are gripping the steering wheel. Through the car windows, green trees and a cloudy sky are visible passing by, indicating motion. The lighting is natural daylight.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout shows an animated female avatar on top and a live-action man driving a car on the bottom. Text overlays appear on the screen showing the dialogue, with red 'X' marks for incorrect grammar and green checkmarks for correct grammar. The avatar speaks, and the man responds, practicing his English.",
+        "audio_transcript": "Character A says: Where are you going?\nCharacter B says: I go to home.\nCharacter A says: You mean, 'I am going home'.\nCharacter B says: Yes, I am going home. I am very hurry.\nCharacter A says: 'I am in a hurry' is the correct way to say that.\nCharacter B says: Okay, thank you.",
+        "supernova_script": "Miss Nova says: Let's practice your English, Ramesh. Where are you going?\nRamesh says: I go to home.\nMiss Nova says: You mean, 'I am going home'. 'Go to' is for places, but 'home' doesn't need 'to'.\nRamesh says: Yes, I am going home. I am very hurry.\nMiss Nova says: 'I am in a hurry' is the correct way to say that.\nRamesh says: Okay, thank you.",
+        "scene_summary": "- Hook: Live correction of a relatable English mistake.\n- Payload beat c: Shows the user actively speaking instead of typing.\n- Payload beat g: Explains the logic simply.",
+        "supernova_on_screen_text": "Let's practice your English, Ramesh. Where are you going? I go to home. You mean, 'I am going home'. 'Go to' is for places, but 'home' doesn't need 'to'. Yes, I am going home. I am very hurry. 'I am in a hurry' is the correct way to say that. Okay, thank you."
+      },
+      {
+        "n": 2,
+        "start_s": 10.5,
+        "end_s": 21.5,
+        "screenshot_at_s": 16.0,
+        "scene_label": "Introduction and Objection",
+        "setting": "Split screen: Abstract studio background top, inside a moving car bottom. Daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A 3D-animated young woman with long dark wavy hair and large brown eyes faces the camera directly. She is wearing a light blue blazer. The background is an abstract pattern of blue and purple geometric shapes. She maintains a friendly, conversational expression while looking forward.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A middle-aged man with a thick mustache is driving a car, viewed from the side. He wears a white shirt and a traditional shoulder cloth. He looks slightly upwards and speaks, gesturing briefly with one hand while keeping the other on the wheel. The scenery outside the window continues to pass by, showing trees and buildings.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen continues with the animated avatar on top and the driving man on the bottom. The man asks a question in Tamil, and the avatar responds, explaining her role. The man then expresses a concern about money. Tamil subtitles appear on screen corresponding to their dialogue.",
+        "audio_transcript": "Character B says: இல்ல, நீங்க யாரு? [No, who are you?]\nCharacter A says: நான் ஒரு AI teacher. உங்களுக்கு English பேச help பண்ண வந்திருக்கேன். என் கூட daily இதே மாதிரி practice பண்ணாலே போதும். [I am an AI teacher. I have come to help you speak English. Just practicing with me daily like this is enough.]\nCharacter B says: ஆனா என்கிட்ட காசு ஒன்னும் இல்லையே. [But I don't have any money.]\nCharacter A says: பயப்படாதீங்க. Trial version-க்கு இப்போ வெறும்... [Don't be afraid. For the trial version, right now it's just...]",
+        "supernova_script": "Ramesh says: Wait, who are you? How are you correcting me in my car?\nMiss Nova says: I am Miss Nova, your personal AI teacher on Supernova AI. I analyze your exact level and build a plan just for you.\nRamesh says: But what if I make silly mistakes? I feel shy.\nMiss Nova says: Here, no one is watching or judging you. Make a thousand mistakes, and I will correct you without ever laughing.",
+        "scene_summary": "- In-story reveal: Ramesh asks who she is.\n- Payload beat a: Personalization (analyzes level, builds plan).\n- Payload beat b: Privacy and no-judgement (make 1000 mistakes).",
+        "supernova_on_screen_text": "Wait, who are you? How are you correcting me in my car? I am Miss Nova, your personal AI teacher on Supernova AI. I analyze your exact level and build a plan just for you. But what if I make silly mistakes? I feel shy. Here, no one is watching or judging you. Make a thousand mistakes, and I will correct you without ever laughing."
+      },
+      {
+        "n": 3,
+        "start_s": 21.5,
+        "end_s": 26.0,
+        "screenshot_at_s": 23.5,
+        "scene_label": "Pricing Offer",
+        "setting": "Split screen: Abstract studio background top, inside a moving car bottom. Daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A 3D-animated young woman with long dark wavy hair and large brown eyes faces the camera directly. She is wearing a light blue blazer. The background is an abstract pattern of blue and purple geometric shapes. She continues to speak with a reassuring expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A middle-aged man with a thick mustache is driving a car, viewed from the side. He wears a white shirt and a traditional shoulder cloth. He listens attentively while driving. The background outside the car window shows passing greenery.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen remains, but a large, dark rectangular graphic overlay appears in the center of the screen, obscuring parts of both panels. The graphic displays pricing information, showing a discounted rate. The avatar continues to explain the subscription cost in Tamil.",
+        "audio_transcript": "Character A says: ஒரு ரூபாய் தான். பிடிச்சிருந்தா மட்டும் two ninety nine-க்கு subscription எடுத்தா போதும். [Just one rupee. Only if you like it, you can take a subscription for two ninety nine.]",
+        "supernova_script": "Miss Nova says: Plus, I explain the logic in your own language, so it finally makes sense.\nRamesh says: Is it expensive?\nMiss Nova says: It is highly affordable, actually seven times cheaper than regular coaching classes.",
+        "scene_summary": "- Payload beat g: Reinforces mother-tongue explanation.\n- Price check: Swaps hard rupee price for a safe comparative cost.",
+        "supernova_on_screen_text": "Plus, I explain the logic in your own language, so it finally makes sense. Is it expensive? It is highly affordable, actually seven times cheaper than regular coaching classes."
+      },
+      {
+        "n": 4,
+        "start_s": 26.0,
+        "end_s": 32.0,
+        "screenshot_at_s": 29.0,
+        "scene_label": "Call to Action",
+        "setting": "Split screen: Abstract studio background top, inside a moving car bottom. Daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A 3D-animated young woman with long dark wavy hair and large brown eyes faces the camera directly. She is wearing a light blue blazer. The background is an abstract pattern of blue and purple geometric shapes. She speaks enthusiastically.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A middle-aged man with a thick mustache is driving a car, viewed from the side. He wears a white shirt and a traditional shoulder cloth. He smiles and nods, appearing convinced. The scenery outside continues to blur past.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen continues. The avatar mentions the number of users. Then, a Google Play Store app installation pop-up overlay appears in the center of the screen. The man agrees to download the app.",
+        "audio_transcript": "Character A says: 50 லட்சம் பேரு என் கூட English கத்துக்குறாங்க. நீங்களும் join பண்ணுங்க. [50 lakh people are learning English with me. You also join.]\nCharacter B says: நான் இப்பவே download பண்றேன். Thank you so much. [I will download it right now. Thank you so much.]",
+        "supernova_script": "Miss Nova says: Over one crore Indians are learning with me. Stop scrolling and practice speaking for just fifteen minutes a day.\nRamesh says: I am downloading Supernova AI right now. Thank you, Miss Nova!",
+        "scene_summary": "- Tight close: Time anchor (stop scrolling vs 15 mins/day).\n- Social proof: 1 crore+ users.\n- Clear CTA to download.",
+        "supernova_on_screen_text": "Over one crore Indians are learning with me. Stop scrolling and practice speaking for just fifteen minutes a day. I am downloading Supernova AI right now. Thank you, Miss Nova!"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy/no-judgement), c (speak), g (logic in own language)",
+      "kept_from_seed": "Split-screen live correction format in a moving car",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used 'seven times cheaper than regular coaching classes'"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi / MySivi Pro",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.6633642
+}

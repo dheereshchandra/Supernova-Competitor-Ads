@@ -1,0 +1,97 @@
+{
+  "competitor_id": "807034821685948",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Karthik",
+        "role": "male presenter",
+        "appearance": "Mid-20s, slim build, brown complexion, short black hair, short beard and mustache. Wearing black-rimmed glasses.",
+        "wardrobe": "Light blue patterned button-down shirt, traditional white dhoti with a gold border, and black over-ear headphones.",
+        "demeanor": "Friendly, inquisitive, and engaged."
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Humanoid robot with a sleek silver and dark grey metallic body. Features a stylized face with glowing eyes and articulated joints.",
+        "wardrobe": "Black over-ear headphones.",
+        "demeanor": "Calm, informative, and professional."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Podcast Intro",
+        "supernova_script": "Karthik says: The AI English teacher that all of India is talking about is here with us today. Welcome, Miss Nova.",
+        "scene_summary": "- Hooks the viewer by introducing the viral AI teacher.\n- Names English immediately.\n- Establishes the podcast interview format.",
+        "supernova_on_screen_text": "THE VIRAL AI ENGLISH TEACHER\nIS HERE WITH US TODAY.\nWELCOME MISS NOVA."
+      },
+      {
+        "n": 2,
+        "scene_label": "Presenter Question 1",
+        "supernova_script": "Karthik says: Tell me, Miss Nova, are you saying people don't need years of grammar books or expensive coaching classes to finally speak English?",
+        "scene_summary": "- Sets up the problem with traditional learning.\n- Questions the necessity of grammar books.",
+        "supernova_on_screen_text": "TELL ME MISS NOVA,\nDO WE REALLY NOT NEED\nGRAMMAR BOOKS OR\nCOACHING CLASSES\nTO SPEAK ENGLISH?"
+      },
+      {
+        "n": 3,
+        "scene_label": "Robot Answer 1",
+        "supernova_script": "Miss Nova says: Exactly, Karthik. Old methods fail because you only read, you never actually speak.\nMiss Nova says: You learned your mother tongue by speaking it out loud, right? English works the exact same way.\nMiss Nova says: On the Supernova AI app, you don't type or read. You speak to me, and I correct your mistakes instantly.\nMiss Nova says: We practice real-life situations, like job interviews or talking to your manager.\nMiss Nova says: With just fifteen minutes of daily practice, most learners start seeing visible progress in about a month.",
+        "scene_summary": "- Lands the mother-tongue reframe (beat f).\n- Explains the core mechanism: speaking instead of reading (beat c).\n- Mentions real-life scenarios like interviews (beat e).\n- Sets a realistic, hedged progress expectation instead of a guarantee.",
+        "supernova_on_screen_text": "OLD METHODS FAIL BECAUSE\nYOU NEVER ACTUALLY SPEAK.\nYOU LEARNED YOUR MOTHER TONGUE\nBY SPEAKING IT.\nON SUPERNOVA AI,\nYOU SPEAK AND I CORRECT YOU.\nWE PRACTICE REAL-LIFE SITUATIONS\nLIKE JOB INTERVIEWS.\nSTART SEEING VISIBLE PROGRESS\nIN ABOUT A MONTH."
+      },
+      {
+        "n": 4,
+        "scene_label": "Presenter Question 2",
+        "supernova_script": "Karthik says: I heard over one crore Indians are already using Supernova AI to learn English. How do you teach so many people?",
+        "scene_summary": "- Uses the approved '1 crore+ users' social proof.\n- Sets up the personalization payload.",
+        "supernova_on_screen_text": "OVER 1 CRORE INDIANS\nARE USING SUPERNOVA AI.\nHOW DO YOU TEACH\nSO MANY PEOPLE?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Robot Answer 2",
+        "supernova_script": "Miss Nova says: Because I don't teach everyone the same way. I analyze your speech, find exactly where you struggle, and build a personalized plan just for you.\nMiss Nova says: And the best part? It is completely private. You can make a thousand mistakes at two in the morning, and I will never judge you.\nMiss Nova says: Plus, I explain the logic in your own language, so you never feel lost.",
+        "scene_summary": "- Delivers the crucial personalization beat (beat a).\n- Delivers the privacy/no-judgement beat (beat b).\n- Confirms explanations in the user's native language (beat g).",
+        "supernova_on_screen_text": "I BUILD A PERSONALIZED PLAN\nJUST FOR YOU.\nCOMPLETELY PRIVATE.\nMAKE 1000 MISTAKES,\nI WILL NEVER JUDGE YOU.\nI EXPLAIN THE LOGIC\nIN YOUR OWN LANGUAGE."
+      },
+      {
+        "n": 6,
+        "scene_label": "Presenter Question 3",
+        "supernova_script": "Karthik says: And they say practicing with you is ten times cheaper than regular coaching classes?",
+        "scene_summary": "- Introduces the comparative cost benefit without a hard rupee figure.",
+        "supernova_on_screen_text": "10 TIMES CHEAPER THAN\nREGULAR COACHING CLASSES?"
+      },
+      {
+        "n": 7,
+        "scene_label": "Robot Answer 3 & CTA",
+        "supernova_script": "Miss Nova says: Yes, it is highly affordable.\nMiss Nova says: Stop wasting hours scrolling through reels that never actually help you speak.\nMiss Nova says: Give me just fifteen minutes a day, and I will help you speak English confidently.\nMiss Nova says: Install the Supernova AI app today and start your journey.",
+        "scene_summary": "- Tight close with negative time anchor (scrolling reels).\n- Positive time anchor (15 mins a day).\n- Clear call to action to install.",
+        "supernova_on_screen_text": "HIGHLY AFFORDABLE.\nSTOP WASTING HOURS\nSCROLLING REELS.\nJUST 15 MINUTES A DAY\nTO SPEAK CONFIDENTLY.\nINSTALL SUPERNOVA AI TODAY."
+      },
+      {
+        "n": 8,
+        "scene_label": "End Card",
+        "supernova_script": "Miss Nova says: Click install and download Supernova AI now.",
+        "scene_summary": "- Final visual CTA.",
+        "supernova_on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speaking), d (old methods), e (scenarios), f (mother-tongue), g (logic in own language)",
+      "kept_from_seed": "Podcast interview format with human host and AI robot",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used 'ten times cheaper than regular coaching classes' as a comparative."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.662546
+}

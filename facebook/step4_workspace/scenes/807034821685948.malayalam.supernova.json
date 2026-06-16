@@ -1,0 +1,65 @@
+{
+  "ad_library_id": "807034821685948",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Podcast Intro",
+        "script": "Arun says: India muzhuvan samsaarikyunna aa viral AI English teacher innu nammude koodeyundu. Welcome, Miss Nova.",
+        "on_screen_text": "INDIA MUZHUVAN SAMSAARIKYUNNA\nVIRAL AI ENGLISH TEACHER\nINNU NAMMUDE KOODEYUNDU.\nWELCOME MISS NOVA."
+      },
+      {
+        "n": 2,
+        "scene_label": "Presenter Question 1",
+        "script": "Arun says: Parayoo Miss Nova, English samsaarikyaan varshangalolam grammar books padikyukayo, expensive coaching classes-il povukayo cheyyendathille?",
+        "on_screen_text": "GRAMMAR BOOKS-UM\nCOACHING CLASSES-UM\nILLATHE ENGLISH\nSAMSAARIKYAAMO?"
+      },
+      {
+        "n": 3,
+        "scene_label": "Robot Answer 1",
+        "script": "Miss Nova says: Athe, Arun. Pazhaya methods fail aavunnathu ningal vaayikkuka mathram cheyyunnathu kondanu, orikkalum samsaarikyunnilla.\nMiss Nova says: Ningalude mathrubhasha ningal samsarichu thanneyalle padichathu? English-um athupole thanneyaanu.\nMiss Nova says: Supernova AI app-il ningal type cheyyendathilla, vaayikyendathilla. Ennodu samsaarikyoo, njan ningalude mistakes appol thanne correct cheyyam.\nMiss Nova says: Nammal job interviews, manager-odu samsaarikyunnathu poleyulla real-life situations aanu practice cheyyunnathu.\nMiss Nova says: Dhivasavum verum 15 minutes practice cheydhaal, oru maasathil ningalkku nalla maattam kaanam.",
+        "on_screen_text": "PAZHAYA METHODS FAIL AAVUNNATHU\nNINGAL SAMSAARIKYATHATHU KONDANU.\nMATHRUBHASHA SAMSARICHU\nPADICHATHU POLE\nSUPERNOVA AI-YIL\nNINGAL SAMSAARIKYOO,\nNJAN CORRECT CHEYYAM.\nJOB INTERVIEWS POLEYULLA\nSITUATIONS PRACTICE CHEYYOO.\nORU MAASATHIL\nMATTAM KAANAM."
+      },
+      {
+        "n": 4,
+        "scene_label": "Presenter Question 2",
+        "script": "Arun says: 1 crore-il adhikam Indians English padikyaan Supernova AI use cheyyunnundennu kettallo. Ithrathram perkku enganeyaano padippikyunnathu?",
+        "on_screen_text": "1 CRORE-IL ADHIKAM INDIANS\nSUPERNOVA AI USE CHEYYUNNU.\nITHRATHRAM PERKKU\nENGANEYAANU PADIPPIKYUNNATHU?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Robot Answer 2",
+        "script": "Miss Nova says: Kaaranam njan ellavarkkum ore reethiyilalla padippikyunnathu. Ningalude speech analyze cheydhu, prashnangal kandupidichu, ningalkkaayi mathram oru personalized plan ready aakyum.\nMiss Nova says: And the best part? Ithu completely private aanu. Pularchye 2 maniykyu ningal aayiram mistakes varuthiyaalum, njan orikkalum kaliyaakyilla, judge cheyyillla.\nMiss Nova says: Plus, njan logic Malayalathil explain cheyyunnathu kondu ningalkku orikkalum budhimuttundaakilla.",
+        "on_screen_text": "NINGALKKAAYI MATHRAM\nPERSONALIZED PLAN.\nCOMPLETELY PRIVATE.\nAAYIRAM MISTAKES VARUTHIYAALUM\nNJAN JUDGE CHEYYILLA.\nLOGIC MALAYALATHIL\nEXPLAIN CHEYYUNNU."
+      },
+      {
+        "n": 6,
+        "scene_label": "Presenter Question 3",
+        "script": "Arun says: Pinne, coaching classes-nekkal 10 iratti sasta aanennaano parayunnathu?",
+        "on_screen_text": "COACHING CLASSES-NEKKAL\n10 IRATTI SASTA?"
+      },
+      {
+        "n": 7,
+        "scene_label": "Robot Answer 3 & CTA",
+        "script": "Miss Nova says: Athe, ithu valare affordable aanu.\nMiss Nova says: English samsaarikyaan oru sahayavum cheyyatha reels scroll cheydhu manikyoorugal kalayunnathu nirthoo.\nMiss Nova says: Enikku dhivasavum verum 15 minutes tharoo, English confident aayi samsaarikyaan njan sahayaikyam.\nMiss Nova says: Innu thanne Supernova AI app install cheydhu ningalude journey thudangoo.",
+        "on_screen_text": "VALARE AFFORDABLE.\nREELS KANDU MANIKYOORUGAL\nKALAYUNNATHU NIRTHOO.\nDHIVASAVUM 15 MINUTES,\nCONFIDENT AAYI SAMSAARIKYOO.\nINNU THANNE\nSUPERNOVA AI INSTALL CHEYYOO."
+      },
+      {
+        "n": 8,
+        "scene_label": "End Card",
+        "script": "Miss Nova says: Click install cheydhu, Supernova AI ippol thanne download cheyyoo.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied all global and Malayalam-specific rules. Replaced presenter Karthik with default Malayalam casting name Arun. Ensured the hook opens with native words ('India muzhuvan...'). Handled Malayalam grammar and vocabulary rules carefully: used 'samsaarikyunnilla' instead of 'speak cheyyunnilla', used person-sensitive 'tharoo' for 1st person 'give me', used 'kaliyaakyilla' for 'judge/mock', used 'athupole' for 'in the same way', avoided English-noun + Malayalam-case-ending hybrids (e.g., 'Malayalathil' instead of 'Malayalam-il', 'oru maasathil' instead of 'oru month-il'). Converted comparative multiplier '10 times cheaper' to '10 iratti sasta' and time units to local words ('manikyoorugal' for hours, 'maasathil' for month) while keeping digits as English numerals."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved social proof, comparative cost, and soft progress expectations.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517699.717543
+}

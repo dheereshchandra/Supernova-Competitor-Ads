@@ -1,0 +1,57 @@
+{
+  "ad_library_id": "824655086830758",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Correcting 'Remove' to 'Take off'",
+        "script": "Lakshmi says: What are you doing? I am removing my jacket.\nMiss Nova says: Removing? Adhi emanna permanently delete chesthunnara? Clothes ki manam 'taking off' ani anali. 'I am taking off my jacket' ani cheppadaniki try cheyandi.\nLakshmi says: I am taking off my jacket. Oh, nenu English matladalsi vachinappudalla freeze aypothanu.\nMiss Nova says: Adhi chala normal! Nenu Miss Nova. Supernova AI lo, nenu andariki oke lessons ivvanu. Mee level ni analyze chesi, mee kosame oka personalized plan ready chesthanu.\nLakshmi says: Kani nenu mistakes chesthe?\nMiss Nova says: Rathiri 3 a.m. ki ayina sare, veyyi mistakes cheyandi! Nenu eppudu mimmalni judge cheyanu, chusi navvanu.",
+        "on_screen_text": "What are you doing? I am removing my jacket\nRemoving? Are you deleting it?\nSay: I am taking off my jacket\nNenu English lo eppudu freeze aypothanu\nMee kosame personalized plan\n1000 mistakes cheyandi, zero judgement"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Store Page",
+        "script": "Miss Nova says: Andhuke 1 crore kante ekkuva mandhi Indians Supernova AI tho nijamga English matladadam nerchukuntunnaru.",
+        "on_screen_text": "1 crore+ Indians Supernova AI lo practice chesthunnaru\nStart English Learning - Supernova AI\nInstall"
+      },
+      {
+        "n": 3,
+        "scene_label": "Time Commitment",
+        "script": "Lakshmi says: Kani naku pedda classes vinnadaniki time ledhu.\nMiss Nova says: Hours kodhi feeds scroll cheyadam aapandi. Naatho roju ki just 15 minutes out loud matladithe chalu. Inka nenu logic ni mee Telugu lone explain chesthanu, so meeru eppudu lost ga feel avvaru.\nLakshmi says: Wow. Nenu ela join avvali?",
+        "on_screen_text": "Classes ki time ledha?\nFeeds scroll cheyadam aapandi\nRoju ki just 15 minutes\nLogic mee language lo explain cheyabaduthundhi\nWow. Ela join avvali?"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Installation",
+        "script": "Miss Nova says: Install button click chesi, Supernova AI app ni download cheyandi.",
+        "on_screen_text": "Install click chesi Supernova AI download cheyandi\nSupernova AI English Speaking\nInstalling..."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: Eroje sign up ayyi matladadam start cheyandi. Idhi coaching classes kante edu retlu sasta, roju practice chesthe, okka month lo mee progress mee ke kanipisthundhi. Let's begin!",
+        "on_screen_text": "Sign up ayyi eroje matladadam start cheyandi\nCoaching classes kante edu retlu sasta\n~30 days lo visible progress chudandi\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "I have successfully applied the Telugu-specific rules. Character name Priya was recast to Lakshmi from the casting table. The multiplier '7x cheaper' was translated to 'edu retlu sasta' using the local multiplier word 'retlu'. The language self-reference was swapped to 'Telugu lone'. All Miss Nova lines maintain the polite plural register (meeru-tier), and the first scene correctly opens with the English taught line as per the T7 exception."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 5 — Call to Action",
+        "quote": "A circular graphic with a price and an 'Install Now' button overlay",
+        "why": "The visual description includes a price graphic, which violates the restriction against generating pricing or offers without team approval.",
+        "fix": "Change the visual description to show a circular graphic with 'Install Now' or an approved discount/offer, omitting any unapproved price placeholder."
+      }
+    ],
+    "summary": "The ad is mostly compliant, but Scene 5's visual description contains an unapproved price graphic placeholder violating G6.1.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517661.470437
+}

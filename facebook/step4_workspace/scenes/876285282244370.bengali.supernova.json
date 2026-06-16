@@ -1,0 +1,29 @@
+{
+  "ad_library_id": "876285282244370",
+  "language": "Bengali",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Struggling with English",
+        "script": "Character A (Voiceover) says: Puro 12 years school aar expensive coaching, kintu jokhon interview-te English bolar somoy ashe...\nCharacter A says: [Screaming and crying in frustration]",
+        "on_screen_text": "Coaching classes-e hajar hajar taka khoroch korar por amar English\n\nSupernova app-e daily 15 minutes practice korar por amar English"
+      },
+      {
+        "n": 2,
+        "scene_label": "Confident English Speaker",
+        "script": "Character A says: Ekhon ami flawlessly English boli. Kibhabe? Ami pora bondho kore Supernova-te bola start korechi.\nCharacter A says: Amar AI teacher, Miss Nova, amar sathe real job interviews practice kore.\nCharacter A says: Ami 100 ta mistake kori, aar uni kono judgment chara live amake correct koren.\nCharacter A says: Amonki uni logic-ta Bangla-te explain kore den.\nCharacter A says: Just 15 minutes a day. Ami ebhabei sikhechi, aar apni-o parben.",
+        "on_screen_text": "Coaching classes-e hajar hajar taka khoroch korar por amar English\n\nSupernova app-e daily 15 minutes practice korar por amar English\n\nSupernova install korun, aaj thekei bola start korun"
+      }
+    ],
+    "self_critique_fixed": "Ensured the hook starts with a native Bengali word ('Puro') to satisfy T7. Replaced the slightly formal 'ebong' with 'amonki' for a more natural spoken flow. Swapped 'mother tongue' to 'Bangla' per T5. Used 'apni-o parben' to maintain the respectful yet encouraging tone for the viewer (T4)."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved comparative framing and resolving the initial frustration hook into a dignified, confident outcome.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517622.03311
+}

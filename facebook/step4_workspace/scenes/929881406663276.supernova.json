@@ -1,0 +1,62 @@
+{
+  "competitor_id": "929881406663276",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with a fair complexion, long curly brown hair, and a bindi. She has a robotic, cybernetic neck piece.",
+        "wardrobe": "Textured blue jacket over a grey top, with delicate layered necklaces.",
+        "demeanor": "Calm, helpful, and slightly robotic but friendly."
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "Male learner",
+        "appearance": "Young male with a fair complexion and curly dark hair. He has a clean-shaven face with a slight stubble.",
+        "wardrobe": "Dark blue, short-sleeved button-down shirt.",
+        "demeanor": "Initially confused and frustrated, transitioning to curious and convinced."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The 'Circle Back' Confusion",
+        "supernova_script": "Rahul says: My boss told me to circle back, so I literally started spinning in circles.\nMiss Nova says: Circle back just means to discuss a topic again later. I am Miss Nova, your personal AI English teacher.\nRahul says: Oh, that is what it means. But how do I learn? I get so nervous speaking English, and I have no time.",
+        "scene_summary": "- Hook: Relatable workplace English confusion.\n- Introduces Miss Nova and names English early.\n- Sets up the time and confidence objection.",
+        "supernova_on_screen_text": "MY BOSS TOLD ME TO CIRCLE BACK SO I LITERALLY STARTED SPINNING IN CIRCLES CIRCLE BACK JUST MEANS TO DISCUSS A TOPIC AGAIN LATER I AM MISS NOVA YOUR PERSONAL AI ENGLISH TEACHER OH THAT IS WHAT IT MEANS BUT HOW DO I LEARN I GET SO NERVOUS SPEAKING ENGLISH AND I HAVE NO TIME"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Features Screencast",
+        "supernova_script": "Miss Nova says: With Supernova AI, you learn by actually speaking. I analyze your exact level and build a personalized plan just for you. Make a thousand mistakes at three in the morning, I will never judge you.",
+        "scene_summary": "- Delivers beat (a) Personalization.\n- Delivers beat (b) Privacy and no-judgement.\n- Emphasizes speaking over reading.",
+        "supernova_on_screen_text": "WITH SUPERNOVA AI YOU LEARN BY ACTUALLY SPEAKING I ANALYZE YOUR EXACT LEVEL AND BUILD A PERSONALIZED PLAN JUST FOR YOU MAKE A THOUSAND MISTAKES AT THREE IN THE MORNING I WILL NEVER JUDGE YOU"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action and Pricing",
+        "supernova_script": "Rahul says: Really? But what do I have to do?\nMiss Nova says: Stop scrolling for hours. Just practice speaking with me for fifteen minutes a day. Download Supernova AI, and you will start seeing visible progress in your confidence within a month.",
+        "scene_summary": "- Negative and positive time anchors.\n- Soft, hedged progress expectation (no guarantees).\n- Clear download CTA without a hard price.",
+        "supernova_on_screen_text": "REALLY BUT WHAT DO I HAVE TO DO STOP SCROLLING FOR HOURS JUST PRACTICE SPEAKING WITH ME FOR FIFTEEN MINUTES A DAY DOWNLOAD SUPERNOVA AI AND YOU WILL START SEEING VISIBLE PROGRESS IN YOUR CONFIDENCE WITHIN A MONTH"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (you speak), e (workplace scenario), g (logic explained)",
+      "kept_from_seed": "Split-screen format and the 'circle back' workplace confusion hook.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure used. Removed the 1 Rupee offer from the seed."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.66516
+}

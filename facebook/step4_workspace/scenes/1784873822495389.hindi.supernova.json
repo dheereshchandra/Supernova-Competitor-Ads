@@ -1,0 +1,57 @@
+{
+  "ad_library_id": "1784873822495389",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Price negotiation",
+        "script": "Rahul says: Bhaiya, prawns kaise kilo diye?\nAmit says: 1 kg to 500 ka hai, par agar aap 2 kg loge, to main 200 ka discount de dunga.",
+        "on_screen_text": "Bhaiya, prawns kaise kilo diye?\n1 kg to 500 ka hai, par agar aap 2 kg loge to 200 ka discount de dunga"
+      },
+      {
+        "n": 2,
+        "scene_label": "Customer surprise",
+        "script": "Rahul says: Wow! Bhaiya, aap itni fluent English kaise bol rahe ho?\nAmit says: Main Supernova AI app par practice karta hoon.\nRahul says: Supernova AI? Wo kya hai?",
+        "on_screen_text": "Wow! Bhaiya, aap itni fluent English kaise bol rahe ho?\nSupernova AI\nSupernova AI? Wo kya hai?"
+      },
+      {
+        "n": 3,
+        "scene_label": "App explanation",
+        "script": "Amit says: Isme ek personal AI teacher hai, Miss Nova. Wo mera level check karke mere liye ek custom plan banati hai.\nAmit says: Main unse out loud baat karta hoon, aur wo bina judge kiye meri mistakes correct karti hain.\nAmit says: Wo mujhe Hindi mein logic explain karti hain taaki main kabhi lost feel na karoon.",
+        "on_screen_text": "Personal AI teacher Miss Nova\nAapke liye custom plan banati hai\nOut loud baat karo\nBina judge kiye mistakes correct karti hain\nHindi mein logic explain karti hain"
+      },
+      {
+        "n": 4,
+        "scene_label": "Fee inquiry",
+        "script": "Rahul says: Par iski fees to bahut zyada hogi na?",
+        "on_screen_text": "Par iski fees to bahut zyada hogi na?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to action",
+        "script": "Amit says: Bilkul nahi, ye coaching classes se 7 guna sasta hai.\nAmit says: Apna phone scroll karna band karo aur roz bas 15 minutes practice karo. 1 month mein tumhe visible progress dikhne lagegi.\nAmit says: 1 crore se zyada log ise use karte hain. Supernova AI install karo aur aaj se hi bolna shuru karo!",
+        "on_screen_text": "Coaching classes se 7 guna sasta\nRoz bas 15 minutes practice karo\nVisible progress dikhne lagegi\n1 crore+ users\nSupernova AI install karo aur aaj se hi bolna shuru karo!"
+      }
+    ],
+    "self_critique_fixed": "The script has been successfully translated to Romanized Hindi using natural, conversational phrasing. Applied the 'Friends / peer conversation' register. Replaced Karthik and Ramesh with Rahul and Amit from the Hindi casting table. Ensured the hook opens with the native word 'Bhaiya'. Applied the T2h multiplier carve-out ('7 guna sasta') and swapped the language self-reference to 'Hindi' in Scene 3. Addressed the viewer in the blunt friend register (tum-tier) for the CTA as per T4."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 5",
+        "quote": "1 RUPEE",
+        "why": "The visual description contains a hard rupee price graphic ('1 RUPEE') which is strictly prohibited without prior team approval.",
+        "fix": "Remove the '1 RUPEE' and '50 LAKHS' text graphics from the visual overlays in Scene 5."
+      }
+    ],
+    "summary": "The ad is compliant except for a severe G6.1 violation in Scene 5 due to the unapproved '1 RUPEE' price graphic in the visual overlay.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517403.212228
+}

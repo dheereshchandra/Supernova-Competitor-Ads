@@ -1,0 +1,60 @@
+{
+  "ad_library_id": "810618368177111",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Practice",
+        "script": "Miss Nova says: Rahul, chalo aapki English practice karte hain. Where are you going?\nRahul says: I go to home.\nMiss Nova says: Aapka matlab, 'I am going home'. 'Go to' places ke liye hota hai, par 'home' ke sath 'to' ki zaroorat nahi hoti.\nRahul says: Yes, I am going home. I am very hurry.\nMiss Nova says: Isse bolne ka sahi tareeqa hai, 'I am in a hurry'.\nRahul says: Okay, thank you.",
+        "on_screen_text": "Rahul, chalo aapki English practice karte hain. Where are you going? I go to home. Aapka matlab, 'I am going home'. 'Go to' places ke liye hota hai, par 'home' ke sath 'to' ki zaroorat nahi hoti. Yes, I am going home. I am very hurry. Isse bolne ka sahi tareeqa hai, 'I am in a hurry'. Okay, thank you."
+      },
+      {
+        "n": 2,
+        "scene_label": "Introduction and Objection",
+        "script": "Rahul says: Wait, aap kaun ho? Aur meri car mein mujhe kaise correct kar rahi ho?\nMiss Nova says: Main hoon Miss Nova, Supernova AI par aapki personal AI teacher. Main aapka exact level analyze karti hoon aur aapke liye ek personalized plan banati hoon.\nRahul says: Par agar main silly mistakes karoon toh? Mujhe thodi sharam aati hai.\nMiss Nova says: Yahan koi aapko dekh nahi raha aur na hi judge kar raha hai. Aap chahe 1000 mistakes karein, main bina hase aapko correct karungi.",
+        "on_screen_text": "Wait, aap kaun ho? Aur meri car mein mujhe kaise correct kar rahi ho? Main hoon Miss Nova, Supernova AI par aapki personal AI teacher. Main aapka exact level analyze karti hoon aur aapke liye ek personalized plan banati hoon. Par agar main silly mistakes karoon toh? Mujhe thodi sharam aati hai. Yahan koi aapko dekh nahi raha aur na hi judge kar raha hai. Aap chahe 1000 mistakes karein, main bina hase aapko correct karungi."
+      },
+      {
+        "n": 3,
+        "scene_label": "Pricing Offer",
+        "script": "Miss Nova says: Plus, main saara logic aapki apni language, Hindi mein samjhati hoon, taaki sab aasaani se samajh aa jaye.\nRahul says: Kya yeh bahut expensive hai?\nMiss Nova says: Bilkul nahi, yeh bahut affordable hai, regular coaching classes se poore 7 guna sasta.",
+        "on_screen_text": "Plus, main saara logic aapki apni language, Hindi mein samjhati hoon, taaki sab aasaani se samajh aa jaye. Kya yeh bahut expensive hai? Bilkul nahi, yeh bahut affordable hai, regular coaching classes se poore 7 guna sasta."
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: 1 crore se zyada Indians mere sath seekh rahe hain. Ab scrolling band kariye aur din mein sirf 15 minutes practice kariye.\nRahul says: Main abhi Supernova AI download karta hoon. Thank you, Miss Nova!",
+        "on_screen_text": "1 crore se zyada Indians mere sath seekh rahe hain. Ab scrolling band kariye aur din mein sirf 15 minutes practice kariye. Main abhi Supernova AI download karta hoon. Thank you, Miss Nova!"
+      }
+    ],
+    "self_critique_fixed": "Applied the Hindi language module and global rules. Re-cast the character Ramesh to Rahul per the Hindi casting table. Ensured the hook opens in native Hindi before transitioning to the English practice question. Applied the T2h multiplier rule to translate 'seven times cheaper' into '7 guna sasta'. Swapped the language self-reference in Scene 3 to 'Hindi' per T5. Used polite plural forms ('kariye') for Miss Nova's viewer-facing lines, and a natural casual-respectful tone ('aap... ho') for Rahul's dialogue to avoid a stiff, dubbed feel."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 3",
+        "quote": "The graphic displays pricing information, showing a discounted rate.",
+        "why": "The visual displays unapproved pricing and discount information, which must only come from the team.",
+        "fix": "Remove the pricing and discount graphic overlay, keeping only the visual of the avatar and driver."
+      },
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 4",
+        "quote": "a Google Play Store app installation pop-up overlay appears in the center of the screen.",
+        "why": "Simulated interactive UI elements like a fake Google Play Store installation pop-up violate Meta's policy against misleading mechanics.",
+        "fix": "Replace the simulated Play Store pop-up with a standard call-to-action button or end card."
+      }
+    ],
+    "summary": "The ad contains severe violations regarding unapproved pricing graphics (G6.1) and a fake Google Play Store installation UI overlay (G4.2).",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517603.8182342
+}

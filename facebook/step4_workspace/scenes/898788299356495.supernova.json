@@ -1,0 +1,48 @@
+{
+  "competitor_id": "898788299356495",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "sad man",
+        "appearance": "Male, 30s, medium build, fair complexion, dark hair styled with volume. He has a clean-shaven look with sharp facial features.",
+        "wardrobe": "Wearing a light grey suit jacket over a white collared shirt.",
+        "demeanor": "Sad, tearful, and emotional."
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "confident man",
+        "appearance": "Male, 30s, medium build, fair complexion, dark hair slicked back. He has a clean-shaven look with sharp facial features.",
+        "wardrobe": "Wearing a dark suit jacket, a white collared shirt, and dark sunglasses.",
+        "demeanor": "Confident, stylish, and cool."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Sad vs Confident Meme",
+        "supernova_script": "Rahul says: Wasted years on expensive English classes but still froze in interviews. Then I found Supernova AI.\nRahul says: Now I practice speaking privately with Miss Nova. She builds a custom plan just for me and never judges my mistakes!",
+        "scene_summary": "- Hooks with relatable failure (freezing in interviews) despite expensive classes.\n- Introduces Supernova AI and Miss Nova as the solution.\n- Lands personalization (custom plan) and privacy (no judgement) beats rapidly.",
+        "supernova_on_screen_text": "Top: Me crying after wasting money on English classes but still freezing in interviews.\n\nBottom: Me after practicing speaking privately with Miss Nova on Supernova AI."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "(d) old methods failed, (e) interview scenario, (b) privacy, (a) personalization",
+      "kept_from_seed": "Split-screen sad vs confident meme format",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "Removed ₹3 and 2000-3000 rupees; used 'expensive English classes' instead."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Mysivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.664491
+}

@@ -1,0 +1,72 @@
+{
+  "ad_library_id": "1265701665062256",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Financial Struggle",
+        "script": "Anjali says: Mere husband ki salary sirf 22,000 rupees thi.\nAnjali says: Aur meri saas mujhe taunt maarti thin, \"Jab English bolna nahi aata, toh 50 rupees ki cream ki kya zaroorat hai?\"",
+        "on_screen_text": "Husband ki salary sirf ₹22,000 thi. ₹50 ki cream ke liye taunts."
+      },
+      {
+        "n": 2,
+        "scene_label": "Comparing Lives",
+        "script": "Anjali says: Mera naam Anjali hai. Meri friend Rekha aur meri shaadi 2022 mein hui thi.\nAnjali says: Rekha fluent English bolti thi, use ek acchi corporate job mil gayi, aur uska husband bhi accha earn karta hai.\nAnjali says: Wo Mumbai ke 5-star hotels mein jaate hain.\nAnjali says: Main bhi kaam karna chahti thi, par broken English ki wajah se interviews mein freeze ho jaati thi.\nAnjali says: Mujhe sabzi khareedne ke liye bhi paise maangne padte the.",
+        "on_screen_text": "Rekha: Fluent English, acchi job, 5-star hotels.\nAnjali: Broken English, sabzi ke paise ke liye struggle."
+      },
+      {
+        "n": 3,
+        "scene_label": "Finding the App",
+        "script": "Anjali says: Ek din maine apni life badalne ka socha, aur Supernova AI download kiya.\nAnjali says: Main Miss Nova se mili, jo meri personal AI teacher hain.\nAnjali says: Unhone mujhe koi generic lessons nahi diye. Mera level analyze karke mere liye ek personalized plan banaya.\nAnjali says: Maine hazaron mistakes kiye, par unhone mujhe kabhi judge nahi kiya. Bas mujhe Hindi mein correct kiya.",
+        "on_screen_text": "Supernova AI download kiya.\nMiss Nova: Personal AI Teacher.\nAapka level analyze karti hain.\n100% Private & No Judgement."
+      },
+      {
+        "n": 4,
+        "scene_label": "Career Success",
+        "script": "Anjali says: Dhire-dhire mera confidence badha. Aur maine ek job interview clear kar liya!\nAnjali says: Jaldi hi, main meetings mein bolne lagi aur client calls handle karne lagi.\nAnjali says: Kyunki maine sach mein bolkar practice ki thi, na ki sirf grammar books padh kar.\nAnjali says: Kuch hi months mein, mere boss ne meri progress notice ki aur mujhe promotion de diya.",
+        "on_screen_text": "Job interview clear kiya!\nMeetings aur client calls mein English.\nBolkar seekha, sirf padh kar nahi."
+      },
+      {
+        "n": 5,
+        "scene_label": "Financial Independence",
+        "script": "Anjali says: Ab main ghar ke kharchon mein help karti hoon, aur meri saas bhi mujhse respect se baat karti hain.\nAnjali says: Kyunki meri English strong hai, aur main ab financially independent hoon.",
+        "on_screen_text": "Financially independent. Mili respect."
+      },
+      {
+        "n": 6,
+        "scene_label": "Call to Action",
+        "script": "Anjali says: Reels scroll karke ghanton waste karna band karo.\nAnjali says: Supernova AI ko din mein sirf 15 minutes do.\nAnjali says: Install par click karo, Miss Nova se milo, aur aaj se hi English bolna start karo.",
+        "on_screen_text": "Reels scroll karna band karo.\nSirf 15 mins ek din mein.\nInstall par click karo.\nAaj hi English bolna shuru karo."
+      }
+    ],
+    "self_critique_fixed": "Applied the 'Family / narrative drama' register to ensure natural family honorifics (respectful plural 'thin' and 'karti hain' for the mother-in-law, and 'unhone' for Miss Nova). Applied T5 to swap the language reference from Marathi to Hindi. Ensured the hook opens with a native word ('Mere husband ki...'). Kept all brand names, product terms, and numbers in their designated English/numeral formats as per T2."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G5.1",
+        "category": "Sensitive themes",
+        "severity": "severe",
+        "scene": "Scene 1",
+        "quote": "Mere husband ki salary sirf 22,000 rupees thi. Aur meri saas mujhe taunt maarti thin, \"Jab English bolna nahi aata, toh 50 rupees ki cream ki kya zaroorat hai?\"",
+        "why": "The script realistically depicts domestic conflict and financial distress (poverty) rather than using clearly fictional, absurdist, or aspirational framing.",
+        "fix": "Focus the opening hook on a relatable, lighthearted confidence barrier or professional aspiration instead of realistic domestic taunts and low income."
+      },
+      {
+        "guardrail_id": "G5.1",
+        "category": "Sensitive themes",
+        "severity": "severe",
+        "scene": "Scene 2",
+        "quote": "Mujhe sabzi khareedne ke liye bhi paise maangne padte the.",
+        "why": "The script exploits realistic poverty and extreme financial dependency as a motivator, which is prohibited under the sensitive themes policy.",
+        "fix": "Focus on the professional and social limitations of not speaking English fluently, rather than extreme financial distress."
+      }
+    ],
+    "summary": "The ad violates G5.1 by realistically depicting domestic conflict and severe financial distress (poverty) as motivators instead of using fictional or aspirational framing.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781516572.260865
+}

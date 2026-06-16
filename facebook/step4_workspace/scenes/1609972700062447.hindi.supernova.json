@@ -1,0 +1,72 @@
+{
+  "ad_library_id": "1609972700062447",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Market Conversation",
+        "script": "Priya says: Bhaiya, ek kilo green chilies kitne ki hain?\nRamesh says: 25 rupees kilo hai, madam. Agar aap 2 kilos loge, toh 40. Aap UPI se pay kar sakte ho.\nPriya says: Bhaiya, aap itni fluently English kaise bol rahe ho?\nRamesh says: Ye sab Supernova AI ki wajah se hai, madam.\nPriya says: Supernova AI? Wo kya hai?\nRamesh says: Main aapko dikhata hoon, madam.",
+        "on_screen_text": "Bhaiya, ek kilo green chilies kitne ki hain?\n25 rupees kilo hai, madam.\nAgar aap 2 kilos loge, toh 40.\nAap UPI se pay kar sakte ho.\nBhaiya, aap itni fluently English kaise bol rahe ho?\nYe sab Supernova AI ki wajah se hai, madam.\nSupernova AI? Wo kya hai?\nMain aapko dikhata hoon, madam.\nUPI Scan & Pay"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Features",
+        "script": "Ramesh says: Isme ek personal AI teacher hain, Miss Nova. Wo mera level check karti hain aur mere liye ek personalized plan banati hain, aur logic Hindi mein explain karti hain.",
+        "on_screen_text": "Isme ek personal AI teacher hain, Miss Nova. Wo mera level check karti hain aur mere liye ek personalized plan banati hain, aur logic Hindi mein explain karti hain.\nMiss Nova AI Teacher\nYour Learning Path\nLearn with Miss Nova"
+      },
+      {
+        "n": 3,
+        "scene_label": "Pricing Discussion",
+        "script": "Ramesh says: Sabse achhi baat hai privacy. Main out loud bolkar practice karta hoon, hazar mistakes karta hoon, aur wo mujhe kabhi judge nahi karti.\nRamesh says: Bas din mein 15 minutes hi kaafi hain.\nPriya says: Lekin ye bahut costly hoga na? Aapne kaise manage kiya?\nRamesh says: Bilkul nahi, madam. Ye coaching classes se bahut sasta hai. Daily practice se, aapko 30 days mein visible progress dikhne lagegi.\nPriya says: Super, bhaiya. Toh main abhi Supernova AI app install karti hoon.",
+        "on_screen_text": "Sabse achhi baat hai privacy. Main out loud bolkar practice karta hoon, hazar mistakes karta hoon, aur wo mujhe kabhi judge nahi karti.\nBas din mein 15 minutes hi kaafi hain.\nLekin ye bahut costly hoga na? Aapne kaise manage kiya?\nBilkul nahi, madam. Ye coaching classes se bahut sasta hai.\nDaily practice se, aapko 30 days mein visible progress dikhne lagegi.\nSuper, bhaiya. Toh main abhi Supernova AI app install karti hoon.\n15 MINUTES\nVISIBLE PROGRESS\nAFFORDABLE\nUPI Scan & Pay"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Installation",
+        "script": "Ramesh says: Supernova AI app install karein.",
+        "on_screen_text": "Supernova AI app install karein.\nSupernova AI English Speaking App\nInstall"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Ramesh says: Reels par time waste karna band karein. Madam ki tarah apni English speaking journey abhi start karein.",
+        "on_screen_text": "Reels par time waste karna band karein. Madam ki tarah apni English speaking journey abhi start karein.\nUPI Scan & Pay"
+      },
+      {
+        "n": 6,
+        "scene_label": "End Card",
+        "script": "Miss Nova says: Abhi install par click karein aur Supernova AI app download karein.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "The script has been localized to colloquial, code-mixed Hindi. The language self-reference 'Kannada' in Scene 2 has been successfully swapped to 'Hindi' per rule T5. All numbers and key English terms remain in their standard forms, and the tone matches the natural, friendly, and respectful market dynamic."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 3 — Pricing Discussion",
+        "quote": "1 RUPEE",
+        "why": "The visual overlay displays an unapproved hard rupee price ('1 RUPEE') which violates the restriction on generator-created pricing.",
+        "fix": "Remove the '1 RUPEE' graphic overlay or replace it with 'AFFORDABLE'."
+      },
+      {
+        "guardrail_id": "G2.1",
+        "category": "Competitors & disparagement",
+        "severity": "moderate",
+        "scene": "Scene 5 — Call to Action",
+        "quote": "Reels par time waste karna band karein.",
+        "why": "It disparages Reels by calling it a waste of time instead of using it as a neutral time-reallocation anchor.",
+        "fix": "Change the script and on-screen text to: 'Reels scroll karne ke bajaye, apni English speaking journey abhi start karein.'"
+      }
+    ],
+    "summary": "The ad contains one severe pricing violation (unapproved '1 RUPEE' graphic) and one moderate competitor disparagement violation (trashing Reels).",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517249.340884
+}

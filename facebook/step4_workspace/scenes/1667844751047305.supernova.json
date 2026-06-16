@@ -1,0 +1,106 @@
+{
+  "competitor_id": "1667844751047305",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Ramesh",
+        "role": "Father",
+        "appearance": "Middle-aged man with a medium build and fair complexion. He has short dark hair, a prominent mustache, and wears rectangular glasses.",
+        "wardrobe": "A light yellow short-sleeved button-up shirt.",
+        "demeanor": "Curious, surprised, and impressed."
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "Mother",
+        "appearance": "Middle-aged woman with a medium build and fair complexion. She has dark hair tied back in a bun and wears a red bindi on her forehead.",
+        "wardrobe": "A green blouse paired with an orange and yellow sari.",
+        "demeanor": "Confident, happy, and knowledgeable."
+      },
+      {
+        "id": "C",
+        "name": "Rohan",
+        "role": "Son",
+        "appearance": "Young boy with a slim build and fair complexion. He has short dark hair.",
+        "wardrobe": "A red short-sleeved t-shirt and white wired earphones.",
+        "demeanor": "Excited, amazed, and eager."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Mother speaks English on the phone",
+        "supernova_script": "Ramesh says: Priya, who is calling? Are you speaking in English?\nPriya says: Hello... yes, that works for us. No, we don't need a credit card. We prefer to manage our expenses carefully. Thank you.",
+        "scene_summary": "- Establishes the real-life scenario (phone call) and names English early.\n- Shows Priya speaking confidently, setting up the reveal.",
+        "supernova_on_screen_text": "Priya, who is calling?\nAre you speaking in English?\nHello... yes, that works for us.\nNo, we don't need a credit card.\nWe prefer to manage our expenses carefully.\nThank you."
+      },
+      {
+        "n": 2,
+        "scene_label": "Family is impressed",
+        "supernova_script": "Ramesh says: Wow Priya, you spoke English so confidently!\nRohan says: Yes Mom, your English is awesome!\nRamesh says: But how did you learn to speak so well?\nPriya says: It's all thanks to Supernova AI and my teacher, Miss Nova.",
+        "scene_summary": "- Family reacts with positive reinforcement and dignity.\n- In-story character question triggers the brand and Miss Nova reveal.",
+        "supernova_on_screen_text": "Wow Priya!\nYou spoke English so confidently!\nYes Mom!\nYour English is awesome!\nBut how did you learn to speak so well?\nIt's all thanks to Supernova AI."
+      },
+      {
+        "n": 3,
+        "scene_label": "App features screencast",
+        "supernova_script": "Priya says: Miss Nova is an AI teacher. She understands my level and builds a personalized plan just for me. And I can make a thousand mistakes, because she never judges me.",
+        "scene_summary": "- Delivers payload beat a (personalization).\n- Delivers payload beat b (privacy/no-judgement).",
+        "supernova_on_screen_text": "Miss Nova is an AI teacher\nShe builds a personalized plan\nMake a thousand mistakes\nShe never judges you\nPractice Now\nFluency Score\nYour Learning Path"
+      },
+      {
+        "n": 4,
+        "scene_label": "Father asks about price",
+        "supernova_script": "Ramesh says: Really? I can't believe it. But how much does this cost?\nPriya says: It is much cheaper than any coaching class. Plus, I actually speak out loud, and she explains the logic in Kannada so I never feel lost.",
+        "scene_summary": "- Addresses cost with a comparative instead of a hard price.\n- Delivers payload beat c (you speak) and beat g (logic in mother tongue).",
+        "supernova_on_screen_text": "Really? I can't believe it.\nBut how much does this cost?\nCheaper than any coaching class\nSpeak out loud\nLogic explained in Kannada"
+      },
+      {
+        "n": 5,
+        "scene_label": "App pricing screencast",
+        "supernova_script": "Priya says: And I only need to practice for fifteen minutes a day to start seeing visible progress.",
+        "scene_summary": "- Replaces the hard price visual with the positive time anchor.\n- Sets a soft, hedged progress expectation.",
+        "supernova_on_screen_text": "Just 15 minutes a day\nSupernova AI\nStart seeing visible progress\nSpeak Confidently\nCancel Anytime"
+      },
+      {
+        "n": 6,
+        "scene_label": "Call to action",
+        "supernova_script": "Rohan says: Then I will join right now!\nRamesh says: Me too!\nPriya says: Stop wasting time scrolling. Press the install button and sign up on Supernova AI today.",
+        "scene_summary": "- Family decides to join, reinforcing universality.\n- Negative time anchor (scrolling) paired with a clean install CTA.",
+        "supernova_on_screen_text": "Then I will join right now!\nMe too!\nStop wasting time scrolling\nPress the install button\nSign up on Supernova AI\nInstall Now"
+      },
+      {
+        "n": 7,
+        "scene_label": "End card",
+        "supernova_script": "Voiceover says: Install Supernova AI and start speaking English today.",
+        "scene_summary": "- Final clean CTA.",
+        "supernova_on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy/no-judgement), c (speak out loud), g (logic in mother tongue)",
+      "kept_from_seed": "Family dining table setting, mother's fluent phone call, and app screencast structure.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used 'cheaper than any coaching class'."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "My Sivi App",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "Mysivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.654762
+}

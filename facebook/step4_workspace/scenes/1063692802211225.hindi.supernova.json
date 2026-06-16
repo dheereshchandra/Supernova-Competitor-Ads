@@ -1,0 +1,45 @@
+{
+  "ad_library_id": "1063692802211225",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Language Barrier",
+        "script": "Character A says: Tell me about yourself.\nCharacter B says: Sir... can I answer in Hindi? I freeze when I have to speak English.\nCharacter A says: Tumne 12 years English medium se padhai ki hai, right?\nCharacter B says: Yes, sir.\nCharacter A says: Dekho, tumne apni mother tongue actually bol kar seekhi hai, grammar books padh kar nahi. English bhi exactly isi tarah kaam karti hai. Tumhe bas ek safe space chahiye out loud practice karne ke liye.",
+        "on_screen_text": "Interviews aise chal rahe hain?\nTell me about yourself.\nSir... kya main Hindi mein answer kar sakta hoon?\nEnglish bolte waqt main freeze ho jata hoon.\n12 years English medium mein padhai ki?\nApni mother tongue aapne actually bol kar seekhi.\nEnglish bhi exactly isi tarah kaam karti hai.\nAapko bas bolne ke liye ek safe space chahiye."
+      },
+      {
+        "n": 2,
+        "scene_label": "Introducing the Solution: MySivi",
+        "script": "Character A says: Isiliye main humesha Supernova app recommend karta hoon. Isme ek personal AI teacher hain, Miss Nova.\nCharacter A says: Wo aapko koi generic lessons nahi detin. Wo aapka exact level analyze karti hain aur aapke liye ek personalized plan ready karti hain.\nCharacter A says: Aap real-life scenarios mein bolne ki practice karte ho, jaise client calls ya interviews.\nCharacter A says: Aur sabse best part? Aap raat ke 3 a.m. par bhi 1000 mistakes kar sakte ho. Wo bina kisi judgment ke aapko aapki apni language mein correct karti hain.",
+        "on_screen_text": "Supernova app try karo.\nPersonal AI teacher: Miss Nova.\nAapke liye ek personalized plan ready karti hain.\nReal-life scenarios practice karo.\nRaat ke 3 a.m. par bhi 1000 mistakes karo.\nAapki apni language mein correct karti hain.\nZero judgment."
+      },
+      {
+        "n": 3,
+        "scene_label": "Social Proof and Decision",
+        "script": "Character B says: But ek AI mujhe human se better kaise sikha sakta hai?\nCharacter A says: ChatGPT toh bas ek assistant hai, par Miss Nova ek real teacher hain. Plus, 1 crore+ Indians ise already use kar rahe hain. Grammar PDFs par ghanto waste karna band karo. Just 15 minutes a day.\nCharacter B says: Okay, main aaj hi Supernova install karunga aur bolna start karunga.\nCharacter A says: Perfect.",
+        "on_screen_text": "AI mujhe kaise sikha sakta hai?\nChatGPT ek assistant hai.\nMiss Nova ek teacher hain.\nIndia mein 1 Crore+ users.\nPDFs par ghanto waste karna band karo.\nJust 15 minutes a day.\nSupernova install karo aur aaj se hi bolna start karo.\nPerfect.\n[App Store Screenshot Text]: Top Charts, Free Apps, Paid Apps, 2 Supernova Learn & Speak English, Your Personal AI English Tutor, Open"
+      }
+    ],
+    "self_critique_fixed": "The script has been successfully localized into romanized, highly conversational, and code-mixed Hindi. The tone matches the relationship between the characters (respectful junior to senior, and warm senior to junior). All numbers, proper nouns, and product vocabulary have been preserved in English as per the global rules. No Sanskritized or bookish words were used, and the first line was kept in English as it represents a quoted interview question."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.3",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 3",
+        "quote": "Top Charts, Free Apps, Paid Apps, 2 Supernova Learn & Speak English",
+        "why": "The ad displays a fabricated App Store Top Charts ranking, which violates the prohibition against fake credentials and fabricated awards.",
+        "fix": "Replace the mock App Store Top Charts ranking graphic with a standard App Store download badge."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe violation in Scene 3 due to a fabricated App Store Top Charts ranking graphic.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781515004.349668
+}

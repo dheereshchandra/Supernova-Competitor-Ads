@@ -1,0 +1,23 @@
+{
+  "ad_library_id": "898788299356495",
+  "language": "Bengali",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Sad vs Confident Meme",
+        "script": "Sourav says: Bochorer por bochor expensive English classes e taka nosto korlam, tao interview-te freeze hoye jetam. Tarpor ami khunje pelam Supernova AI.\nSourav says: Ekhon ami Miss Nova-r sathe privately speaking practice kori. Uni shudhu amar jonne ekta custom plan baniye den, ar amar mistakes niye kokhono judge koren na!",
+        "on_screen_text": "Top: English classes e taka nosto koreo interview te freeze hoye kaddchi.\n\nBottom: Supernova AI-te Miss Nova-r sathe privately speaking practice korar por ami."
+      }
+    ],
+    "self_critique_fixed": "Changed character name Rahul to Sourav to match the Bengali casting table. Ensured the hook opens with native Bengali words ('Bochorer por bochor') rather than English. Used highly colloquial, WhatsApp-style romanized Bengali, avoiding any Sanskritized words like 'byaybahul' or 'shakkhatkar', replacing them with natural code-mixed English terms ('expensive', 'interview') as per T2 and T3."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, featuring a standard meme format that resolves in dignity without any policy violations.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517655.6244931
+}

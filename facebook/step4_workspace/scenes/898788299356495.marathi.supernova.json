@@ -1,0 +1,23 @@
+{
+  "ad_library_id": "898788299356495",
+  "language": "Marathi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Sad vs Confident Meme",
+        "script": "Rahul says: Kititari varsha expensive English classes var waste kele, tari pan interviews madhye freeze vhaycho. Mag mala bhetla Supernova AI.\nRahul says: Ata mi Miss Nova sobat privately speaking practice karto. Ti mazyasathi ek custom plan banavte ani mazyatlya mistakes var kadhich judge karat nahi!",
+        "on_screen_text": "Top: English classes var paise waste kele tari interviews madhye freeze houn radtana mi.\n\nBottom: Supernova AI var Miss Nova sobat privately speaking practice kelya nantar cha mi."
+      }
+    ],
+    "self_critique_fixed": "Applied the Marathi language module and global rules. Ensured the hook (Scene 1) opens with a native Marathi word ('Kititari') to satisfy T7. Code-mixed extensively with English terms like 'expensive English classes', 'interviews', 'freeze', 'custom plan', 'mistakes', and 'privately speaking practice' per T2. Used warm, peer-level colloquial Marathi ('vhaycho', 'karto', 'mazyasathi') avoiding any formal or newspaperish vocabulary (T3, T4). Romanized the text using standard WhatsApp-style spelling without diacritics (T10)."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing an approved meme format that resolves in dignity without violating any competitor, financial, or privacy policies.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517707.399818
+}

@@ -1,0 +1,69 @@
+{
+  "competitor_id": "1587377062318723",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Karthik",
+        "role": "male learner",
+        "appearance": "Young adult male with short dark hair and a medium build. He is seen mostly from behind, sitting cross-legged.",
+        "wardrobe": "Olive green t-shirt with text printed on the back, and blue jeans.",
+        "demeanor": "Attentive and eager to learn, occasionally showing surprise or realization."
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot. Silver metallic body with glowing blue circular accents on the chest and head. Smooth, metallic facial features.",
+        "wardrobe": "Built-in silver metallic plating with blue glowing circuitry lines.",
+        "demeanor": "Helpful, patient, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction and Corrections",
+        "supernova_script": "Miss Nova says: Hello, what is your name?\nKarthik says: My name is Karthik.\nMiss Nova says: How old are you?\nKarthik says: I have 22.\nMiss Nova says: Not 'I have 22', you should say 'I am 22 years old'. I explain the logic in your own language so it makes sense.\nKarthik says: Okay, okay. I am 22 years old.\nMiss Nova says: Where are you from?\nKarthik says: I am Chennai.\nMiss Nova says: It should be 'I am from Chennai'. Don't worry about mistakes. I am Miss Nova. I find where you struggle and build a personalized plan just for you.",
+        "scene_summary": "- Hook: Relatable Indian-English error and live correction.\n- Payload beat (g): Logic explained in your language.\n- Payload beat (a): Personalization introduced early.",
+        "supernova_on_screen_text": "what is your name\nMy name is Karthik\nHow old are you\nI have 22\nNot 'I have 22', you should say 'I am 22 years old'\nI explain the logic in your language\nOkay, I am 22 years old\nWhere are you from\nI am Chennai\nIt should be 'I am from Chennai'\nI build a personalized plan just for you"
+      },
+      {
+        "n": 2,
+        "scene_label": "Cost Discussion",
+        "supernova_script": "Karthik says: But won't a personal AI teacher be very costly?\nMiss Nova says: It is seven times cheaper than regular English classes.\nMiss Nova says: Plus, no one is watching. Make a thousand mistakes, and I will correct you without ever judging you.\nMiss Nova says: That is why over one crore users trust Supernova AI.",
+        "scene_summary": "- Handles the cost objection with a comparative anchor.\n- Payload beat (b): Privacy and no-judgement reassurance.\n- Social proof: 1 crore+ users mentioned naturally.",
+        "supernova_on_screen_text": "won't a personal AI teacher be very costly\n7x Cheaper\nthan regular English classes\nno one is watching\ncorrect you without judging\n1 CRORE+ USERS\nSupernova AI"
+      },
+      {
+        "n": 3,
+        "scene_label": "Time Commitment",
+        "supernova_script": "Karthik says: But I don't get much time.\nMiss Nova says: You don't read books here, you actually speak. Just fifteen minutes of speaking daily is enough to become confident.\nKarthik says: Wow...",
+        "scene_summary": "- Handles the time objection.\n- Payload beat (c): You SPEAK, not read/type.\n- Positive time anchor: 15 minutes a day.",
+        "supernova_on_screen_text": "But I don't get much time\nyou actually speak\nJust 15 mins daily\nis enough\nto become confident\nWow..."
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "supernova_script": "Karthik says: How do I join?\nMiss Nova says: Press the install button and download the Supernova AI app.\nMiss Nova says: With daily practice, you will start seeing visible improvement in just fifteen days.\nMiss Nova says: Let's start speaking today.",
+        "scene_summary": "- Clean CTA to download the app.\n- Sets a soft, hedged progress expectation (brand safety compliant).\n- Final encouragement to start speaking.",
+        "supernova_on_screen_text": "How do I join\ninstall now\nPress the install button\ndownload Supernova AI\nstart seeing visible improvement\nin just 15 days\nLet's start speaking today"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "(g) logic explained, (a) personalization, (b) privacy/no-judgement, (c) you speak",
+      "kept_from_seed": "Live correction skit with giant smartphone and AI avatar",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used comparative 'seven times cheaper'"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.652527
+}

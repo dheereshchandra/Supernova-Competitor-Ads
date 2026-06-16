@@ -1,0 +1,23 @@
+{
+  "ad_library_id": "960956759748865",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Sad vs Happy Meme",
+        "script": "Rahul says: Mehangi coaching classes fail ho gayi kyunki maine kabhi actually English boli hi nahi.\nRahul says: Ab mai Supernova AI par Miss Nova ke saath speaking practice karta hoon. Vo mere liye ek personalized plan banati hai, aur meri mistakes ko kabhi judge nahi karti!",
+        "on_screen_text": "Left: Jab expensive English classes fail ho gayi kyunki maine kabhi actually bola hi nahi.\nRight: Jab maine Supernova AI par Miss Nova ke saath bolna start kiya. Personalized plan, zero judgement!"
+      }
+    ],
+    "self_critique_fixed": "Applied the hook rule (T7) by starting the first line with the native word 'Mehangi' instead of 'Expensive' to ensure a native-language thumbstop. Maintained strict code-mixing (T1, T2) with words like 'coaching classes', 'fail', 'speaking practice', 'personalized plan', and 'mistakes' left in English as they are part of daily spoken Hindi. Used casual, natural peer register (T3, T4) with WhatsApp-style romanization (T10)."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, using generic category comparisons and positive resolution without any prohibited claims or attributes.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517730.176401
+}

@@ -1,0 +1,78 @@
+{
+  "ad_library_id": "1539756771201455",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Practice",
+        "script": "Arun says: I am eating.\nJithin says: I am eating.\nArun says: Are you eating?\nJithin says: Are you eating?\nArun says: What are you eating?\nJithin says: What are you eating?\nArun says: I want to eat.\nJithin says: I want to eat.\nArun says: Wow, Jithin! Ippo ninte English nalla fluent aayallo. Nee evidunnana ithra nannaayi samsaarikkan padichathu?\nJithin says: Supernova AI app-il aanu, Acha! Njan ente personal AI teacher aaya Miss Nova-yodu samsaarikkarundu.\nJithin says: Avar ente level check cheyth, enikkaayi personalized plan ready aakkitharum.\nJithin says: Njan aayiram mistakes varuthiyaalum, avar enne judge cheyyilla. Athum Malayalathil logic explain cheythutharum!\nJithin says: Reels kandu time waste cheyyathe, divasavum just 15 minutes samsaarikkoo. Oru maasathil visible progress kaanam.",
+        "on_screen_text": "I am eating.\nAre you eating?\nWhat are you eating?\nI want to eat.\nWow, Jithin! Ippo ninte English nalla fluent aayallo. Nee evidunnana ithra nannaayi samsaarikkan padichathu?\nSupernova AI app-il aanu, Acha!\nNjan ente personal AI teacher aaya Miss Nova-yodu samsaarikkarundu.\nAvar ente level check cheyth, enikkaayi personalized plan ready aakkitharum.\nNjan aayiram mistakes varuthiyaalum, avar enne judge cheyyilla.\nAthum Malayalathil logic explain cheythutharum!\nReels kandu time waste cheyyathe, divasavum just 15 minutes samsaarikkoo.\nOru maasathil visible progress kaanam."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Offer",
+        "script": "[music only, no speech]",
+        "on_screen_text": "Supernova AI\nUnlock your confidence\n24/7 Personal AI English Teacher\nInstant feedback without judgement\nPractice anytime\nInnu thanne samsaarikkan thudangoo"
+      },
+      {
+        "n": 3,
+        "scene_label": "Father's Decision",
+        "script": "Arun says: Superb! Njan ippo thanne Supernova AI install cheythittu, ente next interview-kkaayi practice thudangaam.",
+        "on_screen_text": "Superb! Njan ippo thanne Supernova AI install cheythittu, ente next interview-kkaayi practice thudangaam.\nSupernova AI"
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "script": "Narrator says: Scrolling nirthoo. Supernova AI install cheyyoo, innu thanne English samsaarikkan thudangoo.",
+        "on_screen_text": "Supernova AI\nSpoken English App\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied the Malayalam language module rules: mapped Rahul/Aarav to Arun/Jithin; localized Marathi to Malayalam; used 'samsaarikkan' (native verb stem) instead of 'speak cheyyuka'; used the person-sensitive 'tharum' for the first-person gift; avoided English-noun + Malayalam-case hybrids by using 'Malayalathil' and 'maasathil'; kept the taught English lines verbatim; and maintained the warm family register with proper honorifics."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G2.1",
+        "category": "Competitors & disparagement",
+        "severity": "moderate",
+        "scene": "Scene 1",
+        "quote": "Reels kandu time waste cheyyathe, divasavum just 15 minutes samsaarikkoo.",
+        "why": "It explicitly trashes Reels as a 'time waste' instead of using it as a neutral time-reallocation anchor.",
+        "fix": "Change to: 'Reels scroll cheyyunnathinu pakaram, divasavum just 15 minutes samsaarikkoo.' (Instead of scrolling Reels, just speak for 15 minutes daily.)"
+      },
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 2",
+        "quote": "A countdown timer",
+        "why": "The visual description includes a countdown timer, which is a prohibited misleading mechanic/fake UI element under Meta's ad policy.",
+        "fix": "Remove the countdown timer from the promotional graphic."
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 2",
+        "quote": "prominent '1' rupee offer, with the original '30' rupee price crossed out",
+        "why": "The visual description contains hard rupee pricing ('1' rupee offer, '30' rupee price) which is strictly prohibited unless approved by the team.",
+        "fix": "Remove the specific rupee pricing and replace it with a generic offer callout like 'Special Trial Offer'."
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 2",
+        "quote": "Start Trial at ₹1",
+        "why": "The visual description contains a hard rupee price ('₹1') on the call-to-action button.",
+        "fix": "Change the button text to 'Start Trial' or 'Unlock Offer' without any rupee amount."
+      }
+    ],
+    "summary": "The ad contains severe violations regarding hard rupee pricing and a countdown timer in Scene 2, along with a moderate violation for trashing Reels in Scene 1.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517283.691703
+}

@@ -1,0 +1,66 @@
+{
+  "ad_library_id": "4364553960461634",
+  "language": "Kannada",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Hair Oiling Correction",
+        "script": "Priya says: Yen madta iddeera?\nMiss Nova says: I'm adding oil.\nPriya says: Adu...\nMiss Nova says: I'm applying oil, or you should say, I'm oiling my hair.\nMiss Nova says: Konegu English confidently maatadbeka?\nPriya says: Haudu, aadhre mistakes madoke thumba shy agutthe.\nMiss Nova says: Naanu Miss Nova. Supernova AI iruvaga, nivu worry madbekilla.",
+        "on_screen_text": "Yen madta iddeera?\nI'm adding oil\nI'm applying oil\nOr you should say\nI'm oiling my hair\nEnglish confidently maatadbeka?\nHaudu, aadhre shy agutthe\nSupernova AI"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Interface Introduction",
+        "script": "Miss Nova says: Nivu daily speaking practice maadbahudu. Saavira mistakes maadidru, naanu nimmanna judge maadalla, matthe yaaru nodta illa.",
+        "on_screen_text": "Daily speaking practice maadi\n1000 mistakes maadidru ok\nZero judgement\nYaaru nodta illa"
+      },
+      {
+        "n": 3,
+        "scene_label": "Explaining Benefits",
+        "script": "Miss Nova says: Actually out loud maatadi, naturally hege speak madodu anta naanu teach maadtini.\nPriya says: Idu nijavaglu nange work agutta?\nMiss Nova says: Idu haleya coaching classes ginta thumba effective, yakendre naanu nimma exact level analyze maadi, nimgaagi ondh custom plan ready maadtini.\nPriya says: Idu affordable idiya?",
+        "on_screen_text": "Naturally speak maadi\nOut loud maatadi\nNange work agutta?\nCoaching classes ginta better\nNimma exact level analyze maadi\nNimgaagi ondh custom plan\nIdu affordable idiya?"
+      },
+      {
+        "n": 4,
+        "scene_label": "Pricing Offer",
+        "script": "Miss Nova says: Haudu, idu regular classes ginta yelu guna sasta irutthe. Daily just 15 minutes kodi, ondh month-nalli nimge visible progress kanisutthe.",
+        "on_screen_text": "Regular classes ginta 7x sasta\nDaily just 15 minutes\nVisible progress kanisutthe\nOndh month-nalli"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: Scrolling nalli time waste madodu nillisi. Egle Supernova AI install maadi, ivthe maatadoke start maadi.",
+        "on_screen_text": "Time waste madodu nillisi\nSupernova AI install maadi\nIvthe maatadoke start maadi"
+      }
+    ],
+    "self_critique_fixed": "The script was successfully localized to Romanized, code-mixed Kannada. The hook opens in native Kannada ('Yen madta iddeera?'). The comparative multiplier 'seven times cheaper' was correctly localized to 'yelu guna sasta' per the T2h carve-out. Taught lines ('I'm adding oil', etc.) were kept verbatim in English. Politeness rules were strictly followed with Miss Nova using polite plural forms ('nivu', '-iri', 'maadi') and Priya using respectful yet friendly peer-level language. Modern spoken contractions like 'niv' and 'ondh' were utilized to avoid a textbook/newspaperish tone."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 4",
+        "quote": "ondh month-nalli nimge visible progress kanisutthe",
+        "why": "The script guarantees that the user will see visible progress in one month without using the required hedge language such as 'start to see' or 'can see'.",
+        "fix": "Rewrite the script to: 'Daily just 15 minutes kodi, ondh month-nalli nimge visible progress kanisoke start agabahudu.'"
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 4 [VISUAL]",
+        "quote": "The UI highlights a discounted price of 1 rupee, crossing out the original price of 30.",
+        "why": "The visual description includes specific, unapproved rupee pricing (1 rupee and 30 rupees) which must not be generated.",
+        "fix": "The UI highlights a comparative discount or subscription benefits without showing specific rupee amounts."
+      }
+    ],
+    "summary": "The ad contains two severe violations: a guaranteed progress outcome without hedge language in Scene 4, and unapproved hard rupee pricing in the Scene 4 visual description.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517584.404494
+}

@@ -1,0 +1,63 @@
+{
+  "ad_library_id": "2397605794050606",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Translation Practice",
+        "script": "Priya says: I am giving an interview.\nMiss Nova says: Aise bolo, \"I am taking an interview.\"\nPriya says: He is my cousin brother.\nMiss Nova says: Aise bolo, \"He is my cousin.\"\nPriya says: I belong to Delhi.\nMiss Nova says: Aise bolo, \"I am from Delhi.\"\nPriya says: I am sleeping now.\nMiss Nova says: Aise bolo, \"I am going to sleep.\"\nPriya says: How to learn English?\nMiss Nova says: Mere saath speaking practice kijiye.",
+        "on_screen_text": "I am giving an interview.\nI AM TAKING AN INTERVIEW.\nHe is my cousin brother.\nHE IS MY COUSIN.\nI belong to Delhi.\nI AM FROM DELHI.\nI am sleeping now.\nI AM GOING TO SLEEP.\nHow to learn English?\nPRACTICE SPEAKING WITH ME."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Introduction",
+        "script": "Miss Nova says: Main hoon Miss Nova, Supernova AI se. Main aapka English level analyze karke, aapke liye ek personalized plan ready karti hoon.",
+        "on_screen_text": "Supernova AI\nPERSONALIZED PLAN\nKhaas aapke liye"
+      },
+      {
+        "n": 3,
+        "scene_label": "Daily Practice",
+        "script": "Miss Nova says: Raat ke 3 a.m. ko bhi 1000 mistakes kijiye. Koi nahi dekh raha, aur main aapko kabhi judge nahi karungi.",
+        "on_screen_text": "1000 MISTAKES KIJIYE\nZERO JUDGEMENT"
+      },
+      {
+        "n": 4,
+        "scene_label": "Features Overview",
+        "script": "Miss Nova says: Main logic aapki language Hindi mein explain karti hoon, taaki aap sirf reading nahi, actually bolkar seekhein.",
+        "on_screen_text": "LOGIC AAPKI LANGUAGE MEIN\nBOLKAR SEEKHEIN"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: Scrolling band kijiye. Din mein bas 15 minutes chahiye visible progress dekhne ke liye.",
+        "on_screen_text": "BAS 15 MINS ROZ\nVISIBLE PROGRESS DEKHIYE"
+      },
+      {
+        "n": 6,
+        "scene_label": "End Card",
+        "script": "Miss Nova says: Supernova AI install kijiye aur aaj se hi English bolna start kijiye.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "I checked the script line-by-line to ensure perfect adherence to the Romanized, code-mixed Hindi rules. Taught lines in Scene 1 are kept 100% verbatim in English. Miss Nova's lines are warm and polite, using the 'aap' register ('kijiye', 'karungi') while maintaining a highly colloquial, spoken tone. Sanskritized words like 'vyaktigat' or 'truti' were avoided in favor of 'personalized' and 'mistakes'. The language self-reference was correctly localized to 'Hindi'. Syllable counts match the English source within the +/-20% budget."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 4 — Features Overview",
+        "quote": "JUST FOR 1",
+        "why": "The visual text overlay contains 'JUST FOR 1', which introduces an unapproved price point or promotional offer.",
+        "fix": "Remove 'JUST FOR 1' from the text overlay and replace it with a feature-focused term like 'SPEAKING'"
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains an unapproved price/offer reference ('JUST FOR 1') in the Scene 4 visual text overlay.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517474.020391
+}

@@ -1,0 +1,96 @@
+{
+  "ad_library_id": "1314122850567353",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Need for English",
+        "script": "Arun says: Engane freeze aavaathe English samsaarikkaam? Ith nammalellaavarkkum ulla doubt aanu.",
+        "on_screen_text": "ENGLISH"
+      },
+      {
+        "n": 2,
+        "scene_label": "Career and Travel Goals",
+        "script": "Arun says: Oru job interview clear cheyyaano, promotion kittano, athumallengil just confidence thonnano...",
+        "on_screen_text": "PROMOTED!"
+      },
+      {
+        "n": 3,
+        "scene_label": "Social Status",
+        "script": "Arun says: Matthullavarude munnil respect nedanum stand out cheyyaanum namukk English venam.",
+        "on_screen_text": "English"
+      },
+      {
+        "n": 4,
+        "scene_label": "Common Excuses",
+        "script": "Arun says: Pakshe pazhaya methods work aayilla. Karanam ningal books vaayichu, samsaarichilla. Pinne coaching classes-inu nalla time pokum.",
+        "on_screen_text": "ENGLISH, TIME"
+      },
+      {
+        "n": 5,
+        "scene_label": "The Solution",
+        "script": "Arun says: Athukondaanu ningalkku Supernova AI vendath. Meet Miss Nova, ningalude personal AI English teacher.",
+        "on_screen_text": "SOLUTION!, Supernova AI"
+      },
+      {
+        "n": 6,
+        "scene_label": "AI Teacher Features",
+        "script": "Arun says: Miss Nova-yodoppam ningalkku out loud samsaarichu practice cheyyaam. Ningal aayiram mistakes varuthiyaalum, Miss Nova ningale orikkalum kaliyaakilla.. judge-um cheyyilla.",
+        "on_screen_text": "ANYTIME LEARNING!, AI TEACHER"
+      },
+      {
+        "n": 7,
+        "scene_label": "Adaptive Learning",
+        "script": "Arun says: Ellavarkkum ore reethiyil alla avar padhippikyunnathu. Ningalude exact level manassilaaki, ningalkkaayi oru personalized plan avar tharum.",
+        "on_screen_text": "LEVEL 1 -> LEVEL 2, AI LEVEL ADAPTING"
+      },
+      {
+        "n": 8,
+        "scene_label": "User Base",
+        "script": "Arun says: Feeds scroll cheythu manikyoorugal kalayathe, ippoal padhikyunna 1 crore-il adhikam Indians-te oppam join cheyyoo.",
+        "on_screen_text": "1 CRORE+ PEOPLE"
+      },
+      {
+        "n": 9,
+        "scene_label": "Ratings and Trust",
+        "script": "Arun says: Avar mistakes correct cheyyumpol, logic Malayalathil explain cheyyum. So karyangal eluppathil manassilaakum.",
+        "on_screen_text": "4.6, Ratings and reviews, Play Store, BEST CHOICE"
+      },
+      {
+        "n": 10,
+        "scene_label": "Call to Action",
+        "script": "Arun says: Ith coaching classes-nekkal laabhamaanu. Divusavum just 15 minutes spend cheyyoo. Supernova AI install cheythu innu thanne samsaarichu thudangoo.",
+        "on_screen_text": "AFFORDABLE, INSTALL NOW, Supernova AI"
+      }
+    ],
+    "self_critique_fixed": "The script was localized into colloquial, code-mixed Malayalam. Recast the character Rahul to Arun using the Malayalam casting table. Ensured the hook opens with a native Malayalam word ('Engane') to satisfy T7. Applied the Malayalam-specific overrides: 'speak' was translated using native verb stems ('samsaarikkaam', 'samsaarichu'), 'give' was correctly rendered as 'tharum' (2nd person), avoided English-noun + Malayalam-case-ending hybrids, used 'kaliyaakilla' instead of literal laughing for mocking, and correctly translated time-unit words ('hours' to 'manikyoorugal' and 'days' to 'divusavum') while keeping digits intact. Addressed the viewer using the polite plural 'ningal' register."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 10",
+        "quote": "drawing of a 1 Rupee coin",
+        "why": "The visual depicts a 1 Rupee coin, which introduces an unapproved hard rupee price into the ad.",
+        "fix": "Remove the 1 Rupee coin drawing and replace it with a generic savings illustration like a piggy bank."
+      },
+      {
+        "guardrail_id": "G1.4",
+        "category": "Claims & legal",
+        "severity": "moderate",
+        "scene": "Scene 9",
+        "quote": "BEST CHOICE",
+        "why": "The on-screen text 'BEST CHOICE' acts as an absolute superlative, which is prohibited.",
+        "fix": "Replace 'BEST CHOICE' with 'TRUSTED CHOICE' or 'TOP RATED'."
+      }
+    ],
+    "summary": "The ad contains a severe violation due to an unapproved hard rupee price visual (1 Rupee coin) and a moderate violation for using an absolute superlative ('BEST CHOICE').",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781516894.9668689
+}

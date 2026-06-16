@@ -1,0 +1,169 @@
+{
+  "competitor_id": "824655086830758",
+  "parsed": {
+    "duration_s": 48.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines human-recorded footage in the bottom panel with an AI-generated robot avatar in the top panel. The AI avatar exhibits slightly stiff movements and unnatural lip-syncing typical of AI generation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult woman with a slim build and fair complexion. She has dark hair tied back in a ponytail and subtle facial features.",
+        "wardrobe": "She wears a light blue t-shirt. Initially, she is also wearing a black jacket which she takes off.",
+        "demeanor": "Expressive, curious, and eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot with a white and silver metallic body showing visible joints. The face is human-like with pale skin and dark eyes.",
+        "wardrobe": "No clothing; metallic robot body.",
+        "demeanor": "Calm, instructive, and friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 26.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Correcting 'Remove' to 'Take off'",
+        "setting": "Top: Cafe with brick walls and wooden tables. Bottom: Plain indoor room.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen, medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A humanoid robot with a white and silver metallic body and a human-like face with pale skin and dark eyes. The robot is sitting at a table in a cafe with brick walls, pendant lights, and wooden furniture. The robot is gesturing with its hands while looking forward.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young woman with fair skin and dark hair tied in a ponytail. She is wearing a light blue t-shirt. At the beginning, she is taking off a black jacket. She is looking directly at the camera and speaking. The background is a plain, softly lit indoor room with a doorway visible.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with a horizontal division. The top half shows a humanoid robot in a cafe setting. The bottom half shows a young woman indoors, initially taking off a jacket. Text captions appear dynamically in the center of the screen.",
+        "audio_transcript": "Character A says: \u0924\u0942 \u0915\u093e\u092f \u0915\u0930\u0924\u0947\u092f [What are you doing?]\nCharacter A says: I am removing my jacket.\nCharacter B says: Removing? \u0915\u093e\u092f? permanently \u0915\u093e\u0922\u0942\u0928 \u091f\u093e\u0915\u0924\u0947\u092f \u0915\u093e? [Removing? What? Are you taking it off permanently?]\nCharacter A says: \u0928\u093e\u0939\u0940 \u0928\u093e\u0939\u0940, \u092b\u0915\u094d\u0924 \u0915\u093e\u0922\u0924 \u0939\u094b\u0924\u0947. [No no, just taking it off.]\nCharacter B says: \u0913\u0915\u0947. \u0930\u094b\u091c\u091a\u094d\u092f\u093e actions \u0938\u093e\u0920\u0940 \"remove\" \u0915\u092e\u0940 \u0935\u093e\u092a\u0930\u0924\u093e\u0924. \u091c\u0938\u0902 \u0915\u092a\u0921\u0947 \u0915\u093e\u0922\u0924\u093e\u0928\u093e \"take off\" \u0935\u093e\u092a\u0930\u0924\u093e\u0924. \u0905\u0938\u0902 \u092c\u094b\u0932 \"I am taking off my jacket\". [Okay. For daily actions, \"remove\" is used less. Like when taking off clothes, \"take off\" is used. Say it like this \"I am taking off my jacket\".]\nCharacter A says: I am taking off my jacket.\nCharacter A says: Ohh ok ok. \u092e\u0932\u093e English \u0928\u0940\u091f \u092f\u0947\u0924\u091a \u0928\u093e\u0939\u0940. [Ohh ok ok. I don't know English properly.]\nCharacter B says: \u0915\u093e\u0939\u0940 problem \u0928\u093e\u0939\u0940. AI teachers try \u0915\u0947\u0932\u0902 \u0915\u093e? [No problem. Have you tried AI teachers?]\nCharacter A says: \u0924\u0947 \u092e\u0939\u093e\u0917 \u0905\u0938\u0924\u0940\u0932 \u0928\u093e? [They must be expensive, right?]\nCharacter B says: \u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940. Normal English classes \u092a\u0947\u0915\u094d\u0937\u093e 7x cheaper \u0906\u0939\u0947. [Not at all. It is 7x cheaper than normal English classes.]",
+        "on_screen_text": "\u0924\u0942 \u0915\u093e\u092f \u0915\u0930\u0924\u0947\u092f (What are you doing) I am removing my jacket Removing \u0915\u093e\u092f (Removing what) permanently \u0928\u093e\u0939\u0940 \u092b\u0915\u094d\u0924 \u0915\u093e\u0922\u0924 \u0939\u094b\u0924\u0947 (no just taking it off) \u0930\u094b\u091c\u091a\u094d\u092f\u093e actions \u0938\u093e\u0920\u0940 (For daily actions) \"remove\" \u0915\u092e\u0940 \u0935\u093e\u092a\u0930\u0924\u093e\u0924 (is used less) \u091c\u0938\u0902 \u0915\u092a\u0921\u0947 \u0915\u093e\u0922\u0924\u093e\u0928\u093e (like when taking off clothes) take off \u0935\u093e\u092a\u0930\u0924\u093e\u0924 (take off is used) \u0905\u0938\u0902 \u092c\u094b\u0932 (say it like this) I am taking off my jacket Ohh ok ok \u092e\u0932\u093e English \u0928\u0940\u091f \u092f\u0947\u0924\u091a \u0928\u093e\u0939\u0940 (I don't know English properly) \u0915\u093e\u0939\u0940 problem \u0928\u093e\u0939\u0940 (No problem) AI teachers try \u0915\u0947\u0932\u0902 \u0915\u093e (Have you tried AI teachers) \u0924\u0947 \u092e\u0939\u093e\u0917 \u0905\u0938\u0924\u0940\u0932 (They must be expensive) \u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940 (Not at all) Normal English classes \u092a\u0947\u0915\u094d\u0937\u093e (than normal English classes) 7x Cheaper"
+      },
+      {
+        "n": 2,
+        "start_s": 26.5,
+        "end_s": 29.5,
+        "screenshot_at_s": 28.0,
+        "scene_label": "App Store Page",
+        "setting": "Digital interface",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A digital screen displaying a layout with rectangular blocks, circular icons, and thumbnail images of people. The composition resembles a digital storefront or application interface, featuring a clean, light-colored background with blue interactive elements.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A full-screen view of a mobile app store interface. The screen displays an app listing with an install button, ratings, and promotional images.",
+        "audio_transcript": "Character B says: \u092e\u094d\u0939\u0923\u0942\u0928 \u090f\u0915 \u0915\u0930\u094b\u0921 \u0932\u094b\u0915 MySivi \u0935\u0930 English practice \u0915\u0930\u0924 \u0906\u0939\u0947\u0924. [That's why one crore people are practicing English on MySivi.]",
+        "on_screen_text": "\u092e\u094d\u0939\u0923\u0942\u0928 \u090f\u0915 \u0915\u0930\u094b\u0921 \u0932\u094b\u0915 MySivi \u0935\u0930 English practice \u0915\u0930\u0924 \u0906\u0939\u0947\u0924 (That's why one crore people are practicing English on MySivi) Start English Learning -MySivi MySivi AI In-app purchases 3+ Rated for 3+ 61 MB 10M+ Downloads Install Install on phone. More devices available. Sivi IS NOW MySivi Improve English speaking with AI About this app Start your English learning with a Trial at No Cost | Practice English Now"
+      },
+      {
+        "n": 3,
+        "start_s": 29.5,
+        "end_s": 37.5,
+        "screenshot_at_s": 33.0,
+        "scene_label": "Time Commitment",
+        "setting": "Top: Cafe. Bottom: Indoor room.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen, medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A humanoid robot with a white and silver metallic body and a human-like face with pale skin and dark eyes. The robot is sitting at a table in a cafe with brick walls, pendant lights, and wooden furniture. The robot is gesturing with its hands while looking forward.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young woman with fair skin and dark hair tied in a ponytail. She is wearing a light blue t-shirt. She is looking directly at the camera and speaking. The background is a plain, softly lit indoor room with a doorway visible.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A return to the horizontal split-screen layout. The top half features the robot in the cafe, and the bottom half shows the young woman in the light blue t-shirt. Dynamic text captions continue to appear.",
+        "audio_transcript": "Character A says: \u092a\u0923 \u0935\u0947\u0933 \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940. [But I don't get time.]\nCharacter B says: \u0930\u094b\u091c \u092b\u0915\u094d\u0924 15-20 minute practice \u092a\u0941\u0930\u0947\u0936\u0940 \u0906\u0939\u0947. \u0905\u0917\u0926\u0940 confident \u0935\u094d\u0939\u093e\u0932. [Just 15-20 minutes of practice daily is enough. You will become very confident.]\nCharacter A says: Wow. \u0915\u0938\u0902 join \u0915\u0930\u0942? [Wow. How do I join?]",
+        "on_screen_text": "\u092a\u0923 \u0935\u0947\u0933 \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940 (But I don't get time) \u0930\u094b\u091c \u092b\u0915\u094d\u0924 15-20 minute practice \u092a\u0941\u0930\u0947\u0936\u0940 \u0906\u0939\u0947 (Just 15-20 minutes of practice daily is enough) \u0905\u0917\u0926\u0940 confident \u0935\u094d\u0939\u093e\u0932 (You will become very confident) Wow \u0915\u0938\u0902 join \u0915\u0930\u0942 (Wow How do I join)"
+      },
+      {
+        "n": 4,
+        "start_s": 37.5,
+        "end_s": 40.0,
+        "screenshot_at_s": 38.5,
+        "scene_label": "App Installation",
+        "setting": "Digital interface",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A digital screen displaying a dark-themed interface. The top section contains a horizontal loading indicator. The lower section features rectangular video thumbnails showing human faces.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A full-screen view of a mobile interface showing an app in the process of being installed. A progress indicator is visible at the top, with video thumbnails below.",
+        "audio_transcript": "Character B says: \u0939\u093e install \u091a\u093e button \u0926\u093e\u092c\u093e \u0906\u0923\u093f MySivi app install \u0915\u0930\u093e. [Press this install button and install the MySivi app.]",
+        "on_screen_text": "\u0939\u093e install \u091a\u093e button \u0926\u093e\u092c\u093e \u0906\u0923\u093f MySivi app install \u0915\u0930\u093e (Press this install button and install the MySivi app) MySivi AI English Spe... 0% of 62.82 MB Verified by Play Protect Cancel Master Spoken Eng Sharpen your Englis 1-on-1 calls. Try MyS fast"
+      },
+      {
+        "n": 5,
+        "start_s": 40.0,
+        "end_s": 48.0,
+        "screenshot_at_s": 44.0,
+        "scene_label": "Call to Action",
+        "setting": "Top: Cafe. Bottom: Indoor room.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen, medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A humanoid robot with a white and silver metallic body and a human-like face with pale skin and dark eyes. The robot is sitting at a table in a cafe with brick walls, pendant lights, and wooden furniture. The robot is gesturing with its hands while looking forward.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young woman with fair skin and dark hair tied in a ponytail. She is wearing a light blue t-shirt. She is looking directly at the camera and speaking. The background is a plain, softly lit indoor room with a doorway visible.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The video returns to the horizontal split-screen layout with the robot on top and the young woman on the bottom. A circular graphic with a price and an 'Install Now' button overlay appears towards the end.",
+        "audio_transcript": "Character B says: Sign up \u0915\u0930\u093e \u0906\u0923\u093f practice start \u0915\u0930\u093e. \u092b\u0915\u094d\u0924 15 \u0926\u093f\u0935\u0938\u093e\u0902\u0924 \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e improvement \u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932. \u091a\u0932\u093e, \u0938\u0941\u0930\u0941 \u0915\u0930\u093e. [Sign up and start practice. In just 15 days you will start seeing improvement. Come on, start.]",
+        "on_screen_text": "Sign up \u0915\u0930\u093e \u0906\u0923\u093f practice start \u0915\u0930\u093e (Sign up and start practice) \u092b\u0915\u094d\u0924 15 \u0926\u093f\u0935\u0938\u093e\u0902\u0924 \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e improvement \u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932 (In just 15 days you will start seeing improvement) \u091a\u0932\u093e \u0938\u0941\u0930\u0941 \u0915\u0930\u093e (Come on start) \u092e\u093e\u0924\u094d\u0930 \u20b91 (Only \u20b91) Install Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.3897102
+}

@@ -1,0 +1,141 @@
+{
+  "competitor_id": "1770363464324959",
+  "parsed": {
+    "duration_s": 54.0,
+    "production_type": "mixed",
+    "production_notes": "The initial street interview appears human-recorded. Subsequent scenes use a CGI/AI-generated robot avatar and the woman's face in the split-screen shows unnatural, AI-smoothed features and stiff lip-syncing.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "Young adult female, slim build, brown complexion. Long, dark, wavy hair. Distinctive facial features include prominent cheekbones and a wide smile.",
+        "wardrobe": "Rust-colored satin slip dress worn under a cropped beige leather jacket. Gold hoop earrings and a small pendant necklace.",
+        "demeanor": "Enthusiastic, confident, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "male interviewer",
+        "appearance": "Young adult male, medium build, fair complexion. Short brown hair styled upwards, with a light beard and mustache.",
+        "wardrobe": "Light blue button-down shirt under a tan corduroy jacket. Dark blue jeans.",
+        "demeanor": "Curious, engaged, and friendly."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot. White and silver smooth casing with visible joints. Pale, synthetic face with bright blue eyes and neutral features.",
+        "wardrobe": "None; exposed robotic chassis.",
+        "demeanor": "Calm, helpful, and slightly robotic in movement."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 17.5,
+        "screenshot_at_s": 8.0,
+        "scene_label": "Street Interview",
+        "setting": "Busy city street at night. Blurred background with illuminated storefronts, streetlights, and passing cars.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B stands on the right, holding a microphone towards Character A on the left. They are on a sidewalk at night. Character A is smiling and gesturing slightly as she speaks. Character B looks at her attentively. The background is a softly out-of-focus urban street scene with warm lighting from shops and vehicles.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A man interviews a woman on a city street at night. He holds a microphone to her as they converse. Large, dynamic text captions appear in the center of the screen, highlighting their dialogue.",
+        "audio_transcript": "Character B says: What is your native language?\nCharacter A says: My native language is Hindi.\nCharacter B says: Wow, your English sounds really good.\nCharacter A says: A few months ago, I didn't speak English at all, and I couldn't get a job.\nCharacter B says: Seriously, how did you learn so fast?\nCharacter A says: I have an AI tutor that helps me.\nCharacter B says: Wow, that's amazing. Show me.",
+        "on_screen_text": "WHAT IS YOUR NATIVE LANGUAGE\nMY NATIVE LANGUAGE IS HINDI\nWOW YOUR ENGLISH SOUNDS REALLY GOOD\nA FEW MONTHS AGO I DIDN'T SPEAK ENGLISH AT ALL\nAND I COULDN'T GET A JOB\nSERIOUSLY HOW DID YOU LEARN SO FAST\nI HAVE AN AI TUTOR THAT HELPS ME\nWOW THATS AMAZING SHOW ME"
+      },
+      {
+        "n": 2,
+        "start_s": 17.5,
+        "end_s": 36.0,
+        "screenshot_at_s": 26.0,
+        "scene_label": "AI Tutor Video Call",
+        "setting": "Split screen. Top: Bright cafe interior. Bottom: Blurred city street at night.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen, close-ups",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character C, a humanoid robot, is framed from the chest up. She is positioned indoors with a large window behind her, showing daylight and some greenery. The interior has warm lighting and hanging spherical lamps.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character A is framed in a close-up, holding a smartphone just out of frame as if taking a selfie video. She is looking directly at the camera lens. The background is a heavily blurred night-time city scene with bokeh lights.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout simulates a video call. The top half shows a robot avatar in a cafe setting. The bottom half shows the woman from the previous scene, holding her phone. Text captions appear across the middle of the screen as they converse.",
+        "audio_transcript": "Character C says: \u0939\u0947 \u0928\u0947\u0939\u093e, \u0915\u0948\u0938\u0940 \u0939\u094b \u0906\u091c? [Hey Neha, how are you today?]\nCharacter A says: I was being interviewed right now.\nCharacter C says: I was \u0928\u0939\u0940\u0902, I am being interviewed right now \u092c\u094b\u0932\u0928\u093e \u091a\u093e\u0939\u093f\u090f\u0964 [Not 'I was', you should say 'I am being interviewed right now'.]\nCharacter A says: Oh, I am being interviewed right now.\nCharacter C says: \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0938\u0939\u0940\u0964 \u0907\u0902\u091f\u0930\u0935\u094d\u092f\u0942 \u0915\u093f\u0938 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902 \u0939\u0948? [Absolutely right. What is the interview about?]\nCharacter A says: It's about my English skills. They say me I speak with confidence.\nCharacter C says: They say me \u0928\u0939\u0940\u0902, They say I speak with confidence \u0939\u094b\u0917\u093e\u0964 [Not 'They say me', it will be 'They say I speak with confidence'.]\nCharacter A says: You're right. They say I speak with confidence.",
+        "on_screen_text": "HEY NEHA KAISI HO AAJ\nI WAS BEING INTERVIEWED RIGHT NOW\nI WAS NAHI I AM BEING INTERVIEWED RIGHT NOW BOLNA CHAHIYE\nOH I AM BEING INTERVIEWED RIGHT NOW\nBILKUL SAHI INTERVIEW KIS BAARE MEIN HAI\nITS ABOUT MY ENGLISH SKILLS\nTHEY SAY ME I SPEAK WITH CONFIDENCE\nTHEY SAY ME NAHI THEY SAY I SPEAK WITH CONFIDENCE HOGA\nYOURE RIGHT THEY SAY I SPEAK WITH CONFIDENCE"
+      },
+      {
+        "n": 3,
+        "start_s": 36.0,
+        "end_s": 50.0,
+        "screenshot_at_s": 43.0,
+        "scene_label": "Robot Tutor Pitch",
+        "setting": "Bright cafe interior during the day. Large windows, hanging lamps.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "Medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character C sits in a black chair in a cafe. She is framed from the waist up, facing the camera directly. The background features large windows letting in daylight, with hanging spherical lamps and blurred cafe decor visible behind her.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The robot avatar sits in a cafe, speaking directly to the viewer. Various graphical overlays appear, including app interface mockups, a Google Play store listing, and promotional text bubbles.",
+        "audio_transcript": "Character C says: \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 \u0939\u092e \u0930\u094b\u091c\u093c \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0907\u092e\u094d\u092a\u094d\u0930\u0942\u0935 \u0915\u0930 \u0938\u0915\u0924\u0947 \u0939\u0948\u0902\u0964 [With me, we can improve English every day.]\nCharacter C says: \u0930\u094b\u091c\u093c 10 \u092e\u093f\u0928\u091f \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u094b, \u0914\u0930 \u0906\u092a \u090f\u0915 \u092e\u0939\u0940\u0928\u0947 \u092e\u0947\u0902 \u0905\u091a\u094d\u091b\u0940 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092c\u094b\u0932\u0928\u0947 \u0932\u0917\u094b\u0917\u0947\u0964 [Practice English with me for 10 minutes every day, and you will start speaking good English in a month.]\nCharacter C says: 50 \u0932\u093e\u0916 \u0938\u0947 \u091c\u093c\u094d\u092f\u093e\u0926\u093e \u092f\u0942\u091c\u093c\u0930\u094d\u0938 MySivi \u092e\u0947\u0902 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964 \u0906\u092a \u092d\u0940 \u0915\u0930 \u0932\u094b\u0964 [More than 50 lakh users practice on MySivi. You should do it too.]\nCharacter C says: \u0938\u093f\u0930\u094d\u092b \u20b91 \u092e\u0947\u0902 MySivi \u0936\u0941\u0930\u0942 \u0915\u0930\u094b\u0964 [Start MySivi for just \u20b91.]",
+        "on_screen_text": "MERE SAATH HUM ROZ ENGLISH IMPROVE KAR SAKTE HAIN\nROZ 10 MINUTE MERE SAATH ENGLISH PRACTICE KARO\nAUR AAP EK MAHINE MEIN ACHI ENGLISH BOLNE LAGOGE\nLearning Path Unit 1 Meet and Greet Start Lesson\n50 LAKH SE ZYADA USERS MYSIVI MEIN PRACTICE KARTE HAIN\nMySivi AI English Speaking... Install\nAAP BHI KAR LO\nSIRF \u20b91 MEIN MYSIVI SHURU KARO\nonly at \u20b91 Install Now"
+      },
+      {
+        "n": 4,
+        "start_s": 50.0,
+        "end_s": 54.0,
+        "screenshot_at_s": 52.0,
+        "scene_label": "End Card",
+        "setting": "Solid light purple background.",
+        "characters_in_scene": [],
+        "camera": "App-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A silver smartphone is displayed against a solid, light purple background. The phone is initially shown from a slight angle, revealing its rear camera array, before rotating to face the viewer directly, showing a blank white screen.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A 3D render of a smartphone rotates into view against a solid purple background. The screen displays the app's logo, name, and a call-to-action button.",
+        "audio_transcript": "Unknown speaker says: \u0907\u0928\u0938\u094d\u091f\u0949\u0932 \u0928\u093e\u0909 \u092a\u0947 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930\u094b \u0914\u0930 MySivi \u0910\u092a \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 [Click on install now and download the MySivi app.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.381591
+}

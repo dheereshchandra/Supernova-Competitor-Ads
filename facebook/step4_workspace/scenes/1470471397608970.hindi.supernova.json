@@ -1,0 +1,39 @@
+{
+  "ad_library_id": "1470471397608970",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Pronunciation Lesson",
+        "script": "Miss Nova says: Kya aap in words ko English mein pronounce karne ki try kar sakte hain?\nRahul says: Catch-ay?\nMiss Nova says: Iska pronunciation 'Cash' hai. Aur iska?\nRahul says: Nitch-ey?\nMiss Nova says: Yeh 'Neesh' hai. Dekha, 12 years tak books padhne se bhi actually English bolna nahi aata.\nRahul says: I know, main hamesha office meetings mein freeze ho jata hoon! Aap itna achha kaise padhati hain?\nMiss Nova says: Main hoon Miss Nova, Supernova AI par aapki AI teacher. Main aapki speech ko analyze karke sirf aapke liye ek personalized plan banati hoon.\nMiss Nova says: Aap mere saath kabhi bhi practice kar sakte hain, chahe 1000 mistakes kariye, main aapko kabhi judge nahi karungi.",
+        "on_screen_text": "Supernova AI\nCache\nHypocrisy\nNiche\nAisle"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Promo End Card",
+        "script": "Miss Nova says: Social media feeds scroll karne mein hours waste karna band kariye.\nMiss Nova says: Din mein bas 15 minutes speaking practice kariye, aur ek month mein visible progress dekhiye.\nMiss Nova says: Supernova AI download kariye aur aaj se hi bolna start kariye.",
+        "on_screen_text": "Learn to actually speak English\nDOWNLOAD SUPERNOVA AI\nGET IT ON Google Play\nSupernova AI: English Speaking App\nSupernova AI\n4.8 star\n2K reviews\nRated for 3+\nInstall\nAbout this app\nEnglish Speaking App by Supernova AI: Improve Spoken English with AI Practice\nEducation"
+      }
+    ],
+    "self_critique_fixed": "Applied the Hindi language module and global rules. Ensured the hook opens with the native word 'Kya' to satisfy T7. Used polite 'aap' and '-kariye' forms for Miss Nova's dialogue to respect the politeness architecture (T4). Kept all numbers as numerals (12, 1000, 15) and retained product vocabulary in English as per T2. Romanized the script in standard WhatsApp-style friendly Hindi."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 2",
+        "quote": "Din mein bas 15 minutes speaking practice kariye, aur ek month mein visible progress dekhiye.",
+        "why": "The script promises a specific outcome ('see visible progress') within a timeframe without using mandatory hedge language like 'start to' or 'can'.",
+        "fix": "Din mein bas 15 minutes speaking practice kariye, aur ek month mein visible progress dekhna start kar sakte hain."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe G1.1 violation due to a guaranteed progress claim without hedge language.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517232.9122481
+}

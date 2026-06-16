@@ -1,0 +1,52 @@
+{
+  "competitor_id": "1228215292748737",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Pallavi",
+        "role": "Pallavi (Messaging Contact)",
+        "appearance": "Visible only as a small circular profile picture. Young Indian woman with a fair complexion and dark hair. She has a gentle smile.",
+        "wardrobe": "Wearing a grey or silver top or saree.",
+        "demeanor": "Friendly and helpful, based on the static profile picture."
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "Me (User)",
+        "appearance": "Visible only as a small circular profile picture. Young Indian man with a fair complexion and short dark hair.",
+        "wardrobe": "Wearing a black t-shirt.",
+        "demeanor": "Casual and relaxed, based on the static profile picture."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Messaging App Screencast",
+        "supernova_script": "Pallavi says: Your job interview is next month. How is your English?\nRahul says: I can read and write fine. But speaking...\nPallavi says: Still freezing when you have to talk?\nRahul says: Yeah. I get too nervous people will judge me.\nPallavi says: You should try Supernova AI. You actually speak out loud to an AI teacher named Miss Nova.\nRahul says: An AI teacher?\nPallavi says: Yes! She checks your level first, then builds a custom plan just for you.\nRahul says: Is it awkward?\nPallavi says: Not at all. You can practice at two in the morning. Make a thousand mistakes, she never laughs at you.\nRahul says: What if I get stuck?\nPallavi says: She explains the logic in your own language so you never feel lost.\nRahul says: Wow. I need this.\nPallavi says: Stop scrolling and give it fifteen minutes a day. Install Supernova AI and start speaking today! Over one crore learners are using it.",
+        "scene_summary": "- Hook: High-stakes job interview scenario (beat e)\n- Payload: Lands personalization (a), privacy/no-judgement (b), speaking (c), and mother-tongue logic (g)\n- Close: Negative and positive time anchors with social proof",
+        "supernova_on_screen_text": "Pallavi\nYour job interview is next month. How is your English?\nI can read and write fine. But speaking...\nStill freezing when you have to talk?\nYeah. I get too nervous people will judge me.\nYou should try Supernova AI. You actually speak out loud to an AI teacher named Miss Nova.\nAn AI teacher?\nYes! She checks your level first, then builds a custom plan just for you.\nIs it awkward?\nNot at all. You can practice at 2 AM. Make a thousand mistakes, she never laughs at you.\nWhat if I get stuck?\nShe explains the logic in your own language so you never feel lost.\nWow. I need this.\nStop scrolling and give it 15 minutes a day. Install Supernova AI and start speaking today! Over 1 crore learners are using it."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speak), e (interview), g (mother-tongue)",
+      "kept_from_seed": "Messaging app screencast visual structure",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee price or comparative used"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "ARYA AI",
+        "supernova_swap": "Miss Nova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.644404
+}

@@ -1,0 +1,82 @@
+{
+  "competitor_id": "2160250698081128",
+  "parsed": {
+    "duration_s": 48.0,
+    "production_type": "mixed",
+    "production_notes": "Combines human-recorded footage of a man on a train with an AI-generated robot avatar inset. The man's lip-syncing appears slightly unnatural, suggesting dubbing or AI manipulation.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male user",
+        "appearance": "Young male, early 20s, slim build, fair complexion, dark curly hair. Clean-shaven.",
+        "wardrobe": "Dark grey polo shirt, blue jeans, black over-ear headphones, black cross-body bag strap.",
+        "demeanor": "Relaxed, casual, engaged with his phone."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "Metallic humanoid female robot. Silver plating, smooth sculpted face, glowing blue eyes, articulated joints.",
+        "wardrobe": "None (metallic body).",
+        "demeanor": "Static, robotic, conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 44.5,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Train Conversation",
+        "setting": "Interior of a moving train carriage, daytime. Blue seats, sunlight through window.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot",
+        "layout": "inset (PIP)",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "Character A sits cross-legged on a blue vinyl train seat, holding a smartphone in both hands. He wears headphones and looks down at the device. Sunlight streams through the window behind him, illuminating his face and the grey-blue train interior.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "Character B, a metallic female robot, is framed from the chest up. The robot has silver plating and glowing blue eyes. The background is a blurred, warm-toned room with shelves.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A is seen sitting on a train, interacting with his phone. An inset panel in the upper left shows Character B, the AI robot he is conversing with. Captions appear at the bottom of the screen.",
+        "audio_transcript": "Character A says: \u092e\u0948\u0902 train \u092a\u0930 bore \u0939\u094b \u0930\u0939\u093e \u0939\u0942\u0901 [I am getting bored on the train]\nCharacter A says: I am getting bored on the train\nCharacter B says: train \u092a\u0930 \u0916\u093e\u0928\u093e \u0905\u091a\u094d\u091b\u093e \u0928\u0939\u0940\u0902 \u0939\u0948 [The food on the train is not good]\nCharacter A says: The food on the train is not good\nCharacter B says: \u092e\u0948\u0902 \u0905\u0917\u0932\u0947 stop \u092a\u0930 \u092c\u093e\u0939\u0930 \u0938\u0947 \u0916\u093e\u0928\u093e \u0932\u0947 \u0932\u0942\u0901\u0917\u093e [I will get food from outside on the next stop]\nCharacter A says: I will get food from outside on the next stop\nCharacter B says: Very good. \u0924\u0941\u092e\u094d\u0939\u093e\u0930\u0940 English \u0924\u094b \u092c\u0939\u0941\u0924 \u0905\u091a\u094d\u091b\u0940 \u0939\u0948\u0964 [Very good. Your English is very good.]\nCharacter A says: Thank you.\nCharacter B says: \u0924\u0941\u092e\u0928\u0947 English \u092c\u094b\u0932\u0928\u093e \u0915\u0939\u093e\u0901 \u0938\u0947 \u0938\u0940\u0916\u093e? [Where did you learn to speak English?]\nCharacter A says: \u0935\u094b \u092e\u0948\u0902\u0928\u0947 MySivi app \u0938\u0947 \u0938\u0940\u0916\u093e\u0964 [I learned that from the MySivi app.]\nCharacter B says: MySivi app? [MySivi app?]\nCharacter A says: Yes. MySivi app \u092a\u0947 \u0928\u093e \u0938\u093f\u0930\u094d\u092b English \u092c\u094b\u0932\u0928\u093e \u0938\u093f\u0916\u093e\u092f\u093e \u091c\u093e\u0924\u093e \u0939\u0948, \u092c\u0932\u094d\u0915\u093f... [Yes. On the MySivi app, not only is speaking English taught, but...]\nCharacter A says: MySivi \u092a\u0947 \u0907\u0924\u0928\u0947 \u0905\u091a\u094d\u091b\u0947 \u0938\u0947 \u0938\u093f\u0916\u093e\u0924\u0947 \u0939\u0948\u0902 \u0915\u093f English \u0938\u0940\u0916\u0928\u093e \u092c\u091a\u094d\u091a\u094b\u0902 \u0915\u093e \u0916\u0947\u0932 \u0932\u0917\u0924\u093e \u0939\u0948\u0964 [They teach so well on MySivi that learning English feels like child's play.]\nCharacter B says: Nice. \u092f\u0947 \u092b\u093f\u0930 \u0939\u092e\u093e\u0930\u0947 \u0938\u093e\u0930\u0947 \u0932\u094b\u0917\u094b\u0902 \u0915\u094b use \u0915\u0930\u0928\u093e \u091a\u093e\u0939\u093f\u090f\u0964 [Nice. Then all our people should use this.]\nCharacter A says: \u0939\u093e\u0901, \u0935\u0948\u0938\u0947 \u092d\u0940 \u0906\u091c\u0915\u0932 \u0938\u093e\u0930\u0947 \u0932\u094b\u0917 Instagram \u092a\u0947 \u092c\u0939\u0941\u0924 time waste \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964 [Yes, anyway nowadays everyone wastes a lot of time on Instagram.]\nCharacter A says: \u092a\u0930 \u092e\u0948\u0902 \u0928\u0939\u0940\u0902 \u0915\u0930\u0924\u093e\u0964 [But I don't.]\nCharacter A says: \u092e\u0948\u0902 \u0924\u094b \u0935\u094b time MySivi app \u0915\u094b \u0926\u0947\u0924\u093e \u0939\u0942\u0901\u0964 [I give that time to the MySivi app.]\nCharacter A says: And my English is getting better and better everyday.\nCharacter B says: Fantastic. \u092b\u093f\u0930 \u0924\u094b \u0938\u093e\u0930\u0947 \u0932\u094b\u0917\u094b\u0902 \u0915\u094b MySivi app download \u0915\u0930 \u0932\u0947\u0928\u0940 \u091a\u093e\u0939\u093f\u090f\u0964 [Fantastic. Then everyone should download the MySivi app.]",
+        "on_screen_text": "ARYA AI is speaking...\n\u092e\u0948\u0902 train \u092a\u0930 bore \u0939\u094b \u0930\u0939\u093e \u0939\u0942\u0901 (I am getting bored on the train)\ntrain \u092a\u0930 \u0916\u093e\u0928\u093e \u0905\u091a\u094d\u091b\u093e \u0928\u0939\u0940\u0902 \u0939\u0948 (The food on the train is not good)\n\u092e\u0948\u0902 \u0905\u0917\u0932\u0947 stop \u092a\u0930 \u092c\u093e\u0939\u0930 \u0938\u0947 \u0916\u093e\u0928\u093e \u0932\u0947 \u0932\u0942\u0901\u0917\u093e (I will get food from outside on the next stop)\nVery good. \u0924\u0941\u092e\u094d\u0939\u093e\u0930\u0940 English \u0924\u094b \u092c\u0939\u0941\u0924 \u0905\u091a\u094d\u091b\u0940 \u0939\u0948 (Very good. Your English is very good)\nThank you.\n\u0924\u0941\u092e\u0928\u0947 English \u092c\u094b\u0932\u0928\u093e \u0915\u0939\u093e\u0901 \u0938\u0947 \u0938\u0940\u0916\u093e (Where did you learn to speak English)\n\u0935\u094b \u092e\u0948\u0902\u0928\u0947 MySivi app \u0938\u0947 \u0938\u0940\u0916\u093e (I learned that from the MySivi app)\nMySivi app?\nYes. MySivi app \u092a\u0947 \u0928\u093e \u0938\u093f\u0930\u094d\u092b English \u092c\u094b\u0932\u0928\u093e \u0938\u093f\u0916\u093e\u092f\u093e \u091c\u093e\u0924\u093e \u0939\u0948, \u092c\u0932\u094d\u0915\u093f... (Yes. On the MySivi app, not only is speaking English taught, but...)\nMySivi \u092a\u0947 \u0907\u0924\u0928\u0947 \u0905\u091a\u094d\u091b\u0947 \u0938\u0947 \u0938\u093f\u0916\u093e\u0924\u0947 \u0939\u0948\u0902 \u0915\u093f English \u0938\u0940\u0916\u0928\u093e \u092c\u091a\u094d\u091a\u094b\u0902 \u0915\u093e \u0916\u0947\u0932 \u0932\u0917\u0924\u093e \u0939\u0948 (They teach so well on MySivi that learning English feels like child's play)\nNice. \u092f\u0947 \u092b\u093f\u0930 \u0939\u092e\u093e\u0930\u0947 \u0938\u093e\u0930\u0947 \u0932\u094b\u0917\u094b\u0902 \u0915\u094b use \u0915\u0930\u0928\u093e \u091a\u093e\u0939\u093f\u090f (Nice. Then all our people should use this)\n\u0939\u093e\u0901, \u0935\u0948\u0938\u0947 \u092d\u0940 \u0906\u091c\u0915\u0932 \u0938\u093e\u0930\u0947 \u0932\u094b\u0917 Instagram \u092a\u0947 \u092c\u0939\u0941\u0924 time waste \u0915\u0930\u0924\u0947 \u0939\u0948\u0902 (Yes, anyway nowadays everyone wastes a lot of time on Instagram)\n\u092a\u0930 \u092e\u0948\u0902 \u0928\u0939\u0940\u0902 \u0915\u0930\u0924\u093e (But I don't)\n\u092e\u0948\u0902 \u0924\u094b \u0935\u094b time MySivi app \u0915\u094b \u0926\u0947\u0924\u093e \u0939\u0942\u0901 (I give that time to the MySivi app)\nAnd my English is getting better and better everyday\nFantastic. \u092b\u093f\u0930 \u0924\u094b \u0938\u093e\u0930\u0947 \u0932\u094b\u0917\u094b\u0902 \u0915\u094b MySivi app download \u0915\u0930 \u0932\u0947\u0928\u0940 \u091a\u093e\u0939\u093f\u090f (Fantastic. Then everyone should download the MySivi app)"
+      },
+      {
+        "n": 2,
+        "start_s": 44.5,
+        "end_s": 48.0,
+        "screenshot_at_s": 46.0,
+        "scene_label": "End Card",
+        "setting": "Plain light purple background.",
+        "characters_in_scene": [],
+        "camera": "App-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A 3D render of a modern smartphone stands upright against a plain, light purple background. The phone has a black bezel and a visible front-facing camera hole at the top center.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A smartphone is displayed against a solid background, showing the app's logo and an install button.",
+        "audio_transcript": "Character A says: Install Now \u092a\u0947 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930\u094b \u0914\u0930 MySivi \u0910\u092a \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 [Click on Install Now and download the MySivi app.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.384717
+}

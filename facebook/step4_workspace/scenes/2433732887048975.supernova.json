@@ -1,0 +1,68 @@
+{
+  "competitor_id": "2433732887048975",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "Satisfying video subject",
+        "appearance": "Adult male of medium build with a light complexion and facial hair. He wears dark sunglasses.",
+        "wardrobe": "He wears a long-sleeve shirt with green, yellow, and black patterns, khaki cargo pants, and a green baseball cap. He carries a string trimmer.",
+        "demeanor": "Focused and diligent, engaged in physical labor."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Airport Counter",
+        "supernova_script": "Rahul says: Freeze when you have to speak English at the airport counter?\nRahul says: Will you just point and say, \"Give me ticket\"?\nRahul says: That is so embarrassing.",
+        "scene_summary": "- Hook: Relatable embarrassment at the airport.\n- Emotion: Mild shame/anxiety.\n- Payload: Names English early.",
+        "supernova_on_screen_text": "Freeze at the airport?\nWill you say \"Give me ticket\"?\nSo embarrassing"
+      },
+      {
+        "n": 2,
+        "scene_label": "Airport Travel",
+        "supernova_script": "Rahul says: If it's your first time flying from Mumbai or Delhi, you know you have to speak English.\nRahul says: But it is not a big deal anymore.\nRahul says: I practice with Miss Nova on the Supernova AI app.\nRahul says: She checks my level and makes a personalized plan just for me.",
+        "scene_summary": "- Purpose: Introduce Miss Nova and the solution.\n- Payload beat a: Personalization (checks level, makes plan).\n- Indianization: Mentions Mumbai and Delhi.",
+        "supernova_on_screen_text": "Flying from Mumbai or Delhi?\nYou have to speak English\nMiss Nova makes a personalized plan\nJust for you"
+      },
+      {
+        "n": 3,
+        "scene_label": "Airplane Model",
+        "supernova_script": "Rahul says: The best part is that no one is watching or judging you.\nRahul says: You actually speak out loud to her, and she corrects you instantly.\nRahul says: You can practice real-life airport situations before you even pack your bags.",
+        "scene_summary": "- Purpose: Build retention value and confidence.\n- Payload beat b: Privacy/no-judgement.\n- Payload beat c & e: Speak out loud, real-life airport scenarios.",
+        "supernova_on_screen_text": "No one is judging you\nSpeak out loud\nPractice real-life airport situations"
+      },
+      {
+        "n": 4,
+        "scene_label": "English Phrases",
+        "supernova_script": "Rahul says: She explains the logic in your own language so it finally makes sense.\nRahul says: Like, \"Where is the luggage counter?\"\nRahul says: Or, \"Where will I get the boarding pass from?\"\nRahul says: Or even, \"Where is the toilet here?\"",
+        "scene_summary": "- Purpose: Demonstrate the learning mechanism.\n- Payload beat g: Logic explained in your language.\n- Matches the visual text exactly.",
+        "supernova_on_screen_text": "Where is the luggage counter?\nWhere will I get the Boarding pass from?\nWhere is the toilet here?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Flight Attendant",
+        "supernova_script": "Rahul says: If you ever felt scared to ask a question at the airport, stop worrying.\nRahul says: Stop scrolling for hours and spend just fifteen minutes a day practicing.\nRahul says: Download Supernova AI and start speaking confidently today.",
+        "scene_summary": "- Purpose: Tight close and call to action.\n- Payload: Negative time anchor (scrolling) + positive time anchor (15 mins/day).\n- Removes the competitor's 1 rupee price offer.",
+        "supernova_on_screen_text": "Scared to ask questions?\nStop scrolling for hours\nPractice just 15 mins a day\nDownload Supernova AI"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalized plan), b (no judgement), c (speak out loud), e (airport situations), g (logic in own language)",
+      "kept_from_seed": "Split-screen format with airport visuals and satisfying yard work",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; removed the seed's 1 rupee trial offer"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MYSIVI",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.6600451
+}

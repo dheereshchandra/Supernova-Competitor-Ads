@@ -1,0 +1,103 @@
+{
+  "competitor_id": "1314122850567353",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "Presenter's hands",
+        "appearance": "Two human hands and forearms visible from a top-down perspective. The skin has a medium brown complexion. The hands appear to belong to an adult, with no visible rings, tattoos, or distinguishing marks. The right hand consistently holds a thick green marker.",
+        "wardrobe": "Not applicable; only bare hands and forearms are visible.",
+        "demeanor": "Purposeful and illustrative, guiding the viewer's attention by drawing, circling, and pointing at specific elements on the paper."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Need for English",
+        "supernova_script": "Rahul says: How do you actually learn to speak English without freezing up? It's a question we all have.",
+        "scene_summary": "- Hooks the viewer with a relatable problem\n- Names English immediately\n- Sets up the core pain point of freezing while speaking",
+        "supernova_on_screen_text": "ENGLISH"
+      },
+      {
+        "n": 2,
+        "scene_label": "Career and Travel Goals",
+        "supernova_script": "Rahul says: Whether it's for clearing that job interview, getting a promotion, or just feeling confident...",
+        "scene_summary": "- Introduces high-stakes real-life scenarios\n- Lands payload beat e (job interview)",
+        "supernova_on_screen_text": "PROMOTED!"
+      },
+      {
+        "n": 3,
+        "scene_label": "Social Status",
+        "supernova_script": "Rahul says: You need English to earn respect and stand out in front of others.",
+        "scene_summary": "- Touches on the dignity and social standing aspect of the language\n- Keeps the pacing aligned with the visual drawing",
+        "supernova_on_screen_text": "English"
+      },
+      {
+        "n": 4,
+        "scene_label": "Common Excuses",
+        "supernova_script": "Rahul says: But old methods failed because you only read books, you never actually spoke. Plus, coaching classes take too much time.",
+        "scene_summary": "- Lands payload beat d (old methods failed because you didn't speak)\n- Addresses the time objection",
+        "supernova_on_screen_text": "ENGLISH, TIME"
+      },
+      {
+        "n": 5,
+        "scene_label": "The Solution",
+        "supernova_script": "Rahul says: That's why you need Supernova AI. Meet Miss Nova, your personal AI English teacher.",
+        "scene_summary": "- Product reveal\n- Introduces Miss Nova by name\n- Transitions to the AI solution",
+        "supernova_on_screen_text": "SOLUTION!, Supernova AI"
+      },
+      {
+        "n": 6,
+        "scene_label": "AI Teacher Features",
+        "supernova_script": "Rahul says: With Miss Nova, you practice by speaking out loud. Make a thousand mistakes, and she will correct you without ever judging or laughing at you.",
+        "scene_summary": "- Lands payload beat b (privacy/no-judgement)\n- Lands payload beat c (you speak, not type)\n- Matches the crossed-out bullying visual perfectly",
+        "supernova_on_screen_text": "ANYTIME LEARNING!, AI TEACHER"
+      },
+      {
+        "n": 7,
+        "scene_label": "Adaptive Learning",
+        "supernova_script": "Rahul says: She doesn't teach everyone the same way. She understands your exact level and builds a personalized plan just for you.",
+        "scene_summary": "- Lands payload beat a (personalization)\n- Directly aligns with the level-adapting visual",
+        "supernova_on_screen_text": "LEVEL 1 -> LEVEL 2, AI LEVEL ADAPTING"
+      },
+      {
+        "n": 8,
+        "scene_label": "User Base",
+        "supernova_script": "Rahul says: Stop wasting hours scrolling through feeds, and join over 1 crore Indians who are already learning.",
+        "scene_summary": "- Negative time anchor (scrolling feeds)\n- Social proof (1 crore+ users)\n- Indianizes the audience scale",
+        "supernova_on_screen_text": "1 CRORE+ PEOPLE"
+      },
+      {
+        "n": 9,
+        "scene_label": "Ratings and Trust",
+        "supernova_script": "Rahul says: When she corrects your mistakes, she explains the logic in your own language, so it finally makes sense.",
+        "scene_summary": "- Lands payload beat g (logic explained in mother tongue)\n- Uses the trust/rating visual to reinforce comprehension",
+        "supernova_on_screen_text": "4.6, Ratings and reviews, Play Store, BEST CHOICE"
+      },
+      {
+        "n": 10,
+        "scene_label": "Call to Action",
+        "supernova_script": "Rahul says: It's way cheaper than coaching classes. Give it just 15 minutes a day. Install Supernova AI and start speaking today.",
+        "scene_summary": "- Positive time anchor (15 min/day)\n- Comparative cost (cheaper than classes)\n- Clean CTA",
+        "supernova_on_screen_text": "AFFORDABLE, INSTALL NOW, Supernova AI"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (no-judgement), c (you speak), d (old methods failed), e (job interview), g (logic in your language)",
+      "kept_from_seed": "Whiteboard animation style with top-down drawing and progressive scene reveals.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "Removed 1 Rupee hard price; replaced with comparative 'cheaper than coaching classes' and 'AFFORDABLE' on screen."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.65036
+}

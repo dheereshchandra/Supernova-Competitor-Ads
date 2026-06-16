@@ -1,0 +1,75 @@
+{
+  "ad_library_id": "807034821685948",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Podcast Intro",
+        "script": "Rahul says: Wo AI English teacher jiske baare mein poora India baat kar raha hai, aaj humare saath hai. Welcome, Miss Nova.",
+        "on_screen_text": "VIRAL AI ENGLISH TEACHER\nAAJ HUMARE SAATH HAI.\nWELCOME MISS NOVA."
+      },
+      {
+        "n": 2,
+        "scene_label": "Presenter Question 1",
+        "script": "Rahul says: Mujhe ek baat bataiye, Miss Nova, kya sach mein English bolne ke liye saalo ki grammar books ya expensive coaching classes ki zaroorat nahi hai?",
+        "on_screen_text": "BATAIYE MISS NOVA,\nKYA SACH MEIN GRAMMAR BOOKS\nYA COACHING CLASSES KI\nZAROORAT NAHI HAI\nENGLISH BOLNE KE LIYE?"
+      },
+      {
+        "n": 3,
+        "scene_label": "Robot Answer 1",
+        "script": "Miss Nova says: Bilkul sahi, Rahul. Old methods isliye fail hote hain kyunki aap sirf padhte ho, kabhi actually bolte nahi.\nMiss Nova says: Aapne apni mother tongue bhi toh bol-bol kar hi seekhi thi, haina? English bhi bilkul waise hi kaam karti hai.\nMiss Nova says: Supernova AI app par, aapko kuch type ya read nahi karna hai. Aap bas mujhse baat kijiye, aur main aapki mistakes instantly correct kar dungi.\nMiss Nova says: Hum real-life situations ki practice karte hain, jaise job interviews ya manager se baat karna.\nMiss Nova says: Roz bas 15 minutes ki practice se, zyadatar learners ko lagbhag 1 month mein visible progress dikhne lagti hai.",
+        "on_screen_text": "OLD METHODS FAIL HOTE HAIN\nKYUNKI AAP ACTUALLY BOLTE NAHI.\nAAPNE MOTHER TONGUE BHI\nBOL KAR SEEKHI THI.\nSUPERNOVA AI PAR,\nAAP BOLO AUR MAIN CORRECT KARUNGI.\nHUM JOB INTERVIEWS JAISI\nREAL-LIFE SITUATIONS PRACTICE KARTE HAIN.\nLAGBHAG 1 MONTH MEIN\nVISIBLE PROGRESS DEKHO."
+      },
+      {
+        "n": 4,
+        "scene_label": "Presenter Question 2",
+        "script": "Rahul says: Maine suna hai ki 1 crore se zyada Indians pehle se hi English seekhne ke liye Supernova AI use kar rahe hain. Aap itne saare logon ko kaise padhati hain?",
+        "on_screen_text": "1 CRORE+ INDIANS\nSUPERNOVA AI USE KAR RAHE HAIN.\nAAP ITNE LOGON KO\nKAISE PADHATI HAIN?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Robot Answer 2",
+        "script": "Miss Nova says: Kyunki main sabko ek hi tarike se nahi padhati. Main aapki speech analyze karti hoon, aapki weak areas dhoondhti hoon, aur aapke liye ek personalized plan banati hoon.\nMiss Nova says: Aur sabse achhi baat? Yeh completely private hai. Aap raat ke 2 baje bhi hazaar mistakes kijiye, main aapko kabhi judge nahi karungi.\nMiss Nova says: Plus, main saari logic Hindi mein explain karti hoon, taaki aap kabhi lost feel na karein.",
+        "on_screen_text": "MAIN AAPKE LIYE PERSONALIZED PLAN\nBANATI HOON.\nCOMPLETELY PRIVATE.\n1000 MISTAKES KARIYE,\nMAIN KABHI JUDGE NAHI KARUNGI.\nHINDI MEIN LOGIC\nEXPLAIN KARTI HOON."
+      },
+      {
+        "n": 6,
+        "scene_label": "Presenter Question 3",
+        "script": "Rahul says: Aur log kehte hain ki aapke saath practice karna regular coaching classes se das guna sasta hai?",
+        "on_screen_text": "COACHING CLASSES SE\n10 GUNA SASTA?"
+      },
+      {
+        "n": 7,
+        "scene_label": "Robot Answer 3 & CTA",
+        "script": "Miss Nova says: Yes, yeh bahut hi affordable hai.\nMiss Nova says: Un reels ko scroll karne mein ghanto waste karna band kijiye jo aapko actually bolna nahi seekhati.\nMiss Nova says: Mujhe roz bas 15 minutes dijiye, aur main aapko confidently English bolne mein help karungi.\nMiss Nova says: Aaj hi Supernova AI app install kijiye aur apni journey start kijiye.",
+        "on_screen_text": "BAHUT AFFORDABLE HAI.\nREELS SCROLL KARKE\nTIME WASTE MAT KIJIYE.\nROZ BAS 15 MINUTES\nCONFIDENTLY ENGLISH BOLNE KE LIYE.\nAAJ HI SUPERNOVA AI INSTALL KIJIYE."
+      },
+      {
+        "n": 8,
+        "scene_label": "End Card",
+        "script": "Miss Nova says: Install par click kijiye aur abhi Supernova AI download kijiye.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied all global and Hindi-specific rules. Recast the presenter 'Karthik' to 'Rahul' from the Hindi casting table. Swapped the language self-reference 'your own language' to 'Hindi'. Applied the T2h multiplier carve-out ('10 times cheaper' -> 'das guna sasta'). Ensured all numbers are formatted as numerals ('15 minutes', '1 crore+', '2 baje', '1 month'). Maintained the polite plural register for Miss Nova ('kijiye', 'karungi') and Rahul ('bataiye', 'padhati hain'). Kept the hook starting with a native word ('Wo AI English teacher...'). The output is fully romanized and code-mixed."
+  },
+  "safety": {
+    "verdict": "flag",
+    "violations": [
+      {
+        "guardrail_id": "G2.1",
+        "category": "Competitors & disparagement",
+        "severity": "moderate",
+        "scene": "Scene 7",
+        "quote": "Un reels ko scroll karne mein ghanto waste karna band kijiye jo aapko actually bolna nahi seekhati.",
+        "why": "It trashes Reels by claiming they do not teach you to speak, violating the rule that Reels/feeds must only be used as neutral time-reallocation anchors.",
+        "fix": "Reels scroll karne ke bajay, roz bas 15 minutes English practice kijiye."
+      }
+    ],
+    "summary": "The ad is highly compliant, with only a minor moderate violation regarding the negative framing of Reels in Scene 7.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517582.87928
+}

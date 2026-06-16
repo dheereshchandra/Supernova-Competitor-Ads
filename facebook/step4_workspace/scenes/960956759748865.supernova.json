@@ -1,0 +1,40 @@
+{
+  "competitor_id": "960956759748865",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "Meme subject",
+        "appearance": "Middle-aged Indian man, medium build, short black hair, mustache.",
+        "wardrobe": "Left: blue patterned kurta. Right: blue shirt, black trousers.",
+        "demeanor": "Expressive, contrasting emotions."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Sad vs Happy Meme",
+        "supernova_script": "Rahul says: Expensive coaching classes failed because I never actually spoke English.\nRahul says: Now I practice speaking with Miss Nova on Supernova AI. She builds a personalized plan for me, and never judges my mistakes!",
+        "scene_summary": "- Hook: Relatable frustration with traditional coaching methods.\n- Payload: Hits old methods failed (d) and speaking (c).\n- Payload: Introduces Miss Nova, Personalization (a), and No-judgement (b).",
+        "supernova_on_screen_text": "Left: When expensive English classes failed because I never actually spoke.\nRight: When I started speaking with Miss Nova on Supernova AI. Personalized plan, zero judgement!"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (no-judgement), c (speaking), d (old methods failed)",
+      "kept_from_seed": "Sad vs happy split-screen meme format",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee price; replaced ₹3000 with 'expensive classes'"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi app",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.665736
+}

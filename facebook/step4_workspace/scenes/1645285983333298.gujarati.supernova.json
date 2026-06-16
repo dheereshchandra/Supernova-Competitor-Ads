@@ -1,0 +1,59 @@
+{
+  "ad_library_id": "1645285983333298",
+  "language": "Gujarati",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Grammar correction",
+        "script": "Priya says: Miss Nova, koi puche 'When are you coming?' to English-ma reply kevi rite aapvo?\nMiss Nova says: Kyarey pan 'I will return back on Monday' em nahi bolvanu.\nPriya says: Ha, 'return back' nahi. Return no matlab ja coming back thay che. Banne sathe bolvu e ek common mistake che. Mare fakt 'I will return on Monday' kehvu joie.\nMiss Nova says: Perfect! Ane tame to kehtha hata ke tamne English bilkul nathi aavadtu.\nPriya says: Mane to bas badha judge karse eano darr hato! Pan Supernova AI par, hu tamari sathe privately practice karu chu.\nMiss Nova says: Exactly. Hu tamari speech analyze karu chu ane tamara mate ek personalized plan banavu chu.\nPriya says: Ane upar thi, e normal English classes karta saat ganu sastu che!",
+        "on_screen_text": "English-ma reply kevi rite aapvo?\nKyarey na bolo: I will return back\nReturn no matlab ja coming back thay che\nFakt aatlu bolo: I will return on Monday\nTame to kehtha hata ke English nathi aavadtu\nJudgement na darr vagar privately practice karo\nTamara mate personalized plan\nNormal classes karta 7 ganu sastu"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Store",
+        "script": "Priya says: Etle ja 1 crore thi pan vadhare Indians Supernova AI par English practice kare che.",
+        "on_screen_text": "1 crore+ Indians Supernova AI par practice kare che"
+      },
+      {
+        "n": 3,
+        "scene_label": "Time objection",
+        "script": "Miss Nova says: Ane e loko mate je kahe che ke temni pase time nathi...\nPriya says: Tamare divas-ma fakt 15 minutes bolvanu che...",
+        "on_screen_text": "Time nathi?\nDivas-ma fakt 15 minutes bolo"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Interface",
+        "script": "Priya says: ...feeds scroll karva na badle. Ek month-ma tamne visible progress dekhava lagse.",
+        "on_screen_text": "Feeds scroll karvanu bandh karo\nEk month-ma visible progress dekhashe"
+      },
+      {
+        "n": 5,
+        "scene_label": "How to join",
+        "script": "Miss Nova says: To, e loko aapne kevi rite join kare, Priya?\nPriya says: Bas niche aapele install button par click karo...",
+        "on_screen_text": "Kevi rite join karvu?\nInstall button press karo"
+      },
+      {
+        "n": 6,
+        "scene_label": "Installing App",
+        "script": "Priya says: ...ane Supernova AI app download karo.",
+        "on_screen_text": "Supernova AI download karo"
+      },
+      {
+        "n": 7,
+        "scene_label": "Call to action",
+        "script": "Priya says: ChatGPT paachhal chhupavanu bandh karo. Supernova AI install karo, ane aaj thi ja confidently English bolvanu start karo!",
+        "on_screen_text": "ChatGPT paachhal chhupavanu bandh karo\nSupernova AI install karo\nAaj thi ja confidently bolvanu start karo"
+      }
+    ],
+    "self_critique_fixed": "The script has been localized to romanized, code-mixed Gujarati. The multiplier '7 times cheaper' was converted to 'saat ganu sastu' using the natural Gujarati multiplier 'ganu'. Politeness levels are maintained with Miss Nova using polite plural forms ('tame', 'tamari') and Priya using respectful terms with her and friendly direct terms with the viewer. The hook opens naturally in Gujarati before presenting the English quote."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved comparative cost metrics, user statistics, and behavior-focused hooks.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517240.963565
+}

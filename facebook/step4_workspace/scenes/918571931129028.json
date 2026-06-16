@@ -1,0 +1,86 @@
+{
+  "competitor_id": "918571931129028",
+  "parsed": {
+    "duration_s": 24.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video utilizes AI generation for both characters. The human presenter exhibits the unnaturally static head positioning, smooth skin texture, and slightly imprecise lip-syncing typical of AI avatar platforms. The robot is a fully CGI/AI-generated asset.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "White humanoid robot with female facial features. It has a glossy white face and torso, with black mechanical joints and wiring visible at the neck and shoulders. It features dark, painted-on eyebrows and lips.",
+        "wardrobe": "None; bare white and black robot chassis.",
+        "demeanor": "Friendly, expressive but artificial."
+      },
+      {
+        "id": "B",
+        "role": "female presenter",
+        "appearance": "Young Indian woman, medium build, medium brown complexion. She has long, straight black hair parted in the middle and dark eyes. She wears small silver hoop earrings.",
+        "wardrobe": "A plain, light blue short-sleeved t-shirt.",
+        "demeanor": "Enthusiastic, smiling, direct eye contact."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "Bilingual Conversation",
+        "setting": "Abstract studio setting. The left side features a plain, medium-grey background. The right side has a slightly textured light-grey background with soft lighting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up, split-screen",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character A, a white humanoid robot with female features, is framed from the chest up against a plain, medium-grey background. The robot has a glossy white face and torso, with black mechanical components visible at the neck. It is looking directly forward with a slight, friendly smile.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Character B, a young Indian woman with long black hair, is framed from the chest up against a light grey background with soft, diffused lighting. She is wearing a light blue t-shirt and small hoop earrings. She is looking directly at the camera with a bright, engaging smile.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen composition. On the left, a white humanoid robot speaks. On the right, a young Indian woman responds. Both are framed in medium close-ups against neutral grey backgrounds. Large text overlays appear in the center of the screen, alternating between the two speakers.",
+        "audio_transcript": "Character A says: \u0924\u0941\u092e \u0915\u092c \u0938\u094b\u0924\u0940 \u0939\u094b? [When do you sleep?]\nCharacter B says: When do you go to sleep?\nCharacter A says: \u092e\u0948\u0902 10 \u092c\u091c\u0947 \u0938\u094b\u0924\u0940 \u0939\u0942\u0901\u0964 [I sleep at 10.]\nCharacter B says: I sleep at 10 at night.\nCharacter A says: \u0924\u0941\u092e \u0938\u0941\u092c\u0939 \u0915\u093f\u0924\u0928\u0947 \u092c\u091c\u0947 \u0909\u0920\u0924\u0940 \u0939\u094b? [What time do you wake up in the morning?]\nCharacter B says: When do you wake up?\nCharacter A says: \u092e\u0948\u0902 \u0938\u0941\u092c\u0939 6 \u092c\u091c\u0947 \u0909\u0920\u0924\u0940 \u0939\u0942\u0901\u0964 [I wake up at 6 in the morning.]\nCharacter B says: I wake up at 6 in the morning.",
+        "on_screen_text": "Tum kab soti ho?\nWhen do you go to sleep?\nMain 10 baje soti hoon.\nI sleep at 10 at night.\nTum subah kitne baje uthti ho?\nWhen do you wake up?\nMain subah 6 baje uthti hoon.\nI wake up at 6 in the morning."
+      },
+      {
+        "n": 2,
+        "start_s": 11.5,
+        "end_s": 24.0,
+        "screenshot_at_s": 18.0,
+        "scene_label": "App Promotion",
+        "setting": "Studio setting with a light grey background. Soft, blurred shadows resembling light passing through a window fall across the background.",
+        "characters_in_scene": [
+          "B"
+        ],
+        "camera": "Medium close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character B, a young Indian woman with long black hair, is framed from the chest up against a light grey background. The background features soft, dappled shadows suggesting a window off-camera. She is wearing a light blue t-shirt and small hoop earrings. She looks directly at the camera, speaking enthusiastically with slight head movements.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene transitions to a full-screen shot of Character B speaking directly to the camera. As she speaks, various app UI elements and promotional graphics overlay the screen, obscuring her partially. These include a logo, a pricing pop-up, an app interface showing learning paths, and finally, a Google Play Store download prompt.",
+        "audio_transcript": "Character B says: \u0910\u0938\u0947 \u0939\u0940 fluent English \u092c\u094b\u0932\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f MySivi app \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 [To speak fluent English like this, download the MySivi app.]\nCharacter B says: \u0938\u093f\u0930\u094d\u092b \u090f\u0915 \u0930\u0941\u092a\u092f\u0947 \u092e\u0947\u0902 AI teacher \u0915\u0947 \u0938\u093e\u0925 daily 15-20 minute practice \u0915\u0930\u094b\u0964 [Practice daily for 15-20 minutes with an AI teacher for just one rupee.]\nCharacter B says: \u0914\u0930 \u0905\u092a\u0928\u0947 confidence \u0915\u094b next level \u092a\u0947 \u0932\u0947\u0915\u0930 \u091c\u093e\u0913\u0964 [And take your confidence to the next level.]",
+        "on_screen_text": "Aise hi fluent English bolne ke liye\nMySivi\nLIMITED TIME OFFER\n3 days of Premium benefits for \u20b91\nThen \u20b9299/month\n1,200 learners purchased today\n24/7 AI English Teacher\n500+ Exercises and Lessons\nUnlimited Access\nSirf ek rupee mein\nPractice Now\nFluency Score\nYour Learning Path\nTalk about anything\nDaily routine\nLet's Improve Vocabulary\nTalk about your childhood\nSeasons and weather\nFamily and Relationships\nHobbies and Interests\nTalk about your workplace\nAI teacher ke saath daily 15-20 minute practice karo\nAur apne confidence ko next level pe lekar jao\nMySivi AI English Speaking...\nPending...\nVerified by Play Protect\nCancel\nOpen\nMaster Spoken Eng\nSharpen your Englis 1-on-1 calls. Try MyS fast"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.390528
+}

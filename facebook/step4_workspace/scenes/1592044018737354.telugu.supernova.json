@@ -1,0 +1,35 @@
+{
+  "ad_library_id": "1592044018737354",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Struggling with English",
+        "script": "Ravi says: Asalu English nerchukovadam impossible anipistundi. Nenu years tharubadi grammar books chadhivaanu, kaani inka job interviews lo freeze aypothunnanu.\nMiss Nova says: Endhukante meeru kevalam chaduvuthunnaru, eppudu matladatledhu. Nenu Supernova AI nundi Miss Nova. Nenu mee exact level ni analyze chesi, mee kosame oka personalized plan ready chestanu.",
+        "on_screen_text": "Ravi: Asalu English nerchukovadam impossible anipistundi. Nenu years tharubadi grammar books chadhivaanu, kaani inka job interviews lo freeze aypothunnanu.\nMiss Nova: Endhukante meeru kevalam chaduvuthunnaru, eppudu matladatledhu. Nenu Supernova AI nundi Miss Nova. Nenu mee exact level ni analyze chesi, mee kosame oka personalized plan ready chestanu."
+      },
+      {
+        "n": 2,
+        "scene_label": "Going Crazy",
+        "script": "Ravi says: Kaani nenu matladeppudu chala mistakes chesthanu! Andharu nannu chusi navvutharu.\nMiss Nova says: Ikkada ala kadhu. Meeru night 3 a.m. ki enni mistakes chesina, nenu mimmalni eppudu judge cheyyakunda correct chesthanu.",
+        "on_screen_text": "Ravi: Kaani nenu matladeppudu chala mistakes chesthanu! Andharu nannu chusi navvutharu.\nMiss Nova: Ikkada ala kadhu. Meeru night 3 a.m. ki enni mistakes chesina, nenu mimmalni eppudu judge cheyyakunda correct chesthanu."
+      },
+      {
+        "n": 3,
+        "scene_label": "Confident and Cool",
+        "script": "Ravi says: Nijangana? And oka vela naku edhaina word ardham kakapothe?\nMiss Nova says: Nenu logic ni mee Telugu lone explain chesthanu, appudu meeku easy ga ardham avthundhi. Scrolling aapesi, roju ki just 15 minutes practice cheyandi.\nRavi says: Nenu ippude Supernova AI install chesthunnanu.",
+        "on_screen_text": "Ravi: Nijangana? And oka vela naku edhaina word ardham kakapothe?\nMiss Nova: Nenu logic ni mee Telugu lone explain chesthanu, appudu meeku easy ga ardham avthundhi. Scrolling aapesi, roju ki just 15 minutes practice cheyandi.\nRavi: Nenu ippude Supernova AI install chesthunnanu."
+      }
+    ],
+    "self_critique_fixed": "Applied all global and Telugu-specific rules. Recast Karthik to Ravi as per the Telugu casting table. Ensured the hook starts with a native Telugu word ('Asalu') before transitioning to code-mixed English. Kept brand names, product terms, and numbers ('3 a.m.', '15 minutes') in their English forms. Swapped 'your own language' to 'Telugu lone' per T5. Maintained polite plural forms ('meeru', 'cheyandi') for Miss Nova's dialogue to ensure a warm, respectful tone."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, featuring no violations.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517327.386374
+}

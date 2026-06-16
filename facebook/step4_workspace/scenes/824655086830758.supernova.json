@@ -1,0 +1,80 @@
+{
+  "competitor_id": "824655086830758",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "female learner",
+        "appearance": "Young adult woman with a slim build and fair complexion. She has dark hair tied back in a ponytail and subtle facial features.",
+        "wardrobe": "She wears a light blue t-shirt. Initially, she is also wearing a black jacket which she takes off.",
+        "demeanor": "Expressive, curious, and eager to learn."
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Female-presenting humanoid robot with a white and silver metallic body showing visible joints. The face is human-like with pale skin and dark eyes.",
+        "wardrobe": "No clothing; metallic robot body.",
+        "demeanor": "Calm, instructive, and friendly."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Correcting 'Remove' to 'Take off'",
+        "supernova_script": "Priya says: What are you doing? I am removing my jacket.\nMiss Nova says: Removing? Are you deleting it permanently? For clothes, we say 'taking off'. Try saying, 'I am taking off my jacket'.\nPriya says: I am taking off my jacket. Oh, I always freeze when I have to speak English.\nMiss Nova says: That's normal! I am Miss Nova. On Supernova AI, I don't give everyone the same lessons. I analyze your level and build a personalized plan just for you.\nPriya says: But what if I make mistakes?\nMiss Nova says: Make a thousand mistakes at 3 a.m.! I will correct you without ever judging or laughing.",
+        "scene_summary": "- Hook: Relatable Indian-English error ('removing' vs 'taking off').\n- Payload a: Personalization (analyzes level, builds plan).\n- Payload b: Privacy/no-judgement (make 1000 mistakes, no laughing).",
+        "supernova_on_screen_text": "What are you doing? I am removing my jacket\nRemoving? Are you deleting it?\nSay: I am taking off my jacket\nI always freeze in English\nPersonalized plan just for you\nMake 1000 mistakes, zero judgement"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Store Page",
+        "supernova_script": "Miss Nova says: That is why over one crore Indians are finally learning to actually speak English with Supernova AI.",
+        "scene_summary": "- Social proof: 1 crore+ users.\n- Reinforces the core promise: actually speaking English.",
+        "supernova_on_screen_text": "1 crore+ Indians practicing on Supernova AI\nStart English Learning - Supernova AI\nInstall"
+      },
+      {
+        "n": 3,
+        "scene_label": "Time Commitment",
+        "supernova_script": "Priya says: But I don't have time for long classes.\nMiss Nova says: Stop scrolling feeds for hours. Just 15 minutes a day of speaking out loud with me is enough. And I explain the logic in your own language, so you never feel lost.\nPriya says: Wow. How do I join?",
+        "scene_summary": "- Negative time anchor: scrolling feeds.\n- Positive time anchor: 15 mins a day.\n- Payload c & g: Speaking out loud + logic explained in your language.",
+        "supernova_on_screen_text": "No time for classes?\nStop scrolling feeds\nJust 15 minutes a day\nLogic explained in your language\nWow. How do I join?"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Installation",
+        "supernova_script": "Miss Nova says: Click the install button and download the Supernova AI app.",
+        "scene_summary": "- Direct CTA to install the app.",
+        "supernova_on_screen_text": "Press install and download Supernova AI\nSupernova AI English Speaking\nInstalling..."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "supernova_script": "Miss Nova says: Sign up and start speaking today. It is 7x cheaper than coaching classes, and with daily practice, you will start seeing visible progress in about a month. Let's begin!",
+        "scene_summary": "- Comparative pricing (7x cheaper).\n- Hedged progress expectation (visible progress in ~30 days).\n- Final CTA.",
+        "supernova_on_screen_text": "Sign up and start speaking\n7x cheaper than coaching classes\nStart seeing visible progress in ~30 days\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (Personalization), b (Privacy/no-judgement), c (You SPEAK), g (Logic in your language)",
+      "kept_from_seed": "Split-screen correction skit and app store visual flow",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; ₹1 removed. Used comparative '7x cheaper than coaching classes'."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "Sivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.664165
+}

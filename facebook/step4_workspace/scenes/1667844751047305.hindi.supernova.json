@@ -1,0 +1,69 @@
+{
+  "ad_library_id": "1667844751047305",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Mother speaks English on the phone",
+        "script": "Rahul says: Priya, kiska phone hai? Kya tum English mein baat kar rahi ho?\nPriya says: Hello... yes, that works for us. No, we don't need a credit card. We prefer to manage our expenses carefully. Thank you.",
+        "on_screen_text": "Priya, kiska phone hai?\nKya tum English mein baat kar rahi ho?\nHello... yes, that works for us.\nNo, we don't need a credit card.\nWe prefer to manage our expenses carefully.\nThank you."
+      },
+      {
+        "n": 2,
+        "scene_label": "Family is impressed",
+        "script": "Rahul says: Wow Priya, tumne kitni confidently English boli!\nRohan says: Haan Mom, aapki English sach mein awesome hai!\nRahul says: Par tumne itni achhi English bolna kahaan se sikha?\nPriya says: Ye sab Supernova AI aur meri teacher, Miss Nova ki wajah se hai.",
+        "on_screen_text": "Wow Priya!\nTumne kitni confidently English boli!\nHaan Mom!\nAapki English awesome hai!\nPar itni achhi English bolna kahaan se sikha?\nYe sab Supernova AI ki wajah se hai."
+      },
+      {
+        "n": 3,
+        "scene_label": "App features screencast",
+        "script": "Priya says: Miss Nova ek AI teacher hain. Wo mera level samajhkar mere liye ek personalized plan banati hain. Aur main chahe hazaar mistakes karoon, wo mujhe kabhi judge nahi karti hain.",
+        "on_screen_text": "Miss Nova ek AI teacher hain\nWo ek personalized plan banati hain\nHazaar mistakes karo\nWo kabhi judge nahi karti hain\nPractice Now\nFluency Score\nYour Learning Path"
+      },
+      {
+        "n": 4,
+        "scene_label": "Father asks about price",
+        "script": "Rahul says: Sach mein? Mujhe to yakeen nahi ho raha. Par iski cost kitni hai?\nPriya says: Ye kisi bhi coaching class se bahut sasta hai. Aur isme main sach mein out loud bolkar practice karti hoon, aur wo saara logic Hindi mein explain karti hain taaki main kabhi lost feel na karoon.",
+        "on_screen_text": "Sach mein? Mujhe yakeen nahi ho raha.\nPar iski cost kitni hai?\nCoaching class se bahut sasta\nOut loud bolo\nHindi mein logic explained"
+      },
+      {
+        "n": 5,
+        "scene_label": "App pricing screencast",
+        "script": "Priya says: Aur mujhe bas din mein 15 minutes practice karni hoti hai visible progress dekhne ke liye.",
+        "on_screen_text": "Bas 15 minutes ek din mein\nSupernova AI\nVisible progress dekhna start karein\nSpeak Confidently\nCancel Anytime"
+      },
+      {
+        "n": 6,
+        "scene_label": "Call to action",
+        "script": "Rohan says: Phir to main abhi join karunga!\nRahul says: Main bhi!\nPriya says: Scrolling karke time waste karna band karo. Aaj hi install button press karo aur Supernova AI par sign up karo.",
+        "on_screen_text": "To main abhi join karunga!\nMain bhi!\nScrolling mein time waste karna band karo\nInstall button press karo\nSupernova AI par sign up karo\nInstall Now"
+      },
+      {
+        "n": 7,
+        "scene_label": "End card",
+        "script": "Voiceover says: Supernova AI install karein aur aaj se hi English bolna start karein.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied the Family register module to ensure natural kinship honorifics (Rohan addresses Priya with respectful 'aap' while Rahul and Priya address each other with warm 'tum'). Applied T5 to swap 'Kannada' to 'Hindi'. Ensured the hook opens in native Hindi ('Priya, kiska phone hai?'). Kept Priya's English phone conversation verbatim per T2a. Romanized the output into standard, readable chat-style Hindi without diacritics."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 5",
+        "quote": "showing a special offer of 1 rupee for 3 days",
+        "why": "The visual description specifies a hard rupee price and an unapproved promotional offer.",
+        "fix": "Modify the visual description to show a generic subscription screen or comparative cost graphic instead of a specific rupee amount."
+      }
+    ],
+    "summary": "The ad is mostly compliant but violates G6.1 by displaying a specific 1-rupee promotional offer in the Scene 5 visual description.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517284.64382
+}

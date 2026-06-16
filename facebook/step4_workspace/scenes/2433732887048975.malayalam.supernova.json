@@ -1,0 +1,47 @@
+{
+  "ad_library_id": "2433732887048975",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Airport Counter",
+        "script": "Arun says: Nammal airport counter-il English samsaarikyendi varumbol freeze aayi pogaarundo?\nArun says: Veruthe point cheythu \"Give me ticket\" enn parayumo?\nArun says: Adhu bhayangara embarrassing aanu.",
+        "on_screen_text": "Airport-il freeze aavundo?\n\"Give me ticket\" enn parayumo?\nBhayangara embarrassing aanu"
+      },
+      {
+        "n": 2,
+        "scene_label": "Airport Travel",
+        "script": "Arun says: Kochi-yil ninno Bangalore-il ninno aadyamaayi flight kayarumbol English samsaarikyanam enn ariyamallo.\nArun says: Pakshe ippo adhu oru big deal alla.\nArun says: Njan Supernova AI app vazhi Miss Nova-yodoppam practice cheyyarundu.\nArun says: Avar ente level check cheythu enikkaayi personalized plan ready aakkum.",
+        "on_screen_text": "Kochi-yil ninno Bangalore-il ninno flight kayarundo?\nEnglish samsaarikyanam\nMiss Nova personalized plan ready aakkum\nEnikkaayi mathram"
+      },
+      {
+        "n": 3,
+        "scene_label": "Airplane Model",
+        "script": "Arun says: Ithile best part, aarum nammale nokki judge cheyyilla ennadhaan.\nArun says: Nammal avarodu out loud samsaarikyumbol, mistakes appol thanne correct cheyyum.\nArun says: Bag pack cheyyunnadhinu munpu thanne real-life airport situations practice cheyyam.",
+        "on_screen_text": "Aarum judge cheyyilla\nOut loud samsaarikyu\nReal-life airport situations practice cheyyam"
+      },
+      {
+        "n": 4,
+        "scene_label": "English Phrases",
+        "script": "Arun says: Avar logic Malayalathil explain cheyyunnadhukondu kaaryangal easy-aayi manassilaagum.\nArun says: Udaharanathinu, \"Where is the luggage counter?\"\nArun says: Alledhil, \"Where will I get the boarding pass from?\"\nArun says: Innum paranjaal, \"Where is the toilet here?\"",
+        "on_screen_text": "\"Where is the luggage counter?\"\n\"Where will I get the boarding pass from?\"\n\"Where is the toilet here?\""
+      },
+      {
+        "n": 5,
+        "scene_label": "Flight Attendant",
+        "script": "Arun says: Airport-il chodhyangal chodhikaan pediyundengil, ini aa tension venda.\nArun says: Manikyoorugal scroll cheyyunnadhu nirthi, divusavum just 15 minutes practice cheyyu.\nArun says: Innu thanne Supernova AI download cheythu confidently samsaarikyu.",
+        "on_screen_text": "Chodhikaan pediyundo?\nManikyoorugal scroll cheyyunnadhu nirthu\nDivusavum just 15 mins practice cheyyu\nSupernova AI download cheyyu"
+      }
+    ],
+    "self_critique_fixed": "Applied all Malayalam-specific rules: used 'samsaarikkyuka' instead of 'speak cheyyuka', replaced 'hours' with 'manikyoorugal' and 'day' with 'divusavum' as per the Malayalam time-unit override. Re-casted 'Rahul' to 'Arun', and the cities 'Mumbai or Delhi' to 'Kochi or Bangalore' to fit the region naturally. Ensured the hook opens with the native word 'Nammal' to capture immediate attention, while keeping all quoted English lines strictly verbatim."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The script is fully compliant with all brand-safety guardrails, successfully resolving the initial situational anxiety into confident speaking without any policy violations.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517489.439889
+}

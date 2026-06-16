@@ -1,0 +1,69 @@
+{
+  "ad_library_id": "1667844751047305",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Mother speaks English on the phone",
+        "script": "Ramesh says: Priya, evaru call chestunnaru? English lo matladutunnava?\nPriya says: Hello... yes, adhi maku ok. No, maku credit card em vaddu. Memu maku expenses ni carefully manage cheyalani anukuntunnam. Thank you.",
+        "on_screen_text": "Priya, evaru call chestunnaru?\nEnglish lo matladutunnava?\nHello... yes, adhi maku ok.\nNo, maku credit card em vaddu.\nMemu maku expenses ni carefully manage cheyalani anukuntunnam.\nThank you."
+      },
+      {
+        "n": 2,
+        "scene_label": "Family is impressed",
+        "script": "Ramesh says: Wow Priya! Chala confidently English matladavu!\nRohan says: Yes Mom, nee English awesome ga undhi!\nRamesh says: Kani intha baga matladadam ela nerchukunnavu?\nPriya says: Idhantha Supernova AI inka na teacher, Miss Nova valle.",
+        "on_screen_text": "Wow Priya!\nChala confidently English matladavu!\nYes Mom!\nNee English awesome ga undhi!\nKani intha baga matladadam ela nerchukunnavu?\nIdhantha Supernova AI valle."
+      },
+      {
+        "n": 3,
+        "scene_label": "App features screencast",
+        "script": "Priya says: Miss Nova oka AI teacher. Ame na level ni understand chesukoni, na kosam oka personalized plan build chesthundhi. Inka nenu enni mistakes chesina, ame nannu eppudu judge cheyyadhu.",
+        "on_screen_text": "Miss Nova oka AI teacher\nAme personalized plan build chesthundhi\nEnni mistakes chesina\nAme nannu eppudu judge cheyyadhu\nPractice Now\nFluency Score\nYour Learning Path"
+      },
+      {
+        "n": 4,
+        "scene_label": "Father asks about price",
+        "script": "Ramesh says: Nijama? Nenu nammalekapotunnanu. Kani deeni cost entha?\nPriya says: Idhi ye coaching class kante aina chala cheaper. Plus, nenu actually out loud ga speak chesthanu, inka ame logic ni Telugu lo explain chesthundhi, so nenu eppudu lost ga feel avvanu.",
+        "on_screen_text": "Nijama? Nenu nammalekapotunnanu.\nKani deeni cost entha?\nCoaching class kante chala cheaper\nSpeak out loud\nLogic explained in Telugu"
+      },
+      {
+        "n": 5,
+        "scene_label": "App pricing screencast",
+        "script": "Priya says: Inka nenu roju ki just 15 minutes practice chesthe chalu, visible progress chudadam start cheyochu.",
+        "on_screen_text": "Just 15 minutes a day\nSupernova AI\nVisible progress chudadam start cheyandi\nSpeak Confidently\nCancel Anytime"
+      },
+      {
+        "n": 6,
+        "scene_label": "Call to action",
+        "script": "Rohan says: Ayithe nenu ippude join avthanu!\nRamesh says: Nenu kuda!\nPriya says: Scrolling chesthu time waste cheyyakandi. Ippude install button press chesi, Supernova AI lo sign up avvandi.",
+        "on_screen_text": "Ayithe nenu ippude join avthanu!\nNenu kuda!\nScrolling chesthu time waste cheyyakandi\nInstall button press cheyandi\nSupernova AI lo sign up avvandi\nInstall Now"
+      },
+      {
+        "n": 7,
+        "scene_label": "End card",
+        "script": "Voiceover says: Supernova AI ni install cheyandi, ee roje English matladadam start cheyandi.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied the 'Family / narrative drama' register to ensure natural tone between family members. Ensured the hook opens in native Telugu ('Priya, evaru call...'). Swapped the seed language reference 'Kannada' to the target language 'Telugu' in Scene 4. Strictly applied the Telugu female-agreement rule for Miss Nova's actions ('judge cheyyadhu', 'explain chesthundhi'). Used polite plural forms ('cheyyakandi', 'avvandi') for the viewer-facing close in Scene 6."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 5 — App pricing screencast",
+        "quote": "showing a special offer of 1 rupee for 3 days",
+        "why": "The visual description contains a specific hard rupee price and unapproved promotional offer ('1 rupee for 3 days').",
+        "fix": "Modify the visual description to show a generic subscription screen or focus on comparative affordability without displaying specific rupee amounts."
+      }
+    ],
+    "summary": "The ad is mostly compliant but violates G6.1 by displaying a specific hard rupee price and unapproved offer ('1 rupee for 3 days') in the Scene 5 visual description.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517379.160864
+}

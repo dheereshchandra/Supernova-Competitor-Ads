@@ -1,0 +1,54 @@
+{
+  "ad_library_id": "929881406663276",
+  "language": "Kannada",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The 'Circle Back' Confusion",
+        "script": "Kiran says: Nanna boss nange 'circle back' maadi andru, adakke naan literally round round thirugoke start maadide!\nMiss Nova says: 'Circle back' andre ondh topic bagge aamele discuss maadodu antha. Naan Miss Nova, nimma personal AI English teacher.\nKiran says: Oh, adha idhra meaning! Aadre naan henge kaliyodu? English maatadoke nange thumba nervous aagutthe, matte nange time-e illa.",
+        "on_screen_text": "NANNA BOSS NANGE CIRCLE BACK MAADI ANDRU ADAKKE NAAN LITERALLY ROUND ROUND THIRUGOKE START MAADIDE CIRCLE BACK ANDRE ONDH TOPIC BAGGE AAMELE DISCUSS MAADODU ANTHA NAAN MISS NOVA NIMMA PERSONAL AI ENGLISH TEACHER OH ADHA IDHRA MEANING AADRE NAAN HENGE KALIYODU ENGLISH MAATADOKE NANGE THUMBA NERVOUS AAGUTTHE MATTE NANGE TIME E ILLA"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Features Screencast",
+        "script": "Miss Nova says: Supernova AI jothe, niv actual aagi maatadi kalithira. Naan nimma English level-na analyze maadi, nimgaagi ondh personalized plan ready maadtini. Beligge 3 a.m. nalli 1000 mistakes maadidru, naan nimmanna yaavatthu judge maadalla.",
+        "on_screen_text": "SUPERNOVA AI JOTHE NIV ACTUAL AAGI MAATADI KALITHIRA NAAN NIMMA ENGLISH LEVEL NA ANALYZE MAADI NIMGAAGI ONDH PERSONALIZED PLAN READY MAADTINI BELIGGE 3 A M NALLI 1000 MISTAKES MAADIDRU NAAN NIMMANNA YAAVATTHU JUDGE MAADALLA"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action and Pricing",
+        "script": "Kiran says: Nijavagluma? Aadre naan yen maadbeku?\nMiss Nova says: Hours-gatle scroll maadodunna stop maadi. Just daily 15 minutes nanna jothe practice maadi. Supernova AI download maadi, matte 1 month-nalliye nimma confidence-nalli visible progress nodtheera.",
+        "on_screen_text": "NIJAVAGLUMA AADRE NAAN YEN MAADBEKU HOURS GATLE SCROLL MAADODUNNA STOP MAADI JUST DAILY 15 MINUTES NANNA JOTHE PRACTICE MAADI SUPERNOVA AI DOWNLOAD MAADI MATTE 1 MONTH NALLIYE NIMMA CONFIDENCE NALLI VISIBLE PROGRESS NODTHEERA"
+      }
+    ],
+    "self_critique_fixed": "Applied the Kannada module rules: changed Rahul to Kiran from the casting table; used contracted spoken forms like 'niv' and 'ondh'; ensured Miss Nova uses polite plural forms; kept the hook opening in native language ('Nanna boss nange...'); and maintained natural code-mixing throughout."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 3 script",
+        "quote": "1 month-nalliye nimma confidence-nalli visible progress nodtheera",
+        "why": "The brand-voiced script promises that the user 'will see' progress within 1 month without using required hedge language like 'start to see' or 'can see'.",
+        "fix": "Rewrite to: '1 month-nalliye nimma confidence-nalli visible progress nodoke start maadtheera' (you will start seeing visible progress in your confidence in 1 month)."
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 3 visual",
+        "quote": "a pricing page showing a 1 Rupee offer",
+        "why": "The visual description includes a hard rupee price ('1 Rupee offer') which is strictly prohibited unless approved by the team.",
+        "fix": "Remove the 1 Rupee pricing page graphic and replace it with a generic 'Get Started' or 'Try Now' button."
+      }
+    ],
+    "summary": "The ad contains a severe brand-voiced outcome guarantee in the Scene 3 script and a severe pricing violation in the Scene 3 visual.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517788.789715
+}

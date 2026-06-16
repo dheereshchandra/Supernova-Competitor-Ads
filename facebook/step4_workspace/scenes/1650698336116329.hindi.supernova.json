@@ -1,0 +1,29 @@
+{
+  "ad_library_id": "1650698336116329",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Confrontation and Explanation",
+        "script": "Rahul says: Yeh kya chal raha hai? Teen din ho gaye, aur kaam abhi tak khatam nahi hua. Tum log bas time waste kar rahe ho kya?\nRamesh says: Sir, delay hamari taraf se nahi hai. Humne brickwork kal hi complete kar diya tha. Hum bas cement supply ka wait kar rahe hain.\nRahul says: Wait... tum itni acchi English kaise bol rahe ho?\nRamesh says: Supernova AI, sir.\nRahul says: Supernova?\nRamesh says: Yes. Main Miss Nova ke saath speaking practice karta hoon, jo meri personal AI teacher hain. Woh mera level test karti hain aur mere liye ek custom plan banati hain.\nRamesh says: Main hazar mistakes bhi karoon, toh bhi woh bina judge kiye mujhe correct karti hain.\nRamesh says: Woh logic ko Hindi mein explain karti hain. Roz bas 15 minutes practice karke, mujhe ek month mein hi visible progress dikhne lagi.\nRahul says: But ek personal AI teacher... yeh toh bahut expensive hoga na?\nRamesh says: Bilkul nahi. Yeh regular coaching classes se bahut zyada affordable hai.\nRahul says: Very impressive. Main apne bete ko bolunga ki yeh app install kare.\nRamesh says: Sure, sir. Kaam time par complete ho jayega.",
+        "on_screen_text": "Dynamic subtitles of the dialogue. UI Overlays: 'Supernova AI' logo. App interface showing 'Miss Nova AI Teacher', 'Practice Now', 'Your Custom Plan'. Graphic: '15 Mins/Day'."
+      },
+      {
+        "n": 2,
+        "scene_label": "Call to Action",
+        "script": "Ramesh says: Ghanto tak scroll karke time waste karna band karo. Aaj hi Supernova AI install karo aur English bolna start karo.",
+        "on_screen_text": "Dynamic subtitles of the dialogue. UI Overlay: App installation prompt for 'Supernova AI'."
+      }
+    ],
+    "self_critique_fixed": "Applied the global code-mixing and stay-English rules. Ensured the hook opens with native Hindi words ('Yeh kya chal raha hai') to stop the scroll. Adjusted the politeness register so Ramesh addresses Rahul as 'sir' and Miss Nova with respectful plural verbs ('karti hain'), while Rahul uses the direct 'tum' register. Replaced 'hours' with the more natural native 'ghanto' to avoid a dubbed feel, and localized the language self-reference to 'Hindi'."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, featuring a respectful portrayal of a worker with no policy violations.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517264.225492
+}

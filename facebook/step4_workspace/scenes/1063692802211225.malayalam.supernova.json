@@ -1,0 +1,45 @@
+{
+  "ad_library_id": "1063692802211225",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Language Barrier",
+        "script": "Arun says: Ningale patti kurachu parayoo.\nAnoop says: Sir... njan Malayalam-il parayatthe? English samsaarikyumpol njan freeze aayi pokum.\nArun says: Nee 12 varsham English medium-il aanallo padichathu, alle?\nAnoop says: Athe, sir.\nArun says: Kando, nee ninte mathrubhasha padichathu athu samsaarikyunnathilude aanu, allathe grammar books vayichittalla. English-um athupole thanneyaanu work aagunnatthu. Ninakku out loud aayi practice cheyyaan oru safe space mathram mathi.",
+        "on_screen_text": "Interviews ingane aano pokunnatthu?\nNingale patti kurachu parayoo.\nSir... njan Malayalam-il parayatthe?\nEnglish samsaarikyumpol njan freeze aayi pokum.\n12 varsham English medium-il padichittum?\nNee mathrubhasha padichathu athu samsaarikyunnathilude aanu.\nEnglish-um athupole thanneyaanu work aagunnatthu.\nNinakku samsaarikyaan oru safe space mathram mathi."
+      },
+      {
+        "n": 2,
+        "scene_label": "Introducing the Solution: MySivi",
+        "script": "Arun says: Athukondaanu njan eppozhum Supernova app recommend cheyyunnatthu. Ithil Miss Nova enna oru personal AI teacher undu.\nArun says: Avar ellavarkkum kodukunna aa same boring lessons alla tharunnatthu. Ninakku vendi ninte exact level analyze cheythu, oru personalized plan ready aakkum.\nArun says: Client calls athallekil interviews poleyulla real-life scenarios-il ninakku samsaarikyaan practice cheyyaam.\nArun says: Pinne ettavum nalla karyam enthanennaal, ninakku rathri 3 a.m.-il polum 1000 mistakes varuthiyaalum, oru judgment-um illaathe ninte swantham bhashayil avar athu correct cheythu tharum.",
+        "on_screen_text": "Supernova app try cheyyoo.\nPersonal AI teacher: Miss Nova.\nNinakkaayi oru personalized plan ready aakkunnu.\nReal-life scenarios practice cheyyoo.\n3 a.m.-il polum 1000 mistakes varuthiyaalum scene illa.\nNinte swantham bhashayil correct cheyyunnu.\nZero judgment."
+      },
+      {
+        "n": 3,
+        "scene_label": "Social Proof and Decision",
+        "script": "Anoop says: Pakshe oru AI-ykku enganeya manushyarekkaal nannaayi padippikkaan kazhiyunnatthu?\nArun says: ChatGPT verum oru assistant mathramaanu, pakshe Miss Nova oru real teacher aanu. Athumalla, 1 crore-il adhikam Indians ithu use cheyyunnu. Grammar PDFs-il manikyoorugal waste cheyyunnatthu nirthoo. Day-il just 15 minutes mathi.\nAnoop says: Okay, njan innu thanne Supernova install cheythu samsaarikyaan thudangaam.\nArun says: Perfect.",
+        "on_screen_text": "Engane oru AI-ykku padippikkaan kazhiyum?\nChatGPT verum oru assistant aanu.\nMiss Nova oru real teacher aanu.\nIndia-yil 1 Crore+ users.\nPDFs-il manikyoorugal waste cheyyunnatthu nirthoo.\nDay-il just 15 minutes mathi.\nInnu thanne Supernova install cheythu samsaarikyaan thudangoo.\nPerfect.\n[App Store Screenshot Text]: Top Charts, Free Apps, Paid Apps, 2 Supernova Learn & Speak English, Your Personal AI English Tutor, Open"
+      }
+    ],
+    "self_critique_fixed": "Applied all Malayalam-specific localization rules: 1. Swapped 'Hindi' to 'Malayalam' in Scene 1. 2. Avoided English+Malayalam hybrid verbs, using native stems like 'samsaarikyumpol' and 'samsaarikyunnathilude' instead of 'speak cheyyumpol'. 3. Properly applied person-sensitive verbs for 'give' ('kodukunna' for giving to third parties/everyone, and 'tharum' for Miss Nova giving corrections to the user). 4. Localized time-unit words ('hours' to 'manikyoorugal' and 'years' to 'varsham') while keeping digits as English numerals. 5. Opened the hook in native Malayalam ('Ningale patti kurachu parayoo'). 6. Recast character names to Arun and Anoop from the Malayalam casting table."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.3",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 3",
+        "quote": "[App Store Screenshot Text]: Top Charts, Free Apps, Paid Apps, 2 Supernova Learn & Speak English",
+        "why": "The ad displays a fabricated App Store Top Charts ranking showing the app at number 2, which constitutes a fake credential or award.",
+        "fix": "Replace the App Store Top Charts graphic with a standard 'Download on the App Store' badge or a generic app interface preview."
+      }
+    ],
+    "summary": "The ad is highly compliant but contains a severe violation in Scene 3 due to a fabricated App Store Top Charts ranking graphic.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781513187.696859
+}

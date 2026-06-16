@@ -1,0 +1,33 @@
+{
+  "ad_library_id": "1724197118748377",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI Tutor Introduction",
+        "script": "Rahul says: Main English kyun nahi bol paata? Office mein sab itni fast bolte hain, main toh freeze ho jata hoon.\nMiss Nova says: Aisa isliye kyunki aap kabhi speaking practice nahi karte. Main aapka level analyze karke aapke liye ek custom plan banaungi.\nRahul says: Lekin aap kaun hain?\nMiss Nova says: Main hoon Miss Nova, Supernova AI par aapki AI English teacher.\nRahul says: Lekin isse meri help kaise hogi?\nMiss Nova says: Main aapko actually bolna sikhaungi. Hum real-life situations ki practice karenge, jaise aapka next job-interview.\nMiss Nova says: Agar aap kahin atke, toh main aapki apni language mein logic explain karungi taaki aap kabhi lost feel na karein.\nMiss Nova says: Aap chahe hazar mistakes karo. Main hamesha yahan hoon, aur main aapko kabhi judge nahi karungi aur na hi aap par hasungi.\nMiss Nova says: Feeds scroll karne mein ghanto waste karna band karo. Din mein bas 15 minutes mere saath baat karo.\nMiss Nova says: Supernova AI install karein, aur ek month mein apni speaking mein visible progress dekhein.",
+        "on_screen_text": "Main English kyun nahi bol paata?\nMain aapka level analyze karke aapke liye ek custom plan banaungi.\nLekin aap kaun hain?\nMain hoon Miss Nova, Supernova AI par aapki AI English teacher.\nIsse meri help kaise hogi?\nHum real-life situations ki practice karenge, jaise aapka next job-interview.\nMain aapki apni language mein logic explain karungi.\nHazar mistakes karo. Main aapko kabhi judge nahi karungi.\nFeeds scroll karne mein ghanto waste karna band karo.\nBas 15 minutes a day mere saath baat karo.\nSupernova AI install karein aur visible progress dekhein."
+      }
+    ],
+    "self_critique_fixed": "Checked the translation for newspaperish/Sanskritized words. Replaced any potential formal words with colloquial equivalents (e.g., using 'hazar' instead of 'sahasra', 'ghanto' instead of 'samay', 'baat karo' instead of 'vaartalaap'). Ensured Miss Nova maintains the polite 'aap' register while Rahul remains casual yet respectful. Verified that all stay-English words like 'Supernova AI', 'Miss Nova', 'job-interview', and 'practice' are preserved. The hook starts with 'Main English...' which is natural Hinglish and avoids starting with pure English."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 1 (Script & On-Screen)",
+        "quote": "Supernova AI install karein, aur ek month mein apni speaking mein visible progress dekhein.",
+        "why": "The statement promises visible progress in one month without using the required hedge language such as 'start seeing' or 'can'.",
+        "fix": "Supernova AI install karein, aur ek month mein apni speaking mein visible progress dekhna shuru karein."
+      }
+    ],
+    "summary": "The ad is mostly compliant but violates G1.1 by promising visible progress in one month without using hedge language.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517325.396487
+}

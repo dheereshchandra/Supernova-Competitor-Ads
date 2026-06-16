@@ -1,0 +1,47 @@
+{
+  "ad_library_id": "1251362460515133",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Anxious Learner",
+        "script": "Rahul says: Jab bhi English bolne ki baat aati thi, main freeze ho jata tha. Mistake karne se bahut darr lagta tha.",
+        "on_screen_text": "English bolne se darr lagta hai? Mistakes hone ka tension hai?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Discovering the App",
+        "script": "Rahul says: Phir mujhe Supernova AI mila. Meri AI teacher, Miss Nova, mera level analyze karti hain aur mere liye ek personalized plan banati hain.\nRahul says: Aur sabse acchi baat, main private me practice kar sakta hoon. Koi dekh nahi raha hota, aur wo meri mistakes ko kabhi judge nahi kartiin.",
+        "on_screen_text": "Miliye Supernova AI se! Apni personal AI teacher ke saath kabhi bhi practice karein."
+      },
+      {
+        "n": 3,
+        "scene_label": "Co-learner Practice",
+        "script": "Rahul says: Ab main sirf textbooks nahi padhta. Main actually zor se bolkar practice karta hoon, Miss Nova aur Priya jaise doosre learners ke saath.",
+        "on_screen_text": "Zor se boliye aur supportive community ke saath practice karein!"
+      },
+      {
+        "n": 4,
+        "scene_label": "Confident Interview",
+        "script": "Rahul says: Hum real-life situations ki practice karte hain, jaise Mumbai me mera upcoming job interview.\nRahul says: Daily practice se, mere confidence me ek clear improvement dikhne laga hai.",
+        "on_screen_text": "Job interviews jaise real-life scenarios practice karein. Aaj hi shuru karein!"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Rahul says: Ghanto scrolling karke time waste karna band karo. Supernova AI ko din me bas 15 minutes do. App download karo aur bolna shuru karo!",
+        "on_screen_text": "Bas 15 minutes roz. Aaj hi Supernova AI download karein!"
+      }
+    ],
+    "self_critique_fixed": "Self-critique pass: Checked for literary or formal Hindi words. Replaced formal terms like 'vishleshan' with 'analyze', 'truti' with 'mistake', and 'atmarakshatmak' with 'private'. Ensured the hook starts with native words ('Jab bhi English...') rather than English. Verified that the CTA uses a natural, friendly peer-to-peer register ('band karo', 'do') to match the blunt energy of the English master without sounding like a news broadcast. All numbers are kept as numerals. Romanization is consistent with standard WhatsApp-style Hinglish."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, featuring an approved shame-to-dignity resolution and safe time-reallocation hooks.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781515205.7335072
+}

@@ -1,0 +1,69 @@
+{
+  "ad_library_id": "1242366044736854",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Verb Tense Drill",
+        "script": "Miss Nova says: I go\nRahul says: I went\nMiss Nova says: I have\nRahul says: I had\nMiss Nova says: I tell\nRahul says: I told\nMiss Nova says: I know\nRahul says: I knew\nMiss Nova says: I drive\nRahul says: I drove\nMiss Nova says: I take\nRahul says: I took\nMiss Nova says: I buy\nRahul says: I bought\nMiss Nova says: I think\nRahul says: I thought\nMiss Nova says: I make\nRahul says: I made\nMiss Nova says: I eat\nRahul says: I ate\nMiss Nova says: I sleep\nRahul says: I slept\nMiss Nova says: I write\nRahul says: I wrote",
+        "on_screen_text": "Present\nPast\nEnglish Mastery Day 22\nI Go\nI Went\nI Have\nI Had\nI Tell\nI Told\nI Know\nI Knew\nI Drive\nI Drove\nI Take\nI Took\nI Buy\nI Bought\nI Think\nI Thought\nI Make\nI Made\nI Eat\nI Ate\nI Sleep\nI Slept\nI Write\nI Wrote"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Recommendation",
+        "script": "Miss Nova says: Wow, aapki English kaafi improve ho gayi hai. Aap practice kahaan karte ho?\nRahul says: Main Supernova AI app par practice karta hoon.\nMiss Nova says: Supernova AI?\nRahul says: Haan.",
+        "on_screen_text": "WOW\nAAPKI ENGLISH\nKAAFI IMPROVE HO GAYI\nSUPERNOVA AI\nHAAN"
+      },
+      {
+        "n": 3,
+        "scene_label": "App UI - Learning Path",
+        "script": "Rahul says: Isme ek personal AI teacher hain, Miss Nova. Wo mera exact level analyze karke mere liye ek custom plan ready karti hain.",
+        "on_screen_text": "Practice Now\nFluency Score\n48\nYour Learning Path\nTalk about anything\nDaily routine\nLet's Improve Vocabulary\nTalk about your childhood\nSeasons and weather\nFamily and Relationships\nHobbies and Interests\nTalk about your workplace\nMERE LIYE CUSTOM PLAN"
+      },
+      {
+        "n": 4,
+        "scene_label": "Pricing Question",
+        "script": "Rahul says: Main actually unse out loud baat karta hoon. Main hazar mistakes bhi karoon, toh bhi wo mujhe kabhi judge nahi karti.\nMiss Nova says: Par kya personal coaching expensive nahi hoti?",
+        "on_screen_text": "OUT LOUD BOLO\nHAZAR MISTAKES\nKABHI JUDGE NAHI KARTI\nEXPENSIVE?"
+      },
+      {
+        "n": 5,
+        "scene_label": "App UI - Premium Offer",
+        "script": "Rahul says: Bilkul nahi, ye Mumbai ki kisi bhi coaching class se bahut sasta hai. Plus, mujhe din mein bas 15 minutes chahiye.",
+        "on_screen_text": "Supernova AI Premium\nLIMITED TIME OFFER\nCoaching classes se sasta\nAutopay, cancel anytime.\n10,000+ learners practicing today\n24/7 AI English Teacher\n500+ Exercises and Lessons\nUnlimited Access"
+      },
+      {
+        "n": 6,
+        "scene_label": "Final Endorsement",
+        "script": "Miss Nova says: Sahi kaha! Aap bolkar hi seekhte ho, jaise aapne Hindi seekhi thi.",
+        "on_screen_text": "JAISE AAPNE HINDI SEEKHI"
+      },
+      {
+        "n": 7,
+        "scene_label": "End Card",
+        "script": "Unknown speaker says: Scroll karna band karo. Supernova AI install karo aur aaj se hi bolna start karo.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "The script has been successfully localized into romanized, code-mixed Hindi. All global rules (T1-T11) were strictly followed: English grammar drills in Scene 1 were kept verbatim; brand names, product vocabulary, and daily-speech English terms were retained; numbers were kept as digits; the tone is highly conversational and avoids formal Sanskritized Hindi; politeness registers are correctly set with Miss Nova using warm 'Aap' and Rahul speaking respectfully about her; and the regional casting of Mumbai and Rahul was maintained."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 5 — App UI - Premium Offer",
+        "quote": "₹1",
+        "why": "The visual description contains a hard rupee price ('₹1') which violates the strict ban on generating specific pricing or discount offers.",
+        "fix": "Replace the '₹1' price point in the visual description with a generic 'Start Free Trial' or 'Try Premium' button."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe violation in Scene 5 due to a hard rupee price ('₹1') in the visual description.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781515130.806261
+}

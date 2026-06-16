@@ -1,0 +1,79 @@
+{
+  "competitor_id": "1701651697935230",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "Presenter",
+        "appearance": "Only hands and forearms are visible. Brown skin tone, average build.",
+        "wardrobe": "Brown long-sleeve shirt.",
+        "demeanor": "Instructional, active, engaging through drawing."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Childhood Basics vs Reality",
+        "supernova_script": "Rahul says: You memorized 'A for Apple' in childhood, right?\nRahul says: But sadly, after years of school, you still freeze when it is time to actually speak a full sentence in English.",
+        "scene_summary": "- Hook: Relatable tough-love callout on reading vs speaking.\n- Lands beat d (old methods failed).\n- Names English immediately.",
+        "supernova_on_screen_text": "A FOR APPLE, YEARS OF SCHOOL, STILL FREEZE, SPEAK A FULL SENTENCE IN ENGLISH."
+      },
+      {
+        "n": 2,
+        "scene_label": "The Need for English",
+        "supernova_script": "Rahul says: The truth is, without spoken English, you do not get the respect you truly deserve at work.\nRahul says: That is why you need Supernova AI.\nRahul says: It does not give everyone the same lesson—it analyzes your level and builds a personalized plan just for you.",
+        "scene_summary": "- Connects dignity stakes to the solution.\n- Lands beat a (Personalization) early.\n- Introduces Supernova AI.",
+        "supernova_on_screen_text": "WITHOUT SPOKEN ENGLISH, NO RESPECT, SUPERNOVA AI, PERSONALIZED PLAN."
+      },
+      {
+        "n": 3,
+        "scene_label": "AI Teacher Introduction",
+        "supernova_script": "Rahul says: Meet Miss Nova, your personal AI teacher who is available twenty-four seven.\nRahul says: You can make a thousand mistakes, and she will never judge or laugh at you.",
+        "scene_summary": "- Introduces Miss Nova.\n- Lands beat b (Privacy/No-judgment) as the core retention engine.",
+        "supernova_on_screen_text": "MISS NOVA, AI TEACHER, AVAILABLE 24/7, MAKE 1000 MISTAKES, NO JUDGMENT."
+      },
+      {
+        "n": 4,
+        "scene_label": "Practice Conversations",
+        "supernova_script": "Rahul says: The best part is that she explains the logic in your own language so you never feel lost.\nRahul says: You practice real-life scenarios like a job interview by actually speaking out loud.",
+        "scene_summary": "- Lands beat g (Logic in mother tongue).\n- Lands beat e (Real-life scenarios - interview).\n- Lands beat c (You speak).",
+        "supernova_on_screen_text": "LOGIC IN YOUR LANGUAGE, REAL-LIFE SCENARIOS, JOB INTERVIEW, SPEAK OUT LOUD."
+      },
+      {
+        "n": 5,
+        "scene_label": "Surprising Results",
+        "supernova_script": "Rahul says: Just give it fifteen minutes a day, and you will start seeing visible progress in your confidence within a month.\nRahul says: Over one crore Indians are already learning with Supernova AI.",
+        "scene_summary": "- Replaces guarantee with hedged progress expectation.\n- Adds approved social proof (1 crore+ users).",
+        "supernova_on_screen_text": "15 MINUTES A DAY, VISIBLE PROGRESS, 1 CRORE+ INDIANS, SUPERNOVA AI."
+      },
+      {
+        "n": 6,
+        "scene_label": "Call to Action",
+        "supernova_script": "Rahul says: So stop wasting hours scrolling on your phone.\nRahul says: It is much more affordable than expensive coaching classes.\nRahul says: Click install now and download the Supernova AI app today.",
+        "scene_summary": "- Negative time anchor (scrolling).\n- Addresses the visual Rupee symbol with a comparative cost.\n- Clean CTA.",
+        "supernova_on_screen_text": "STOP SCROLLING, AFFORDABLE, INSTALL NOW, SUPERNOVA AI APP."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speak), d (old methods), e (scenarios), g (logic)",
+      "kept_from_seed": "Top-down drawing on printed papers visual format",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used comparative 'more affordable than expensive coaching classes' to match visual Rupee symbol."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "Arya",
+        "supernova_swap": "Miss Nova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.65551
+}

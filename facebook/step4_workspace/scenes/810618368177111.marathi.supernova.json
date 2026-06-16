@@ -1,0 +1,60 @@
+{
+  "ad_library_id": "810618368177111",
+  "language": "Marathi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Practice",
+        "script": "Miss Nova says: Amol, chala tumchi English practice karu. Where are you going?\nAmol says: I go to home.\nMiss Nova says: Tumhala mhanaycha ahe, 'I am going home'. 'Go to' he places sathi vapartat, pan 'home' sathi 'to' chi garaj naste.\nAmol says: Yes, I am going home. I am very hurry.\nMiss Nova says: 'I am in a hurry' he mhannyacha correct way ahe.\nAmol says: Okay, thank you.",
+        "on_screen_text": "Amol, chala tumchi English practice karu. Where are you going? I go to home. Tumhala mhanaycha ahe, 'I am going home'. 'Go to' he places sathi vapartat, pan 'home' sathi 'to' chi garaj naste. Yes, I am going home. I am very hurry. 'I am in a hurry' he mhannyacha correct way ahe. Okay, thank you."
+      },
+      {
+        "n": 2,
+        "scene_label": "Introduction and Objection",
+        "script": "Amol says: Wait, tumhi kon ahat? Ani mazya car madhe tumhi mala kashi correct karat ahat?\nMiss Nova says: Mi ahe Miss Nova, tumchi personal AI teacher, Supernova AI var. Mi tumcha exact level analyze karte ani phakta tumchyasathi ek personalized plan banavte.\nAmol says: Pan jar mi silly mistakes kelya tar? Mala khup shy feel hota.\nMiss Nova says: Ithe tumhala konihi baghat nahiye ani judge pan karat nahiye. Hazaro mistakes kara, mi tumhala kadhihi na hasata correct karen.",
+        "on_screen_text": "Wait, tumhi kon ahat? Ani mazya car madhe tumhi mala kashi correct karat ahat? Mi ahe Miss Nova, tumchi personal AI teacher, Supernova AI var. Mi tumcha exact level analyze karte ani phakta tumchyasathi ek personalized plan banavte. Pan jar mi silly mistakes kelya tar? Mala khup shy feel hota. Ithe tumhala konihi baghat nahiye ani judge pan karat nahiye. Hazaro mistakes kara, mi tumhala kadhihi na hasata correct karen."
+      },
+      {
+        "n": 3,
+        "scene_label": "Pricing Offer",
+        "script": "Miss Nova says: Plus, mi sagla logic tumchya swatahchya Marathi madhe explain karte, mhanje te finally sahaj samajhel.\nAmol says: He khup expensive ahe ka?\nMiss Nova says: He khup affordable ahe, actually regular coaching classes pekscha saat pat swasta.",
+        "on_screen_text": "Plus, mi sagla logic tumchya swatahchya Marathi madhe explain karte, mhanje te finally sahaj samajhel. He khup expensive ahe ka? He khup affordable ahe, actually regular coaching classes pekscha saat pat swasta."
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: 1 crore pekscha jast Indians mazya sobat shikat ahet. Stop scrolling ani divasatun phakta 15 minutes speaking practice kara.\nAmol says: Mi ata lagech Supernova AI download karto. Thank you, Miss Nova!",
+        "on_screen_text": "1 crore pekscha jast Indians mazya sobat shikat ahet. Stop scrolling ani divasatun phakta 15 minutes speaking practice kara. Mi ata lagech Supernova AI download karto. Thank you, Miss Nova!"
+      }
+    ],
+    "self_critique_fixed": "Conducted a self-critique pass to ensure maximum colloquial flow. Replaced formal Marathi words like 'bhashet' with 'madhe' to sound like natural spoken code-mixed Marathi. Replaced 'swasta' with 'swasta' (written as 'swasta' in Romanized Marathi) for regional accuracy. Re-cast Ramesh to Amol per the Marathi casting table. Ensured the hook opens in native Marathi before going into the English practice line."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 4 — Call to Action (Visual)",
+        "quote": "a Google Play Store app installation pop-up overlay appears in the center of the screen",
+        "why": "Simulated app store installation pop-ups mimic interactive system UI, which violates Meta's policy against misleading mechanics.",
+        "fix": "Replace the simulated Play Store pop-up with a standard Supernova brand end-card and a static 'Download Now' call-to-action."
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 3 — Pricing Offer (Visual)",
+        "quote": "The graphic displays pricing information, showing a discounted rate.",
+        "why": "Generating or displaying specific pricing information or unapproved discount offers in the ad visuals is strictly prohibited.",
+        "fix": "Modify the graphic overlay to show a generic 'Affordable Plans' message instead of specific pricing or discount rates."
+      }
+    ],
+    "summary": "The ad contains severe violations regarding misleading fake UI (simulated Play Store pop-up) and unapproved pricing/discount graphics.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517752.146492
+}

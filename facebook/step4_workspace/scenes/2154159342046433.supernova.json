@@ -1,0 +1,100 @@
+{
+  "competitor_id": "2154159342046433",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "Protagonist (Vada)",
+        "appearance": "Anthropomorphic fritter. Round, golden-yellow textured head and body with embedded green chili pieces. Large expressive eyes.",
+        "wardrobe": "Wears a suit made of the same golden-yellow, chili-flecked fried texture as his skin.",
+        "demeanor": "Starts happy, becomes sad and insecure, then transforms into confident and successful."
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "Love interest (Pav)",
+        "appearance": "Anthropomorphic bread roll. Pale beige, soft-looking square head with a rounded top. Large eyes and soft features.",
+        "wardrobe": "Wears a simple, pale beige outfit draped like a sari or scarf, matching her skin tone.",
+        "demeanor": "Fickle, easily impressed by status, later regretful."
+      },
+      {
+        "id": "C",
+        "name": "Vikram",
+        "role": "Rival (Misal)",
+        "appearance": "Anthropomorphic bowl of food. Head is a silver bowl filled with spicy red curry, topped with crunchy snacks, onions, and a lemon wedge.",
+        "wardrobe": "Wears a black button-down shirt, beige trousers, a thick gold chain, and a gold watch.",
+        "demeanor": "Arrogant, mocking, and overconfident."
+      },
+      {
+        "id": "D",
+        "name": "Amit",
+        "role": "Reporter",
+        "appearance": "Human male, short dark hair, medium build, light brown complexion.",
+        "wardrobe": "White button-down shirt.",
+        "demeanor": "Professional, attentive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Confrontation",
+        "supernova_script": "Rahul says: Priya, we make such a great team. Let's always stay together.\nVikram says: Priya? You're still hanging out with Rahul? He can't even speak proper English.\nPriya says: He is trying.\nVikram says: Please, he freezes every time he has to speak. He will never be fluent like me.",
+        "scene_summary": "- Hook: Shame setup with a relatable Indian-English struggle.\n- Names English immediately to set context.\n- Establishes the dignity stakes for the protagonist.",
+        "supernova_on_screen_text": "Priya, we make such a great team.\nLet's always stay together.\nYou're still with Rahul?\nHe can't even speak proper English.\nHe is trying.\nHe freezes every time.\nHe will never be fluent like me."
+      },
+      {
+        "n": 2,
+        "scene_label": "The Breakup",
+        "supernova_script": "Priya says: Vikram is right. Being with you is ruining my image. We are done.\nRahul says: No, crying won't fix this. I need to show her I can speak English too. I am downloading Supernova AI.",
+        "scene_summary": "- Emotional low point driving the need for change.\n- Introduces Supernova AI as the tool for reclaiming dignity.\n- Transitions from shame to proactive action.",
+        "supernova_on_screen_text": "TWO DAYS LATER...\nVikram is right.\nBeing with you is ruining my image.\nWe are done.\nCrying won't fix this.\nI need to show her I can speak English.\nSupernova AI"
+      },
+      {
+        "n": 3,
+        "scene_label": "Learning English",
+        "supernova_script": "Rahul says: I practice speaking with Miss Nova, my personal AI teacher. She checks my level and makes a custom plan just for me. And the best part? I can make a thousand mistakes, and she never judges me.",
+        "scene_summary": "- Delivers beat (a) Personalization: custom plan based on level.\n- Delivers beat (b) Privacy: zero judgment, safe space to make mistakes.\n- Delivers beat (c) Speak to learn: practicing speaking with Miss Nova.",
+        "supernova_on_screen_text": "Practice speaking with Miss Nova.\nCustom plan just for me.\nMake a thousand mistakes.\nZero judgment."
+      },
+      {
+        "n": 4,
+        "scene_label": "The Interview",
+        "supernova_script": "Rahul says: Someone once rejected me because of my broken English. But Miss Nova explained the logic in my own language, and I practiced speaking every day. Now, I clear interviews with confidence.\nVikram says: Wait, Rahul is giving an interview in English? How is this possible?\nPriya says: I made a huge mistake leaving him.",
+        "scene_summary": "- Resolves shame into authority and respect.\n- Delivers beat (e) Real-life scenario: clearing interviews.\n- Delivers beat (g) Logic explained in own language.",
+        "supernova_on_screen_text": "TWO WEEKS LATER\nRejected because of my broken English.\nMiss Nova explained the logic in my own language.\nNow I clear interviews with confidence.\nRahul is speaking English?\nI made a huge mistake."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "supernova_script": "Rahul says: Stop wasting hours scrolling on your phone. Just fifteen minutes a day on Supernova AI can help you speak confidently. If I can do it, you can too. Download Supernova AI and start speaking today.",
+        "scene_summary": "- Tight close with negative time anchor (scrolling) and positive time anchor (15 mins/day).\n- Soft progress expectation (help you speak confidently) instead of a hard guarantee.\n- Clean CTA with no price mentioned.",
+        "supernova_on_screen_text": "Stop wasting hours scrolling.\nJust 15 minutes a day.\nSpeak confidently.\nDownload Supernova AI.\nStart speaking today."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speak to learn), e (interview scenario), g (logic in own language)",
+      "kept_from_seed": "Anthropomorphic food characters, shame-to-authority breakup arc, luxury car ending",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure used; removed the ₹1 trial from the seed."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi App",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "MySivi AI English Speaking App",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "MySivi Premium",
+        "supernova_swap": "Removed entirely"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.658559
+}

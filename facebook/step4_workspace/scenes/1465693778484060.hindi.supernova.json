@@ -1,0 +1,45 @@
+{
+  "ad_library_id": "1465693778484060",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The Problem",
+        "script": "Priya says: Ah!\nUnknown Voice says: Kya hua?\nPriya says: My hands on fire!\nMiss Nova says: Actually, isse \"My hands are burning\" bolte hain.\nPriya says: Kehna easy hai! Jab bhi English bolna padta hai, main freeze ho jaati hoon.\nMiss Nova says: Main hoon Miss Nova. Main Supernova AI par aapko English sikhati hoon, aapse actually speak karwa kar.",
+        "on_screen_text": "Kya hua?\nMy hands on fire\nMy hands are burning.\nMain freeze ho jaati hoon\nSpeak English\nSupernova AI"
+      },
+      {
+        "n": 2,
+        "scene_label": "The Solution",
+        "script": "Miss Nova says: Main aapka exact level analyze karti hoon aur aapke liye ek personalized plan banati hoon.\nPriya says: Par agar mujhse mistakes ho gayi toh? Mujhe bohot shy feel hota hai.\nMiss Nova says: 1000 mistakes kijiye! Yahan koi aapko judge nahi kar raha hai. Main aapko correct karti hoon aur aapki apni language Hindi mein logic explain karti hoon.\nMiss Nova says: Din mein bas 15 minutes real-life scenarios practice kijiye, aur 1 month mein aapko visible progress dikhne lagegi.",
+        "on_screen_text": "Personalized plan just for you\n1000 mistakes kijiye\nKoi aapko judge nahi karega\nHindi mein explained\n15 MINUTES A DAY\n1 month mein visible progress"
+      },
+      {
+        "n": 3,
+        "scene_label": "Pricing and CTA",
+        "script": "Priya says: Yeh toh badhiya hai, par abhi main expensive classes afford nahi kar sakti.\nMiss Nova says: Supernova AI regular coaching classes se saat guna sasta hai.\nPriya says: Really? Saat guna sasta?\nMiss Nova says: Reels scroll karne mein hours waste karna band kijiye. Iske badle mere sath 15 minutes speak kijiye.\nPriya says: Main abhi Supernova AI download kar rahi hoon, speaking start karne ke liye!",
+        "on_screen_text": "Classes afford nahi kar sakti\nCoaching se 7x sasta\nReels scroll karna band karo\nDin mein 15 minutes\nDownload Supernova AI\nAaj se speaking start karo"
+      }
+    ],
+    "self_critique_fixed": "Applied the 'Teaching / correction skit' register. Handled the T2h multiplier carve-out correctly by translating 'seven times cheaper' to 'saat guna sasta'. Kept the quoted English lines exactly verbatim as required by T2a. Replaced 'your own language' with 'Hindi' per T5. Ensured polite 'aap-tier' register for Miss Nova and natural spoken WhatsApp-style romanization throughout."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 3",
+        "quote": "a Google Play Store download interface overlay dominates the center of the screen",
+        "why": "Mimicking an interactive Google Play Store download interface within the video constitutes a fake UI/misleading mechanic under Meta's ad policies.",
+        "fix": "Replace the Google Play Store overlay with a standard, non-interactive 'Download Now' button graphic or end card."
+      }
+    ],
+    "summary": "The ad is mostly compliant, but Scene 3 contains a fake UI element (Google Play Store overlay) which violates Meta's ad policies.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517008.753381
+}

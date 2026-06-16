@@ -1,0 +1,47 @@
+{
+  "ad_library_id": "1251362460515133",
+  "language": "Marathi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Anxious Learner",
+        "script": "Amol says: Jevha pan English bolaychi vel yaychi, mi freeze vhaycho. Mistake honyachi khup bhiti vataychi.",
+        "on_screen_text": "English bolaychi bhiti vatte? Mistake honyachi tension aahe?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Discovering the App",
+        "script": "Amol says: Mag mala bhetla Supernova AI. Mazi AI teacher, Miss Nova, maza level analyze karun mazyasathi personalized plan banavte.\nAmol says: Ani ho, mi private madhe practice karu shakto. Koni baghat nahi, ani tya kadhi judge karat nahit.",
+        "on_screen_text": "Bheta Supernova AI la! Tumchya personal AI teacher sobat kadhihi speaking practice kara."
+      },
+      {
+        "n": 3,
+        "scene_label": "Co-learner Practice",
+        "script": "Amol says: Ata mi fakt textbooks nahi vachat. Mi actually out loud bolto, Miss Nova ani Snehal sarkhya dusrya learners sobat practice karto.",
+        "on_screen_text": "Out loud bola ani supportive community sobat practice kara!"
+      },
+      {
+        "n": 4,
+        "scene_label": "Confident Interview",
+        "script": "Amol says: Aamhi real-life situations practice karto, jasa maza Mumbai madhla upcoming job interview.\nAmol says: Daily practice mule, maza confidence madhe mala visible progress disayla lagli.",
+        "on_screen_text": "Job interview sarkhe real-life scenarios practice kara. Aajach tumchi journey start kara!"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Amol says: Scrolling madhe vel waste karna thambva. Supernova AI la daily 15 minutes dya. App download karun bolayla start kara!",
+        "on_screen_text": "Fakt daily 15 minutes. Aajach Supernova AI download kara!"
+      }
+    ],
+    "self_critique_fixed": "Ensured the hook opens with a native Marathi word ('Jevha') to catch attention. Re-cast characters to Amol and Snehal per the Marathi casting table. Maintained polite plural forms ('dya', 'kara') for viewer-facing lines and respectful forms for Miss Nova ('tya kadhi judge karat nahit'). Kept numbers as English numerals ('15 minutes') and heavily code-mixed the script to match natural WhatsApp-style spoken Marathi."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved personal testimonials, safe privacy framing, and generic behavior-change hooks without any prohibited claims or hard pricing.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781515252.470159
+}

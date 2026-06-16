@@ -1,0 +1,51 @@
+{
+  "ad_library_id": "1682634462923678",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Sand and Mesh",
+        "script": "Miss Nova says: Verum grammar books mathram vayichu ningalkku orikkalum English padikkan kazhiyilla.\nMiss Nova says: Athinu ningal athu purathuthurannu samsaarikkanam. Pakshe koode practice cheyyaan aale kittan bhayankara paadaanu.",
+        "on_screen_text": "Verum grammar books mathram vayichu ningalkku orikkalum English padikkan kazhiyilla. Athinu ningal athu purathuthurannu samsaarikkanam."
+      },
+      {
+        "n": 2,
+        "scene_label": "Carving Green Sand",
+        "script": "Miss Nova says: Athuporathinu, mistake varuthiyaal aalukal kaliyaakkumo enna bhayam eppozhum undavum.\nMiss Nova says: Athukondu thanneyaanu Supernova AI undakkiyathum.\nMiss Nova says: Njan Miss Nova. Ellavarkkum kodukkunna athe same boring lessons alla njan ningalkku tharunnathu.\nMiss Nova says: Njan ningalude exact level analyze cheythu, ningalkkaayi mathram oru personalized plan ready aakkum.",
+        "on_screen_text": "Kaliyaakkumo enna bhayamundo? Athinaanu Supernova AI undakkiyathathu. Njan ningalude level analyze cheythu oru personalized plan ready aakkum."
+      },
+      {
+        "n": 3,
+        "scene_label": "Cutting Foam",
+        "script": "Miss Nova says: Nammal orumichu job-interview athallekil client call poleyulla real-life scenarios practice cheyyum.\nMiss Nova says: Paathiraathriyil ningal aayiram mistakes varuthiyaalum njan orikkalum judge cheyyilla, corrections okke Malayalathil explain cheythu tharum.",
+        "on_screen_text": "Job-interview poleyulla real-life scenarios practice cheyyoo. Aayiram mistakes varuthiyaalum njan judge cheyyilla, corrections okke Malayalathil explain cheyyum."
+      },
+      {
+        "n": 4,
+        "scene_label": "Scraping Pink Roller",
+        "script": "Miss Nova says: Reels kandu manikyoorugal kalayunnathu nirthoo.\nMiss Nova says: Dhivsavum verum 15 minutes samsaarikkan practice cheyyoo.\nMiss Nova says: Innu thanne Supernova AI download cheyyoo, oru maasathil ningalkku nalla confident aayi samsaarikkan kazhiyum.",
+        "on_screen_text": "Reels kandu manikyoorugal kalayunnathu nirthoo. Dhivsavum verum 15 minutes practice cheyyoo. Supernova AI download cheythu oru maasathil confident aayi samsaarikkoo."
+      }
+    ],
+    "self_critique_fixed": "Applied all Malayalam-specific rules: used 'samsaarikkan' instead of 'speak cheyyan', correctly distinguished 'kodukkunna' (to others) vs 'tharunnathu' (to the viewer), used 'kaliyaakkumo' for mocking, avoided English-noun + Malayalam-case hybrids (using 'Malayalathil' and 'oru maasathil'), and localized time units to 'manikyoorugal' and 'maasathil'. The hook opens with the native word 'Verum'."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 4",
+        "quote": "Supernova AI download cheythu oru maasathil confident aayi samsaarikkoo.",
+        "why": "The on-screen text promises that the user will speak confidently in a month without using required hedge language like 'start to' or 'begin to'.",
+        "fix": "Change the text to 'Supernova AI download cheythu oru maasathil confident aayi samsaarikkan thudangoo.' to introduce the required hedge language."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a G1.1 violation in Scene 4's on-screen text due to a lack of hedge language in the progress claim.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517298.430798
+}

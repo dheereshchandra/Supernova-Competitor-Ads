@@ -1,0 +1,69 @@
+{
+  "ad_library_id": "1667844751047305",
+  "language": "Kannada",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Mother speaks English on the phone",
+        "script": "Ramesh says: Asha, yaar call madtirodu? English-nalli matadtidiya?\nAsha says: Hello... yes, that works for us. No, we don't need a credit card. We prefer to manage our expenses carefully. Thank you.",
+        "on_screen_text": "Asha, yaar call madtirodu?\nEnglish-nalli matadtidiya?\nHello... yes, that works for us.\nNo, we don't need a credit card.\nWe prefer to manage our expenses carefully.\nThank you."
+      },
+      {
+        "n": 2,
+        "scene_label": "Family is impressed",
+        "script": "Ramesh says: Wow Asha, eshtu confidently English matadde!\nChethan says: Avdu Mom, nimma English nijakku awesome aagide!\nRamesh says: Aadre ishtu chennagi matadoke henge kalthe?\nAsha says: Idella Supernova AI mattu nanna teacher, Miss Nova indha aagiddu.",
+        "on_screen_text": "Wow Asha!\nEshtu confidently English matadde!\nAvdu Mom!\nNimma English awesome aagide!\nAadre ishtu chennagi matadoke henge kalthe?\nIdella Supernova AI indha aagiddu."
+      },
+      {
+        "n": 3,
+        "scene_label": "App features screencast",
+        "script": "Asha says: Miss Nova ondh AI teacher. Avru nanna English level-na analyze maadi, nanagaagi ondh personalized plan ready maadtare. Mattu naanu saviraru mistakes maadidru, avru nannanna yaavatthu judge maadalla.",
+        "on_screen_text": "Miss Nova ondh AI teacher\nPersonalized plan ready maadtare\nSaviraru mistakes maadidru\nAvru yaavatthu judge maadalla\nPractice Now\nFluency Score\nYour Learning Path"
+      },
+      {
+        "n": 4,
+        "scene_label": "Father asks about price",
+        "script": "Ramesh says: Nijana? Nanage namboke aagtilla. Aadre idakke eshtu cost aagutthe?\nAsha says: Idu coaching classes ginthany tumba cheap aagide. Adalladhe, naanu illi out loud matadi practice maadbahudu, mattu avru logic-na Kannada-nalli explain maadtare, so nanage yenu thondare aagalla.",
+        "on_screen_text": "Nijana? Namboke aagtilla.\nAadre idakke eshtu cost aagutthe?\nCoaching class ginthany cheap\nOut loud matadi practice maadi\nLogic-na Kannada-nalli explain maadtare"
+      },
+      {
+        "n": 5,
+        "scene_label": "App pricing screencast",
+        "script": "Asha says: Mattu naavu dinakke bari 15 minutes spend maadidre saaku, namage visible progress kanisutthe.",
+        "on_screen_text": "Bari 15 minutes dinakke\nSupernova AI\nVisible progress kanisutthe\nSpeak Confidently\nCancel Anytime"
+      },
+      {
+        "n": 6,
+        "scene_label": "Call to action",
+        "script": "Chethan says: Hagadhre naanu ivatthu join aagthini!\nRamesh says: Naanu kooda!\nAsha says: Time waste madodu bittu, ivatthe install button press maadi, Supernova AI-nalli sign up aagi.",
+        "on_screen_text": "Hagadhre naanu ivatthu join aagthini!\nNaanu kooda!\nTime waste madodu bidi\nInstall button press maadi\nSupernova AI-nalli sign up aagi\nInstall Now"
+      },
+      {
+        "n": 7,
+        "scene_label": "End card",
+        "script": "Voiceover says: Supernova AI install maadi, ivatthe English matadoke start maadi.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied the Family / narrative drama register. Replaced Priya with Asha and Rohan with Chethan per the Kannada casting guidelines. Kept the phone conversation in verbatim English per T2a. Ensured the hook opens in native Kannada. Used modern contracted spoken forms like 'ondh' and 'niv' per the Kannada module rules."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 5 — App pricing screencast",
+        "quote": "showing a special offer of 1 rupee for 3 days",
+        "why": "The visual description includes a specific, unapproved rupee price and promotional offer ('1 rupee for 3 days').",
+        "fix": "Update the visual description to show a generic subscription or features screen instead of a specific rupee offer."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe violation in Scene 5 due to displaying an unapproved hard rupee price ('1 rupee for 3 days') in the visual description.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517333.861442
+}

@@ -1,0 +1,57 @@
+{
+  "ad_library_id": "4333182190269237",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Farmer impresses doctor",
+        "script": "Ramesh says: Mujhe saans lene mein dikkat ho rahi hai, doctor. Chest mein pain constant hai, aur medicine se bhi koi help nahi mil rahi.\nDr. Arjun says: Wow! Aapki English toh amazing hai. Kya aap shehar mein kisi expensive coaching class mein gaye the?\nRamesh says: No doctor, un classes ki cost bahut zyada hoti hai. Aur waise bhi, maine toh apne gaon mein sirf 5th standard tak padhai ki hai.\nDr. Arjun says: Toh phir aap itni confidently English kaise bol rahe ho?\nRamesh says: Ye sab Supernova AI ki wajah se hai. Main har roz apni personal AI teacher, Miss Nova ke saath practice karta hoon.",
+        "on_screen_text": "Confidently English kaise bole?\nMujhe saans lene mein dikkat ho rahi hai, doctor.\nWow! Aapki English toh amazing hai.\nKya aap kisi expensive coaching class mein gaye the?\nNo doctor, un classes ki cost bahut zyada hoti hai.\nToh phir aap itni confidently English kaise bol rahe ho?\nYe sab Supernova AI ki wajah se hai.\nMain har roz Miss Nova ke saath practice karta hoon."
+      },
+      {
+        "n": 2,
+        "scene_label": "App interface showcase",
+        "script": "Ramesh says: Wo sabko same lessons nahi deti. Wo mera exact level analyze karti hai aur mere liye ek personalized plan banati hai.\nRamesh says: Aur sabse best part? Main aadhi raat ko bhi 1000 mistakes karoon, toh bhi wo mujhe kabhi judge nahi karti aur na hi mujh par hasti hai.",
+        "on_screen_text": "Miss Nova AI Teacher\nPersonalized Learning Path\nBina kisi judgement ke practice karein\nWo mere liye ek personalized plan banati hai.\nMain 1000 mistakes bhi karoon, toh bhi wo mujhe judge nahi karti."
+      },
+      {
+        "n": 3,
+        "scene_label": "Learning commitment",
+        "script": "Ramesh says: Agar main kahi atak jata hoon, toh wo logic seedhe Hindi mein explain karti hai taaki main kabhi lost feel na karoon.\nRamesh says: Bas aapko din mein 10-15 minutes unse baat karni hai. Bilkul waise hi jaise humne apni mother tongue seekhi thi—baat karke!\nDr. Arjun says: Ye toh sach mein incredible hai. Mujhe bhi ise use karna shuru karna chahiye.\nRamesh says: Bilkul karna chahiye! Acchi English bolna logon ke aapko dekhne aur respect karne ka tareeqa bilkul badal deta hai.",
+        "on_screen_text": "30 DAYS\n10-15 mins\nWo logic Hindi mein explain karti hai.\nDin mein 10-15 minutes baat karein.\nApni mother tongue ki tarah seekhein!\nAcchi English bolna logon ke respect karne ka tareeqa badal deta hai."
+      },
+      {
+        "n": 4,
+        "scene_label": "App installation",
+        "script": "Ramesh says: Videos scroll karne mein ghanto waste karna band karein. Aaj hi Supernova AI app download karein.\nRamesh says: Daily practice ke saath, aap ek month ke andar apni speaking mein visible progress dekhna shuru kar denge.",
+        "on_screen_text": "Supernova AI English App\nInstalling...\nGhanto scroll karna band karein.\nAaj hi Supernova AI app download karein.\nEk month mein visible progress dekhein."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to action",
+        "script": "Miss Nova says: Abhi install par click karein aur Supernova AI download karein.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "The script has been successfully localized into natural, conversational, and highly code-mixed Romanized Hindi (Hinglish). The hook opens with a native Hindi phrase ('Mujhe saans lene mein...') to ensure a high thumbstop rate. Polite registers are carefully maintained: Ramesh and Dr. Arjun address each other with respectful 'aap' forms, and Miss Nova uses warm, polite plural commands ('karein'). Product vocabulary and daily English terms are kept in English as per the Stay-English list (T2). No brand-safety violations or hard pricing constraints were present in the comments."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 4",
+        "quote": "Installing...",
+        "why": "The simulated app store installation pop-up and 'Installing...' text constitute a fake UI/misleading mechanic, which violates Meta's ad policies.",
+        "fix": "Replace the simulated installation progress and 'Installing...' text with a static App Store/Google Play badge."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe Meta policy violation in Scene 4 due to a fake installation UI.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517531.517185
+}

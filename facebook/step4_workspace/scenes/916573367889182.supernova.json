@@ -1,0 +1,81 @@
+{
+  "competitor_id": "916573367889182",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "male presenter",
+        "appearance": "Mid-30s, medium build, fair complexion, short dark hair, beard.",
+        "wardrobe": "Maroon blazer, white shirt, dark trousers, brown shoes.",
+        "demeanor": "Confident and professional."
+      },
+      {
+        "id": "B",
+        "name": "Karthik",
+        "role": "male student",
+        "appearance": "Late teens, slim build, fair complexion, short dark hair, glasses.",
+        "wardrobe": "Dark blue shirt, grey trousers, black shoes, blue rosette badge.",
+        "demeanor": "Earnest and polite."
+      },
+      {
+        "id": "VO",
+        "name": "Voiceover",
+        "role": "announcer",
+        "appearance": "None",
+        "wardrobe": "None",
+        "demeanor": "Professional"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Stage Interview",
+        "supernova_script": "Rahul says: Switch off the light...\nRahul says: Close the door...\nRahul says: Reduce the AC...\nRahul says: Your English is flawless! Where did you learn to speak like this?\nKarthik says: Sir, there was a time I would freeze trying to say even those simple sentences in an interview.\nKarthik says: But everything changed when I found Supernova AI.",
+        "scene_summary": "- Hooks the viewer with a relatable language test\n- Names English immediately\n- Introduces the high-stakes interview scenario (beat e) and the app reveal",
+        "supernova_on_screen_text": "Switch off the light...\nClose the door...\nReduce the AC...\nYour English is flawless! Where did you learn to speak like this?\nSir, there was a time I would freeze trying to say even those simple sentences in an interview.\nBut everything changed when I found Supernova AI."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Interface",
+        "supernova_script": "Karthik says: I practice with Miss Nova, my personal AI teacher. She analyzes my exact level and builds a custom plan just for me.",
+        "scene_summary": "- Introduces Miss Nova\n- Lands the personalization beat (beat a) over the UI visual",
+        "supernova_on_screen_text": "Miss Nova AI Teacher\nPractice Now\nYour Learning Path\nI practice with Miss Nova, my personal AI teacher. She analyzes my exact level and builds a custom plan just for me."
+      },
+      {
+        "n": 3,
+        "scene_label": "Stage Explanation",
+        "supernova_script": "Karthik says: The best part? I can make a thousand mistakes at 2 AM, and she never judges or laughs at me.\nKarthik says: She just corrects me and explains the logic in my own language.\nKarthik says: People waste hours scrolling Reels every day.\nKarthik says: I spent just 15 minutes a day actually speaking out loud, and it completely transformed my confidence.\nKarthik says: Do you also want to speak English like this?\nKarthik says: Then download the Supernova AI app right now.",
+        "scene_summary": "- Replaces the 1-rupee price claim with the privacy/no-judgement beat (beat b)\n- Adds logic in your language (beat g) and speaking out loud (beat c)\n- Keeps the strong Reels negative time anchor vs 15 minutes positive anchor",
+        "supernova_on_screen_text": "The best part? I can make a thousand mistakes at 2 AM, and she never judges or laughs at me.\nShe just corrects me and explains the logic in my own language.\nPeople waste hours scrolling Reels every day.\nI spent just 15 minutes a day actually speaking out loud, and it completely transformed my confidence.\nDo you also want to speak English like this?\nThen download the Supernova AI app right now.\nSupernova AI"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "Voiceover says: Click on install now and download Supernova AI.",
+        "scene_summary": "- Clean CTA",
+        "supernova_on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a, b, c, e, g",
+      "kept_from_seed": "Stage interview setup and Reels time-waste anchor",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "Removed 1 Rupee claim entirely, no price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "Arya AI Teacher",
+        "supernova_swap": "Miss Nova AI Teacher"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781516380.31156
+}

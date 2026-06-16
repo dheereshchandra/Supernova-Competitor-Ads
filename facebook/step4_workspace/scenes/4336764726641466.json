@@ -1,0 +1,143 @@
+{
+  "competitor_id": "4336764726641466",
+  "parsed": {
+    "duration_s": 52.0,
+    "production_type": "AI-generated",
+    "production_notes": "The video uses a single, completely static AI-generated image for the background and the two human characters, who never move. Only the face of the robot in the painting is animated using AI lip-sync technology, and all voices are AI text-to-speech.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "White humanoid robot face with blue eyes, smooth metallic skin, visible neck joints. No clothing, just the robot chassis.",
+        "wardrobe": "None.",
+        "demeanor": "Friendly, slightly uncanny expression."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young adult male, slim build, dark hair. Static posture, back to camera.",
+        "wardrobe": "Light pink long-sleeve shirt and khaki pants.",
+        "demeanor": "Motionless, attentive."
+      },
+      {
+        "id": "C",
+        "role": "Female learner",
+        "appearance": "Young adult female, dark shoulder-length hair. Static posture, back to camera.",
+        "wardrobe": "Denim jacket and a yellow floral skirt.",
+        "demeanor": "Motionless, attentive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 28.0,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Grammar Correction",
+        "setting": "Museum gallery, dark grey walls, ornate gold frame.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C"
+        ],
+        "camera": "Wide shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A static wide shot of a museum gallery with dark grey walls. A large, ornate gold picture frame hangs on the wall, containing a close-up portrait of Character A. Character A's face is animated. Standing in front of the painting, with their backs to the camera, are two motionless people: Character C on the left and Character B on the right. Soft lighting focuses on the painting.",
+            "characters_in_panel": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A museum setting where two people look at a framed portrait of a robot. The robot's face is animated and speaks to them. Text overlays show the dialogue, with red 'X' marks and green checkmarks indicating incorrect and correct grammar.",
+        "audio_transcript": "Character A says: Hello, what is your name? [Hello, what is your name?]\nCharacter B says: My name is Rahul. [My name is Rahul.]\nCharacter A says: How old are you? [How old are you?]\nCharacter B says: I have 22. [I have 22.]\nCharacter A says: I have 22 \u0928\u0939\u0940\u0902, I am 22 years old \u0939\u094b\u0924\u093e \u0939\u0948\u0964 [Not 'I have 22', it should be 'I am 22 years old'.]\nCharacter B says: Okay okay. I am 22 years old. [Okay okay. I am 22 years old.]\nCharacter A says: Where are you from? [Where are you from?]\nCharacter B says: I am Uttar Pradesh. [I am Uttar Pradesh.]\nCharacter A says: I am Uttar Pradesh \u0928\u0939\u0940\u0902, I am from Uttar Pradesh \u0939\u094b\u0917\u093e\u0964 [Not 'I am Uttar Pradesh', it will be 'I am from Uttar Pradesh'.]\nCharacter B says: \u0913\u0939... \u0920\u0940\u0915 \u0939\u0948\u0964 \u092e\u0941\u091d\u0947 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0905\u091a\u094d\u091b\u0947 \u0938\u0947 \u0928\u0939\u0940\u0902 \u0906\u0924\u0940\u0964 [Ohh... okay. I don't know English well.]\nCharacter A says: \u0915\u094b\u0908 \u092a\u094d\u0930\u0949\u092c\u094d\u0932\u092e \u0928\u0939\u0940\u0902\u0964 AI teachers \u091f\u094d\u0930\u093e\u0908 \u0915\u093f\u092f\u093e? [No problem. Have you tried AI teachers?]\nCharacter B says: \u0935\u094b \u0924\u094b \u092e\u0939\u0902\u0917\u0947 \u0939\u094b\u0924\u0947 \u0939\u094b\u0902\u0917\u0947 \u0928\u093e? [They must be expensive, right?]\nCharacter A says: \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0928\u0939\u0940\u0902\u0964 \u0928\u093e\u0930\u094d\u092e\u0932 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0915\u094d\u0932\u093e\u0938\u0947\u091c \u0938\u0947... [Not at all. Compared to normal English classes...]",
+        "on_screen_text": "what is your name\nMy name is Rahul\nHow old are you\nI have 22\n\u274c\nI am 22 yrs old\nOkay okay\nI am 22 years old\nWhere are you from\nI am Uttar Pradesh\n\u274c\nI am from Uttar Pradesh\nOhh... theek hai\nMujhe English\nacche se nahi aati\nKoi problem nahi\nAI teachers try\nkiya\nWo toh mehenge\nhote honge na\nBilkul nahi\nNormal English\nclasses se"
+      },
+      {
+        "n": 2,
+        "start_s": 28.0,
+        "end_s": 40.0,
+        "screenshot_at_s": 32.0,
+        "scene_label": "App Introduction",
+        "setting": "Museum gallery, dark grey walls, ornate gold frame.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C"
+        ],
+        "camera": "Wide shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A static wide shot of a museum gallery with dark grey walls. A large, ornate gold picture frame hangs on the wall, containing a close-up portrait of Character A. Character A's face is animated. Standing in front of the painting, with their backs to the camera, are two motionless people: Character C on the left and Character B on the right. Soft lighting focuses on the painting.",
+            "characters_in_panel": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The museum scene continues. A large '7X CHEAPER' graphic pops up over the painting, followed by an overlay of an app store listing for 'MySivi'. The robot continues explaining the app's benefits as a clock icon appears briefly.",
+        "audio_transcript": "Character A says: ...\u0938\u093e\u0924 \u0917\u0941\u0928\u093e \u0938\u0938\u094d\u0924\u093e \u0939\u0948\u0964 \u0907\u0938\u0932\u093f\u090f 50 \u0932\u093e\u0916 \u0932\u094b\u0917 MySivi \u092a\u0930 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902\u0964 [...it is seven times cheaper. That's why 5 million people are practicing English on MySivi.]\nCharacter B says: \u092a\u0930 \u091f\u093e\u0907\u092e \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u0924\u093e\u0964 [But I don't get time.]\nCharacter A says: \u0930\u094b\u091c\u093c \u0915\u0940 \u0938\u093f\u0930\u094d\u092b 15-20 \u092e\u093f\u0928\u091f \u0915\u0940 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u093e\u092b\u0940 \u0939\u0948\u0964 \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0915\u0949\u0928\u094d\u092b\u093f\u0921\u0947\u0902\u091f \u0939\u094b \u091c\u093e\u0913\u0917\u0940\u0964 [Just 15-20 minutes of practice daily is enough. You will become completely confident.]",
+        "on_screen_text": "7X CHEAPER\nMySivi AI English Speakin...\nMySivi AI\nInstall\nIn-app purchases\nRated for 3+\n5M+ Downloads\nSivi is now MySivi\nImprove English speaking with AI\nEnglish Speaking App - Improve Your Spoken English and Fluency with AI Support\nPar time nahi\nmilta\nRoz ki sirf 15-20\nminute ki practice\nkaafi hai\nBilkul confident\nho jaogi"
+      },
+      {
+        "n": 3,
+        "start_s": 40.0,
+        "end_s": 49.0,
+        "screenshot_at_s": 44.0,
+        "scene_label": "Call to Action",
+        "setting": "Museum gallery, dark grey walls, ornate gold frame.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C"
+        ],
+        "camera": "Wide shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A static wide shot of a museum gallery with dark grey walls. A large, ornate gold picture frame hangs on the wall, containing a close-up portrait of Character A. Character A's face is animated. Standing in front of the painting, with their backs to the camera, are two motionless people: Character C on the left and Character B on the right. Soft lighting focuses on the painting.",
+            "characters_in_panel": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The museum scene continues. Another app store overlay appears, showing the app installing. The robot gives final instructions and a call to action to start using the app.",
+        "audio_transcript": "Character C says: \u0935\u093e\u0913, \u0915\u0948\u0938\u0947 \u091c\u094d\u0935\u093e\u0907\u0928 \u0915\u0930\u0942\u0901? [Wow, how do I join?]\nCharacter A says: \u092f\u0947 \u0907\u0928\u0938\u094d\u091f\u0949\u0932 \u0915\u093e \u092c\u091f\u0928 \u0926\u092c\u093e\u0913 \u0914\u0930 MySivi \u0910\u092a \u0907\u0928\u0938\u094d\u091f\u0949\u0932 \u0915\u0930\u094b\u0964 \u0938\u093f\u0930\u094d\u092b 15 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 \u0924\u0941\u092e\u094d\u0939\u0947\u0902 \u0907\u092e\u094d\u092a\u094d\u0930\u0942\u0935\u092e\u0947\u0902\u091f \u0926\u093f\u0916\u0928\u0947 \u0932\u0917\u0947\u0917\u0940\u0964 \u091a\u0932\u094b, \u0936\u0941\u0930\u0942 \u0939\u094b \u091c\u093e\u0913\u0964 [Press this install button and install the MySivi app. In just 15 days you will start seeing improvement. Come on, get started.]",
+        "on_screen_text": "Wow\nKaise join karun\nMySivi AI English Spe...\nInstalling...\nVerified by Play Protect\nCancel\nMaster Spoken Eng\nSharpen your Englis\n1-on-1 calls. Try MyS\nfast\nSirf 15 dino mein\ntumhe improvement\ndikhne lagegi\nChalo\nShuru ho jao"
+      },
+      {
+        "n": 4,
+        "start_s": 49.0,
+        "end_s": 52.0,
+        "screenshot_at_s": 50.5,
+        "scene_label": "End Card",
+        "setting": "Abstract white background.",
+        "characters_in_scene": [],
+        "camera": "Close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of a modern smartphone angled slightly towards the left. The phone has a black bezel and a visible front-facing camera hole at the top center. The background is a solid, light lavender-white color.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A 3D render of a smartphone appears against a plain white background. The phone screen displays the app logo and an install button.",
+        "audio_transcript": "Unknown speaker says: \u0907\u0928\u0938\u094d\u091f\u0949\u0932 \u0928\u093e\u0909 \u092a\u0947 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930\u094b \u0914\u0930 MySivi \u0910\u092a \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 [Click on install now and download the MySivi app.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.38716
+}

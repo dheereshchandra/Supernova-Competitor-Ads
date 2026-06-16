@@ -1,0 +1,29 @@
+{
+  "ad_library_id": "810472615431061",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Paper presentation",
+        "script": "Rahul says: Tum roz ghanto scrolling mein waste karte ho, par jab English bolne ki baat aati hai toh freeze ho jaate ho.\nRahul says: Iske badle, Supernova AI par din mein bas 15 minutes spend karo.\nRahul says: Tumhari personal AI teacher, Miss Nova, tumhara level test karegi aur tumhare liye ek learning plan banayegi.\nRahul says: Yahan tum sirf padhte nahi ho, actually out loud bolte ho. Raat ke 2 baje practice karo, hazaar mistakes karo, woh tumhe kabhi judge nahi karegi.\nRahul says: Jab tum kahin phasoge, toh woh tumhe correct karegi aur Hindi mein logic explain karegi.\nRahul says: Time waste karna band karo. Aaj hi Supernova AI download karo aur bolna start karo.",
+        "on_screen_text": "Time Wasted: Scrolling 3 hr, Videos 1 hr, Gaming 30 mins. Supernova AI. 15 MINS ENGLISH. Personal AI Teacher. Bina darr ke English bolo. Download Supernova AI."
+      },
+      {
+        "n": 2,
+        "scene_label": "End card",
+        "script": "Rahul says: Abhi install par click karo aur Supernova AI ke saath apni English journey start karo.",
+        "on_screen_text": "Supernova AI English speaking app Install Now."
+      }
+    ],
+    "self_critique_fixed": "Applied the Hindi language module and global rules. Used the direct-friend 'tum' register to match the blunt tough-love energy of the English hook. Ensured the hook opens with native words ('Tum roz...'). Swapped 'your own language' to 'Hindi' per T5. Kept all brand terms, product vocabulary, and numbers in English/numerals per T2. Romanized in standard chat-style Hindi."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, focusing on permissible behavioral critiques and private practice benefits.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517560.047433
+}

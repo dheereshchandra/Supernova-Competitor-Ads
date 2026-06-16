@@ -1,0 +1,52 @@
+{
+  "competitor_id": "1724197118748377",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "Young woman, fair complexion, bright pink hair tied back. Glowing, semi-transparent holographic appearance.",
+        "wardrobe": "Dark green lace dress.",
+        "demeanor": "Friendly, encouraging, slightly robotic."
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "Male learner",
+        "appearance": "Young man, average build, dark hair.",
+        "wardrobe": "Plaid shirt and dark trousers.",
+        "demeanor": "Attentive, looking up."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "AI Tutor Introduction",
+        "supernova_script": "Rahul says: Why can't I speak English? Everyone at the office speaks so fast, I just freeze.\nMiss Nova says: That is because you never practice speaking. I will analyze your level and build a custom plan just for you.\nRahul says: But who are you?\nMiss Nova says: I am Miss Nova, your AI English teacher on Supernova AI.\nRahul says: How will that help me?\nMiss Nova says: I make you actually speak. We will practice real-life situations, like your next job interview.\nMiss Nova says: If you get stuck, I will explain the logic in your own language so you never feel lost.\nMiss Nova says: Make a thousand mistakes. I am always here, and I will never judge you or laugh at you.\nMiss Nova says: Stop wasting hours scrolling feeds. Talk to me for just fifteen minutes a day.\nMiss Nova says: Install Supernova AI, and start seeing visible progress in your speaking within a month.",
+        "scene_summary": "- Hook: Relatable workplace English anxiety\n- Payload: Lands personalization (a), privacy (b), speaking (c), scenarios (e), and logic in mother tongue (g)\n- Close: Negative/positive time anchors and hedged progress expectation",
+        "supernova_on_screen_text": "Why can't I speak English?\nI will analyze your level and build a custom plan just for you.\nBut who are you?\nI am Miss Nova, your AI English teacher on Supernova AI.\nHow will that help me?\nWe will practice real-life situations, like your next job interview.\nI will explain the logic in your own language.\nMake a thousand mistakes. I will never judge you.\nStop wasting hours scrolling feeds.\nTalk to me for just 15 minutes a day.\nInstall Supernova AI and start seeing visible progress."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speaking), e (scenarios), g (logic in language)",
+      "kept_from_seed": "Giant AI tutor and small learner visual structure with in-story reveal",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "PW Talk app",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "Riva",
+        "supernova_swap": "Miss Nova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.655864
+}

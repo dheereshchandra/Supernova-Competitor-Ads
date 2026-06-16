@@ -1,0 +1,60 @@
+{
+  "ad_library_id": "1539756771201455",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Practice",
+        "script": "Rahul says: I am eating.\nAarav says: I am eating.\nRahul says: Are you eating?\nAarav says: Are you eating?\nRahul says: What are you eating?\nAarav says: What are you eating?\nRahul says: I want to eat.\nAarav says: I want to eat.\nRahul says: Wow Aarav! Tumhari English kitni fluent ho gayi hai. Aise bolna kaha se seekha?\nAarav says: Supernova AI app par, Dad! Main Miss Nova se baat karta hoon, jo meri personal AI teacher hain.\nAarav says: Wo mera level check karti hain aur mere liye ek personalized plan banati hain.\nAarav says: Main 1000 mistakes bhi karoon, toh bhi wo mujhe judge nahi karti. Aur toh aur, wo saari logic Hindi mein samjhati hain!\nAarav says: Reels par time waste karne ke bajaye, bas din mein 15 minutes practice karo. 1 month mein hi visible progress dikhne lagegi.",
+        "on_screen_text": "I am eating.\nAre you eating?\nWhat are you eating?\nI want to eat.\nWow Aarav! Tumhari English kitni fluent ho gayi hai. Aise bolna kaha se seekha?\nSupernova AI app par, Dad!\nMain Miss Nova se baat karta hoon, jo meri personal AI teacher hain.\nWo mera level check karti hain aur mere liye ek personalized plan banati hain.\nMain 1000 mistakes bhi karoon, toh bhi wo mujhe judge nahi karti.\nAur toh aur, wo saari logic Hindi mein samjhati hain!\nReels par time waste karne ke bajaye, bas din mein 15 minutes practice karo.\n1 month mein hi visible progress dikhne lagegi."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Offer",
+        "script": "[music only, no speech]",
+        "on_screen_text": "Supernova AI\nApna confidence unlock karo\n24/7 Personal AI English Teacher\nBina judgement ke instant feedback\nPractice anytime\nAaj se hi bolna start karo"
+      },
+      {
+        "n": 3,
+        "scene_label": "Father's Decision",
+        "script": "Rahul says: Ye toh amazing hai! Main abhi Supernova AI install karta hoon aur apne next interview ke liye practice start karta hoon.",
+        "on_screen_text": "Ye toh amazing hai! Main abhi Supernova AI install karta hoon aur apne next interview ke liye practice start karta hoon.\nSupernova AI"
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "script": "Narrator says: Scrolling band karo. Supernova AI install karo aur aaj se hi English bolna start karo.",
+        "on_screen_text": "Supernova AI\nSpoken English App\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied the Hindi language module and global code-mixing rules. Kept all English practice lines verbatim in English. Swapped the seed language reference 'Marathi' to 'Hindi' per T5. Used natural, warm, and colloquial family register for the father-son interaction, avoiding formal 'aap' between them to keep it natural, while maintaining respectful 'hain' for Miss Nova. Ensured all numbers are formatted as English numerals."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 2 — App Offer (visual)",
+        "quote": "highlighting a prominent '1' rupee offer, with the original '30' rupee price crossed out",
+        "why": "The visual contains hard rupee pricing ('1' rupee and '30' rupee), which is strictly prohibited as pricing must come from the team.",
+        "fix": "Remove the specific rupee pricing from the visual and replace it with a generic offer like 'Start Free Trial'."
+      },
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 2 — App Offer (visual)",
+        "quote": "A countdown timer and a yellow 'Start Trial at ₹1' button are positioned at the bottom.",
+        "why": "The visual contains a countdown timer, which is a prohibited misleading mechanic/fake UI element under Meta's ad policy.",
+        "fix": "Remove the countdown timer and the rupee pricing from the button, replacing it with a standard 'Install Now' button."
+      }
+    ],
+    "summary": "The ad contains severe violations in Scene 2's visual description, specifically hard rupee pricing (G6.1) and a prohibited countdown timer (G4.2).",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517235.943315
+}

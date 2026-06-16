@@ -1,0 +1,69 @@
+{
+  "ad_library_id": "1263491662355958",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Payment Issue and English Surprise",
+        "script": "Priya says: Bhaiya, scanner dena please?\nRahul says: Sorry madam, actually mera UPI abhi blocked hai. Kya aap cash mein pay kar sakte hain?\nPriya says: Wow bhaiya! Aap itni fluent English kaise bol rahe ho?\nRahul says: Ye sab Supernova AI ki wajah se hai, ma'am.\nPriya says: Supernova AI? Wo kya hai?",
+        "on_screen_text": "BHAIYA, SCANNER DENA PLEASE?\nSORRY MADAM, ACTUALLY MERA UPI BLOCKED HAI. KYA AAP CASH MEIN PAY KAR SAKTE HAIN?\nWOW BHAIYA! AAP ITNI FLUENT ENGLISH KAISE BOL RAHE HO?\nYE SAB SUPERNOVA AI KI WAJAH SE HAI, MA'AM.\nSUPERNOVA AI? WO KYA HAI?"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Learning Path",
+        "script": "Rahul says: Isme ek personal AI teacher hain, Miss Nova. Wo sabko ek jaise lessons nahi deti. Wo mera level samajhkar mere liye ek custom plan banati hain, aur saari logic meri apni language mein samjhati hain.",
+        "on_screen_text": "PERSONAL AI TEACHER MISS NOVA\nLEVEL SAMAJHKAR CUSTOM PLAN BANATI HAIN\nLOGIC APNI LANGUAGE MEIN SAMJHATI HAIN"
+      },
+      {
+        "n": 3,
+        "scene_label": "Time and Cost Discussion",
+        "script": "Rahul says: Main unke saath din mein bas 15 minutes practice karta hoon. Aap chahe 1000 mistakes karein, wo kabhi judge nahi karti.\nPriya says: Par ye toh bahut expensive hoga na? Aapne kaise manage kiya?\nRahul says: Bilkul nahi, madam! Ye coaching classes se bohot sasta hai. Aur daily practice se, lagbhag 1 month mein hi improvement dikhne lagta hai.",
+        "on_screen_text": "BAS 15 MINUTES DAILY PRACTICE\n1000 MISTAKES PAR BHI NO JUDGEMENT\nPAR YE TOH BAHUT EXPENSIVE HOGA NA?\nCOACHING CLASSES SE BOHOT SASTA\n1 MONTH MEIN VISIBLE IMPROVEMENT"
+      },
+      {
+        "n": 4,
+        "scene_label": "Trial Offer",
+        "script": "Rahul says: Aap ise abhi install karke real-life conversations ki practice kar sakte hain, jaise kisi customer se baat karna ya interview dena.",
+        "on_screen_text": "REAL-LIFE CONVERSATIONS KI PRACTICE\nCUSTOMER CALLS YA INTERVIEWS"
+      },
+      {
+        "n": 5,
+        "scene_label": "Decision to Install",
+        "script": "Priya says: Ye toh amazing hai, bhaiya. Main abhi Supernova AI app install karti hoon.",
+        "on_screen_text": "YE TOH AMAZING HAI BHAIYA\nMAIN ABHI SUPERNOVA AI INSTALL KARTI HOON"
+      },
+      {
+        "n": 6,
+        "scene_label": "Call to Action",
+        "script": "Rahul says: Hours feed scroll karke time waste karna band kijiye. Supernova AI install kijiye aur aaj se hi confidently English bolna shuru kijiye.",
+        "on_screen_text": "FEED SCROLL KARKE TIME WASTE KARNA BAND KIJIYE\nSUPERNOVA AI INSTALL KIJIYE AUR AAJ SE ENGLISH BOLIYE"
+      },
+      {
+        "n": 7,
+        "scene_label": "End Card",
+        "script": "Miss Nova says: Abhi install par click kijiye aur Supernova AI download kijiye.",
+        "on_screen_text": "SUPERNOVA AI ENGLISH SPEAKING APP\nINSTALL NOW"
+      }
+    ],
+    "self_critique_fixed": "Successfully localized the script to romanized, code-mixed Hindi. Used the casting table to change 'Ramesh' to 'Rahul' for natural regional fit. Ensured the hook opens with the native word 'Bhaiya' to maximize thumbstop potential. Maintained appropriate politeness levels (Priya using warm casual-respectful 'bol rahe ho' with the shopkeeper, Rahul using polite 'sakte hain' and 'kijiye' with the customer, and Miss Nova using polite plural 'kijiye'). Followed all stay-English rules for product terms and kept numbers as numerals."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 3",
+        "quote": "1 MONTH MEIN VISIBLE IMPROVEMENT",
+        "why": "The on-screen text presents a progress expectation on a timeline without using the required hedge language like 'start' or 'can'.",
+        "fix": "Change the on-screen text to '1 MONTH MEIN IMPROVEMENT START HOGA' to include hedge language."
+      }
+    ],
+    "summary": "The ad is highly compliant, but the on-screen text in Scene 3 violates G1.1 by presenting a progress timeline without required hedge language.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781516512.650103
+}

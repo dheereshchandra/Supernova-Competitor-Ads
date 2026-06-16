@@ -1,0 +1,66 @@
+{
+  "ad_library_id": "1972865810107259",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction and Problem",
+        "script": "Arun says: Enikku oru interview-nil English samsaarikyendi varumbozhokke, ente brain full slow aavum. Ente career dreams okke ippol thanne kazhinjo?\nMiss Nova says: Orikkalumilla! Njan aanu Miss Nova. Ennodu koode samsaarippan practice cheythaal, ningal nalla confident aayi English samsaarikyan thudangum.\nArun says: Satyamayittum? Oru AI teacher-o? Enikku manasilavana reethiyil karyangal explain cheyyan ningalkku pattumo?\nMiss Nova says: Pinne enna! Njan logic ningalude swantham Malayalathil explain cheyyum, athukondu ningalkku oru budhimuttum undavilla. Ready aano?",
+        "on_screen_text": "\"Interview-nil English samsaarikyumbozhekkum brain slow aavunnu.\"\n\"Orikkalumilla! Njan aanu Miss Nova. Ennodu koode samsaarikyan practice cheyyoo.\"\n\"Enikku manasilavana reethiyil explain cheyyan pattumo?\"\n\"Njan logic Malayalathil explain cheyyam. Ready aano?\""
+      },
+      {
+        "n": 2,
+        "scene_label": "Objections",
+        "script": "Arun says: Enikku padikyanam ennundu, pakshe coaching classes okke bhayankara expensive aanu. Athumalla, college-um yaathrayum kazhinjal pinne enikku zero time aanu. Njan ithinu engane samayam kandethum?\nMiss Nova says: Athu bilkul oru problem-e alla. Supernova AI app-il, njan ningalude level analyze cheythittu, ningal struggle cheyyunna bhagangalude oru personalized plan ready aakyum.",
+        "on_screen_text": "\"Coaching classes expensive aanu. Enikku zero time aanu. Engane samayam kandethum?\"\n\"Oru problem-e alla. Supernova AI ningalkkaayi personalized plan ready aakyum.\"\nSupernova AI"
+      },
+      {
+        "n": 3,
+        "scene_label": "Solution and Time Commitment",
+        "script": "Miss Nova says: Divsavum just 15 minutes ennodu koode out loud samsaarikyan practice cheyyoo. Thudarchayayi practice cheythaal, oru maasathil thanne ningalkku nalla maattam kaanam.\nArun says: Pakshe enikku mistakes vannaalo? Ente pazhaya teachers-ne pole ningalum enne judge cheyyumo?",
+        "on_screen_text": "\"Divsavum 15 minutes practice cheyyoo. Oru maasathil nalla maattam kaanam.\"\n15 mins\n\"Pakshe mistakes vannaalo? Ningal enne judge cheyyumo?\""
+      },
+      {
+        "n": 4,
+        "scene_label": "Teacher Persona",
+        "script": "Miss Nova says: Njan ningalude personal teacher aanu. Veluppine 3 a.m.-inu ningal aayiram mistakes varuthiyaalum, njan athu live aayi correct cheyyum, orikkalum kaliyaakilla.\nArun says: Adipoli! Aarum judge cheyyatha, practice cheyyaan ulla oru private space thanneyaanu enikku venamayirunnathu!",
+        "on_screen_text": "\"3 a.m.-inu aayiram mistakes varuthiyaalum, njan live aayi correct cheyyam, kaliyaakilla.\"\n\"Adipoli! Aarum judge cheyyatha oru private space!\""
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: Manikyoorugal feed scroll cheythu samayam kalayunnathu nirthoo. Supernova AI-yil English samsaarikyan padikyunna 1 crore-il adhikam Indians-inte koode join cheyyoo. App install cheythu innu thanne samsaarikyan thudangoo!\nArun says: Njan ippol thanne install cheyyukayanu!",
+        "on_screen_text": "\"Scroll cheyyunnathu nirthoo. 1 crore+ Indians-inte koode join cheyyoo. Install today!\"\n1 CRORE+\nSupernova AI English Speaking... Install\n\"Njan ippol thanne install cheyyukayanu!\""
+      }
+    ],
+    "self_critique_fixed": "Applied Malayalam localization rules: Recast Karthik to Arun. Ensured 'speak' is translated using the native Malayalam verb stem 'samsaarikyan' rather than 'speak cheyyunnu'. Replaced 'laugh at' with 'kaliyaakilla' to accurately capture the mocking/shame nuance. Handled time-units correctly by translating 'hours' to 'manikyoorugal' and 'month' to 'maasathil' while keeping 'minutes' and 'seconds' in English. Replaced 'your own language' with 'Malayalathil' per T5. Maintained polite plural imperatives for Miss Nova (nirthoo, join cheyyoo, thudangoo) and casual-respectful register for Arun. The hook opens naturally in native Malayalam."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 5 visual",
+        "quote": "a pricing graphic with crossed-out text and a '₹1' offer appears",
+        "why": "The visual contains a hard rupee price ('₹1') which is strictly prohibited from being generated.",
+        "fix": "Remove the pricing graphic and the '₹1' offer, replacing them with a generic 'Install Now' call-to-action."
+      },
+      {
+        "guardrail_id": "G6.3",
+        "category": "Price & financial",
+        "severity": "moderate",
+        "scene": "Scene 5 visual",
+        "quote": "large 3D text reading '50 LAKHS' pops up",
+        "why": "The visual uses an unapproved and inconsistent social proof number ('50 LAKHS') instead of the approved '1 crore+' metric.",
+        "fix": "Change the 3D text to '1 CRORE+' to align with the approved social proof point."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe pricing violation (₹1 offer) and an inconsistent social proof metric (50 LAKHS) in the Scene 5 visual.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517431.322989
+}

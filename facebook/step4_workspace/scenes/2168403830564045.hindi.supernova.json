@@ -1,0 +1,47 @@
+{
+  "ad_library_id": "2168403830564045",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction to the App",
+        "script": "Sushma says: Phone par kisse baat kar rahi ho?\nMiss Nova says: Main hoon Miss Nova. Main logon se baat karke unhe actually English bolne mein help karti hoon.\nSushma says: Sach mein?\nMiss Nova says: Haan! Main pehle aapka exact level check karti hoon, aur phir aapke liye ek personalized plan banati hoon.\nSushma says: Mere ghutno mein bohot dard hai. Isse English mein kaise bolenge?\nMiss Nova says: Bas bolne ki koshish kijiye, aur main aapki help karungi.",
+        "on_screen_text": "POV: Jab Dadi Supernova AI se apne poti-pota se bhi zyada questions poochti hain 🤪📱\nEnd tak ruko 😂"
+      },
+      {
+        "n": 2,
+        "scene_label": "Pronunciation Correction",
+        "script": "Sushma says: I have pain in my niece.\nMiss Nova says: Yeh 'knees' hai, 'niece' nahi. Par tension mat lijiye, hazaar mistakes kijiye! Yahan aapko koi judge nahi kar raha hai.\nSushma says: Knees. Right?",
+        "on_screen_text": "POV: Jab Dadi Supernova AI se apne poti-pota se bhi zyada questions poochti hain 🤪📱\nEnd tak ruko 😂"
+      },
+      {
+        "n": 3,
+        "scene_label": "Asking About the App",
+        "script": "Sushma says: Yeh ladki kaun hai jo mujhse baat kar rahi hai?\nPriya says: Dadi, yeh Supernova AI app par Miss Nova hain.\nSushma says: Supernova AI. Yeh toh bohot acchi teacher hain. Humari apni Hindi mein logic samjhati hain taaki sab samajh aaye. Par yeh toh batao, iska cost kya hai?",
+        "on_screen_text": "POV: Jab Dadi Supernova AI se apne poti-pota se bhi zyada questions poochti hain 🤪📱\nEnd tak ruko 😂"
+      },
+      {
+        "n": 4,
+        "scene_label": "Price Reveal",
+        "script": "Priya says: Yeh un expensive coaching classes se bohot sasta hai, Dadi. Aur aapko din mein bas 15 minutes chahiye.\nSushma says: Oh wow! Phir toh yeh kal tumhare job interview ke liye perfect rahega.",
+        "on_screen_text": "POV: Jab Dadi Supernova AI se apne poti-pota se bhi zyada questions poochti hain 🤪📱\nEnd tak ruko 😂"
+      },
+      {
+        "n": 5,
+        "scene_label": "Conclusion",
+        "script": "Priya says: Haan Dadi, main abhi Supernova AI par apne interview scenarios practice kar rahi hoon. App install kijiye aur aaj hi bolna start kijiye!",
+        "on_screen_text": "POV: Jab Dadi Supernova AI se apne poti-pota se bhi zyada questions poochti hain 🤪📱\nEnd tak ruko 😂"
+      }
+    ],
+    "self_critique_fixed": "Verified that the hook opens in native Hindi ('Phone par kisse...'). Ensured Miss Nova uses polite 'aap' register ('koshish kijiye', 'tension mat lijiye') and Priya addresses Grandma respectfully ('Dadi... hain'). Kept English taught/quoted lines verbatim ('I have pain in my niece', 'knees', 'niece') per T2a. Replaced 'fifteen minutes' with '15 minutes' per T2h. Swapped 'our own language' to 'Humari apni Hindi' per T5. No Sanskritized/formal red-flag words used."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, featuring a warm, supportive interaction with no violations.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517458.699873
+}

@@ -1,0 +1,41 @@
+{
+  "ad_library_id": "916573367889182",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Stage Interview",
+        "script": "Rahul says: Switch off the light...\nRahul says: Close the door...\nRahul says: Reduce the AC...\nRahul says: Aapki English bilkul flawless hai! Aapne aise bolna kaha se seekha?\nAmit says: Sir, ek time tha jab mai interview mein ye simple sentences bolne mein bhi freeze ho jata tha.\nAmit says: Par sab kuch badal gaya jab mujhe Supernova AI mila.",
+        "on_screen_text": "Switch off the light...\nClose the door...\nReduce the AC...\nAapki English bilkul flawless hai! Aapne aise bolna kaha se seekha?\nSir, ek time tha jab mai interview mein ye simple sentences bolne mein bhi freeze ho jata tha.\nPar sab kuch badal gaya jab mujhe Supernova AI mila."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Interface",
+        "script": "Amit says: Mai Miss Nova ke saath practice karta hoon, jo meri personal AI Teacher hain. Wo mera exact level analyze karti hain aur mere liye ek custom plan banati hain.",
+        "on_screen_text": "Miss Nova AI Teacher\nPractice Now\nYour Learning Path\nMai Miss Nova ke saath practice karta hoon, jo meri personal AI Teacher hain. Wo mera exact level analyze karti hain aur mere liye ek custom plan banati hain."
+      },
+      {
+        "n": 3,
+        "scene_label": "Stage Explanation",
+        "script": "Amit says: Sabse best part? Mai raat ke 2 AM bhi 1000 mistakes kar sakta hoon, aur wo mujhe kabhi judge nahi karti ya mujh par hasti nahi hain.\nAmit says: Wo bas mujhe correct karti hain aur logic meri apni language mein samjhati hain.\nAmit says: Log roz hours waste karte hain Reels scroll karne mein.\nAmit says: Maine roz bas 15 minutes spend kiye actually out loud bolne mein, aur isne mera confidence bilkul badal diya.\nAmit says: Kya aap bhi aise hi English bolna chahte hain?\nAmit says: To abhi Supernova AI app download kijiye.",
+        "on_screen_text": "Sabse best part? Mai raat ke 2 AM bhi 1000 mistakes kar sakta hoon, aur wo mujhe kabhi judge nahi karti ya mujh par hasti nahi hain.\nWo bas mujhe correct karti hain aur logic meri apni language mein samjhati hain.\nLog roz hours waste karte hain Reels scroll karne mein.\nMaine roz bas 15 minutes spend kiye actually out loud bolne mein, aur isne mera confidence bilkul badal diya.\nKya aap bhi aise hi English bolna chahte hain?\nTo abhi Supernova AI app download kijiye.\nSupernova AI"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "script": "Voiceover says: Abhi install par click karein aur Supernova AI download karein.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied the 'Interview / talk-show' register module. Recast character 'Karthik' to 'Amit' using the Hindi casting table. Kept the quoted English sentences verbatim in Scene 1 as they represent taught/quoted content (T2a/T7 exception). Ensured natural Hinglish code-mixing throughout, using standard romanization without diacritics. Maintained respectful plural forms for Miss Nova and the viewer address (T4)."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, featuring an approved character testimonial and safe time-reallocation framing.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517702.177848
+}

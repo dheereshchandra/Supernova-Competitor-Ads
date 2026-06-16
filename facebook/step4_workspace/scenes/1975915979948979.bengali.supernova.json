@@ -1,0 +1,72 @@
+{
+  "ad_library_id": "1975915979948979",
+  "language": "Bengali",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction",
+        "script": "Priya says: Ei bochhor jodi emon kono life-changing trend thake, sheta holo kivabe manush obosheshe AI-er shathe actually English-e kotha bola shikchhe.\nPriya says: West Bengal-er chhoto shohor theke shuru kore Bengaluru-r tech park porjonto shobai ekhon Supernova AI join korchhe.",
+        "on_screen_text": "AI-er shathe actually English-e kotha bola shikha\nSupernova AI\nWest Bengal-er chhoto shohor theke Bengaluru, shobai join korchhe"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Feature - Practice",
+        "script": "Priya says: Meet Miss Nova, apnar personal AI teacher. Apni shudhu porben na—actually tar shathe out loud kotha bolben.",
+        "on_screen_text": "Miss Nova-r shathe out loud kotha bolun\nMiss Nova AI Teacher\nPractice Now\nFluency Score\nYour Learning Path\nTalk about anything\nDaily routine"
+      },
+      {
+        "n": 3,
+        "scene_label": "Building Confidence",
+        "script": "Priya says: Uni shobaike same lesson den na. Apnar exact level analyze kore shudhu apnar jonne ekta custom plan banan.\nPriya says: Ar eta completely private. Hajar ta mistake korun, uni kokhono apnake judge korben na ba apnake niye laugh korben na.",
+        "on_screen_text": "Shudhu apnar jonne custom plan\n100% private, no judgement"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Feature - Learning Path",
+        "script": "Priya says: Uni apnake live correct koren ar puro logic apnar nijer bhasha Bangla-te explain koren.",
+        "on_screen_text": "Nijer bhashay logic explained\nLearn with Miss Nova\nInformal greetings\nFormal greetings\nGreetings and salutations"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Priya says: Apni bina bhoye real-life situations practice korte parben, jemon ekta high-stakes job interview.\nPriya says: Onekei public-e English-e kotha bolte shy feel koren, kintu Miss Nova-r shathe shei hesitation ekdom chole jay.\nPriya says: Shei shob feed scroll kore ghonta-r por ghonta noshto kora bondho korun ja apnake kotha bolte help kore na.\nPriya says: Dine shudhu 15 minutes shomoy din. Consistent practice-er shathe, pray 1 month-er modhye apni visible progress dekhte paben.\nPriya says: Ekhoni Supernova AI download korun.\nPriya says: Ar obosheshe confidence-er shathe English-e kotha bola shuru korun.",
+        "on_screen_text": "Real-life job interviews practice korun\nMiss Nova-r shathe hesitation door hoben\nFeed scroll kora bondho korun, kotha bola shuru korun\nShudhu 15 minutes protidin\n~1 month-e visible progress\nEkhoni Supernova AI download korun\nConfidence-er shathe English-e kotha bola shuru korun"
+      },
+      {
+        "n": 6,
+        "scene_label": "End Card",
+        "script": "[music only, no speech]",
+        "on_screen_text": "Supernova AI\nSpoken English App\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied the Bengali language module rules. Ensured the hook opens with a native word ('Ei bochhor'). Swapped the regional reference from UP to West Bengal for local relevance. Swapped the language self-reference to 'Bangla-te'. Used the polite 'apni' register for Miss Nova and viewer-facing lines while maintaining a highly colloquial, code-mixed spoken tone (avoiding any formal Sanskritized/sadhu-bhasha vocabulary). Kept all brand names, product terms, and numbers in English as mandated."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 5",
+        "quote": "Miss Nova-r shathe shei hesitation ekdom chole jay",
+        "why": "The script promises that hesitation will 'completely go away' (ekdom chole jay), which is an absolute outcome guarantee voiced by the brand without hedge language.",
+        "fix": "Change to 'Miss Nova-r shathe shei hesitation onekta kome jete pare' (with Miss Nova, that hesitation can be greatly reduced)."
+      },
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 5",
+        "quote": "Miss Nova-r shathe hesitation door hoben",
+        "why": "The on-screen text promises that hesitation will be completely removed, which is an absolute outcome guarantee.",
+        "fix": "Change to 'Miss Nova-r shathe hesitation door korte sahajjo kore' (helps remove hesitation with Miss Nova)."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains absolute outcome guarantees regarding the complete removal of hesitation in Scene 5.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517437.367827
+}

@@ -1,0 +1,33 @@
+{
+  "ad_library_id": "24553583707571927",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Learning Conversation",
+        "script": "Character B says: [Sipping sound]\nCharacter A says: Yemaindhi?\nCharacter B says: Naku... \"I got a burning tongue\".\nCharacter A says: Adhi \"burnt tongue\", \"burning tongue\" kadhu.\nCharacter B says: Enti?\nCharacter A says: \"Burning tongue\" anedhi oka medical condition. Hot tea thagepudu naluka kalithe, adhi \"burnt tongue\" avthundhi.\nCharacter B says: Okay okay, naa English chala weak. Matlade tappudu nenu freeze aypothanu.\nCharacter A says: Ayithe nuvvu Supernova app lo Miss Nova tho practice cheyali.\nCharacter B says: AI teacher aa? Kani AI naku ela teach chesthundhi?\nCharacter A says: Ame andariki oke lesson ivvadhu. First nee level ni artham cheskoni, nee kosam oka personalized plan ready chesthundhi.\nCharacter B says: Kani nenu chala mistakes chesthanu...\nCharacter A says: Adhe kadha best part! Nuvvu 1000 mistakes chesina, ame ninnu judge cheyyadhu, 1000 times correct chesthundhi. Inka logic ni nee sontha Telugu lone explain chesthundhi.\nCharacter B says: Chala expensive aa? Naku antha time kuda ledhu.\nCharacter A says: Coaching classes kante chala sasta, roju ki just 15 minutes spend chesthe chalu. Already 1 crore+ Indians confidently ga matladadam nerchukuntunnaru.\nCharacter B says: Wow! Nenu ela join avvali?\nCharacter A says: Install button click chesi, Supernova download chesko, ivvale English matladadam start chey!",
+        "on_screen_text": "Supernova\nburning tongue\nIt's burnt tongue\nnot burning tongue\nnaa English weak\nMiss Nova tho practice cheyandi\nSupernova app\nPersonalized plan\nNo judgment\nTelugu lone explanation\nClasses kante chala sasta\nRoju ki 15 mins\n1 crore+ users\nSupernova Install cheyandi\nIvvale matladadam start cheyandi"
+      }
+    ],
+    "self_critique_fixed": "Applied the Telugu-specific gender agreement rule for female subjects: used 'cheyyadhu' and 'ivvadhu' instead of the masculine 'cheyadu/ivvadu'. The hook opens with a natural native Telugu word ('Yemaindhi?'). The quoted English correction lines are preserved verbatim. Code-mixing is applied naturally throughout, avoiding any Sanskritized or textbook-heavy Telugu terminology."
+  },
+  "safety": {
+    "verdict": "flag",
+    "violations": [
+      {
+        "guardrail_id": "G4.4",
+        "category": "Meta / Facebook ad policy",
+        "severity": "moderate",
+        "scene": "SCENE 1 — English Learning Conversation [VISUAL]",
+        "quote": "falling money",
+        "why": "The use of falling money emojis can be flagged by Meta as implying quick-money or get-rich-quick schemes, violating prohibited/limited-content framing guidelines.",
+        "fix": "Replace the falling money emoji with progress or learning-themed emojis like stars, thumbs up, or books."
+      }
+    ],
+    "summary": "The ad is mostly compliant, but the visual description contains a 'falling money' emoji which violates Meta's policy against quick-money framing.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517483.3229408
+}

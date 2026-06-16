@@ -1,0 +1,94 @@
+{
+  "competitor_id": "1241566174149176",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "male presenter",
+        "appearance": "Mid-30s, medium build, light brown complexion, short black hair. Clean-shaven with standard facial features.",
+        "wardrobe": "White long-sleeve button-down shirt tucked into black trousers with a black belt. Wears a dark wristwatch.",
+        "demeanor": "Confident, authoritative, and expressive with active hand gestures."
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "female user",
+        "appearance": "Early 20s, slim build, light complexion, long dark hair. Smooth skin.",
+        "wardrobe": "Bright pink top.",
+        "demeanor": "Focused and attentive, looking down at her device."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Presenter and Audience",
+        "supernova_script": "Rahul says: I speak fluent English, but if you ask me what the past perfect tense is... I have absolutely no idea. And it doesn't matter! You didn't learn your mother tongue by memorizing grammar rules, right? You learned by speaking. If you want to actually speak English, stop memorizing rules.",
+        "scene_summary": "- Hooks viewer with anti-grammar contrarian stance\n- Names English immediately\n- Lands mother-tongue reframe (beat f)",
+        "supernova_on_screen_text": "Supernova AI\nI speak fluent\nEnglish\nbut if you ask me\nwhat past perfect\ntense is\nI have no idea\nAnd it doesn't matter\nYou didn't learn\nyour mother tongue\nby memorizing\ngrammar rules\nYou learned by\nspeaking\nStop memorizing rules"
+      },
+      {
+        "n": 2,
+        "scene_label": "Presenter and App UI",
+        "supernova_script": "Rahul says: This is where Supernova AI comes in. Your AI teacher, Miss Nova, doesn't give everyone the same lesson. She tests your level and builds a personalized plan just for you.",
+        "scene_summary": "- Introduces Miss Nova and Supernova AI\n- Lands personalization (beat a)",
+        "supernova_on_screen_text": "Supernova AI\nMeet Miss Nova\nShe tests your level\nand builds a\npersonalized plan\njust for you\nMiss Nova\nPractice Now"
+      },
+      {
+        "n": 3,
+        "scene_label": "Presenter and User",
+        "supernova_script": "Rahul says: You practice by actually speaking out loud, not typing.",
+        "scene_summary": "- Shows user engaged with app\n- Lands speaking over typing (beat c)",
+        "supernova_on_screen_text": "Supernova AI\nYou practice by\nactually speaking\nnot typing"
+      },
+      {
+        "n": 4,
+        "scene_label": "Presenter and Audience Return",
+        "supernova_script": "Rahul says: And because it is an AI, you can make a thousand mistakes with zero judgement. No one is watching.",
+        "scene_summary": "- Reassures viewer about making mistakes\n- Lands privacy and no-judgement (beat b)",
+        "supernova_on_screen_text": "Supernova AI\nMake 1000 mistakes\nwith zero judgement\nNo one is watching"
+      },
+      {
+        "n": 5,
+        "scene_label": "Presenter and Chat UI",
+        "supernova_script": "Rahul says: She corrects your mistakes instantly and explains the logic in your own language, so you never feel lost.",
+        "scene_summary": "- Explains the core correction loop\n- Lands logic explained in native language (beat g)",
+        "supernova_on_screen_text": "Supernova AI\nShe corrects you\ninstantly and\nexplains the logic\nin your language"
+      },
+      {
+        "n": 6,
+        "scene_label": "Presenter, Audience, and CTA",
+        "supernova_script": "Rahul says: Over 1 crore users are already practicing real-life scenarios like job interviews. Stop wasting hours scrolling through feeds.",
+        "scene_summary": "- Adds social proof and real-life scenarios (beat e)\n- Sets negative time anchor",
+        "supernova_on_screen_text": "Supernova AI\n1 CRORE+\nusers are practicing\njob interviews\nStop wasting hours\nscrolling"
+      },
+      {
+        "n": 7,
+        "scene_label": "End Card",
+        "supernova_script": "Rahul says: Give Supernova AI just fifteen minutes a day, and start seeing visible progress. Install now.",
+        "scene_summary": "- Sets positive time anchor\n- Delivers hedged progress expectation and final CTA",
+        "supernova_on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a, b, c, e, f, g",
+      "kept_from_seed": "Split-screen presenter format and anti-grammar hook",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "Arya AI Teacher",
+        "supernova_swap": "Miss Nova"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.644923
+}

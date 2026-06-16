@@ -1,0 +1,23 @@
+{
+  "ad_library_id": "1228215292748737",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Messaging App Screencast",
+        "script": "Pallavi says: Agle month tumhara job-interview hai. English kaisi hai tumhari?\nRahul says: Read aur write to sahi kar leta hoon. Par speaking...\nPallavi says: Bolte waqt abhi bhi freeze ho jaate ho?\nRahul says: Haan yaar. Bohot nervousness hoti hai ki log judge karenge.\nPallavi says: Tumhe Supernova AI try karna chahiye. Isme tum actually ek AI teacher se out loud baat karte ho jiska naam Miss Nova hai.\nRahul says: AI teacher?\nPallavi says: Haan! Wo sabse pehle tumhara level check karti hai, phir tumhare liye ek custom plan banati hai.\nRahul says: Awkward lagta hai kya?\nPallavi says: Bilkul nahi. Tum raat ke 2 a.m. pe bhi practice kar sakte ho. Hazaron mistakes karo, wo kabhi tum par hasegi nahi.\nRahul says: Agar main kahin stuck ho gaya to?\nPallavi says: Wo saari logic Hindi mein explain karti hai taaki tum kabhi lost feel na karo.\nRahul says: Wow. Mujhe iski zaroorat hai.\nPallavi says: Scrolling band karo aur din mein bas 15 minutes do. Aaj hi Supernova AI install karo aur bolna start karo! 1 crore se zyada learners ise use kar rahe hain.",
+        "on_screen_text": "Pallavi\nAgle month tumhara job-interview hai. English kaisi hai tumhari?\nRead aur write to sahi kar leta hoon. Par speaking...\nBolte waqt abhi bhi freeze ho jaate ho?\nHaan yaar. Bohot nervousness hoti hai ki log judge karenge.\nTumhe Supernova AI try karna chahiye. Isme tum actually ek AI teacher se out loud baat karte ho jiska naam Miss Nova hai.\nAI teacher?\nHaan! Wo sabse pehle tumhara level check karti hai, phir tumhare liye ek custom plan banati hai.\nAwkward lagta hai kya?\nBilkul nahi. Tum raat ke 2 a.m. pe bhi practice kar sakte ho. Hazaron mistakes karo, wo kabhi tum par hasegi nahi.\nAgar main kahin stuck ho gaya to?\nWo saari logic Hindi mein explain karti hai taaki tum kabhi lost feel na karo.\nWow. Mujhe iski zaroorat hai.\nScrolling band karo aur din mein bas 15 minutes do. Aaj hi Supernova AI install karo aur bolna start karo! 1 crore se zyada learners ise use kar rahe hain."
+      }
+    ],
+    "self_critique_fixed": "Applied peer register (tum-tier) for Pallavi and Rahul. Ensured the hook opens with the native word 'Agle'. Replaced 'your own language' with 'Hindi' per T5. Kept all brand names, product terms, and numbers in English/numeral format as per T2. Romanized the text using natural WhatsApp-style Hindi."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety and ad-policy guardrails, utilizing approved social proof and behavior-based hooks.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781515036.792852
+}

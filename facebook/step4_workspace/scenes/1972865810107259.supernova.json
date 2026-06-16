@@ -1,0 +1,76 @@
+{
+  "competitor_id": "1972865810107259",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "3D animated female young adult. Fair complexion, long dark wavy hair, large expressive brown eyes. Smooth, stylized facial features typical of 3D animation.",
+        "wardrobe": "Light blue blazer over a white top.",
+        "demeanor": "Cheerful, encouraging, and highly expressive."
+      },
+      {
+        "id": "B",
+        "name": "Karthik",
+        "role": "male learner",
+        "appearance": "South Asian male young adult, medium build, dark complexion. Short black hair with a slight fade, light mustache and beard.",
+        "wardrobe": "Grey button-down shirt.",
+        "demeanor": "Expressive, initially anxious but becomes eager and excited."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction and Problem",
+        "supernova_script": "Karthik says: Whenever I have to speak English in an interview, my brain goes into slow motion. Are my career dreams just over?\nMiss Nova says: Not at all! I am Miss Nova. If you practice speaking with me, you will start speaking English confidently.\nKarthik says: Really? An AI teacher? Can you actually explain things so I understand?\nMiss Nova says: Of course! I explain the logic in your own language, so you never feel lost. Are you ready?",
+        "scene_summary": "- Hooks with relatable slow-motion English anxiety and high-stakes interview scenario.\n- Introduces Miss Nova and names English early.\n- Lands beat g (logic explained in your language).",
+        "supernova_on_screen_text": "\"Whenever I have to speak English in an interview, my brain goes into slow motion.\"\n\"Not at all! I am Miss Nova. Practice speaking with me.\"\n\"Can you actually explain things so I understand?\"\n\"I explain the logic in your own language. Are you ready?\""
+      },
+      {
+        "n": 2,
+        "scene_label": "Objections",
+        "supernova_script": "Karthik says: I want to learn, but coaching classes are too expensive. Plus, between college and commuting, I have zero time. How can I possibly fit this in?\nMiss Nova says: That is not a problem at all. On the Supernova AI app, I analyze your level and build a personalized plan exactly for where you struggle.",
+        "scene_summary": "- Addresses cost and time objections.\n- Lands beat a (personalization) by the midpoint.\n- Replaces competitor app name with Supernova AI.",
+        "supernova_on_screen_text": "\"Coaching classes are expensive. I have zero time. How can I fit this in?\"\n\"Not a problem. Supernova AI builds a personalized plan just for you.\"\nSupernova AI"
+      },
+      {
+        "n": 3,
+        "scene_label": "Solution and Time Commitment",
+        "supernova_script": "Miss Nova says: Just practice speaking out loud with me for 15 minutes a day. With consistent practice, you will start seeing visible progress in about a month.\nKarthik says: But what if I make mistakes? Will you judge me like my old teachers did?",
+        "scene_summary": "- Sets positive time anchor (15 mins/day).\n- Provides a soft, safe progress expectation (no hard guarantees).\n- Sets up the privacy/no-judgment reveal.",
+        "supernova_on_screen_text": "\"Practice speaking for 15 minutes a day. See visible progress in a month.\"\n15 mins\n\"But what if I make mistakes? Will you judge me?\""
+      },
+      {
+        "n": 4,
+        "scene_label": "Teacher Persona",
+        "supernova_script": "Miss Nova says: I am your personal teacher. You can make a thousand mistakes at 3 a.m., and I will correct you live without ever laughing at you.\nKarthik says: Awesome! A private space to practice where nobody judges me is exactly what I need!",
+        "scene_summary": "- Lands beat b (privacy/no-judgment) strongly.\n- Lands beat c (live correction without mockery).\n- Builds emotional relief and retention value.",
+        "supernova_on_screen_text": "\"Make a thousand mistakes at 3 a.m. I will correct you live without laughing.\"\n\"Awesome! A private space where nobody judges me!\""
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "supernova_script": "Miss Nova says: Stop wasting hours scrolling through feeds. Join over 1 crore Indians learning to speak on Supernova AI. Install the app and start speaking today!\nKarthik says: I am installing it right now!",
+        "scene_summary": "- Negative time anchor (scrolling feeds).\n- True social proof (1 crore+ Indians).\n- Clean install CTA with no hard rupee price.",
+        "supernova_on_screen_text": "\"Stop scrolling. Join over 1 crore Indians on Supernova AI. Install today!\"\n1 CRORE+\nSupernova AI English Speaking... Install\n\"I am installing it right now!\""
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy/no-judgment), c (live correction), e (interview scenario), g (logic in own language)",
+      "kept_from_seed": "Split-screen AI tutor and human learner conversation with clock/text popups.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "Removed ₹1 trial and ₹299/month; used comparative 'coaching classes are too expensive'."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.657471
+}

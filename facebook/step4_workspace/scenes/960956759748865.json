@@ -1,0 +1,53 @@
+{
+  "competitor_id": "960956759748865",
+  "parsed": {
+    "duration_s": 9.0,
+    "production_type": "human-recorded",
+    "production_notes": "Uses clips from a live-action television show. No AI artifacts present.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Meme subject",
+        "appearance": "Middle-aged Indian man, medium build, short black hair, mustache.",
+        "wardrobe": "Left: blue patterned kurta. Right: blue shirt, black trousers.",
+        "demeanor": "Expressive, contrasting emotions."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 9.0,
+        "screenshot_at_s": 4.5,
+        "scene_label": "Sad vs Happy Meme",
+        "setting": "Left: Outdoors, closed shutter. Right: Indoors, bedroom.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium shots",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "Character A sits outdoors looking sad and exhausted. He wears a light blue patterned kurta. A closed grey metal shutter is behind him. He sits on a wooden surface, looking distressed.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "Character A dances energetically indoors. He wears a blue short-sleeve shirt and black trousers. A bed with a red cover and a bedside lamp are visible behind him. He smiles broadly while dancing.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Split-screen layout on a white background. Left panel shows a sad man; right panel shows the same man dancing. Gujarati text overlays appear above each panel.",
+        "audio_transcript": "[music only, no speech]",
+        "on_screen_text": "\u0a9c\u0acd\u0aaf\u0abe\u0ab0\u0ac7 \u0ab9\u0ac1\u0a82 \u20b93000 \u0a86\u0aaa\u0ac0\u0aa8\u0ac7 English coaching class \u0aae\u0abe\u0a82 \u0a9c\u0aa4\u0acb \u0ab9\u0aa4\u0acb. (When I used to pay \u20b93000 and go to English coaching class.)\n\u0a9c\u0acd\u0aaf\u0abe\u0ab0\u0ac7 \u0aae\u0ac7\u0a82 MySivi app \u0aa8\u0abe AI teacher \u0ab8\u0abe\u0aa5\u0ac7 English \u0ab6\u0ac0\u0a96\u0ab5\u0abe\u0aa8\u0ac1\u0a82 \u0ab6\u0ab0\u0ac2 \u0a95\u0ab0\u0acd\u0aaf\u0ac1\u0a82. (When I started learning English with MySivi app's AI teacher.)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.391498
+}

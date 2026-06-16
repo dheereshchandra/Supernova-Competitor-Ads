@@ -1,0 +1,60 @@
+{
+  "ad_library_id": "810618368177111",
+  "language": "Kannada",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "English Practice",
+        "script": "Miss Nova says: Banni Ramesh, English practice maadona! Let's practice your English, Ramesh. Where are you going?\nRamesh says: I go to home.\nMiss Nova says: Niv 'I am going home' anbeku. 'Go to' bere places-ge use maadtivi, aadre 'home' munde 'to' bekaagilla.\nRamesh says: Yes, I am going home. I am very hurry.\nMiss Nova says: Adhanna 'I am in a hurry' anta helodu correct way.\nRamesh says: Okay, thank you.",
+        "on_screen_text": "Banni Ramesh, English practice maadona! Let's practice your English, Ramesh. Where are you going? I go to home. Niv 'I am going home' anbeku. 'Go to' bere places-ge use maadtivi, aadre 'home' munde 'to' bekaagilla. Yes, I am going home. I am very hurry. Adhanna 'I am in a hurry' anta helodu correct way. Okay, thank you."
+      },
+      {
+        "n": 2,
+        "scene_label": "Introduction and Objection",
+        "script": "Ramesh says: Wait, niv yaaru? Car-nalli nange henge correct maadtidira?\nMiss Nova says: Naanu Miss Nova, Supernova AI-nalli nimma personal AI teacher. Nimma English level-na analyze maadi, nimgaagi ondh personalized plan ready maadtini.\nRamesh says: But naanu silly mistakes maadidre? Nange thumba shy aagutthe.\nMiss Nova says: Illi yaaru nimmannu nodolla, judge-u maadolla. Niv saavira mistakes maadidru, naanu nagade correct maadtini.",
+        "on_screen_text": "Wait, niv yaaru? Car-nalli nange henge correct maadtidira? Naanu Miss Nova, Supernova AI-nalli nimma personal AI teacher. Nimma English level-na analyze maadi, nimgaagi ondh personalized plan ready maadtini. But naanu silly mistakes maadidre? Nange thumba shy aagutthe. Illi yaaru nimmannu nodolla, judge-u maadolla. Niv saavira mistakes maadidru, naanu nagade correct maadtini."
+      },
+      {
+        "n": 3,
+        "scene_label": "Pricing Offer",
+        "script": "Miss Nova says: Plus, naanu logic-na nimma Kannada-nalle explain maadtini, so nimge aaraamaagi arthavaagutthe.\nRamesh says: Idhu thumba expensive-aa?\nMiss Nova says: Illa, idhu thumba affordable. Regular coaching classes-ginta 7 patu swasta!",
+        "on_screen_text": "Plus, naanu logic-na nimma Kannada-nalle explain maadtini, so nimge aaraamaagi arthavaagutthe. Idhu thumba expensive-aa? Illa, idhu thumba affordable. Regular coaching classes-ginta 7 patu swasta!"
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: 1 crore-ginta hechhu Indians nannondige learn maadtidare. Scrolling stop maadi, dinaa just 15 minutes speaking practice maadi.\nRamesh says: Naanu egle Supernova AI download maadtini. Thank you, Miss Nova!",
+        "on_screen_text": "1 crore-ginta hechhu Indians nannondige learn maadtidare. Scrolling stop maadi, dinaa just 15 minutes speaking practice maadi. Naanu egle Supernova AI download maadtini. Thank you, Miss Nova!"
+      }
+    ],
+    "self_critique_fixed": "The translation strictly adheres to the Kannada localization module. I have used natural, conversational, and code-mixed Kannada (WhatsApp-style romanization). The hook opens natively in Kannada before transitioning to the English practice dialogue. Miss Nova's tone is warm and polite (using 'neevu' and polite plural verb endings like 'maadtidira' and 'maadi'), while Ramesh speaks in a casual yet respectful tone. The comparative multiplier 'seven times cheaper' has been translated to the local form '7 patu swasta' as mandated by the T2h carve-out, and 'your own language' has been correctly localized to 'Kannada-nalle' per T5. No brand safety issues were flagged."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "Scene 4 — Call to Action (Visual)",
+        "quote": "a Google Play Store app installation pop-up overlay appears in the center of the screen.",
+        "why": "The visual features a simulated Google Play Store installation pop-up, which violates Meta's policy against misleading mechanics and fake UI.",
+        "fix": "Replace the simulated installation pop-up with a standard end card showing the Supernova AI logo and a 'Download Now' call to action."
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 3 — Pricing Offer (Visual)",
+        "quote": "The graphic displays pricing information, showing a discounted rate.",
+        "why": "The visual overlay displays specific pricing and discount information which has not been pre-approved by the team.",
+        "fix": "Remove the pricing and discount graphic overlay, relying instead on the approved verbal comparative cost."
+      }
+    ],
+    "summary": "The ad contains two severe violations: a fake Google Play Store installation UI in Scene 4 and unapproved pricing/discount graphics in Scene 3.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517652.144215
+}

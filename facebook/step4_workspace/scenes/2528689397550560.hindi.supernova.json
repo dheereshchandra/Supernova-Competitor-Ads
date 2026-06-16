@@ -1,0 +1,41 @@
+{
+  "ad_library_id": "2528689397550560",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "App Icon",
+        "script": "Rahul says: 1 crore se zyada Indians finally Supernova AI par English seekh rahe hain. Chalo dekhte hain ye kaise kaam karta hai.",
+        "on_screen_text": "Gemini, Instagram, ET Mo..., Amazon, Slack, WhatsApp, Truecaller, Supernova AI, Calendar, Swiggy, GPay, BHIM"
+      },
+      {
+        "n": 2,
+        "scene_label": "AI Chat Interface",
+        "script": "Rahul says: Aap directly Miss Nova ke saath practice karte hain. Hazaaron mistakes karo, wo bina judge kiye instantly correct karegi. Wo grammar logic aapki apni language Hindi mein samjhati hai taaki aap actually samajh sakein. Plus, wo aapka exact level analyze karke personalized plan banati hai.",
+        "on_screen_text": "epdi irukka, How are you?, Miss Nova, I understand you're asking how I'm doing! I'm doing well, thank you! How about you? How do you feel today?, i doing great, I am doing great., That's amazing! Just a small tweak: you can say, \"I'm doing great.\" What makes you feel great today?, That is amazing! A small change: you can say \"I am doing great\". What makes you feel good today?"
+      },
+      {
+        "n": 3,
+        "scene_label": "Learning Path",
+        "script": "Rahul says: Yahan aapko real-life practice scenarios milte hain, starting right from job-interviews. Agar aap roz sirf 15 minutes practice karein, toh ek month mein aapka confidence badhne lagega.",
+        "on_screen_text": "Learning Path, Unit 1 Meet and Greet, 1 Chapter, Informal greetings, Informal Opening Greeting words and Phrases, START +20 STARS, What is Learning Path?, Master basic to advanced English speaking skills, Structured Learning: Progress through units, chapters, and lessons, Basic to advanced English: a structured path to learn and practice, Designed by expert teachers and aligned with global learning standards, Get hints during conversations to keep them engaging and learn new sentences, Continue"
+      },
+      {
+        "n": 4,
+        "scene_label": "Play Store",
+        "script": "Rahul says: Feeds scroll karke ghanton waste karna band kijiye. Aaj hi Supernova AI install kijiye aur English bolna shuru kijiye.",
+        "on_screen_text": "English Speaking App - Supernova AI, Improve Your Spoken English and Fluency with AI Support, #10 top free in education, Language, 4.6 star, 64K reviews, Rated for 3+, 1Cr+ Downloads, Supernova AI, Improve English speaking with AI, Data safety, Ratings and reviews"
+      }
+    ],
+    "self_critique_fixed": "I have localized the script into Romanized, code-mixed Hindi. The hook in Scene 1 opens with a native-sounding phrase ('1 crore se zyada...'). I have maintained consistent polite 'aap' register for the viewer-facing segments while keeping the tone highly colloquial and conversational (T3, T4). The language self-reference in Scene 2 has been correctly swapped to Hindi (T5). All stay-English keywords, brand names, and numerals have been preserved exactly as per T2 rules."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved social proof and acceptable progress framing.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517529.854711
+}

@@ -1,0 +1,76 @@
+{
+  "competitor_id": "1784873822495389",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Ramesh",
+        "role": "fish seller",
+        "appearance": "Older Indian male, approximately 60s, with a medium build and dark complexion. He has white hair and a full white beard. His facial expressions are friendly and animated.",
+        "wardrobe": "Wearing a blue checkered short-sleeve button-down shirt and a plaid lungi (lower garment).",
+        "demeanor": "Confident, friendly, and enthusiastic."
+      },
+      {
+        "id": "B",
+        "name": "Karthik",
+        "role": "customer",
+        "appearance": "Younger Indian male, approximately 20s-30s, with a slim build and medium complexion. He has short black hair and a neatly trimmed short black beard.",
+        "wardrobe": "Wearing a solid olive green short-sleeve t-shirt and a wristwatch with a brown leather strap.",
+        "demeanor": "Surprised, inquisitive, and impressed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Price negotiation",
+        "supernova_script": "Karthik says: Brother, how much is a kilo of prawns?\nRamesh says: One kilogram is five hundred, but if you buy two kilograms, I can give you a discount of two hundred.",
+        "scene_summary": "- Hook: Pattern break\n- Emotion: Everyday interaction turning into surprise\n- Purpose: Establishes the setting and delivers the fluent English shock factor.",
+        "supernova_on_screen_text": "Brother, how much is a kilo of prawns?\n1 kilogram is 500 but if you buy two kilograms I can give you a discount of 200"
+      },
+      {
+        "n": 2,
+        "scene_label": "Customer surprise",
+        "supernova_script": "Karthik says: Wow! Brother, how are you speaking English so fluently?\nRamesh says: I practice on the Supernova AI app.\nKarthik says: Supernova AI? What is that?",
+        "scene_summary": "- Purpose: In-story character question triggers the reveal\n- Emotion: Curiosity and impressed surprise\n- Payload: Names English early and introduces the brand naturally.",
+        "supernova_on_screen_text": "Wow! Brother, how are you speaking English so fluently?\nSupernova AI\nSupernova AI? What is that?"
+      },
+      {
+        "n": 3,
+        "scene_label": "App explanation",
+        "supernova_script": "Ramesh says: It has a personal AI teacher, Miss Nova. She checks my level and builds a custom plan just for me.\nRamesh says: I speak out loud to her, and she corrects my mistakes without ever judging me.\nRamesh says: She even explains the logic in my own language so I never feel lost.",
+        "scene_summary": "- Purpose: Core retention engine delivery\n- Payload beats: a (personalization), c (speak out loud), b (privacy/no-judgement), g (logic in own language)\n- Emotion: Reassuring and confident.",
+        "supernova_on_screen_text": "Personal AI teacher Miss Nova\nBuilds a custom plan just for you\nSpeak out loud\nCorrects mistakes without judging\nExplains logic in your own language"
+      },
+      {
+        "n": 4,
+        "scene_label": "Fee inquiry",
+        "supernova_script": "Karthik says: But the fees must be very high, right?",
+        "scene_summary": "- Purpose: Objection handling setup\n- Emotion: Skeptical\n- Payload: Sets up the affordability and time anchor.",
+        "supernova_on_screen_text": "But the fees must be very high, right?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to action",
+        "supernova_script": "Ramesh says: Not at all, it is seven times cheaper than coaching classes.\nRamesh says: Stop scrolling your phone and practice just fifteen minutes a day. You will start seeing visible progress in a month.\nRamesh says: Over one crore people use it. Install Supernova AI and start speaking today!",
+        "scene_summary": "- Purpose: Tight close and CTA\n- Payload: Negative time anchor (stop scrolling), positive time anchor (15 mins/day), soft progress expectation, social proof.\n- Emotion: Motivating.",
+        "supernova_on_screen_text": "7x cheaper than coaching classes\nPractice 15 mins a day\nStart seeing visible progress\nOver 1 crore users\nInstall Supernova AI today!"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (no-judgement), c (speak out loud), g (own language logic)",
+      "kept_from_seed": "Fish market setting and fluent-seller surprise hook",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; used 'seven times cheaper than coaching classes'"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi app",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.65661
+}

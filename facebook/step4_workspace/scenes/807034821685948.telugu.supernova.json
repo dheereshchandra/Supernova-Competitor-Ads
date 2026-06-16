@@ -1,0 +1,75 @@
+{
+  "ad_library_id": "807034821685948",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Podcast Intro",
+        "script": "Ravi says: Mana desam motham maatladukuntunna aa viral AI English teacher eeroju mana tho paatu unnaru. Welcome, Miss Nova.",
+        "on_screen_text": "VIRAL AI ENGLISH TEACHER\nEEROJU MANA THO PAATU UNNARU.\nWELCOME MISS NOVA."
+      },
+      {
+        "n": 2,
+        "scene_label": "Presenter Question 1",
+        "script": "Ravi says: Cheppandi Miss Nova, nijangane English maatladadaniki years tharabadi grammar books chadavalsina avasaram ledha? Expensive coaching classes ki vellalsina pani ledha?",
+        "on_screen_text": "CHEPPANDI MISS NOVA,\nENGLISH MAATLADADANIKI\nGRAMMAR BOOKS OR\nCOACHING CLASSES\nAVASARAM LEDHA?"
+      },
+      {
+        "n": 3,
+        "scene_label": "Robot Answer 1",
+        "script": "Miss Nova says: Exactly, Ravi. Patha methods fail avthayi, endhukante meeru kevalam chaduvutharu, kaani eppudu actual ga maatladaru.\nMiss Nova says: Mee mother tongue ni kuda meeru out loud ga maatlaadi nerchukunnaru, kadha? English kuda exact ga alage panichesthundhi.\nMiss Nova says: Supernova AI app lo, meeru type cheyalsina ledha chadavalsina avasaram ledhu. Meeru naatho maatladandi, nenu mee mistakes ni instantly correct chesthanu.\nMiss Nova says: Memu job interviews ledha mee manager tho maatladadam lanti real-life situations ni practice chestham.\nMiss Nova says: Just fifteen minutes daily practice chesthe, chala mandhi learners oka nelalone visible progress chustharu.",
+        "on_screen_text": "PATHA METHODS FAIL AVTHAYI\nENDHUKANTE MEERU MAATLADARU.\nMEERU MOTHER TONGUE NI\nMAATLAADI NERCHUKUNNARU.\nSUPERNOVA AI LO,\nMEERU MAATLADANDI, NENU CORRECT CHESTHANU.\nREAL-LIFE SITUATIONS\nLIKE JOB INTERVIEWS PRACTICE CHESTHAM.\nOKA NELALONE\nVISIBLE PROGRESS CHUSTHARU."
+      },
+      {
+        "n": 4,
+        "scene_label": "Presenter Question 2",
+        "script": "Ravi says: Nenu vinnaanu, already 1 crore kante ekkuva mandhi Indians English nerchukodaniki Supernova AI use chesthunnarani. Meeru intha mandhiki ela teach chestharu?",
+        "on_screen_text": "1 CRORE KANTE EKKUVA MANDHI\nSUPERNOVA AI USE CHESTHUNNARU.\nINTHA MANDHIKI\nELA TEACH CHESTHARU?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Robot Answer 2",
+        "script": "Miss Nova says: Endhukante nenu andariki oke laaga teach cheyanu. Nenu mee speech ni analyze chesi, meeru ekkada struggle avthunnaro correct ga kanukkoni, mee kosam oka personalized plan ready chesthanu.\nMiss Nova says: Inka best part entante? Idhi completely private. Meeru night 2 a.m. ki veyyi mistakes chesina, nenu mimmalni eppudu judge cheyyanu.\nMiss Nova says: Plus, nenu logic ni mee Telugu lone explain chesthanu, so meeru eppudu lost ga feel avvaru.",
+        "on_screen_text": "MEE KOSAM PERSONALIZED PLAN\nREADY CHESTHANU.\nCOMPLETELY PRIVATE.\n1000 MISTAKES CHESINA,\nNENU JUDGE CHEYYANU.\nLOGIC NI MEE TELUGU LONE\nEXPLAIN CHESTHANU."
+      },
+      {
+        "n": 6,
+        "scene_label": "Presenter Question 3",
+        "script": "Ravi says: Inka meetho practice cheyadam regular coaching classes kante padhi retlu sasta ani antaru, nijamena?",
+        "on_screen_text": "REGULAR COACHING CLASSES KANTE\n10 RETLU SASTA?"
+      },
+      {
+        "n": 7,
+        "scene_label": "Robot Answer 3 & CTA",
+        "script": "Miss Nova says: Avunu, idhi highly affordable.\nMiss Nova says: Meeru English maatladadaniki emathram help cheyani reels scroll chesthu hours waste cheyadam aapandi.\nMiss Nova says: Naku roju ki just fifteen minutes ivvandi, nenu meeru English confidently ga maatladela chesthanu.\nMiss Nova says: Eeroje Supernova AI app install chesukondi, mee journey ni start cheyandi.",
+        "on_screen_text": "HIGHLY AFFORDABLE.\nREELS SCROLL CHESTHU\nHOURS WASTE CHEYODDHU.\nROJU KI JUST 15 MINUTES\nCONFIDENT GA MAATLADADANIKI.\nEEROJE SUPERNOVA AI INSTALL CHEYANDI."
+      },
+      {
+        "n": 8,
+        "scene_label": "End Card",
+        "script": "Miss Nova says: Ippude install paina click chesi Supernova AI download cheyandi.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nIppude Install Cheyandi"
+      }
+    ],
+    "self_critique_fixed": "Applied all localization rules for Telugu. 1. Re-casted host Karthik to Ravi from the Telugu casting table. 2. Implemented T7 hook rule by starting the first line with the native word 'Mana' instead of English. 3. Applied T2h multiplier carve-out by translating '10 times cheaper' to 'padhi retlu sasta' (local multiplier). 4. Followed T5 language self-reference by changing 'your own language' to 'Telugu lone'. 5. Maintained polite plural register (T4) for Miss Nova ('meeru', '-ndi' endings) and host Ravi addressing Miss Nova. 6. Kept all stay-English vocabulary and brand names intact while ensuring natural, conversational, non-literary Telugu phrasing."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 7",
+        "quote": "Naku roju ki just fifteen minutes ivvandi, nenu meeru English confidently ga maatladela chesthanu.",
+        "why": "The brand voice guarantees a specific outcome ('I will make you speak English confidently') rather than using hedge language to set a soft progress expectation.",
+        "fix": "Naku roju ki just fifteen minutes ivvandi, meeru English confidently ga maatladadam start cheyochu."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe G1.1 violation in Scene 7 where the brand voice guarantees a fluent outcome instead of using hedge language.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517763.507343
+}

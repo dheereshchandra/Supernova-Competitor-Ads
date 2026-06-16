@@ -1,0 +1,84 @@
+{
+  "competitor_id": "2168403830564045",
+  "parsed": {
+    "production_type": "human-recorded",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Sushma",
+        "role": "grandmother",
+        "appearance": "Older Indian woman with a medium build and light complexion. She has grey hair pulled back neatly and soft, expressive facial features.",
+        "wardrobe": "Light green saree with a pattern of white, yellow, and green polka dots. She wears gold bangles on her wrists.",
+        "demeanor": "Curious, warm, and playful."
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "granddaughter",
+        "appearance": "Young Indian woman with a slim build and medium complexion. She has dark, curly, shoulder-length hair and clear facial features.",
+        "wardrobe": "Simple solid grey t-shirt.",
+        "demeanor": "Encouraging, cheerful, and attentive."
+      },
+      {
+        "id": "Unknown",
+        "name": "Miss Nova",
+        "role": "App Voice",
+        "appearance": "Voice only",
+        "wardrobe": "N/A",
+        "demeanor": "Warm, patient, and encouraging."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction to the App",
+        "supernova_script": "Sushma says: Who are you talking to on the phone?\nMiss Nova says: I am Miss Nova. I help people actually speak English, by talking with them.\nSushma says: Really?\nMiss Nova says: Yes! I figure out your exact level first, and then build a personalized plan just for you.\nSushma says: My knees hurt a lot. How do I say this in English?\nMiss Nova says: Just try speaking it, and I will help you.",
+        "scene_summary": "- Hooks with curiosity about the AI voice\n- Names English immediately\n- Lands personalization beat (a) early\n- Sets up the interactive speaking loop",
+        "supernova_on_screen_text": "POV: When Grandma asks Supernova AI more questions than her grandchildren 🤪📱\nWait for the end 😂"
+      },
+      {
+        "n": 2,
+        "scene_label": "Pronunciation Correction",
+        "supernova_script": "Sushma says: I have pain in my niece.\nMiss Nova says: It is 'knees', not 'niece'. But do not worry, make a thousand mistakes! No one is judging you here.\nSushma says: Knees. Right?",
+        "scene_summary": "- Shows the live correction loop\n- Lands privacy/no-judgement beat (b)\n- Maintains warm, encouraging tone",
+        "supernova_on_screen_text": "POV: When Grandma asks Supernova AI more questions than her grandchildren 🤪📱\nWait for the end 😂"
+      },
+      {
+        "n": 3,
+        "scene_label": "Asking About the App",
+        "supernova_script": "Sushma says: Who is this girl talking to me?\nPriya says: Grandma, that is Miss Nova on the Supernova AI app.\nSushma says: Supernova AI. She is a very nice teacher. She explains the logic in our own language so it makes sense. But tell me, how much does this cost?",
+        "scene_summary": "- In-story reveal of the brand and teacher name\n- Lands logic-in-own-language beat (g)\n- Sets up the cost/value proposition",
+        "supernova_on_screen_text": "POV: When Grandma asks Supernova AI more questions than her grandchildren 🤪📱\nWait for the end 😂"
+      },
+      {
+        "n": 4,
+        "scene_label": "Price Reveal",
+        "supernova_script": "Priya says: It is way more affordable than those expensive coaching classes, Grandma. And you just need fifteen minutes a day.\nSushma says: Oh wow! Then this will be perfect for your job interview tomorrow.",
+        "scene_summary": "- Replaces hard price with comparative cost and positive time anchor\n- Lands real-life scenario beat (e) with job interview stakes",
+        "supernova_on_screen_text": "POV: When Grandma asks Supernova AI more questions than her grandchildren 🤪📱\nWait for the end 😂"
+      },
+      {
+        "n": 5,
+        "scene_label": "Conclusion",
+        "supernova_script": "Priya says: Yes Grandma, I am practicing my interview scenarios on Supernova AI right now. Install the app and start speaking today!",
+        "scene_summary": "- Reinforces the interview scenario\n- Delivers a clean, direct call-to-action",
+        "supernova_on_screen_text": "POV: When Grandma asks Supernova AI more questions than her grandchildren 🤪📱\nWait for the end 😂"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy/no-judgement), e (real-life scenarios), g (logic in own language)",
+      "kept_from_seed": "Grandmother/granddaughter dynamic and the 'niece/knees' pronunciation correction loop",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "Removed '3 rupees' hard price; replaced with 'more affordable than coaching classes'"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.6593
+}

@@ -1,0 +1,77 @@
+{
+  "competitor_id": "4336764726641466",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "White humanoid robot face with blue eyes, smooth metallic skin, visible neck joints. No clothing, just the robot chassis.",
+        "wardrobe": "None.",
+        "demeanor": "Friendly, slightly uncanny expression."
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "Male learner",
+        "appearance": "Young adult male, slim build, dark hair. Static posture, back to camera.",
+        "wardrobe": "Light pink long-sleeve shirt and khaki pants.",
+        "demeanor": "Motionless, attentive."
+      },
+      {
+        "id": "C",
+        "name": "Priya",
+        "role": "Female learner",
+        "appearance": "Young adult female, dark shoulder-length hair. Static posture, back to camera.",
+        "wardrobe": "Denim jacket and a yellow floral skirt.",
+        "demeanor": "Motionless, attentive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Grammar Correction",
+        "supernova_script": "Miss Nova says: Hello, what is your name?\nRahul says: My name is Rahul.\nMiss Nova says: How old are you?\nRahul says: I have 22.\nMiss Nova says: Not 'I have 22', it should be 'I am 22 years old'.\nRahul says: Okay, I am 22 years old.\nMiss Nova says: Where are you from?\nRahul says: I am Uttar Pradesh.\nMiss Nova says: Not 'I am Uttar Pradesh', it is 'I am from Uttar Pradesh'.\nRahul says: Oh, okay. I always freeze when I have to speak English.\nMiss Nova says: That is completely normal. I am Miss Nova. I teach you to speak English on Supernova AI, and I explain the logic in your own language.\nRahul says: But won't people laugh at my mistakes?\nMiss Nova says: Not here. You can make a thousand mistakes, and I will correct you without ever judging you.",
+        "scene_summary": "- Hook: Relatable Indian-English error and live correction.\n- Payload: Names English early, introduces Miss Nova, lands logic in your language (g).\n- Payload: Sets up privacy/no-judgement (b) as the core reassurance.",
+        "supernova_on_screen_text": "What is your name\nMy name is Rahul\nHow old are you\nI have 22\n❌\nI am 22 yrs old\nOkay, I am 22 years old\nWhere are you from\nI am Uttar Pradesh\n❌\nI am from Uttar Pradesh\nI freeze when I speak English\nI am Miss Nova\nLogic in your own language\nWon't people laugh?\nMake 1000 mistakes\nNo judgement"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Introduction",
+        "supernova_script": "Miss Nova says: Plus, I do not give everyone the same lessons. I analyze your speech and build a personalized plan just for you.\nRahul says: But I do not get much free time.\nMiss Nova says: Just fifteen minutes of speaking practice a day is enough. And it is seven times cheaper than regular coaching classes.",
+        "scene_summary": "- Payload: Lands personalization (a) by explaining the tailored plan.\n- Payload: Lands the positive time anchor (15 mins/day).\n- Keeps the comparative cost anchor from the seed.",
+        "supernova_on_screen_text": "7X CHEAPER\nSupernova AI English Speaking\nPersonalized plan just for you\nBut I don't have time\nJust 15 minutes a day"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action",
+        "supernova_script": "Priya says: Wow, how do I join?\nMiss Nova says: Press the install button and download the Supernova AI app. With daily practice, you will start seeing visible progress in about a month. Let us start speaking today.",
+        "scene_summary": "- In-story character triggers the CTA.\n- Replaces the seed's 15-day guarantee with a safe, hedged progress expectation.\n- Clean install CTA.",
+        "supernova_on_screen_text": "Wow\nHow do I join\nSupernova AI English\nInstalling...\nStart seeing visible progress\nLet us start speaking today"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "supernova_script": "Miss Nova says: Click on install now and download the Supernova AI app.",
+        "scene_summary": "- Final clear CTA.\n- Brand reinforcement.",
+        "supernova_on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (Personalization), b (Privacy/no-judgement), c (You SPEAK), g (Logic in your language)",
+      "kept_from_seed": "Live grammar correction hook and museum setting.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; kept 'seven times cheaper' comparative."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.6614149
+}

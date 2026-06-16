@@ -1,0 +1,29 @@
+{
+  "ad_library_id": "918571931129028",
+  "language": "Kannada",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Bilingual Conversation",
+        "script": "Miss Nova says: Namskara! Nanu Miss Nova. Nimma level-ge thakka hage ondh personalized English plan ready maadi kodthini.\nAsha says: I sleeped at 10 last night.\nMiss Nova says: Navu \"slept\" anta helbeku. Nanna jothe yaavaga bekaadru practice maadi. Naanu nimma mistakes-na yaavathgu judge maadalla.\nAsha says: I slept at 10 last night.",
+        "on_screen_text": "Nanu Miss Nova.\nPersonalized English plan.\nI sleeped at 10 last night.\nNavu \"slept\" anta helbeku.\nNaanu nimma mistakes-na judge maadalla.\nI slept at 10 last night."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Promotion",
+        "script": "Asha says: Hours-gatte scroll maadi time waste maadodu nilsi. Supernova AI download maadi, job-interviews thara real-life scenarios-na practice maadi.\nAsha says: Miss Nova jothe dinakke just 15 minutes maatadi.\nAsha says: Ondh month-nallige neevu confidently English maatadoke start maadthira!",
+        "on_screen_text": "Hours-gatte scroll maadodu nilsi\nSupernova AI\nJob-interviews practice maadi\nJust 15 minutes dinakke\nConfidently maatadoke start maadi\nSupernova AI download maadi"
+      }
+    ],
+    "self_critique_fixed": "Applied the Kannada language module rules: replaced Priya with Asha from the casting table; used conversational contractions like 'ondh' instead of 'ondu' and 'niv'/'neevu' appropriately; ensured Miss Nova uses polite plural forms ('maadi', 'nimma'); kept taught English lines identical to the master; and opened the hook with a native word ('Namskara') to satisfy the hook rule."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved conversational structures, relatable error corrections, and generic behavioral hooks without any prohibited guarantees, pricing, or competitor disparagement.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517718.0507698
+}

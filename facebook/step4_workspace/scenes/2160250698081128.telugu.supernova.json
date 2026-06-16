@@ -1,0 +1,29 @@
+{
+  "ad_library_id": "2160250698081128",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Train Conversation",
+        "script": "Rahul says: I am giving an English interview tomorrow.\nMiss Nova says: Almost, Rahul! Ila cheppandi, I am appearing for an English interview tomorrow. Give ante edhaina chethiki ivvadam.\nRahul says: Ah, got it. Telusa, naa English actually chala better avuthundhi.\nMiss Nova says: Very good! Intha baaga matladadam ekkada nerchukuntunnaru?\nRahul says: Mee daggare, Supernova AI app lo! Meere Miss Nova, naa personal AI teacher.\nRahul says: Meeru naku edho random lessons ivvaru, adhi naku chala ishtam. Meeru naa exact level ento telusukoni, naakosam oka personalized plan ready chesharu.\nMiss Nova says: And nenu mee mistakes ni eppudu judge cheyanu.\nRahul says: Exactly! Ee crowded train lo kurchoni nenu veyyi mistakes chesina, meeru navvakunda nannu correct chestharu.\nMiss Nova says: Endhukante meeru just chadavadam valle kaadhu, actually out loud ga matladi nerchukuntaru.\nRahul says: Avunu. Janalu phone lo feeds scroll chesthu hours waste chestharu, kani nenu mee tho matladadaniki roju ki just 15 minutes spend chesthanu.\nMiss Nova says: Correct. Daily practice chesthe, chala mandhi learners ki almost oka month lo visible progress kanipisthundhi.",
+        "on_screen_text": "I am giving an English interview tomorrow.\nSay: I am appearing for an English interview tomorrow.\nNaa English actually chala better avuthundhi.\nIntha baaga matladadam ekkada nerchukuntunnaru?\nMee daggare, Supernova AI app lo!\nExact level telusukoni personalized plan ready chesharu.\nNenu mee mistakes ni eppudu judge cheyanu.\nVeyyi mistakes chesina navvakunda correct chestharu.\nActually out loud ga matladi nerchukuntaru.\nFeeds scroll chesthu hours waste chestharu.\nRoju ki just 15 minutes spend chesthanu.\nOka month lo visible progress kanipisthundhi."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "script": "Rahul says: Scrolling aapandi. Eroje Supernova AI install cheskoni matladadam start cheyandi.",
+        "on_screen_text": "Supernova AI\nSpoken English App\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "The script has been localized to Telugu using natural, conversational code-mixing. The first line correctly opens in English per the T7 exception since it is the quoted content being corrected. Politeness registers are strictly maintained: Miss Nova addresses Rahul with warm respect ('meeru', 'cheppandi', 'nerchukuntunnaru'), and Rahul addresses the audience politely in the end card ('aapandi', 'cheyandi'). All brand names, English quoted lines, and numbers remain in their correct English/numeral formats."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved progress expectations, safe-environment framing, and allowed time-reallocation anchors.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517483.920374
+}

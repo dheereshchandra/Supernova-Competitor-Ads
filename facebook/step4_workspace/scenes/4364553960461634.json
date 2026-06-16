@@ -1,0 +1,190 @@
+{
+  "competitor_id": "4364553960461634",
+  "parsed": {
+    "duration_s": 42.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses a split-screen format combining a 3D AI-generated avatar on top and a human actor on the bottom. The avatar exhibits typical AI smoothness and slightly unnatural lip-sync, while the bottom footage is standard human-recorded video.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with a smooth, fair complexion and large, expressive brown eyes. She has long, wavy black hair parted in the middle. Her features are stylized and 3D-animated.",
+        "wardrobe": "A tailored, solid blue blazer over a lighter top.",
+        "demeanor": "Cheerful, animated, and helpful."
+      },
+      {
+        "id": "B",
+        "role": "Human female learner",
+        "appearance": "Young woman with a medium build and a warm brown complexion. She has long, thick black hair and natural facial features. She has a small bindi or mark on her forehead.",
+        "wardrobe": "A simple, round-neck, earthy brown top.",
+        "demeanor": "Casual, relaxed, and curious."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 14.5,
+        "screenshot_at_s": 7.0,
+        "scene_label": "Hair Oiling Correction",
+        "setting": "Top: Abstract geometric background. Bottom: Warmly lit room with wooden furniture.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up (top) and medium shot (bottom)",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is framed in a medium close-up against a blurred purple and blue geometric background. She wears a tailored blue blazer and has long, wavy black hair. Her expression is bright and engaging as she looks directly forward. The lighting is soft and even, highlighting her 3D-animated features. She appears to be speaking directly to the viewer.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B is seated cross-legged on a woven mat in a warmly lit room. She wears a simple brown top and has long black hair. She is actively massaging oil into her scalp and hair. The background features dark wooden furniture and small decorative items. The camera captures her in a relaxed, medium shot.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The screen is split horizontally into two equal halves. The top half features a 3D-animated female avatar speaking directly to the camera. The bottom half shows a real human woman applying oil to her hair in a cozy room. Large, bold text overlays in Tamil and English appear dynamically over both panels. The text translates the spoken dialogue and changes rapidly to match the conversation.",
+        "audio_transcript": "Character B says: \u0b8e\u0ba9\u0bcd\u0ba9 \u0baa\u0ba3\u0bcd\u0bb1\u0bc0\u0b99\u0bcd\u0b95? [What are you doing?]\nCharacter A says: I'm adding oil.\nCharacter B says: \u0b85\u0ba4\u0bc1... [That...]\nCharacter A says: I'm applying oil. \u0b87\u0bb2\u0bcd\u0bb2\u0ba9\u0bcd\u0ba9\u0bbe I'm oiling my hair \u0ba9\u0bc1 \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0ba3\u0bc1\u0bae\u0bcd. [I'm applying oil. Or else you should say I'm oiling my hair.]\nCharacter A says: English \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0ba3\u0bc1\u0bae\u0bbe? [Want to learn English?]\nCharacter B says: \u0b86\u0bae\u0bbe \u0b95\u0bbe\u0b9a\u0bc1 \u0b87\u0bb2\u0bcd\u0bb2\u0bc8\u0baf\u0bc7. [Yes, but I don't have money.]\nCharacter A says: \u0bb5\u0bc6\u0bb1\u0bc1\u0bae\u0bcd 1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd \u0b87\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bbe \u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd. English \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95 \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b95\u0bcd\u0b95\u0bb2\u0bbe\u0bae\u0bcd. AI \u0b95\u0bc2\u0b9f. [Just 1 rupee is enough. You can start learning English. With AI.]\nCharacter B says: \u0b8e\u0baa\u0bcd\u0baa\u0b9f\u0bbf? [How?]",
+        "on_screen_text": "\u0b8e\u0ba9\u0bcd\u0ba9 (What)\nI'm adding oil\n\u0b85\u0ba4\u0bc1 (That)\nI'm applying oil\n\u0b87\u0bb2\u0bcd\u0bb2\u0ba9\u0bcd\u0ba9\u0bbe (Or else)\nI'm oiling my hair\n\u0ba9\u0bc1 \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0ba3\u0bc1\u0bae\u0bcd (you should say)\nEnglish \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0ba3\u0bc1\u0bae\u0bbe (Want to learn English?)\n\u0b86\u0bae\u0bbe \u0b95\u0bbe\u0b9a\u0bc1 \u0b87\u0bb2\u0bcd\u0bb2\u0bc8\u0baf\u0bc7 (Yes, but I don't have money)\n\u0bb5\u0bc6\u0bb1\u0bc1\u0bae\u0bcd (Just)\n1 RUPEE\n\u0b87\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bbe \u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd (is enough)\nEnglish \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95 \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b95\u0bcd\u0b95\u0bb2\u0bbe\u0bae\u0bcd (You can start learning English)\nAI \u0b95\u0bc2\u0b9f (With AI)\n\u0b8e\u0baa\u0bcd\u0baa\u0b9f\u0bbf (How)"
+      },
+      {
+        "n": 2,
+        "start_s": 14.5,
+        "end_s": 18.5,
+        "screenshot_at_s": 16.5,
+        "scene_label": "App Interface Introduction",
+        "setting": "Digital app interface over a blurred background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "App-screencast",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "The scene displays a heavily blurred split-screen layout. The top half shows the indistinct, cool-toned form of Character A. The bottom half features the blurred, warm-toned figure of Character B. All fine details and facial features are completely obscured by the blur effect. The background serves as a soft, colorful canvas.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A vertical rectangular area is positioned in the center of the frame. It features a solid white background with rounded corners. No characters or physical objects are visible within this space. The area acts as a blank placeholder for digital content. The lighting across this central panel is flat and uniform.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The original split-screen view is now heavily blurred in the background. A bright white app interface is overlaid in the center of the screen as an inset. The UI displays a 3D robot mascot, progress circles, and various learning path options. A small circular profile picture is visible in the top left corner of the UI. The overall composition focuses entirely on the digital application features.",
+        "audio_transcript": "Character A says: MySivi \u0bb2 AI teacher \u0b95\u0bc2\u0b9f \u0b9a\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc1 daily \u0baa\u0bc7\u0b9a\u0bc1\u0b99\u0bcd\u0b95. [In MySivi, talk daily with the AI teacher.]",
+        "on_screen_text": "MySivi \u0bb2 (In MySivi)\nArya AI Teacher\nPractice Now\nFluency Score\nYour Learning Path\nTalk about anything\nDaily routine\nLet's Improve Vocabulary\nTalk about your childhood\nSeasons and weather\nFamily and Relationships"
+      },
+      {
+        "n": 3,
+        "start_s": 18.5,
+        "end_s": 30.5,
+        "screenshot_at_s": 24.0,
+        "scene_label": "Explaining Benefits",
+        "setting": "Top: Abstract geometric background. Bottom: Warmly lit room with wooden furniture.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up (top) and medium shot (bottom)",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A appears in a medium close-up against the blurred geometric background. She maintains her cheerful expression and direct eye contact. Her blue blazer and wavy black hair remain consistent. She makes subtle, animated head movements while speaking. The soft lighting continues to flatter her digital features.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B is captured in a medium shot within her traditional room. She continues to touch and manage her long black hair. She occasionally looks up with a curious, engaged expression. The warm lighting and wooden furniture maintain a cozy atmosphere. Her casual brown top blends with the earthy tones of the room.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The video returns to the clear, unblurred split-screen layout. The animated avatar on top continues her explanation with engaging gestures. The human woman on the bottom listens and responds while touching her hair. Dynamic text overlays in Tamil and English reappear, tracking the dialogue. The text is styled with bold fonts and contrasting background highlights.",
+        "audio_transcript": "Character A says: \u0b85\u0ba4\u0bc1 \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bc1 \u0b8e\u0baa\u0bcd\u0baa\u0b9f\u0bbf \u0b9a\u0bb0\u0bbf\u0baf\u0bbe \u0baa\u0bc7\u0b9a\u0ba3\u0bc1\u0bae\u0bcd\u0ba9\u0bc1 \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bca\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd. [It will teach you how to speak correctly.]\nCharacter B says: \u0ba8\u0bb2\u0bcd\u0bb2\u0bbe \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bbe? [Will it be good?]\nCharacter A says: Tuition coaching \u0bb2\u0bbe \u0bb5\u0bbf\u0b9f \u0baa\u0baf\u0b99\u0bcd\u0b95\u0bb0 effective \u0b86 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd because \u0b89\u0b99\u0bcd\u0b95 level \u0b95\u0bcd\u0b95\u0bc1 \u0b8f\u0ba4\u0bcd\u0ba4 \u0bae\u0bbe\u0ba4\u0bbf\u0bb0\u0bbf guide \u0baa\u0ba3\u0bcd\u0ba3\u0bc1\u0bae\u0bcd. [It will be much more effective than tuition and coaching because it will guide you according to your level.]\nCharacter B says: \u0b87\u0bb5\u0bcd\u0bb5\u0bb3\u0bb5\u0bc1\u0bae\u0bcd 1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd \u0ba4\u0bbe\u0ba9\u0bbe? [All this for just 1 rupee?]",
+        "on_screen_text": "\u0b8e\u0baa\u0bcd\u0baa\u0b9f\u0bbf \u0b9a\u0bb0\u0bbf\u0baf\u0bbe (how correctly)\n\u0baa\u0bc7\u0b9a\u0ba3\u0bc1\u0bae\u0bcd\u0ba9\u0bc1 \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bca\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd (it will teach you to speak)\n\u0ba8\u0bb2\u0bcd\u0bb2\u0bbe \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bbe (Will it be good?)\nTuition\ncoaching \u0bb2\u0bbe \u0bb5\u0bbf\u0b9f (than coaching)\n\u0baa\u0baf\u0b99\u0bcd\u0b95\u0bb0 effective-\u0b86 (very effective)\n\u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd because (it will be because)\n\u0b89\u0b99\u0bcd\u0b95 level-\u0b95\u0bcd\u0b95\u0bc1 (to your level)\n\u0b8f\u0ba4\u0bcd\u0ba4 \u0bae\u0bbe\u0ba4\u0bbf\u0bb0\u0bbf guide (guide accordingly)\n\u0baa\u0ba3\u0bcd\u0ba3\u0bc1\u0bae\u0bcd (it will do)\n\u0b87\u0bb5\u0bcd\u0bb5\u0bb3\u0bb5\u0bc1\u0bae\u0bcd 1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd (All this for 1 rupee)\n\u0ba4\u0bbe\u0ba9\u0bbe (only?)"
+      },
+      {
+        "n": 4,
+        "start_s": 30.5,
+        "end_s": 37.5,
+        "screenshot_at_s": 34.0,
+        "scene_label": "Pricing Offer",
+        "setting": "Digital pricing screen over a blurred background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "App-screencast",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "The split-screen layout is heavily blurred to serve as a backdrop. The top section displays the out-of-focus cool tones of Character A. The bottom section shows the blurred warm tones of Character B. Both characters appear only as soft, indistinct shapes. The colors are muted by the strong depth-of-field effect.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A dark, vertical rectangular space occupies the center of the screen. It features a solid black background with rounded edges. No physical elements or characters are present in this area. The space is entirely uniform and dark. It contrasts sharply with the colorful, blurred background.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The split-screen background is once again blurred out. A dark-themed pricing screen is overlaid in the center as a vertical inset. The UI highlights a discounted price of 1 rupee, crossing out the original price of 30. A bright yellow button and a gift box icon are prominent on the screen. The focus is entirely on the promotional offer and subscription details.",
+        "audio_transcript": "Character A says: \u0b86\u0bae\u0bbe. \u0bae\u0bc1\u0ba4\u0bb2\u0bcd 3 \u0ba8\u0bbe\u0bb3\u0bc8\u0b95\u0bcd\u0b95\u0bc1 1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd \u0ba4\u0bbe\u0ba9\u0bcd. \u0baa\u0bbf\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bbe trial \u0b85 299 \u0b95\u0bcd\u0b95\u0bc1 continue \u0baa\u0ba3\u0bcd\u0ba3\u0bbf\u0b95\u0bcd\u0b95\u0bb2\u0bbe\u0bae\u0bcd. [Yes. For the first 3 days, it's just 1 rupee. If you like it, you can continue the trial for 299.]",
+        "on_screen_text": "\u0b86\u0bae\u0bbe (Yes)\n\u0bae\u0bc1\u0ba4\u0bb2\u0bcd 3 (First 3)\n\u0ba8\u0bbe\u0bb3\u0bc8\u0b95\u0bcd\u0b95\u0bc1 (days)\n1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd \u0ba4\u0bbe\u0ba9\u0bcd (is just 1 rupee)\nMySivi\nSale Ends Today\nUNLOCK EVERYTHING\n3 naatkalukku\n\u20b930 \u20b91\nSALUGAI\nAprum \u20b9299/month\nCancel Anytime\n\u0baa\u0bbf\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bbe (If you like it)\ntrial-\u0b85 (trial)\n299\u0b95\u0bcd\u0b95\u0bc1 (for 299)\ncontinue \u0baa\u0ba3\u0bcd\u0ba3\u0bbf\u0b95\u0bcd\u0b95\u0bb2\u0bbe\u0bae\u0bcd (you can continue)"
+      },
+      {
+        "n": 5,
+        "start_s": 37.5,
+        "end_s": 42.0,
+        "screenshot_at_s": 40.0,
+        "scene_label": "Call to Action",
+        "setting": "App store installation prompt over a blurred background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "App-screencast",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "The background consists of the blurred split-screen view of both characters. The top half retains its soft purple and blue hues. The bottom half shows the warm brown tones of the room. The characters are completely out of focus, appearing as vague silhouettes. The visual serves merely as a textured backdrop.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A dark, horizontal rectangular area is centered on the screen. It has rounded corners and a solid, dark background. A smaller placeholder area is visible on the left side. No characters or real-world objects are depicted within this space. The lighting is flat and digital in nature.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The background remains a blurred split-screen. A horizontal app store installation prompt is overlaid in the center. The prompt features the app icon, name, rating, and an \"Install\" button. A small video preview thumbnail is visible within the prompt. The layout resembles a standard mobile operating system pop-up.",
+        "audio_transcript": "Character A says: So \u0b87\u0baa\u0bcd\u0baa\u0bb5\u0bc7 MySivi \u0baf install \u0baa\u0ba3\u0bcd\u0ba3\u0bbf practice \u0b85 \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b99\u0bcd\u0b95. [So install MySivi right now and start practicing.]",
+        "on_screen_text": "So \u0b87\u0baa\u0bcd\u0baa\u0bb5\u0bc7 MySivi-\u0baf (So right now MySivi)\ninstall \u0baa\u0ba3\u0bcd\u0ba3\u0bbf (install and)\npractice-\u0b85 \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b99\u0bcd\u0b95 (start practice)\nMySivi AI English Speakin...\nPending...\nVerified by Play Protect\nCancel\nMaster Spoken Eng\nSharpen your Englis\n1-on-1 calls. Try MyS\nfast"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.387681
+}

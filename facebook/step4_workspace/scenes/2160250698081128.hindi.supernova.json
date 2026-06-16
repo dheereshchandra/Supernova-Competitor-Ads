@@ -1,0 +1,29 @@
+{
+  "ad_library_id": "2160250698081128",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Train Conversation",
+        "script": "Rahul says: I am giving an English interview tomorrow.\nMiss Nova says: Almost, Rahul! Say, I am appearing for an English interview tomorrow. Give ka matlab hota hai kuch hand over karna.\nRahul says: Ah, samajh gaya. You know, meri English actually bahut better ho rahi hai.\nMiss Nova says: Very good! Aap itni achhi English bolna kahaan se seekh rahe ho?\nRahul says: Aap se hi, Supernova AI app par! Aap ho Miss Nova, meri personal AI teacher.\nRahul says: Mujhe achha lagta hai ki aap mujhe koi bhi random lessons nahi dete. Aapne mera exact level samajh kar mere liye ek personalized plan banaya hai.\nMiss Nova says: Aur main aapki mistakes ko kabhi judge nahi karti.\nRahul says: Exactly! Is crowded train mein baithe-baithe main hazaaron mistakes kar sakta hoon, aur aap bina hase mujhe correct karti ho.\nMiss Nova says: Kyunki aap actually out loud bol kar seekhte ho, sirf read karke nahi.\nRahul says: Haan. Log apne phone par ghanto feeds scroll karne mein waste karte hain, par main din mein bas 15 minutes aapke saath bolne mein spend karta hoon.\nMiss Nova says: Sahi kaha. Daily practice se, yadatar learners ko lagbhag 1 month mein visible progress dikhne lagti hai.",
+        "on_screen_text": "I am giving an English interview tomorrow.\nSay: I am appearing for an English interview tomorrow.\nMeri English actually bahut better ho rahi hai.\nAap itni achhi English bolna kahaan se seekh rahe ho?\nAap se hi, Supernova AI app par!\nAapne mera exact level samajh kar personalized plan banaya.\nAur main aapki mistakes ko kabhi judge nahi karti.\nMain hazaaron mistakes kar sakta hoon aur aap bina hase correct karti ho.\nAap actually out loud bol kar seekhte ho.\nLog ghanto feeds scroll karne mein waste karte hain.\nMain din mein bas 15 minutes aapke saath bolta hoon.\nLagbhag 1 month mein visible progress dekhein."
+      },
+      {
+        "n": 2,
+        "scene_label": "End Card",
+        "script": "Rahul says: Scrolling band karo. Supernova AI install karo aur aaj se hi bolna start karo.",
+        "on_screen_text": "Supernova AI\nSpoken English App\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "The translation strictly follows the Hinglish code-mixing rules. The taught English lines are kept verbatim as per T2a. The tone is kept warm and polite using the 'Aap' register for Miss Nova and Rahul's interaction, avoiding any overly formal Sanskritized words. The first line correctly opens in English because it is a quoted/taught line (the T7 exception)."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved soft progress expectations and generic scrolling contrasts.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517443.367541
+}

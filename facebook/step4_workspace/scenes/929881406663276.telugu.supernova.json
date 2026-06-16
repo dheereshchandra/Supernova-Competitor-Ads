@@ -1,0 +1,54 @@
+{
+  "ad_library_id": "929881406663276",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "The 'Circle Back' Confusion",
+        "script": "Rahul says: Ma boss \"circle back\" avmante, nenu literally circles lo thiragadam start chesa.\nMiss Nova says: \"Circle back\" ante oka topic gurinchi malli discuss cheyadam anthe. Nenu Miss Nova, mee personal AI English teacher ni.\nRahul says: Oh, dhani meaning adha! Kani nenu ela nerchukovali? English matladalante chala nervous ga untundi, and time asalu ledhu.",
+        "on_screen_text": "MA BOSS \"CIRCLE BACK\" AVMANTE, NENU LITERALLY CIRCLES LO THIRAGADAM START CHESA. \"CIRCLE BACK\" ANTE OKA TOPIC GURINCHI MALLI DISCUSS CHEYADAM ANTHE. NENU MISS NOVA, MEE PERSONAL AI ENGLISH TEACHER NI. OH, DHANI MEANING ADHA! KANI NENU ELA NERCHUKOVALI? ENGLISH MATLADALANTE CHALA NERVOUS GA UNTUNDI, AND TIME ASALU LEDHU."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Features Screencast",
+        "script": "Miss Nova says: Supernova AI tho, meeru actually matladi nerchukuntaru. Mee exact level ni analyze chesi, mee kosam oka personalized plan ready chestanu. Morning 3 a.m. ki 1000 mistakes chesina, nenu mimmalni eppudu judge cheyyadhu.",
+        "on_screen_text": "SUPERNOVA AI THO, MEERU ACTUALLY MATLADI NERCHUKUNTARU. MEE EXACT LEVEL NI ANALYZE CHESI, MEE KOSAM OKA PERSONALIZED PLAN READY CHESTANU. MORNING 3 A.M. KI 1000 MISTAKES CHESINA, NENU MIMMALNI EPPUDU JUDGE CHEYYADHU."
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action and Pricing",
+        "script": "Rahul says: Nijamga? Kani nenu em cheyali?\nMiss Nova says: Gantalu gantalu scroll cheyadam aapandi. Roju ki just 15 minutes natho speaking practice cheyandi. Supernova AI download cheyandi, and one month lo mee confidence lo visible progress chustaru.",
+        "on_screen_text": "NIJAMGA? KANI NENU EM CHEYALI? GANTALU GANTALU SCROLL CHEYADAM AAPANDI. ROJU KI JUST 15 MINUTES NATHO SPEAKING PRACTICE CHEYANDI. SUPERNOVA AI DOWNLOAD CHEYANDI, AND ONE MONTH LO MEE CONFIDENCE LO VISIBLE PROGRESS CHUSTARU."
+      }
+    ],
+    "self_critique_fixed": "Checked the Telugu gender agreement rule: ensured Miss Nova's negative verb form ends in '-dhu' ('judge cheyyadhu') instead of the masculine '-du'. Checked the hook rule: the script successfully opens with a native Telugu word ('Ma boss...'). Verified that all numbers remain as English numerals ('3 a.m.', '1000', '15') and that the overall tone is highly colloquial and conversational, avoiding any formal or bookish Telugu phrasing."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 3 [SCRIPT]",
+        "quote": "one month lo mee confidence lo visible progress chustaru",
+        "why": "The phrase promises a guaranteed progress outcome within a month without using required hedge language like 'start to see' or 'can see'.",
+        "fix": "Change the phrase to 'one month lo mee confidence lo visible progress chudadam modalu pedatharu' to use soft progress language."
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 3 [VISUAL]",
+        "quote": "a pricing page showing a 1 Rupee offer",
+        "why": "The visual depicts a specific hard rupee price ('1 Rupee offer') which is prohibited without explicit team approval.",
+        "fix": "Replace the pricing page graphic with a generic app feature showcase or download screen."
+      }
+    ],
+    "summary": "The ad contains two severe violations: a guaranteed progress claim without hedge language in Scene 3, and an unapproved hard rupee price in the Scene 3 visual.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517836.04019
+}

@@ -1,0 +1,121 @@
+{
+  "competitor_id": "929881406663276",
+  "parsed": {
+    "duration_s": 37.0,
+    "production_type": "mixed",
+    "production_notes": "The top half features an AI-generated avatar with a perfectly static body, uncanny facial movements, and a robotic neck design. The bottom half features a human actor recorded in a standard studio setting.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with a fair complexion, long curly brown hair, and a bindi. She has a robotic, cybernetic neck piece.",
+        "wardrobe": "Textured blue jacket over a grey top, with delicate layered necklaces.",
+        "demeanor": "Calm, helpful, and slightly robotic but friendly."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Young male with a fair complexion and curly dark hair. He has a clean-shaven face with a slight stubble.",
+        "wardrobe": "Dark blue, short-sleeved button-down shirt.",
+        "demeanor": "Initially confused and frustrated, transitioning to curious and convinced."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 16.5,
+        "screenshot_at_s": 8.0,
+        "scene_label": "The 'Circle Back' Confusion",
+        "setting": "Top: Sci-fi office. Bottom: Plain room with a grey sofa.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is centered, looking forward against a blurred, cool-toned futuristic office background. Her posture is static.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B sits on a grey sofa against a plain wall. He gestures actively with his hands, looking confused.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout with an AI avatar on top and a human actor on the bottom. The human actor expresses confusion about a workplace phrase, using hand gestures. The AI avatar responds calmly, explaining the phrase. Large, dynamic text overlays appear over both panels, highlighting the spoken words.",
+        "audio_transcript": "Character B says: \u092c\u0949\u0938 \u0928\u0947 \u0939\u092e\u0915\u094b \u092c\u094b\u0932\u093e \u0938\u0930\u094d\u0915\u0932 \u092c\u0948\u0915, \u0939\u092e \u0917\u094b\u0932-\u0917\u094b\u0932 \u0918\u0942\u092e\u0928\u0947 \u0932\u0917\u0947 \u092c\u0924\u093e\u0913\u0964 [The boss told us to 'circle back', we started spinning in circles, tell me.]\nCharacter A says: \u0938\u0930\u094d\u0915\u0932 \u092c\u0948\u0915 \u0915\u093e \u092e\u0924\u0932\u092c \u0939\u094b\u0924\u093e \u0939\u0948, \u092c\u093e\u0926 \u092e\u0947\u0902 \u0915\u093f\u0938\u0940 \u091f\u0949\u092a\u093f\u0915 \u092a\u0930 \u092b\u093f\u0930 \u0938\u0947 \u091a\u0930\u094d\u091a\u093e \u0915\u0930\u0928\u093e\u0964 ['Circle back' means to discuss a topic again later.]\nCharacter B says: \u0913 \u0905\u091a\u094d\u091b\u093e, \u092f\u0947 \u0939\u094b\u0924\u093e \u0939\u0948 \u092e\u0940\u0928\u093f\u0902\u0917\u0964 [Oh I see, this is the meaning.]\nCharacter A says: \u0915\u094b\u0908 \u092c\u093e\u0924 \u0928\u0939\u0940\u0902, \u0924\u0941\u092e \u0905\u092d\u0940 \u092d\u0940 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916 \u0938\u0915\u0924\u0947 \u0939\u094b \u092e\u0947\u0930\u0947 \u0938\u093e\u0925\u0964 [No worries, you can still learn English with me.]\nCharacter B says: \u0905\u0930\u0947 \u092a\u0930 \u0915\u0948\u0938\u0947 \u0938\u0940\u0916\u0942\u0902? \u0915\u093e\u092e \u0915\u0947 \u092c\u0940\u091a \u092e\u0947\u0902 \u091f\u093e\u0907\u092e \u0939\u0940 \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u0924\u093e\u0964 [But how do I learn? I don't get time amidst work.]",
+        "on_screen_text": "BOSS BOLA CIRCLE BACK HAM GOL GOL LAGE BATAO CIRCLE BACK MATLAB HOTA TOPIC PAR PHIR SE CHARCHA KARNA OH! HAI MEANING KOI BAAT NAHI TUM ABHI BHI ENGLISH SEEKH SAKTE HO MERE SAATH ARE PAR KAISE SEEKHU KAAM KE BEECH ME TIME HI NAHI MILTA"
+      },
+      {
+        "n": 2,
+        "start_s": 16.5,
+        "end_s": 21.5,
+        "screenshot_at_s": 19.0,
+        "scene_label": "App Features Screencast",
+        "setting": "Blurred background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The background is a heavily blurred version of the previous split-screen, with cool blue tones on top and neutral tones on the bottom. Characters A and B are visible but completely out of focus.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene transitions to a full-screen display of the MySivi app interface. It shows a menu of learning topics and then a chat interface where a user interacts with an AI bot. The original split-screen video is blurred out in the background. Text overlays continue to display the spoken dialogue.",
+        "audio_transcript": "Character A says: \u092e\u0948\u0902 MySivi \u0910\u092a \u0915\u0940 AI \u0939\u0942\u0901\u0964 \u092c\u0938 \u0926\u093f\u0928 \u092e\u0947\u0902 10 \u092e\u093f\u0928\u091f \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u094b, \u092b\u093f\u0930 \u0926\u0947\u0916\u0928\u093e \u0915\u0948\u0938\u0947 \u0939\u0930 \u091c\u0917\u0939 \u0915\u0949\u0928\u094d\u092b\u093f\u0921\u0947\u0902\u0938 \u0915\u0947 \u0938\u093e\u0925 \u092b\u0930\u094d\u0938\u094d\u091f \u0915\u094d\u0932\u093e\u0938 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092c\u094b\u0932\u0924\u0947 \u0939\u094b\u0964 [I am the AI of the MySivi app. Just practice with me for 10 minutes a day, then see how you speak first-class English with confidence everywhere.]",
+        "on_screen_text": "MySivi Practice Now Fluency Score Your Learning Path Talk about anything Daily routine Talk about your childhood Seasons and weather Family and Relationships Hobbies and Interests Talk about your workplace Hey! What did you do over the weekend? I go to the beach and eat ice cream. Almost perfect! Just a small correction: I went to the beach and ate ice cream. MAIN MYSIVI APP KI AI HOON BAS DIN ME 10 MINUTE MERE SAATH PRACTICE KARO PHIR DEKHNA KAISE HAR JAGAH CONFIDENCE KE SAATH FIRST CLASS ENGLISH BOLTE HO"
+      },
+      {
+        "n": 3,
+        "start_s": 21.5,
+        "end_s": 37.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Call to Action and Pricing",
+        "setting": "Top: Sci-fi office. Bottom: Plain room with a grey sofa.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A is centered against the blurred futuristic office background. She smiles and looks directly at the viewer.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B sits on the grey sofa against the plain wall. He looks interested and satisfied, glancing slightly upwards.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen layout returns. The human actor asks a follow-up question, and the AI avatar provides the solution. Various app-related graphics, including a download prompt, an app store ranking, and a pricing page showing a 1 Rupee offer, pop up sequentially over the top panel. Dynamic text overlays continue to highlight the dialogue.",
+        "audio_transcript": "Character B says: \u0938\u091a \u092e\u0947\u0902? \u092a\u0930 \u0907\u0938\u0915\u0947 \u0932\u093f\u090f \u092e\u0941\u091d\u0947 \u0915\u094d\u092f\u093e \u0915\u0930\u0928\u093e \u092a\u095c\u0947\u0917\u093e? [Really? But what will I have to do for this?]\nCharacter A says: \u092c\u0938 MySivi \u0910\u092a \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 \u092f\u0947 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0928\u0902\u092c\u0930 1 \u0910\u092a \u0939\u0948\u0964 \u092e\u093e\u0924\u094d\u0930 1 \u0930\u0941\u092a\u092f\u0947 \u0915\u0947 \u091f\u094d\u0930\u093e\u092f\u0932 \u092e\u0947\u0902 \u092e\u0947\u0930\u0947 \u091c\u0948\u0938\u0947 AI \u091f\u0940\u091a\u0930\u094d\u0938 \u0915\u0947 \u0938\u093e\u0925 \u0938\u093f\u0930\u094d\u092b 2 \u0939\u092b\u094d\u0924\u0947 \u092e\u0947\u0902 \u092b\u0930\u094d\u0930\u093e\u091f\u0947\u0926\u093e\u0930 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092c\u094b\u0932\u0928\u093e \u0936\u0941\u0930\u0942 \u0915\u0930 \u0926\u094b\u0917\u0947\u0964 [Just download the MySivi app. It is the number 1 app for learning English. In a trial of just 1 Rupee, you will start speaking fluent English in just 2 weeks with AI teachers like me.]",
+        "on_screen_text": "SACH MEIN PAR ISKE LIYE MUJHE KYA KARNA PADEGA BAS MYSIVI APP DOWNLOAD KARO YEH ENGLISH SEEKHNE KE LIYE NUMBER 1 APP HAI MATR 1 RUPAYE KE TRIAL MEIN MERE JAISE AI TEACHERS KE SAATH SIRF 2 HAFTE MEIN FARRAATE DAAR ENGLISH BOLNA SHURU KAR DOGE. MySivi AI English Spe... 100% of 62.82 MB Verified by Play Protect Cancel Master Spoken Eng Sharpen your English 1-on-1 calls. Try MyS fast Free Apps Paid Apps MySivi Learn English Speaking Your Personal AI English Tutor Open MySivi Premium LIMITED TIME OFFER 3 days of Premium benefits for \u20b91 \u20b9299/month Autopay, cancel anytime. 1,200 learners purchased today 24/7 AI English Teacher 500+ Exercises and Lessons Unlimited Access"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.390888
+}

@@ -1,0 +1,61 @@
+{
+  "competitor_id": "1682634462923678",
+  "parsed": {
+    "production_type": "mixed",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI presenter",
+        "appearance": "Male humanoid robot. Fair human face with short brown hair on top. Exposed mechanical parts, wires, and metal on the sides and back of the head and neck.",
+        "wardrobe": "Dark blue collared shirt. Holding a black microphone.",
+        "demeanor": "Serious, informative, and slightly stiff."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Sand and Mesh",
+        "supernova_script": "Miss Nova says: You can never truly learn English just by reading grammar books.\nMiss Nova says: You have to actually speak it out loud. But finding someone to practice with is hard.",
+        "scene_summary": "- Hook: names English immediately and calls out the core problem of passive learning.\n- Lands beat (c): You SPEAK, not read.\n- Sets up the need for a practice partner.",
+        "supernova_on_screen_text": "You can never truly learn English just by reading grammar books. You have to actually speak it out loud."
+      },
+      {
+        "n": 2,
+        "scene_label": "Carving Green Sand",
+        "supernova_script": "Miss Nova says: Plus, there is always that fear of being mocked when you make a mistake.\nMiss Nova says: That is exactly why Supernova AI was built.\nMiss Nova says: I am Miss Nova. I do not give everyone the same generic lessons.\nMiss Nova says: I analyze your current level and build a personalized plan just for you.",
+        "scene_summary": "- Introduces the brand and Miss Nova persona.\n- Lands beat (a): Personalization.\n- Sets up the privacy/no-judgement emotional hook.",
+        "supernova_on_screen_text": "Fear of being mocked? That is why Supernova AI was built. I analyze your current level and build a personalized plan just for you."
+      },
+      {
+        "n": 3,
+        "scene_label": "Cutting Foam",
+        "supernova_script": "Miss Nova says: We will practice real-life scenarios together, like a job interview or a client call.\nMiss Nova says: Make a thousand mistakes at midnight. I will never judge you, and I will explain the corrections in your own language.",
+        "scene_summary": "- Lands beat (e): Real-life scenarios (job interview).\n- Lands beat (b): Privacy / no-judgement.\n- Lands beat (g): Logic explained in your language.",
+        "supernova_on_screen_text": "Practice real-life scenarios like a job interview. Make a thousand mistakes. I will never judge you, and I will explain corrections in your own language."
+      },
+      {
+        "n": 4,
+        "scene_label": "Scraping Pink Roller",
+        "supernova_script": "Miss Nova says: Stop losing hours scrolling through reels.\nMiss Nova says: Practice speaking for just fifteen minutes a day.\nMiss Nova says: Download Supernova AI today and start speaking more confidently within a month.",
+        "scene_summary": "- Tight close with negative time anchor (scrolling reels) and positive time anchor (15 mins/day).\n- Clean CTA with a soft, hedged progress expectation.",
+        "supernova_on_screen_text": "Stop scrolling reels. Practice for just 15 minutes a day. Download Supernova AI and start speaking more confidently within a month."
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "(c) You SPEAK, (a) Personalization, (e) Real-life scenarios, (b) Privacy/no-judgement, (g) Logic in your language",
+      "kept_from_seed": "Split-screen layout with AI robot presenter and ASMR footage",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "Removed the hard ₹3 trial price; replaced with a time anchor (15 minutes a day)"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.655162
+}

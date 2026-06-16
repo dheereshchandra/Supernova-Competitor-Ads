@@ -1,0 +1,66 @@
+{
+  "competitor_id": "1297225115212417",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Ramesh",
+        "role": "Elderly passenger",
+        "appearance": "Older Indian male, approximately 60s, with a medium build and dark complexion. He has grey hair, a full grey beard, and a slightly weathered face.",
+        "wardrobe": "White short-sleeved button-up shirt, a dark checkered lungi, and a red and white striped towel draped over his right shoulder.",
+        "demeanor": "Curious, slightly hesitant, and attentive."
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI Robot",
+        "appearance": "Sleek, white humanoid robot. It has a smooth, stylized face with distinct eyes, and exposed black mechanical joints at the neck, shoulders, and elbows.",
+        "wardrobe": "None. Its body consists of white, glossy armor-like panels over a mechanical chassis.",
+        "demeanor": "Helpful, polite, and conversational."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction and Problem",
+        "supernova_script": "Miss Nova says: Where are you traveling to today?\nRamesh says: I Bangalore going, son seeing there.\nMiss Nova says: No problem! You should say, \"I am going to Bangalore to see my son\".\nRamesh says: I can never speak English properly. I just freeze.\nMiss Nova says: I am Miss Nova. I teach English on Supernova AI, and I can help you.",
+        "scene_summary": "- Hook: Relatable Indian-English error and live correction.\n- Emotion: Hesitation turning to hope.\n- Payload: Names English early, introduces Miss Nova as the AI teacher.",
+        "supernova_on_screen_text": "Where are you traveling to today?\nI Bangalore going, son seeing there\nYou should say \"I am going to Bangalore to see my son\"\nI can never speak English properly\nI am Miss Nova. I teach English on Supernova AI\nPractice Now\nFluency Score\nYour Learning Path"
+      },
+      {
+        "n": 2,
+        "scene_label": "Cost Objection",
+        "supernova_script": "Ramesh says: But how can a robot teach me? And classes cost too much.\nMiss Nova says: Supernova AI is seven times cheaper than normal classes. Plus, I analyze your speech and build a personalized plan just for you.\nMiss Nova says: You practice by speaking out loud. Make a thousand mistakes, and I will correct you without ever judging you.\nRamesh says: But I don't have much free time.",
+        "scene_summary": "- Purpose: Overcome skepticism with core retention beats.\n- Payload: Personalization (a), Privacy/no-judgement (b), Speak not type (c).\n- Emotion: Reassurance and value.",
+        "supernova_on_screen_text": "How can a robot teach me?\n7x Cheaper than normal classes\nPersonalized learning plan\nPractice by speaking out loud\nMake 1000 mistakes, zero judgement\nBut I don't have much free time"
+      },
+      {
+        "n": 3,
+        "scene_label": "Time Objection and CTA",
+        "supernova_script": "Miss Nova says: You only need fifteen minutes a day. And I explain the logic in your own language, so it finally makes sense.\nMiss Nova says: With daily practice, you will start speaking more confidently within a month.\nRamesh says: That sounds wonderful. How do I start?\nMiss Nova says: Stop wasting time scrolling videos. Click install, download Supernova AI, and start speaking today.",
+        "scene_summary": "- Purpose: Close the deal with time anchors and clear CTA.\n- Payload: Logic in mother tongue (g), hedged progress expectation.\n- Emotion: Motivation and action.",
+        "supernova_on_screen_text": "15 MINUTES A DAY\nLogic explained in your own language\nSpeak more confidently within a month\nStop wasting time scrolling videos\nInstall Supernova AI\nVerified by Play Protect\nStart speaking today"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalized plan), b (zero judgement), c (speaking out loud), g (logic in own language)",
+      "kept_from_seed": "Airplane setting, elderly man and robot conversation, broken English correction hook.",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; kept '7x cheaper' comparative."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "Arya AI Teacher",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.6493561
+}

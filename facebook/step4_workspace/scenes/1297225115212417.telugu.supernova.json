@@ -1,0 +1,35 @@
+{
+  "ad_library_id": "1297225115212417",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction and Problem",
+        "script": "Miss Nova says: Where are you traveling to today?\nRamesh says: I Hyderabad going, son seeing there.\nMiss Nova says: No problem! Meeru, \"I am going to Hyderabad to see my son\" ani anali.\nRamesh says: Nenu eppatiki English properly matladalenu. Just freeze aypothanu.\nMiss Nova says: Nenu Miss Nova. Nenu Supernova AI lo English teach chesthanu, and nenu meeku help cheyagalanu.",
+        "on_screen_text": "Where are you traveling to today?\nI Hyderabad going, son seeing there\nYou should say \"I am going to Hyderabad to see my son\"\nI can never speak English properly\nI am Miss Nova. I teach English on Supernova AI\nPractice Now\nFluency Score\nYour Learning Path"
+      },
+      {
+        "n": 2,
+        "scene_label": "Cost Objection",
+        "script": "Ramesh says: Kani oka robot naku ela teach chesthundhi? And classes cost chala ekkuva untundhi.\nMiss Nova says: Supernova AI normal classes kante 7 retlu thakkuva cost. Plus, nenu mee speech ni analyze chesi, mee kosame personalized plan build chesthanu.\nMiss Nova says: Meeru out loud speak chesthu practice cheyandi. 1000 mistakes chesina, nenu correct chesthanu, and ninnu eppatiki judge cheyyadhu.\nRamesh says: Kani naku anthaga free time undadhu.",
+        "on_screen_text": "Oka robot naku ela teach chesthundhi?\nNormal classes kante 7 retlu thakkuva cost\nPersonalized learning plan\nOut loud speak chesthu practice cheyandi\n1000 mistakes chesina, zero judgement\nKani naku anthaga free time undadhu"
+      },
+      {
+        "n": 3,
+        "scene_label": "Time Objection and CTA",
+        "script": "Miss Nova says: Meeku day ki just 15 minutes unte chalu. And nenu logic ni mee Telugu lone explain chesthanu, so meeku easily arham avthundhi.\nMiss Nova says: Daily practice tho, meeru oka nelalo inka confident ga matladadam start chestharu.\nRamesh says: Adhi chala bagundi. Nenu ela start cheyali?\nMiss Nova says: Videos scroll chesthu time waste cheyadam aapandi. Install click chesi, Supernova AI download cheyandi, and ee roje matladadam start cheyandi.",
+        "on_screen_text": "Day ki just 15 minutes\nLogic mee Telugu lone explain chestharu\nOka nelalo inka confident ga matladandi\nVideos scroll chesthu time waste cheyadam aapandi\nSupernova AI install cheyandi\nVerified by Play Protect\nEe roje matladadam start cheyandi"
+      }
+    ],
+    "self_critique_fixed": "Applied the 'Teaching / correction skit' format register. Recast the city 'Bangalore' to 'Hyderabad' per T6, including inside the taught English lines. Applied the Telugu gender agreement rule for Miss Nova ('judge cheyyadhu' instead of 'cheyadu'). Used the natural Telugu multiplier '7 retlu' for '7 times cheaper' and localized the time-unit 'within a month' to 'oka nelalo' per T2h. Ensured all brand nouns and taught lines remain in English while the surrounding dialogue is highly colloquial, natural, code-mixed Telugu."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, correctly utilizing approved carve-outs for progress expectations, comparative costs, and non-disparaging behavior contrasts.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781516727.0609212
+}

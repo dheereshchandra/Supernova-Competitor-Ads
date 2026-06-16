@@ -1,0 +1,29 @@
+{
+  "ad_library_id": "876285282244370",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Struggling with English",
+        "script": "Character A (Voiceover) says: Poore 12 years school aur expensive coaching, par jab interview mein English bolne ki baari aati hai...\nCharacter A says: [Screaming and crying in frustration]",
+        "on_screen_text": "Coaching classes par hazaaron kharch karne ke baad meri English\n\nSupernova app par roz 15 minutes practice karne ke baad meri English"
+      },
+      {
+        "n": 2,
+        "scene_label": "Confident English Speaker",
+        "script": "Character A says: Ab main flawlessly bolta hoon. Kaise? Maine reading band ki aur Supernova par speaking start ki.\nCharacter A says: Meri AI teacher, Miss Nova, mere saath real job interviews ki practice karti hai.\nCharacter A says: Main 100 mistakes karta hoon, aur wo bina kisi judgment ke mujhe live correct karti hai.\nCharacter A says: Wo toh logic Hindi mein bhi explain karti hai.\nCharacter A says: Bas roz ke 15 minutes. Maine toh aise hi seekha, aur aap bhi seekh sakte hain.",
+        "on_screen_text": "Coaching classes par hazaaron kharch karne ke baad meri English\n\nSupernova app par roz 15 minutes practice karne ke baad meri English\n\nSupernova install karein, aaj hi bolna shuru karein"
+      }
+    ],
+    "self_critique_fixed": "The script has been successfully localized into natural, conversational, romanized Hindi. The hook starts with the native word 'Poore' to ensure a strong native-first thumbstop. All numbers are kept as numerals ('12 years', '15 minutes', '100 mistakes'). The term 'mother tongue' has been correctly localized to 'Hindi' per the language self-reference swap rule. The tone is highly colloquial and matches a peer-to-peer UGC format, completely avoiding any formal or Sanskritized vocabulary."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, featuring a permissible shame-to-triumph arc and generic category comparisons.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517657.268896
+}

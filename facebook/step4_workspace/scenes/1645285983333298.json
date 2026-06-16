@@ -1,0 +1,223 @@
+{
+  "competitor_id": "1645285983333298",
+  "parsed": {
+    "duration_s": 40.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses a split-screen format combining a human actor and an AI-generated robot avatar. The robot's movements are slightly stiff and repetitive, typical of AI generation, while the human actor's lip-sync is occasionally slightly off, suggesting the audio might have been dubbed.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "Young adult female with a medium build and fair complexion. She has long, straight dark hair that falls past her shoulders. Her facial features are clear and expressive.",
+        "wardrobe": "She is wearing a bright yellow t-shirt with thin white horizontal stripes and a v-neckline.",
+        "demeanor": "Confident, helpful, and expressive."
+      },
+      {
+        "id": "B",
+        "role": "AI robot learner",
+        "appearance": "A silver metallic humanoid robot. It has a smooth, featureless face, visible mechanical joints at the shoulders and elbows, and a glowing circular chest piece.",
+        "wardrobe": "None, metallic robot body.",
+        "demeanor": "Calm, robotic, and inquisitive."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 21.5,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Grammar correction",
+        "setting": "Top: traditional Indian living room. Bottom: plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A silver metallic humanoid robot sits at a wooden desk, facing forward. The robot features a smooth, featureless face, visible mechanical joints at the shoulders and elbows, and a glowing circular chest piece. It rests its hands on the desk surface. The background reveals a warmly lit, traditional Indian living room. A wooden sofa with intricately patterned cushions sits to the left. Brass artifacts and framed pictures decorate the walls and shelves. A window on the right lets in natural light, showing a glimpse of a street outside.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young woman stands centered in the frame, facing the camera directly. She has a fair complexion and long, straight dark hair that falls past her shoulders. She is wearing a bright yellow t-shirt with thin white horizontal stripes and a v-neckline. The background is a completely plain, untextured white wall. The lighting is even and bright, illuminating her face clearly without harsh shadows. Her expression is engaged and conversational as she looks into the lens.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen view showing a robot in a traditional room on top and a woman against a white wall on the bottom. Text overlays appear dynamically over both panels as they converse.",
+        "audio_transcript": "Character A says: \u0924\u0942 \u0915\u0947\u0935\u094d\u0939\u093e \u092f\u0947\u0923\u093e\u0930 \u0906\u0939\u0947\u0938? [When are you coming?]\nCharacter B says: I will return back on Monday. [I will return back on Monday.]\nCharacter A says: Return back \u0928\u093e\u0939\u0940\u0964 Return \u092e\u094d\u0939\u0923\u091c\u0947\u091a \u092a\u0930\u0924 \u092f\u0947\u0923\u0902\u0964 Return \u0906\u0923\u093f back \u0926\u094b\u0928\u094d\u0939\u0940 \u090f\u0915\u0924\u094d\u0930 \u092e\u094d\u0939\u0923\u091c\u0947 \u092a\u0930\u0924 \u092a\u0930\u0924 \u0915\u093e \u092f\u0947\u0924\u094b\u092f\u0938\u0964 Just say I will return on Monday\u0964 [Not return back. Return means to come back. Return and back together means why are you coming back again and again. Just say I will return on Monday.]\nCharacter B says: Ohh... \u0920\u0940\u0915 \u0906\u0939\u0947 \u0920\u0940\u0915 \u0906\u0939\u0947\u0964 \u092e\u0932\u093e \u0928\u093e English \u092f\u0947\u0924\u091a \u0928\u093e\u0939\u0940\u0964 [Ohh... okay okay. I don't know English at all.]\nCharacter A says: \u0915\u093e\u0939\u0940 problem \u0928\u093e\u0939\u0940\u0964 AI teachers try \u0915\u0947\u0932\u0902 \u0915\u093e? [No problem. Have you tried AI teachers?]\nCharacter B says: \u0924\u0947 \u092e\u0939\u093e\u0917 \u0905\u0938\u0924\u0940\u0932 \u0928\u093e? [They must be expensive, right?]\nCharacter A says: \u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940\u0964 Normal English classes \u092a\u0947\u0915\u094d\u0937\u093e 7 \u092a\u091f \u0938\u094d\u0935\u0938\u094d\u0924 \u0906\u0939\u0947\u0964 [Not at all. It is 7 times cheaper than normal English classes.]",
+        "on_screen_text": "\u0924\u0942 \u0915\u0947\u0935\u094d\u0939\u093e \u092f\u0947\u0923\u093e\u0930 (When will you come)\nI will return back on Monday\nReturn back \u0928\u093e\u0939\u0940 (Not return back)\nReturn \u092e\u094d\u0939\u0923\u091c\u0947\u091a \u092a\u0930\u0924 \u092f\u0947\u0923\u0902 (Return means to come back)\nReturn \u0906\u0923\u093f back \u0926\u094b\u0928\u094d\u0939\u0940 \u090f\u0915\u0924\u094d\u0930 \u092e\u094d\u0939\u0923\u091c\u0947 \u092a\u0930\u0924 \u092a\u0930\u0924 \u0915\u093e \u092f\u0947\u0924\u094b\u092f\u0938 (Return and back together means why are you coming back again and again)\nJust say I will return on Monday\nOhh... \u0920\u0940\u0915 \u0906\u0939\u0947 \u0920\u0940\u0915 (Ohh... okay okay)\n\u092e\u0932\u093e English \u0928\u0940\u091f \u092f\u0947\u0924\u091a \u0928\u093e\u0939\u0940 (I don't know English well at all)\n\u0915\u093e\u0939\u0940 problem \u0928\u093e\u0939\u0940 AI teachers try \u0915\u0947\u0932\u0902 \u0915\u093e (No problem, did you try AI teachers)\n\u0924\u0947 \u092e\u0939\u093e\u0917 \u0905\u0938\u0924\u0940\u0932 (They must be expensive)\n\u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940 (Not at all)\nNormal English classes \u092a\u0947\u0915\u094d\u0937\u093e 7 \u092a\u091f \u0938\u094d\u0935\u0938\u094d\u0924 \u0906\u0939\u0947 (7 times cheaper than normal English classes)\n\u092e\u094d\u0939\u0923\u0942\u0928 50 \u0932\u093e\u0916 (That's why 5 million)"
+      },
+      {
+        "n": 2,
+        "start_s": 21.5,
+        "end_s": 23.5,
+        "screenshot_at_s": 22.5,
+        "scene_label": "App Store",
+        "setting": "Mobile app store interface",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A mobile phone screen displays an app store interface. At the top, an app icon featuring a purple logo is visible next to the app's title and developer information. Below this, a prominent blue 'Install' button is centered on the screen. Further down, several rectangular app screenshots are displayed in a horizontal scrolling gallery. The overall layout is clean and typical of a standard mobile application marketplace. The background of the interface is white with light gray accents.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A full-screen view of a mobile app store interface showing the MySivi app page with an install button and screenshots.",
+        "audio_transcript": "Character A says: \u092e\u094d\u0939\u0923\u0942\u0928 50 \u0932\u093e\u0916 \u0932\u094b\u0915 MySivi \u0935\u0930 English practice \u0915\u0930\u0924 \u0906\u0939\u0947\u0924\u0964 [That's why 5 million people are practicing English on MySivi.]",
+        "on_screen_text": "\u0932\u094b\u0915 MySivi \u0935\u0930 English practice \u0915\u0930\u0924 \u0906\u0939\u0947\u0924 (people are practicing English on MySivi)"
+      },
+      {
+        "n": 3,
+        "start_s": 23.5,
+        "end_s": 25.5,
+        "screenshot_at_s": 24.5,
+        "scene_label": "Time objection",
+        "setting": "Top: traditional Indian living room. Bottom: plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A silver metallic humanoid robot sits at a wooden desk, facing forward. The robot features a smooth, featureless face, visible mechanical joints at the shoulders and elbows, and a glowing circular chest piece. It rests its hands on the desk surface. The background reveals a warmly lit, traditional Indian living room. A wooden sofa with intricately patterned cushions sits to the left. Brass artifacts and framed pictures decorate the walls and shelves. A window on the right lets in natural light, showing a glimpse of a street outside.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young woman stands centered in the frame, facing the camera directly. She has a fair complexion and long, straight dark hair that falls past her shoulders. She is wearing a bright yellow t-shirt with thin white horizontal stripes and a v-neckline. The background is a completely plain, untextured white wall. The lighting is even and bright, illuminating her face clearly without harsh shadows. Her expression is engaged and conversational as she looks into the lens.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen view returns, showing the robot on top and the woman on the bottom, continuing their conversation.",
+        "audio_transcript": "Character B says: \u092a\u0923 \u0935\u0947\u0933\u091a \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940\u0964 [But I don't get time.]\nCharacter A says: \u0930\u094b\u091c \u092b\u0915\u094d\u0924 15-20... [Just 15-20 daily...]",
+        "on_screen_text": "\u092a\u0923 \u0935\u0947\u0933\u091a \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940 (But I don't get time)\n\u0930\u094b\u091c \u092b\u0915\u094d\u0924 15-20 (Just 15-20 daily)"
+      },
+      {
+        "n": 4,
+        "start_s": 25.5,
+        "end_s": 27.5,
+        "screenshot_at_s": 26.5,
+        "scene_label": "App Interface",
+        "setting": "Mobile app interface",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A mobile phone screen shows an application interface with a deep blue gradient background. In the upper center, a circular profile picture displays a silver robot face. Below the avatar, a block of white text provides a greeting message. At the very bottom of the screen, three circular interactive buttons are arranged horizontally. The left button has a lightbulb icon, the center button has a microphone icon, and the right button has a red 'X'. The design is minimalistic and focused on voice interaction.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A full-screen view of the MySivi app interface featuring an AI robot avatar, a text greeting, and interactive buttons at the bottom.",
+        "audio_transcript": "Character A says: ...\u092e\u093f\u0928\u093f\u091f\u0947 practice \u092a\u0941\u0930\u0947\u0936\u0940 \u0906\u0939\u0947\u0964 \u0905\u0917\u0926\u0940 confident \u0935\u094d\u0939\u093e\u0932\u0964 [...minutes of practice is enough. You will become very confident.]",
+        "on_screen_text": "\u092e\u093f\u0928\u093f\u091f\u0947 practice \u092a\u0941\u0930\u0947\u0936\u0940 \u0906\u0939\u0947 (minutes of practice is enough)\n\u0905\u0917\u0926\u0940 confident (very confident)"
+      },
+      {
+        "n": 5,
+        "start_s": 27.5,
+        "end_s": 30.5,
+        "screenshot_at_s": 29.0,
+        "scene_label": "How to join",
+        "setting": "Top: traditional Indian living room. Bottom: plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A silver metallic humanoid robot sits at a wooden desk, facing forward. The robot features a smooth, featureless face, visible mechanical joints at the shoulders and elbows, and a glowing circular chest piece. It rests its hands on the desk surface. The background reveals a warmly lit, traditional Indian living room. A wooden sofa with intricately patterned cushions sits to the left. Brass artifacts and framed pictures decorate the walls and shelves. A window on the right lets in natural light, showing a glimpse of a street outside.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young woman stands centered in the frame, facing the camera directly. She has a fair complexion and long, straight dark hair that falls past her shoulders. She is wearing a bright yellow t-shirt with thin white horizontal stripes and a v-neckline. The background is a completely plain, untextured white wall. The lighting is even and bright, illuminating her face clearly without harsh shadows. Her expression is engaged and conversational as she looks into the lens.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen view returns again, showing the robot on top and the woman on the bottom.",
+        "audio_transcript": "Character B says: Wow... \u0915\u0938\u0902 join \u0915\u0930\u0942? [Wow... how do I join?]\nCharacter A says: \u0939\u093e install \u091a\u093e button \u0926\u093e\u092c\u093e... [Press this install button...]",
+        "on_screen_text": "\u0935\u094d\u0939\u093e\u0932 (will become)\nWow\n\u0915\u0938\u0902 join \u0915\u0930\u0942 (how do I join)\n\u0939\u093e install \u091a\u093e button \u0926\u093e\u092c\u093e (Press this install button)"
+      },
+      {
+        "n": 6,
+        "start_s": 30.5,
+        "end_s": 32.5,
+        "screenshot_at_s": 31.5,
+        "scene_label": "Installing App",
+        "setting": "Mobile app store interface",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A mobile phone screen displays an app store interface rendered in dark mode. The top section shows the app's title and an active 'Installing...' progress indicator with a circular loading animation. Below the installation status, a large rectangular video thumbnail is visible, featuring a person's face. To the right of the video, another rectangular card shows text related to spoken English courses. The interface uses a dark gray and black color palette with white text for high contrast.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A full-screen view of an app store interface in dark mode, showing the MySivi app in the process of being installed.",
+        "audio_transcript": "Character A says: ...\u0906\u0923\u093f MySivi app install \u0915\u0930\u093e\u0964 [...and install the MySivi app.]",
+        "on_screen_text": "\u0906\u0923\u093f MySivi app install (and install MySivi app)"
+      },
+      {
+        "n": 7,
+        "start_s": 32.5,
+        "end_s": 40.0,
+        "screenshot_at_s": 36.0,
+        "scene_label": "Call to action",
+        "setting": "Top: traditional Indian living room. Bottom: plain white wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A silver metallic humanoid robot sits at a wooden desk, facing forward. The robot features a smooth, featureless face, visible mechanical joints at the shoulders and elbows, and a glowing circular chest piece. It rests its hands on the desk surface. The background reveals a warmly lit, traditional Indian living room. A wooden sofa with intricately patterned cushions sits to the left. Brass artifacts and framed pictures decorate the walls and shelves. A window on the right lets in natural light, showing a glimpse of a street outside.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young woman stands centered in the frame, facing the camera directly. She has a fair complexion and long, straight dark hair that falls past her shoulders. She is wearing a bright yellow t-shirt with thin white horizontal stripes and a v-neckline. The background is a completely plain, untextured white wall. The lighting is even and bright, illuminating her face clearly without harsh shadows. Her expression is engaged and conversational as she looks into the lens.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The final split-screen view showing the robot on top and the woman on the bottom as she delivers the closing message.",
+        "audio_transcript": "Character A says: Sign up \u0915\u0930\u093e \u0906\u0923\u093f practice start \u0915\u0930\u093e\u0964 \u092b\u0915\u094d\u0924 15 \u0926\u093f\u0935\u0938\u093e\u0902\u0924 \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e improvement \u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932\u0964 \u091a\u0932\u093e... \u0938\u0941\u0930\u0942 \u0915\u0930\u093e\u0964 [Sign up and start practicing. You will start seeing improvement in just 15 days. Come on... start.]",
+        "on_screen_text": "\u0915\u0930\u093e (do)\nSign up \u0915\u0930\u093e \u0906\u0923\u093f practice start (Sign up and start practice)\n\u0915\u0930\u093e (do)\n\u092b\u0915\u094d\u0924 15 \u0926\u093f\u0935\u0938\u093e\u0902\u0924 \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e improvement \u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932 (You will start seeing improvement in just 15 days)\n\u091a\u0932\u093e (Come on)\n\u0938\u0941\u0930\u0942 \u0915\u0930\u093e (start)"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513837.497893
+}

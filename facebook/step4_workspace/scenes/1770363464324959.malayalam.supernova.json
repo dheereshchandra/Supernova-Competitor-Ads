@@ -1,0 +1,41 @@
+{
+  "ad_library_id": "1770363464324959",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Street Interview",
+        "script": "Arun says: Ningalude native language ethaanu?\nAnu says: Ente native language Malayalam aanu.\nArun says: Wow, ningalude English kelkkan nalla adipoli aayittund.\nAnu says: Kuraachu maasangal mumbu enikku English samsaarikkaney ariyillayirunnu, thudare thudare job interviews fail aayirunnu.\nArun says: Seriously? Ithra vegathil ithu enganeya padichathu?\nAnu says: Njan Supernova AI-yodu koode English practice cheyyarund. Avar ente exact level manassilaaki enikkaayi mathram oru personalized plan ready aakkum.\nArun says: Wow, athu adipoli aanallo. Enikkum onnu kaanichu tharoo.",
+        "on_screen_text": "NINGALUDE NATIVE LANGUAGE ETHAANU\nENTE NATIVE LANGUAGE MALAYALAM AANU\nWOW NINGALUDE ENGLISH KELKKAN SUPER AAYITTUND\nKURACHU MAASANGAL MUMBU ENIKKU SAMSAARIKKAN ARIYILLAYIRUNNU\nJOB INTERVIEWS EPPOLUM FAIL AAYIRUNNU\nSERIOUSLY ITHRA VEGATHIL ENGANE PADICHU\nNJAN SUPERNOVA AI-YODU PRACTICE CHEYYUNNU\nENIKKAAYI MATHRAM ORU PLAN READY AAKKUM\nWOW ATHU ADIPOLI AANALLO ONNU KAANIKKOO"
+      },
+      {
+        "n": 2,
+        "scene_label": "AI Tutor Video Call",
+        "script": "Miss Nova says: Hey Anu, innu engane undu?\nAnu says: I was being interviewed right now.\nMiss Nova says: Not 'I was', ningal 'I am being interviewed right now' ennu venam parayaan, kaaranam ithu present-il nadakkunnathaannu.\nAnu says: Oh, I am being interviewed right now.\nMiss Nova says: Absolutely right. Interview enthine kurichaanu?\nAnu says: Ithu ente English skills-ne kurichaanu. They say me I speak with confidence.\nMiss Nova says: Not 'They say me', ithu 'They say I speak with confidence' ennaanu parayendathu. Pinne orkkuka, ningal aayiram mistakes varuthiyaalum, njan ningale orikkalum kaliyaakilla... judge-um cheyyilla.\nAnu says: You're right. They say I speak with confidence.",
+        "on_screen_text": "HEY ANU HOW ARE YOU TODAY\nI WAS BEING INTERVIEWED RIGHT NOW\nNOT I WAS NINGAL I AM BEING INTERVIEWED ENNU PARAYANAM\nOH I AM BEING INTERVIEWED RIGHT NOW\nABSOLUTELY RIGHT INTERVIEW ENTHINE KURICHAANU\nITHU ENTE ENGLISH SKILLS-NE KURICHAANU\nTHEY SAY ME I SPEAK WITH CONFIDENCE\nNOT THEY SAY ME ITHU THEY SAY I SPEAK WITH CONFIDENCE ENNAANU\nAAYIRAM MISTAKES VARUTHIYAALUM NJAN JUDGE CHEYYILLA\nYOURE RIGHT THEY SAY I SPEAK WITH CONFIDENCE"
+      },
+      {
+        "n": 3,
+        "scene_label": "Robot Tutor Pitch",
+        "script": "Miss Nova says: Feeds scroll cheythu manikyoorugal waste aakkunnath nirthoo, ennit ennodu koode English samsaarikkan thudangoo.\nMiss Nova says: Divusavum just 15 minutes ennodu koode practice cheyyoo, oru maasathil ningalkku nalla progress kaanam.\nMiss Nova says: 1 crore-il adhikam users ippol thanne Supernova AI-yil practice cheyyunnu. Ningalum thudangoo.\nMiss Nova says: Ithu coaching classes-nekkal ethrayo laabhamaanu.",
+        "on_screen_text": "SCROLL CHEYTHU MANIKYOORUGAL WASTE AAKKUNNATH NIRTHOO\nDIVUSAVUM 15 MINUTES PRACTICE CHEYYOO\nORU MAASATHIL NALLA PROGRESS KAANAM\n1 CRORE-IL ADHIKAM USERS SUPERNOVA AI-YIL PRACTICE CHEYYUNNU\nNINGALUM THUDANGOO\nCOACHING CLASSES-NEKKAL ETHRAYO LAABHAM"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "script": "Unknown speaker says: Ippol thanne install cheyyoo, ennit innu thanne Supernova AI app download cheyyoo.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "Applied Malayalam-specific localization rules: 1. Ensured the hook opens in native Malayalam ('Ningalude native language ethaanu?'). 2. Recast Rahul and Neha to Arun and Anu. 3. Replaced 'Hindi' with 'Malayalam' per T5. 4. Strictly avoided English-noun + Malayalam-case hybrids, using 'maasathil' instead of 'month-il', 'maasangal' instead of 'months', and 'manikyoorugal' instead of 'hours'. 5. Used 'samsaarikkan' instead of 'speak cheyyan' to avoid robotic hybrids. 6. Replaced literal 'laugh at' with 'kaliyaakilla' to preserve the correct sense of mocking/shame. 7. Kept all quoted English lines verbatim in scene 2 as required by T2a."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved social proof, acceptable comparative cost framing, and a safe, non-guaranteed progress expectation.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517414.5345652
+}

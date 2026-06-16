@@ -1,0 +1,33 @@
+{
+  "ad_library_id": "1974355020143862",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Video Call with AI Tutor",
+        "script": "Priya says: Main English read aur write toh perfectly fine kar leti hoon.\nMiss Nova says: Lekin jab actually English speak karne ka time aata hai, toh kya aap freeze ho jaate ho?\nPriya says: Haan! Mujhe bahut sharm aati hai. Maine itne saare courses try kiye hain, par kuch kaam nahi karta.\nMiss Nova says: Kyunki un courses mein, aapne kabhi actually speak nahi kiya. Main hoon Miss Nova, Supernova AI par aapki AI teacher.\nPriya says: Ek AI teacher? Bhala koi AI mujhe speak karna kaise sikha sakta hai?\nMiss Nova says: Main aapko bas generic lessons nahi deti. Main aapko speak karte hue sunti hoon, aapki exact struggle dhoondti hoon, aur aapke liye ek personalized plan ready karti hoon.\nPriya says: Par agar main mistakes karoon toh? Mujhe embarrassed feel hota hai.\nMiss Nova says: Aap mere saath raat ke 2 a.m. par bhi practice kar sakte ho. Hazaaron mistakes karo, main aapko correct karungi bina judge kiye ya aap par hanse.\nPriya says: Sach mein? Aur aap sab kuch aise explain karoge ki mujhe samajh aa jaye?\nMiss Nova says: Haan, main logic seedhe aapki apni language Hindi mein explain karti hoon. 1 crore+ Indians mere saath pehle se practice kar rahe hain.\nPriya says: Yeh toh sach mein amazing lag raha hai.\nMiss Nova says: Videos scroll karne mein ghanton waste karna band karo. Bas mere saath roz 15 minutes practice karo. Supernova AI install karo aur aaj se hi speak karna start karo.",
+        "on_screen_text": "You\nMain English read aur write toh perfectly fine kar leti hoon.\nAI Feedback\nLekin jab actually English speak karne ka time aata hai, toh kya aap freeze ho jaate ho?\nYou\nHaan! Mujhe bahut sharm aati hai. Maine itne saare courses try kiye hain, par kuch kaam nahi karta.\nAI Feedback\nKyunki un courses mein, aapne kabhi actually speak nahi kiya. Main hoon Miss Nova, Supernova AI par aapki AI teacher.\nYou\nEk AI teacher? Bhala koi AI mujhe speak karna kaise sikha sakta hai?\nAI Feedback\nMain aapko speak karte hue sunti hoon, aapki exact struggle dhoondti hoon, aur aapke liye ek personalized plan ready karti hoon.\nYou\nPar agar main mistakes karoon toh? Mujhe embarrassed feel hota hai.\nAI Feedback\nHazaaron mistakes karo. Main aapko correct karungi bina judge kiye ya aap par hanse. Main logic seedhe aapki apni language Hindi mein explain karti hoon. 1 crore+ Indians mere saath pehle se practice kar rahe hain.\nYou\nYeh toh sach mein amazing lag raha hai.\nAI Feedback\nVideos scroll karne mein ghanton waste karna band karo. Bas mere saath roz 15 minutes practice karo. Supernova AI install karo aur aaj se hi speak karna start karo."
+      }
+    ],
+    "self_critique_fixed": "The script has been successfully translated to romanized, code-mixed Hindi following all global and language-specific rules. The hook opens with a native word ('Main') rather than an English word. Miss Nova maintains a warm, polite 'aap' register throughout. All specified stay-English words (such as 'English', 'speak', 'practice', 'personalized plan', 'AI teacher', 'Supernova AI') and numerals ('2 a.m.', '1 crore+', '15 minutes') have been strictly preserved. The translation maintains a natural, spoken register (T3) and avoids any textbook-style or overly formal Hindi."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G4.2",
+        "category": "Meta / Facebook ad policy",
+        "severity": "severe",
+        "scene": "SCENE 1 — Video Call with AI Tutor",
+        "quote": "At the bottom of the screen, a dark translucent bar houses standard video call control icons, including a camera toggle, microphone mute, a red end-call button, an add-user icon, and a more-options menu.",
+        "why": "The inclusion of interactive-looking video call control buttons mimics a functional user interface, which violates Meta's policy against fake UI and misleading mechanics.",
+        "fix": "Remove the interactive video call control icons from the bottom bar, presenting the AI tutor interface as a clean, non-interactive video playback or chat screen."
+      }
+    ],
+    "summary": "The ad is mostly compliant but contains a severe Meta policy violation (G4.2) due to simulated interactive video call controls in the visual description.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517425.476613
+}

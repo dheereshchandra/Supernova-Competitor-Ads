@@ -1,0 +1,72 @@
+{
+  "ad_library_id": "1975915979948979",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction",
+        "script": "Priya says: Agar is saal ka koi ek life-changing trend hai, toh woh hai ki kaise log finally AI ke saath English bolna seekh rahe hain. Priya says: UP ke chhote towns se lekar Bengaluru ke tech parks tak, sabhi log Supernova AI join kar rahe hain.",
+        "on_screen_text": "AI ke saath English bolna seekhein\\nSupernova AI\\nUP ke chhote towns se lekar Bengaluru tak, log join kar rahe hain"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Feature - Practice",
+        "script": "Priya says: Miliye Miss Nova se, jo hain aapki personal AI teacher. Yahan aapko sirf read nahi karna hai—aap unse actually out loud baat kar sakte hain.",
+        "on_screen_text": "Miss Nova se out loud baat karein\\nMiss Nova AI Teacher\\nPractice Now\\nFluency Score\\nYour Learning Path\\nTalk about anything\\nDaily routine"
+      },
+      {
+        "n": 3,
+        "scene_label": "Building Confidence",
+        "script": "Priya says: Woh sabko same boring lessons nahi deti. Woh aapka exact level analyze karti hain aur aapke liye ek custom plan banati hain. Priya says: Aur yeh bilkul private hai. Aap chahe 1000 mistakes karein, woh aapko kabhi judge nahi karengi aur na hi aap par hasengi.",
+        "on_screen_text": "Aapke liye custom plan\\n100% private, no judgement"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Feature - Learning Path",
+        "script": "Priya says: Woh aapko live correct karti hain aur saara logic aapki apni language, Hindi mein samjhati hain.",
+        "on_screen_text": "Logic aapki apni language mein\\nLearn with Miss Nova\\nInformal greetings\\nFormal greetings\\nGreetings and salutations"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Priya says: Aap bina kisi darr ke real-life situations, jaise ek important job-interview, ki practice kar sakte hain. Priya says: Bahut se logon ko public mein English bolne mein sharm aati hai, par Miss Nova ke saath yeh hesitation bilkul gayab ho jati hai. Priya says: Un feeds ko ghanton scroll karna band karein jo aapko bolna nahi sikhaate. Priya says: Bas din mein 15 minutes dijiye. Consistent practice ke saath, aapko lagbhag 1 month mein visible progress dikhne lagegi. Priya says: Abhi download karein Supernova AI. Priya says: Aur finally confidence ke saath English bolna shuru karein.",
+        "on_screen_text": "Real-life job interviews ki practice karein\\nMiss Nova ke saath hesitation gayab\\nFeeds scroll karna band karein, bolna shuru karein\\nBas 15 minutes roz\\nLagbhag 1 month mein visible progress\\nAbhi download karein Supernova AI\\nConfidence ke saath English bolna shuru karein"
+      },
+      {
+        "n": 6,
+        "scene_label": "End Card",
+        "script": "[music only, no speech]",
+        "on_screen_text": "Supernova AI\\nSpoken English App\\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "The translation successfully applies all global rules. The hook opens with the native word 'Agar' to satisfy T7. Code-mixing is naturally maintained throughout using standard WhatsApp-style Romanized Hindi. Politeness matches the warm 'aap' register for Miss Nova and viewer-facing lines. The language self-reference has been correctly localized to 'Hindi' in Scene 4."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 5 (Script)",
+        "quote": "Miss Nova ke saath yeh hesitation bilkul gayab ho jati hai",
+        "why": "The brand voice promises that hesitation will completely disappear, which constitutes an absolute outcome guarantee.",
+        "fix": "Change to 'Miss Nova ke saath aapka hesitation kam hone lagega' to frame it as a progress expectation."
+      },
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 5 (On-Screen Text)",
+        "quote": "Miss Nova ke saath hesitation gayab",
+        "why": "The on-screen text guarantees that hesitation will disappear, violating the ban on brand-voiced outcome promises.",
+        "fix": "Change to 'Miss Nova ke saath hesitation door karein' to avoid guaranteeing an absolute end-state."
+      }
+    ],
+    "summary": "The ad is highly compliant overall, but contains two severe violations under G1.1 due to promising that hesitation will completely disappear.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517485.548744
+}

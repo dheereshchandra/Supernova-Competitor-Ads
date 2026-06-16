@@ -1,0 +1,41 @@
+{
+  "ad_library_id": "1770363464324959",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Street Interview",
+        "script": "Rahul says: Aapki native language kya hai?\nNeha says: Meri native language Hindi hai.\nRahul says: Wow, aapki English bahut acchi lag rahi hai.\nNeha says: Kuch months pehle, main bol bhi nahi paati thi aur job interviews mein fail ho jaati thi.\nRahul says: Seriously? Aap itna jaldi kaise seekh gaye?\nNeha says: Main Supernova AI ke saath practice karti hoon. Wo mera exact level samajh kar mere liye personalized plan banati hai.\nRahul says: Wow, ye toh amazing hai. Mujhe bhi dikhao.",
+        "on_screen_text": "AAPKI NATIVE LANGUAGE KYA HAI\nMERI NATIVE LANGUAGE HINDI HAI\nWOW AAPKI ENGLISH BAHUT ACCHI HAI\nKUCH MONTHS PEHLE MAIN BOL BHI NAHI PAATI THI\nAUR JOB INTERVIEWS MEIN FAIL HO JAATI THI\nSERIOUSLY ITNA JALDI KAISE SEEKHA\nMAIN SUPERNOVA AI KE SAATH PRACTICE KARTI HOON\nWO MERE LIYE PERSONALIZED PLAN BANATI HAI\nWOW YE TOH AMAZING HAI MUJHE BHI DIKHAO"
+      },
+      {
+        "n": 2,
+        "scene_label": "AI Tutor Video Call",
+        "script": "Miss Nova says: Hey Neha, aap aaj kaise hain?\nNeha says: I was being interviewed right now.\nMiss Nova says: 'I was' nahi, aapko kehna chahiye 'I am being interviewed right now' kyunki ye present mein ho raha hai.\nNeha says: Oh, I am being interviewed right now.\nMiss Nova says: Absolutely right. Interview kis baare mein hai?\nNeha says: It's about my English skills. They say me I speak with confidence.\nMiss Nova says: 'They say me' nahi, ye hoga 'They say I speak with confidence'. Aur yaad rakhiye, aap yahan 1000 mistakes kar sakte hain, main aapko kabhi judge nahi karungi.\nNeha says: You're right. They say I speak with confidence.",
+        "on_screen_text": "HEY NEHA AAP AAJ KAISE HAIN\nI WAS BEING INTERVIEWED RIGHT NOW\nNOT I WAS, YOU SHOULD SAY I AM BEING INTERVIEWED\nOH I AM BEING INTERVIEWED RIGHT NOW\nABSOLUTELY RIGHT! INTERVIEW KIS BAARE MEIN HAI\nITS ABOUT MY ENGLISH SKILLS\nTHEY SAY ME I SPEAK WITH CONFIDENCE\nNOT THEY SAY ME, IT WILL BE THEY SAY I SPEAK WITH CONFIDENCE\n1000 MISTAKES KARIYE, MAIN KABHI JUDGE NAHI KARUNGI\nYOURE RIGHT, THEY SAY I SPEAK WITH CONFIDENCE"
+      },
+      {
+        "n": 3,
+        "scene_label": "Robot Tutor Pitch",
+        "script": "Miss Nova says: Feeds scroll karke ghanton waste mat kijiye, aur mere saath English bolna start kijiye.\nMiss Nova says: Roz bas 15 minutes mere saath practice kijiye, aur aapko 1 month mein visible progress dikhne lagegi.\nMiss Nova says: 1 crore se zyada users pehle se hi Supernova AI par practice kar rahe hain. Aap bhi kariye!\nMiss Nova says: Ye kisi bhi coaching class se bahut sasta hai.",
+        "on_screen_text": "FEEDS SCROLL KARKE GHANTON WASTE MAT KIJIYE\nROZ BAS 15 MINUTES PRACTICE KIJIYE\n1 MONTH MEIN VISIBLE PROGRESS DEKHIYE\n1 CRORE+ USERS SUPERNOVA AI PAR PRACTICE KARTE HAIN\nAAP BHI KARIYE\nCOACHING CLASSES SE BAHUT SASTA"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "script": "Unknown speaker says: Abhi install par click kariye aur aaj hi Supernova AI app download kijiye.",
+        "on_screen_text": "Supernova AI\nEnglish speaking app\nInstall Now"
+      }
+    ],
+    "self_critique_fixed": "I have successfully translated the script into romanized, code-mixed Hindi (Hinglish). The hook opens with a native word ('Aapki') to capture attention. All English lines being taught or corrected are kept 100% verbatim as per T2a. Miss Nova's lines are tuned to a warm, polite plural register ('aap' + 'kijiye'), while the street dialogue uses a natural, colloquial peer register. No formal or Sanskritized Hindi words are used, ensuring a highly natural, conversational flow."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved carve-outs for testimonials, soft progress expectations, and social proof.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517346.385581
+}

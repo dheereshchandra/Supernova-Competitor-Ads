@@ -1,0 +1,87 @@
+{
+  "competitor_id": "1975915979948979",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "female presenter (top)",
+        "appearance": "Young South Asian woman, medium complexion, long dark wavy hair. Features a red bindi and gold jhumka earrings.",
+        "wardrobe": "Dark sleeveless top.",
+        "demeanor": "Expressive, smiling, and engaging."
+      },
+      {
+        "id": "B",
+        "name": "Anjali",
+        "role": "female presenter (bottom)",
+        "appearance": "Young South Asian woman, medium complexion, dark hair styled in an updo. Features a red bindi and gold jhumka earrings.",
+        "wardrobe": "Crisp white button-down shirt.",
+        "demeanor": "Calm and professional, seated near a microphone."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction",
+        "supernova_script": "Priya says: If there's one life-changing trend this year, it's how people are finally learning to actually speak English with AI.\nPriya says: People from small towns in UP to tech parks in Bengaluru are joining Supernova AI.",
+        "scene_summary": "- Hook: Trend/FOMO framing\n- Names English in the first 10 seconds\n- Indianizes the geographic reach",
+        "supernova_on_screen_text": "Learning to actually speak English with AI\nSupernova AI\nFrom small towns in UP to Bengaluru, people are joining"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Feature - Practice",
+        "supernova_script": "Priya says: Meet Miss Nova, your personal AI teacher. You don't just read—you actually speak to her out loud.",
+        "scene_summary": "- Introduces Miss Nova\n- Lands beat (c) You SPEAK, not read/type",
+        "supernova_on_screen_text": "Speak to Miss Nova out loud\nMiss Nova AI Teacher\nPractice Now\nFluency Score\nYour Learning Path\nTalk about anything\nDaily routine"
+      },
+      {
+        "n": 3,
+        "scene_label": "Building Confidence",
+        "supernova_script": "Priya says: She doesn't give everyone the same lesson. She analyzes your exact level and builds a custom plan just for you.\nPriya says: And it's completely private. Make a thousand mistakes, and she will never judge or laugh at you.",
+        "scene_summary": "- Lands beat (a) Personalization\n- Lands beat (b) Privacy/no-judgement\n- Front-loads retention engine",
+        "supernova_on_screen_text": "Custom plan just for you\n100% private, no judgement"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Feature - Learning Path",
+        "supernova_script": "Priya says: She corrects you live and explains the logic right in your own language.",
+        "scene_summary": "- Lands beat (g) Logic explained in your language\n- Highlights live correction",
+        "supernova_on_screen_text": "Logic explained in your own language\nLearn with Miss Nova\nInformal greetings\nFormal greetings\nGreetings and salutations"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "supernova_script": "Priya says: You can practice real-life situations, like a high-stakes job interview, without any fear.\nPriya says: Many people feel shy to speak English in public, but with Miss Nova, that hesitation disappears.\nPriya says: Stop wasting hours scrolling through feeds that don't help you speak.\nPriya says: Just give it fifteen minutes a day. With consistent practice, you'll start seeing visible progress in about a month.\nPriya says: Download Supernova AI right now.\nPriya says: And finally start speaking English with confidence.",
+        "scene_summary": "- Lands beat (e) Real-life scenarios (job interview)\n- Negative time anchor (scrolling feeds) + positive time anchor (15 min/day)\n- Soft, hedged progress expectation + clean CTA",
+        "supernova_on_screen_text": "Practice real-life job interviews\nHesitation disappears with Miss Nova\nStop scrolling feeds, start speaking\nJust 15 minutes a day\nVisible progress in ~1 month\nDownload Supernova AI right now\nStart speaking English with confidence"
+      },
+      {
+        "n": 6,
+        "scene_label": "End Card",
+        "supernova_script": "[music only, no speech]",
+        "scene_summary": "- Final brand visual\n- CTA button",
+        "supernova_on_screen_text": "Supernova AI\nSpoken English App\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "c (You speak), a (Personalization), b (Privacy), g (Logic in own language), e (Real-life scenarios)",
+      "kept_from_seed": "Split-screen podcast format and UI feature cutaways",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No price mentioned"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      },
+      {
+        "competitor_brand": "Arya AI Teacher",
+        "supernova_swap": "Miss Nova AI Teacher"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.658149
+}

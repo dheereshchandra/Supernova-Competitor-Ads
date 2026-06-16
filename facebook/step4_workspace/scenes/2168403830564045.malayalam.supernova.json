@@ -1,0 +1,47 @@
+{
+  "ad_library_id": "2168403830564045",
+  "language": "Malayalam",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Introduction to the App",
+        "script": "Lakshmi says: Nee phone-il aaroda ee samsaarikunnathu?\nMiss Nova says: Njan Miss Nova. Ennodulla samsaarathiloode aalukale English samsaarikkan njan sahayikkum.\nLakshmi says: Aano?\nMiss Nova says: Athe! Njan aadyam ningalude exact level analyze cheyyum, ennittu ningalkkayi mathram oru personalized plan ready aakkum.\nLakshmi says: Ente muttinokke nalla vedhanayaanu. Idhu English-il enganeya parayuka?\nMiss Nova says: Onnu samsaarikkan try cheyyoo, njan sahayikkaam.",
+        "on_screen_text": "POV: When Grandma asks Supernova AI more questions than her grandchildren 🤪📱\nWait for the end 😂"
+      },
+      {
+        "n": 2,
+        "scene_label": "Pronunciation Correction",
+        "script": "Lakshmi says: I have pain in my niece.\nMiss Nova says: Athu 'knees' aanu, 'niece' alla. Pakshe tension venda, aayiram mistakes varuthiyaalum ivide ningale aarum judge cheyyilla.\nLakshmi says: Knees. Sheriyalle?",
+        "on_screen_text": "POV: When Grandma asks Supernova AI more questions than her grandchildren 🤪📱\nWait for the end 😂"
+      },
+      {
+        "n": 3,
+        "scene_label": "Asking About the App",
+        "script": "Lakshmi says: Ennod ee samsaarikkunna kutty aaraa?\nAnu says: Ammamma, athu Supernova AI app-ile Miss Nova aanu.\nLakshmi says: Supernova AI. Valare nalla teacher aanu. Malayalathil logic paranju tharunnadhukondu nannaayi manasilavum. Pakshe idhinu ethra cost aakum?",
+        "on_screen_text": "POV: When Grandma asks Supernova AI more questions than her grandchildren 🤪📱\nWait for the end 😂"
+      },
+      {
+        "n": 4,
+        "scene_label": "Price Reveal",
+        "script": "Anu says: Aa expensive coaching classes-nekkalum ethrayo affordable aanu, Ammamma. Pinne divusavum verum 15 minutes spend cheythal mathi.\nLakshmi says: Oh wow! Ennaal ninakku naale nadakkanulla job interview-nu idhu perfect aayirikkum.",
+        "on_screen_text": "POV: When Grandma asks Supernova AI more questions than her grandchildren 🤪📱\nWait for the end 😂"
+      },
+      {
+        "n": 5,
+        "scene_label": "Conclusion",
+        "script": "Anu says: Athe Ammamma, njan ippo Supernova AI-yil ente interview scenarios practice cheyyukayaanu. Innu thanne app install cheythu samsaarikkan thudangoo!",
+        "on_screen_text": "POV: When Grandma asks Supernova AI more questions than her grandchildren 🤪📱\nWait for the end 😂"
+      }
+    ],
+    "self_critique_fixed": "Self-critique pass: Checked for newspaperish Malayalam. Replaced literal translations with colloquial expressions like 'Ammamma' for Grandma, 'Malayalathil logic paranju tharunnadhukondu' for 'explains logic in our own language', and ensured no 'speak cheyyuka' hybrids were used, opting for 'samsaarikkan' instead. Hook opens in pure native Malayalam."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, featuring a warm, respectful portrayal of a grandmother learning English with no false guarantees, rupee prices, or competitor disparagement.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517509.8170738
+}

@@ -1,0 +1,45 @@
+{
+  "ad_library_id": "954609790259093",
+  "language": "Hindi",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Pronunciation comparison",
+        "script": "Rahul says: Schedule.\nAmit says: Shedule.\nRahul says: Alarm.\nAmit says: Alaram.\nRahul says: Salad.\nAmit says: Salaad.",
+        "on_screen_text": "SCHEDULE ✔️ SHEDULE ❌ ALARM ✔️ ALARAM ❌ SALAD ✔️ SALAAD ❌"
+      },
+      {
+        "n": 2,
+        "scene_label": "App pitch",
+        "script": "Rahul says: Arre bas kar, Amit. Sirf words jaan lena kaafi nahi hai agar bolte time tum freeze ho jao.\nRahul says: 12 years tak books padhne se ye thik nahi hoga. Tumhe actually speaking practice karni padegi.\nRahul says: Isiliye main Supernova AI use karta hoon. Bas Miss Nova se baat karo, jo tumhari personal AI teacher hain.\nRahul says: Wo tumhara exact level analyze karke tumhare liye ek custom plan banati hain.\nRahul says: Aur best part? Tum raat ko 3 a.m. pe bhi 1000 mistakes karo, wo tumhe kabhi judge nahi karegi aur na hi hasegi.\nRahul says: Wo tumhara pronunciation instantly correct karti hain aur Hindi mein logic explain karti hain, taaki tum kabhi lost feel na karo.\nRahul says: Tum actually out loud speak karke seekhte ho, na ki bas passively videos dekh kar.\nRahul says: Apne next job-interview mein embarrass hone ka wait mat karo. Supernova AI download karo aur aaj se hi confidently bolna start karo.",
+        "on_screen_text": "Arre bas kar, Amit. Sirf words jaan lena kaafi nahi hai agar bolte time tum freeze ho jao. 12 years tak books padhne se ye thik nahi hoga. Tumhe actually speaking practice karni padegi. Isiliye main Supernova AI use karta hoon. Bas Miss Nova se baat karo, jo tumhari personal AI teacher hain. Wo tumhara exact level analyze karke tumhare liye ek custom plan banati hain. Aur best part? Tum raat ko 3 a.m. pe bhi 1000 mistakes karo, wo tumhe kabhi judge nahi karegi aur na hi hasegi. Wo tumhara pronunciation instantly correct karti hain aur Hindi mein logic explain karti hain, taaki tum kabhi lost feel na karo. Tum actually out loud speak karke seekhte ho, na ki bas passively videos dekh kar. Apne next job-interview mein embarrass hone ka wait mat karo. Supernova AI download karo aur aaj se hi confidently bolna start karo."
+      },
+      {
+        "n": 3,
+        "scene_label": "App screencast and CTA",
+        "script": "Rahul says: Hours tak scroll karke time waste karna band karo. Din mein bas 15 minutes do. Supernova AI install karo aur confidently bolna start karo.",
+        "on_screen_text": "Download Supernova AI Now GET IT ON Google play"
+      }
+    ],
+    "self_critique_fixed": "Applied the Hindi language module and global rules. Ensured high-quality code-mixing (T1) using standard WhatsApp-style romanization (T10). Pronunciation words in Scene 1 are kept verbatim English (T2a). Applied T4 politeness: Rahul addresses his friend Amit using the casual 'tum' register, while referring to Miss Nova with respectful plural verbs ('banati hain', 'explain karti hain'). Replaced 'your own language' with 'Hindi' in Scene 2 per T5. Converted all numbers to English numerals ('12 years', '3 a.m.', '1000 mistakes', '15 minutes') per T2h. Run a self-critique pass to strip out any formal/Sanskritized Hindi, replacing them with highly colloquial spoken phrasing like 'Arre bas kar', 'time waste karna band karo', and 'lost feel na karo' to keep the script natural and anti-newspaperish (T3)."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G3.1",
+        "category": "Dignity & representation",
+        "severity": "severe",
+        "scene": "Scene 2",
+        "quote": "Character B stands beside him, listening passively and looking slightly embarrassed when referenced.",
+        "why": "The ad sets up a shame hook by correcting and embarrassing Amit, but fails to resolve it into triumph or respect, leaving him humiliated.",
+        "fix": "Modify the visual so Amit actively downloads the app or practices with a smile, showing a clear path to triumph."
+      }
+    ],
+    "summary": "The ad violates G3.1 (Severe) because the shame hook involving Amit's pronunciation errors does not resolve in dignity or triumph.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517745.6799061
+}

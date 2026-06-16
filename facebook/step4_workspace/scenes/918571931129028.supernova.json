@@ -1,0 +1,55 @@
+{
+  "competitor_id": "918571931129028",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar",
+        "appearance": "White humanoid robot with female facial features. It has a glossy white face and torso, with black mechanical joints and wiring visible at the neck and shoulders. It features dark, painted-on eyebrows and lips.",
+        "wardrobe": "None; bare white and black robot chassis.",
+        "demeanor": "Friendly, expressive but artificial."
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "female presenter",
+        "appearance": "Young Indian woman, medium build, medium brown complexion. She has long, straight black hair parted in the middle and dark eyes. She wears small silver hoop earrings.",
+        "wardrobe": "A plain, light blue short-sleeved t-shirt.",
+        "demeanor": "Enthusiastic, smiling, direct eye contact."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Bilingual Conversation",
+        "supernova_script": "Miss Nova says: I am Miss Nova. I build a personalized English plan just for your level.\nPriya says: I sleeped at 10 last night.\nMiss Nova says: We say \"slept\". Practice with me anytime. I will never judge your mistakes.\nPriya says: I slept at 10 last night.",
+        "scene_summary": "- Establishes Miss Nova and names English early\n- Lands personalization (beat a) and privacy/no-judgement (beat b)\n- Demonstrates the live speak-and-correct loop",
+        "supernova_on_screen_text": "I am Miss Nova.\nPersonalized English plan.\nI sleeped at 10 last night.\nWe say \"slept\".\nI will never judge your mistakes.\nI slept at 10 last night."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Promotion",
+        "supernova_script": "Priya says: Stop wasting hours scrolling. Download Supernova AI and practice real-life scenarios like job interviews.\nPriya says: Speak for just fifteen minutes a day with Miss Nova.\nPriya says: You will start speaking English confidently within a month!",
+        "scene_summary": "- Delivers the tight close with negative and positive time anchors\n- Mentions real-life scenarios like job interviews (beat e)\n- Sets a soft, realistic progress expectation without hard guarantees",
+        "supernova_on_screen_text": "Stop wasting hours scrolling\nSupernova AI\nPractice job interviews\nJust 15 minutes a day\nStart speaking confidently\nDownload Supernova AI"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy), c (speak), e (scenarios)",
+      "kept_from_seed": "Split-screen conversation followed by direct-to-camera app promotion",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "No hard rupee figure; removed ₹1 and ₹299/month from seed."
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.6648881
+}

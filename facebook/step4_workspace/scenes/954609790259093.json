@@ -1,0 +1,103 @@
+{
+  "competitor_id": "954609790259093",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features real human actors in a physical outdoor setting. The lighting, movements, and facial expressions are natural, with no AI artifacts. The final scene uses standard motion graphics.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male presenter",
+        "appearance": "Bald male with a full black beard and round glasses. Medium build, brown complexion. Expressive facial features.",
+        "wardrobe": "Black t-shirt with a white graphic ('OPERATION SAFED SAGAR') and khaki pants.",
+        "demeanor": "Confident, authoritative, and slightly exasperated."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "Male with short black hair and a light mustache and beard. Medium build, brown complexion.",
+        "wardrobe": "White and blue plaid shirt worn unbuttoned over a maroon t-shirt with white text, paired with black pants.",
+        "demeanor": "Clueless, passive, and slightly embarrassed."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 4.5,
+        "screenshot_at_s": 2.0,
+        "scene_label": "Pronunciation comparison",
+        "setting": "Outdoor balcony or rooftop at night. Dark sky, silhouettes of trees, and distant city lights. A metal railing with plants is in the foreground.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Two men stand side-by-side on a balcony at night. Character A is on the left, looking forward and speaking. Character B is on the right, looking forward and speaking after Character A, gesturing slightly with his hands. The background is dark with silhouettes of trees and distant city lights. A metal railing with some potted plants is visible in the lower foreground.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Two men stand side-by-side outdoors at night. Text overlays appear above their heads as they speak. Character A says a word correctly, accompanied by a green checkmark overlay. Character B repeats the word incorrectly, accompanied by a red cross overlay. This rapid-fire exchange happens for three different words.",
+        "audio_transcript": "Character A says: \u0938\u094d\u0915\u0947\u0921\u094d\u092f\u0942\u0932\u0964 [Schedule.]\nCharacter B says: \u0936\u0947\u0921\u094d\u092f\u0942\u0932\u0964 [Schedule.]\nCharacter A says: \u0905\u0932\u093e\u0930\u094d\u092e\u0964 [Alarm.]\nCharacter B says: \u0905\u0932\u093e\u0930\u092e\u0964 [Alarm.]\nCharacter A says: \u0938\u0948\u0932\u0947\u0921\u0964 [Salad.]\nCharacter B says: \u0938\u0932\u093e\u0926\u0964 [Salad.]",
+        "on_screen_text": "SKEDULE \u2714\ufe0f SCHEDULE \u274c ALARM \u2714\ufe0f ALARAM \u274c SALAD \u2714\ufe0f SALAAD \u274c"
+      },
+      {
+        "n": 2,
+        "start_s": 4.5,
+        "end_s": 33.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "App pitch",
+        "setting": "Outdoor balcony or rooftop at night. Dark sky, silhouettes of trees, and distant city lights. A metal railing with plants is in the foreground.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Two men stand side-by-side on a balcony at night. Character A is on the left, actively speaking and gesturing with his hands, looking directly at the camera. Character B is on the right, standing quietly with his hands clasped in front of him. He listens to Character A, occasionally looking at him or the camera with a slightly sheepish expression. The background remains a dark night scene with trees and distant lights.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A delivers a pitch about the importance of English pronunciation and introduces a language learning app. He gestures animatedly while speaking directly to the camera. Character B stands beside him, listening passively and looking slightly embarrassed when referenced. Subtitles appear at the bottom of the screen throughout the pitch.",
+        "audio_transcript": "Character A says: \u092c\u0938 \u0915\u0930 \u092d\u093e\u0908\u0964 [Stop it brother.]\nCharacter A says: \u0938\u093f\u0930\u094d\u092b \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0915\u0947 \u0936\u092c\u094d\u0926 \u092a\u0924\u093e \u0939\u094b\u0928\u093e \u0915\u093e\u092b\u0940 \u0928\u0939\u0940\u0902 \u0939\u0948, \u0909\u0938\u0915\u093e \u0938\u0939\u0940 \u0909\u091a\u094d\u091a\u093e\u0930\u0923 \u0915\u0930\u0928\u093e, \u0938\u0939\u0940 \u092a\u094d\u0930\u094b\u0928\u0902\u0938\u093f\u090f\u0936\u0928 \u0915\u0930\u0928\u093e \u092c\u0939\u0941\u0924 \u095b\u0930\u0942\u0930\u0940 \u0939\u0948\u0964 [Just knowing English words is not enough, pronouncing them correctly, having the right pronunciation is very important.]\nCharacter A says: \u091c\u094b \u0906\u092a\u0915\u094b \u0915\u093f\u0938\u0940 \u0911\u0928\u0932\u093e\u0907\u0928 \u0915\u094b\u0930\u094d\u0938 \u092f\u093e \u0915\u093f\u0924\u093e\u092c \u092a\u095d\u0928\u0947 \u0938\u0947 \u0928\u0939\u0940\u0902, \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0928\u0947 \u0938\u0947 \u0906\u090f\u0917\u093e\u0964 [Which will not come to you by reading any online course or book, but by practicing.]\nCharacter A says: \u0907\u0938\u0915\u0947 \u0932\u093f\u090f \u0906\u092a PW Talk \u0910\u092a \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930 \u0932\u0940\u091c\u093f\u090f\u0964 [For this, you can download the PW Talk app.]\nCharacter A says: \u0907\u0938\u0915\u0947 AI \u091f\u0940\u091a\u0930 \u0930\u0940\u0935\u093e \u0938\u0947 \u091c\u092c \u0906\u092a \u092c\u093e\u0924 \u0915\u0930\u0947\u0902\u0917\u0947, \u0924\u094b \u0906\u092a\u0915\u0947 \u0917\u0932\u0924 \u0909\u091a\u094d\u091a\u093e\u0930\u0923 \u0915\u094b \u0938\u0939\u0940 \u0915\u0930\u0915\u0947, \u0939\u0930 \u0935\u0930\u094d\u0921 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092e\u0947\u0902 \u0938\u0939\u0940 \u0938\u0947 \u092c\u094b\u0932\u0928\u093e \u0938\u093f\u0916\u093e\u090f\u0917\u0940\u0964 [When you talk to its AI teacher Riva, she will correct your wrong pronunciation and teach you to speak every word correctly in English.]\nCharacter A says: \u0914\u0930 \u0906\u092a \u0938\u0940\u0916\u0947\u0902\u0917\u0947 \u092d\u0940, \u0915\u094d\u092f\u094b\u0902\u0915\u093f \u092a\u095d\u0915\u0930 \u0914\u0930 \u0938\u0941\u0928\u0915\u0930 \u0928\u0939\u0940\u0902, \u0906\u092a \u090f\u0915 AI \u091f\u0940\u091a\u0930 \u0938\u0947 \u092c\u093e\u0924 \u0915\u0930\u0915\u0947 \u0938\u0940\u0916 \u0930\u0939\u0947 \u0939\u0948\u0902\u0964 [And you will also learn, because you are not learning by reading and listening, but by talking to an AI teacher.]\nCharacter A says: \u0907\u0938\u0915\u0940 \u0924\u0930\u0939 \u0917\u0932\u0924 \u0936\u092c\u094d\u0926\u094b\u0902 \u0915\u094b \u092c\u094b\u0932\u0915\u0930 \u0905\u0917\u0930 \u0906\u092a \u092c\u0947\u0907\u091c\u094d\u091c\u0924\u0940 \u0928\u0939\u0940\u0902 \u0915\u0930\u0935\u093e\u0928\u093e \u091a\u093e\u0939\u0924\u0947 \u0939\u0948\u0902, \u0924\u094b \u091c\u094d\u092f\u093e\u0926\u093e \u092e\u0924 \u0938\u094b\u091a\u093f\u090f\u0964 [If you don't want to get insulted by speaking wrong words like him, then don't think too much.]\nCharacter A says: PW Talk \u0910\u092a \u0905\u092d\u0940 \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0940\u091c\u093f\u090f\u0964 [Download the PW Talk app now.]",
+        "on_screen_text": "bas kar bhai. sirf english ke shabd pata hona kaafi nahi hai uska sahi ucharan karna sahi pronunciation karna bahut zaroori hai jo aapko kisi online course ya kitab padhne se nahi practice karne se aayega. Iske liye aap PWTalk app download kar lijiye. Iske AI teacher RIVA se jab aap baat karenge to aapke galat ucharan ko sahi karke har word english me sahi se bolna sikhayegi. aur aap seekhenge bhi kyunki padhkar aur sunkar nahi aap ek AI teacher se baat kar ke seekh rahe hain. Iske tere galat shabdon ko bol kar agar aap beizzati nahi karwana chahte hain to zyada mat sochiye. PWTalk app abhi download kijiye."
+      },
+      {
+        "n": 3,
+        "start_s": 33.5,
+        "end_s": 38.0,
+        "screenshot_at_s": 35.0,
+        "scene_label": "App screencast and CTA",
+        "setting": "Abstract yellow background with subtle purple geometric shapes.",
+        "characters_in_scene": [],
+        "camera": "app-screencast",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A smartphone is displayed against a bright yellow background with subtle purple geometric shapes. The phone screen shows a mobile application interface with various menus, buttons, and text. The phone is initially angled and then rotates to face forward, filling more of the screen.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A 3D render of a smartphone appears on a yellow and purple background, showcasing the PW Talk app interface. The phone rotates to face the viewer. Large text overlays prompt the viewer to download the app, accompanied by a Google Play store badge. A voiceover encourages downloading the app.",
+        "audio_transcript": "Unknown speaker says: \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u094d\u092a\u0940\u0915\u093f\u0902\u0917 \u0938\u0940\u0916\u0928\u093e \u0939\u0948 \u0924\u094b PW Talk \u0910\u092a \u0905\u092d\u0940 \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 [If you want to learn English speaking, download the PW Talk app now.]",
+        "on_screen_text": "Download Now GET IT ON Google play"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781513577.391252
+}

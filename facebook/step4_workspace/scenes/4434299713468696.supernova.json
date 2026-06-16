@@ -1,0 +1,75 @@
+{
+  "competitor_id": "4434299713468696",
+  "parsed": {
+    "production_type": "AI-generated",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Kavita",
+        "role": "female presenter",
+        "appearance": "Middle-aged Indian woman with a medium build and fair complexion. She has black hair pulled back and adorned with a white jasmine garland (gajra). She wears a prominent red bindi on her forehead.",
+        "wardrobe": "A solid green saree with a gold border. She wears a gold necklace with a black thread (mangalsutra), small gold earrings, and a gold bangle on her right wrist.",
+        "demeanor": "Authoritative, persuasive, and confident, delivering a strong motivational message."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Audience and Presenter",
+        "supernova_script": "Kavita says: Listen to me carefully.\nKavita says: If you are still freezing when it is time to speak English, you are holding your own career back.\nKavita says: But if you start practicing today, you can finally build that confidence.\nKavita says: You think you don't have the time or money? Those are just excuses.",
+        "scene_summary": "- Hook: Tough-love behavior callout\n- Names English immediately\n- Sets up urgency and confidence aspiration without guaranteeing an outcome",
+        "supernova_on_screen_text": "Listen to me carefully\nStill freezing when you speak English?\nYou are holding your career back\nBuild your confidence\nTime and money are just excuses"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Pricing and Chat",
+        "supernova_script": "Kavita says: Because Supernova AI is completely affordable and different from watching videos.\nKavita says: You get Miss Nova, your personal AI teacher, in a completely private space where no one is judging you.\nKavita says: She doesn't give everyone the same lesson. She analyzes your level and builds a plan exactly for you.",
+        "scene_summary": "- Replaces hard price with 'affordable'\n- Introduces Miss Nova\n- Lands beat (b) privacy/no-judgement\n- Lands beat (a) personalization",
+        "supernova_on_screen_text": "Supernova AI\nAffordable learning\nMeet Miss Nova\n100% Private & No Judgement\nPersonalized plan just for you"
+      },
+      {
+        "n": 3,
+        "scene_label": "Presenter at Podium",
+        "supernova_script": "Kavita says: Just ten to fifteen minutes a day is all it takes to start seeing visible progress.\nKavita says: Whether you are preparing for a tough job interview or a manager round, Supernova AI prepares you for real life.",
+        "scene_summary": "- Lands positive time anchor (10-15 mins)\n- Sets hedged progress expectation\n- Lands beat (e) real-life scenarios (job interview)",
+        "supernova_on_screen_text": "Just 10-15 minutes a day\nStart seeing visible progress\nPrepare for job interviews\nReal-life practice"
+      },
+      {
+        "n": 4,
+        "scene_label": "Grammar Correction Feature",
+        "supernova_script": "Kavita says: You actually speak out loud, not just type.\nKavita says: Make a thousand mistakes, and Miss Nova will correct you and explain the logic in your own language.",
+        "scene_summary": "- Lands beat (c) you speak, not type\n- Lands beat (g) logic explained in your language\n- Reinforces no-judgement correction loop",
+        "supernova_on_screen_text": "Speak out loud, don't just type\nMake 1000 mistakes\nLogic explained in your own language"
+      },
+      {
+        "n": 5,
+        "scene_label": "Final Call to Action",
+        "supernova_script": "Kavita says: So why are you still waiting?",
+        "scene_summary": "- Urgent transition to CTA",
+        "supernova_on_screen_text": "So why wait anymore?"
+      },
+      {
+        "n": 6,
+        "scene_label": "App Install Screen",
+        "supernova_script": "Kavita says: Stop scrolling through videos. Install Supernova AI and start speaking today.",
+        "scene_summary": "- Negative time anchor (stop scrolling)\n- Clean install CTA",
+        "supernova_on_screen_text": "Supernova AI\nSpoken English App\nInstall Now"
+      }
+    ],
+    "payload_audit": {
+      "beats_covered": "a (personalization), b (privacy/no-judgement), c (you speak), e (job interview), g (logic in your language)",
+      "kept_from_seed": "Split-screen auditorium visual and authoritative podium presentation format",
+      "miss_nova_named": true,
+      "english_named_early": true,
+      "price_check": "Removed ₹1 and ₹299/month; replaced with 'completely affordable'"
+    },
+    "brand_swaps_detected": [
+      {
+        "competitor_brand": "MySivi",
+        "supernova_swap": "Supernova AI"
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1781514308.6621382
+}

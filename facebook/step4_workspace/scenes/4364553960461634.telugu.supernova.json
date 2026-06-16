@@ -1,0 +1,66 @@
+{
+  "ad_library_id": "4364553960461634",
+  "language": "Telugu",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Hair Oiling Correction",
+        "script": "Priya says: What are you doing?\nMiss Nova says: I'm adding oil.\nPriya says: Adhi...\nMiss Nova says: I'm applying oil. Leda meeru, I'm oiling my hair ani cheppochu.\nMiss Nova says: Chivariki English confidently matladali ani undha?\nPriya says: Avunu, kani mistakes cheyali ante chala shy ga anipisthundi.\nMiss Nova says: Nenu Miss Nova. Supernova AI unte, meeru asalu worry avvalsina pane ledhu.",
+        "on_screen_text": "What are you doing?\nI'm adding oil\nI'm applying oil\nOr you should say\nI'm oiling my hair\nEnglish matladali ani undha?\nAvunu, kani shy ga undhi\nSupernova AI"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Interface Introduction",
+        "script": "Miss Nova says: Meeru daily speaking practice cheyochu. Veyyi mistakes chesina, nenu mimalni eppudu judge cheyanu, and evaru chudadam ledhu.",
+        "on_screen_text": "Daily speaking practice cheyandi\n1000 mistakes chesina parvaledhu\nZero judgement\nEvaru chudadam ledhu"
+      },
+      {
+        "n": 3,
+        "scene_label": "Explaining Benefits",
+        "script": "Miss Nova says: Actually out loud ga matladuthu, naturally ela matladalo nenu meeku nerpisthanu.\nPriya says: Idhi nijangane naku work avuthundha?\nMiss Nova says: Idhi patha coaching classes kante chala effective, endhukante nenu mee exact level ni analyze chesi, mee kosam oka custom plan ready chesthanu.\nPriya says: Mari idhi affordable ena?",
+        "on_screen_text": "Naturally matladandi\nOut loud ga matladandi\nNaku work avuthundha?\nCoaching classes kante better\nMee exact level analyze chestham\nCustom plan just for you\nAffordable ena?"
+      },
+      {
+        "n": 4,
+        "scene_label": "Pricing Offer",
+        "script": "Miss Nova says: Avunu, regular classes kante idhi 7 retlu cheaper. Roju ki just 15 minutes naku ivvandi, and oka month lo meeku visible progress kanipisthundi.",
+        "on_screen_text": "Regular classes kante 7 retlu cheaper\nRoju ki just 15 minutes\nVisible progress chudandi\nOka month lo"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Miss Nova says: Scrolling chesthu time waste cheyadam aapandi. Ippude Supernova AI install cheyandi, and ee roje matladadam start cheyandi.",
+        "on_screen_text": "Scrolling chesthu time waste cheyoddu\nSupernova AI install cheyandi\nEe roje matladadam start cheyandi"
+      }
+    ],
+    "self_critique_fixed": "The script has been successfully localized to romanized, code-mixed Telugu. The multiplier '7x cheaper' was translated to '7 retlu cheaper' per the T2h multiplier carve-out. The polite plural 'meeru' and corresponding verb endings ('cheyandi', 'ivvandi') were used for Miss Nova to maintain a warm, respectful tone. The taught English lines in Scene 1 were kept completely verbatim as required by T2a."
+  },
+  "safety": {
+    "verdict": "block",
+    "violations": [
+      {
+        "guardrail_id": "G1.1",
+        "category": "Claims & legal",
+        "severity": "severe",
+        "scene": "Scene 4",
+        "quote": "oka month lo meeku visible progress kanipisthundi",
+        "why": "The script promises a definite progress outcome within a specific timeline without using the required hedge language like 'start' or 'can'.",
+        "fix": "Rewrite the line to: 'oka month lo meeku visible progress kanipinchadam start avuthundi' (you will start seeing visible progress within a month)."
+      },
+      {
+        "guardrail_id": "G6.1",
+        "category": "Price & financial",
+        "severity": "severe",
+        "scene": "Scene 4 — Pricing Offer (Visual)",
+        "quote": "The UI highlights a discounted price of 1 rupee, crossing out the original price of 30.",
+        "why": "The visual description contains specific, unapproved rupee pricing and discount figures (1 rupee and 30 rupees).",
+        "fix": "Modify the visual description to show a generic discount banner or 'Special Offer' text without specific rupee amounts."
+      }
+    ],
+    "summary": "The ad contains severe violations regarding unhedged progress promises (G1.1) and unauthorized hard rupee pricing in the visual description (G6.1).",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781517629.5146399
+}

@@ -1,0 +1,47 @@
+{
+  "ad_library_id": "1251362460515133",
+  "language": "Bengali",
+  "parsed": {
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Anxious Learner",
+        "script": "Sourav says: Ami jokhon-e English bolte jetam, freeze hoye jetam. Mistake korar ekdom bhoy chilo mathay.",
+        "on_screen_text": "English bolte bhoy lagchhe? Mistake korar tension?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Discovering the App",
+        "script": "Sourav says: Tarpor ami khunje pelam Supernova AI. Amar AI teacher, Miss Nova, amar level analyze kore ekta personalized plan baniye dey.\nSourav says: Aar ami private-e practice korte pari. Keu dekhar nei, aar uni amar mistake niye judge koren na.",
+        "on_screen_text": "Supernova AI-er sathe meet koro! Tomar personal AI teacher-er sathe jekono somoy practice koro."
+      },
+      {
+        "n": 3,
+        "scene_label": "Co-learner Practice",
+        "script": "Sourav says: Ekhon aar shudhu textbook porte hoy na. Ami actually loud-e kotha boli, Miss Nova aar Moumita-r moto baki learner-der sathe practice kori.",
+        "on_screen_text": "Loud-e kotha bolo aar ekta supportive community-r sathe practice koro!"
+      },
+      {
+        "n": 4,
+        "scene_label": "Confident Interview",
+        "script": "Sourav says: Amra real-life situations practice kori, jemon Kolkata-te amar upcoming job-interview.\nSourav says: Daily practice kore amar confidence-e ekta bhalo change dekhte pachhi.",
+        "on_screen_text": "Job-interview-r moto real-life scenarios practice koro. Aajke-i suru koro!"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script": "Sourav says: Ghonta-r por ghonta scroll kore somoy nosto koro na. Supernova AI-ke dine 15 minutes dao. App-ta download koro aar bolte suru koro!",
+        "on_screen_text": "Dine shudhu 15 minutes. Aaj-i Supernova AI download koro!"
+      }
+    ],
+    "self_critique_fixed": "Applied the Bengali language module with natural, conversational, WhatsApp-style romanization. Used the 'Friends / peer conversation' register with the direct-friend 'tum'-tier for Sourav addressing the audience, while keeping Miss Nova's references respectful. Recast character names to Sourav and Moumita, and the city to Kolkata per the Bengali casting table. Ensured the hook opens with native Bengali words ('Ami jokhon-e...'). All numbers are kept as numerals, and the stay-English list has been strictly followed."
+  },
+  "safety": {
+    "verdict": "pass",
+    "violations": [],
+    "summary": "The ad is fully compliant with all brand-safety guardrails, utilizing approved personal testimonials, safe private-practice framing, and generic scrolling contrasts.",
+    "model": "gemini-flash-latest"
+  },
+  "model": "gemini-flash-latest",
+  "localized_at": 1781515170.2979698
+}
