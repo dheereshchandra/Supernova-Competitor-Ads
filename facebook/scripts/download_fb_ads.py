@@ -604,6 +604,13 @@ def main() -> None:
     if skipped:
         print(f"[info] {len(skipped)} ad(s) already downloaded - skipping")
 
+    # Throttle backoff: FB rate-limits this IP after a burst of CDN fetches (the trigger for
+    # the rest of a daily run getting "0 ads"). The signature is whole batches coming back
+    # 0-ok in a row. Pause once the wall is clearly hit so the limit can recover, instead of
+    # burning the remaining batches into it. Env-tunable; FB_DL_THROTTLE_COOLDOWN=0 disables.
+    cooldown = int(os.environ.get("FB_DL_THROTTLE_COOLDOWN", "60"))
+    max_cooldowns = int(os.environ.get("FB_DL_MAX_COOLDOWNS", "3"))
+    consec_allfail = cooldowns_used = 0
     for start in range(0, len(todo), args.batch_size):
         batch = todo[start:start + args.batch_size]
         n = start // args.batch_size + 1
@@ -616,6 +623,15 @@ def main() -> None:
             else:
                 results[i] = ("failed", errs.get(i, "unknown error"))
         print(f"             {len(ok)} ok, {len(batch) - len(ok)} failed")
+        consec_allfail = consec_allfail + 1 if (batch and not ok) else 0
+        last_batch = start + args.batch_size >= len(todo)
+        if (cooldown > 0 and consec_allfail >= 2
+                and cooldowns_used < max_cooldowns and not last_batch):
+            print(f"  [throttle] {consec_allfail} batches all-failed — IP likely rate-limited; "
+                  f"cooling down {cooldown}s before continuing...")
+            time.sleep(cooldown)
+            cooldowns_used += 1
+            consec_allfail = 0
 
     # Retry pass. The facebook:ads extractor is flaky - a fresh request a few
     # seconds later sometimes succeeds where the first one returned "Unable to
