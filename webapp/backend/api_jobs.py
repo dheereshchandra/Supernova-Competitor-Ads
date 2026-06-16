@@ -87,7 +87,7 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
     if not ad["media_url"]:
         raise HTTPException(422, "This ad has no media in R2 to work from")
     langs = [l.strip() for l in (body.languages or []) if l.strip()]
-    bad = [l for l in langs if l not in SUPPORTED_LANGUAGES]
+    bad = [l for l in langs if l not in GENERATE_LANGUAGES]   # English selectable (direct generates it)
     if bad:
         raise HTTPException(422, f"Unsupported language(s): {', '.join(bad)}")
     active = db.query_one(
@@ -110,9 +110,9 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
             cost = est["estimates"][0].get("cost_total", cost)
     except Exception:
         pass
-    # Merged generate also localizes into the chosen languages (Flash translate + safety audit,
-    # images reused) — add that to the estimate so the daily-cap accounting stays honest.
-    cost += len(langs) * LOCALIZE_COST_PER_LANG
+    # Direct seed→target: each selected language is its own Gemini Pro generation (re-skin + localize
+    # in one pass) — price per language at the Pro rate so the daily-cap accounting stays honest.
+    cost += len(langs) * DIRECT_COST_PER_LANG
     cfg = settings()
     if cost > cfg.max_job_cost:
         raise HTTPException(422, f"Estimated {inr(cost)} exceeds the per-job cap ({inr(cfg.max_job_cost)})")
@@ -154,7 +154,12 @@ def create_job(body: JobBody, user: str = Depends(require_user)):
 
 SUPPORTED_LANGUAGES = ("Hindi", "Telugu", "Tamil", "Marathi", "Kannada", "Malayalam",
                        "Bengali", "Gujarati", "Assamese", "Punjabi")
-LOCALIZE_COST_PER_LANG = 0.02  # Flash translate + safety audit; images are REUSED (₹0)
+LOCALIZE_COST_PER_LANG = 0.02  # (legacy English-pivot Flash translate — retired path)
+# Direct seed→target: "English" is now a SELECTABLE generate target (it's only produced if picked).
+GENERATE_LANGUAGES = ("English",) + SUPPORTED_LANGUAGES
+# Each direct language is its own Gemini Pro generation (re-skin + localize in one pass). Conservative
+# per-language estimate at the Pro rate — the ~31KB translation-rules doc dominates the prompt input.
+DIRECT_COST_PER_LANG = 0.05
 # TTS (Stage 5a voiceover) targets the localized scripts AND the English master.
 # APPROXIMATE per-language estimate, shown as an AVERAGE across both providers (the real
 # split depends on which voices the registry routes to which provider). Per-character:
@@ -172,10 +177,16 @@ def _ad_has_english(ad: dict) -> bool:
                 or ad.get("has_locales") or any((ad.get("locales") or {}).values()))
 
 
+def _ad_has_decompose(ad_id: str) -> bool:
+    """Direct seed→target needs only the decompose sidecar (no English master). It's committed to the
+    repo for any ad that was generated before, so this is the gate for the 'add a language' path."""
+    return (Path(FACEBOOK_DIR) / "step4_workspace" / "scenes" / f"{ad_id}.json").is_file()
+
+
 def _validate_langs(langs: list[str]) -> None:
     if not langs:
         raise HTTPException(422, "Pick at least one language")
-    bad = [l for l in langs if l not in SUPPORTED_LANGUAGES]
+    bad = [l for l in langs if l not in GENERATE_LANGUAGES]   # English allowed (direct generates it)
     if bad:
         raise HTTPException(422, f"Unsupported language(s): {', '.join(bad)}")
 
@@ -211,14 +222,14 @@ def create_localize_job(body: LocalizeBody, user: str = Depends(require_user)):
     ad = catalog().get(body.pipeline, body.competitor, body.ad_id)
     if not ad:
         raise HTTPException(404, "Ad not found")
-    if not _ad_has_english(ad):
-        raise HTTPException(422, "Generate the English Supernova script first")
+    if not _ad_has_decompose(body.ad_id):
+        raise HTTPException(422, "Generate the script for this ad first (no decomposition found)")
     active = db.query_one(
         f"SELECT id FROM jobs WHERE pipeline=? AND competitor=? AND ad_id=? "
         f"AND status IN {ACTIVE}", (body.pipeline, body.competitor, body.ad_id))
     if active:
         raise HTTPException(409, f"A run for this ad is already in flight (job #{active['id']})")
-    cost = len(body.languages) * LOCALIZE_COST_PER_LANG
+    cost = len(body.languages) * DIRECT_COST_PER_LANG
     cfg = settings()
     if _daily_spent() + cost > cfg.max_daily_cost:
         raise HTTPException(429, f"Daily spend cap reached ({inr(cfg.max_daily_cost)})")
@@ -272,7 +283,7 @@ def _classify_localize(items: list[AdRef]) -> list[dict]:
 def bulk_localize_estimate(body: BulkLocalizeBody, _user: str = Depends(require_user)):
     _validate_langs(body.languages)
     items = _classify_localize(body.items)
-    per = len(body.languages) * LOCALIZE_COST_PER_LANG
+    per = len(body.languages) * DIRECT_COST_PER_LANG
     for it in items:
         if it.get("eligible"):
             it["cost_usd"] = per
@@ -287,7 +298,7 @@ def bulk_localize_estimate(body: BulkLocalizeBody, _user: str = Depends(require_
 def bulk_localize(body: BulkLocalizeBody, user: str = Depends(require_user)):
     _validate_langs(body.languages)
     items = _classify_localize(body.items)
-    per = len(body.languages) * LOCALIZE_COST_PER_LANG
+    per = len(body.languages) * DIRECT_COST_PER_LANG
     cfg = settings()
     spent = _daily_spent()
     queued, skipped = [], []

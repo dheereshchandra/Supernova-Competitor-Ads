@@ -3,8 +3,8 @@ import { ApiError, createLocalizeJob, SUPPORTED_LANGUAGES } from '../api'
 import { money } from '../format'
 import { Spinner } from './ui'
 
-/** Matches LOCALIZE_COST_PER_LANG on the backend (Flash translate + safety audit). */
-const COST_PER_LANG_USD = 0.02
+/** Matches DIRECT_COST_PER_LANG on the backend (each language is its own Gemini Pro generation). */
+const COST_PER_LANG_USD = 0.05
 
 /**
  * "Replicate to languages" confirmation: pick target languages, consent that the

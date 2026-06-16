@@ -496,6 +496,9 @@ export const SUPPORTED_LANGUAGES = [
   'Malayalam', 'Bengali', 'Gujarati', 'Assamese', 'Punjabi',
 ] as const
 
+// Generate (direct seed→target) targets — "English" is selectable; it's only produced if picked.
+export const GENERATE_LANGUAGES = ['English', ...SUPPORTED_LANGUAGES] as const
+
 export const createLocalizeJob = (
   pipeline: string,
   competitor: string,

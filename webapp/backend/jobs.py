@@ -50,6 +50,10 @@ STEP_LABELS = {
     "sheet_sync": "Updating the tracker sheet",
     "localize": "Translating into the chosen languages",
     "tts": "Generating the voiceover",
+    "direct_submit": "Submitting the script",
+    "direct_poll": "Writing the script in each language",
+    "qc": "Quality-checking the script",
+    "direct_docs": "Building the Google Docs",
 }
 
 # Image generation (char_sheets, panels — Nano Banana Pro) is NO LONGER part of the
@@ -72,8 +76,20 @@ STEPS_VIDEO_LOCALIZED = ["hydrate", "estimate", "decompose_upload", "decompose",
 STEPS_IMAGE_LOCALIZED = ["hydrate", "estimate", "decompose_images",
                          "upload_images", "rewrite_submit", "rewrite_poll",
                          "localize", "commit_push", "sheet_sync"]
-# Localization (PR 4): translate an existing English master into N languages. No image/decompose
-# stages — step4_localize.py reuses the ad's existing images (image-once guardrail).
+# DIRECT seed→target (default for generate-with-languages): each selected language is generated
+# DIRECTLY from the seed language in one Pro pass (re-skin + localize together) — NO English master,
+# unless "English" is one of the selected languages. A QC gate runs before the docs are built.
+STEPS_VIDEO_DIRECT = ["hydrate", "estimate", "decompose_upload", "decompose", "frames",
+                      "upload_images", "direct_submit", "direct_poll", "qc",
+                      "direct_docs", "commit_push", "sheet_sync"]
+STEPS_IMAGE_DIRECT = ["hydrate", "estimate", "decompose_images",
+                      "upload_images", "direct_submit", "direct_poll", "qc",
+                      "direct_docs", "commit_push", "sheet_sync"]
+# "Add a language later" (kind=localize) is ALSO direct-from-seed now (no English master needed) —
+# it only needs the existing decompose sidecar.
+STEPS_DIRECT_LOCALIZE = ["direct_submit", "direct_poll", "qc", "direct_docs", "commit_push", "sheet_sync"]
+# Legacy English-pivot localize (translate an approved English master into N languages) — retired as the
+# default by steps_for() but kept for reference / any explicit English-master→translate use.
 STEPS_LOCALIZE = ["localize", "commit_push", "sheet_sync"]
 # TTS (Stage 5a, voiceover only): synth a per-language voiceover from the approved script —
 # multi-provider (Cartesia + ElevenLabs), voice-mapped per character. No image/decompose stages.
@@ -121,13 +137,13 @@ def _parse_langs(raw) -> list[str]:
 
 
 def steps_for(media_type: str, kind: str = "generate", languages=None) -> list[str]:
-    if kind == "localize":
-        return STEPS_LOCALIZE
+    if kind == "localize":          # add-language-later → direct from seed (no English master needed)
+        return STEPS_DIRECT_LOCALIZE
     if kind == "tts":
         return STEPS_TTS
-    if languages:  # generate up front into N languages → combined per-language Docs
-        return STEPS_IMAGE_LOCALIZED if media_type == "Image" else STEPS_VIDEO_LOCALIZED
-    return STEPS_IMAGE if media_type == "Image" else STEPS_VIDEO
+    if languages:                   # generate into N languages → DIRECT seed→target (English only if picked)
+        return STEPS_IMAGE_DIRECT if media_type == "Image" else STEPS_VIDEO_DIRECT
+    return STEPS_IMAGE if media_type == "Image" else STEPS_VIDEO   # no languages → English-only master
 
 
 def steps_payload(media_type: str, kind: str = "generate", languages=None) -> list[dict]:
@@ -286,6 +302,81 @@ class JobRunner:
             await asyncio.sleep(30)
         raise StepFailed("rewrite_poll: not done after 80 polls (~40 min)")
 
+    # ---------- direct seed→target ----------
+    async def step_direct_submit(self):
+        langs = _parse_langs(self.job.get("languages"))
+        if not langs:
+            raise StepFailed("direct_submit: no target languages")
+        out = await self.must("direct_submit", [
+            PY, "scripts/step4_rewrite.py", "submit", "--competitor", self.slug,
+            "--target-languages", ",".join(langs), self.ad_id], timeout_s=300)
+        m = re.findall(r"poll ([A-Za-z0-9_-]+)", out)
+        if not m:
+            raise StepFailed("direct_submit: could not capture poll id")
+        _set(self.id, rewrite_short_id=m[-1])
+        self.job["rewrite_short_id"] = m[-1]
+
+    async def step_direct_poll(self):
+        short = self.job.get("rewrite_short_id") or (
+            (db.query_one("SELECT rewrite_short_id FROM jobs WHERE id=?", (self.id,)) or {})
+            .get("rewrite_short_id"))
+        if not short:  # resumed without a submit — redo it (direct)
+            await self.step_direct_submit()
+            short = self.job["rewrite_short_id"]
+        for _ in range(80):
+            rc, _out = await self.run_cmd("direct_poll", [
+                PY, "scripts/step4_rewrite.py", "poll", short], timeout_s=180)
+            if rc == 0:
+                return
+            if rc == 2:
+                raise StepFailed("direct_poll: batch terminally failed")
+            await asyncio.sleep(30)
+        raise StepFailed("direct_poll: not done after 80 polls (~40 min)")
+
+    async def step_qc(self):
+        """QC gate. Lint the generated sidecars; on a BLOCK, auto-regenerate ONCE (persisting the
+        1-retry guard FIRST so a crash can't loop), then hard-gate. Flags are non-blocking."""
+        scenes = FACEBOOK_DIR / "step4_workspace" / "scenes"
+        qc_path = scenes / f"{self.ad_id}.qc.json"
+        corr_path = scenes / f"{self.ad_id}.qc_correction.txt"
+        qc_argv = [PY, "scripts/step4_qc.py", self.ad_id, "--competitor", self.slug]
+
+        def _block_reason() -> str:
+            try:
+                d = json.loads(qc_path.read_text())
+                bl = [i for i in d.get("issues", []) if i.get("severity") == "block"]
+                return "; ".join(f"{i['code']}: {i['detail']}" for i in bl)[:500] or "QC blocked"
+            except Exception:
+                return "QC blocked"
+
+        rc, out = await self.run_cmd("qc", qc_argv, timeout_s=600)
+        if rc == 0:
+            if "flag" in out:
+                _event(self.id, "qc", "QC flags noted for human review (non-blocking)")
+            return
+        # rc == 2 → block
+        if self.job.get("qc_retried"):
+            reason = _block_reason()
+            _set(self.id, qc_block=reason)
+            raise StepFailed(f"qc: blocked after 1 regenerate — {reason}")
+        _set(self.id, qc_retried=1)          # persist the guard BEFORE the re-submit (crash-safe)
+        self.job["qc_retried"] = 1
+        try:                                  # write the corrective the rewrite prompt will read back
+            d = json.loads(qc_path.read_text())
+            bl = [i for i in d.get("issues", []) if i.get("severity") == "block"]
+            corr_path.write_text("\n".join(f"- {i['code']}: {i['detail']}" for i in bl), encoding="utf-8")
+        except Exception:
+            pass
+        _event(self.id, "qc", "QC blocked — regenerating once with corrections")
+        await self.step_direct_submit()
+        await self.step_direct_poll()
+        corr_path.unlink(missing_ok=True)
+        rc2, _ = await self.run_cmd("qc", qc_argv, timeout_s=600)
+        if rc2 == 2:
+            reason = _block_reason()
+            _set(self.id, qc_block=reason)
+            raise StepFailed(f"qc: blocked after 1 regenerate — {reason}")
+
     async def step_commit_push(self):
         await self.must("commit_push", [
             "bash", "tools/log_and_commit.sh", "facebook", self.slug,
@@ -353,6 +444,19 @@ class JobRunner:
             await self.step_rewrite_submit()
         elif step == "rewrite_poll":
             await self.step_rewrite_poll()
+        elif step == "direct_submit":
+            await self.step_direct_submit()
+        elif step == "direct_poll":
+            await self.step_direct_poll()
+        elif step == "qc":
+            await self.step_qc()
+        elif step == "direct_docs":
+            langs = _parse_langs(self.job.get("languages"))
+            if not langs:
+                raise StepFailed("direct_docs: no target languages")
+            argv = [PY, "scripts/step4_localize.py", self.ad_id, "--competitor", self.slug,
+                    "--languages", ",".join(langs), "--direct", "--source", "sidecar"]
+            await self.must("direct_docs", argv, timeout_s=1200)
         elif step == "upload_gdocs":
             argv = [PY, "scripts/step4_upload_gdocs.py", "--competitor", self.slug, self.ad_id]
             if self.job.get("force_regen"):
