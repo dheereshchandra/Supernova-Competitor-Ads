@@ -1,0 +1,127 @@
+{
+  "competitor_id": "810618368177111",
+  "parsed": {
+    "duration_s": 32.0,
+    "production_type": "AI-generated",
+    "production_notes": "Both characters are AI-generated. The top character is a stylized 3D avatar. The bottom character exhibits uncanny, stiff facial movements, unnatural lip-sync, and AI-typical artifacts around the hands and steering wheel, with a poorly composited background.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "Young female with a fair complexion and long, dark wavy hair. She has large, expressive, cartoonish eyes and smooth features resembling a 3D animation.",
+        "wardrobe": "A light blue blazer over a white top.",
+        "demeanor": "Friendly, encouraging, and patient."
+      },
+      {
+        "id": "B",
+        "role": "Male learner",
+        "appearance": "Middle-aged Indian man with a dark complexion, thick black mustache, and short dark hair. He has a serious but eager expression.",
+        "wardrobe": "A crisp white shirt with a traditional white and gold-bordered cloth (angavastram) draped over his left shoulder.",
+        "demeanor": "Serious, slightly confused initially, but eager to learn and eventually relieved."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 10.5,
+        "screenshot_at_s": 5.0,
+        "scene_label": "English Practice",
+        "setting": "Top: Abstract blue/purple geometric background. Bottom: Inside a car, driving past a tropical landscape with palm trees.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A young woman with long dark wavy hair and a light blue blazer faces the camera directly. She has large, expressive eyes and a smooth complexion, resembling a stylized 3D animated character. The background behind her is an abstract pattern of blue and purple geometric shapes. She appears to be speaking and smiling warmly. Her posture is upright and professional. The lighting is bright and even, highlighting her features.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A middle-aged Indian man with a thick mustache sits in the driver's seat of a car, holding the steering wheel. He wears a crisp white shirt with a traditional white and gold-bordered cloth draped over his left shoulder. He looks forward and slightly up, as if conversing with someone outside the frame. The background outside the car window shows a blurred tropical landscape with lush green palm trees. The interior of the car features a modern dashboard. The lighting suggests daytime outdoors.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen layout divides the video horizontally, with a female avatar on the top half and a male driver on the bottom half. The top panel shows the animated woman speaking directly to the camera. The bottom panel shows the man driving and responding to her prompts. Large text overlays appear in the center of the screen, indicating correct and incorrect English phrases. These overlays use red cross marks for mistakes and green checkmarks for corrections. The overall composition resembles a video call between a tutor and a student.",
+        "audio_transcript": "Character A says: Where are you going?\nCharacter B says: I go to home.\nCharacter A says: You mean, 'I am going home'.\nCharacter B says: Yes, I am going home. I am very hurry.\nCharacter A says: 'I am in a hurry' is the correct way to say that.\nCharacter B says: Okay, thank you.",
+        "on_screen_text": "Where are you going? I go to home. 'I am going home'. I am going home. I am very hurry. 'I am in a hurry' is the correct way to say that. Okay, thank you."
+      },
+      {
+        "n": 2,
+        "start_s": 10.5,
+        "end_s": 21.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "AI Teacher Intro",
+        "setting": "Top: Abstract blue/purple geometric background. Bottom: Inside a car, driving past a tropical landscape with palm trees.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "The young woman in the light blue blazer continues to face the camera, maintaining a friendly and helpful expression. Her long dark hair frames her face against the geometric blue and purple background. She is actively speaking, with her mouth open and eyes engaged. Her demeanor remains patient and encouraging. The framing is a medium close-up, focusing on her facial expressions. The abstract background provides a clean, distraction-free setting.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "The man in the white shirt remains in the driver's seat, his hands resting on the steering wheel. He turns his head slightly more towards the camera, his expression shifting from concentration to curiosity and then concern. The tropical scenery outside the window remains consistent, with green foliage passing by. His traditional shoulder cloth stays neatly draped. The camera angle captures him from the passenger side, providing a clear view of his profile and the car's interior.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen layout continues with the same framing for both characters. The man asks a question, and the woman responds, explaining her role as an AI teacher. The man then expresses a financial concern, looking slightly worried. Dynamic Tamil subtitles appear on the screen, highlighting each word as it is spoken. The subtitles are placed centrally, bridging the gap between the top and bottom panels. The visual focus remains on the interaction between the two characters despite the text overlays.",
+        "audio_transcript": "Character B says: \u0b87\u0bb2\u0bcd\u0bb2, \u0ba8\u0bc0\u0b99\u0bcd\u0b95 \u0baf\u0bbe\u0bb0\u0bc1? [No, who are you?]\nCharacter A says: \u0ba8\u0bbe\u0ba9\u0bcd \u0b92\u0bb0\u0bc1 AI teacher. \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bc1 English \u0baa\u0bc7\u0b9a help \u0baa\u0ba3\u0bcd\u0ba3 \u0bb5\u0ba8\u0bcd\u0ba4\u0bbf\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc7\u0ba9\u0bcd. \u0b8e\u0ba9\u0bcd \u0b95\u0bc2\u0b9f daily \u0b87\u0ba4\u0bc7 \u0bae\u0bbe\u0ba4\u0bbf\u0bb0\u0bbf practice \u0baa\u0ba3\u0bcd\u0ba3\u0bbe\u0bb2\u0bc7 \u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd. [I am an AI teacher. I have come to help you speak English. Just practicing with me daily like this is enough.]\nCharacter B says: \u0b86\u0ba9\u0bbe \u0b8e\u0ba9\u0bcd\u0b95\u0bbf\u0b9f\u0bcd\u0b9f \u0b95\u0bbe\u0b9a\u0bc1 \u0b92\u0ba9\u0bcd\u0ba9\u0bc1\u0bae\u0bcd \u0b87\u0bb2\u0bcd\u0bb2\u0bc8\u0baf\u0bc7. [But I don't have any money.]\nCharacter A says: \u0baa\u0baf\u0baa\u0bcd\u0baa\u0b9f\u0bbe\u0ba4\u0bc0\u0b99\u0bcd\u0b95. [Don't be afraid.]",
+        "on_screen_text": "\u0b87\u0bb2\u0bcd\u0bb2, \u0ba8\u0bc0\u0b99\u0bcd\u0b95 \u0baf\u0bbe\u0bb0\u0bc1 (No, who are you). \u0ba8\u0bbe\u0ba9\u0bcd \u0b92\u0bb0\u0bc1 AI teacher (I am an AI teacher). \u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bc1 English (to you English). \u0baa\u0bc7\u0b9a help \u0baa\u0ba3\u0bcd\u0ba3 (to help speak). \u0bb5\u0ba8\u0bcd\u0ba4\u0bbf\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc7\u0ba9\u0bcd (I have come). \u0b8e\u0ba9\u0bcd \u0b95\u0bc2\u0b9f daily (daily with me). \u0b87\u0ba4\u0bc7 \u0bae\u0bbe\u0ba4\u0bbf\u0bb0\u0bbf practice (practice like this). \u0baa\u0ba3\u0bcd\u0ba3\u0bbe\u0bb2\u0bc7 \u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd (is enough). \u0b86\u0ba9\u0bbe \u0b8e\u0ba9\u0bcd\u0b95\u0bbf\u0b9f\u0bcd\u0b9f (But with me). \u0b95\u0bbe\u0b9a\u0bc1 \u0b92\u0ba9\u0bcd\u0ba9\u0bc1\u0bae\u0bcd (no money). \u0b87\u0bb2\u0bcd\u0bb2\u0bc8\u0baf\u0bc7 (is there). \u0baa\u0baf\u0baa\u0bcd\u0baa\u0b9f\u0bbe\u0ba4\u0bc0\u0b99\u0bcd\u0b95 (Don't be afraid)."
+      },
+      {
+        "n": 3,
+        "start_s": 21.5,
+        "end_s": 32.0,
+        "screenshot_at_s": 26.0,
+        "scene_label": "Pricing and CTA",
+        "setting": "Top: Abstract blue/purple geometric background. Bottom: Inside a car, driving past a tropical landscape with palm trees.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "The woman in the blue blazer is still centered in the frame, smiling reassuringly. The abstract geometric background remains unchanged, providing a consistent visual theme. She continues to speak directly to the viewer, her expression conveying enthusiasm and persuasion. Her animated features are well-lit, emphasizing her large eyes and friendly smile. The medium close-up framing keeps the focus entirely on her delivery.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "The man in the driver's seat looks relieved and nods in agreement. He continues to hold the steering wheel, with the tropical landscape visible through the car window. His expression has shifted from concern to satisfaction. He appears to be speaking his final lines, looking forward with a positive demeanor. The lighting and framing remain consistent with the previous shots, maintaining the illusion of a continuous car ride.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The underlying split-screen video continues with the characters conversing. However, large graphical overlays dominate the center of the screen, obscuring parts of the video. First, a dark pricing card appears, showing a discounted trial offer with crossed-out prices. Then, an app installation prompt pops up, displaying the app icon, name, and an \"Install\" button. Tamil subtitles continue to appear at the bottom of the screen. The scene transitions from an educational interaction to a direct promotional call to action.",
+        "audio_transcript": "Character A says: Trial version-\u0b95\u0bcd\u0b95\u0bc1 \u0b87\u0baa\u0bcd\u0baa\u0bcb \u0bb5\u0bc6\u0bb1\u0bc1\u0bae\u0bcd \u0b92\u0bb0\u0bc1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd \u0ba4\u0bbe\u0ba9\u0bcd. \u0baa\u0bbf\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bbe \u0bae\u0b9f\u0bcd\u0b9f\u0bc1\u0bae\u0bcd two ninety nine-\u0b95\u0bcd\u0b95\u0bc1 subscription \u0b8e\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4\u0bbe \u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd. [For the trial version, it's just one rupee now. Only if you like it, you can take a subscription for 299.]\nCharacter A says: 50 \u0bb2\u0b9f\u0bcd\u0b9a\u0bae\u0bcd \u0baa\u0bc7\u0bb0\u0bc1 \u0b8e\u0ba9\u0bcd \u0b95\u0bc2\u0b9f English \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bb1\u0bbe\u0b99\u0bcd\u0b95. \u0ba8\u0bc0\u0b99\u0bcd\u0b95\u0bb3\u0bc1\u0bae\u0bcd join \u0baa\u0ba3\u0bcd\u0ba3\u0bc1\u0b99\u0bcd\u0b95. [50 lakh people are learning English with me. You also join.]\nCharacter B says: \u0ba8\u0bbe\u0ba9\u0bcd \u0b87\u0baa\u0bcd\u0baa\u0bb5\u0bc7 download \u0baa\u0ba3\u0bcd\u0bb1\u0bc7\u0ba9\u0bcd. Thank you so much. [I am downloading it right now. Thank you so much.]",
+        "on_screen_text": "Trial version-\u0b95\u0bcd\u0b95\u0bc1 (For trial version). \u0b87\u0baa\u0bcd\u0baa\u0bcb \u0bb5\u0bc6\u0bb1\u0bc1\u0bae\u0bcd (now only). Sale Ends Today. UNLOCK EVERYTHING. 3 naatkalukku (For 3 days). SALUGAI (DISCOUNT). \u20b930 \u20b91. Aprum \u20b9299/month (Then \u20b9299/month). Cancel Anytime. MySivi Pro Sirappugal (MySivi Pro Features). \u0b92\u0bb0\u0bc1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd \u0ba4\u0bbe\u0ba9\u0bcd (is just one rupee). \u0baa\u0bbf\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bbe (If liked). \u0bae\u0b9f\u0bcd\u0b9f\u0bc1\u0bae\u0bcd two ninety (only two ninety). nine-\u0b95\u0bcd\u0b95\u0bc1 subscription (subscription for nine). \u0b8e\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4\u0bbe \u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd (is enough to take). 50 \u0bb2\u0b9f\u0bcd\u0b9a\u0bae\u0bcd \u0baa\u0bc7\u0bb0\u0bc1 (50 lakh people). \u0b8e\u0ba9\u0bcd \u0b95\u0bc2\u0b9f English (English with me). \u0b95\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bb1\u0bbe\u0b99\u0bcd\u0b95 (are learning). \u0ba8\u0bc0\u0b99\u0bcd\u0b95\u0bb3\u0bc1\u0bae\u0bcd join (You also join). \u0baa\u0ba3\u0bcd\u0ba3\u0bc1\u0b99\u0bcd\u0b95 (do). MySivi AI English Speakin... Pending... Verified by Play Protect. Install. Master Spoken Eng. Sharpen your Englis 1-on-1 calls. Try MyS fast. \u0ba8\u0bbe\u0ba9\u0bcd \u0b87\u0baa\u0bcd\u0baa\u0bb5\u0bc7 download (I am downloading right now). \u0baa\u0ba3\u0bcd\u0bb1\u0bc7\u0ba9\u0bcd (doing)."
+      }
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "decoded_at": 1781625313.739514
+}
