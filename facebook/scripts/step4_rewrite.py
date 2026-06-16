@@ -110,8 +110,12 @@ PRIORITY ORDER:
      ONLY as the speaker label and on-screen — never spoken.)
    - Weave in the **benefits the ad's beats invite** (PART 2) — usually **3 or more**, smoothly into the one
      conversation, never jammed. **Lead with the two flagship claims when they fit — "1 crore+ users" and
-     "improve in just 21 days".** If a benefit doesn't fit a beat, use one that does. Flow always wins over
+     "improve in just 30 days".** If a benefit doesn't fit a beat, use one that does. Flow always wins over
      the count.
+   - **Affordability / "7× cheaper" — do NOT force it in.** Only land the cost comparison when the
+     conversation cues cost: a character asks the price or worries "that might be expensive". Then answer it
+     there. If there is no such cue (e.g. a single-presenter monologue) but it still fits, place it near the
+     **END, right beside the CTA** — never mid-script. No cue and no natural CTA-adjacent spot → leave it out.
    - Re-point the **CTA** to Supernova AI as **ONE single, urgent, action-specific close** at the very end
      (never split across scenes): name the action ("install", "click the install button", "download
      Supernova AI now"), keep it in the **speaking character's own first-person voice** ("…start speaking
@@ -157,7 +161,7 @@ directions), though a LIGHT inline performance cue in parentheses is allowed (se
       "supernova_script": "<this scene's slice of the ONE continuous conversation, in ENGLISH. Each spoken turn on its OWN line, prefixed with the speaking character's ASSIGNED NAME + ' says:' — e.g. 'Ramesh says:' / 'Miss Nova says:' — using the names from characters[] (one line per turn). When all scenes' scripts are read in order they MUST form one unbroken, natural conversation (no recap, no re-introducing the brand/teacher). DIALOGUE ONLY — what is SPOKEN. A LIGHT inline performance cue in parentheses is allowed where it aids delivery, e.g. '(laughs)' or '(warmly)' — but NO on-screen text, narration, or camera directions, and NEVER speak the name 'Miss Nova'. If a scene has NO spoken dialogue (music-only / pure visual), set this to an EMPTY string \"\" — never a placeholder like '[music only]'.>"
     }
   ],
-  "pitch_points_used": ["<the Supernova benefits you landed — e.g. 'personalization', 'no-judgement', '21 days', '1 crore users'>"]
+  "pitch_points_used": ["<the Supernova benefits you landed — e.g. 'personalization', 'no-judgement', '30 days', '1 crore users'>"]
 }
 
 CONSTRAINTS:

@@ -97,6 +97,18 @@ Flash can't hold the register.*
 **T5. Language self-reference swap.** Every language name inside the script resolves to the TARGET
 language ("explains in Hindi" → "explains in Telugu" in the Telugu version); the mother-tongue
 reframe (beat f) localizes the same way. A Telugu viewer never hears "Hindi".
+  - **Name the language PLAINLY — don't over-complicate it.** Render "explains in your (own) language /
+    your mother tongue / your native language" as simply "**explains in <Target>**" / "**teaches English
+    using <Target>**" (Hindi: "Hindi mein samjhati hai" / "Hindi mein sikhati hai"; Telugu: "Telugu lo
+    cheptundi"; Bengali: "Bangla-y bojhabe"). NEVER the clunky "your own <Target>" ("aapki apni Hindi"),
+    "your mother tongue", or "your native language" — just say the language by name.
+
+**T5b. "Speaking practice", never "out loud".** The "You SPEAK / talk out loud" benefit is about *speaking
+practice* — being made to actually speak and get corrected. NEVER calque "out loud / aloud / loudly /
+firmly" (Hindi "out loud", Telugu "gattiga", Kannada "out loud speak", Bengali "jore jore"). Render it as
+natural **speaking practice / practise speaking** in the target language (Hindi "bolne ki practice" /
+"bol-bol kar seekhna"; Telugu "matladi practice cheyadam"; Bengali "bola practice koro"). The point is
+practising speech, not volume.
 
 **T6. Regional re-casting.**
   - Character names from the casting table (§3) — familiar everyday names, never distracting.
@@ -196,8 +208,9 @@ casting table. Native-script examples teach register; output is romanized (T10).
       number-word like the Hindi "saat guna" exemplar (§1 carve-out), e.g. "offline classes
       **kante edu rettlu thakkuva**" ('edu' = seven, 'rettlu' = times/fold; flag 'edu'/'ezu' for
       native review). Never the calque "7 times cheap" or a bare rupee figure.
-    - **"speak out loud":** don't calque it — render naturally, e.g. "**gattiga matladatam**"
-      ("speak aloud/firmly"), not a word-for-word "out loud".
+    - **"speak out loud" = speaking PRACTICE (not "loudly"):** render it as natural *speaking practice* —
+      e.g. "**matladi practice cheyadam**" / "**matladatam practice**" — NOT "gattiga" ("loudly/firmly") and
+      never a word-for-word "out loud".
     - **Time-per-day line (proven phrasing):** prefer "**Meeku rojuki kevalam 10–15 mins padutundi
       anthe, paiga Supernova AI meeku Telugu lone explain chestundi**" over the stiff "10 to 15
       minutes chalu … explain chestundi" — same meaning, natural spoken rhythm.
@@ -297,9 +310,10 @@ casting table. Native-script examples teach register; output is romanized (T10).
     maadi" (analyze *what* level?).
   - **Don't pack too many English words into one sentence.** Stay-English (concepts everyone gets):
     *speaking environment, personalized plan, analyze, meetings, logic, explain, hour* (plus the
-    global T2 list). Go-Kannada (conversational): *speak out loud, custom, simulation, sudden panic,
+    global T2 list). Go-Kannada (conversational): *speaking practice, custom, simulation, sudden panic,
     wonder*. ✓ "Illi full privacy iratthe, so nivu aaraamaagi English practice maadbahudu." ✗ "Full
-    privacy-nalli, neevu actual aagi out loud speak maadi practice maadbodu."
+    privacy-nalli, neevu actual aagi out loud speak maadi practice maadbodu." (the ✗ calques "out loud" —
+    say *speaking practice*, never "out loud / loudly".)
   - **Use contracted modern spoken forms**, not long literary ones: ನೀವು → ನೀವ್ (*neevu* → *niv*),
     ಒಂದು → ಒಂದ್ (*ondu* → *ondh*). ✓ "Niv ondh AI teacher." ✗ "Neevu ondu AI teacher."
   - **Vary repeated phrasing** — not always "15 minutes tegedu"; rotate "15 minutes spend maadi",
