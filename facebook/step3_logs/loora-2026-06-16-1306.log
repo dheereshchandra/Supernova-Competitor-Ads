@@ -1,0 +1,103 @@
+# Step 3 run log
+# competitor : loora
+# started_at : 2026-06-16T13:06:48
+# input      : facebook/inputs/fb-ads-loora-2026-06-16-0750.csv
+# videos     : facebook/videos/loora-2026-06-16
+# master     : facebook/master/loora.csv  (updated)
+# enriched   : facebook/inputs/fb-ads-loora-2026-06-16-0750_enriched.csv
+# bucket     : video-ads
+# public_base: https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com
+# dry_run    : False
+#
+# counts     : {'uploaded': 0, 'carried-forward': 52, 'image-pending': 1, 'video-missing': 37, 'no-creative': 0, 'error': 0}
+#
+carried-forward  1581060787352516 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1581060787352516.mp4
+video-missing    1581060787352516 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1819504062758111 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1819504062758111.mp4
+carried-forward  887166504395248 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/887166504395248.mp4
+video-missing    887166504395248 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1923073918386349 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1923073918386349.mp4
+carried-forward  4482617731983250 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/4482617731983250.mp4
+video-missing    4482617731983250 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+video-missing    4482617731983250 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+video-missing    4482617731983250 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+video-missing    4482617731983250 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1758731028824393 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1758731028824393.mp4
+video-missing    1758731028824393 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1582553446724594 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1582553446724594.mp4
+carried-forward  1410322400818020 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1410322400818020.mp4
+video-missing    1410322400818020 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1399715815299179 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1399715815299179.mp4
+video-missing    1399715815299179 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1017749350907847 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1017749350907847.mp4
+carried-forward  1315848836760274 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1315848836760274.mp4
+video-missing    1315848836760274 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+video-missing    1315848836760274 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1608766093513896 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1608766093513896.mp4
+video-missing    1608766093513896 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1143622754604208 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1143622754604208.mp4
+carried-forward  1519322489795780 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1519322489795780.mp4
+video-missing    1519322489795780 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+image-pending    1477343336919375 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1600521857717578 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1600521857717578.mp4
+video-missing    1600521857717578 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  987721023705930 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/987721023705930.mp4
+carried-forward  2065316954367727 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2065316954367727.mp4
+video-missing    2065316954367727 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  2063273217925254 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2063273217925254.mp4
+video-missing    2063273217925254 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  990584049996241 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/990584049996241.mp4
+carried-forward  1020433583744483 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1020433583744483.mp4
+video-missing    1020433583744483 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  2257110451487366 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2257110451487366.mp4
+carried-forward  1332393458836467 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1332393458836467.mp4
+video-missing    1332393458836467 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  2153620542128180 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2153620542128180.mp4
+carried-forward  1633635301042962 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1633635301042962.jpg
+carried-forward  1626068392526827 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1626068392526827.mp4
+carried-forward  1651325459631448 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1651325459631448.mp4
+carried-forward  1575036264038808 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1575036264038808.mp4
+carried-forward  828323076603145 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/828323076603145.mp4
+video-missing    828323076603145 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  27338242895831171 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/27338242895831171.mp4
+video-missing    27338242895831171 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  902774176194288 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/902774176194288.mp4
+video-missing    902774176194288 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  2920536348298813 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2920536348298813.mp4
+carried-forward  1861497244534107 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1861497244534107.mp4
+video-missing    1861497244534107 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1671097577430352 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1671097577430352.mp4
+video-missing    1671097577430352 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  4212630769048709 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/4212630769048709.mp4
+video-missing    4212630769048709 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1446355560859167 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1446355560859167.mp4
+video-missing    1446355560859167 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1015808140933762 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1015808140933762.mp4
+video-missing    1015808140933762 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1680023209867820 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1680023209867820.mp4
+video-missing    1680023209867820 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  993531416757146 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/993531416757146.mp4
+video-missing    993531416757146 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1007116398921663 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1007116398921663.mp4
+video-missing    1007116398921663 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1537509541396440 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1537509541396440.mp4
+video-missing    1537509541396440 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  2438251120009190 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2438251120009190.mp4
+video-missing    2438251120009190 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  887507133689970 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/887507133689970.mp4
+video-missing    887507133689970 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1028258436260871 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1028258436260871.mp4
+carried-forward  3449271938584984 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/3449271938584984.mp4
+video-missing    3449271938584984 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1313009764351341 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1313009764351341.mp4
+video-missing    1313009764351341 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  832041293094340 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/832041293094340.mp4
+video-missing    832041293094340 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  28365108253078782 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/28365108253078782.mp4
+carried-forward  1515608520010052 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1515608520010052.mp4
+video-missing    1515608520010052 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  1312246001030850 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1312246001030850.mp4
+video-missing    1312246001030850 c0  (expected file not found in facebook/videos/loora-2026-06-16)
+carried-forward  2216087012537934 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2216087012537934.mp4
+carried-forward  965883689761456 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/965883689761456.mp4
+carried-forward  4596613803998320 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/4596613803998320.mp4
