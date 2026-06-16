@@ -43,6 +43,7 @@ import _gdrive            # noqa: E402
 import step4_safety_check as safety   # noqa: E402
 import step4_build_docs as build_docs  # noqa: E402
 import _flash             # noqa: E402
+import _remarks           # noqa: E402
 from r2_utils import load_env  # noqa: E402
 
 SUPPORTED_LANGUAGES = ["Hindi", "Telugu", "Tamil", "Marathi", "Kannada", "Malayalam",
@@ -211,7 +212,7 @@ def audit_text(translated: dict, decompose: dict) -> str:
 
 
 def to_rewrite_shape(translated: dict, english_skeleton: list, base_parsed: dict,
-                     language: str = "") -> dict:
+                     language: str = "", remarks: list | None = None) -> dict:
     """Adapt a translation into the rewrite shape build_supernova_doc expects.
     The visuals are identical to the English master, so reuse its format / visual_overview /
     per-scene brief (English context for the editor). The Script zone carries BOTH the English
@@ -238,13 +239,15 @@ def to_rewrite_shape(translated: dict, english_skeleton: list, base_parsed: dict
             "visual_overview": base_parsed.get("visual_overview", ""),
             "characters": base_parsed.get("characters", []),
             "language": language,
+            "remarks": remarks or [],
             "scenes": scenes,
             "tts": {"romanized": roman_lines, "native": native_lines}}
 
 
 # ---------------------------------------------------------------- per-language run
 def localize_one(client, svc, env, ad_id, competitor, target, skeleton, comments,
-                 decompose, base_parsed, seed_lang, folder_id, gdocs, dry_run, regenerate):
+                 decompose, base_parsed, seed_lang, folder_id, gdocs, dry_run, regenerate,
+                 remarks=None):
     lang_key = target.lower()
     side_path = SCENES_DIR / f"{ad_id}.{lang_key}.supernova.json"
     if side_path.exists() and not regenerate:
@@ -255,7 +258,8 @@ def localize_one(client, svc, env, ad_id, competitor, target, skeleton, comments
                                base_parsed.get("production_type", ""), seed_lang)
         verdict = safety.audit(client, audit_text(translated, decompose))
         side = {"ad_library_id": ad_id, "language": target, "parsed": translated,
-                "safety": verdict, "model": _flash.DEFAULT_MODEL, "localized_at": time.time()}
+                "safety": verdict, "remark": remarks or [],
+                "model": _flash.DEFAULT_MODEL, "localized_at": time.time()}
         if not dry_run:
             side_path.write_text(json.dumps(side, indent=2, ensure_ascii=False))
         print(f"  [{target}] script OK — safety={verdict['verdict'].upper()} | "
@@ -270,7 +274,8 @@ def localize_one(client, svc, env, ad_id, competitor, target, skeleton, comments
         return {"language": target, "verdict": side["safety"]["verdict"], "link": "(dry-run)"}
 
     docx_path = DOCS_DIR / f"{ad_id}_{lang_key}_supernova_rewrite.docx"
-    rewrite_shaped = {"parsed": to_rewrite_shape(side["parsed"], skeleton, base_parsed, target)}
+    rewrite_shaped = {"parsed": to_rewrite_shape(side["parsed"], skeleton, base_parsed, target,
+                                                 side.get("remark") or remarks)}
     build_docs.build_supernova_doc(ad_id, competitor, decompose, rewrite_shaped, docx_path,
                                    lambda m: None)
     title = f"{competitor.title()} {ad_id} — Supernova Rewrite ({target})"
@@ -295,10 +300,15 @@ def cmd_localize(ad_id, competitor, languages, source_mode, dry_run, regenerate)
         sys.exit(f"[error] --source gdoc requested but {source}")
     base_parsed = json.loads((SCENES_DIR / f"{ad_id}.supernova.json").read_text()).get("parsed", {})
     seed_lang = _seed_language(competitor, ad_id)
+    # Deterministic ad-level reviewer remarks (English-original / no-voiceover). Same for every
+    # language; shown in each Doc + the app + recorded on the per-language sidecar.
+    remarks = _remarks.detect_remarks(decompose.get("parsed", {}), seed_lang)
 
     print(f"Localize {ad_id} ({competitor}) → {', '.join(languages)}")
     print(f"  English source: {source}")
     print(f"  seed language: {seed_lang} | scenes: {len(skeleton)}")
+    if remarks:
+        print(f"  remarks: {' | '.join(remarks)}")
 
     env = load_env()
     client = _flash.get_client(env)
@@ -314,7 +324,7 @@ def cmd_localize(ad_id, competitor, languages, source_mode, dry_run, regenerate)
         try:
             results.append(localize_one(client, svc, env, ad_id, competitor, target, skeleton,
                                         comments, decompose, base_parsed, seed_lang, folder_id,
-                                        gdocs, dry_run, regenerate))
+                                        gdocs, dry_run, regenerate, remarks))
         except Exception as ex:
             print(f"  [{target}] FAILED — {type(ex).__name__}: {str(ex)[:140]}")
             results.append({"language": target, "verdict": "error", "link": "", "error": str(ex)})

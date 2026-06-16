@@ -26,7 +26,8 @@ flow always wins over hitting the count; see the job rules).
 - **Mother-tongue reframe** — you learned your first language by *speaking* it; English works the same way.
 - **Real-life practice** — interviews (highest stakes), office / manager calls, shopkeeper, social.
 - **Old methods failed** — 12 years of books and you still freeze when you have to speak.
-- **Practical proof** (use where they fit): ~10–15 min/day · cheaper than coaching (a *comparative*, never
-  a rupee figure) · 1 crore+ users · built by IITians · a level test · 1000+ practice scenarios.
+- **Practical proof** (use where they fit): ~10–15 min/day · **~7× cheaper than offline classes/coaching**
+  (use the 7× comparative — never a rupee figure) · 1 crore+ users · built by IITians · a level test ·
+  1000+ practice scenarios.
 
 These are the **only** claims to make — do not invent features or outcomes.
