@@ -93,6 +93,15 @@ Flash can't hold the register.*
     register (friends saying "aap" to each other sounds dubbed); younger→elder respectful;
     elder→younger natural-warm. A mocking antagonist may use the harsh register ONLY where the
     English master already has mockery — and G3.1 still applies (shame must resolve in dignity).
+  - **Honorific CONSISTENCY (every language — strict).** Once a character is referred to in the
+    respectful / honorific register, KEEP every verb and pronoun for that character honorific all the way
+    through — NEVER mix an honorific form and a peer / neuter form for the SAME person, even in the same
+    sentence. The AI teacher (Miss Nova) is ALWAYS respected, so all her verbs are honorific. Apply each
+    language's honorific verb concord: **Telugu** she = "Aavida" + the **-aru** honorific ("nerpistaru,
+    cheptaru, chestaru, untaru") — NEVER the peer / neuter **-undi** ("chestundi, untundi, cheptundi");
+    so "…nerpistaru … explain **chestaru**", not "…nerpistaru … explain chestundi". **Hindi** honorific
+    plural ("sikhati / karti / samjhati **hain**"), not the bare singular. **Tamil** "-aanga" honorific.
+    **Kannada** "-tȃare" honorific. Pick the honorific tier the relationship demands, then hold it.
 
 **T5. Language self-reference swap.** Every language name inside the script resolves to the TARGET
 language ("explains in Hindi" → "explains in Telugu" in the Telugu version); the mother-tongue
@@ -203,6 +212,12 @@ casting table. Native-script examples teach register; output is romanized (T10).
   - **GENDER AGREEMENT (native-review flag, 2026-06-12):** a FEMALE subject's negative/verb forms end
     **-dhu**, not the masculine **-du** — "Miss Nova ninnu judge **cheyyadhu**" / "ame andariki oke lesson
     **ivvadhu**" (NOT cheyadu / ivvadu). Flash gets this wrong by default — enforce it.
+  - **HONORIFIC for the AI teacher — ALWAYS -aru, never -undi (native-review flag, 2026-06-17):** Miss
+    Nova / the AI teacher is "Aavida" (respectful she) and takes the **-aru** honorific on EVERY verb that
+    refers to her — "nerpistaru, cheptaru, chestaru, untaru, sahayam chestaru, explain chestaru". NEVER the
+    peer / neuter **-undi** ("chestundi", "untundi", "cheptundi"). Once one verb for her is honorific, they
+    ALL stay honorific — do NOT slip mid-sentence ("…nerpistaru … explain chestundi" is WRONG → use
+    "…nerpistaru … explain chestaru"). See T4 honorific-consistency.
   - **NATURALNESS (native-review flag, 2026-06-16, from live output review):**
     - **"7× cheaper than offline classes":** render the WHOLE multiplier in Telugu — spell out the
       number-word like the Hindi "saat guna" exemplar (§1 carve-out), e.g. "offline classes
@@ -212,8 +227,9 @@ casting table. Native-script examples teach register; output is romanized (T10).
       e.g. "**matladi practice cheyadam**" / "**matladatam practice**" — NOT "gattiga" ("loudly/firmly") and
       never a word-for-word "out loud".
     - **Time-per-day line (proven phrasing):** prefer "**Meeku rojuki kevalam 10–15 mins padutundi
-      anthe, paiga Supernova AI meeku Telugu lone explain chestundi**" over the stiff "10 to 15
-      minutes chalu … explain chestundi" — same meaning, natural spoken rhythm.
+      anthe, paiga Aavida meeku Telugu lone explain chestaru**" over the stiff "10 to 15 minutes chalu …"
+      — same meaning, natural spoken rhythm. (Note the HONORIFIC "**chestaru**" — the AI teacher always
+      takes the -aru honorific; NEVER "chestundi". See the honorific note above.)
 - **Casting:** M: Ramesh, Suresh, Ravi, Srinu, Mahesh, Venkat, Kiran, Sai · F: Lakshmi, Anusha,
   Swathi, Kavya, Priyanka, Sravani, Harika, Divya · default **Ravi/Lakshmi** · Cities: Hyderabad,
   Vijayawada · Language name: "Telugu".
