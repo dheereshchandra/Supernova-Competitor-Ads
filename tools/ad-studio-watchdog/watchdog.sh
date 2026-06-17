@@ -34,6 +34,7 @@ HEALTH_URL="http://127.0.0.1:${PORT}/api/health"
 ASSERTED_FILE="$STATE/asserted_netsig"   # the network signature we last re-asserted the funnel for
 VPN_FLAG="$STATE/vpn_active"             # present while a system VPN owns the default route
 NOTIFY_FILE="$STATE/last_recover_notify"
+PUB_STATE="$STATE/public_state"          # "up"/"down": edge-trigger ONE down + ONE up alert per episode
 HEAL_CNT="$STATE/heal_count"; HEAL_WIN="$STATE/heal_window"
 MAX_HEALS_PER_HOUR=6                      # backstop for backend/funnel repairs (recovery re-assert is exempt)
 NOTIFY_COOLDOWN=1200                      # min seconds between recovery Slack notes
@@ -42,6 +43,13 @@ FORCE=0; [ "${1:-}" = "--force" ] && FORCE=1
 log()    { print -r -- "$(date '+%Y-%m-%d %H:%M:%S')  $1" >> "$LOG"; }
 notify() { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
 reassert_funnel() { tailscale serve reset >> "$LOG" 2>&1 || true; tailscale funnel --bg "$PORT" >> "$LOG" 2>&1 || true; }
+
+# Public-state edge trigger: alert exactly ONCE when the public site goes down, and ONCE
+# when it comes back — whatever the cause (VPN on, backend dead, funnel gone). Repeats are
+# logged, not re-alerted, so a wedged edge can't spam Slack every 60s.
+pub_state() { cat "$PUB_STATE" 2>/dev/null || echo up; }   # assume healthy on first run
+mark_down() { [ "$(pub_state)" = down ] || { print -r -- down > "$PUB_STATE"; notify "🔴 Ad Studio is DOWN" "$1"; }; }
+mark_up()   { [ "$(pub_state)" = up ]   || { print -r -- up   > "$PUB_STATE"; notify "🟢 Ad Studio is back UP" "$1"; }; }
 
 # heal cap (per wall-clock hour) — guards backend/funnel-config repair loops, NOT recovery
 now_hour=$(( $(date +%s) / 3600 ))
@@ -70,13 +78,23 @@ reassert_funnel_record() { reassert_funnel; print -r -- "$netsig" > "$ASSERTED_F
 # --- manual instant recovery (works regardless of VPN state) ---
 if [ "$FORCE" = "1" ]; then
   log "FORCE re-assert on [$netsig]"; reassert_funnel_record
-  echo "Funnel re-asserted (serve reset && funnel --bg $PORT). Public URL should be back in a few seconds."
+  if [ "$vpn_active" = "1" ]; then
+    # A manual re-assert can't beat an active VPN — the public URL stays down until the VPN
+    # is off. Do NOT announce a (false) recovery, and keep state 'down' so we don't re-DOWN.
+    mark_down "Re-asserted, but a system VPN still owns the connection — the public URL is still down. Turn the VPN off and it recovers on its own."
+    echo "Re-asserted, but a VPN is still active — the public URL stays down until you turn the VPN off."
+  else
+    rm -f "$VPN_FLAG"
+    mark_up "Manually re-asserted (recover.sh / --force). Public URL should be back in a few seconds."
+    echo "Funnel re-asserted (serve reset && funnel --bg $PORT). Public URL should be back in a few seconds."
+  fi
   exit 0
 fi
 
-# --- VPN active: site is intentionally down; stay quiet and just remember it ---
+# --- VPN active: site is intentionally down. Alert ONCE that it's down, then stay quiet. ---
 if [ "$vpn_active" = "1" ]; then
   [ -f "$VPN_FLAG" ] || { touch "$VPN_FLAG"; log "VPN active (default route via $def_iface) — site intentionally down; holding. Auto-recovers when VPN is turned off."; }
+  mark_down "A system VPN is on, so the public URL is intentionally down for the team. It comes back on its own the moment you turn the VPN off (≈1–2 min; run tools/ad-studio-watchdog/recover.sh to make it instant)."
   exit 0
 fi
 
@@ -98,13 +116,23 @@ problems=(); healed=()
 if [ -z "$asserted_sig" ]; then            # first run after install: assume healthy, no spurious re-assert
   print -r -- "$netsig" > "$ASSERTED_FILE"
 elif [ "$ts_ok" = "ok" ] && { [ -f "$VPN_FLAG" ] || [ "$netsig" != "$asserted_sig" ]; }; then
-  reason="network changed -> [$netsig]"; [ -f "$VPN_FLAG" ] && reason="VPN turned off; normal IP back [$netsig]"
+  from_vpn=0; reason="network changed -> [$netsig]"
+  [ -f "$VPN_FLAG" ] && { from_vpn=1; reason="VPN turned off; normal IP back [$netsig]"; }
   log "RECOVERY $reason -> re-asserting funnel"
   reassert_funnel_record; rm -f "$VPN_FLAG"; healed+=("auto-recovered Funnel")
-  now="$(date +%s)"
-  if [ $((now - $(cat "$NOTIFY_FILE" 2>/dev/null || echo 0))) -ge "$NOTIFY_COOLDOWN" ]; then
-    print -r -- "$now" > "$NOTIFY_FILE"
-    notify "Ad Studio: Funnel re-asserted" "$reason — public URL should be back within seconds. (normal after toggling a VPN)"
+  if [ "$from_vpn" = 1 ]; then
+    # VPN off: funnel re-asserted. Don't announce UP yet — the verdict's mark_up posts the
+    # single 🟢 UP once backend+tailscale+funnel actually verify healthy, so a brief
+    # funnel-status lag right after the network change can't trigger a premature UP that a
+    # later DOWN would contradict. public_state stays 'down' until then (set by the VPN-on DOWN).
+    log "VPN off — re-asserted; UP will be confirmed by the verdict once the door is serving."
+  else
+    # Plain Wi-Fi/DHCP change (site wasn't down) — informational re-assert note, rate-limited.
+    now="$(date +%s)"
+    if [ $((now - $(cat "$NOTIFY_FILE" 2>/dev/null || echo 0))) -ge "$NOTIFY_COOLDOWN" ]; then
+      print -r -- "$now" > "$NOTIFY_FILE"
+      notify "Ad Studio: Funnel re-asserted" "$reason — public URL should be back within seconds. (normal after a Wi-Fi/network change)"
+    fi
   fi
 fi
 
@@ -120,18 +148,20 @@ elif ! tailscale funnel status 2>/dev/null | grep -q "127.0.0.1:${PORT}"; then
   if can_heal; then log "HEAL funnel config missing -> re-assert"; reassert_funnel_record; bump_heal; healed+=("re-asserted funnel (config missing)"); fi
 fi
 
-# --- verdict ---
+# --- verdict (edge-triggered: ONE DOWN per outage, ONE UP on recovery — see mark_down/up) ---
 if [ ${#problems[@]} -eq 0 ]; then
+  mark_up "Recovered — backend + tailscale + funnel are healthy again."
   [ ${#healed[@]} -gt 0 ] && log "RECOVERED ${(j:; :)healed} (sig=$netsig)" || log "OK healthy (sig=$netsig)"
   exit 0
 fi
 detail="${(j:; :)problems}"
-if ! can_heal; then
-  log "ALERT persistent [$detail] (heal cap $MAX_HEALS_PER_HOUR/hr reached)"
-  notify "Ad Studio DEGRADED" "$detail — auto-heal couldn't resolve it after $MAX_HEALS_PER_HOUR tries this hour. See watchdog.log."
-elif [ ${#healed[@]} -gt 0 ]; then
-  log "RECOVERED-with-issues [$detail] via [${(j:; :)healed}]"
+if [ ${#healed[@]} -gt 0 ]; then
+  # actively healing this run — don't declare DOWN yet; let the next run confirm.
+  log "RECOVERED-with-issues [$detail] via [${(j:; :)healed}] (rechecking next run)"
 else
-  log "WARN [$detail] (will recheck next run)"
+  # nothing healed this run (no auto-fix available, or heal cap reached) -> a real outage.
+  can_heal || log "heal cap $MAX_HEALS_PER_HOUR/hr reached — no more auto-repairs this hour"
+  log "ALERT [$detail]"
+  mark_down "$detail — the public URL looks down and auto-heal hasn't resolved it. See watchdog.log."
 fi
 exit 0

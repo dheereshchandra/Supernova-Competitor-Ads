@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template only. Do NOT install directly — run `zsh tools/host-monitor/install.sh`,
+     which fills in __PRESENCE_SH__ and __LOG__ and loads the job.
+
+     This is a LONG-LIVED agent (not a timer). RunAtLoad fires it once at login/boot
+     (→ the "UP" alert). KeepAlive/SuccessfulExit=false means: restart it only if it
+     CRASHES (non-zero exit), but do NOT restart it after a clean exit. Our SIGTERM
+     trap exits 0, so at logout/shutdown it fires the "DOWN" alert and stays down —
+     no restart loop — and at the next boot RunAtLoad brings it (and the "UP") back. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>live.gosupernova.host-monitor</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>__PRESENCE_SH__</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <dict>
+    <key>SuccessfulExit</key>
+    <false/>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>__LOG__</string>
+  <key>StandardErrorPath</key>
+  <string>__LOG__</string>
+</dict>
+</plist>

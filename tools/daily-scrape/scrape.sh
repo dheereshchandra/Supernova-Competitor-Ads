@@ -42,7 +42,9 @@ mkdir -p "$LOG_DIR"
 
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG"; }
 # macOS banner + Slack (when SLACK_WEBHOOK_URL is in .env) via the shared notifier
-notify() { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+notify()    { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+# routine "it ran" ping — silenceable in one place via NOTIFY_HEARTBEATS=0 in .env
+heartbeat() { zsh "$REPO/tools/notify/heartbeat.sh" "$1" "$2" >/dev/null 2>&1 || true; }
 
 # Run from the canonical clone only (has videos/, on main, single writer).
 if [ "$(git rev-parse --git-common-dir 2>/dev/null)" != ".git" ]; then
@@ -239,11 +241,12 @@ else
 fi
 
 # ── push everything once (with one pull-retry) so main stays fast-forwardable ────────────
+push_failed=0
 if git push >> "$LOG" 2>&1; then
   log "pushed."
 else
   git pull --no-rebase >> "$LOG" 2>&1 && git push >> "$LOG" 2>&1 && log "pushed after pull." \
-    || { log "PUSH FAILED — resolve manually."; notify "Daily scrape: push failed" "Commits are local — open Conductor to push."; }
+    || { push_failed=1; log "PUSH FAILED — resolve manually."; notify "Daily scrape: push failed" "Commits are local — open Conductor to push."; }
 fi
 
 # ── summary + alert ─────────────────────────────────────────────────────────────────────
@@ -254,10 +257,17 @@ log "=== done ($RAN): ok=$ok recovered=$recovered empty=$empty blocked=$blocked 
 [ "$blocked"   -gt 0 ] && log "    BLOCKED (real advertiser, 0 ads — check): ${BLOCKED_S[*]}"
 [ "$failed"    -gt 0 ] && log "    FAILED (real errors):                   ${FAILED_S[*]}"
 
-# Alert ONLY when something needs a human — an expected "empty" stays quiet.
+# Exactly one end-of-run message:
+#  • needs a human (blocked/failed) → actionable ALERT (an expected "empty" never alerts).
+#  • push failed → the push-failed notify above already fired; stay quiet here (no false "✓").
+#  • otherwise → routine "it ran ✓" HEARTBEAT so the team sees it happened.
 if [ "$blocked" -gt 0 ] || [ "$failed" -gt 0 ]; then
   binfo=""; [ "$blocked" -gt 0 ] && binfo="blocked: ${BLOCKED_S[*]} · "
   finfo=""; [ "$failed"  -gt 0 ] && finfo="failed: ${FAILED_S[*]} · "
   notify "Daily scrape ($RAN): blocked=$blocked failed=$failed" \
     "blocked = real advertiser returned 0 ads even after a cooled retry (likely throttle/page issue) · failed = real errors · ${binfo}${finfo}see scrape.log"
+elif [ "$push_failed" = 0 ]; then
+  einfo=""; [ "$empty" -gt 0 ] && einfo=" · empty=$empty (no active ads — expected)"
+  heartbeat "Daily scrape ✓ ($RAN)" \
+    "ok=$ok recovered=$recovered${einfo} — refreshed cleanly, nothing needs a human. see scrape.log"
 fi
