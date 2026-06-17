@@ -21,7 +21,9 @@ mkdir -p "$LOG_DIR"
 
 log()    { print -r -- "$(date '+%Y-%m-%d %H:%M:%S')  $1" >> "$LOG"; }
 # macOS banner + Slack (when SLACK_WEBHOOK_URL is in .env) via the shared notifier
-notify() { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+notify()    { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+# routine "it ran" ping — silenceable in one place via NOTIFY_HEARTBEATS=0 in .env
+heartbeat() { zsh "$REPO/tools/notify/heartbeat.sh" "$1" "$2" >/dev/null 2>&1 || true; }
 
 cd "$REPO" 2>/dev/null || { log "ERR repo not found: $REPO"; exit 1; }
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || { log "ERR not a git repo: $REPO"; exit 1; }
@@ -50,9 +52,11 @@ BASE="$(git merge-base @ @{u})"
 
 if [ "$LOCAL" = "$REMOTE" ]; then
   log "OK already up to date"
+  heartbeat "Repo sync ✓ (11:30)" "Already up to date with origin/main — nothing to pull."
 elif [ "$LOCAL" = "$BASE" ]; then
   if git merge --ff-only @{u} >> "$LOG" 2>&1; then
     log "OK fast-forwarded main to origin"
+    heartbeat "Repo sync ✓ (11:30)" "Fast-forwarded main to origin — teammates' pushes are now pulled in."
   else
     log "ERR ff-only merge failed"
     notify "Supernova sync failed" "Fast-forward failed. Open Conductor."

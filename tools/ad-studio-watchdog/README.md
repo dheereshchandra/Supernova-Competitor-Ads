@@ -29,11 +29,19 @@ and auto-heals:
    ingress, so it proactively runs the documented repair
    `tailscale serve reset && tailscale funnel --bg 8787`.
 
-Heals are capped at **4/hour** (a wedged edge can't loop forever); on a clean self-heal it
-posts an `Ad Studio auto-recovered` note, and if it can't fix things it posts
-`Ad Studio DEGRADED`. All alerts go through the shared `tools/notify/notify.sh`
-(macOS banner + Slack when `SLACK_WEBHOOK_URL` is in `.env`). Healthy runs are silent
-(logged only).
+Heals are capped at **6/hour** (a wedged edge can't loop forever). Alerts are
+**edge-triggered** so the team hears about an outage exactly once, not every 60s:
+
+- `🔴 Ad Studio is DOWN` — posted **once** when the public URL first goes down (a VPN was
+  turned on, the backend died and auto-heal couldn't fix it, tailscale/funnel dropped).
+- `🟢 Ad Studio is back UP` — posted **once** when it recovers (VPN turned off, backend/
+  funnel healthy again).
+- `Ad Studio: Funnel re-asserted` — an informational note (rate-limited) for a plain
+  Wi-Fi/DHCP change that briefly re-asserted the Funnel without a real outage.
+
+All alerts go through the shared `tools/notify/notify.sh` (macOS banner + Slack when
+`SLACK_WEBHOOK_URL` is in `.env`). Healthy steady-state runs are silent (logged only).
+The down/up edge is remembered in `~/Library/Application Support/SupernovaAdStudioWatchdog/state/public_state`.
 
 ```sh
 # install (run on the canonical clone — the same Mac that serves Ad Studio)
@@ -64,10 +72,13 @@ down for everyone while that VPN owns the Mac's connection — see
 `scraper-rotating-ip-vs-ad-studio-funnel`). The watchdog is **VPN-aware**:
 
 - **While a VPN owns the default route** (a `utun`/`ppp`/`ipsec` interface, not Tailscale's
-  `100.x`): it stays **quiet** — no churn, no alerts. The public outage is expected.
+  `100.x`): it stays **quiet** — no churn — after posting a single `🔴 Ad Studio is DOWN
+  (VPN on)` note so the team knows the public URL is intentionally down. The expected
+  outage is announced once, not every minute.
 - **The moment you turn the VPN off** and your normal IP returns: it re-asserts the Funnel
-  **automatically within ~1-2 minutes** — no operator action. (It also auto-recovers from a
-  plain Wi-Fi switch / DHCP change; each new network signature is re-asserted once.)
+  **automatically within ~1-2 minutes** — no operator action — and posts `🟢 Ad Studio is
+  back UP`. (It also auto-recovers from a plain Wi-Fi switch / DHCP change; each new
+  network signature is re-asserted once.)
 
 So the workflow is just: turn VPN on → scrape → turn VPN off → walk away; the site comes
 back on its own. Want it back **instantly** instead of waiting ~2 min?
@@ -82,7 +93,13 @@ zsh tools/ad-studio-watchdog/recover.sh     # = watchdog.sh --force: serve reset
 ## Tier 1b — External monitor (`.github/workflows/ad-studio-uptime.yml`)
 
 A GitHub Actions cron (every ~5 min) curls the **public** `/api/health` from off-tailnet
-and Slack-alerts on a 2-strike failure. One-time setup:
+and Slack-alerts on a 2-strike failure. It is **edge-triggered** (reads its own last
+completed run's conclusion as prior state), so it posts **one** `🚨 DOWN` when the public
+URL first drops and **one** `✅ back UP` when it returns — not a fresh red alert every 5
+minutes for the whole outage. This matters during a planned Google-scrape VPN window: the
+site is intentionally unreachable for many minutes and the local watchdog already posted a
+single `🔴 DOWN (VPN on)`; without the edge-trigger this monitor would otherwise spam the
+same channel. One-time setup:
 
 ```sh
 gh secret set SLACK_WEBHOOK_URL --body "https://hooks.slack.com/services/..."   # same webhook as .env

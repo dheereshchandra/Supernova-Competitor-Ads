@@ -6,6 +6,14 @@ name: Ad Studio uptime (public)
 # the "remote users can't reach it" outage. GitHub runners are off-tailnet, so they hit
 # the genuine public path.
 #
+# EDGE-TRIGGERED (added 2026-06-17): it Slack-alerts only ONCE when the public URL first
+# goes down, and once when it recovers — not every 5 minutes for the whole outage. The
+# "previous state" is read from this workflow's own last completed run conclusion (failure
+# == was down, success == was up). This matters most during a planned Google-scrape VPN
+# window: the site is intentionally unreachable for many minutes, the local Ad Studio
+# watchdog already posts a single "DOWN (VPN on)", and without de-duping THIS monitor would
+# otherwise re-post a red DOWN every ~5 min into the same Slack channel.
+#
 # Setup (once): add the Slack webhook as a repo secret so failures page the team:
 #     gh secret set SLACK_WEBHOOK_URL --body "https://hooks.slack.com/services/..."
 #
@@ -22,6 +30,10 @@ on:
 concurrency:
   group: ad-studio-uptime
   cancel-in-progress: true
+
+permissions:
+  actions: read                 # gh run list (read this workflow's previous conclusion)
+  contents: read
 
 jobs:
   probe:
@@ -46,17 +58,46 @@ jobs:
             echo "down=true"  >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Alert Slack (public outage)
-        if: steps.probe.outputs.down == 'true'
+      - name: Read previous state (last completed run's conclusion)
+        id: prev
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # failure == previous run saw the site DOWN; success == it was UP. Best-effort:
+          # if the API is unreachable, leave it empty so we fail OPEN (alert rather than miss).
+          prev="$(gh run list --repo "${{ github.repository }}" --workflow ad-studio-uptime.yml \
+                    --status completed --limit 12 --json conclusion \
+                    --jq 'map(select(.conclusion=="success" or .conclusion=="failure")) | .[0].conclusion' \
+                    2>/dev/null || echo '')"
+          echo "conclusion=${prev}" >> "$GITHUB_OUTPUT"
+          echo "previous completed conclusion: ${prev:-unknown}"
+
+      - name: Alert Slack — DOWN (only on the down edge)
+        if: steps.probe.outputs.down == 'true' && steps.prev.outputs.conclusion != 'failure'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
             echo "::warning::SLACK_WEBHOOK_URL secret not set — cannot alert. Run: gh secret set SLACK_WEBHOOK_URL"
-            exit 1
+            exit 0
           fi
           curl -sS -m 10 -X POST "$SLACK_WEBHOOK_URL" \
             -H 'Content-Type: application/json' \
-            --data '{"text":":rotating_light: *Ad Studio is DOWN on the public URL* — '"$URL"' did not return ok over the public internet (2 strikes). The Tailscale Funnel edge or the host Mac is unreachable. Check the Mac, then tail ~/Library/Application Support/SupernovaAdStudioWatchdog/watchdog.log"}'
-          # fail the job so the run is visibly red in the Actions tab
+            --data '{"text":":rotating_light: *Ad Studio is DOWN on the public URL* — '"$URL"' did not return ok over the public internet (2 strikes). If this coincides with a planned Google-scrape VPN window it is expected (the local watchdog already flagged it); otherwise the Tailscale Funnel edge or the host Mac is unreachable — check the Mac, then tail ~/Library/Application Support/SupernovaAdStudioWatchdog/watchdog.log. (You will get ONE more alert when it recovers.)"}'
+
+      - name: Alert Slack — RECOVERED (only on the up edge)
+        if: steps.probe.outputs.down == 'false' && steps.prev.outputs.conclusion == 'failure'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          [ -z "${SLACK_WEBHOOK_URL:-}" ] && exit 0
+          curl -sS -m 10 -X POST "$SLACK_WEBHOOK_URL" \
+            -H 'Content-Type: application/json' \
+            --data '{"text":":white_check_mark: *Ad Studio is back UP on the public URL* — '"$URL"' is returning ok over the public internet again."}'
+
+      - name: Reflect DOWN in the run status
+        if: steps.probe.outputs.down == 'true'
+        run: |
+          echo "Public URL is DOWN — failing the run so the Actions tab shows red and the next"
+          echo "run can read this 'failure' conclusion as the previous state (edge-trigger)."
           exit 1

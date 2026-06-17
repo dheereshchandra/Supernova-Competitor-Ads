@@ -22,7 +22,9 @@ mkdir -p "$LOG_DIR"
 
 log()    { print -r -- "$(date '+%Y-%m-%d %H:%M:%S')  $1" >> "$LOG"; }
 # macOS banner + Slack (when SLACK_WEBHOOK_URL is in .env) via the shared notifier
-notify() { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+notify()    { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+# routine "it ran" ping — silenceable in one place via NOTIFY_HEARTBEATS=0 in .env
+heartbeat() { zsh "$REPO/tools/notify/heartbeat.sh" "$1" "$2" >/dev/null 2>&1 || true; }
 
 cd "$REPO" 2>/dev/null || { log "ERR repo not found: $REPO"; exit 1; }
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || { log "ERR not a git repo: $REPO"; exit 1; }
@@ -45,6 +47,7 @@ fi
 log "running sync_to_sheets --all"
 if "$PY" "$REPO/tools/csv-sync/sync_to_sheets.py" --all >> "$LOG" 2>&1; then
   log "OK sync complete"
+  heartbeat "CSV-sync ✓" "Pushed the latest analysis CSVs into the 'Supernova Competitor Master' Google Sheet."
 else
   log "ERR sync_to_sheets failed"
   notify "CSV-sync failed" "sync_to_sheets.py errored — check sync.log"

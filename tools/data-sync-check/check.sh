@@ -19,7 +19,9 @@ LOG="$LOG_DIR/check.log"
 mkdir -p "$LOG_DIR"
 
 log()    { print -r -- "$(date '+%Y-%m-%d %H:%M:%S')  $1" >> "$LOG"; }
-notify() { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+notify()    { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+# routine "it ran" ping — silenceable in one place via NOTIFY_HEARTBEATS=0 in .env
+heartbeat() { zsh "$REPO/tools/notify/heartbeat.sh" "$1" "$2" >/dev/null 2>&1 || true; }
 
 log "=== data-sync check start ==="
 out="$(python3.13 "$SCRIPT_DIR/check_sync.py" 2>&1)"
@@ -29,6 +31,7 @@ summary="$(print -r -- "$out" | grep '^RESULT:' | tail -1)"
 
 if [ $rc -eq 0 ]; then
   log "OK ${summary:-consistent}"
+  heartbeat "Data sync check ✓ (12:15)" "${summary:-Mac ↔ repo ↔ Sheet all agree} — morning sync chain verified end-to-end."
 elif [ $rc -eq 1 ]; then
   log "ALERT ${summary:-mismatches found}"
   notify "Data sync check: MISMATCHES" "${summary:-Mac/repo/Sheet disagree} — see check.log"

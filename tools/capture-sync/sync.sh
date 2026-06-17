@@ -40,7 +40,9 @@ mkdir -p "$LOG_DIR"
 
 log()    { print -r -- "$(date '+%Y-%m-%d %H:%M:%S')  $1" >> "$LOG"; }
 # macOS banner + Slack (when SLACK_WEBHOOK_URL is in .env) via the shared notifier
-notify() { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+notify()    { zsh "$REPO/tools/notify/notify.sh" "$1" "$2" >/dev/null 2>&1 || true; }
+# routine "it ran" ping — silenceable in one place via NOTIFY_HEARTBEATS=0 in .env
+heartbeat() { zsh "$REPO/tools/notify/heartbeat.sh" "$1" "$2" >/dev/null 2>&1 || true; }
 
 cd "$REPO" 2>/dev/null || { log "ERR repo not found: $REPO"; exit 1; }
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || { log "ERR not a git repo: $REPO"; exit 1; }
@@ -86,7 +88,7 @@ age_days() { local mt; mt=$(stat -f %m "$1" 2>/dev/null || echo 0); echo $(( ($(
 # scraper + runs stages 1–5 daily). Capture-sync keeps the Google pipeline + is the
 # safety-net for manually-dropped Google snapshots. Owning FB here too would
 # double-process / double-commit. See tools/pipeline-run/README.md.
-processed=(); scrape_needed=(); changed=0
+processed=(); scrape_needed=(); changed=0; had_error=0
 for pipeline in google; do
   for master in "$REPO/$pipeline"/master/*.csv(N); do
     slug="${master:t:r}"
@@ -112,6 +114,7 @@ for pipeline in google; do
         [ -n "$(git status --porcelain)" ] && changed=1
       else
         rc=$?
+        had_error=1
         log "WARN run_pipeline failed for $pipeline/$slug (rc=$rc) — see log"
         notify "Capture-sync: pipeline failed" "$pipeline/$slug (rc=$rc) — see capture.log"
       fi
@@ -136,7 +139,7 @@ if [ "$DRY" != 1 ] && [ "$changed" = 1 ] && [ -n "$(git status --porcelain)" ]; 
     log "WARN push rejected — pulling --no-rebase and retrying once"
     git pull --no-rebase >> "$LOG" 2>&1
     git push >> "$LOG" 2>&1 && log "OK pushed on retry" \
-      || { log "ERR push still failing — commit is local"; \
+      || { had_error=1; log "ERR push still failing — commit is local"; \
            notify "Capture-sync: push failed" "Captured locally but push failed. Open Conductor to push."; }
   fi
 fi
@@ -145,9 +148,16 @@ fi
 summary="captured: ${#processed} · re-scrape due: ${#scrape_needed}"
 log "DONE $summary"
 [ ${#scrape_needed} -gt 0 ] && log "  re-scrape: ${(j:, :)scrape_needed}"
+# scrape-due is actionable (a human must run a manual FB scrape); everything else is a
+# routine "it ran ✓" heartbeat — but stay quiet if a failure alert already fired this run,
+# or on a manual DRY preview (so a local dry-run doesn't imply the 11:35 job actually ran).
 if [ ${#scrape_needed} -gt 0 ]; then
-  notify "Capture-sync: scrape due (${#scrape_needed})" "${(j:, :)scrape_needed}"
-elif [ ${#processed} -gt 0 ]; then
-  notify "Capture-sync done" "$summary"
+  notify "Capture-sync: scrape due (${#scrape_needed})" "${(j:, :)scrape_needed} · $summary"
+elif [ "$DRY" = 1 ]; then
+  log "DRY preview — skipping heartbeat"
+elif [ "$had_error" = 1 ]; then
+  log "a failure alert already fired this run — skipping success heartbeat"
+else
+  heartbeat "Capture-sync ✓ (11:35)" "$summary — no expiring snapshots need a manual scrape."
 fi
 exit 0
