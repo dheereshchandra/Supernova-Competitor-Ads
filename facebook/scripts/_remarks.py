@@ -53,11 +53,39 @@ def is_no_voiceover(decompose_parsed: dict) -> bool:
     return all(_voiceless(s.get("audio_transcript")) for s in scenes)
 
 
+def audio_note(decompose_parsed: dict) -> str:
+    """Best available description of the ad's audio, for the no-voiceover remark. Prefers the
+    decompose's top-level `audio_track`; else the distinct bracketed audio markers across scenes
+    (e.g. '[background song, no spoken dialogue]')."""
+    track = ((decompose_parsed or {}).get("audio_track") or "").strip()
+    if track:
+        return track
+    seen: set[str] = set()
+    out: list[str] = []
+    for s in (decompose_parsed or {}).get("scenes") or []:
+        for m in _BRACKET_RE.findall(s.get("audio_transcript") or ""):
+            t = m.strip()
+            if t and t.lower() not in seen:
+                seen.add(t.lower())
+                out.append(t)
+    return "; ".join(out)
+
+
+def no_voiceover_remark(decompose_parsed: dict) -> str:
+    """The rich no-voiceover reviewer note: states there's no spoken dialogue, what the audio is,
+    and that the on-screen text (not a VO) is what was replicated/translated."""
+    note = audio_note(decompose_parsed)
+    base = ("No spoken dialogue in the original ad — the message is carried by ON-SCREEN TEXT "
+            "(replicated/translated here); any voiceover generated is synthetic, not a replication "
+            "of the original.")
+    return f"{base} Audio: {note}." if note else base
+
+
 def detect_remarks(decompose_parsed: dict, seed_language: str) -> list[str]:
     """Ad-level reviewer remarks (deterministic, no LLM). Empty list for the common case."""
     out: list[str] = []
     if is_english_original(seed_language):
         out.append(EN_ORIGINAL)
     if is_no_voiceover(decompose_parsed):
-        out.append(NO_VOICEOVER)
+        out.append(no_voiceover_remark(decompose_parsed))
     return out

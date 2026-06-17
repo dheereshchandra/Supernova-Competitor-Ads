@@ -126,6 +126,12 @@ PRIORITY ORDER:
      exchange warmer and more human. Just keep the seed's example and what the beat is about.
    - **[SOFT, strong default] Keep the opening speaker + turn order** — if the robot / Miss Nova opens,
      keep it; flip it ONLY if the brief or natural flow demands.
+   - **[SOFT, strong default] Keep the seed's INTERACTION PATTERN (the teaching mechanic), not just the lines.**
+     Check the input's `interaction_pattern`. A repeat-after-me drill (teacher SAYS a phrase, learner ECHOES it)
+     STAYS a drill — do NOT turn it into a quiz where the teacher asks and the learner answers correctly, and
+     do NOT make a struggling beginner suddenly produce correct English on her own. A live correction stays a
+     correction; a testimonial stays a testimonial. Apply the wrong-English correction beat ONLY if the seed
+     actually has a learner mistake — never invent one.
    - **[SOFT] Keep the hook** unless the brief changes it or it names the competitor brand.
 3. **[HARD] Re-skin for Supernova — the only deliberate changes:**
    - Swap the competitor brand -> **Supernova AI**. ALWAYS use the FULL product name **"Supernova AI"** in
@@ -145,21 +151,52 @@ PRIORITY ORDER:
    - Re-point the **CTA** to Supernova AI as **ONE single, urgent, action-specific close** at the very end
      (never split across scenes): name the action ("install", "click the install button", "download
      Supernova AI now"), keep it in the **speaking character's own first-person voice** ("…start speaking
-     with me today"), restate the core benefit, and give it energy/urgency ("right now", "today").
-   - **[SOFT] Benefits first, brand second** — lean toward the first half carrying the relatable / benefit
-     content and bringing Supernova AI in around the second half — but follow the seed if it reveals the
-     product early.
+     with me today"), restate the core benefit, and give it energy/urgency ("right now", "today"). **If the
+     learner has the final beat, make it ACTION / commitment — "I'm downloading right now!" / "Yes, let's
+     start!" — never a polite thank-you ("Thank you, teacher").**
+   - **[SOFT] Benefits first, brand revealed LATE** — let the first part be the relatable, in-world moment
+     (the correction, the rapport, the benefits the beats invite) and bring **Supernova AI in only in the
+     back portion of the ad** — ideally *asked into existence* by the learner's own interest ("How do I
+     start?" / "That sounds amazing!"), the teacher naming the product in response, NOT announced up front.
+     Follow the seed if it genuinely reveals the product early; otherwise hold the reveal.
 4. **[HARD] ONE SMOOTH, NATURAL CONVERSATION IS THE #1 GOAL.** The whole ad must read like one real,
    continuous exchange — warm and human, the way a friendly teacher actually talks. NEVER add a benefit
    just to hit a count; NEVER introduce the product abruptly. Where the FORMAT invites it you MAY add a
    light connecting beat the seed implies — a short reaction from a second voice / the audience
    ("What?? How??"), a momentum-building reaction line — but ONLY if it keeps the seed's hook, examples and
    turn order intact and makes the conversation flow better. Permitted, never required.
+   - **[SOFT default — this is what makes it feel like a conversation, not a checklist] Add warmth + a little
+     chemistry where the moment supports it.** After a correction, prefer a brief **"why?" exchange** — the
+     learner asks why ("but why 'in'?" / "is that right?") and the teacher explains the logic in **one or two
+     sentences** (this earns the rest of the script). Let the two characters **react to each other** — the
+     learner can be surprised ("Really?!"), a little embarrassed, push back; the teacher is warm and
+     encouraging. Use these where they fit naturally; do NOT force them onto every beat or onto a seed that
+     has no room for them.
+   - **[SOFT] Laughter is shared, never punching down.** A "(laughs)" cue is fine ONLY when it reads as
+     warmth *with* the other character — NEVER the teacher laughing alone *at* the learner's mistake.
+   - **[SUGGESTION — only if the script's situation invites it] Natural objections.** If the seed's setup
+     naturally has the learner voicing worries, the most realistic order is **time first** ("I don't get
+     time") then **fear / embarrassment** ("people will laugh at my mistakes"), each answered as it comes.
+     Reach for this only when the context calls for it — never impose objections on a seed that has none.
 5. **[HARD] INDIANIZE EVERY REFERENCE** — names -> Indian (Rahul, Priya, Anjali, Imran…, never
    "Jenny"/"John"), cities/places -> Indian (never France/London-as-home), currency/food/festivals ->
    Indian. The audience is in India.
 6. **[HARD] NEVER cross the four HARD LINES above.** Otherwise do NOT rewrite anything in the name of
    guidelines — when unsure, KEEP THE SEED.
+
+LANGUAGE DELIVERY TAGS (mark HOW each line is meant to be spoken — every WORD still stays English for review):
+The finished ad is delivered to a regional-Indian viewer: the AI teacher and the everyday conversation are
+spoken in the **viewer's regional language**, while the **English being taught / practised stays English**.
+Keep every word in English (this is the English master, for review), but TAG each spoken turn with its
+intended delivery language, placed right after "says:" and before the line:
+  - Lines meant to be delivered in the viewer's mother tongue → **(in regional language)** — the AI teacher's
+    lines and the learner's natural talk (reactions, worries, the "why" question, everyday conversation).
+  - The English being taught or quoted — the learner's wrong-English example, the teacher's correction of it,
+    and any English phrase being practised — stays English, tagged **(in English)**.
+Examples: `Priya says: (in regional language) When do you sleep?` · `Priya says: (in English) I sleeped at 10
+last night.` · `Miss Nova says: (in regional language) We say "slept", not "sleeped".` Most of the
+conversation is "(in regional language)"; only the taught / quoted English is "(in English)". The tag is a
+delivery marker, NOT spoken words.
 
 OUTPUT: exactly one JSON object (no markdown fences, no commentary). The deliverable doc renders the
 per-scene `supernova_script` fields back-to-back as ONE flowing script (no scene headings shown), so they
@@ -198,16 +235,24 @@ CONSTRAINTS:
   question) and the turn order. Do not SUBSTITUTE a different example or change what a beat is about — but
   you may add a short clarifying / warmth line on the kept example, and a light connecting reaction where
   the format invites it (see priority 4), as long as the seed's hook, examples and order stay intact.
-- `supernova_script` MUST put each spoken turn on its OWN line prefixed with the speaker's ASSIGNED NAME + " says:" (e.g. "Ramesh says:", "Miss Nova says:"), using the names from `characters[]` — never "Character A says:". One line per turn. DIALOGUE ONLY — no on-screen text, no narration, no camera directions; a LIGHT inline performance cue in parentheses (e.g. "(laughs)") is allowed where it aids delivery. The character name "Miss Nova" is a speaker LABEL only — it must NOT appear inside any spoken line.
+- `supernova_script` MUST put each spoken turn on its OWN line prefixed with the speaker's ASSIGNED NAME + " says:" (e.g. "Ramesh says:", "Miss Nova says:"), using the names from `characters[]` — never "Character A says:". One line per turn. DIALOGUE ONLY — no on-screen text, no narration, no camera directions; a LIGHT inline performance cue in parentheses (e.g. "(laughs)") is allowed where it aids delivery. **Also REQUIRED on every turn: the delivery-language tag — "(in regional language)" or "(in English)" — placed right after "says:" (see LANGUAGE DELIVERY TAGS above).** The character name "Miss Nova" is a speaker LABEL only — it must NOT appear inside any spoken line.
 - **WRITE 100% PURE ENGLISH — every word.** The master is entirely in English: NO Hindi/Tamil/Telugu/etc.
   *words or phrases* at all, not even romanized flavour ("yaar", "koi baat nahi"). The code-mix is added
   later at localization, not here. Keep the warm, conversational rhythm — in plain English. Never output
   Devanagari/Tamil/etc. script. EXCEPTIONS: brand proper nouns (Supernova AI, Miss Nova); and you MAY NAME
   an Indian language as an English word where the seed does ("learn English through Kannada", "in your own
   Hindi") — *naming* a language is allowed; *writing in it* is not.
-- Do NOT change the visuals or scene order. A scene with NO spoken dialogue (music-only / pure visual) gets
-  `supernova_script: ""` (empty). Only if a scene's dialogue is genuinely impossible to re-skin, emit it
-  with `supernova_script: "[scene needs manual edit]"`. Never silently drop a scene from the JSON.
+- Do NOT change the visuals or scene order. A scene that is an INTERLUDE with no spoken dialogue (music-only
+  / pure visual, inside an otherwise-spoken ad) gets `supernova_script: ""` (empty). Only if a scene's
+  dialogue is genuinely impossible to re-skin, emit it with `supernova_script: "[scene needs manual edit]"`.
+  Never silently drop a scene from the JSON.
+- **No spoken voiceover at all?** If the WHOLE ad has no spoken dialogue and carries its message as
+  ON-SCREEN TEXT over a song / music (a captioned / meme ad — see `audio_track` and per-scene
+  `on_screen_text`), re-skin + use that ON-SCREEN TEXT as the script — do NOT emit empty scripts and do NOT
+  fabricate a spoken voiceover that pretends to be the original. (A reviewer remark notes the source had no
+  voiceover.)
+- Do NOT add commerce / legal framing the seed doesn't have — no "cancel anytime", subscription / plan /
+  trial / pricing language, or invented offers. Re-skin only; when in doubt, KEEP THE SEED.
 
 INPUT:
 """

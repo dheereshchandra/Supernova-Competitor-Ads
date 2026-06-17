@@ -47,6 +47,9 @@ HERE = pathlib.Path(__file__).resolve().parent          # facebook/scripts
 ROOT = HERE.parent.parent                               # repo root
 SCENES = pathlib.Path("step4_workspace") / "scenes"
 
+sys.path.insert(0, str(HERE))
+import _remarks  # noqa: E402  (ad-level no-voiceover / English-original remarks; single source of truth)
+
 # "Name says: <spoken>" -> "<spoken>"; a non-dialogue line passes through unchanged.
 _SAYS = re.compile(r"^.{1,40}?\bsays:\s*(.*)$")
 
@@ -70,6 +73,7 @@ _BANNED = [
 _SEV = {
     "MISS_NOVA_SPOKEN": "block", "PLACEHOLDER_SPOKEN": "block",
     "BANNED_PHRASE": "flag", "CLAIM_VALUE": "flag", "BRAND_FULLNAME": "flag",
+    "NO_VOICEOVER": "flag", "INTERACTION_PATTERN_DRIFT": "flag",
 }
 
 
@@ -138,8 +142,12 @@ _ROLE_SCHEMA = {
         "inverted": {"type": "boolean"},
         "confidence": {"type": "string"},   # high | medium | low
         "evidence": {"type": "string"},
+        "pattern_changed": {"type": "boolean"},
+        "pattern_confidence": {"type": "string"},   # high | medium | low
+        "pattern_desc": {"type": "string"},
     },
-    "required": ["applicable", "inverted", "confidence", "evidence"],
+    "required": ["applicable", "inverted", "confidence", "evidence",
+                 "pattern_changed", "pattern_confidence", "pattern_desc"],
 }
 
 _ROLE_PROMPT = """You are a QC check for a re-skinned spoken-English ad. The ORIGINAL is a competitor ad
@@ -147,15 +155,22 @@ _ROLE_PROMPT = """You are a QC check for a re-skinned spoken-English ad. The ORI
 says a WRONG-English phrase (the mistake) and the AI TEACHER corrects it. In our rewrite the AI teacher's
 speaker label is "Miss Nova".
 
-Decide ONLY this: in the REWRITE, did the roles get INVERTED — i.e. does the AI teacher (Miss Nova) end up
-SAYING the learner's wrong-English mistake as her own line (e.g. Miss Nova says "I am having two brothers"
-or "I am adding oil"), instead of the learner saying it and Miss Nova correcting it?
+TASK 1 — role inversion: in the REWRITE, did the roles get INVERTED — i.e. does the AI teacher (Miss Nova)
+end up SAYING the learner's wrong-English mistake as her own line (e.g. Miss Nova says "I am having two
+brothers" or "I am adding oil"), instead of the learner saying it and Miss Nova correcting it? Set
+applicable=false, inverted=false if there is no wrong-English-correction beat (e.g. a monologue). Be
+conservative: inverted=true only with high confidence when you can quote the AI teacher speaking the mistake.
 
-Return JSON: applicable (is this a grammar-correction ad with a wrong→right beat at all?), inverted (did the
-AI teacher voice the learner's mistake?), confidence (high|medium|low), evidence (the offending rewrite line,
-or ""). If there is no wrong-English-correction beat (e.g. a monologue), set applicable=false, inverted=false.
-Be conservative: only say inverted=true with high confidence when you can quote the AI teacher speaking the
-mistake.
+TASK 2 — interaction-pattern drift: did the REWRITE change the ad's TEACHING MECHANIC (what the LEARNER is
+doing) compared to the ORIGINAL? Examples of drift: a repeat-after-me DRILL (teacher SAYS a phrase, learner
+ECHOES it back) became a QUIZ (teacher ASKS, learner ANSWERS correctly on her own); a struggling beginner now
+produces fluent correct English; a live correction became a testimonial. Set pattern_changed=true ONLY if the
+CATEGORY of what the learner does changed (be conservative); give pattern_confidence (high|medium|low) and
+pattern_desc (one line: 'original mechanic → rewrite mechanic'). If unchanged, pattern_changed=false,
+pattern_confidence="low", pattern_desc="".
+
+Return JSON with all of: applicable, inverted, confidence, evidence (Task 1) AND pattern_changed,
+pattern_confidence, pattern_desc (Task 2).
 """
 
 def check_role_inversion(decompose_parsed: dict, rewrite_parsed: dict, lang: str, where: str) -> list[dict]:
@@ -163,14 +178,16 @@ def check_role_inversion(decompose_parsed: dict, rewrite_parsed: dict, lang: str
     if client is None:
         return []
     chars = "; ".join(f"{c.get('id')}={c.get('role','')}" for c in decompose_parsed.get("characters", []))
+    pattern = (decompose_parsed.get("interaction_pattern") or "").strip()
     orig = [f"Scene {s.get('n')}: {(s.get('audio_transcript') or '').strip()}"
             for s in decompose_parsed.get("scenes", []) if (s.get("audio_transcript") or "").strip()]
     rew = [f"Scene {s.get('n')}: {((s.get('script_roman') or s.get('supernova_script')) or '').strip()}"
            for s in rewrite_parsed.get("scenes", []) if ((s.get('script_roman') or s.get('supernova_script')) or '').strip()]
     if not orig or not rew:
         return []
-    prompt = (_ROLE_PROMPT + f"\nCHARACTER ROLES (original): {chars}\n\n"
-              f"ORIGINAL (competitor, seed language):\n" + "\n".join(orig) +
+    prompt = (_ROLE_PROMPT + f"\nCHARACTER ROLES (original): {chars}\n"
+              + (f"ORIGINAL interaction_pattern (from decompose): {pattern}\n" if pattern else "")
+              + f"\nORIGINAL (competitor, seed language):\n" + "\n".join(orig) +
               f"\n\nREWRITE (Supernova, {lang}):\n" + "\n".join(rew))
     try:
         res = _FLASH["mod"].generate_json(client, _FLASH["mod"].DEFAULT_MODEL, prompt,
@@ -178,17 +195,19 @@ def check_role_inversion(decompose_parsed: dict, rewrite_parsed: dict, lang: str
     except Exception as e:
         print(f"[qc] role-check call failed ({type(e).__name__}) — skipping", file=sys.stderr)
         return []
-    if not res.get("applicable") or not res.get("inverted"):
-        return []
+    findings: list[dict] = []
+    # Task 1 — role inversion
     conf = (res.get("confidence") or "").lower()
-    if conf == "high":
-        sev = "block"
-    elif conf == "medium":
-        sev = "flag"
-    else:
-        return []   # low confidence → ignore (avoid over-gating)
-    return [{"severity": sev, "code": "SPEAKER_ROLE_INVERSION", "where": where,
-             "detail": f'AI teacher voices the learner\'s mistake ({conf}) → {res.get("evidence","")[:120]}'}]
+    if res.get("applicable") and res.get("inverted") and conf in ("high", "medium"):
+        findings.append({"severity": "block" if conf == "high" else "flag",
+                         "code": "SPEAKER_ROLE_INVERSION", "where": where,
+                         "detail": f'AI teacher voices the learner\'s mistake ({conf}) → {res.get("evidence","")[:120]}'})
+    # Task 2 — interaction-pattern drift (non-gating FLAG; conservative)
+    pconf = (res.get("pattern_confidence") or "").lower()
+    if res.get("pattern_changed") and pconf in ("high", "medium"):
+        findings.append({"severity": "flag", "code": "INTERACTION_PATTERN_DRIFT", "where": where,
+                         "detail": f'teaching mechanic changed ({pconf}) → {res.get("pattern_desc","")[:160]}'})
+    return findings
 
 
 # --------------------------------------------------------------------------- aggregation
@@ -207,6 +226,15 @@ def lint_ad(ad_id: str, paths: list[pathlib.Path], use_llm: bool) -> dict:
     decompose = json.loads(dec_path.read_text()).get("parsed", {}) if dec_path.exists() else {}
     issues: list[dict] = []
     checked: list[str] = []
+    remarks: list[str] = []
+    # Ad-level: no-voiceover / synthetic-VO reviewer note (deterministic, no LLM). The direct path
+    # bypasses step4_localize (the other caller of detect_remarks), so surface it here — a non-gating
+    # FLAG that names the audio (song/music) and notes the script came from on-screen text.
+    if decompose and _remarks.is_no_voiceover(decompose):
+        note = _remarks.no_voiceover_remark(decompose)
+        issues.append({"severity": "flag", "code": "NO_VOICEOVER",
+                       "where": f"{ad_id} (ad-level)", "detail": note})
+        remarks.append(note)
     for p in paths:
         lang, det = lint_sidecar(p)
         issues += det
@@ -215,7 +243,7 @@ def lint_ad(ad_id: str, paths: list[pathlib.Path], use_llm: bool) -> dict:
                                             lang, p.name)
         checked.append(lang)
     rec = {"ad_id": ad_id, "verdict": compute_verdict(issues), "issues": issues,
-           "checked": checked, "at": time.time()}
+           "remarks": remarks, "checked": checked, "at": time.time()}
     (SCENES / f"{ad_id}.qc.json").write_text(json.dumps(rec, indent=2, ensure_ascii=False))
     return rec
 

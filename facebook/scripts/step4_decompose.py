@@ -56,6 +56,8 @@ Watch the video AND listen to the audio carefully. Reply with EXACTLY ONE JSON o
   "duration_s": <float, total video length>,
   "production_type": "human-recorded" | "AI-generated" | "mixed",
   "production_notes": "<1-2 sentences explaining your reasoning — look for uncanny faces, perfectly static cuts, AI-typical fingers/eyes, unnatural lighting, etc.>",
+  "interaction_pattern": "<the pedagogical / audience mechanic in a few words — e.g. 'teacher SAYS a phrase, beginner REPEATS it back (repeat-after-me drill)', 'teacher quizzes a learner who answers correctly', 'live correction of a spontaneous wrong-English mistake', 'before/after testimonial', 'no dialogue — on-screen-text meme over music'. Describe what the LEARNER is actually doing.>",
+  "audio_track": "<describe the AD'S AUDIO overall: spoken voiceover/dialogue, a background SONG (name it if recognizable, e.g. a specific Bollywood song), instrumental music, or silence. CRITICAL: state explicitly when there is NO spoken dialogue and the message is carried by ON-SCREEN TEXT (e.g. 'No spoken dialogue; a Hindi film song plays under an on-screen-text meme').>",
 
   "characters": [
     {
@@ -86,7 +88,7 @@ Watch the video AND listen to the audio carefully. Reply with EXACTLY ONE JSON o
         }
       ],
       "visual_description": "<5-8 sentences describing the WHOLE composite shot (all panels together, including text/UI overlays). For analyst reference; not used for image generation.>",
-      "audio_transcript": "<verbatim transcript of speech in this scene. CRITICAL: prefix EVERY spoken line with the speaking character's ID, e.g. 'Character A says: मुझे एटीएम कार्ड एक्टिवेट करवाना है। [I want to get my ATM card activated.]'. Each line on its own paragraph. Use native script (Devanagari/Tamil/Bengali/etc.) for the original speech, followed by a bracketed [English translation]. If a section is music with no speech, write '[music only, no speech]'. If a speaker can't be identified, label them 'Unknown speaker'.>",
+      "audio_transcript": "<verbatim transcript of ONLY what is AUDIBLE — spoken voiceover / dialogue / sung lyrics you can HEAR. CRITICAL: prefix EVERY spoken line with the speaking character's ID, e.g. 'Character A says: मुझे एटीएम कार्ड एक्टिवेट करवाना है। [I want to get my ATM card activated.]'. Each line on its own paragraph. Use native script (Devanagari/Tamil/Bengali/etc.) for the original speech, followed by a bracketed [English translation]. DO NOT transcribe ON-SCREEN TEXT / captions / overlays here — those go in on_screen_text ONLY; NEVER invent a 'Narrator says:' line from text that is merely displayed on screen. If there is NO spoken dialogue in this scene, write a bracketed AUDIO note instead — e.g. '[background song playing, no spoken dialogue]' (name the song if recognizable), '[instrumental music, no speech]', or '[silent]'. If a speaker can't be identified, label them 'Unknown speaker'.>",
       "on_screen_text": "<verbatim text overlays, captions, end-card copy visible in this scene. Original script + English in parentheses for non-Latin. This is for analyst reference and is intentionally NOT included in panel_visual_description.>"
     }
   ]
@@ -100,6 +102,8 @@ Rules:
 - For single-layout scenes, panels[] has exactly one entry with position='full'.
 - CRITICAL: panel_visual_description must EXCLUDE all text overlays, captions, subtitles, infographics, logos, app UI, end-cards, brand bugs, callouts, watermarks, progress bars, and any other graphic-overlay element. Describe ONLY the underlying scene as if those overlays were removed. The editing team will add the overlays themselves later.
 - Be precise. Don't invent details that aren't in the video.
+- AUDIO vs ON-SCREEN TEXT: `audio_transcript` is ONLY for sound you can HEAR; `on_screen_text` is for text shown on screen. Many ads (meme / captioned formats) carry the whole message as ON-SCREEN TEXT over a song or music with NO spoken voiceover — in that case each scene's `audio_transcript` is a bracketed audio note (e.g. '[background song, no spoken dialogue]'), the wording goes in `on_screen_text`, and `audio_track` says so at the ad level. NEVER duplicate on-screen text into `audio_transcript` as if it were spoken.
+- `interaction_pattern`: report the actual teaching mechanic you observe (repeat-after-me drill vs quiz vs live correction vs testimonial vs no-dialogue text meme). Be literal about what the learner does — if the learner only ECHOES/REPEATS the teacher, say so; don't call it a quiz.
 """
 
 

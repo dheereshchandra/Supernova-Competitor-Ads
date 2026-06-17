@@ -9,10 +9,24 @@ English master — do both at once.
 
 ## A. RE-SKIN (change as little as possible; the competitor ad is proven)
 - Write the WHOLE ad as ONE continuous, natural conversation (not isolated scene fragments).
-- Keep the seed's hook, its SPECIFIC lines/examples, who speaks first, and the turn order. The exact
-  wrong-English example being corrected STAYS, and the **AI teacher CORRECTS it — NEVER voice the learner's
-  wrong-English mistake yourself** (the human learner makes the mistake; Miss Nova corrects). A short
-  clarifying / warmth clause on a kept example is fine; do not substitute examples or invent beats.
+- Keep the seed's hook, its SPECIFIC lines/examples, who speaks first, and the turn order.
+- **PRESERVE THE SEED'S INTERACTION PATTERN (the teaching mechanic) — not just the lines.** Check the
+  decompose's `interaction_pattern`. If the teacher SAYS a phrase and the learner REPEATS it back (a
+  model-and-repeat / repeat-after-me drill), KEEP that exact mechanic — the teacher leads with the phrase,
+  the learner echoes it; do NOT turn it into a quiz where the teacher ASKS and the learner ANSWERS, and do
+  NOT make a struggling beginner suddenly produce correct English on her own. A live correction stays a
+  correction; a testimonial stays a testimonial. Treat the learner exactly as the seed shows her (a beginner
+  being drilled stays a beginner). The concept brief may reclassify the format; otherwise preserve the mechanic.
+- **The wrong-English CORRECTION beat applies ONLY IF the seed actually contains a learner mistake.** If the
+  seed has no wrong-English line (e.g. a repeat-after-me drill, a testimonial, a feature montage), do NOT
+  invent one. When a mistake IS present: the human learner makes it and the **AI teacher CORRECTS it — NEVER
+  voice the learner's wrong-English mistake yourself.** A short clarifying / warmth clause on a kept example
+  is fine; do not substitute examples or invent beats.
+- **No spoken voiceover? Re-skin the ON-SCREEN TEXT.** If the seed has NO spoken dialogue and carries its
+  message as ON-SCREEN TEXT over a song / music (a captioned / meme ad — see the decompose's `audio_track`
+  and per-scene `on_screen_text`), build the script by re-skinning and translating that ON-SCREEN TEXT (it
+  IS the ad's copy). Do NOT emit empty scripts and do NOT fabricate a spoken voiceover that pretends to be
+  the original. (A reviewer remark will note that the source had no voiceover and what the audio was.)
 - Swap the competitor brand → **"Supernova AI"** (ALWAYS the full name, never bare "Supernova").
 - The AI teacher's speaker label is **Miss Nova**, but she is **NEVER named aloud in the dialogue** — she is
   "I" / "me"; others say "an AI teacher". Never put the literal words "Miss Nova" inside a spoken line.
@@ -25,6 +39,21 @@ English master — do both at once.
 - Explain "in your own language" simply as **using the target language by name** (e.g. "in Hindi" / "Telugu
   lo"), never "your own language" / "mother tongue".
 - Re-point the CTA to ONE single urgent first-person close at the end (install + download Supernova AI).
+- **Reveal Supernova AI LATE.** Keep the first part the relatable, in-world moment (the correction +
+  rapport + the benefits the beats invite); bring the product in only in the **back portion** of the ad,
+  ideally *asked into existence* by the learner's own interest ("How do I start?" / "That sounds amazing!"),
+  the teacher naming it in response — NOT announced up front. Follow the seed if it genuinely reveals early.
+- **Warmth + a little chemistry (where the moment supports it).** After a correction, prefer a short
+  **"why?" exchange** — the learner asks why and the teacher explains the logic in one or two sentences
+  (this earns the rest). Let the two react to each other — the learner surprised ("Really?!"), a little
+  embarrassed, pushing back; the teacher warm and encouraging. Use where it fits; never force it onto a seed
+  with no room. **Laughter is SHARED** — never the teacher laughing alone *at* the learner's mistake.
+- **The learner's final beat is ACTION / commitment** ("I'm downloading right now!" / "Yes, let's start!"),
+  never a polite thank-you.
+- **Objections — only if the seed's situation invites them:** the natural order is **time first** ("I don't
+  get time"), then **fear / embarrassment** ("people will laugh"), each answered as it comes. A tool for when
+  the context calls for it — never imposed on a seed that has none.
+- Do NOT add commerce / legal framing the seed lacks — no "cancel anytime" / subscription / trial / pricing.
 - Indianize names/places. Never cross the four HARD LINES.
 
 ## B. LOCALIZE (apply ALL the target-language rules above)
