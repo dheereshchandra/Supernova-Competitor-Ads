@@ -1,0 +1,19 @@
+{
+  "language": "English",
+  "presenter_type": "human-only",
+  "device_format": "app-screencast",
+  "production_type": "human-recorded",
+  "message_angle": "feature-demo",
+  "split_screen_role": "none",
+  "has_price_offer": true,
+  "duration_s": 20,
+  "transcript": "Speaker A: Users are getting logged out after every page refresh, session isn't persisting. I've already, um, checked cookie settings and they look fine. Need to investigate whether we're initializing the supabase client multiple times across API routes, might need to refactor to a singleton. Priority is high, fire emoji. Try Wispr Flow for FREE today.",
+  "on_screen_text": "I found a dev tool that writes my entire linear ticket without typing 😱...\nWispr Flow\nTry Wispr Flow for FREE today",
+  "summary": "A developer demonstrates Wispr Flow, a voice-to-text tool that drafts detailed Linear tickets from spoken descriptions. The ad showcases the tool's accuracy in transcribing technical jargon and ends with a call to try it for free.",
+  "ad_id": "1468669864379536",
+  "competitor": "wispr-flow",
+  "pipeline": "facebook",
+  "model": "gemini-flash-latest",
+  "source_video": "1468669864379536.mp4",
+  "decoded_at": 1782143423.890631
+}
