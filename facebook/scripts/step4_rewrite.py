@@ -132,7 +132,11 @@ PRIORITY ORDER:
      do NOT make a struggling beginner suddenly produce correct English on her own. A live correction stays a
      correction; a testimonial stays a testimonial. Apply the wrong-English correction beat ONLY if the seed
      actually has a learner mistake — never invent one.
-   - **[SOFT] Keep the hook** unless the brief changes it or it names the competitor brand.
+   - **[SOFT, strong default] Keep the hook — and keep its exact MEANING/CLAIM, not just the opening beat.**
+     Preserve WHAT the opener asserts: if the seed hook says "not able to speak English" / "don't know
+     English", keep that claim; do NOT recast it as "afraid / scared to speak" or "can't speak", and do NOT
+     front-load the brand's fear / no-judgement angle into the opener. Change the hook only if the brief
+     changes it or it names the competitor brand.
 3. **[HARD] Re-skin for Supernova — the only deliberate changes:**
    - Swap the competitor brand -> **Supernova AI**. ALWAYS use the FULL product name **"Supernova AI"** in
      spoken lines and the CTA — never bare "Supernova".
