@@ -23,6 +23,7 @@ type Card = {
   nativeLoading: boolean
   ttsLoading: boolean
   error: string
+  warning: string
   castOpen: boolean
   provider: string
   voicePick: Record<string, string> // character -> voice_id
@@ -35,6 +36,7 @@ const blankCard = (): Card => ({
   nativeLoading: false,
   ttsLoading: false,
   error: '',
+  warning: '',
   castOpen: false,
   provider: 'cartesia',
   voicePick: {},
@@ -43,14 +45,15 @@ const blankCard = (): Card => ({
 const errText = (e: unknown) =>
   e instanceof ApiError ? e.detail : (e as Error)?.message || 'Something went wrong'
 
-/** Distinct 'Name says:' speakers, in first-seen order. */
+/** Distinct 'Name says:' speakers, in first-seen order. Normalized to match the backend's
+ *  parse_turns (which does .strip('*')), so cast keys bind the same way on both sides. */
 function parseChars(text: string): string[] {
   const seen = new Set<string>()
   const out: string[] = []
   for (const line of (text || '').split('\n')) {
     const m = line.match(/^\s*(.+?)\s+says:/i)
     if (m) {
-      const n = m[1].trim()
+      const n = m[1].trim().replace(/^\*+|\*+$/g, '').trim()
       if (n && !seen.has(n.toLowerCase())) {
         seen.add(n.toLowerCase())
         out.push(n)
@@ -132,24 +135,44 @@ function PromptBox({
   )
 }
 
+async function copyText(text: string): Promise<boolean> {
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text)
+      return true
+    }
+  } catch {
+    /* fall through to the execCommand fallback (e.g. non-secure-origin http) */
+  }
+  try {
+    const ta = document.createElement('textarea')
+    ta.value = text
+    ta.style.position = 'fixed'
+    ta.style.opacity = '0'
+    document.body.appendChild(ta)
+    ta.select()
+    const ok = document.execCommand('copy')
+    document.body.removeChild(ta)
+    return ok
+  } catch {
+    return false
+  }
+}
+
 function CopyButton({ text, disabled }: { text: string; disabled?: boolean }) {
-  const [done, setDone] = useState(false)
+  const [state, setState] = useState<'' | 'ok' | 'fail'>('')
   return (
     <button
       type="button"
       disabled={disabled || !text}
       onClick={async () => {
-        try {
-          await navigator.clipboard.writeText(text)
-          setDone(true)
-          setTimeout(() => setDone(false), 1500)
-        } catch {
-          /* clipboard unavailable — ignore */
-        }
+        const ok = await copyText(text)
+        setState(ok ? 'ok' : 'fail')
+        setTimeout(() => setState(''), 1500)
       }}
       className="text-[11px] text-zinc-500 hover:text-zinc-300 disabled:opacity-40"
     >
-      {done ? 'Copied ✓' : 'Copy'}
+      {state === 'ok' ? 'Copied ✓' : state === 'fail' ? 'Copy failed' : 'Copy'}
     </button>
   )
 }
@@ -177,6 +200,7 @@ function VoiceCast({
   const [loadedFor, setLoadedFor] = useState('')
   const key = `${provider}|${language}`
   const loading = loadedFor !== key // derived — avoids setState in the effect body
+  const shown = loading ? [] : voices // don't show the previous provider/language's voices while loading
 
   useEffect(() => {
     let live = true
@@ -207,9 +231,14 @@ function VoiceCast({
           <option value="elevenlabs">ElevenLabs</option>
         </select>
         {loading && <Spinner className="h-3.5 w-3.5" />}
-        <span className="text-[11px] text-zinc-600">{voices.length} voices</span>
+        <span className="text-[11px] text-zinc-600">{shown.length} voices</span>
       </div>
       {!loading && err && <div className="text-[11px] text-amber-300">{err}</div>}
+      {!loading && !err && shown.length === 0 && provider === 'cartesia' && (
+        <div className="text-[11px] text-amber-300">
+          Cartesia has no voices for {language} — switch to ElevenLabs.
+        </div>
+      )}
       {characters.length ? (
         characters.map((ch) => (
           <div key={ch} className="flex items-center gap-2">
@@ -222,7 +251,7 @@ function VoiceCast({
               onChange={(e) => onPick(ch, e.target.value)}
             >
               <option value="">— default (narrator) —</option>
-              {voices.map((v) => (
+              {shown.map((v) => (
                 <option key={v.voice_id} value={v.voice_id}>
                   {v.name || v.voice_id}
                   {v.gender ? ` (${v.gender})` : ''}
@@ -327,8 +356,9 @@ export default function Translations() {
 
   const playTts = async (lang: string) => {
     const c = results[lang]
-    patch(lang, { ttsLoading: true, error: '' })
-    // build the per-character voice map from the cast picks (chars from the romanized labels)
+    patch(lang, { ttsLoading: true, error: '', warning: '' })
+    // build the per-character voice map from the cast picks (keys = romanized labels; the backend
+    // keeps those labels Latin in the native text, so they bind there)
     const voices: Record<string, { provider: string; voice_id: string }> = {}
     for (const ch of parseChars(c.roman || c.native)) {
       const vid = c.voicePick[ch]
@@ -340,18 +370,35 @@ export default function Translations() {
         text: c.native,
         voices: Object.keys(voices).length ? voices : undefined,
       })
-      patch(lang, { audioUrl: r.audio_url, ttsLoading: false })
+      patch(lang, { audioUrl: r.audio_url, ttsLoading: false, warning: r.warning || '' })
     } catch (e) {
       patch(lang, { ttsLoading: false, error: errText(e) })
     }
   }
 
+  // change the source language; drop it from targets if it was selected (can't translate to self)
+  const onSourceLang = (l: string) => {
+    setSourceLang(l)
+    setTargets((prev) => {
+      if (!prev.has(l)) return prev
+      const next = new Set(prev)
+      next.delete(l)
+      return next
+    })
+  }
+
+  const orderedTargets = TRANSLATE_TARGET_LANGUAGES.filter((l) => targets.has(l))
+  const hasResults = orderedTargets.some((l) => results[l])
+
   const downloadAll = () => {
+    // only the currently-selected, generated languages (not ones the user has since deselected)
     const payload = {
       source_language: sourceLang,
       source_text: sourceText,
       results: Object.fromEntries(
-        Object.entries(results).map(([l, c]) => [l, { roman: c.roman, native: c.native }]),
+        orderedTargets
+          .filter((l) => results[l])
+          .map((l) => [l, { roman: results[l].roman, native: results[l].native }]),
       ),
     }
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
@@ -362,9 +409,6 @@ export default function Translations() {
     a.click()
     URL.revokeObjectURL(url)
   }
-
-  const orderedTargets = TRANSLATE_TARGET_LANGUAGES.filter((l) => targets.has(l))
-  const hasResults = Object.keys(results).length > 0
 
   return (
     <div className="fade-in-up space-y-5">
@@ -393,7 +437,7 @@ export default function Translations() {
             <span className={LABEL}>Source script</span>
             <div className="flex items-center gap-2">
               <span className="text-xs text-zinc-500">Source language</span>
-              <select className={SELECT} value={sourceLang} onChange={(e) => setSourceLang(e.target.value)}>
+              <select className={SELECT} value={sourceLang} onChange={(e) => onSourceLang(e.target.value)}>
                 {TRANSLATE_SOURCE_LANGUAGES.map((l) => (
                   <option key={l} value={l}>
                     {l}
@@ -550,7 +594,8 @@ export default function Translations() {
                         </button>
                         <button
                           type="button"
-                          disabled={c.ttsLoading || !c.native}
+                          disabled={c.ttsLoading || !c.native || c.romanDirty}
+                          title={c.romanDirty ? 'Update native first' : undefined}
                           onClick={() => playTts(lang)}
                           className="inline-flex items-center gap-1.5 rounded-lg bg-sky-600 px-2.5 py-1 text-xs font-semibold text-white hover:bg-sky-500 disabled:opacity-50"
                         >
@@ -558,10 +603,13 @@ export default function Translations() {
                         </button>
                         {c.romanDirty && (
                           <span className="rounded-full border border-amber-400/30 bg-amber-500/10 px-2 py-0.5 text-[11px] text-amber-200">
-                            Romanized edited — update native
+                            Romanized edited — update native first
                           </span>
                         )}
                       </div>
+                      {c.warning && (
+                        <div className="text-[11px] text-amber-300">{c.warning}</div>
+                      )}
                       <div>
                         <button
                           type="button"
@@ -584,7 +632,14 @@ export default function Translations() {
                         )}
                       </div>
                       {c.audioUrl && (
-                        <audio controls autoPlay src={c.audioUrl} className="mt-1 h-9 w-full" />
+                        <audio
+                          key={c.audioUrl}
+                          controls
+                          autoPlay
+                          src={c.audioUrl}
+                          onError={() => patch(lang, { error: 'Audio expired — regenerate.' })}
+                          className="mt-1 h-9 w-full"
+                        />
                       )}
                     </div>
                   </div>

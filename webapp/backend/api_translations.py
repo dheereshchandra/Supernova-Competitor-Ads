@@ -20,6 +20,7 @@ import subprocess
 import threading
 import time
 from collections import deque, defaultdict
+from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import FileResponse
@@ -38,8 +39,9 @@ TTS_DEFAULT_MODEL = "gemini-2.5-pro"
 RULES_PATH = FACEBOOK_DIR / "generation" / "supernova_translation_rules.md"
 AUDIO_DIR = STATE_DIR / "translations"
 _AUDIO_TTL = 3600          # delete synthesized mp3s older than 1h
-_MAX_TARGETS = 8
-_RUN_TIMEOUT = 180         # seconds per subprocess (a fan-out of up to 8 Flash calls)
+_AUDIO_MAX_FILES = 500     # hard cap on retained mp3s (delete oldest beyond this, regardless of TTL)
+_MAX_TARGETS = 10          # matches the 10 selectable target languages in the UI
+_RUN_TIMEOUT = 240         # seconds per subprocess (a fan-out of up to 10 Flash calls)
 
 # Mirrors facebook/scripts/_tts_text.py::native_instruction (kept in sync — it's only the editing
 # starting point; the real default is applied server-side when the box is left untouched).
@@ -71,10 +73,16 @@ def _throttle(user: str) -> None:
         if len(q) >= _RATE_MAX:
             raise HTTPException(429, "Too many translation requests — wait a moment.")
         q.append(now)
+        # Opportunistically drop other users' stale buckets so the dict can't grow unbounded.
+        if len(_BUCKET) > 256:
+            for u in [u for u, dq in _BUCKET.items()
+                      if u != user and (not dq or now - dq[-1] > _RATE_WINDOW)]:
+                _BUCKET.pop(u, None)
 
 
 # Provider voice lists change rarely; cache them so the cast picker is snappy.
 _VOICES_CACHE: dict[tuple, tuple] = {}     # (provider, language) -> (ts, voices)
+_VOICES_LOCK = threading.Lock()            # FastAPI runs sync routes in a threadpool — guard the dict
 _VOICES_TTL = 600
 
 
@@ -91,8 +99,9 @@ def _run_playground(script: str, args: list[str], body: dict) -> dict:
     out = proc.stdout or ""
     brace = out.find("{")
     if brace < 0:
-        detail = (proc.stderr or out or "no output").strip()[-400:]
-        raise HTTPException(502, f"Translation backend error: {detail}")
+        # Log the raw tail server-side; return a generic message (don't leak paths/tracebacks to clients).
+        print(f"[translate] {script} {args}: {(proc.stderr or out or 'no output').strip()[-400:]}")
+        raise HTTPException(502, "Translation backend error.")
     try:
         return json.loads(out[brace:])
     except json.JSONDecodeError:
@@ -100,15 +109,31 @@ def _run_playground(script: str, args: list[str], body: dict) -> dict:
 
 
 def _sweep_audio() -> None:
+    """Reclaim synthesized mp3s: delete anything older than the TTL, then hard-cap the count
+    (delete oldest survivors beyond _AUDIO_MAX_FILES) so the dir can't grow unbounded."""
     if not AUDIO_DIR.is_dir():
         return
     cutoff = time.time() - _AUDIO_TTL
+    survivors = []
     for f in AUDIO_DIR.glob("*.mp3"):
         try:
-            if f.stat().st_mtime < cutoff:
-                f.unlink()
+            mtime = f.stat().st_mtime
         except OSError:
-            pass
+            continue
+        if mtime < cutoff:
+            try:
+                f.unlink()
+            except OSError:
+                pass
+        else:
+            survivors.append((mtime, f))
+    if len(survivors) > _AUDIO_MAX_FILES:
+        survivors.sort()   # oldest first
+        for _, f in survivors[:len(survivors) - _AUDIO_MAX_FILES]:
+            try:
+                f.unlink()
+            except OSError:
+                pass
 
 
 # ---------------- request models ----------------
@@ -127,12 +152,17 @@ class NativeBody(BaseModel):
     prompt_override: str | None = Field(default=None, max_length=20_000)
 
 
+class VoicePick(BaseModel):
+    provider: Literal["cartesia", "elevenlabs"] = "cartesia"
+    voice_id: str = Field(max_length=80)
+
+
 class TtsBody(BaseModel):
     language: str = Field(min_length=1, max_length=40)
     text: str = Field(min_length=1, max_length=8_000)
     voice_id: str | None = Field(default=None, max_length=80)
     # Per-character casting: {character_name: {"provider": "cartesia", "voice_id": "..."}}
-    voices: dict[str, dict] | None = Field(default=None)
+    voices: dict[str, VoicePick] | None = Field(default=None, max_length=20)
 
 
 # ---------------- endpoints ----------------
@@ -185,31 +215,36 @@ def translate_tts(body: TtsBody, user: str = Depends(require_user)):
     res = _run_playground("step4_tts.py", ["--playground-synth", "--out", str(out_path)], {
         "language": body.language, "text": body.text,
         "voice_id": body.voice_id or "",
-        "voices": body.voices or {},
+        "voices": {k: v.model_dump() for k, v in (body.voices or {}).items()},
     })
     if not res.get("ok") or not out_path.is_file():
         raise HTTPException(502, f"TTS failed: {res.get('error', 'unknown error')}")
     return {"audio_url": f"/api/translate/audio/{token}",
-            "provider": res.get("provider"), "voice_id": res.get("voice_id")}
+            "provider": res.get("provider"), "voice_id": res.get("voice_id"),
+            "warning": res.get("warning")}
 
 
 @router.get("/api/translate/voices")
 def translate_voices(provider: str = "cartesia", language: str = "",
-                     _user: str = Depends(require_user)):
+                     user: str = Depends(require_user)):
     """List a TTS provider's voices for the per-character cast picker (cached ~10m)."""
+    _throttle(user)   # this route spawns a subprocess + provider API calls — share the per-user budget
     provider = (provider or "cartesia").lower()
     if provider not in ("cartesia", "elevenlabs"):
         raise HTTPException(422, "provider must be cartesia or elevenlabs")
+    language = (language or "")[:40]
     key = (provider, language)
-    hit = _VOICES_CACHE.get(key)
-    if hit and time.time() - hit[0] < _VOICES_TTL:
-        return {"provider": provider, "voices": hit[1]}
+    with _VOICES_LOCK:
+        hit = _VOICES_CACHE.get(key)
+        if hit and time.time() - hit[0] < _VOICES_TTL:
+            return {"provider": provider, "voices": hit[1]}
     args = ["--list-voices", "--provider", provider, "--json"]
     if language:
         args += ["--language", language]
-    res = _run_playground("step4_tts.py", args, {})
+    res = _run_playground("step4_tts.py", args, {})   # outside the lock — don't serialize fetches
     voices = res.get("voices", [])
-    _VOICES_CACHE[key] = (time.time(), voices)
+    with _VOICES_LOCK:
+        _VOICES_CACHE[key] = (time.time(), voices)
     return {"provider": provider, "voices": voices}
 
 

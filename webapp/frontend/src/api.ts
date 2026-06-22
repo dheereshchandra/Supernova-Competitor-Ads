@@ -43,6 +43,7 @@ export async function api<T>(
     try {
       const body = await res.json()
       if (typeof body?.detail === 'string') detail = body.detail
+      else if (Array.isArray(body?.detail) && body.detail[0]?.msg) detail = body.detail[0].msg
       else if (body?.detail) detail = JSON.stringify(body.detail)
     } catch {
       /* not JSON — keep generic message */
@@ -641,6 +642,7 @@ export const synthTts = (body: {
   /** Per-character casting: { characterName: { provider, voice_id } } */
   voices?: Record<string, { provider: string; voice_id: string }>
 }) =>
-  api<{ audio_url: string; provider?: string; voice_id?: string }>('/api/translate/tts', {
-    json: body,
-  })
+  api<{ audio_url: string; provider?: string; voice_id?: string; warning?: string | null }>(
+    '/api/translate/tts',
+    { json: body },
+  )

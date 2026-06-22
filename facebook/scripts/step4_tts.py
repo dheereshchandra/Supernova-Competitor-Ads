@@ -435,13 +435,29 @@ def cmd_playground_native() -> int:
     allow_pro = "pro" in model.lower()
     env = load_env()
     client = _flash.get_client(env)
+    # Transliterate only the DIALOGUE — keep any leading "Name says:" label verbatim in Latin so the
+    # native block stays line-aligned with the romanized one AND per-character voice casting can match
+    # speakers (the cast keys are the romanized Latin names). Mirrors the production pipeline, which
+    # parses speakers off the roman script and only transliterates the spoken text (step4_tts tts_one).
     lines = roman.split("\n")
-    idx = [i for i, ln in enumerate(lines) if ln.strip()]   # convert only non-empty lines
-    converted = ttx.to_native_script(client, language, [lines[i] for i in idx],
+    prefixes: dict[int, str] = {}
+    payloads, payload_idx = [], []
+    for i, ln in enumerate(lines):
+        if not ln.strip():
+            continue
+        m = LINE_RE.match(ln)
+        if m:
+            prefixes[i] = ln[:m.start(2)]   # everything up to the dialogue, e.g. "Robot says: "
+            payloads.append(m.group(2))
+        else:
+            prefixes[i] = ""
+            payloads.append(ln)
+        payload_idx.append(i)
+    converted = ttx.to_native_script(client, language, payloads,
                                      model=model, allow_pro=allow_pro,
                                      prompt_override=prompt_override)
-    for i, txt in zip(idx, converted):
-        lines[i] = txt
+    for i, txt in zip(payload_idx, converted):
+        lines[i] = prefixes[i] + txt
     print(json.dumps({"native": "\n".join(lines)}, ensure_ascii=False))
     return 0
 
@@ -476,6 +492,12 @@ def cmd_playground_synth(out_path: str) -> int:
                 "model": pdef.get("model") or tts.DEFAULT_MODELS.get(prov),
                 "settings": pdef.get("settings") or {}}
 
+    MAX_TURNS = 100   # bound per-turn provider calls (an ad script is short; abuse/spend guard)
+    if len(turns) > MAX_TURNS:
+        print(json.dumps({"ok": False,
+                          "error": f"too many speaker turns ({len(turns)} > {MAX_TURNS})"}))
+        return 1
+
     try:
         if voices_map and turns:
             # per-character casting: voice each turn with its mapped voice (narrator fallback), stitch
@@ -483,14 +505,20 @@ def cmd_playground_synth(out_path: str) -> int:
             import tempfile
             narrator = resolve_voice(reg, language, "narrator")
             tmp = pathlib.Path(tempfile.mkdtemp(prefix="pg_synth_"))
-            clips, used = [], set()
+            clips, used, matched_keys = [], set(), set()
             try:
                 for i, t in enumerate(turns):
-                    spec = voices_map.get(t["speaker"].lower())
-                    v = _voice_for(spec) if spec else narrator
-                    if not v or not v.get("voice_id"):
-                        raise tts.TTSConfigError(
-                            f"no voice for '{t['speaker']}' and no narrator default for {language}")
+                    key = t["speaker"].lower()
+                    spec = voices_map.get(key)
+                    if spec:
+                        v = _voice_for(spec)
+                        matched_keys.add(key)
+                    else:
+                        v = narrator
+                        if not v or not v.get("configured"):
+                            raise tts.TTSConfigError(f"no configured narrator voice for {language}")
+                    if not v.get("voice_id"):
+                        raise tts.TTSConfigError(f"no voice for '{t['speaker']}' in {language}")
                     provider = tts.get_provider(v["provider"], env)
                     audio = provider.synth(t["text"], v["voice_id"], model=v.get("model"),
                                            language=language, settings=v.get("settings") or {})
@@ -501,7 +529,14 @@ def cmd_playground_synth(out_path: str) -> int:
                 _stitch(clips, op)
             finally:
                 shutil.rmtree(tmp, ignore_errors=True)
-            print(json.dumps({"ok": True, "voices": sorted(used), "lines": len(clips)}))
+            out = {"ok": True, "voices": sorted(used), "lines": len(clips)}
+            # surface cast picks that never bound to a turn (e.g. a label the user mistyped) so the
+            # narrator fallback can't silently swallow a chosen voice
+            unmatched = [k for k in voices_map if k not in matched_keys]
+            if unmatched:
+                out["warning"] = ("These cast voices weren't applied (no matching speaker): "
+                                  + ", ".join(sorted(unmatched)))
+            print(json.dumps(out, ensure_ascii=False))
             return 0
 
         # single-voice path (default narrator, or one chosen voice_id) — reads the whole block
@@ -522,7 +557,8 @@ def cmd_playground_synth(out_path: str) -> int:
         print(json.dumps({"ok": True, "provider": voice.get("provider"),
                           "voice_id": voice.get("voice_id"), "bytes": len(audio)}))
         return 0
-    except (tts.TTSConfigError, tts.TTSError) as ex:
+    except (tts.TTSConfigError, tts.TTSError, RuntimeError) as ex:
+        # RuntimeError covers ffmpeg/_stitch failures (e.g. a zero-byte clip) -> clean JSON, not a traceback
         print(json.dumps({"ok": False, "error": f"{type(ex).__name__}: {str(ex)[:200]}"}))
         return 1
 
