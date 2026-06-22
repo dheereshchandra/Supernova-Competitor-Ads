@@ -66,7 +66,8 @@ run on your Mac, not in the sandbox. Each runs **once per ad and caches** a
 committed sidecar — re-runs only touch new ads, and teammates reuse via `git pull`.
 
 ```bash
-# language from ad copy (cheap, batched; no videos needed)
+# OPTIONAL/diagnostic only: language guessed from ad-copy text. This feeds the
+# copy-vs-audio reconciliation report ONLY — it does NOT set an ad's language.
 python3 analysis/scripts/detect_language.py  --pipeline facebook --competitor duolingo
 # transcribe + tag format/production (needs the videos — rehydrate from R2 first)
 python3 tools/rehydrate.py                   --pipeline facebook --competitor duolingo
@@ -75,6 +76,15 @@ python3 analysis/scripts/transcribe_tag.py   --pipeline facebook --competitor du
 python3 analysis/scripts/compute_rank_metrics.py --pipeline facebook --competitor duolingo
 python3 analysis/scripts/build_report.py         --pipeline facebook --competitor duolingo
 ```
+
+**Language is spoken-audio only.** An ad's `language` comes solely from the
+transcript's detected *spoken* language (`transcribe_tag.py`, audio-only); the
+ad-copy/caption text (`detect_language.py`) is **not** used to set it — Indian video
+ads frequently run English captions over a Hindi/regional voiceover, so copy text
+mislabels them. `detect_language.py` is retained only to power the copy-vs-audio
+*reconciliation* report (`build_language_reconciliation.py`). Consequence: an ad with
+**no transcript has no language** (blank), so competitors must be transcribed (not
+just copy-detected) before `by_language` is populated.
 
 Cost: ~$0.005–0.01 per video on Flash (full Facebook corpus ≈ $40–60 one-time,
 then ~$1–3/week for new ads). Add `--dry-run` to preview / `--limit N` to test.
