@@ -145,6 +145,7 @@ COMPETITOR_PAGES = {
     "Wispr Flow": [{"page_id": "110864474787474", "page_name": "Wispr Flow"}],
     "Lingo AI": [{"page_id": "599204246602758", "page_name": "Lingo AI"}],  # HongKong Gleaming Ltd; ~147 active IN ads (2026-06-15)
     "PW Talk": [{"page_id": "631251720065425", "page_name": "PW Talk"}],  # PhysicsWallah AI English-speaking app; ~210 active IN ads (2026-06-15). FB-only — no PW-Talk-specific Google advertiser.
+    "Speakeasy": [{"page_id": "1055960967600140", "page_name": "English Learning App"}],  # India Hinglish spoken-English app; FB page name is the generic "English Learning App", CTA "Download kro Speakeasy app now"; ~140 active IN ads (2026-06-22). Distinct from "Speak" (= Speakeasy Labs, Inc). Google advertiser ID pending manual Transparency-Center lookup.
 }
 
 NAV_URL = ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all"
