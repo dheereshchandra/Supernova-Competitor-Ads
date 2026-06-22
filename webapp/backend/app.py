@@ -11,7 +11,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
-from . import api_browse, api_jobs, auth, db, media
+from . import api_browse, api_jobs, api_translations, auth, db, media
 from .config import FRONTEND_DIST, REPO, settings
 from .data import catalog
 
@@ -33,6 +33,7 @@ def create_app() -> FastAPI:
     app.include_router(auth.router)
     app.include_router(api_browse.router)
     app.include_router(api_jobs.router)
+    app.include_router(api_translations.router)
     app.include_router(media.router)
 
     @app.get("/api/health")

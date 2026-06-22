@@ -6,6 +6,7 @@ import { PageLoading } from './components/ui'
 import Library from './pages/Library'
 import AdDetail from './pages/AdDetail'
 import Pipeline from './pages/Pipeline'
+import Translations from './pages/Translations'
 import Runs from './pages/Runs'
 import Health from './pages/Health'
 import Login from './pages/Login'
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="/" element={<Library />} />
             <Route path="/ad/:pipeline/:slug/:adId" element={<AdDetail />} />
             <Route path="/pipeline" element={<Pipeline />} />
+            <Route path="/translations" element={<Translations />} />
             <Route path="/runs" element={<Runs />} />
             <Route path="/health" element={<Health />} />
           </Route>

@@ -138,7 +138,18 @@ const MONTHS = [
 
 export function parseDate(s: string | null | undefined): Date | null {
   if (!s) return null
-  const d = new Date(s.includes('T') || s.includes(' ') ? s.replace(' ', 'T') : `${s}T00:00:00`)
+  let str: string
+  if (s.includes('T') || s.includes(' ')) {
+    str = s.replace(' ', 'T')
+    // Backend datetimes are UTC but serialized WITHOUT a 'Z'/offset. Tag them as UTC
+    // so they aren't misread as the viewer's local time — that was inflating every
+    // "X ago" / elapsed duration by the local offset (e.g. +5:30 in IST).
+    const time = str.slice(str.indexOf('T') + 1)
+    if (!/[Z+]/.test(time) && !/-\d\d:?\d\d$/.test(time)) str += 'Z'
+  } else {
+    str = `${s}T00:00:00`
+  }
+  const d = new Date(str)
   return isNaN(d.getTime()) ? null : d
 }
 

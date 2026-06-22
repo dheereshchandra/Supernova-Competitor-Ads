@@ -131,9 +131,12 @@ practising speech, not volume.
     quoted/taught English content that cannot exist any other way (the wrong-English line
     "I passed out in 2022!", a challenge like "Describe this in English!"). Then it stays per T2a.
     "Sounds nicer in English" is NOT a demand — when in doubt, open native.
-  - If the English hook translates awkwardly, the model MAY reframe the first line — same context,
-    same scene, same meaning, just natural and thumbstopping. This is the ONLY line with creative
-    latitude.
+  - If the English hook translates awkwardly, the model MAY adjust the first line's PHRASING / word-order
+    for naturalness and thumbstop — but the hook's CLAIM IS FROZEN: keep exactly WHAT it asserts. Never
+    change the framing — e.g. "not able to speak English" / "don't know English" must STAY that; do NOT
+    recast it as "afraid / scared to speak", "can't speak", or any other framing, and never inject the
+    brand's fear / no-judgement angle into the opener. PHRASING is the ONLY latitude the hook gets; its
+    MEANING does not move.
 
 **T8. Line-fit (visuals are frozen).** Each translated line ≈ same speech duration as its English
 source (±20% syllables). Never merge, split, reorder, add, or drop scenes or speaking turns.

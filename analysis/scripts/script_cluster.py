@@ -90,9 +90,10 @@ def load_meta(root: Path, pipeline: str, slug: str) -> dict:
     """Per-ad {language, device_format, first_seen} from sidecars + enriched."""
     base = root / "analysis" / "enrichment" / pipeline
     meta: dict[str, dict] = {}
-    lang_csv = base / "language" / f"{slug}.csv"
-    for r in read_csv(lang_csv):
-        meta.setdefault(r["ad_id"], {})["language"] = r.get("language", "")
+    # LANGUAGE = spoken-audio only (from the transcript). The ad-copy/caption text
+    # sidecar is intentionally not used to set language — see
+    # compute_rank_metrics.load_enrichment for why on-screen captions are excluded.
+    # (The clustering text below still reads on_screen_text for script similarity.)
     tdir = base / "transcripts" / slug
     if tdir.is_dir():
         for p in tdir.glob("*.json"):

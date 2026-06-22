@@ -118,9 +118,14 @@ def parse_json_lenient(text: str):
 
 
 def generate_json(client, model: str, contents, *, temperature: float = 0.0,
-                  max_retries: int = 5, response_schema=None):
+                  max_retries: int = 5, response_schema=None, allow_pro: bool = False):
     """Call Flash for a JSON response, with ERROR-AWARE backoff + lenient parsing.
     Returns the parsed object, or raises after exhausting retries.
+
+    `allow_pro` is a SCOPED escape hatch — leave it False (the default) everywhere.
+    The ONLY sanctioned exception is the ad-hoc "Translations" playground (the team
+    explicitly opted into Gemini 2.5 Pro for that single interactive tab); every other
+    caller stays Flash-only via the assert_flash guard below.
 
     When `response_schema` is given, Gemini uses CONTROLLED generation — the output is
     guaranteed to be valid JSON conforming to the schema. This eliminates the
@@ -134,7 +139,8 @@ def generate_json(client, model: str, contents, *, temperature: float = 0.0,
       • parse error: quick retry (1s)
       • permanent (safety block / 400 / permission): raise immediately, no retry
         (retrying just burns time + the worker — it will never succeed)."""
-    assert_flash(model)
+    if not allow_pro:
+        assert_flash(model)
     from google.genai import types as gt
     cfg_kw = dict(temperature=temperature, response_mime_type="application/json")
     if response_schema is not None:
