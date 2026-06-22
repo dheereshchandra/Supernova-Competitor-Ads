@@ -621,7 +621,26 @@ export const transliterateNative = (body: {
   prompt_override?: string
 }) => api<{ native: string }>('/api/translate/native', { json: body })
 
-export const synthTts = (body: { language: string; text: string; voice_id?: string }) =>
+export interface ProviderVoice {
+  voice_id: string
+  name?: string
+  language?: string
+  gender?: string
+}
+/** List a TTS provider's voices for the per-character cast picker. */
+export const listTranslateVoices = (provider: string, language?: string) =>
+  api<{ provider: string; voices: ProviderVoice[] }>(
+    `/api/translate/voices?provider=${encodeURIComponent(provider)}` +
+      (language ? `&language=${encodeURIComponent(language)}` : ''),
+  )
+
+export const synthTts = (body: {
+  language: string
+  text: string
+  voice_id?: string
+  /** Per-character casting: { characterName: { provider, voice_id } } */
+  voices?: Record<string, { provider: string; voice_id: string }>
+}) =>
   api<{ audio_url: string; provider?: string; voice_id?: string }>('/api/translate/tts', {
     json: body,
   })

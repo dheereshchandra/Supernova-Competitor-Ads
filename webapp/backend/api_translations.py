@@ -73,6 +73,11 @@ def _throttle(user: str) -> None:
         q.append(now)
 
 
+# Provider voice lists change rarely; cache them so the cast picker is snappy.
+_VOICES_CACHE: dict[tuple, tuple] = {}     # (provider, language) -> (ts, voices)
+_VOICES_TTL = 600
+
+
 # ---------------- subprocess helper ----------------
 def _run_playground(script: str, args: list[str], body: dict) -> dict:
     """Run a step4 --playground mode synchronously, piping `body` as JSON stdin, parse stdout JSON."""
@@ -126,6 +131,8 @@ class TtsBody(BaseModel):
     language: str = Field(min_length=1, max_length=40)
     text: str = Field(min_length=1, max_length=8_000)
     voice_id: str | None = Field(default=None, max_length=80)
+    # Per-character casting: {character_name: {"provider": "cartesia", "voice_id": "..."}}
+    voices: dict[str, dict] | None = Field(default=None)
 
 
 # ---------------- endpoints ----------------
@@ -178,11 +185,32 @@ def translate_tts(body: TtsBody, user: str = Depends(require_user)):
     res = _run_playground("step4_tts.py", ["--playground-synth", "--out", str(out_path)], {
         "language": body.language, "text": body.text,
         "voice_id": body.voice_id or "",
+        "voices": body.voices or {},
     })
     if not res.get("ok") or not out_path.is_file():
         raise HTTPException(502, f"TTS failed: {res.get('error', 'unknown error')}")
     return {"audio_url": f"/api/translate/audio/{token}",
             "provider": res.get("provider"), "voice_id": res.get("voice_id")}
+
+
+@router.get("/api/translate/voices")
+def translate_voices(provider: str = "cartesia", language: str = "",
+                     _user: str = Depends(require_user)):
+    """List a TTS provider's voices for the per-character cast picker (cached ~10m)."""
+    provider = (provider or "cartesia").lower()
+    if provider not in ("cartesia", "elevenlabs"):
+        raise HTTPException(422, "provider must be cartesia or elevenlabs")
+    key = (provider, language)
+    hit = _VOICES_CACHE.get(key)
+    if hit and time.time() - hit[0] < _VOICES_TTL:
+        return {"provider": provider, "voices": hit[1]}
+    args = ["--list-voices", "--provider", provider, "--json"]
+    if language:
+        args += ["--language", language]
+    res = _run_playground("step4_tts.py", args, {})
+    voices = res.get("voices", [])
+    _VOICES_CACHE[key] = (time.time(), voices)
+    return {"provider": provider, "voices": voices}
 
 
 @router.get("/api/translate/audio/{token}")
