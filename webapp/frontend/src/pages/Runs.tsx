@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { cancelJob, confirmEnrich, getJobs, retryJob, type Job } from '../api'
-import { elapsedBetween, JOB_STATUS_MAP, money, timeAgo } from '../format'
+import { elapsedBetween, friendlyDateTime, JOB_STATUS_MAP, money } from '../format'
 import { EmptyState, ErrorNote, PageLoading, Spinner } from '../components/ui'
 
 export default function Runs() {
@@ -87,10 +87,15 @@ function RunCard({ job, onChange }: { job: Job; onChange: () => void }) {
               <span className="text-xs text-zinc-500">#{job.queue_position} in line</span>
             )}
             <span className="text-xs text-zinc-600">
-              by {job.requested_by} · {timeAgo(job.created_at)}
+              by {job.requested_by} · {friendlyDateTime(job.started_at ?? job.created_at)}
             </span>
             {job.cost_estimate_usd != null && (
               <span className="text-xs text-zinc-500">{money(job.cost_estimate_usd)}</span>
+            )}
+            {job.started_at && job.finished_at && (
+              <span className="text-xs text-zinc-500">
+                took {elapsedBetween(job.started_at, job.finished_at)}
+              </span>
             )}
           </div>
 
