@@ -88,10 +88,20 @@ ENTRY="## ${STAMP} — ${PIPELINE} / ${COMPETITOR} — operator: ${OPERATOR}
 - Links manifest: ${MANIFEST}
 "
 MARK="<!-- New entries are inserted below this line, newest first. -->"
-awk -v entry="$ENTRY" -v mark="$MARK" '
-  { print }
-  $0 == mark && !done { print ""; printf "%s", entry; done = 1 }
-' RUN_LOG.md > RUN_LOG.md.tmp && mv RUN_LOG.md.tmp RUN_LOG.md
+# Insert via python, NOT `awk -v entry=...`: a multi-line `-v` assignment errors
+# ("newline in string") and silently no-ops on macOS/BSD awk, so the entry was
+# never written and RUN_LOG stayed empty. Python is stdlib-only and already used above.
+ENTRY="$ENTRY" MARK="$MARK" python3 - <<'PY'
+import os, pathlib
+mark, entry = os.environ["MARK"], os.environ["ENTRY"].rstrip("\n")
+p = pathlib.Path("RUN_LOG.md")
+text = p.read_text(encoding="utf-8")
+if mark in text:
+    text = text.replace(mark, mark + "\n\n" + entry + "\n", 1)
+else:  # marker missing — append at end so the entry is never lost
+    text = text.rstrip("\n") + "\n\n" + entry + "\n"
+p.write_text(text, encoding="utf-8")
+PY
 
 # 3) Stage the small text artifacts and commit under the operator.
 git add "$PIPELINE/master/${COMPETITOR}.csv" 2>/dev/null || true
