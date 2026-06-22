@@ -22,7 +22,9 @@ ELEVEN_BASE = "https://api.elevenlabs.io/v1"
 CARTESIA_BASE = "https://api.cartesia.ai"
 CARTESIA_VERSION_DEFAULT = "2024-11-13"
 
-DEFAULT_MODELS = {"elevenlabs": "eleven_multilingual_v2", "cartesia": "sonic-2"}
+# Cartesia: sonic-3 (sonic-2 can't synth Tamil/Telugu — it 400s "language not supported";
+# sonic-3 covers en/hi/ta/te and is the current Sonic generation).
+DEFAULT_MODELS = {"elevenlabs": "eleven_multilingual_v2", "cartesia": "sonic-3"}
 
 
 class TTSConfigError(RuntimeError):
