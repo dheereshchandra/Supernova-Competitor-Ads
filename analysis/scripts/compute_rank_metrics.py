@@ -75,15 +75,16 @@ def read_csv(path: Path) -> list[dict]:
 
 def load_enrichment(root: Path, pipeline: str, slug: str) -> dict:
     """Optional Flash-derived signals — {ad_id: {language, presenter_type,
-    device_format, production_type}}. Empty until detect_language / transcribe_tag
-    have been run; the transcript language (if any) overrides the text-only one."""
+    device_format, production_type}}. LANGUAGE is the SPOKEN-AUDIO language from the
+    transcript ONLY; the ad-copy/caption text sidecar (detect_language.py) is
+    intentionally NOT used to set language. Empty until transcribe_tag has been run."""
     import json as _json
     base = root / "analysis" / "enrichment" / pipeline
     enr: dict[str, dict] = {}
-    lang_csv = base / "language" / f"{slug}.csv"
-    if lang_csv.exists():
-        for r in read_csv(lang_csv):
-            enr.setdefault(r["ad_id"], {})["language"] = r.get("language", "")
+    # LANGUAGE = spoken-audio only. The text/copy sidecar (detect_language.py) is
+    # deliberately NOT read here: Indian video ads routinely run English captions over
+    # a Hindi/regional voiceover, so ad-copy text mislabels the ad. Only the
+    # transcript's (audio) language counts; an ad with no transcript has no language.
     tdir = base / "transcripts" / slug
     if tdir.is_dir():
         for p in tdir.glob("*.json"):

@@ -76,7 +76,7 @@ intelligence database. Watch the video AND listen to the audio. Reply with EXACT
 JSON object — no markdown fences, no commentary:
 
 {
-  "language": "<dominant spoken/on-screen human language as an English name, e.g. Hindi, Tamil, English; 'unknown' if none>",
+  "language": "<dominant SPOKEN (audio/voiceover) human language as an English name, e.g. Hindi, Tamil, English. Judge from the AUDIO ONLY — IGNORE on-screen text, captions and subtitles (ads often run English captions over a Hindi/regional voiceover). Use 'unknown' only if there is no speech at all>",
   "presenter_type": "<one of: human-only | ai-avatar-only | ai+human | voiceover-only | none>",
   "device_format": "<one of: talking-head | split-screen | app-screencast | text-on-screen-only | pen-and-paper | skit-narrative | listicle-montage | other>",
   "production_type": "<one of: human-recorded | ai-generated | mixed>",
