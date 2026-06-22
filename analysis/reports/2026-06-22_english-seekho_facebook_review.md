@@ -85,6 +85,43 @@
 | English Seekho App | 2026-06-15 | 387 | 144 | 73 | 0.189 |
 | English Seekho App | 2026-06-22 | 275 | 229 | 12 | 0.044 |
 
+## By language
+
+| language | ads | winners | win ratio |
+|---|--:|--:|--:|
+| Hindi | 1014 | 96 | 0.095 |
+| Bengali | 44 | 19 | 0.432 |
+| Gujarati | 6 | 0 | 0.0 |
+| English | 4 | 0 | 0.0 |
+| Marathi | 3 | 0 | 0.0 |
+
+## Format mix
+
+| format | ads | winners | win ratio |
+|---|--:|--:|--:|
+| skit-narrative | 591 | 45 | 0.076 |
+| talking-head | 234 | 32 | 0.137 |
+| split-screen | 193 | 34 | 0.176 |
+| app-screencast | 15 | 1 | 0.067 |
+| other | 13 | 3 | 0.231 |
+| pen-and-paper | 13 | 0 | 0.0 |
+| listicle-montage | 9 | 0 | 0.0 |
+| text-on-screen-only | 3 | 0 | 0.0 |
+
+## Script replication
+
+How much of the output is fresh scripts vs. replays of a script that already worked (same script translated, or re-shot with new visuals).
+
+| replication | ads | winners | win ratio |
+|---|--:|--:|--:|
+| reworded_replica | 256 | 19 | 0.074 |
+| unique | 254 | 18 | 0.071 |
+| original | 177 | 30 | 0.169 |
+| visual_variant | 123 | 14 | 0.114 |
+| exact_replica | 117 | 16 | 0.137 |
+| character_variant | 92 | 8 | 0.087 |
+| translation_replica | 51 | 10 | 0.196 |
+
 ## Biggest rank movers
 
 | ad_id | scrape | Δ rank | new rank |
