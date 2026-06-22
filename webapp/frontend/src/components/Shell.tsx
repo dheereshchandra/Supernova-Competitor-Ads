@@ -5,6 +5,7 @@ import { friendlyDateTime } from '../format'
 const NAV = [
   { to: '/', label: 'Library' },
   { to: '/pipeline', label: 'Pipeline' },
+  { to: '/translations', label: 'Translations' },
   { to: '/runs', label: 'Runs' },
   { to: '/health', label: 'Health' },
 ]
