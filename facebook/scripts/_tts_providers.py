@@ -22,7 +22,10 @@ ELEVEN_BASE = "https://api.elevenlabs.io/v1"
 CARTESIA_BASE = "https://api.cartesia.ai"
 CARTESIA_VERSION_DEFAULT = "2024-11-13"
 
-DEFAULT_MODELS = {"elevenlabs": "eleven_multilingual_v2", "cartesia": "sonic-2"}
+# Cartesia: sonic-3 (sonic-2 400d on Tamil/Telugu "language not supported"). sonic-3 covers all 10
+# Indic languages mapped in CartesiaProvider.LANG_CODES (en/hi/ta/te/bn/gu/mr/kn/ml/pa), verified
+# live. NOTE: Assamese is NOT a Cartesia language (no 'as' code, no voices) — route it to ElevenLabs.
+DEFAULT_MODELS = {"elevenlabs": "eleven_multilingual_v2", "cartesia": "sonic-3"}
 
 
 class TTSConfigError(RuntimeError):
@@ -122,6 +125,12 @@ class CartesiaProvider(_Provider):
 
     def synth(self, text, voice_id, *, model=None, language=None, settings=None) -> bytes:
         model = model or DEFAULT_MODELS["cartesia"]
+        # Fail loudly on a language Cartesia can't synthesize (e.g. Assamese) instead of silently
+        # dropping the language field and producing wrong-language/auto-detected audio.
+        if language and language not in self.LANG_CODES:
+            raise TTSConfigError(
+                f"Cartesia cannot synthesize '{language}' (no language code / voices) — "
+                f"use ElevenLabs for this language.")
         body = {
             "model_id": model,
             "transcript": text,
@@ -160,6 +169,8 @@ class CartesiaProvider(_Provider):
                 break
             params = {"limit": 100, "starting_after": data[-1].get("id")}
         if language:
+            if language not in self.LANG_CODES:
+                return []   # Cartesia can't synth this language (e.g. Assamese) — don't offer voices
             code = self.LANG_CODES.get(language, language.lower())
             pref = [v for v in out if (v.get("language") or "").lower() in (code, language.lower())]
             return pref or out

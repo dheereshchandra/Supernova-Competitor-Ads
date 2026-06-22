@@ -65,6 +65,12 @@ def create_app() -> FastAPI:
             sheets.start_syncer(app)
         except ImportError:
             pass
+        # Reclaim any stale Translations-playground mp3s left over a restart (the /tts sweep is
+        # event-driven, so an idle period after a burst would otherwise leave files past their TTL).
+        try:
+            api_translations._sweep_audio()
+        except Exception:
+            pass
         # Pre-warm winner thumbnails off-thread so the first browse is instant.
         if settings().env.get("STUDIO_PREWARM_THUMBS", "1") == "1":
             import threading
