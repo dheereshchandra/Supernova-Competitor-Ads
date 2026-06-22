@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-06-22 18:15 IST — facebook / mysivi — operator: Dheeresh (Ad Studio pipeline)
+- data refresh via Ad Studio (stages 1-5)
+- Links manifest: facebook/runs/mysivi_2026-06-22_links.json
+
+
 ## 2026-06-22 15:46 IST — facebook / speakeasy — operator: Claude (on-demand)
 - Steps 1-4 (scrape -> download -> R2 -> free analysis). NEW competitor (first run).
 - Result: 111 ads (all video), master 0 -> 111; verdicts: 4 strong_winner, 35 winner, 72 new (win ratio 0.351).
