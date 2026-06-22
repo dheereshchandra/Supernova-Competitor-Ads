@@ -31,8 +31,8 @@ Per scrape-date live volume (history.csv — one row per ad per scrape).
 | bucket | ads | winners | win ratio |
 |---|--:|--:|--:|
 | ai_plus_human | 1414 | 490 | 0.347 |
-| human_only | 527 | 140 | 0.266 |
-| other | 284 | 111 | 0.391 |
+| human_only | 528 | 141 | 0.267 |
+| other | 283 | 110 | 0.389 |
 | ai_plus_ai | 145 | 67 | 0.462 |
 | paper_translation | 61 | 24 | 0.393 |
 | split_screen | 1310 | 463 | 0.353 |
@@ -45,7 +45,7 @@ Per scrape-date live volume (history.csv — one row per ad per scrape).
 | format | ads | winners | win ratio |
 |---|--:|--:|--:|
 | split-screen | 1310 | 463 | 0.353 |
-| skit-narrative | 681 | 224 | 0.329 |
+| skit-narrative | 682 | 225 | 0.33 |
 | app-demo | 284 | 93 | 0.327 |
 | pen-and-paper | 61 | 24 | 0.393 |
 | other | 13 | 5 | 0.385 |
@@ -58,29 +58,29 @@ Per scrape-date live volume (history.csv — one row per ad per scrape).
 |---|--:|--:|--:|
 | speak-correctly | 1300 | 447 | 0.344 |
 | habit-aspiration | 252 | 75 | 0.298 |
-| translation-practice | 195 | 66 | 0.338 |
+| translation-practice | 196 | 67 | 0.342 |
 | social-proof | 193 | 71 | 0.368 |
 | understand-cant-speak | 163 | 47 | 0.288 |
 | fear-shame | 160 | 70 | 0.438 |
 | feature-demo | 56 | 24 | 0.429 |
 | other | 44 | 14 | 0.318 |
 
-*Price / offer hook present in 2146 of 2431 ads. Split-screen role split in `mysivi_by_split_role.csv`.*
+*Price / offer hook present in 2147 of 2431 ads. Split-screen role split in `mysivi_by_split_role.csv`.*
 
 ## Q5 AI vs human production
 
 | production class | ads | win ratio |
 |---|--:|--:|
 | AI-heavy (ai_plus_ai + ai_plus_human) | 1559 | 0.357 |
-| human_only | 527 | 0.266 |
+| human_only | 528 | 0.267 |
 | paper_translation | 61 | 0.393 |
-| other | 284 | 0.391 |
+| other | 283 | 0.389 |
 
 ## Q9 New scripts / formats per week
 
 | week | new scripts | new formats | new ads | winners | win ratio |
 |---|--:|--:|--:|--:|--:|
-| 2026-05-25 | 355 | 8 | 1596 | 709 | 0.444 |
+| 2026-05-25 | 356 | 8 | 1596 | 709 | 0.444 |
 | 2026-06-01 | 23 | 0 | 242 | 53 | 0.219 |
 | 2026-06-08 | 94 | 0 | 320 | 68 | 0.212 |
 | 2026-06-15 | 56 | 0 | 165 | 0 | 0.0 |
