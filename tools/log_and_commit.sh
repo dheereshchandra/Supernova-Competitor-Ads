@@ -110,6 +110,23 @@ git add "$RUNS_DIR"/* 2>/dev/null || true
 git add "$PIPELINE"/step3_logs/*"$COMPETITOR"* 2>/dev/null || true
 git add "$PIPELINE"/step4_workspace/images/*/r2_urls.json 2>/dev/null || true
 git add "$PIPELINE"/step4_workspace/scenes/*.json 2>/dev/null || true
+
+# Analysis outputs for THIS competitor — enrichment (transcripts/language/media/visual/
+# scripts/embeddings), derived metrics, and the dated reports. These are committed text
+# artifacts; if left unstaged they pile up uncommitted and stall the daily auto-sync
+# (live.gosupernova.repo-sync is pull-only and SKIPS on any dirty working tree). Patterns are
+# anchored on the competitor name + a separator so a substring slug (e.g. "speak" vs "speakx")
+# isn't over-staged.
+git add analysis/derived/"$PIPELINE"/"$COMPETITOR"_*.csv 2>/dev/null || true
+git add analysis/enrichment/"$PIPELINE"/*/"$COMPETITOR".csv 2>/dev/null || true
+git add analysis/enrichment/"$PIPELINE"/embeddings/"$COMPETITOR".jsonl 2>/dev/null || true
+git add analysis/enrichment/"$PIPELINE"/transcripts/"$COMPETITOR"/ 2>/dev/null || true
+git add analysis/reports/*_"$COMPETITOR"_*.md 2>/dev/null || true
+# Google scrape ledger (append-only, never deleted) — only google runs touch it.
+if [ "$PIPELINE" = "google" ]; then
+  git add google/logs/scrape_history.jsonl 2>/dev/null || true
+fi
+
 git add RUN_LOG.md 2>/dev/null || true
 
 if git commit -m "run: ${PIPELINE}/${COMPETITOR} by ${OPERATOR} — ${NOTE}"; then
