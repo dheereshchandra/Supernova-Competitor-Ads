@@ -9,7 +9,10 @@ English master — do both at once.
 
 ## A. RE-SKIN (change as little as possible; the competitor ad is proven)
 - Write the WHOLE ad as ONE continuous, natural conversation (not isolated scene fragments).
-- Keep the seed's hook, its SPECIFIC lines/examples, who speaks first, and the turn order.
+- Keep the seed's hook, its SPECIFIC lines/examples, who speaks first, and the turn order. **The hook's
+  exact CLAIM / FRAMING is frozen** — preserve WHAT the opener asserts (translate it faithfully): "not able
+  to speak English" / "don't know English" must STAY that; never recast it as "afraid / scared to speak" or
+  "can't speak", and never inject the brand's fear / no-judgement angle into the opener.
 - **PRESERVE THE SEED'S INTERACTION PATTERN (the teaching mechanic) — not just the lines.** Check the
   decompose's `interaction_pattern`. If the teacher SAYS a phrase and the learner REPEATS it back (a
   model-and-repeat / repeat-after-me drill), KEEP that exact mechanic — the teacher leads with the phrase,

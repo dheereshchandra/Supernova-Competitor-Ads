@@ -73,7 +73,7 @@ _BANNED = [
 _SEV = {
     "MISS_NOVA_SPOKEN": "block", "PLACEHOLDER_SPOKEN": "block",
     "BANNED_PHRASE": "flag", "CLAIM_VALUE": "flag", "BRAND_FULLNAME": "flag",
-    "NO_VOICEOVER": "flag", "INTERACTION_PATTERN_DRIFT": "flag",
+    "NO_VOICEOVER": "flag", "INTERACTION_PATTERN_DRIFT": "flag", "HOOK_DRIFT": "flag",
 }
 
 
@@ -145,9 +145,13 @@ _ROLE_SCHEMA = {
         "pattern_changed": {"type": "boolean"},
         "pattern_confidence": {"type": "string"},   # high | medium | low
         "pattern_desc": {"type": "string"},
+        "hook_drifted": {"type": "boolean"},
+        "hook_confidence": {"type": "string"},   # high | medium | low
+        "hook_desc": {"type": "string"},
     },
     "required": ["applicable", "inverted", "confidence", "evidence",
-                 "pattern_changed", "pattern_confidence", "pattern_desc"],
+                 "pattern_changed", "pattern_confidence", "pattern_desc",
+                 "hook_drifted", "hook_confidence", "hook_desc"],
 }
 
 _ROLE_PROMPT = """You are a QC check for a re-skinned spoken-English ad. The ORIGINAL is a competitor ad
@@ -169,8 +173,17 @@ CATEGORY of what the learner does changed (be conservative); give pattern_confid
 pattern_desc (one line: 'original mechanic → rewrite mechanic'). If unchanged, pattern_changed=false,
 pattern_confidence="low", pattern_desc="".
 
-Return JSON with all of: applicable, inverted, confidence, evidence (Task 1) AND pattern_changed,
-pattern_confidence, pattern_desc (Task 2).
+TASK 3 — hook fidelity: compare the FIRST line of the REWRITE to the FIRST line of the ORIGINAL (the hook /
+thumbstop). Did the opener's CLAIM / FRAMING change — i.e. WHAT it asserts? Drift examples: "not able to
+speak English" / "don't know English" became "afraid / scared to speak", "can't speak", or a different
+question; or the brand's fear / no-judgement angle got front-loaded into the opener. A faithful TRANSLATION
+into the target language and the brand swap are NOT drift. Set hook_drifted=true ONLY if the opener's
+meaning/claim moved (be conservative; the inability↔fear↔not-knowing axis matters most); give hook_confidence
+(high|medium|low) and hook_desc (one line: 'original hook claim → rewrite hook claim'). If faithful,
+hook_drifted=false, hook_confidence="low", hook_desc="".
+
+Return JSON with all of: applicable, inverted, confidence, evidence (Task 1); pattern_changed,
+pattern_confidence, pattern_desc (Task 2); hook_drifted, hook_confidence, hook_desc (Task 3).
 """
 
 def check_role_inversion(decompose_parsed: dict, rewrite_parsed: dict, lang: str, where: str) -> list[dict]:
@@ -207,6 +220,11 @@ def check_role_inversion(decompose_parsed: dict, rewrite_parsed: dict, lang: str
     if res.get("pattern_changed") and pconf in ("high", "medium"):
         findings.append({"severity": "flag", "code": "INTERACTION_PATTERN_DRIFT", "where": where,
                          "detail": f'teaching mechanic changed ({pconf}) → {res.get("pattern_desc","")[:160]}'})
+    # Task 3 — hook-claim drift (non-gating FLAG; conservative)
+    hconf = (res.get("hook_confidence") or "").lower()
+    if res.get("hook_drifted") and hconf in ("high", "medium"):
+        findings.append({"severity": "flag", "code": "HOOK_DRIFT", "where": where,
+                         "detail": f'hook claim changed ({hconf}) → {res.get("hook_desc","")[:160]}'})
     return findings
 
 
