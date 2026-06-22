@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-06-22 21:40 IST — facebook / mysivi — operator: Dheeresh (Ad Studio pipeline)
+- data refresh via Ad Studio (stages 1-5)
+- Links manifest: facebook/runs/mysivi_2026-06-22_links.json
+
+
 ## 2026-06-22 21:40 IST — facebook / wispr-flow — operator: Dheeresh (Ad Studio pipeline)
 - data refresh via Ad Studio (stages 1-5)
 - Links manifest: facebook/runs/wispr-flow_2026-06-22_links.json
