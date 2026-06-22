@@ -416,6 +416,73 @@ def cmd_setup(ad_id: str, competitor: str, language: str) -> int:
     return 0
 
 
+def cmd_playground_native() -> int:
+    """Real-time native-script transliteration for the "Translations" playground tab. Reads
+    {"language", "roman", "model"?} from stdin, prints {"native"} to stdout. Transliterates the
+    (editable) romanized block line-by-line so the native column stays word-for-word identical.
+    SYNCHRONOUS — NOT the job queue, NOT the Gemini Batch API."""
+    req = json.loads(sys.stdin.read() or "{}")
+    language = (req.get("language") or "").strip()
+    roman = req.get("roman") or ""
+    model = (req.get("model") or _flash.DEFAULT_MODEL).strip()
+    prompt_override = req.get("prompt_override") or None
+    if not language or not roman.strip():
+        print(json.dumps({"native": roman}, ensure_ascii=False))
+        return 1
+    allow_pro = "pro" in model.lower()
+    env = load_env()
+    client = _flash.get_client(env)
+    lines = roman.split("\n")
+    idx = [i for i, ln in enumerate(lines) if ln.strip()]   # convert only non-empty lines
+    converted = ttx.to_native_script(client, language, [lines[i] for i in idx],
+                                     model=model, allow_pro=allow_pro,
+                                     prompt_override=prompt_override)
+    for i, txt in zip(idx, converted):
+        lines[i] = txt
+    print(json.dumps({"native": "\n".join(lines)}, ensure_ascii=False))
+    return 0
+
+
+def cmd_playground_synth(out_path: str) -> int:
+    """Real-time TTS synth for the "Translations" playground tab. Reads {"language", "text"
+    (native script), "voice_id"?} from stdin, writes an mp3 to --out, prints {"ok", ...} to stdout.
+    No ad/characters — uses the registry's universal `narrator` voice unless a voice_id is given."""
+    req = json.loads(sys.stdin.read() or "{}")
+    language = (req.get("language") or "English").strip()
+    text = req.get("text") or ""
+    voice_id = (req.get("voice_id") or "").strip()
+    if not text.strip():
+        print(json.dumps({"ok": False, "error": "text is empty"}))
+        return 1
+    # strip 'Name says:' labels + [cue] brackets so the voice reads only spoken dialogue
+    turns = ttx.parse_turns(text)
+    speak = "\n".join(t["text"] for t in turns) if turns else BRACKET_RE.sub("", text).strip()
+    speak = speak or text.strip()
+    env = load_env()
+    reg = load_registry()
+    catalog = voice_catalog(reg)
+    voice = catalog.get(voice_id) if voice_id else None
+    if not voice:
+        voice = resolve_voice(reg, language, "narrator")
+    if not voice or not voice.get("configured"):
+        print(json.dumps({"ok": False,
+                          "error": f"no configured voice for {language} (narrator slot)"}))
+        return 1
+    try:
+        provider = tts.get_provider(voice["provider"], env)
+        audio = provider.synth(speak, voice["voice_id"], model=voice["model"],
+                               language=language, settings=voice["settings"])
+    except (tts.TTSConfigError, tts.TTSError) as ex:
+        print(json.dumps({"ok": False, "error": f"{type(ex).__name__}: {str(ex)[:200]}"}))
+        return 1
+    op = pathlib.Path(out_path)
+    op.parent.mkdir(parents=True, exist_ok=True)
+    op.write_bytes(audio)
+    print(json.dumps({"ok": True, "provider": voice.get("provider"),
+                      "voice_id": voice.get("voice_id"), "bytes": len(audio)}))
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -427,9 +494,21 @@ def main() -> int:
     ap.add_argument("--regenerate", action="store_true")
     ap.add_argument("--list-voices", action="store_true")
     ap.add_argument("--setup", action="store_true", help="emit picker JSON (characters + voices)")
+    ap.add_argument("--playground-native", action="store_true",
+                    help="Translations tab: transliterate romanized -> native (stdin/stdout JSON)")
+    ap.add_argument("--playground-synth", action="store_true",
+                    help="Translations tab: synth one native-script block to --out mp3 (stdin JSON)")
+    ap.add_argument("--out", help="output mp3 path for --playground-synth")
     ap.add_argument("--provider", choices=["elevenlabs", "cartesia"])
     ap.add_argument("--language", help="filter for --list-voices / target for --setup")
     args = ap.parse_args()
+
+    if args.playground_native:
+        return cmd_playground_native()
+    if args.playground_synth:
+        if not args.out:
+            sys.exit("[error] --playground-synth needs --out PATH")
+        return cmd_playground_synth(args.out)
 
     if args.list_voices:
         if not args.provider:

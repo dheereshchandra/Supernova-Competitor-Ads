@@ -576,3 +576,52 @@ export const verifyTtsLanguage = (
     `/api/tracker/${encodeURIComponent(pipeline)}/${encodeURIComponent(slug)}/${encodeURIComponent(adId)}/tts-verify`,
     { method: 'PATCH', json: { language, verified } },
   )
+
+// ---------- Translations playground (ad-hoc; REAL-TIME, not the job queue) ----------
+
+/** Source can be English or any of the 10 Indic languages; targets are the 10 Indic. */
+export const TRANSLATE_SOURCE_LANGUAGES = GENERATE_LANGUAGES
+export const TRANSLATE_TARGET_LANGUAGES = SUPPORTED_LANGUAGES
+
+export const TRANSLATE_MODELS = [
+  { id: 'gemini-flash-latest', label: 'Gemini Flash' },
+  { id: 'gemini-2.5-pro', label: 'Gemini 2.5 Pro' },
+] as const
+export const SCRIPT_DEFAULT_MODEL = 'gemini-flash-latest'
+export const TTS_DEFAULT_MODEL = 'gemini-2.5-pro'
+
+export interface TranslatePrompts {
+  script: string
+  tts: string
+}
+export const getTranslatePrompts = () => api<TranslatePrompts>('/api/translate/prompts')
+
+export interface ScriptResult {
+  language: string
+  script_roman?: string
+  script_native?: string
+  self_critique_fixed?: string
+  error?: string
+}
+export const translateScript = (body: {
+  source_text: string
+  source_language: string
+  target_languages: string[]
+  model?: string
+  rules_override?: string
+}) =>
+  api<{ results: ScriptResult[]; model: string; error?: string }>('/api/translate/script', {
+    json: body,
+  })
+
+export const transliterateNative = (body: {
+  language: string
+  roman: string
+  model?: string
+  prompt_override?: string
+}) => api<{ native: string }>('/api/translate/native', { json: body })
+
+export const synthTts = (body: { language: string; text: string; voice_id?: string }) =>
+  api<{ audio_url: string; provider?: string; voice_id?: string }>('/api/translate/tts', {
+    json: body,
+  })

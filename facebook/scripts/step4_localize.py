@@ -223,8 +223,24 @@ def resolve_english_source(ad_id: str, prefer_gdoc: bool):
 
 # ---------------------------------------------------------------- translate + audit
 def translate(client, target: str, skeleton: list, comments: list,
-              production_type: str, seed_lang: str) -> dict:
-    rules = load_rules()
+              production_type: str, seed_lang: str, *, source_lang: str = "English",
+              model: str | None = None, allow_pro: bool = False,
+              rules_override: str | None = None) -> dict:
+    """Translate the source skeleton into code-mixed `target` (script_native + script_roman).
+
+    Production localization always passes an ENGLISH master (source_lang stays "English"), so the
+    header below is byte-identical to before. The ad-hoc Translations playground passes a non-English
+    `source_lang` (the pasted script's language), an optional `model`/`allow_pro` (its model dropdown),
+    and an optional `rules_override` (its editable-prompt box, used in-memory — the committed .md is
+    never touched)."""
+    rules = rules_override if rules_override is not None else load_rules()
+    model = model or _flash.DEFAULT_MODEL
+    if source_lang and source_lang.strip().lower() != "english":
+        master_clause = f"the SOURCE SCRIPT below (written in {source_lang})"
+        master_label = f"SOURCE SCRIPT ({source_lang}):"
+    else:
+        master_clause = "the APPROVED ENGLISH MASTER below"
+        master_label = "ENGLISH MASTER:"
     header = f"""
 
 ================================================================================
@@ -238,18 +254,18 @@ for something the brand-safety guardrails ban (e.g. a hard rupee price), IGNORE 
 comment and say so in self_critique_fixed:
 {chr(10).join('- ' + c for c in comments) if comments else '(none)'}
 
-Translate the APPROVED ENGLISH MASTER below — scene-for-scene, line-for-line — into code-mixed
+Translate {master_clause} — scene-for-scene, line-for-line — into code-mixed
 {target}. Output BOTH forms of every scene's dialogue (same words, same speaker labels 'Name says:',
 one turn per line):
   - script_native : {target} in its NATIVE script + English keywords kept inline (code-mix).
   - script_roman  : the SAME, romanized in Latin letters + English keywords.
 Keep '[music only, no speech]' scenes as-is. Same scene count and order.
 
-ENGLISH MASTER:
+{master_label}
 """
     contents = rules + header + json.dumps({"scenes": skeleton}, ensure_ascii=False)
-    return _flash.generate_json(client, _flash.DEFAULT_MODEL, contents,
-                                temperature=0.4, response_schema=LOCALE_SCHEMA)
+    return _flash.generate_json(client, model, contents, temperature=0.4,
+                                response_schema=LOCALE_SCHEMA, allow_pro=allow_pro)
 
 
 def audit_text(translated: dict, decompose: dict) -> str:
@@ -531,7 +547,56 @@ def _seed_language(competitor: str, ad_id: str) -> str:
     return "unknown"
 
 
+def cmd_playground() -> int:
+    """Real-time, SYNCHRONOUS translate for the Ad Studio "Translations" playground tab.
+    Reads a JSON request from stdin, prints a JSON result to stdout. Ephemeral — NO Drive/R2/
+    safety audit/sidecars, NOT the job queue, NOT the Gemini Batch API.
+
+      stdin : {"source_text": str, "source_language": str, "target_languages": [str],
+               "model"?: str, "rules_override"?: str}
+      stdout: {"results": [{"language", "script_roman", "script_native",
+                            "self_critique_fixed", "error"?}], "model": str}
+    """
+    import concurrent.futures as _fut
+    req = json.loads(sys.stdin.read() or "{}")
+    source_text = (req.get("source_text") or "").strip()
+    source_lang = (req.get("source_language") or "English").strip()
+    targets = [t.strip() for t in (req.get("target_languages") or []) if t and t.strip()]
+    model = (req.get("model") or _flash.DEFAULT_MODEL).strip()
+    rules_override = req.get("rules_override") or None
+    if not source_text or not targets:
+        print(json.dumps({"results": [], "model": model,
+                          "error": "source_text and target_languages are required"}))
+        return 1
+    allow_pro = "pro" in model.lower()   # the playground is the one sanctioned Pro path
+    env = load_env()
+    client = _flash.get_client(env)
+    skeleton = [{"n": 1, "scene_label": "Script", "script": source_text}]
+
+    def _one(target: str) -> dict:
+        if target.strip().lower() == source_lang.lower():
+            return {"language": target, "error": "source and target language are the same"}
+        try:
+            tr = translate(client, target, skeleton, [], "", source_lang,
+                           source_lang=source_lang, model=model, allow_pro=allow_pro,
+                           rules_override=rules_override)
+            scenes = tr.get("scenes", [])
+            roman = "\n\n".join((s.get("script_roman") or "").strip() for s in scenes).strip()
+            native = "\n\n".join((s.get("script_native") or "").strip() for s in scenes).strip()
+            return {"language": target, "script_roman": roman, "script_native": native,
+                    "self_critique_fixed": tr.get("self_critique_fixed", "")}
+        except Exception as ex:   # noqa: BLE001
+            return {"language": target, "error": f"{type(ex).__name__}: {str(ex)[:200]}"}
+
+    with _fut.ThreadPoolExecutor(max_workers=min(4, len(targets))) as pool:
+        results = list(pool.map(_one, targets))
+    print(json.dumps({"results": results, "model": model}, ensure_ascii=False))
+    return 0
+
+
 def main() -> int:
+    if "--playground" in sys.argv:   # real-time synchronous Translations-tab path
+        return cmd_playground()
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("ad_id")

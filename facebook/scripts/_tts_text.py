@@ -53,14 +53,17 @@ def parse_turns(script: str) -> list[dict]:
     return out
 
 
-def to_native_script(client, language: str, texts: list[str]) -> list[str]:
-    """Romanized code-mix -> native-script + English code-mix (Gemini Flash). English / empty /
-    no client -> returned unchanged."""
-    if not texts or language.lower() == "english" or client is None:
-        return list(texts)
-    import _flash  # noqa: E402 — analysis/scripts is on sys.path above
-    payload = [{"i": i, "text": t} for i, t in enumerate(texts)]
-    prompt = (
+# The JSON output contract is FIXED (never user-editable) so an edited instruction can't break parsing.
+NATIVE_RETURN_CONTRACT = (
+    'Return ONE JSON object: {"lines":[{"i":<index>,"text":"<native-script line>"}]}'
+)
+
+
+def native_instruction(language: str) -> str:
+    """The default transliteration instruction (romanized -> native script). Exposed so the
+    Translations tab can show it as an editable default; pass language='<your target language>'
+    for a generic, placeholder-friendly version."""
+    return (
         f"You convert romanized {language} ad-script lines into the SAME language written in its "
         f"NATIVE SCRIPT, for a text-to-speech engine.\n\n"
         f"RULES:\n"
@@ -70,12 +73,29 @@ def to_native_script(client, language: str, texts: list[str]) -> list[str]:
         f"'Miss Nova' and proper nouns exactly as written.\n"
         f"- Do NOT add, drop, reorder, or paraphrase words. Exactly one output line per input line, "
         f"same index i.\n"
-        f"- It will be read aloud, so spell native words the natural, correct way.\n\n"
-        f"Return ONE JSON object: {{\"lines\":[{{\"i\":<index>,\"text\":\"<native-script line>\"}}]}}\n\n"
-        f"INPUT LINES:\n{json.dumps(payload, ensure_ascii=False)}"
+        f"- It will be read aloud, so spell native words the natural, correct way."
     )
-    res = _flash.generate_json(client, _flash.DEFAULT_MODEL, prompt,
-                               temperature=0.0, response_schema=NATIVE_SCHEMA)
+
+
+def to_native_script(client, language: str, texts: list[str], *, model: str | None = None,
+                     allow_pro: bool = False, prompt_override: str | None = None) -> list[str]:
+    """Romanized code-mix -> native-script + English code-mix (Gemini Flash by default). English /
+    empty / no client -> returned unchanged. `model`/`allow_pro`/`prompt_override` let the
+    Translations playground drive this with its TTS-section model (e.g. Gemini 2.5 Pro) and an edited
+    instruction; the defaults keep every pipeline caller byte-identical (Flash, stock instruction)."""
+    if not texts or language.lower() == "english" or client is None:
+        return list(texts)
+    import _flash  # noqa: E402 — analysis/scripts is on sys.path above
+    model = model or _flash.DEFAULT_MODEL
+    payload = [{"i": i, "text": t} for i, t in enumerate(texts)]
+    if prompt_override and prompt_override.strip():
+        # Always pin the language so an edited instruction can't lose the target script.
+        instr = f"TARGET LANGUAGE: {language}\n\n{prompt_override.strip()}"
+    else:
+        instr = native_instruction(language)
+    prompt = f"{instr}\n\n{NATIVE_RETURN_CONTRACT}\n\nINPUT LINES:\n{json.dumps(payload, ensure_ascii=False)}"
+    res = _flash.generate_json(client, model, prompt, temperature=0.0,
+                               response_schema=NATIVE_SCHEMA, allow_pro=allow_pro)
     by_i = {ln.get("i"): ln.get("text", "") for ln in res.get("lines", [])}
     return [by_i.get(i) or texts[i] for i in range(len(texts))]
 
