@@ -379,10 +379,13 @@ def cmd_tts(ad_id, competitor, languages, source_mode, dry_run, regenerate) -> i
     return 0 if all(not r.get("error") for r in results) else 1
 
 
-def cmd_list_voices(provider: str, language: str | None) -> int:
+def cmd_list_voices(provider: str, language: str | None, as_json: bool = False) -> int:
     env = load_env()
     prov = tts.get_provider(provider, env)
     voices = prov.list_voices(language)
+    if as_json:   # for the Translations tab voice picker
+        print(json.dumps({"provider": provider, "voices": voices}, ensure_ascii=False))
+        return 0
     print(f"{provider} voices" + (f" (filtered: {language})" if language else "") + f" — {len(voices)}")
     for v in voices[:300]:
         print(f"  {v.get('voice_id', ''):<40} {str(v.get('name', '')):<28} "
@@ -444,43 +447,84 @@ def cmd_playground_native() -> int:
 
 
 def cmd_playground_synth(out_path: str) -> int:
-    """Real-time TTS synth for the "Translations" playground tab. Reads {"language", "text"
-    (native script), "voice_id"?} from stdin, writes an mp3 to --out, prints {"ok", ...} to stdout.
-    No ad/characters — uses the registry's universal `narrator` voice unless a voice_id is given."""
+    """Real-time TTS synth for the "Translations" playground tab. Reads from stdin:
+        {"language", "text" (native script), "voice_id"?, "voices"?}
+    where `voices` = {character_name: {"provider", "voice_id"}} for per-character casting.
+    Writes an mp3 to --out, prints {"ok", ...} to stdout. With a `voices` map and labelled
+    'Name says:' lines, each turn is voiced by its character's voice and stitched together;
+    otherwise the whole block is read by the registry `narrator` (or a single `voice_id`)."""
     req = json.loads(sys.stdin.read() or "{}")
     language = (req.get("language") or "English").strip()
     text = req.get("text") or ""
     voice_id = (req.get("voice_id") or "").strip()
+    voices_map = {str(k).lower(): v for k, v in (req.get("voices") or {}).items()
+                  if isinstance(v, dict) and v.get("voice_id")}
     if not text.strip():
         print(json.dumps({"ok": False, "error": "text is empty"}))
         return 1
-    # strip 'Name says:' labels + [cue] brackets so the voice reads only spoken dialogue
-    turns = ttx.parse_turns(text)
-    speak = "\n".join(t["text"] for t in turns) if turns else BRACKET_RE.sub("", text).strip()
-    speak = speak or text.strip()
     env = load_env()
     reg = load_registry()
-    catalog = voice_catalog(reg)
-    voice = catalog.get(voice_id) if voice_id else None
-    if not voice:
-        voice = resolve_voice(reg, language, "narrator")
-    if not voice or not voice.get("configured"):
-        print(json.dumps({"ok": False,
-                          "error": f"no configured voice for {language} (narrator slot)"}))
-        return 1
+    op = pathlib.Path(out_path)
+    op.parent.mkdir(parents=True, exist_ok=True)
+    turns = ttx.parse_turns(text)   # [{speaker, text}] — empty if no 'Name says:' labels
+
+    def _voice_for(spec: dict) -> dict:
+        """A {provider, voice_id} pick from the UI -> a synth-ready voice (registry provider defaults)."""
+        prov = (spec.get("provider") or "cartesia").lower()
+        pdef = (reg.get("providers") or {}).get(prov, {})
+        return {"provider": prov, "voice_id": spec["voice_id"],
+                "model": pdef.get("model") or tts.DEFAULT_MODELS.get(prov),
+                "settings": pdef.get("settings") or {}}
+
     try:
+        if voices_map and turns:
+            # per-character casting: voice each turn with its mapped voice (narrator fallback), stitch
+            import shutil
+            import tempfile
+            narrator = resolve_voice(reg, language, "narrator")
+            tmp = pathlib.Path(tempfile.mkdtemp(prefix="pg_synth_"))
+            clips, used = [], set()
+            try:
+                for i, t in enumerate(turns):
+                    spec = voices_map.get(t["speaker"].lower())
+                    v = _voice_for(spec) if spec else narrator
+                    if not v or not v.get("voice_id"):
+                        raise tts.TTSConfigError(
+                            f"no voice for '{t['speaker']}' and no narrator default for {language}")
+                    provider = tts.get_provider(v["provider"], env)
+                    audio = provider.synth(t["text"], v["voice_id"], model=v.get("model"),
+                                           language=language, settings=v.get("settings") or {})
+                    clip = tmp / f"line_{i:03d}.mp3"
+                    clip.write_bytes(audio)
+                    clips.append(clip)
+                    used.add(f"{v['provider']}:{v['voice_id']}")
+                _stitch(clips, op)
+            finally:
+                shutil.rmtree(tmp, ignore_errors=True)
+            print(json.dumps({"ok": True, "voices": sorted(used), "lines": len(clips)}))
+            return 0
+
+        # single-voice path (default narrator, or one chosen voice_id) — reads the whole block
+        catalog = voice_catalog(reg)
+        voice = catalog.get(voice_id) if voice_id else None
+        if not voice:
+            voice = resolve_voice(reg, language, "narrator")
+        if not voice or not voice.get("configured"):
+            print(json.dumps({"ok": False,
+                              "error": f"no configured voice for {language} (narrator slot)"}))
+            return 1
+        speak = "\n".join(t["text"] for t in turns) if turns else BRACKET_RE.sub("", text).strip()
+        speak = speak or text.strip()
         provider = tts.get_provider(voice["provider"], env)
         audio = provider.synth(speak, voice["voice_id"], model=voice["model"],
                                language=language, settings=voice["settings"])
+        op.write_bytes(audio)
+        print(json.dumps({"ok": True, "provider": voice.get("provider"),
+                          "voice_id": voice.get("voice_id"), "bytes": len(audio)}))
+        return 0
     except (tts.TTSConfigError, tts.TTSError) as ex:
         print(json.dumps({"ok": False, "error": f"{type(ex).__name__}: {str(ex)[:200]}"}))
         return 1
-    op = pathlib.Path(out_path)
-    op.parent.mkdir(parents=True, exist_ok=True)
-    op.write_bytes(audio)
-    print(json.dumps({"ok": True, "provider": voice.get("provider"),
-                      "voice_id": voice.get("voice_id"), "bytes": len(audio)}))
-    return 0
 
 
 def main() -> int:
@@ -501,6 +545,7 @@ def main() -> int:
     ap.add_argument("--out", help="output mp3 path for --playground-synth")
     ap.add_argument("--provider", choices=["elevenlabs", "cartesia"])
     ap.add_argument("--language", help="filter for --list-voices / target for --setup")
+    ap.add_argument("--json", action="store_true", help="JSON output for --list-voices")
     args = ap.parse_args()
 
     if args.playground_native:
@@ -513,7 +558,7 @@ def main() -> int:
     if args.list_voices:
         if not args.provider:
             sys.exit("[error] --list-voices needs --provider elevenlabs|cartesia")
-        return cmd_list_voices(args.provider, args.language)
+        return cmd_list_voices(args.provider, args.language, as_json=args.json)
 
     if args.setup:
         if not args.ad_id or not args.language:

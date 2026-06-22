@@ -5,6 +5,8 @@ import {
   translateScript,
   transliterateNative,
   synthTts,
+  listTranslateVoices,
+  type ProviderVoice,
   TRANSLATE_SOURCE_LANGUAGES,
   TRANSLATE_TARGET_LANGUAGES,
   TRANSLATE_MODELS,
@@ -21,6 +23,9 @@ type Card = {
   nativeLoading: boolean
   ttsLoading: boolean
   error: string
+  castOpen: boolean
+  provider: string
+  voicePick: Record<string, string> // character -> voice_id
 }
 const blankCard = (): Card => ({
   roman: '',
@@ -30,10 +35,30 @@ const blankCard = (): Card => ({
   nativeLoading: false,
   ttsLoading: false,
   error: '',
+  castOpen: false,
+  provider: 'cartesia',
+  voicePick: {},
 })
 
 const errText = (e: unknown) =>
   e instanceof ApiError ? e.detail : (e as Error)?.message || 'Something went wrong'
+
+/** Distinct 'Name says:' speakers, in first-seen order. */
+function parseChars(text: string): string[] {
+  const seen = new Set<string>()
+  const out: string[] = []
+  for (const line of (text || '').split('\n')) {
+    const m = line.match(/^\s*(.+?)\s+says:/i)
+    if (m) {
+      const n = m[1].trim()
+      if (n && !seen.has(n.toLowerCase())) {
+        seen.add(n.toLowerCase())
+        out.push(n)
+      }
+    }
+  }
+  return out
+}
 
 const INPUT =
   'w-full resize-y rounded-lg border border-white/10 bg-zinc-950/60 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-violet-500/50 focus:outline-none'
@@ -129,6 +154,92 @@ function CopyButton({ text, disabled }: { text: string; disabled?: boolean }) {
   )
 }
 
+/** Per-character voice casting: pick a provider, then a voice for each character.
+ *  Voices are fetched per (provider, language). Cartesia covers a subset of languages
+ *  (its model errors on unsupported ones); ElevenLabs is the multilingual fallback. */
+function VoiceCast({
+  language,
+  characters,
+  provider,
+  picks,
+  onProviderChange,
+  onPick,
+}: {
+  language: string
+  characters: string[]
+  provider: string
+  picks: Record<string, string>
+  onProviderChange: (p: string) => void
+  onPick: (character: string, voiceId: string) => void
+}) {
+  const [voices, setVoices] = useState<ProviderVoice[]>([])
+  const [err, setErr] = useState('')
+  const [loadedFor, setLoadedFor] = useState('')
+  const key = `${provider}|${language}`
+  const loading = loadedFor !== key // derived — avoids setState in the effect body
+
+  useEffect(() => {
+    let live = true
+    listTranslateVoices(provider, language)
+      .then((r) => {
+        if (live) {
+          setVoices(r.voices)
+          setErr('')
+        }
+      })
+      .catch((e) => {
+        if (live) setErr(e instanceof ApiError ? e.detail : 'Could not load voices')
+      })
+      .finally(() => {
+        if (live) setLoadedFor(`${provider}|${language}`)
+      })
+    return () => {
+      live = false
+    }
+  }, [provider, language])
+
+  return (
+    <div className="mt-2 space-y-2 rounded-lg border border-white/10 bg-zinc-950/40 p-3">
+      <div className="flex items-center gap-2">
+        <span className="text-[11px] font-medium uppercase tracking-wide text-zinc-500">Provider</span>
+        <select className={SELECT} value={provider} onChange={(e) => onProviderChange(e.target.value)}>
+          <option value="cartesia">Cartesia</option>
+          <option value="elevenlabs">ElevenLabs</option>
+        </select>
+        {loading && <Spinner className="h-3.5 w-3.5" />}
+        <span className="text-[11px] text-zinc-600">{voices.length} voices</span>
+      </div>
+      {!loading && err && <div className="text-[11px] text-amber-300">{err}</div>}
+      {characters.length ? (
+        characters.map((ch) => (
+          <div key={ch} className="flex items-center gap-2">
+            <span className="w-24 shrink-0 truncate text-xs text-zinc-300" title={ch}>
+              {ch}
+            </span>
+            <select
+              className={`${SELECT} min-w-0 flex-1`}
+              value={picks[ch] || ''}
+              onChange={(e) => onPick(ch, e.target.value)}
+            >
+              <option value="">— default (narrator) —</option>
+              {voices.map((v) => (
+                <option key={v.voice_id} value={v.voice_id}>
+                  {v.name || v.voice_id}
+                  {v.gender ? ` (${v.gender})` : ''}
+                </option>
+              ))}
+            </select>
+          </div>
+        ))
+      ) : (
+        <div className="text-[11px] text-zinc-500">
+          No named characters in this script — the whole block uses one voice.
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Translations() {
   const [sourceText, setSourceText] = useState('')
   const [sourceLang, setSourceLang] = useState<string>('English')
@@ -215,9 +326,20 @@ export default function Translations() {
   }
 
   const playTts = async (lang: string) => {
+    const c = results[lang]
     patch(lang, { ttsLoading: true, error: '' })
+    // build the per-character voice map from the cast picks (chars from the romanized labels)
+    const voices: Record<string, { provider: string; voice_id: string }> = {}
+    for (const ch of parseChars(c.roman || c.native)) {
+      const vid = c.voicePick[ch]
+      if (vid) voices[ch] = { provider: c.provider, voice_id: vid }
+    }
     try {
-      const r = await synthTts({ language: lang, text: results[lang].native })
+      const r = await synthTts({
+        language: lang,
+        text: c.native,
+        voices: Object.keys(voices).length ? voices : undefined,
+      })
       patch(lang, { audioUrl: r.audio_url, ttsLoading: false })
     } catch (e) {
       patch(lang, { ttsLoading: false, error: errText(e) })
@@ -438,6 +560,27 @@ export default function Translations() {
                           <span className="rounded-full border border-amber-400/30 bg-amber-500/10 px-2 py-0.5 text-[11px] text-amber-200">
                             Romanized edited — update native
                           </span>
+                        )}
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          onClick={() => patch(lang, { castOpen: !c.castOpen })}
+                          className="text-[11px] text-zinc-400 hover:text-zinc-200"
+                        >
+                          🎙 Cast voices {c.castOpen ? '▴' : '▾'}
+                        </button>
+                        {c.castOpen && (
+                          <VoiceCast
+                            language={lang}
+                            characters={parseChars(c.roman || c.native)}
+                            provider={c.provider}
+                            picks={c.voicePick}
+                            onProviderChange={(p) => patch(lang, { provider: p, voicePick: {} })}
+                            onPick={(ch, vid) =>
+                              patch(lang, { voicePick: { ...c.voicePick, [ch]: vid } })
+                            }
+                          />
                         )}
                       </div>
                       {c.audioUrl && (
