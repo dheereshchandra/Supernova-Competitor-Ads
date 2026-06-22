@@ -47,7 +47,8 @@ class _Provider:
         self.env = env
 
     def synth(self, text: str, voice_id: str, *, model=None, language=None,
-              settings=None) -> bytes:
+              settings=None, speed=None, emotion=None) -> bytes:
+        # speed/emotion are Cartesia sonic-3 controls; providers that don't support them ignore them.
         raise NotImplementedError
 
     def list_voices(self, language: str | None = None) -> list[dict]:
@@ -66,7 +67,9 @@ class ElevenLabsProvider(_Provider):
             raise TTSConfigError("ELEVENLABS_API_KEY missing in .env")
         return {"xi-api-key": self.api_key}
 
-    def synth(self, text, voice_id, *, model=None, language=None, settings=None) -> bytes:
+    def synth(self, text, voice_id, *, model=None, language=None, settings=None,
+              speed=None, emotion=None) -> bytes:
+        # eleven_multilingual_v2 has no speed/emotion controls — silently ignored (Cartesia-only).
         model = model or DEFAULT_MODELS["elevenlabs"]
         body = {"text": text, "model_id": model}
         settings = settings or {}
@@ -123,7 +126,14 @@ class CartesiaProvider(_Provider):
             raise TTSConfigError("CARTESIA_API_KEY missing in .env")
         return {"X-API-Key": self.api_key, "Cartesia-Version": self.version}
 
-    def synth(self, text, voice_id, *, model=None, language=None, settings=None) -> bytes:
+    # sonic-3 delivery controls go in `generation_config` (verified live: the old
+    # `__experimental_controls` is a near-no-op on sonic-3 — slowest/fastest barely move; the
+    # generation_config knobs have the real effect). speed is a numeric multiplier in [0.6, 1.5].
+    SPEED_MAP = {"slowest": 0.6, "slow": 0.8, "normal": 1.0, "fast": 1.2, "fastest": 1.5}
+    EMOTIONS = ("happy", "excited", "calm", "curious", "surprised", "sad", "angry")
+
+    def synth(self, text, voice_id, *, model=None, language=None, settings=None,
+              speed=None, emotion=None) -> bytes:
         model = model or DEFAULT_MODELS["cartesia"]
         # Fail loudly on a language Cartesia can't synthesize (e.g. Assamese) instead of silently
         # dropping the language field and producing wrong-language/auto-detected audio.
@@ -131,12 +141,21 @@ class CartesiaProvider(_Provider):
             raise TTSConfigError(
                 f"Cartesia cannot synthesize '{language}' (no language code / voices) — "
                 f"use ElevenLabs for this language.")
+        gen = {}
+        if speed:
+            n = self.SPEED_MAP.get(speed)
+            if n and n != 1.0:
+                gen["speed"] = n
+        if emotion:
+            gen["emotion"] = emotion[0] if isinstance(emotion, (list, tuple)) else emotion
         body = {
             "model_id": model,
             "transcript": text,
             "voice": {"mode": "id", "id": voice_id},
             "output_format": {"container": "mp3", "sample_rate": 44100, "bit_rate": 128000},
         }
+        if gen:
+            body["generation_config"] = gen
         code = self.LANG_CODES.get(language or "")
         if code:
             body["language"] = code

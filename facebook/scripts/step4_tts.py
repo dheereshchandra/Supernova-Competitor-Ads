@@ -58,6 +58,24 @@ SUPPORTED_LANGUAGES = ["English", "Hindi", "Telugu", "Tamil", "Marathi", "Kannad
 
 LINE_RE = re.compile(r"^\s*(.+?)\s+says:\s*(.*)$", re.IGNORECASE)
 BRACKET_RE = re.compile(r"\[[^\]]*\]")  # strip [English translation] / [SFX] cues before synth
+
+# Playground-only speaker-label detection. Handles "Name says: ..." (any case) AND "Name: ..."
+# (Title-Case / CAPS name only — so a mid-sentence colon like "I said: stop" is NOT a label).
+# Production stays on LINE_RE ("Name says:" only); this only affects the Translations tab.
+_PG_SAYS_RE = re.compile(r"^(.{1,40}?)\s+says\s*:\s*(.+)$", re.IGNORECASE)
+_PG_COLON_RE = re.compile(r"^\*{0,2}\s*([A-Z][\w.'\-]*(?:\s+[A-Z][\w.'\-]*){0,3})\*{0,2}\s*:\s*(.+)$")
+# A line that is ONLY a speaker label with no inline dialogue ("Robot says:" / "Priya:") — a
+# production cue, never voiced.
+_PG_LABEL_ONLY_RE = re.compile(r"^\*{0,2}\s*[\w.'\- ]{1,40}?\s*\*{0,2}\s*:\s*\*{0,2}\s*$", re.IGNORECASE)
+
+
+def _split_label(line: str) -> tuple[str | None, str]:
+    """(speaker, dialogue) if the line opens with a speaker label, else (None, original line)."""
+    s = line.strip()
+    m = _PG_SAYS_RE.match(s) or _PG_COLON_RE.match(s)
+    if m:
+        return m.group(1).strip().strip("*").strip(), m.group(2).strip()
+    return None, line
 AI_TEACHER_RE = re.compile(r"miss\s*nova|\b(a\.?i\.?|robot|avatar|assistant|tutor|bot|hologram|virtual)\b", re.I)
 NARRATOR_RE = re.compile(r"\b(narrator|voice\s*-?\s*over|voiceover|\bvo\b)\b", re.I)
 FEMALE_RE = re.compile(r"\b(female|woman|women|girl|lady|mother|mom|mum|aunt|sister|daughter|wife|grandmother|she|her)\b", re.I)
@@ -421,8 +439,10 @@ def cmd_setup(ad_id: str, competitor: str, language: str) -> int:
 
 def cmd_playground_native() -> int:
     """Real-time native-script transliteration for the "Translations" playground tab. Reads
-    {"language", "roman", "model"?} from stdin, prints {"native"} to stdout. Transliterates the
-    (editable) romanized block line-by-line so the native column stays word-for-word identical.
+    {"language", "roman", "model"?, "prompt_override"?} from stdin, prints {"native"}.
+    The "Name says:" label is a production cue (never voiced), so it is STRIPPED here — the native
+    TTS script is a clean continuous flow of the spoken sentences, kept line-aligned to the romanized
+    block (one line per turn) so speakers map back positionally at synth time.
     SYNCHRONOUS — NOT the job queue, NOT the Gemini Batch API."""
     req = json.loads(sys.stdin.read() or "{}")
     language = (req.get("language") or "").strip()
@@ -431,61 +451,92 @@ def cmd_playground_native() -> int:
     prompt_override = req.get("prompt_override") or None
     if not language or not roman.strip():
         print(json.dumps({"native": roman}, ensure_ascii=False))
-        return 1
+        return 0
     allow_pro = "pro" in model.lower()
     env = load_env()
     client = _flash.get_client(env)
-    # Transliterate only the DIALOGUE — keep any leading "Name says:" label verbatim in Latin so the
-    # native block stays line-aligned with the romanized one AND per-character voice casting can match
-    # speakers (the cast keys are the romanized Latin names). Mirrors the production pipeline, which
-    # parses speakers off the roman script and only transliterates the spoken text (step4_tts tts_one).
     lines = roman.split("\n")
-    prefixes: dict[int, str] = {}
-    payloads, payload_idx = [], []
+    # if the script has ANY speaker labels, unlabelled lines are stage directions / scene headings —
+    # not voiced (mirrors the production parse_turns "dialogue-only" contract).
+    has_labels = any(_split_label(ln)[0] for ln in lines if ln.strip())
+    payloads, idx = [], []
     for i, ln in enumerate(lines):
-        if not ln.strip():
+        s = ln.strip()
+        if not s or _PG_LABEL_ONLY_RE.match(s):     # blank or a bare "Name:" cue line -> not voiced
             continue
-        m = LINE_RE.match(ln)
-        if m:
-            prefixes[i] = ln[:m.start(2)]   # everything up to the dialogue, e.g. "Robot says: "
-            payloads.append(m.group(2))
-        else:
-            prefixes[i] = ""
-            payloads.append(ln)
-        payload_idx.append(i)
+        spk, dialogue = _split_label(ln)            # strip "Name:" / "Name says:" label if present
+        if has_labels and not spk:                  # a stage direction inside a labelled script
+            continue
+        dialogue = BRACKET_RE.sub("", dialogue).strip()   # drop [SFX]/[music only] cues
+        if not dialogue:
+            continue
+        payloads.append(dialogue)
+        idx.append(i)
     converted = ttx.to_native_script(client, language, payloads,
                                      model=model, allow_pro=allow_pro,
                                      prompt_override=prompt_override)
-    for i, txt in zip(payload_idx, converted):
-        lines[i] = prefixes[i] + txt
-    print(json.dumps({"native": "\n".join(lines)}, ensure_ascii=False))
+    out = [""] * len(lines)                         # blank for cues/labels/non-dialogue lines
+    for i, txt in zip(idx, converted):
+        out[i] = txt                                # label-free native sentence, aligned to its roman line
+    print(json.dumps({"native": "\n".join(out)}, ensure_ascii=False))
     return 0
+
+
+def _playground_turns(roman: str, native: str) -> tuple[list, bool]:
+    """Pair each native sentence with its speaker. The native block is label-free by construction;
+    its text is taken VERBATIM (NEVER re-parsed for labels — that would drop legitimate leading words
+    like 'Supernova AI:'); speakers come only from the romanized labels, aligned by line position.
+    Returns (turns, aligned). On a line-count mismatch (a manual native edit) it falls back to a
+    continuous read with no speaker — deterministic, never guesses."""
+    nlines = native.split("\n")
+    rlines = roman.split("\n")
+    aligned = bool(roman.strip()) and len(rlines) == len(nlines)
+    has_labels = aligned and any(_split_label(r)[0] for r in rlines if r.strip())
+    turns = []
+    if aligned:
+        for r, n in zip(rlines, nlines):
+            text = BRACKET_RE.sub("", n).strip()    # native verbatim (minus bracket cues)
+            if not text:
+                continue
+            speaker, _ = _split_label(r)            # speaker from the romanized label only
+            if has_labels and not speaker:          # unlabelled line in a labelled script -> not voiced
+                continue
+            turns.append({"speaker": speaker or "", "text": text})
+    else:
+        for n in nlines:
+            text = BRACKET_RE.sub("", n).strip()
+            if text:
+                turns.append({"speaker": "", "text": text})
+    return turns, aligned
 
 
 def cmd_playground_synth(out_path: str) -> int:
     """Real-time TTS synth for the "Translations" playground tab. Reads from stdin:
-        {"language", "text" (native script), "voice_id"?, "voices"?}
-    where `voices` = {character_name: {"provider", "voice_id"}} for per-character casting.
-    Writes an mp3 to --out, prints {"ok", ...} to stdout. With a `voices` map and labelled
-    'Name says:' lines, each turn is voiced by its character's voice and stitched together;
-    otherwise the whole block is read by the registry `narrator` (or a single `voice_id`)."""
+        {"language", "native" (label-free TTS script), "roman"? (for per-character mapping),
+         "voices"? {character: {provider, voice_id}}, "voice_id"?, "speed"?, "emotion"? [..]}
+    Writes an mp3 to --out, prints {"ok", ...}. With a voices map, each sentence is voiced by its
+    character's voice and stitched into one continuous track (no labels are ever spoken); otherwise
+    the whole block is read by one voice. speed/emotion are Cartesia sonic-3 controls (ignored by
+    ElevenLabs)."""
     req = json.loads(sys.stdin.read() or "{}")
     language = (req.get("language") or "English").strip()
-    text = req.get("text") or ""
+    native = req.get("native") or req.get("text") or ""
+    roman = req.get("roman") or ""
     voice_id = (req.get("voice_id") or "").strip()
     voices_map = {str(k).lower(): v for k, v in (req.get("voices") or {}).items()
                   if isinstance(v, dict) and v.get("voice_id")}
-    if not text.strip():
+    speed = (req.get("speed") or "").strip() or None
+    emotion = req.get("emotion") or None
+    if not native.strip():
         print(json.dumps({"ok": False, "error": "text is empty"}))
         return 1
     env = load_env()
     reg = load_registry()
     op = pathlib.Path(out_path)
     op.parent.mkdir(parents=True, exist_ok=True)
-    turns = ttx.parse_turns(text)   # [{speaker, text}] — empty if no 'Name says:' labels
+    turns, aligned = _playground_turns(roman, native)
 
     def _voice_for(spec: dict) -> dict:
-        """A {provider, voice_id} pick from the UI -> a synth-ready voice (registry provider defaults)."""
         prov = (spec.get("provider") or "cartesia").lower()
         pdef = (reg.get("providers") or {}).get(prov, {})
         return {"provider": prov, "voice_id": spec["voice_id"],
@@ -494,25 +545,25 @@ def cmd_playground_synth(out_path: str) -> int:
 
     MAX_TURNS = 100   # bound per-turn provider calls (an ad script is short; abuse/spend guard)
     if len(turns) > MAX_TURNS:
-        print(json.dumps({"ok": False,
-                          "error": f"too many speaker turns ({len(turns)} > {MAX_TURNS})"}))
+        print(json.dumps({"ok": False, "error": f"too many turns ({len(turns)} > {MAX_TURNS})"}))
         return 1
 
+    warnings = []
     try:
         if voices_map and turns:
-            # per-character casting: voice each turn with its mapped voice (narrator fallback), stitch
+            # per-character casting: voice each sentence with its mapped voice (narrator fallback), stitch
             import shutil
             import tempfile
             narrator = resolve_voice(reg, language, "narrator")
             tmp = pathlib.Path(tempfile.mkdtemp(prefix="pg_synth_"))
-            clips, used, matched_keys = [], set(), set()
+            clips, used, matched = [], set(), set()
             try:
                 for i, t in enumerate(turns):
                     key = t["speaker"].lower()
-                    spec = voices_map.get(key)
+                    spec = voices_map.get(key) if key else None
                     if spec:
                         v = _voice_for(spec)
-                        matched_keys.add(key)
+                        matched.add(key)
                     else:
                         v = narrator
                         if not v or not v.get("configured"):
@@ -521,7 +572,8 @@ def cmd_playground_synth(out_path: str) -> int:
                         raise tts.TTSConfigError(f"no voice for '{t['speaker']}' in {language}")
                     provider = tts.get_provider(v["provider"], env)
                     audio = provider.synth(t["text"], v["voice_id"], model=v.get("model"),
-                                           language=language, settings=v.get("settings") or {})
+                                           language=language, settings=v.get("settings") or {},
+                                           speed=speed, emotion=emotion)
                     clip = tmp / f"line_{i:03d}.mp3"
                     clip.write_bytes(audio)
                     clips.append(clip)
@@ -529,17 +581,21 @@ def cmd_playground_synth(out_path: str) -> int:
                 _stitch(clips, op)
             finally:
                 shutil.rmtree(tmp, ignore_errors=True)
+            if not aligned:
+                warnings.append("Native edits changed the line structure — voices couldn't be mapped "
+                                "to speakers; narrator used. Re-run Update native to restore casting.")
+            else:
+                unmatched = [k for k in voices_map if k not in matched]
+                if unmatched:
+                    warnings.append("Cast voices not applied (no matching speaker): "
+                                    + ", ".join(sorted(unmatched)))
             out = {"ok": True, "voices": sorted(used), "lines": len(clips)}
-            # surface cast picks that never bound to a turn (e.g. a label the user mistyped) so the
-            # narrator fallback can't silently swallow a chosen voice
-            unmatched = [k for k in voices_map if k not in matched_keys]
-            if unmatched:
-                out["warning"] = ("These cast voices weren't applied (no matching speaker): "
-                                  + ", ".join(sorted(unmatched)))
+            if warnings:
+                out["warning"] = " ".join(warnings)
             print(json.dumps(out, ensure_ascii=False))
             return 0
 
-        # single-voice path (default narrator, or one chosen voice_id) — reads the whole block
+        # single-voice path: one voice reads the whole (label-free) block
         catalog = voice_catalog(reg)
         voice = catalog.get(voice_id) if voice_id else None
         if not voice:
@@ -548,11 +604,12 @@ def cmd_playground_synth(out_path: str) -> int:
             print(json.dumps({"ok": False,
                               "error": f"no configured voice for {language} (narrator slot)"}))
             return 1
-        speak = "\n".join(t["text"] for t in turns) if turns else BRACKET_RE.sub("", text).strip()
-        speak = speak or text.strip()
+        speak = "\n".join(t["text"] for t in turns) if turns else BRACKET_RE.sub("", native).strip()
+        speak = speak or native.strip()
         provider = tts.get_provider(voice["provider"], env)
         audio = provider.synth(speak, voice["voice_id"], model=voice["model"],
-                               language=language, settings=voice["settings"])
+                               language=language, settings=voice["settings"],
+                               speed=speed, emotion=emotion)
         op.write_bytes(audio)
         print(json.dumps({"ok": True, "provider": voice.get("provider"),
                           "voice_id": voice.get("voice_id"), "bytes": len(audio)}))

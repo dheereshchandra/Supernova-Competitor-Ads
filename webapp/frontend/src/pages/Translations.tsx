@@ -10,6 +10,8 @@ import {
   TRANSLATE_SOURCE_LANGUAGES,
   TRANSLATE_TARGET_LANGUAGES,
   TRANSLATE_MODELS,
+  TTS_SPEEDS,
+  TTS_EMOTIONS,
   SCRIPT_DEFAULT_MODEL,
   TTS_DEFAULT_MODEL,
 } from '../api'
@@ -27,6 +29,8 @@ type Card = {
   castOpen: boolean
   provider: string
   voicePick: Record<string, string> // character -> voice_id
+  speed: string
+  emotion: string
 }
 const blankCard = (): Card => ({
   roman: '',
@@ -40,18 +44,25 @@ const blankCard = (): Card => ({
   castOpen: false,
   provider: 'cartesia',
   voicePick: {},
+  speed: 'normal',
+  emotion: '',
 })
 
 const errText = (e: unknown) =>
   e instanceof ApiError ? e.detail : (e as Error)?.message || 'Something went wrong'
 
-/** Distinct 'Name says:' speakers, in first-seen order. Normalized to match the backend's
- *  parse_turns (which does .strip('*')), so cast keys bind the same way on both sides. */
+/** Distinct speaker names, in first-seen order. Mirrors the backend _split_label: matches
+ *  'Name says: ...' (any case) and 'Name: ...' (Title-Case/CAPS only, so a mid-sentence colon
+ *  isn't a label), normalized (strip '*') so cast keys bind identically on both sides. */
 function parseChars(text: string): string[] {
   const seen = new Set<string>()
   const out: string[] = []
   for (const line of (text || '').split('\n')) {
-    const m = line.match(/^\s*(.+?)\s+says:/i)
+    const s = line.trim()
+    const m =
+      s.match(/^(.{1,40}?)\s+says\s*:\s*.+$/i) ||
+      // Unicode-aware (matches Python's Unicode \w) so accented names like "José:" bind on both sides
+      s.match(/^\*{0,2}\s*(\p{Lu}[\p{L}\p{N}.'-]*(?:\s+\p{Lu}[\p{L}\p{N}.'-]*){0,3})\*{0,2}\s*:\s*.+$/u)
     if (m) {
       const n = m[1].trim().replace(/^\*+|\*+$/g, '').trim()
       if (n && !seen.has(n.toLowerCase())) {
@@ -325,12 +336,27 @@ export default function Translations() {
         next[res.language] = {
           ...blankCard(),
           roman: res.script_roman ?? '',
-          native: res.script_native ?? '',
+          native: '', // derived below — the LLM's script_native may not be line-aligned to roman,
+          nativeLoading: !res.error && !!res.script_roman, // which would break per-character casting
           error: res.error ?? '',
         }
       }
       setResults(next)
       if (r.error) setGenError(r.error)
+      // Derive a clean, label-free, line-aligned native per language (guarantees the per-character
+      // voice mapping lines up; this is the same transliteration "Update native" runs).
+      for (const lang of Object.keys(next)) {
+        const card = next[lang]
+        if (card.error || !card.roman) continue
+        transliterateNative({
+          language: lang,
+          roman: card.roman,
+          model: ttsModel,
+          prompt_override: ttsPrompt ?? undefined,
+        })
+          .then((nr) => patch(lang, { native: nr.native, romanDirty: false, nativeLoading: false }))
+          .catch((e) => patch(lang, { nativeLoading: false, error: errText(e) }))
+      }
     } catch (e) {
       setGenError(errText(e))
       setResults({})
@@ -357,10 +383,10 @@ export default function Translations() {
   const playTts = async (lang: string) => {
     const c = results[lang]
     patch(lang, { ttsLoading: true, error: '', warning: '' })
-    // build the per-character voice map from the cast picks (keys = romanized labels; the backend
-    // keeps those labels Latin in the native text, so they bind there)
+    // cast keys come from the romanized labels; the backend maps them onto the label-free native
+    // sentences by line position
     const voices: Record<string, { provider: string; voice_id: string }> = {}
-    for (const ch of parseChars(c.roman || c.native)) {
+    for (const ch of parseChars(c.roman)) {
       const vid = c.voicePick[ch]
       if (vid) voices[ch] = { provider: c.provider, voice_id: vid }
     }
@@ -368,7 +394,10 @@ export default function Translations() {
       const r = await synthTts({
         language: lang,
         text: c.native,
+        roman: c.roman,
         voices: Object.keys(voices).length ? voices : undefined,
+        speed: c.speed && c.speed !== 'normal' ? c.speed : undefined,
+        emotion: c.emotion || undefined,
       })
       patch(lang, { audioUrl: r.audio_url, ttsLoading: false, warning: r.warning || '' })
     } catch (e) {
@@ -583,6 +612,9 @@ export default function Translations() {
                         rows={6}
                         className={`${INPUT} ${c.romanDirty ? 'opacity-60' : ''}`}
                       />
+                      <div className="text-[10px] text-zinc-600">
+                        Spoken as one continuous flow — speaker labels are stripped, not voiced.
+                      </div>
                       <div className="flex flex-wrap items-center gap-2">
                         <button
                           type="button"
@@ -610,18 +642,47 @@ export default function Translations() {
                       {c.warning && (
                         <div className="text-[11px] text-amber-300">{c.warning}</div>
                       )}
+                      {/* delivery controls (Cartesia sonic-3; ignored by ElevenLabs) */}
+                      <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                        <span className="text-[11px] text-zinc-500">Speed</span>
+                        <select
+                          className={`${SELECT} py-1 text-xs`}
+                          value={c.speed}
+                          onChange={(e) => patch(lang, { speed: e.target.value })}
+                        >
+                          {TTS_SPEEDS.map((s) => (
+                            <option key={s.id} value={s.id}>
+                              {s.label}
+                            </option>
+                          ))}
+                        </select>
+                        <span className="ml-1 text-[11px] text-zinc-500">Emotion</span>
+                        <select
+                          className={`${SELECT} py-1 text-xs`}
+                          value={c.emotion}
+                          onChange={(e) => patch(lang, { emotion: e.target.value })}
+                        >
+                          {TTS_EMOTIONS.map((em) => (
+                            <option key={em.id} value={em.id}>
+                              {em.label}
+                            </option>
+                          ))}
+                        </select>
+                        <span className="text-[10px] text-zinc-600">Cartesia only</span>
+                      </div>
                       <div>
                         <button
                           type="button"
                           onClick={() => patch(lang, { castOpen: !c.castOpen })}
                           className="text-[11px] text-zinc-400 hover:text-zinc-200"
                         >
-                          🎙 Cast voices {c.castOpen ? '▴' : '▾'}
+                          🎙 Cast voices ({parseChars(c.roman).length} character
+                          {parseChars(c.roman).length === 1 ? '' : 's'}) {c.castOpen ? '▴' : '▾'}
                         </button>
                         {c.castOpen && (
                           <VoiceCast
                             language={lang}
-                            characters={parseChars(c.roman || c.native)}
+                            characters={parseChars(c.roman)}
                             provider={c.provider}
                             picks={c.voicePick}
                             onProviderChange={(p) => patch(lang, { provider: p, voicePick: {} })}

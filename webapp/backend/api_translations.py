@@ -157,12 +157,19 @@ class VoicePick(BaseModel):
     voice_id: str = Field(max_length=80)
 
 
+# Cartesia sonic-3 emotion (generation_config.emotion = a single word). Validate against this set.
+_EMOTIONS = {"happy", "excited", "calm", "curious", "surprised", "sad", "angry"}
+
+
 class TtsBody(BaseModel):
     language: str = Field(min_length=1, max_length=40)
-    text: str = Field(min_length=1, max_length=8_000)
+    text: str = Field(min_length=1, max_length=8_000)          # native (label-free) TTS script
+    roman: str | None = Field(default=None, max_length=8_000)  # romanized labels -> per-character mapping
     voice_id: str | None = Field(default=None, max_length=80)
     # Per-character casting: {character_name: {"provider": "cartesia", "voice_id": "..."}}
     voices: dict[str, VoicePick] | None = Field(default=None, max_length=20)
+    speed: Literal["slowest", "slow", "normal", "fast", "fastest"] | None = None
+    emotion: str | None = Field(default=None, max_length=20)    # one of _EMOTIONS (Cartesia only)
 
 
 # ---------------- endpoints ----------------
@@ -213,9 +220,13 @@ def translate_tts(body: TtsBody, user: str = Depends(require_user)):
     token = secrets.token_hex(16)
     out_path = AUDIO_DIR / f"{token}.mp3"
     res = _run_playground("step4_tts.py", ["--playground-synth", "--out", str(out_path)], {
-        "language": body.language, "text": body.text,
+        "language": body.language,
+        "native": body.text,
+        "roman": body.roman or "",
         "voice_id": body.voice_id or "",
         "voices": {k: v.model_dump() for k, v in (body.voices or {}).items()},
+        "speed": body.speed or "",
+        "emotion": body.emotion if body.emotion in _EMOTIONS else "",
     })
     if not res.get("ok") or not out_path.is_file():
         raise HTTPException(502, f"TTS failed: {res.get('error', 'unknown error')}")
