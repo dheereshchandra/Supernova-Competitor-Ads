@@ -74,6 +74,37 @@
 | Wispr Flow | 2026-06-15 | 7 | 7 | 0 | 0.0 |
 | Wispr Flow | 2026-06-22 | 7 | 0 | 0 | 0.0 |
 
+## By language
+
+| language | ads | winners | win ratio |
+|---|--:|--:|--:|
+| English | 362 | 6 | 0.017 |
+| unknown | 7 | 0 | 0.0 |
+| Hindi | 3 | 0 | 0.0 |
+| Hinglish | 2 | 0 | 0.0 |
+
+## Format mix
+
+| format | ads | winners | win ratio |
+|---|--:|--:|--:|
+| talking-head | 254 | 1 | 0.004 |
+| split-screen | 59 | 1 | 0.017 |
+| skit-narrative | 35 | 0 | 0.0 |
+| app-screencast | 22 | 3 | 0.136 |
+| listicle-montage | 4 | 1 | 0.25 |
+
+## Script replication
+
+How much of the output is fresh scripts vs. replays of a script that already worked (same script translated, or re-shot with new visuals).
+
+| replication | ads | winners | win ratio |
+|---|--:|--:|--:|
+| exact_replica | 156 | 1 | 0.006 |
+| original | 137 | 2 | 0.015 |
+| unique | 57 | 3 | 0.053 |
+| reworded_replica | 18 | 0 | 0.0 |
+| visual_variant | 6 | 0 | 0.0 |
+
 ## Biggest rank movers
 
 | ad_id | scrape | Δ rank | new rank |
