@@ -21,6 +21,36 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-06-23 06:36 IST — facebook / english-seekho — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/english-seekho_2026-06-23_links.json
+
+
+## 2026-06-23 06:31 IST — facebook / duolingo — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/duolingo_2026-06-23_links.json
+
+
+## 2026-06-23 06:27 IST — facebook / loora — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/loora_2026-06-23_links.json
+
+
+## 2026-06-23 06:22 IST — facebook / zinglish — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/zinglish_2026-06-23_links.json
+
+
+## 2026-06-23 06:20 IST — facebook / speakx — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/speakx_2026-06-23_links.json
+
+
+## 2026-06-23 06:13 IST — facebook / mysivi — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/mysivi_2026-06-23_links.json
+
+
 ## 2026-06-22 21:41 IST — facebook / mysivi — operator: Dheeresh (Ad Studio pipeline)
 - data refresh via Ad Studio (stages 1-5)
 - Links manifest: facebook/runs/mysivi_2026-06-22_links.json
