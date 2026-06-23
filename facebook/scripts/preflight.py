@@ -170,25 +170,41 @@ def check_sheets(env: dict) -> tuple[bool, str]:
     except Exception as e:  # noqa: BLE001
         return False, f"sheets client build failed: {e}"
     sidecar = pathlib.Path(__file__).resolve().parents[2] / "tools" / "csv-sync" / "sheet_id.json"
-    try:
-        if sidecar.is_file():
-            sid = json.loads(sidecar.read_text()).get("spreadsheet_id")
-            if sid:
-                m = sheets.spreadsheets().get(spreadsheetId=sid, fields="properties.title").execute()
-                return True, f"sheets ok — '{m.get('properties', {}).get('title', '?')}' reachable"
-        # No spreadsheet yet: probe a bogus id. API enabled → 400/404; API disabled → 403 SERVICE_DISABLED.
-        sheets.spreadsheets().get(spreadsheetId="0", fields="spreadsheetId").execute()
-        return True, "sheets ok (API enabled; no spreadsheet created yet)"
-    except HttpError as e:
-        status = getattr(getattr(e, "resp", None), "status", None)
-        if status in (400, 404):
+    import http.client
+    import socket
+    import ssl
+    import time
+    # A transient network blip on the reachability probe must NOT skip the whole csv-sync run
+    # (this caused the 2026-06-23 11:45 SKIP). Retry the probe a few times; only a real
+    # API-disabled / auth / definitive error fails the check.
+    transient = (TimeoutError, socket.timeout, ssl.SSLError, ConnectionError,
+                 http.client.HTTPException, socket.gaierror, OSError)
+    last_net = None
+    for attempt in range(3):
+        try:
+            if sidecar.is_file():
+                sid = json.loads(sidecar.read_text()).get("spreadsheet_id")
+                if sid:
+                    m = sheets.spreadsheets().get(spreadsheetId=sid, fields="properties.title").execute()
+                    return True, f"sheets ok — '{m.get('properties', {}).get('title', '?')}' reachable"
+            # No spreadsheet yet: probe a bogus id. API enabled → 400/404; API disabled → 403 SERVICE_DISABLED.
+            sheets.spreadsheets().get(spreadsheetId="0", fields="spreadsheetId").execute()
             return True, "sheets ok (API enabled; no spreadsheet created yet)"
-        if status == 403 and "SERVICE_DISABLED" in str(e):
-            return False, ("Google Sheets API is NOT enabled — turn it on at console.cloud.google.com "
-                           "→ APIs & Services → Library → Google Sheets API → Enable.")
-        return False, f"Sheets API probe failed: {e}"
-    except Exception as e:  # noqa: BLE001
-        return False, f"Sheets check failed: {e}"
+        except HttpError as e:
+            status = getattr(getattr(e, "resp", None), "status", None)
+            if status in (400, 404):
+                return True, "sheets ok (API enabled; no spreadsheet created yet)"
+            if status == 403 and "SERVICE_DISABLED" in str(e):
+                return False, ("Google Sheets API is NOT enabled — turn it on at console.cloud.google.com "
+                               "→ APIs & Services → Library → Google Sheets API → Enable.")
+            return False, f"Sheets API probe failed: {e}"
+        except transient as e:
+            last_net = e
+            time.sleep(2 ** attempt)
+            continue
+        except Exception as e:  # noqa: BLE001
+            return False, f"Sheets check failed: {e}"
+    return False, f"Sheets API unreachable after retries (transient network error): {last_net}"
 
 
 def check_layout() -> tuple[bool, str]:
