@@ -76,6 +76,72 @@ def _split_label(line: str) -> tuple[str | None, str]:
     if m:
         return m.group(1).strip().strip("*").strip(), m.group(2).strip()
     return None, line
+
+
+# English verbs use \b word boundaries; the Devanagari forms do NOT (Python's \b doesn't fire between
+# Devanagari letters, so \bकहती है\b never matches — the Hindi speech verbs would be dead otherwise).
+_SPEECH_VERB_RE = re.compile(
+    r"(?:\b(?:says?|said)\b|कहती\s*है|कहते\s*हैं|कहता\s*है|बोलती\s*है|बोलते\s*हैं|बोलता\s*है)",
+    re.IGNORECASE)
+
+
+def _strip_cues(text: str) -> str:
+    """Remove every [..] segment — stage directions, [SFX]/[music only] cues, and the trailing
+    [English translation] aid. Nesting- and unbalanced-aware (an unmatched '[' drops to end of line),
+    so stray '['/']' can never leak into the voiced text. A bracket is never voiced on its own;
+    dialogue embedded in a whole-line bracketed direction is recovered by _extract_bracket_speech."""
+    out, depth = [], 0
+    for ch in text:
+        if ch == "[":
+            depth += 1
+        elif ch == "]":
+            depth = max(0, depth - 1)
+        elif depth == 0:
+            out.append(ch)
+    return "".join(out)
+
+
+def _extract_bracket_speech(text: str) -> str | None:
+    """For a line whose only content is a bracketed direction, recover dialogue introduced by a
+    speech verb — '[Miss Nova looks at the camera and says अगर आप...]' -> 'अगर आप...'. Returns None
+    for a pure stage direction ('[She said nothing]', '[He says hello and waves]'): the dialogue is
+    only honored when a STRONG boundary follows the verb (a colon, an opening quote, or a sentence-
+    initial capital / non-Latin char), so mid-cue verbs don't leak a fragment into the audio."""
+    for m in BRACKET_RE.finditer(text):
+        inner = m.group(0)[1:-1]
+        sm = _SPEECH_VERB_RE.search(inner)
+        if not sm:
+            continue
+        after = inner[sm.end():].lstrip()
+        colon = after[:1] in (":", "-", "–", "—")
+        tail = after.lstrip(":-–— ").strip()
+        if not tail:
+            continue
+        first = tail[0]
+        if colon or first.isupper() or (not first.isascii()) or first in "\"'“‘’":
+            return tail
+    return None
+
+
+def _roman_line(ln: str) -> tuple[str | None, str | None]:
+    """Parse one romanized playground line -> (speaker, spoken_text). spoken_text is None only when
+    NOTHING is voiced: a blank line, a bare 'Name:' label, or a pure cue bracket. The speaker label
+    is stripped FIRST, THEN cue brackets are dropped — so a trailing '[English translation]' (even one
+    containing the word 'say') never leaks. A whole-line bracketed direction that embeds dialogue
+    after a speech verb has that dialogue recovered. Every other line (incl. an unlabelled continuation
+    sentence) is voiced verbatim — nothing real is silently dropped."""
+    s = ln.strip()
+    if not s or _PG_LABEL_ONLY_RE.match(s):
+        return None, None
+    spk, rest = _split_label(ln)
+    if spk and spk.lstrip().startswith("["):    # a leading bracket isn't a speaker label
+        spk, rest = None, ln
+    text = _strip_cues(rest).strip().lstrip("*").strip()   # also drop a stray leading markdown **
+    if not text or _PG_LABEL_ONLY_RE.match(text):
+        # nothing left after dropping cue brackets -> maybe a whole-line "[... says <dialogue>]"
+        d = _extract_bracket_speech(rest)
+        return (spk, d) if d else (None, None)
+    return spk, text
 AI_TEACHER_RE = re.compile(r"miss\s*nova|\b(a\.?i\.?|robot|avatar|assistant|tutor|bot|hologram|virtual)\b", re.I)
 NARRATOR_RE = re.compile(r"\b(narrator|voice\s*-?\s*over|voiceover|\bvo\b)\b", re.I)
 FEMALE_RE = re.compile(r"\b(female|woman|women|girl|lady|mother|mom|mum|aunt|sister|daughter|wife|grandmother|she|her)\b", re.I)
@@ -456,19 +522,13 @@ def cmd_playground_native() -> int:
     env = load_env()
     client = _flash.get_client(env)
     lines = roman.split("\n")
-    # if the script has ANY speaker labels, unlabelled lines are stage directions / scene headings —
-    # not voiced (mirrors the production parse_turns "dialogue-only" contract).
-    has_labels = any(_split_label(ln)[0] for ln in lines if ln.strip())
+    # Drop ONLY cues/labels (a [..] stage direction, the trailing [English translation], or a bare
+    # 'Name:' label); voice every real spoken line incl. unlabelled continuation sentences, so nothing
+    # is silently dropped. Native stays line-aligned to roman (one entry per line, blanks for cues).
     payloads, idx = [], []
     for i, ln in enumerate(lines):
-        s = ln.strip()
-        if not s or _PG_LABEL_ONLY_RE.match(s):     # blank or a bare "Name:" cue line -> not voiced
-            continue
-        spk, dialogue = _split_label(ln)            # strip "Name:" / "Name says:" label if present
-        if has_labels and not spk:                  # a stage direction inside a labelled script
-            continue
-        dialogue = BRACKET_RE.sub("", dialogue).strip()   # drop [SFX]/[music only] cues
-        if not dialogue:
+        _spk, dialogue = _roman_line(ln)
+        if dialogue is None:                        # blank / bare label / pure cue
             continue
         payloads.append(dialogue)
         idx.append(i)
@@ -484,27 +544,28 @@ def cmd_playground_native() -> int:
 
 def _playground_turns(roman: str, native: str) -> tuple[list, bool]:
     """Pair each native sentence with its speaker. The native block is label-free by construction;
-    its text is taken VERBATIM (NEVER re-parsed for labels — that would drop legitimate leading words
-    like 'Supernova AI:'); speakers come only from the romanized labels, aligned by line position.
-    Returns (turns, aligned). On a line-count mismatch (a manual native edit) it falls back to a
-    continuous read with no speaker — deterministic, never guesses."""
+    its text is taken VERBATIM (only stray [cue] brackets are stripped — NEVER re-parsed for labels,
+    which would drop leading words like 'Supernova AI:'). Speakers come from the romanized labels,
+    aligned by line position; an unlabelled continuation line carries forward the previous speaker.
+    Returns (turns, aligned); a line-count mismatch (manual native edit) falls back to a continuous
+    read with no speaker — deterministic, never guesses."""
     nlines = native.split("\n")
     rlines = roman.split("\n")
     aligned = bool(roman.strip()) and len(rlines) == len(nlines)
-    has_labels = aligned and any(_split_label(r)[0] for r in rlines if r.strip())
     turns = []
     if aligned:
+        last_speaker = ""
         for r, n in zip(rlines, nlines):
-            text = BRACKET_RE.sub("", n).strip()    # native verbatim (minus bracket cues)
+            text = _strip_cues(n).strip()           # native verbatim, minus any stray cue bracket
             if not text:
                 continue
-            speaker, _ = _split_label(r)            # speaker from the romanized label only
-            if has_labels and not speaker:          # unlabelled line in a labelled script -> not voiced
-                continue
-            turns.append({"speaker": speaker or "", "text": text})
+            spk, _ = _roman_line(r)                 # speaker from roman (same parse as the native build)
+            if spk:
+                last_speaker = spk
+            turns.append({"speaker": spk or last_speaker, "text": text})
     else:
         for n in nlines:
-            text = BRACKET_RE.sub("", n).strip()
+            text = _strip_cues(n).strip()
             if text:
                 turns.append({"speaker": "", "text": text})
     return turns, aligned
@@ -527,6 +588,7 @@ def cmd_playground_synth(out_path: str) -> int:
                   if isinstance(v, dict) and v.get("voice_id")}
     speed = (req.get("speed") or "").strip() or None
     emotion = req.get("emotion") or None
+    tts_model = (req.get("tts_model") or "").strip()   # Cartesia synth model (sonic-3 / sonic-3.5)
     if not native.strip():
         print(json.dumps({"ok": False, "error": "text is empty"}))
         return 1
@@ -542,6 +604,10 @@ def cmd_playground_synth(out_path: str) -> int:
         return {"provider": prov, "voice_id": spec["voice_id"],
                 "model": pdef.get("model") or tts.DEFAULT_MODELS.get(prov),
                 "settings": pdef.get("settings") or {}}
+
+    def _model_for(v: dict) -> str:
+        # the Cartesia voice model (sonic-3 / sonic-3.5) is user-selectable; ElevenLabs keeps its own
+        return tts_model if (v.get("provider") == "cartesia" and tts_model) else v.get("model")
 
     MAX_TURNS = 100   # bound per-turn provider calls (an ad script is short; abuse/spend guard)
     if len(turns) > MAX_TURNS:
@@ -571,7 +637,7 @@ def cmd_playground_synth(out_path: str) -> int:
                     if not v.get("voice_id"):
                         raise tts.TTSConfigError(f"no voice for '{t['speaker']}' in {language}")
                     provider = tts.get_provider(v["provider"], env)
-                    audio = provider.synth(t["text"], v["voice_id"], model=v.get("model"),
+                    audio = provider.synth(t["text"], v["voice_id"], model=_model_for(v),
                                            language=language, settings=v.get("settings") or {},
                                            speed=speed, emotion=emotion)
                     clip = tmp / f"line_{i:03d}.mp3"
@@ -604,10 +670,10 @@ def cmd_playground_synth(out_path: str) -> int:
             print(json.dumps({"ok": False,
                               "error": f"no configured voice for {language} (narrator slot)"}))
             return 1
-        speak = "\n".join(t["text"] for t in turns) if turns else BRACKET_RE.sub("", native).strip()
+        speak = "\n".join(t["text"] for t in turns) if turns else _strip_cues(native).strip()
         speak = speak or native.strip()
         provider = tts.get_provider(voice["provider"], env)
-        audio = provider.synth(speak, voice["voice_id"], model=voice["model"],
+        audio = provider.synth(speak, voice["voice_id"], model=_model_for(voice),
                                language=language, settings=voice["settings"],
                                speed=speed, emotion=emotion)
         op.write_bytes(audio)

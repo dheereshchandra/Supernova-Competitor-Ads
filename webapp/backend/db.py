@@ -86,6 +86,18 @@ CREATE TABLE IF NOT EXISTS activity (
   detail TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_activity_ad ON activity (pipeline, competitor, ad_id, id);
+
+-- Translations playground history (team-shared; every Generate is saved).
+CREATE TABLE IF NOT EXISTS translations (
+  id              INTEGER PRIMARY KEY AUTOINCREMENT,
+  created_at      TEXT NOT NULL DEFAULT (datetime('now')),
+  who             TEXT,
+  source_language TEXT,
+  source_text     TEXT,
+  target_languages TEXT,   -- json array
+  results         TEXT      -- json {lang: {roman, native}}
+);
+CREATE INDEX IF NOT EXISTS idx_translations_id ON translations (id DESC);
 """
 
 _conn: sqlite3.Connection | None = None

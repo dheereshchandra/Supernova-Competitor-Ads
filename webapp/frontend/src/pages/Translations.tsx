@@ -6,16 +6,22 @@ import {
   transliterateNative,
   synthTts,
   listTranslateVoices,
+  getTranslationHistory,
+  getTranslationHistoryItem,
+  deleteTranslationHistory,
   type ProviderVoice,
+  type TranslationHistoryItem,
   TRANSLATE_SOURCE_LANGUAGES,
   TRANSLATE_TARGET_LANGUAGES,
   TRANSLATE_MODELS,
+  TTS_VOICE_MODELS,
   TTS_SPEEDS,
   TTS_EMOTIONS,
   SCRIPT_DEFAULT_MODEL,
   TTS_DEFAULT_MODEL,
 } from '../api'
 import { Spinner, ErrorNote, EmptyState } from '../components/ui'
+import { friendlyDateTime } from '../format'
 
 type Card = {
   roman: string
@@ -31,6 +37,7 @@ type Card = {
   voicePick: Record<string, string> // character -> voice_id
   speed: string
   emotion: string
+  ttsVoiceModel: string
 }
 const blankCard = (): Card => ({
   roman: '',
@@ -46,6 +53,7 @@ const blankCard = (): Card => ({
   voicePick: {},
   speed: 'normal',
   emotion: '',
+  ttsVoiceModel: 'sonic-3',
 })
 
 const errText = (e: unknown) =>
@@ -298,11 +306,48 @@ export default function Translations() {
   const [generating, setGenerating] = useState(false)
   const [genError, setGenError] = useState('')
 
+  const [history, setHistory] = useState<TranslationHistoryItem[]>([])
+  const loadHistory = () =>
+    getTranslationHistory()
+      .then((r) => setHistory(r.items))
+      .catch(() => {})
+
   useEffect(() => {
     getTranslatePrompts()
       .then(setDefaults)
       .catch(() => setDefaults({ script: '', tts: '' }))
+    loadHistory()
   }, [])
+
+  const loadFromHistory = async (id: number) => {
+    try {
+      const d = await getTranslationHistoryItem(id)
+      setSourceText(d.source_text)
+      setSourceLang(d.source_language)
+      setTargets(new Set(d.target_languages))
+      // load the romanized translations; native is re-derived on "Update native" (label-free, aligned)
+      setResults(
+        Object.fromEntries(
+          d.target_languages
+            .filter((l) => d.results[l])
+            .map((l) => [l, { ...blankCard(), roman: d.results[l].roman, native: '' }]),
+        ),
+      )
+      setGenError('')
+    } catch (e) {
+      setGenError(errText(e))
+    }
+  }
+
+  const removeFromHistory = async (id: number) => {
+    if (!window.confirm('Delete this translation? It is removed for the whole team.')) return
+    setHistory((h) => h.filter((x) => x.id !== id))
+    try {
+      await deleteTranslationHistory(id)
+    } catch {
+      loadHistory() // restore on failure
+    }
+  }
 
   const toggleTarget = (lang: string) =>
     setTargets((prev) => {
@@ -343,6 +388,7 @@ export default function Translations() {
       }
       setResults(next)
       if (r.error) setGenError(r.error)
+      loadHistory() // the backend just saved this run to the team-shared history
       // Derive a clean, label-free, line-aligned native per language (guarantees the per-character
       // voice mapping lines up; this is the same transliteration "Update native" runs).
       for (const lang of Object.keys(next)) {
@@ -398,6 +444,7 @@ export default function Translations() {
         voices: Object.keys(voices).length ? voices : undefined,
         speed: c.speed && c.speed !== 'normal' ? c.speed : undefined,
         emotion: c.emotion || undefined,
+        tts_model: c.ttsVoiceModel || undefined,
       })
       patch(lang, { audioUrl: r.audio_url, ttsLoading: false, warning: r.warning || '' })
     } catch (e) {
@@ -642,9 +689,21 @@ export default function Translations() {
                       {c.warning && (
                         <div className="text-[11px] text-amber-300">{c.warning}</div>
                       )}
-                      {/* delivery controls (Cartesia sonic-3; ignored by ElevenLabs) */}
+                      {/* delivery controls (Cartesia; ignored by ElevenLabs) */}
                       <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                        <span className="text-[11px] text-zinc-500">Speed</span>
+                        <span className="text-[11px] text-zinc-500">Voice model</span>
+                        <select
+                          className={`${SELECT} py-1 text-xs`}
+                          value={c.ttsVoiceModel}
+                          onChange={(e) => patch(lang, { ttsVoiceModel: e.target.value })}
+                        >
+                          {TTS_VOICE_MODELS.map((m) => (
+                            <option key={m.id} value={m.id}>
+                              {m.label}
+                            </option>
+                          ))}
+                        </select>
+                        <span className="ml-1 text-[11px] text-zinc-500">Speed</span>
                         <select
                           className={`${SELECT} py-1 text-xs`}
                           value={c.speed}
@@ -708,6 +767,43 @@ export default function Translations() {
               </div>
             )
           })}
+        </div>
+      )}
+
+      {/* ---- team-shared history ---- */}
+      {history.length > 0 && (
+        <div className="space-y-2">
+          <h2 className="text-sm font-semibold text-zinc-300">
+            History <span className="font-normal text-zinc-600">— saved &amp; shared with the team</span>
+          </h2>
+          <div className="divide-y divide-white/5 overflow-hidden rounded-xl border border-white/10 bg-zinc-900/40">
+            {history.map((h) => (
+              <div key={h.id} className="flex items-start gap-3 px-4 py-2.5 hover:bg-white/5">
+                <button
+                  type="button"
+                  onClick={() => loadFromHistory(h.id)}
+                  className="min-w-0 flex-1 text-left"
+                  title="Load into the workbench"
+                >
+                  <div className="truncate text-sm text-zinc-200">{h.source_text || '(empty)'}</div>
+                  <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-zinc-500">
+                    <span className="text-zinc-400">{h.source_language}</span>
+                    <span>→ {h.target_languages.join(', ')}</span>
+                    <span>· {h.who || 'someone'}</span>
+                    <span>· {friendlyDateTime(h.created_at)}</span>
+                  </div>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => removeFromHistory(h.id)}
+                  className="shrink-0 text-[11px] text-zinc-600 hover:text-red-300"
+                  title="Delete (removes for everyone)"
+                >
+                  ✕
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
