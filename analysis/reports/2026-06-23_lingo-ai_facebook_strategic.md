@@ -35,7 +35,7 @@ Per scrape-date live volume (history.csv — one row per ad per scrape).
 |---|--:|--:|--:|
 | skit-narrative | 49 | 3 | 0.061 |
 | app-demo | 45 | 4 | 0.089 |
-| listicle-montage | 19 | 0 | 0.0 |
+| listicle-montage | 20 | 1 | 0.05 |
 | split-screen | 15 | 0 | 0.0 |
 | other | 12 | 2 | 0.167 |
 | text-on-screen-only | 5 | 0 | 0.0 |
@@ -47,7 +47,7 @@ Per scrape-date live volume (history.csv — one row per ad per scrape).
 |---|--:|--:|--:|
 | speak-correctly | 40 | 2 | 0.05 |
 | habit-aspiration | 38 | 2 | 0.053 |
-| other | 30 | 3 | 0.1 |
+| other | 31 | 4 | 0.129 |
 | feature-demo | 25 | 5 | 0.2 |
 | translation-practice | 15 | 0 | 0.0 |
 
@@ -66,7 +66,7 @@ Per scrape-date live volume (history.csv — one row per ad per scrape).
 
 | week | new scripts | new formats | new ads | winners | win ratio |
 |---|--:|--:|--:|--:|--:|
-| 2026-06-15 | 82 | 7 | 104 | 13 | 0.125 |
+| 2026-06-15 | 83 | 7 | 104 | 13 | 0.125 |
 | 2026-06-22 | 32 | 0 | 45 | 0 | 0.0 |
 
 ## Q10 Replication speed

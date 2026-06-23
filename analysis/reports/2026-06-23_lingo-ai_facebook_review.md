@@ -66,7 +66,7 @@
 
 | language | ads | winners | win ratio |
 |---|--:|--:|--:|
-| English | 122 | 12 | 0.098 |
+| English | 123 | 13 | 0.106 |
 | French | 13 | 0 | 0.0 |
 | Turkish | 5 | 0 | 0.0 |
 | Arabic | 3 | 0 | 0.0 |
@@ -80,7 +80,7 @@
 |---|--:|--:|--:|
 | skit-narrative | 49 | 3 | 0.061 |
 | talking-head | 45 | 4 | 0.089 |
-| listicle-montage | 19 | 0 | 0.0 |
+| listicle-montage | 20 | 1 | 0.05 |
 | split-screen | 15 | 0 | 0.0 |
 | other | 12 | 2 | 0.167 |
 | text-on-screen-only | 5 | 0 | 0.0 |
@@ -92,7 +92,7 @@ How much of the output is fresh scripts vs. replays of a script that already wor
 
 | replication | ads | winners | win ratio |
 |---|--:|--:|--:|
-| unique | 98 | 5 | 0.051 |
+| unique | 99 | 6 | 0.061 |
 | exact_replica | 25 | 2 | 0.08 |
 | original | 16 | 5 | 0.312 |
 | reworded_replica | 4 | 0 | 0.0 |
