@@ -80,6 +80,26 @@
 | PW Talk | 2026-06-15 | 141 | 141 | 97 | 0.688 |
 | PW Talk | 2026-06-22 | 120 | 20 | 79 | 0.658 |
 
+## By language
+
+| language | ads | winners | win ratio |
+|---|--:|--:|--:|
+| Hindi | 49 | 40 | 0.816 |
+| English | 5 | 1 | 0.2 |
+| unknown | 3 | 3 | 1.0 |
+
+## Format mix
+
+| format | ads | winners | win ratio |
+|---|--:|--:|--:|
+| split-screen | 17 | 14 | 0.824 |
+| skit-narrative | 16 | 16 | 1.0 |
+| text-on-screen-only | 11 | 5 | 0.455 |
+| talking-head | 9 | 6 | 0.667 |
+| app-screencast | 2 | 2 | 1.0 |
+| other | 1 | 1 | 1.0 |
+| listicle-montage | 1 | 0 | 0.0 |
+
 ## Biggest rank movers
 
 | ad_id | scrape | Δ rank | new rank |
