@@ -112,6 +112,13 @@ def check_env(env: dict, skip_gemini: bool) -> tuple[bool, str]:
         missing.append("GEMINI_API_KEY")
     if missing:
         return False, f".env missing key(s): {', '.join(missing)}"
+    # R2_PUBLIC_URL_BASE must be the PUBLIC host (pub-<hash>.r2.dev or a custom domain),
+    # NOT the private S3 API endpoint — otherwise every uploaded URL 400s in a browser
+    # (the master/sheet links won't open). See tools/fix_r2_public_urls.py.
+    pub = env.get("R2_PUBLIC_URL_BASE", "")
+    if "r2.cloudflarestorage.com" in pub:
+        return False, (f"R2_PUBLIC_URL_BASE is the PRIVATE S3 endpoint ({pub}) — set it to the "
+                       "public pub-<hash>.r2.dev (Cloudflare → R2 → bucket → Public URL) or a custom domain")
     return True, f".env has {len(REQUIRED_R2_KEYS) + (0 if skip_gemini else 1)} required keys"
 
 
