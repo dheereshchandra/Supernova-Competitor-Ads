@@ -20,55 +20,55 @@ Per scrape-date live volume (history.csv — one row per ad per scrape).
 
 | bucket | ads | winners | win ratio |
 |---|--:|--:|--:|
-| human_only | 96 | 60 | 0.625 |
-| other | 41 | 25 | 0.61 |
-| ai_plus_human | 19 | 11 | 0.579 |
+| human_only | 99 | 62 | 0.626 |
+| other | 37 | 22 | 0.595 |
+| ai_plus_human | 20 | 12 | 0.6 |
 | ai_plus_ai | 5 | 1 | 0.2 |
-| split_screen | 33 | 23 | 0.697 |
+| split_screen | 34 | 24 | 0.706 |
 | TOTAL | 161 | 97 | 0.602 |
 
-*split-screen ads (captured both above and in `pw-talk_raw_format_counts.csv`): 33.*
+*split-screen ads (captured both above and in `pw-talk_raw_format_counts.csv`): 34.*
 
 ## Format mix (Axis 1 — merged)
 
 | format | ads | winners | win ratio |
 |---|--:|--:|--:|
-| skit-narrative | 60 | 33 | 0.55 |
-| split-screen | 33 | 23 | 0.697 |
-| app-demo | 23 | 15 | 0.652 |
+| skit-narrative | 62 | 34 | 0.548 |
+| split-screen | 34 | 24 | 0.706 |
+| app-demo | 24 | 16 | 0.667 |
 | text-on-screen-only | 12 | 6 | 0.5 |
 | other | 4 | 2 | 0.5 |
-| listicle-montage | 2 | 0 | 0.0 |
+| listicle-montage | 3 | 0 | 0.0 |
 
 ## Message angle (Axis 3)
 
 | message_angle | ads | winners | win ratio |
 |---|--:|--:|--:|
-| speak-correctly | 36 | 28 | 0.778 |
+| speak-correctly | 39 | 30 | 0.769 |
+| habit-aspiration | 23 | 15 | 0.652 |
 | understand-cant-speak | 22 | 8 | 0.364 |
-| habit-aspiration | 22 | 14 | 0.636 |
-| fear-shame | 20 | 9 | 0.45 |
+| fear-shame | 21 | 9 | 0.429 |
 | feature-demo | 15 | 8 | 0.533 |
 | other | 13 | 8 | 0.615 |
 | social-proof | 5 | 3 | 0.6 |
 | translation-practice | 1 | 1 | 1.0 |
 
-*Price / offer hook present in 55 of 161 ads. Split-screen role split in `pw-talk_by_split_role.csv`.*
+*Price / offer hook present in 56 of 161 ads. Split-screen role split in `pw-talk_by_split_role.csv`.*
 
 ## Q5 AI vs human production
 
 | production class | ads | win ratio |
 |---|--:|--:|
-| AI-heavy (ai_plus_ai + ai_plus_human) | 24 | 0.5 |
-| human_only | 96 | 0.625 |
+| AI-heavy (ai_plus_ai + ai_plus_human) | 25 | 0.52 |
+| human_only | 99 | 0.626 |
 | paper_translation | 0 | 0.0 |
-| other | 41 | 0.61 |
+| other | 37 | 0.595 |
 
 ## Q9 New scripts / formats per week
 
 | week | new scripts | new formats | new ads | winners | win ratio |
 |---|--:|--:|--:|--:|--:|
-| 2026-06-15 | 65 | 7 | 141 | 97 | 0.688 |
+| 2026-06-15 | 68 | 7 | 141 | 97 | 0.688 |
 | 2026-06-22 | 13 | 0 | 20 | 0 | 0.0 |
 
 ## Q10 Replication speed
@@ -78,19 +78,19 @@ Days from a script group's original to each replica (median per type).
 | replication_type | n replicas | median days | mean days | min | max |
 |---|--:|--:|--:|--:|--:|
 | character_variant | 2 | 0.0 | 0 | 0 | 0 |
-| exact_replica | 19 | 1 | 0.7 | 0 | 2 |
+| exact_replica | 20 | 1.0 | 0.8 | 0 | 2 |
 | reworded_replica | 23 | 0 | 0.5 | 0 | 2 |
-| visual_variant | 11 | 1 | 0.5 | 0 | 1 |
-| ALL | 55 | 1 | 0.6 | 0 | 2 |
+| visual_variant | 13 | 0 | 0.5 | 0 | 1 |
+| ALL | 58 | 0.5 | 0.6 | 0 | 2 |
 
-*Fastest replicated group: `pw-talk-g0001` — replica `1281960683918283` (visual_variant) appeared 0 day(s) after the original `1271072245182250`.*
+*Fastest replicated group: `pw-talk-g0000` — replica `1281960683918283` (visual_variant) appeared 0 day(s) after the original `1271072245182250`.*
 
 ## Q11 Per-script performance (top 10 groups by size)
 
 | script_group_id | group size | ads | winners | win ratio | replication_types |
 |---|--:|--:|--:|--:|---|
-| pw-talk-g0000 | 7 | 7 | 3 | 0.429 | exact_replica;original;reworded_replica;visual_variant |
-| pw-talk-g0001 | 6 | 6 | 6 | 1.0 | original;visual_variant |
+| pw-talk-g0000 | 7 | 7 | 7 | 1.0 | original;visual_variant |
+| pw-talk-g0001 | 7 | 7 | 3 | 0.429 | exact_replica;original;reworded_replica;visual_variant |
 | pw-talk-g0002 | 6 | 6 | 4 | 0.667 | original;reworded_replica;visual_variant |
 | pw-talk-g0003 | 4 | 4 | 0 | 0.0 | original;reworded_replica |
 | pw-talk-g0004 | 3 | 3 | 3 | 1.0 | original;reworded_replica |
