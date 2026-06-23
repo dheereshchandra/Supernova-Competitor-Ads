@@ -62,6 +62,43 @@
 | Lingo AI | 2026-06-15 | 104 | 104 | 13 | 0.125 |
 | Lingo AI | 2026-06-22 | 77 | 45 | 7 | 0.091 |
 
+## By language
+
+| language | ads | winners | win ratio |
+|---|--:|--:|--:|
+| English | 122 | 12 | 0.098 |
+| French | 13 | 0 | 0.0 |
+| Turkish | 5 | 0 | 0.0 |
+| Arabic | 3 | 0 | 0.0 |
+| Vietnamese | 2 | 0 | 0.0 |
+| Hindi | 2 | 0 | 0.0 |
+| German | 1 | 0 | 0.0 |
+
+## Format mix
+
+| format | ads | winners | win ratio |
+|---|--:|--:|--:|
+| skit-narrative | 49 | 3 | 0.061 |
+| talking-head | 45 | 4 | 0.089 |
+| listicle-montage | 19 | 0 | 0.0 |
+| split-screen | 15 | 0 | 0.0 |
+| other | 12 | 2 | 0.167 |
+| text-on-screen-only | 5 | 0 | 0.0 |
+| pen-and-paper | 3 | 3 | 1.0 |
+
+## Script replication
+
+How much of the output is fresh scripts vs. replays of a script that already worked (same script translated, or re-shot with new visuals).
+
+| replication | ads | winners | win ratio |
+|---|--:|--:|--:|
+| unique | 98 | 5 | 0.051 |
+| exact_replica | 25 | 2 | 0.08 |
+| original | 16 | 5 | 0.312 |
+| reworded_replica | 4 | 0 | 0.0 |
+| visual_variant | 3 | 0 | 0.0 |
+| translation_replica | 2 | 0 | 0.0 |
+
 ## Biggest rank movers
 
 | ad_id | scrape | Δ rank | new rank |
