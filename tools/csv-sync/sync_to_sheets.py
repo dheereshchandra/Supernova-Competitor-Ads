@@ -502,10 +502,13 @@ def upsert_tab(sheets, ssid: str, title: str, header: list, rows: list, key_cols
     if not dry_run:
         if header_changed:
             _gsheets.write_row(sheets, ssid, title, 1, sheet_header)
-        if data_updates:
-            _gsheets.batch_update_values(sheets, ssid, data_updates)
+        # Append NEW rows first: a missing ad is worse than a stale one, and appending (INSERT_ROWS
+        # at the end) never shifts the row numbers the data_updates A1 ranges target. So even if the
+        # batch update later fails on a transient error, no new ad is ever dropped from the Sheet.
         if appends:
             _gsheets.append_rows(sheets, ssid, title, appends)
+        if data_updates:
+            _gsheets.batch_update_values(sheets, ssid, data_updates)
     return {"appended": appended, "updated": updated, "unchanged": unchanged}
 
 
