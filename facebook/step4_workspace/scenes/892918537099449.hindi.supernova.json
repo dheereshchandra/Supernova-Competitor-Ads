@@ -1,0 +1,64 @@
+{
+  "ad_library_id": "892918537099449",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "Video call / AI teacher correction skit",
+    "visual_overview": "A simulated video call interface between a young woman and a 3D AI avatar. The screen shows animated text boxes for their conversation, with brief cutaways to an app store page and an install screen.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "female learner"
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "female AI tutor avatar"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Learner makes a mistake, AI corrects",
+        "script_native": "Miss Nova says: तुम कब आओगी?\nPriya says: I will return back on Monday.\nMiss Nova says: 'Return back' नहीं। Return का मतलब ही है वापस आना। Return और back एक साथ बोलने का मतलब है कि बार-बार क्यों आ रही हो? Just say, I will return on Monday.",
+        "script_roman": "Miss Nova says: Tum kab aaogi?\nPriya says: I will return back on Monday.\nMiss Nova says: 'Return back' nahi. Return ka matlab hi hai wapas aana. Return aur back ek saath bolne ka matlab hai ki baar-baar kyun aa rahi ho? Just say, I will return on Monday."
+      },
+      {
+        "n": 2,
+        "scene_label": "Learner expresses difficulty, AI offers solution",
+        "script_native": "Priya says: Oh, ठीक है ठीक है। मुझे ना English आती ही नहीं है।\nMiss Nova says: कोई problem नहीं। क्या तुमने AI teachers try किए हैं?\nPriya says: वो तो expensive होंगे ना?\nMiss Nova says: बिल्कुल नहीं। Normal English classes से सात गुना सस्ता है।",
+        "script_roman": "Priya says: Oh, theek hai theek hai. Mujhe na English aati hi nahi hai.\nMiss Nova says: Koi problem nahi. Kya tumne AI teachers try kiye hain?\nPriya says: Wo toh expensive honge na?\nMiss Nova says: Bilkul nahi. Normal English classes se saat guna sasta hai."
+      },
+      {
+        "n": 3,
+        "scene_label": "Social proof and app store view",
+        "script_native": "Miss Nova says: इसीलिए 1 crore से ज़्यादा लोग Supernova AI पर English practice कर रहे हैं।",
+        "script_roman": "Miss Nova says: Isiliye 1 crore se zyada log Supernova AI par English practice kar rahe hain."
+      },
+      {
+        "n": 4,
+        "scene_label": "Addressing the 'no time' objection",
+        "script_native": "Priya says: पर time ही नहीं मिलता।\nMiss Nova says: रोज़ सिर्फ 10-15 minutes की speaking practice काफी है। और मैं सब कुछ तुम्हें Hindi में समझाऊंगी।\nPriya says: Wow! कैसे join करूँ?",
+        "script_roman": "Priya says: Par time hi nahi milta.\nMiss Nova says: Roz sirf 10-15 minutes ki speaking practice kaafi hai. Aur main sab kuch tumhe Hindi mein samjhaungi.\nPriya says: Wow! Kaise join karun?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to action and final offer",
+        "script_native": "Miss Nova says: बस Supernova AI download करो और sign up करो। सिर्फ 30 days में तुम्हें improvement दिखने लगेगा। चलो, शुरू करें।\nPriya says: मैं अभी download करती हूँ!",
+        "script_roman": "Miss Nova says: Bas Supernova AI download karo aur sign up karo. Sirf 30 days mein tumhe improvement dikhne lagega. Chalo, shuru karein.\nPriya says: Main abhi download karti hoon!"
+      }
+    ],
+    "pitch_points_used": [
+      "1 crore+ users",
+      "improve in just 30 days",
+      "7x cheaper",
+      "speaking practice",
+      "explains in Hindi",
+      "10-15 minutes a day"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.887669
+}

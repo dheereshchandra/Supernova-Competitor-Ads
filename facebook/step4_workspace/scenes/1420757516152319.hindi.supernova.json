@@ -1,0 +1,63 @@
+{
+  "ad_library_id": "1420757516152319",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "Mock news panel debate",
+    "visual_overview": "A split-screen virtual news broadcast featuring a female anchor, an AI robot avatar, and two human male experts. They debate the effectiveness of learning English with an AI app, ending with a smartphone displaying the app install screen.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "News Anchor"
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI Teacher"
+      },
+      {
+        "id": "C",
+        "name": "Rahul",
+        "role": "English Teacher"
+      },
+      {
+        "id": "D",
+        "name": "Saurabh",
+        "role": "English Expert"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "News Anchor Introduction",
+        "script_native": "Priya says: सिर्फ 30 days में English सिखाने वाला AI teacher viral हो रहा है। आइये इस panel का स्वागत करते हैं।",
+        "script_roman": "Priya says: Sirf 30 days mein English sikhane wala AI teacher viral ho raha hai. Aaiye is panel ka swagat karte hain."
+      },
+      {
+        "n": 2,
+        "scene_label": "Panel Debate",
+        "script_native": "Priya says: तो, आपका कहना है कि English सीखने के लिए grammar books या coaching classes की ज़रूरत नहीं है?\nMiss Nova says: हाँ, बिल्कुल सही। Supernova AI app में मैं बोलने की practice करवा कर naturally English सिखाती हूँ। ऐसे practice करने से 30 days में improvement दिखती है।\nSaurabh says: नहीं, नहीं। English सीखने के लिए real human interaction चाहिए। AI के साथ कैसे सीखेंगे?\nRahul says: पर सौरभ जी, मेरे सारे students Supernova AI use करते हैं। पहले घर पर practice partner नहीं मिलता था, अब Supernova AI से unlimited practice करते हैं।\nSaurabh says: पर यह natural conversation जैसा तो बिल्कुल नहीं होगा।\nMiss Nova says: मैं 24/7 available हूँ। मैं Hindi में समझाती हूँ, mistakes तुरंत correct करती हूँ, और यहाँ कोई judge भी नहीं करता। 1 crore+ लोग already मेरे साथ English सीख रहे हैं।\nSaurabh says: Hmm, actually बोलने की practice के लिए तो यह एक अच्छा option लगता है। शायद मुझे भी try करना चाहिए।\nPriya says: Perfect! तो इस app का price क्या है?\nMiss Nova says: यह offline coaching से सात गुना सस्ता है।\nPriya says: तो अगर English सीखनी है...",
+        "script_roman": "Priya says: Toh, aapka kehna hai ki English seekhne ke liye grammar books ya coaching classes ki zaroorat nahi hai?\nMiss Nova says: Haan, bilkul sahi. Supernova AI app mein main bolne ki practice karwa kar naturally English sikhati hoon. Aise practice karne se 30 days mein improvement dikhti hai.\nSaurabh says: Nahi, nahi. English seekhne ke liye real human interaction chahiye. AI ke saath kaise seekhenge?\nRahul says: Par Saurabh ji, mere saare students Supernova AI use karte hain. Pehle ghar par practice partner nahi milta tha, ab Supernova AI se unlimited practice karte hain.\nSaurabh says: Par yeh natural conversation jaisa toh bilkul nahi hoga.\nMiss Nova says: Main 24/7 available hoon. Main Hindi mein samjhati hoon, mistakes turant correct karti hoon, aur yahan koi judge bhi nahi karta. 1 crore+ log already mere saath English seekh rahe hain.\nSaurabh says: Hmm, actually bolne ki practice ke liye toh yeh ek achha option lagta hai. Shayad mujhe bhi try karna chahiye.\nPriya says: Perfect! Toh is app ka price kya hai?\nMiss Nova says: Yeh offline coaching se saat guna sasta hai.\nPriya says: Toh agar English seekhni hai..."
+      },
+      {
+        "n": 3,
+        "scene_label": "App Install CTA",
+        "script_native": "Priya says: आज ही Supernova AI app download कीजिये और अपनी English बोलने की practice शुरू कीजिये।",
+        "script_roman": "Priya says: Aaj hi Supernova AI app download kijiye aur apni English bolne ki practice shuru kijiye."
+      }
+    ],
+    "pitch_points_used": [
+      "improve in just 30 days",
+      "Not boring grammar lessons",
+      "You SPEAK (speaking practice)",
+      "Explains in your language (Hindi)",
+      "No-judgement / privacy",
+      "1 crore+ users",
+      "7x cheaper"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.88341
+}

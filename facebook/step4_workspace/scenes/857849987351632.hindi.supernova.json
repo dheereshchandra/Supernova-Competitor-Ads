@@ -1,0 +1,86 @@
+{
+  "ad_library_id": "857849987351632",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "human-recorded",
+    "format": "Testimonial and product demonstration",
+    "visual_overview": "A live-action ad set in a North Indian tea shop. A shop owner confidently takes a foreign tourist's order in English, amazing his friend. The owner then explains how he learned using Supernova AI, with app UI cutaways showing the learning features. The ad ends with the friend deciding to download the app.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "male tea shop owner"
+      },
+      {
+        "id": "B",
+        "name": "Tourist",
+        "role": "male foreign tourist"
+      },
+      {
+        "id": "C",
+        "name": "Amit",
+        "role": "male friend/customer"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Tourist Orders Tea",
+        "script_native": "Tourist says: One chai please?\nRahul says: Normal chai or ginger chai?\nTourist says: Ginger chai? Normal chai!\nRahul says: Would you like some samosas with it?\nTourist says: Yeah, I will give it a try.",
+        "script_roman": "Tourist says: One chai please?\nRahul says: Normal chai or ginger chai?\nTourist says: Ginger chai? Normal chai!\nRahul says: Would you like some samosas with it?\nTourist says: Yeah, I will give it a try."
+      },
+      {
+        "n": 2,
+        "scene_label": "Friend's Amazement",
+        "script_native": "Amit says: Rahul! इतनी अच्छी English कैसे बोल लेते हो? कहाँ से सीखी?\nRahul says: कहीं बाहर नहीं गया सीखने, भाई।",
+        "script_roman": "Amit says: Rahul! Itni achhi English kaise bol lete ho? Kahan se seekhi?\nRahul says: Kahin bahar nahi gaya seekhne, bhai."
+      },
+      {
+        "n": 3,
+        "scene_label": "Revealing the AI Tutor",
+        "script_native": "Rahul says: Supernova AI app पर एक AI teacher हैं. कहीं भी, कभी भी practice कर सकते हो. अपनी इस चाय की टपरी से भी।",
+        "script_roman": "Rahul says: Supernova AI app par ek AI teacher hain. Kahin bhi, kabhi bhi practice kar sakte ho. Apni is chai ki tapri se bhi."
+      },
+      {
+        "n": 4,
+        "scene_label": "Skepticism and Reassurance",
+        "script_native": "Amit says: AI? वो तो English में सिखाएंगी ना? तुम्हें कैसे समझ आया?\nRahul says: यही तो highlight है! वो सब कुछ Hindi में समझाती हैं।",
+        "script_roman": "Amit says: AI? Woh toh English mein sikhayengi na? Tumhe kaise samajh aaya?\nRahul says: Yahi toh highlight hai! Woh sab kuch Hindi mein samjhati hain."
+      },
+      {
+        "n": 5,
+        "scene_label": "App Features: No Judgment",
+        "script_native": "Rahul says: कोई judge नहीं करता, कोई मज़ाक नहीं उड़ाता. हज़ार mistakes करो, कोई tension नहीं! वो आराम से correct करती हैं, और बस 30 days में English improve हो जाती है।",
+        "script_roman": "Rahul says: Koi judge nahi karta, koi mazaak nahi udata. Hazaar mistakes karo, koi tension nahi! Woh aaram se correct karti hain, aur bas 30 days mein English improve ho jati hai."
+      },
+      {
+        "n": 6,
+        "scene_label": "The Low Price",
+        "script_native": "Amit says: तो फिर fees तो बहुत ज़्यादा होगी?\nRahul says: अरे नहीं! Offline coaching से सात गुना सस्ता है।",
+        "script_roman": "Amit says: Toh phir fees toh bahut zyada hogi?\nRahul says: Arre nahi! Offline coaching se saat guna sasta hai."
+      },
+      {
+        "n": 7,
+        "scene_label": "Social Proof and Benefit",
+        "script_native": "Rahul says: अभी 1 crore+ लोग Supernova AI पर English बोलने की practice कर रहे हैं. मेरा business तो इससे बहुत बढ़ गया।",
+        "script_roman": "Rahul says: Abhi 1 crore+ log Supernova AI par English bolne ki practice kar rahe hain. Mera business toh isse bahut badh gaya."
+      },
+      {
+        "n": 8,
+        "scene_label": "Call to Action",
+        "script_native": "Amit says: मैं भी अभी Supernova AI download करके English बोलना शुरू करता हूँ!",
+        "script_roman": "Amit says: Main bhi abhi Supernova AI download karke English bolna shuru karta hoon!"
+      }
+    ],
+    "pitch_points_used": [
+      "explains in Hindi",
+      "no-judgement / privacy",
+      "improve in just 30 days",
+      "7x cheaper than offline classes/coaching",
+      "1 crore+ users"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.890806
+}

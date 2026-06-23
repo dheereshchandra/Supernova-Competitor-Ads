@@ -1,0 +1,46 @@
+{
+  "ad_library_id": "1466438068588297",
+  "language": "Marathi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "translation drill and app pitch",
+    "visual_overview": "A vertical split-screen video where an AI teacher and a human learner engage in a rapid-fire Marathi-to-English translation drill. In the second half, they discuss the Supernova AI app, accompanied by app UI overlays, ending with a final download call-to-action.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI Teacher"
+      },
+      {
+        "id": "B",
+        "name": "Snehal",
+        "role": "Learner"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Marathi to English Translation Drill",
+        "script_native": "Miss Nova says: तुम्ही Red म्हणा, मी Black म्हणते. चला, सुरु करूया.\nSnehal says: Yes, सुरु करूया.\nMiss Nova says: मी आता नाश्ता करत आहे.\nSnehal says: I am having breakfast right now.\nMiss Nova says: तुम्ही कुठे जात आहात?\nSnehal says: Where are you going?\nMiss Nova says: मला थोडं पाणी द्या ना.\nSnehal says: Please give me some water.\nMiss Nova says: आज खूप गरम आहे.\nSnehal says: It is very hot today.\nMiss Nova says: मी तुम्हाला नंतर फोन करते.\nSnehal says: I will call you later.\nMiss Nova says: मला हे समजलं नाही.\nSnehal says: I did not understand this.\nMiss Nova says: तुम्ही माझी मदत करू शकता का?\nSnehal says: Can you help me?\nMiss Nova says: Perfect! आता शेवटचं वाक्य, मला इंग्लिश बोलायला शिकायचं आहे.\nSnehal says: I want to learn how to speak English.",
+        "script_roman": "Miss Nova says: Tumhi Red mhana, mi Black mhante. Chala, suru karuya.\nSnehal says: Yes, suru karuya.\nMiss Nova says: Mi aata nashta karat aahe.\nSnehal says: I am having breakfast right now.\nMiss Nova says: Tumhi kuthe jaat aahat?\nSnehal says: Where are you going?\nMiss Nova says: Mala thoda pani dya na.\nSnehal says: Please give me some water.\nMiss Nova says: Aaj khoop garam aahe.\nSnehal says: It is very hot today.\nMiss Nova says: Mi tumhala nantar phone karte.\nSnehal says: I will call you later.\nMiss Nova says: Mala he samajla nahi.\nSnehal says: I did not understand this.\nMiss Nova says: Tumhi majhi madat karu shakta ka?\nSnehal says: Can you help me?\nMiss Nova says: Perfect! Aata shevatcha vakya, mala English bolayla shikaycha aahe.\nSnehal says: I want to learn how to speak English."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Pitch and Call to Action",
+        "script_native": "Snehal says: (smiling) Wow, हे खूप easy होतं! पण मला रोज practice करायची असेल तर?\nMiss Nova says: त्यासाठीच Supernova AI आहे. तुम्ही माझ्यासोबत रोज फक्त 10-15 minutes speaking practice करू शकता, आणि मी सगळं Marathi मध्ये explain करते.\nSnehal says: आणि improvement किती दिवसात दिसेल?\nMiss Nova says: Just 30 days मध्ये! 1 crore+ users आधीच माझ्यासोबत practice करत आहेत. आणि हो, हे offline classes पेक्षा सात पट स्वस्त आहे.\nSnehal says: That sounds amazing! मी आत्ताच download करते.\nMiss Nova says: Yes! आजच Supernova AI download करा.",
+        "script_roman": "Snehal says: (smiling) Wow, he khoop easy hota! Pan mala roj practice karaychi asel tar?\nMiss Nova says: Tyasathich Supernova AI aahe. Tumhi majhyasobat roj fakta 10-15 minutes speaking practice karu shakta, aani mi sagala Marathi madhye explain karte.\nSnehal says: Aani improvement kiti divsat disel?\nMiss Nova says: Just 30 days madhye! 1 crore+ users aadhich majhyasobat practice karat aahet. Aani ho, he offline classes peksha saat pat swast aahe.\nSnehal says: That sounds amazing! Mi aattach download karte.\nMiss Nova says: Yes! Aajach Supernova AI download kara."
+      }
+    ],
+    "pitch_points_used": [
+      "10-15 minutes a day",
+      "You SPEAK (speaking practice)",
+      "Explains in your language (Marathi)",
+      "Improve in just 30 days",
+      "1 crore+ users",
+      "7x cheaper than offline classes"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217816.755552
+}

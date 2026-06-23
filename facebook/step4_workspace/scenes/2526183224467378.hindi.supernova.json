@@ -1,0 +1,58 @@
+{
+  "ad_library_id": "2526183224467378",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "teaching / correction skit",
+    "visual_overview": "A young man and a sleek AI robot sit opposite each other in a train compartment. The robot corrects his English mistakes and explains the app's features using UI overlays. The ad ends with a call to action and an app download animation.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "male learner"
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI teacher"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Conversation and Correction",
+        "script_native": "Miss Nova says: कहाँ travel कर रहे हैं आप?\nRahul says: I, going Goa!\nMiss Nova says: आपको बोलना चाहिए \"I am going to Goa\", या फिर \"I am heading to Goa\".\nRahul says: ओह, अच्छा? पर मैं ऐसी English बोलना कैसे सीखूँ?",
+        "script_roman": "Miss Nova says: Kahan travel kar rahe hain aap?\nRahul says: I, going Goa!\nMiss Nova says: Aapko bolna chahiye \"I am going to Goa\", ya phir \"I am heading to Goa\".\nRahul says: Oh, achha? Par main aisi English bolna kaise seekhun?"
+      },
+      {
+        "n": 2,
+        "scene_label": "The Learning Pitch",
+        "script_native": "Miss Nova says: मेरे साथ रोज़ बस 10-15 minutes speaking practice कीजिए। मैं सब कुछ Hindi में समझाऊँगी, और आप just 30 days में improve कर लेंगे।",
+        "script_roman": "Miss Nova says: Mere saath roz bas 10-15 minutes speaking practice kijiye. Main sab kuch Hindi mein samjhaungi, aur aap just 30 days mein improve kar lenge."
+      },
+      {
+        "n": 3,
+        "scene_label": "The Special Offer",
+        "script_native": "Rahul says: पर ये सब तो बहुत expensive होगा ना?\nMiss Nova says: बिल्कुल नहीं, ये offline coaching से सात गुना सस्ता है।",
+        "script_roman": "Rahul says: Par yeh sab toh bahut expensive hoga na?\nMiss Nova says: Bilkul nahi, yeh offline coaching se saat guna sasta hai."
+      },
+      {
+        "n": 4,
+        "scene_label": "Social Proof and Final CTA",
+        "script_native": "Miss Nova says: और 1 crore+ लोग already मेरे साथ practice कर रहे हैं।\nRahul says: Super! मैं अभी download करता हूँ!\nMiss Nova says: तो अभी Supernova AI download कीजिए।",
+        "script_roman": "Miss Nova says: Aur 1 crore+ log already mere saath practice kar rahe hain.\nRahul says: Super! Main abhi download karta hoon!\nMiss Nova says: Toh abhi Supernova AI download kijiye."
+      }
+    ],
+    "pitch_points_used": [
+      "You SPEAK (speaking practice)",
+      "Explains in your language (Hindi)",
+      "improve in just 30 days",
+      "Time is not the blocker (10-15 minutes)",
+      "~7x cheaper than offline classes/coaching",
+      "1 crore+ users"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217979.905865
+}

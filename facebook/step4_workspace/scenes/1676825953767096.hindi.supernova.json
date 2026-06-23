@@ -1,0 +1,69 @@
+{
+  "ad_library_id": "1676825953767096",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "Teaching / correction skit",
+    "visual_overview": "A split-screen ad where an AI robot in a modern room interacts with a rural Indian woman grinding atta. The ad cuts to app UI screencasts to demonstrate the product, then returns to the split-screen before ending on a download CTA card.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI Teacher"
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "Learner"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Live Correction",
+        "script_native": "Miss Nova says: आप क्या कर रही हैं?\nPriya says: I rubbing atta.\nMiss Nova says: इसे 'I am grinding atta' कहते हैं।\nPriya says: अच्छा... पर मैं English बोलना कैसे सीखूँ?\nMiss Nova says: Supernova AI try कीजिए।\nPriya says: वो क्या है?",
+        "script_roman": "Miss Nova says: Aap kya kar rahi hain?\nPriya says: I rubbing atta.\nMiss Nova says: Isey 'I am grinding atta' kehte hain.\nPriya says: Achha... par main English bolna kaise seekhun?\nMiss Nova says: Supernova AI try kijiye.\nPriya says: Woh kya hai?"
+      },
+      {
+        "n": 2,
+        "scene_label": "App Demo",
+        "script_native": "Miss Nova says: इस app पर आप मेरे साथ बोलने की practice कर सकती हैं, और मैं सब कुछ आपको Hindi में समझाऊँगी।",
+        "script_roman": "Miss Nova says: Is app par aap mere saath bolne ki practice kar sakti hain, aur main sab kuch aapko Hindi mein samjhaungi."
+      },
+      {
+        "n": 3,
+        "scene_label": "Learning Method and Offer",
+        "script_native": "Miss Nova says: रोज़ सिर्फ 10-15 minutes practice कीजिए, और just 30 days में improve कीजिए।\nPriya says: सही में? तो मैं अभी try करती हूँ!",
+        "script_roman": "Miss Nova says: Roz sirf 10-15 minutes practice kijiye, aur just 30 days mein improve kijiye.\nPriya says: Sahi mein? Toh main abhi try karti hoon!"
+      },
+      {
+        "n": 4,
+        "scene_label": "App Installation",
+        "script_native": "Miss Nova says: हाँ, Supernova AI app install कीजिए...",
+        "script_roman": "Miss Nova says: Haan, Supernova AI app install kijiye..."
+      },
+      {
+        "n": 5,
+        "scene_label": "Start Your Journey",
+        "script_native": "Miss Nova says: ...क्योंकि 1 crore से ज़्यादा लोग already मेरे साथ practice कर रहे हैं।",
+        "script_roman": "Miss Nova says: ...kyunki 1 crore se zyada log already mere saath practice kar rahe hain."
+      },
+      {
+        "n": 6,
+        "scene_label": "End Card CTA",
+        "script_native": "Miss Nova says: आज ही Supernova AI download कीजिए।",
+        "script_roman": "Miss Nova says: Aaj hi Supernova AI download kijiye."
+      }
+    ],
+    "pitch_points_used": [
+      "You SPEAK (speaking practice)",
+      "Explains in your language (Hindi)",
+      "Time is not the blocker (10-15 minutes)",
+      "Improve in just 30 days",
+      "1 crore+ users"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.889976
+}

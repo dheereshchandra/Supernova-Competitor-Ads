@@ -1,0 +1,70 @@
+{
+  "ad_library_id": "3008300169365904",
+  "language": "Bengali",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "teaching skit with UI cutaways",
+    "visual_overview": "A vertically split screen showing a static AI avatar on top and a live-action young woman on the bottom. The woman makes an English mistake, the AI corrects her, and they discuss app benefits. Mid-way, the screen cuts to an app UI showing user stats, then returns to the split screen before ending on a final app download card.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI teacher"
+      },
+      {
+        "id": "B",
+        "name": "Moumita",
+        "role": "human learner"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Grammar Correction & Frustration",
+        "script_native": "Miss Nova says: আপনার কতজন ভাই আছে?\nMoumita says: I am having two brothers.\nMiss Nova says: Having না। আপনি কি এখন দুজনকে হাতে ধরে রেখেছেন? বলুন, I have two brothers.\nMoumita says: Oh, ঠিক আছে। আমার English ঠিক মতো আসে না।\nMiss Nova says: কোনো সমস্যা নেই। আমি বাংলায় বোঝাবো।",
+        "script_roman": "Miss Nova says: Apnar kotojon bhai ache?\nMoumita says: I am having two brothers.\nMiss Nova says: Having na. Apni ki ekhon dujon-ke hate dhore rekhechen? Bolun, I have two brothers.\nMoumita says: Oh, thik ache. Amar English thik moto ashe na.\nMiss Nova says: Kono shomosya nei. Ami Bangla-y bojhabo."
+      },
+      {
+        "n": 2,
+        "scene_label": "AI Solution & Cost Benefit",
+        "script_native": "Miss Nova says: একটা AI teacher try করেছেন?\nMoumita says: ওগুলো তো অনেক দামী হবে, তাই না?\nMiss Nova says: একদমই না। নরমাল offline class-এর থেকে সাত গুণ সস্তা।",
+        "script_roman": "Miss Nova says: Ekta AI teacher try korechen?\nMoumita says: Ogulo to onek dami hobe, tai na?\nMiss Nova says: Ekdom-i na. Normal offline class-er theke saat gun shosta."
+      },
+      {
+        "n": 3,
+        "scene_label": "App Offer Screen",
+        "script_native": "Miss Nova says: তাই ১ কোটির বেশি মানুষ Supernova AI-তে English বলা practice করছে।",
+        "script_roman": "Miss Nova says: Tai 1 crore-er beshi manush Supernova AI-te English bola practice korche."
+      },
+      {
+        "n": 4,
+        "scene_label": "Overcoming Time Objection",
+        "script_native": "Moumita says: কিন্তু সময় পাই না।\nMiss Nova says: রোজ শুধু ১০-১৫ minutes practice করলেই হবে। Just 30 days-এ আপনি improve করবেন।\nMoumita says: Wow!",
+        "script_roman": "Moumita says: Kintu shomoy pai na.\nMiss Nova says: Roj shudhu 10-15 minutes practice korlei hobe. Just 30 days-e apni improve korben.\nMoumita says: Wow!"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script_native": "Moumita says: কিভাবে join করবো?\nMiss Nova says: নিচের install button-এ click করুন, Supernova AI download করুন আর আজকেই practice শুরু করুন।",
+        "script_roman": "Moumita says: Kibhabe join korbo?\nMiss Nova says: Nicher install button-e click korun, Supernova AI download korun aar ajkei practice shuru korun."
+      },
+      {
+        "n": 6,
+        "scene_label": "App End Card",
+        "script_native": "",
+        "script_roman": ""
+      }
+    ],
+    "pitch_points_used": [
+      "Explains in your language",
+      "7x cheaper than offline classes",
+      "1 crore+ users",
+      "You SPEAK (speaking practice)",
+      "10-15 minutes a day",
+      "Improve in just 30 days"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217813.895147
+}

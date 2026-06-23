@@ -1,0 +1,63 @@
+{
+  "competitor_id": "1313251437526813",
+  "parsed": {
+    "duration_s": 43.3,
+    "production_type": "human-recorded",
+    "production_notes": "The video features a human actress in natural settings with realistic lighting, expressions, and movements. There are no signs of AI-generated visuals.",
+    "interaction_pattern": "A native speaker says a phrase in Marathi, and a fluent speaker immediately provides the English translation, demonstrating fluency gained from an app.",
+    "audio_track": "Spoken dialogue in Marathi and English between two characters. There is no background music or song.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter (as fluent English speaker)",
+        "appearance": "A young South Asian woman in her early 20s with a fair complexion, slim build, and long, dark brown hair. She has large, expressive dark eyes and defined eyebrows. In this role, she wears a fake, thick black mustache.",
+        "wardrobe": "A white short-sleeved polo shirt, a black baseball cap worn backwards, and small hoop earrings.",
+        "demeanor": "Confident, knowledgeable, and slightly playful due to the costume. She speaks clearly and calmly."
+      },
+      {
+        "id": "B",
+        "role": "female presenter (as Marathi speaker)",
+        "appearance": "The same young South Asian woman in her early 20s with a fair complexion, slim build, and long, dark brown hair parted to the side. She has large, expressive dark eyes and defined eyebrows.",
+        "wardrobe": "A simple olive green spaghetti strap top and a delicate gold necklace.",
+        "demeanor": "Initially tired and frustrated, then becomes curious and impressed by the end of the conversation. Her expressions are very animated."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 43.3,
+        "screenshot_at_s": 15.0,
+        "scene_label": "Marathi to English Dialogue",
+        "setting": "An indoor setting, likely a cafe or modern apartment, during the day. The background is softly lit and out of focus, showing some shelves with plants.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up, static shot.",
+        "layout": "split-vertical (left/right)",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A medium close-up shot of Character A, who is a young woman dressed as a man with a fake mustache and a backward baseball cap. She is sitting at a table and looking slightly towards the right, as if in conversation. The background is a softly blurred interior of a room or cafe. She maintains a confident and slightly amused expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A medium close-up shot of Character B, a young woman sitting at a table and looking slightly towards the left, as if in conversation. The setting appears to be the same as the left panel. Her expressions shift throughout the scene, starting with weariness and frustration, then moving to curiosity and finally a bright, impressed smile.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The screen is vertically split into two panels against a black background. The left panel shows Character A, and the right panel shows Character B. At the top of the screen, 'ENGLISH' is written above the left panel and '\u092e\u0930\u093e\u0920\u0940' is written above the right panel. As the characters speak, their dialogue appears as captions in white boxes at the bottom of their respective panels. Towards the end, the brand name and logo for 'MySivi' appear in the center.",
+        "audio_transcript": "Character B says: \u092e\u0932\u093e \u0915\u093e\u0932 \u0930\u093e\u0924\u094d\u0930\u0940 \u0928\u0940\u091f \u091d\u094b\u092a \u0932\u093e\u0917\u0932\u0940 \u0928\u093e\u0939\u0940. [I didn't sleep well last night.]\nCharacter A says: I did not sleep well last night.\nCharacter B says: \u092e\u0940 \u0935\u093e\u0930\u0902\u0935\u093e\u0930 \u0909\u0920\u0924 \u0939\u094b\u0924\u0947. [I was waking up repeatedly.]\nCharacter A says: I kept waking up again and again.\nCharacter B says: \u092e\u093e\u091d\u0902 \u092e\u0928 \u0936\u093e\u0902\u0924 \u0928\u0935\u094d\u0939\u0924\u0902. [My mind was not calm.]\nCharacter A says: My mind was not calm.\nCharacter B says: \u0935\u093f\u0928\u093e\u0915\u093e\u0930\u0923 \u091a\u093f\u0921\u091a\u093f\u0921 \u0939\u094b\u0924 \u0906\u0939\u0947. [I am getting irritated for no reason.]\nCharacter A says: I am feeling irritated for no reason.\nCharacter B says: \u0905\u0917\u0926\u0940 \u091b\u094b\u091f\u0940 \u0915\u093e\u092e\u0902\u0938\u0941\u0926\u094d\u0927\u093e \u0915\u0920\u0940\u0923 \u0935\u093e\u091f\u0924 \u0906\u0939\u0947\u0924. [Even small tasks feel difficult.]\nCharacter A says: Even small tasks feel difficult.\nCharacter B says: \u0915\u093e\u0936, \u0915\u093e\u0932 \u0928\u0940\u091f \u091d\u094b\u092a \u091d\u093e\u0932\u0940 \u0905\u0938\u0924\u0940. [I wish I had slept well yesterday.]\nCharacter A says: I wish I had slept better.\nCharacter B says: \u092a\u094d\u0930\u0924\u094d\u092f\u0947\u0915 \u0935\u093e\u0915\u094d\u092f\u093e\u091a\u0902 \u0924\u0942 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092e\u0927\u094d\u092f\u0947 \u0932\u0917\u0947\u091a \u0909\u0924\u094d\u0924\u0930 \u0926\u093f\u0932\u0902\u0938. \u0915\u0941\u0920\u0942\u0928 \u0936\u093f\u0915\u0932\u093e\u0938? [You answered every sentence immediately in English. Where did you learn from?]\nCharacter A says: \u092e\u0940 \u0930\u094b\u091c \u092a\u0902\u0927\u0930\u093e \u092e\u093f\u0928\u093f\u091f\u0902 \u090f\u0906\u092f \u0938\u094b\u092c\u0924 \u092c\u094b\u0932\u0932\u094b \u0906\u0923\u093f \u0924\u093f\u0925\u0942\u0928\u091a \u0936\u093f\u0915\u0932\u094b. [I spoke with an AI for fifteen minutes every day and learned from there.]\nCharacter B says: \u0915\u0938\u0902? \u0906\u0923\u093f \u0915\u094b\u0923\u0924\u0902 \u090f\u0906\u092f? [How? And which AI?]\nCharacter A says: MySivi AI. \u092f\u093e\u0924 \u090f\u0906\u092f \u0938\u094b\u092c\u0924 \u092c\u094b\u0932\u0924\u093e\u0902\u0928\u093e \u0924\u0940 \u0924\u0941\u0932\u093e \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092c\u094b\u0932\u093e\u092f\u0932\u093e \u0932\u093e\u0935\u0924\u0947 \u0906\u0923\u093f \u091a\u0942\u0915 \u091d\u093e\u0932\u0940 \u0924\u0930 \u0932\u0917\u0947\u091a \u0915\u0930\u0947\u0915\u094d\u091f \u0915\u0930\u0924\u0947. [MySivi AI. In this, while talking to the AI, it makes you speak English and if you make a mistake, it corrects you immediately.]\nCharacter B says: \u0906\u0923\u093f \u092a\u0948\u0938\u0947 \u0915\u093f\u0924\u0940? [And how much does it cost?]\nCharacter A says: \u092b\u0915\u094d\u0924 \u090f\u0915 \u0930\u0941\u092a\u092f\u093e\u0924 \u0938\u0941\u0930\u0942 \u0915\u0930\u0942 \u0936\u0915\u0924\u0947\u0938. [You can start with just one rupee.]\nCharacter B says: \u091f\u094d\u0930\u093e\u092f \u0915\u0930\u0924\u0947 MySivi App. [I'll try the MySivi App.]",
+        "on_screen_text": "ENGLISH\n\u092e\u0930\u093e\u0920\u0940\n\u092e\u0932\u093e \u0915\u093e\u0932 \u0930\u093e\u0924\u094d\u0930\u0940 \u0928\u0940\u091f \u091d\u094b\u092a \u0932\u093e\u0917\u0932\u0940 \u0928\u093e\u0939\u0940.\nI did not sleep well last night.\n\u092e\u0940 \u0935\u093e\u0930\u0902\u0935\u093e\u0930 \u0909\u0920\u0924 \u0939\u094b\u0924\u0947.\nI kept waking up again and again.\n\u092e\u093e\u091d\u0902 \u092e\u0928 \u0936\u093e\u0902\u0924 \u0928\u0935\u094d\u0939\u0924\u0902.\nMy mind was not calm.\n\u0935\u093f\u0928\u093e\u0915\u093e\u0930\u0923 \u091a\u093f\u0921\u091a\u093f\u0921 \u0939\u094b\u0924 \u0906\u0939\u0947.\nI am feeling irritated for no reason.\n\u0905\u0917\u0926\u0940 \u091b\u094b\u091f\u0940 \u0915\u093e\u092e\u0902\u0938\u0941\u0926\u094d\u0927\u093e \u0915\u0920\u0940\u0923 \u0935\u093e\u091f\u0924 \u0906\u0939\u0947\u0924.\nEven small tasks feel difficult.\n\u0915\u093e\u0936, \u0915\u093e\u0932 \u0928\u0940\u091f \u091d\u094b\u092a \u091d\u093e\u0932\u0940 \u0905\u0938\u0924\u0940.\nI wish I had slept better.\n\u092a\u094d\u0930\u0924\u094d\u092f\u0947\u0915 \u0935\u093e\u0915\u094d\u092f\u093e\u091a\u0902\n\u0924\u0942 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092e\u0927\u094d\u092f\u0947 \u0932\u0917\u0947\u091a \u0909\u0924\u094d\u0924\u0930\n\u0926\u093f\u0932\u0902\u0938 \u0915\u0941\u0920\u0942\u0928 \u0936\u093f\u0915\u0932\u093e\u0938\n\u092e\u0940 \u0930\u094b\u091c \u092a\u0902\u0927\u0930\u093e \u092e\u093f\u0928\u093f\u091f\u0902\n\u090f\u0906\u092f \u0938\u094b\u092c\u0924 \u092c\u094b\u0932\u0932\u094b\n\u0906\u0923\u093f \u0924\u093f\u0925\u0942\u0928\u091a \u0936\u093f\u0915\u0932\u094b \u0915\u0938\u0902\n\u0906\u0923\u093f \u0915\u094b\u0923\u0924\u0902 \u090f\u0906\u092f\nMySivi AI \u092f\u093e\u0924\n\u090f\u0906\u092f \u0938\u094b\u092c\u0924 \u092c\u094b\u0932\u0924\u093e\u0902\u0928\u093e\n\u0924\u0940 \u0924\u0941\u0932\u093e \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092c\u094b\u0932\u093e\u092f\u0932\u093e\n\u0932\u093e\u0935\u0924\u0947 \u0906\u0923\u093f \u091a\u0942\u0915\n\u091d\u093e\u0932\u0940 \u0924\u0930 \u0932\u0917\u0947\u091a \u0915\u0930\u0947\u0915\u094d\u091f\n\u0915\u0930\u0924\u0947 \u0906\u0923\u093f \u092a\u0948\u0938\u0947\n\u0915\u093f\u0924\u0940 \u092b\u0915\u094d\u0924\n\u090f\u0915 \u0930\u0941\u092a\u092f\u093e\u0924 \u0938\u0941\u0930\u0942 \u0915\u0930\u0942 \u0936\u0915\u0924\u0947\u0938\n\u091f\u094d\u0930\u093e\u092f \u0915\u0930\u0924\u0947 MySivi App\nMySivi"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214373.402105
+}

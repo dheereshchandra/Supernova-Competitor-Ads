@@ -1,0 +1,69 @@
+{
+  "ad_library_id": "974298155593175",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "testimonial and live correction skit",
+    "visual_overview": "A hotel trainee films a selfie video about surprising her manager with her improved English. She speaks fluently to her manager, then shows the Supernova AI app on her phone. A split-screen shows her interacting with the AI teacher, making mistakes and getting live corrections, before ending with an enthusiastic CTA.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Shruti",
+        "role": "Female learner / Hotel trainee"
+      },
+      {
+        "id": "B",
+        "name": "Manager",
+        "role": "Female manager"
+      },
+      {
+        "id": "C",
+        "name": "Miss Nova",
+        "role": "AI teacher"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Secretly Practicing English",
+        "script_native": "Shruti says: मेरी manager को नहीं पता कि मैं पिछले दो महीने से English practice कर रही हूँ। और उन्हें लगता है मेरी English अच्छी नहीं है। आज मैं उन्हें surprise देने वाली हूँ।",
+        "script_roman": "Shruti says: Meri manager ko nahi pata ki main pichle do mahine se English practice kar rahi hoon. Aur unhe lagta hai meri English achhi nahi hai. Aaj main unhe surprise dene wali hoon."
+      },
+      {
+        "n": 2,
+        "scene_label": "Surprising the Manager",
+        "script_native": "Shruti says: \"I completely understand. I'm so sorry for the inconvenience. I'll have that sorted for you right away.\"\nManager says: Wow, यह तो बहुत professional English थी। कहाँ से सीखी?\nShruti says: मैं पिछले दो महीने से रोज़ phone पर Supernova AI पर practice कर रही हूँ। जैसे pocket में ही एक AI teacher हो। यह देखिए, मैं आपको दिखाती हूँ।",
+        "script_roman": "Shruti says: \"I completely understand. I'm so sorry for the inconvenience. I'll have that sorted for you right away.\"\nManager says: Wow, yeh toh bahut professional English thi. Kahan se seekhi?\nShruti says: Main pichle do mahine se roz phone par Supernova AI par practice kar rahi hoon. Jaise pocket mein hi ek AI teacher ho. Yeh dekhiye, main aapko dikhati hoon."
+      },
+      {
+        "n": 3,
+        "scene_label": "AI Tutor Corrects Mistakes",
+        "script_native": "Miss Nova says: आपका नाम क्या है?\nShruti says: \"I name is Shruti.\"\nMiss Nova says: \"I name is Shruti\", नहीं। \"My name is Shruti.\"\nMiss Nova says: आप कहाँ रहती हैं?\nShruti says: \"I am Mumbai.\"\nMiss Nova says: \"I am Mumbai\", नहीं। \"I live in Mumbai.\"\nShruti says: मैं हमेशा यहीं confuse हो जाती हूँ।\nMiss Nova says: और इसीलिए मैं यहाँ हूँ, आपको सही English बोलने में help करने के लिए। मैं सब कुछ Hindi में समझाती हूँ, ताकि आपको logic समझ आए।",
+        "script_roman": "Miss Nova says: Aapka naam kya hai?\nShruti says: \"I name is Shruti.\"\nMiss Nova says: \"I name is Shruti\", nahi. \"My name is Shruti.\"\nMiss Nova says: Aap kahan rehti hain?\nShruti says: \"I am Mumbai.\"\nMiss Nova says: \"I am Mumbai\", nahi. \"I live in Mumbai.\"\nShruti says: Main hamesha yahin confuse ho jati hoon.\nMiss Nova says: Aur isiliye main yahan hoon, aapko sahi English bolne mein help karne ke liye. Main sab kuch Hindi mein samjhati hoon, taaki aapko logic samajh aaye."
+      },
+      {
+        "n": 4,
+        "scene_label": "Explaining Benefits (Cost, Time)",
+        "script_native": "Shruti says: पर यह expensive होगा ना?\nMiss Nova says: बिल्कुल नहीं। Normal English classes से सात गुना सस्ता है। इसीलिए 1 crore से ज़्यादा लोग मेरे साथ English practice कर रहे हैं।\nShruti says: पर मुझे time ही नहीं मिलता।\nMiss Nova says: रोज़ सिर्फ 10-15 minutes की practice काफी है। आप बिल्कुल confident हो जाएँगी।",
+        "script_roman": "Shruti says: Par yeh expensive hoga na?\nMiss Nova says: Bilkul nahi. Normal English classes se saat guna sasta hai. Isiliye 1 crore se zyada log mere saath English practice kar rahe hain.\nShruti says: Par mujhe time hi nahi milta.\nMiss Nova says: Roz sirf 10-15 minutes ki practice kaafi hai. Aap bilkul confident ho jayengi."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script_native": "Shruti says: Wow, मैं कैसे start करूँ?\nMiss Nova says: नीचे install button दबाइए और Supernova AI download कीजिए। सिर्फ 30 days में आपको improvement दिखने लगेगा।\nShruti says: (excitedly) मैं अभी download करती हूँ!",
+        "script_roman": "Shruti says: Wow, main kaise start karun?\nMiss Nova says: Neeche install button dabaiye aur Supernova AI download kijiye. Sirf 30 days mein aapko improvement dikhne lagega.\nShruti says: (excitedly) Main abhi download karti hoon!"
+      }
+    ],
+    "pitch_points_used": [
+      "You SPEAK (speaking practice / live correction)",
+      "Explains in your language (Hindi)",
+      "7x cheaper than offline classes",
+      "1 crore+ users",
+      "Time is not the blocker (10-15 minutes a day)",
+      "Improve in just 30 days"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.8864582
+}

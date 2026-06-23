@@ -1,0 +1,61 @@
+{
+  "ad_library_id": "1327750302736660",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "human-recorded",
+    "format": "Presenter-led ranking monologue",
+    "visual_overview": "A female presenter dressed as a teacher ranks different English learning methods. Graphic overlays show scores out of 10, transitioning from Hollywood movies and practicing with friends to the Supernova AI app, ending with an app install CTA.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "Presenter / Teacher"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Ranking Hollywood Movies",
+        "script_native": "Priya says: हॉलीवुड मूवीज़ देखकर English सीखना। 4 out of 10. नए words तो सीख लेंगे, पर बोलने की practice नहीं होगी।",
+        "script_roman": "Priya says: Hollywood movies dekh kar English seekhna. 4 out of 10. Naye words toh seekh lenge, par bolne ki practice nahi hogi."
+      },
+      {
+        "n": 2,
+        "scene_label": "Ranking Practicing with Friends",
+        "script_native": "Priya says: Friends के साथ बोलने की practice करना। 5 out of 10. बोलते time mistakes करेंगे तो कोई correct नहीं करेगा, बस मज़ाक उड़ाएंगे।",
+        "script_roman": "Priya says: Friends ke saath bolne ki practice karna. 5 out of 10. Bolte time mistakes karenge toh koi correct nahi karega, bas mazaak udayenge."
+      },
+      {
+        "n": 3,
+        "scene_label": "Ranking English Apps (Supernova AI)",
+        "script_native": "Priya says: तो फिर English apps? Supernova AI जैसे app को 10 out of 10. College students से लेकर job interviews देने वालों तक, 1 crore+ लोग इसे use कर रहे हैं।",
+        "script_roman": "Priya says: Toh phir English apps? Supernova AI jaise app ko 10 out of 10. College students se lekar job interviews dene walo tak, 1 crore+ log isse use kar rahe hain."
+      },
+      {
+        "n": 4,
+        "scene_label": "App Features and Results",
+        "script_native": "Priya says: क्योंकि इसमें एक AI teacher हैं, जो आपकी mistakes को live correct करती हैं और सब कुछ Hindi में explain करती हैं। बस दिन में 10-15 minutes बोलने की practice कीजिए, और सिर्फ 30 days में improvement देखिए।",
+        "script_roman": "Priya says: Kyunki isme ek AI teacher hain, jo aapki mistakes ko live correct karti hain aur sab kuch Hindi mein explain karti hain. Bas din mein 10-15 minutes bolne ki practice kijiye, aur sirf 30 days mein improvement dekhiye."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action and Pricing",
+        "script_native": "Priya says: अगर English सीखनी है पर कोई guide करने वाला नहीं है, तो Supernova AI try कीजिए। ये offline coaching से सात गुना सस्ता है। तो अभी Supernova AI download कीजिए और आज ही practice start कीजिए।",
+        "script_roman": "Priya says: Agar English seekhni hai par koi guide karne wala nahi hai, toh Supernova AI try kijiye. Ye offline coaching se saat guna sasta hai. Toh abhi Supernova AI download kijiye aur aaj hi practice start kijiye."
+      }
+    ],
+    "pitch_points_used": [
+      "You SPEAK (speaking practice)",
+      "No-judgement / privacy",
+      "1 crore+ users",
+      "Real-life practice (job interviews)",
+      "Explains in your language (Hindi)",
+      "Time is not the blocker (10-15 minutes a day)",
+      "Improve in just 30 days",
+      "7x cheaper than offline classes/coaching"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.891509
+}

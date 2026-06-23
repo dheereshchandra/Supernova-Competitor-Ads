@@ -1,0 +1,204 @@
+{
+  "competitor_id": "3008300169365904",
+  "parsed": {
+    "duration_s": 35.0,
+    "production_type": "mixed",
+    "production_notes": "The ad uses a mixed-media approach. The top panel features a static, AI-generated image of a humanoid robot, while the bottom panel shows a live-action, human-recorded video of a young woman.",
+    "interaction_pattern": "AI tutor quizzes a human learner, identifies a grammatical mistake in her English, and provides a live correction, followed by a Q&A to overcome her objections about the learning app.",
+    "audio_track": "Spoken dialogue in Bengali between two characters. There is no background music until the final end card.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "An AI-generated female humanoid robot with a pale, synthetic face, blue eyes, and no hair, revealing a metallic head structure. Her neck and upper torso show exposed mechanical parts, while the chest and shoulders are covered in smooth, white plating. She resembles the real-world robot Sophia.",
+        "wardrobe": "The character is a robot and does not wear clothing. Its body is composed of white and silver metallic plating. Thin black wires, resembling earphone cables, run from its ears down its chest.",
+        "demeanor": "Calm, neutral, and authoritative, with a consistently placid facial expression."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "A young South Asian woman in her early to mid-20s, with a medium build and a warm brown complexion. She has dark, shoulder-length wavy hair, large expressive dark eyes, and a friendly face.",
+        "wardrobe": "A casual, short-sleeved olive green t-shirt and dark blue jeans. She wears a watch on her left wrist.",
+        "demeanor": "Expressive and relatable. She transitions from hesitant and frustrated about her English skills to curious, impressed, and hopeful."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.5,
+        "screenshot_at_s": 5.5,
+        "scene_label": "Grammar Correction & Frustration",
+        "setting": "The top panel is a modern, well-lit living room. The bottom panel is a simple bedroom with a bed and wardrobe.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static medium shot on both panels.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A static, medium shot of Character A, a female humanoid robot, from the chest up. She is positioned in the center of a brightly lit living room with a couch and a window with green shutters visible in the background. Her expression is neutral, with her mouth slightly open as if speaking.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium shot of Character B, a young woman, standing in her bedroom. She holds a small glass cup of tea in her left hand. The background includes a wooden wardrobe and a bed. She looks directly at the camera, and her expression changes from smiling to thoughtful and then slightly frustrated as she speaks.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertically split screen. The top panel is a static image of the AI tutor (Character A). The bottom panel is a video of the human learner (Character B). Large, colorful text overlays appear sequentially, highlighting key words from the dialogue.",
+        "audio_transcript": "Character A says: \u09a4\u09cb\u09ae\u09be\u09b0 \u0995\u09a4\u09cb\u099c\u09a8 \u09ad\u09be\u0987 \u0986\u099b\u09c7? [How many brothers do you have?]\nCharacter B says: I am having two brothers.\nCharacter A says: \u09b9\u09cd\u09af\u09be\u09ad\u09bf\u0982 \u09a8\u09be\u0964 \u098f\u0996\u09a8 \u0995\u09bf \u09a6\u09c1\u099c\u09a8\u0995\u09c7 \u09b9\u09be\u09a4\u09c7 \u09a7\u09b0\u09c7 \u09b0\u09c7\u0996\u09c7\u099b\u09cb \u09a8\u09be\u0995\u09bf? \u098f\u09ad\u09be\u09ac\u09c7 \u09ac\u09b2, I have two brothers. [Not 'having'. Are you holding two people in your hands right now? Say it like this, I have two brothers.]\nCharacter B says: \u0993\u09b9, \u09a0\u09bf\u0995 \u0986\u099b\u09c7, \u09a0\u09bf\u0995 \u0986\u099b\u09c7\u0964 \u0986\u09ae\u09be\u09b0 \u0987\u0982\u09b0\u09c7\u099c\u09bf \u09a0\u09bf\u0995 \u09ae\u09a4\u09cb \u0986\u09b8\u09c7 \u09a8\u09be\u0964 [Oh, okay, okay. My English is not very good.]\nCharacter A says: \u0995\u09cb\u09a8\u09cb \u09b8\u09ae\u09b8\u09cd\u09af\u09be \u09a8\u09c7\u0987\u0964 [No problem.]",
+        "on_screen_text": "TOMAR KOTJON\nHAVING\nEKHON KI DUJON-KE\nHATE DHORE REKHECHO\nEBHABE BOL\nTWO BROTHERS\nOHH THIK\nACHE\nAMAR\nENGLISH\nTHIK MOTO\nASHE NA\nKONO SHOMOSYA"
+      },
+      {
+        "n": 2,
+        "start_s": 11.5,
+        "end_s": 17.5,
+        "screenshot_at_s": 14.5,
+        "scene_label": "AI Solution & Cost Benefit",
+        "setting": "The top panel is a modern, well-lit living room. The bottom panel is a simple bedroom with a bed and wardrobe.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static medium shot on both panels.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A static, medium shot of Character A, a female humanoid robot, from the chest up. She is positioned in the center of a brightly lit living room with a couch and a window with green shutters visible in the background. Her expression is neutral.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium shot of Character B, a young woman, standing in her bedroom holding a cup of tea. She listens and then asks a question with a skeptical expression.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen continues. As the AI tutor mentions the cost, a large red and yellow circular graphic with the text '7X Cheap' pops up in the center of the screen, momentarily obscuring the characters.",
+        "audio_transcript": "Character A says: AI \u099f\u09bf\u099a\u09be\u09b0 \u099f\u09cd\u09b0\u09be\u0987 \u0995\u09b0\u09c7\u099b\u09cb? [Have you tried an AI teacher?]\nCharacter B says: \u0993\u0997\u09c1\u09b2\u09cb \u09a4\u09cb \u0985\u09a8\u09c7\u0995 \u09a6\u09be\u09ae\u09c0 \u09b9\u09ac\u09c7, \u09a4\u09be\u0987 \u09a8\u09be? [Those must be very expensive, right?]\nCharacter A says: \u098f\u0995\u09a6\u09ae\u0987 \u09a8\u09be\u0964 \u09a8\u09b0\u09ae\u09be\u09b2 \u0987\u0982\u09b2\u09bf\u09b6 \u0995\u09cd\u09b2\u09be\u09b8\u09c7\u09b0 \u09a5\u09c7\u0995\u09c7 \u09b8\u09be\u09a4 \u0997\u09c1\u09a3 \u09b8\u09b8\u09cd\u09a4\u09be\u0964 [Not at all. It's seven times cheaper than normal English classes.]",
+        "on_screen_text": "AI\nOGULO\nDAMI HOBE\nEKDOM-I\nNORMAL ENGLISH\n7X Cheap"
+      },
+      {
+        "n": 3,
+        "start_s": 17.5,
+        "end_s": 20.7,
+        "screenshot_at_s": 19.0,
+        "scene_label": "App Offer Screen",
+        "setting": "An app's subscription/offer screen shown on a smartphone.",
+        "characters_in_scene": [],
+        "camera": "Screencast of an app UI.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of a smartphone screen displaying a dark-themed app interface. The background behind the phone is a blurred version of the previous split-screen scene. The app screen itself is black with white and yellow text and icons.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The split-screen background blurs and a smartphone screen animates into the foreground. It displays the MySivi app's special offer page, showing a trial for \u20b91 for 3 days, with details about the 24/7 AI teacher.",
+        "audio_transcript": "Character A says: \u09a4\u09be\u0987 \u09eb\u09e6 \u09b2\u09be\u0996 \u09ae\u09be\u09a8\u09c1\u09b7 \u09ae\u09be\u0987\u09b8\u09bf\u09ad\u09bf\u09a4\u09c7 \u0987\u0982\u09b0\u09c7\u099c\u09bf \u09aa\u09cd\u09b0\u09cd\u09af\u09be\u0995\u099f\u09bf\u09b8 \u0995\u09b0\u099b\u09c7\u0964 [That's why 50 lakh (5 million) people are practicing English on MySivi.]",
+        "on_screen_text": "TAI 50\nMySivi\nSale Ends Today\nUNLOCK EVERYTHING\n\u09e9 \u09a6\u09bf\u09a8\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u0985\u09ab\u09be\u09b0 (Offer for 3 days)\n\u20b930 \u20b91\n\u09aa\u09b0\u09ac\u09b0\u09cd\u09a4\u09c0 \u20b9\u09e8\u09ef\u09ef/\u09ae\u09be\u09b8 (Next \u20b9299/month)\nCancel Anytime\nMySivi \u09aa\u09cd\u09b0\u09cb-\u098f\u09b0 \u09b8\u09c1\u09ac\u09bf\u09a7\u09be (MySivi Pro Benefits)\n24/7 Personal AI English Teacher\n\u09ad\u09be\u09b7\u09be\u0997\u09a4 \u09b6\u09bf\u0995\u09cd\u09b7\u0995\u09a6\u09c7\u09b0 \u09b8\u09be\u09a5\u09c7 \u0986\u09aa\u09a8\u09be\u09b0 \u09ac\u09cd\u09af\u0995\u09cd\u09a4\u09bf\u0997\u09a4 \u09aa\u09cd\u09b0\u09b6\u09bf\u0995\u09cd\u09b7\u09a3\u09c7\u09b0 \u09b8\u09c7\u09b6\u09a8\u0964 (Your personal training session with language teachers.)\nOffer ends in 09:56\nPAY USING GPay\nAll Payments are Safe. Cancel Anytime\n\u099f\u09cd\u09b0\u09be\u09df\u09be\u09b2 \u09b6\u09c1\u09b0\u09c1 \u0995\u09b0\u09c1\u09a8 \u20b9\u09e7 \u098f (Start trial at \u20b91)"
+      },
+      {
+        "n": 4,
+        "start_s": 20.7,
+        "end_s": 27.5,
+        "screenshot_at_s": 24.0,
+        "scene_label": "Overcoming Time Objection",
+        "setting": "The top panel is a modern, well-lit living room. The bottom panel is a simple bedroom with a bed and wardrobe.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static medium shot on both panels.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A static, medium shot of Character A, a female humanoid robot, from the chest up. She is positioned in the center of a brightly lit living room. Her expression is neutral.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium shot of Character B, a young woman, standing in her bedroom. She raises an objection about time, then listens and reacts with a surprised and impressed 'Wow' expression, puckering her lips.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The video returns to the split-screen format. As the AI tutor mentions the time commitment, a large graphic of a clock with the text '15-20 Minutes' appears in the center of the screen.",
+        "audio_transcript": "Character B says: \u0995\u09bf\u09a8\u09cd\u09a4\u09c1 \u09b8\u09ae\u09af\u09bc \u09aa\u09be\u0987 \u09a8\u09be\u0964 [But I don't have time.]\nCharacter A says: \u09b0\u09cb\u099c \u09b6\u09c1\u09a7\u09c1 \u09e7\u09eb-\u09e8\u09e6 \u09ae\u09bf\u09a8\u09bf\u099f \u09aa\u09cd\u09b0\u09cd\u09af\u09be\u0995\u099f\u09bf\u09b8 \u0995\u09b0\u09b2\u09c7\u0987 \u09b9\u09ac\u09c7\u0964 \u098f\u0995\u09a6\u09ae \u0995\u09a8\u09ab\u09bf\u09a1\u09c7\u09a8\u09cd\u099f \u09b9\u09af\u09bc\u09c7 \u09af\u09be\u09ac\u09c7\u0964 [Just practicing for 15-20 minutes every day is enough. You will become completely confident.]\nCharacter B says: Wow!",
+        "on_screen_text": "PAI NA\nROJ SHUDHU\n15-20 Minutes\nKORLEI HOBE\nEKDOM CONFIDENT\nWOW"
+      },
+      {
+        "n": 5,
+        "start_s": 27.5,
+        "end_s": 33.5,
+        "screenshot_at_s": 30.5,
+        "scene_label": "Call to Action",
+        "setting": "The top panel is a modern, well-lit living room. The bottom panel is a simple bedroom with a bed and wardrobe.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static medium shot on both panels.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A static, medium shot of Character A, a female humanoid robot, from the chest up. She is positioned in the center of a brightly lit living room. She delivers the final instructions.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium shot of Character B, a young woman, standing in her bedroom. She asks how to join and then smiles, looking convinced and happy.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen continues. The learner asks how to join, and the AI tutor provides step-by-step instructions. The MySivi app logo appears between the two panels.",
+        "audio_transcript": "Character B says: \u0995\u09bf\u09ad\u09be\u09ac\u09c7 \u099c\u09af\u09bc\u09c7\u09a8 \u0995\u09b0\u09ac? [How do I join?]\nCharacter A says: \u098f\u0987 \u0987\u09a8\u09cd\u09b8\u099f\u09b2 \u09ac\u09be\u099f\u09a8\u099f\u09be \u099a\u09be\u09aa\u09cb \u0986\u09b0 \u09ae\u09be\u0987\u09b8\u09bf\u09ad\u09bf \u0985\u09cd\u09af\u09be\u09aa \u0987\u09a8\u09cd\u09b8\u099f\u09b2 \u0995\u09b0\u09cb, \u09b8\u09be\u0987\u09a8 \u0986\u09aa \u0995\u09b0\u09cb \u0986\u09b0 \u09aa\u09cd\u09b0\u09cd\u09af\u09be\u0995\u099f\u09bf\u09b8 \u09b6\u09c1\u09b0\u09c1 \u0995\u09b0\u09cb\u0964 [Press this install button and install the MySivi app, sign up, and start practicing.]",
+        "on_screen_text": "KIBHABE\nEI\nINSTALL\nMySivi\nAPP INSTALL\nSIGN UP KORO"
+      },
+      {
+        "n": 6,
+        "start_s": 33.5,
+        "end_s": 35.0,
+        "screenshot_at_s": 34.2,
+        "scene_label": "App End Card",
+        "setting": "A simple graphic background with a smartphone.",
+        "characters_in_scene": [],
+        "camera": "Static shot of an end card.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A smartphone is shown against a plain, light purple background. The phone screen is white.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A final screen shows a smartphone with the MySivi logo, the text 'English speaking app', and a prominent 'Install Now' button.",
+        "audio_transcript": "[instrumental music, no speech]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214706.87073
+}

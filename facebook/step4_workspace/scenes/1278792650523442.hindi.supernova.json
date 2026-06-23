@@ -1,0 +1,55 @@
+{
+  "ad_library_id": "1278792650523442",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "Mock news bulletin",
+    "visual_overview": "A vertical video framed as a satirical breaking news report. A young male reporter stands outdoors holding a microphone, speaking directly to the camera with news-ticker text overlays. The video cuts to screen recordings of the Supernova AI app interface and pricing screen, before returning to the reporter for the final call to action.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "Male presenter / news reporter"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Breaking News Report",
+        "script_native": "Rahul says: Breaking news आ रही है Lucknow से।\nRahul says: जहाँ एक लड़के ने English सीखने के लिए अपने parents से mobile माँगा।\nRahul says: पहले ये लड़का सुबह-शाम 2 hours Instagram पर reels देखता था।\nRahul says: पर अचानक एक दिन उसे एक app दिखा और उसने download कर लिया।\nRahul says: और अब रोज़ सिर्फ 10-15 minutes speaking practice करके, वो लड़का just 30 days में English बोलने लगा।\nRahul says: जब हमने parents से इस चमत्कार के बारे में पूछा, तो उन्होंने कहा -\nRahul says: ये सब एक AI teacher का कमाल है।\nRahul says: और बात बिल्कुल सच थी। App का नाम है Supernova AI।",
+        "script_roman": "Rahul says: Breaking news aa rahi hai Lucknow se.\nRahul says: Jahan ek ladke ne English seekhne ke liye apne parents se mobile maanga.\nRahul says: Pehle ye ladka subah-shaam 2 hours Instagram par reels dekhta tha.\nRahul says: Par achanak ek din use ek app dikha aur usne download kar liya.\nRahul says: Aur ab roz sirf 10-15 minutes speaking practice karke, wo ladka just 30 days mein English bolne laga.\nRahul says: Jab humne parents se is chamatkar ke baare mein poocha, toh unhone kaha -\nRahul says: Ye sab ek AI teacher ka kamaal hai.\nRahul says: Aur baat bilkul sach thi. App ka naam hai Supernova AI."
+      },
+      {
+        "n": 2,
+        "scene_label": "AI Tutor App Interface",
+        "script_native": "Rahul says: ये AI teacher उसकी mistakes को live correct करती हैं, और सब कुछ Hindi में explain करती हैं।",
+        "script_roman": "Rahul says: Ye AI teacher uski mistakes ko live correct karti hain, aur sab kuch Hindi mein explain karti hain."
+      },
+      {
+        "n": 3,
+        "scene_label": "Pricing Offer",
+        "script_native": "Rahul says: और सबसे बड़ी बात? ये offline coaching से सात गुना सस्ता है।",
+        "script_roman": "Rahul says: Aur sabse badi baat? Ye offline coaching se saat guna sasta hai."
+      },
+      {
+        "n": 4,
+        "scene_label": "Conclusion and Call to Action",
+        "script_native": "Rahul says: लड़के का कहना है कि इस app पर कोई भी बिना डरे English बोलना सीख सकता है।\nRahul says: ये खबर पूरे शहर में आग की तरह फ़ैल रही है।\nRahul says: और अब तक 1 crore+ users Supernova AI पर practice कर रहे हैं।\nRahul says: अगर आपको भी just 30 days में अपनी English improve करनी है, तो आज ही Supernova AI download कीजिए।",
+        "script_roman": "Rahul says: Ladke ka kehna hai ki is app par koi bhi bina dare English bolna seekh sakta hai.\nRahul says: Ye khabar poore shehar mein aag ki tarah phail rahi hai.\nRahul says: Aur ab tak 1 crore+ users Supernova AI par practice kar rahe hain.\nRahul says: Agar aapko bhi just 30 days mein apni English improve karni hai, toh aaj hi Supernova AI download kijiye."
+      }
+    ],
+    "pitch_points_used": [
+      "improve in just 30 days",
+      "Time is not the blocker (~10-15 minutes a day)",
+      "You SPEAK (speaking practice)",
+      "Personalization (live correct)",
+      "Explains in your language (Hindi)",
+      "~7x cheaper than offline classes/coaching",
+      "No-judgement / privacy (bina dare)",
+      "1 crore+ users"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.890477
+}

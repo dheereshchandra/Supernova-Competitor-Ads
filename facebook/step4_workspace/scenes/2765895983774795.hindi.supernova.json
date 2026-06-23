@@ -1,0 +1,81 @@
+{
+  "ad_library_id": "2765895983774795",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "AI-generated",
+    "format": "Bilingual translation drill and app recommendation",
+    "visual_overview": "An anime-style animation showing two children, a girl and a boy, walking down a suburban street. The girl speaks in Hindi, and the boy translates her sentences into English. The visual then transitions to UI overlays showing the app's features and pricing, ending with a 3D smartphone displaying the final install CTA.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "female learner"
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "male presenter"
+      },
+      {
+        "id": "Unknown",
+        "name": "Unknown speaker",
+        "role": "voiceover"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Walking to school",
+        "script_native": "Priya says: मैं स्कूल जा रही हूँ।\nRahul says: I am going to school.\nPriya says: आज मैं स्कूल जाकर Maths पढूँगी।\nRahul says: Today, I will go to school and study maths.",
+        "script_roman": "Priya says: Main school jaa rahi hoon.\nRahul says: I am going to school.\nPriya says: Aaj main school jaakar Maths padhungi.\nRahul says: Today, I will go to school and study maths."
+      },
+      {
+        "n": 2,
+        "scene_label": "Talking about lunch",
+        "script_native": "Priya says: मेरे लंच में मेरी माँ ने tasty खाना डाला है।\nRahul says: My mother has packed tasty food in my lunch.",
+        "script_roman": "Priya says: Mere lunch mein meri maa ne tasty khaana daala hai.\nRahul says: My mother has packed tasty food in my lunch."
+      },
+      {
+        "n": 3,
+        "scene_label": "The App Reveal",
+        "script_native": "Priya says: वाह! तुम्हारी English तो बहुत अच्छी है। ये तुमने कहाँ से सीखी?\nRahul says: वो मैंने Supernova AI app से सीखी।\nPriya says: Supernova AI? वो क्या है?",
+        "script_roman": "Priya says: Waah! Tumhari English toh bahut achhi hai. Ye tumne kahan se seekhi?\nRahul says: Wo maine Supernova AI app se seekhi.\nPriya says: Supernova AI? Wo kya hai?"
+      },
+      {
+        "n": 4,
+        "scene_label": "Explaining App Features",
+        "script_native": "Rahul says: इस app में एक AI teacher हैं, जो बिना judgement के English बोलने की practice करवाती हैं। और कोई mistake हुई तो तुरंत correct करके Hindi में समझाती हैं।",
+        "script_roman": "Rahul says: Is app mein ek AI teacher hain, jo bina judgement ke English bolne ki practice karwati hain. Aur koi mistake hui toh turant correct karke Hindi mein samjhati hain."
+      },
+      {
+        "n": 5,
+        "scene_label": "Price Reveal",
+        "script_native": "Priya says: वाह! पर ये app तो महँगा होगा ना?\nRahul says: बिलकुल नहीं। ये offline coaching से सात गुना सस्ता है। और 1 crore+ users already practice कर रहे हैं।",
+        "script_roman": "Priya says: Waah! Par ye app toh mehenga hoga na?\nRahul says: Bilkul nahi. Ye offline coaching se saat guna sasta hai. Aur 1 crore+ users already practice kar rahe hain."
+      },
+      {
+        "n": 6,
+        "scene_label": "How to Start",
+        "script_native": "Priya says: Wow! Amazing! फिर शुरू कैसे करूँ?\nRahul says: Install button पे click करो, Supernova AI download करो, और सिर्फ 30 days में अपनी English improve करो।",
+        "script_roman": "Priya says: Wow! Amazing! Phir shuru kaise karun?\nRahul says: Install button pe click karo, Supernova AI download karo, aur sirf 30 days mein apni English improve karo."
+      },
+      {
+        "n": 7,
+        "scene_label": "Final CTA",
+        "script_native": "Unknown speaker says: अभी install button पे click करो और Supernova AI download करो।",
+        "script_roman": "Unknown speaker says: Abhi install button pe click karo aur Supernova AI download karo."
+      }
+    ],
+    "pitch_points_used": [
+      "No-judgement / privacy",
+      "You SPEAK (speaking practice)",
+      "Explains in your language (Hindi)",
+      "~7x cheaper than offline classes/coaching",
+      "1 crore+ users",
+      "Improve in just 30 days"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.885818
+}

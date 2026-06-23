@@ -1,0 +1,70 @@
+{
+  "ad_library_id": "974298155593175",
+  "language": "Marathi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "testimonial and live correction skit",
+    "visual_overview": "A young hotel trainee secretly records a selfie video about practicing English, then successfully surprises her manager with fluent English. The ad then transitions to a split-screen showing her interacting with an AI teacher avatar, making mistakes, getting live corrections, and discussing app benefits before a final call to action.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Snehal",
+        "role": "Hotel trainee / Learner"
+      },
+      {
+        "id": "B",
+        "name": "Manager",
+        "role": "Hotel manager"
+      },
+      {
+        "id": "C",
+        "name": "Miss Nova",
+        "role": "AI teacher avatar"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Secretly Practicing English",
+        "script_native": "Snehal says: माझ्या manager ला माहित नाही की मी गेल्या काही दिवसांपासून English practice करत आहे.\nSnehal says: आणि तिला वाटतं माझं English पुरेसं चांगलं नाही.\nSnehal says: आज मी तिला surprise देणार आहे.",
+        "script_roman": "Snehal says: Mazya manager la mahit nahi ki mi gelya kahi divsampasun English practice karat aahe.\nSnehal says: Aani tila vatata maza English puresa changla nahi.\nSnehal says: Aaj mi tila surprise denar aahe."
+      },
+      {
+        "n": 2,
+        "scene_label": "Surprising the Manager",
+        "script_native": "Snehal says: I completely understand. I'm so sorry for the inconvenience. I'll have that sorted for you right away.\nManager says: Wow, हे खूप professional English होतं. हे कुठून शिकलीस?\nSnehal says: मी रोज फोनवर एका AI teacher सोबत speaking practice करत होते.\nSnehal says: जसं तुमच्या खिशातच एक personal teacher असतो तसं. हे बघा, मी तुम्हाला दाखवते.",
+        "script_roman": "Snehal says: I completely understand. I'm so sorry for the inconvenience. I'll have that sorted for you right away.\nManager says: Wow, he khup professional English hota. He kuthun shiklisa?\nSnehal says: Mi roj phone var eka AI teacher sobat speaking practice karat hote.\nSnehal says: Jasa tumchya khishatach ek personal teacher asato tasa. He bagha, mi tumhala dakhvate."
+      },
+      {
+        "n": 3,
+        "scene_label": "AI Tutor Corrects Mistakes",
+        "script_native": "Miss Nova says: तुमचं नाव काय आहे?\nSnehal says: I name is Snehal.\nMiss Nova says: I name is Snehal, नाही. My name is Snehal.\nMiss Nova says: तुम्ही कुठे राहता?\nSnehal says: I am Mumbai.\nMiss Nova says: I am Mumbai, नाही. I live in Mumbai. मी तुम्हाला सगळं Marathi मध्ये explain करेन, ज्यामुळे logic clear होईल.\nSnehal says: Oh, म्हणजे अशा mistakes केल्या तरी चालेल?\nMiss Nova says: हो, बिंधास्त बोला! इथे judge करायला कोणीही नाही.",
+        "script_roman": "Miss Nova says: Tumcha nav kay aahe?\nSnehal says: I name is Snehal.\nMiss Nova says: I name is Snehal, nahi. My name is Snehal.\nMiss Nova says: Tumhi kuthe rahata?\nSnehal says: I am Mumbai.\nMiss Nova says: I am Mumbai, nahi. I live in Mumbai. Mi tumhala sagla Marathi madhye explain karen, jyamule logic clear hoil.\nSnehal says: Oh, mhanje asha mistakes kelya tari chalel?\nMiss Nova says: Ho, bindhast bola! Ithe judge karayla konihi nahi."
+      },
+      {
+        "n": 4,
+        "scene_label": "Explaining Benefits (Cost, Time)",
+        "script_native": "Snehal says: पण हे महाग असेल ना?\nMiss Nova says: अजिबात नाही. Offline classes पेक्षा 7 पट स्वस्त आहे. म्हणूनच 1 crore+ users माझ्या सोबत practice करत आहेत.\nSnehal says: पण माझ्याकडे वेळ नसतो.\nMiss Nova says: रोज फक्त 10-15 minutes ची practice पुरेशी आहे.",
+        "script_roman": "Snehal says: Pan he mahag asel na?\nMiss Nova says: Ajibat nahi. Offline classes peksha 7 pat sasta aahe. Mhanunach 1 crore+ users mazya sobat practice karat aahet.\nSnehal says: Pan mazya kade vel nasto.\nMiss Nova says: Roj fakt 10-15 minutes chi practice pureshi aahe."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script_native": "Snehal says: Wow, मी कशी start करू?\nMiss Nova says: आत्ता Supernova AI app download करा. फक्त 30 days मध्ये तुम्हाला improvement दिसेल. चला, practice start करूया.\nSnehal says: मी आत्ताच download करते!",
+        "script_roman": "Snehal says: Wow, mi kashi start karu?\nMiss Nova says: Aatta Supernova AI app download kara. Fakt 30 days madhye tumhala improvement disel. Chala, practice start karuya.\nSnehal says: Mi aattach download karte!"
+      }
+    ],
+    "pitch_points_used": [
+      "Speaking practice",
+      "Explains in your language (Marathi)",
+      "No-judgement / privacy",
+      "7x cheaper than offline classes",
+      "1 crore+ users",
+      "10-15 minutes a day",
+      "Improve in just 30 days"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217816.756275
+}

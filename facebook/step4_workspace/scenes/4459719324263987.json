@@ -1,0 +1,193 @@
+{
+  "competitor_id": "4459719324263987",
+  "parsed": {
+    "duration_s": 59.5,
+    "production_type": "mixed",
+    "production_notes": "The ad combines human-recorded footage of the presenter/learner with an AI-generated humanoid robot avatar set in a likely AI-generated cafe background.",
+    "interaction_pattern": "AI tutor quizzes a learner, identifies mistakes, provides live correction, and the learner repeats the correct phrase.",
+    "audio_track": "Spoken dialogue in Hindi and English between a human learner and an AI tutor avatar. There is no background music.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter and learner",
+        "appearance": "A young Indian woman in her early 20s with a slim build and a warm, medium complexion. She has long, wavy, dark brown hair with lighter highlights, styled with a side part and face-framing layers. Her features include large, expressive dark brown eyes, well-defined eyebrows, and a friendly smile.",
+        "wardrobe": "In the first scene, she wears a white ribbed short-sleeved top and white trousers. In subsequent scenes, she wears a beige short-sleeved t-shirt. She consistently wears gold jewelry: a multi-layered chain necklace, gold hoop earrings, and several gold bracelets.",
+        "demeanor": "Initially confident and direct, then transitions to a curious, slightly hesitant learner, and finally becomes happy and satisfied."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "A female-presenting humanoid robot with a white, glossy finish. She has a bald head, defined but non-human facial features (large eyes, small nose, defined lips), and visible mechanical joints at the neck, shoulders, and elbows. Her design is sleek and futuristic.",
+        "wardrobe": "The character is a robot and does not wear clothes; its body is its 'wardrobe'.",
+        "demeanor": "Neutral, calm, and authoritative, with a consistently placid facial expression."
+      },
+      {
+        "id": "C",
+        "role": "female learner",
+        "appearance": "A young Indian woman in her late teens or early 20s with a medium build and fair complexion. She has long, straight dark hair. Her facial features are soft and she has a neutral, focused expression.",
+        "wardrobe": "She wears a pink hooded sweatshirt over a black top.",
+        "demeanor": "Focused and engaged with her phone."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 11.8,
+        "screenshot_at_s": 6.0,
+        "scene_label": "Presenter's Introduction",
+        "setting": "The driver's seat of a luxury car with red leather interior, during daytime. The background shows a blurry, green, outdoor environment.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "medium close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young, stylish Indian woman (Character A) sits in the driver's seat of a luxury convertible car with red leather seats. She is looking directly at the camera and speaking with expressive hand gestures. The lighting is bright and warm, suggesting a sunny day. The background outside the car is softly blurred, showing trees and a road.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A medium close-up of a young woman (Character A) in a car, speaking to the camera. A red banner at the top reads 'Stop Saying'. As she speaks, phrases like 'I am fine' and 'thank you' appear on screen and are crossed out with a red 'X'. Later, her Hindi dialogue appears as subtitled text in white boxes.",
+        "audio_transcript": "Character A says: Stop saying I am fine, thank you, I don't know, and you are welcome.\nCharacter A says: \u092f\u0947 \u092c\u0939\u0941\u0924 \u092c\u0947\u0938\u093f\u0915 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0939\u0948\u0964 \u092a\u0939\u0932\u0947 \u092e\u0948\u0902 \u092d\u0940 \u0910\u0938\u0940 \u0939\u0940 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092c\u094b\u0932\u0924\u0940 \u0925\u0940\u0964 \u092b\u093f\u0930 \u092e\u0948\u0902\u0928\u0947 MySivi \u092a\u0947 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0928\u093e \u0936\u0941\u0930\u0942 \u0915\u093f\u092f\u093e\u0964 [This is very basic English. Earlier, I also used to speak English like this. Then I started practicing on MySivi.]",
+        "on_screen_text": "Stop Saying\nI am fine \u274c\nthank you \u274c\u274c\nI don't know \u274c\u274c\u274c\nYou are welcome \u274c\u274c\u274c\u274c\nYe bahut basic\nenglish hai Pehle\nmai bhi aisi hi\nphir maine MySivi\nkarna shuru kia"
+      },
+      {
+        "n": 2,
+        "start_s": 11.8,
+        "end_s": 46.0,
+        "screenshot_at_s": 30.0,
+        "scene_label": "AI Tutor Correction & Pitch",
+        "setting": "Top panel: A modern, bright cafe with brick walls and large windows. Bottom panel: A home study or recording studio with a bookshelf in the background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen, medium close-ups",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A female-presenting humanoid robot (Character B) with a white finish sits at a table in a brightly lit, modern cafe. The cafe has exposed brick walls, large windows showing a street scene outside, and warm overhead lighting. The robot is looking slightly off-camera, as if in conversation.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "The young Indian woman (Character A) is in an indoor setting, wearing large over-ear headphones and sitting in front of a professional microphone. Behind her is a well-stocked bookshelf, and the room is warmly lit. She looks up and towards the camera, reacting and speaking with various expressions.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen video. The top panel shows an AI robot tutor (Character B) in a cafe. The bottom panel shows the human learner (Character A) in a home studio. Text overlays of their dialogue appear in their respective panels. Green checkmarks and red crosses appear to indicate correct or incorrect answers. The MySivi brand logo appears briefly.",
+        "audio_transcript": "Character B says: What is your name?\nCharacter A says: My name is Neha.\nCharacter B says: How old are you?\nCharacter A says: I have 22.\nCharacter B says: I have 22, nahi. I am 22 years old hota hai. [Not 'I have 22'. It is 'I am 22 years old'.]\nCharacter A says: Okay, okay. I am 22 years old.\nCharacter B says: Where are you from?\nCharacter A says: I am Uttar Pradesh.\nCharacter B says: I am Uttar Pradesh, nahi. I am from Uttar Pradesh hoga. [Not 'I am Uttar Pradesh'. It will be 'I am from Uttar Pradesh'.]\nCharacter A says: \u0920\u0940\u0915 \u0939\u0948, \u0920\u0940\u0915 \u0939\u0948\u0964 \u092e\u0941\u091d\u0947 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0905\u091a\u094d\u091b\u0947 \u0938\u0947 \u0928\u0939\u0940\u0902 \u0906\u0924\u0940\u0964 [Okay, okay. I don't know English well.]\nCharacter B says: \u0915\u094b\u0908 \u092a\u094d\u0930\u0949\u092c\u094d\u0932\u092e \u0928\u0939\u0940\u0902\u0964 \u090f\u0906\u0908 \u091f\u0940\u091a\u0930 \u0915\u0947 \u0938\u093e\u0925 \u091f\u094d\u0930\u093e\u0908 \u0915\u093f\u092f\u093e? [No problem. Have you tried with an AI teacher?]\nCharacter A says: \u0935\u094b \u0924\u094b \u092e\u0939\u0902\u0917\u0947 \u0939\u094b\u0924\u0947 \u0939\u094b\u0902\u0917\u0947 \u0928\u093e? [They must be expensive, right?]\nCharacter B says: \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0928\u0939\u0940\u0902\u0964 \u0928\u0949\u0930\u094d\u092e\u0932 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0915\u094d\u0932\u093e\u0938\u0947\u0938 \u0938\u0947 \u0938\u093e\u0924 \u0917\u0941\u0928\u093e \u0938\u0938\u094d\u0924\u093e \u0939\u0948\u0964 \u0907\u0938\u0932\u093f\u090f 50 \u0932\u093e\u0916 \u0932\u094b\u0917 MySivi \u092a\u0930 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902\u0964 [Not at all. It's seven times cheaper than normal English classes. That's why 50 lakh (5 million) people are practicing English on MySivi.]\nCharacter A says: \u092a\u0930 \u091f\u093e\u0907\u092e \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u0924\u093e\u0964 [But I don't get the time.]",
+        "on_screen_text": "what is your name?\nMy name is Neha. \u2705\nHow old are you?\nI have 22 \u274c\nI am 22 years old \u2705\nWhere are you from?\nI am Uttar Pradesh \u274c\nI am from Uttar Pradesh \u2705\nTheek hai\nMujhe English\nKoi problem nahi\nMySivi\nsaath try kiya\nWo toh mehenge\nhote honge na\nclasses se 7 guna\nIsliye 50 lakh\nlog MySivi par\nEnglish practice\nPar time nahi\nmilta"
+      },
+      {
+        "n": 3,
+        "start_s": 46.0,
+        "end_s": 49.5,
+        "screenshot_at_s": 47.5,
+        "scene_label": "Daily Practice Example",
+        "setting": "Top: A plain, light grey background. Bottom: A dimly lit room, likely a bedroom at night.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "split-screen, extreme close-up (top) and medium shot (bottom)",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "An extreme close-up of the female-presenting humanoid robot's (Character B) face against a plain, light grey background. The robot is smiling, showing white teeth, and looking directly forward. The shot is tightly framed on her head and the top of her shoulders.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A young Indian woman (Character C) with long dark hair is seen from the chest up in a dimly lit room. She is looking down at a glowing blue smartphone she holds in her hands. The background is dark and indistinct, with a patterned blanket or cushion visible over her shoulder.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen shot. The top panel is an extreme close-up of the smiling AI tutor (Character B). The bottom panel shows a different young woman (Character C) using her phone at night. Text overlays with the tutor's dialogue appear.",
+        "audio_transcript": "Character B says: \u0930\u094b\u095b \u0938\u093f\u0930\u094d\u092b 15 \u0938\u0947 20 \u092e\u093f\u0928\u091f \u0915\u0940 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u093e\u092b\u0940 \u0939\u0948\u0964 [Just 15 to 20 minutes of practice daily is enough.]",
+        "on_screen_text": "Rojh sirf 15 se\n20 minute ki practice\nkaafi hai"
+      },
+      {
+        "n": 4,
+        "start_s": 49.5,
+        "end_s": 51.5,
+        "screenshot_at_s": 50.5,
+        "scene_label": "Learner's Question",
+        "setting": "Top panel: A modern, bright cafe. Bottom panel: A home study or recording studio.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen, medium close-ups",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "The female-presenting humanoid robot (Character B) sits at a table in a brightly lit, modern cafe. The cafe has exposed brick walls and large windows. The robot is looking slightly off-camera, as if in conversation.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "The young Indian woman (Character A) is in her home studio, wearing large over-ear headphones and sitting in front of a professional microphone. Behind her is a bookshelf. She looks up with a wide-eyed, excited expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The ad returns to the original split-screen setup with the AI tutor (B) on top and the learner (A) on the bottom. Text overlays for their dialogue appear.",
+        "audio_transcript": "Character B says: \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0915\u0949\u0928\u094d\u092b\u093f\u0921\u0947\u0902\u091f \u0939\u094b \u091c\u093e\u0913\u0917\u0940\u0964 [You will become completely confident.]\nCharacter A says: \u0915\u0948\u0938\u0947 \u091c\u094d\u0935\u093e\u0907\u0928 \u0915\u0930\u0942\u0902? [How do I join?]",
+        "on_screen_text": "Bilkul confident\nKaise join karu"
+      },
+      {
+        "n": 5,
+        "start_s": 51.5,
+        "end_s": 59.5,
+        "screenshot_at_s": 56.0,
+        "scene_label": "Call to Action",
+        "setting": "A screen recording of a mobile phone's app store, overlaid on the previous split-screen background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "split-screen with screen recording overlay",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A split-screen image is in the background. The top half shows a female-presenting humanoid robot (Character B) in a cafe. The bottom half shows a young Indian woman (Character A) in a home studio with headphones and a microphone. She is smiling and winking at the camera.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "This panel is a screen recording of a mobile phone interface, specifically the Google Play Store. It shows the app page for an English speaking app, with the app icon, name, developer, ratings, and an 'Install' button. The view shows the button being tapped and the installation process beginning.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The split-screen of the tutor and learner remains in the background. A screen recording of the Google Play Store app page for 'MySivi' is overlaid. The recording shows the 'Install' button being pressed and the app starting to download. Text overlays from the audio appear.",
+        "audio_transcript": "Character B says: \u092f\u0947 \u0907\u0902\u0938\u094d\u091f\u0949\u0932 \u0915\u093e \u092c\u091f\u0928 \u0926\u092c\u093e\u0913 \u0914\u0930 MySivi \u0910\u092a \u0907\u0902\u0938\u094d\u091f\u0949\u0932 \u0915\u0930\u094b\u0964 \u0938\u093f\u0930\u094d\u092b 15 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 \u0924\u0941\u092e\u094d\u0939\u0947\u0902 \u0907\u092e\u094d\u092a\u094d\u0930\u0942\u0935\u092e\u0947\u0902\u091f\u094d\u0938 \u0926\u093f\u0916\u0928\u0947 \u0932\u0917\u0947\u0917\u0940\u0964 \u091a\u0932\u094b, \u0936\u0941\u0930\u0942 \u0939\u094b \u091c\u093e\u0913\u0964 [Press this install button and install the MySivi app. You will start seeing improvements in just 15 days. Come on, get started.]",
+        "on_screen_text": "MySivi AI English Speaking App\n5M+ Downloads\nInstall\ninstall karo\nSirf 15 dinon\ndikhne lagegi"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214486.810452
+}

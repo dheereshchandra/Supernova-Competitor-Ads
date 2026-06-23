@@ -1,0 +1,64 @@
+{
+  "ad_library_id": "881727308209965",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "Translation drill and testimonial",
+    "visual_overview": "A giant AI robot teacher conducts a translation drill with a human learner in a futuristic industrial setting. The ad then cuts to an app interface screencast showing chat features, before returning to the robot and learner for a testimonial, ending with a smartphone displaying the install button.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI Teacher"
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "Learner"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Translation Drill",
+        "script_native": "Miss Nova says: मैं सो रही हूँ।\nRahul says: I am sleeping.\nMiss Nova says: क्या तुम सो रहे हो?\nRahul says: Are you sleeping?\nMiss Nova says: कौन सो रहा है?\nRahul says: Who is sleeping?\nMiss Nova says: क्या तुम सोना चाहते हो?\nRahul says: Do you want to sleep?\nMiss Nova says: क्या तुम आना चाहते हो?\nRahul says: Do you want to come?",
+        "script_roman": "Miss Nova says: Main so rahi hoon.\nRahul says: I am sleeping.\nMiss Nova says: Kya tum so rahe ho?\nRahul says: Are you sleeping?\nMiss Nova says: Kaun so raha hai?\nRahul says: Who is sleeping?\nMiss Nova says: Kya tum sona chahte ho?\nRahul says: Do you want to sleep?\nMiss Nova says: Kya tum aana chahte ho?\nRahul says: Do you want to come?"
+      },
+      {
+        "n": 2,
+        "scene_label": "The Big Reveal",
+        "script_native": "Miss Nova says: Very good. आपकी English तो बहुत अच्छी हो गई है।\nRahul says: Thank you, teacher.\nMiss Nova says: आपने इतनी अच्छी English बोलना कहाँ से सीखा?\nRahul says: Teacher, वो मैंने Supernova AI से सीखा।\nMiss Nova says: Supernova AI? उसमें ऐसा क्या खास है?",
+        "script_roman": "Miss Nova says: Very good. Aapki English toh bahut achhi ho gayi hai.\nRahul says: Thank you, teacher.\nMiss Nova says: Aapne itni achhi English bolna kahan se seekha?\nRahul says: Teacher, woh maine Supernova AI se seekha.\nMiss Nova says: Supernova AI? Usme aisa kya khaas hai?"
+      },
+      {
+        "n": 3,
+        "scene_label": "App Features Demo",
+        "script_native": "Rahul says: Supernova AI पर boring grammar lessons नहीं होते, बल्कि असल speaking practice होती है। वहाँ AI teacher मेरी गलतियाँ live correct करती हैं, और सब कुछ मुझे Hindi में समझाती हैं।",
+        "script_roman": "Rahul says: Supernova AI par boring grammar lessons nahi hote, balki asal speaking practice hoti hai. Wahan AI teacher meri galtiyan live correct karti hain, aur sab kuch mujhe Hindi mein samjhati hain."
+      },
+      {
+        "n": 4,
+        "scene_label": "Recommendation and Testimonial",
+        "script_native": "Miss Nova says: Fantastic! फिर तो सबको Supernova AI download कर लेना चाहिए।\nRahul says: हाँ teacher, वैसे भी आजकल लोग Instagram पर बहुत time waste करते हैं। मैं बस रोज़ 10-15 minutes Supernova AI को देता हूँ। And my English is getting better and better every day. सिर्फ 30 days में ही मुझे इतना improvement दिखा है।\nMiss Nova says: बिल्कुल! 1 crore+ users पहले से ही मेरे साथ practice कर रहे हैं।",
+        "script_roman": "Miss Nova says: Fantastic! Phir toh sabko Supernova AI download kar lena chahiye.\nRahul says: Haan teacher, waise bhi aajkal log Instagram par bahut time waste karte hain. Main bas roz 10-15 minutes Supernova AI ko deta hoon. And my English is getting better and better every day. Sirf 30 days mein hi mujhe itna improvement dikha hai.\nMiss Nova says: Bilkul! 1 crore+ users pehle se hi mere saath practice kar rahe hain."
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script_native": "Rahul says: तो अभी Install Now पर click करो और Supernova AI download करो।",
+        "script_roman": "Rahul says: Toh abhi Install Now par click karo aur Supernova AI download karo."
+      }
+    ],
+    "pitch_points_used": [
+      "speaking practice",
+      "not boring grammar lessons",
+      "explains in Hindi",
+      "10-15 minutes a day",
+      "improve in just 30 days",
+      "1 crore+ users"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.892124
+}

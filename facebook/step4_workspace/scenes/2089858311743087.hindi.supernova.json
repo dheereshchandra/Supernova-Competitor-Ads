@@ -1,0 +1,63 @@
+{
+  "ad_library_id": "2089858311743087",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "split-screen repeat-after-me drill",
+    "visual_overview": "A split-screen video. The top half shows a static AI robot teacher in an Indian living room, while the bottom half shows a live-action North Indian man driving a car. The man asks questions and practices English, and the video cuts to app screencasts when discussing price and features, ending with a smartphone CTA.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "male learner driving a car"
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI tutor avatar"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Greeting a Tourist",
+        "script_native": "Rahul says: मुझे आज एक tourist से बात करनी है। कैसे start करूँ?\nMiss Nova says: अगर कोई tourist आये, तो कहिए, \"Welcome. Where would you like to go?\"\nRahul says: Welcome. Where would you like to go?",
+        "script_roman": "Rahul says: Mujhe aaj ek tourist se baat karni hai. Kaise start karoon?\nMiss Nova says: Agar koi tourist aaye, toh kahiye, \"Welcome. Where would you like to go?\"\nRahul says: Welcome. Where would you like to go?"
+      },
+      {
+        "n": 2,
+        "scene_label": "How to Learn",
+        "script_native": "Rahul says: ये तो बहुत easy है। मैं English कैसे सीखूँ?\nMiss Nova says: बस मेरे साथ daily 10-15 minutes speaking practice कीजिए। आप 30 days में ही improve कर लेंगे।",
+        "script_roman": "Rahul says: Ye toh bahut easy hai. Main English kaise seekhoon?\nMiss Nova says: Bas mere saath daily 10-15 minutes speaking practice kijiye. Aap 30 days mein hi improve kar lenge."
+      },
+      {
+        "n": 3,
+        "scene_label": "Cost and Social Proof",
+        "script_native": "Rahul says: पर ये सब बहुत expensive होगा ना?\nMiss Nova says: बिलकुल नहीं, ये offline coaching से saat guna sasta है। और 1 crore+ users पहले से ही मेरे साथ English सीख रहे हैं।",
+        "script_roman": "Rahul says: Par ye sab bahut expensive hoga na?\nMiss Nova says: Bilkul nahi, ye offline coaching se saat guna sasta hai. Aur 1 crore+ users pehle se hi mere saath English seekh rahe hain."
+      },
+      {
+        "n": 4,
+        "scene_label": "How to Join",
+        "script_native": "Rahul says: Awesome! मैं join कैसे करूँ?",
+        "script_roman": "Rahul says: Awesome! Main join kaise karoon?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Final Call to Action",
+        "script_native": "Miss Nova says: अभी Supernova AI app download कीजिए और अपनी English practice शुरू कीजिए।",
+        "script_roman": "Miss Nova says: Abhi Supernova AI app download kijiye aur apni English practice shuru kijiye."
+      }
+    ],
+    "pitch_points_used": [
+      "You SPEAK (speaking practice)",
+      "Time is not the blocker (10-15 minutes)",
+      "improve in just 30 days",
+      "~7x cheaper than offline classes/coaching",
+      "1 crore+ users"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.8911302
+}

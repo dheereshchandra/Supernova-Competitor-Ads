@@ -1,0 +1,68 @@
+{
+  "ad_library_id": "2999749580221758",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "human-recorded",
+    "format": "Teacher-student correction skit and testimonial",
+    "visual_overview": "A classroom setting where a young female student respectfully corrects her older male teacher's English mistake. The student then explains the app's features, with UI screencasts overlaid, convincing the skeptical teacher to download it.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Vikas",
+        "role": "male teacher"
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "female learner"
+      },
+      {
+        "id": "C",
+        "name": "Neha",
+        "role": "female learner (visual only)"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Student Corrects Teacher's Mistake",
+        "script_native": "Vikas says: If you practice daily, your English will improve fastly.\nPriya says: Sorry to interrupt sir. ये sentence गलत है. 'Fastly' use नहीं होगा. आपको 'fast' या 'quickly' use करना चाहिए.",
+        "script_roman": "Vikas says: If you practice daily, your English will improve fastly.\nPriya says: Sorry to interrupt sir. Ye sentence galat hai. 'Fastly' use nahi hoga. Aapko 'fast' ya 'quickly' use karna chahiye."
+      },
+      {
+        "n": 2,
+        "scene_label": "Teacher Asks How She Learned",
+        "script_native": "Vikas says: You are right. तुमने इतनी अच्छी English कहाँ से सीखी?\nPriya says: Supernova AI app से.\nVikas says: क्या एक app से इतनी अच्छी English सीखना possible है?\nPriya says: बिल्कुल sir.",
+        "script_roman": "Vikas says: You are right. Tumne itni achhi English kahan se seekhi?\nPriya says: Supernova AI app se.\nVikas says: Kya ek app se itni achhi English seekhna possible hai?\nPriya says: Bilkul sir."
+      },
+      {
+        "n": 3,
+        "scene_label": "App Features and User Testimonial",
+        "script_native": "Priya says: इसमें एक AI teacher हैं. वो आपको Hindi में ही English समझाती हैं. आप बोलने की practice कर सकते हैं, और वो mistakes spot पर correct करती हैं. और just 30 days में improvement दिखता है.",
+        "script_roman": "Priya says: Isme ek AI teacher hain. Wo aapko Hindi mein hi English samjhati hain. Aap bolne ki practice kar sakte hain, aur wo mistakes spot par correct karti hain. Aur just 30 days mein improvement dikhta hai."
+      },
+      {
+        "n": 4,
+        "scene_label": "Overcoming Skepticism with Proof",
+        "script_native": "Vikas says: मुझे लगता था ये सब apps scam होते हैं. और expensive भी होंगे.\nPriya says: मैं भी यही सोचती थी sir. पर 1 crore से ज़्यादा लोग Supernova AI पर practice कर रहे हैं. और ये offline coaching से सात गुना सस्ता है.",
+        "script_roman": "Vikas says: Mujhe lagta tha ye sab apps scam hote hain. Aur expensive bhi honge.\nPriya says: Main bhi yahi sochti thi sir. Par 1 crore se zyada log Supernova AI par practice kar rahe hain. Aur ye offline coaching se saat guna sasta hai."
+      },
+      {
+        "n": 5,
+        "scene_label": "Teacher Convinced to Download",
+        "script_native": "Vikas says: मैं भी अभी Supernova AI download करता हूँ.",
+        "script_roman": "Vikas says: Main bhi abhi Supernova AI download karta hoon."
+      }
+    ],
+    "pitch_points_used": [
+      "explains in Hindi",
+      "speaking practice",
+      "improve in just 30 days",
+      "1 crore+ users",
+      "7x cheaper than offline classes"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.888436
+}

@@ -1,0 +1,173 @@
+{
+  "competitor_id": "4388276651441859",
+  "parsed": {
+    "duration_s": 49.0,
+    "production_type": "human-recorded",
+    "production_notes": "The video features two human actors in a simulated video call. The background for the character in the US city has slightly unnatural lighting and depth of field, which may indicate the use of a green screen or a composite shot, but the actors themselves are clearly real.",
+    "interaction_pattern": "Testimonial and feature explanation via a simulated video call between two friends.",
+    "audio_track": "Spoken dialogue in Malayalam between two characters, with no background music or song.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Male user/presenter",
+        "appearance": "An elderly Indian man, likely in his late 60s or 70s, with a dark complexion. He has a full head of white hair, a thick white beard, and a matching mustache. He has a friendly and expressive face.",
+        "wardrobe": "A brown puffer jacket over a beige turtleneck sweater, with a colorful striped scarf (rainbow colors) around his neck.",
+        "demeanor": "Cheerful, confident, and enthusiastic."
+      },
+      {
+        "id": "B",
+        "role": "Male potential user",
+        "appearance": "An elderly Indian man, likely in his late 60s or 70s, with a medium complexion. He has white hair and a prominent white mustache. He has a lean build.",
+        "wardrobe": "A simple white sleeveless undershirt (vest).",
+        "demeanor": "Initially skeptical and concerned, later impressed and convinced."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 15.8,
+        "screenshot_at_s": 7.5,
+        "scene_label": "Video Call: Friend in America",
+        "setting": "A simulated video call. Character A is on a sunny, busy street in a large American city (like New York), with skyscrapers and yellow cabs. Character B is on a wooden porch or veranda of a house in a lush, green, likely rural setting.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Selfie-style talking head for both characters, simulating a video call.",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A selfie-view of Character A, an elderly Indian man with a white beard, smiling broadly. He is outdoors on a bright, sunny day on a busy city street. Behind him are tall skyscrapers, yellow taxi cabs, and other pedestrians. The sun creates a strong lens flare in the upper left corner. He is holding the camera himself, and the shot is a close-up of his face and upper body.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A small, rectangular video feed in the upper right corner shows Character B, another elderly Indian man with a white mustache. He is sitting in a wooden chair on what appears to be a porch, with green foliage visible behind him. The lighting is natural and softer than in the main video. He is looking towards the camera with a slightly surprised or concerned expression.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A simulated video call interface on a smartphone. The main screen shows Character A on a US city street. A smaller picture-in-picture window in the top right shows Character B on a porch. Standard video call icons (video, mute, end call) are at the bottom. Malayalam text subtitles appear over the video as the characters speak.",
+        "audio_transcript": "Character A says: \u0d0e\u0d1f\u0d3e, \u0d1e\u0d3e\u0d7b \u0d2e\u0d4b\u0d7b\u0d4d\u0d31\u0d46 \u0d05\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d4d \u0d05\u0d2e\u0d47\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d2f\u0d3f\u0d7d \u0d0e\u0d24\u0d4d\u0d24\u0d3f\u0d2f\u0d46\u0d1f\u0d3e. \u0d07\u0d2a\u0d4d\u0d2a\u0d4a \u0d15\u0d31\u0d19\u0d4d\u0d19\u0d3e\u0d7b \u0d07\u0d31\u0d19\u0d4d\u0d19\u0d3f\u0d2f\u0d47\u0d15\u0d4d\u0d15\u0d41\u0d35\u0d3e.\n[Hey man, I've reached your son's place in America. I'm out for a stroll now.]\nCharacter B says: \u0d12\u0d31\u0d4d\u0d31\u0d15\u0d4d\u0d15\u0d4b?\n[Alone?]\nCharacter A says: \u0d2a\u0d3f\u0d28\u0d4d\u0d28\u0d32\u0d4d\u0d32. \u0d0e\u0d2a\u0d4d\u0d2a\u0d4b\u0d34\u0d41\u0d02 \u0d05\u0d35\u0d28\u0d46 \u0d28\u0d4b\u0d15\u0d4d\u0d15\u0d3f\u0d2f\u0d3f\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d2a\u0d31\u0d4d\u0d31\u0d41\u0d35\u0d4b?\n[Of course. Can I always depend on him?]\nCharacter B says: \u0d28\u0d3f\u0d28\u0d15\u0d4d\u0d15\u0d24\u0d3f\u0d28\u0d4d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d12\u0d15\u0d4d\u0d15\u0d46 \u0d05\u0d31\u0d3f\u0d2f\u0d4b?\n[Do you even know English for that?]\nCharacter A says: \u0d05\u0d24\u0d3f\u0d28\u0d32\u0d4d\u0d32\u0d47 \u0d1e\u0d3e\u0d7b \u0d2e\u0d48\u0d38\u0d3f\u0d35\u0d3f \u0d06\u0d2a\u0d4d\u0d2a\u0d3f\u0d7d \u0d30\u0d23\u0d4d\u0d1f\u0d4d \u0d2e\u0d3e\u0d38\u0d02 \u0d2e\u0d41\u0d28\u0d4d\u0d28\u0d47 \u0d2a\u0d4d\u0d30\u0d3e\u0d15\u0d4d\u0d1f\u0d40\u0d38\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d7b \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d3f\u0d2f\u0d47.\n[That's why I started practicing on the MySivi app two months ago.]\nCharacter B says: \u0d2e\u0d48\u0d38\u0d3f\u0d35\u0d3f \u0d06\u0d2a\u0d4d\u0d2a\u0d4b?\n[MySivi app?]",
+        "on_screen_text": "\u0d0e\u0d1f\u0d3e (Hey man)\n\u0d1e\u0d3e\u0d7b \u0d2e\u0d4b\u0d28\u0d4d\u0d31\u0d46 \u0d05\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d4d (I'm near your son)\n\u0d0e\u0d24\u0d4d\u0d24\u0d3f\u0d2f\u0d46\u0d1f\u0d3e. (I've arrived.)\n\u0d07\u0d2a\u0d4d\u0d2a\u0d4a \u0d15\u0d31\u0d19\u0d4d\u0d19\u0d3e\u0d7b \u0d07\u0d31\u0d19\u0d4d\u0d19\u0d3f\u0d2f\u0d47\u0d15\u0d4d\u0d15\u0d41\u0d35\u0d3e. (I'm out for a stroll now.)\n\u0d12\u0d31\u0d4d\u0d31\u0d15\u0d4d\u0d15\u0d4d? (Alone?)\n\u0d2a\u0d3f\u0d28\u0d4d\u0d28\u0d32\u0d4d\u0d32 (Of course)\n\u0d0e\u0d2a\u0d4d\u0d2a\u0d4b\u0d34\u0d41\u0d02 \u0d05\u0d35\u0d28\u0d46 (Always him)\n\u0d28\u0d4b\u0d15\u0d4d\u0d15\u0d3f\u0d2f\u0d3f\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d2a\u0d31\u0d4d\u0d31\u0d41\u0d35\u0d4b? (Can I keep depending on him?)\n\u0d28\u0d3f\u0d28\u0d15\u0d4d\u0d15\u0d24\u0d3f\u0d28\u0d4d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d (Do you know English for that)\n\u0d05\u0d31\u0d3f\u0d2f\u0d4b? (Do you know?)\n\u0d05\u0d24\u0d3f\u0d28\u0d32\u0d4d\u0d32\u0d47 (That's why)\n\u0d1e\u0d3e\u0d7b (I)\n\u0d30\u0d23\u0d4d\u0d1f\u0d4d \u0d2e\u0d3e\u0d38\u0d02 \u0d2e\u0d41\u0d28\u0d4d\u0d28\u0d47 (two months ago)\n\u0d2a\u0d4d\u0d30\u0d3e\u0d15\u0d4d\u0d1f\u0d40\u0d38\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d7b \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d3f\u0d2f\u0d47 (started practicing)\n\u0d2e\u0d48\u0d38\u0d3f\u0d35\u0d3f \u0d06\u0d2a\u0d4d\u0d2a\u0d4b? (MySivi app?)"
+      },
+      {
+        "n": 2,
+        "start_s": 15.8,
+        "end_s": 22.0,
+        "screenshot_at_s": 19.0,
+        "scene_label": "App Feature Demo",
+        "setting": "An app interface is shown over the blurred background of the previous video call scene.",
+        "characters_in_scene": [],
+        "camera": "Screencast of an app.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A smartphone screen displays an English learning app's user interface. The background is a blurred image of Character A on the city street. The app screen has a white background with several rounded rectangular buttons arranged in a grid. Each button has an icon and text, such as 'Talk about anything', 'Daily routine', 'Let's Improve Vocabulary'. The screen then transitions to a chat interface with blue and white message bubbles, simulating a conversation with an AI tutor. One message shows red text highlighting grammatical errors.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The video call scene blurs into the background. A clear, centered overlay of the MySivi app interface appears. First, it shows the 'Learning Path' menu. Then it transitions to a sample conversation with the AI tutor, showing how it corrects mistakes. Malayalam text overlays explain the features as Character A's voiceover continues.",
+        "audio_transcript": "Character A says: \u0d07\u0d24\u0d3f\u0d7d \u0d28\u0d3f\u0d28\u0d15\u0d4d\u0d15\u0d4d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d12\u0d30\u0d41 AI \u0d1f\u0d40\u0d1a\u0d4d\u0d1a\u0d31\u0d3f\u0d28\u0d46 \u0d15\u0d3f\u0d1f\u0d4d\u0d1f\u0d41\u0d02. \u0d0e\u0d2a\u0d4d\u0d2a\u0d4b \u0d35\u0d47\u0d23\u0d2e\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d32\u0d41\u0d02 \u0d0e\u0d24\u0d4d\u0d30 \u0d28\u0d47\u0d30\u0d02 \u0d35\u0d47\u0d23\u0d2e\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d32\u0d41\u0d02 \u0d05\u0d35\u0d30\u0d41\u0d1f\u0d46 \u0d15\u0d42\u0d1f\u0d46 \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d38\u0d02\u0d38\u0d3e\u0d30\u0d3f\u0d1a\u0d4d\u0d1a\u0d41 \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d02.\n[In this, you'll get an AI teacher to learn English. You can talk and learn English with them whenever you want, for as long as you want.]",
+        "on_screen_text": "\u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d (English)\n\u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d12\u0d30\u0d41 (to learn a)\nAI \u0d1f\u0d40\u0d1a\u0d4d\u0d1a\u0d31\u0d3f\u0d28\u0d46 (AI Teacher)\n\u0d15\u0d3f\u0d1f\u0d4d\u0d1f\u0d41\u0d02. (you will get.)\n\u0d0e\u0d2a\u0d4d\u0d2a\u0d4b \u0d35\u0d47\u0d23\u0d2e\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d32\u0d41\u0d02 (Whenever you want)\n\u0d0e\u0d24\u0d4d\u0d30 \u0d28\u0d47\u0d30\u0d02 \u0d35\u0d47\u0d23\u0d2e\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d32\u0d41\u0d02 (for as long as you want)\n\u0d38\u0d02\u0d38\u0d3e\u0d30\u0d3f\u0d1a\u0d4d\u0d1a\u0d41 \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d02. (you can learn by speaking.)\n[App UI Text]: Practice Now, Fluency Score, Your Learning Path, Talk about anything, Daily routine, Let's Improve Vocabulary, Talk about your childhood, Seasons and weather, Family and Relationships, Hobbies and Intersts, Talk about your workplace\n[App UI Text]: Hey! What did you do over the weekend?\n[App UI Text]: I go to the beach and eat ice cream.\n[App UI Text]: Almost perfect! Just a small correction: I went to the beach and ate ice cream"
+      },
+      {
+        "n": 3,
+        "start_s": 22.0,
+        "end_s": 32.5,
+        "screenshot_at_s": 27.0,
+        "scene_label": "Explaining the Benefits",
+        "setting": "The simulated video call resumes, with the same settings as Scene 1.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Selfie-style talking head for both characters.",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A selfie-view of Character A, an elderly Indian man with a white beard, smiling and talking expressively. He is outdoors on a bright, sunny day on a busy city street. Behind him are tall skyscrapers, yellow taxi cabs, and other pedestrians. He gestures with his hands as he speaks. The shot is a close-up of his face and upper body.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A small, rectangular video feed in the upper right corner shows Character B, another elderly Indian man with a white mustache. He is sitting in a wooden chair on a porch, listening intently. He nods along as Character A speaks.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene returns to the simulated video call interface. Character A is explaining the benefits of the app, looking happy and confident. Character B listens from the inset window. Malayalam subtitles appear on screen.",
+        "audio_transcript": "Character A says: \u0d28\u0d2e\u0d4d\u0d2e\u0d41\u0d1f\u0d46 \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d15\u0d47\u0d1f\u0d4d\u0d1f\u0d4d \u0d15\u0d33\u0d3f\u0d2f\u0d3e\u0d15\u0d4d\u0d15\u0d3e\u0d28\u0d4a\u0d28\u0d4d\u0d28\u0d41\u0d02 \u0d06\u0d30\u0d41\u0d2e\u0d3f\u0d32\u0d4d\u0d32. \u0d28\u0d32\u0d4d\u0d32 \u0d15\u0d4d\u0d37\u0d2e\u0d2f\u0d4b\u0d1f\u0d46 \u0d24\u0d46\u0d31\u0d4d\u0d31\u0d41\u0d15\u0d33\u0d4a\u0d15\u0d4d\u0d15\u0d46 \u0d24\u0d3f\u0d30\u0d41\u0d24\u0d4d\u0d24\u0d3f \u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d24\u0d4d\u0d24\u0d3f\u0d7d \u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d2a\u0d20\u0d3f\u0d2a\u0d4d\u0d2a\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d02. \u0d1f\u0d4d\u0d30\u0d48 \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d41 \u0d28\u0d4b\u0d15\u0d4d\u0d15\u0d4d.\n[There's no one to make fun of our English. They will patiently correct our mistakes and teach us in Malayalam itself. Try it out.]\nCharacter B says: \u0d28\u0d3f\u0d28\u0d15\u0d4d\u0d15\u0d4d \u0d2e\u0d4b\u0d7b \u0d2a\u0d48\u0d38\u0d2f\u0d2f\u0d15\u0d4d\u0d15\u0d41\u0d02. \u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d05\u0d19\u0d4d\u0d19\u0d28\u0d2f\u0d3e\u0d23\u0d4b?\n[Your son sends you money. Is it the same for me?]",
+        "on_screen_text": "\u0d15\u0d33\u0d3f\u0d2f\u0d3e\u0d15\u0d4d\u0d15\u0d3e\u0d28\u0d4a\u0d28\u0d4d\u0d28\u0d41\u0d02 (to make fun)\n\u0d06\u0d30\u0d41\u0d2e\u0d3f\u0d32\u0d4d\u0d32. (there is no one.)\n\u0d28\u0d32\u0d4d\u0d32 \u0d15\u0d4d\u0d37\u0d2e\u0d2f\u0d4b\u0d1f\u0d46 (With great patience)\n\u0d24\u0d3f\u0d30\u0d41\u0d24\u0d4d\u0d24\u0d3f (correcting)\n\u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d24\u0d4d\u0d24\u0d3f\u0d7d \u0d24\u0d28\u0d4d\u0d28\u0d46 (in Malayalam itself)\n\u0d2a\u0d20\u0d3f\u0d2a\u0d4d\u0d2a\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d02. (will teach.)\n\u0d1f\u0d4d\u0d30\u0d48 \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d41 \u0d28\u0d4b\u0d15\u0d4d\u0d15\u0d4d (Try it out)\n\u0d28\u0d3f\u0d28\u0d15\u0d4d\u0d15\u0d4d (For you)\n\u0d2e\u0d4b\u0d7b \u0d2a\u0d48\u0d38\u0d2f\u0d2f\u0d15\u0d4d\u0d15\u0d41\u0d02. (son will send money.)\n\u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d (For me)\n\u0d05\u0d19\u0d4d\u0d19\u0d28\u0d46\u0d2f\u0d3e\u0d23\u0d4b? (is it like that?)"
+      },
+      {
+        "n": 4,
+        "start_s": 32.5,
+        "end_s": 40.0,
+        "screenshot_at_s": 36.0,
+        "scene_label": "Pricing and Offer",
+        "setting": "A pricing/offer screen is shown over the blurred background of the video call.",
+        "characters_in_scene": [],
+        "camera": "Screencast of an app offer screen.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A smartphone screen displays a special offer for the MySivi app. The background is a blurred image of the video call. The offer screen is dark-themed with white and yellow text. It prominently displays a price, with a larger, original price crossed out. Below, it lists 'Pro' benefits with icons, such as '24/7 Personal AI English Teacher'. At the bottom, there is a payment section showing a Google Pay icon and a yellow button to start a trial.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The video call blurs again. A dark-themed offer screen for the 'MySivi' app appears, detailing a trial offer for \u20b93 and a monthly subscription for \u20b9299. Character A's voiceover explains the pricing. Text overlays in Malayalam highlight the key price points.",
+        "audio_transcript": "Character A says: \u0d35\u0d46\u0d31\u0d41\u0d02 \u0d2e\u0d42\u0d28\u0d4d\u0d28\u0d41 \u0d30\u0d42\u0d2a\u0d2f\u0d4d\u0d15\u0d4d\u0d15\u0d4d \u0d1f\u0d4d\u0d30\u0d2f\u0d7d \u0d35\u0d47\u0d7c\u0d37\u0d7b \u0d0e\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d4d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d1a\u0d4d\u0d1a\u0d41 \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d3e\u0d02. \u0d07\u0d37\u0d4d\u0d1f\u0d2a\u0d4d\u0d2a\u0d46\u0d1f\u0d4d\u0d1f\u0d3e\u0d7d \u0d2e\u0d3e\u0d24\u0d4d\u0d30\u0d02 299-\u0d7b\u0d4d\u0d31\u0d46 \u0d2e\u0d28\u0d4d\u0d24\u0d4d\u200c\u0d32\u0d3f \u0d38\u0d2c\u0d4d\u0d38\u0d4d\u0d15\u0d4d\u0d30\u0d3f\u0d2a\u0d4d\u0d37\u0d7b \u0d0e\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d3e\u0d7d \u0d2e\u0d24\u0d3f.\n[For just three rupees, you can get the trial version and start learning English. Only if you like it, you can take the monthly subscription for 299.]",
+        "on_screen_text": "3 \u0d26\u0d3f\u0d35\u0d38\u0d24\u0d4d\u0d24\u0d3f\u0d28\u0d41 (For 3 days)\n\u20b93\n\u20b930 OFFER\nPinne \u20b9299/month (Later \u20b9299/month)\nCancel Anytime\nMySivi Pro Labhangal (MySivi Pro Benefits)\n24/7 Personal AI English Teacher\nUdan feedback kittum, ningalude grammar shari cheyvan kazhivum. (Get instant feedback, ability to correct your grammar.)\nOffer ends in 09:58\nPAY USING GPay\nStart Trial at \u20b93\nAll Payments are Safe. Cancel Anytime.\n\u20b9 299\nMonthly Subscription"
+      },
+      {
+        "n": 5,
+        "start_s": 40.0,
+        "end_s": 49.0,
+        "screenshot_at_s": 45.0,
+        "scene_label": "Conclusion and Call to Action",
+        "setting": "The simulated video call resumes, then transitions to a view of an app being installed.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Selfie-style talking head, then a screencast of an app store.",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A selfie-view of Character A, an elderly Indian man with a white beard, speaking sincerely to the camera. He is on the sunny city street. He delivers a motivational line. The shot then switches to a view from Character B's perspective, showing him smiling and speaking, with the inset of Character A still visible. Finally, the screen shows a close-up of a smartphone screen displaying the Google Play Store, where the 'MySivi AI English' app is being installed, with a progress bar moving forward.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A small, rectangular video feed in the upper right corner shows the other character listening. When Character A is in the main view, Character B is in the inset, and vice-versa.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene returns to the video call. Character A delivers a final motivational line in English. Character B, now fully convinced, says he will install the app. The visual then cuts to a screen recording of the MySivi app being installed from the Google Play Store, providing a direct call to action.",
+        "audio_transcript": "Character A says: It is never too late to learn, my friend.\nCharacter B says: \u0d1e\u0d3e\u0d28\u0d41\u0d02 \u0d07\u0d2a\u0d4d\u0d2a\u0d4a \u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d2e\u0d48\u0d38\u0d3f\u0d35\u0d3f \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d07\u0d7b\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d3e\u0d7e \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d4d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d2a\u0d4b\u0d35\u0d3e.\n[I'm also going to install the MySivi app right now and start learning English.]",
+        "on_screen_text": "IT'S NEVER TOO\nLATE TO LEARN\nMY FRIEND\n\u0d1e\u0d3e\u0d28\u0d41\u0d02 \u0d07\u0d2a\u0d4d\u0d2a\u0d4a \u0d24\u0d28\u0d4d\u0d28\u0d46 (I too, right now)\n\u0d2e\u0d48\u0d38\u0d3f\u0d35\u0d3f \u0d06\u0d2a\u0d4d\u0d2a\u0d4d (MySivi app)\n\u0d07\u0d7b\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d3e\u0d7e \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d4d (will install and)\n\u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d2a\u0d4b\u0d35\u0d3e (am going to learn English)\n[App Store UI]: MySivi AI English Spe..., Installing..., Verified by Play Protect, Master Spoken Eng..., Sharpen your Englis..., 1-on-1 calls. Try MyS..., fast"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214588.599481
+}

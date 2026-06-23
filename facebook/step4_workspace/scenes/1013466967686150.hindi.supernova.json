@@ -1,0 +1,59 @@
+{
+  "ad_library_id": "1013466967686150",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "Split-screen AI teacher correction",
+    "visual_overview": "A split-screen video with an AI avatar (Miss Nova) on the left and a human learner on the right. They have a natural conversation where the AI corrects the learner's English. The video cuts to app screencasts showing the 1 crore+ users and the install process.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI teacher"
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "Female learner"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Problem Hook",
+        "script_native": "Priya says: इंग्लिश समझ तो आती है, पर बोलने का टाइम आये तो फ्रीज़ हो जाते हो?",
+        "script_roman": "Priya says: English samajh toh aati hai, par bolne ka time aaye toh freeze ho jate ho?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Mistake, Correction, and Pitch",
+        "script_native": "Miss Nova says: आपके कितने भाई हैं?\nPriya says: I am having two brothers.\nMiss Nova says: 'Having' नहीं। क्या आपने उन दोनों को अभी हाथ में पकड़ कर रखा है?\nPriya says: (laughs) नहीं नहीं, हाथ में तो नहीं।\nMiss Nova says: तो ऐसे बोलिए: I have two brothers.\nPriya says: ओह... ठीक है। मुझे ना इंग्लिश ठीक से बोलनी नहीं आती।\nMiss Nova says: कोई प्रॉब्लम नहीं। मैं एक AI टीचर हूँ, और मैं सब कुछ हिंदी में समझाती हूँ।\nPriya says: पर AI टीचर तो महंगे होंगे ना?\nMiss Nova says: बिलकुल नहीं। नार्मल कोचिंग से सात गुना सस्ता है।",
+        "script_roman": "Miss Nova says: Aapke kitne bhai hain?\nPriya says: I am having two brothers.\nMiss Nova says: 'Having' nahi. Kya aapne un dono ko abhi haath mein pakad kar rakha hai?\nPriya says: (laughs) Nahi nahi, haath mein toh nahi.\nMiss Nova says: Toh aise boliye: I have two brothers.\nPriya says: Ohh... theek hai. Mujhe na English theek se bolni nahi aati.\nMiss Nova says: Koi problem nahi. Main ek AI teacher hoon, aur main sab kuch Hindi mein samjhati hoon.\nPriya says: Par AI teacher toh mehnge honge na?\nMiss Nova says: Bilkul nahi. Normal coaching se saat guna sasta hai."
+      },
+      {
+        "n": 3,
+        "scene_label": "Social Proof and App Demo",
+        "script_native": "Miss Nova says: इसीलिए 1 crore+ लोग Supernova AI पर मेरे साथ बोलने की प्रैक्टिस कर रहे हैं।\nPriya says: पर मेरे पास टाइम ही नहीं मिलता।\nMiss Nova says: रोज़ सिर्फ 10-15 minutes की प्रैक्टिस काफी है। आप बिना किसी जजमेंट के प्रैक्टिस कर सकते हो।\nPriya says: वाओ, मैं कैसे स्टार्ट करूँ?",
+        "script_roman": "Miss Nova says: Isiliye 1 crore+ log Supernova AI par mere saath bolne ki practice kar rahe hain.\nPriya says: Par mere paas time hi nahi milta.\nMiss Nova says: Roz sirf 10-15 minutes ki practice kaafi hai. Aap bina kisi judgement ke practice kar sakte ho.\nPriya says: Wow, main kaise start karoon?"
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "script_native": "Miss Nova says: नीचे Install बटन दबाइए और Supernova AI डाउनलोड कीजिये। सिर्फ 30 days में आपको इम्प्रूवमेंट दिखने लगेगा।\nPriya says: मैं अभी डाउनलोड करती हूँ!",
+        "script_roman": "Miss Nova says: Neeche Install button dabaiye aur Supernova AI download kijiye. Sirf 30 days mein aapko improvement dikhne lagega.\nPriya says: Main abhi download karti hoon!"
+      }
+    ],
+    "pitch_points_used": [
+      "1 crore+ users",
+      "improve in just 30 days",
+      "7x cheaper",
+      "Explains in Hindi",
+      "Speaking practice",
+      "No-judgement / privacy",
+      "Time is not the blocker (10-15 minutes)"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.891807
+}

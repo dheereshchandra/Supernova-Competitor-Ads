@@ -1,0 +1,51 @@
+{
+  "ad_library_id": "1481880370348464",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "human-recorded",
+    "format": "Testimonial / peer conversation",
+    "visual_overview": "A young female passenger in a cycle rickshaw converses with the older male driver on a busy street. The video ends with a 3D render of a smartphone displaying the Supernova AI app and an install button.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "female passenger"
+      },
+      {
+        "id": "B",
+        "name": "Ramesh",
+        "role": "male rickshaw driver"
+      },
+      {
+        "id": "C",
+        "name": "Unknown speaker",
+        "role": "voiceover"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Rickshaw Negotiation & App Testimonial",
+        "script_native": "Priya says: भैया, चांदनी चौक जाने का कितना लोगे?\nRamesh says: It will be around 100 rupees.\nPriya says: 100 rupees तो थोड़ा ज्यादा है भैया।\nRamesh says: If you can't afford, then find some other rickshaw, please.\nPriya says: अच्छा भैया, ये बताओ, I have been trying to make my boyfriend learn English, but I can't. फिर आपने कैसे सीख ली?\nRamesh says: वो मैं Supernova AI app use करता हूँ ना।\nPriya says: Supernova AI? वो क्या है?\nRamesh says: इस app में एक AI teacher हैं। मैं रोज़ उनके साथ 10-15 minutes speaking practice करता हूँ। और वो सब कुछ Hindi में समझाती हैं।\nPriya says: अरे वाह! पर ये AI तो महंगा होगा ना?\nRamesh says: बिल्कुल नहीं। ये offline coaching से सात गुना सस्ता है। और सिर्फ 30 days में improvement दिखने लगता है। तो अपने boyfriend को भी करवा दो।\nPriya says: ज़रूर भैया। कैसे start करूँ?\nRamesh says: 1 crore+ users पहले से practice कर रहे हैं। बस install button पे click करो और Supernova AI download करो।",
+        "script_roman": "Priya says: Bhaiya, Chandni Chowk jaane ka kitna loge?\nRamesh says: It will be around 100 rupees.\nPriya says: 100 rupees toh thoda zyada hai bhaiya.\nRamesh says: If you can't afford, then find some other rickshaw, please.\nPriya says: Achha bhaiya, ye batao, I have been trying to make my boyfriend learn English, but I can't. Phir aapne kaise seekh li?\nRamesh says: Wo main Supernova AI app use karta hoon na.\nPriya says: Supernova AI? Wo kya hai?\nRamesh says: Iss app mein ek AI teacher hain. Main roz unke saath 10-15 minutes speaking practice karta hoon. Aur wo sab kuch Hindi mein samjhati hain.\nPriya says: Are waah! Par ye AI toh mehnga hoga na?\nRamesh says: Bilkul nahi. Ye offline coaching se saat guna sasta hai. Aur sirf 30 days mein improvement dikhne lagta hai. Toh apne boyfriend ko bhi karwa do.\nPriya says: Zaroor bhaiya. Kaise start karun?\nRamesh says: 1 crore+ users pehle se practice kar rahe hain. Bas install button pe click karo aur Supernova AI download karo."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Install CTA",
+        "script_native": "Unknown speaker says: Install now पे click करो और Supernova AI download करो।",
+        "script_roman": "Unknown speaker says: Install now pe click karo aur Supernova AI download karo."
+      }
+    ],
+    "pitch_points_used": [
+      "10-15 minutes a day",
+      "speaking practice",
+      "explains in Hindi",
+      "7x cheaper than offline classes/coaching",
+      "improve in just 30 days",
+      "1 crore+ users"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.889409
+}

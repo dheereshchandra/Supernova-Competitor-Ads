@@ -1,0 +1,138 @@
+{
+  "competitor_id": "1441837924379258",
+  "parsed": {
+    "duration_s": 41.6,
+    "production_type": "mixed",
+    "production_notes": "The video uses a split-screen format. The top panel features a clearly AI-generated female humanoid robot, while the bottom panel is a standard human-recorded video of a male actor.",
+    "interaction_pattern": "AI tutor diagnoses a learner's problem (lack of English confidence) through dialogue and offers the app as a solution.",
+    "audio_track": "Spoken dialogue in Hindi between two characters with no background music, followed by a male voiceover for the final call-to-action.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "An AI-generated female humanoid robot with a photorealistic Caucasian face, fair skin, dark eyes, and defined facial features. She has no hair. Her body is a white and grey mechanical chassis with exposed joints at the neck, shoulders, and elbows.",
+        "wardrobe": "Character A is a robot and does not wear clothing; her body is a white, glossy chassis.",
+        "demeanor": "Calm, composed, helpful, and reassuring."
+      },
+      {
+        "id": "B",
+        "role": "male learner",
+        "appearance": "A young South Asian man in his late teens or early twenties with a slim build and medium complexion. He has dark, wavy hair, dark eyes, and a light mustache and beard.",
+        "wardrobe": "A light blue/grey button-down shirt with a dark, loosely tied necktie.",
+        "demeanor": "Initially appears stressed, frustrated, and anxious, then becomes curious, hopeful, and finally confident and smiling."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 26.8,
+        "screenshot_at_s": 13.0,
+        "scene_label": "AI Tutor Diagnoses Student's Problem",
+        "setting": "A split-screen setup. The top panel is a bright, modern cafe. The bottom panel is a simple room with a plain wall.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up on both characters.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up shot of a female humanoid robot, Character A, sitting comfortably in a black leather armchair. She is in a bright, airy cafe setting with large windows behind her showing greenery and a pagoda-like structure. On a small table next to her is a purple mug with a latte art heart on top. The lighting is soft and natural. Her expression is calm and attentive.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up shot of a young South Asian man, Character B, sitting and looking directly at the camera. He is in a plainly decorated room with a neutral-colored wall behind him. The lighting is simple and direct. His expressions change throughout the scene from frustrated and anxious to hopeful and smiling.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertically split-screen video. The top panel shows Character A, a female AI robot, in a cafe. The bottom panel shows Character B, a young male student, in a simple room. They are having a conversation. Large, single-word text overlays appear in the middle of the screen, synchronized with the dialogue.",
+        "audio_transcript": "Character A says: \u0924\u0941\u092e\u094d\u0939\u093e\u0930\u093e \u0935\u093e\u0907\u0935\u093e \u0915\u0948\u0938\u093e \u0917\u092f\u093e? [How was your viva (oral exam)?]\nCharacter B says: \u0905\u091a\u094d\u091b\u093e \u0928\u0939\u0940\u0902 \u0917\u092f\u093e\u0964 \u092e\u0941\u091d\u0947 \u0938\u093e\u0930\u0947 \u0906\u0902\u0938\u0930\u094d\u0938 \u0906\u0924\u0947 \u0925\u0947, \u092b\u093f\u0930 \u092d\u0940 \u0906\u0902\u0938\u0930 \u0928\u0939\u0940\u0902 \u0926\u0947 \u092a\u093e\u092f\u093e\u0964 [It didn't go well. I knew all the answers, but still couldn't answer.]\nCharacter A says: \u0915\u094d\u092f\u094b\u0902, \u0910\u0938\u093e \u0915\u094d\u092f\u093e \u0939\u0941\u0906? [Why, what happened?]\nCharacter B says: \u0935\u094b \u092e\u0948\u0902 \u0906\u0902\u0938\u0930 \u0926\u0947\u0924\u0947 \u0939\u0941\u090f \u0928\u0930\u094d\u0935\u0938 \u0939\u094b \u0917\u092f\u093e \u0915\u094d\u092f\u094b\u0902\u0915\u093f \u092e\u0941\u091d\u0947 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0905\u091a\u094d\u091b\u0947 \u0938\u0947 \u0928\u0939\u0940\u0902 \u0906\u0924\u0940\u0964 [Well, I got nervous while answering because I don't know English well.]\nCharacter A says: \u0924\u094b \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916 \u0915\u094d\u092f\u094b\u0902 \u0928\u0939\u0940\u0902 \u0932\u0947\u0924\u0947? [Then why don't you learn English?]\nCharacter B says: \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 \u0915\u094b\u0908 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0928\u0947 \u0935\u093e\u0932\u093e \u0928\u0939\u0940\u0902 \u0939\u0948 \u0928\u093e\u0964 [I don't have anyone to practice with.]\nCharacter A says: \u0924\u094b \u0924\u0941\u092e \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u094b \u0928\u093e\u0964 [Then practice with me.]\nCharacter B says: \u092e\u0947\u0930\u0947 \u092a\u093e\u0938 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0928\u0947 \u0915\u093e \u091f\u093e\u0907\u092e \u092d\u0940 \u0915\u0939\u093e\u0902 \u0939\u0948? [Where do I even have the time to practice?]\nCharacter A says: \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 \u0930\u094b\u095b \u092c\u0938 15 \u092e\u093f\u0928\u091f \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u094b \u090f\u0902\u0921 \u0915\u0941\u091b \u0939\u0940 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 \u0924\u0941\u092e\u094d\u0939\u093e\u0930\u0940 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0905\u091a\u094d\u091b\u0940 \u0939\u094b \u091c\u093e\u090f\u0917\u0940\u0964 [Just practice with me for 15 minutes every day, and in a few days, your English will become very good.]\nCharacter B says: \u0905\u091a\u094d\u091b\u093e? \u092a\u0930 \u092f\u0947 \u0924\u094b \u092e\u0939\u0902\u0917\u093e \u0939\u094b\u0917\u093e \u0928\u093e? [Really? But this must be expensive, right?]",
+        "on_screen_text": "TUMHARA VIVA, ACHA, MUJHE, AATE, BHI ANSWER, DE PAYA, KYON,, WO MAI ANSWER, MUJHE, AATI, SEEKH, MERE, PRACTICE KARNE, HAI NA TO TUM, SATH PRACTICE, KA TIME, HAI MERE, ROZ, AND, ME TUMHARI, BILKUL, HO JAYEGI, PAR, HOGA NA"
+      },
+      {
+        "n": 2,
+        "start_s": 26.8,
+        "end_s": 31.5,
+        "screenshot_at_s": 28.0,
+        "scene_label": "Presenting the \u20b91 Offer",
+        "setting": "The same split-screen background, now slightly blurred, with a prominent app UI overlay in the center.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up on both characters in the background.",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A static, vertically split-screen image. The top half shows a female humanoid robot, Character A, sitting in a cafe. The bottom half shows a young South Asian man, Character B, in a simple room. Both are looking forward with neutral to pleasant expressions. The entire image is slightly blurred.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen video of Character A and B continues in the background, slightly blurred. A large, dark blue app UI card appears in the center of the screen. The card is titled 'MySivi Premium' and presents a 'LIMITED TIME OFFER' for '3 days of Premium benefits for \u20b91'. Below this are buttons for '24/7 AI English Teacher', '500+ Exercises and Lessons', and 'Unlimited Access'.",
+        "audio_transcript": "Character A says: \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0928\u0939\u0940\u0902\u0964 \u0924\u0941\u092e \u0938\u093f\u0930\u094d\u092b \u20b91 \u092e\u0947\u0902 \u0939\u0940 \u0936\u0941\u0930\u0942 \u0915\u0930 \u0938\u0915\u0924\u0947 \u0939\u094b\u0964 \u092b\u093f\u0930 \u092a\u0938\u0902\u0926 \u0906\u092f\u093e \u0924\u092d\u0940 \u0915\u0902\u091f\u093f\u0928\u094d\u092f\u0942 \u0915\u0930\u094b\u0964 [Not at all. You can start with just \u20b91. Then, if you like it, continue.]\nCharacter B says: \u0935\u093e\u0939, \u092b\u093f\u0930 \u0936\u0941\u0930\u0942 \u0915\u0948\u0938\u0947 \u0915\u0930\u0942\u0902? [Wow, so how do I start?]",
+        "on_screen_text": "TUM, PHIR, TABHI, KARO, WAAH,, KARUN?\nMySivi Premium\nLIMITED TIME OFFER\n3 days of Premium benefits for \u20b91\nAutopay, cancel anytime.\n1,200 learners purchased today\n24/7 AI English Teacher\n500+ Exercises and Lessons\nUnlimited Access"
+      },
+      {
+        "n": 3,
+        "start_s": 31.5,
+        "end_s": 38.5,
+        "screenshot_at_s": 34.0,
+        "scene_label": "Call to Action: Install the App",
+        "setting": "The same split-screen background, now heavily blurred, with an app store installation UI overlay.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up on both characters in the background.",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A static, vertically split-screen image. The top half shows a female humanoid robot, Character A, sitting in a cafe. The bottom half shows a young South Asian man, Character B, in a simple room. Both are looking forward with pleasant expressions. The image is heavily blurred.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen video of Character A and B is heavily blurred in the background. A green 'Install' button is at the top. Below it, an app store pop-up shows the 'MySivi AI English Speakin...' app icon, name, rating, and an 'Install' button. The pop-up then shows a progress bar as the app 'installs'.",
+        "audio_transcript": "Character A says: \u092c\u0938 \u0907\u0902\u0938\u094d\u091f\u0949\u0932 \u092c\u091f\u0928 \u092a\u0947 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930\u094b, MySivi \u0910\u092a \u0907\u0902\u0938\u094d\u091f\u0949\u0932 \u0915\u0930\u094b \u090f\u0902\u0921 \u0905\u092a\u0928\u0940 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u091c\u0930\u094d\u0928\u0940 \u0936\u0941\u0930\u0942 \u0915\u0930\u094b\u0964 [Just click on the install button, install the MySivi app, and start your English journey.]",
+        "on_screen_text": "INSTALL, KARO AND, ENGLISH, SHURU KARO\nInstall\nMySivi AI English Speakin...\nMySivi AI \u2022 Education\n4.6 \u2605 62 MB Rated for 3+\nInstall\nCancel\nInstalling...\n2% of 62.82 MB\nVerified by Play Protect"
+      },
+      {
+        "n": 4,
+        "start_s": 38.5,
+        "end_s": 41.6,
+        "screenshot_at_s": 40.0,
+        "scene_label": "End Card",
+        "setting": "A plain, light purple background.",
+        "characters_in_scene": [],
+        "camera": "Static graphic shot.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up shot of a modern smartphone with a white screen against a plain, light purple background. The phone is shown from a slight angle.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A smartphone is shown against a light purple background. On the screen is the MySivi logo, the text 'English speaking app', and a blue 'Install Now' button.",
+        "audio_transcript": "Unknown speaker says: Install Now \u092a\u0947 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930\u094b \u0914\u0930 MySivi \u0910\u092a \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u094b\u0964 [Click on Install Now and download the MySivi app.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214541.180497
+}

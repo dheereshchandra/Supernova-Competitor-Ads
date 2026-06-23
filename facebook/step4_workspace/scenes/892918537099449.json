@@ -1,0 +1,165 @@
+{
+  "competitor_id": "892918537099449",
+  "parsed": {
+    "duration_s": 43.5,
+    "production_type": "mixed",
+    "production_notes": "The video is a screen recording of a simulated app call. One participant is represented by a static photograph of a real person, while the other is a clearly AI-generated 3D avatar.",
+    "interaction_pattern": "AI tutor provides a live correction of a learner's spontaneous wrong-English mistake, followed by a Q&A about the app's benefits.",
+    "audio_track": "Spoken dialogue in Marathi and English between two female characters. There is no background music or song.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female learner",
+        "appearance": "A young South Asian woman in her early 20s with a fair complexion. She has long, straight, dark brown hair parted on the side, framing her face. Her features include defined dark eyebrows, dark eyes, and full lips.",
+        "wardrobe": "A dark, possibly black or charcoal grey, top with thin straps.",
+        "demeanor": "Her expression in the static profile picture is neutral and posed, looking slightly away from the camera."
+      },
+      {
+        "id": "B",
+        "role": "female AI tutor avatar",
+        "appearance": "A stylized 3D avatar of a young South Asian woman with a medium, warm complexion. She has large, expressive brown eyes, perfectly arched eyebrows, and long, wavy black hair. Her features are smooth and slightly exaggerated in a friendly, animated style.",
+        "wardrobe": "A dark blue collared shirt or blazer.",
+        "demeanor": "Her expression is consistently friendly, smiling, and engaged, with wide-open eyes to appear helpful and approachable."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 13.2,
+        "screenshot_at_s": 6.0,
+        "scene_label": "Learner makes a mistake, AI corrects",
+        "setting": "A simulated video call interface of a mobile application, with a light lavender background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static shot of the app UI.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A clean, minimalist app interface is shown against a light lavender background. At the top, two circular profile icons are displayed side-by-side, connected by a thin line. The left icon shows a photograph of Character A, a young woman with dark hair. The right icon shows a 3D avatar of Character B, a smiling woman with dark hair and a blue collar. Below the icons, the app's logo is centered. At the very bottom, a dark purple bar contains three standard call icons: a microphone for mute, a speaker, and a red button to end the call.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene displays a simulated video call on the \"MySivi\" app. At the top, profile pictures for \"Shreya\" (Character A) and \"Arya\" (Character B) are shown. Below the app logo, animated text boxes appear sequentially, displaying the words spoken by the characters. The bottom of the screen has call controls (Mute, Speaker, End). A small text note at the top reads \"Be polite and respect the other person's opinion. Avoid rude comments\".",
+        "audio_transcript": "Character B says: \u0924\u0942 \u0915\u0947\u0935\u094d\u0939\u093e \u092f\u0947\u0923\u093e\u0930 \u0906\u0939\u0947\u0938? [When will you come?]\n\nCharacter A says: I will return back on Monday.\n\nCharacter B says: Return back \u0928\u093e\u0939\u0940. Return \u092e\u094d\u0939\u0923\u091c\u0947 \u092a\u0930\u0924 \u092f\u0947\u0923\u0902. Return \u0906\u0923\u093f back \u0926\u094b\u0928\u094d\u0939\u0940 \u090f\u0915\u0924\u094d\u0930 \u092e\u094d\u0939\u0923\u091c\u0947 \u092a\u0930\u0924 \u092a\u0930\u0924 \u0915\u093e \u092f\u0947\u0924\u094b\u092f\u0938? Just say I will return on Monday. [Not 'return back'. 'Return' means to come back. 'Return' and 'back' together means why are you coming again and again? Just say I will return on Monday.]",
+        "on_screen_text": "Be polite and respect the other person's opinion. Avoid rude comments\nShreya\nArya\nMySivi\n\u0924\u0942 \u0915\u0947\u0935\u094d\u0939\u093e \u092f\u0947\u0923\u093e\u0930\nI will return\nback on Monday\nReturn back \u0928\u093e\u0939\u0940\nReturn \u092e\u094d\u0939\u0923\u091c\u0947\u091a\n\u092a\u0930\u0924 \u092f\u0947\u0923\u0902\nReturn \u0906\u0923\u093f back\n\u0926\u094b\u0928\u094d\u0939\u0940 \u090f\u0915\u0924\u094d\u0930\n\u092a\u0930\u0924 \u092a\u0930\u0924 \u0915\u093e \u092f\u0947\u0924\u094b\u092f\u0938\nJust say\nI will return\non Monday\nMute\nSpeaker\nEnd"
+      },
+      {
+        "n": 2,
+        "start_s": 13.2,
+        "end_s": 23.0,
+        "screenshot_at_s": 18.0,
+        "scene_label": "Learner expresses difficulty, AI offers solution",
+        "setting": "A simulated video call interface of a mobile application, with a light lavender background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static shot of the app UI.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A clean, minimalist app interface is shown against a light lavender background. At the top, two circular profile icons are displayed side-by-side, connected by a thin line. The left icon shows a photograph of Character A, a young woman with dark hair. The right icon shows a 3D avatar of Character B, a smiling woman with dark hair and a blue collar. Below the icons, the app's logo is centered. At the very bottom, a dark purple bar contains three standard call icons: a microphone for mute, a speaker, and a red button to end the call.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene continues on the \"MySivi\" app interface. The conversation continues with animated text boxes appearing in the center. The overall layout remains unchanged.",
+        "audio_transcript": "Character A says: Oh, \u0920\u0940\u0915 \u0906\u0939\u0947 \u0920\u0940\u0915 \u0906\u0939\u0947. \u092e\u0932\u093e \u0928\u093e English \u092f\u0947\u0924\u091a \u0928\u093e\u0939\u0940. [Oh, okay okay. I just don't know English.]\n\nCharacter B says: \u0915\u093e\u0939\u0940 problem \u0928\u093e\u0939\u0940. AI teachers try \u0915\u0947\u0932\u0902 \u0915\u093e? [No problem. Have you tried AI teachers?]\n\nCharacter A says: \u0924\u0947 \u092e\u0939\u093e\u0917 \u0905\u0938\u0924\u0940\u0932 \u0928\u093e? [They must be expensive, right?]\n\nCharacter B says: \u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940. Normal English classes \u092a\u0947\u0915\u094d\u0937\u093e 7 \u092a\u091f \u0938\u094d\u0935\u0938\u094d\u0924 \u0906\u0939\u0947. [Not at all. It's 7 times cheaper than normal English classes.]",
+        "on_screen_text": "Oh \u0920\u0940\u0915 \u0906\u0939\u0947\n\u092e\u0932\u093e English \u0928\u0940\u091f\n\u092f\u0947\u0924\u091a \u0928\u093e\u0939\u0940\n\u0915\u093e\u0939\u0940 problem\n\u0928\u093e\u0939\u0940 AI teachers\ntry \u0915\u0947\u0932\u0902 \u0915\u093e\n\u0924\u0947 \u092e\u0939\u093e\u0917 \u0905\u0938\u0924\u0940\u0932\n\u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940\nNormal English\nclasses \u092a\u0947\u0915\u094d\u0937\u093e\n7 \u092a\u091f \u0938\u094d\u0935\u0938\u094d\u0924 \u0906\u0939\u0947"
+      },
+      {
+        "n": 3,
+        "start_s": 23.0,
+        "end_s": 26.5,
+        "screenshot_at_s": 24.5,
+        "scene_label": "Social proof and app store view",
+        "setting": "A simulated Google Play Store page, then back to the call interface.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Screen recording of an app store page, then back to the static UI shot.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The first part of the scene shows a mobile app store listing. It features the app's icon, name, and developer details at the top. Below this are metrics like user rating, age rating, download size, and total downloads. A large blue \"Install\" button is prominent. The second part returns to the minimalist app interface with two profile icons (Character A and Character B) at the top against a light lavender background.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene briefly cuts away from the call to show the \"MySivi AI\" app page on the Google Play Store, highlighting \"10M+ Downloads\". It then cuts back to the call interface where the conversation continues with animated text boxes.",
+        "audio_transcript": "Character B says: \u092e\u094d\u0939\u0923\u0942\u0928 \u090f\u0915 \u0915\u094b\u091f\u0940 \u0932\u094b\u0915 MySivi \u0935\u0930 English practice \u0915\u0930\u0924 \u0906\u0939\u0947\u0924. [That's why 1 crore (10 million) people are practicing English on MySivi.]",
+        "on_screen_text": "Start English Learning -MySivi\nMySivi AI\nIn-app purchases\nRated for 3+\n61 MB\n10M+ Downloads\nInstall\n\u092e\u094d\u0939\u0923\u0942\u0928 1 \u0915\u094b\u091f\u0940\n\u0932\u094b\u0915 MySivi \u0935\u0930\nEnglish practice\n\u0915\u0930\u0924 \u0906\u0939\u0947\u0924"
+      },
+      {
+        "n": 4,
+        "start_s": 26.5,
+        "end_s": 33.5,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Addressing the 'no time' objection",
+        "setting": "A simulated video call interface of a mobile application, with a light lavender background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static shot of the app UI.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A clean, minimalist app interface is shown against a light lavender background. At the top, two circular profile icons are displayed side-by-side, connected by a thin line. The left icon shows a photograph of Character A, a young woman with dark hair. The right icon shows a 3D avatar of Character B, a smiling woman with dark hair and a blue collar. Below the icons, the app's logo is centered. At the very bottom, a dark purple bar contains three standard call icons: a microphone for mute, a speaker, and a red button to end the call.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene continues on the \"MySivi\" app interface. The conversation continues with animated text boxes appearing in the center, addressing the user's potential time constraints.",
+        "audio_transcript": "Character A says: \u092a\u0923 \u0935\u0947\u0933\u091a \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940. [But I don't get the time.]\n\nCharacter B says: \u0930\u094b\u091c \u092b\u0915\u094d\u0924 15-20 \u092e\u093f\u0928\u093f\u091f\u0947 practice \u092a\u0941\u0930\u0947\u0936\u0940 \u0906\u0939\u0947. \u0905\u0917\u0926\u0940 confident \u0935\u094d\u0939\u093e\u0932. [Just 15-20 minutes of practice daily is enough. You will become very confident.]\n\nCharacter A says: Wow! \u0915\u0938\u0902 join \u0915\u0930\u0942? [Wow! How do I join?]",
+        "on_screen_text": "\u092a\u0923 \u0935\u0947\u0933\u091a \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940\n\u0930\u094b\u091c \u092b\u0915\u094d\u0924 15-20\nminute practice\n\u092a\u0941\u0930\u0947\u0936\u0940 \u0906\u0939\u0947\n\u0905\u0917\u0926\u0940 confident\n\u0935\u094d\u0939\u093e\u0932\nWow\n\u0915\u0938\u0902 join \u0915\u0930\u0942"
+      },
+      {
+        "n": 5,
+        "start_s": 33.5,
+        "end_s": 43.5,
+        "screenshot_at_s": 39.0,
+        "scene_label": "Call to action and final offer",
+        "setting": "A simulated app install screen, then back to the call interface with a final CTA overlay.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Screen recording of an app install, then back to the static UI shot.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The first part shows a mobile app installation screen with a progress bar. The second part returns to the minimalist app interface with two profile icons (Character A and Character B) at the top against a light lavender background. A large, dark blue circular button with text appears overlaid in the lower half of the screen.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene cuts to a screen showing the \"MySivi AI English Spe...\" app installing. It then returns to the call interface. A large \"Install Now\" button appears, with a price tag of \"\u092e\u093e\u0924\u094d\u0930 \u20b91\" (Only \u20b91). The conversation provides the final instructions.",
+        "audio_transcript": "Character B says: \u0939\u093e install \u091a\u093e button \u0926\u093e\u092c\u093e \u0906\u0923\u093f MySivi app install \u0915\u0930\u093e. Sign up \u0915\u0930\u093e \u0906\u0923\u093f practice start \u0915\u0930\u093e. \u092b\u0915\u094d\u0924 15 \u0926\u093f\u0935\u0938\u093e\u0902\u0924 \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e improvement \u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932. \u091a\u0932\u093e, \u0938\u0941\u0930\u0941 \u0915\u0930\u093e. [Press this install button and install the MySivi app. Sign up and start practicing. In just 15 days, you will start seeing improvement. Come on, start.]",
+        "on_screen_text": "MySivi AI English Spe...\n70% of 62.82 MB\nVerified by Play Protect\nInstalling...\n\u0939\u093e install \u091a\u093e\nbutton \u0926\u093e\u092c\u093e\nMySivi app install\n\u0915\u0930\u093e\nSign up \u0915\u0930\u093e \u0906\u0923\u093f\npractice start\n\u0915\u0930\u093e\n\u092e\u093e\u0924\u094d\u0930 \u20b91 Install Now\n\u092b\u0915\u094d\u0924 15 \u0926\u093f\u0935\u0938\u093e\u0902\u0924\n\u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e improvement\n\u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932\n\u091a\u0932\u093e\n\u0938\u0941\u0930\u0941 \u0915\u0930\u093e"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214493.181972
+}

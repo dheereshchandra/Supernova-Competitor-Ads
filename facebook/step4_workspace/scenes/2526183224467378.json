@@ -1,0 +1,138 @@
+{
+  "competitor_id": "2526183224467378",
+  "parsed": {
+    "duration_s": 29.0,
+    "production_type": "mixed",
+    "production_notes": "The video features a human actor interacting with a CGI/AI-generated robot in a static shot, likely a composite image, with numerous graphic and UI overlays added in post-production.",
+    "interaction_pattern": "AI tutor corrects a learner's spontaneous English mistake, then pitches the benefits and features of its learning app.",
+    "audio_track": "Spoken dialogue in Telugu between two characters. There is no background music or song.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "A young South Asian man in his early 20s with a medium build and a fair to medium complexion. He has short, neat, dark hair and is clean-shaven. He has the appearance of a college student or young professional.",
+        "wardrobe": "A short-sleeved, camouflage-patterned t-shirt, dark grey or black jeans, and dark-colored flip-flop sandals. He wears white wired earphones.",
+        "demeanor": "Initially casual and curious, then shows concern about cost, and finally becomes enthusiastic and impressed."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "A humanoid robot with a sleek, articulated body made of a silver and blue metallic material. It has no hair or human-like facial features, but possesses glowing blue eyes. Its build is slender and athletic.",
+        "wardrobe": "The character is a robot and has no wardrobe; its body is its 'clothing'.",
+        "demeanor": "Calm, knowledgeable, and persuasive. It maintains a composed posture and uses hand gestures to explain points."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 9.5,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Conversation and Correction",
+        "setting": "Inside a lower berth section of an Indian Railways sleeper class train compartment. The setting is static, with luggage on the upper berths. The lighting is cool and even.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static medium shot, eye-level.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young South Asian man (Character A) sits on a blue vinyl train seat, facing a humanoid robot (Character B) who is sitting opposite him. Character A, wearing a camouflage t-shirt and earphones, is looking at the robot and speaking. Character B, a sleek silver-blue robot with glowing blue eyes, is sitting calmly. Between them is a train window showing a blurry green landscape passing by. Luggage is stowed on the overhead racks.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A static medium shot shows Character A and Character B conversing in a train compartment. On-screen text in Telugu appears near Character B as he asks a question. Character A's incorrect English response appears with a large red X over it. Two corrected English sentences then appear sequentially, each with a green checkmark. The conversation continues with more Telugu on-screen text appearing near the speakers.",
+        "audio_transcript": "Character B says: \u0c2a\u0c4d\u0c30\u0c2f\u0c3e\u0c23\u0c02 \u0c0e\u0c15\u0c4d\u0c15\u0c21\u0c3f\u0c15\u0c3f? [Where are you traveling to?]\nCharacter A says: I, going Goa!\nCharacter B says: I am going to Goa \u0c05\u0c28\u0c41, \u0c32\u0c47\u0c26\u0c3e I am heading to Goa \u0c05\u0c28\u0c4b \u0c1a\u0c46\u0c2a\u0c4d\u0c2a\u0c35\u0c1a\u0c4d\u0c1a\u0c41. [Say 'I am going to Goa', or you can say 'I am heading to Goa'.]\nCharacter A says: \u0c13 \u0c05\u0c35\u0c41\u0c28\u0c3e? \u0c2e\u0c30\u0c3f \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c0e\u0c32\u0c3e \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c3e\u0c32\u0c3f? [Oh, is that so? Then how to learn English?]",
+        "on_screen_text": "\u0c2a\u0c4d\u0c30\u0c2f\u0c3e\u0c23\u0c02 \u0c0e\u0c15\u0c4d\u0c15\u0c21\u0c3f\u0c15\u0c3f\nI, going Goa!\nI am going to Goa\nI am heading to Goa\n\u0c13 \u0c05\u0c35\u0c41\u0c28\u0c3e?\n\u0c0e\u0c32\u0c3e \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c3e\u0c32\u0c3f"
+      },
+      {
+        "n": 2,
+        "start_s": 9.5,
+        "end_s": 14.5,
+        "screenshot_at_s": 11.5,
+        "scene_label": "The Learning Pitch",
+        "setting": "Inside the same train compartment.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static medium shot, with graphic overlays.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "In a train compartment, the humanoid robot (Character B) gestures with its hands while explaining something to the young man (Character A). Character A listens intently. The background remains the same, with blue vinyl seats and a window showing a blurry landscape.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene continues in the train compartment. As Character B speaks, the view briefly cuts away to a graphic of a clock with '15-20 mins' text, then to a large '30 Days' graphic, before returning to the main shot. On-screen text in Telugu appears near Character B.",
+        "audio_transcript": "Character B says: \u0c28\u0c3e\u0c24\u0c4b \u0c30\u0c4b\u0c1c\u0c41 \u0c12\u0c15 20 \u0c28\u0c3f\u0c2e\u0c3f\u0c37\u0c3e\u0c32\u0c41 \u0c2a\u0c4d\u0c30\u0c3e\u0c15\u0c4d\u0c1f\u0c40\u0c38\u0c4d \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c47 \u0c1a\u0c3e\u0c32\u0c41. \u0c12\u0c15\u0c4d\u0c15 \u0c28\u0c46\u0c32\u0c32\u0c4b\u0c28\u0c47 \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c1a\u0c4d\u0c1a\u0c41. [If you practice with me for 20 minutes a day, that's enough. You can learn English in just one month.]",
+        "on_screen_text": "\u0c28\u0c3e\u0c24\u0c4b \u0c30\u0c4b\u0c1c\u0c42 \u0c12\u0c15 20\n15-20 mins\n30 Days\n\u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c1a\u0c4d\u0c1a\u0c41"
+      },
+      {
+        "n": 3,
+        "start_s": 14.5,
+        "end_s": 19.5,
+        "screenshot_at_s": 16.5,
+        "scene_label": "The Special Offer",
+        "setting": "Inside the same train compartment.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static medium shot, with a large UI card overlay.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The young man (Character A) looks concerned as he speaks to the robot (Character B) in the train compartment. The robot listens calmly. The background remains unchanged.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A expresses concern about cost. The shot is then largely obscured by a pop-up UI card for a 'LIMITED TIME OFFER' of '3 days of Premium benefits for \u20b91'. The card lists app features. The scene then returns to the train compartment as Character B explains the offer.",
+        "audio_transcript": "Character A says: \u0c07\u0c26\u0c02\u0c24\u0c3e \u0c1a\u0c3e\u0c32\u0c3e \u0c16\u0c30\u0c4d\u0c1a\u0c41 \u0c05\u0c35\u0c41\u0c24\u0c41\u0c02\u0c26\u0c47\u0c2e\u0c4b. [This might all be very expensive.]\nCharacter B says: \u0c15\u0c47\u0c35\u0c32\u0c02 \u0c12\u0c15\u0c4d\u0c15 \u0c30\u0c42\u0c2a\u0c3e\u0c2f\u0c3f\u0c15\u0c47 \u0c08 \u0c2f\u0c3e\u0c2a\u0c4d \u0c28\u0c3f \u0c2a\u0c42\u0c30\u0c4d\u0c24\u0c3f\u0c17\u0c3e \u0c1f\u0c4d\u0c30\u0c48 \u0c1a\u0c47\u0c38\u0c3f \u0c1a\u0c42\u0c21\u0c35\u0c1a\u0c4d\u0c1a\u0c41. [For just one rupee, you can try this app completely.]",
+        "on_screen_text": "\u0c07\u0c26\u0c02\u0c24\u0c3e \u0c1a\u0c3e\u0c32\u0c3e \u0c16\u0c30\u0c4d\u0c1a\u0c35\u0c41\u0c24\u0c41\u0c02\u0c26\u0c47\u0c2e\u0c4b\nLIMITED TIME OFFER\n3 days of Premium benefits for \u20b91\nAutopay, cancel anytime.\n1,200 learners purchased today\n24/7 AI English Teacher\n500+ Exercises and Lessons\nUnlimited Access\n\u0c15\u0c47\u0c35\u0c32\u0c02 \u0c12\u0c15\u0c4d\u0c15 \u0c30\u0c42\u0c2a\u0c3e\u0c2f\u0c3f\u0c15\u0c47\n\u0c08 \u0c2f\u0c3e\u0c2a\u0c4d \u0c28\u0c3f \u0c2a\u0c42\u0c30\u0c4d\u0c24\u0c3f\u0c17\u0c3e\n\u0c1f\u0c4d\u0c30\u0c48 \u0c1a\u0c47\u0c38\u0c3f \u0c1a\u0c42\u0c21\u0c35\u0c1a\u0c4d\u0c1a\u0c41"
+      },
+      {
+        "n": 4,
+        "start_s": 19.5,
+        "end_s": 29.0,
+        "screenshot_at_s": 25.0,
+        "scene_label": "Social Proof and Final CTA",
+        "setting": "Inside the same train compartment.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static medium shot, with app store and download UI overlays.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "In the train compartment, the robot (Character B) continues to speak, gesturing with its hands. The young man (Character A) listens, his expression changing from thoughtful to excited. He claps his hands together in enthusiasm. The background remains unchanged.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene continues in the train. As Character B mentions the number of users, the view cuts to a screenshot of the app's Google Play Store page, highlighting '10M+ Downloads'. Character A reacts with excitement. The view then cuts to an animation of the app installing. The scene returns to the train for the final call to action from Character B.",
+        "audio_transcript": "Character B says: \u0c15\u0c4b\u0c1f\u0c3f \u0c2e\u0c02\u0c26\u0c3f\u0c15\u0c3f \u0c2a\u0c48\u0c17\u0c3e \u0c28\u0c3e\u0c24\u0c4b \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c41\u0c02\u0c1f\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c30\u0c41. [More than a crore (10 million) people are learning English with me.]\nCharacter A says: \u0c38\u0c42\u0c2a\u0c30\u0c4d! \u0c0e\u0c32\u0c3e \u0c1c\u0c3e\u0c2f\u0c3f\u0c28\u0c4d \u0c05\u0c35\u0c4d\u0c35\u0c3e\u0c32\u0c3f? [Super! How to join?]\nCharacter B says: \u0c07\u0c2a\u0c4d\u0c2a\u0c41\u0c21\u0c47 \u0c2e\u0c48\u0c38\u0c3f\u0c35\u0c3f \u0c2f\u0c3e\u0c2a\u0c4d \u0c28\u0c3f \u0c21\u0c4c\u0c28\u0c4d\u0c32\u0c4b\u0c21\u0c4d \u0c1a\u0c47\u0c38\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f. \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c21\u0c02 \u0c2e\u0c4a\u0c26\u0c32\u0c41\u0c2a\u0c46\u0c1f\u0c4d\u0c1f\u0c02\u0c21\u0c3f. [Download the MySivi app right now. Start learning English.]",
+        "on_screen_text": "\u0c15\u0c4b\u0c1f\u0c3f \u0c2e\u0c02\u0c26\u0c3f\u0c15\u0c3f \u0c2a\u0c48\u0c17\u0c3e\nStart English Learning - MySivi\n10M+ Downloads\nMySivi AI English Spe...\nInstalling...\n\u0c2f\u0c3e\u0c2a\u0c4d \u0c28\u0c3f \u0c21\u0c4c\u0c28\u0c4d\u0c32\u0c4b\u0c21\u0c4d \u0c1a\u0c47\u0c38\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\n\u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c21\u0c02\n\u0c2e\u0c4a\u0c26\u0c32\u0c41\u0c2a\u0c46\u0c1f\u0c4d\u0c1f\u0c02\u0c21\u0c3f"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214421.377556
+}

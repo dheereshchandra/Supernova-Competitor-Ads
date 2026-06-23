@@ -1,0 +1,63 @@
+{
+  "ad_library_id": "1901269943919389",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "Talk show interview / live correction",
+    "visual_overview": "A live-action talk show setting where a female interviewer and a male learner sit at a table. The screen splits to show a CGI AI robot avatar interacting with the male presenter, correcting his English live. The ad ends with the male presenter delivering a direct call to action.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Priya",
+        "role": "female presenter/interviewer"
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "male presenter/learner"
+      },
+      {
+        "id": "C",
+        "name": "Miss Nova",
+        "role": "AI teacher avatar"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Interview Introduction",
+        "script_native": "Priya says: जिसको English नहीं आती, उसको native की तरह बोलने में कितना time लगता है?\nRahul says: सिर्फ 30 days.\nPriya says: कैसे?\nRahul says: Supernova AI के साथ. देखो कैसे.",
+        "script_roman": "Priya says: Jisko English nahi aati, usko native ki tarah bolne mein kitna time lagta hai?\nRahul says: Sirf 30 days.\nPriya says: Kaise?\nRahul says: Supernova AI ke saath. Dekho kaise."
+      },
+      {
+        "n": 2,
+        "scene_label": "AI Tutor Corrects Learner",
+        "script_native": "Miss Nova says: आपका नाम क्या है?\nRahul says: My name is Rahul.\nMiss Nova says: आपकी age क्या है?\nRahul says: I have 39.\nMiss Nova says: क्या आपका मतलब था, \"I am 39\"?\nRahul says: Oh yeah, right. I am 39.\nMiss Nova says: Where are you from?\nRahul says: I am Delhi.\nMiss Nova says: Nice try, पर आपको बोलना चाहिए, \"I am from Delhi\". और tension मत लीजिए, मैं सब कुछ Hindi में समझाती हूँ.\nRahul says: I'm sorry, मैं mistakes करता हूँ.",
+        "script_roman": "Miss Nova says: Aapka naam kya hai?\nRahul says: My name is Rahul.\nMiss Nova says: Aapki age kya hai?\nRahul says: I have 39.\nMiss Nova says: Kya aapka matlab tha, \"I am 39\"?\nRahul says: Oh yeah, right. I am 39.\nMiss Nova says: Where are you from?\nRahul says: I am Delhi.\nMiss Nova says: Nice try, par aapko bolna chahiye, \"I am from Delhi\". Aur tension mat lijiye, main sab kuch Hindi mein samjhati hoon.\nRahul says: I'm sorry, main mistakes karta hoon."
+      },
+      {
+        "n": 3,
+        "scene_label": "App Promotion and AI Message",
+        "script_native": "Miss Nova says: कोई बात नहीं! गलतियां करने से ही तो speaking practice होती है. मेरे साथ 1 crore से ज़्यादा लोग Supernova AI पर English बोलना सीख रहे हैं. आप बस रोज़ 10-15 minutes practice कीजिए.",
+        "script_roman": "Miss Nova says: Koi baat nahi! Galtiyan karne se hi toh speaking practice hoti hai. Mere saath 1 crore se zyada log Supernova AI par English bolna seekh rahe hain. Aap bas roz 10-15 minutes practice kijiye."
+      },
+      {
+        "n": 4,
+        "scene_label": "Final Call to Action",
+        "script_native": "Rahul says: मैं तो आज ही download कर रहा हूँ! तुम भी Supernova AI install करो और 30 days में अपनी English improve करो.",
+        "script_roman": "Rahul says: Main toh aaj hi download kar raha hoon! Tum bhi Supernova AI install karo aur 30 days mein apni English improve karo."
+      }
+    ],
+    "pitch_points_used": [
+      "improve in just 30 days",
+      "explains in Hindi",
+      "no-judgement / privacy",
+      "speaking practice",
+      "1 crore+ users",
+      "10-15 minutes a day"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.887263
+}

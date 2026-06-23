@@ -1,0 +1,69 @@
+{
+  "ad_library_id": "4459719324263987",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "teaching / correction skit",
+    "visual_overview": "A split-screen ad where a young woman first hooks the viewer from her car, then transitions to a home studio where she practices English with an AI robot tutor. The AI corrects her mistakes live, and the ad ends with an app store installation screen.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Neha",
+        "role": "presenter and learner"
+      },
+      {
+        "id": "B",
+        "name": "Miss Nova",
+        "role": "AI teacher"
+      },
+      {
+        "id": "C",
+        "name": "Neha",
+        "role": "learner practicing at night"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Presenter's Introduction",
+        "script_native": "Neha says: Stop saying I am fine, thank you, I don't know, and you are welcome. ये बहुत basic English है। पहले मैं भी ऐसी ही English बोलती थी। फिर मैंने Supernova AI पर practice करना शुरू किया।",
+        "script_roman": "Neha says: Stop saying I am fine, thank you, I don't know, and you are welcome. Ye bahut basic English hai. Pehle main bhi aisi hi English bolti thi. Phir maine Supernova AI par practice karna shuru kiya."
+      },
+      {
+        "n": 2,
+        "scene_label": "AI Tutor Correction & Pitch",
+        "script_native": "Miss Nova says: What is your name?\nNeha says: My name is Neha.\nMiss Nova says: How old are you?\nNeha says: I have 22.\nMiss Nova says: I have 22, नहीं। I am 22 years old होता है।\nNeha says: Okay, okay. I am 22 years old.\nMiss Nova says: Where are you from?\nNeha says: I am Uttar Pradesh.\nMiss Nova says: I am Uttar Pradesh, नहीं। I am from Uttar Pradesh होगा।\nNeha says: ठीक है, ठीक है। मुझे English अच्छे से नहीं आती।\nMiss Nova says: कोई problem नहीं। मेरे जैसी AI teacher के साथ try किया?\nNeha says: वो तो महंगे होते होंगे ना?\nMiss Nova says: बिल्कुल नहीं। Offline classes से सात गुना सस्ता है। इसलिए 1 crore+ लोग मेरे साथ Supernova AI पर बोलने की practice कर रहे हैं।\nNeha says: पर time नहीं मिलता।",
+        "script_roman": "Miss Nova says: What is your name?\nNeha says: My name is Neha.\nMiss Nova says: How old are you?\nNeha says: I have 22.\nMiss Nova says: I have 22, nahi. I am 22 years old hota hai.\nNeha says: Okay, okay. I am 22 years old.\nMiss Nova says: Where are you from?\nNeha says: I am Uttar Pradesh.\nMiss Nova says: I am Uttar Pradesh, nahi. I am from Uttar Pradesh hoga.\nNeha says: Theek hai, theek hai. Mujhe English achhe se nahi aati.\nMiss Nova says: Koi problem nahi. Mere jaisi AI teacher ke saath try kiya?\nNeha says: Wo toh mehenge hote honge na?\nMiss Nova says: Bilkul nahi. Offline classes se saat guna sasta hai. Isliye 1 crore+ log mere saath Supernova AI par bolne ki practice kar rahe hain.\nNeha says: Par time nahi milta."
+      },
+      {
+        "n": 3,
+        "scene_label": "Daily Practice Example",
+        "script_native": "Miss Nova says: रोज़ सिर्फ 10-15 minutes की practice काफी है। और मैं सब कुछ Hindi में समझाती हूँ।",
+        "script_roman": "Miss Nova says: Roz sirf 10-15 minutes ki practice kaafi hai. Aur main sab kuch Hindi mein samjhati hoon."
+      },
+      {
+        "n": 4,
+        "scene_label": "Learner's Question",
+        "script_native": "Miss Nova says: आप बिल्कुल confident हो जाएँगी।\nNeha says: कैसे join करूँ?",
+        "script_roman": "Miss Nova says: Aap bilkul confident ho jayengi.\nNeha says: Kaise join karoon?"
+      },
+      {
+        "n": 5,
+        "scene_label": "Call to Action",
+        "script_native": "Miss Nova says: ये install का button दबाइए और Supernova AI app download कीजिए। सिर्फ 30 days में आपको improvement दिखने लगेगा।\nNeha says: मैं तो अभी download कर रही हूँ!",
+        "script_roman": "Miss Nova says: Ye install ka button dabaiye aur Supernova AI app download kijiye. Sirf 30 days mein aapko improvement dikhne lagega.\nNeha says: Main toh abhi download kar rahi hoon!"
+      }
+    ],
+    "pitch_points_used": [
+      "1 crore+ users",
+      "improve in just 30 days",
+      "7x cheaper than offline classes/coaching",
+      "You SPEAK (speaking practice)",
+      "Explains in your language (Hindi)",
+      "Time is not the blocker (10-15 minutes a day)"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.883979
+}

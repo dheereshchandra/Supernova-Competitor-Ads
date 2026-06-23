@@ -1,0 +1,59 @@
+{
+  "ad_library_id": "1441837924379258",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "Split-screen dialogue / Problem-solution",
+    "visual_overview": "A vertically split-screen video featuring an AI teacher in the top panel and a young male learner in the bottom panel. They have a continuous back-and-forth conversation about his interview struggles, transitioning into app UI overlays and ending with a smartphone end card.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI teacher"
+      },
+      {
+        "id": "B",
+        "name": "Rahul",
+        "role": "Learner"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Diagnosing the Problem",
+        "script_native": "Miss Nova says: आपका interview कैसा गया?\nRahul says: अच्छा नहीं गया। मुझे सारे answers आते थे, फिर भी बोल नहीं पाया।\nMiss Nova says: क्यों, ऐसा क्या हुआ?\nRahul says: वो मैं answer देते हुए nervous हो गया क्योंकि मुझे English अच्छे से नहीं आती।\nMiss Nova says: तो आप English बोलने की practice क्यों नहीं करते?\nRahul says: मेरे साथ कोई practice करने वाला नहीं है ना।\nMiss Nova says: तो आप मेरे साथ practice कीजिए ना। मैं एक AI teacher हूँ।\nRahul says: पर मेरे पास practice करने का time भी कहाँ है?\nMiss Nova says: मेरे साथ रोज़ बस 10-15 minutes practice कीजिए। मैं सब कुछ Hindi में समझाऊँगी, और सिर्फ 30 days में आप improve करेंगे।\nRahul says: अच्छा? पर ये तो महंगा होगा ना?",
+        "script_roman": "Miss Nova says: Aapka interview kaisa gaya?\nRahul says: Achha nahi gaya. Mujhe saare answers aate the, phir bhi bol nahi paya.\nMiss Nova says: Kyon, aisa kya hua?\nRahul says: Wo main answer dete hue nervous ho gaya kyonki mujhe English achhe se nahi aati.\nMiss Nova says: To aap English bolne ki practice kyon nahi karte?\nRahul says: Mere saath koi practice karne wala nahi hai na.\nMiss Nova says: To aap mere saath practice kijiye na. Main ek AI teacher hoon.\nRahul says: Par mere paas practice karne ka time bhi kahan hai?\nMiss Nova says: Mere saath roz bas 10-15 minutes practice kijiye. Main sab kuch Hindi mein samjhaungi, aur sirf 30 days mein aap improve karenge.\nRahul says: Achha? Par ye to mahnga hoga na?"
+      },
+      {
+        "n": 2,
+        "scene_label": "Presenting the Solution",
+        "script_native": "Miss Nova says: बिल्कुल नहीं। Supernova AI offline coaching से 7 गुना सस्ता है।\nRahul says: वाह! फिर शुरू कैसे करूँ?",
+        "script_roman": "Miss Nova says: Bilkul nahi. Supernova AI offline coaching se saat guna sasta hai.\nRahul says: Waah! Phir shuru kaise karun?"
+      },
+      {
+        "n": 3,
+        "scene_label": "Call to Action",
+        "script_native": "Miss Nova says: बस install button पे click कीजिए और Supernova AI download कीजिए। 1 crore+ users already मेरे साथ practice कर रहे हैं!",
+        "script_roman": "Miss Nova says: Bas install button pe click kijiye aur Supernova AI download kijiye. 1 crore+ users already mere saath practice kar rahe hain!"
+      },
+      {
+        "n": 4,
+        "scene_label": "End Card",
+        "script_native": "Rahul says: मैं तो अभी Supernova AI download कर रहा हूँ!",
+        "script_roman": "Rahul says: Main to abhi Supernova AI download kar raha hoon!"
+      }
+    ],
+    "pitch_points_used": [
+      "Real-life practice (interview)",
+      "Speaking practice",
+      "10-15 minutes a day",
+      "Explains in Hindi",
+      "Improve in 30 days",
+      "7x cheaper",
+      "1 crore+ users"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.8890471
+}

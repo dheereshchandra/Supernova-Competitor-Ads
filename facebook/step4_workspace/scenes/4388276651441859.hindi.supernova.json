@@ -1,0 +1,64 @@
+{
+  "ad_library_id": "4388276651441859",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "human-recorded",
+    "format": "Testimonial video call",
+    "visual_overview": "A simulated video call between two elderly Indian friends. One is walking on a busy, sunny street in an American city, while the other is sitting on a porch in India. The screen occasionally cuts to app UI overlays showing practice features and pricing before ending on a Google Play Store installation screen.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Deepak",
+        "role": "Elderly man visiting the US, confident Supernova AI user"
+      },
+      {
+        "id": "B",
+        "name": "Amit",
+        "role": "Elderly friend in India, initially skeptical but gets convinced"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Video Call: Friend in America",
+        "script_native": "Deepak says: यार, मैं बेटे के पास America पहुँच गया। अभी घूमने निकला हूँ।\nAmit says: अकेले?\nDeepak says: और नहीं तो क्या। हमेशा उस पर depend थोड़ी रहूँगा।\nAmit says: पर तुझे वहाँ के लिए English आती है क्या?\nDeepak says: इसी लिए तो मैंने Supernova AI app पर practice करना शुरू किया था।",
+        "script_roman": "Deepak says: Yaar, main bete ke paas America pahunch gaya. Abhi ghoomne nikla hoon.\nAmit says: Akele?\nDeepak says: Aur nahi toh kya. Hamesha us par depend thodi rahunga.\nAmit says: Par tujhe wahan ke liye English aati hai kya?\nDeepak says: Isi liye toh maine Supernova AI app par practice karna shuru kiya tha."
+      },
+      {
+        "n": 2,
+        "scene_label": "App Feature Demo",
+        "script_native": "Deepak says: इसमें English सीखने के लिए एक AI teacher मिलती हैं। जब चाहो, जितनी देर चाहो, उनके साथ English बोलने की practice कर सकते हो।",
+        "script_roman": "Deepak says: Isme English seekhne ke liye ek AI teacher milti hain. Jab chaho, jitni der chaho, unke saath English bolne ki practice kar sakte ho."
+      },
+      {
+        "n": 3,
+        "scene_label": "Explaining the Benefits",
+        "script_native": "Deepak says: हमारी English सुनकर कोई हँसने वाला नहीं है। वो बहुत patience के साथ mistakes correct करती हैं और Hindi में ही समझाती हैं। तू भी try कर।\nAmit says: तुझे तो तेरा बेटा पैसे भेजता है। मेरे लिए क्या?",
+        "script_roman": "Deepak says: Hamari English sunkar koi hasne wala nahi hai. Wo bahut patience ke saath mistakes correct karti hain aur Hindi mein hi samjhati hain. Tu bhi try kar.\nAmit says: Tujhe toh tera beta paise bhejta hai. Mere liye kya?"
+      },
+      {
+        "n": 4,
+        "scene_label": "Pricing and Offer",
+        "script_native": "Deepak says: अरे tension मत ले! ये offline coaching से 7 गुना सस्ता है। 1 crore+ users already इनके साथ practice कर रहे हैं। सिर्फ 30 days में improvement दिखेगा।",
+        "script_roman": "Deepak says: Are tension mat le! Ye offline coaching se 7 guna sasta hai. 1 crore+ users already inke saath practice kar rahe hain. Sirf 30 days mein improvement dikhega."
+      },
+      {
+        "n": 5,
+        "scene_label": "Conclusion and Call to Action",
+        "script_native": "Deepak says: It is never too late to learn, my friend.\nAmit says: मैं भी अभी Supernova AI download करके English सीखना शुरू करता हूँ।",
+        "script_roman": "Deepak says: It is never too late to learn, my friend.\nAmit says: Main bhi abhi Supernova AI download karke English seekhna shuru karta hoon."
+      }
+    ],
+    "pitch_points_used": [
+      "You SPEAK (speaking practice)",
+      "No-judgement / privacy",
+      "Explains in your language (Hindi)",
+      "7x cheaper than offline classes/coaching",
+      "1 crore+ users",
+      "Improve in just 30 days"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.890162
+}

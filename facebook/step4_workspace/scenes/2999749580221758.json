@@ -1,0 +1,186 @@
+{
+  "competitor_id": "2999749580221758",
+  "parsed": {
+    "duration_s": 44.4,
+    "production_type": "human-recorded",
+    "production_notes": "The video features human actors in a natural setting with standard lighting and camera work. There are no signs of AI generation in the characters or environment.",
+    "interaction_pattern": "A student corrects a teacher's English mistake, leading to a testimonial about the language-learning app she uses.",
+    "audio_track": "The audio consists entirely of spoken dialogue in a mix of Malayalam and English. There is no background music or song.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male teacher",
+        "appearance": "A South Indian man in his 40s with a medium build, dark complexion, short black hair, and a mustache. He wears glasses.",
+        "wardrobe": "A maroon, long-sleeved, button-down shirt and a traditional white mundu (dhoti) with a thin red border. He wears a black watch on his left wrist.",
+        "demeanor": "Initially authoritative and confident, then becomes surprised, impressed, and ultimately convinced."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "A young South Indian woman in her late teens or early 20s with a slim build and fair complexion. She has long, dark, wavy hair parted in the middle.",
+        "wardrobe": "A dark blue, long-sleeved top with a subtle white geometric or floral pattern.",
+        "demeanor": "Confident, articulate, and helpful. She respectfully corrects her teacher and persuasively explains the app's benefits."
+      },
+      {
+        "id": "C",
+        "role": "female learner",
+        "appearance": "A young woman in her late teens or early 20s with long, dark, straight hair and a fair complexion.",
+        "wardrobe": "A bright pink long-sleeved top.",
+        "demeanor": "Relaxed and happy, smiling while using her phone."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 9.8,
+        "screenshot_at_s": 5.5,
+        "scene_label": "Student Corrects Teacher's Mistake",
+        "setting": "A brightly lit classroom with a blackboard, wooden desks, and off-white walls.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Cuts between a medium shot of the teacher and a medium close-up of the student.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The scene cuts between a middle-aged male teacher (Character A) standing in front of a blackboard, and a young female student (Character B) sitting at her desk. The teacher gestures as he speaks. The student then interrupts, looking directly at him with a thoughtful expression, raising her finger to make a point.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The teacher (Character A) makes a grammatical error while teaching. A student (Character B) politely interrupts to correct him, explaining the correct usage. Large on-screen text captions their dialogue, with a red 'X' over the incorrect word and a green checkmark for the correct suggestion.",
+        "audio_transcript": "Character A says: If you practice daily, your English will improve fastly.\nCharacter B says: Sorry to interrupt sir. \u0d08 \u0d38\u0d46\u0d28\u0d4d\u0d31\u0d7b\u0d38\u0d4d \u0d24\u0d46\u0d31\u0d4d\u0d31\u0d3e\u0d23\u0d4d. \u0d2b\u0d3e\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d4d\u200c\u0d32\u0d3f \u0d0e\u0d28\u0d4d\u0d28\u0d4d \u0d35\u0d30\u0d3f\u0d32\u0d4d\u0d32. \u0d12\u0d28\u0d4d\u0d28\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d7d \u0d2b\u0d3e\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d4d \u0d13\u0d7c \u0d15\u0d4d\u0d35\u0d3f\u0d15\u0d4d\u0d15\u0d4d\u200c\u0d32\u0d3f \u0d0e\u0d28\u0d4d\u0d28\u0d4d \u0d2f\u0d42\u0d38\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d23\u0d02. [Sorry to interrupt sir. This sentence is wrong. 'Fastly' is not a word. You should use either 'fast' or 'quickly'.]",
+        "on_screen_text": "IF YOU PRACTICE DAILY, YOUR ENGLISH WILL IMPROVE FASTLY\nSORRY TO INTERRUPT\n\u0d08 SENTENCE \u0d24\u0d46\u0d31\u0d4d\u0d31\u0d3e\u0d23\u0d4d\nFASTLY \u274c\n\u0d0e\u0d28\u0d4d\u0d28\u0d4d \u0d35\u0d30\u0d3f\u0d32\u0d4d\u0d32\n\u0d12\u0d28\u0d4d\u0d28\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d7d FAST OR QUICKLY\n\u0d0e\u0d28\u0d4d\u0d28\u0d4d USE \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d23\u0d02 \u2705"
+      },
+      {
+        "n": 2,
+        "start_s": 9.8,
+        "end_s": 17.9,
+        "screenshot_at_s": 13.5,
+        "scene_label": "Teacher Asks How She Learned",
+        "setting": "A brightly lit classroom with a blackboard, wooden desks, and off-white walls.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Cuts between a medium shot of the teacher and a medium close-up of the student.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The teacher (Character A) looks impressed and smiles, gesturing with an open palm as he asks a question. The shot cuts to the student (Character B) at her desk, who answers confidently. The teacher then looks skeptical. The student replies with a firm nod.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Impressed, the teacher (Character A) asks the student (Character B) where she learned such good English. She replies, and the app's logo 'MySivi' appears over a blurred shot of her. The teacher expresses skepticism about learning from an app, and the student confidently reassures him.",
+        "audio_transcript": "Character A says: You are right. \u0d0e\u0d35\u0d3f\u0d1f\u0d41\u0d28\u0d4d\u0d28\u0d4d \u0d28\u0d40 \u0d07\u0d24\u0d4d\u0d30 \u0d28\u0d28\u0d4d\u0d28\u0d3e\u0d2f\u0d3f \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d1a\u0d4d\u0d1a\u0d47? [You are right. Where did you learn English so well?]\nCharacter B says: MySivi \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d35\u0d34\u0d3f. [Through the MySivi app.]\nCharacter A says: \u0d06\u0d2a\u0d4d\u0d2a\u0d3f\u0d32\u0d4a\u0d15\u0d4d\u0d15\u0d46 \u0d07\u0d24\u0d4d\u0d30 \u0d28\u0d28\u0d4d\u0d28\u0d3e\u0d2f\u0d3f \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d2a\u0d31\u0d4d\u0d31\u0d41\u0d2e\u0d4b? [Is it possible to learn so well from an app?]\nCharacter B says: \u0d09\u0d31\u0d2a\u0d4d\u0d2a\u0d3e\u0d2f\u0d41\u0d02. [Definitely.]",
+        "on_screen_text": "YOU ARE RIGHT.\n\u0d0e\u0d35\u0d3f\u0d1f\u0d41\u0d28\u0d4d\u0d28\u0d4d \u0d28\u0d40 \u0d07\u0d24\u0d4d\u0d30 \u0d28\u0d28\u0d4d\u0d28\u0d3e\u0d2f\u0d3f \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d1a\u0d4d\u0d1a\u0d47?\nMySivi\n\u0d06\u0d2a\u0d4d\u0d2a\u0d3f\u0d32\u0d4a\u0d15\u0d4d\u0d15\u0d46\n\u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d2a\u0d31\u0d4d\u0d31\u0d41\u0d2e\u0d4b?\n\u0d09\u0d31\u0d2a\u0d4d\u0d2a\u0d3e\u0d2f\u0d41\u0d02."
+      },
+      {
+        "n": 3,
+        "start_s": 17.9,
+        "end_s": 27.5,
+        "screenshot_at_s": 22.0,
+        "scene_label": "App Features and User Testimonial",
+        "setting": "Classroom (background), App UI, and a bedroom at night.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "App screencast inset over the student, then a quick cut to a selfie-style shot.",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "A young South Indian woman (Character B) sits at her desk in a classroom, speaking directly to the camera. The background is softly blurred.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "This panel is a screen recording of a mobile application interface. It shows a user's learning path, an AI teacher robot avatar, and a grammar correction feature. The scene then cuts to a full-screen, selfie-style shot of another young woman (Character C) lying on her bed, smiling as she uses her phone.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "The student (Character B) explains the app's features. Screencasts of the app's UI (learning path, AI teacher, grammar correction) are overlaid. The scene then cuts to a different user (Character C) happily using the app in bed, illustrating the convenience.",
+        "audio_transcript": "Character B says: \u0d07\u0d24\u0d3f\u0d7d \u0d28\u0d2e\u0d41\u0d15\u0d4d\u0d15\u0d4d \u0d2e\u0d3e\u0d24\u0d4d\u0d30\u0d2e\u0d3e\u0d2f\u0d3f \u0d12\u0d30\u0d41 AI \u0d1f\u0d40\u0d1a\u0d4d\u0d1a\u0d7c \u0d09\u0d23\u0d4d\u0d1f\u0d4d. \u0d05\u0d35\u0d7c \u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d24\u0d4d\u0d24\u0d3f\u0d7d \u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d31\u0d1e\u0d4d\u0d1e\u0d41 \u0d24\u0d30\u0d41\u0d02. \u0d24\u0d46\u0d31\u0d4d\u0d31\u0d41\u0d15\u0d33\u0d4a\u0d15\u0d4d\u0d15\u0d46 \u0d38\u0d4d\u0d2a\u0d4b\u0d1f\u0d4d\u0d1f\u0d3f\u0d7d \u0d24\u0d3f\u0d30\u0d41\u0d24\u0d4d\u0d24\u0d41\u0d02. \u0d08\u0d38\u0d3f\u0d2f\u0d3e\u0d2f\u0d3f \u0d0e\u0d2a\u0d4d\u0d2a\u0d4b \u0d35\u0d47\u0d23\u0d2e\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d32\u0d41\u0d02 \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d02. [In this, we have a dedicated AI teacher. They will teach English in Malayalam itself. Mistakes are corrected on the spot. You can learn easily, anytime.]",
+        "on_screen_text": "\u0d05\u0d35\u0d7c \u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d24\u0d4d\u0d24\u0d3f\u0d7d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d31\u0d1e\u0d4d\u0d1e\u0d41 \u0d24\u0d30\u0d41\u0d02\n\u0d08\u0d38\u0d3f\u0d2f\u0d3e\u0d2f\u0d3f \u0d0e\u0d2a\u0d4d\u0d2a\u0d4b \u0d35\u0d47\u0d23\u0d2e\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d32\u0d41\u0d02 \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d02."
+      },
+      {
+        "n": 4,
+        "start_s": 27.5,
+        "end_s": 40.7,
+        "screenshot_at_s": 35.5,
+        "scene_label": "Overcoming Skepticism with Proof",
+        "setting": "Classroom (background) and App UI.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Cuts between teacher and student, with app screencasts inset.",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "The scene cuts between the teacher (Character A) standing and speaking with a skeptical expression, and the student (Character B) sitting at her desk, responding confidently and gesturing.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "This panel shows a screen recording of a mobile app store, highlighting an app at the number 1 position in the 'Free Apps' education chart. The view then transitions to a promotional screen for the app, showing a special offer for a 3-day trial.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The scene returns to the classroom. The teacher (Character A) says he thought such apps were scams. The student (Character B) counters with social proof, as a '50 LAKH+ DOWNLOADS' graphic appears. She then shows it's a top-ranked app and mentions a cheap trial offer, with corresponding UI screencasts appearing as insets.",
+        "audio_transcript": "Character A says: \u0d1e\u0d3e\u0d28\u0d3f\u0d24\u0d4a\u0d15\u0d4d\u0d15\u0d46 \u0d38\u0d4d\u0d15\u0d3e\u0d02 \u0d06\u0d23\u0d46\u0d28\u0d4d\u0d28\u0d3e \u0d35\u0d3f\u0d1a\u0d3e\u0d30\u0d3f\u0d1a\u0d4d\u0d1a\u0d3f\u0d30\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d4d. [I thought these things were a scam.]\nCharacter B says: \u0d1e\u0d3e\u0d28\u0d41\u0d02 \u0d38\u0d7c \u0d07\u0d24\u0d4d \u0d2f\u0d42\u0d38\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d4d \u0d35\u0d30\u0d46. 50 \u0d32\u0d15\u0d4d\u0d37\u0d24\u0d4d\u0d24\u0d3f\u0d7d \u0d05\u0d27\u0d3f\u0d15\u0d02 \u0d06\u0d33\u0d41\u0d15\u0d7e \u0d08 \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d35\u0d34\u0d3f \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d1a\u0d4d\u0d1a\u0d3f\u0d1f\u0d4d\u0d1f\u0d41\u0d23\u0d4d\u0d1f\u0d4d. \u0d07\u0d28\u0d4d\u0d24\u0d4d\u0d2f\u0d2f\u0d3f\u0d32\u0d46 \u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d35\u0d7a \u0d13\u0d2b\u0d4d \u0d26\u0d3f \u0d1f\u0d4b\u0d2a\u0d4d\u0d2a\u0d4d \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d06\u0d23\u0d4d \u0d2e\u0d48\u0d38\u0d3f\u0d35\u0d3f. \u0d1f\u0d4d\u0d30\u0d2f\u0d7d \u0d35\u0d47\u0d7c\u0d37\u0d7b \u0d06\u0d23\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d7d \u0d35\u0d46\u0d31\u0d41\u0d02 \u0d2e\u0d42\u0d28\u0d4d\u0d28\u0d41 \u0d30\u0d42\u0d2a\u0d2f\u0d41\u0d02. [Me too, sir, until I started using this. More than 50 lakh people have learned English through this app. MySivi is one of the top apps in India. And the trial version is just three rupees.]",
+        "on_screen_text": "\u0d1e\u0d3e\u0d28\u0d3f\u0d24\u0d4a\u0d15\u0d4d\u0d15\u0d46 SCAM \u0d06\u0d23\u0d46\u0d28\u0d4d\u0d28\u0d3e \u0d35\u0d3f\u0d1a\u0d3e\u0d30\u0d3f\u0d1a\u0d4d\u0d1a\u0d3f\u0d30\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d4d.\n\u0d1e\u0d3e\u0d28\u0d41\u0d02 \u0d38\u0d7c \u0d07\u0d24\u0d4d USE \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d4d \u0d35\u0d30\u0d46.\n50 LAKH+ DOWNLOADS\nMILESTONE ACHIEVED. CELEBRATE WITH US.\n50 \u0d32\u0d15\u0d4d\u0d37\u0d24\u0d4d\u0d24\u0d3f\u0d7d \u0d05\u0d27\u0d3f\u0d15\u0d02 \u0d06\u0d33\u0d41\u0d15\u0d7e \u0d08 \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d35\u0d34\u0d3f \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d1a\u0d4d\u0d1a\u0d3f\u0d1f\u0d4d\u0d1f\u0d41\u0d23\u0d4d\u0d1f\u0d4d.\n\u0d07\u0d28\u0d4d\u0d24\u0d4d\u0d2f\u0d2f\u0d3f\u0d32\u0d46 \u0d24\u0d28\u0d4d\u0d28\u0d46 ONE OF THE TOP APP \u0d06\u0d23\u0d4d MySivi\nTRIAL VERSION \u0d06\u0d23\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d7d \u0d35\u0d46\u0d31\u0d41\u0d02 3 \u0d30\u0d42\u0d2a\u0d2f\u0d41\u0d02"
+      },
+      {
+        "n": 5,
+        "start_s": 40.7,
+        "end_s": 44.4,
+        "screenshot_at_s": 42.5,
+        "scene_label": "Teacher Convinced to Download",
+        "setting": "Classroom (background) and App UI.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium shot of the teacher with an app download screen inset.",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "The middle-aged South Indian teacher (Character A) stands in front of the blackboard, looking convinced and nodding as he speaks. The background is softly blurred.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "This panel shows a screen recording of a mobile phone's app store. A pop-up for an app download is visible, showing the app icon, name, and a progress bar indicating the download is in progress and completing.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The teacher (Character A) is now convinced and declares he will install the app immediately. An inset shows the app downloading from the app store, serving as the final call to action.",
+        "audio_transcript": "Character A says: \u0d1e\u0d3e\u0d28\u0d41\u0d02 \u0d07\u0d2a\u0d4d\u0d2a\u0d4a\u0d24\u0d4d\u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d2e\u0d48\u0d38\u0d3f\u0d35\u0d3f \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d07\u0d7b\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d3e\u0d7e \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d7b \u0d2a\u0d4b\u0d15\u0d41\u0d35\u0d3e. [I'm also going to install the MySivi app right now.]",
+        "on_screen_text": "\u0d1e\u0d3e\u0d28\u0d41\u0d02 \u0d07\u0d2a\u0d4d\u0d2a\u0d4a \u0d24\u0d28\u0d4d\u0d28\u0d46 MySivi \u0d06\u0d2a\u0d4d\u0d2a\u0d4d INSTALL \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d7b \u0d2a\u0d4b\u0d15\u0d41\u0d35\u0d3e"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214535.903393
+}

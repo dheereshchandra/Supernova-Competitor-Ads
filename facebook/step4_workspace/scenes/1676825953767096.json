@@ -1,0 +1,184 @@
+{
+  "competitor_id": "1676825953767096",
+  "parsed": {
+    "duration_s": 27.7,
+    "production_type": "mixed",
+    "production_notes": "The video uses AI-generated imagery for the robot character and what appears to be a stock photo for the human character, creating a composite scene. The app screencasts are also digitally generated.",
+    "interaction_pattern": "AI tutor corrects a learner's spontaneous wrong-English mistake, then explains the app's features and value proposition.",
+    "audio_track": "Spoken dialogue in Telugu between two characters, followed by a final call-to-action in English. There is no background music.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female AI tutor avatar",
+        "appearance": "A female-presenting humanoid robot with a white and grey metallic body. She has a human-like face with defined features, blue eyes, and a neutral to slightly smiling expression. Her body shows exposed mechanical joints and wiring, particularly around the neck, torso, and limbs.",
+        "wardrobe": "N/A - metallic body.",
+        "demeanor": "Calm, knowledgeable, and encouraging."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "A middle-aged South Indian woman, likely in her 40s or 50s, with a dark complexion and a warm, friendly smile. She has dark hair tied back and wears a bindi on her forehead. Her features are expressive and kind.",
+        "wardrobe": "A traditional red and gold patterned saree with a short-sleeved white blouse.",
+        "demeanor": "Cheerful, curious, and receptive to learning."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 8.1,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Live Correction",
+        "setting": "A split-screen composite. The top panel shows a modern, well-lit Indian living room with ornate furniture. The bottom panel shows a rustic, outdoor village setting with a dirt floor.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static medium shots on both panels.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A, a female humanoid robot, sits cross-legged on a red patterned rug in the center of a warmly lit, modern living room. The room is decorated with traditional Indian art, cushions, and wooden furniture. She looks directly at the camera with a calm expression.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B, a middle-aged South Indian woman, kneels on a stone step in a rustic outdoor setting. She is actively grinding something in a traditional stone mortar and pestle, looking up towards the camera with a bright, engaging smile. A metal container sits beside her on the ground.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertically split screen. The top half shows Character A, a robot, in a modern home. The bottom half shows Character B, a woman, in a rustic village setting. Text overlays appear sequentially over the images, first in Telugu and then in English, corresponding to the dialogue.",
+        "audio_transcript": "Character A says: \u0c0f\u0c02 \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c30\u0c41? [What are you doing?]\nCharacter B says: \u0c10 \u0c30\u0c41\u0c2c\u0c4d\u0c2c\u0c3f\u0c02\u0c17\u0c4d \u0c26\u0c4b\u0c38 \u0c2a\u0c3f\u0c02\u0c21\u0c3f. [I rubbing dosa pindi.]\nCharacter A says: \u0c26\u0c3e\u0c28\u0c4d\u0c28\u0c3f I AM GRINDING DOSA BATTER \u0c05\u0c28\u0c3e\u0c32\u0c3f. [You should say 'I am grinding dosa batter' for that.]\nCharacter B says: \u0c38\u0c30\u0c47 \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c0e\u0c32\u0c3e \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c3e\u0c32\u0c3f? [Okay, how to learn English?]\nCharacter A says: MySivi TRY \u0c1a\u0c47\u0c2f\u0c41. [Try MySivi.]\nCharacter B says: \u0c05\u0c26\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f? [What is that?]",
+        "on_screen_text": "\u0c0f\u0c02 \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c30\u0c41?\n\u0c10 \u0c30\u0c41\u0c2c\u0c4d\u0c2c\u0c3f\u0c02\u0c17\u0c4d \u0c26\u0c4b\u0c38 \u0c2a\u0c3f\u0c02\u0c21\u0c3f\n\u0c26\u0c3e\u0c28\u0c4d\u0c28\u0c3f\nI AM GRINDING\nDOSA BATTER \u0c05\u0c28\u0c3e\u0c32\u0c3f\n\u0c38\u0c30\u0c47 ENGLISH \u0c0e\u0c32\u0c3e \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c3e\u0c32\u0c3f?\nMySivi\nTRY \u0c1a\u0c47\u0c2f\u0c41.\n\u0c05\u0c26\u0c3f \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?"
+      },
+      {
+        "n": 2,
+        "start_s": 8.1,
+        "end_s": 12.8,
+        "screenshot_at_s": 10.5,
+        "scene_label": "App Demo",
+        "setting": "A screencast of a mobile application interface with a light purple and white color scheme.",
+        "characters_in_scene": [],
+        "camera": "App-screencast, static view.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A mobile app screen is shown. At the top is a user profile icon and gamification elements like trophies and a flame streak. Below the title 'Arya AI Teacher', a small blue and white robot mascot is displayed next to progress indicators for 'Lessons completed' and 'Fluency Score'. The main section, titled 'Your Learning Path', shows a grid of six lesson modules with icons and titles like 'Talk about anything', 'Daily routine', 'Let's Improve Vocabulary', 'Talk about your childhood', 'Seasons and weather', and 'Family and Relationships'.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A screen recording of the MySivi app's home screen is shown. Text overlays in Telugu and English appear over the screen to highlight features as the narrator explains them.",
+        "audio_transcript": "Character A says: \u0c08 \u0c2f\u0c3e\u0c2a\u0c4d \u0c32\u0c4b \u0c28\u0c41\u0c35\u0c4d\u0c35\u0c41 \u0c24\u0c46\u0c32\u0c41\u0c17\u0c41\u0c32\u0c4b \u0c2e\u0c3e\u0c1f\u0c4d\u0c32\u0c3e\u0c21\u0c35\u0c1a\u0c4d\u0c1a\u0c41. \u0c28\u0c47\u0c28\u0c41 \u0c26\u0c3e\u0c28\u0c4d\u0c28\u0c3f \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c15\u0c3f \u0c1f\u0c4d\u0c30\u0c3e\u0c28\u0c4d\u0c38\u0c4d\u0c32\u0c47\u0c1f\u0c4d \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c3e\u0c28\u0c41. [In this app, you can speak in Telugu. I will translate that to English.]",
+        "on_screen_text": "\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41\u0c32\u0c4b \u0c2e\u0c3e\u0c1f\u0c4d\u0c32\u0c3e\u0c21\u0c35\u0c1a\u0c4d\u0c1a\u0c41...\n\u0c26\u0c3e\u0c28\u0c4d\u0c28\u0c3f ENGLISH \u0c15\u0c3f\nTRANSLATE \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c3e\u0c28\u0c41..."
+      },
+      {
+        "n": 3,
+        "start_s": 12.8,
+        "end_s": 19.8,
+        "screenshot_at_s": 16.0,
+        "scene_label": "Learning Method and Offer",
+        "setting": "The same split-screen composite as Scene 1.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Static medium shots on both panels.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "Character A, a female humanoid robot, sits cross-legged on a red patterned rug in the center of a warmly lit, modern living room. She looks directly at the camera with a calm expression. At one point, she holds up a digital graphic of a blue timer showing '15 MINUTES'. Later, she holds up a digital graphic of a yellow and red tag.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "Character B, a middle-aged South Indian woman, kneels on a stone step in a rustic outdoor setting. She is actively grinding something in a traditional stone mortar and pestle, looking up towards the camera with a bright, engaging smile. A metal container sits beside her on the ground.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The video returns to the split-screen view from Scene 1. Text overlays and graphic elements (a timer showing '15 MINUTES', a price tag saying '1 Rupee Only') appear over the top panel as Character A explains the learning process and the trial offer. Character B reacts at the end.",
+        "audio_transcript": "Character A says: \u0c05\u0c32\u0c3e \u0c28\u0c41\u0c35\u0c4d\u0c35\u0c41 \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c41\u0c02\u0c1f\u0c3e\u0c35\u0c41. \u0c30\u0c4b\u0c1c\u0c41\u0c15\u0c41 \u0c15\u0c47\u0c35\u0c32\u0c02 15 \u0c28\u0c3f\u0c2e\u0c3f\u0c37\u0c3e\u0c32\u0c41 \u0c2a\u0c4d\u0c30\u0c3e\u0c15\u0c4d\u0c1f\u0c40\u0c38\u0c4d \u0c1a\u0c3e\u0c32\u0c41. \u0c1f\u0c4d\u0c30\u0c2f\u0c32\u0c4d \u0c15\u0c42\u0c21\u0c3e \u0c15\u0c47\u0c35\u0c32\u0c02 \u0c12\u0c15 \u0c30\u0c42\u0c2a\u0c3e\u0c2f\u0c3f \u0c24\u0c4b \u0c38\u0c4d\u0c1f\u0c3e\u0c30\u0c4d\u0c1f\u0c4d \u0c05\u0c35\u0c41\u0c24\u0c41\u0c02\u0c26\u0c3f. [That's how you will learn English. Just 15 minutes of practice per day is enough. The trial also starts at just one rupee.]\nCharacter B says: \u0c38\u0c30\u0c47... \u0c1f\u0c4d\u0c30\u0c48 \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c3e\u0c28\u0c41. [Okay... I will try.]",
+        "on_screen_text": "\u0c05\u0c32\u0c3e \u0c28\u0c41\u0c35\u0c4d\u0c35\u0c41 ENGLISH\n\u0c28\u0c47\u0c30\u0c4d\u0c1a\u0c41\u0c15\u0c41\u0c02\u0c1f\u0c3e\u0c35\u0c41.\n\u0c30\u0c4b\u0c1c\u0c41\u0c15\u0c41 \u0c15\u0c47\u0c35\u0c32\u0c02\n15 MINUTES\nPRACTICE \u0c1a\u0c3e\u0c32\u0c41.\nTRIAL \u0c15\u0c42\u0c21\u0c3e \u0c15\u0c47\u0c35\u0c32\u0c02\n1 Rupee Only\n\u0c24\u0c4b START \u0c05\u0c35\u0c41\u0c24\u0c41\u0c02\u0c26\u0c3f.\n\u0c38\u0c30\u0c47... TRY \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c3e\u0c28\u0c41."
+      },
+      {
+        "n": 4,
+        "start_s": 19.8,
+        "end_s": 21.8,
+        "screenshot_at_s": 20.8,
+        "scene_label": "App Installation",
+        "setting": "A screencast of the Google Play Store app page, in dark mode.",
+        "characters_in_scene": [],
+        "camera": "App-screencast, showing a download progress bar.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A screen recording of the Google Play Store in dark mode. The app page for 'MySivi AI English Speaking App' is visible, with the app icon, name, and a 'Verified by Play Protect' checkmark. An 'Install' button is shown, which then changes to a progress bar indicating the app is downloading and installing.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A screen recording shows the MySivi app page on the Google Play Store. The user initiates the download, and a progress bar fills up. A text overlay appears on the screen.",
+        "audio_transcript": "Character A says: MySivi \u0c2f\u0c3e\u0c2a\u0c4d \u0c07\u0c28\u0c4d\u0c38\u0c4d\u0c1f\u0c3e\u0c32\u0c4d \u0c1a\u0c47\u0c38\u0c3f... [Install the MySivi app and...]",
+        "on_screen_text": "APP INSTALL \u0c1a\u0c47\u0c38\u0c3f..."
+      },
+      {
+        "n": 5,
+        "start_s": 21.8,
+        "end_s": 24.5,
+        "screenshot_at_s": 23.0,
+        "scene_label": "Start Your Journey",
+        "setting": "The modern living room from the previous scenes.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A medium close-up shot of Character A, the female humanoid robot. She is sitting cross-legged on the rug, looking directly at the camera and smiling slightly. She is wearing a small earpiece-like device. The background is the same warmly lit living room.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A medium close-up shot of the robot, Character A, speaking to the camera. Text overlays appear sequentially over her.",
+        "audio_transcript": "Character A says: \u0c2e\u0c40 \u0c07\u0c02\u0c17\u0c4d\u0c32\u0c40\u0c37\u0c4d \u0c1c\u0c30\u0c4d\u0c28\u0c40 \u0c28\u0c3f \u0c08\u0c30\u0c4b\u0c1c\u0c47 \u0c38\u0c4d\u0c1f\u0c3e\u0c30\u0c4d\u0c1f\u0c4d \u0c1a\u0c47\u0c2f\u0c02\u0c21\u0c3f. [start your English journey today.]",
+        "on_screen_text": "\u0c2e\u0c40 ENGLISH JOURNEY\n\u0c28\u0c3f \u0c08\u0c30\u0c4b\u0c1c\u0c47 START"
+      },
+      {
+        "n": 6,
+        "start_s": 24.5,
+        "end_s": 27.7,
+        "screenshot_at_s": 26.0,
+        "scene_label": "End Card CTA",
+        "setting": "A plain, light purple-to-white gradient background.",
+        "characters_in_scene": [],
+        "camera": "Static graphic.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A smartphone with a white screen is shown against a plain light purple background. The phone is angled slightly towards the right.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "An end card shows a smartphone graphic against a light purple background. The app's logo, name, and an 'Install Now' button appear on the phone's screen.",
+        "audio_transcript": "Unknown speaker says: Click on install now and download MySivi app.",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214596.070938
+}

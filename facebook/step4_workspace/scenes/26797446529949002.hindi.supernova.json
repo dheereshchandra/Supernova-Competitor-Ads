@@ -1,0 +1,70 @@
+{
+  "ad_library_id": "26797446529949002",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "human-recorded",
+    "format": "Testimonial / recommendation",
+    "visual_overview": "A live-action outdoor scene on a busy city street. A young man asks a Home Guard for directions, leading to a conversation about his inability to speak English. The Home Guard recommends the Supernova AI app, with brief on-screen text and UI cutaways highlighting the app's features and cost.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Rahul",
+        "role": "Young male learner"
+      },
+      {
+        "id": "B",
+        "name": "Amit",
+        "role": "Home Guard / experienced user"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Asking for Directions",
+        "script_native": "Rahul says: सर, Kashmere Gate कैसे जाऊँ?\nAmit says: Just take the 12E bus from here. That's a direct bus for Kashmere Gate. You will reach there in 30 minutes.",
+        "script_roman": "Rahul says: Sir, Kashmere Gate kaise jaun?\nAmit says: Just take the 12E bus from here. That's a direct bus for Kashmere Gate. You will reach there in 30 minutes."
+      },
+      {
+        "n": 2,
+        "scene_label": "The Language Barrier",
+        "script_native": "Rahul says: सर समझ नहीं आया। मुझे English उतनी नहीं आती।\nAmit says: अरे भाई, आज कल के time में English आना बहुत important है। तुम क्यों नहीं सीखते?\nRahul says: मेरे पास time कहाँ है सर? वैसे आपने कहाँ से सीखी?",
+        "script_roman": "Rahul says: Sir samajh nahi aaya. Mujhe English utni nahi aati.\nAmit says: Arre bhai, aaj kal ke time mein English aana bahut important hai. Tum kyun nahi seekhte?\nRahul says: Mere paas time kahan hai sir? Waise aapne kahan se seekhi?"
+      },
+      {
+        "n": 3,
+        "scene_label": "The Recommendation",
+        "script_native": "Amit says: मैंने Supernova AI app से सीखी। इसमें ज़्यादा time नहीं लगता। बस दिन में 10-15 minutes practice करो, और 30 days में तुम्हारी English improve हो जाएगी।",
+        "script_roman": "Amit says: Maine Supernova AI app se seekhi. Isme zyada time nahi lagta. Bas din mein 10-15 minutes practice karo, aur 30 days mein tumhari English improve ho jayegi."
+      },
+      {
+        "n": 4,
+        "scene_label": "Explaining the App's Features",
+        "script_native": "Rahul says: ये Supernova AI क्या है सर?\nAmit says: इस app में एक AI teacher हैं। तुम उनके साथ बोलने की practice कर सकते हो। और best part ये है कि अगर तुम mistake करते हो, तो वो तुरंत correct करती हैं और Hindi में समझाती हैं।",
+        "script_roman": "Rahul says: Ye Supernova AI kya hai sir?\nAmit says: Is app mein ek AI teacher hain. Tum unke saath bolne ki practice kar sakte ho. Aur best part ye hai ki agar tum mistake karte ho, toh woh turant correct karti hain aur Hindi mein samjhati hain."
+      },
+      {
+        "n": 5,
+        "scene_label": "The Cost Objection",
+        "script_native": "Rahul says: पर सर, ये app तो बहुत costly होगी ना?\nAmit says: बिल्कुल नहीं। ये offline coaching से सात गुना सस्ता है।",
+        "script_roman": "Rahul says: Par sir, ye app toh bahut costly hogi na?\nAmit says: Bilkul nahi. Ye offline coaching se saat guna sasta hai."
+      },
+      {
+        "n": 6,
+        "scene_label": "The Call to Action",
+        "script_native": "Rahul says: Super सर! मैं अभी start करता हूँ।\nAmit says: हाँ, 1 crore से ज़्यादा लोग already practice कर रहे हैं। तुम भी Supernova AI download करो।",
+        "script_roman": "Rahul says: Super sir! Main abhi start karta hoon.\nAmit says: Haan, 1 crore se zyada log already practice kar rahe hain. Tum bhi Supernova AI download karo."
+      }
+    ],
+    "pitch_points_used": [
+      "10-15 minutes a day",
+      "improve in just 30 days",
+      "speaking practice",
+      "explains in Hindi",
+      "7x cheaper than offline classes/coaching",
+      "1 crore+ users"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.8880498
+}

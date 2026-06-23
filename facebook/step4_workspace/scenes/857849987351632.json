@@ -1,0 +1,245 @@
+{
+  "competitor_id": "857849987351632",
+  "parsed": {
+    "duration_s": 51.2,
+    "production_type": "human-recorded",
+    "production_notes": "The video features human actors in a realistic setting with natural lighting and camera work. There are no signs of AI-generated visuals in the live-action segments.",
+    "interaction_pattern": "Testimonial and product demonstration; a satisfied user explains the app's benefits to a skeptical friend, showing how the AI provides live correction of grammar mistakes.",
+    "audio_track": "Spoken dialogue in both English and Malayalam between characters. There is no background music or song.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male tea shop owner",
+        "appearance": "A middle-aged South Indian man in his late 40s or early 50s with a medium build and a dark complexion. He has short, neat black hair and a prominent, well-groomed black mustache. He has a friendly and confident face with warm eyes.",
+        "wardrobe": "A short-sleeved, button-down shirt in a solid beige/khaki color, paired with a traditional white mundu (dhoti) with a thin gold border (kasavu).",
+        "demeanor": "Confident, knowledgeable, friendly, and persuasive."
+      },
+      {
+        "id": "B",
+        "role": "male foreign tourist",
+        "appearance": "A young Caucasian man in his late 20s or early 30s with a slim, athletic build and a fair complexion. He has short, light brown hair and is clean-shaven. He has a curious and open facial expression.",
+        "wardrobe": "A plain, dark green crew-neck t-shirt, light beige or khaki trousers, and a black backpack worn over both shoulders.",
+        "demeanor": "Polite, curious, and cheerful."
+      },
+      {
+        "id": "C",
+        "role": "male friend/customer",
+        "appearance": "A middle-aged South Indian man in his 40s with a medium build and a dark complexion. He has short black hair and a neatly trimmed full beard and mustache that are starting to show some grey. He has expressive, inquisitive eyes.",
+        "wardrobe": "A short-sleeved, button-down shirt in a light cream or off-white color, paired with a traditional white mundu (dhoti) with a thin gold border.",
+        "demeanor": "Amazed, skeptical, and ultimately convinced."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 7.4,
+        "screenshot_at_s": 3.5,
+        "scene_label": "Tourist Orders Tea",
+        "setting": "A rustic, traditional South Indian tea shop with weathered green walls. A red and white sign reads 'TEA SHOP'. Shelves with glass jars of snacks are in the background.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up, cutting back and forth between characters.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The scene alternates between two shots. In one, Character B, a young Caucasian man with a backpack, sits on a wooden bench against a green wall, looking up and speaking with a friendly expression. In the other, Character A, a middle-aged Indian man with a mustache, stands behind a counter in his tea shop, smiling warmly as he responds. He holds two small glasses of tea on a saucer.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Quick cuts between Character B, a foreign tourist, sitting in a tea shop, and Character A, the shop owner, behind the counter. They have a conversation in English. Large, stylized on-screen text captions their dialogue.",
+        "audio_transcript": "Character B says: One chai please?\nCharacter A says: Normal chai or ginger chai?\nCharacter B says: Ginger chai? Normal chai!\nCharacter A says: Would you like some banana fritters with it?\nCharacter B says: Yeah, I will give it a try.",
+        "on_screen_text": "ONE CHAI PLEASE?\nNORMAL CHAI OR GINGER CHAI?\nGINGER CHAI? NORMAL CHAI!!\nWOULD YOU LIKE SOME BANANA FRITTERS WITH IT?\nI WILL GIVE IT A TRY"
+      },
+      {
+        "n": 2,
+        "start_s": 7.4,
+        "end_s": 12.8,
+        "screenshot_at_s": 10.0,
+        "scene_label": "Friend's Amazement",
+        "setting": "The same tea shop. Character C is seated on a bench.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Medium shot, cutting between Character C and Character A.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The scene cuts between a medium shot of Character C, a bearded man, sitting on a bench and looking up with an amazed expression as he speaks, and a medium close-up of Character A, the shop owner, listening and then replying with a smile.",
+            "characters_in_panel": [
+              "A",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "Character C, another customer, asks Character A in Malayalam how he speaks English so well. Character A replies modestly. Large on-screen text captions their dialogue.",
+        "audio_transcript": "Character C says: \u0d30\u0d35\u0d3f\u0d2f\u0d47! \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46\u0d2f\u0d3e\u0d1f\u0d3e \u0d07\u0d24\u0d4d\u0d30\u0d47\u0d02 \u0d28\u0d28\u0d4d\u0d28\u0d3e\u0d2f\u0d3f \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d38\u0d02\u0d38\u0d3e\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d46? \u0d0e\u0d35\u0d3f\u0d1f\u0d46 \u0d2a\u0d4b\u0d2f\u0d3f \u0d2a\u0d20\u0d3f\u0d1a\u0d4d\u0d1a\u0d41? [Raviye! Engane da ithrem nannaayi English samsaarikkunne? Evide poyi padichu? - Ravi! How do you speak English so well? Where did you go to study?]\nCharacter A says: \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d0e\u0d35\u0d3f\u0d1f\u0d47\u0d15\u0d4d\u0d15\u0d41\u0d02 \u0d2a\u0d4b\u0d2f\u0d3f\u0d1f\u0d4d\u0d1f\u0d3f\u0d32\u0d4d\u0d32 \u0d1a\u0d47\u0d1f\u0d4d\u0d1f\u0d3e. [Padikkaan evidekkum pooyilla chetta. - I didn't go anywhere to study, brother.]",
+        "on_screen_text": "RAVIYE! ENGANE DA ITHREM NANNAAYI ENGLISH SAMSAARIKUNNE? EVIDE POYI PADICH?\nPADIKKAAN EVIDEKKUM POOYILLA CHETTA."
+      },
+      {
+        "n": 3,
+        "start_s": 12.8,
+        "end_s": 18.9,
+        "screenshot_at_s": 15.5,
+        "scene_label": "Revealing the AI Tutor",
+        "setting": "The tea shop, with a cut to a screencast of a mobile app.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up on Character A, followed by a screen recording.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands in his tea shop, smiling confidently. The shot then transitions to a clean, bright screen recording of a mobile application interface. The interface shows a small, friendly robot avatar, progress bars for 'Lessons completed' and 'Fluency Score', and a grid of learning modules with icons and titles like 'Talk about anything' and 'Daily routine'.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A reveals he uses the MySivi app. The app's logo appears, followed by a screencast of the app's dashboard. He explains it's an AI English trainer that can be used anywhere, anytime. On-screen text captions his speech.",
+        "audio_transcript": "Character A says: MySivi \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d12\u0d30\u0d41 AI \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d1f\u0d4d\u0d30\u0d46\u0d2f\u0d4d\u0d28\u0d7c \u0d06\u0d23\u0d4d. \u0d0e\u0d35\u0d3f\u0d1f\u0d46 \u0d35\u0d47\u0d23\u0d47\u0d32\u0d41\u0d02 \u0d0e\u0d2a\u0d4d\u0d2a\u0d4b \u0d35\u0d47\u0d23\u0d47\u0d32\u0d41\u0d02 \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d02. \u0d1a\u0d3e\u0d2f\u0d15\u0d4d\u0d15\u0d1f\u0d2f\u0d3f\u0d7d \u0d28\u0d3f\u0d28\u0d4d\u0d28\u0d4d \u0d2a\u0d4b\u0d32\u0d41\u0d02. [MySivi app oru AI English trainer aanu. Evide venelum epo venelum padikkaam. Chaayakadayil ninnu polum. - The MySivi app is an AI English trainer. You can study wherever you want, whenever you want. Even from the tea shop.]",
+        "on_screen_text": "MySivi\nORU AI ENGLISH TRAINER AANU.\nEVIDE VENELUM, EPO VENELUM PADIKAAM.\nCHAAYA KADENU NINNU POLUM."
+      },
+      {
+        "n": 4,
+        "start_s": 18.9,
+        "end_s": 25.1,
+        "screenshot_at_s": 22.0,
+        "scene_label": "Skepticism and Reassurance",
+        "setting": "The tea shop.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Medium shot, cutting between Character C and Character A.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character C sits on the bench, looking up and asking a skeptical question with an inquisitive expression. The shot cuts to Character A, who smiles knowingly and begins to explain, gesturing with his hands.",
+            "characters_in_panel": [
+              "A",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "Character C questions the AI, assuming it only teaches in English. Character A reassures him, explaining that the app's highlight is that it teaches in Malayalam. On-screen text captions the dialogue.",
+        "audio_transcript": "Character C says: \u0d0e\u0d10-\u0d2f\u0d4b? \u0d05\u0d24\u0d4d \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d3f\u0d7d \u0d05\u0d32\u0d4d\u0d32\u0d47 \u0d2a\u0d20\u0d3f\u0d2a\u0d4d\u0d2a\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d15? \u0d28\u0d40 \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46 \u0d2e\u0d28\u0d38\u0d4d\u0d38\u0d3f\u0d32\u0d3e\u0d15\u0d4d\u0d15\u0d3f? [AI-yo? Athu English-il alle padipikka? Nee engane manasilaakki? - AI? Doesn't it teach in English? How did you understand?]\nCharacter A says: \u0d05\u0d24\u0d3e\u0d23\u0d4d \u0d39\u0d48\u0d32\u0d48\u0d31\u0d4d\u0d31\u0d4d. \u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d24\u0d4d\u0d24\u0d3f\u0d7d \u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d2a\u0d20\u0d3f\u0d2a\u0d4d\u0d2a\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d02! [Ath\u0101\u1e47 highlight. Malay\u0101\u1e37attil tanne pa\u1e6dhippikku\u1e41! - That's the highlight. It teaches in Malayalam itself!]",
+        "on_screen_text": "AI-YO? ATHU ENGLISH-IL ALLE PADAPIKA? NEE ENGANE MANASILAAKKI?\nATHAANU HIGHLIGHT. MALAYALATHIL THANNE PADAPIKKUM!"
+      },
+      {
+        "n": 5,
+        "start_s": 25.1,
+        "end_s": 31.8,
+        "screenshot_at_s": 28.0,
+        "scene_label": "App Features: No Judgment",
+        "setting": "The tea shop, with an animated app UI overlay.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up on Character A.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands in his tea shop, speaking directly to the viewer with a reassuring and friendly expression. He explains the benefits of the app, emphasizing its non-judgmental nature.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "As Character A explains that the app doesn't judge or make fun of mistakes, an animated overlay of a chat interface appears. It shows the AI asking a question, the user making a grammatical error ('I go to the beach...'), and the AI providing a gentle correction ('Almost perfect! ... I went to the beach...').",
+        "audio_transcript": "Character A says: \u0d06\u0d30\u0d41\u0d02 \u0d1c\u0d21\u0d4d\u0d1c\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3f\u0d32\u0d4d\u0d32, \u0d15\u0d33\u0d3f\u0d2f\u0d3e\u0d15\u0d4d\u0d15\u0d3f\u0d32\u0d4d\u0d32. \u0d24\u0d46\u0d31\u0d4d\u0d31\u0d3f\u0d1a\u0d4d\u0d1a\u0d3e\u0d32\u0d41\u0d02 \u0d1f\u0d46\u0d7b\u0d37\u0d7b \u0d07\u0d32\u0d4d\u0d32! \u0d15\u0d4d\u0d37\u0d2e\u0d2f\u0d4b\u0d1f\u0d46 AI \u0d2a\u0d31\u0d1e\u0d4d\u0d1e\u0d41 \u0d2e\u0d28\u0d38\u0d4d\u0d38\u0d3f\u0d32\u0d3e\u0d15\u0d4d\u0d15\u0d3f \u0d24\u0d30\u0d41\u0d02. [Aarum judge cheyyilla, kaliyaakila. Thettichaalum tension illa! Kshamayode AI paranju manasilaakki tharum. - No one will judge, no one will make fun. Even if you make a mistake, there's no tension! The AI will patiently explain and make you understand.]",
+        "on_screen_text": "AARUM JUDGE CHEYYILLA, KALIYAAKILA.\nTHETTICHAALUM TENSION ILLA!\nKSHAMA YODE AI PARANJU MANASILAAKI THARUM.\n[App UI Text]: Hey! What did you do over the weekend?\n[App UI Text]: I go to the beach and eat ice cream.\n[App UI Text]: Almost perfect! Just a small correction: I went to the beach and ate ice cream"
+      },
+      {
+        "n": 6,
+        "start_s": 31.8,
+        "end_s": 39.1,
+        "screenshot_at_s": 36.0,
+        "scene_label": "The Low Price",
+        "setting": "The tea shop.",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Cuts between characters, with a 3D graphic overlay.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character C looks concerned about the price. The shot cuts to Character A, who smiles and points down at the two glasses of tea on his counter, explaining that the app costs less. The background blurs as he speaks.",
+            "characters_in_panel": [
+              "A",
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "Character C asks if the app is expensive. Character A says it costs less than a cup of tea. A large, red and white 3D graphic of '\u20b9 3' floats in the center of the screen over a blurred shot of Character A. He then clarifies that this price is for a trial of the full app.",
+        "audio_transcript": "Character C says: \u0d05\u0d2a\u0d4d\u0d2a\u0d4a \u0d28\u0d32\u0d4d\u0d32 \u0d2a\u0d48\u0d38 \u0d06\u0d35\u0d41\u0d02 \u0d05\u0d32\u0d4d\u0d32\u0d47? [Appo nalla paisa aavum ale? - Then it must cost a lot of money, right?]\nCharacter A says: \u0d08 \u0d1a\u0d3e\u0d2f\u0d47\u0d1f\u0d46 \u0d35\u0d3f\u0d32 \u0d2a\u0d4b\u0d32\u0d41\u0d02 \u0d07\u0d32\u0d4d\u0d32! \u0d1f\u0d4d\u0d30\u0d2f\u0d7d \u0d35\u0d47\u0d7c\u0d37\u0d28\u0d4d \u0d35\u0d46\u0d31\u0d41\u0d02 \u0d2e\u0d42\u0d28\u0d4d\u0d28\u0d41 \u0d30\u0d42\u0d2a \u0d2e\u0d3e\u0d24\u0d4d\u0d30\u0d2e\u0d47 \u0d09\u0d33\u0d4d\u0d33\u0d42. \u0d2b\u0d41\u0d7e \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d1f\u0d4d\u0d30\u0d48 \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d02. [Ee chaayede vila polum illa! Trial version-u verum moonnu roopa maathre ullu. Full app try cheyyaam. - It doesn't even cost as much as this tea! The trial version is only three rupees. You can try the full app.]",
+        "on_screen_text": "APPO NALLA PAISA AAVUM ALE?\nEE CHAAYEDE VILA POLUM ILLA!\n\u20b9 3\nFULL APP TRY CHEYYAAM."
+      },
+      {
+        "n": 7,
+        "start_s": 39.1,
+        "end_s": 46.0,
+        "screenshot_at_s": 42.5,
+        "scene_label": "Social Proof and Benefit",
+        "setting": "The tea shop.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up on Character A, with a 3D graphic overlay.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character A stands in his shop, speaking persuasively with open hands. The background blurs as he mentions the number of users. He then smiles warmly, sharing how his own business has improved.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "Character A provides social proof, stating that over 50 lakh people use the app. A large, golden 3D graphic of '50 LAKHS' appears on screen. He concludes by saying his own business has improved as a result.",
+        "audio_transcript": "Character A says: \u0d07\u0d2a\u0d4d\u0d2a\u0d4b\u0d24\u0d4d\u0d24\u0d28\u0d4d\u0d28\u0d46 50 \u0d32\u0d15\u0d4d\u0d37\u0d24\u0d4d\u0d24\u0d3f\u0d7d \u0d05\u0d27\u0d3f\u0d15\u0d02 \u0d06\u0d33\u0d41\u0d15\u0d7e MySivi \u0d06\u0d2a\u0d4d\u0d2a\u0d3f\u0d7d \u0d28\u0d3f\u0d28\u0d4d\u0d28\u0d41\u0d02 \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d1a\u0d4d\u0d1a\u0d3f\u0d1f\u0d4d\u0d1f\u0d41\u0d23\u0d4d\u0d1f\u0d4d. \u0d0e\u0d7b\u0d4d\u0d31\u0d46 \u0d15\u0d1a\u0d4d\u0d1a\u0d4b\u0d1f\u0d02 \u0d05\u0d24\u0d41\u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d4d \u0d2e\u0d46\u0d1a\u0d4d\u0d1a\u0d2a\u0d4d\u0d2a\u0d46\u0d1f\u0d4d\u0d1f\u0d3f\u0d1f\u0d4d\u0d1f\u0d47 \u0d09\u0d33\u0d4d\u0d33\u0d42. [Ippo thanne 50 lakshathil adikam aalukal MySivi app il ninnum English padichittund. Ente kachodam athond mechappettitte ullu. - Right now, more than 50 lakh people have learned English from the MySivi app. My business has only improved because of it.]",
+        "on_screen_text": "50 LAKHS\nAALUKAL MYSIVI APP IL NINNUM ENGLISH PADICHITTUND.\nENTE KACHODAM ATHOND MECHAPETTITE ULLU."
+      },
+      {
+        "n": 8,
+        "start_s": 46.0,
+        "end_s": 51.2,
+        "screenshot_at_s": 48.5,
+        "scene_label": "Call to Action",
+        "setting": "The tea shop, with an app store UI overlay.",
+        "characters_in_scene": [
+          "C"
+        ],
+        "camera": "Medium shot of Character C with an overlay.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "Character C sits on the bench, looking forward with a determined and convinced expression. He nods and smiles as he decides to take action. His image becomes the blurred background for the subsequent overlay.",
+            "characters_in_panel": [
+              "C"
+            ]
+          }
+        ],
+        "visual_description": "Convinced, Character C announces he is going to download the app and start learning. An overlay of the Google Play Store appears over a blurred shot of him, showing the 'MySivi AI English Speaking' app being installed.",
+        "audio_transcript": "Character C says: \u0d1e\u0d3e\u0d28\u0d41\u0d02 MySivi \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d21\u0d57\u0d7a\u0d32\u0d4b\u0d21\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d4d \u0d07\u0d2a\u0d4d\u0d2a\u0d4b\u0d24\u0d4d\u0d24\u0d28\u0d4d\u0d28\u0d46 \u0d07\u0d02\u0d17\u0d4d\u0d32\u0d40\u0d37\u0d4d \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d7b \u0d2a\u0d4b\u0d15\u0d41\u0d35\u0d3e. [Njanum MySivi app download cheyth ippo thanne English padikkaan poova. - I'm also going to download the MySivi app and start learning English right now.]",
+        "on_screen_text": "NJANUM MYSIVI APP DOWNLOAD CHEYTH IPO THANNE ENGLISH PADIKAAN POKUVA.\n[App Store UI Text]: MySivi AI English Speakin...\n[App Store UI Text]: MySivi AI \u2022 Education\n[App Store UI Text]: Install\n[App Store UI Text]: Master Spoken Eng\n[App Store UI Text]: Sharpen your Englis 1-on-1 calls. Try MyS fast\n[App Store UI Text]: Installing..."
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214614.198146
+}

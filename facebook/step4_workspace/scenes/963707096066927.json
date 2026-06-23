@@ -1,0 +1,162 @@
+{
+  "competitor_id": "963707096066927",
+  "parsed": {
+    "duration_s": 38.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses a split-screen format where the top panel features a photorealistic but clearly AI-generated female humanoid robot, while the bottom panel is a standard human-recorded video of a woman.",
+    "interaction_pattern": "AI tutor quizzes a learner, who answers incorrectly; the tutor then provides a live correction of the spontaneous wrong-English mistake and explains the rule.",
+    "audio_track": "Spoken dialogue in Tamil and English between two characters. There is no background music.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "A female-presenting humanoid robot with a sleek, metallic body made of white and silver components. She has a defined, human-like facial structure with bright blue, luminous eyes and no hair. Her build is slender and futuristic.",
+        "wardrobe": "As a robot, she wears no clothes. Her body is her 'wardrobe'. She has black in-ear headphones connected by a thin black wire that hangs down her chest.",
+        "demeanor": "Calm, knowledgeable, and persuasive. Her facial expressions are subtle but she appears patient and encouraging."
+      },
+      {
+        "id": "B",
+        "role": "female learner",
+        "appearance": "A young South Indian woman in her early to mid-20s with a medium complexion. She has large, expressive dark brown eyes, and her shoulder-length, wavy black hair is parted to the side. She has a friendly and relatable appearance.",
+        "wardrobe": "A light-colored, possibly off-white or beige, three-quarter sleeve kurta with a traditional blue and brown block print pattern.",
+        "demeanor": "Her demeanor shifts throughout the ad: initially uncertain and making mistakes, then showing understanding, concern about cost, and finally becoming excited and convinced by the tutor's pitch."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 9.5,
+        "screenshot_at_s": 4.5,
+        "scene_label": "Mistake and Correction",
+        "setting": "The AI tutor is in a warmly lit, traditionally decorated Indian living room. The human learner is against a plain, off-white wall in a brightly lit space.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up on both characters in their respective panels.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up of Character A, a female humanoid robot, sitting at a wooden table in a cozy, traditionally decorated Indian room. The room has warm lighting, with shelves holding brass items and framed pictures on the wall behind her. She looks directly forward, speaking, with subtle movements of her head and mouth.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up of Character B, a young woman, standing against a plain, off-white wall. She looks directly at the camera. Her expression changes from neutral with closed eyes, to speaking, to listening intently, and finally to a small smile of understanding.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertically split-screen video. The top panel shows the AI tutor (Character A) and the bottom panel shows the human learner (Character B). As Character B gives an incorrect answer, a red 'X' graphic appears over Character A's chest. When Character A provides the correction, a white checkmark graphic appears instead. Text bubbles with the dialogue appear between the two panels.",
+        "audio_transcript": "Character A says: \u0b89\u0ba9\u0b95\u0bcd\u0b95\u0bc1 \u0b8e\u0ba4\u0bcd\u0ba4\u0ba9\u0bc8 brothers \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbe\u0b99\u0bcd\u0b95? [How many brothers do you have?]\nCharacter B says: I am having two brothers.\nCharacter A says: Having-\u0ba9\u0bc1 \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0b95\u0bcd\u0b95\u0bc2\u0b9f\u0bbe\u0ba4\u0bc1. [You shouldn't say 'having'.]\nCharacter A says: \u0ba8\u0bc0 \u0bb0\u0bc6\u0ba3\u0bcd\u0b9f\u0bc1 \u0baa\u0bc7\u0bb0\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0b95\u0bc8\u0bb2 \u0baa\u0bc1\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0b9f\u0bcd\u0b9f\u0bc1 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0baf\u0bbe \u0b8e\u0ba9\u0bcd\u0ba9? [Are you holding both of them in your hands or what?]\nCharacter A says: 'I have two brothers'-\u0ba9\u0bc1 \u0ba4\u0bbe\u0ba9\u0bcd \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0ba3\u0bc1\u0bae\u0bcd. ['I have two brothers' is what you should say.]",
+        "on_screen_text": "I am having two brothers\n\u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0b95\u0bcd\u0b95\u0bc2\u0b9f\u0bbe\u0ba4\u0bc1 (sollakkoodathu - shouldn't say)\n\u0ba8\u0bc0 \u0bb0\u0bc6\u0ba3\u0bcd\u0b9f\u0bc1 \u0baa\u0bc7\u0bb0\u0bc8\u0baf\u0bc1\u0bae\u0bcd (Nee rendu peraiyum - You, both of them)\n\u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0baf\u0bbe \u0b8e\u0ba9\u0bcd\u0ba9 (irukkiya enna - are you or what)\n'I have two brothers'-\u0ba9\u0bc1 (I have two brothers'-nu)\n\u0ba4\u0bbe\u0ba9\u0bcd \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0ba3\u0bc1\u0bae\u0bcd (thaan sollanum - is what should be said)"
+      },
+      {
+        "n": 2,
+        "start_s": 9.5,
+        "end_s": 16.0,
+        "screenshot_at_s": 12.5,
+        "scene_label": "Addressing Insecurity and Cost",
+        "setting": "The AI tutor is in a warmly lit, traditionally decorated Indian living room. The human learner is against a plain, off-white wall in a brightly lit space.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up on both characters in their respective panels.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up of Character A, the AI robot, in her Indian living room setting. She listens and then responds, her expression remaining calm and reassuring. Her head tilts slightly as she speaks.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up of Character B against her plain wall. She smiles happily, then her expression changes to one of concern and doubt as she raises an objection, frowning and looking worried.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen conversation continues. Character B smiles, then looks concerned. Character A responds reassuringly. Dialogue text appears in bubbles between the panels.",
+        "audio_transcript": "Character B says: \u0b93 \u0b93\u0b95\u0bc7 \u0b93\u0b95\u0bc7. \u0b8e\u0ba9\u0b95\u0bcd\u0b95\u0bc1 English \u0b85\u0bb5\u0bcd\u0bb3\u0bcb\u0bb5\u0bbe \u0ba4\u0bc6\u0bb0\u0bbf\u0baf\u0bbe\u0ba4\u0bc1. [Oh okay okay. I don't know that much English.]\nCharacter A says: No problem. AI teachers-\u0b85 try \u0baa\u0ba3\u0bcd\u0ba3\u0bb2\u0bc8\u0baf\u0bbe? [No problem. Haven't you tried AI teachers?]\nCharacter B says: \u0b85\u0ba4\u0bc6\u0bb2\u0bcd\u0bb2\u0bbe\u0bae\u0bcd \u0bb0\u0bca\u0bae\u0bcd\u0baa \u0b9a\u0bc6\u0bb2\u0bb5\u0bbe\u0b95\u0bc1\u0bae\u0bc7. [That would be very expensive.]\nCharacter A says: \u0b95\u0ba3\u0bcd\u0b9f\u0bbf\u0baa\u0bcd\u0baa\u0bbe \u0b87\u0bb2\u0bcd\u0bb2. [Definitely not.]",
+        "on_screen_text": "\u0b8e\u0ba9\u0b95\u0bcd\u0b95\u0bc1 English (enakku English - For me English)\n\u0b85\u0bb5\u0bcd\u0bb3\u0bcb\u0bb5\u0bbe \u0ba4\u0bc6\u0bb0\u0bbf\u0baf\u0bbe\u0ba4\u0bc1 (avvalova theriyathu - don't know that much)\nNo problem\nAI teachers-\u0b85 (AI teachers-a)\ntry \u0baa\u0ba3\u0bcd\u0ba3\u0bb2\u0bc8\u0baf\u0bbe (try pannalaiya - haven't you tried)\n\u0b9a\u0bc6\u0bb2\u0bb5\u0bbe\u0b95\u0bc1\u0bae\u0bc7 (selavaagume - it will be expensive)\n\u0b95\u0ba3\u0bcd\u0b9f\u0bbf\u0baa\u0bcd\u0baa\u0bbe \u0b87\u0bb2\u0bcd\u0bb2 (kandippa illa - definitely not)"
+      },
+      {
+        "n": 3,
+        "start_s": 16.0,
+        "end_s": 28.5,
+        "screenshot_at_s": 22.0,
+        "scene_label": "Value Proposition: Cost and Time",
+        "setting": "The AI tutor is in a warmly lit, traditionally decorated Indian living room. The human learner is against a plain, off-white wall in a brightly lit space.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up on both characters, with graphic overlays.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up of Character A, the AI robot, in her Indian living room setting. She speaks persuasively, making her case. Her mouth moves as she talks and her blue eyes are bright.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up of Character B against her plain wall. Her expression shifts from neutral listening to a slight frown of concern, then back to a more pleasant, receptive look as she listens to the solution.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen continues. As Character A talks about the app's popularity, a screenshot of the Google Play Store page for 'MySivi AI' briefly overlays the video, highlighting '10M+ Downloads'. Later, as she mentions time, a graphic of an analog clock appears over the blurred video. Dialogue text continues in bubbles.",
+        "audio_transcript": "Character A says: \u0b8e\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4\u0bcd\u0ba4\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0bb5\u0bbf\u0b9f 7 \u0bae\u0b9f\u0b99\u0bcd\u0b95\u0bc1 cheap-\u0b86 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0ba4\u0bc1\u0ba9\u0bbe\u0bb2 \u0ba4\u0bbe\u0ba9\u0bcd \u0b92\u0bb0\u0bc1 \u0b95\u0bcb\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd \u0b85\u0ba4\u0bbf\u0b95\u0bae\u0bbe\u0ba9\u0bb5\u0b99\u0bcd\u0b95 \u0b87\u0ba9\u0bcd\u0ba9\u0bc8\u0b95\u0bcd\u0b95\u0bc1 MySivi-\u0bb2 English practice \u0baa\u0ba3\u0bcd\u0bb1\u0bbe\u0b99\u0bcd\u0b95. [Because it is 7 times cheaper than everything else, more than one crore people practice English on MySivi today.]\nCharacter B says: \u0b86\u0ba9\u0bbe time \u0b95\u0bbf\u0b9f\u0bc8\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0ba4\u0bbf\u0bb2\u0bcd\u0bb2. [But I don't get the time.]\nCharacter A says: \u0ba4\u0bbf\u0ba9\u0bae\u0bc1\u0bae\u0bcd 15-\u0bb2\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 20 minutes practice \u0baa\u0ba3\u0bcd\u0ba3\u0bbe\u0bb2\u0bc7 \u0baa\u0bcb\u0ba4\u0bc1\u0bae\u0bcd. Confident-\u0b86 English \u0baa\u0bc7\u0b9a\u0bb2\u0bbe\u0bae\u0bcd. [Practicing for 15 to 20 minutes daily is enough. You can speak English confidently.]",
+        "on_screen_text": "\u0bb5\u0bbf\u0b9f 7 \u0bae\u0b9f\u0b99\u0bcd\u0b95\u0bc1 cheap-\u0b86 (vida 7 madangu cheap-a - 7 times cheaper than)\n\u0ba4\u0bbe\u0ba9\u0bcd \u0b92\u0bb0\u0bc1 \u0b95\u0bcb\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd (thaan oru kodikkum - that's why for more than one crore)\n\u0b85\u0ba4\u0bbf\u0b95\u0bae\u0bbe\u0ba9\u0bb5\u0b99\u0bcd\u0b95 (athigamanavanga - people)\n\u0b87\u0ba9\u0bcd\u0ba9\u0bc8\u0b95\u0bcd\u0b95\u0bc1 MySivi-\u0bb2 (innaikku MySivi-la - today on MySivi)\nEnglish practice (English practice)\n\u0b86\u0ba9\u0bbe time \u0b95\u0bbf\u0b9f\u0bc8\u0b95\u0bcd\u0b95\u0bbf\u0bb1 (aana time kidaikkira - but getting time)\n\u0b87\u0bb2\u0bcd\u0bb2 (illa - no)\n15-20 mins\n15-\u0bb2\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 (15-ilirundhu - from 15)\n20 minutes practice\nConfident-\u0b86 (Confident-a - confidently)\nEnglish \u0baa\u0bc7\u0b9a\u0bb2\u0bbe\u0bae\u0bcd (English pesalam - can speak English)"
+      },
+      {
+        "n": 4,
+        "start_s": 28.5,
+        "end_s": 38.0,
+        "screenshot_at_s": 34.0,
+        "scene_label": "Call to Action",
+        "setting": "The AI tutor is in a warmly lit, traditionally decorated Indian living room. The human learner is against a plain, off-white wall in a brightly lit space.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium close-up on both characters in their respective panels.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up of Character A, the AI robot, in her Indian living room. She gestures with her right hand as she gives instructions, looking directly at the viewer. She smiles at the very end.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up of Character B against her plain wall. She looks up with a wide-eyed, excited 'wow' expression, then smiles pleasantly as she listens to the instructions, nodding slightly.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The final scene in the split-screen format. Character B is now excited and asks how to join. Character A gives clear instructions, gesturing with her hand. Text bubbles with the dialogue appear, followed by a final 'Start Now' button overlay.",
+        "audio_transcript": "Character B says: Wow! \u0ba8\u0bbe\u0ba9\u0bcd \u0b8e\u0baa\u0bcd\u0baa\u0b9f\u0bbf join \u0baa\u0ba3\u0bcd\u0bb1\u0ba4\u0bc1? [Wow! How do I join?]\nCharacter A says: Install button-\u0b90 tap \u0baa\u0ba3\u0bcd\u0ba3\u0bc1\u0b99\u0bcd\u0b95. Sign up \u0baa\u0ba3\u0bcd\u0ba3\u0bbf practice \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b99\u0bcd\u0b95. \u0bb5\u0bc6\u0bb1\u0bc1\u0bae\u0bcd 15 \u0ba8\u0bbe\u0bb3\u0bcd\u0bb2\u0baf\u0bc7 improvement \u0ba4\u0bc6\u0bb0\u0bbf\u0baf\u0bc1\u0bae\u0bcd. Start Now. [Tap the install button. Sign up and start practicing. You will see improvement in just 15 days. Start Now.]",
+        "on_screen_text": "\u0ba8\u0bbe\u0ba9\u0bcd \u0b8e\u0baa\u0bcd\u0baa\u0b9f\u0bbf join (naan eppadi join - how do I join)\nInstall button-\u0b90 (Install button-ai)\ntap \u0baa\u0ba3\u0bcd\u0ba3\u0bc1\u0b99\u0bcd\u0b95 (tap pannunga - tap)\nSign up \u0baa\u0ba3\u0bcd\u0ba3\u0bbf (Sign up panni - after signing up)\npractice \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b99\u0bcd\u0b95 (practice aarambinga - start practice)\n\u0bb5\u0bc6\u0bb1\u0bc1\u0bae\u0bcd 15 \u0ba8\u0bbe\u0bb3\u0bcd\u0bb2\u0baf\u0bc7 (verum 15 naallaye - in just 15 days)\nimprovement\nStart Now"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214543.1980531
+}

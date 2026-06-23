@@ -1,0 +1,143 @@
+{
+  "competitor_id": "1013466967686150",
+  "parsed": {
+    "duration_s": 42.4,
+    "production_type": "mixed",
+    "production_notes": "The video is a mix of a live-action human recording on the right side of the split-screen and an AI-generated avatar on the left. The avatar has perfectly symmetrical features and glowing neon lines on her face, which are typical of stylized AI-generated characters.",
+    "interaction_pattern": "An AI tutor corrects a common English mistake made by a human learner, explains the correct usage, and then pitches the learning app.",
+    "audio_track": "Spoken dialogue in Marathi and English between two characters. There is no background music.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "AI tutor avatar",
+        "appearance": "An AI-generated young woman of East Asian appearance in her early 20s. She has a perfectly symmetrical face, fair complexion, large brown eyes, and shoulder-length brown hair with a fringe. Two glowing blue neon lines run vertically down her cheeks from under her eyes.",
+        "wardrobe": "A shiny, metallic gold-colored hooded sweatshirt.",
+        "demeanor": "Calm, poised, and consistently smiling in a friendly and encouraging manner."
+      },
+      {
+        "id": "B",
+        "role": "Female learner",
+        "appearance": "A young Indian woman in her early 20s with a medium complexion, dark brown eyes, and a small bindi on her forehead. Her black hair is slightly messy and tied back loosely. She has a naturally expressive face and a warm, genuine smile.",
+        "wardrobe": "A light-colored camisole top with a subtle floral print and thin straps, paired with blue jeans. She wears a simple, thin gold necklace.",
+        "demeanor": "Cheerful and friendly. She appears slightly hesitant when making the English mistake but becomes happy and confident after receiving the correction and learning about the app."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 3.5,
+        "screenshot_at_s": 1.5,
+        "scene_label": "Problem Hook",
+        "setting": "A rustic craftsman's workshop with a wooden workbench, wood shavings, and tools in the background.",
+        "characters_in_scene": [],
+        "camera": "Close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A close-up, dramatic shot of a person's hand holding a heated, glowing knife. The knife is being used to carve into the dark purple skin of a large eggplant that is resting on a rough wooden workbench. Smoke billows up from the point of contact between the hot knife and the vegetable. The background is a softly lit workshop with wood shavings and tools visible.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A close-up shot of a hand using a hot, smoking knife to carve Marathi text onto the skin of an eggplant. The text reads '\u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e \u0907\u0902\u0917\u094d\u0930\u091c\u0940 \u0915\u0933\u0924\u0902 \u092a\u0923 \u092c\u094b\u0932\u093e\u092f\u0932\u093e \u091c\u092e\u0924 \u0928\u093e\u0939\u0940?'. The setting is a rustic workshop.",
+        "audio_transcript": "Unknown speaker says: \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e \u0907\u0902\u0917\u094d\u0930\u091c\u0940 \u0915\u0933\u0924\u0902 \u092a\u0923 \u092c\u094b\u0932\u093e\u092f\u0932\u093e \u091c\u092e\u0924 \u0928\u093e\u0939\u0940? [You understand English but can't speak it?]",
+        "on_screen_text": "\u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e \u0907\u0902\u0917\u094d\u0930\u091c\u0940 \u0915\u0933\u0924\u0902 \u092a\u0923 \u092c\u094b\u0932\u093e\u092f\u0932\u093e \u091c\u092e\u0924 \u0928\u093e\u0939\u0940? (This text is physically carved into the eggplant)"
+      },
+      {
+        "n": 2,
+        "start_s": 3.5,
+        "end_s": 22.5,
+        "screenshot_at_s": 13.0,
+        "scene_label": "Mistake, Correction, and Pitch",
+        "setting": "Split screen. Left panel is a dark room with purple ambient lighting. Right panel is a brightly lit, neutral-colored indoor space, likely a home.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "High-angle medium close-up on both characters",
+        "layout": "split-vertical",
+        "panels": [
+          {
+            "position": "left",
+            "panel_visual_description": "A high-angle shot of Character A, the AI tutor, looking up towards the camera. She has a gentle, knowing smile and is resting her chin on her hand. The background is dark and illuminated by a soft purple light, giving it a futuristic feel.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "right",
+            "panel_visual_description": "A high-angle shot of Character B, the human learner, looking up towards the camera with a bright, friendly smile. She is in a well-lit room with plain, light-colored walls behind her.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A vertical split-screen shows Character A (left) and Character B (right) having a conversation. Text overlays subtitle their dialogue. A large red 'X' appears over Character B's incorrect sentence, followed by a green checkmark over Character A's correction. The 'MySivi' logo and a '7X CHEAPER' graphic appear during the pitch.",
+        "audio_transcript": "Character A says: \u0924\u0941\u0932\u093e \u0915\u093f\u0924\u0940 \u092d\u093e\u090a \u0906\u0939\u0947\u0924? [How many brothers do you have?]\nCharacter B says: I am having two brothers.\nCharacter A says: Having \u0928\u093e\u0939\u0940. \u0906\u0924\u093e \u0939\u093e\u0924\u093e\u0924 \u0927\u0930\u0942\u0928 \u0920\u0947\u0935\u0932\u0947 \u0906\u0939\u0947\u0924 \u0915\u093e \u0926\u094b\u0918\u093e\u0902\u0928\u093e? [Not 'having'. Are you holding both of them in your hands right now?]\nCharacter B says: \u0928\u093e\u0939\u0940 \u0928\u093e\u0939\u0940, \u0939\u093e\u0924\u093e\u0924 \u0924\u0930 \u0928\u093e\u0939\u0940. [No no, not in my hands.]\nCharacter A says: \u0905\u0938\u0902 \u092c\u094b\u0932. I have two brothers. [Say it like this. I have two brothers.]\nCharacter B says: Ohh... \u0920\u0940\u0915 \u0906\u0939\u0947 \u0920\u0940\u0915 \u0906\u0939\u0947. \u092e\u0932\u093e English \u0928\u0940\u091f \u092f\u0947\u0924 \u0928\u093e\u0939\u0940. [Ohh... okay okay. I don't know English properly.]\nCharacter A says: \u0915\u093e\u0939\u0940 problem \u0928\u093e\u0939\u0940. AI teachers try \u0915\u0947\u0932\u0902 \u0915\u093e? [No problem. Have you tried AI teachers?]\nCharacter B says: \u0924\u0947 \u092e\u0939\u093e\u0917 \u0905\u0938\u0924\u0940\u0932 \u0928\u093e. [They must be expensive, right?]\nCharacter A says: \u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940. Normal English classes \u092a\u0947\u0915\u094d\u0937\u093e \u0938\u093e\u0924 \u092a\u091f \u0938\u094d\u0935\u0938\u094d\u0924 \u0906\u0939\u0947. [Not at all. It's seven times cheaper than normal English classes.]",
+        "on_screen_text": "\u0924\u0941\u0932\u093e \u0915\u093f\u0924\u0940 \u092d\u093e\u090a \u0906\u0939\u0947\u0924\nI am having two brothers\nHaving \u0928\u093e\u0939\u0940\n\u0906\u0924\u093e \u0939\u093e\u0924\u093e\u0924 \u0927\u0930\u0942\u0928 \u0920\u0947\u0935\u0932\u0947 \u0906\u0939\u0947\u0924 \u0915\u093e \u0926\u094b\u0918\u093e\u0902\u0928\u093e\n\u0928\u093e\u0939\u0940 \u0928\u093e\u0939\u0940, \u0939\u093e\u0924\u093e\u0924 \u0924\u0930 \u0928\u093e\u0939\u0940\n\u0905\u0938\u0902 \u092c\u094b\u0932\nI have two brothers\nOhh... \u0920\u0940\u0915 \u0906\u0939\u0947 \u0920\u0940\u0915 \u0906\u0939\u0947\n\u092e\u0932\u093e \u0928\u093e English \u0928\u0940\u091f \u092f\u0947\u0924 \u0928\u093e\u0939\u0940\n\u0915\u093e\u0939\u0940 problem \u0928\u093e\u0939\u0940\nAI teachers try \u0915\u0947\u0932\u0902 \u0915\u093e\n\u0924\u0947 \u092e\u0939\u093e\u0917 \u0905\u0938\u0924\u0940\u0932 \u0928\u093e\n\u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940\nNormal English classes \u092a\u0947\u0915\u094d\u0937\u093e\n7 \u092a\u091f \u0938\u094d\u0935\u0938\u094d\u0924 \u0906\u0939\u0947"
+      },
+      {
+        "n": 3,
+        "start_s": 22.5,
+        "end_s": 31.5,
+        "screenshot_at_s": 27.5,
+        "scene_label": "Social Proof and App Demo",
+        "setting": "A screencast of a mobile app store and app interface, sometimes overlaid on the previous split-screen scene.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "App screencast, cutting back to the split-screen high-angle medium close-up",
+        "layout": "inset",
+        "panels": [
+          {
+            "position": "background",
+            "panel_visual_description": "The vertical split-screen video of Character A on the left and Character B on the right continues to play, often blurred or partially obscured by the foreground element.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "position": "inset",
+            "panel_visual_description": "A sequence of mobile screen recordings. First, a screenshot of the Google Play Store page for an app, showing its icon, name, and download statistics. This is followed by a screencast of the app's user interface, which features a circular portrait of a female android and a text-based chat interface below it.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The scene quickly cuts to an overlay of the MySivi app page on the Play Store, with a red box highlighting '10M+ Downloads'. It then cuts to a screencast of the app's AI tutor interface ('ARYA AI'). The underlying split-screen of Characters A and B is visible throughout. The scene ends with Character B smiling confidently with her eyes closed.",
+        "audio_transcript": "Character A says: \u092e\u094d\u0939\u0923\u0942\u0928 1 \u0915\u094b\u091f\u0940 \u0932\u094b\u0915 MySivi \u0935\u0930 English practice \u0915\u0930\u0924 \u0906\u0939\u0947\u0924. [That's why 1 crore (10 million) people are practicing English on MySivi.]\nCharacter B says: \u092a\u0923 \u0935\u0947\u0933 \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940. [But I don't get the time.]\nCharacter A says: \u0930\u094b\u091c \u092b\u0915\u094d\u0924 15-20 minute practice \u092a\u0941\u0930\u0947\u0936\u0940 \u0906\u0939\u0947. \u0905\u0917\u0926\u0940 confident \u0935\u094d\u0939\u093e\u0932. [Just 15-20 minutes of practice daily is enough. You will become very confident.]\nCharacter B says: Wow, \u0915\u0938\u0902 join \u0915\u0930\u0942? [Wow, how do I join?]",
+        "on_screen_text": "\u092e\u094d\u0939\u0923\u0942\u0928 1 \u0915\u094b\u091f\u0940 \u0932\u094b\u0915 MySivi \u0935\u0930\nEnglish practice \u0915\u0930\u0924 \u0906\u0939\u0947\u0924\n\u092a\u0923 \u0935\u0947\u0933 \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940\n\u0930\u094b\u091c \u092b\u0915\u094d\u0924 15-20 minute\npractice \u092a\u0941\u0930\u0947\u0936\u0940 \u0906\u0939\u0947\n\u0905\u0917\u0926\u0940 confident \u0935\u094d\u0939\u093e\u0932\nWow \u0915\u0938\u0902 join \u0915\u0930\u0942"
+      },
+      {
+        "n": 4,
+        "start_s": 31.5,
+        "end_s": 42.4,
+        "screenshot_at_s": 37.0,
+        "scene_label": "Call to Action",
+        "setting": "A screencast of a mobile app installation process, cutting back to the split-screen.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "App screencast, cutting back to the split-screen high-angle medium close-up",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A sequence starting with a screen recording of the Google Play Store, showing an app's page as the 'Install' button is pressed and the download/installation process begins. The scene then cuts back to the final vertical split-screen shot, with Character A on the left and Character B on the right, both looking up at the camera and smiling.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene shows a screen recording of the MySivi app being installed from the Play Store. It then returns to the final split-screen shot of Character A and Character B smiling warmly at the camera as the final instructions are given.",
+        "audio_transcript": "Character A says: \u0939\u093e Install \u091a\u093e button \u0926\u093e\u092c\u093e \u0906\u0923\u093f MySivi app install \u0915\u0930\u093e. Sign up \u0915\u0930\u093e \u0906\u0923\u093f practice start \u0915\u0930\u093e. \u092b\u0915\u094d\u0924 15 \u0926\u093f\u0935\u0938\u093e\u0902\u0924 \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e improvement \u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932. \u091a\u0932\u093e, \u0938\u0941\u0930\u0941 \u0915\u0930\u093e. [Press this Install button and install the MySivi app. Sign up and start practicing. In just 15 days, you will start seeing improvement. Come on, start.]",
+        "on_screen_text": "join \u0915\u0930\u0942 \u0939\u093e Install\n\u091a\u093e button \u0926\u093e\u092c\u093e\n\u0906\u0923\u093f MySivi app\ninstall \u0915\u0930\u093e Sign\nup \u0915\u0930\u093e \u0906\u0923\u093f practice\nstart \u0915\u0930\u093e \u092b\u0915\u094d\u0924\n15 \u0926\u093f\u0935\u0938\u093e\u0902\u0924 \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e\nimprovement \u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932\n\u091a\u0932\u093e, \u0938\u0941\u0930\u0941 \u0915\u0930\u093e"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214672.941447
+}

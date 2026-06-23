@@ -1,0 +1,157 @@
+{
+  "competitor_id": "1901269943919389",
+  "parsed": {
+    "duration_s": 31.3,
+    "production_type": "mixed",
+    "production_notes": "The advertisement features human-recorded actors in a live-action talk show setting, combined with a clearly AI-generated CGI robot character for the AI tutor segments.",
+    "interaction_pattern": "AI tutor quizzes a human learner who makes spontaneous English mistakes, and the AI provides live correction.",
+    "audio_track": "The audio consists entirely of spoken dialogue in Marathi and English between the characters. There is no background music or song.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter/interviewer",
+        "appearance": "A woman in her late 30s or early 40s with a medium build and fair complexion. She has long, dark brown hair styled loosely over her shoulders. Her facial features are defined, with expressive dark eyes.",
+        "wardrobe": "A traditional beige or light gold Indian saree with a prominent red and gold border. She wears small earrings.",
+        "demeanor": "Engaged, professional, and curious, with an encouraging smile."
+      },
+      {
+        "id": "B",
+        "role": "male presenter/learner",
+        "appearance": "A man in his late 30s or early 40s with a slim to medium build and a fair complexion. He has short, neatly styled dark hair, a full beard and mustache, and wears modern eyeglasses.",
+        "wardrobe": "A white collared shirt worn under a dark blue sleeveless vest (Nehru jacket) and matching dark trousers. He wears a watch on his left wrist and brown leather dress shoes.",
+        "demeanor": "Approachable and friendly. He appears confident as a presenter but portrays a slightly clumsy, good-natured learner during the AI interaction."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "A humanoid robot with a distinctly female form, featuring a glossy white chassis with black and grey mechanical joints visible at the neck. The face is smooth and stylized with large, luminous blue eyes and a subtle, fixed smile.",
+        "wardrobe": "The character is a robot; its body is its wardrobe, consisting of a sleek white and black robotic frame.",
+        "demeanor": "Calm, patient, and helpful, with a consistently neutral yet encouraging facial expression."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.8,
+        "screenshot_at_s": 3.0,
+        "scene_label": "Interview Introduction",
+        "setting": "A warmly lit television studio designed to look like a stage for a live talk show. A blurred audience is visible sitting in tiered rows in the background. The main set features a small, round, metallic table.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A medium shot captures Character A and Character B seated opposite each other at a small, round silver table on a stage. Character A, on the left, gestures with her hands as she speaks into a microphone. Character B, on the right, listens with an engaged, smiling expression. Behind them, a live audience is seated in rows, softly out of focus under the warm stage lighting.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A medium shot of Character A and Character B in a talk show setting. They are seated at a table with microphones, with a live audience blurred in the background. On-screen text in Marathi, presented in white boxes with a slight drop shadow, appears sequentially to highlight their dialogue.",
+        "audio_transcript": "Character A says: \u091c\u094d\u092f\u093e\u0932\u093e English \u092f\u0947\u0924 \u0928\u093e\u0939\u0940 \u0924\u094d\u092f\u093e\u0932\u093e native \u0938\u093e\u0930\u0916\u0902 \u092c\u094b\u0932\u093e\u092f\u0932\u093e \u0915\u093f\u0924\u0940 \u0935\u0947\u0933 \u0932\u093e\u0917\u0924\u094b? [For someone who doesn't know English, how long does it take to speak like a native?]\n\nCharacter B says: \u092b\u0915\u094d\u0924 \u0924\u0940\u0928 \u0906\u0920\u0935\u0921\u0947. [Only three weeks.]\n\nCharacter A says: \u0915\u0938\u0902? [How?]\n\nCharacter B says: With MySivi, of course. \u092c\u0918\u093e \u0915\u0938\u0902. [See how.]",
+        "on_screen_text": "\u091c\u094d\u092f\u093e\u0932\u093e English (The one who English)\n\u092f\u0947\u0924 \u0928\u093e\u0939\u0940 \u0924\u094d\u092f\u093e\u0932\u093e (doesn't know)\nnative \u0938\u093e\u0930\u0916\u0902 (like a native)\n\u092c\u094b\u0932\u093e\u092f\u0932\u093e \u0915\u093f\u0924\u0940 (to speak how much)\n\u0935\u0947\u0933 \u0932\u093e\u0917\u0924\u094b \u092b\u0915\u094d\u0924 (time does it take only)\n\u0924\u0940\u0928 \u0906\u0920\u0935\u0921\u0947 \u0915\u0938\u0902 (three weeks how)\nwith MySivi\ncourse \u092c\u0918\u093e \u0915\u0938\u0902 (course see how)"
+      },
+      {
+        "n": 2,
+        "start_s": 6.8,
+        "end_s": 22.5,
+        "screenshot_at_s": 15.0,
+        "scene_label": "AI Tutor Corrects Learner",
+        "setting": "The bottom panel is the talk show stage. The top panel is a dark, abstract space with glowing concentric circles.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "split-screen, medium close-ups",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up of Character C, a white humanoid robot with blue eyes, is centered against a dark background. Glowing white concentric circles radiate outwards behind the robot. The robot's head moves subtly as it speaks, and a faint soundwave graphic occasionally animates over the circles.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up of Character B sitting at the table on the talk show stage. He looks slightly upwards, interacting with the character in the panel above. He speaks into his microphone, showing expressions ranging from thoughtful to confused to understanding. The audience remains blurred in the background.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A horizontally split screen. The top panel shows the AI tutor, Character C, against a dark background with glowing rings. The bottom panel shows a medium close-up of the human learner, Character B, on the talk show set. Text overlays of their dialogue appear in white boxes within their respective panels.",
+        "audio_transcript": "Character C says: \u0924\u0941\u092e\u091a\u0902 \u0928\u093e\u0935 \u0915\u093e\u092f? [What is your name?]\n\nCharacter B says: My name is Akshay.\n\nCharacter C says: \u0924\u0941\u092e\u091a\u0902 \u0935\u092f \u0915\u093e\u092f? [What is your age?]\n\nCharacter B says: I have 39.\n\nCharacter C says: \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e \u0939\u0947 \u092e\u094d\u0939\u0923\u093e\u092f\u091a\u0902 \u0939\u094b\u0924\u0902 \u0915\u093e? I'm 39. [Did you mean to say this? I'm 39.]\n\nCharacter B says: Oh yeah, right. I'm 39.\n\nCharacter C says: Where are you from?\n\nCharacter B says: I am Mumbai.\n\nCharacter C says: \u091b\u093e\u0928 \u092a\u094d\u0930\u092f\u0924\u094d\u0928, \u092a\u0923 \u0924\u0941\u0932\u093e \u092e\u094d\u0939\u0923\u093e\u092f\u0932\u093e \u0939\u0935\u0902, I am from Mumbai. [Nice try, but you should say, I am from Mumbai.]\n\nCharacter B says: I'm sorry, I make mistakes.",
+        "on_screen_text": "\u0924\u0941\u092e\u091a\u0902 \u0928\u093e\u0935 \u0915\u093e\u092f (What is your name)\nMy name is Akshay\n\u0924\u0941\u092e\u091a\u0902 \u0935\u092f \u0915\u093e\u092f (What is your age)\nI have 39\n\u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e (You)\n\u0939\u0947 \u092e\u094d\u0939\u0923\u093e\u092f\u091a\u0902 \u0939\u094b\u0924\u0902 (meant to say this)\n\u0915\u093e I'm 39 (interrogative particle, I'm 39)\nOh yeah\nright I'm 39\nWhere\nare you from\nI\nam Mumbai\n\u091b\u093e\u0928 (Nice)\n\u092a\u094d\u0930\u092f\u0924\u094d\u0928 \u092a\u0923 \u0924\u0941\u0932\u093e (try but you)\n\u092e\u094d\u0939\u0923\u093e\u092f\u0932\u093e \u0939\u0935\u0902 (should say)\nI am from Mumbai\nI'm sorry I make\nmistakes"
+      },
+      {
+        "n": 3,
+        "start_s": 22.5,
+        "end_s": 28.8,
+        "screenshot_at_s": 25.5,
+        "scene_label": "App Promotion and AI Message",
+        "setting": "The split-screen setting continues from the previous scene.",
+        "characters_in_scene": [
+          "B",
+          "C"
+        ],
+        "camera": "split-screen, medium close-ups",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A medium close-up of Character C, the white humanoid robot, centered against the dark background with glowing concentric circles. The robot maintains an encouraging and patient expression while delivering its lines.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A medium close-up of Character B at the talk show table, listening attentively. For a portion of this scene, a large graphic of a mobile phone app store page is superimposed over his torso, partially obscuring him.",
+            "characters_in_panel": [
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen continues. The top panel shows the AI tutor. The bottom panel shows the man, but a large screenshot of the MySivi app's Google Play Store page is overlaid on his chest. The screenshot displays the app icon, name 'Start English Learning - MySivi', a '10M+ Downloads' count, and an 'Install' button. Dialogue text overlays continue to appear in the top panel.",
+        "audio_transcript": "Character C says: \u0915\u093e\u0933\u091c\u0940 \u0915\u0930\u0942 \u0928\u0915\u093e. \u092e\u0940 1 \u0915\u094b\u091f\u0940 \u0932\u094b\u0915\u093e\u0902\u0928\u093e MySivi \u0935\u0930 English \u0936\u093f\u0915\u0935\u0932\u0902 \u0906\u0939\u0947. \u092a\u0923 \u0930\u094b\u091c \u092c\u094b\u0932\u0924 \u0930\u093e\u0939\u093f\u0932\u094b, \u0924\u0930 \u0906\u092a\u0923 \u0926\u094b\u0918\u0902 \u092e\u093f\u0933\u0942\u0928 \u0905\u091c\u0942\u0928 \u091a\u093e\u0902\u0917\u0932\u0902 \u0915\u0930\u0942. [Don't worry. I have taught 1 crore (10 million) people English on MySivi. But if we keep talking daily, we both can do even better together.]",
+        "on_screen_text": "\u0915\u093e\u0933\u091c\u0940 (Worry)\n\u0915\u0930\u0942 \u0928\u0915\u093e \u092e\u0940 1 \u0915\u094b\u091f\u0940 (don't, I 1 crore)\n\u0932\u094b\u0915\u093e\u0902\u0928\u093e MySivi \u0935\u0930 (people on MySivi)\nEnglish \u0936\u093f\u0915\u0935\u0932\u0902 (taught English)\n\u0906\u0939\u0947 \u0906\u092a\u0923 \u0930\u094b\u091c \u092c\u094b\u0932\u0924 (have, we daily speak)\n\u0930\u093e\u0939\u093f\u0932\u094b (if we keep)\n\u0924\u0930 \u0906\u092a\u0923 \u0926\u094b\u0918\u0902 \u092e\u093f\u0933\u0942\u0928 (then we both together)\n\u0905\u091c\u0942\u0928 \u091a\u093e\u0902\u0917\u0932\u0902 \u0915\u0930\u0942 (will do even better)\n[App Screenshot Text]: MySivi AI Speak English, Start English Learning -MySivi, MySivi AI, In-app purchases, Rated for 3+, 61 MB, 10M+ Downloads, Install"
+      },
+      {
+        "n": 4,
+        "start_s": 28.8,
+        "end_s": 31.3,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Final Call to Action",
+        "setting": "The talk show stage from the first scene.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "medium shot",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The scene returns to a medium shot of Character A and Character B at the silver table on stage. Character B, on the right, gestures with his right hand as he speaks enthusiastically to Character A. Character A, on the left, smiles and listens. The warm studio lighting and blurred audience are visible in the background.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The scene returns to the initial medium shot of the two presenters on the talk show stage. Character B makes the final call to action while gesturing towards Character A, who listens with a smile. Text overlays appear to reinforce his words.",
+        "audio_transcript": "Character B says: Trial \u092b\u0915\u094d\u0924 1 \u0930\u0941\u092a\u092f\u093e\u091a\u093e \u0906\u0939\u0947. Try \u0924\u0930\u0940 \u0915\u0930\u093e. [The trial is for only 1 rupee. At least give it a try.]",
+        "on_screen_text": "Trial \u092b\u0915\u094d\u0924 1 \u0930\u0941\u092a\u092f\u093e\u091a\u093e (Trial only 1 rupee)\n\u0906\u0939\u0947 try \u0924\u0930\u0940 \u0915\u0930\u093e (is, at least try)"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214488.056903
+}

@@ -1,0 +1,58 @@
+{
+  "ad_library_id": "963707096066927",
+  "language": "Hindi",
+  "mode": "direct-no-english",
+  "parsed": {
+    "production_type": "mixed",
+    "format": "Split-screen AI tutor correction",
+    "visual_overview": "A vertically split-screen video. The top panel features a female AI robot teacher in a traditional Indian room, while the bottom panel shows a young Indian woman (learner) against a plain wall. They have a continuous conversation with text bubbles appearing between them, ending with an install CTA.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Miss Nova",
+        "role": "AI teacher"
+      },
+      {
+        "id": "B",
+        "name": "Priya",
+        "role": "Learner"
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "scene_label": "Mistake and Correction",
+        "script_native": "Miss Nova says: आपके कितने brothers हैं?\nPriya says: I am having two brothers.\nMiss Nova says: (warmly) 'Having' नहीं बोलते। क्या आपने उन्हें हाथ में पकड़ रखा है?\nMiss Nova says: सही sentence है, 'I have two brothers'.",
+        "script_roman": "Miss Nova says: Aapke kitne brothers hain?\nPriya says: I am having two brothers.\nMiss Nova says: (warmly) 'Having' nahi bolte. Kya aapne unhe haath mein pakad rakha hai?\nMiss Nova says: Sahi sentence hai, 'I have two brothers'."
+      },
+      {
+        "n": 2,
+        "scene_label": "Addressing Insecurity and Cost",
+        "script_native": "Priya says: Oh okay. मुझे इतनी English नहीं आती।\nMiss Nova says: कोई बात नहीं। आपने किसी AI teacher के साथ बोलने की practice नहीं की?\nPriya says: पर वो तो बहुत महंगा होगा ना?\nMiss Nova says: बिल्कुल नहीं।",
+        "script_roman": "Priya says: Oh okay. Mujhe itni English nahi aati.\nMiss Nova says: Koi baat nahi. Aapne kisi AI teacher ke saath bolne ki practice nahi ki?\nPriya says: Par wo toh bohot mehenga hoga na?\nMiss Nova says: Bilkul nahi."
+      },
+      {
+        "n": 3,
+        "scene_label": "Value Proposition: Cost and Time",
+        "script_native": "Miss Nova says: ये offline coaching से सात गुना सस्ता है, इसीलिए आज 1 crore से ज़्यादा लोग Supernova AI पर मेरे साथ English practice कर रहे हैं।\nPriya says: पर मेरे पास time ही नहीं होता।\nMiss Nova says: दिन में बस 10–15 minutes practice कीजिए। मैं आपको Hindi में समझाऊंगी, ताकि logic clear हो जाए।",
+        "script_roman": "Miss Nova says: Ye offline coaching se saat guna sasta hai, isiliye aaj 1 crore se zyada log Supernova AI par mere saath English practice kar rahe hain.\nPriya says: Par mere paas time hi nahi hota.\nMiss Nova says: Din mein bas 10–15 minutes practice kijiye. Main aapko Hindi mein samjhaungi, taaki logic clear ho jaye."
+      },
+      {
+        "n": 4,
+        "scene_label": "Call to Action",
+        "script_native": "Priya says: Wow! मैं कैसे start करूँ?\nMiss Nova says: नीचे install button पर tap कीजिए और Supernova AI download कीजिए।\nMiss Nova says: सिर्फ 30 days में improvement दिखेगा। आज ही start कीजिए!",
+        "script_roman": "Priya says: Wow! Main kaise start karun?\nMiss Nova says: Niche install button par tap kijiye aur Supernova AI download kijiye.\nMiss Nova says: Sirf 30 days mein improvement dikhega. Aaj hi start kijiye!"
+      }
+    ],
+    "pitch_points_used": [
+      "You SPEAK (speaking practice)",
+      "7× cheaper than offline classes",
+      "1 crore+ users",
+      "Time is not the blocker (10-15 minutes a day)",
+      "Explains in your language (Hindi)",
+      "Improve in just 30 days"
+    ]
+  },
+  "model": "gemini-3.1-pro-preview",
+  "rewrote_at": 1782217810.8886771
+}

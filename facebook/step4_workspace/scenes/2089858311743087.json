@@ -1,0 +1,173 @@
+{
+  "competitor_id": "2089858311743087",
+  "parsed": {
+    "duration_s": 30.0,
+    "production_type": "mixed",
+    "production_notes": "The video combines live-action footage of a human actor with a static, AI-generated image of a robot and digital screencasts of a mobile application.",
+    "interaction_pattern": "Learner asks a question in his native language, AI tutor provides the English phrase, and the learner repeats it back (repeat-after-me drill).",
+    "audio_track": "Spoken dialogue in Malayalam and English between a human learner and an AI tutor. There is no background music.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "A middle-aged South Indian man, likely in his 40s or 50s, with a medium build and a dark complexion. He has short black hair and a prominent, well-groomed black mustache. His facial features are friendly and expressive.",
+        "wardrobe": "A white, short-sleeved, collared button-up shirt.",
+        "demeanor": "Curious, friendly, and easily impressed. He seems eager to learn."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "A female-presenting humanoid robot with a white and silver metallic body. She has a synthetic but human-like face with pale skin, defined features, and light blue eyes. Her expression is neutral and static throughout the video.",
+        "wardrobe": "The robot is wearing large, over-ear headphones.",
+        "demeanor": "Calm, informative, and robotic. Her face does not move when she 'speaks'."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 8.5,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Greeting a Tourist",
+        "setting": "Split screen. Top: an Indian-style living room. Bottom: inside a car on a highway during the day.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Split screen. Top is a static medium shot of the robot. Bottom is a medium close-up on the driver.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A female-presenting humanoid robot, Character B, sits facing forward in a medium shot. She has a white and silver metallic body, a placid human-like face with blue eyes, and is wearing over-ear headphones. The setting is a warmly lit, traditionally decorated Indian living room with ornate furniture, colorful cushions, and decorative wall hangings.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A middle-aged Indian man, Character A, is seen from the chest up, driving a car. He has a mustache and is wearing a white collared shirt. He holds the steering wheel with both hands and looks slightly to his right, as if addressing someone in the passenger seat, speaking with an engaged expression. The view through the car windows shows a highway with green foliage on the side.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen video. The top panel shows a static image of a female-presenting humanoid robot (Character B) in an Indian living room. The bottom panel shows a live-action video of a middle-aged Indian man (Character A) driving a car and speaking. On-screen text in Malayalam and English appears in black boxes, captioning the dialogue.",
+        "audio_transcript": "Character A says: \u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d07\u0d28\u0d4d\u0d28\u0d4d \u0d12\u0d30\u0d41 tourist-\u0d28\u0d4b\u0d1f\u0d4d \u0d38\u0d02\u0d38\u0d3e\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d23\u0d02. \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46\u0d2f\u0d3e \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d41\u0d15? [I have to speak to a tourist today. How do I start?]\n\nCharacter B says: If a tourist comes, say 'Welcome. Where would you like to go?'\n\nCharacter A says: Welcome. Where would you like to go?",
+        "on_screen_text": "\u0d0e\u0d28\u0d3f\u0d15\u0d4d\u0d15\u0d4d \u0d07\u0d28\u0d4d\u0d28\u0d4d (I today)\n\u0d12\u0d30\u0d41 tourist-\u0d28\u0d4b\u0d1f\u0d4d (with a tourist)\n\u0d38\u0d02\u0d38\u0d3e\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d23\u0d02 (have to speak)\n\u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46\u0d2f\u0d3e \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d41\u0d15 (how to start)\nIf a tourist comes\nsay 'Welcome\nwhere would you like to go?'\nWelcome\nlike to go"
+      },
+      {
+        "n": 2,
+        "start_s": 8.5,
+        "end_s": 16.5,
+        "screenshot_at_s": 12.0,
+        "scene_label": "How to Learn",
+        "setting": "Split screen. Top: an Indian-style living room. Bottom: inside a car on a highway during the day.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Split screen. Top is a static medium shot of the robot. Bottom is a medium close-up on the driver.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A female-presenting humanoid robot, Character B, sits facing forward in a medium shot. She has a white and silver metallic body, a placid human-like face with blue eyes, and is wearing over-ear headphones. The setting is a warmly lit, traditionally decorated Indian living room with ornate furniture, colorful cushions, and decorative wall hangings.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A middle-aged Indian man, Character A, is seen from the chest up, driving a car. He has a mustache and is wearing a white collared shirt. He holds the steering wheel with both hands and looks slightly to his right, smiling as he speaks. The view through the car windows shows a highway with green foliage on the side.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen view continues. The man (Character A) smiles and asks how to learn English. The robot (Character B) remains static. On-screen text captions the dialogue.",
+        "audio_transcript": "Character A says: \u0d07\u0d24\u0d4d \u0d0e\u0d33\u0d41\u0d2a\u0d4d\u0d2a\u0d2e\u0d3e\u0d23\u0d32\u0d4d\u0d32\u0d4b. \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46\u0d2f\u0d3e English \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d15? [This is easy. How do I learn English?]\n\nCharacter B says: \u0d0e\u0d7b\u0d4d\u0d31\u0d46 \u0d15\u0d42\u0d1f\u0d46 \u0d0e\u0d28\u0d4d\u0d28\u0d41\u0d02 \u0d12\u0d30\u0d41 15 minute daily practice \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d3e\u0d7d \u0d2e\u0d24\u0d3f. \u0d12\u0d30\u0d41 \u0d2e\u0d3e\u0d38\u0d02 \u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d4d \u0d24\u0d28\u0d4d\u0d28\u0d46 English improve \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d02. [Just practice with me daily for 15 minutes. You can improve your English in a month.]",
+        "on_screen_text": "\u0d07\u0d24\u0d4d \u0d0e\u0d33\u0d41\u0d2a\u0d4d\u0d2a\u0d2e\u0d3e\u0d23\u0d32\u0d4d\u0d32\u0d4b (This is easy)\n\u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46\u0d2f\u0d3e English (How to English)\n\u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d15 (learn)\n\u0d0e\u0d7b\u0d4d\u0d31\u0d46 \u0d15\u0d42\u0d1f\u0d46 \u0d0e\u0d28\u0d4d\u0d28\u0d41\u0d02 (with me always)\n\u0d12\u0d30\u0d41 15 minute (a 15 minute)\ndaily practice\n\u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d3e\u0d7d \u0d2e\u0d24\u0d3f (is enough)\n\u0d12\u0d30\u0d41 \u0d2e\u0d3e\u0d38\u0d02 \u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d4d (in one month)\nimprove \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d02 (can improve)"
+      },
+      {
+        "n": 3,
+        "start_s": 16.5,
+        "end_s": 24.8,
+        "screenshot_at_s": 20.0,
+        "scene_label": "Cost and Social Proof",
+        "setting": "Mobile app screencasts.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Screen recordings of a mobile app interface.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The scene begins with a motion blur effect over the shot of the man driving. It then cuts to a close-up of a smartphone screen displaying an application's user interface against a blurred background. The interface has a dark blue and purple gradient. It then transitions to another screen from a mobile application store, showing the application's listing page with its icon and other details.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "The driver asks about the cost, and the video transitions with a blur to a screencast of the 'MySivi Premium' offer page, showing a price of \u20b91 for 3 days. It then shows the app's Google Play Store page, with a red box highlighting the '10M+ Downloads' metric. A female voiceover (Character B) explains the offer and the app's popularity.",
+        "audio_transcript": "Character A says: \u0d07\u0d24\u0d4a\u0d15\u0d4d\u0d15\u0d46 \u0d28\u0d32\u0d4d\u0d32 \u0d1a\u0d46\u0d32\u0d35\u0d3e\u0d15\u0d41\u0d35\u0d32\u0d4d\u0d32\u0d47? [Won't all this be very expensive?]\n\nCharacter B says: \u0d35\u0d46\u0d31\u0d41\u0d02 \u0d12\u0d30\u0d41 \u0d30\u0d42\u0d2a\u0d2f\u0d4d\u0d15\u0d4d\u0d15\u0d4d \u0d08 \u0d06\u0d2a\u0d4d\u0d2a\u0d4d \u0d2e\u0d41\u0d34\u0d41\u0d35\u0d28\u0d3e\u0d2f\u0d41\u0d02 try \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d41 \u0d28\u0d4b\u0d15\u0d4d\u0d15\u0d3e\u0d02. \u0d12\u0d30\u0d41 \u0d15\u0d4b\u0d1f\u0d3f\u0d2f\u0d3f\u0d7d \u0d05\u0d27\u0d3f\u0d15\u0d02 \u0d06\u0d33\u0d41\u0d15\u0d7e \u0d0e\u0d7b\u0d4d\u0d31\u0d46 \u0d15\u0d42\u0d1f\u0d46 English \u0d2a\u0d20\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41\u0d23\u0d4d\u0d1f\u0d4d. [For just one rupee, you can try this entire app. More than one crore people are learning English with me.]",
+        "on_screen_text": "\u0d07\u0d24\u0d4a\u0d15\u0d4d\u0d15\u0d46 \u0d28\u0d32\u0d4d\u0d32 (all this is very)\n\u0d1a\u0d46\u0d32\u0d35\u0d3e\u0d15\u0d41\u0d35\u0d32\u0d4d\u0d32\u0d47? (expensive, right?)\nMySivi Premium\nLIMITED TIME OFFER\n3 days of Premium benefits for \u20b91\nAutopay, cancel anytime.\n1,200 learners purchased today\n24/7 AI English Teacher\n500+ Exercises and Lessons\nUnlimited Access\nStart English Learning -MySivi\nMySivi AI Speak English\n10M+ Downloads\nInstall"
+      },
+      {
+        "n": 4,
+        "start_s": 24.8,
+        "end_s": 26.5,
+        "screenshot_at_s": 25.5,
+        "scene_label": "How to Join",
+        "setting": "Split screen. Top: an Indian-style living room. Bottom: inside a car on a highway during the day.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Split screen. Top is a static medium shot of the robot. Bottom is a medium close-up on the driver.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A female-presenting humanoid robot, Character B, sits facing forward in a medium shot. She has a white and silver metallic body, a placid human-like face with blue eyes, and is wearing over-ear headphones. The setting is a warmly lit, traditionally decorated Indian living room with ornate furniture, colorful cushions, and decorative wall hangings.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "A middle-aged Indian man, Character A, is seen from the chest up, driving a car. He holds the steering wheel and looks to his right, smiling and making a small, dismissive wave with his right hand as he speaks. He looks impressed and happy.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The video returns to the split-screen format. The man (Character A) in the bottom panel looks impressed, waves his hand, and asks how to join. The robot (Character B) remains static in the top panel. On-screen text captions his dialogue.",
+        "audio_transcript": "Character A says: \u0d05\u0d1f\u0d3f\u0d2a\u0d4a\u0d33\u0d3f. \u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46\u0d2f\u0d3e join \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d47\u0d23\u0d4d\u0d1f\u0d24\u0d4d? [Awesome. How do I join?]",
+        "on_screen_text": "\u0d05\u0d1f\u0d3f\u0d2a\u0d4a\u0d33\u0d3f (Awesome)\n\u0d0e\u0d19\u0d4d\u0d19\u0d28\u0d46\u0d2f\u0d3e join (how to join)\n\u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d47\u0d23\u0d4d\u0d1f\u0d24\u0d4d (to do)"
+      },
+      {
+        "n": 5,
+        "start_s": 26.5,
+        "end_s": 30.0,
+        "screenshot_at_s": 28.0,
+        "scene_label": "Final Call to Action",
+        "setting": "A plain, light purple background with a smartphone.",
+        "characters_in_scene": [],
+        "camera": "Close-up on a smartphone screen.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A modern, dark-colored smartphone with a silver frame is shown angled slightly towards the right against a plain, light purple studio background. The phone's screen is bright white.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A smartphone appears against a light purple background. The app's logo, name ('MySivi'), a tagline ('English speaking app'), and an 'Install Now' button appear on the screen, serving as the final call to action. A female voiceover (Character B) encourages the viewer to download the app.",
+        "audio_transcript": "Character B says: \u0d07\u0d2a\u0d4d\u0d2a\u0d4b\u0d7e \u0d24\u0d28\u0d4d\u0d28\u0d46 MySivi app download \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d4d English \u0d2a\u0d20\u0d3f\u0d1a\u0d4d\u0d1a\u0d41 \u0d24\u0d41\u0d1f\u0d19\u0d4d\u0d19\u0d3f\u0d15\u0d4d\u0d15\u0d4b. [Download the MySivi app right now and start learning English.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214650.0098088
+}

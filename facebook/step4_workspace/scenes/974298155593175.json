@@ -1,0 +1,188 @@
+{
+  "competitor_id": "974298155593175",
+  "parsed": {
+    "duration_s": 70.0,
+    "production_type": "mixed",
+    "production_notes": "The video uses human-recorded footage for the narrative part, featuring real actors. The AI tutor is represented by a common stock animation of a humanoid robot, making the production a mix of real and generated/stock elements.",
+    "interaction_pattern": "A 'before/after' testimonial followed by a demonstration of the app's core mechanic: an AI tutor quizzes a learner, who makes a mistake and receives live correction.",
+    "audio_track": "Spoken dialogue in Marathi and English. There is no background music or song.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "Female learner / Hotel trainee",
+        "appearance": "A young South Asian woman in her early 20s with a slender build and a medium-brown complexion. She has large, expressive dark brown eyes, well-defined eyebrows, and long black hair tied back neatly in a bun. Her face is heart-shaped and she has a friendly smile.",
+        "wardrobe": "Initially, a dark navy blue blazer over a white collared shirt. Later, a short-sleeved navy blue hotel uniform top with a white collar and cuffs, and a white apron. She wears a name tag that reads 'SHRUTI PATIL TRAINEE'.",
+        "demeanor": "Initially secretive and excited, then professional and confident, and finally engaged and curious while interacting with the AI."
+      },
+      {
+        "id": "B",
+        "role": "Female manager",
+        "appearance": "A woman, likely in her 30s, with a fair complexion and dark hair. Her face is mostly seen in profile or partially obscured, and she appears to be of average build.",
+        "wardrobe": "A dark professional blazer.",
+        "demeanor": "Professional, then surprised and impressed by her trainee's improvement."
+      },
+      {
+        "id": "C",
+        "role": "AI tutor avatar",
+        "appearance": "A white and grey humanoid robot with a female-presenting face. It has large, dark, camera-like eyes, a smooth white facial plate, and a sleek, minimalist robotic body. Its movements are smooth and mechanical.",
+        "wardrobe": "N/A (robotic body)",
+        "demeanor": "Neutral, helpful, and robotic."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 9.6,
+        "screenshot_at_s": 4.0,
+        "scene_label": "Secretly Practicing English",
+        "setting": "A brightly lit, modern hotel corridor with neutral-toned walls and patterned carpeting.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up, selfie-style talking head.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young South Asian woman (Character A) stands in a well-lit hotel corridor, filming herself selfie-style. The long hallway stretches out behind her, with neutral-colored walls, a patterned carpet, and evenly spaced circular ceiling lights. She looks directly into the camera with wide, expressive eyes, speaking conspiratorially. Her expressions shift from secretive to mischievous to excited as she talks, using hand gestures to emphasize her points.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A young woman in a hotel uniform (Character A) speaks directly to the camera in a selfie video. She is in a hotel hallway. Text overlays in Marathi appear sequentially above her head as she speaks, corresponding to her words.",
+        "audio_transcript": "Character A says: \u092e\u093e\u091d\u094d\u092f\u093e \u092e\u0945\u0928\u0947\u091c\u0930\u0932\u093e \u092e\u093e\u0939\u093f\u0924 \u0928\u093e\u0939\u0940 \u0915\u0940 \u092e\u0940 \u0917\u0947\u0932\u094d\u092f\u093e \u0926\u094b\u0928 \u092e\u0939\u093f\u0928\u094d\u092f\u093e\u0902\u092a\u093e\u0938\u0942\u0928 English practice \u0915\u0930\u0924 \u0906\u0939\u0947. \u0906\u0923\u093f \u0924\u093f\u0932\u093e \u0935\u093e\u091f\u0924\u0902 \u092e\u093e\u091d\u0902 English \u092a\u0941\u0930\u0947\u0938\u0902 \u091a\u093e\u0902\u0917\u0932\u0902 \u0928\u093e\u0939\u0940. \u0906\u091c \u092e\u0940 \u0924\u093f\u0932\u093e surprise \u0926\u0947\u0923\u093e\u0930 \u0906\u0939\u0947.\n[My manager doesn't know that I have been practicing English for the last two months. And she thinks my English is not good enough. Today I am going to give her a surprise.]",
+        "on_screen_text": "\u092e\u093e\u091d\u094d\u092f\u093e \u092e\u0945\u0928\u0947\u091c\u0930\u0932\u093e (To my manager)\n\u092e\u093e\u0939\u093f\u0924 \u0928\u093e\u0939\u0940 \u0915\u0940 (Doesn't know that)\n\u092e\u0940 \u0917\u0947\u0932\u094d\u092f\u093e \u0926\u094b\u0928 (For the last two)\nEnglish practice\n\u0915\u0930\u0924 \u0906\u0939\u0947 (I am doing)\n\u0906\u0923\u093f \u0924\u093f\u0932\u093e \u0935\u093e\u091f\u0924\u0902 (And she thinks)\n\u092e\u093e\u091d\u0902 English (My English)\n\u0928\u093e\u0939\u0940 (is not)\n\u0906\u091c \u092e\u0940 \u0924\u093f\u0932\u093e surprise (Today I will surprise her)\n\u0926\u0947\u0923\u093e\u0930 \u0906\u0939\u0947 (I am going to give)"
+      },
+      {
+        "n": 2,
+        "start_s": 9.6,
+        "end_s": 26.7,
+        "screenshot_at_s": 16.0,
+        "scene_label": "Surprising the Manager",
+        "setting": "At the doorway of a hotel room, looking from the hallway.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium shot.",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A young hotel trainee (Character A), now in a different uniform, stands in a hotel room doorway holding a stack of fresh white towels. She is smiling and speaking confidently to her manager (Character B), who is standing just to the left, mostly seen from the side. The background shows a glimpse of the hotel room with warm lighting. Character A listens intently as her manager speaks, then replies with a knowledgeable smile.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "Character A speaks fluent English to her manager (Character B), who is impressed. The manager asks in Marathi where she learned, and Character A explains. Text overlays appear over the shot, corresponding to the dialogue.",
+        "audio_transcript": "Character A says: I completely understand. I'm so sorry for the inconvenience. I'll have that sorted for you right away.\nCharacter B says: Wow \u0939\u0947 \u0916\u0942\u092a professional English \u0939\u094b\u0924\u0902. \u0939\u0947 \u0915\u0941\u0920\u0942\u0928 \u0936\u093f\u0915\u0932\u0940\u0938?\n[Wow, that was very professional English. Where did you learn this from?]\nCharacter A says: \u092e\u0940 \u0917\u0947\u0932\u094d\u092f\u093e \u0926\u094b\u0928 \u092e\u0939\u093f\u0928\u094d\u092f\u093e\u0902\u092a\u093e\u0938\u0942\u0928 \u0930\u094b\u091c \u092b\u094b\u0928\u0935\u0930 MySivi \u0935\u0930 \u092a\u094d\u0930\u0945\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0924 \u0939\u094b\u0924\u0947. \u091c\u0938\u0902 \u0924\u0941\u092e\u091a\u094d\u092f\u093e \u0916\u093f\u0936\u093e\u0924\u091a \u090f\u0915 English teacher \u0905\u0938\u0924\u094b \u0924\u0938\u0902. \u0939\u0947 \u092c\u0918\u093e, \u092e\u0940 \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e \u0926\u093e\u0916\u0935\u0924\u0947.\n[For the last two months, I have been practicing on MySivi on my phone every day. It's like having an English teacher in your pocket. Look, I'll show you.]",
+        "on_screen_text": "I completely\nthe inconvenience\nI'll have that\nWow \u0939\u0947 \u0916\u0942\u092a professional\nEnglish \u0939\u094b\u0924\u0902\n\u0939\u0947 \u0915\u0941\u0920\u0942\u0928 \u0936\u093f\u0915\u0932\u0940\u0938\n\u092e\u0940 \u0917\u0947\u0932\u094d\u092f\u093e \u0926\u094b\u0928\n\u092e\u0939\u093f\u0928\u094d\u092f\u093e\u0902\u092a\u093e\u0938\u0942\u0928\n\u0930\u094b\u091c \u092b\u094b\u0928\u0935\u0930 MySivi\n\u0939\u094b\u0924\u0947\n\u091c\u0938\u0902 \u0924\u0941\u092e\u091a\u094d\u092f\u093e \u0916\u093f\u0936\u093e\u0924\u091a\n\u090f\u0915 English teacher\n\u0939\u0947 \u092c\u0918\u093e\n\u092e\u0940 \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e \u0926\u093e\u0916\u0935\u0924\u0947"
+      },
+      {
+        "n": 3,
+        "start_s": 26.7,
+        "end_s": 42.5,
+        "screenshot_at_s": 35.0,
+        "scene_label": "AI Tutor Corrects Mistakes",
+        "setting": "Hotel corridor (bottom panel), digital space (top panel).",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen, two medium close-ups.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "A white humanoid robot (Character C) is shown from the chest up against a black background with concentric blue glowing rings behind it. The robot has a neutral, slightly smiling expression and looks directly forward. The lighting is clean and futuristic.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "The young woman (Character A) is back in the hotel hallway, looking directly at the camera as if it were her phone screen. She listens, then speaks, making grammatical mistakes. Her expression is that of a student trying to answer questions. She nods as she receives corrections.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A split-screen view shows the AI tutor (Character C) on top and the learner (Character A) on the bottom. The AI asks questions in Marathi, and Character A answers incorrectly in English. A red cross appears over her wrong answer, followed by the AI's correction and a green checkmark. This happens for two different questions.",
+        "audio_transcript": "Character C says: \u0924\u0941\u091d\u0902 \u0928\u093e\u0935 \u0915\u093e\u092f \u0906\u0939\u0947?\n[What is your name?]\nCharacter A says: I name is Shruti.\nCharacter C says: I name is Shruti. \u0928\u093e\u0939\u0940. My name is Shruti.\n[I name is Shruti. No. My name is Shruti.]\nCharacter C says: \u0924\u0942 \u0915\u0941\u0920\u0947 \u0930\u093e\u0939\u0924\u0947\u0938?\n[Where do you live?]\nCharacter A says: I am Mumbai.\nCharacter C says: I am Mumbai. \u0928\u093e\u0939\u0940. I live in Mumbai.\n[I am Mumbai. No. I live in Mumbai.]\nCharacter A says: \u092e\u0940 \u0928\u0947\u0939\u092e\u0940 \u0907\u0925\u0947\u091a \u0917\u094b\u0902\u0927\u0933 \u0915\u0930\u0924\u0947.\n[I always get confused here.]\nCharacter C says: \u0906\u0923\u093f \u092e\u094d\u0939\u0923\u0942\u0928\u091a \u092e\u0940 \u0907\u0925\u0947 \u0906\u0939\u0947, \u0924\u0941\u0932\u093e \u092f\u094b\u0917\u094d\u092f English \u092c\u094b\u0932\u093e\u092f\u0932\u093e \u092e\u0926\u0924 \u0915\u0930\u093e\u092f\u0932\u093e.\n[And that's why I am here, to help you speak correct English.]",
+        "on_screen_text": "\u0924\u0941\u091d\u0902 \u0928\u093e\u0935 \u0915\u093e\u092f \u0906\u0939\u0947\nI name is Shruti\nMy name is Shruti\n\u0924\u0942 \u0915\u0941\u0920\u0947 \u0930\u093e\u0939\u0924\u0947\u0938\nI am Mumbai\n\"I live in Mumbai.\"\n\u092e\u0940 \u0928\u0947\u0939\u092e\u0940 \u0907\u0925\u0947\u091a\n\u0917\u094b\u0902\u0927\u0933 \u0915\u0930\u0924\u0947 \u0906\u0923\u093f\n\u092e\u094d\u0939\u0923\u0942\u0928\u091a \u092e\u0940 \u0907\u0925\u0947\n\u0924\u0941\u0932\u093e \u092f\u094b\u0917\u094d\u092f English\n\u092c\u094b\u0932\u093e\u092f\u0932\u093e \u092e\u0926\u0924 \u0915\u0930\u093e\u092f\u0932\u093e"
+      },
+      {
+        "n": 4,
+        "start_s": 42.5,
+        "end_s": 57.5,
+        "screenshot_at_s": 49.0,
+        "scene_label": "Explaining Benefits (Cost, Time)",
+        "setting": "Hotel corridor (bottom panel), digital space (top panel).",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen, two medium close-ups.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "The white humanoid robot (Character C) remains in its position against the black and blue background, looking forward and speaking.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "The young woman (Character A) continues to look at the camera, listening to the AI tutor. Her expression is thoughtful as she asks about the cost, and then concerned as she mentions her lack of time.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "The split-screen conversation continues. Character A asks about the cost. The AI explains it's cheaper, and a large '7x Cheaper' graphic pops up, blurring the background. This is followed by a quick shot of the app's page on the Google Play Store. Character A then raises a concern about time, and a '10-15 Minutes' clock graphic appears.",
+        "audio_transcript": "Character A says: \u092a\u0923 \u0939\u0947 \u092e\u0939\u093e\u0917 \u0905\u0938\u0947\u0932 \u0928\u093e?\n[But this must be expensive, right?]\nCharacter C says: \u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940. \u0928\u0949\u0930\u094d\u092e\u0932 English classes \u092a\u0947\u0915\u094d\u0937\u093e 7 \u092a\u091f \u0938\u094d\u0935\u0938\u094d\u0924 \u0906\u0939\u0947. \u092e\u094d\u0939\u0923\u0942\u0928\u091a 1 \u0915\u094b\u091f\u0940 \u0932\u094b\u0915 MySivi \u0935\u0930 English practice \u0915\u0930\u0924 \u0906\u0939\u0947\u0924.\n[Not at all. It is 7 times cheaper than normal English classes. That's why 1 crore people are practicing English on MySivi.]\nCharacter A says: \u092a\u0923 \u0935\u0947\u0933 \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940.\n[But I don't get time.]\nCharacter C says: \u0930\u094b\u091c \u092b\u0915\u094d\u0924 15-20 \u092e\u093f\u0928\u093f\u091f\u093e\u0902\u091a\u0940 practice \u092a\u0941\u0930\u0947\u0936\u0940 \u0906\u0939\u0947. \u0905\u0917\u0926\u0940 confident \u0935\u094d\u0939\u093e\u0932.\n[Just 15-20 minutes of practice every day is enough. You will become very confident.]",
+        "on_screen_text": "\u092a\u0923 \u0939\u0947 \u092e\u0939\u093e\u0917 \u0905\u0938\u0947\u0932 \u0928\u093e\n\u0905\u091c\u093f\u092c\u093e\u0924 \u0928\u093e\u0939\u0940\n7 \u092a\u091f \u0938\u094d\u0935\u0938\u094d\u0924 \u0906\u0939\u0947\nEnglish practice\n\u0915\u0930\u0924 \u0906\u0939\u0947\u0924\n\u092a\u0923 \u0935\u0947\u0933 \u092e\u093f\u0933\u0924 \u0928\u093e\u0939\u0940\n\u0930\u094b\u091c \u092b\u0915\u094d\u0924 15-20\n\u092e\u093f\u0928\u093f\u091f\u093e\u0902\u091a\u0940 practice\n\u0905\u0917\u0926\u0940 confident\n\u0935\u094d\u0939\u093e\u0932"
+      },
+      {
+        "n": 5,
+        "start_s": 57.5,
+        "end_s": 70.0,
+        "screenshot_at_s": 64.0,
+        "scene_label": "Call to Action",
+        "setting": "Hotel corridor (bottom panel), digital space (top panel).",
+        "characters_in_scene": [
+          "A",
+          "C"
+        ],
+        "camera": "Split-screen, two medium close-ups.",
+        "layout": "split-horizontal",
+        "panels": [
+          {
+            "position": "top",
+            "panel_visual_description": "The white humanoid robot (Character C) continues to speak from the top panel, delivering the final call to action.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom",
+            "panel_visual_description": "The young woman (Character A) looks excited and convinced. She asks how to join, her eyes wide with enthusiasm. She then listens to the instructions, nodding with a smile.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "In the final scene, Character A asks how to join. The AI gives instructions to click the install button. An animation of the app installing appears, blurring the background. The AI gives final encouragement as the video ends.",
+        "audio_transcript": "Character A says: wow \u0915\u0938\u0902 join \u0915\u0930\u0942?\n[Wow, how do I join?]\nCharacter C says: \u0939\u093e Install \u091a\u093e \u092c\u091f\u0923 \u0926\u093e\u092c\u093e \u0906\u0923\u093f MySivi app install \u0915\u0930\u093e. Sign up \u0915\u0930\u093e \u0906\u0923\u093f practice start \u0915\u0930\u093e. \u092b\u0915\u094d\u0924 15 \u0926\u093f\u0935\u0938\u093e\u0924 \u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e improvement \u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932. \u091a\u0932\u093e, \u0938\u0941\u0930\u0942 \u0915\u0930\u093e.\n[Press this Install button and install the MySivi app. Sign up and start practicing. In just 15 days, you will start seeing improvement. Come on, get started.]",
+        "on_screen_text": "wow \u0915\u0938\u0902 join \u0915\u0930\u0942\nMySivi app install\nSign up \u0915\u0930\u093e \u0906\u0923\u093f\npractice start\n\u0924\u0941\u092e\u094d\u0939\u093e\u0932\u093e improvement\n\u0926\u093f\u0938\u093e\u092f\u0932\u093e \u0932\u093e\u0917\u0947\u0932\n\u091a\u0932\u093e"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214471.684185
+}

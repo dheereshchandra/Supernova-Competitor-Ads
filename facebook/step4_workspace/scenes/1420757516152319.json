@@ -1,0 +1,139 @@
+{
+  "competitor_id": "1420757516152319",
+  "parsed": {
+    "duration_s": 65.8,
+    "production_type": "mixed",
+    "production_notes": "The ad uses human-recorded footage for the news anchor and the two male experts, which appears natural. The AI tutor character is a clear CGI/AI-generated animation of a humanoid robot.",
+    "interaction_pattern": "A simulated TV news panel debate where a host moderates a discussion between an AI tutor and two human experts on the best way to learn English.",
+    "audio_track": "Spoken dialogue in Hindi between multiple characters, set against a backdrop of news-style instrumental music.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "female presenter",
+        "appearance": "An Indian woman in her early 30s with a medium complexion, a round face, and dark eyes. She has shoulder-length, straight black hair parted on the side. Her expression is serious and professional, typical of a news anchor.",
+        "wardrobe": "A dark navy blue blazer over a grey and black patterned saree.",
+        "demeanor": "Authoritative, professional, and engaging, moderating the discussion with direct questions and gestures."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "A female-presenting humanoid robot with a white, porcelain-like face, defined cheekbones, and large, light-colored eyes. Her body is composed of visible silver and white mechanical parts. Her hair is styled in a metallic, sculpted silver updo.",
+        "wardrobe": "N/A (robotic body)",
+        "demeanor": "Calm, confident, and articulate, with precise, slightly robotic movements and a steady gaze."
+      },
+      {
+        "id": "C",
+        "role": "male English teacher",
+        "appearance": "A middle-aged Indian man in his late 40s or early 50s with a medium complexion, short black hair, and a clean-shaven face. He wears thin-framed glasses and has a friendly, academic look.",
+        "wardrobe": "A light blue and white checked collared shirt.",
+        "demeanor": "Supportive, knowledgeable, and calm, speaking with conviction and making gentle hand gestures."
+      },
+      {
+        "id": "D",
+        "role": "male English expert",
+        "appearance": "A middle-aged Indian man in his 50s with a medium complexion, short, salt-and-pepper hair, and a matching short beard and mustache. He has prominent facial features and expressive eyebrows.",
+        "wardrobe": "A dark grey or black blazer over a light-colored collared shirt.",
+        "demeanor": "Initially skeptical and argumentative, becoming thoughtful and eventually convinced as the discussion progresses."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 6.5,
+        "screenshot_at_s": 3.0,
+        "scene_label": "News Anchor Introduction",
+        "setting": "A virtual news studio with a red and blue graphic background featuring a world map and the word 'NEWS'.",
+        "characters_in_scene": [
+          "A"
+        ],
+        "camera": "Medium close-up, talking-head",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A medium close-up shot of Character A, a female news anchor, sitting at a desk in a news studio. She is looking directly at the camera and speaking with a serious expression, gesturing with her right hand. The background is a large red and white graphic with the word 'NEWS' partially visible behind her.",
+            "characters_in_panel": [
+              "A"
+            ]
+          }
+        ],
+        "visual_description": "A female news anchor, Character A, is shown in a medium close-up. The screen is formatted like a news broadcast, with a large red banner at the top with Hindi text. Below her is a red nameplate. At the bottom of the screen is a red 'BREAKING NEWS' ticker. The overall color scheme is red, white, and blue.",
+        "audio_transcript": "Character A says: \u092a\u0902\u0926\u094d\u0930\u0939 \u0926\u093f\u0928 \u092e\u0947\u0902 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u093f\u0916\u093e\u0928\u0947 \u0935\u093e\u0932\u093e AI \u091f\u0940\u091a\u0930 \u0935\u093e\u092f\u0930\u0932 \u0939\u094b \u0930\u0939\u093e \u0939\u0948\u0964\n[Character A says: An AI teacher that teaches English in 15 days is going viral.]\n\nCharacter A says: \u0906\u0907\u090f \u0907\u0938 \u092a\u0948\u0928\u0932 \u0915\u093e \u0938\u094d\u0935\u093e\u0917\u0924 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964\n[Character A says: Let's welcome this panel.]",
+        "on_screen_text": "\u092f\u0939 AI \u091f\u0940\u091a\u0930 \u0938\u093f\u0930\u094d\u092b 3 \u0930\u0941\u092a\u092f\u0947 \u092e\u0947\u0902 ENGLISH \u0938\u093f\u0916\u093e\u0928\u0947 \u0915\u093e \u0935\u093e\u0926\u093e \u0915\u0930\u0924\u0940 \u0939\u0948\u0964 (This AI teacher promises to teach ENGLISH for just 3 rupees.)\nMySivi \u0915\u093e AI Teacher \u0935\u093e\u092f\u0930\u0932 \u0939\u094b \u0930\u0939\u093e \u0939\u0948 (MySivi's AI Teacher is going viral)\nPalki Goswami\nLIVE\nBREAKING NEWS"
+      },
+      {
+        "n": 2,
+        "start_s": 6.5,
+        "end_s": 101.5,
+        "screenshot_at_s": 30.0,
+        "scene_label": "Panel Debate",
+        "setting": "Four separate remote locations: a news studio, a modern living room, a study with bookshelves, and a home office.",
+        "characters_in_scene": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "camera": "Four separate medium close-ups combined in a grid",
+        "layout": "grid",
+        "panels": [
+          {
+            "position": "top-left",
+            "panel_visual_description": "A medium close-up of Character A, the female news anchor, in her studio setting. She looks towards the other panelists as she speaks and gestures. The red and white 'NEWS' graphic is visible behind her.",
+            "characters_in_panel": [
+              "A"
+            ]
+          },
+          {
+            "position": "top-right",
+            "panel_visual_description": "A medium close-up of Character B, the AI robot, sitting in a well-lit, modern living room. Behind her, a small golden statue is visible on a shelf. She looks forward with a neutral expression, occasionally blinking and moving her head slightly as she speaks.",
+            "characters_in_panel": [
+              "B"
+            ]
+          },
+          {
+            "position": "bottom-left",
+            "panel_visual_description": "A medium close-up of Character C, the male English teacher, sitting in his study. A large bookshelf filled with books is visible in the background. He smiles and gestures with his right hand while speaking.",
+            "characters_in_panel": [
+              "C"
+            ]
+          },
+          {
+            "position": "bottom-right",
+            "panel_visual_description": "A medium close-up of Character D, the male English expert, sitting in what appears to be a home office or living room. A framed picture is on the wall behind him. He speaks animatedly, using hand gestures to emphasize his points.",
+            "characters_in_panel": [
+              "D"
+            ]
+          }
+        ],
+        "visual_description": "The screen is divided into a 2x2 grid, showing the four participants in their respective locations. Character A is top-left, Character B is top-right, Character C is bottom-left, and Character D is bottom-right. Each panelist has a red nameplate below them identifying their role (e.g., 'Host', 'AI Arya', 'English Teacher', 'Sunil Ji'). The overall news broadcast branding with red banners and tickers remains.",
+        "audio_transcript": "Character A says: \u0924\u094b \u0906\u0930\u094d\u092f\u093e, \u0906\u092a\u0915\u093e \u0915\u0939\u0928\u093e \u0939\u0948 \u0915\u093f \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0917\u094d\u0930\u093e\u092e\u0930 \u092c\u0941\u0915 \u092f\u093e \u0915\u094b\u091a\u093f\u0902\u0917 \u0915\u094d\u0932\u093e\u0938 \u0915\u0940 \u091c\u0930\u0942\u0930\u0924 \u0928\u0939\u0940\u0902 \u0939\u0948?\n[Character A says: So Arya, are you saying that to learn English, there's no need for grammar books or coaching classes?]\n\nCharacter B says: \u0939\u093e\u0902, \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0938\u0939\u0940\u0964 MySivi \u0910\u092a \u092e\u0947\u0902 \u092e\u0948\u0902 \u092c\u093e\u0924\u091a\u0940\u0924 \u0915\u0930\u0915\u0947 \u0928\u0948\u091a\u0941\u0930\u0932\u0940 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u093f\u0916\u093e\u0924\u0940 \u0939\u0942\u0902\u0964 \u0910\u0938\u0947 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0928\u0947 \u0938\u0947 \u0930\u094b\u091c \u092a\u094d\u0930\u094b\u0917\u094d\u0930\u0947\u0938 \u0926\u093f\u0916\u0924\u0940 \u0939\u0948\u0964\n[Character B says: Yes, that's absolutely right. In the MySivi app, I teach English naturally through conversation. Practicing this way shows daily progress.]\n\nCharacter D says: \u0928\u0939\u0940\u0902, \u0928\u0939\u0940\u0902\u0964 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0930\u093f\u092f\u0932 \u0939\u094d\u092f\u0942\u092e\u0928 \u0907\u0902\u091f\u0930\u0947\u0915\u094d\u0936\u0928 \u091a\u093e\u0939\u093f\u090f\u0964 AI \u0915\u0947 \u0938\u093e\u0925 \u0915\u0948\u0938\u0947 \u0938\u0940\u0916\u0947\u0902\u0917\u0947?\n[Character D says: No, no. To learn English, you need real human interaction. How will you learn with AI?]\n\nCharacter C says: \u092a\u0930 \u0938\u0941\u0928\u0940\u0932 \u0938\u093e\u0939\u092c, \u092e\u0947\u0930\u0947 \u0938\u093e\u0930\u0947 \u0938\u094d\u091f\u0942\u0921\u0947\u0902\u091f\u094d\u0938 MySivi \u092f\u0942\u091c \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964 \u092a\u0939\u0932\u0947 \u0918\u0930 \u092a\u0930 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u092a\u093e\u0930\u094d\u091f\u0928\u0930 \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u0924\u093e \u0925\u093e, \u0905\u092c MySivi \u0938\u0947 \u0905\u0928\u0932\u093f\u092e\u093f\u091f\u0947\u0921 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964\n[Character C says: But Sunil sir, all my students use MySivi. Earlier, they couldn't find a practice partner at home, now they do unlimited practice with MySivi.]\n\nCharacter D says: \u092a\u0930 \u092f\u0939 \u0928\u0947\u091a\u0941\u0930\u0932 \u0915\u0928\u094d\u0935\u0930\u094d\u0938\u0947\u0936\u0928 \u091c\u0948\u0938\u093e \u0924\u094b \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u0928\u0939\u0940\u0902 \u0939\u094b\u0917\u093e\u0964\n[Character D says: But this won't be like a natural conversation at all.]\n\nCharacter B says: \u092e\u0948\u0902 24/7 \u0905\u0935\u0947\u0932\u0947\u092c\u0932 \u0939\u0942\u0902\u0964 \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902 \u0938\u092e\u091d\u093e\u0924\u0940 \u0939\u0942\u0902, \u092e\u093f\u0938\u094d\u091f\u0947\u0915\u094d\u0938 \u0924\u0941\u0930\u0902\u0924 \u0915\u0930\u0947\u0915\u094d\u091f \u0915\u0930\u0924\u0940 \u0939\u0942\u0902, \u0914\u0930 \u092f\u0939\u093e\u0902 \u0915\u094b\u0908 \u091c\u091c \u092d\u0940 \u0928\u0939\u0940\u0902 \u0915\u0930\u0924\u093e\u0964 15 \u0932\u093e\u0916 \u0938\u094d\u091f\u0942\u0921\u0947\u0902\u091f\u094d\u0938 \u092e\u0947\u0930\u0947 \u0938\u093e\u0925 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916 \u091a\u0941\u0915\u0947 \u0939\u0948\u0902\u0964\n[Character B says: I am available 24/7. I explain in Hindi, correct mistakes instantly, and no one judges you here. 1.5 million students have learned English with me.]\n\nCharacter D says: \u0939\u092e\u094d\u092e, \u090f\u0915\u094d\u091a\u0941\u0905\u0932\u0940 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u0947 \u0932\u093f\u090f \u0924\u094b \u092f\u0939 \u090f\u0915 \u0905\u091a\u094d\u091b\u093e \u0911\u092a\u094d\u0936\u0928 \u0932\u0917\u0924\u093e \u0939\u0948\u0964 \u0936\u093e\u092f\u0926 \u092e\u0941\u091d\u0947 \u092d\u0940 \u091f\u094d\u0930\u093e\u0908 \u0915\u0930\u0928\u093e \u091a\u093e\u0939\u093f\u090f\u0964\n[Character D says: Hmm, actually, for practice, this seems like a good option. Maybe I should try it too.]\n\nCharacter A says: \u092a\u0930\u092b\u0947\u0915\u094d\u091f! \u0906\u0930\u094d\u092f\u093e, \u0907\u0938 \u0910\u092a \u0915\u093e \u092a\u094d\u0930\u093e\u0907\u0938 \u0915\u094d\u092f\u093e \u0939\u0948?\n[Character A says: Perfect! Arya, what is the price of this app?]\n\nCharacter B says: \u0938\u093f\u0930\u094d\u092b \u0924\u0940\u0928 \u0930\u0941\u092a\u092f\u0947 \u092e\u0947\u0902 \u0936\u0941\u0930\u0942 \u0915\u0930 \u0938\u0915\u0924\u0947 \u0939\u0948\u0902\u0964\n[Character B says: You can start for just three rupees.]\n\nCharacter A says: \u0924\u094b \u0905\u0917\u0930 \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u0940\u0916\u0928\u0940 \u0939\u0948...\n[Character A says: So if you want to learn English...]",
+        "on_screen_text": "\u092f\u0939 AI \u091f\u0940\u091a\u0930 \u0938\u093f\u0930\u094d\u092b 3 \u0930\u0941\u092a\u092f\u0947 \u092e\u0947\u0902 ENGLISH \u0938\u093f\u0916\u093e\u0928\u0947 \u0915\u093e \u0935\u093e\u0926\u093e \u0915\u0930\u0924\u0940 \u0939\u0948\u0964 (This AI teacher promises to teach ENGLISH for just 3 rupees.)\nMySivi \u0915\u093e AI Teacher \u0935\u093e\u092f\u0930\u0932 \u0939\u094b \u0930\u0939\u093e \u0939\u0948 (MySivi's AI Teacher is going viral)\nHost / Palki Goswami\nMySivi App / AI Arya\nInt'l English School / English Teacher\nEnglish Expert / Sunil Ji\nLIVE\nBREAKING NEWS"
+      },
+      {
+        "n": 3,
+        "start_s": 101.5,
+        "end_s": 105.8,
+        "screenshot_at_s": 103.5,
+        "scene_label": "App Install CTA",
+        "setting": "An abstract, plain, light purple background.",
+        "characters_in_scene": [],
+        "camera": "Static shot of a smartphone",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A black smartphone with a silver frame is shown against a plain, light purple background. The phone's screen is lit up, displaying a simple, clean interface.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A smartphone is displayed against a light purple background. On the phone's screen is the MySivi app logo, the text 'MySivi English speaking app', and a prominent blue 'Install Now' button. The shot is clean and focused on the call to action.",
+        "audio_transcript": "Unknown speaker says: MySivi \u0910\u092a \u0907\u0902\u0938\u094d\u091f\u0949\u0932 \u0915\u0930\u094b \u090f\u0902\u0921 15 \u0921\u0947\u091c \u0907\u0902\u0917\u094d\u0932\u093f\u0936 \u0938\u094d\u092a\u0940\u0915\u093f\u0902\u0917 \u091a\u0948\u0932\u0947\u0902\u091c \u0936\u0941\u0930\u0942 \u0915\u0930\u094b\u0964\n[Unknown speaker says: Install the MySivi app and start the 15-day English speaking challenge.]",
+        "on_screen_text": "MySivi\nEnglish speaking app\nInstall Now"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214385.293687
+}

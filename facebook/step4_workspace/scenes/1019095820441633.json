@@ -1,0 +1,153 @@
+{
+  "competitor_id": "1019095820441633",
+  "parsed": {
+    "duration_s": 25.0,
+    "production_type": "mixed",
+    "production_notes": "The production uses a human actor interacting with a CGI robot character, which are composited together into a real-world setting (a train car). The lighting and interaction between the real and generated elements are well-integrated.",
+    "interaction_pattern": "AI tutor provides live correction of a common wrong-English mistake made by a human learner.",
+    "audio_track": "Spoken dialogue in Tamil between two characters. There is no background music.",
+    "characters": [
+      {
+        "id": "A",
+        "role": "male learner",
+        "appearance": "A young South Indian man in his mid-to-late 20s with a medium build and a dark complexion. He has short, curly black hair, a full beard, and a mustache. His expression is earnest and slightly worried.",
+        "wardrobe": "A white, long-sleeved formal shirt, dark navy blue trousers, and brown leather shoes. He carries a black leather messenger bag over his shoulder.",
+        "demeanor": "Initially uncertain and seeking advice, becoming convinced and enthusiastic by the end."
+      },
+      {
+        "id": "B",
+        "role": "AI tutor avatar",
+        "appearance": "A humanoid robot with a sleek, metallic silver body composed of distinct plates and visible joints. It has a human-like face with defined features but no hair, and glowing blue circular lights on the sides of its head and in its eyes.",
+        "wardrobe": "N/A (metallic body)",
+        "demeanor": "Calm, knowledgeable, and helpful, with measured and precise movements."
+      }
+    ],
+    "scenes": [
+      {
+        "n": 1,
+        "start_s": 0.0,
+        "end_s": 13.5,
+        "screenshot_at_s": 6.0,
+        "scene_label": "Correcting an English Introduction",
+        "setting": "The interior of a modern, brightly lit metro train car during the daytime. Other passengers are seated in the background, out of focus.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium wide shot, static",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "In the center aisle of a moving train, a young man (Character A) stands facing a humanoid robot (Character B). Both are holding onto a vertical grab pole. Character A looks at the robot with a questioning expression. The robot looks back at him, gesturing slightly with its left hand. The train car is clean and modern, with natural light coming from the windows, showing a blurred city view outside.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "A static medium wide shot shows Character A (a man) and Character B (a robot) talking in a metro train. A series of on-screen text captions in Tamil appear at the bottom of the screen, synchronized with the dialogue, highlighting key phrases.",
+        "audio_transcript": "Character A says: \u0b87\u0ba9\u0bcd\u0b9f\u0bb0\u0bcd\u0bb5\u0bbf\u0baf\u0bc2\u0bb2 \"Myself Karthik\"\u0ba9\u0bc1 \u0b87\u0ba9\u0bcd\u0b9f\u0bcd\u0bb0\u0bcb \u0b95\u0bc1\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb2\u0bbe\u0bae\u0bbe? [In an interview, can I introduce myself as \"Myself Karthik\"?]\nCharacter B says: \u0bb5\u0bc7\u0ba3\u0bbe\u0bae\u0bcd \u0b95\u0bbe\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0bbf\u0b95\u0bcd. \"Myself\" \u0b85\u0baa\u0bcd\u0baa\u0b9f\u0bbf\u0ba9\u0bcd\u0ba9\u0bc1 \u0b86\u0bb0\u0bae\u0bcd\u0baa\u0bbf\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0ba4\u0bc1 \u0ba4\u0baa\u0bcd\u0baa\u0bc1. \"I am Karthik\" \u0b87\u0bb2\u0bcd\u0bb2\u0ba9\u0bbe \"My name is Karthik\"\u0ba9\u0bc1 \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0bc1\u0b99\u0bcd\u0b95. \u0b85\u0ba4\u0bbe\u0ba9\u0bcd \u0b95\u0bc6\u0ba4\u0bcd\u0ba4\u0bbe \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd. [No, Karthik. Starting with \"Myself\" is wrong. Say \"I am Karthik\" or \"My name is Karthik\". That will be cool.]\nCharacter A says: \u0b85\u0b9f \u0b86\u0bae\u0bbe\u0baa\u0bcd\u0baa\u0bbe. \u0b86\u0ba9\u0bbe \u0b8e\u0ba9\u0b95\u0bcd\u0b95\u0bc1 \u0b87\u0b99\u0bcd\u0b95\u0bbf\u0bb2\u0bc0\u0bb7\u0bcd \u0baa\u0bc7\u0b9a \u0bb5\u0bb0\u0bbe\u0ba4\u0bc7. [Oh, yes. But I don't know how to speak English.]\nCharacter B says: \u0baa\u0baf\u0baa\u0bcd\u0baa\u0b9f\u0bbe\u0ba4\u0bc0\u0b99\u0bcd\u0b95. \u0b8e\u0ba9\u0bcd\u0b95\u0bc2\u0b9f \u0ba4\u0bbf\u0ba9\u0bae\u0bc1\u0bae\u0bcd... [Don't worry. With me, daily...]",
+        "on_screen_text": "Interview-\u0bb2 (In the interview)\n\"Myself Karthik\" \u0ba9\u0bc1 (as \"Myself Karthik\")\n\u0bb5\u0bc7\u0ba3\u0bbe\u0bae\u0bcd (No)\n\"Myself\" \u0b85\u0baa\u0bcd\u0baa\u0b9f\u0bbf\u0ba9\u0bcd\u0ba9\u0bc1 (Like \"Myself\")\n\u0ba4\u0baa\u0bcd\u0baa\u0bc1 (Wrong)\n\"I am Karthik\"\n\u0b87\u0bb2\u0bcd\u0bb2\u0ba9\u0bbe \"My name\" (or \"My name\")\n\u0b85\u0ba4\u0bbe\u0ba9\u0bcd \u0b95\u0bc6\u0ba4\u0bcd\u0ba4\u0bbe (That's cool)\n\u0b86\u0bae\u0bbe\u0baa\u0bcd\u0baa\u0bbe (Yes)\n\u0baa\u0bc7\u0b9a \u0bb5\u0bb0\u0bbe\u0ba4\u0bc7 (Can't speak)\n\u0baa\u0baf\u0baa\u0bcd\u0baa\u0b9f\u0bbe\u0ba4\u0bc0\u0b99\u0bcd\u0b95 (Don't worry)\n\u0b8e\u0ba9\u0bcd\u0b95\u0bc2\u0b9f \u0ba4\u0bbf\u0ba9\u0bae\u0bc1\u0bae\u0bcd (With me daily)"
+      },
+      {
+        "n": 2,
+        "start_s": 13.5,
+        "end_s": 14.5,
+        "screenshot_at_s": 14.0,
+        "scene_label": "15 Minutes a Day",
+        "setting": "Abstract graphic overlay over a blurred background.",
+        "characters_in_scene": [],
+        "camera": "N/A (Graphic)",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A stylized 3D graphic of a blue and white analog clock icon is shown against a heavily blurred background of the previous train scene. Below the clock, the number 15 and the word \"MINUTES\" are displayed in large, blue, 3D-style text.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A graphic overlay appears, showing a clock icon and the text \"15 MINUTES\". The background is a blurred version of the train scene. A Tamil text caption is at the bottom.",
+        "audio_transcript": "Character B says: ...15 minutes \u0baa\u0bc7\u0b9a\u0bc1\u0b99\u0bcd\u0b95. [...speak for 15 minutes.]",
+        "on_screen_text": "15 \u0ba8\u0bbf\u0bae\u0bbf\u0bb7\u0bae\u0bcd \u0baa\u0bc7\u0b9a\u0bc1\u0b99\u0bcd\u0b95 (Speak for 15 minutes)"
+      },
+      {
+        "n": 3,
+        "start_s": 14.5,
+        "end_s": 18.0,
+        "screenshot_at_s": 16.0,
+        "scene_label": "Becoming a Master",
+        "setting": "The interior of a modern, brightly lit metro train car during the daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium wide shot, static",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The scene returns to the young man (Character A) and the silver humanoid robot (Character B) standing face-to-face in the metro train. They continue their conversation, holding onto the central pole. The lighting and background remain consistent with the first scene. Character A gestures with his hands as he speaks about his concern.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The shot returns to the man and robot on the train. On-screen text continues to appear at the bottom, synchronized with the dialogue.",
+        "audio_transcript": "Character B says: \u0b85\u0baa\u0bcd\u0baa\u0bc1\u0bb1\u0bae\u0bcd \u0baa\u0bbe\u0bb0\u0bc1\u0b99\u0bcd\u0b95, \u0ba8\u0bc0\u0b99\u0bcd\u0b95 \u0b87\u0b99\u0bcd\u0b95\u0bbf\u0bb2\u0bc0\u0bb7\u0bcd\u0bb2 \u0baa\u0bc7\u0b9a\u0bc1\u0bb1 \u0bae\u0bbe\u0bb8. [Then see the mass appeal of you speaking in English.]\nCharacter A says: Fees \u0b85\u0ba4\u0bbf\u0b95\u0bae\u0bbe \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcb? [Will the fees be high?]",
+        "on_screen_text": "\u0b85\u0baa\u0bcd\u0baa\u0bc1\u0bb1\u0bae\u0bcd \u0baa\u0bbe\u0bb0\u0bc1\u0b99\u0bcd\u0b95 (Then see)\n\u0ba8\u0bc0\u0b99\u0bcd\u0b95 \u0b87\u0b99\u0bcd\u0b95\u0bbf\u0bb2\u0bc0\u0bb7\u0bcd\u0bb2 (You in English)\nFees \u0b85\u0ba4\u0bbf\u0b95\u0bae\u0bbe \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcb (Will the fees be high)"
+      },
+      {
+        "n": 4,
+        "start_s": 18.0,
+        "end_s": 20.5,
+        "screenshot_at_s": 19.0,
+        "scene_label": "Special Offer",
+        "setting": "App screenshot overlay over a blurred background.",
+        "characters_in_scene": [],
+        "camera": "N/A (Graphic)",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "A screenshot of a mobile app's promotional offer screen is displayed. The screen has a black background with white and yellow text. It features a large price display showing a crossed-out number next to a new, lower price. The background behind the screenshot is a blurred image of the train scene.",
+            "characters_in_panel": []
+          }
+        ],
+        "visual_description": "A graphic overlay shows a screenshot of the MySivi app's special offer. It details a trial price of \u20b91 for 3 days (down from \u20b930), with the regular price being \u20b9299/month. The background is the blurred train scene. Tamil text captions are overlaid at the bottom.",
+        "audio_transcript": "Character B says: \u0bb5\u0bc6\u0bb1\u0bc1\u0bae\u0bcd \u0b92\u0bb0\u0bc1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd\u0b95\u0bcd\u0b95\u0bc1 MySivi \u0b86\u0baa\u0bcd\u0baa \u0b9f\u0bcd\u0bb0\u0bc8 \u0baa\u0ba3\u0bcd\u0ba3\u0bb2\u0bbe\u0bae\u0bcd. [For just one rupee, you can try the MySivi app.]",
+        "on_screen_text": "\u0bb5\u0bc6\u0bb1\u0bc1\u0bae\u0bcd \u0b92\u0bb0\u0bc1 \u0bb0\u0bc2\u0baa\u0bbe\u0baf\u0bcd\u0b95\u0bcd\u0b95\u0bc1 (For just one rupee)\n3 \u0ba8\u0bbe\u0b9f\u0bcd\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bc1 (For 3 days)\n\u0b9f\u0bcd\u0bb0\u0bc8 \u0baa\u0ba3\u0bcd\u0ba3\u0bb2\u0bbe\u0bae\u0bcd (Can try)\n[App UI Text]: MySivi, Sale Ends Today, UNLOCK EVERYTHING, \u20b930 \u20b91, SALUGAI (OFFER), Aprum \u20b9299/month, Cancel Anytime, MySivi Pro Sirappugal (MySivi Pro Features), 24/7 Personal AI English Teacher, Udanadi feedback oda unga grammar'a seri seiya mudiyum. (With instant feedback, your grammar can be corrected.)"
+      },
+      {
+        "n": 5,
+        "start_s": 20.5,
+        "end_s": 25.0,
+        "screenshot_at_s": 23.0,
+        "scene_label": "User Convinced",
+        "setting": "The interior of a modern, brightly lit metro train car during the daytime.",
+        "characters_in_scene": [
+          "A",
+          "B"
+        ],
+        "camera": "Medium wide shot, static",
+        "layout": "single",
+        "panels": [
+          {
+            "position": "full",
+            "panel_visual_description": "The final shot returns to the man (Character A) and the robot (Character B) on the train. Character A now has a wide, happy smile on his face, looking convinced and enthusiastic. He makes a gesture as if he's about to use his phone. The robot maintains its calm, helpful posture.",
+            "characters_in_panel": [
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "visual_description": "The shot returns to the man and robot. The man is now smiling and agrees to install the app. On-screen text captions continue at the bottom.",
+        "audio_transcript": "Character B says: \u0b92\u0bb0\u0bc1 \u0b95\u0bcb\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd \u0bae\u0bc7\u0bb2 \u0bae\u0b95\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bae\u0bcd\u0bae \u0b95\u0bc2\u0b9f \u0baa\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0b9f\u0bcd\u0b9f\u0bc1 \u0b87\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbe\u0b99\u0bcd\u0b95. [More than one crore people are studying with us.]\nCharacter A says: \u0b9a\u0bc2\u0baa\u0bcd\u0baa\u0bb0\u0bcd! \u0b87\u0baa\u0bcd\u0baa\u0bb5\u0bc7 \u0b87\u0ba9\u0bcd\u0bb8\u0bcd\u0b9f\u0bbe\u0bb2\u0bcd \u0baa\u0ba3\u0bcd\u0bb1\u0bc7\u0ba9\u0bcd. [Super! I'll install it right now.]",
+        "on_screen_text": "\u0b92\u0bb0\u0bc1 \u0b95\u0bcb\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd (More than one crore)\n\u0b95\u0bc2\u0b9f \u0baa\u0b9f\u0bbf\u0b9a\u0bcd\u0b9a\u0bbf\u0b9f\u0bcd\u0b9f\u0bc1 (Studying with)\n\u0b9a\u0bc2\u0baa\u0bcd\u0baa\u0bb0\u0bcd (Super)\n\u0b87\u0baa\u0bcd\u0baa\u0bcb\u0bb5\u0bc7 \u0b87\u0ba9\u0bcd\u0bb8\u0bcd\u0b9f\u0bbe\u0bb2\u0bcd (Install right now)"
+      }
+    ]
+  },
+  "model": "gemini-2.5-pro",
+  "decoded_at": 1782214472.311915
+}
