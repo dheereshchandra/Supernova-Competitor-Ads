@@ -26,6 +26,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
+from . import db
 from .auth import require_user
 from .config import FACEBOOK_DIR, STATE_DIR
 
@@ -170,6 +171,7 @@ class TtsBody(BaseModel):
     voices: dict[str, VoicePick] | None = Field(default=None, max_length=20)
     speed: Literal["slowest", "slow", "normal", "fast", "fastest"] | None = None
     emotion: str | None = Field(default=None, max_length=20)    # one of _EMOTIONS (Cartesia only)
+    tts_model: Literal["sonic-3", "sonic-3.5"] | None = None    # Cartesia synth model
 
 
 # ---------------- endpoints ----------------
@@ -186,7 +188,8 @@ def translate_prompts(_user: str = Depends(require_user)):
 
 @router.post("/api/translate/script")
 def translate_script(body: ScriptBody, user: str = Depends(require_user)):
-    """Translate the pasted source into per-language Romanized + native code-mix (real-time)."""
+    """Translate the pasted source into per-language Romanized + native code-mix (real-time).
+    Every generate is saved to the team-shared history."""
     _throttle(user)
     res = _run_playground("step4_localize.py", ["--playground"], {
         "source_text": body.source_text,
@@ -195,6 +198,21 @@ def translate_script(body: ScriptBody, user: str = Depends(require_user)):
         "model": (body.model or SCRIPT_DEFAULT_MODEL).strip(),
         "rules_override": body.rules_override or None,
     })
+    # Save to the team-shared history (best-effort — never fail the translation on a logging error).
+    try:
+        saved = {r["language"]: {"roman": r.get("script_roman", ""), "native": r.get("script_native", "")}
+                 for r in res.get("results", []) if isinstance(r, dict) and not r.get("error")}
+        if saved:
+            db.execute(
+                "INSERT INTO translations (who, source_language, source_text, target_languages, results) "
+                "VALUES (?,?,?,?,?)",
+                (user, body.source_language, body.source_text,
+                 json.dumps(body.target_languages), json.dumps(saved, ensure_ascii=False)))
+            # keep the history bounded (newest 500)
+            db.execute("DELETE FROM translations WHERE id NOT IN "
+                       "(SELECT id FROM translations ORDER BY id DESC LIMIT 500)")
+    except Exception as ex:   # noqa: BLE001
+        print(f"[translate] history save failed: {type(ex).__name__}")
     return res
 
 
@@ -227,6 +245,7 @@ def translate_tts(body: TtsBody, user: str = Depends(require_user)):
         "voices": {k: v.model_dump() for k, v in (body.voices or {}).items()},
         "speed": body.speed or "",
         "emotion": body.emotion if body.emotion in _EMOTIONS else "",
+        "tts_model": body.tts_model or "",
     })
     if not res.get("ok") or not out_path.is_file():
         raise HTTPException(502, f"TTS failed: {res.get('error', 'unknown error')}")
@@ -268,3 +287,40 @@ def translate_audio(token: str, _user: str = Depends(require_user)):
     if not f.is_file():
         raise HTTPException(404, "Audio expired or not found")
     return FileResponse(f, media_type="audio/mpeg")
+
+
+# ---------------- team-shared history ----------------
+@router.get("/api/translate/history")
+def translate_history(_user: str = Depends(require_user)):
+    """Recent translations across the whole team (newest first; source truncated for the list)."""
+    rows = db.query(
+        "SELECT id, created_at, who, source_language, source_text, target_languages "
+        "FROM translations ORDER BY id DESC LIMIT 100")
+    items = [{
+        "id": r["id"], "created_at": r["created_at"], "who": r["who"] or "",
+        "source_language": r["source_language"] or "",
+        "source_text": (r["source_text"] or "")[:240],
+        "target_languages": json.loads(r["target_languages"] or "[]"),
+    } for r in rows]
+    return {"items": items}
+
+
+@router.get("/api/translate/history/{item_id}")
+def translate_history_item(item_id: int, _user: str = Depends(require_user)):
+    """Full record (source + per-language results) for loading back into the workbench."""
+    r = db.query_one("SELECT * FROM translations WHERE id = ?", (item_id,))
+    if not r:
+        raise HTTPException(404, "Not found")
+    return {
+        "id": r["id"], "created_at": r["created_at"], "who": r["who"] or "",
+        "source_language": r["source_language"] or "", "source_text": r["source_text"] or "",
+        "target_languages": json.loads(r["target_languages"] or "[]"),
+        "results": json.loads(r["results"] or "{}"),
+    }
+
+
+@router.delete("/api/translate/history/{item_id}")
+def translate_history_delete(item_id: int, _user: str = Depends(require_user)):
+    """Delete a history entry (team-shared — affects everyone)."""
+    db.execute("DELETE FROM translations WHERE id = ?", (item_id,))
+    return {"ok": True}

@@ -635,6 +635,12 @@ export const listTranslateVoices = (provider: string, language?: string) =>
       (language ? `&language=${encodeURIComponent(language)}` : ''),
   )
 
+// Cartesia synthesis model (Indic-capable generations). ElevenLabs keeps its own model.
+export const TTS_VOICE_MODELS = [
+  { id: 'sonic-3', label: 'Sonic 3' },
+  { id: 'sonic-3.5', label: 'Sonic 3.5' },
+] as const
+
 // Cartesia sonic-3 voice controls (no-ops on ElevenLabs).
 export const TTS_SPEEDS = [
   { id: 'normal', label: 'Normal speed' },
@@ -663,8 +669,28 @@ export const synthTts = (body: {
   voices?: Record<string, { provider: string; voice_id: string }>
   speed?: string // Cartesia: slowest|slow|normal|fast|fastest
   emotion?: string // Cartesia: a single emotion word (happy, sad, ...)
+  tts_model?: string // Cartesia synth model: sonic-3 | sonic-3.5
 }) =>
   api<{ audio_url: string; provider?: string; voice_id?: string; warning?: string | null }>(
     '/api/translate/tts',
     { json: body },
   )
+
+// Team-shared translation history (every Generate is saved).
+export interface TranslationHistoryItem {
+  id: number
+  created_at: string
+  who: string
+  source_language: string
+  source_text: string
+  target_languages: string[]
+}
+export interface TranslationHistoryDetail extends TranslationHistoryItem {
+  results: Record<string, { roman: string; native: string }>
+}
+export const getTranslationHistory = () =>
+  api<{ items: TranslationHistoryItem[] }>('/api/translate/history')
+export const getTranslationHistoryItem = (id: number) =>
+  api<TranslationHistoryDetail>(`/api/translate/history/${id}`)
+export const deleteTranslationHistory = (id: number) =>
+  api<{ ok: boolean }>(`/api/translate/history/${id}`, { method: 'DELETE' })
