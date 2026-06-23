@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-06-23 15:17 IST — facebook / speakx — operator: Dheeresh (Ad Studio pipeline)
+- data refresh via Ad Studio (stages 1-5)
+- Links manifest: facebook/runs/speakx_2026-06-23_links.json
+
+
 ## 2026-06-23 14:18 IST — facebook / duolingo — operator: Dheeresh (Ad Studio pipeline)
 - data refresh via Ad Studio (stages 1-5)
 - Links manifest: facebook/runs/duolingo_2026-06-23_links.json
