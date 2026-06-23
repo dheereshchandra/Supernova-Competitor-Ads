@@ -635,12 +635,34 @@ export const listTranslateVoices = (provider: string, language?: string) =>
       (language ? `&language=${encodeURIComponent(language)}` : ''),
   )
 
+// Cartesia sonic-3 voice controls (no-ops on ElevenLabs).
+export const TTS_SPEEDS = [
+  { id: 'normal', label: 'Normal speed' },
+  { id: 'slowest', label: 'Slowest' },
+  { id: 'slow', label: 'Slow' },
+  { id: 'fast', label: 'Fast' },
+  { id: 'fastest', label: 'Fastest' },
+] as const
+export const TTS_EMOTIONS = [
+  { id: '', label: 'No emotion' },
+  { id: 'happy', label: 'Happy' },
+  { id: 'excited', label: 'Excited' },
+  { id: 'calm', label: 'Calm' },
+  { id: 'curious', label: 'Curious' },
+  { id: 'surprised', label: 'Surprised' },
+  { id: 'sad', label: 'Sad' },
+  { id: 'angry', label: 'Angry' },
+] as const
+
 export const synthTts = (body: {
   language: string
-  text: string
+  text: string // the native (label-free) TTS script
+  roman?: string // romanized labels, for per-character speaker mapping
   voice_id?: string
   /** Per-character casting: { characterName: { provider, voice_id } } */
   voices?: Record<string, { provider: string; voice_id: string }>
+  speed?: string // Cartesia: slowest|slow|normal|fast|fastest
+  emotion?: string // Cartesia: a single emotion word (happy, sad, ...)
 }) =>
   api<{ audio_url: string; provider?: string; voice_id?: string; warning?: string | null }>(
     '/api/translate/tts',
