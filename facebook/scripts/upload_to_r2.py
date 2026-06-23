@@ -47,7 +47,21 @@ def load_env(env_path: pathlib.Path) -> Dict[str, str]:
     missing = [k for k in required if not env.get(k)]
     if missing:
         sys.exit(f"[error] .env missing required keys: {', '.join(missing)}")
+    # R2_PUBLIC_URL_BASE must be the PUBLIC host, never the private S3 API endpoint — else every
+    # r2_public_url we write 400s in a browser (master/sheet links won't open). Fail loud.
+    if "r2.cloudflarestorage.com" in env["R2_PUBLIC_URL_BASE"]:
+        sys.exit(f"[error] R2_PUBLIC_URL_BASE is the PRIVATE S3 endpoint ({env['R2_PUBLIC_URL_BASE']}). "
+                 "Set it to the public pub-<hash>.r2.dev (Cloudflare → R2 → bucket → Public URL) or a custom domain.")
     return env
+
+
+_S3_HOST_RE = re.compile(r"https://[A-Za-z0-9]+\.r2\.cloudflarestorage\.com")
+
+
+def publicize(url: str, public_base: str) -> str:
+    """Repair a stored URL that used the private S3 endpoint by swapping in the public host
+    (the object key/path is identical). No-op for already-public URLs."""
+    return _S3_HOST_RE.sub(public_base.rstrip("/"), url) if url else url
 
 
 # -------- CSV helpers --------
@@ -284,7 +298,8 @@ def main() -> int:
 
         # 1. carry-forward path: master already has an R2 URL
         if existing_master and existing_master.get("r2_public_url"):
-            r2_public_url = existing_master["r2_public_url"]
+            # self-heal: repair any URL stored with the private S3 endpoint (legacy bad config)
+            r2_public_url = publicize(existing_master["r2_public_url"], env["R2_PUBLIC_URL_BASE"])
             # Update mutable fields in master (latest scrape wins for these)
             for c in input_cols:
                 if c in ("first_scrape_run_date",):
