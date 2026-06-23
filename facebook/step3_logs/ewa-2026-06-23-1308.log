@@ -1,0 +1,43 @@
+# Step 3 run log
+# competitor : ewa
+# started_at : 2026-06-23T13:08:10
+# input      : facebook/inputs/fb-ads-ewa-2026-06-23-1300.csv
+# videos     : facebook/videos/ewa-2026-06-23
+# master     : facebook/master/ewa.csv  (updated)
+# enriched   : facebook/inputs/fb-ads-ewa-2026-06-23-1300_enriched.csv
+# bucket     : video-ads
+# public_base: https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com
+# dry_run    : False
+#
+# counts     : {'uploaded': 1, 'carried-forward': 9, 'image-pending': 13, 'video-missing': 7, 'no-creative': 0, 'error': 0}
+#
+image-pending    1306267591684899 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  860435503765923 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/860435503765923.jpg
+uploaded         1874206359934788 c0  (video) ← 1874206359934788.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1874206359934788.mp4
+video-missing    1874206359934788 c0  (expected file not found in facebook/videos/ewa-2026-06-23)
+video-missing    1874206359934788 c0  (expected file not found in facebook/videos/ewa-2026-06-23)
+video-missing    1874206359934788 c0  (expected file not found in facebook/videos/ewa-2026-06-23)
+video-missing    1874206359934788 c0  (expected file not found in facebook/videos/ewa-2026-06-23)
+video-missing    1874206359934788 c0  (expected file not found in facebook/videos/ewa-2026-06-23)
+video-missing    1874206359934788 c0  (expected file not found in facebook/videos/ewa-2026-06-23)
+video-missing    1874206359934788 c0  (expected file not found in facebook/videos/ewa-2026-06-23)
+carried-forward  1345302127494780 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1345302127494780.mp4
+carried-forward  1747669433310045 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1747669433310045.mp4
+image-pending    3553610338136073 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3553610338136073 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    953982024336586 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1625111295455261 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1625111295455261.jpg
+image-pending    3748419995299131 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    990463830259661 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3992486917711214 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1637342333991232 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27106274772371837 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2892999924237848 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2892999924237848.jpg
+image-pending    861736090334632 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1932943247415360 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  3378461688982686 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/3378461688982686.mp4
+carried-forward  2055734171992505 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2055734171992505.jpg
+image-pending    26154823880861146 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1527829898736588 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1527829898736588.mp4
+carried-forward  1752650406168033 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1752650406168033.mp4
+image-pending    1507908807491179 c0  (HANDOVER §8.5 — image handling not yet built)
