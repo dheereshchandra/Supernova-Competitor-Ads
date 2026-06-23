@@ -44,20 +44,33 @@ def build_services(env: dict):
 
 
 def with_backoff(fn, tries: int = 6):
-    """Retry a Sheets/Drive call on transient quota/5xx errors (exp backoff + jitter)."""
+    """Retry a Sheets/Drive call on transient errors (exp backoff + jitter).
+
+    Two transient families are retried: (1) HTTP quota/5xx (429/500/502/503/504), and
+    (2) socket/SSL/connection timeouts — e.g. `TimeoutError: The read operation timed out`,
+    which is NOT an HttpError and previously aborted the whole sync mid-upsert (dropping the
+    new-row appends). Bounded by `tries`, so a genuinely non-transient error still re-raises."""
     from googleapiclient.errors import HttpError
+    import http.client
     import random
+    import socket
+    import ssl
     last = None
     for attempt in range(tries):
         try:
             return fn()
         except HttpError as e:
             status = getattr(getattr(e, "resp", None), "status", None)
-            if status in (429, 500, 503):
+            if status in (429, 500, 502, 503, 504):
                 last = e
                 time.sleep(min(60, 2 ** attempt) + random.random())
                 continue
             raise
+        except (TimeoutError, socket.timeout, ssl.SSLError, ConnectionError,
+                http.client.HTTPException, socket.gaierror, OSError) as e:
+            last = e
+            time.sleep(min(60, 2 ** attempt) + random.random())
+            continue
     raise last
 
 
