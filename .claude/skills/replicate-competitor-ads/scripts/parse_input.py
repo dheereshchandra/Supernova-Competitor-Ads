@@ -35,6 +35,13 @@ def pick_col(headers, keys):
                 return i
     return None
 
+# A brief that is just one of these (any trailing punctuation) means "replicate
+# faithfully, no override" — no concept changes to apply.
+FAITHFUL_BRIEFS = ("", "same", "ditto", "exact replication", "exact", "replication")
+
+def is_faithful(brief):
+    return brief.strip().rstrip(".!").strip().lower() in FAITHFUL_BRIEFS
+
 def normalize(rows_as_dicts):
     out = []
     for n, d in enumerate(rows_as_dicts, start=1):
@@ -44,7 +51,7 @@ def normalize(rows_as_dicts):
             "name": (d.get("name") or f"ad-{n}").strip(),
             "language": (d.get("language") or "").strip(),
             "brief_raw": brief,
-            "faithful": brief.lower() in ("", "same", "ditto"),
+            "faithful": is_faithful(brief),
             "ref_link": (d.get("ref_link") or "").strip(),
         })
     return out

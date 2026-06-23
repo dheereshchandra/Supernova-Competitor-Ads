@@ -5,7 +5,7 @@ description: >-
   language) and deliver them as one Google Doc per ad plus a filled-in CSV. Use when given a
   shortlist (a sheet/CSV or a list) of competitor ad reference links, each with a target
   language and a concept brief ("Same"/"Ditto" = faithful replication; anything else = apply
-  the brief). NOT part of the Ad Studio pipeline — this is a standalone, on-demand workflow.
+  the brief). By default it generates via the repo's own Creative-Studio pipeline (Gemini), staying in sync with Ad Studio (a Claude engine is optional). Runs standalone/on-demand (no Ad Studio webapp queue involved).
 ---
 
 # Replicate competitor ads → Supernova scripts (Google Docs + CSV)
@@ -29,17 +29,18 @@ A sheet (`.xlsx`/`.csv`) or JSON list. Columns are auto-detected by header keywo
 
 ## Prerequisites
 - Run everything from the **repo root** with `python3.13` (not system `python3`).
-- Packages: `openpyxl google-genai yt-dlp python-docx`(optional) + `ffmpeg` on PATH. Repo `.env` must have `GEMINI_API_KEY` (used only to transcribe sources that aren't already in the repo; Flash only).
+- Packages: `openpyxl google-genai yt-dlp` + `ffmpeg` on PATH. `GEMINI_API_KEY` + R2 keys in `.env` (root for the Claude/transcribe path; `facebook/.env` for the repo engine's step4 scripts). The repo engine uses Gemini **Pro** for decompose/rewrite (the sanctioned Creative-Studio exception); transcription is Flash.
 - The **claude.ai Google Drive integration** must be connected (for creating the Docs). It can create + read + search, but has **no update/delete** — re-running makes *new* Docs; it can't edit old ones.
 
-## ⚠️ Single source of truth — do not duplicate prompts
-- **Generation prompts** (write / verify / revise) live **only** in
-  `.claude/skills/replicate-competitor-ads/scripts/generate_workflow.js`.
-- **Supernova brand rules** (voice, claims, HARD LINES, per-language localization) live **only** in
-  `facebook/generation/supernova_{creative_context,direct_rewrite,brand_safety,translation_rules,casting}.md`.
-  The workflow's agents **read** these at runtime.
-- **Doc layout** lives only in `scripts/build_docs.py`; **CSV column mapping** only in `scripts/build_csv.py`.
-- This SKILL.md only *orchestrates* — it never restates a prompt or a brand rule. **To change behaviour, edit the one canonical file** above; everything downstream picks it up automatically.
+## Two generation engines
+- **`repo` (DEFAULT) — the real repo / Ad-Studio Creative-Studio pipeline (Gemini).** `scripts/generate_repo_pipeline.py` *only orchestrates*; it shells out to the SAME scripts Ad Studio's `webapp/backend/jobs.py` calls — `facebook/scripts/step4_decompose*.py` (Gemini decompose of the video), `step4_rewrite.py` (Gemini 3.1 Pro rewrite), `step4_qc.py` (Gemini Flash audit). **There is NO copy of the generation logic in the skill** — change `facebook/scripts/step4_*` or `facebook/generation/supernova_*.md` and this skill picks it up automatically. Output is native-script + romanized in the target language (no English master). Cost ≈ $0.05/ad.
+- **`claude` (ALTERNATE) — a Claude Workflow** (write → adversarial-verify → revise) defined ONLY in `scripts/generate_workflow.js`, grounded in the same `facebook/generation/supernova_*.md` brand rules (its agents read them at runtime). Output is an English master + romanized target language. Use for fast/cheap drafts or model comparison.
+
+## ⚠️ Single source of truth
+- **Generation** = the repo `facebook/scripts/step4_*` pipeline (engine `repo`) OR `scripts/generate_workflow.js` (engine `claude`) — never both copies of a prompt; each lives in exactly one file.
+- **Brand rules** (voice, claims, HARD LINES, localization) live **only** in `facebook/generation/supernova_{creative_context,direct_rewrite,brand_safety,translation_rules,casting}.md` — read at runtime by BOTH engines.
+- **Doc layout** only in `scripts/build_docs.py` (renders English and/or native + romanized); **CSV mapping** only in `scripts/build_csv.py`.
+- This SKILL.md only *orchestrates* — it never restates a prompt or a brand rule. **To change behaviour, edit the one canonical file**; everything downstream picks it up.
 
 ## Pipeline — run these in order
 Let `ROOT` = repo root, `WORK` = `$ROOT/.context/replicate/<batch-name>` (gitignored scratch),
@@ -58,14 +59,27 @@ python3.13 "$S/resolve_sources.py" --shortlist "$WORK/shortlist.json" --root "$R
 ```
 If it lists any **UNRESOLVED** ads, ask the operator for an `.mp4` or transcript for those, drop the file in `$WORK/videos/`, and re-run (cached transcripts are reused).
 
-**3. Generate the scripts** with the **Workflow tool** (write → adversarial-verify → revise).
-Read `$WORK/ads.json`, then invoke:
+**3. Generate the scripts** → `$WORK/generated.json`. Pick the engine:
+
+**3a. `repo` engine (DEFAULT — the real Gemini pipeline).** Needs the ads to be rows in
+`facebook/master/<competitor>.csv` with an `r2_public_url`; pass that competitor slug:
+```
+python3.13 "$S/generate_repo_pipeline.py" --shortlist "$WORK/shortlist.json" --root "$ROOT" \
+    --competitor <slug> --workdir "$WORK"
+```
+It downloads the videos, decomposes them (Gemini), submits the Gemini 3.1-Pro rewrite per target
+language and polls the Batch API (blocks up to `--max-poll-min`, default 45), runs the Flash QC, and
+writes `$WORK/generated.json`. (The Gemini Batch API occasionally drops a malformed-JSON key — the
+script auto-resubmits dropped keys once. If any remain `MISSING`, re-run the same command; finished
+work is skipped.) Long-running, so prefer running it as a background Bash command.
+
+**3b. `claude` engine (ALTERNATE — fast Claude drafts / model comparison).** Read `$WORK/ads.json`, then:
 ```
 Workflow({ scriptPath: "$S/generate_workflow.js",
            args: { root: "$ROOT", sourceFile: "$WORK/source_master.json", ads: <contents of ads.json> } })
 ```
-When it finishes, the task-output file's `result` key is the array `[{n, script, verdict, revised}, …]` —
-save that array to `$WORK/generated.json` (e.g. `python3.13 -c "import json;d=json.load(open('<output-file>'));json.dump(d['result'],open('$WORK/generated.json','w'),ensure_ascii=False,indent=2)"`).
+When it finishes, the task-output file's `result` key is `[{n, script, verdict, revised}, …]` — save that
+array to `$WORK/generated.json` (`python3.13 -c "import json;d=json.load(open('<output-file>'));json.dump(d['result'],open('$WORK/generated.json','w'),ensure_ascii=False,indent=2)"`).
 
 **4. Final safety sweep** (safe auto-fixes + flags):
 ```
