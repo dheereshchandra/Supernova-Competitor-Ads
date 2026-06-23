@@ -87,7 +87,7 @@
 
 | language | ads | winners | win ratio |
 |---|--:|--:|--:|
-| English | 38 | 20 | 0.526 |
+| English | 40 | 20 | 0.5 |
 | Arabic, Spanish | 1 | 1 | 1.0 |
 | Spanish | 1 | 1 | 1.0 |
 
@@ -96,9 +96,9 @@
 | format | ads | winners | win ratio |
 |---|--:|--:|--:|
 | app-screencast | 22 | 15 | 0.682 |
-| other | 6 | 4 | 0.667 |
+| other | 7 | 4 | 0.571 |
 | listicle-montage | 6 | 0 | 0.0 |
-| skit-narrative | 3 | 2 | 0.667 |
+| skit-narrative | 4 | 2 | 0.5 |
 | text-on-screen-only | 2 | 0 | 0.0 |
 | split-screen | 1 | 1 | 1.0 |
 
@@ -108,11 +108,10 @@ How much of the output is fresh scripts vs. replays of a script that already wor
 
 | replication | ads | winners | win ratio |
 |---|--:|--:|--:|
+| unique | 18 | 16 | 0.889 |
 | visual_variant | 17 | 1 | 0.059 |
-| unique | 12 | 12 | 1.0 |
-| original | 5 | 5 | 1.0 |
-| exact_replica | 5 | 3 | 0.6 |
-| translation_replica | 1 | 1 | 1.0 |
+| reworded_replica | 4 | 2 | 0.5 |
+| original | 3 | 3 | 1.0 |
 
 ## Biggest rank movers
 
