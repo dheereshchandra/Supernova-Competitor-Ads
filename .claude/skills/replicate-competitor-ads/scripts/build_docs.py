@@ -64,8 +64,16 @@ def main():
             L.append(""); L.append("Scenes at a glance:")
             for g in glance:
                 L.append(f"   • {g}")
-        L += ["", BAR, "FULL SCRIPT — ENGLISH", BAR, continuous(sc, "english")]
-        L += ["", BAR, f"FULL SCRIPT — {lang.upper()} (ROMANIZED)", BAR, continuous(sc, "romanized"), ""]
+        # Render whichever script blocks exist: English master (Claude / English path) and/or
+        # native script (repo direct seed→target path), always the romanized target language.
+        eng, nat, rom = continuous(sc, "english"), continuous(sc, "native"), continuous(sc, "romanized")
+        if eng:
+            L += ["", BAR, "FULL SCRIPT — ENGLISH", BAR, eng]
+        if nat:
+            L += ["", BAR, f"FULL SCRIPT — {lang.upper()} (NATIVE SCRIPT)", BAR, nat]
+        if rom:
+            L += ["", BAR, f"FULL SCRIPT — {lang.upper()} (ROMANIZED)", BAR, rom]
+        L += [""]
         body = "\n".join(L)
         fn = f"{n:02d}-{lang.lower()}-{slug(name)}.txt"
         (out / fn).write_text(body, encoding="utf-8")
