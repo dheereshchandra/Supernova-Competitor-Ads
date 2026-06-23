@@ -27,8 +27,8 @@ Per scrape-date live volume (history.csv — one row per ad per scrape).
 | bucket | ads | winners | win ratio |
 |---|--:|--:|--:|
 | ai_plus_human | 67 | 30 | 0.448 |
-| ai_plus_ai | 51 | 23 | 0.451 |
-| other | 6 | 0 | 0.0 |
+| ai_plus_ai | 54 | 23 | 0.426 |
+| other | 3 | 0 | 0.0 |
 | split_screen | 67 | 30 | 0.448 |
 | TOTAL | 124 | 53 | 0.427 |
 
@@ -39,13 +39,13 @@ Per scrape-date live volume (history.csv — one row per ad per scrape).
 | format | ads | winners | win ratio |
 |---|--:|--:|--:|
 | split-screen | 67 | 30 | 0.448 |
-| app-demo | 51 | 23 | 0.451 |
+| app-demo | 54 | 23 | 0.426 |
 
 ## Message angle (Axis 3)
 
 | message_angle | ads | winners | win ratio |
 |---|--:|--:|--:|
-| speak-correctly | 87 | 41 | 0.471 |
+| speak-correctly | 90 | 41 | 0.456 |
 | understand-cant-speak | 25 | 8 | 0.32 |
 | habit-aspiration | 5 | 3 | 0.6 |
 | fear-shame | 1 | 1 | 1.0 |
@@ -56,10 +56,10 @@ Per scrape-date live volume (history.csv — one row per ad per scrape).
 
 | production class | ads | win ratio |
 |---|--:|--:|
-| AI-heavy (ai_plus_ai + ai_plus_human) | 118 | 0.449 |
+| AI-heavy (ai_plus_ai + ai_plus_human) | 121 | 0.438 |
 | human_only | 0 | 0.0 |
 | paper_translation | 0 | 0.0 |
-| other | 6 | 0.0 |
+| other | 3 | 0.0 |
 
 ## Q9 New scripts / formats per week
 
@@ -79,8 +79,8 @@ Days from a script group's original to each replica (median per type).
 |---|--:|--:|--:|--:|--:|
 | exact_replica | 58 | 11.5 | 10.9 | 0 | 26 |
 | reworded_replica | 10 | 19.5 | 15.4 | 0 | 26 |
-| translation_replica | 14 | 17.0 | 12.4 | 0 | 26 |
-| ALL | 82 | 15.0 | 11.7 | 0 | 26 |
+| translation_replica | 17 | 20 | 14.5 | 0 | 26 |
+| ALL | 85 | 15 | 12.1 | 0 | 26 |
 
 *Fastest replicated group: `loora-g0000` — replica `1399715815299179` (exact_replica) appeared 0 day(s) after the original `1286341193458429`.*
 
@@ -89,7 +89,7 @@ Days from a script group's original to each replica (median per type).
 | script_group_id | group size | ads | winners | win ratio | replication_types |
 |---|--:|--:|--:|--:|---|
 | loora-g0000 | 18 | 18 | 5 | 0.278 | exact_replica;original;reworded_replica |
-| loora-g0001 | 15 | 15 | 7 | 0.467 | exact_replica;original;translation_replica |
+| loora-g0001 | 18 | 18 | 7 | 0.389 | exact_replica;original;translation_replica |
 | loora-g0002 | 13 | 13 | 3 | 0.231 | exact_replica;original;reworded_replica |
 | loora-g0003 | 11 | 11 | 6 | 0.545 | exact_replica;original |
 | loora-g0004 | 5 | 5 | 3 | 0.6 | exact_replica;original;reworded_replica |

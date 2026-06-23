@@ -93,7 +93,7 @@
 
 | language | ads | winners | win ratio |
 |---|--:|--:|--:|
-| English | 109 | 50 | 0.459 |
+| English | 112 | 50 | 0.446 |
 | Spanish | 5 | 2 | 0.4 |
 | French | 3 | 0 | 0.0 |
 | Japanese | 1 | 1 | 1.0 |
@@ -103,7 +103,7 @@
 | format | ads | winners | win ratio |
 |---|--:|--:|--:|
 | split-screen | 67 | 30 | 0.448 |
-| talking-head | 51 | 23 | 0.451 |
+| talking-head | 54 | 23 | 0.426 |
 
 ## Script replication
 
@@ -114,7 +114,7 @@ How much of the output is fresh scripts vs. replays of a script that already wor
 | exact_replica | 58 | 25 | 0.431 |
 | original | 18 | 11 | 0.611 |
 | unique | 18 | 9 | 0.5 |
-| translation_replica | 14 | 5 | 0.357 |
+| translation_replica | 17 | 5 | 0.294 |
 | reworded_replica | 10 | 3 | 0.3 |
 
 ## Biggest rank movers
