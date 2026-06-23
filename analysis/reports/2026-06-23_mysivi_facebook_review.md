@@ -113,28 +113,28 @@
 
 | language | ads | winners | win ratio |
 |---|--:|--:|--:|
-| Hindi | 418 | 154 | 0.368 |
+| Hindi | 419 | 155 | 0.37 |
 | Tamil | 385 | 124 | 0.322 |
-| Marathi | 360 | 191 | 0.531 |
-| Telugu | 358 | 113 | 0.316 |
+| Telugu | 370 | 113 | 0.305 |
+| Marathi | 365 | 192 | 0.526 |
 | Malayalam | 224 | 81 | 0.362 |
-| Kannada | 206 | 73 | 0.354 |
+| Kannada | 208 | 73 | 0.351 |
 | Gujarati | 182 | 51 | 0.28 |
 | Bengali | 132 | 29 | 0.22 |
 | Punjabi | 61 | 0 | 0.0 |
-| English | 38 | 23 | 0.605 |
+| English | 45 | 23 | 0.511 |
 
 ## Format mix
 
 | format | ads | winners | win ratio |
 |---|--:|--:|--:|
-| split-screen | 1310 | 479 | 0.366 |
-| skit-narrative | 682 | 231 | 0.339 |
+| split-screen | 1327 | 481 | 0.362 |
+| skit-narrative | 685 | 231 | 0.337 |
 | app-screencast | 150 | 49 | 0.327 |
 | talking-head | 134 | 44 | 0.328 |
 | pen-and-paper | 61 | 25 | 0.41 |
+| text-on-screen-only | 17 | 4 | 0.235 |
 | other | 13 | 6 | 0.462 |
-| text-on-screen-only | 10 | 4 | 0.4 |
 | listicle-montage | 4 | 1 | 0.25 |
 
 ## Script replication
@@ -143,11 +143,11 @@ How much of the output is fresh scripts vs. replays of a script that already wor
 
 | replication | ads | winners | win ratio |
 |---|--:|--:|--:|
-| translation_replica | 956 | 427 | 0.447 |
-| exact_replica | 677 | 191 | 0.282 |
-| original | 274 | 97 | 0.354 |
-| unique | 270 | 46 | 0.17 |
-| reworded_replica | 100 | 37 | 0.37 |
+| translation_replica | 960 | 430 | 0.448 |
+| exact_replica | 687 | 190 | 0.277 |
+| original | 277 | 96 | 0.347 |
+| unique | 274 | 46 | 0.168 |
+| reworded_replica | 106 | 38 | 0.358 |
 | visual_variant | 61 | 27 | 0.443 |
 | character_variant | 26 | 14 | 0.538 |
 
