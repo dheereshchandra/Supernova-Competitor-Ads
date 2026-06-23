@@ -35,6 +35,7 @@ type Card = {
   castOpen: boolean
   provider: string
   voicePick: Record<string, string> // character -> voice_id
+  genderPick: Record<string, string> // character -> 'male' | 'female' (filters the voice list)
   speed: string
   emotion: string
   ttsVoiceModel: string
@@ -51,6 +52,7 @@ const blankCard = (): Card => ({
   castOpen: false,
   provider: 'cartesia',
   voicePick: {},
+  genderPick: {},
   speed: 'normal',
   emotion: '',
   ttsVoiceModel: 'sonic-3',
@@ -196,23 +198,46 @@ function CopyButton({ text, disabled }: { text: string; disabled?: boolean }) {
   )
 }
 
-/** Per-character voice casting: pick a provider, then a voice for each character.
- *  Voices are fetched per (provider, language). Cartesia covers a subset of languages
- *  (its model errors on unsupported ones); ElevenLabs is the multilingual fallback. */
+/** Normalize a provider gender field to 'male' | 'female' | '' — check female FIRST ('female'
+ *  contains the substring 'male'). Cartesia uses masculine/feminine; ElevenLabs male/female/neutral. */
+function voiceGender(g?: string): 'male' | 'female' | '' {
+  const s = (g || '').toLowerCase()
+  if (s.includes('female') || s.includes('feminine') || s.includes('woman')) return 'female'
+  if (s.includes('male') || s.includes('masculine') || s.includes('man')) return 'male'
+  return ''
+}
+const FEMALE_HINT =
+  /\b(woman|women|girl|lady|mother|mom|mum|aunt|aunty|sister|daughter|wife|grandmother|granny|miss|mrs|ms|she|her|devi|amma|akka|didi|maa|bride)\b/i
+const MALE_HINT =
+  /\b(man|men|boy|father|dad|uncle|brother|son|husband|grandfather|grandpa|mr|sir|he|him|anna|bhai|raja|groom)\b/i
+/** Best-guess gender for a character name/role; defaults to male when unknown (user can flip it). */
+function guessGender(name: string): 'male' | 'female' {
+  if (FEMALE_HINT.test(name)) return 'female'
+  if (MALE_HINT.test(name)) return 'male'
+  return 'male'
+}
+
+/** Per-character voice casting: pick a provider, then a gender + voice for each character.
+ *  Voices are fetched per (provider, language) and the list is filtered to the chosen gender.
+ *  Cartesia covers a subset of languages; ElevenLabs is the multilingual fallback. */
 function VoiceCast({
   language,
   characters,
   provider,
   picks,
+  genders,
   onProviderChange,
   onPick,
+  onGender,
 }: {
   language: string
   characters: string[]
   provider: string
   picks: Record<string, string>
+  genders: Record<string, string>
   onProviderChange: (p: string) => void
   onPick: (character: string, voiceId: string) => void
+  onGender: (character: string, gender: string) => void
 }) {
   const [voices, setVoices] = useState<ProviderVoice[]>([])
   const [err, setErr] = useState('')
@@ -259,26 +284,43 @@ function VoiceCast({
         </div>
       )}
       {characters.length ? (
-        characters.map((ch) => (
-          <div key={ch} className="flex items-center gap-2">
-            <span className="w-24 shrink-0 truncate text-xs text-zinc-300" title={ch}>
-              {ch}
-            </span>
-            <select
-              className={`${SELECT} min-w-0 flex-1`}
-              value={picks[ch] || ''}
-              onChange={(e) => onPick(ch, e.target.value)}
-            >
-              <option value="">— default (narrator) —</option>
-              {shown.map((v) => (
-                <option key={v.voice_id} value={v.voice_id}>
-                  {v.name || v.voice_id}
-                  {v.gender ? ` (${v.gender})` : ''}
-                </option>
-              ))}
-            </select>
-          </div>
-        ))
+        characters.map((ch) => {
+          const g = genders[ch] || guessGender(ch)
+          // show voices matching the chosen gender; keep unknown/neutral-gender voices visible
+          const opts = shown.filter((v) => {
+            const vg = voiceGender(v.gender)
+            return !vg || vg === g
+          })
+          return (
+            <div key={ch} className="flex items-center gap-2">
+              <span className="w-24 shrink-0 truncate text-xs text-zinc-300" title={ch}>
+                {ch}
+              </span>
+              <select
+                className={`${SELECT} shrink-0`}
+                value={g}
+                onChange={(e) => onGender(ch, e.target.value)}
+                title="Character gender — filters the voice list"
+              >
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              <select
+                className={`${SELECT} min-w-0 flex-1`}
+                value={picks[ch] || ''}
+                onChange={(e) => onPick(ch, e.target.value)}
+              >
+                <option value="">— default (narrator) —</option>
+                {opts.map((v) => (
+                  <option key={v.voice_id} value={v.voice_id}>
+                    {v.name || v.voice_id}
+                    {v.gender ? ` (${v.gender})` : ''}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )
+        })
       ) : (
         <div className="text-[11px] text-zinc-500">
           No named characters in this script — the whole block uses one voice.
@@ -744,9 +786,16 @@ export default function Translations() {
                             characters={parseChars(c.roman)}
                             provider={c.provider}
                             picks={c.voicePick}
+                            genders={c.genderPick}
                             onProviderChange={(p) => patch(lang, { provider: p, voicePick: {} })}
                             onPick={(ch, vid) =>
                               patch(lang, { voicePick: { ...c.voicePick, [ch]: vid } })
+                            }
+                            onGender={(ch, g) =>
+                              patch(lang, {
+                                genderPick: { ...c.genderPick, [ch]: g },
+                                voicePick: { ...c.voicePick, [ch]: '' }, // clear stale opposite-gender pick
+                              })
                             }
                           />
                         )}
