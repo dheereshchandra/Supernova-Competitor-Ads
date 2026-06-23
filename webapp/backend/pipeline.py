@@ -20,7 +20,6 @@ import re
 from . import db
 from .config import REPO, inr, settings
 from .data import catalog
-from .notify import notify
 
 PER_VIDEO_USD = 0.012  # Gemini Flash transcribe+tag, ~$0.012/new video (run_batch.sh)
 
@@ -144,6 +143,12 @@ class PipelineRunner:
         from .jobs import _set
         _set(self.id, **f)
 
+    def _fail(self, kind: str, error: str):
+        """Route a run failure through the central auto-retry policy (re-queue
+        with a cooldown if attempts remain, else fail + escalate)."""
+        from .jobs import record_failure
+        record_failure(self.job, kind=kind, error=error, tail=self.tail)
+
     async def _run(self, step, argv, cwd=REPO, timeout=7200):
         proc = await asyncio.create_subprocess_exec(
             *argv, cwd=cwd, stdout=asyncio.subprocess.PIPE,
@@ -250,19 +255,12 @@ class PipelineRunner:
             argv.append("--dry-run")
         rc = await self._run("scrape", argv, timeout=7200)
         if rc == 10:
-            self._set(status="failed", finished_at=_now(),
-                      error="Scrape was blocked (0 ads / login wall / throttle). "
-                            "Don't retry immediately — try again later.",
-                      stderr_tail="\n".join(self.tail[-50:]))
-            notify("Ad Studio: data update blocked",
-                   f"{self.slug} ({self.pipeline}) — scrape blocked (0 ads/throttle).")
+            self._fail("blocked",
+                       "Scrape was blocked (0 ads / login wall / throttle). "
+                       "Don't retry immediately.")
             return
         if rc != 0:
-            self._set(status="failed", finished_at=_now(),
-                      error=f"Scrape/analysis failed (exit {rc}) — see the log.",
-                      stderr_tail="\n".join(self.tail[-50:]))
-            notify("Ad Studio: data update failed",
-                   f"{self.slug} ({self.pipeline}) — scrape/analysis exit {rc}.")
+            self._fail("transient", f"Scrape/analysis failed (exit {rc}) — see the log.")
             return
 
         # commit the free ranking update now (goes live + keeps the tree clean)
@@ -299,19 +297,23 @@ class PipelineRunner:
         confirmed the exact cost shown post-scrape."""
         from .jobs import _now
         self._set(status="running", current_step="enrich")
-        self._ev("enrich", "▶ Enriching videos (transcripts & tags)")
+        # Size the timeout to the real backlog (~9s/video over the ~6s observed),
+        # floored at 2h for small runs and capped at 6h. A flat 2h killed big
+        # competitors mid-run (english-seekho: 1,140 videos, died at ~94%).
+        # Enrichment resumes incrementally, so even a capped-out giant finishes
+        # on the next attempt (the 'timeout' class auto-retries).
+        backlog = count_unenriched(self.pipeline, self.slug)
+        timeout = max(7200, min(21600, backlog * 9))
+        self._ev("enrich", f"▶ Enriching {backlog} videos (transcripts & tags) "
+                           f"— up to {timeout // 60} min")
         argv = ["bash", "analysis/scripts/run_pipeline.sh",
                 "--competitor", self.slug, "--pipeline", self.pipeline,
                 "--from-stage", "5", "--through-stage", "5"]
         if self._dryrun():
             argv.append("--dry-run")
-        rc = await self._run("enrich", argv, timeout=7200)
+        rc = await self._run("enrich", argv, timeout=timeout)
         if rc != 0:
-            self._set(status="failed", finished_at=_now(),
-                      error=f"Enrichment failed (exit {rc}) — see the log.",
-                      stderr_tail="\n".join(self.tail[-50:]))
-            notify("Ad Studio: enrichment failed",
-                   f"{self.slug} ({self.pipeline}) — exit {rc}.")
+            self._fail("transient", f"Enrichment failed (exit {rc}) — see the log.")
             return
         self._set(current_step="commit")
         self._ev("commit", "▶ Saving the enriched data")

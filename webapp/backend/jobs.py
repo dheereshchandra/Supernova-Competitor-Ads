@@ -599,8 +599,11 @@ class JobRunner:
                          _html_url(self.slug, self.ad_id))
 
 
-def _now() -> str:
-    return datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M:%S")
+def _now(plus_seconds: int = 0) -> str:
+    t = datetime.datetime.now(datetime.UTC)
+    if plus_seconds:
+        t += datetime.timedelta(seconds=plus_seconds)
+    return t.strftime("%Y-%m-%d %H:%M:%S")
 
 
 def _html_url(slug: str, ad_id: str) -> str:
@@ -740,6 +743,73 @@ def _in_blackout() -> bool:
         return False
 
 
+# ---- failure classification & auto-retry policy (data-update runs) --------
+# kind -> (max_total_attempts, cooldown_seconds). A failed attempt is auto-
+# retried only while attempt_count < max_total_attempts AND the kind is
+# retryable. 'blocked' (scrape 0-ads / login wall / throttle) waits HOURS on
+# purpose: the FB scraper shares one static IP, so retrying soon just deepens
+# the throttle — the long cooldown lets the IP recover (the real fix is a
+# rotating proxy). 'timeout' is cheap to retry because enrichment resumes
+# incrementally (already-transcribed videos are skipped), so a giant competitor
+# that caps out finishes on the next attempt. 'permanent' never auto-retries.
+RETRY_POLICY = {
+    "blocked":   (2, 6 * 3600),   # 1 auto-retry, +6h
+    "timeout":   (3, 10 * 60),    # 2 auto-retries, +10m
+    "transient": (2, 10 * 60),    # 1 auto-retry, +10m
+    "permanent": (1, 0),          # no auto-retry
+}
+
+
+def _fmt_eta(seconds: int) -> str:
+    if seconds >= 3600:
+        h = seconds / 3600
+        return f"{h:.0f}h" if h == int(h) else f"{h:.1f}h"
+    return f"{max(1, round(seconds / 60))} min"
+
+
+def record_failure(job: dict, *, kind: str, error: str,
+                   tail: list[str] | None = None) -> None:
+    """Central failure handler for pipeline (data-update) runs — applies the
+    auto-retry policy. If attempts remain and the kind is retryable, the job is
+    re-queued with a cooldown (next_retry_at); the FIFO worker skips it until
+    then and keeps current_step so enrichment resumes where it stopped. Cooled-
+    down jobs do NOT block the queue — the worker's next_retry_at gate lets other
+    runs go ahead. Otherwise the job lands in 'failed' and an escalation alert
+    fires. The manual Retry button always works and resets the budget. A heads-up
+    Slack alert fires on the first failure and again on final escalation (not on
+    the quiet middle retries). Never raises — a broken handler must not wedge the
+    worker."""
+    try:
+        job_id = job["id"]
+        slug = job.get("competitor") or job.get("slug") or "?"
+        pipe = job.get("pipeline") or "?"
+        max_attempts, cooldown = RETRY_POLICY.get(kind, RETRY_POLICY["transient"])
+        row = db.query_one("SELECT attempt_count FROM jobs WHERE id=?", (job_id,))
+        attempt = ((row["attempt_count"] if row else 0) or 0) + 1
+        tail_s = "\n".join((tail or [])[-50:]) or None
+        if kind != "permanent" and attempt < max_attempts:
+            eta = _fmt_eta(cooldown)
+            _set(job_id, status="queued", attempt_count=attempt, failure_kind=kind,
+                 next_retry_at=_now(cooldown), finished_at=None, stderr_tail=tail_s,
+                 error=f"{error} — auto-retry {attempt + 1}/{max_attempts} in ~{eta}")
+            _event(job_id, job.get("current_step") or "scrape",
+                   f"⚠ {error} — auto-retry {attempt + 1}/{max_attempts} scheduled in ~{eta}")
+            if attempt == 1:  # first failure only; stay quiet on the middle retries
+                notify("Ad Studio: run failed — auto-retrying",
+                       f"{slug} ({pipe}) — {error} Retry {attempt + 1}/{max_attempts} in ~{eta}.")
+        else:
+            _set(job_id, status="failed", attempt_count=attempt, failure_kind=kind,
+                 next_retry_at=None, finished_at=_now(), error=error, stderr_tail=tail_s)
+            notify("Ad Studio: run needs attention",
+                   f"{slug} ({pipe}) — failed after {attempt} attempt(s): {error} "
+                   f"Manual retry needed.")
+    except Exception:
+        try:  # last-ditch: never leave the job stuck in 'running'
+            _set(job["id"], status="failed", finished_at=_now(), error=error)
+        except Exception:
+            pass
+
+
 async def _worker():
     while True:
         job = None
@@ -747,8 +817,12 @@ async def _worker():
             if _in_blackout():
                 await asyncio.sleep(30)
                 continue
+            # skip jobs in an auto-retry cooldown (next_retry_at in the future) so
+            # they don't block ready work; same-format UTC strings compare lexically
             row = db.query_one(
-                "SELECT * FROM jobs WHERE status='queued' ORDER BY id LIMIT 1")
+                "SELECT * FROM jobs WHERE status='queued' "
+                "AND (next_retry_at IS NULL OR next_retry_at <= ?) "
+                "ORDER BY id LIMIT 1", (_now(),))
             if row is None:
                 await asyncio.sleep(2)
                 continue
@@ -761,13 +835,18 @@ async def _worker():
         except Exception as e:  # worker must never die
             try:
                 if job is not None:
-                    _set(job["id"], status="failed", error=f"runner crashed: {e}",
-                         finished_at=_now())
-                    # timeouts & unexpected crashes land here, not in the per-step
-                    # failure branches — without this, a hung run fails silently
-                    notify("Ad Studio: job crashed",
-                           f"{job.get('competitor') or job.get('slug') or '?'}"
-                           f" (job {job['id']}) — {e}")
+                    if job.get("kind") == "pipeline":
+                        # timeouts & unexpected crashes land here, not the per-step
+                        # failure branches — route through the auto-retry policy so a
+                        # hung run self-heals instead of failing silently.
+                        kind = "timeout" if "timed out" in str(e) else "transient"
+                        record_failure(job, kind=kind, error=f"runner crashed: {e}")
+                    else:
+                        _set(job["id"], status="failed", error=f"runner crashed: {e}",
+                             finished_at=_now())
+                        notify("Ad Studio: job crashed",
+                               f"{job.get('competitor') or job.get('slug') or '?'}"
+                               f" (job {job['id']}) — {e}")
             except Exception:
                 pass
             await asyncio.sleep(5)
