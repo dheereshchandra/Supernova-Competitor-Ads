@@ -67,7 +67,8 @@ def _job_payload(r: dict, queue_ids: list[int]) -> dict:
         "id", "kind", "pipeline", "competitor", "ad_id", "status", "current_step",
         "requested_by", "created_at", "started_at", "finished_at",
         "cost_estimate_usd", "error", "stderr_tail", "rewrite_gdoc_url",
-        "analysis_gdoc_url", "rewrite_html_url", "needs_push")},
+        "analysis_gdoc_url", "rewrite_html_url", "needs_push",
+        "next_retry_at", "attempt_count", "failure_kind")},
         "steps": steps,
         "step_index": keys.index(cur) if cur in keys else None,
         "queue_position": queue_ids.index(r["id"]) + 1 if r["id"] in queue_ids else None,
@@ -507,7 +508,9 @@ def retry_job(job_id: int, user: str = Depends(require_user)):
         raise HTTPException(404, "Job not found")
     if r["status"] not in ("failed", "cancelled"):
         raise HTTPException(409, f"Job is {r['status']} — nothing to retry")
-    db.execute("UPDATE jobs SET status='queued', error=NULL, finished_at=NULL WHERE id=?",
+    # a human override gets a fresh auto-retry budget and runs immediately
+    db.execute("UPDATE jobs SET status='queued', error=NULL, finished_at=NULL, "
+               "attempt_count=0, next_retry_at=NULL, failure_kind=NULL WHERE id=?",
                (job_id,))
     _log(r["pipeline"], r["competitor"], r["ad_id"], user, "retry", f"job #{job_id}")
     return {"ok": True}

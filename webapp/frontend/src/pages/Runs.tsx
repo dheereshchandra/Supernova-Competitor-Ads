@@ -42,6 +42,20 @@ export default function Runs() {
   )
 }
 
+// "now" is encapsulated in a helper so it isn't an impure call in component render
+function msUntil(d: Date | null): number {
+  return d ? d.getTime() - Date.now() : -1
+}
+
+function retryRel(d: Date): string {
+  const ms = msUntil(d)
+  if (ms <= 0) return 'any moment now'
+  const min = Math.round(ms / 60000)
+  if (min < 60) return `in ~${Math.max(1, min)} min`
+  const h = ms / 3600000
+  return `in ~${h < 2 ? h.toFixed(1) : Math.round(h)}h`
+}
+
 function RunCard({ job, onChange }: { job: Job; onChange: () => void }) {
   const [busy, setBusy] = useState(false)
   const b = JOB_STATUS_MAP[job.status] ?? { label: job.status, className: '' }
@@ -49,6 +63,11 @@ function RunCard({ job, onChange }: { job: Job; onChange: () => void }) {
   const idx = job.step_index ?? (job.status === 'done' ? total : 0)
   const active = job.status === 'queued' || job.status === 'running'
   const curLabel = job.steps.find((s) => s.key === job.current_step)?.label
+  // next_retry_at is "YYYY-MM-DD HH:MM:SS" UTC; a future value = waiting to auto-retry
+  const retryAt = job.next_retry_at
+    ? new Date(job.next_retry_at.replace(' ', 'T') + 'Z')
+    : null
+  const awaitingRetry = job.status === 'queued' && msUntil(retryAt) > 0
 
   const act = async (fn: () => Promise<unknown>) => {
     setBusy(true)
@@ -83,7 +102,7 @@ function RunCard({ job, onChange }: { job: Job; onChange: () => void }) {
             <span className={`inline-flex rounded-full px-2 py-0.5 text-[11px] font-semibold ${b.className}`}>
               {b.label}
             </span>
-            {job.status === 'queued' && job.queue_position != null && (
+            {job.status === 'queued' && !awaitingRetry && job.queue_position != null && (
               <span className="text-xs text-zinc-500">#{job.queue_position} in line</span>
             )}
             <span className="text-xs text-zinc-600">
@@ -99,7 +118,14 @@ function RunCard({ job, onChange }: { job: Job; onChange: () => void }) {
             )}
           </div>
 
-          {active && (
+          {awaitingRetry && (
+            <div className="mt-2 rounded-lg border border-amber-400/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-100">
+              ↻ Auto-retry scheduled — {retryRel(retryAt!)}
+              {job.error && <div className="mt-0.5 text-amber-200/70">{job.error}</div>}
+            </div>
+          )}
+
+          {active && !awaitingRetry && (
             <div className="mt-2">
               <div className="mb-1 flex items-center gap-2 text-xs text-zinc-400">
                 {job.status === 'running' && <Spinner className="h-3 w-3" />}

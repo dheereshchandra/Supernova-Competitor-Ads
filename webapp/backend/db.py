@@ -41,7 +41,10 @@ CREATE TABLE IF NOT EXISTS jobs (
   qc_retried    INTEGER NOT NULL DEFAULT 0,
   qc_block      TEXT,
   direct_retried INTEGER NOT NULL DEFAULT 0,
-  dropped_languages TEXT
+  dropped_languages TEXT,
+  attempt_count INTEGER NOT NULL DEFAULT 0,
+  next_retry_at TEXT,
+  failure_kind  TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_jobs_ad ON jobs (pipeline, competitor, ad_id);
 CREATE INDEX IF NOT EXISTS idx_jobs_status ON jobs (status);
@@ -137,6 +140,16 @@ def conn() -> sqlite3.Connection:
             c.commit()
         if "dropped_languages" not in cols:
             c.execute("ALTER TABLE jobs ADD COLUMN dropped_languages TEXT")
+            c.commit()
+        # run resilience: auto-retry budget + cooldown timestamp + failure class
+        if "attempt_count" not in cols:
+            c.execute("ALTER TABLE jobs ADD COLUMN attempt_count INTEGER NOT NULL DEFAULT 0")
+            c.commit()
+        if "next_retry_at" not in cols:
+            c.execute("ALTER TABLE jobs ADD COLUMN next_retry_at TEXT")
+            c.commit()
+        if "failure_kind" not in cols:
+            c.execute("ALTER TABLE jobs ADD COLUMN failure_kind TEXT")
             c.commit()
         tcols = {r[1] for r in c.execute("PRAGMA table_info(tracker)").fetchall()}
         if "localization_gdoc_urls" not in tcols:

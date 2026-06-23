@@ -304,6 +304,10 @@ export interface Job {
   analysis_gdoc_url?: string
   rewrite_html_url?: string
   queue_position?: number | null
+  /** auto-retry cooldown: when set in the future, the run is waiting to retry */
+  next_retry_at?: string | null
+  attempt_count?: number
+  failure_kind?: 'blocked' | 'timeout' | 'transient' | 'permanent' | null
   /** pipeline runs paused after the free scrape: exact enrichment count + cost */
   enrich?: { videos: number; cost: number; summary: string } | null
 }
