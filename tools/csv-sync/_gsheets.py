@@ -22,6 +22,26 @@ _REPO = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(_REPO / "facebook" / "scripts"))
 import _gdrive  # noqa: E402
 
+# Silence the benign google-auth "Regional Access Boundary" background-thread noise: a
+# best-effort RAB lookup that logs a scary "HTTP request failed after retries … FAILED_PRECONDITION"
+# line on every call but does NOT affect auth or the Sheets write (the sync still exits 0). We drop
+# ONLY that message (by substring), so real auth errors are still logged.
+import logging as _logging
+
+
+class _DropRAB(_logging.Filter):
+    def filter(self, record):  # noqa: A003
+        try:
+            return "Regional Access Boundary" not in record.getMessage()
+        except Exception:  # noqa: BLE001
+            return True
+
+
+for _n in ("google.oauth2._client", "google.oauth2._client_async",
+           "google.auth.external_account", "google.auth.impersonated_credentials",
+           "google.auth.external_account_authorized_user", "google.auth._credentials_async"):
+    _logging.getLogger(_n).addFilter(_DropRAB())
+
 SHEETS_SCOPES = ["https://www.googleapis.com/auth/drive",
                  "https://www.googleapis.com/auth/spreadsheets"]
 SPREADSHEET_MIME = "application/vnd.google-apps.spreadsheet"
