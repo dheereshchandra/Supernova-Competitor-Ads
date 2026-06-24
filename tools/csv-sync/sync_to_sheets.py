@@ -473,9 +473,13 @@ def upsert_tab(sheets, ssid: str, title: str, header: list, rows: list, key_cols
     key_pos = [sheet_header.index(k) for k in key_cols if k in sheet_header]
 
     key_to_row = {}
+    duplicates = 0
     for i, r in enumerate(values[1:]):
         key = tuple((str(r[p]).strip() if p < len(r) else "") for p in key_pos)
-        key_to_row.setdefault(key, i + 2)
+        if key in key_to_row:          # a 2nd sheet row with the same key = legacy duplicate cruft
+            duplicates += 1
+        else:
+            key_to_row[key] = i + 2
 
     appended = updated = unchanged = 0
     data_updates, appends = [], []
@@ -509,7 +513,7 @@ def upsert_tab(sheets, ssid: str, title: str, header: list, rows: list, key_cols
             _gsheets.append_rows(sheets, ssid, title, appends)
         if data_updates:
             _gsheets.batch_update_values(sheets, ssid, data_updates)
-    return {"appended": appended, "updated": updated, "unchanged": unchanged}
+    return {"appended": appended, "updated": updated, "unchanged": unchanged, "duplicates": duplicates}
 
 
 def write_sidecar(ssid: str) -> None:
@@ -594,6 +598,10 @@ def main() -> int:
     print(f"\nDONE — https://docs.google.com/spreadsheets/d/{ssid}/edit")
     print(f"  Overview: {ov}")
     print(f"  Analysis: {an}")
+    for tname, res in (("Overview", ov), ("Analysis", an)):
+        if res.get("duplicates"):
+            print(f"  ⚠️  {tname}: {res['duplicates']} duplicate row(s) in the Sheet — clean with "
+                  f"`python3.13 tools/csv-sync/dedup_sheet.py --tab {tname}`")
     return 0
 
 
