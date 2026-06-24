@@ -1,0 +1,208 @@
+# Step 3 run log
+# competitor : speakx
+# started_at : 2026-06-24T06:18:28
+# input      : facebook/inputs/fb-ads-speakx-2026-06-24-0613.csv
+# videos     : facebook/videos/speakx-2026-06-24
+# master     : facebook/master/speakx.csv  (updated)
+# enriched   : facebook/inputs/fb-ads-speakx-2026-06-24-0613_enriched.csv
+# bucket     : video-ads
+# public_base: https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com
+# dry_run    : False
+#
+# counts     : {'uploaded': 27, 'carried-forward': 158, 'image-pending': 8, 'video-missing': 2, 'no-creative': 0, 'error': 0}
+#
+carried-forward  4317358591866176 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4317358591866176.mp4
+carried-forward  27292861753737186 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27292861753737186.mp4
+video-missing    27292861753737186 c0  (expected file not found in facebook/videos/speakx-2026-06-24)
+carried-forward  26844394018563524 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26844394018563524.mp4
+carried-forward  1676862793642995 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1676862793642995.mp4
+carried-forward  36517908114474049 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/36517908114474049.mp4
+carried-forward  1515349576107394 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1515349576107394.mp4
+carried-forward  2606314053100217 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2606314053100217.mp4
+carried-forward  1361741085811598 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1361741085811598.mp4
+carried-forward  1507220527751466 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1507220527751466.mp4
+carried-forward  1333380855312442 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1333380855312442.mp4
+carried-forward  1306104707759795 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1306104707759795.mp4
+carried-forward  2504659850014715 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2504659850014715.mp4
+carried-forward  1011020231314440 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1011020231314440.mp4
+carried-forward  2939848399741782 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2939848399741782.mp4
+carried-forward  2245758992828721 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2245758992828721.mp4
+carried-forward  1029162966150456 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1029162966150456.mp4
+carried-forward  1541795334197554 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1541795334197554.mp4
+carried-forward  1646829209907293 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1646829209907293.mp4
+carried-forward  1656371092252840 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1656371092252840.mp4
+carried-forward  878992604485262 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/878992604485262.mp4
+carried-forward  1631437637912562 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1631437637912562.mp4
+carried-forward  1519722763280163 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1519722763280163.mp4
+carried-forward  1573736987697228 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1573736987697228.mp4
+carried-forward  27039326735676879 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/27039326735676879.mp4
+carried-forward  1008889414931118 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1008889414931118.mp4
+carried-forward  842042471990963 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/842042471990963.mp4
+carried-forward  1681625439656874 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1681625439656874.mp4
+carried-forward  1712870236507784 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1712870236507784.mp4
+carried-forward  1271227128122015 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1271227128122015.mp4
+carried-forward  928672226847609 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/928672226847609.mp4
+carried-forward  975868448384290 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/975868448384290.mp4
+carried-forward  918355924593292 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/918355924593292.mp4
+carried-forward  4080095702285014 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/4080095702285014.mp4
+carried-forward  1883151975705319 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1883151975705319.mp4
+carried-forward  2295536704309986 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2295536704309986.mp4
+carried-forward  1406313074589852 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1406313074589852.mp4
+carried-forward  878652348591010 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/878652348591010.mp4
+carried-forward  1553179199937865 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1553179199937865.mp4
+carried-forward  1748068816627011 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1748068816627011.mp4
+carried-forward  962644176775840 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/962644176775840.mp4
+carried-forward  1459744116192629 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1459744116192629.mp4
+carried-forward  1559092795653919 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1559092795653919.mp4
+carried-forward  1543328573849703 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1543328573849703.mp4
+carried-forward  971854005467557 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/971854005467557.mp4
+carried-forward  1811089719867101 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1811089719867101.mp4
+carried-forward  1528983802208134 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1528983802208134.mp4
+carried-forward  1030329693015754 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1030329693015754.mp4
+carried-forward  1357098709656712 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1357098709656712.mp4
+carried-forward  1033816292419500 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1033816292419500.mp4
+video-missing    1033816292419500 c0  (expected file not found in facebook/videos/speakx-2026-06-24)
+carried-forward  1963315200982929 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1963315200982929.mp4
+uploaded         1767362847967603 c0  (video) ← 1767362847967603.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1767362847967603.mp4
+carried-forward  1006329295201378 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1006329295201378.mp4
+carried-forward  824616770475280 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/824616770475280.mp4
+carried-forward  3689448171208985 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3689448171208985.mp4
+carried-forward  1718754532619881 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1718754532619881.mp4
+carried-forward  1519137703335884 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1519137703335884.mp4
+carried-forward  2087931068421187 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2087931068421187.mp4
+carried-forward  2333949223804215 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2333949223804215.mp4
+carried-forward  2215935059244884 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2215935059244884.mp4
+carried-forward  1312620537668127 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1312620537668127.mp4
+carried-forward  874484212365190 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/874484212365190.mp4
+carried-forward  2055225678395208 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2055225678395208.mp4
+carried-forward  2218610062223953 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2218610062223953.mp4
+carried-forward  1730346694625329 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1730346694625329.mp4
+uploaded         1962115631098937 c0  (video) ← 1962115631098937.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1962115631098937.mp4
+carried-forward  2445266529284122 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2445266529284122.mp4
+carried-forward  2640130723049758 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2640130723049758.mp4
+carried-forward  1007530385081900 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1007530385081900.mp4
+carried-forward  1305210145123671 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1305210145123671.mp4
+carried-forward  2027539371487379 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2027539371487379.mp4
+carried-forward  1000338829196892 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1000338829196892.mp4
+carried-forward  975392855199734 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/975392855199734.mp4
+carried-forward  2177042646483754 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2177042646483754.mp4
+carried-forward  1387399283411233 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1387399283411233.mp4
+uploaded         1544800664105521 c0  (video) ← 1544800664105521.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1544800664105521.mp4
+carried-forward  1665305344789047 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1665305344789047.mp4
+carried-forward  1529478111859234 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1529478111859234.mp4
+uploaded         860734170438815 c0  (video) ← 860734170438815.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/860734170438815.mp4
+uploaded         1511673067306037 c0  (video) ← 1511673067306037.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1511673067306037.mp4
+carried-forward  983503630938689 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/983503630938689.mp4
+carried-forward  1751381559566795 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1751381559566795.mp4
+uploaded         1991706455067992 c0  (video) ← 1991706455067992.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1991706455067992.mp4
+carried-forward  1537332977762360 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1537332977762360.mp4
+carried-forward  2875471912820841 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2875471912820841.mp4
+carried-forward  1030440172717015 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1030440172717015.mp4
+uploaded         1037994698567525 c0  (video) ← 1037994698567525.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1037994698567525.mp4
+carried-forward  1005340095418175 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1005340095418175.mp4
+carried-forward  36389016304045469 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/36389016304045469.mp4
+carried-forward  4304356203209733 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4304356203209733.mp4
+carried-forward  2312156932524239 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2312156932524239.mp4
+carried-forward  2053832001834030 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2053832001834030.mp4
+carried-forward  1019027777130898 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1019027777130898.mp4
+carried-forward  1537054738130040 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1537054738130040.mp4
+carried-forward  2852148961823035 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2852148961823035.mp4
+carried-forward  940203322383049 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/940203322383049.mp4
+uploaded         3946455572325077 c0  (video) ← 3946455572325077.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/3946455572325077.mp4
+carried-forward  1534951244867864 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1534951244867864.mp4
+carried-forward  2289248188147929 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2289248188147929.mp4
+carried-forward  1387888156724645 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1387888156724645.mp4
+carried-forward  3505206902990144 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/3505206902990144.mp4
+carried-forward  1317357846423381 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1317357846423381.mp4
+carried-forward  1027447753065197 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1027447753065197.mp4
+carried-forward  1316777246578170 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1316777246578170.mp4
+carried-forward  1812790096772217 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1812790096772217.mp4
+carried-forward  1283594347179158 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1283594347179158.mp4
+carried-forward  1385625296768441 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1385625296768441.mp4
+uploaded         2764304687274475 c0  (video) ← 2764304687274475.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2764304687274475.mp4
+uploaded         859185150599687 c0  (video) ← 859185150599687.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/859185150599687.mp4
+carried-forward  1561713398936768 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1561713398936768.mp4
+carried-forward  1518844083190295 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1518844083190295.mp4
+carried-forward  1019696327203383 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1019696327203383.mp4
+carried-forward  1681602069650676 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1681602069650676.mp4
+uploaded         1371426394857560 c0  (video) ← 1371426394857560.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1371426394857560.mp4
+uploaded         1729723791785930 c0  (video) ← 1729723791785930.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1729723791785930.mp4
+carried-forward  2380382949113659 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2380382949113659.mp4
+carried-forward  2180793392740960 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2180793392740960.mp4
+carried-forward  2073537180176297 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2073537180176297.mp4
+carried-forward  1339557674759234 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1339557674759234.mp4
+carried-forward  1015528570998771 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1015528570998771.mp4
+carried-forward  864406799548908 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/864406799548908.mp4
+carried-forward  1026930139840138 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1026930139840138.mp4
+carried-forward  1591966805893885 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1591966805893885.mp4
+carried-forward  3028455167350044 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3028455167350044.mp4
+carried-forward  2525386577875029 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2525386577875029.mp4
+carried-forward  1888179688562464 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1888179688562464.mp4
+carried-forward  2103193720227930 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2103193720227930.mp4
+carried-forward  1664834988132991 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1664834988132991.mp4
+carried-forward  2088037832070282 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2088037832070282.mp4
+carried-forward  1314381756861108 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1314381756861108.mp4
+carried-forward  1057542156838977 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1057542156838977.mp4
+carried-forward  1297084372624612 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1297084372624612.mp4
+carried-forward  1755985579113125 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1755985579113125.mp4
+carried-forward  982762464660618 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/982762464660618.mp4
+uploaded         1522383285399526 c0  (video) ← 1522383285399526.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1522383285399526.mp4
+carried-forward  691760497365738 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/691760497365738.mp4
+carried-forward  986106167606403 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/986106167606403.mp4
+carried-forward  1719995149342353 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1719995149342353.mp4
+carried-forward  993366446988196 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/993366446988196.mp4
+carried-forward  1785926192782164 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1785926192782164.mp4
+carried-forward  1784390322973469 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1784390322973469.mp4
+carried-forward  1551825403153031 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1551825403153031.mp4
+carried-forward  847846551131630 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/847846551131630.mp4
+carried-forward  1165796592370540 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1165796592370540.mp4
+carried-forward  4358734457789065 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/4358734457789065.mp4
+carried-forward  880180717685885 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/880180717685885.mp4
+carried-forward  1020332987278380 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1020332987278380.mp4
+carried-forward  817247541325649 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/817247541325649.mp4
+carried-forward  3194390794101462 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3194390794101462.mp4
+uploaded         2433488863824147 c0  (video) ← 2433488863824147.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2433488863824147.mp4
+uploaded         1002226199188311 c0  (video) ← 1002226199188311.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1002226199188311.mp4
+carried-forward  1017961491189825 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1017961491189825.mp4
+carried-forward  1350966316920951 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1350966316920951.mp4
+carried-forward  873618651754187 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/873618651754187.mp4
+carried-forward  4473968839557115 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/4473968839557115.mp4
+uploaded         1000607919565492 c0  (video) ← 1000607919565492.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1000607919565492.mp4
+carried-forward  1724422962333351 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1724422962333351.mp4
+carried-forward  847771278003454 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/847771278003454.mp4
+carried-forward  952737910984432 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/952737910984432.mp4
+uploaded         1749798796383077 c0  (video) ← 1749798796383077.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1749798796383077.mp4
+uploaded         4071248453006664 c0  (video) ← 4071248453006664.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/4071248453006664.mp4
+carried-forward  1359996982637929 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1359996982637929.mp4
+carried-forward  1002307968916209 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1002307968916209.mp4
+uploaded         1034523755598603 c0  (video) ← 1034523755598603.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1034523755598603.mp4
+carried-forward  1492658115275135 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1492658115275135.mp4
+carried-forward  1473581078140211 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1473581078140211.mp4
+carried-forward  1436395304911998 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1436395304911998.mp4
+carried-forward  872479192551236 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/872479192551236.mp4
+uploaded         998178389749226 c0  (video) ← 998178389749226.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/998178389749226.mp4
+uploaded         1485003256999347 c0  (video) ← 1485003256999347.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1485003256999347.mp4
+uploaded         1354815406638108 c0  (video) ← 1354815406638108.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1354815406638108.mp4
+uploaded         2006704783280061 c0  (video) ← 2006704783280061.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2006704783280061.mp4
+carried-forward  998521345905657 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/998521345905657.mp4
+uploaded         2214051986037784 c0  (video) ← 2214051986037784.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2214051986037784.mp4
+carried-forward  1018266577731610 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1018266577731610.mp4
+uploaded         1723206915372815 c0  (video) ← 1723206915372815.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1723206915372815.mp4
+uploaded         1519138156349576 c0  (video) ← 1519138156349576.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1519138156349576.mp4
+uploaded         1474482837766143 c0  (video) ← 1474482837766143.mp4  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1474482837766143.mp4
+image-pending    1502553454983449 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1668913915243531 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1530276725269853 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1032088779257493 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1032088779257493.mp4
+image-pending    1587003312849731 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  985249144363806 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/985249144363806.mp4
+image-pending    1341185267964259 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1031255179567911 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1031255179567911.mp4
+carried-forward  933981069692312 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/933981069692312.mp4
+carried-forward  2852221428457241 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/2852221428457241.mp4
+carried-forward  845484834915284 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/845484834915284.mp4
+image-pending    1022383650256237 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1318839933771493 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1318839933771493.mp4
+image-pending    1551047923410116 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1513995210370651 c0  → https://dcfd27564ef899969db9a562c7e1945f.r2.cloudflarestorage.com/1513995210370651.mp4
+image-pending    2304650336940476 c0  (HANDOVER §8.5 — image handling not yet built)
