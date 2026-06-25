@@ -516,6 +516,34 @@ def upsert_tab(sheets, ssid: str, title: str, header: list, rows: list, key_cols
     return {"appended": appended, "updated": updated, "unchanged": unchanged, "duplicates": duplicates}
 
 
+def full_write_tab(sheets, ssid: str, title: str, gid: int, header: list, rows: list) -> dict:
+    """DETERMINISTIC full rewrite of a machine-generated tab (Overview/Analysis) — idempotent, so it
+    can never drift into duplicate or missing rows the way the incremental upsert did against a large
+    tab. Writes header + every row in place (chunked values.update), then trims stale trailing rows.
+    Order is never-empty (grow grid → overwrite rows 1..N → delete the leftover tail), and it REFUSES
+    to write an empty dataset so a build glitch can't wipe the tab. Per-row notes/formatting on the
+    kept rows are preserved (only cell VALUES are written)."""
+    width = len(header)
+    matrix = [list(header)]
+    for row in rows:
+        line = [_gsheets.sanitize_cell(row.get(c, "")) for c in header]
+        matrix.append(line)
+    n = len(matrix)                       # incl. header row
+    if n <= 1:
+        return {"rows": 0, "skipped": "empty build — tab left untouched"}
+    orig_rows, _orig_cols = _gsheets.ensure_grid(sheets, ssid, gid, n, width)  # grow-only
+    CHUNK = 4000
+    for i in range(0, n, CHUNK):
+        chunk = matrix[i:i + CHUNK]
+        rng = (f"{_gsheets.a1_quote_title(title)}!A{i + 1}:"
+               f"{_gsheets.col_to_a1(width - 1)}{i + len(chunk)}")
+        _gsheets.with_backoff(lambda c=chunk, r=rng: sheets.spreadsheets().values().update(
+            spreadsheetId=ssid, range=r, valueInputOption="RAW", body={"values": c}).execute())
+    if orig_rows > n:                     # trim stale rows below the freshly-written data
+        _gsheets.delete_rows(sheets, ssid, gid, n, orig_rows)
+    return {"rows": n - 1}
+
+
 def write_sidecar(ssid: str) -> None:
     url = f"https://docs.google.com/spreadsheets/d/{ssid}/edit"
     tmp = SIDECAR_PATH.with_suffix(".json.tmp")
@@ -593,8 +621,10 @@ def main() -> int:
     if "Sheet1" in tabs:
         _gsheets.delete_tab(sheets, ssid, "Sheet1", tabs)
 
-    ov = upsert_tab(sheets, ssid, "Overview", OVERVIEW_HEADER, overview_all, KEY_COLS, False)
-    an = upsert_tab(sheets, ssid, "Analysis", ANALYSIS_HEADER, analysis_all, KEY_COLS, False)
+    # Deterministic full rewrite (idempotent — converges in ONE pass; no duplicate/missing drift
+    # the way the incremental upsert did on a 15k-row tab). upsert_tab is kept for reference/history.
+    ov = full_write_tab(sheets, ssid, "Overview", tabs["Overview"], OVERVIEW_HEADER, overview_all)
+    an = full_write_tab(sheets, ssid, "Analysis", tabs["Analysis"], ANALYSIS_HEADER, analysis_all)
     print(f"\nDONE — https://docs.google.com/spreadsheets/d/{ssid}/edit")
     print(f"  Overview: {ov}")
     print(f"  Analysis: {an}")
