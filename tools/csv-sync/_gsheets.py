@@ -215,3 +215,40 @@ def append_rows(sheets, ssid: str, title: str, rows: list) -> None:
             spreadsheetId=ssid, range=a1_quote_title(title),
             valueInputOption="RAW", insertDataOption="INSERT_ROWS",
             body={"values": c}).execute())
+
+
+# ----------------------------------------------------------------------------- grid helpers (full rewrite)
+
+def grid_dims(sheets, ssid: str, gid: int) -> tuple[int, int]:
+    """Return the tab's (rowCount, columnCount) grid size (NOT the data extent)."""
+    meta = with_backoff(lambda: sheets.spreadsheets().get(
+        spreadsheetId=ssid,
+        fields="sheets(properties(sheetId,gridProperties(rowCount,columnCount)))").execute())
+    for s in meta.get("sheets", []):
+        p = s["properties"]
+        if p["sheetId"] == gid:
+            g = p.get("gridProperties", {})
+            return g.get("rowCount", 0), g.get("columnCount", 0)
+    return 0, 0
+
+
+def ensure_grid(sheets, ssid: str, gid: int, min_rows: int, min_cols: int) -> tuple[int, int]:
+    """GROW-ONLY: make sure the grid has >= min_rows / min_cols (never shrinks here). Returns the
+    ORIGINAL (rowCount, columnCount) so the caller can trim stale trailing rows afterwards."""
+    rc, cc = grid_dims(sheets, ssid, gid)
+    nr, nc = max(rc, min_rows), max(cc, min_cols)
+    if nr != rc or nc != cc:
+        with_backoff(lambda: sheets.spreadsheets().batchUpdate(spreadsheetId=ssid, body={"requests": [{
+            "updateSheetProperties": {
+                "properties": {"sheetId": gid, "gridProperties": {"rowCount": nr, "columnCount": nc}},
+                "fields": "gridProperties(rowCount,columnCount)"}}]}).execute())
+    return rc, cc
+
+
+def delete_rows(sheets, ssid: str, gid: int, start0: int, end0: int) -> None:
+    """Delete grid rows [start0, end0) (0-based, half-open)."""
+    if end0 <= start0:
+        return
+    with_backoff(lambda: sheets.spreadsheets().batchUpdate(spreadsheetId=ssid, body={"requests": [{
+        "deleteDimension": {"range": {"sheetId": gid, "dimension": "ROWS",
+                                      "startIndex": start0, "endIndex": end0}}}]}).execute())
