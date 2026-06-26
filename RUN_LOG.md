@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-06-26 06:25 IST — facebook / loora — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/loora_2026-06-26_links.json
+
+
 ## 2026-06-26 06:21 IST — facebook / zinglish — operator: daily-scrape
 - daily free refresh (stages 1-4)
 - Links manifest: facebook/runs/zinglish_2026-06-26_links.json
