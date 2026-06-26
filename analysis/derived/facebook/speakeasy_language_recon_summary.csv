@@ -1,5 +1,7 @@
 pipeline,competitor,kind,key,ads
-facebook,speakeasy,status,agree,109
-facebook,speakeasy,status,copy_only,1
-facebook,speakeasy,status,disagree,1
+facebook,speakeasy,status,agree,260
+facebook,speakeasy,status,disagree,9
+facebook,speakeasy,status,copy_only,2
+facebook,speakeasy,mismatch,audio=Telugu | copy=Kannada,5
+facebook,speakeasy,mismatch,audio=Punjabi | copy=Hindi,3
 facebook,speakeasy,mismatch,audio=English | copy=Hindi,1

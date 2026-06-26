@@ -1,6 +1,7 @@
 pipeline,competitor,replication_type,n_replicas,median_days_to_replica,mean_days_to_replica,min_days_to_replica,max_days_to_replica
-facebook,speakeasy,character_variant,1,0,0,0,0
-facebook,speakeasy,exact_replica,2,0.0,0,0,0
-facebook,speakeasy,reworded_replica,22,0.0,0,0,0
-facebook,speakeasy,visual_variant,1,0,0,0,0
-facebook,speakeasy,ALL,26,0.0,0,0,0
+facebook,speakeasy,character_variant,5,3,2.4,0,4
+facebook,speakeasy,exact_replica,15,2,1.8,0,3
+facebook,speakeasy,reworded_replica,42,0.0,0.9,0,4
+facebook,speakeasy,translation_replica,13,4,3.3,0,4
+facebook,speakeasy,visual_variant,4,2.5,2.2,0,4
+facebook,speakeasy,ALL,79,2,1.6,0,4
