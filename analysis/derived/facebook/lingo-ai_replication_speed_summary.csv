@@ -1,6 +1,6 @@
 pipeline,competitor,replication_type,n_replicas,median_days_to_replica,mean_days_to_replica,min_days_to_replica,max_days_to_replica
-facebook,lingo-ai,exact_replica,25,1,1.2,0,6
-facebook,lingo-ai,reworded_replica,4,0.5,0.8,0,2
+facebook,lingo-ai,exact_replica,64,8.0,5.2,0,10
+facebook,lingo-ai,reworded_replica,6,0.5,2,0,9
 facebook,lingo-ai,translation_replica,2,0.0,0,0,0
-facebook,lingo-ai,visual_variant,3,1,0.7,0,1
-facebook,lingo-ai,ALL,34,1.0,1.1,0,6
+facebook,lingo-ai,visual_variant,5,1,3.4,0,8
+facebook,lingo-ai,ALL,77,6,4.7,0,10

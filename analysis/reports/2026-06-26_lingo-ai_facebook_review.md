@@ -66,25 +66,26 @@
 
 | language | ads | winners | win ratio |
 |---|--:|--:|--:|
-| English | 123 | 13 | 0.106 |
+| English | 234 | 13 | 0.056 |
 | French | 13 | 0 | 0.0 |
+| Arabic | 6 | 0 | 0.0 |
 | Turkish | 5 | 0 | 0.0 |
-| Arabic | 3 | 0 | 0.0 |
 | Vietnamese | 2 | 0 | 0.0 |
 | Hindi | 2 | 0 | 0.0 |
+| Portuguese | 2 | 0 | 0.0 |
 | German | 1 | 0 | 0.0 |
 
 ## Format mix
 
 | format | ads | winners | win ratio |
 |---|--:|--:|--:|
-| skit-narrative | 49 | 3 | 0.061 |
-| talking-head | 45 | 4 | 0.089 |
-| listicle-montage | 20 | 1 | 0.05 |
-| split-screen | 15 | 0 | 0.0 |
-| other | 12 | 2 | 0.167 |
-| text-on-screen-only | 5 | 0 | 0.0 |
-| pen-and-paper | 3 | 3 | 1.0 |
+| skit-narrative | 86 | 3 | 0.035 |
+| talking-head | 86 | 4 | 0.047 |
+| listicle-montage | 43 | 1 | 0.023 |
+| split-screen | 21 | 0 | 0.0 |
+| other | 17 | 2 | 0.118 |
+| text-on-screen-only | 8 | 0 | 0.0 |
+| pen-and-paper | 4 | 3 | 0.75 |
 
 ## Script replication
 
@@ -92,11 +93,11 @@ How much of the output is fresh scripts vs. replays of a script that already wor
 
 | replication | ads | winners | win ratio |
 |---|--:|--:|--:|
-| unique | 99 | 6 | 0.061 |
-| exact_replica | 25 | 2 | 0.08 |
-| original | 16 | 5 | 0.312 |
-| reworded_replica | 4 | 0 | 0.0 |
-| visual_variant | 3 | 0 | 0.0 |
+| unique | 141 | 6 | 0.043 |
+| exact_replica | 64 | 2 | 0.031 |
+| original | 46 | 5 | 0.109 |
+| reworded_replica | 6 | 0 | 0.0 |
+| visual_variant | 5 | 0 | 0.0 |
 | translation_replica | 2 | 0 | 0.0 |
 
 ## Biggest rank movers
