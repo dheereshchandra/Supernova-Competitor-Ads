@@ -9,6 +9,13 @@
 # NOT touch your work; it logs the reason and posts a macOS notification so you can
 # open Conductor and ask Claude to resolve.
 #
+# ONE narrow exception (added 2026-06-25): a scrape / Ad-Studio run that dies before its
+# commit step (FB throttle, enrichment timeout) leaves append-only dated input snapshots
+# (facebook/inputs|google/inputs) UNCOMMITTED — which used to make this SKIP every day until
+# someone hand-committed them. If those are the ONLY uncommitted changes, we now commit + push
+# just them (immutable data, can't conflict) so the morning chain stays self-clean. Any OTHER
+# uncommitted change still falls through to the safe SKIP.
+#
 # Install once with:  zsh tools/daily-sync/install.sh   (see tools/daily-sync/README.md)
 set -u
 
@@ -35,6 +42,25 @@ if [ "$BRANCH" != "main" ]; then
   log "SKIP on branch '$BRANCH' (not main) — not syncing"
   notify "Supernova sync skipped" "On branch $BRANCH, not main. Open Conductor to resolve."
   exit 0
+fi
+
+# Self-heal orphaned input snapshots (see header). If the ONLY uncommitted changes are under
+# facebook/inputs or google/inputs, commit + push just them so we don't skip the whole sync.
+if [ -n "$(git status --porcelain)" ]; then
+  OTHER="$(git status --porcelain | cut -c4- | grep -vE '^(facebook|google)/inputs/' || true)"
+  if [ -z "$OTHER" ]; then
+    git add facebook/inputs google/inputs >> "$LOG" 2>&1 || true
+    if ! git diff --cached --quiet; then
+      git commit -q -m "Sweep orphaned scrape input snapshots (keep main clean for auto-sync)" >> "$LOG" 2>&1
+      if [ "$(git rev-parse @{u} 2>/dev/null)" = "$(git merge-base @ @{u} 2>/dev/null)" ] \
+         && git push origin main >> "$LOG" 2>&1; then
+        log "swept + pushed orphaned input snapshot(s) — main is clean"
+        heartbeat "Repo sync: swept inputs" "Committed + pushed orphaned scrape input snapshot(s) to keep main clean."
+      else
+        log "swept input snapshot(s) committed locally; push deferred (origin moved/diverged)"
+      fi
+    fi
+  fi
 fi
 
 if [ -n "$(git status --porcelain)" ]; then
