@@ -1,5 +1,6 @@
 pipeline,competitor,replication_type,n_replicas,median_days_to_replica,mean_days_to_replica,min_days_to_replica,max_days_to_replica
-facebook,loora,exact_replica,58,11.5,10.9,0,26
-facebook,loora,reworded_replica,10,19.5,15.4,0,26
-facebook,loora,translation_replica,17,20,14.5,0,26
-facebook,loora,ALL,85,15,12.1,0,26
+facebook,loora,exact_replica,65,15,12.6,0,29
+facebook,loora,reworded_replica,14,21.0,18.5,0,28
+facebook,loora,translation_replica,18,20.0,15.3,0,29
+facebook,loora,visual_variant,1,29,29,29,29
+facebook,loora,ALL,98,19.0,14.1,0,29

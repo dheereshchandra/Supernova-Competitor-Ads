@@ -93,7 +93,7 @@
 
 | language | ads | winners | win ratio |
 |---|--:|--:|--:|
-| English | 112 | 51 | 0.455 |
+| English | 126 | 56 | 0.444 |
 | Spanish | 5 | 2 | 0.4 |
 | French | 3 | 0 | 0.0 |
 | Japanese | 1 | 1 | 1.0 |
@@ -102,8 +102,9 @@
 
 | format | ads | winners | win ratio |
 |---|--:|--:|--:|
-| split-screen | 67 | 31 | 0.463 |
-| talking-head | 54 | 23 | 0.426 |
+| split-screen | 75 | 35 | 0.467 |
+| talking-head | 59 | 24 | 0.407 |
+| app-screencast | 1 | 0 | 0.0 |
 
 ## Script replication
 
@@ -111,11 +112,12 @@ How much of the output is fresh scripts vs. replays of a script that already wor
 
 | replication | ads | winners | win ratio |
 |---|--:|--:|--:|
-| exact_replica | 58 | 26 | 0.448 |
-| original | 18 | 11 | 0.611 |
-| unique | 18 | 9 | 0.5 |
-| translation_replica | 17 | 5 | 0.294 |
-| reworded_replica | 10 | 3 | 0.3 |
+| exact_replica | 65 | 27 | 0.415 |
+| original | 19 | 12 | 0.632 |
+| translation_replica | 18 | 5 | 0.278 |
+| unique | 18 | 8 | 0.444 |
+| reworded_replica | 14 | 7 | 0.5 |
+| visual_variant | 1 | 0 | 0.0 |
 
 ## Biggest rank movers
 
