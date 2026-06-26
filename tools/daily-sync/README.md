@@ -40,7 +40,7 @@ You should see an `OK ...` line (e.g. `OK already up to date` or `OK fast-forwar
 
 | File | What it is |
 |------|-----------|
-| `sync.sh` | the pull-only sync logic (finds its own repo root; logs + notifies) |
+| `sync.sh` | the pull-only sync logic (finds its own repo root; logs + notifies). ONE exception: if the only uncommitted changes are orphaned `*/inputs/*.csv` scrape snapshots (left by a run that died before its commit), it commits + pushes just those so the sync isn't stuck skipping forever; any other dirty change still safely skips. |
 | `live.gosupernova.repo-sync.plist.template` | launchd schedule template (paths filled in by the installer) |
 | `install.sh` | generates the plist with real paths and loads the job |
 | `uninstall.sh` | unloads and removes the job |
