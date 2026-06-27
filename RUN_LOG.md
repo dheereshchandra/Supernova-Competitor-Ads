@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-06-27 14:08 IST — facebook / pw-talk — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/pw-talk_2026-06-27_links.json
+
+
 ## 2026-06-27 13:19 IST — facebook / ewa — operator: daily-scrape
 - daily free refresh (stages 1-4)
 - Links manifest: facebook/runs/ewa_2026-06-27_links.json
