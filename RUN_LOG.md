@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-06-29 13:13 IST — facebook / ewa — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/ewa_2026-06-29_links.json
+
+
 ## 2026-06-29 12:00 IST — google / memrise — operator: google-weekly
 - weekly Google scrape (scrape→R2)
 - Links manifest: google/runs/memrise_2026-06-29_links.json
