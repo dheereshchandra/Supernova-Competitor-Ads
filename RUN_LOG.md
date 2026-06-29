@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-06-29 20:30 IST — google / english-seekho — operator: google-weekly
+- weekly Google scrape (scrape→R2)
+- Links manifest: google/runs/english-seekho_2026-06-29_links.json
+
+
 ## 2026-06-29 18:29 IST — google / mysivi — operator: google-weekly
 - weekly Google scrape (scrape→R2)
 - Links manifest: google/runs/mysivi_2026-06-29_links.json
