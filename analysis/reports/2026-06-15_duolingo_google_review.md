@@ -48,19 +48,8 @@
 
 | language | ads | winners | win ratio |
 |---|--:|--:|--:|
-| English | 37 | 0 | 0.0 |
-| Hindi | 21 | 0 | 0.0 |
-| Bengali | 8 | 0 | 0.0 |
-| Telugu | 6 | 0 | 0.0 |
-| German | 2 | 0 | 0.0 |
-| Spanish | 2 | 0 | 0.0 |
-| Tamil | 2 | 0 | 0.0 |
-| Dutch | 1 | 0 | 0.0 |
-| Greek | 1 | 0 | 0.0 |
-| Romanian | 1 | 0 | 0.0 |
-| Thai | 1 | 0 | 0.0 |
-| Turkish | 1 | 0 | 0.0 |
-| Arabic | 1 | 0 | 0.0 |
+| English | 18 | 0 | 0.0 |
+| Hindi | 1 | 0 | 0.0 |
 
 ## Format mix
 
