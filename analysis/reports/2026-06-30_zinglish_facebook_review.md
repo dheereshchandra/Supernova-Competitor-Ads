@@ -76,19 +76,21 @@
 
 | language | ads | winners | win ratio |
 |---|--:|--:|--:|
+| Tamil | 16 | 14 | 0.875 |
 | Hindi | 15 | 15 | 1.0 |
-| Tamil | 14 | 14 | 1.0 |
-| Kannada | 2 | 2 | 1.0 |
+| Kannada | 6 | 2 | 0.333 |
+| Telugu | 4 | 0 | 0.0 |
 
 ## Format mix
 
 | format | ads | winners | win ratio |
 |---|--:|--:|--:|
-| app-screencast | 22 | 22 | 1.0 |
+| app-screencast | 28 | 22 | 0.786 |
 | pen-and-paper | 6 | 6 | 1.0 |
+| talking-head | 4 | 1 | 0.25 |
 | other | 1 | 1 | 1.0 |
 | listicle-montage | 1 | 1 | 1.0 |
-| talking-head | 1 | 1 | 1.0 |
+| skit-narrative | 1 | 0 | 0.0 |
 
 ## Script replication
 
@@ -96,9 +98,10 @@ How much of the output is fresh scripts vs. replays of a script that already wor
 
 | replication | ads | winners | win ratio |
 |---|--:|--:|--:|
-| unique | 29 | 29 | 1.0 |
+| unique | 37 | 29 | 0.784 |
+| original | 2 | 1 | 0.5 |
 | visual_variant | 1 | 1 | 1.0 |
-| original | 1 | 1 | 1.0 |
+| exact_replica | 1 | 0 | 0.0 |
 
 ## Biggest rank movers
 
