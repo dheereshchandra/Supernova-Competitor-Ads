@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-01 13:49 IST — facebook / speakeasy — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/speakeasy_2026-07-01_links.json
+
+
 ## 2026-07-01 13:39 IST — facebook / lingo-ai — operator: daily-scrape
 - daily free refresh (stages 1-4)
 - Links manifest: facebook/runs/lingo-ai_2026-07-01_links.json
