@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-02 13:23 IST — facebook / ewa — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/ewa_2026-07-02_links.json
+
+
 ## 2026-07-02 06:40 IST — facebook / english-seekho — operator: daily-scrape
 - daily free refresh (stages 1-4)
 - Links manifest: facebook/runs/english-seekho_2026-07-02_links.json
