@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-06 13:21 IST — facebook / ewa — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/ewa_2026-07-06_links.json
+
+
 ## 2026-07-06 12:43 IST — google / busuu — operator: google-weekly
 - weekly Google scrape (scrape→R2)
 - Links manifest: google/runs/busuu_2026-07-06_links.json
