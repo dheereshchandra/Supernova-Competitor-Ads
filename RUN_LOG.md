@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-07 13:33 IST — facebook / wispr-flow — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/wispr-flow_2026-07-07_links.json
+
+
 ## 2026-07-07 13:20 IST — facebook / ewa — operator: daily-scrape
 - daily free refresh (stages 1-4)
 - Links manifest: facebook/runs/ewa_2026-07-07_links.json
