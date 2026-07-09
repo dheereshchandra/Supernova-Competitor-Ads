@@ -1,0 +1,44 @@
+# Step 3 run log
+# competitor : duolingo
+# started_at : 2026-07-09T06:32:28
+# input      : facebook/inputs/fb-ads-duolingo-2026-07-09-0631.csv
+# videos     : facebook/videos/duolingo-2026-07-09
+# master     : facebook/master/duolingo.csv  (updated)
+# enriched   : facebook/inputs/fb-ads-duolingo-2026-07-09-0631_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded': 0, 'carried-forward': 27, 'image-pending': 3, 'video-missing': 1, 'no-creative': 0, 'error': 0}
+#
+carried-forward  870791105586044 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/870791105586044.jpg
+carried-forward  855822700785894 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/855822700785894.jpg
+carried-forward  931440739227131 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/931440739227131.mp4
+carried-forward  873410355318564 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/873410355318564.mp4
+carried-forward  4420167301545944 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4420167301545944.jpg
+carried-forward  1393073786168344 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1393073786168344.jpg
+carried-forward  854198787652805 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/854198787652805.jpg
+carried-forward  1187219770066761 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1187219770066761.mp4
+carried-forward  1428449025623778 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1428449025623778.mp4
+carried-forward  862072036697076 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/862072036697076.mp4
+video-missing    862072036697076 c0  (expected file not found in facebook/videos/duolingo-2026-07-09)
+carried-forward  4047050955534121 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4047050955534121.mp4
+carried-forward  26572679392369522 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26572679392369522.mp4
+carried-forward  1358473513046877 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1358473513046877.mp4
+carried-forward  2222173525022786 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2222173525022786.mp4
+carried-forward  1285799853439039 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1285799853439039.mp4
+carried-forward  872722692089728 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/872722692089728.mp4
+image-pending    1021191287536143 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1494881322674687 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1494881322674687.mp4
+carried-forward  2490003268148509 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2490003268148509.mp4
+carried-forward  1047283794654159 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1047283794654159.mp4
+carried-forward  1632792401134352 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1632792401134352.mp4
+carried-forward  1065691319139064 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1065691319139064.mp4
+carried-forward  1340124641657794 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1340124641657794.mp4
+carried-forward  1011173138444252 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1011173138444252.mp4
+carried-forward  3939394116369617 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3939394116369617.mp4
+image-pending    2223911945030578 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1364532395612949 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2311584146036186 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2311584146036186.mp4
+carried-forward  1454975033324122 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1454975033324122.mp4
+carried-forward  1530352525167478 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1530352525167478.mp4
