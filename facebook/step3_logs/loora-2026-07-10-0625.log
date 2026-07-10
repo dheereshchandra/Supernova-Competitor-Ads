@@ -1,0 +1,91 @@
+# Step 3 run log
+# competitor : loora
+# started_at : 2026-07-10T06:25:40
+# input      : facebook/inputs/fb-ads-loora-2026-07-10-0624.csv
+# videos     : facebook/videos/loora-2026-07-10
+# master     : facebook/master/loora.csv  (updated)
+# enriched   : facebook/inputs/fb-ads-loora-2026-07-10-0624_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded': 3, 'carried-forward': 53, 'image-pending': 0, 'video-missing': 22, 'no-creative': 0, 'error': 0}
+#
+carried-forward  887507133689970 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/887507133689970.mp4
+video-missing    887507133689970 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+video-missing    887507133689970 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  768123156362702 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/768123156362702.mp4
+carried-forward  1923073918386349 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1923073918386349.mp4
+video-missing    1923073918386349 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  1017749350907847 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1017749350907847.mp4
+carried-forward  1011292844956913 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1011292844956913.mp4
+carried-forward  1399715815299179 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1399715815299179.mp4
+video-missing    1399715815299179 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  1323640396530842 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1323640396530842.mp4
+carried-forward  1036628765435067 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1036628765435067.mp4
+video-missing    1036628765435067 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+video-missing    1036628765435067 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+video-missing    1036628765435067 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  2153620542128180 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2153620542128180.mp4
+video-missing    2153620542128180 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+video-missing    2153620542128180 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  979523084446611 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/979523084446611.mp4
+carried-forward  1389378246427597 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1389378246427597.mp4
+video-missing    1389378246427597 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  2537378303379370 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2537378303379370.mp4
+carried-forward  1495982208735813 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1495982208735813.mp4
+carried-forward  1021136453737366 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1021136453737366.mp4
+carried-forward  1313009764351341 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1313009764351341.mp4
+video-missing    1313009764351341 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  979977635018465 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/979977635018465.mp4
+carried-forward  2438251120009190 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2438251120009190.mp4
+video-missing    2438251120009190 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  832041293094340 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/832041293094340.mp4
+video-missing    832041293094340 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  1032668232984789 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1032668232984789.mp4
+carried-forward  4085441481753577 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4085441481753577.mp4
+carried-forward  989786880310878 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/989786880310878.mp4
+carried-forward  911558108594444 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/911558108594444.mp4
+carried-forward  28365108253078782 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/28365108253078782.mp4
+video-missing    28365108253078782 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  1555971279252723 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1555971279252723.mp4
+carried-forward  1028258436260871 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1028258436260871.mp4
+video-missing    1028258436260871 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  1032864065896787 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1032864065896787.mp4
+carried-forward  1800522517580952 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1800522517580952.mp4
+carried-forward  1354175103312608 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1354175103312608.mp4
+carried-forward  1537509541396440 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1537509541396440.mp4
+video-missing    1537509541396440 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+video-missing    1537509541396440 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+video-missing    1537509541396440 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  2257110451487366 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2257110451487366.mp4
+uploaded         1053758737567750 c0  (video) ← 1053758737567750.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1053758737567750.mp4
+video-missing    1053758737567750 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  1575036264038808 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1575036264038808.mp4
+carried-forward  1651325459631448 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1651325459631448.mp4
+carried-forward  27895788590026016 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27895788590026016.mp4
+video-missing    27895788590026016 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  2787277954991012 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2787277954991012.mp4
+video-missing    2787277954991012 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  1003207599247646 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1003207599247646.mp4
+carried-forward  869185468874772 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/869185468874772.mp4
+carried-forward  27312881168353507 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27312881168353507.mp4
+carried-forward  975194242006056 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/975194242006056.mp4
+carried-forward  2827057244325446 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2827057244325446.mp4
+video-missing    2827057244325446 c0  (expected file not found in facebook/videos/loora-2026-07-10)
+carried-forward  2920536348298813 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2920536348298813.mp4
+carried-forward  886284157893490 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/886284157893490.mp4
+carried-forward  1632804617809986 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1632804617809986.mp4
+carried-forward  1366146328694387 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1366146328694387.mp4
+carried-forward  3986740264793174 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3986740264793174.mp4
+carried-forward  989729313528735 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/989729313528735.mp4
+carried-forward  2122627011616500 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2122627011616500.mp4
+carried-forward  2311025816307474 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2311025816307474.mp4
+carried-forward  1298208928762380 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1298208928762380.mp4
+carried-forward  27356581034010818 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27356581034010818.mp4
+carried-forward  2418322802022115 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2418322802022115.mp4
+carried-forward  1565174518464522 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1565174518464522.mp4
+carried-forward  27423307387277285 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27423307387277285.mp4
+carried-forward  2337129586816797 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2337129586816797.mp4
+uploaded         2299097647495324 c0  (video) ← 2299097647495324.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2299097647495324.mp4
+uploaded         1257067016406614 c0  (video) ← 1257067016406614.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1257067016406614.mp4
