@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-13 06:11 IST — facebook / mysivi — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/mysivi_2026-07-13_links.json
+
+
 ## 2026-07-12 15:27 IST — facebook / speakeasy — operator: daily-scrape
 - daily free refresh (stages 1-4)
 - Links manifest: facebook/runs/speakeasy_2026-07-12_links.json
