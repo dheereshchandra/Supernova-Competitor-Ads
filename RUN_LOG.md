@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-13 13:44 IST — google / speak — operator: google-weekly
+- weekly Google scrape (scrape→R2)
+- Links manifest: google/runs/speak_2026-07-13_links.json
+
+
 ## 2026-07-13 13:41 IST — facebook / lingo-ai — operator: daily-scrape
 - daily free refresh (stages 1-4)
 - Links manifest: facebook/runs/lingo-ai_2026-07-13_links.json
