@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-13 06:30 IST — facebook / english-seekho — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/english-seekho_2026-07-13_links.json
+
+
 ## 2026-07-13 06:26 IST — facebook / duolingo — operator: daily-scrape
 - daily free refresh (stages 1-4)
 - Links manifest: facebook/runs/duolingo_2026-07-13_links.json
