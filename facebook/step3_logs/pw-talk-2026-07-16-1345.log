@@ -1,0 +1,172 @@
+# Step 3 run log
+# competitor : pw-talk
+# started_at : 2026-07-16T13:45:21
+# input      : facebook/inputs/fb-ads-pw-talk-2026-07-16-1344.csv
+# videos     : facebook/videos/pw-talk-2026-07-16
+# master     : facebook/master/pw-talk.csv  (updated)
+# enriched   : facebook/inputs/fb-ads-pw-talk-2026-07-16-1344_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded': 3, 'carried-forward': 68, 'image-pending': 30, 'video-missing': 58, 'no-creative': 0, 'error': 0}
+#
+image-pending    1668604657811317 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1668604657811317 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1668604657811317 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1668604657811317 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1668604657811317 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1928172847901225 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1928172847901225 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1928172847901225 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1928172847901225 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1928172847901225 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1616029346132773 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1616029346132773 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1281960683918283 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1281960683918283.mp4
+carried-forward  1007300494972391 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1007300494972391.mp4
+carried-forward  2118422772240776 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2118422772240776.mp4
+carried-forward  982593771083391 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/982593771083391.mp4
+video-missing    982593771083391 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1381152990544040 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1381152990544040.mp4
+video-missing    1381152990544040 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1381152990544040 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1656226372193192 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1656226372193192.mp4
+video-missing    1656226372193192 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1656226372193192 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  941613088747926 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/941613088747926.mp4
+carried-forward  990067790082865 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/990067790082865.mp4
+carried-forward  1459802412348522 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1459802412348522.mp4
+video-missing    1459802412348522 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1459802412348522 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  910631738693945 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/910631738693945.mp4
+video-missing    910631738693945 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  954609790259093 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/954609790259093.mp4
+video-missing    954609790259093 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    954609790259093 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1484334716724850 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1484334716724850.mp4
+video-missing    1484334716724850 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1484334716724850 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1484334716724850 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1484334716724850 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+image-pending    3428402423999893 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  986491307132323 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/986491307132323.mp4
+image-pending    1279844364134321 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  990621093352631 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/990621093352631.mp4
+video-missing    990621093352631 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1761637955248042 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1761637955248042.mp4
+carried-forward  873558985758115 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/873558985758115.mp4
+carried-forward  3404871473007544 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3404871473007544.mp4
+video-missing    3404871473007544 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    3404871473007544 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    3404871473007544 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+uploaded         2030893881148855 c0  (video) ← 2030893881148855.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2030893881148855.mp4
+video-missing    2030893881148855 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    2030893881148855 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    2030893881148855 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    2030893881148855 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  2235954877164840 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2235954877164840.mp4
+video-missing    2235954877164840 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1888603368477515 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1888603368477515.mp4
+image-pending    1477576483809130 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1952764212047061 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1952764212047061.mp4
+video-missing    1952764212047061 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1952764212047061 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1952764212047061 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+image-pending    3385563551622383 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1611808773250006 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1611808773250006.mp4
+uploaded         4418464488439320 c0  (video) ← 4418464488439320.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4418464488439320.mp4
+video-missing    4418464488439320 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    4418464488439320 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  863233420161856 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/863233420161856.mp4
+carried-forward  2328908670850681 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2328908670850681.mp4
+carried-forward  962816803136157 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/962816803136157.mp4
+carried-forward  995349610036230 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/995349610036230.mp4
+video-missing    995349610036230 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    995349610036230 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1969883523697091 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1969883523697091.mp4
+video-missing    1969883523697091 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1703276117526351 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1703276117526351.mp4
+image-pending    1744854186873436 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1291252116517177 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1291252116517177.mp4
+carried-forward  1768727637443286 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1768727637443286.mp4
+carried-forward  933714815692813 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/933714815692813.mp4
+carried-forward  4450977831887585 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4450977831887585.mp4
+video-missing    4450977831887585 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    4450977831887585 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  4270646853245283 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4270646853245283.mp4
+video-missing    4270646853245283 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1043108071709163 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1043108071709163.mp4
+video-missing    1043108071709163 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1043108071709163 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1538536904371801 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1538536904371801.mp4
+carried-forward  1028350056558406 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1028350056558406.mp4
+carried-forward  1537207307879549 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1537207307879549.mp4
+carried-forward  994739106942227 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/994739106942227.mp4
+carried-forward  1644235086654060 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1644235086654060.mp4
+video-missing    1644235086654060 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1644235086654060 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  962920393089241 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/962920393089241.mp4
+video-missing    962920393089241 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    962920393089241 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1398691244996445 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1398691244996445.mp4
+carried-forward  4502341303427184 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4502341303427184.mp4
+carried-forward  1175933374295559 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1175933374295559.mp4
+carried-forward  1360508430469520 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1360508430469520.mp4
+video-missing    1360508430469520 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1347292534133209 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1347292534133209.mp4
+video-missing    1347292534133209 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1810610246280277 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1810610246280277.mp4
+carried-forward  1532066918300938 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1532066918300938.mp4
+carried-forward  1476773330606036 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1476773330606036.mp4
+video-missing    1476773330606036 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1476773330606036 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1922940892437204 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1922940892437204.mp4
+carried-forward  1274208157485689 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1274208157485689.mp4
+video-missing    1274208157485689 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1274208157485689 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  25506520168976866 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/25506520168976866.mp4
+carried-forward  1610948496652199 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1610948496652199.mp4
+video-missing    1610948496652199 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1610948496652199 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  911440421411962 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/911440421411962.mp4
+carried-forward  25708460672174884 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/25708460672174884.mp4
+carried-forward  1739956290526598 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1739956290526598.mp4
+image-pending    3423707654457091 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3423707654457091 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2689205164778706 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2689205164778706.mp4
+video-missing    2689205164778706 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+image-pending    4037885109675432 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2233165930785010 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2233165930785010.mp4
+video-missing    2233165930785010 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+image-pending    994908826779122 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1044959517952597 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1044959517952597 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1513821856539124 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1513821856539124.mp4
+video-missing    1513821856539124 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+image-pending    1570180031154109 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2195122731268390 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2195122731268390 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1352533072883929 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1352533072883929.mp4
+carried-forward  1364636219033957 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1364636219033957.mp4
+carried-forward  1484396486622158 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1484396486622158.mp4
+video-missing    1484396486622158 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    1484396486622158 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+image-pending    1756246105826668 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1500684418055839 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1500684418055839.mp4
+image-pending    1794694598434181 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1776577913512500 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1776577913512500.mp4
+video-missing    1776577913512500 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1812131213254272 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1812131213254272.mp4
+video-missing    1812131213254272 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1021255273973673 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1021255273973673.mp4
+image-pending    868876099140823 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1359488312753507 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1359488312753507.mp4
+carried-forward  1494810338624797 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1494810338624797.mp4
+image-pending    1385187736808003 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  939016588843645 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/939016588843645.mp4
+video-missing    939016588843645 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+video-missing    939016588843645 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
+carried-forward  1685794299537493 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1685794299537493.mp4
+uploaded         806105662497768 c0  (video) ← 806105662497768.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/806105662497768.mp4
+video-missing    806105662497768 c0  (expected file not found in facebook/videos/pw-talk-2026-07-16)
