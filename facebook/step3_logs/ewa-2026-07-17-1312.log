@@ -1,0 +1,782 @@
+# Step 3 run log
+# competitor : ewa
+# started_at : 2026-07-17T13:13:18
+# input      : facebook/inputs/fb-ads-ewa-2026-07-17-1300.csv
+# videos     : facebook/videos/ewa-2026-07-17
+# master     : facebook/master/ewa.csv  (updated)
+# enriched   : facebook/inputs/fb-ads-ewa-2026-07-17-1300_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded': 69, 'carried-forward': 250, 'image-pending': 359, 'video-missing': 91, 'no-creative': 0, 'error': 0}
+#
+image-pending    1306267591684899 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1321429953391127 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1321429953391127 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2211020936353424 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2211020936353424 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2211020936353424 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3748419995299131 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1053659170524096 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1053659170524096 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1053659170524096 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1172392938404612 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1172392938404612 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1172392938404612 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1172392938404612 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1172392938404612 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  27584885344484583 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27584885344484583.mp4
+image-pending    1926963888000255 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1926963888000255 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1926963888000255 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1064661679325929 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1064661679325929.mp4
+carried-forward  27103837955911154 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27103837955911154.mp4
+video-missing    27103837955911154 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  981542304873894 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/981542304873894.mp4
+image-pending    1640875417612984 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1677528396874891 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1677528396874891 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1677528396874891 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1677528396874891 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1677528396874891 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1677528396874891 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2023456231577415 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1798037831577515 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1798037831577515.mp4
+video-missing    1798037831577515 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    2047300065857950 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2047300065857950 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1747989286365429 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    988421774035585 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1364528388957027 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1364528388957027 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1364528388957027 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1557786819279519 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1557786819279519.mp4
+video-missing    1557786819279519 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  2784909331991960 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2784909331991960.mp4
+video-missing    2784909331991960 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    2784909331991960 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1653363682608529 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1653363682608529.jpg
+carried-forward  2032002694369624 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2032002694369624.mp4
+image-pending    1037668488816556 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1037668488816556 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1037668488816556 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    992101903436874 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    902598298802006 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    902598298802006 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    902598298802006 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    902598298802006 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1769263140752656 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1769263140752656.mp4
+video-missing    1769263140752656 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    27554091767535954 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27554091767535954 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27554091767535954 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2172491403607364 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2172491403607364.mp4
+video-missing    2172491403607364 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1001085442686373 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1001085442686373.mp4
+video-missing    1001085442686373 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    2213512612526530 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2213512612526530 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  3210833395973179 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3210833395973179.mp4
+video-missing    3210833395973179 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    2106331687432426 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2106331687432426 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2106331687432426 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1313535210890149 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1313535210890149.mp4
+carried-forward  2262483514290087 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2262483514290087.mp4
+carried-forward  1040195851917005 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1040195851917005.mp4
+carried-forward  2047632899162364 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2047632899162364.mp4
+image-pending    2052520945699288 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2052520945699288 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2052520945699288 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2052520945699288 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1543605293933269 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2231102494371320 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2231102494371320 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2231102494371320 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2231102494371320 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2231102494371320 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2231102494371320 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    999273256498651 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    999273256498651 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    999273256498651 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1913718692634670 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1913718692634670.mp4
+carried-forward  4521599338076323 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4521599338076323.mp4
+video-missing    4521599338076323 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  2092967338095401 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2092967338095401.mp4
+carried-forward  1428010472758704 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1428010472758704.mp4
+image-pending    1670496207540300 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1670496207540300 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1670496207540300 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1677769523466249 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2507531419701992 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2507531419701992 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2907943432931543 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2907943432931543.mp4
+image-pending    2254457095094679 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  4618723138350435 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4618723138350435.mp4
+video-missing    4618723138350435 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1370786434964003 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1370786434964003.mp4
+image-pending    1517336272963359 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1503345134454157 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1347942816788975 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1347942816788975.mp4
+carried-forward  993315043543289 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/993315043543289.mp4
+image-pending    4507517659485294 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1718359912815403 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1718359912815403.mp4
+video-missing    1718359912815403 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1738076294211986 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2203692056840083 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2203692056840083.mp4
+video-missing    2203692056840083 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    2203692056840083 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1961539248582227 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1961539248582227.mp4
+image-pending    882492284285861 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1147669700867740 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1147669700867740.jpg
+image-pending    1147669700867740 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1147669700867740 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1147669700867740 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1391934999450626 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1391934999450626.mp4
+video-missing    1391934999450626 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1008677578468718 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1008677578468718 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1008677578468718 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1008677578468718 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1008677578468718 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1008677578468718 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1008677578468718 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1008677578468718 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1641626951296099 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1641626951296099 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1641626951296099 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1641626951296099 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1641626951296099 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1641626951296099 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2635866166855638 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2635866166855638.mp4
+image-pending    3537150746432305 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  975097332110635 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/975097332110635.jpg
+image-pending    4434165596851679 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    978862254975064 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1051036900936457 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1051036900936457 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1051036900936457 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1051036900936457 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1051036900936457 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1051036900936457 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1051036900936457 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1051036900936457 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1012370408376782 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1012370408376782 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1010961044980046 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    991137993743257 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1692317208565480 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1692317208565480.mp4
+video-missing    1692317208565480 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1692317208565480 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1692317208565480 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1030360883180582 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2519756155112349 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2519756155112349.mp4
+video-missing    2519756155112349 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1366113265475069 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1542740697485884 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1542740697485884.mp4
+image-pending    1292823162965929 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2107242233191705 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2107242233191705.mp4
+carried-forward  1406307381546601 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1406307381546601.mp4
+image-pending    1549571593247683 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1316391644000434 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1316391644000434.mp4
+uploaded         1585102079987639 c0  (video) ← 1585102079987639.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1585102079987639.mp4
+carried-forward  850433381228657 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/850433381228657.mp4
+video-missing    850433381228657 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1580583887191094 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1580583887191094 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1580583887191094 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2566477970433653 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1079412317992229 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1270366909494214 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1270366909494214.mp4
+image-pending    948708748187114 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1286857293258613 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1286857293258613 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1020847180459200 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1020847180459200 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1020847180459200 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1020847180459200 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1020847180459200 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1020847180459200 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1020847180459200 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1673420503919939 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1673420503919939.mp4
+image-pending    1002665749351878 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1212833935253690 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1212833935253690.mp4
+video-missing    1212833935253690 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1026767053155674 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  987928834211455 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/987928834211455.mp4
+image-pending    1587689292959880 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1709931890052134 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1709931890052134.mp4
+video-missing    1709931890052134 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1349092573379730 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1349092573379730.mp4
+video-missing    1349092573379730 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1528602198770385 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1984393962221979 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1984393962221979.mp4
+carried-forward  1020599134191970 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1020599134191970.mp4
+carried-forward  1020771023668945 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1020771023668945.mp4
+carried-forward  1063754789936927 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1063754789936927.mp4
+carried-forward  1987534708563449 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1987534708563449.mp4
+image-pending    1034437492405530 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  3630765620417607 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3630765620417607.mp4
+video-missing    3630765620417607 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  3401273316721075 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3401273316721075.mp4
+image-pending    1950371338957291 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2590042038105297 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2590042038105297 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2590042038105297 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2590042038105297 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  859655760237604 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/859655760237604.mp4
+video-missing    859655760237604 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1244565624353855 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1244565624353855.mp4
+carried-forward  980681778358632 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/980681778358632.mp4
+carried-forward  1033760292521419 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1033760292521419.mp4
+image-pending    1539092751208374 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1539092751208374 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1015602017848955 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1004062135371891 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1004062135371891.jpg
+carried-forward  3140725936117788 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3140725936117788.mp4
+carried-forward  1315958386532359 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1315958386532359.jpg
+carried-forward  2012326406088411 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2012326406088411.mp4
+carried-forward  1951342105484600 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1951342105484600.mp4
+video-missing    1951342105484600 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1341580808123351 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1341580808123351.mp4
+carried-forward  4290380504555651 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4290380504555651.mp4
+video-missing    4290380504555651 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1701414314497292 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1922917495024366 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2240884820008255 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1835443024528339 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1835443024528339.mp4
+carried-forward  958816927176313 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/958816927176313.mp4
+carried-forward  1497877788232093 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1497877788232093.mp4
+image-pending    1054903820333680 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1548858883404630 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1548858883404630.mp4
+image-pending    1391482792836894 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1345876130946949 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1345876130946949.mp4
+image-pending    1399385072032370 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1566896548113359 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1073552061755276 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1073552061755276.mp4
+image-pending    3000964803585321 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2124189675106408 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2124189675106408 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    988299704003575 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  27335941129361928 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27335941129361928.mp4
+image-pending    1669711447586554 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2888348224831321 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2888348224831321.mp4
+carried-forward  1546161980513802 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1546161980513802.mp4
+carried-forward  1055515240366228 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1055515240366228.mp4
+image-pending    1013741348031300 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1305834284653905 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1305834284653905.mp4
+image-pending    1041164718302871 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2499338940566467 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1774560927221883 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1774560927221883.mp4
+video-missing    1774560927221883 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1345647287672826 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1345647287672826.mp4
+carried-forward  1001531209331816 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1001531209331816.mp4
+video-missing    1001531209331816 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1718204432555820 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1718204432555820.mp4
+image-pending    924766850703214 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1671205474108549 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1043111004925424 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1043111004925424 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1043111004925424 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2017457759164713 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1468484601989983 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1468484601989983 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1468484601989983 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1468484601989983 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1020788754151425 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1020788754151425.mp4
+image-pending    1025608223536894 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1753741698951262 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1753741698951262.mp4
+video-missing    1753741698951262 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1839164380576000 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1839164380576000.mp4
+video-missing    1839164380576000 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1839164380576000 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  873292079155007 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/873292079155007.mp4
+carried-forward  1021906857393822 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1021906857393822.mp4
+carried-forward  1557976449192005 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1557976449192005.mp4
+carried-forward  1053384307014992 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1053384307014992.mp4
+image-pending    1742938173730861 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1742938173730861 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1708426440354500 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1708426440354500.mp4
+image-pending    1729533135141066 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1729533135141066 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1729533135141066 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1550063626795058 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1550063626795058 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1059182186557701 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1059182186557701.mp4
+image-pending    873317502089659 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2098306711040991 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1519572902439906 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1519572902439906.mp4
+image-pending    4379024182345222 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    4379024182345222 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  875511508585987 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/875511508585987.mp4
+carried-forward  1598124328350267 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1598124328350267.mp4
+image-pending    2020854061930775 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1693006391942342 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1693006391942342.mp4
+image-pending    2839077213122544 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2382335412175607 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2382335412175607 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1836794177300533 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    967702612982275 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2449548375519528 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2449548375519528.mp4
+carried-forward  2551763855260272 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2551763855260272.mp4
+image-pending    1026593306415088 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1543953990765332 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1543953990765332 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1543953990765332 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1543953990765332 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1543953990765332 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1543953990765332 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27436576862679123 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27436576862679123 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27436576862679123 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1558057719324918 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1558057719324918.mp4
+image-pending    1577271277363458 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1047114574486525 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1047114574486525.mp4
+carried-forward  1778374726938540 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1778374726938540.mp4
+carried-forward  1064674179551494 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1064674179551494.mp4
+carried-forward  1593750882360742 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1593750882360742.mp4
+carried-forward  2385012251991603 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2385012251991603.mp4
+carried-forward  1006264918983521 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1006264918983521.mp4
+carried-forward  1507473047150986 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1507473047150986.mp4
+carried-forward  2088052618758098 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2088052618758098.mp4
+carried-forward  1733722027799742 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1733722027799742.mp4
+video-missing    1733722027799742 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1356666143079683 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1356666143079683.mp4
+carried-forward  3077280812470621 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3077280812470621.mp4
+uploaded         1031998639311542 c0  (video) ← 1031998639311542.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1031998639311542.mp4
+video-missing    1031998639311542 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1031998639311542 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1031998639311542 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1031998639311542 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1031998639311542 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    26613094448366463 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1731900044506106 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1012663194895591 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  834577789592624 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/834577789592624.mp4
+video-missing    834577789592624 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    834577789592624 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    834577789592624 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  2914370645587737 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2914370645587737.mp4
+carried-forward  2719992665041445 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2719992665041445.mp4
+image-pending    1017429574213695 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1590958579043958 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1590958579043958.mp4
+video-missing    1590958579043958 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1590958579043958 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1327470832874738 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2095520504331498 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2095520504331498.mp4
+carried-forward  27441365728789118 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27441365728789118.jpg
+carried-forward  2132942784307230 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2132942784307230.mp4
+video-missing    2132942784307230 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1496588182155541 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1496588182155541.mp4
+video-missing    1496588182155541 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    3959241857711182 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3959241857711182 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1054872653537553 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1054872653537553.mp4
+image-pending    891575253544413 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    891575253544413 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1552368389669828 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1552368389669828.mp4
+video-missing    1552368389669828 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1757369968588038 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1329611571903841 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1329611571903841.mp4
+image-pending    1062814409617560 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1334128871582192 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1334128871582192.mp4
+uploaded         1185355877113590 c0  (video) ← 1185355877113590.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1185355877113590.mp4
+video-missing    1185355877113590 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1553177682821544 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1553177682821544.mp4
+carried-forward  2202763280580855 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2202763280580855.mp4
+carried-forward  1478728220253869 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1478728220253869.jpg
+image-pending    2124761528100910 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1739376450666447 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1739376450666447.mp4
+uploaded         1345228317806787 c0  (video) ← 1345228317806787.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1345228317806787.mp4
+image-pending    1389033136493199 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1598798275233970 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1598798275233970.mp4
+uploaded         2158644124710082 c0  (video) ← 2158644124710082.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2158644124710082.mp4
+carried-forward  1797297944964478 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1797297944964478.mp4
+carried-forward  953000507748365 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/953000507748365.mp4
+image-pending    2368423126901181 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1227702419419687 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    897873679412171 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1010342818268745 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1010342818268745.mp4
+carried-forward  1011396708545013 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1011396708545013.mp4
+video-missing    1011396708545013 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1011396708545013 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1011396708545013 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1418414003459524 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1418414003459524 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1418414003459524 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    3078276922379918 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    4123507764614081 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1533245944962233 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1305205138055758 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  778890205282709 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/778890205282709.mp4
+carried-forward  1500130284728503 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1500130284728503.mp4
+carried-forward  1096016802851652 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1096016802851652.mp4
+image-pending    4487350054834317 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1457702979727021 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1457702979727021.mp4
+image-pending    1942167116403535 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2794753707570347 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  27535842256026487 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27535842256026487.mp4
+video-missing    27535842256026487 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    27535842256026487 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1379647650743558 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1379647650743558.mp4
+carried-forward  1580922686996950 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1580922686996950.mp4
+carried-forward  1347128267545628 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1347128267545628.mp4
+image-pending    2539354896520542 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1394346502659840 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  959288810468171 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/959288810468171.mp4
+image-pending    1342058630810485 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1005077108909759 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2821106971576712 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  897584573336306 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/897584573336306.mp4
+carried-forward  1023579663653579 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1023579663653579.mp4
+carried-forward  1719296292436944 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1719296292436944.mp4
+video-missing    1719296292436944 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  2225699741586641 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2225699741586641.mp4
+carried-forward  27379204638396197 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27379204638396197.mp4
+carried-forward  1819535669030757 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1819535669030757.mp4
+carried-forward  1560506245661516 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1560506245661516.mp4
+uploaded         2330181094473826 c0  (video) ← 2330181094473826.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2330181094473826.mp4
+carried-forward  28069326826019052 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/28069326826019052.mp4
+carried-forward  1694060214980430 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1694060214980430.mp4
+video-missing    1694060214980430 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    2477698442729434 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1935175824064302 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1555979722859023 c0  (video) ← 1555979722859023.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1555979722859023.mp4
+image-pending    1260362019376536 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  951987437935111 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/951987437935111.mp4
+image-pending    2928567720854980 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    963212996765558 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2234393020682815 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2234393020682815.mp4
+image-pending    27697541803203418 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2664767333920983 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2664767333920983.mp4
+image-pending    1048152420957287 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1048152420957287 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1023916740225725 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2324062521668025 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2324062521668025.mp4
+uploaded         1470729935082242 c0  (video) ← 1470729935082242.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1470729935082242.mp4
+uploaded         1014402298044048 c0  (video) ← 1014402298044048.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1014402298044048.mp4
+video-missing    1014402298044048 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1588352296242444 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1700773848012323 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1700773848012323.mp4
+image-pending    2312295802852632 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1996569370993890 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1551743203314017 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1551743203314017.mp4
+carried-forward  2031646937452539 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2031646937452539.mp4
+carried-forward  1524801158634663 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1524801158634663.mp4
+video-missing    1524801158634663 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1525550895120599 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1525550895120599.mp4
+carried-forward  862655229956099 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/862655229956099.mp4
+uploaded         1673695457029679 c0  (video) ← 1673695457029679.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1673695457029679.mp4
+video-missing    1673695457029679 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1216833803842853 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2000652637224686 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2000652637224686.mp4
+carried-forward  2002369933736835 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2002369933736835.mp4
+image-pending    2440876419753259 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1543668917261655 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1543668917261655.mp4
+video-missing    1543668917261655 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1543668917261655 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1543668917261655 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1543668917261655 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1013767104770013 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1013767104770013.mp4
+video-missing    1013767104770013 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  27580761458252340 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27580761458252340.mp4
+image-pending    965988233132280 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2754468074934925 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2754468074934925.mp4
+carried-forward  1430861215545783 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1430861215545783.mp4
+carried-forward  2669430920118412 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2669430920118412.mp4
+video-missing    2669430920118412 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1013479841561750 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  27152268437785170 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27152268437785170.mp4
+image-pending    794809820323291 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    794809820323291 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2076555413239944 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2076555413239944 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1376282037695125 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1376282037695125 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1804975490883472 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1804975490883472 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1804975490883472 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1699831511250568 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1699831511250568.mp4
+carried-forward  966228486466430 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/966228486466430.mp4
+image-pending    2775701016133639 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2775701016133639 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    872536282107119 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1028902046169144 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2406870426474178 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2406870426474178.mp4
+carried-forward  1336328915277823 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1336328915277823.mp4
+carried-forward  947909591668864 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/947909591668864.mp4
+image-pending    1559873162333585 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2170159490218748 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2170159490218748.mp4
+carried-forward  1554479282882105 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1554479282882105.mp4
+image-pending    1011877798144358 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1579457437037540 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1579457437037540.mp4
+image-pending    992154867124769 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1820417072261340 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1820417072261340.mp4
+carried-forward  3981141785525330 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3981141785525330.mp4
+image-pending    1450803096806341 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1049763874058221 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1049763874058221.mp4
+image-pending    1041262242172538 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1041262242172538 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  966853269731379 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/966853269731379.mp4
+image-pending    1695977268334588 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1695977268334588 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1695977268334588 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1695977268334588 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1695977268334588 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2506548853154434 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2506548853154434.mp4
+video-missing    2506548853154434 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  2109631216280896 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2109631216280896.mp4
+carried-forward  1584993213042784 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1584993213042784.mp4
+video-missing    1584993213042784 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1682996579661385 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1682996579661385.mp4
+carried-forward  1499504531948866 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1499504531948866.mp4
+carried-forward  1628725505932441 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1628725505932441.mp4
+image-pending    1425982136027555 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1425982136027555 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1425982136027555 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1596164391869838 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1596164391869838.mp4
+carried-forward  2959050207776643 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2959050207776643.mp4
+carried-forward  950354991355423 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/950354991355423.mp4
+video-missing    950354991355423 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    950354991355423 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+uploaded         2133690397189285 c0  (video) ← 2133690397189285.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2133690397189285.mp4
+image-pending    2238648113616728 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1211954354357221 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1211954354357221.mp4
+image-pending    27644628095226536 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    27644628095226536 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  3607683532740664 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3607683532740664.mp4
+image-pending    1331831279125256 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1331831279125256 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1331831279125256 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1331831279125256 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1486341310177609 c0  (video) ← 1486341310177609.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1486341310177609.mp4
+video-missing    1486341310177609 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1486341310177609 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1486341310177609 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1486341310177609 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  27919617490965862 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27919617490965862.mp4
+video-missing    27919617490965862 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+uploaded         1574210557424919 c0  (video) ← 1574210557424919.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1574210557424919.mp4
+image-pending    3393967717429986 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1812757213021790 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1812757213021790.mp4
+carried-forward  1401172908614575 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1401172908614575.mp4
+image-pending    1606212207585356 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  4072363043063442 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4072363043063442.mp4
+video-missing    4072363043063442 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  2251217448976739 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2251217448976739.mp4
+video-missing    2251217448976739 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    2107376909876419 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  837033132823272 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/837033132823272.mp4
+carried-forward  1021784623781943 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1021784623781943.mp4
+image-pending    1050959890611197 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  898245353336292 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/898245353336292.mp4
+carried-forward  1014482958070201 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1014482958070201.mp4
+image-pending    1049508164193496 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1429499778984916 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1429499778984916.mp4
+image-pending    1799879408039498 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  4450126508650351 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4450126508650351.mp4
+image-pending    894549983719956 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1710561490277690 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1034440859176025 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1034440859176025 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1034440859176025 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1034440859176025 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1406859967949184 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1406859967949184.mp4
+image-pending    1598554471929463 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    36892124337101702 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1346622686901092 c0  (video) ← 1346622686901092.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1346622686901092.mp4
+video-missing    1346622686901092 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1516224559827370 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2892016287845574 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2892016287845574.mp4
+video-missing    2892016287845574 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1032126766097258 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  883578214824301 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/883578214824301.mp4
+carried-forward  1564273415288163 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1564273415288163.mp4
+image-pending    889443537553372 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         28528465066754449 c0  (video) ← 28528465066754449.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/28528465066754449.mp4
+uploaded         1332794415666579 c0  (video) ← 1332794415666579.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1332794415666579.mp4
+carried-forward  1294337706051746 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1294337706051746.mp4
+image-pending    1580328836915259 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1579060173825379 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1853026572769426 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1357812409664244 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1560806408773512 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    794726597001757 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1380159090842332 c0  (video) ← 1380159090842332.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1380159090842332.mp4
+video-missing    1380159090842332 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1380159090842332 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1380159090842332 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+uploaded         2289485715156767 c0  (video) ← 2289485715156767.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2289485715156767.mp4
+carried-forward  1346374660305512 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1346374660305512.mp4
+carried-forward  1545007704019300 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1545007704019300.mp4
+uploaded         2321326025372330 c0  (video) ← 2321326025372330.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2321326025372330.mp4
+video-missing    2321326025372330 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1357050445754562 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1357050445754562.mp4
+carried-forward  1459745522625388 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1459745522625388.mp4
+image-pending    1313369707218694 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1917756545588816 c0  (video) ← 1917756545588816.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1917756545588816.mp4
+carried-forward  1661983111550770 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1661983111550770.mp4
+image-pending    1118667054446122 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1656251878773269 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1656251878773269.mp4
+uploaded         1345212593734169 c0  (video) ← 1345212593734169.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1345212593734169.mp4
+image-pending    1753263662680522 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1762740098380285 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2002480637046401 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2002480637046401.mp4
+image-pending    1581279610290496 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1022368523864315 c0  (video) ← 1022368523864315.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1022368523864315.mp4
+carried-forward  1499819831470247 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1499819831470247.mp4
+image-pending    1764051195013255 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1571233087681949 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2828529930842721 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    967239789695503 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2422602684928025 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1506195630762706 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2114097576202101 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2114097576202101 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         915076271615039 c0  (video) ← 915076271615039.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/915076271615039.mp4
+video-missing    915076271615039 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1600643738319678 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1600643738319678.mp4
+carried-forward  1037281795467019 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1037281795467019.mp4
+video-missing    1037281795467019 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  1005731552081700 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1005731552081700.mp4
+carried-forward  1641743326889395 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1641743326889395.mp4
+video-missing    1641743326889395 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+uploaded         1692685542041507 c0  (video) ← 1692685542041507.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1692685542041507.mp4
+carried-forward  4358362467779190 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/4358362467779190.mp4
+image-pending    27593518713634801 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2063585607578634 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1752843819080466 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1063384919971552 c0  (video) ← 1063384919971552.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1063384919971552.mp4
+uploaded         1187742246851155 c0  (video) ← 1187742246851155.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1187742246851155.mp4
+carried-forward  1405726478272704 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1405726478272704.mp4
+carried-forward  1774469307063531 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1774469307063531.mp4
+video-missing    1774469307063531 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+video-missing    1774469307063531 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+uploaded         1430848975601920 c0  (video) ← 1430848975601920.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1430848975601920.mp4
+image-pending    27674615735565225 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    2234630433953836 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2267679223990390 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2267679223990390.mp4
+uploaded         1019674440785394 c0  (video) ← 1019674440785394.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1019674440785394.mp4
+carried-forward  1035892955464152 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1035892955464152.mp4
+uploaded         876388285526264 c0  (video) ← 876388285526264.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/876388285526264.mp4
+video-missing    876388285526264 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+uploaded         1338517247844734 c0  (video) ← 1338517247844734.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1338517247844734.mp4
+uploaded         1043907634695478 c0  (video) ← 1043907634695478.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1043907634695478.mp4
+image-pending    4398033000434097 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    895326040286857 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    895326040286857 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1662677514809671 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    904070266093517 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    904070266093517 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1427699039168290 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1944534039553955 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1944534039553955.mp4
+image-pending    1383467507218000 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1589337099422604 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1589337099422604.mp4
+image-pending    1878099066909398 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1878099066909398 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  949770718122490 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/949770718122490.mp4
+image-pending    953453484384107 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         961824916872869 c0  (video) ← 961824916872869.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/961824916872869.mp4
+carried-forward  2048970249101738 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2048970249101738.mp4
+uploaded         1622756449403310 c0  (video) ← 1622756449403310.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1622756449403310.mp4
+video-missing    1622756449403310 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1302037141725438 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1535398954143882 c0  (video) ← 1535398954143882.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1535398954143882.mp4
+image-pending    2172905496587588 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1060798633564454 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1542420430596538 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1542420430596538 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1603738558135640 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1603738558135640.mp4
+carried-forward  1008416582005126 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1008416582005126.mp4
+carried-forward  1509734444174147 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1509734444174147.mp4
+image-pending    2111492806452235 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1016617764325176 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1532775557712688 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2765875750453643 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2765875750453643.mp4
+image-pending    1344282743887403 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1693779785231609 c0  (video) ← 1693779785231609.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1693779785231609.mp4
+carried-forward  1009960622030951 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1009960622030951.mp4
+uploaded         2507789266311707 c0  (video) ← 2507789266311707.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2507789266311707.mp4
+carried-forward  889982286964946 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/889982286964946.mp4
+carried-forward  1810247500159313 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1810247500159313.mp4
+uploaded         2248183932622822 c0  (video) ← 2248183932622822.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2248183932622822.mp4
+uploaded         1554618599500957 c0  (video) ← 1554618599500957.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1554618599500957.mp4
+uploaded         28409591748643670 c0  (video) ← 28409591748643670.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/28409591748643670.mp4
+carried-forward  2026515621404364 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2026515621404364.mp4
+uploaded         1395958149262566 c0  (video) ← 1395958149262566.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1395958149262566.mp4
+image-pending    1554801386316748 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1706918947236964 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1706918947236964.mp4
+image-pending    1295976119054023 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1468650791696367 c0  (video) ← 1468650791696367.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1468650791696367.mp4
+uploaded         1031036932636041 c0  (video) ← 1031036932636041.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1031036932636041.mp4
+video-missing    1031036932636041 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1244597881007845 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  885784687934999 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/885784687934999.mp4
+image-pending    1357165622439228 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  889908100306111 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/889908100306111.mp4
+uploaded         1026354613622804 c0  (video) ← 1026354613622804.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1026354613622804.mp4
+video-missing    1026354613622804 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+image-pending    1038946665250288 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1049423840817502 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1061062223156565 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1061062223156565.mp4
+uploaded         1345409133747012 c0  (video) ← 1345409133747012.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1345409133747012.mp4
+image-pending    1026292599783937 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1058369666852216 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1058369666852216 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1061487143502136 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1061487143502136.mp4
+image-pending    1394578142520401 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1394578142520401 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1011016281715332 c0  (video) ← 1011016281715332.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1011016281715332.mp4
+carried-forward  1695156788201262 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1695156788201262.mp4
+carried-forward  1982511245802579 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1982511245802579.mp4
+carried-forward  793461963792398 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/793461963792398.mp4
+image-pending    1017433927849044 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1017433927849044 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1034363842338948 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1034363842338948.mp4
+uploaded         2217876362085723 c0  (video) ← 2217876362085723.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2217876362085723.mp4
+uploaded         27506862982308606 c0  (video) ← 27506862982308606.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27506862982308606.mp4
+image-pending    1003156312531618 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1394934199271875 c0  (video) ← 1394934199271875.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1394934199271875.mp4
+video-missing    1394934199271875 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+uploaded         2130787451186096 c0  (video) ← 2130787451186096.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2130787451186096.mp4
+uploaded         1700491111071090 c0  (video) ← 1700491111071090.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1700491111071090.mp4
+uploaded         1868227910812147 c0  (video) ← 1868227910812147.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1868227910812147.mp4
+image-pending    1103254815358762 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1023376787210126 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1501093751266649 c0  (video) ← 1501093751266649.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1501093751266649.mp4
+uploaded         1393115379348580 c0  (video) ← 1393115379348580.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1393115379348580.mp4
+uploaded         964346649986637 c0  (video) ← 964346649986637.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/964346649986637.mp4
+image-pending    1012873808163826 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1716642782903952 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1716642782903952.mp4
+uploaded         1985182902188609 c0  (video) ← 1985182902188609.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1985182902188609.mp4
+carried-forward  1354909930097759 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1354909930097759.mp4
+uploaded         1363965082331786 c0  (video) ← 1363965082331786.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1363965082331786.mp4
+uploaded         1482038130274275 c0  (video) ← 1482038130274275.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1482038130274275.mp4
+uploaded         2225491614896617 c0  (video) ← 2225491614896617.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2225491614896617.mp4
+carried-forward  2467626733746556 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2467626733746556.mp4
+uploaded         1529703942242605 c0  (video) ← 1529703942242605.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1529703942242605.mp4
+image-pending    1592825742299208 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         2041328216774778 c0  (video) ← 2041328216774778.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2041328216774778.mp4
+carried-forward  2237434290411369 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2237434290411369.mp4
+carried-forward  836169429430148 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/836169429430148.mp4
+image-pending    1760983655071811 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1360644552189603 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    911328205342078 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1763324061334648 c0  (video) ← 1763324061334648.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1763324061334648.mp4
+uploaded         1957431241542354 c0  (video) ← 1957431241542354.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1957431241542354.mp4
+uploaded         2149642122251177 c0  (video) ← 2149642122251177.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2149642122251177.mp4
+uploaded         1692611525292366 c0  (video) ← 1692611525292366.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1692611525292366.mp4
+uploaded         1726907408557947 c0  (video) ← 1726907408557947.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1726907408557947.mp4
+uploaded         1873150467409771 c0  (video) ← 1873150467409771.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1873150467409771.mp4
+carried-forward  1016174471379153 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1016174471379153.mp4
+video-missing    1016174471379153 c0  (expected file not found in facebook/videos/ewa-2026-07-17)
+carried-forward  3563655757116661 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3563655757116661.mp4
+carried-forward  1504923200846764 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1504923200846764.mp4
+uploaded         1755898215585424 c0  (video) ← 1755898215585424.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1755898215585424.mp4
+image-pending    1645504130333590 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1645504130333590 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         1667292531482206 c0  (video) ← 1667292531482206.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1667292531482206.mp4
+carried-forward  1363405059101772 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1363405059101772.mp4
+uploaded         2096046477647641 c0  (video) ← 2096046477647641.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2096046477647641.mp4
+image-pending    4565990666955957 c0  (HANDOVER §8.5 — image handling not yet built)

@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-17 13:14 IST — facebook / ewa — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/ewa_2026-07-17_links.json
+
+
 ## 2026-07-17 09:55 IST — facebook / lingo-ai — operator: nawin (Ad Studio pipeline)
 - data refresh via Ad Studio (stages 1-5)
 - Links manifest: facebook/runs/lingo-ai_2026-07-17_links.json
