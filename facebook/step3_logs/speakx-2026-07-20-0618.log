@@ -1,0 +1,82 @@
+# Step 3 run log
+# competitor : speakx
+# started_at : 2026-07-20T06:18:23
+# input      : facebook/inputs/fb-ads-speakx-2026-07-20-0616.csv
+# videos     : facebook/videos/speakx-2026-07-20
+# master     : facebook/master/speakx.csv  (updated)
+# enriched   : facebook/inputs/fb-ads-speakx-2026-07-20-0616_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded': 10, 'carried-forward': 36, 'image-pending': 8, 'video-missing': 15, 'no-creative': 0, 'error': 0}
+#
+carried-forward  2170232180187458 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2170232180187458.mp4
+carried-forward  999797746202495 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/999797746202495.mp4
+carried-forward  1025654197054648 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1025654197054648.mp4
+carried-forward  1351262990299594 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1351262990299594.mp4
+carried-forward  1006144355452513 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1006144355452513.mp4
+carried-forward  1951806882141238 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1951806882141238.mp4
+carried-forward  1402822115240024 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1402822115240024.mp4
+carried-forward  2556548328132117 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2556548328132117.mp4
+carried-forward  1663497831527377 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1663497831527377.mp4
+carried-forward  2242547292987219 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2242547292987219.mp4
+video-missing    2242547292987219 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+carried-forward  1606161311081490 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1606161311081490.mp4
+carried-forward  1035880228803854 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1035880228803854.mp4
+carried-forward  2085674658961809 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2085674658961809.mp4
+carried-forward  1911617969511435 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1911617969511435.mp4
+carried-forward  2493959911111238 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2493959911111238.mp4
+video-missing    2493959911111238 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+carried-forward  2431019154040799 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2431019154040799.mp4
+image-pending    1028571596228151 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  979397888269297 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/979397888269297.mp4
+carried-forward  1048333250872687 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1048333250872687.mp4
+video-missing    1048333250872687 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+carried-forward  27229193570063215 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/27229193570063215.mp4
+carried-forward  1456561929564609 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1456561929564609.mp4
+carried-forward  1032087992996376 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1032087992996376.mp4
+carried-forward  2069488480359379 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2069488480359379.mp4
+video-missing    2069488480359379 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+video-missing    2069488480359379 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+carried-forward  1059656459751703 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1059656459751703.mp4
+carried-forward  26791593250513491 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/26791593250513491.mp4
+video-missing    26791593250513491 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+video-missing    26791593250513491 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+image-pending    1319774340279303 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1355918086631670 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1497039245504119 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1497039245504119.mp4
+video-missing    1497039245504119 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+video-missing    1497039245504119 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+carried-forward  3000690926949183 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/3000690926949183.mp4
+video-missing    3000690926949183 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+video-missing    3000690926949183 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+carried-forward  1646565340803054 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1646565340803054.mp4
+video-missing    1646565340803054 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+video-missing    1646565340803054 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+carried-forward  1353796682838534 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1353796682838534.mp4
+uploaded         1745366670113665 c0  (video) ← 1745366670113665.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1745366670113665.mp4
+video-missing    1745366670113665 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+video-missing    1745366670113665 c0  (expected file not found in facebook/videos/speakx-2026-07-20)
+image-pending    1042478948739321 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1036413095395358 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1036413095395358.mp4
+image-pending    2198101554346438 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  2721403284920040 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2721403284920040.mp4
+carried-forward  1340007950958225 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1340007950958225.mp4
+image-pending    2221002488734307 c0  (HANDOVER §8.5 — image handling not yet built)
+image-pending    1750635042706914 c0  (HANDOVER §8.5 — image handling not yet built)
+carried-forward  1534744628291389 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1534744628291389.mp4
+carried-forward  1583946576480802 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1583946576480802.mp4
+carried-forward  1944664899515494 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1944664899515494.mp4
+image-pending    1338566518256713 c0  (HANDOVER §8.5 — image handling not yet built)
+uploaded         2021121468510189 c0  (video) ← 2021121468510189.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2021121468510189.mp4
+uploaded         2900884660251891 c0  (video) ← 2900884660251891.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2900884660251891.mp4
+carried-forward  1018301297462586 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1018301297462586.mp4
+uploaded         1547281113612928 c0  (video) ← 1547281113612928.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1547281113612928.mp4
+carried-forward  1350626287269177 c0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1350626287269177.mp4
+uploaded         1712143186536118 c0  (video) ← 1712143186536118.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1712143186536118.mp4
+uploaded         1400500505225634 c0  (video) ← 1400500505225634.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1400500505225634.mp4
+uploaded         1022376590681928 c0  (video) ← 1022376590681928.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/1022376590681928.mp4
+uploaded         2101329414148842 c0  (video) ← 2101329414148842.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2101329414148842.mp4
+uploaded         2381337792359278 c0  (video) ← 2381337792359278.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2381337792359278.mp4
+uploaded         2002075970441142 c0  (video) ← 2002075970441142.mp4  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/2002075970441142.mp4
