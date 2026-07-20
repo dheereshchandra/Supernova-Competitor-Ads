@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-20 12:00 IST — google / memrise — operator: google-weekly
+- weekly Google scrape (scrape→R2)
+- Links manifest: google/runs/memrise_2026-07-20_links.json
+
+
 ## 2026-07-20 06:43 IST — facebook / english-seekho — operator: daily-scrape
 - daily free refresh (stages 1-4)
 - Links manifest: facebook/runs/english-seekho_2026-07-20_links.json
