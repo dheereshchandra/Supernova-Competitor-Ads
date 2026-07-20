@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-20 12:35 IST — google / busuu — operator: google-weekly
+- weekly Google scrape (scrape→R2)
+- Links manifest: google/runs/busuu_2026-07-20_links.json
+
+
 ## 2026-07-20 12:00 IST — google / memrise — operator: google-weekly
 - weekly Google scrape (scrape→R2)
 - Links manifest: google/runs/memrise_2026-07-20_links.json
