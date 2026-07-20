@@ -1,0 +1,615 @@
+# Step 3 run log (Google pipeline)
+# competitor : duolingo
+# started_at : 2026-07-20T15:57:16
+# input      : google/inputs/g-ads-duolingo-2026-07-20.csv
+# videos     : google/videos/duolingo-2026-07-20
+# images     : google/images/duolingo-2026-07-20
+# master     : google/master/duolingo.csv  (updated)
+# enriched   : google/inputs/g-ads-duolingo-2026-07-20_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded-video': 0, 'uploaded-image': 6, 'carried-forward': 240, 'text-no-asset': 0, 'asset-missing': 0, 'unsupported': 0, 'no-creative': 0, 'scrape-error': 355, 'error': 0}
+#
+carried-forward  CR00077483048265842689 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00077483048265842689.jpg
+carried-forward  CR00172539367540129793 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00172539367540129793.jpg
+carried-forward  CR00172539367540129793 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00172539367540129793.jpg
+carried-forward  CR00172539367540129793 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00172539367540129793.jpg
+scrape-error     CR00183418201873317889 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00183418201873317889 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00183418201873317889 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00183418201873317889 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR00220408796688678913 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00220408796688678913.jpg
+scrape-error     CR00273460825434357761 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00273460825434357761 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00273460825434357761 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00273460825434357761 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR00340579095412736001 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00340579095412736001.jpg
+carried-forward  CR00340579095412736001 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00340579095412736001.jpg
+carried-forward  CR00340579095412736001 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00340579095412736001.jpg
+scrape-error     CR00486904619688001537 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00486904619688001537 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00486904619688001537 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR00523603173907103745 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00523603173907103745.jpg
+carried-forward  CR00622910591681429505 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00622910591681429505.jpg
+carried-forward  CR00622910591681429505 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00622910591681429505.jpg
+carried-forward  CR00622910591681429505 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00622910591681429505.jpg
+carried-forward  CR00666386106077413377 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00666386106077413377.jpg
+carried-forward  CR00708930609002577921 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00708930609002577921.jpg
+carried-forward  CR00708930609002577921 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00708930609002577921.jpg
+carried-forward  CR00708930609002577921 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00708930609002577921.jpg
+carried-forward  CR00912206643708559361 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00912206643708559361.jpg
+scrape-error     CR00957807101764173825 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00957807101764173825 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00957807101764173825 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR00957807101764173825 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR00990928154384138241 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR00990928154384138241.jpg
+scrape-error     CR01002423385243779073 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01002423385243779073 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01002423385243779073 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01002423385243779073 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01002423385243779073 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01030743368801452033 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01030743368801452033 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01030743368801452033 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01030743368801452033 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01030743368801452033 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR01080890376157396993 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01080890376157396993.jpg
+carried-forward  CR01127077561105383425 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01127077561105383425.jpg
+carried-forward  CR01127077561105383425 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01127077561105383425.jpg
+carried-forward  CR01127077561105383425 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01127077561105383425.jpg
+scrape-error     CR01130741245518282753 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01130741245518282753 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01130741245518282753 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01130741245518282753 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01450103631985508353 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01450103631985508353 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01450103631985508353 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01506785655420616705 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01506785655420616705 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01506785655420616705 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01868085494135390209 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01868085494135390209 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR01868085494135390209 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR01968406266493534209 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01968406266493534209.jpg
+carried-forward  CR01968406266493534209 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01968406266493534209.jpg
+carried-forward  CR01968406266493534209 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR01968406266493534209.jpg
+carried-forward  CR02300258323368247297 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02300258323368247297.jpg
+carried-forward  CR02300258323368247297 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02300258323368247297.jpg
+carried-forward  CR02300258323368247297 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02300258323368247297.jpg
+carried-forward  CR02332026650268532737 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02332026650268532737.jpg
+carried-forward  CR02332026650268532737 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02332026650268532737.jpg
+carried-forward  CR02332026650268532737 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02332026650268532737.jpg
+carried-forward  CR02345735223804690433 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02345735223804690433.jpg
+carried-forward  CR02345735223804690433 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02345735223804690433.jpg
+carried-forward  CR02345735223804690433 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02345735223804690433.jpg
+scrape-error     CR02400119130498793473 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02400119130498793473 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02400119130498793473 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02400119130498793473 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02400119130498793473 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02403692818166972417 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02403692818166972417 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02403692818166972417 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02403692818166972417 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02469643449746325505 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02469643449746325505 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02469643449746325505 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02469643449746325505 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02469643449746325505 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+uploaded-image  CR02760380368811982849  ← CR02760380368811982849.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02760380368811982849.jpg
+uploaded-image  CR02760380368811982849  ← CR02760380368811982849_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02760380368811982849.jpg
+uploaded-image  CR02760380368811982849  ← CR02760380368811982849_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02760380368811982849.jpg
+carried-forward  CR02876105685622325249 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02876105685622325249.jpg
+carried-forward  CR02876105685622325249 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02876105685622325249.jpg
+carried-forward  CR02876105685622325249 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02876105685622325249.jpg
+carried-forward  CR02883287901733388289 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02883287901733388289.jpg
+carried-forward  CR02883287901733388289 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02883287901733388289.jpg
+carried-forward  CR02883287901733388289 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02883287901733388289.jpg
+scrape-error     CR02885473937007837185 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02885473937007837185 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02885473937007837185 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02885473937007837185 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR02953461826194505729 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02953461826194505729.jpg
+carried-forward  CR02953461826194505729 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR02953461826194505729.jpg
+scrape-error     CR02959457325661814785 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02959457325661814785 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02959457325661814785 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR02959457325661814785 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03125866348941410305 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03125866348941410305 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03125866348941410305 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR03289419536796745729 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03289419536796745729.jpg
+scrape-error     CR03342477054510628865 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03342477054510628865 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03342477054510628865 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR03419157983274205185 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03419157983274205185.jpg
+carried-forward  CR03419157983274205185 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03419157983274205185.jpg
+carried-forward  CR03419157983274205185 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03419157983274205185.jpg
+scrape-error     CR03444500283185430529 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03444500283185430529 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03444500283185430529 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03444500283185430529 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03444500283185430529 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR03449188738205220865 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03449188738205220865.jpg
+carried-forward  CR03449188738205220865 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03449188738205220865.jpg
+carried-forward  CR03449188738205220865 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03449188738205220865.jpg
+scrape-error     CR03460262881881227265 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03460262881881227265 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03460262881881227265 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03460262881881227265 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR03461645655192109057 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03461645655192109057.jpg
+carried-forward  CR03461645655192109057 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03461645655192109057.jpg
+carried-forward  CR03568382765093093377 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03568382765093093377.jpg
+scrape-error     CR03872881463749771265 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03872881463749771265 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03872881463749771265 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03872881463749771265 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR03986498286625226753 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR03986498286625226753.jpg
+scrape-error     CR04074443454317330433 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04074443454317330433 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04074443454317330433 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04074443454317330433 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04074443454317330433 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04123240768200507393 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04123240768200507393 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04123240768200507393 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04123240768200507393 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR04243151788338839553 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04243151788338839553.jpg
+carried-forward  CR04243151788338839553 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04243151788338839553.jpg
+carried-forward  CR04306221768172896257 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04306221768172896257.jpg
+carried-forward  CR04306221768172896257 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04306221768172896257.jpg
+carried-forward  CR04306221768172896257 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04306221768172896257.jpg
+scrape-error     CR04691106638109605889 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04691106638109605889 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04691106638109605889 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR04808461817699368961 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04808461817699368961.jpg
+carried-forward  CR04844956498410864641 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR04844956498410864641.jpg
+scrape-error     CR04921081589686861825 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04921081589686861825 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR04921081589686861825 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR05131027012818829313 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05131027012818829313.jpg
+carried-forward  CR05131027012818829313 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05131027012818829313.jpg
+carried-forward  CR05323514484814249985 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05323514484814249985.jpg
+carried-forward  CR05386581002904666113 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05386581002904666113.jpg
+carried-forward  CR05386581002904666113 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05386581002904666113.jpg
+uploaded-image  CR05386581002904666113  ← CR05386581002904666113_v3.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05386581002904666113.jpg
+carried-forward  CR05406473573432819713 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05406473573432819713.jpg
+scrape-error     CR05543142980434526209 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+carried-forward  CR05583083874184855553 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05583083874184855553.jpg
+carried-forward  CR05583083874184855553 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05583083874184855553.jpg
+carried-forward  CR05657396214384033793 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05657396214384033793.jpg
+carried-forward  CR05657396214384033793 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05657396214384033793.jpg
+scrape-error     CR05666550748196896769 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05666550748196896769 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05666550748196896769 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05666550748196896769 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05666550748196896769 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05686368302826258433 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05686368302826258433 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05803985243492843521 v0  (Step 1 tag: image-url-not-extracted; re-run Step 1 to recover)
+carried-forward  CR05930435944044822529 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05930435944044822529.jpg
+carried-forward  CR05930435944044822529 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR05930435944044822529.jpg
+scrape-error     CR05983931101746298881 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05983931101746298881 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05983931101746298881 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR05983931101746298881 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR06045526018012217345 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06045526018012217345.jpg
+carried-forward  CR06045526018012217345 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06045526018012217345.jpg
+carried-forward  CR06045526018012217345 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06045526018012217345.jpg
+carried-forward  CR06108857887772114945 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06108857887772114945.jpg
+carried-forward  CR06108857887772114945 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06108857887772114945.jpg
+carried-forward  CR06108857887772114945 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06108857887772114945.jpg
+scrape-error     CR06204449428690960385 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06204449428690960385 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06204449428690960385 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06204449428690960385 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR06272089056159465473 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06272089056159465473.jpg
+carried-forward  CR06272089056159465473 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06272089056159465473.jpg
+carried-forward  CR06322497395095502849 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06322497395095502849.jpg
+carried-forward  CR06322497395095502849 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06322497395095502849.jpg
+carried-forward  CR06322497395095502849 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06322497395095502849.jpg
+scrape-error     CR06417969407074500609 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06417969407074500609 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06417969407074500609 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR06426361661501734913 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06426361661501734913.jpg
+carried-forward  CR06426361661501734913 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06426361661501734913.jpg
+carried-forward  CR06426361661501734913 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06426361661501734913.jpg
+scrape-error     CR06454979475271581697 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06454979475271581697 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06454979475271581697 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR06454979475271581697 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR06643980163967090689 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06643980163967090689.jpg
+carried-forward  CR06643980163967090689 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06643980163967090689.jpg
+carried-forward  CR06643980163967090689 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06643980163967090689.jpg
+carried-forward  CR06702948965429542913 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06702948965429542913.jpg
+carried-forward  CR06702948965429542913 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06702948965429542913.jpg
+carried-forward  CR06702948965429542913 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR06702948965429542913.jpg
+carried-forward  CR07157674058048339969 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07157674058048339969.mp4
+carried-forward  CR07157674058048339969 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07157674058048339969.mp4
+carried-forward  CR07157674058048339969 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07157674058048339969.mp4
+scrape-error     CR07158521712793878529 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07158521712793878529 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07158521712793878529 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR07395444761814892545 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07395444761814892545.jpg
+carried-forward  CR07397178691651895297 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR07397178691651895297.jpg
+scrape-error     CR07543396523917180929 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07543396523917180929 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07543396523917180929 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07563440577941864449 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07563440577941864449 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07563440577941864449 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07563440577941864449 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07848985989648220161 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR07950475405427736577 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07950475405427736577 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07950475405427736577 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR07950475405427736577 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08032435845430509569 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08032435845430509569 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08032435845430509569 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR08046156221536796673 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08046156221536796673.jpg
+scrape-error     CR08074942964960329729 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08074942964960329729 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08074942964960329729 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR08392678426405765121 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08392678426405765121.jpg
+scrape-error     CR08397333973386133505 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08397333973386133505 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08397333973386133505 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08397333973386133505 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08608896597733933057 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08608896597733933057 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08608896597733933057 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08664307285079621633 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08664307285079621633 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08664307285079621633 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR08828366720730136577 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08828366720730136577.jpg
+carried-forward  CR08828366720730136577 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08828366720730136577.jpg
+carried-forward  CR08828366720730136577 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08828366720730136577.jpg
+scrape-error     CR08840752513058603009 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08840752513058603009 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08840752513058603009 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR08840752513058603009 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR08869171658821206017 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08869171658821206017.jpg
+carried-forward  CR08869171658821206017 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08869171658821206017.jpg
+carried-forward  CR08869171658821206017 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08869171658821206017.jpg
+carried-forward  CR08903716596179009537 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08903716596179009537.jpg
+uploaded-image  CR08903716596179009537  ← CR08903716596179009537_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08903716596179009537.jpg
+carried-forward  CR08997587753587703809 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08997587753587703809.jpg
+carried-forward  CR08997587753587703809 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR08997587753587703809.jpg
+carried-forward  CR09105497088912785409 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09105497088912785409.jpg
+carried-forward  CR09105497088912785409 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09105497088912785409.jpg
+carried-forward  CR09139973409873068033 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09139973409873068033.jpg
+scrape-error     CR09257889426292342785 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09257889426292342785 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09257889426292342785 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09257889426292342785 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR09322502983012843521 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09322502983012843521.jpg
+carried-forward  CR09322502983012843521 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09322502983012843521.jpg
+carried-forward  CR09322502983012843521 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09322502983012843521.jpg
+carried-forward  CR09323993714621677569 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09323993714621677569.jpg
+carried-forward  CR09323993714621677569 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09323993714621677569.jpg
+scrape-error     CR09402136117676867585 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09402136117676867585 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09402136117676867585 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09402136117676867585 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR09524829142751641601 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09524829142751641601.jpg
+carried-forward  CR09613772203145297921 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09613772203145297921.jpg
+carried-forward  CR09613772203145297921 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09613772203145297921.jpg
+carried-forward  CR09613772203145297921 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09613772203145297921.jpg
+carried-forward  CR09697229533740007425 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09697229533740007425.jpg
+carried-forward  CR09697229533740007425 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09697229533740007425.jpg
+carried-forward  CR09697229533740007425 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09697229533740007425.jpg
+carried-forward  CR09846282628536205313 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09846282628536205313.jpg
+carried-forward  CR09846282628536205313 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09846282628536205313.jpg
+carried-forward  CR09846282628536205313 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR09846282628536205313.jpg
+scrape-error     CR09890420641637597185 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09890420641637597185 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09890420641637597185 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09890420641637597185 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR09976959662806794241 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10049201622610870273 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10049201622610870273 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10049201622610870273 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10049201622610870273 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10049201622610870273 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10134121578548428801 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10134121578548428801 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10134121578548428801 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10134121578548428801 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR10293516336118104065 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10293516336118104065.jpg
+scrape-error     CR10331997937420206081 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10331997937420206081 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10331997937420206081 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10331997937420206081 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10337104593405607937 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+scrape-error     CR10464658688235798529 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10464658688235798529 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10464658688235798529 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10509336174999371777 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10509336174999371777 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10509336174999371777 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10509336174999371777 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR10768944889090539521 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10768944889090539521.jpg
+carried-forward  CR10768944889090539521 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10768944889090539521.jpg
+scrape-error     CR10807972672793739265 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10807972672793739265 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10807972672793739265 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10807972672793739265 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR10900726726388613121 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR10900726726388613121.jpg
+scrape-error     CR10906009665011712001 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10906009665011712001 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10906009665011712001 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10906009665011712001 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10946004099824353281 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10946004099824353281 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10946004099824353281 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR10946004099824353281 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11014488306841812993 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11014488306841812993 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11014488306841812993 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11014488306841812993 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11030900854348578817 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11030900854348578817 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11030900854348578817 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11030900854348578817 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11231224038909018113 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11231224038909018113 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11231224038909018113 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11231224038909018113 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR11265099055857926145 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11265099055857926145.jpg
+carried-forward  CR11527773569144586241 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11527773569144586241.jpg
+scrape-error     CR11570853560002281473 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11570853560002281473 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11570853560002281473 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11570853560002281473 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11570853560002281473 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR11947045081124438017 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR11947045081124438017.jpg
+carried-forward  CR12064062315507482625 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12064062315507482625.jpg
+carried-forward  CR12064062315507482625 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12064062315507482625.jpg
+carried-forward  CR12064062315507482625 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12064062315507482625.jpg
+scrape-error     CR12068207534473740289 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12068207534473740289 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12068207534473740289 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12068207534473740289 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR12153520918005547009 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12153520918005547009.jpg
+carried-forward  CR12153520918005547009 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12153520918005547009.jpg
+carried-forward  CR12153520918005547009 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12153520918005547009.jpg
+carried-forward  CR12262115145995517953 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12262115145995517953.jpg
+carried-forward  CR12262115145995517953 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12262115145995517953.jpg
+carried-forward  CR12262115145995517953 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12262115145995517953.jpg
+carried-forward  CR12267137577672245249 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12267137577672245249.jpg
+carried-forward  CR12267137577672245249 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12267137577672245249.jpg
+carried-forward  CR12267137577672245249 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12267137577672245249.jpg
+scrape-error     CR12455594901465202689 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12455594901465202689 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12455594901465202689 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12455594901465202689 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR12480928817600266241 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12480928817600266241.mp4
+carried-forward  CR12480928817600266241 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12480928817600266241.mp4
+carried-forward  CR12480928817600266241 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12480928817600266241.mp4
+scrape-error     CR12480928817600266241 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12504227675151269889 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12504227675151269889 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12504227675151269889 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR12542398114662711297 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12542398114662711297.jpg
+scrape-error     CR12659402996719812609 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR12743741792042614785 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12743741792042614785.jpg
+scrape-error     CR12753894673823563777 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12753894673823563777 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12753894673823563777 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12753894673823563777 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR12769296933353160705 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12769296933353160705.jpg
+scrape-error     CR12859093953504346113 v0  (Step 1 tag: image-url-not-extracted; re-run Step 1 to recover)
+scrape-error     CR12859093953504346113 v1  (Step 1 tag: image-url-not-extracted; re-run Step 1 to recover)
+carried-forward  CR12863802955647680513 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12863802955647680513.mp4
+carried-forward  CR12863802955647680513 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12863802955647680513.mp4
+carried-forward  CR12863802955647680513 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR12863802955647680513.mp4
+scrape-error     CR12863802955647680513 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12912006576201531393 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12912006576201531393 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR12912006576201531393 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13021082527723421697 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13021082527723421697 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13021082527723421697 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR13121889052292808705 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13121889052292808705.jpg
+carried-forward  CR13121889052292808705 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13121889052292808705.jpg
+carried-forward  CR13121889052292808705 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13121889052292808705.jpg
+carried-forward  CR13257516216760664065 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13257516216760664065.jpg
+carried-forward  CR13257516216760664065 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13257516216760664065.jpg
+carried-forward  CR13257516216760664065 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13257516216760664065.jpg
+carried-forward  CR13357102360732631041 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13357102360732631041.jpg
+carried-forward  CR13388207338523983873 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13388207338523983873.jpg
+scrape-error     CR13524496125523918849 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13524496125523918849 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13524496125523918849 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13524496125523918849 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13542136251993292801 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13542136251993292801 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13542136251993292801 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13542136251993292801 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR13560614326582116353 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13560614326582116353.jpg
+carried-forward  CR13560614326582116353 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13560614326582116353.jpg
+carried-forward  CR13560614326582116353 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13560614326582116353.jpg
+scrape-error     CR13615593412664229889 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13615593412664229889 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13615593412664229889 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR13712223992071323649 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13712223992071323649.jpg
+carried-forward  CR13712223992071323649 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13712223992071323649.jpg
+carried-forward  CR13712223992071323649 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13712223992071323649.jpg
+scrape-error     CR13972041338493861889 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13972041338493861889 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13972041338493861889 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR13972041338493861889 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR13978443863421878273 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13978443863421878273.jpg
+carried-forward  CR13978443863421878273 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13978443863421878273.jpg
+carried-forward  CR13978443863421878273 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR13978443863421878273.jpg
+scrape-error     CR14093348600960516097 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14093348600960516097 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14093348600960516097 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14093348600960516097 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14093348600960516097 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR14098023449523912705 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14098023449523912705.jpg
+carried-forward  CR14121301622512418817 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14121301622512418817.jpg
+carried-forward  CR14214538078244044801 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14214538078244044801.jpg
+carried-forward  CR14214538078244044801 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14214538078244044801.jpg
+carried-forward  CR14214538078244044801 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14214538078244044801.jpg
+scrape-error     CR14263880732714729473 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14333273969560387585 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14333273969560387585 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14333273969560387585 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14333273969560387585 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14457736933477974017 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14457736933477974017 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14457736933477974017 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR14503331404349177857 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14503331404349177857.jpg
+carried-forward  CR14503331404349177857 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14503331404349177857.jpg
+carried-forward  CR14503331404349177857 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14503331404349177857.jpg
+carried-forward  CR14512574792445460481 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14512574792445460481.jpg
+carried-forward  CR14512574792445460481 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14512574792445460481.jpg
+carried-forward  CR14512574792445460481 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14512574792445460481.jpg
+carried-forward  CR14524670726021054465 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14524670726021054465.jpg
+carried-forward  CR14524670726021054465 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14524670726021054465.jpg
+carried-forward  CR14524670726021054465 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14524670726021054465.jpg
+scrape-error     CR14674366210485780481 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14674366210485780481 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14674366210485780481 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14674366210485780481 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14698326243892264961 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14698326243892264961 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14698326243892264961 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR14747712157273554945 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14747712157273554945.jpg
+carried-forward  CR14747712157273554945 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14747712157273554945.jpg
+carried-forward  CR14764325777969250305 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14764325777969250305.jpg
+carried-forward  CR14791427914960207873 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14791427914960207873.jpg
+carried-forward  CR14889223220778500097 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14889223220778500097.jpg
+uploaded-image  CR14889223220778500097  ← CR14889223220778500097_v2.jpg  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14889223220778500097.jpg
+carried-forward  CR14911460577162297345 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14911460577162297345.jpg
+scrape-error     CR14950572808512471041 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14950572808512471041 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14950572808512471041 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR14950572808512471041 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR14964264038970687489 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14964264038970687489.jpg
+carried-forward  CR14964264038970687489 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR14964264038970687489.jpg
+carried-forward  CR15062215913526788097 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15062215913526788097.jpg
+carried-forward  CR15062215913526788097 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15062215913526788097.jpg
+scrape-error     CR15087245196221480961 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15087245196221480961 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15087245196221480961 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15087245196221480961 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15124672915628359681 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15124672915628359681 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15124672915628359681 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15124672915628359681 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR15129272378925776897 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15129272378925776897.mp4
+carried-forward  CR15129272378925776897 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15129272378925776897.mp4
+carried-forward  CR15129272378925776897 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15129272378925776897.mp4
+scrape-error     CR15197344586910400513 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15197344586910400513 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15197344586910400513 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR15273935123792265217 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR15273935123792265217.jpg
+scrape-error     CR15318706137763676161 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15318706137763676161 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15318706137763676161 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15334138333215326209 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15334138333215326209 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15334138333215326209 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15334138333215326209 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15402426870112714753 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15402426870112714753 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15402426870112714753 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15454342716799844353 v0  (Step 1 tag: image-url-not-extracted; re-run Step 1 to recover)
+scrape-error     CR15454342716799844353 v1  (Step 1 tag: image-url-not-extracted; re-run Step 1 to recover)
+scrape-error     CR15612273062320275457 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15612273062320275457 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15612273062320275457 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15612273062320275457 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15689359753824174081 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15689359753824174081 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15689359753824174081 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15930982252981256193 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15930982252981256193 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR15930982252981256193 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR16014139614470078465 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16014139614470078465.mp4
+carried-forward  CR16014139614470078465 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16014139614470078465.mp4
+carried-forward  CR16014139614470078465 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16014139614470078465.mp4
+carried-forward  CR16058041739377639425 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16058041739377639425.jpg
+scrape-error     CR16167130962348474369 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16167130962348474369 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16167130962348474369 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR16328759918955855873 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16328759918955855873.jpg
+carried-forward  CR16328759918955855873 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16328759918955855873.jpg
+carried-forward  CR16328759918955855873 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16328759918955855873.jpg
+scrape-error     CR16651913258306895873 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16651913258306895873 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16651913258306895873 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16652154781497819137 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16652154781497819137 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16652154781497819137 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR16716632436863139841 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16716632436863139841.jpg
+carried-forward  CR16716632436863139841 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16716632436863139841.jpg
+carried-forward  CR16716632436863139841 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16716632436863139841.jpg
+scrape-error     CR16860688844016582657 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16860688844016582657 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16860688844016582657 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16860688844016582657 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16979506013294034945 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16979506013294034945 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16979506013294034945 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR16979506013294034945 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR16979697122158837761 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16979697122158837761.jpg
+carried-forward  CR16979697122158837761 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16979697122158837761.jpg
+carried-forward  CR16979697122158837761 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR16979697122158837761.jpg
+carried-forward  CR17029122789757419521 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17029122789757419521.jpg
+carried-forward  CR17029122789757419521 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17029122789757419521.jpg
+carried-forward  CR17029122789757419521 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17029122789757419521.jpg
+scrape-error     CR17141482123518017537 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17141482123518017537 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17141482123518017537 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17195655018468868097 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17195655018468868097 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17195655018468868097 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR17439134721614282753 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17439134721614282753.jpg
+carried-forward  CR17439134721614282753 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17439134721614282753.jpg
+carried-forward  CR17439134721614282753 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17439134721614282753.jpg
+scrape-error     CR17660929306680885249 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17660929306680885249 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17660929306680885249 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17717268342617669633 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17717268342617669633 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17717268342617669633 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17717268342617669633 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR17762195908147019777 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17762195908147019777.jpg
+carried-forward  CR17762195908147019777 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17762195908147019777.jpg
+carried-forward  CR17762195908147019777 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17762195908147019777.jpg
+carried-forward  CR17810233090128216065 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17810233090128216065.jpg
+carried-forward  CR17821800957474766849 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17821800957474766849.jpg
+carried-forward  CR17821800957474766849 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17821800957474766849.jpg
+carried-forward  CR17821800957474766849 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR17821800957474766849.jpg
+scrape-error     CR17915019846790152193 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17915019846790152193 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17915019846790152193 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR17915019846790152193 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18023376717707476993 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18027554312137211905 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18027554312137211905 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18027554312137211905 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR18027554312137211905 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR18156208098983804929 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18156208098983804929.jpg
+carried-forward  CR18156208098983804929 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18156208098983804929.jpg
+carried-forward  CR18156208098983804929 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18156208098983804929.jpg
+carried-forward  CR18217646274713223169 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18217646274713223169.jpg
+carried-forward  CR18217646274713223169 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18217646274713223169.jpg
+carried-forward  CR18217646274713223169 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18217646274713223169.jpg
+carried-forward  CR18247574835192397825 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18247574835192397825.mp4
+carried-forward  CR18247574835192397825 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18247574835192397825.mp4
+carried-forward  CR18247574835192397825 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18247574835192397825.mp4
+scrape-error     CR18247574835192397825 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+carried-forward  CR18253761168646602753 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18253761168646602753.jpg
+scrape-error     CR18337398930817417217 v0  (Step 1 tag: detail-fetch: HTTPError; re-run Step 1 to recover)
+carried-forward  CR18342870616073306113 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18342870616073306113.jpg
+carried-forward  CR18342870616073306113 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18342870616073306113.jpg
+carried-forward  CR18360220282494386177 v0  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18360220282494386177.jpg
+carried-forward  CR18360220282494386177 v1  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18360220282494386177.jpg
+carried-forward  CR18360220282494386177 v2  → https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev/g_CR18360220282494386177.jpg
