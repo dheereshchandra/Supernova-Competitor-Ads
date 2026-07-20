@@ -1,0 +1,25 @@
+# Step 3 run log (Google pipeline)
+# competitor : loora
+# started_at : 2026-07-20T13:05:58
+# input      : google/inputs/g-ads-loora-2026-07-20.csv
+# videos     : google/videos/loora-2026-07-20
+# images     : google/images/loora-2026-07-20
+# master     : google/master/loora.csv  (updated)
+# enriched   : google/inputs/g-ads-loora-2026-07-20_enriched.csv
+# bucket     : video-ads
+# public_base: https://pub-893b4a6a607b4221a894bf861da7914e.r2.dev
+# dry_run    : False
+#
+# counts     : {'uploaded-video': 0, 'uploaded-image': 0, 'carried-forward': 0, 'text-no-asset': 0, 'asset-missing': 0, 'unsupported': 0, 'no-creative': 0, 'scrape-error': 11, 'error': 0}
+#
+scrape-error     CR03300941216064995329 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03300941216064995329 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03300941216064995329 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03300941216064995329 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03300941216064995329 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR03536229308475375617 v0  (Step 1 tag: image-url-not-extracted; re-run Step 1 to recover)
+scrape-error     CR11977924349794451457 v0  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11977924349794451457 v1  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11977924349794451457 v2  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11977924349794451457 v3  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
+scrape-error     CR11977924349794451457 v4  (Step 1 tag: html5-banner-no-mp4; re-run Step 1 to recover)
