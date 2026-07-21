@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-21 06:16 IST — facebook / mysivi — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/mysivi_2026-07-21_links.json
+
+
 ## 2026-07-20 16:05 IST — google / duolingo — operator: google-weekly
 - weekly Google scrape (scrape→R2)
 - Links manifest: google/runs/duolingo_2026-07-20_links.json
