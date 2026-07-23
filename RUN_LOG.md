@@ -21,6 +21,11 @@ Entry format:
 
 <!-- New entries are inserted below this line, newest first. -->
 
+## 2026-07-23 13:33 IST — facebook / lingo-ai — operator: daily-scrape
+- daily free refresh (stages 1-4)
+- Links manifest: facebook/runs/lingo-ai_2026-07-23_links.json
+
+
 ## 2026-07-23 13:29 IST — facebook / wispr-flow — operator: daily-scrape
 - daily free refresh (stages 1-4)
 - Links manifest: facebook/runs/wispr-flow_2026-07-23_links.json
